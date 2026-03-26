@@ -114,6 +114,18 @@ export default function HomePage() {
   const [greeting] = useState(getRandomMessage(GASTON_GREETINGS));
   const [mounted, setMounted] = useState(false);
 
+  // ── Load saved element adjustments from localStorage (monuments + banners) ──
+  const [elemAdj, setElemAdj] = useState<Record<string, { dx: number; dy: number; scale: number; rot: number }>>({});
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('monument_adjustments');
+      if (raw) setElemAdj(JSON.parse(raw));
+    } catch {}
+  }, []);
+  const getElemAdj = useCallback((id: string) => {
+    return elemAdj[id] || { dx: 0, dy: 0, scale: 1, rot: 0 };
+  }, [elemAdj]);
+
   // ── Lesson modal state ──
   const [modalNode, setModalNode] = useState<PathNode | null>(null);
   const [selectedPartieIdx, setSelectedPartieIdx] = useState<number | null>(null);
@@ -582,15 +594,18 @@ export default function HomePage() {
             const bannerNudge: Record<string, number> = { E: -35, F: -20 };
             const bannerX = roadCX + ROAD_W / 2 + 55 + (bannerNudge[themeCode] || 0);
 
+            const bAdj = getElemAdj(`banner-${themeCode}`);
             return (
               <div
                 key={`theme-${themeCode}`}
                 className="absolute"
                 style={{
-                  top: bannerY,
-                  left: bannerX,
+                  top: bannerY + bAdj.dy,
+                  left: bannerX + bAdj.dx,
                   opacity: isLocked ? 0.25 : 1,
                   zIndex: 15,
+                  transform: bAdj.scale !== 1 || bAdj.rot !== 0 ? `scale(${bAdj.scale}) rotate(${bAdj.rot}deg)` : undefined,
+                  transformOrigin: 'center center',
                 }}
               >
                 <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-2xl" style={{
@@ -860,16 +875,19 @@ export default function HomePage() {
               const top = Math.max(0, monCenterY - mon.h / 2);
 
               const monId = `mon-${themeCode}-${mi}`;
+              const adj = getElemAdj(monId);
               return (
                 <div
                   key={monId}
                   className="absolute pointer-events-none monument-reveal"
                   style={{
-                    left,
-                    top,
-                    width: mon.w,
-                    height: mon.h,
+                    left: left + adj.dx,
+                    top: top + adj.dy,
+                    width: mon.w * adj.scale,
+                    height: mon.h * adj.scale,
                     zIndex: 6,
+                    transform: adj.rot !== 0 ? `rotate(${adj.rot}deg)` : undefined,
+                    transformOrigin: 'center center',
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
