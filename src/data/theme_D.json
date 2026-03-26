@@ -1,0 +1,2412 @@
+{
+  "theme": "D",
+  "city": "Spa",
+  "title": "La vitesse",
+  "lessons": [
+    {
+      "id": "D1",
+      "title": "La vitesse maximale",
+      "theory": [
+        {
+          "title": "Récapitulatif des vitesses maximales",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Autoroute",
+              "content": "Vitesse maximale : 120 km/h. Vitesse minimale : 70 km/h.",
+              "emoji": "🛣️"
+            },
+            {
+              "type": "text",
+              "title": "Route pour automobiles / 2x2 voies avec berme centrale",
+              "content": "Hors agglomération : 120 km/h (au moins 2 bandes par sens + berme centrale).",
+              "emoji": "🚗"
+            },
+            {
+              "type": "text",
+              "title": "Routes hors agglomération séparées par marquage",
+              "content": "Flandre : 70 km/h. Wallonie : 90 km/h. Bruxelles : 70 km/h.",
+              "emoji": "📍"
+            },
+            {
+              "type": "text",
+              "title": "Chaussée à voie centrale",
+              "content": "70 km/h partout (toutes régions confondues).",
+              "emoji": "↔️"
+            },
+            {
+              "type": "text",
+              "title": "En agglomération",
+              "content": "Flandre : 50 km/h. Wallonie : 50 km/h. Bruxelles : 30 km/h.",
+              "emoji": "🏙️"
+            },
+            {
+              "type": "text",
+              "title": "Zones spéciales",
+              "content": "Zone résidentielle / zone de rencontre : 20 km/h. Chemin réservé : 30 km/h. Rue réservée au jeu : allure du pas. Rue scolaire : allure du pas. Abords d'école : 30 km/h. Zone piétonne : allure du pas. Zone cyclable : 30 km/h.",
+              "emoji": "🚶"
+            },
+            {
+              "type": "text",
+              "title": "Dispositif surélevé",
+              "content": "La vitesse maximale est de 30 km/h à l'approche et lors du passage d'un dispositif surélevé (dos-d'âne, coussin berlinois, plateau surélevé).",
+              "emoji": "🚧"
+            },
+            {
+              "type": "text",
+              "title": "Engins de déplacement motorisés",
+              "content": "Les engins de déplacement motorisés (trottinettes électriques, etc.) ont une vitesse maximale de 25 km/h sur les voies autorisées.",
+              "emoji": "🛴"
+            }
+          ]
+        },
+        {
+          "title": "Conduire trop lentement",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Infraction de rouler trop lentement",
+              "content": "Conduire trop lentement est une infraction. Rouler excessivement lentement sans raison, obligeant les autres à vous dépasser, est sanctionnable.",
+              "emoji": "🐢"
+            },
+            {
+              "type": "text",
+              "title": "Freiner soudainement sans raison",
+              "content": "Freiner soudainement sans raison est aussi une infraction.",
+              "emoji": "🛑"
+            }
+          ]
+        },
+        {
+          "title": "Courses de vitesse",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Interdiction",
+              "content": "Sauf autorisation spéciale, toutes les courses de vitesse et compétitions sportives sont interdites sur la voie publique (courses de vitesse, de régularité ou d'adresse).",
+              "emoji": "🏁"
+            },
+            {
+              "type": "text",
+              "title": "Infraction du quatrième degré",
+              "content": "Participer à une course de vitesse sur la voie publique est une infraction du quatrième degré, la plus grave.",
+              "emoji": "⚠️"
+            }
+          ]
+        },
+        {
+          "title": "Retrait immédiat du permis (Police)",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Autoroute et route ordinaire",
+              "content": "Retrait immédiat si dépassement de plus de 30 km/h sur autoroute, route pour automobiles ou route ordinaire.",
+              "emoji": "🛣️"
+            },
+            {
+              "type": "text",
+              "title": "Agglomération, zone 30, zone résidentielle",
+              "content": "Retrait immédiat si dépassement de plus de 20 km/h.",
+              "emoji": "🏙️"
+            },
+            {
+              "type": "text",
+              "title": "Qui décide, qui exécute",
+              "content": "La décision de retrait revient au Procureur du Roi ou à un Officier de Police Judiciaire. L'exécution revient à la Police.",
+              "emoji": "👮"
+            }
+          ]
+        },
+        {
+          "title": "Déchéance du droit de conduire (Juge)",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Autoroute et route ordinaire",
+              "content": "Déchéance si dépassement de plus de 40 km/h.",
+              "emoji": "🛣️"
+            },
+            {
+              "type": "text",
+              "title": "Agglomération, zone 30, zone résidentielle",
+              "content": "Déchéance si dépassement de plus de 30 km/h.",
+              "emoji": "🏙️"
+            },
+            {
+              "type": "text",
+              "title": "Durée",
+              "content": "Minimum 8 jours, maximum 5 ans. Concerne aussi les véhicules à moteur qui n'exigent pas de permis.",
+              "emoji": "📅"
+            },
+            {
+              "type": "text",
+              "title": "Différence retrait immédiat vs déchéance",
+              "content": "Retrait immédiat = décision du Procureur/OPJ, exécuté sur place par la Police. Déchéance = décision d'un Juge au tribunal, prononcée plus tard.",
+              "emoji": "⚖️"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "D1_Q1",
+          "question": "Quelle est la vitesse maximale sur autoroute ?",
+          "choices": [
+            "100 km/h",
+            "120 km/h",
+            "130 km/h",
+            "90 km/h"
+          ],
+          "correct": 1,
+          "explanation": "La vitesse maximale sur autoroute est de 120 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q2",
+          "question": "Quelle est la vitesse minimale sur autoroute ?",
+          "choices": [
+            "50 km/h",
+            "60 km/h",
+            "70 km/h",
+            "80 km/h"
+          ],
+          "correct": 2,
+          "explanation": "La vitesse minimale sur autoroute est de 70 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q3",
+          "question": "Quelle est la vitesse maximale hors agglomération sur une route à 2x2 voies séparées par une berme centrale ?",
+          "choices": [
+            "90 km/h",
+            "100 km/h",
+            "120 km/h",
+            "70 km/h"
+          ],
+          "correct": 2,
+          "explanation": "Sur une route à au moins 2 bandes par sens avec berme centrale, la vitesse maximale est de 120 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q4",
+          "question": "Quelles sont les deux conditions pour rouler à 120 km/h hors agglomération ?",
+          "choices": [
+            "Deux bandes et ligne continue",
+            "Au moins deux bandes par sens ET séparation par berme centrale",
+            "Trois bandes et marquage routier",
+            "Deux bandes et feux de signalisation"
+          ],
+          "correct": 1,
+          "explanation": "Pour rouler à 120 km/h hors agglomération : au moins 2 bandes par sens ET séparation par berme centrale.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q5",
+          "question": "Hors agglomération en Flandre, quelle est la vitesse maximale sur une route séparée par marquage ?",
+          "choices": [
+            "90 km/h",
+            "70 km/h",
+            "50 km/h",
+            "120 km/h"
+          ],
+          "correct": 1,
+          "explanation": "En Flandre, hors agglomération, la vitesse maximale sur une route séparée par marquage est de 70 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q6",
+          "question": "Hors agglomération en Wallonie, quelle est la vitesse maximale sur une route séparée par marquage ?",
+          "choices": [
+            "70 km/h",
+            "90 km/h",
+            "120 km/h",
+            "50 km/h"
+          ],
+          "correct": 1,
+          "explanation": "En Wallonie, hors agglomération, la vitesse maximale sur une route séparée par marquage est de 90 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q7",
+          "question": "Hors agglomération à Bruxelles, quelle est la vitesse maximale sur une route séparée par marquage ?",
+          "choices": [
+            "90 km/h",
+            "70 km/h",
+            "50 km/h",
+            "30 km/h"
+          ],
+          "correct": 1,
+          "explanation": "À Bruxelles, hors agglomération, la vitesse maximale sur une route séparée par marquage est de 70 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q8",
+          "question": "Quelle est la vitesse maximale sur une chaussée à voie centrale ?",
+          "choices": [
+            "50 km/h",
+            "70 km/h",
+            "90 km/h",
+            "120 km/h"
+          ],
+          "correct": 1,
+          "explanation": "La vitesse maximale sur une chaussée à voie centrale est de 70 km/h, partout en Belgique.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q9",
+          "question": "Cette vitesse de 70 km/h sur une chaussée à voie centrale est-elle la même dans toutes les régions ?",
+          "choices": [
+            "Non, elle varie par région",
+            "Oui, 70 km/h partout",
+            "Non, 90 km/h en Wallonie",
+            "Non, 50 km/h à Bruxelles"
+          ],
+          "correct": 1,
+          "explanation": "70 km/h sur chaussée à voie centrale est la même dans toutes les régions de Belgique.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q10",
+          "question": "Quelle est la vitesse maximale en agglomération en Flandre ?",
+          "choices": [
+            "30 km/h",
+            "50 km/h",
+            "70 km/h",
+            "40 km/h"
+          ],
+          "correct": 1,
+          "explanation": "La vitesse maximale en agglomération en Flandre est de 50 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q11",
+          "question": "Quelle est la vitesse maximale en agglomération en Wallonie ?",
+          "choices": [
+            "30 km/h",
+            "50 km/h",
+            "70 km/h",
+            "40 km/h"
+          ],
+          "correct": 1,
+          "explanation": "La vitesse maximale en agglomération en Wallonie est de 50 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q12",
+          "question": "Quelle est la vitesse maximale en agglomération à Bruxelles ?",
+          "choices": [
+            "50 km/h",
+            "40 km/h",
+            "30 km/h",
+            "20 km/h"
+          ],
+          "correct": 2,
+          "explanation": "La vitesse maximale en agglomération à Bruxelles est de 30 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q13",
+          "question": "Quelle est la vitesse maximale dans une zone résidentielle ?",
+          "choices": [
+            "30 km/h",
+            "20 km/h",
+            "L'allure du pas",
+            "50 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Dans une zone résidentielle (zone de rencontre), la vitesse maximale est de 20 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q14",
+          "question": "Quelle est la vitesse maximale sur un chemin réservé ?",
+          "choices": [
+            "20 km/h",
+            "30 km/h",
+            "50 km/h",
+            "L'allure du pas"
+          ],
+          "correct": 1,
+          "explanation": "Sur un chemin réservé, la vitesse maximale est de 30 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q15",
+          "question": "Quelle est la vitesse maximale dans une rue réservée au jeu ?",
+          "choices": [
+            "20 km/h",
+            "30 km/h",
+            "L'allure du pas",
+            "10 km/h"
+          ],
+          "correct": 2,
+          "explanation": "Dans une rue réservée au jeu, la vitesse maximale est l'allure du pas.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q16",
+          "question": "Quelle est la vitesse maximale dans une rue scolaire ?",
+          "choices": [
+            "20 km/h",
+            "30 km/h",
+            "L'allure du pas",
+            "10 km/h"
+          ],
+          "correct": 2,
+          "explanation": "Dans une rue scolaire, la vitesse maximale est l'allure du pas.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q17",
+          "question": "Quelle est la vitesse maximale aux abords d'école ?",
+          "choices": [
+            "20 km/h",
+            "30 km/h",
+            "50 km/h",
+            "L'allure du pas"
+          ],
+          "correct": 1,
+          "explanation": "Aux abords d'école, la vitesse maximale est de 30 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q18",
+          "question": "Quelle est la vitesse maximale dans une zone piétonne ?",
+          "choices": [
+            "20 km/h",
+            "30 km/h",
+            "L'allure du pas",
+            "10 km/h"
+          ],
+          "correct": 2,
+          "explanation": "Dans une zone piétonne, la vitesse maximale est l'allure du pas.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q19",
+          "question": "Quelle est la vitesse maximale dans une zone cyclable ?",
+          "choices": [
+            "20 km/h",
+            "30 km/h",
+            "50 km/h",
+            "L'allure du pas"
+          ],
+          "correct": 1,
+          "explanation": "Dans une zone cyclable, la vitesse maximale est de 30 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q20",
+          "question": "Quelle est la vitesse maximale à l'approche d'un dispositif surélevé ?",
+          "choices": [
+            "20 km/h",
+            "30 km/h",
+            "50 km/h",
+            "L'allure du pas"
+          ],
+          "correct": 1,
+          "explanation": "La vitesse maximale à l'approche et lors du passage d'un dispositif surélevé est de 30 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q21",
+          "question": "Quelle est la vitesse maximale des engins de déplacement motorisés sur les routes autorisées ?",
+          "choices": [
+            "20 km/h",
+            "25 km/h",
+            "30 km/h",
+            "45 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Les engins de déplacement motorisés (trottinettes électriques, etc.) ont une vitesse maximale de 25 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q22",
+          "question": "Vous roulez en Wallonie hors agglomération sur une route séparée par marquage. Quelle vitesse maximale ?",
+          "choices": [
+            "70 km/h",
+            "90 km/h",
+            "120 km/h",
+            "50 km/h"
+          ],
+          "correct": 1,
+          "explanation": "En Wallonie, hors agglomération, route séparée par marquage = 90 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q23",
+          "question": "Vous entrez dans une agglomération à Bruxelles. Quelle vitesse maximale ?",
+          "choices": [
+            "50 km/h",
+            "40 km/h",
+            "30 km/h",
+            "70 km/h"
+          ],
+          "correct": 2,
+          "explanation": "En agglomération à Bruxelles, la vitesse maximale est de 30 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q24",
+          "question": "Vous quittez l'agglomération en Flandre et vous trouvez sur une route avec marquage. Quelle vitesse ?",
+          "choices": [
+            "90 km/h",
+            "70 km/h",
+            "50 km/h",
+            "120 km/h"
+          ],
+          "correct": 1,
+          "explanation": "En Flandre, hors agglomération, route séparée par marquage = 70 km/h.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q25",
+          "question": "Vous roulez sur une chaussée à voie centrale en Wallonie. Quelle vitesse maximale ?",
+          "choices": [
+            "90 km/h",
+            "70 km/h",
+            "50 km/h",
+            "120 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Sur une chaussée à voie centrale, c'est 70 km/h partout, quelle que soit la région.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q26",
+          "question": "Vous entrez dans une zone résidentielle puis voyez un panneau de zone 30. Quelle vitesse ?",
+          "choices": [
+            "30 km/h",
+            "20 km/h (la zone résidentielle est plus restrictive)",
+            "50 km/h",
+            "25 km/h"
+          ],
+          "correct": 1,
+          "explanation": "La zone résidentielle impose 20 km/h, ce qui est plus restrictif que la zone 30. On applique toujours la règle la plus stricte.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q27",
+          "question": "Vous êtes sur autoroute. Un panneau indique 90 km/h pour la sortie. Quelle vitesse dans la sortie ?",
+          "choices": [
+            "120 km/h",
+            "90 km/h",
+            "70 km/h",
+            "50 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Un signal de limitation de vitesse à 90 km/h sur la sortie s'applique à cette bretelle.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q28",
+          "question": "Vous êtes hors agglomération en Flandre sur une route à 2x2 voies avec berme centrale. Quelle vitesse ?",
+          "choices": [
+            "70 km/h",
+            "90 km/h",
+            "120 km/h",
+            "100 km/h"
+          ],
+          "correct": 2,
+          "explanation": "Sur une route à 2x2 voies avec berme centrale hors agglomération, la vitesse est de 120 km/h (quelle que soit la région).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q29",
+          "question": "Classez du plus rapide au plus lent : autoroute, agglomération Wallonie, zone résidentielle, zone piétonne.",
+          "choices": [
+            "120 > 50 > 20 > allure du pas",
+            "120 > 90 > 50 > 30",
+            "90 > 70 > 50 > 30",
+            "120 > 70 > 30 > 20"
+          ],
+          "correct": 0,
+          "explanation": "Autoroute : 120 km/h. Agglomération Wallonie : 50 km/h. Zone résidentielle : 20 km/h. Zone piétonne : allure du pas.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q30",
+          "question": "Vous roulez à 35 km/h sur un dispositif surélevé. Commettez-vous une infraction ?",
+          "choices": [
+            "Non, c'est en dessous de 50 km/h",
+            "Oui, la limite est 30 km/h",
+            "Non, c'est toléré",
+            "Oui, la limite est 20 km/h"
+          ],
+          "correct": 1,
+          "explanation": "La limite à l'approche d'un dispositif surélevé est de 30 km/h. Rouler à 35 km/h est une infraction.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q31",
+          "question": "Conduire trop lentement sans raison est-il une infraction ?",
+          "choices": [
+            "Non, c'est prudent",
+            "Oui, c'est une infraction",
+            "Non, il n'y a pas de vitesse minimale sauf sur autoroute",
+            "Uniquement sur autoroute"
+          ],
+          "correct": 1,
+          "explanation": "Conduire trop lentement sans raison est une infraction car cela oblige les autres à vous dépasser.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D1_Q32",
+          "question": "Vous roulez à 30 km/h en agglomération sans aucune raison. Est-ce correct ?",
+          "choices": [
+            "Oui, c'est en dessous de la limite",
+            "Non, conduire trop lentement sans raison est une infraction qui oblige les autres à vous dépasser",
+            "Oui, c'est prudent",
+            "Non, la limite minimale est 40 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Rouler excessivement lentement sans raison est une infraction, même en dessous de la limite maximale.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D1_Q33",
+          "question": "Freiner soudainement sans raison est-il une infraction ?",
+          "choices": [
+            "Non, c'est votre droit",
+            "Oui, c'est une infraction",
+            "Non, si vous ne gênez personne",
+            "Uniquement sur autoroute"
+          ],
+          "correct": 1,
+          "explanation": "Freiner soudainement sans raison est une infraction qui met en danger les conducteurs derrière vous.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D1_Q34",
+          "question": "Vous freinez brusquement sans raison devant un autre véhicule. Que risquez-vous ?",
+          "choices": [
+            "Rien",
+            "C'est une infraction et vous mettez en danger le conducteur derrière vous",
+            "Un simple avertissement",
+            "Rien si personne ne vous percute"
+          ],
+          "correct": 1,
+          "explanation": "Freiner brusquement sans raison est une infraction et crée un danger pour le conducteur qui vous suit.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D1_Q35",
+          "question": "Pour l'examen pratique, à quelle vitesse devez-vous rouler en agglomération ?",
+          "choices": [
+            "30 km/h",
+            "Adaptée à la situation, ni trop vite ni trop lentement (proche de 50 km/h si possible)",
+            "Toujours 50 km/h exactement",
+            "Le plus lentement possible"
+          ],
+          "correct": 1,
+          "explanation": "À l'examen, roulez à une vitesse adaptée : ni trop vite, ni trop lentement. Rouler inutilement lentement est une faute.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D1_Q36",
+          "question": "Les courses de vitesse sur la voie publique sont-elles autorisées ?",
+          "choices": [
+            "Oui, le week-end",
+            "Non, sauf autorisation spéciale de l'autorité compétente",
+            "Oui, hors agglomération",
+            "Oui, sur autoroute"
+          ],
+          "correct": 1,
+          "explanation": "Toutes les courses sur la voie publique sont interdites, sauf autorisation spéciale de l'autorité légalement compétente.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D1_Q37",
+          "question": "L'interdiction concerne-t-elle uniquement les courses de vitesse ?",
+          "choices": [
+            "Oui, uniquement la vitesse",
+            "Non, aussi les courses de régularité et d'adresse",
+            "Oui, les rallyes sont autorisés",
+            "Non, uniquement les courses de voitures"
+          ],
+          "correct": 1,
+          "explanation": "L'interdiction couvre les courses de vitesse, de régularité ET d'adresse sur la voie publique.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D1_Q38",
+          "question": "Quel degré d'infraction est une course de vitesse sur la voie publique ?",
+          "choices": [
+            "Premier degré",
+            "Deuxième degré",
+            "Troisième degré",
+            "Quatrième degré (le plus grave)"
+          ],
+          "correct": 3,
+          "explanation": "Une course de vitesse sur la voie publique est une infraction du quatrième degré, la plus grave.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D1_Q39",
+          "question": "Peut-on organiser une course de vitesse sur la voie publique avec autorisation ?",
+          "choices": [
+            "Non, jamais",
+            "Oui, avec une autorisation spéciale de l'autorité légalement compétente",
+            "Oui, si la police est prévenue",
+            "Oui, uniquement pour les motos"
+          ],
+          "correct": 1,
+          "explanation": "Des compétitions sportives peuvent être organisées sur la voie publique avec une autorisation spéciale de l'autorité compétente.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D1_Q40",
+          "question": "À partir de quel dépassement de vitesse votre permis peut-il être retiré immédiatement sur autoroute ?",
+          "choices": [
+            "> 20 km/h",
+            "> 30 km/h",
+            "> 40 km/h",
+            "> 50 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Sur autoroute, route pour automobiles ou route ordinaire, le retrait immédiat s'applique au-delà de 30 km/h de dépassement.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q41",
+          "question": "Vous roulez à 155 km/h sur autoroute (limite 120 km/h). Dépassement de 35 km/h. Risquez-vous un retrait immédiat ?",
+          "choices": [
+            "Non, c'est en dessous de 40 km/h",
+            "Oui, vous dépassez de plus de 30 km/h",
+            "Non, c'est toléré sur autoroute",
+            "Uniquement si vous êtes flashé"
+          ],
+          "correct": 1,
+          "explanation": "35 km/h de dépassement est supérieur à 30 km/h : retrait immédiat possible.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q42",
+          "question": "Sur une route ordinaire, à partir de quel dépassement risquez-vous un retrait immédiat ?",
+          "choices": [
+            "> 20 km/h",
+            "> 30 km/h",
+            "> 40 km/h",
+            "> 50 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Sur une route ordinaire, le seuil de retrait immédiat est un dépassement de plus de 30 km/h.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q43",
+          "question": "À partir de quel dépassement de vitesse votre permis peut-il être retiré immédiatement en agglomération ?",
+          "choices": [
+            "> 10 km/h",
+            "> 20 km/h",
+            "> 30 km/h",
+            "> 40 km/h"
+          ],
+          "correct": 1,
+          "explanation": "En agglomération, zone 30 et zone résidentielle, le retrait immédiat s'applique au-delà de 20 km/h de dépassement.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q44",
+          "question": "Vous roulez à 55 km/h dans une zone 30. Dépassement de 25 km/h. Risquez-vous un retrait immédiat ?",
+          "choices": [
+            "Non, c'est en dessous de 30 km/h",
+            "Oui, vous dépassez de plus de 20 km/h dans une zone 30",
+            "Non, les zones 30 ne comptent pas",
+            "Uniquement si c'est près d'une école"
+          ],
+          "correct": 1,
+          "explanation": "Dans une zone 30, le seuil est 20 km/h. Un dépassement de 25 km/h dépasse ce seuil : retrait immédiat possible.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q45",
+          "question": "Vous roulez à 45 km/h dans une zone résidentielle (limite 20 km/h). Dépassement de 25 km/h. Risquez-vous un retrait immédiat ?",
+          "choices": [
+            "Non",
+            "Oui, vous dépassez de plus de 20 km/h dans une zone résidentielle",
+            "Non, zone résidentielle n'est pas agglomération",
+            "Uniquement si des enfants sont présents"
+          ],
+          "correct": 1,
+          "explanation": "Dans une zone résidentielle, le seuil est 20 km/h. Un dépassement de 25 km/h déclenche le retrait immédiat.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q46",
+          "question": "Qui décide du retrait immédiat du permis ?",
+          "choices": [
+            "La police seule",
+            "Le Procureur du Roi ou un Officier de Police Judiciaire",
+            "Un juge au tribunal",
+            "Le bourgmestre"
+          ],
+          "correct": 1,
+          "explanation": "Le retrait immédiat est décidé par le Procureur du Roi ou un Officier de Police Judiciaire.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q47",
+          "question": "Qui exécute le retrait immédiat du permis ?",
+          "choices": [
+            "Le Procureur du Roi",
+            "La Police",
+            "Un juge",
+            "Un huissier"
+          ],
+          "correct": 1,
+          "explanation": "L'exécution du retrait immédiat revient à la Police, sur place.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q48",
+          "question": "Le retrait immédiat se fait-il sur place ou au tribunal ?",
+          "choices": [
+            "Au tribunal",
+            "Sur place par la Police",
+            "Par courrier",
+            "Au commissariat"
+          ],
+          "correct": 1,
+          "explanation": "Le retrait immédiat est exécuté sur place par la Police.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q49",
+          "question": "Rouler à 95 km/h en agglomération (limite 50 km/h). Dépassement de 45 km/h. Retrait immédiat ?",
+          "choices": [
+            "Non",
+            "Oui, dépassement > 20 km/h en agglomération",
+            "Uniquement une amende",
+            "Non, c'est une route rapide"
+          ],
+          "correct": 1,
+          "explanation": "45 km/h de dépassement en agglomération dépasse largement le seuil de 20 km/h : retrait immédiat.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q50",
+          "question": "Rouler à 145 km/h sur autoroute (limite 120 km/h). Dépassement de 25 km/h. Retrait immédiat ?",
+          "choices": [
+            "Oui, > 20 km/h",
+            "Non, le seuil est > 30 km/h sur autoroute",
+            "Oui, toujours sur autoroute",
+            "Non, c'est toléré"
+          ],
+          "correct": 1,
+          "explanation": "Sur autoroute, le seuil est 30 km/h. Un dépassement de 25 km/h ne déclenche pas le retrait immédiat.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q51",
+          "question": "Rouler à 100 km/h sur une route ordinaire (limite 70 km/h en Flandre). Dépassement de 30 km/h. Retrait immédiat ?",
+          "choices": [
+            "Oui, 30 km/h pile c'est > 30",
+            "Non, il faut PLUS de 30 km/h, 30 pile ne suffit pas",
+            "Oui, automatiquement",
+            "Ça dépend de la région"
+          ],
+          "correct": 1,
+          "explanation": "Le seuil est un dépassement de PLUS de 30 km/h. Un dépassement de 30 km/h pile ne suffit pas pour déclencher le retrait immédiat.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q52",
+          "question": "Rouler à 52 km/h dans une zone 30. Dépassement de 22 km/h. Retrait immédiat ?",
+          "choices": [
+            "Non, c'est en dessous de 30 km/h",
+            "Oui, dépassement > 20 km/h dans une zone 30",
+            "Non, les zones 30 ne comptent pas",
+            "Uniquement avec un radar"
+          ],
+          "correct": 1,
+          "explanation": "22 km/h de dépassement dans une zone 30 dépasse le seuil de 20 km/h : retrait immédiat possible.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q53",
+          "question": "Le retrait immédiat concerne-t-il aussi les routes pour automobiles ?",
+          "choices": [
+            "Non, uniquement les autoroutes",
+            "Oui, le seuil de > 30 km/h s'applique aussi aux routes pour automobiles",
+            "Non, seulement les routes ordinaires",
+            "Uniquement en Flandre"
+          ],
+          "correct": 1,
+          "explanation": "Le seuil de retrait immédiat de 30 km/h s'applique sur autoroute, route pour automobiles ET route ordinaire.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D1_Q54",
+          "question": "À partir de quel dépassement de vitesse risquez-vous une déchéance sur autoroute ?",
+          "choices": [
+            "> 20 km/h",
+            "> 30 km/h",
+            "> 40 km/h",
+            "> 50 km/h"
+          ],
+          "correct": 2,
+          "explanation": "Sur autoroute et route ordinaire, la déchéance s'applique au-delà de 40 km/h de dépassement.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q55",
+          "question": "Vous roulez à 165 km/h sur autoroute (limite 120 km/h). Dépassement de 45 km/h. Risquez-vous une déchéance ?",
+          "choices": [
+            "Non",
+            "Oui, dépassement > 40 km/h",
+            "Uniquement un retrait immédiat",
+            "Non, c'est toléré"
+          ],
+          "correct": 1,
+          "explanation": "45 km/h de dépassement sur autoroute dépasse le seuil de 40 km/h : déchéance possible.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q56",
+          "question": "À partir de quel dépassement de vitesse risquez-vous une déchéance en agglomération ?",
+          "choices": [
+            "> 20 km/h",
+            "> 30 km/h",
+            "> 40 km/h",
+            "> 50 km/h"
+          ],
+          "correct": 1,
+          "explanation": "En agglomération, zone 30 et zone résidentielle, la déchéance s'applique au-delà de 30 km/h de dépassement.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q57",
+          "question": "Vous roulez à 85 km/h en agglomération (limite 50 km/h). Dépassement de 35 km/h. Déchéance ?",
+          "choices": [
+            "Non",
+            "Oui, dépassement > 30 km/h en agglomération",
+            "Uniquement retrait immédiat",
+            "Uniquement une amende"
+          ],
+          "correct": 1,
+          "explanation": "35 km/h de dépassement en agglomération dépasse le seuil de 30 km/h : déchéance possible.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q58",
+          "question": "Vous roulez à 65 km/h dans une zone 30. Dépassement de 35 km/h. Déchéance ?",
+          "choices": [
+            "Non",
+            "Oui, dépassement > 30 km/h dans une zone 30",
+            "Uniquement retrait immédiat",
+            "Non, zone 30 ne compte pas"
+          ],
+          "correct": 1,
+          "explanation": "35 km/h de dépassement dans une zone 30 dépasse le seuil de 30 km/h : déchéance possible.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q59",
+          "question": "Quelle est la durée minimale de la déchéance du droit de conduire ?",
+          "choices": [
+            "1 jour",
+            "8 jours",
+            "15 jours",
+            "30 jours"
+          ],
+          "correct": 1,
+          "explanation": "La déchéance du droit de conduire dure au minimum 8 jours.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q60",
+          "question": "Quelle est la durée maximale de la déchéance ?",
+          "choices": [
+            "1 an",
+            "3 ans",
+            "5 ans",
+            "10 ans"
+          ],
+          "correct": 2,
+          "explanation": "La déchéance du droit de conduire peut durer jusqu'à 5 ans maximum.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q61",
+          "question": "La déchéance concerne-t-elle uniquement les véhicules nécessitant un permis ?",
+          "choices": [
+            "Oui, uniquement les voitures",
+            "Non, aussi les véhicules à moteur qui n'exigent pas de permis",
+            "Uniquement les voitures et motos",
+            "Uniquement les camions"
+          ],
+          "correct": 1,
+          "explanation": "La déchéance s'applique aussi aux véhicules à moteur qui n'exigent pas de permis de conduire.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q62",
+          "question": "Qui prononce la déchéance du droit de conduire ?",
+          "choices": [
+            "La Police",
+            "Le Procureur du Roi",
+            "Un Juge au tribunal",
+            "Le bourgmestre"
+          ],
+          "correct": 2,
+          "explanation": "La déchéance du droit de conduire est prononcée par un Juge au tribunal.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q63",
+          "question": "Quelle est la différence entre le retrait immédiat et la déchéance ?",
+          "choices": [
+            "Aucune différence",
+            "Le retrait est décidé par le Procureur/OPJ et exécuté sur place par la Police. La déchéance est prononcée par un Juge au tribunal",
+            "Le retrait est plus grave que la déchéance",
+            "Le retrait est au tribunal, la déchéance sur place"
+          ],
+          "correct": 1,
+          "explanation": "Retrait immédiat : décision du Procureur/OPJ, exécution sur place. Déchéance : décision d'un Juge, prononcée plus tard.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q64",
+          "question": "Le retrait immédiat et la déchéance peuvent-ils se cumuler ?",
+          "choices": [
+            "Non, c'est l'un ou l'autre",
+            "Oui, vous pouvez d'abord subir un retrait immédiat puis être déchu par un juge plus tard",
+            "Non, la déchéance annule le retrait",
+            "Uniquement pour les récidivistes"
+          ],
+          "correct": 1,
+          "explanation": "Le retrait immédiat (sur place) et la déchéance (au tribunal) sont deux sanctions distinctes qui peuvent se cumuler.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q65",
+          "question": "Dépassement de 35 km/h sur autoroute. Quelles sanctions ?",
+          "choices": [
+            "Retrait immédiat uniquement",
+            "Retrait immédiat (> 30 km/h) mais pas déchéance (< 40 km/h)",
+            "Retrait immédiat et déchéance",
+            "Aucune sanction"
+          ],
+          "correct": 1,
+          "explanation": "35 km/h > 30 km/h → retrait immédiat possible. 35 km/h < 40 km/h → pas de déchéance.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q66",
+          "question": "Dépassement de 45 km/h sur autoroute. Quelles sanctions possibles ?",
+          "choices": [
+            "Retrait immédiat uniquement",
+            "Retrait immédiat (> 30 km/h) ET déchéance possible (> 40 km/h)",
+            "Déchéance uniquement",
+            "Aucune"
+          ],
+          "correct": 1,
+          "explanation": "45 km/h > 30 km/h → retrait immédiat. 45 km/h > 40 km/h → déchéance possible. Les deux peuvent se cumuler.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q67",
+          "question": "Dépassement de 25 km/h en agglomération. Quelles sanctions ?",
+          "choices": [
+            "Retrait immédiat (> 20 km/h) mais pas déchéance (< 30 km/h)",
+            "Retrait immédiat et déchéance",
+            "Aucune sanction spéciale",
+            "Déchéance uniquement"
+          ],
+          "correct": 0,
+          "explanation": "25 km/h > 20 km/h → retrait immédiat possible. 25 km/h < 30 km/h → pas de déchéance.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_Q68",
+          "question": "Que signifie ce panneau ?",
+          "choices": [
+            "Route pour automobiles",
+            "Commencement d'une autoroute",
+            "Échangeur",
+            "Sortie"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal vert indique le commencement d'une autoroute (120 km/h max, 70 km/h min).",
+          "theoryCardIndex": 5,
+          "sign": "F5"
+        },
+        {
+          "id": "D1_Q69",
+          "question": "Que signifie ce panneau ?",
+          "choices": [
+            "Autoroute",
+            "Route pour automobiles",
+            "Parking",
+            "Voie rapide"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal bleu avec voiture blanche indique une route pour automobiles (120 km/h si 2x2 voies avec berme centrale).",
+          "theoryCardIndex": 5,
+          "sign": "F9"
+        },
+        {
+          "id": "D1_Q70",
+          "question": "Que signifie ce panneau ?",
+          "choices": [
+            "Direction",
+            "Commencement d'une agglomération",
+            "Zone industrielle",
+            "Frontière"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique le commencement d'une agglomération (limite de vitesse selon la région).",
+          "theoryCardIndex": 5,
+          "sign": "F1"
+        },
+        {
+          "id": "D1_Q71",
+          "question": "Que signifie ce panneau ?",
+          "choices": [
+            "Zone piétonne",
+            "Zone résidentielle / zone de rencontre",
+            "Parking résidentiel",
+            "Aire de repos"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique une zone résidentielle (zone de rencontre) : vitesse maximale 20 km/h.",
+          "theoryCardIndex": 5,
+          "sign": "F12a"
+        },
+        {
+          "id": "D1_Q72",
+          "question": "Ce signal 'zone 30' signifie :",
+          "choices": [
+            "30 mètres de zone",
+            "Commencement d'une zone à vitesse limitée à 30 km/h",
+            "30 km avant la destination",
+            "30% de pente"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal marque le commencement d'une zone à vitesse limitée à 30 km/h.",
+          "theoryCardIndex": 5,
+          "sign": "F4a"
+        },
+        {
+          "id": "D1_Q73",
+          "question": "Que signifie ce panneau ?",
+          "choices": [
+            "Route bosselée",
+            "Dispositif(s) surélevé(s), vitesse maximale 30 km/h",
+            "Pont",
+            "Pente"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal de danger annonce un ou plusieurs dispositifs surélevés. La vitesse maximale est de 30 km/h.",
+          "theoryCardIndex": 5,
+          "sign": "C43"
+        },
+        {
+          "id": "D1_Q74",
+          "question": "Que signifie ce panneau ?",
+          "choices": [
+            "Dispositif surélevé dans 200 mètres",
+            "200 mètres de ralentisseurs",
+            "Pente de 200 mètres",
+            "Pont à 200 mètres"
+          ],
+          "correct": 0,
+          "explanation": "Ce signal annonce qu'un dispositif surélevé se trouve dans 200 mètres.",
+          "theoryCardIndex": 5,
+          "sign": "A14"
+        },
+        {
+          "id": "D1_Q75",
+          "question": "Ce signal indiquant '150 m' et '500 m' avec plusieurs dos-d'âne signifie :",
+          "choices": [
+            "Un seul dispositif à 150 mètres",
+            "150 m plus loin, plusieurs dispositifs surélevés sur une distance de 500 m",
+            "Pente de 500 m à 150 m",
+            "Travaux sur 500 m"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal annonce plusieurs dispositifs surélevés : ils commencent dans 150 m et s'étendent sur 500 m.",
+          "theoryCardIndex": 5,
+          "sign": "A14"
+        },
+        {
+          "id": "D1_Q76",
+          "question": "Ce signal rond bleu indiquant 90 km/h à une sortie signifie :",
+          "choices": [
+            "Vitesse minimale",
+            "Vitesse maximale autorisée sur la sortie",
+            "Distance",
+            "Vitesse recommandée"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal (C43) indique la vitesse maximale autorisée, ici 90 km/h, applicable sur la bretelle de sortie.",
+          "theoryCardIndex": 5,
+          "sign": "C43"
+        },
+        {
+          "id": "D1_Q77",
+          "question": "Ce signal C43 avec '200 m' et '60 km/h' signifie :",
+          "choices": [
+            "60 km/h immédiatement",
+            "200 m plus loin la vitesse maximale sera de 60 km/h",
+            "60 km jusqu'à la destination",
+            "Travaux à 200 m"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal annonce qu'une limitation de vitesse à 60 km/h entrera en vigueur dans 200 mètres.",
+          "theoryCardIndex": 5,
+          "sign": "C43"
+        },
+        {
+          "id": "D1_Q78",
+          "question": "Vous voyez un signal de début d'agglomération à Bruxelles. Quelle vitesse adoptez-vous ?",
+          "choices": [
+            "50 km/h",
+            "30 km/h",
+            "70 km/h",
+            "20 km/h"
+          ],
+          "correct": 1,
+          "explanation": "À Bruxelles, en agglomération, la vitesse maximale est de 30 km/h.",
+          "theoryCardIndex": 5,
+          "sign": "F1"
+        },
+        {
+          "id": "D1_Q79",
+          "question": "Vous voyez un signal de dispositif surélevé. Quelle vitesse maximale ?",
+          "choices": [
+            "20 km/h",
+            "30 km/h",
+            "50 km/h",
+            "L'allure du pas"
+          ],
+          "correct": 1,
+          "explanation": "Un signal de dispositif surélevé impose une vitesse maximale de 30 km/h.",
+          "theoryCardIndex": 5,
+          "sign": "A14"
+        },
+        {
+          "id": "D1_Q80",
+          "question": "Vous voyez un signal de fin d'agglomération en Wallonie. Quelle vitesse hors agglomération ?",
+          "choices": [
+            "50 km/h",
+            "70 km/h",
+            "90 km/h",
+            "120 km/h"
+          ],
+          "correct": 2,
+          "explanation": "En Wallonie, hors agglomération sur une route avec marquage, la vitesse maximale est de 90 km/h.",
+          "theoryCardIndex": 5,
+          "sign": "F3"
+        },
+        {
+          "id": "D1_Q81",
+          "question": "Vous voyez un signal '200 m plus loin 60 km/h'. Pouvez-vous encore rouler à votre vitesse actuelle ?",
+          "choices": [
+            "Non, ralentissez immédiatement",
+            "Oui, pendant 200 m la limitation n'est pas encore en vigueur, mais préparez-vous à ralentir",
+            "Non, la limitation est immédiate",
+            "Oui, c'est indicatif"
+          ],
+          "correct": 1,
+          "explanation": "La limitation entre en vigueur dans 200 m. Vous pouvez conserver votre vitesse actuelle, mais commencez à ralentir.",
+          "theoryCardIndex": 5,
+          "sign": "C43"
+        },
+        {
+          "id": "D1_Q82",
+          "question": "Vous voyez un panneau combinant interdiction de dépasser et limitation à 60 km/h dans 200 m. Que devez-vous respecter immédiatement ?",
+          "choices": [
+            "Uniquement la vitesse",
+            "L'interdiction de dépasser (immédiate), la limitation de vitesse s'applique dans 200 m",
+            "Les deux immédiatement",
+            "Aucun des deux"
+          ],
+          "correct": 1,
+          "explanation": "L'interdiction de dépasser est immédiate. La limitation de vitesse à 60 km/h s'applique seulement dans 200 m.",
+          "theoryCardIndex": 5,
+          "sign": "C43"
+        },
+        {
+          "id": "D1_Q83",
+          "question": "Vous voyez le signal d'indication de route ordinaire. Que signifie-t-il ?",
+          "choices": [
+            "Autoroute",
+            "Route ordinaire, les vitesses standards de la région s'appliquent",
+            "Route pour automobiles",
+            "Zone 30"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique une route ordinaire. Les vitesses standards de la région s'appliquent.",
+          "theoryCardIndex": 5,
+          "sign": "F9"
+        },
+        {
+          "id": "D1_SIGN_FEU_PIETON_ROUGE_1",
+          "question": "Le feu piéton affiche un bonhomme rouge immobile. Que devez-vous faire si vous êtes piéton ?",
+          "choices": [
+            "Traverser rapidement",
+            "Ne pas traverser : attendez le feu vert piéton",
+            "Traverser si aucune voiture n'arrive",
+            "Traverser car le feu est identique à un feu orange"
+          ],
+          "correct": 1,
+          "explanation": "Le feu piéton rouge signifie formellement : ne pas traverser. Même si la chaussée semble libre, vous devez attendre que le bonhomme passe au vert."
+        },
+        {
+          "id": "D1_SIGN_FEU_VELO_ROUGE_1",
+          "question": "Un cycliste voit ce petit feu vélo rouge au niveau de sa piste. Que doit-il faire ?",
+          "choices": [
+            "Il peut continuer car il n'est pas un véhicule à moteur",
+            "Il doit s'arrêter et attendre le feu vert vélo",
+            "Il doit céder le passage puis continuer",
+            "Il suit les feux destinés aux voitures"
+          ],
+          "correct": 1,
+          "explanation": "Le feu vélo rouge a la même valeur contraignante qu'un feu rouge pour les voitures. Le cycliste doit impérativement s'arrêter et attendre le feu vert."
+        },
+        {
+          "id": "D1_SIGN_FEU_VELO_VERT_1",
+          "question": "Un petit feu vélo vert s'allume à l'intersection. Cela signifie :",
+          "choices": [
+            "Le cycliste a la priorité absolue sur tous les véhicules",
+            "Le cycliste peut s'engager mais reste prudent face aux autres usagers",
+            "C'est un feu décoratif sans valeur légale",
+            "Le cycliste doit attendre les piétons avant de partir"
+          ],
+          "correct": 1,
+          "explanation": "Le feu vélo vert autorise le cycliste à s'engager. Il ne confère pas une priorité absolue sur tous : le cycliste doit quand même vérifier que la voie est libre et respecter les piétons."
+        },
+        {
+          "id": "D1_SIGN_CROIX_ROUGE_VOIE_1",
+          "question": "Au-dessus d'une voie d'autoroute ou de tunnel, vous voyez une croix rouge éclairée. Cela signifie :",
+          "choices": [
+            "Ralentissez : risque d'accident",
+            "Cette voie est fermée à la circulation : ne l'empruntez pas",
+            "Priorité aux véhicules d'urgence",
+            "Péage à venir sur cette voie"
+          ],
+          "correct": 1,
+          "explanation": "La croix rouge au-dessus d'une voie signifie que cette voie est totalement fermée. Il est strictement interdit d'y rouler. Changez de voie immédiatement."
+        },
+        {
+          "id": "D1_SIGN_FLECHE_VERTE_VOIE_1",
+          "question": "Au-dessus d'une voie, une flèche verte pointant vers le bas est allumée. Cela signifie :",
+          "choices": [
+            "La voie va bientôt fermer",
+            "Cette voie est ouverte à la circulation",
+            "La voie est réservée aux transports en commun",
+            "Accélération recommandée sur cette voie"
+          ],
+          "correct": 1,
+          "explanation": "La flèche verte indique que la voie est ouverte. Vous pouvez l'emprunter normalement. Vérifiez les signaux au-dessus des autres voies avant de changer de file."
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "title": "La distance d'arrêt",
+      "theory": [
+        {
+          "title": "La distance de sécurité",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Formule : vitesse ÷ 2",
+              "content": "Plus vous roulez vite, plus la distance de sécurité doit être grande. Formule : vitesse ÷ 2. À 120 km/h = 60 mètres. À 100 km/h = 50 mètres.",
+              "emoji": "📏"
+            },
+            {
+              "type": "text",
+              "title": "Règle des deux secondes (sol sec)",
+              "content": "Choisir un point fixe (poteau, arbre, pont). Quand le véhicule devant y passe, dire 'un crocodile, deux crocodiles' (2 secondes). Si vous passez le point après, la distance est respectée.",
+              "emoji": "🐊"
+            },
+            {
+              "type": "text",
+              "title": "Sol mouillé (+50%, 3 secondes)",
+              "content": "Sur sol mouillé, ajouter 50%. À 120 km/h : 60 + 30 = 90 mètres = 3 secondes (3 crocodiles).",
+              "emoji": "🌧️"
+            },
+            {
+              "type": "text",
+              "title": "Sol enneigé/verglacé (4 secondes)",
+              "content": "Sur sol enneigé ou verglacé : au moins 4 secondes (4 crocodiles).",
+              "emoji": "❄️"
+            }
+          ]
+        },
+        {
+          "title": "La distance de réaction",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Définition",
+              "content": "La distance de réaction est la distance parcourue entre la reconnaissance du risque et le début du freinage.",
+              "emoji": "👁️"
+            },
+            {
+              "type": "text",
+              "title": "Temps de réaction = 1 seconde",
+              "content": "En général, le temps de réaction est d'environ 1 seconde. Il n'est pas influencé par la vitesse, mais la distance parcourue pendant ce temps dépend de la vitesse.",
+              "emoji": "⏱️"
+            },
+            {
+              "type": "text",
+              "title": "Formule : vitesse ÷ 10 × 3",
+              "content": "Pour calculer la distance approximative parcourue en 1 seconde : vitesse ÷ 10 × 3.",
+              "emoji": "🧮"
+            },
+            {
+              "type": "text",
+              "title": "Exemples",
+              "content": "À 30 km/h : 9 m. À 50 km/h : 15 m (réel : 14 m). À 70 km/h : 21 m. À 90 km/h : 27 m (réel : 25 m). À 120 km/h : 36 m (réel : 33 m).",
+              "emoji": "📊"
+            },
+            {
+              "type": "text",
+              "title": "Alcool et stupéfiants",
+              "content": "Alcool : temps de réaction augmente à 2-3 secondes. Stupéfiants : 5-8 secondes.",
+              "emoji": "🍺"
+            },
+            {
+              "type": "text",
+              "title": "Facteurs augmentant le temps de réaction",
+              "content": "L'âge du conducteur, la concentration, la température, les médicaments, les drogues, l'alcool.",
+              "emoji": "⚠️"
+            }
+          ]
+        },
+        {
+          "title": "La distance de freinage",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Définition",
+              "content": "La distance de freinage est la distance parcourue depuis l'instant où le conducteur appuie sur le frein jusqu'à l'arrêt complet du véhicule.",
+              "emoji": "🛑"
+            },
+            {
+              "type": "text",
+              "title": "Facteurs influençant la distance de freinage",
+              "content": "Les conditions climatiques, la qualité des pneus, l'état de la voirie, le poids du véhicule, la montée ou la descente, l'usure des freins. Un véhicule ne s'arrête jamais instantanément.",
+              "emoji": "🔧"
+            },
+            {
+              "type": "text",
+              "title": "Chaussée sèche vs mouillée",
+              "content": "La distance de freinage est nettement plus longue sur sol mouillé que sur sol sec.",
+              "emoji": "💧"
+            }
+          ]
+        },
+        {
+          "title": "La distance d'arrêt",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Définition (réaction + freinage)",
+              "content": "La distance d'arrêt = distance de réaction + distance de freinage.",
+              "emoji": "🚗"
+            },
+            {
+              "type": "text",
+              "title": "Plus vite = plus longue",
+              "content": "Plus vous roulez vite, plus la distance d'arrêt est longue.",
+              "emoji": "📈"
+            },
+            {
+              "type": "text",
+              "title": "Sol mouillé = plus longue",
+              "content": "La distance d'arrêt est plus longue sur sol mouillé que sur sol sec.",
+              "emoji": "🌧️"
+            }
+          ]
+        },
+        {
+          "title": "L'ABS",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Définition et fonction",
+              "content": "ABS = Anti-Blocking System. Empêche les pneus de glisser sur la chaussée lors d'un freinage brusque, même sur chaussée mouillée.",
+              "emoji": "🔒"
+            },
+            {
+              "type": "text",
+              "title": "Garder le contrôle de la direction",
+              "content": "L'ABS permet au conducteur de garder le contrôle de la direction du véhicule pendant le freinage.",
+              "emoji": "🕹️"
+            },
+            {
+              "type": "text",
+              "title": "ABS ≠ distance de freinage plus courte",
+              "content": "Freiner avec l'ABS ne signifie pas forcément une distance de freinage plus courte que sans ABS. Sur sol mouillé, la distance reste plus longue que sur sol sec, même avec ABS.",
+              "emoji": "⚠️"
+            }
+          ]
+        },
+        {
+          "title": "Les pneus",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Seul contact véhicule-sol",
+              "content": "Les pneus sont le seul contact entre le véhicule et le sol. Ils doivent être en parfait état.",
+              "emoji": "⚫"
+            },
+            {
+              "type": "text",
+              "title": "Profondeur minimale des rainures (1,6 mm)",
+              "content": "La profondeur minimale légale est de 1,6 mm. C'est un minimum légal : il faut changer les pneus avant d'atteindre ce seuil.",
+              "emoji": "📐"
+            },
+            {
+              "type": "text",
+              "title": "Témoins d'usure (TWI)",
+              "content": "Des témoins d'usure (TWI) sont situés dans les rainures principales. Si la bande de roulement arrive à leur hauteur, les pneus sont trop usés.",
+              "emoji": "🔍"
+            },
+            {
+              "type": "text",
+              "title": "Pression des pneus",
+              "content": "La pression doit correspondre à celle prescrite par le constructeur. L'étiquette se trouve dans la porte du conducteur, celle du passager ou la trappe à carburant. Pour un long trajet ou une charge lourde, augmenter légèrement la pression.",
+              "emoji": "💨"
+            }
+          ]
+        },
+        {
+          "title": "Systèmes de freinage automatique et pauses",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Systèmes automatiques non fiables à 100%",
+              "content": "Les systèmes de freinage automatique peuvent freiner de manière intempestive ou ne pas s'activer quand il le faudrait. Ils réduisent le risque d'accident mais ne le suppriment pas. Le conducteur doit rester attentif.",
+              "emoji": "🤖"
+            },
+            {
+              "type": "text",
+              "title": "Pause toutes les 2 heures, minimum 15 minutes",
+              "content": "Lors d'un long trajet, faites une pause toutes les 2 heures environ. La pause doit durer au minimum 15 minutes. Descendez du véhicule, étirez-vous, respirez et hydratez-vous.",
+              "emoji": "⏸️"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "D2_Q1",
+          "question": "Quelle est la formule pour calculer la distance de sécurité minimale ?",
+          "choices": [
+            "Vitesse × 2",
+            "Vitesse ÷ 2",
+            "Vitesse ÷ 3",
+            "Vitesse × 3"
+          ],
+          "correct": 1,
+          "explanation": "La distance de sécurité minimale (en mètres) se calcule par : vitesse ÷ 2. À 120 km/h = 60 m, à 100 km/h = 50 m.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q2",
+          "question": "Quelle est la distance de sécurité minimale à 120 km/h sur sol sec ?",
+          "choices": [
+            "30 mètres",
+            "60 mètres",
+            "90 mètres",
+            "120 mètres"
+          ],
+          "correct": 1,
+          "explanation": "À 120 km/h, la distance de sécurité minimale est de 120 ÷ 2 = 60 mètres (2 secondes).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q3",
+          "question": "Quelle est la distance de sécurité minimale à 100 km/h sur sol sec ?",
+          "choices": [
+            "30 mètres",
+            "50 mètres",
+            "75 mètres",
+            "100 mètres"
+          ],
+          "correct": 1,
+          "explanation": "À 100 km/h, la distance de sécurité minimale est de 100 ÷ 2 = 50 mètres (2 secondes).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q4",
+          "question": "Combien de secondes la règle des deux secondes vous impose-t-elle de maintenir ?",
+          "choices": [
+            "1 seconde",
+            "2 secondes",
+            "3 secondes",
+            "5 secondes"
+          ],
+          "correct": 1,
+          "explanation": "La règle des deux secondes impose de maintenir au minimum 2 secondes de distance sur sol sec.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q5",
+          "question": "Comment appliquer la règle des deux secondes ?",
+          "choices": [
+            "Regarder l'horloge pendant 2 secondes",
+            "Choisir un point fixe, quand le véhicule devant y passe, dire 'un crocodile, deux crocodiles' ; si vous passez après, la distance est respectée",
+            "Freiner pendant 2 secondes",
+            "Attendre 2 secondes avant de démarrer"
+          ],
+          "correct": 1,
+          "explanation": "On choisit un point fixe, on dit 'un crocodile, deux crocodiles' quand le véhicule devant y passe. Si on passe le point après avoir dit les deux crocodiles, la distance est correcte.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q6",
+          "question": "La règle des deux secondes s'applique à quel type de sol ?",
+          "choices": [
+            "Sol mouillé",
+            "Sol sec",
+            "Sol enneigé",
+            "Tous les sols"
+          ],
+          "correct": 1,
+          "explanation": "La règle des 2 secondes s'applique sur sol sec. Sur sol mouillé ou enneigé, il faut augmenter la distance.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q7",
+          "question": "De combien augmente la distance de sécurité sur sol mouillé ?",
+          "choices": [
+            "De 25%",
+            "De 50%",
+            "De 75%",
+            "De 100%"
+          ],
+          "correct": 1,
+          "explanation": "Sur sol mouillé, la distance de sécurité augmente de 50% (2 secondes → 3 secondes).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q8",
+          "question": "Vous roulez à 120 km/h sur sol mouillé. Quelle distance de sécurité ?",
+          "choices": [
+            "60 mètres",
+            "75 mètres",
+            "90 mètres",
+            "120 mètres"
+          ],
+          "correct": 2,
+          "explanation": "À 120 km/h, sol sec : 60 m. Sol mouillé (+50%) : 60 + 30 = 90 mètres (3 secondes).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q9",
+          "question": "Combien de secondes faut-il respecter sur sol mouillé ?",
+          "choices": [
+            "2 secondes",
+            "3 secondes",
+            "4 secondes",
+            "5 secondes"
+          ],
+          "correct": 1,
+          "explanation": "Sur sol mouillé, la distance de sécurité passe à 3 secondes (3 crocodiles).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q10",
+          "question": "Vous roulez à 100 km/h sur sol mouillé. Quelle distance de sécurité ?",
+          "choices": [
+            "50 mètres",
+            "65 mètres",
+            "75 mètres",
+            "100 mètres"
+          ],
+          "correct": 2,
+          "explanation": "À 100 km/h, sol sec : 50 m. Sol mouillé (+50%) : 50 + 25 = 75 mètres.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q11",
+          "question": "Combien de secondes faut-il respecter sur sol enneigé ou verglacé ?",
+          "choices": [
+            "2 secondes",
+            "3 secondes",
+            "Au moins 4 secondes",
+            "5 secondes"
+          ],
+          "correct": 2,
+          "explanation": "Sur sol enneigé ou verglacé, la distance de sécurité est d'au moins 4 secondes (4 crocodiles).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q12",
+          "question": "Sur sol verglacé, combien de 'crocodiles' devez-vous compter ?",
+          "choices": [
+            "2",
+            "3",
+            "Au moins 4",
+            "6"
+          ],
+          "correct": 2,
+          "explanation": "Sur sol verglacé, il faut au moins 4 crocodiles (4 secondes) de distance de sécurité.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q13",
+          "question": "Classez du plus court au plus long : distance de sécurité sur sol sec, mouillé, enneigé.",
+          "choices": [
+            "Mouillé < sec < enneigé",
+            "Sec < mouillé < enneigé",
+            "Enneigé < mouillé < sec",
+            "Sec < enneigé < mouillé"
+          ],
+          "correct": 1,
+          "explanation": "Sol sec (2 s) < sol mouillé (3 s) < sol enneigé/verglacé (4 s+).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q14",
+          "question": "Vous roulez à 90 km/h sur sol sec. Quelle distance de sécurité ?",
+          "choices": [
+            "30 mètres",
+            "45 mètres",
+            "60 mètres",
+            "90 mètres"
+          ],
+          "correct": 1,
+          "explanation": "À 90 km/h, la distance de sécurité minimale est de 90 ÷ 2 = 45 mètres (2 secondes).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D2_Q15",
+          "question": "Qu'est-ce que la distance de réaction ?",
+          "choices": [
+            "La distance de freinage",
+            "La distance parcourue entre la reconnaissance du risque et le début du freinage",
+            "La distance totale d'arrêt",
+            "La distance entre deux véhicules"
+          ],
+          "correct": 1,
+          "explanation": "La distance de réaction est la distance parcourue pendant le temps que met le conducteur à reconnaître un danger et à appuyer sur le frein.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q16",
+          "question": "Quel est le temps de réaction normal d'un conducteur ?",
+          "choices": [
+            "0,5 seconde",
+            "1 seconde",
+            "2 secondes",
+            "3 secondes"
+          ],
+          "correct": 1,
+          "explanation": "Le temps de réaction normal d'un conducteur est d'environ 1 seconde.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q17",
+          "question": "Le temps de réaction change-t-il en fonction de la vitesse ?",
+          "choices": [
+            "Oui, il augmente avec la vitesse",
+            "Non, le temps reste d'environ 1 seconde, mais la distance parcourue augmente",
+            "Oui, il diminue avec la vitesse",
+            "Non, ni le temps ni la distance ne changent"
+          ],
+          "correct": 1,
+          "explanation": "Le temps de réaction (environ 1 s) ne dépend pas de la vitesse. Mais la distance parcourue en 1 s augmente avec la vitesse.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q18",
+          "question": "Quelle est la formule pour calculer la distance parcourue en 1 seconde ?",
+          "choices": [
+            "Vitesse × 3",
+            "Vitesse ÷ 10 × 3",
+            "Vitesse ÷ 2",
+            "Vitesse ÷ 3"
+          ],
+          "correct": 1,
+          "explanation": "La formule approximative est : vitesse ÷ 10 × 3 (donne la distance en mètres parcourue en 1 seconde).",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q19",
+          "question": "À 50 km/h, quelle est la distance de réaction approximative ?",
+          "choices": [
+            "5 mètres",
+            "10 mètres",
+            "15 mètres (environ 14 m réels)",
+            "25 mètres"
+          ],
+          "correct": 2,
+          "explanation": "À 50 km/h : 50 ÷ 10 × 3 = 15 m (réel : environ 14 m).",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q20",
+          "question": "À 90 km/h, quelle est la distance de réaction approximative ?",
+          "choices": [
+            "15 mètres",
+            "27 mètres (environ 25 m réels)",
+            "36 mètres",
+            "45 mètres"
+          ],
+          "correct": 1,
+          "explanation": "À 90 km/h : 90 ÷ 10 × 3 = 27 m (réel : environ 25 m).",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q21",
+          "question": "À 120 km/h, quelle est la distance de réaction approximative ?",
+          "choices": [
+            "25 mètres",
+            "36 mètres (environ 33 m réels)",
+            "50 mètres",
+            "60 mètres"
+          ],
+          "correct": 1,
+          "explanation": "À 120 km/h : 120 ÷ 10 × 3 = 36 m (réel : environ 33 m).",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q22",
+          "question": "À 30 km/h, quelle distance parcourez-vous en 1 seconde ?",
+          "choices": [
+            "5 mètres",
+            "9 mètres",
+            "15 mètres",
+            "20 mètres"
+          ],
+          "correct": 1,
+          "explanation": "À 30 km/h : 30 ÷ 10 × 3 = 9 mètres.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q23",
+          "question": "À 70 km/h, quelle distance parcourez-vous en 1 seconde ?",
+          "choices": [
+            "14 mètres",
+            "21 mètres",
+            "28 mètres",
+            "35 mètres"
+          ],
+          "correct": 1,
+          "explanation": "À 70 km/h : 70 ÷ 10 × 3 = 21 mètres.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q24",
+          "question": "Quel est le temps de réaction d'un conducteur sous influence d'alcool ?",
+          "choices": [
+            "1 seconde",
+            "2-3 secondes",
+            "5-8 secondes",
+            "0,5 seconde"
+          ],
+          "correct": 1,
+          "explanation": "Sous influence d'alcool, le temps de réaction passe à 2-3 secondes.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q25",
+          "question": "Quel est le temps de réaction d'un conducteur sous influence de stupéfiants ?",
+          "choices": [
+            "1-2 secondes",
+            "2-3 secondes",
+            "5-8 secondes",
+            "10 secondes"
+          ],
+          "correct": 2,
+          "explanation": "Sous influence de stupéfiants, le temps de réaction peut atteindre 5-8 secondes.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q26",
+          "question": "Un conducteur sous alcool roule à 120 km/h. Son temps de réaction est de 3 secondes. Quelle distance parcourt-il avant de freiner ?",
+          "choices": [
+            "33 mètres",
+            "66 mètres",
+            "99 mètres",
+            "120 mètres"
+          ],
+          "correct": 2,
+          "explanation": "À 120 km/h ≈ 33 m/s. En 3 secondes : 33 × 3 = 99 mètres parcourus avant de freiner.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q27",
+          "question": "Quels facteurs augmentent le temps de réaction ?",
+          "choices": [
+            "Uniquement l'alcool",
+            "L'âge, la concentration, la température, les médicaments, les drogues et l'alcool",
+            "Uniquement la vitesse",
+            "Uniquement la fatigue"
+          ],
+          "correct": 1,
+          "explanation": "Le temps de réaction est augmenté par : l'âge, la concentration, la température, les médicaments, les drogues et l'alcool.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q28",
+          "question": "Les médicaments peuvent-ils augmenter le temps de réaction ?",
+          "choices": [
+            "Non, ils n'ont aucun effet",
+            "Oui, certains médicaments augmentent le temps de réaction",
+            "Uniquement les somnifères",
+            "Uniquement les antibiotiques"
+          ],
+          "correct": 1,
+          "explanation": "Certains médicaments augmentent le temps de réaction. Consultez toujours la notice ou votre médecin.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q29",
+          "question": "La fatigue influence-t-elle le temps de réaction ?",
+          "choices": [
+            "Non, pas du tout",
+            "Oui, la fatigue ralentit les réflexes et augmente le temps de réaction",
+            "Non, si vous buvez du café",
+            "Uniquement sur autoroute"
+          ],
+          "correct": 1,
+          "explanation": "La fatigue ralentit les réflexes et augmente significativement le temps de réaction.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q30",
+          "question": "Un conducteur âgé roulant à 90 km/h aura-t-il la même distance de réaction qu'un jeune conducteur à la même vitesse ?",
+          "choices": [
+            "Oui, la distance est la même pour tous",
+            "Pas nécessairement, l'âge peut augmenter le temps de réaction et donc la distance",
+            "Non, les jeunes ont toujours un temps de réaction plus long",
+            "Oui, la vitesse est le seul facteur"
+          ],
+          "correct": 1,
+          "explanation": "L'âge est un facteur qui peut augmenter le temps de réaction, et donc la distance de réaction.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "D2_Q31",
+          "question": "Qu'est-ce que la distance de freinage ?",
+          "choices": [
+            "La distance entre la reconnaissance du danger et le freinage",
+            "La distance parcourue depuis l'appui sur le frein jusqu'à l'arrêt complet",
+            "La distance totale d'arrêt",
+            "La distance de sécurité"
+          ],
+          "correct": 1,
+          "explanation": "La distance de freinage est la distance parcourue depuis le moment où le conducteur appuie sur le frein jusqu'à l'arrêt complet du véhicule.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D2_Q32",
+          "question": "Un véhicule s'arrête-t-il instantanément quand on freine ?",
+          "choices": [
+            "Oui, avec de bons freins",
+            "Non, un véhicule ne s'arrête jamais instantanément",
+            "Oui, avec l'ABS",
+            "Oui, sur sol sec"
+          ],
+          "correct": 1,
+          "explanation": "Un véhicule ne s'arrête jamais instantanément. Il continue à avancer pendant la distance de freinage.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D2_Q33",
+          "question": "Quels facteurs influencent la distance de freinage ?",
+          "choices": [
+            "Uniquement la vitesse",
+            "Conditions climatiques, qualité des pneus, état de la voirie, poids du véhicule, montée/descente, usure des freins",
+            "Uniquement l'état des pneus",
+            "Uniquement le poids du véhicule"
+          ],
+          "correct": 1,
+          "explanation": "La distance de freinage dépend de nombreux facteurs : conditions climatiques, pneus, voirie, poids, pente et état des freins.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D2_Q34",
+          "question": "Rouler en descente influence-t-il la distance de freinage ?",
+          "choices": [
+            "Non, ça n'a aucun effet",
+            "Oui, la distance de freinage est plus longue en descente",
+            "Non, ça raccourcit la distance",
+            "Uniquement en montée"
+          ],
+          "correct": 1,
+          "explanation": "En descente, la gravité s'ajoute au poids du véhicule et allonge la distance de freinage.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D2_Q35",
+          "question": "Le poids du véhicule influence-t-il la distance de freinage ?",
+          "choices": [
+            "Non, le poids n'a aucun effet",
+            "Oui, un véhicule plus lourd a une distance de freinage plus longue",
+            "Non, les freins s'adaptent",
+            "Uniquement pour les camions"
+          ],
+          "correct": 1,
+          "explanation": "Un véhicule plus lourd a plus d'énergie cinétique, ce qui allonge la distance de freinage.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D2_Q36",
+          "question": "Sur quelle chaussée la distance de freinage est-elle la plus longue ?",
+          "choices": [
+            "Sur chaussée sèche",
+            "Sur chaussée mouillée",
+            "C'est la même",
+            "Sur chaussée en béton"
+          ],
+          "correct": 1,
+          "explanation": "La distance de freinage est nettement plus longue sur chaussée mouillée que sur chaussée sèche.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D2_Q37",
+          "question": "La distance de freinage est 'nettement' plus longue sur sol mouillé. Cela signifie :",
+          "choices": [
+            "Un petit peu plus longue",
+            "Significativement plus longue, il faut adapter sa conduite",
+            "La même avec de bons pneus",
+            "Plus courte grâce à l'eau"
+          ],
+          "correct": 1,
+          "explanation": "La différence est significative sur sol mouillé : il faut absolument adapter sa vitesse et sa distance de sécurité.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D2_Q38",
+          "question": "Plus vous roulez vite, que se passe-t-il avec la distance de freinage ?",
+          "choices": [
+            "Elle diminue",
+            "Elle augmente",
+            "Elle reste la même",
+            "Elle diminue puis augmente"
+          ],
+          "correct": 1,
+          "explanation": "La distance de freinage augmente avec la vitesse (et même de façon plus que proportionnelle).",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D2_Q39",
+          "question": "Qu'est-ce que la distance d'arrêt ?",
+          "choices": [
+            "La distance de freinage",
+            "La distance de réaction + la distance de freinage",
+            "La distance de sécurité",
+            "La distance entre deux véhicules"
+          ],
+          "correct": 1,
+          "explanation": "La distance d'arrêt = distance de réaction + distance de freinage.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q40",
+          "question": "Si votre distance de réaction est de 15 m et votre distance de freinage est de 25 m, quelle est votre distance d'arrêt ?",
+          "choices": [
+            "15 mètres",
+            "25 mètres",
+            "40 mètres",
+            "50 mètres"
+          ],
+          "correct": 2,
+          "explanation": "Distance d'arrêt = 15 m (réaction) + 25 m (freinage) = 40 mètres.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q41",
+          "question": "Si votre distance de réaction est de 33 m et votre distance de freinage est de 80 m, quelle est votre distance d'arrêt ?",
+          "choices": [
+            "80 mètres",
+            "113 mètres",
+            "33 mètres",
+            "160 mètres"
+          ],
+          "correct": 1,
+          "explanation": "Distance d'arrêt = 33 m (réaction) + 80 m (freinage) = 113 mètres.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q42",
+          "question": "Plus vous roulez vite, la distance d'arrêt est :",
+          "choices": [
+            "Plus courte",
+            "Plus longue",
+            "La même",
+            "Plus courte grâce aux freins modernes"
+          ],
+          "correct": 1,
+          "explanation": "La distance d'arrêt augmente avec la vitesse : les deux composantes (réaction et freinage) sont plus longues.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q43",
+          "question": "Sur sol mouillé par rapport au sol sec, la distance d'arrêt est :",
+          "choices": [
+            "Plus courte",
+            "Plus longue",
+            "La même",
+            "Ça dépend des pneus uniquement"
+          ],
+          "correct": 1,
+          "explanation": "Sur sol mouillé, la distance de freinage est plus longue, donc la distance d'arrêt totale est aussi plus longue.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q44",
+          "question": "Qu'est-ce qui est le plus long : la distance de réaction ou la distance de freinage à haute vitesse ?",
+          "choices": [
+            "La distance de réaction",
+            "La distance de freinage, car elle augmente plus que proportionnellement avec la vitesse",
+            "Elles sont toujours égales",
+            "Ça dépend du conducteur"
+          ],
+          "correct": 1,
+          "explanation": "À haute vitesse, la distance de freinage augmente plus vite que la distance de réaction et devient prépondérante.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q45",
+          "question": "Un conducteur sous alcool roule à 90 km/h. Sa distance de réaction est-elle affectée ?",
+          "choices": [
+            "Non, seule la distance de freinage change",
+            "Oui, son temps de réaction est plus long (2-3 s), donc sa distance de réaction est doublée ou triplée",
+            "Non, l'alcool n'affecte que la vision",
+            "Oui, mais uniquement s'il est très ivre"
+          ],
+          "correct": 1,
+          "explanation": "L'alcool allonge le temps de réaction à 2-3 s, doublant ou triplant la distance de réaction avant le freinage.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q46",
+          "question": "La distance d'arrêt augmente-t-elle si le conducteur est fatigué ?",
+          "choices": [
+            "Non, la fatigue n'a aucun effet",
+            "Oui, car la fatigue augmente le temps de réaction, donc la distance de réaction et la distance d'arrêt",
+            "Non, seuls les pneus comptent",
+            "Uniquement sur autoroute"
+          ],
+          "correct": 1,
+          "explanation": "La fatigue allonge le temps de réaction, ce qui augmente la distance de réaction et donc la distance d'arrêt totale.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q47",
+          "question": "Que signifie ABS ?",
+          "choices": [
+            "Automatic Braking System",
+            "Anti-Blocking System (système antiblocage des roues)",
+            "Advanced Brake Safety",
+            "Anti-Break System"
+          ],
+          "correct": 1,
+          "explanation": "ABS signifie Anti-Blocking System : il empêche les roues de se bloquer lors d'un freinage d'urgence.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D2_Q48",
+          "question": "Que fait l'ABS ?",
+          "choices": [
+            "Il arrête la voiture instantanément",
+            "Il empêche les pneus de glisser (se bloquer) lors d'un freinage brusque",
+            "Il réduit la vitesse automatiquement",
+            "Il gonfle les pneus"
+          ],
+          "correct": 1,
+          "explanation": "L'ABS empêche les roues de se bloquer lors d'un freinage brusque, même sur chaussée mouillée.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D2_Q49",
+          "question": "Quel avantage supplémentaire offre l'ABS ?",
+          "choices": [
+            "Il accélère le véhicule",
+            "Il permet au conducteur de garder le contrôle de la direction pendant le freinage",
+            "Il réduit la consommation",
+            "Il allume les feux automatiquement"
+          ],
+          "correct": 1,
+          "explanation": "Grâce à l'ABS, le conducteur conserve le contrôle de la direction du véhicule même lors d'un freinage d'urgence.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D2_Q50",
+          "question": "L'ABS raccourcit-il toujours la distance de freinage ?",
+          "choices": [
+            "Oui, toujours",
+            "Non, freiner avec l'ABS ne signifie pas forcément une distance plus courte",
+            "Oui, de 50%",
+            "Oui, sur sol mouillé"
+          ],
+          "correct": 1,
+          "explanation": "L'ABS ne garantit pas une distance de freinage plus courte. Son principal avantage est le maintien de la direction.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D2_Q51",
+          "question": "Avec l'ABS sur sol mouillé, la distance de freinage est-elle plus courte que sur sol sec ?",
+          "choices": [
+            "Oui, l'ABS compense le sol mouillé",
+            "Non, même avec l'ABS, la distance est plus longue sur sol mouillé que sur sol sec",
+            "Oui, c'est le but de l'ABS",
+            "C'est la même"
+          ],
+          "correct": 1,
+          "explanation": "Même avec l'ABS, le sol mouillé allonge la distance de freinage par rapport au sol sec.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D2_Q52",
+          "question": "L'ABS remplace-t-il la prudence du conducteur ?",
+          "choices": [
+            "Oui, l'ABS gère tout",
+            "Non, le conducteur doit rester attentif et adapter sa conduite",
+            "Oui, sur les voitures récentes",
+            "Oui, sur sol sec"
+          ],
+          "correct": 1,
+          "explanation": "L'ABS est une aide, pas un remplacement de la vigilance. Le conducteur doit toujours adapter sa conduite.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D2_Q53",
+          "question": "Quel est le seul contact entre le véhicule et le sol ?",
+          "choices": [
+            "Les amortisseurs",
+            "Les pneus",
+            "Les freins",
+            "Le châssis"
+          ],
+          "correct": 1,
+          "explanation": "Les pneus sont le seul point de contact entre le véhicule et la chaussée.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q54",
+          "question": "Pourquoi les pneus doivent-ils être en bon état ?",
+          "choices": [
+            "Pour l'esthétique",
+            "Pour freiner en toute sécurité, car ils sont le seul contact avec le sol",
+            "Pour la consommation de carburant",
+            "Pour le confort uniquement"
+          ],
+          "correct": 1,
+          "explanation": "Des pneus en bon état sont essentiels à la sécurité : ils assurent le seul contact avec la route.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q55",
+          "question": "Quelle est la profondeur minimale légale des rainures des pneus ?",
+          "choices": [
+            "1 mm",
+            "1,6 mm",
+            "2 mm",
+            "3 mm"
+          ],
+          "correct": 1,
+          "explanation": "La profondeur minimale légale des rainures est de 1,6 mm.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q56",
+          "question": "La profondeur de 1,6 mm est :",
+          "choices": [
+            "La profondeur recommandée",
+            "Le minimum légal, il faut changer les pneus avant d'atteindre ce seuil",
+            "La profondeur idéale",
+            "Le maximum autorisé"
+          ],
+          "correct": 1,
+          "explanation": "1,6 mm est le minimum légal. En pratique, il faut changer les pneus avant d'atteindre ce seuil.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q57",
+          "question": "Que sont les TWI ?",
+          "choices": [
+            "Des capteurs électroniques",
+            "Des témoins d'usure situés dans les rainures principales des pneus",
+            "Des marques de fabrication",
+            "Des indicateurs de pression"
+          ],
+          "correct": 1,
+          "explanation": "Les TWI (Tread Wear Indicators) sont des témoins d'usure dans les rainures. Quand la bande de roulement les atteint, les pneus sont usés.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q58",
+          "question": "Que signifie-t-il si la bande de roulement arrive à la hauteur des TWI ?",
+          "choices": [
+            "Les pneus sont neufs",
+            "Les pneus sont trop usés et doivent être changés",
+            "Les pneus sont en bon état",
+            "Il faut regonfler les pneus"
+          ],
+          "correct": 1,
+          "explanation": "Si la bande de roulement atteint la hauteur des TWI, les pneus sont trop usés et doivent être remplacés.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q59",
+          "question": "Comment déterminer la bonne pression des pneus ?",
+          "choices": [
+            "Deviner selon la taille des pneus",
+            "Consulter l'étiquette dans la porte du conducteur, du passager ou la trappe à carburant",
+            "Gonfler au maximum",
+            "Mesurer au toucher"
+          ],
+          "correct": 1,
+          "explanation": "La pression prescrite par le constructeur est indiquée sur une étiquette dans la porte du conducteur, du passager ou la trappe à carburant.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q60",
+          "question": "Quand est-il recommandé d'augmenter légèrement la pression des pneus ?",
+          "choices": [
+            "En hiver",
+            "Pour un long trajet ou le transport d'une charge lourde",
+            "En été",
+            "Jamais, toujours la pression prescrite"
+          ],
+          "correct": 1,
+          "explanation": "Pour un long trajet ou une charge lourde, augmenter légèrement la pression des pneus est recommandé.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q61",
+          "question": "Des pneus sous-gonflés peuvent-ils affecter la distance de freinage ?",
+          "choices": [
+            "Non, la pression n'a aucun effet",
+            "Oui, des pneus mal gonflés réduisent l'adhérence et augmentent la distance de freinage",
+            "Non, seule la profondeur des rainures compte",
+            "Oui, mais uniquement sur sol mouillé"
+          ],
+          "correct": 1,
+          "explanation": "Des pneus sous-gonflés réduisent l'adhérence et augmentent la distance de freinage.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q62",
+          "question": "Vos pneus ont des rainures de 1,4 mm de profondeur. Sont-ils conformes ?",
+          "choices": [
+            "Oui, c'est proche du minimum",
+            "Non, c'est en dessous du minimum légal de 1,6 mm, il faut les changer immédiatement",
+            "Oui, la tolérance le permet",
+            "Ça dépend de la saison"
+          ],
+          "correct": 1,
+          "explanation": "1,4 mm est inférieur au minimum légal de 1,6 mm. Les pneus doivent être changés immédiatement.",
+          "theoryCardIndex": 5
+        },
+        {
+          "id": "D2_Q63",
+          "question": "Les systèmes de freinage automatique sont-ils fiables à 100% ?",
+          "choices": [
+            "Oui, la technologie est parfaite",
+            "Non, ils peuvent freiner de manière intempestive ou ne pas s'activer quand il le faudrait",
+            "Oui, sur les voitures récentes",
+            "Oui, sur sol sec"
+          ],
+          "correct": 1,
+          "explanation": "Les systèmes de freinage automatique ne sont pas fiables à 100% : ils peuvent avoir des ratés ou des faux positifs.",
+          "theoryCardIndex": 6
+        },
+        {
+          "id": "D2_Q64",
+          "question": "Les systèmes automatiques remplacent-ils la vigilance du conducteur ?",
+          "choices": [
+            "Oui, le conducteur peut se détendre",
+            "Non, le conducteur doit rester attentif et anticiper",
+            "Oui, en ville",
+            "Oui, sur autoroute"
+          ],
+          "correct": 1,
+          "explanation": "Les systèmes automatiques sont des aides, non des substituts à la vigilance. Le conducteur doit toujours rester attentif.",
+          "theoryCardIndex": 6
+        },
+        {
+          "id": "D2_Q65",
+          "question": "Les systèmes de freinage automatique :",
+          "choices": [
+            "Éliminent les accidents",
+            "Réduisent le risque d'accident mais ne le suppriment pas",
+            "Sont inutiles",
+            "Remplacent les freins classiques"
+          ],
+          "correct": 1,
+          "explanation": "Ces systèmes réduisent le risque d'accident mais ne l'éliminent pas. La conduite active reste indispensable.",
+          "theoryCardIndex": 6
+        },
+        {
+          "id": "D2_Q66",
+          "question": "Toutes les combien devez-vous faire une pause lors d'un long trajet ?",
+          "choices": [
+            "Toutes les heures",
+            "Environ toutes les 2 heures",
+            "Toutes les 3 heures",
+            "Toutes les 4 heures"
+          ],
+          "correct": 1,
+          "explanation": "Lors d'un long trajet, faites une pause toutes les 2 heures environ pour éviter la fatigue.",
+          "theoryCardIndex": 6
+        },
+        {
+          "id": "D2_Q67",
+          "question": "Quelle est la durée minimale recommandée d'une pause ?",
+          "choices": [
+            "5 minutes",
+            "15 minutes",
+            "30 minutes",
+            "10 minutes"
+          ],
+          "correct": 1,
+          "explanation": "La pause doit durer au minimum 15 minutes pour être efficace.",
+          "theoryCardIndex": 6
+        },
+        {
+          "id": "D2_Q68",
+          "question": "Que devez-vous faire pendant la pause ?",
+          "choices": [
+            "Rester dans la voiture et dormir",
+            "Descendre du véhicule, s'étirer, respirer et s'hydrater",
+            "Vérifier les pneus uniquement",
+            "Faire le plein uniquement"
+          ],
+          "correct": 1,
+          "explanation": "Pendant la pause, descendez du véhicule, étirez-vous, respirez de l'air frais et hydratez-vous.",
+          "theoryCardIndex": 6
+        },
+        {
+          "id": "D2_Q69",
+          "question": "Pourquoi faire une pause régulièrement ?",
+          "choices": [
+            "Pour vérifier la voiture",
+            "Pour éviter la fatigue, car elle ralentit les réflexes et augmente le temps de réaction",
+            "Pour économiser du carburant",
+            "C'est uniquement une recommandation"
+          ],
+          "correct": 1,
+          "explanation": "La fatigue ralentit les réflexes et augmente le temps de réaction. Les pauses régulières permettent de rester alerte.",
+          "theoryCardIndex": 6
+        },
+        {
+          "id": "D2_Q70",
+          "question": "Un conducteur fatigué a-t-il le même temps de réaction qu'un conducteur reposé ?",
+          "choices": [
+            "Oui, la fatigue n'affecte pas les réflexes",
+            "Non, la fatigue ralentit les réflexes et augmente le temps de réaction",
+            "Oui, si la route est droite",
+            "Non, mais uniquement la nuit"
+          ],
+          "correct": 1,
+          "explanation": "La fatigue altère significativement les réflexes, augmentant le temps de réaction et donc la distance d'arrêt.",
+          "theoryCardIndex": 6
+        }
+      ]
+    }
+  ]
+}

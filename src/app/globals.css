@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #1A1A2E;
+  --bg-dark: #0D0D1A;
+  --surface: #0F3460;
+  --surface-light: #1E2D4A;
+  --card: #16213E;
+  --card-dark: #252545;
+  --primary: #00B894;
+  --success: #27AE60;
+  --error: #FF6B6B;
+  --error-dark: #E74C3C;
+  --warning: #FDCB6E;
+  --xp: #FFD700;
+  --streak: #FF6348;
+  --lives: #FF4757;
+  --text: #FFFFFF;
+  --text-secondary: #8B9DC3;
+  --text-muted: #5A6B8A;
+  --border: #2A3550;
+  --border-light: #3A3A5C;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.sign-placeholder {
+  background: var(--surface-light);
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+/* Gaston bubble */
+.gaston-bubble {
+  background: #FFF8E7;
+  border: 2px solid #1B3A6B;
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  position: relative;
+}
+.gaston-bubble::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  bottom: 14px;
+  width: 0; height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 10px solid #1B3A6B;
+}
+.gaston-bubble::after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  bottom: 16px;
+  width: 0; height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 8px solid #FFF8E7;
+}
+
+/* Road line animation */
+@keyframes roadPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+.road-line-pulse { animation: roadPulse 3s ease-in-out infinite; }
+
+/* Bounce animation for car */
+@keyframes carBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.car-bounce { animation: carBounce 2s ease-in-out infinite; }
+
+/* Float up for XP */
+@keyframes floatUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-60px); }
+}
+.xp-float { animation: floatUp 1.2s ease-out forwards; }
+
+/* Shake for wrong answer */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+.shake { animation: shake 0.4s ease-in-out; }
+
+/* Scale press effect */
+.press-scale { transition: transform 0.15s ease; }
+.press-scale:active { transform: scale(0.96); }
+
+/* Smooth card entrance */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slide-up { animation: slideUp 0.4s ease-out forwards; }
+
+/* Slow bounce for onboarding logo */
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-bounce-slow { animation: bounceSlow 3s ease-in-out infinite; }
+
+/* Drive-in animation for final car */
+@keyframes driveIn {
+  from { opacity: 0; transform: translateX(-100px) scale(0.5); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+.animate-drive-in { animation: driveIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+/* ── Node pulse — heartbeat glow for active node ── */
+@keyframes nodePulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px 0 rgba(78,205,196,0.4), 0 0 0 0 rgba(78,205,196,0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(78,205,196,0.6), 0 0 0 14px rgba(78,205,196,0);
+  }
+}
+.node-pulse { animation: nodePulseGlow 1.8s ease-in-out infinite; }
+
+/* ── Hover scale for unlocked nodes ── */
+.node-hover { transition: transform 200ms ease, filter 200ms ease; }
+.node-hover:hover { transform: scale(1.1); filter: brightness(1.15); }
+
+/* ── COMMENCER floating button bounce ── */
+@keyframes floatBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-4px); }
+}
+.commencer-float { animation: floatBounce 2s ease-in-out infinite; }
+
+/* ── Shimmer sweep on COMMENCER button ── */
+@keyframes shimmerSweep {
+  0% { left: -100%; }
+  50%, 100% { left: 200%; }
+}
+.commencer-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.commencer-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmerSweep 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Star twinkle on exam nodes ── */
+@keyframes starTwinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+.star-twinkle { animation: starTwinkle 2s ease-in-out infinite; display: inline-block; }
+
+/* ── Barrier blinking red lights ── */
+@keyframes barrierBlink {
+  0%, 48% { opacity: 1; }
+  50%, 98% { opacity: 0.15; }
+  100% { opacity: 1; }
+}
+.barrier-light-left { animation: barrierBlink 1.2s step-start infinite; }
+.barrier-light-right { animation: barrierBlink 1.2s step-start 0.6s infinite; }
+
+/* ── Monument scroll reveal ── */
+@keyframes monumentReveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.monument-reveal {
+  opacity: 0;
+  animation: monumentReveal 0.8s ease-out forwards;
+  animation-play-state: paused;
+}
+.monument-reveal.visible {
+  animation-play-state: running;
+}
+
+/* ── Sidebar tooltip ── */
+.sidebar-icon-btn:hover { background: rgba(255,255,255,0.06) !important; }
+
+/* ── Right sidebar cards ── */
+.stat-card {
+  background: #16213E;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.stat-card-glow {
+  box-shadow: 0 0 20px rgba(0,184,148,0.08);
+}
+
+/* ── Theme banner ── */
+.theme-banner {
+  border-radius: 14px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
