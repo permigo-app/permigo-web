@@ -114,17 +114,58 @@ export default function HomePage() {
   const [greeting] = useState(getRandomMessage(GASTON_GREETINGS));
   const [mounted, setMounted] = useState(false);
 
-  // ── Load saved element adjustments from localStorage (monuments + banners) ──
-  const [elemAdj, setElemAdj] = useState<Record<string, { dx: number; dy: number; scale: number; rot: number }>>({});
+  // ── Element editor (monuments + banners) ──
+  const [editMode, setEditMode] = useState(false);
+  const [editSelected, setEditSelected] = useState<string | null>(null);
+  const DEFAULT_ADJ: Record<string, { dx: number; dy: number; scale: number; rot: number }> = {
+    "mon-A-0": { dx: -140, dy: -140, scale: 1.3, rot: 0 },
+    "mon-A-1": { dx: 235, dy: 97, scale: 1.2, rot: 0 },
+    "mon-A-2": { dx: -535, dy: 85, scale: 1.6, rot: 0 },
+    "mon-B-0": { dx: -185, dy: 20, scale: 1.4, rot: 0 },
+    "mon-B-1": { dx: -115, dy: -135, scale: 2.0, rot: 0 },
+    "mon-C-0": { dx: -230, dy: -175, scale: 2.2, rot: 0 },
+    "mon-C-1": { dx: -125, dy: -115, scale: 1.6, rot: 0 },
+    "mon-D-0": { dx: 245, dy: -60, scale: 2.05, rot: 0 },
+    "mon-D-1": { dx: -630, dy: -105, scale: 1.8, rot: 0 },
+    "mon-E-0": { dx: -125, dy: -385, scale: 1.9, rot: 0 },
+    "mon-F-0": { dx: -110, dy: -195, scale: 1.55, rot: 0 },
+    "mon-F-1": { dx: -210, dy: -85, scale: 1.7, rot: 0 },
+    "mon-G-0": { dx: -640, dy: -225, scale: 2.8, rot: 0 },
+    "mon-H-0": { dx: -145, dy: -45, scale: 1.5, rot: 0 },
+    "mon-H-1": { dx: -270, dy: 10, scale: 1.8, rot: 0 },
+    "mon-I-0": { dx: -90, dy: -60, scale: 1.4, rot: 0 },
+    "mon-I-1": { dx: -130, dy: -10, scale: 1.55, rot: 0 },
+    "mon-I-2": { dx: -125, dy: 0, scale: 1.45, rot: 0 },
+    "banner-B": { dx: -15, dy: 0, scale: 1, rot: 0 },
+    "banner-E": { dx: 0, dy: 0, scale: 0.9, rot: 0 },
+    "banner-H": { dx: -25, dy: 0, scale: 1, rot: 0 },
+  };
+  const [elemAdj, setElemAdj] = useState<Record<string, { dx: number; dy: number; scale: number; rot: number }>>(DEFAULT_ADJ);
+
   useEffect(() => {
     try {
       const raw = localStorage.getItem('monument_adjustments');
-      if (raw) setElemAdj(JSON.parse(raw));
+      if (raw) {
+        const local = JSON.parse(raw);
+        setElemAdj({ ...DEFAULT_ADJ, ...local });
+      }
     } catch {}
   }, []);
+
+  const saveElemAdj = useCallback((adj: Record<string, { dx: number; dy: number; scale: number; rot: number }>) => {
+    setElemAdj(adj);
+    localStorage.setItem('monument_adjustments', JSON.stringify(adj));
+  }, []);
+
   const getElemAdj = useCallback((id: string) => {
     return elemAdj[id] || { dx: 0, dy: 0, scale: 1, rot: 0 };
   }, [elemAdj]);
+
+  const updateElemAdj = useCallback((id: string, patch: Partial<{ dx: number; dy: number; scale: number; rot: number }>) => {
+    const current = elemAdj[id] || { dx: 0, dy: 0, scale: 1, rot: 0 };
+    const updated = { ...elemAdj, [id]: { ...current, ...patch } };
+    saveElemAdj(updated);
+  }, [elemAdj, saveElemAdj]);
 
   // ── Lesson modal state ──
   const [modalNode, setModalNode] = useState<PathNode | null>(null);
@@ -263,10 +304,10 @@ export default function HomePage() {
     }
 
     // ── Width calculation ──
-    // Available width between left sidebar (80px) and right sidebar (340px)
-    const availableW = typeof window !== 'undefined' ? window.innerWidth - 80 - 340 : 400;
+    // Available width between left sidebar (250px) and right sidebar (500px)
+    const availableW = typeof window !== 'undefined' ? window.innerWidth - 250 - 500 : 400;
     const SVG_W = Math.min(600, Math.max(300, availableW));
-    const CX = SVG_W * 0.22;  // road shifted more left
+    const CX = SVG_W * 0.14;  // road shifted more left
     // Zigzag amplitude
     const AMP = Math.min((SVG_W - 100) / 2, 110);
 
@@ -448,10 +489,10 @@ export default function HomePage() {
             // Panel to the left of the road (right edge = left post left edge - 2px gap)
             const PANEL_W = 80;
             const actualPanelW = PANEL_W;
-            const panelLeftAbs = Math.max(2, lpLeftAbs - PANEL_W - 2);
+            const panelLeftAbs = lpLeftAbs - PANEL_W - 2;
 
             // SVG container encompasses everything
-            const svgLeft = Math.max(0, Math.min(lpLeftAbs, panelLeftAbs) - 2);
+            const svgLeft = Math.min(lpLeftAbs, panelLeftAbs) - 2;
             const svgRight = Math.max(rpLeftAbs + POST_W, panelLeftAbs + PANEL_W) + 2;
             const svgW = svgRight - svgLeft;
             const pnlX = panelLeftAbs - svgLeft;
@@ -594,18 +635,23 @@ export default function HomePage() {
             const bannerNudge: Record<string, number> = { E: -35, F: -20 };
             const bannerX = roadCX + ROAD_W / 2 + 55 + (bannerNudge[themeCode] || 0);
 
-            const bAdj = getElemAdj(`banner-${themeCode}`);
+            const bannerId = `banner-${themeCode}`;
+            const bAdj = getElemAdj(bannerId);
+            const isBannerSelected = editSelected === bannerId;
             return (
               <div
                 key={`theme-${themeCode}`}
-                className="absolute"
+                className={`absolute ${editMode ? 'cursor-pointer' : ''}`}
+                onClick={editMode ? (e) => { e.stopPropagation(); setEditSelected(isBannerSelected ? null : bannerId); } : undefined}
                 style={{
                   top: bannerY + bAdj.dy,
                   left: bannerX + bAdj.dx,
                   opacity: isLocked ? 0.25 : 1,
-                  zIndex: 15,
-                  transform: bAdj.scale !== 1 || bAdj.rot !== 0 ? `scale(${bAdj.scale}) rotate(${bAdj.rot}deg)` : undefined,
+                  zIndex: isBannerSelected ? 99 : 15,
+                  transform: `scale(${bAdj.scale}) rotate(${bAdj.rot}deg)`,
                   transformOrigin: 'center center',
+                  outline: editMode ? (isBannerSelected ? '2px solid #00B894' : '2px dashed rgba(0,184,148,0.4)') : undefined,
+                  outlineOffset: '2px',
                 }}
               >
                 <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-2xl" style={{
@@ -871,23 +917,26 @@ export default function HomePage() {
               } else {
                 left = roadR + (SVG_W - roadR) / 2 - mon.w / 2 + (mon.xOffset || 0);
               }
-              left = Math.max(0, Math.min(left, SVG_W - mon.w));
               const top = Math.max(0, monCenterY - mon.h / 2);
 
               const monId = `mon-${themeCode}-${mi}`;
               const adj = getElemAdj(monId);
+              const isMonSelected = editSelected === monId;
               return (
                 <div
                   key={monId}
-                  className="absolute pointer-events-none monument-reveal"
+                  className={`absolute ${editMode ? 'cursor-pointer' : 'pointer-events-none'} monument-reveal`}
+                  onClick={editMode ? (e) => { e.stopPropagation(); setEditSelected(isMonSelected ? null : monId); } : undefined}
                   style={{
                     left: left + adj.dx,
                     top: top + adj.dy,
                     width: mon.w * adj.scale,
                     height: mon.h * adj.scale,
-                    zIndex: 6,
+                    zIndex: isMonSelected ? 99 : 6,
                     transform: adj.rot !== 0 ? `rotate(${adj.rot}deg)` : undefined,
                     transformOrigin: 'center center',
+                    outline: editMode ? (isMonSelected ? '2px solid #00B894' : '2px dashed rgba(0,184,148,0.4)') : undefined,
+                    outlineOffset: '2px',
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1004,7 +1053,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* RIGHT SIDEBAR — Desktop only (~300px) */}
       {/* ═══════════════════════════════════════ */}
-      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 340, background: '#0F1923', borderLeft: '1px solid #16213E' }}>
+      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 500, background: '#0F1923', borderLeft: '1px solid #16213E' }}>
 
         {/* ── Stats du jour ── */}
         <div className="stat-card stat-card-glow">
@@ -1218,6 +1267,82 @@ export default function HomePage() {
         );
       })()}
 
+      {/* ── Element Editor Panel ── */}
+      {!editMode ? (
+        <button
+          onClick={() => setEditMode(true)}
+          className="fixed bottom-4 left-4 z-[100] px-3 py-2 rounded-xl text-xs font-bold press-scale"
+          style={{ background: '#16213E', border: '1px solid #2A3550', color: '#8B9DC3' }}
+        >
+          🛠️ Éditeur
+        </button>
+      ) : (
+        <div className="fixed bottom-4 left-4 z-[100] rounded-2xl p-4 flex flex-col gap-3" style={{ background: '#0F1923', border: '1px solid #2A3550', width: 280, boxShadow: '0 8px 32px rgba(0,0,0,0.5)' }}>
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-black" style={{ color: '#00B894' }}>🛠️ Éditeur</span>
+            <button onClick={() => { setEditMode(false); setEditSelected(null); }} className="text-xs font-bold px-2 py-1 rounded-lg press-scale" style={{ background: '#FF6B6B20', color: '#FF6B6B' }}>✕</button>
+          </div>
+          <p className="text-[11px]" style={{ color: '#5A6B8A' }}>Clique sur un monument ou banner</p>
+
+          {editSelected && (() => {
+            const adj = getElemAdj(editSelected);
+            const STEP = 5;
+            const SCALE_STEP = 0.05;
+            const ROT_STEP = 5;
+            return (
+              <>
+                <div className="text-xs font-bold truncate" style={{ color: '#74B9FF' }}>📍 {editSelected}</div>
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-[10px] font-bold uppercase" style={{ color: '#8B9DC3' }}>Position</span>
+                  <div className="flex items-center gap-1">
+                    <button onClick={() => updateElemAdj(editSelected, { dx: adj.dx - STEP })} className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold press-scale" style={{ background: '#16213E', color: '#fff' }}>←</button>
+                    <div className="flex flex-col gap-1">
+                      <button onClick={() => updateElemAdj(editSelected, { dy: adj.dy - STEP })} className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold press-scale" style={{ background: '#16213E', color: '#fff' }}>↑</button>
+                      <button onClick={() => updateElemAdj(editSelected, { dy: adj.dy + STEP })} className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold press-scale" style={{ background: '#16213E', color: '#fff' }}>↓</button>
+                    </div>
+                    <button onClick={() => updateElemAdj(editSelected, { dx: adj.dx + STEP })} className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold press-scale" style={{ background: '#16213E', color: '#fff' }}>→</button>
+                  </div>
+                  <span className="text-[10px]" style={{ color: '#5A6B8A' }}>x: {adj.dx}, y: {adj.dy}</span>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <span className="text-[10px] font-bold uppercase" style={{ color: '#8B9DC3' }}>Taille</span>
+                  <button onClick={() => updateElemAdj(editSelected, { scale: Math.max(0.1, adj.scale - SCALE_STEP) })} className="w-8 h-8 rounded-lg flex items-center justify-center text-lg font-bold press-scale" style={{ background: '#16213E', color: '#FF6B6B' }}>−</button>
+                  <span className="text-xs font-bold" style={{ color: '#fff' }}>{Math.round(adj.scale * 100)}%</span>
+                  <button onClick={() => updateElemAdj(editSelected, { scale: adj.scale + SCALE_STEP })} className="w-8 h-8 rounded-lg flex items-center justify-center text-lg font-bold press-scale" style={{ background: '#16213E', color: '#00B894' }}>+</button>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <span className="text-[10px] font-bold uppercase" style={{ color: '#8B9DC3' }}>Rotation</span>
+                  <button onClick={() => updateElemAdj(editSelected, { rot: adj.rot - ROT_STEP })} className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold press-scale" style={{ background: '#16213E', color: '#FF6B6B' }}>↺</button>
+                  <span className="text-xs font-bold" style={{ color: '#fff' }}>{adj.rot}°</span>
+                  <button onClick={() => updateElemAdj(editSelected, { rot: adj.rot + ROT_STEP })} className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold press-scale" style={{ background: '#16213E', color: '#00B894' }}>↻</button>
+                </div>
+                <div className="flex gap-1">
+                  <button onClick={() => updateElemAdj(editSelected, { rot: adj.rot - 1 })} className="flex-1 h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#16213E', color: '#8B9DC3' }}>↺ 1°</button>
+                  <button onClick={() => updateElemAdj(editSelected, { rot: adj.rot + 1 })} className="flex-1 h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#16213E', color: '#8B9DC3' }}>↻ 1°</button>
+                </div>
+                <div className="flex gap-1">
+                  <button onClick={() => updateElemAdj(editSelected, { dx: adj.dx - 1 })} className="flex-1 h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#16213E', color: '#8B9DC3' }}>←1</button>
+                  <button onClick={() => updateElemAdj(editSelected, { dy: adj.dy - 1 })} className="flex-1 h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#16213E', color: '#8B9DC3' }}>↑1</button>
+                  <button onClick={() => updateElemAdj(editSelected, { dy: adj.dy + 1 })} className="flex-1 h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#16213E', color: '#8B9DC3' }}>↓1</button>
+                  <button onClick={() => updateElemAdj(editSelected, { dx: adj.dx + 1 })} className="flex-1 h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#16213E', color: '#8B9DC3' }}>→1</button>
+                </div>
+                <button onClick={() => { const updated = { ...elemAdj }; delete updated[editSelected]; saveElemAdj(updated); }} className="h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#FF6B6B15', color: '#FF6B6B' }}>
+                  🗑️ Reset
+                </button>
+              </>
+            );
+          })()}
+
+          <div className="flex gap-2 pt-1" style={{ borderTop: '1px solid #2A3550' }}>
+            <button onClick={() => { navigator.clipboard.writeText(JSON.stringify(elemAdj, null, 2)); alert('Ajustements copiés !'); }} className="flex-1 h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#00B89420', color: '#00B894' }}>
+              📋 Exporter
+            </button>
+            <button onClick={() => saveElemAdj({})} className="flex-1 h-7 rounded-lg text-[10px] font-bold press-scale" style={{ background: '#FF6B6B15', color: '#FF6B6B' }}>
+              🗑️ Tout reset
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

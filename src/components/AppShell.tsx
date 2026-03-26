@@ -35,7 +35,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      <main className="lg:ml-[80px] pb-20 lg:pb-6">
+      <main className="lg:ml-[250px] pb-20 lg:pb-6">
         {children}
       </main>
     </>

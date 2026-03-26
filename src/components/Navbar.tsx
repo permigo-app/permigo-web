@@ -43,34 +43,31 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop sidebar — 60px, icons only, tooltips */}
-      <nav className="hidden lg:flex flex-col items-center fixed left-0 top-0 h-full z-50 py-5" style={{ width: 80, background: '#0F1923', borderRight: '1px solid #16213E' }}>
+      <nav className="hidden lg:flex flex-col items-start fixed left-0 top-0 h-full z-50 py-5 pl-4" style={{ width: 250, background: '#0F1923', borderRight: '1px solid #16213E' }}>
         {/* Logo */}
-        <Link href="/" className="mb-8 flex items-center justify-center">
+        <Link href="/" className="mb-8 flex items-center gap-2.5 px-3">
           <span className="text-2xl">🚗</span>
+          <span className="text-lg font-black tracking-tight" style={{ color: '#00B894' }}>PermiGo</span>
         </Link>
 
         {/* Nav items */}
-        <div className="flex flex-col gap-2 flex-1 items-center">
+        <div className="flex flex-col gap-2 flex-1 items-start">
           {SIDEBAR_ITEMS.map((item) => {
             const active = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className="sidebar-icon-btn group relative flex items-center justify-center w-11 h-11 rounded-xl transition-all press-scale"
+                className="sidebar-icon-btn group relative flex items-center gap-3 w-full px-3 py-2.5 rounded-xl transition-all press-scale"
                 style={active
                   ? { background: `${item.color}20`, color: item.color }
                   : { color: item.color }
                 }
               >
                 {item.icon}
-                {/* Tooltip */}
-                <div className="sidebar-tooltip absolute left-[76px] px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity"
-                  style={{ background: '#16213E', color: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }}>
+                <span className="text-sm font-bold" style={{ color: active ? item.color : '#8B9DC3' }}>
                   {item.label}
-                  {/* Arrow */}
-                  <div className="absolute left-0 top-1/2 -translate-x-1 -translate-y-1/2 w-2 h-2 rotate-45" style={{ background: '#16213E' }} />
-                </div>
+                </span>
               </Link>
             );
           })}
@@ -79,22 +76,16 @@ export default function Navbar() {
         {/* User avatar at bottom */}
         <div className="mt-auto pt-3" style={{ borderTop: '1px solid #16213E' }}>
           {user ? (
-            <Link href="/profil" className="group relative flex items-center justify-center w-11 h-11 rounded-xl press-scale">
-              <span className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white" style={{ background: '#00B894' }}>
+            <Link href="/profil" className="flex items-center gap-3 px-3 py-2.5 rounded-xl press-scale">
+              <span className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0" style={{ background: '#00B894' }}>
                 {user.username?.charAt(0).toUpperCase() || '?'}
               </span>
-              <div className="sidebar-tooltip absolute left-[76px] px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity"
-                style={{ background: '#16213E', color: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }}>
-                {user.username}
-              </div>
+              <span className="text-sm font-bold truncate" style={{ color: '#8B9DC3' }}>{user.username}</span>
             </Link>
           ) : (
-            <Link href="/login" className="group relative flex items-center justify-center w-11 h-11 rounded-xl press-scale" style={{ color: '#00B894' }}>
+            <Link href="/login" className="flex items-center gap-3 px-3 py-2.5 rounded-xl press-scale" style={{ color: '#00B894' }}>
               <span className="text-lg">🔑</span>
-              <div className="sidebar-tooltip absolute left-[76px] px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity"
-                style={{ background: '#16213E', color: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }}>
-                Connexion
-              </div>
+              <span className="text-sm font-bold" style={{ color: '#8B9DC3' }}>Connexion</span>
             </Link>
           )}
         </div>
