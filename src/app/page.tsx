@@ -1172,8 +1172,8 @@ export default function HomePage() {
                 <div className="mb-4">
                   {theories.map((partie, idx) => {
                     const done = completedParties.includes(idx) || lessonFullyDone;
-                    // Unlock: first partie always unlocked, others need previous partie done
-                    const unlocked = idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
+                    // All parties unlocked for now (free version)
+                    const unlocked = true;
                     const isSelected = selectedPartieIdx === idx;
 
                     return (
