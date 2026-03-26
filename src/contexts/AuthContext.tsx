@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
-import { supabase } from '@/lib/supabase';
+import { supabase, hasSupabase } from '@/lib/supabase';
 import { getUserProfile, createUserProfile, mapProfileToUser, type AppUser } from '@/lib/supabaseUser';
 
 interface AuthContextType {
@@ -42,6 +42,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
+    if (!hasSupabase || !supabase) {
+      // No Supabase — skip auth, everything works with localStorage
+      setLoading(false);
+      return;
+    }
+
     // Check initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user) {
@@ -67,6 +73,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [loadProfile]);
 
   const signUp = async (email: string, password: string, username: string) => {
+    if (!supabase) return { error: 'Authentification non configurée' };
     try {
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -79,7 +86,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         await createUserProfile({ uid: data.user.id, name: username, email });
       }
 
-      // Check if email confirmation is needed
       if (data.user && !data.session) {
         return { needsConfirmation: true };
       }
@@ -92,6 +98,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signIn = async (email: string, password: string) => {
+    if (!supabase) return { error: 'Authentification non configurée' };
     try {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) return { error: translateError(error.message) };
@@ -103,12 +110,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signOut = async () => {
-    await supabase.auth.signOut();
+    if (supabase) await supabase.auth.signOut();
     setUser(null);
     setSupabaseUser(null);
   };
 
   const resetPassword = async (email: string) => {
+    if (!supabase) return { error: 'Authentification non configurée' };
     const { error } = await supabase.auth.resetPasswordForEmail(email);
     if (error) return { error: translateError(error.message) };
     return { success: true };

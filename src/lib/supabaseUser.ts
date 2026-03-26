@@ -85,6 +85,7 @@ export async function createUserProfile(params: {
   name: string;
   email: string;
 }): Promise<SupabaseProfile | null> {
+  if (!supabase) return null;
   try {
     const inviteCode = generateInviteCode();
 
@@ -122,6 +123,7 @@ export async function createUserProfile(params: {
 }
 
 export async function getUserProfile(uid: string): Promise<SupabaseProfile | null> {
+  if (!supabase) return null;
   try {
     const [{ data: tableRow }, { data: { user } }] = await Promise.all([
       supabase.from('profiles').select('*').eq('id', uid).maybeSingle(),
@@ -159,6 +161,7 @@ export async function syncProgressToSupabase(uid: string, progress: {
   streakData: { currentStreak: number; lastActiveDate: string; bestStreak: number };
   xpData: { totalXP: number; level: number };
 }): Promise<void> {
+  if (!supabase) return;
   try {
     await supabase.from('profiles').update({
       stars: progress.stars,
