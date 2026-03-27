@@ -44,7 +44,7 @@ export default function PanneauCategoriePage() {
 
   return (
     <div className="py-8 px-6" style={{ minHeight: '100vh' }}>
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         {/* Header */}
         <button onClick={() => router.push('/panneaux')} className="text-sm mb-4 block press-scale" style={{ color: '#8B9DC3' }}>
           ← Retour aux catégories
@@ -138,7 +138,7 @@ export default function PanneauCategoriePage() {
           </div>
 
           {/* Right sidebar: flashcard — desktop */}
-          <div className="w-[320px] flex-shrink-0 hidden xl:block">
+          <div className="w-64 xl:w-80 flex-shrink-0 hidden lg:block">
             <div className="sticky top-6">
               <div className="rounded-2xl p-5" style={{ background: '#16213E', border: `1px solid ${category.color}30` }}>
                 <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">

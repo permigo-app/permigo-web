@@ -75,7 +75,7 @@ export default function QuizLayout({
         className="sticky top-0 z-30 px-6 py-3"
         style={{ background: 'rgba(10,14,42,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #2A3550' }}
       >
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-screen-xl mx-auto">
           <div className="flex items-center gap-4 mb-2">
             {headerLeft}
             <div className="flex-1 flex items-center justify-center gap-3">
@@ -99,10 +99,10 @@ export default function QuizLayout({
 
       {/* ── 2-column layout ── */}
       <div className="px-6 py-6">
-        <div className="max-w-[1200px] mx-auto flex flex-col xl:flex-row gap-6">
+        <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6">
 
           {/* ── Left: Question + Answers (60%) ── */}
-          <div className="flex-1 xl:flex-[3]">
+          <div className="flex-1 min-w-0 lg:flex-[3]">
             {/* Subtitle */}
             {subtitle && (
               <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#5A6B8A' }}>{subtitle}</p>
@@ -241,7 +241,7 @@ export default function QuizLayout({
 
           {/* ── Right sidebar (40%) — desktop only ── */}
           {sidebar && (
-            <div className="hidden xl:block xl:flex-[2] xl:max-w-[380px]">
+            <div className="hidden lg:block lg:flex-[2] lg:max-w-[280px] xl:max-w-[380px]">
               <div className="sticky top-20 flex flex-col gap-5">
                 {sidebar}
               </div>

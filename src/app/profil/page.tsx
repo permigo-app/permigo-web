@@ -77,13 +77,13 @@ export default function ProfilePage() {
 
   return (
     <div className="py-8 px-6" style={{ minHeight: '100vh' }}>
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         {/* ── 2-column layout: sidebar + main ── */}
-        <div className="flex flex-col xl:flex-row gap-6">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
 
           {/* ══════════ SIDEBAR GAUCHE (sticky on desktop) ══════════ */}
-          <div className="w-full xl:w-[340px] xl:max-w-[340px] xl:flex-shrink-0">
-            <div className="xl:sticky xl:top-6 flex flex-col gap-5">
+          <div className="w-full lg:w-64 xl:w-80 lg:flex-shrink-0">
+            <div className="lg:sticky lg:top-6 flex flex-col gap-5">
 
               {/* Profile card */}
               <div className="rounded-2xl p-6" style={{ background: '#16213E', border: '1px solid #2A3550' }}>

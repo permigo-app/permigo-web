@@ -24,7 +24,7 @@ export default function PanneauxPage() {
 
   return (
     <div className="py-8 px-6" style={{ minHeight: '100vh' }}>
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-[32px] font-black">Panneaux routiers</h1>
@@ -126,7 +126,7 @@ export default function PanneauxPage() {
           </div>
 
           {/* Right sidebar: flashcard — desktop */}
-          <div className="w-[320px] flex-shrink-0 hidden xl:block">
+          <div className="w-64 xl:w-80 flex-shrink-0 hidden lg:block">
             <div className="sticky top-6">
               {selectedCat && selectedMeta ? (
                 <div className="rounded-2xl p-5" style={{ background: '#16213E', border: `1px solid ${selectedMeta.color}30` }}>

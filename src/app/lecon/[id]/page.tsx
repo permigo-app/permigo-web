@@ -221,7 +221,7 @@ export default function LessonPage() {
           className="sticky top-0 z-30 px-6 py-3"
           style={{ background: 'rgba(10,14,42,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #2A3550' }}
         >
-          <div className="max-w-[1200px] mx-auto flex items-center gap-4">
+          <div className="max-w-screen-xl mx-auto flex items-center gap-4">
             <button
               onClick={() => router.push('/')}
               className="w-9 h-9 rounded-full flex items-center justify-center press-scale"
@@ -240,7 +240,7 @@ export default function LessonPage() {
 
         {/* ── Progress bar ── */}
         <div className="px-6 pt-4 pb-2">
-          <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-screen-xl mx-auto">
             <div className="flex items-center gap-3 mb-1">
               <span className="text-[11px] font-bold" style={{ color: '#5A6B8A' }}>
                 {currentPartieTitle || partieInfo?.partieTitle || lesson.title}
@@ -261,10 +261,10 @@ export default function LessonPage() {
 
         {/* ── 2-column layout ── */}
         <div className="px-6 py-6">
-          <div className="max-w-[1200px] mx-auto flex flex-col xl:flex-row gap-6">
+          <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6">
 
             {/* ── Left: Theory card (60%) ── */}
-            <div className="flex-1 xl:flex-[3]">
+            <div className="flex-1 min-w-0 lg:flex-[3]">
               <div
                 className="rounded-2xl p-8 xl:p-10 slide-up"
                 style={{
@@ -350,8 +350,8 @@ export default function LessonPage() {
             </div>
 
             {/* ── Right sidebar (40%) ── */}
-            <div className="xl:flex-[2] xl:max-w-[380px]">
-              <div className="xl:sticky xl:top-20 flex flex-col gap-5">
+            <div className="hidden lg:block lg:flex-[2] lg:max-w-[280px] xl:max-w-[380px]">
+              <div className="lg:sticky lg:top-20 flex flex-col gap-5">
 
                 {/* Progress card */}
                 <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>

@@ -178,7 +178,7 @@ export default function TurboPage() {
   if (!mode) {
     return (
       <div className="py-8 px-6" style={{ minHeight: '100vh' }}>
-        <div className="max-w-[1200px] mx-auto flex gap-6">
+        <div className="max-w-screen-xl mx-auto flex gap-6">
           {/* Main area */}
           <div className="flex-1 min-w-0">
             {/* Title */}
@@ -255,7 +255,7 @@ export default function TurboPage() {
           </div>
 
           {/* Right sidebar — desktop only */}
-          <div className="w-[300px] flex-shrink-0 hidden xl:flex flex-col gap-5">
+          <div className="w-64 xl:w-80 flex-shrink-0 hidden lg:flex flex-col gap-5">
             {/* Parties jouées */}
             <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
               <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">

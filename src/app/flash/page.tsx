@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getThemeData, type LocalTheoryCard } from '@/lib/lessonData';
-import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
+import { THEME_COLORS, THEME_EMOJIS, GASTON_GREETINGS, getRandomMessage } from '@/lib/constants';
+import Gaston from '@/components/Gaston';
 
 interface FlashCard extends LocalTheoryCard {
   lessonTitle: string;
@@ -31,6 +32,15 @@ function saveMastered(themeCode: string, uids: string[]) {
   } catch {}
 }
 
+const GASTON_FLASH = [
+  'Concentre-toi bien sur chaque fiche ! 🧐',
+  'Tu retiens de mieux en mieux ! 📚',
+  'Encore quelques cartes, tu gères ! 💪',
+  'La répétition, c\'est la clé ! 🔑',
+  'Bientôt un expert du code ! 🏆',
+  'Continue, tu es sur la bonne voie ! 🌟',
+];
+
 export default function FlashPage() {
   const params = useSearchParams();
   const router = useRouter();
@@ -39,6 +49,7 @@ export default function FlashPage() {
   const themeEmoji = THEME_EMOJIS[themeCode] || '🃏';
 
   const themeData = getThemeData(themeCode);
+  const themeTitle = themeData?.title || '';
 
   const allCards = useMemo<FlashCard[]>(() => {
     if (!themeData) return [];
@@ -65,6 +76,24 @@ export default function FlashPage() {
   const [done, setDone] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [animating, setAnimating] = useState(false);
+  const [gastonMsg, setGastonMsg] = useState(getRandomMessage(GASTON_FLASH));
+  const [sessionViewed, setSessionViewed] = useState(0);
+  const sessionStartRef = useRef(Date.now());
+  const [elapsed, setElapsed] = useState(0);
+
+  // Timer
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - sessionStartRef.current) / 1000));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatTime = (s: number) => {
+    const m = Math.floor(s / 60);
+    const sec = s % 60;
+    return `${m}:${sec.toString().padStart(2, '0')}`;
+  };
 
   // Load saved state
   useEffect(() => {
@@ -89,13 +118,17 @@ export default function FlashPage() {
   const advanceCard = useCallback((updateFn: () => void) => {
     if (animating) return;
     setAnimating(true);
-    // Quick fade out
     setTimeout(() => {
       setFlipped(false);
       updateFn();
       setAnimating(false);
+      setSessionViewed(v => v + 1);
+      // Rotate Gaston message every 3 cards
+      if ((sessionViewed + 1) % 3 === 0) {
+        setGastonMsg(getRandomMessage(GASTON_FLASH));
+      }
     }, 150);
-  }, [animating]);
+  }, [animating, sessionViewed]);
 
   const handleMastered = useCallback(() => {
     const current = queue[0];
@@ -118,6 +151,18 @@ export default function FlashPage() {
       setQueue(prev => [...prev.slice(1), current]);
     });
   }, [queue, advanceCard]);
+
+  const shuffleQueue = useCallback(() => {
+    setQueue(prev => {
+      const shuffled = [...prev];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    });
+    setFlipped(false);
+  }, []);
 
   const restart = useCallback(() => {
     localStorage.removeItem(storageKey(themeCode));
@@ -155,7 +200,7 @@ export default function FlashPage() {
           <div className="w-10" />
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center px-8 gap-4">
+        <div className="flex-1 flex flex-col items-center justify-center px-8 gap-4 max-w-lg mx-auto w-full">
           <span className="text-[72px]">🏆</span>
           <h1 className="text-[30px] font-black">Toutes maîtrisées !</h1>
           <p className="text-center" style={{ color: '#8B9DC3' }}>
@@ -186,128 +231,304 @@ export default function FlashPage() {
   // Main card screen
   const card = queue[0];
   const progressPct = totalCards > 0 ? (masteredUids.length / totalCards) * 100 : 0;
+  const masteredCount = masteredUids.length;
+  const remainingCount = queue.length;
+  const sessionPct = sessionViewed > 0 ? Math.round((masteredCount / totalCards) * 100) : 0;
+
+  // Upcoming cards (next 5)
+  const upcoming = queue.slice(1, 6);
 
   return (
-    <div className="min-h-screen flex flex-col items-center">
-      {/* Header */}
-      <div className="w-full max-w-md flex items-center justify-between px-5 pt-5 pb-3">
-        <button onClick={() => router.back()} className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold press-scale" style={{ background: '#16213E' }}>
-          ←
-        </button>
-        <span className="text-lg font-extrabold">{themeEmoji} Flash</span>
-        <span className="text-sm font-extrabold min-w-[40px] text-right" style={{ color: themeColor }}>
-          {masteredUids.length}/{totalCards}
-        </span>
-      </div>
-
-      {/* Progress bar */}
-      <div className="w-full max-w-md mx-auto px-5">
-        <div className="h-1 rounded-full overflow-hidden mb-3" style={{ background: '#1E2D4A' }}>
-          <div className="h-full rounded-full transition-all duration-300" style={{ width: `${progressPct}%`, background: themeColor }} />
-        </div>
-      </div>
-
-      {/* Stats chips */}
-      <div className="flex gap-2 mb-2 justify-center">
-        <span className="px-3 py-1 rounded-full text-xs font-bold" style={{ background: '#4CAF5020', color: '#4CAF50' }}>
-          ✅ {masteredUids.length} maîtrisées
-        </span>
-        <span className="px-3 py-1 rounded-full text-xs font-bold" style={{ background: '#16213E', color: '#8B9DC3' }}>
-          🔄 {queue.length} restantes
-        </span>
-      </div>
-
-      {/* Flip hint */}
-      <p className="text-center text-xs mb-3" style={{ color: '#5A6B8A' }}>
-        Clique sur la carte pour la retourner ↕
-      </p>
-
-      {/* 3D Flip Card — portrait format, centered */}
+    <div className="min-h-screen flex flex-col" style={{ minHeight: '100vh' }}>
+      {/* ── Sticky header ── */}
       <div
-        className="cursor-pointer mx-auto"
-        onClick={flipCard}
-        style={{ perspective: 1200, width: 340, height: 480, maxWidth: 'calc(100vw - 40px)' }}
+        className="sticky top-0 z-30 px-6 py-3"
+        style={{ background: 'rgba(10,14,42,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #2A3550' }}
       >
-        <div
-          className="relative w-full h-full"
-          style={{
-            transformStyle: 'preserve-3d',
-            transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-            opacity: animating ? 0.3 : 1,
-            transition: animating ? 'opacity 0.15s' : 'transform 0.5s ease, opacity 0.15s',
-          }}
-        >
-          {/* Front face */}
-          <div
-            className="absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-2xl p-8"
-            style={{
-              backfaceVisibility: 'hidden',
-              background: '#16213E',
-              border: `2px solid ${themeColor}60`,
-              boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
-            }}
-          >
-            <span className="text-4xl">{themeEmoji}</span>
-            <h2 className="text-2xl font-extrabold text-center leading-snug" style={{ color: themeColor }}>
-              {card.title}
-            </h2>
-            <p className="text-sm text-center" style={{ color: '#8B9DC3' }}>
-              {card.lessonTitle}
-            </p>
-            <p className="absolute bottom-5 text-xs" style={{ color: '#5A6B8A' }}>
-              Toucher pour voir l&apos;explication →
-            </p>
+        <div className="max-w-screen-xl mx-auto">
+          <div className="flex items-center gap-4 mb-2">
+            <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+              ✕
+            </button>
+            <div className="flex-1 flex items-center justify-center gap-2">
+              <span className="text-sm font-bold">🃏 Flash — Thème {themeCode}</span>
+            </div>
+            <span className="text-sm font-extrabold" style={{ color: themeColor }}>
+              {masteredCount + 1}/{totalCards}
+            </span>
           </div>
-
-          {/* Back face */}
-          <div
-            className="absolute inset-0 rounded-2xl p-6 overflow-y-auto"
-            style={{
-              backfaceVisibility: 'hidden',
-              transform: 'rotateY(180deg)',
-              background: '#1E1E35',
-              border: '1px solid #2A3550',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
-            }}
-          >
-            <h3 className="text-lg font-extrabold mb-3" style={{ color: themeColor }}>
-              {card.title}
-            </h3>
-            <p className="text-[15px] leading-relaxed mb-4" style={{ color: '#FFFFFF', lineHeight: '24px' }}>
-              {card.content}
-            </p>
-            {card.explanation_simple && (
-              <div className="rounded-xl p-4" style={{ background: '#2A2A4A', borderLeft: '3px solid #74B9FF' }}>
-                <p className="text-xs font-bold uppercase tracking-wider mb-1.5" style={{ color: '#74B9FF' }}>
-                  💡 En simple
-                </p>
-                <p className="text-sm leading-relaxed" style={{ color: '#8B9DC3' }}>
-                  {card.explanation_simple}
-                </p>
-              </div>
-            )}
+          <div className="flex items-center gap-3">
+            <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+              <div
+                className="h-full rounded-full transition-all duration-500"
+                style={{ width: `${progressPct}%`, background: themeColor }}
+              />
+            </div>
+            <span className="text-xs font-bold flex-shrink-0" style={{ color: themeColor }}>
+              {Math.round(progressPct)}%
+            </span>
           </div>
         </div>
       </div>
 
-      {/* Action buttons */}
-      <div className="flex gap-3 w-full max-w-[340px] mt-4 mb-6 px-5">
-        <button
-          onClick={handleReview}
-          className="flex-1 h-[60px] rounded-2xl flex flex-col items-center justify-center gap-1 press-scale"
-          style={{ background: '#16213E', border: '1px solid #2A3550' }}
-        >
-          <span className="text-[22px]">🔄</span>
-          <span className="text-sm font-bold">À revoir</span>
-        </button>
-        <button
-          onClick={handleMastered}
-          className="flex-1 h-[60px] rounded-2xl flex flex-col items-center justify-center gap-1 press-scale text-white"
-          style={{ background: themeColor, boxShadow: `0 3px 12px ${themeColor}60` }}
-        >
-          <span className="text-[22px]">✅</span>
-          <span className="text-sm font-bold">Je savais</span>
-        </button>
+      {/* ── 3-column layout ── */}
+      <div className="flex-1 px-6 py-6">
+        <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
+
+          {/* ── Left sidebar (desktop only) ── */}
+          <div className="hidden lg:block lg:w-56 xl:w-72 lg:flex-shrink-0">
+            <div className="sticky top-20 flex flex-col gap-5">
+
+              {/* Progression */}
+              <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+                <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4ecdc4' }}>Progression</h4>
+
+                {/* Mastered bar */}
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-lg">✅</span>
+                  <div className="flex-1">
+                    <div className="flex justify-between mb-1">
+                      <span className="text-xs font-bold" style={{ color: '#2ecc71' }}>{masteredCount} maîtrisées</span>
+                      <span className="text-xs font-bold" style={{ color: '#5A6B8A' }}>{Math.round(progressPct)}%</span>
+                    </div>
+                    <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                      <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progressPct}%`, background: '#2ecc71' }} />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Remaining bar */}
+                <div className="flex items-center gap-3">
+                  <span className="text-lg">🔄</span>
+                  <div className="flex-1">
+                    <div className="flex justify-between mb-1">
+                      <span className="text-xs font-bold" style={{ color: '#e74c3c' }}>{remainingCount} restantes</span>
+                      <span className="text-xs font-bold" style={{ color: '#5A6B8A' }}>{totalCards > 0 ? Math.round((remainingCount / totalCards) * 100) : 0}%</span>
+                    </div>
+                    <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                      <div className="h-full rounded-full transition-all duration-500" style={{ width: `${totalCards > 0 ? (remainingCount / totalCards) * 100 : 0}%`, background: '#e74c3c' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Upcoming cards */}
+              {upcoming.length > 0 && (
+                <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Prochaines cartes</h4>
+                  <div className="flex flex-col gap-2">
+                    {upcoming.map((uq, i) => (
+                      <p key={i} className="text-xs leading-relaxed truncate" style={{ color: '#5A6B8A' }}>
+                        {i + 1}. {uq.title}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Shuffle button */}
+              <button
+                onClick={shuffleQueue}
+                className="w-full py-3 rounded-xl font-bold text-sm press-scale transition-all"
+                style={{
+                  background: 'transparent',
+                  border: '1.5px solid #4ecdc4',
+                  color: '#4ecdc4',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.1)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
+              >
+                🔀 Mélanger les cartes
+              </button>
+            </div>
+          </div>
+
+          {/* ── Center: Card + Actions ── */}
+          <div className="flex-1 flex flex-col items-center">
+
+            {/* Mobile stats chips */}
+            <div className="lg:hidden flex gap-2 mb-3 justify-center">
+              <span className="px-3 py-1 rounded-full text-xs font-bold" style={{ background: 'rgba(46,204,113,0.15)', color: '#2ecc71' }}>
+                ✅ {masteredCount} maîtrisées
+              </span>
+              <span className="px-3 py-1 rounded-full text-xs font-bold" style={{ background: '#16213E', color: '#8B9DC3' }}>
+                🔄 {remainingCount} restantes
+              </span>
+            </div>
+
+            {/* 3D Flip Card */}
+            <div
+              className="cursor-pointer"
+              onClick={!flipped ? flipCard : undefined}
+              style={{ perspective: 1200, width: 420, height: 420, maxWidth: 'calc(100vw - 40px)', maxHeight: 'calc(100vw - 40px)' }}
+            >
+              <div
+                className="relative w-full h-full"
+                style={{
+                  transformStyle: 'preserve-3d',
+                  transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+                  opacity: animating ? 0.3 : 1,
+                  transition: animating ? 'opacity 0.15s' : 'transform 0.4s ease, opacity 0.15s',
+                }}
+              >
+                {/* Front face */}
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-2xl p-8"
+                  style={{
+                    backfaceVisibility: 'hidden',
+                    background: '#16213E',
+                    border: '1px solid rgba(78,205,196,0.2)',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.boxShadow = `0 8px 32px rgba(0,0,0,0.35), 0 0 20px ${themeColor}20`; }}
+                  onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.35)'; }}
+                >
+                  <span className="text-[80px] leading-none">{themeEmoji}</span>
+                  <h2 className="text-2xl font-black text-center leading-snug text-white">
+                    {card.title}
+                  </h2>
+                  <div className="px-3 py-1.5 rounded-lg" style={{ background: themeColor + '18' }}>
+                    <span className="text-xs font-bold" style={{ color: themeColor }}>
+                      📚 Thème {themeCode} : {themeTitle}
+                    </span>
+                  </div>
+
+                  {/* CTA button */}
+                  <button
+                    onClick={(e) => { e.stopPropagation(); flipCard(); }}
+                    className="mt-4 px-6 py-2.5 rounded-xl font-bold text-sm press-scale transition-all"
+                    style={{
+                      background: 'transparent',
+                      border: '1.5px solid #4ecdc4',
+                      color: '#4ecdc4',
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.12)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
+                  >
+                    👁 Voir l&apos;explication
+                  </button>
+                </div>
+
+                {/* Back face */}
+                <div
+                  className="absolute inset-0 rounded-2xl p-8 overflow-y-auto cursor-pointer"
+                  onClick={flipCard}
+                  style={{
+                    backfaceVisibility: 'hidden',
+                    transform: 'rotateY(180deg)',
+                    background: '#1E1E35',
+                    border: '1px solid rgba(78,205,196,0.2)',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
+                  }}
+                >
+                  <h3 className="text-lg font-black mb-3" style={{ color: themeColor }}>
+                    {card.title}
+                  </h3>
+                  <p className="text-base leading-relaxed mb-4" style={{ color: '#e5e7eb', lineHeight: '26px' }}>
+                    {card.content}
+                  </p>
+                  {card.explanation_simple && (
+                    <div className="rounded-xl p-4" style={{ background: 'rgba(78,205,196,0.08)', borderLeft: `3px solid ${themeColor}` }}>
+                      <p className="text-xs font-bold uppercase tracking-wider mb-1.5" style={{ color: themeColor }}>
+                        💡 En simple
+                      </p>
+                      <p className="text-sm leading-relaxed" style={{ color: '#8B9DC3' }}>
+                        {card.explanation_simple}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Action buttons — always visible, sticky on mobile */}
+            <div className="flex gap-4 w-full max-w-[420px] mt-5 sticky bottom-6 z-20">
+              <button
+                onClick={handleReview}
+                className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale transition-all active:scale-95"
+                style={{
+                  background: 'rgba(231,76,60,0.15)',
+                  border: '1.5px solid rgba(231,76,60,0.5)',
+                  color: '#e74c3c',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.25)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.15)'; }}
+              >
+                <span className="text-lg">🔄</span>
+                <span className="text-sm font-bold">À revoir</span>
+              </button>
+              <button
+                onClick={handleMastered}
+                className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale transition-all active:scale-95"
+                style={{
+                  background: 'rgba(46,204,113,0.15)',
+                  border: '1.5px solid rgba(46,204,113,0.5)',
+                  color: '#2ecc71',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(46,204,113,0.25)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(46,204,113,0.15)'; }}
+              >
+                <span className="text-lg">✅</span>
+                <span className="text-sm font-bold">Je savais</span>
+              </button>
+            </div>
+
+            {/* Mobile shuffle */}
+            <button
+              onClick={shuffleQueue}
+              className="lg:hidden mt-3 px-5 py-2 rounded-lg text-xs font-bold press-scale"
+              style={{ color: '#4ecdc4', background: 'transparent', border: '1px solid rgba(78,205,196,0.3)' }}
+            >
+              🔀 Mélanger
+            </button>
+          </div>
+
+          {/* ── Right sidebar (desktop only) ── */}
+          <div className="hidden lg:block lg:w-56 xl:w-72 lg:flex-shrink-0">
+            <div className="sticky top-20 flex flex-col gap-5">
+
+              {/* Gaston */}
+              <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+                <Gaston message={gastonMsg} expression="encouraging" size="small" title="Prof. Gaston" />
+              </div>
+
+              {/* Session stats */}
+              <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+                <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4ecdc4' }}>Session</h4>
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm" style={{ color: '#8B9DC3' }}>Cartes vues</span>
+                    <span className="text-sm font-bold">{sessionViewed}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm" style={{ color: '#8B9DC3' }}>Maîtrisées</span>
+                    <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{sessionPct}%</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm" style={{ color: '#8B9DC3' }}>Temps passé</span>
+                    <span className="text-sm font-bold" style={{ color: themeColor }}>{formatTime(elapsed)}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* End session button */}
+              <button
+                onClick={() => router.back()}
+                className="w-full py-3 rounded-xl font-bold text-sm press-scale transition-all"
+                style={{
+                  background: 'transparent',
+                  border: '1.5px solid #4ecdc4',
+                  color: '#4ecdc4',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.1)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
+              >
+                Terminer la session →
+              </button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   );
