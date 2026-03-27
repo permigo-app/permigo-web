@@ -79,9 +79,9 @@ function GastonSVG({ expression = 'happy', w, h }: { expression: GastonExpressio
         return (
           <g>
             <ellipse cx={62} cy={36} rx={13} ry={11} fill="white" />
-            <text x={62} y={41} fontSize={14} textAnchor="middle" fill="#FFD700" fontWeight="900">{'\u2605'}</text>
+            <text x={62} y={41} fontSize={14} textAnchor="middle" fill="#FFD700" fontWeight="900">{'★'}</text>
             <ellipse cx={98} cy={36} rx={13} ry={11} fill="white" />
-            <text x={98} y={41} fontSize={14} textAnchor="middle" fill="#FFD700" fontWeight="900">{'\u2605'}</text>
+            <text x={98} y={41} fontSize={14} textAnchor="middle" fill="#FFD700" fontWeight="900">{'★'}</text>
             <circle cx={98} cy={36} r={15} fill="none" stroke="#DAA520" strokeWidth={1.5} />
             <line x1={111} y1={44} x2={118} y2={58} stroke="#DAA520" strokeWidth={1} />
             <circle cx={30} cy={12} r={2.5} fill="#FF6B6B" />

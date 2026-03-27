@@ -1,12 +1,13 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { getLessonData, getThemeForLesson, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
 import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, checkAndUpdateStreak } from '@/lib/progressStorage';
-import { THEME_COLORS, GASTON_CORRECT, GASTON_WRONG, getRandomMessage } from '@/lib/constants';
+import { THEME_COLORS, THEME_EMOJIS, GASTON_CORRECT, GASTON_WRONG, getRandomMessage } from '@/lib/constants';
 import SignImage from '@/components/SignImage';
 import Gaston from '@/components/Gaston';
+import QuizLayout from '@/components/QuizLayout';
 
 type Phase = 'theory' | 'quiz';
 
@@ -21,7 +22,6 @@ function getQuestionsForPartie(
   if (withIndex.length > 0) {
     return questions.filter(q => q.theoryCardIndex === partieIndex);
   }
-  // Fallback: equal division
   const base = Math.floor(questions.length / totalParties);
   const extra = questions.length % totalParties;
   let start = 0;
@@ -38,6 +38,14 @@ function shuffleQuestion(q: LocalQuestion) {
     correct: order.indexOf(q.correct),
   };
 }
+
+const GASTON_THEORY_TIPS = [
+  'Lis bien cette carte, c\'est important !',
+  'Retiens bien les points clés !',
+  'Prends ton temps pour comprendre.',
+  'Cette notion tombe souvent à l\'examen !',
+  'Concentre-toi bien sur les détails.',
+];
 
 export default function LessonPage() {
   const params = useParams();
@@ -73,7 +81,6 @@ export default function LessonPage() {
     if (t) setThemeCode(t.theme);
   }, [lessonId]);
 
-  // ── Compute display data based on partie mode ──
   const theories: LocalPartie[] = lesson?.theory ?? [];
   const allQuestions: LocalQuestion[] = lesson?.questions ?? [];
 
@@ -89,7 +96,6 @@ export default function LessonPage() {
     ? theories[partieIndex]?.title
     : null;
 
-  // For full lesson mode: track which partie we're in
   const getCurrentPartieInfo = () => {
     if (isPartieMode) return null;
     let cardsSoFar = 0;
@@ -102,6 +108,10 @@ export default function LessonPage() {
     }
     return null;
   };
+
+  const gastonTheoryTip = useMemo(() => {
+    return GASTON_THEORY_TIPS[currentCard % GASTON_THEORY_TIPS.length];
+  }, [currentCard]);
 
   const startQuiz = useCallback(() => {
     const qs = displayQuestions.map(shuffleQuestion);
@@ -155,7 +165,6 @@ export default function LessonPage() {
     updateQuizHistory(correctCount, total);
     checkAndUpdateStreak();
 
-    // Mark partie done if in partie mode
     if (isPartieMode && partieIndex !== undefined) {
       markPartieDone(lessonId, partieIndex);
       saveLessonCardProgress(lessonId, partieIndex + 1, theories.length);
@@ -176,7 +185,7 @@ export default function LessonPage() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <p className="text-xl font-bold mb-2">Leçon introuvable</p>
-          <button onClick={() => router.push('/')} className="px-6 py-3 rounded-2xl font-black text-white press-scale" style={{ background: '#00B894' }}>
+          <button onClick={() => router.push('/')} className="px-6 py-3 rounded-2xl font-black text-white press-scale" style={{ background: '#4ecdc4' }}>
             Retour
           </button>
         </div>
@@ -185,8 +194,9 @@ export default function LessonPage() {
   }
 
   const color = THEME_COLORS[themeCode] || '#74B9FF';
+  const themeEmoji = THEME_EMOJIS[themeCode] || '📖';
 
-  // ── THEORY ──
+  // ── THEORY PHASE ──
   if (phase === 'theory') {
     if (displayTheories.length === 0) { startQuiz(); return null; }
     const card: LocalTheoryCard = displayTheories[currentCard];
@@ -195,249 +205,302 @@ export default function LessonPage() {
     const totalCards = displayTheories.length;
     const isLastCard = currentCard === totalCards - 1;
     const partieInfo = getCurrentPartieInfo();
+    const progressPct = totalCards > 0 ? ((currentCard + 1) / totalCards) * 100 : 0;
+
+    // Extract key points from card content (first 2-3 sentences as bullets)
+    const keyPoints = card.content
+      .split(/[.!?]+/)
+      .map(s => s.trim())
+      .filter(s => s.length > 15)
+      .slice(0, 3);
 
     return (
-      <div className="max-w-2xl mx-auto px-4 py-5" style={{ background: '#1B1B2F', minHeight: '100vh' }}>
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-4">
-          <button
-            onClick={() => router.push('/')}
-            className="w-9 h-9 rounded-full flex items-center justify-center text-white press-scale"
-            style={{ background: 'rgba(255,255,255,0.10)' }}
-          >
-            ✕
-          </button>
-          <div className="flex-1 text-center">
-            <span className="text-sm font-bold">
-              {currentPartieTitle || lesson.title}
+      <div style={{ minHeight: '100vh' }}>
+        {/* ── Sticky header ── */}
+        <div
+          className="sticky top-0 z-30 px-6 py-3"
+          style={{ background: 'rgba(10,14,42,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #2A3550' }}
+        >
+          <div className="max-w-[1200px] mx-auto flex items-center gap-4">
+            <button
+              onClick={() => router.push('/')}
+              className="w-9 h-9 rounded-full flex items-center justify-center press-scale"
+              style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}
+            >
+              ✕
+            </button>
+            <div className="flex-1 text-center">
+              <span className="text-sm font-bold">{currentPartieTitle || lesson.title}</span>
+            </div>
+            <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
+              Carte {currentCard + 1}/{totalCards}
             </span>
           </div>
-          <span className="text-xs font-bold" style={{ color: '#8B9DC3' }}>
-            Carte {currentCard + 1}/{totalCards}
-          </span>
         </div>
 
-        {/* Progress dots */}
-        <div className="flex gap-[5px] justify-center mb-5">
-          {displayTheories.map((_, i) => (
-            <div
-              key={i}
-              className="h-2 rounded-full transition-all duration-300"
-              style={{
-                width: i === currentCard ? 24 : 12,
-                background: i <= currentCard ? color : 'rgba(255,255,255,0.15)',
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Partie title indicator */}
-        {(currentPartieTitle || partieInfo) && (
-          <p className="text-xs font-bold mb-3 ml-1" style={{ color: '#8B9DC3' }}>
-            {currentPartieTitle || partieInfo?.partieTitle}
-            {partieInfo && !isPartieMode && (
-              <span className="ml-2 opacity-60">
-                ({partieInfo.cardInPartie + 1}/{partieInfo.totalInPartie})
+        {/* ── Progress bar ── */}
+        <div className="px-6 pt-4 pb-2">
+          <div className="max-w-[1200px] mx-auto">
+            <div className="flex items-center gap-3 mb-1">
+              <span className="text-[11px] font-bold" style={{ color: '#5A6B8A' }}>
+                {currentPartieTitle || partieInfo?.partieTitle || lesson.title}
               </span>
-            )}
-          </p>
-        )}
-
-        {/* Theory card — WHITE card */}
-        <div
-          className="rounded-3xl p-6 mb-5 slide-up"
-          style={{
-            background: '#FFFFFF',
-            boxShadow: '0 8px 20px rgba(0,0,0,0.35)',
-          }}
-        >
-          <div className="inline-block px-3 py-1 rounded-xl mb-3" style={{ background: color + '20' }}>
-            <span className="text-xs font-bold" style={{ color }}>{lesson.id}</span>
-          </div>
-
-          <div className="text-4xl mb-3">{card.emoji}</div>
-          <h3 className="text-[19px] font-extrabold mb-3" style={{ color: '#1A1A2E' }}>{card.title}</h3>
-          <p className="text-base leading-relaxed" style={{ color: '#444' }}>{card.content}</p>
-
-          {card.signs && card.signs.length > 0 && (
-            <div className="flex flex-wrap gap-3 mt-4">
-              {card.signs.map(s => <SignImage key={s} code={s} size={64} />)}
+              <div className="flex-1" />
+              <span className="text-[11px] font-bold" style={{ color: '#4ecdc4' }}>
+                Carte {currentCard + 1}/{totalCards}
+              </span>
             </div>
-          )}
-        </div>
-
-        {/* "J'ai pas compris" button */}
-        {card.explanation_simple && (
-          <div className="mb-4">
-            <button
-              onClick={() => setShowSimple(!showSimple)}
-              className="text-sm font-semibold underline press-scale"
-              style={{ color: 'rgba(255,255,255,0.5)' }}
-            >
-              {showSimple ? 'Fermer' : "J'ai pas compris 🤔"}
-            </button>
-            {showSimple && (
-              <div className="mt-3 rounded-2xl p-4 slide-up" style={{ background: 'rgba(253,203,110,0.15)', border: '1px solid rgba(253,203,110,0.3)' }}>
-                <p className="text-sm font-semibold" style={{ color: '#FDCB6E' }}>{card.explanation_simple}</p>
-              </div>
-            )}
+            <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+              <div
+                className="h-full rounded-full transition-all duration-500"
+                style={{ width: `${progressPct}%`, background: '#4ecdc4' }}
+              />
+            </div>
           </div>
-        )}
-
-        {/* Gaston */}
-        <div className="mb-4">
-          <Gaston message="Lis bien cette carte ! 📖" expression="encouraging" size="small" />
         </div>
 
-        {/* Navigation buttons */}
-        <div className="flex gap-3">
-          {currentCard > 0 && (
-            <button
-              onClick={() => { setShowSimple(false); setCurrentCard(c => c - 1); }}
-              className="h-14 px-6 rounded-2xl font-bold text-sm press-scale"
-              style={{ border: `2px solid ${color}`, color }}
-            >
-              ← Précédent
-            </button>
-          )}
-          <button
-            onClick={() => {
-              setShowSimple(false);
-              if (isLastCard) { startQuiz(); }
-              else { setCurrentCard(c => c + 1); }
-            }}
-            className="flex-1 h-14 rounded-2xl font-black text-sm text-white press-scale"
-            style={{ background: color, boxShadow: `0 4px 12px ${color}50` }}
-          >
-            {isLastCard ? '🎯 Commencer le quiz' : 'Suivant →'}
-          </button>
+        {/* ── 2-column layout ── */}
+        <div className="px-6 py-6">
+          <div className="max-w-[1200px] mx-auto flex flex-col xl:flex-row gap-6">
+
+            {/* ── Left: Theory card (60%) ── */}
+            <div className="flex-1 xl:flex-[3]">
+              <div
+                className="rounded-2xl p-8 xl:p-10 slide-up"
+                style={{
+                  background: '#111827',
+                  border: '1px solid rgba(78,205,196,0.2)',
+                }}
+              >
+                {/* Theme badge */}
+                <div className="inline-block px-3 py-1.5 rounded-lg mb-4" style={{ background: 'rgba(78,205,196,0.15)' }}>
+                  <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>{lesson.id}</span>
+                </div>
+
+                {/* Emoji icon */}
+                <div className="text-6xl mb-4">{card.emoji}</div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-black text-white mb-3">{card.title}</h3>
+
+                {/* Content */}
+                <p className="text-base leading-relaxed mb-4" style={{ color: '#d1d5db' }}>{card.content}</p>
+
+                {/* Signs */}
+                {card.signs && card.signs.length > 0 && (
+                  <div className="flex flex-wrap gap-3 mb-4">
+                    {card.signs.map(s => <SignImage key={s} code={s} size={64} />)}
+                  </div>
+                )}
+
+                {/* Separator */}
+                <div className="my-6" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }} />
+
+                {/* "J'ai pas compris" button */}
+                {card.explanation_simple && (
+                  <div className="mb-6">
+                    <button
+                      onClick={() => setShowSimple(!showSimple)}
+                      className="rounded-xl px-5 py-2.5 text-sm font-bold press-scale flex items-center gap-2 transition-all"
+                      style={{
+                        background: 'transparent',
+                        border: '1.5px solid #e74c3c',
+                        color: '#e74c3c',
+                      }}
+                      onMouseEnter={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.1)'; }}
+                      onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
+                    >
+                      <span>{'❓'}</span>
+                      {showSimple ? 'Fermer' : "J'ai pas compris"}
+                    </button>
+                    {showSimple && (
+                      <div className="mt-3 rounded-xl p-4 slide-up" style={{ background: 'rgba(253,203,110,0.12)', border: '1px solid rgba(253,203,110,0.3)' }}>
+                        <p className="text-sm font-semibold leading-relaxed" style={{ color: '#FDCB6E' }}>{card.explanation_simple}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Navigation buttons */}
+                <div className="flex gap-3">
+                  {currentCard > 0 && (
+                    <button
+                      onClick={() => { setShowSimple(false); setCurrentCard(c => c - 1); }}
+                      className="h-14 px-6 rounded-xl font-bold text-sm press-scale"
+                      style={{ border: `2px solid ${color}`, color }}
+                    >
+                      ← Précédent
+                    </button>
+                  )}
+                  <button
+                    onClick={() => {
+                      setShowSimple(false);
+                      if (isLastCard) { startQuiz(); }
+                      else { setCurrentCard(c => c + 1); }
+                    }}
+                    className="flex-1 h-14 rounded-xl font-black text-base press-scale transition-all"
+                    style={{ background: '#4ecdc4', color: '#0a0e2a', boxShadow: '0 4px 12px rgba(78,205,196,0.3)' }}
+                    onMouseEnter={e => { e.currentTarget.style.filter = 'brightness(1.1)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; }}
+                  >
+                    {isLastCard ? '🎯 Commencer le quiz' : 'Suivant →'}
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* ── Right sidebar (40%) ── */}
+            <div className="xl:flex-[2] xl:max-w-[380px]">
+              <div className="xl:sticky xl:top-20 flex flex-col gap-5">
+
+                {/* Progress card */}
+                <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Progression</h4>
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-2xl">{themeEmoji}</span>
+                    <div className="flex-1">
+                      <p className="text-sm font-bold">{lesson.title}</p>
+                      {partieInfo && !isPartieMode && (
+                        <p className="text-[11px] mt-0.5" style={{ color: '#5A6B8A' }}>{partieInfo.partieTitle}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                      <div
+                        className="h-full rounded-full transition-all duration-500"
+                        style={{ width: `${progressPct}%`, background: '#4ecdc4' }}
+                      />
+                    </div>
+                    <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>{currentCard + 1}/{totalCards}</span>
+                  </div>
+                </div>
+
+                {/* Prof. Gaston */}
+                <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+                  <Gaston
+                    message={gastonTheoryTip}
+                    expression="encouraging"
+                    size="small"
+                    title="Prof. Gaston"
+                  />
+                </div>
+
+                {/* Key points */}
+                {keyPoints.length > 0 && (
+                  <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+                    <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Points clés</h4>
+                    <div className="flex flex-col gap-2.5">
+                      {keyPoints.map((point, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <span className="text-xs mt-0.5" style={{ color: '#4ecdc4' }}>{'✓'}</span>
+                          <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{point}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Skip to quiz shortcut */}
+                <button
+                  onClick={startQuiz}
+                  className="w-full py-3 rounded-xl text-sm font-bold press-scale transition-all"
+                  style={{ background: 'transparent', border: '1.5px solid #4ecdc4', color: '#4ecdc4' }}
+                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.1)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
+                >
+                  Passer au quiz →
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 
-  // ── QUIZ ──
+  // ── QUIZ PHASE ──
   if (phase === 'quiz' && questions.length > 0) {
     const q = questions[currentQ];
     const pctDone = ((currentQ + 1) / questions.length) * 100;
 
     return (
-      <div className="max-w-2xl mx-auto px-4 py-5" style={{ minHeight: '100vh' }}>
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-4">
-          <button
-            onClick={() => router.push('/')}
-            className="w-9 h-9 rounded-full flex items-center justify-center text-sm press-scale"
-            style={{ background: '#16213E', color: 'white' }}
-          >
-            ✕
+      <QuizLayout
+        progress={pctDone}
+        progressLabel={`${currentQ + 1}/${questions.length}`}
+        headerLeft={
+          <button onClick={() => router.push('/')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+            {'✕'}
           </button>
-          <div className="flex-1">
-            <div className="h-[10px] rounded-full overflow-hidden" style={{ background: '#1E2D4A' }}>
-              <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: color }} />
+        }
+        headerCenter={
+          <span className="text-sm font-bold">{themeEmoji} {currentPartieTitle || lesson.title} — Quiz</span>
+        }
+        subtitle={currentPartieTitle ? `${currentPartieTitle} — Quiz` : `${lesson.title} — Quiz`}
+        question={q.question}
+        signCode={q.sign}
+        choices={[...q.choices]}
+        selected={selected}
+        validated={validated}
+        correctIndex={q.correct}
+        onSelect={setSelected}
+        onValidate={handleValidate}
+        onNext={nextQuestion}
+        isLastQuestion={currentQ + 1 >= questions.length}
+        explanation={q.explanation}
+        shakeWrong={shakeWrong}
+        sidebar={
+          <>
+            {/* Progress card */}
+            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Progression</h4>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm" style={{ color: '#8B9DC3' }}>Question</span>
+                <span className="text-sm font-bold">{currentQ + 1} / {questions.length}</span>
+              </div>
+              <div className="h-2 rounded-full overflow-hidden mb-3" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: '#4ecdc4' }} />
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm" style={{ color: '#8B9DC3' }}>Correctes</span>
+                <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
+              </div>
             </div>
-          </div>
-          <span className="text-xs font-bold" style={{ color: '#8B9DC3' }}>
-            {currentQ + 1}/{questions.length}
-          </span>
-        </div>
 
-        {/* Partie indicator */}
-        {currentPartieTitle && (
-          <p className="text-xs font-bold text-center mb-3" style={{ color: '#8B9DC3' }}>
-            {currentPartieTitle} — Quiz
-          </p>
-        )}
-
-        {/* Sign image */}
-        {q.sign && (
-          <div className="flex justify-center mb-5">
-            <SignImage code={q.sign} size={100} />
-          </div>
-        )}
-
-        {/* Question */}
-        <p className="text-xl font-bold text-center mb-6 leading-relaxed">{q.question}</p>
-
-        {/* Answer grid — 2 columns */}
-        <div className="grid grid-cols-2 gap-2 mb-5">
-          {q.choices.map((choice, i) => {
-            let bg = '#252545';
-            let borderColor = 'rgba(255,255,255,0.08)';
-            let textColor = 'rgba(255,255,255,0.82)';
-
-            if (validated) {
-              if (i === q.correct) {
-                bg = '#0D3B20'; borderColor = '#27AE60'; textColor = '#4ADE80';
-              } else if (i === selected) {
-                bg = '#3B0D0D'; borderColor = '#E74C3C'; textColor = '#FC8181';
-              }
-            } else if (i === selected) {
-              bg = 'rgba(0,184,148,0.13)'; borderColor = '#00B894';
-            }
-
-            return (
-              <button
-                key={i}
-                onClick={() => !validated && setSelected(i)}
-                disabled={validated}
-                className={`rounded-2xl p-4 text-left font-semibold text-[15px] leading-snug transition-all press-scale ${shakeWrong && validated && i === selected && i !== q.correct ? 'shake' : ''}`}
-                style={{
-                  background: bg,
-                  border: `2px solid ${borderColor}`,
-                  color: textColor,
-                  minHeight: 72,
-                }}
-              >
-                {choice}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Feedback panel */}
-        {validated && (
-          <div
-            className="rounded-t-[28px] p-5 mb-4 slide-up"
-            style={{ background: selected === q.correct ? '#1A5C38' : '#6B1A1A' }}
-          >
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-3xl">{selected === q.correct ? '🎉' : '😅'}</span>
-              <span className="text-lg font-bold">{selected === q.correct ? 'Correct !' : 'Incorrect'}</span>
+            {/* Theme badge */}
+            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Thème</h4>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{themeEmoji}</span>
+                <div>
+                  <span className="text-xs px-2.5 py-1 rounded-md font-bold" style={{ background: color + '20', color }}>
+                    Thème {themeCode}
+                  </span>
+                  <p className="text-sm font-bold mt-1.5">{lesson.title}</p>
+                </div>
+              </div>
             </div>
-            <p className="text-sm leading-relaxed opacity-90">{q.explanation}</p>
-          </div>
-        )}
 
-        {/* Gaston */}
-        <div className="mb-4">
-          <Gaston message={gastonMsg} expression={gastonExpr} size="small" />
-        </div>
+            {/* Gaston */}
+            <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+              <Gaston message={gastonMsg} expression={gastonExpr} size="small" title="Prof. Gaston" />
+            </div>
 
-        {/* Validate / Next button */}
-        {!validated ? (
-          <button
-            onClick={handleValidate}
-            disabled={selected === null}
-            className="w-full h-14 rounded-2xl font-black text-base text-white press-scale transition-all"
-            style={{
-              background: selected !== null ? color : '#2A3550',
-              opacity: selected !== null ? 1 : 0.5,
-              boxShadow: selected !== null ? `0 4px 12px ${color}50` : 'none',
-            }}
-          >
-            VALIDER
-          </button>
-        ) : (
-          <button
-            onClick={nextQuestion}
-            className="w-full h-14 rounded-2xl font-black text-base text-white press-scale"
-            style={{ background: color, boxShadow: `0 4px 12px ${color}50` }}
-          >
-            {currentQ + 1 < questions.length ? 'SUIVANTE →' : 'VOIR RÉSULTATS →'}
-          </button>
-        )}
-      </div>
+            {/* Explanation in sidebar after validation */}
+            {validated && q.explanation && (
+              <div className="rounded-2xl p-5" style={{
+                background: selected === q.correct ? 'rgba(46,204,113,0.1)' : 'rgba(231,76,60,0.1)',
+                border: `1px solid ${selected === q.correct ? 'rgba(46,204,113,0.3)' : 'rgba(231,76,60,0.3)'}`,
+              }}>
+                <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: selected === q.correct ? '#2ecc71' : '#e74c3c' }}>
+                  {selected === q.correct ? '✓ Correct' : '✗ Incorrect'}
+                </p>
+                <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{q.explanation}</p>
+              </div>
+            )}
+          </>
+        }
+      />
     );
   }
 

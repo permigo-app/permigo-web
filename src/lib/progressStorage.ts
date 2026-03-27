@@ -209,6 +209,62 @@ export function setSurvivalBest(score: number): void {
   }
 }
 
+// ── Turbo best scores (per mode) ──
+export function getTurboBest(mode: '3min' | '5min' | 'survie'): number {
+  const raw = getItem(`turbo_best_${mode}`);
+  return raw ? Number(raw) : 0;
+}
+
+export function setTurboBest(mode: '3min' | '5min' | 'survie', score: number): void {
+  const current = getTurboBest(mode);
+  if (score > current) {
+    setItem(`turbo_best_${mode}`, String(score));
+  }
+}
+
+// ── Turbo session history ──
+export interface TurboSession {
+  date: string;
+  mode: '3min' | '5min' | 'survie';
+  score: number;
+  total: number;
+}
+
+export function getTurboHistory(): TurboSession[] {
+  const raw = getItem('turbo_history');
+  return raw ? JSON.parse(raw) : [];
+}
+
+export function addTurboSession(session: TurboSession): void {
+  const history = getTurboHistory();
+  history.unshift(session);
+  if (history.length > 20) history.length = 20;
+  setItem('turbo_history', JSON.stringify(history));
+}
+
+// ── Turbo all-time stats ──
+export interface TurboAllTimeStats {
+  games3min: number;
+  games5min: number;
+  gamesSurvie: number;
+  timeSeconds: number;
+}
+
+export function getTurboAllTime(): TurboAllTimeStats {
+  const raw = getItem('turbo_alltime');
+  if (raw) return JSON.parse(raw);
+  return { games3min: 0, games5min: 0, gamesSurvie: 0, timeSeconds: 0 };
+}
+
+export function addTurboAllTime(mode: '3min' | '5min' | 'survie', timeSeconds: number): void {
+  const current = getTurboAllTime();
+  if (mode === '3min') current.games3min += 1;
+  else if (mode === '5min') current.games5min += 1;
+  else current.gamesSurvie += 1;
+  current.timeSeconds += timeSeconds;
+  setItem('turbo_alltime', JSON.stringify(current));
+}
+
 // ── Reset all progress ──
 export function resetAllProgress(): void {
   if (typeof window === 'undefined') return;

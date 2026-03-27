@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { getLessonData, getThemeForLesson, type LocalQuestion } from '@/lib/lessonData';
+import { getLessonData, getThemeForLesson, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { setStars, updateQuizHistory, updateXP, checkAndUpdateStreak } from '@/lib/progressStorage';
-import { THEME_COLORS, GASTON_CORRECT, GASTON_WRONG, getRandomMessage } from '@/lib/constants';
-import SignImage from '@/components/SignImage';
+import { THEME_COLORS, THEME_EMOJIS, GASTON_CORRECT, GASTON_WRONG, getRandomMessage } from '@/lib/constants';
+import QuizLayout from '@/components/QuizLayout';
 import Gaston from '@/components/Gaston';
 
 export default function QuizPage() {
@@ -21,15 +21,17 @@ export default function QuizPage() {
   const [gastonMsg, setGastonMsg] = useState('Réfléchis bien... 🤔');
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'impressed' | 'unhappy' | 'thinking'>('thinking');
   const [themeCode, setThemeCode] = useState('A');
+  const [shakeWrong, setShakeWrong] = useState(false);
 
   useEffect(() => {
     const lesson = getLessonData(lessonId);
-    if (lesson) setQuestions([...lesson.questions].sort(() => Math.random() - 0.5));
+    if (lesson) setQuestions([...lesson.questions].sort(() => Math.random() - 0.5).map(q => {
+      const s = shuffleChoices(q);
+      return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+    }));
     const t = getThemeForLesson(lessonId);
     if (t) setThemeCode(t.theme);
   }, [lessonId]);
-
-  const color = THEME_COLORS[themeCode] || '#74B9FF';
 
   const handleValidate = () => {
     if (selected === null || validated) return;
@@ -42,6 +44,8 @@ export default function QuizPage() {
     } else {
       setGastonMsg(getRandomMessage(GASTON_WRONG));
       setGastonExpr('unhappy');
+      setShakeWrong(true);
+      setTimeout(() => setShakeWrong(false), 400);
     }
   };
 
@@ -73,67 +77,99 @@ export default function QuizPage() {
 
   const q = questions[currentQ];
   const pctDone = ((currentQ + 1) / questions.length) * 100;
+  const themeEmoji = THEME_EMOJIS[themeCode] || '📖';
+  const color = THEME_COLORS[themeCode] || '#74B9FF';
+
+  // Upcoming questions preview
+  const upcoming = questions.slice(currentQ + 1, currentQ + 4);
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-5" style={{ minHeight: '100vh' }}>
-      <div className="flex items-center gap-3 mb-4">
-        <button onClick={() => router.push('/')} className="w-9 h-9 rounded-full flex items-center justify-center text-sm press-scale" style={{ background: '#16213E' }}>✕</button>
-        <div className="flex-1">
-          <div className="h-[10px] rounded-full overflow-hidden" style={{ background: '#1E2D4A' }}>
-            <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: color }} />
-          </div>
-        </div>
-        <span className="text-xs font-bold" style={{ color: '#8B9DC3' }}>{currentQ + 1}/{questions.length}</span>
-      </div>
-
-      {q.sign && <div className="flex justify-center mb-5"><SignImage code={q.sign} size={100} /></div>}
-
-      <p className="text-xl font-bold text-center mb-6 leading-relaxed">{q.question}</p>
-
-      <div className="grid grid-cols-2 gap-2 mb-5">
-        {q.choices.map((choice, i) => {
-          let bg = '#252545'; let borderColor = 'rgba(255,255,255,0.08)'; let textColor = 'rgba(255,255,255,0.82)';
-          if (validated) {
-            if (i === q.correct) { bg = '#0D3B20'; borderColor = '#27AE60'; textColor = '#4ADE80'; }
-            else if (i === selected) { bg = '#3B0D0D'; borderColor = '#E74C3C'; textColor = '#FC8181'; }
-          } else if (i === selected) { bg = 'rgba(0,184,148,0.13)'; borderColor = '#00B894'; }
-          return (
-            <button key={i} onClick={() => !validated && setSelected(i)} disabled={validated}
-              className="rounded-2xl p-4 text-left font-semibold text-[15px] leading-snug transition-all press-scale"
-              style={{ background: bg, border: `2px solid ${borderColor}`, color: textColor, minHeight: 72 }}>
-              {choice}
-            </button>
-          );
-        })}
-      </div>
-
-      {validated && (
-        <div className="rounded-t-[28px] p-5 mb-4 slide-up" style={{ background: selected === q.correct ? '#1A5C38' : '#6B1A1A' }}>
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-3xl">{selected === q.correct ? '🎉' : '😅'}</span>
-            <span className="text-lg font-bold">{selected === q.correct ? 'Correct !' : 'Incorrect'}</span>
-          </div>
-          <p className="text-sm leading-relaxed opacity-90">{q.explanation}</p>
-        </div>
-      )}
-
-      <div className="mb-4">
-        <Gaston message={gastonMsg} expression={gastonExpr} size="small" />
-      </div>
-
-      {!validated ? (
-        <button onClick={handleValidate} disabled={selected === null}
-          className="w-full h-14 rounded-2xl font-black text-white press-scale"
-          style={{ background: selected !== null ? color : '#2A3550', opacity: selected !== null ? 1 : 0.5 }}>
-          VALIDER
+    <QuizLayout
+      progress={pctDone}
+      progressLabel={`${currentQ + 1}/${questions.length}`}
+      headerLeft={
+        <button onClick={() => router.push('/')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+          {'✕'}
         </button>
-      ) : (
-        <button onClick={nextQuestion}
-          className="w-full h-14 rounded-2xl font-black text-white press-scale"
-          style={{ background: color }}>
-          {currentQ + 1 < questions.length ? 'SUIVANTE →' : 'VOIR RÉSULTATS →'}
-        </button>
-      )}
-    </div>
+      }
+      headerCenter={
+        <span className="text-sm font-bold">{themeEmoji} Quiz — {lessonId}</span>
+      }
+      subtitle={`Leçon ${lessonId} — Quiz`}
+      question={q.question}
+      signCode={q.sign}
+      choices={[...q.choices]}
+      selected={selected}
+      validated={validated}
+      correctIndex={q.correct}
+      onSelect={setSelected}
+      onValidate={handleValidate}
+      onNext={nextQuestion}
+      isLastQuestion={currentQ + 1 >= questions.length}
+      explanation={q.explanation}
+      shakeWrong={shakeWrong}
+      sidebar={
+        <>
+          {/* Progress card */}
+          <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Progression</h4>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm" style={{ color: '#8B9DC3' }}>Question</span>
+              <span className="text-sm font-bold">{currentQ + 1} / {questions.length}</span>
+            </div>
+            <div className="h-2 rounded-full overflow-hidden mb-3" style={{ background: 'rgba(255,255,255,0.1)' }}>
+              <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: '#4ecdc4' }} />
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-sm" style={{ color: '#8B9DC3' }}>Correctes</span>
+              <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
+            </div>
+          </div>
+
+          {/* Theme badge */}
+          <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Thème</h4>
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">{themeEmoji}</span>
+              <span className="text-xs px-2.5 py-1 rounded-md font-bold" style={{ background: color + '20', color }}>
+                Thème {themeCode} — {lessonId}
+              </span>
+            </div>
+          </div>
+
+          {/* Gaston */}
+          <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+            <Gaston message={gastonMsg} expression={gastonExpr} size="small" title="Prof. Gaston" />
+          </div>
+
+          {/* Explanation in sidebar after validation */}
+          {validated && q.explanation && (
+            <div className="rounded-2xl p-5" style={{
+              background: selected === q.correct ? 'rgba(46,204,113,0.1)' : 'rgba(231,76,60,0.1)',
+              border: `1px solid ${selected === q.correct ? 'rgba(46,204,113,0.3)' : 'rgba(231,76,60,0.3)'}`,
+            }}>
+              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: selected === q.correct ? '#2ecc71' : '#e74c3c' }}>
+                {selected === q.correct ? '✓ Correct' : '✗ Incorrect'}
+              </p>
+              <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{q.explanation}</p>
+            </div>
+          )}
+
+          {/* Upcoming questions */}
+          {upcoming.length > 0 && !validated && (
+            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Questions suivantes</h4>
+              <div className="flex flex-col gap-2">
+                {upcoming.map((uq, i) => (
+                  <p key={i} className="text-xs leading-relaxed truncate" style={{ color: '#5A6B8A' }}>
+                    {currentQ + 2 + i}. {uq.question}
+                  </p>
+                ))}
+              </div>
+            </div>
+          )}
+        </>
+      }
+    />
   );
 }

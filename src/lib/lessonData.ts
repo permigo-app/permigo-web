@@ -114,6 +114,18 @@ export function getAllQuestions(): LocalQuestion[] {
   return all;
 }
 
+/** Shuffle choices and return new choices array + new correct index */
+export function shuffleChoices(q: LocalQuestion): { choices: string[]; correct: number } {
+  const indices = [0, 1, 2, 3];
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  const choices = indices.map(i => q.choices[i]);
+  const correct = indices.indexOf(q.correct);
+  return { choices, correct };
+}
+
 export function getNextThemeCode(code: string): string | null {
   const idx = THEME_ORDER.indexOf(code);
   if (idx < 0 || idx >= THEME_ORDER.length - 1) return null;
