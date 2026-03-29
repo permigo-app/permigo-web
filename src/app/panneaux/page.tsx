@@ -3,13 +3,13 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { PANNEAU_CATEGORIES } from '@/lib/constants';
-import { SIGNS_BY_CATEGORY } from '@/lib/signsData';
+import { getSignsByCategory } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
 
 export default function PanneauxPage() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [selectedCat, setSelectedCat] = useState<string | null>(null);
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
   const [mobileFlash, setMobileFlash] = useState(false);
@@ -40,7 +40,7 @@ export default function PanneauxPage() {
           <div className="flex-1 min-w-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {PANNEAU_CATEGORIES.map(cat => {
-                const signs = SIGNS_BY_CATEGORY[cat.id] || [];
+                const signs = getSignsByCategory(cat.id, lang);
                 const masteredCount = signs.filter(s => masteredMap[s.code]).length;
                 const total = signs.length;
                 const pct = total > 0 ? Math.round((masteredCount / total) * 100) : 0;

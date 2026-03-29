@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { PANNEAU_CATEGORIES } from '@/lib/constants';
-import { SIGNS_BY_CATEGORY } from '@/lib/signsData';
+import { getSignsByCategory } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
@@ -11,11 +11,11 @@ import { useLang } from '@/contexts/LanguageContext';
 export default function PanneauCategoriePage() {
   const params = useParams();
   const router = useRouter();
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const catId = params.categorie as string;
 
   const category = PANNEAU_CATEGORIES.find(c => c.id === catId);
-  const signs = SIGNS_BY_CATEGORY[catId] || [];
+  const signs = getSignsByCategory(catId, lang);
 
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
   const [selectedSign, setSelectedSign] = useState<string | null>(null);

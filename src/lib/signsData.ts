@@ -1,8 +1,29 @@
 /** All Belgian road signs — official descriptions (Arrêté royal du 1er décembre 1975) */
 
+import SIGNS_NL from './signsData_nl';
+
 export interface SignDef {
   code: string;
   name: string;
+}
+
+type Lang = 'fr' | 'nl';
+
+/** Returns signs for a category, localized by language */
+export function getSignsByCategory(catId: string, lang: Lang): SignDef[] {
+  const signs = SIGNS_BY_CATEGORY[catId] || [];
+  if (lang === 'fr') return signs;
+  return signs.map(s => ({ code: s.code, name: SIGNS_NL[s.code] || s.name }));
+}
+
+/** Returns ALL signs across all categories, localized */
+export function getAllSignsLocalized(lang: Lang): Record<string, SignDef[]> {
+  if (lang === 'fr') return SIGNS_BY_CATEGORY;
+  const result: Record<string, SignDef[]> = {};
+  for (const [cat, signs] of Object.entries(SIGNS_BY_CATEGORY)) {
+    result[cat] = signs.map(s => ({ code: s.code, name: SIGNS_NL[s.code] || s.name }));
+  }
+  return result;
 }
 
 export const SIGNS_BY_CATEGORY: Record<string, SignDef[]> = {

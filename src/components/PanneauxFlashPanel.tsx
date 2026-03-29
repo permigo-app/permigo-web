@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { SIGNS_BY_CATEGORY, type SignDef } from '@/lib/signsData';
+import { SIGNS_BY_CATEGORY, getSignsByCategory, type SignDef } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import { useLang } from '@/contexts/LanguageContext';
 
@@ -39,8 +39,8 @@ interface FlashPanelProps {
 }
 
 export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMasteredChange }: FlashPanelProps) {
-  const { t } = useLang();
-  const signs = useMemo(() => SIGNS_BY_CATEGORY[catId] || [], [catId]);
+  const { t, lang } = useLang();
+  const signs = useMemo(() => getSignsByCategory(catId, lang), [catId, lang]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
