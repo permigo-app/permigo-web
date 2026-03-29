@@ -1,16 +1,17 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { getAllQuestions, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { getAllQuestionsLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { useLang } from '@/contexts/LanguageContext';
 import {
-  updateQuizHistory, updateXP, checkAndUpdateStreak,
+  updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime,
   setSurvivalBest, getSurvivalBest,
   getTurboBest, setTurboBest,
   getTurboHistory, addTurboSession,
   getTurboAllTime, addTurboAllTime,
   type TurboSession, type TurboAllTimeStats,
 } from '@/lib/progressStorage';
-import { GASTON_CORRECT, GASTON_WRONG, getRandomMessage } from '@/lib/constants';
+import { GASTON_CORRECT, GASTON_WRONG, GASTON_TIPS, getRandomMsg } from '@/locales/messages';
 import SignImage from '@/components/SignImage';
 import Gaston from '@/components/Gaston';
 import QuizLayout from '@/components/QuizLayout';
@@ -18,19 +19,10 @@ import QuizLayout from '@/components/QuizLayout';
 type Mode = null | '3min' | '5min' | 'survie';
 
 const MODE_META = {
-  '3min': { icon: '⏱️', label: 'Sprint 3 min', desc: 'Le maximum de bonnes réponses en 3 minutes', gradient: 'linear-gradient(135deg, #0a2e4a 0%, #0d3b5c 50%, #0a3040 100%)', border: '#2ecc71', color: '#2ecc71', btnColor: '#2ecc71' },
-  '5min': { icon: '🔥', label: 'Sprint 5 min', desc: 'Plus de temps, plus de pression', gradient: 'linear-gradient(135deg, #3a2000 0%, #4a2800 50%, #3a2200 100%)', border: '#e67e22', color: '#e67e22', btnColor: '#e67e22' },
-  'survie': { icon: '💀', label: 'Mode Survie', desc: '1 seule vie — à la première erreur, c\'est fini !', gradient: 'linear-gradient(135deg, #2a0a0a 0%, #3a1010 50%, #1a0505 100%)', border: '#e74c3c', color: '#e74c3c', btnColor: '#e74c3c' },
+  '3min': { icon: '⏱️', gradient: 'linear-gradient(135deg, #0a2e4a 0%, #0d3b5c 50%, #0a3040 100%)', border: '#2ecc71', color: '#2ecc71', btnColor: '#2ecc71' },
+  '5min': { icon: '🔥', gradient: 'linear-gradient(135deg, #3a2000 0%, #4a2800 50%, #3a2200 100%)', border: '#e67e22', color: '#e67e22', btnColor: '#e67e22' },
+  'survie': { icon: '💀', gradient: 'linear-gradient(135deg, #2a0a0a 0%, #3a1010 50%, #1a0505 100%)', border: '#e74c3c', color: '#e74c3c', btnColor: '#e74c3c' },
 } as const;
-
-const GASTON_TIPS = [
-  'Le mode Survie entraîne ta concentration sous pression — parfait avant l\'examen !',
-  'Fais un Sprint 3min par jour pour maintenir ton streak !',
-  'Tu réponds trop vite ? Le Sprint 5min punit les erreurs précipitées.',
-  'Tu peux battre ton record, j\'en suis sûr !',
-  'Chaque erreur est une leçon apprise — continue !',
-  'La régularité, c\'est la clé du succès !',
-];
 
 function formatTime(s: number) {
   return `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`;
@@ -53,13 +45,8 @@ function formatDate(iso: string) {
   } catch { return iso; }
 }
 
-function modeLabel(m: string) {
-  if (m === '3min') return '3 min';
-  if (m === '5min') return '5 min';
-  return 'Survie';
-}
-
 export default function TurboPage() {
+  const { t, lang } = useLang();
   const [mode, setMode] = useState<Mode>(null);
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
   const [currentQ, setCurrentQ] = useState(0);
@@ -96,12 +83,12 @@ export default function TurboPage() {
     const interval = setInterval(() => {
       setTipFade(false);
       setTimeout(() => {
-        setTipIndex(i => (i + 1) % GASTON_TIPS.length);
+        setTipIndex(i => (i + 1) % GASTON_TIPS[lang].length);
         setTipFade(true);
       }, 300);
     }, 5000);
     return () => clearInterval(interval);
-  }, [mode]);
+  }, [mode, lang]);
 
   const endGame = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -122,12 +109,13 @@ export default function TurboPage() {
         total: currentQ,
       });
       addTurboAllTime(mode, elapsed);
+      addStudyTime(elapsed);
     }
   }, [correctCount, currentQ, mode, timeLeft]);
 
   const startGame = (m: '3min' | '5min' | 'survie') => {
     setMode(m);
-    const allQ = getAllQuestions();
+    const allQ = getAllQuestionsLocalized(lang);
     const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
       const s = shuffleChoices(q);
       return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
@@ -157,10 +145,10 @@ export default function TurboPage() {
     const isCorrect = selected === questions[currentQ].correct;
     if (isCorrect) {
       setCorrectCount(c => c + 1);
-      setGastonMsg(getRandomMessage(GASTON_CORRECT));
+      setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
       setGastonExpr('impressed');
     } else {
-      setGastonMsg(getRandomMessage(GASTON_WRONG));
+      setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
       setGastonExpr('unhappy');
       if (mode === 'survie') { setTimeout(() => endGame(), 1200); }
     }
@@ -174,6 +162,12 @@ export default function TurboPage() {
     else { endGame(); }
   };
 
+  function modeLabel(m: string) {
+    if (m === '3min') return t('turbo_3min_label');
+    if (m === '5min') return t('turbo_5min_label');
+    return t('turbo_survie_label');
+  }
+
   // ── MODE SELECTION (desktop redesign) ──
   if (!mode) {
     return (
@@ -184,9 +178,9 @@ export default function TurboPage() {
             {/* Title */}
             <div className="mb-8">
               <h1 className="text-4xl font-black flex items-center gap-3">
-                <span>🏎️</span> Mode Turbo
+                <span>🏎️</span> {t('turbo_titre')}
               </h1>
-              <p className="text-sm mt-1 italic" style={{ color: '#94a3b8' }}>Réponds le plus vite possible !</p>
+              <p className="text-sm mt-1 italic" style={{ color: '#94a3b8' }}>{t('turbo_subtitle')}</p>
             </div>
 
             {/* 3 mode cards — same height */}
@@ -194,6 +188,8 @@ export default function TurboPage() {
               {(['3min', '5min', 'survie'] as const).map((m) => {
                 const meta = MODE_META[m];
                 const best = m === '3min' ? best3 : m === '5min' ? best5 : bestSurvie;
+                const labelKey = m === '3min' ? 'turbo_sprint_3' : m === '5min' ? 'turbo_sprint_5' : 'turbo_survie';
+                const descKey = m === '3min' ? 'turbo_sprint_3_desc' : m === '5min' ? 'turbo_sprint_5_desc' : 'turbo_survie_desc';
                 return (
                   <div
                     key={m}
@@ -215,10 +211,10 @@ export default function TurboPage() {
                     }}
                   >
                     <span className="text-5xl mb-4">{meta.icon}</span>
-                    <h2 className="text-xl font-black mb-2">{meta.label}</h2>
-                    <p className="text-sm mb-4 leading-relaxed" style={{ color: '#8B9DC3' }}>{meta.desc}</p>
+                    <h2 className="text-xl font-black mb-2">{t(labelKey)}</h2>
+                    <p className="text-sm mb-4 leading-relaxed" style={{ color: '#8B9DC3' }}>{t(descKey)}</p>
                     <p className="text-xs font-bold mb-auto" style={{ color: meta.color }}>
-                      {best > 0 ? `Meilleur score : ${best}` : 'Pas encore joué'}
+                      {best > 0 ? `${t('turbo_meilleur')} : ${best}` : t('turbo_pas_joue')}
                     </p>
                     <button
                       onClick={() => startGame(m)}
@@ -229,7 +225,7 @@ export default function TurboPage() {
                         boxShadow: `0 4px 16px ${meta.btnColor}40`,
                       }}
                     >
-                      LANCER
+                      {t('turbo_lancer')}
                     </button>
                   </div>
                 );
@@ -243,12 +239,12 @@ export default function TurboPage() {
             >
               <span className="text-3xl flex-shrink-0">🚗</span>
               <div className="flex-1 min-w-0">
-                <p className="text-xs font-bold mb-1.5" style={{ color: '#4ecdc4' }}>Prof. Gaston conseille</p>
+                <p className="text-xs font-bold mb-1.5" style={{ color: '#4ecdc4' }}>{t('turbo_gaston_conseille')}</p>
                 <p
                   className="text-sm leading-relaxed transition-opacity duration-300"
                   style={{ color: '#94a3b8', opacity: tipFade ? 1 : 0 }}
                 >
-                  💡 {GASTON_TIPS[tipIndex]}
+                  💡 {GASTON_TIPS[lang][tipIndex]}
                 </p>
               </div>
             </div>
@@ -259,24 +255,24 @@ export default function TurboPage() {
             {/* Parties jouées */}
             <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
               <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">
-                <span>📊</span> Parties jouées
+                <span>📊</span> {t('turbo_parties_jouees')}
               </h3>
               <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>⏱️ Sprint 3 min</span>
+                  <span className="text-xs" style={{ color: '#8B9DC3' }}>⏱️ {t('turbo_sprint_3')}</span>
                   <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{allTime.games3min}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>🔥 Sprint 5 min</span>
+                  <span className="text-xs" style={{ color: '#8B9DC3' }}>🔥 {t('turbo_sprint_5')}</span>
                   <span className="text-sm font-bold" style={{ color: '#e67e22' }}>{allTime.games5min}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>💀 Survie</span>
+                  <span className="text-xs" style={{ color: '#8B9DC3' }}>💀 {t('turbo_survie')}</span>
                   <span className="text-sm font-bold" style={{ color: '#e74c3c' }}>{allTime.gamesSurvie}</span>
                 </div>
                 <div className="h-[1px] my-1" style={{ background: '#2A3550' }} />
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>Temps total joué</span>
+                  <span className="text-xs" style={{ color: '#8B9DC3' }}>{t('turbo_temps_total')}</span>
                   <span className="text-sm font-bold">{formatDuration(allTime.timeSeconds)}</span>
                 </div>
               </div>
@@ -285,19 +281,19 @@ export default function TurboPage() {
             {/* Records */}
             <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
               <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">
-                <span>🏆</span> Records
+                <span>🏆</span> {t('turbo_records')}
               </h3>
               <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>⏱️ Sprint 3 min</span>
+                  <span className="text-xs" style={{ color: '#8B9DC3' }}>⏱️ {t('turbo_sprint_3')}</span>
                   <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{best3 || '—'}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>🔥 Sprint 5 min</span>
+                  <span className="text-xs" style={{ color: '#8B9DC3' }}>🔥 {t('turbo_sprint_5')}</span>
                   <span className="text-sm font-bold" style={{ color: '#e67e22' }}>{best5 || '—'}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>💀 Mode Survie</span>
+                  <span className="text-xs" style={{ color: '#8B9DC3' }}>💀 {t('turbo_survie')}</span>
                   <span className="text-sm font-bold" style={{ color: '#e74c3c' }}>{bestSurvie || '—'}</span>
                 </div>
               </div>
@@ -306,10 +302,10 @@ export default function TurboPage() {
             {/* Historique */}
             <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
               <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">
-                <span>📋</span> Historique
+                <span>📋</span> {t('turbo_historique')}
               </h3>
               {history.length === 0 ? (
-                <p className="text-xs text-center py-4" style={{ color: '#5A6B8A' }}>Aucune partie jouée — lance-toi !</p>
+                <p className="text-xs text-center py-4" style={{ color: '#5A6B8A' }}>{t('turbo_aucune_partie')}</p>
               ) : (
                 <div className="flex flex-col overflow-y-auto pr-1" style={{ maxHeight: 300 }}>
                   {history.slice(0, 20).map((s, i) => (
@@ -339,9 +335,9 @@ export default function TurboPage() {
     return (
       <div className="max-w-2xl mx-auto px-6 py-12 text-center">
         <span className="text-[80px] block mb-3">{correctCount >= 10 ? '🏆' : '💪'}</span>
-        <h1 className="text-3xl font-black mb-2">Terminé !</h1>
+        <h1 className="text-3xl font-black mb-2">{t('turbo_termine')}</h1>
         <p className="text-[56px] font-black mb-1" style={{ color: meta.color }}>{correctCount}</p>
-        <p className="text-sm mb-6" style={{ color: '#8B9DC3' }}>bonnes réponses</p>
+        <p className="text-sm mb-6" style={{ color: '#8B9DC3' }}>{t('turbo_bonnes_reponses')}</p>
 
         <div className="px-5 py-2 rounded-full inline-block mb-6" style={{ background: 'rgba(255,215,0,0.15)' }}>
           <span className="font-black" style={{ color: '#FFD700' }}>+{correctCount * 10} XP ⚡</span>
@@ -349,7 +345,7 @@ export default function TurboPage() {
 
         <div className="mb-8">
           <Gaston
-            message={correctCount >= 10 ? 'Impressionnant ! 🏆' : 'Continue à t\'entraîner ! 💪'}
+            message={correctCount >= 10 ? t('turbo_impressionnant') : t('turbo_continue')}
             expression={correctCount >= 10 ? 'party' : 'encouraging'}
             size="small"
           />
@@ -361,14 +357,14 @@ export default function TurboPage() {
             className="flex-1 py-4 rounded-2xl font-black press-scale"
             style={{ background: meta.color, color: mode === '5min' ? '#1A1A2E' : 'white' }}
           >
-            REJOUER
+            {t('turbo_rejouer')}
           </button>
           <button
             onClick={() => { setMode(null); setGameOver(false); }}
             className="flex-1 py-4 rounded-2xl font-black press-scale"
             style={{ background: '#16213E' }}
           >
-            Changer de mode
+            {t('turbo_changer_mode')}
           </button>
         </div>
       </div>
@@ -399,13 +395,13 @@ export default function TurboPage() {
             {'⏱️'} {formatTime(timeLeft)}
           </span>
         ) : (
-          <span className="text-sm font-black px-3 py-1 rounded-lg" style={{ color: '#FF4757', background: '#FF475715' }}>{'💀'} 1 vie</span>
+          <span className="text-sm font-black px-3 py-1 rounded-lg" style={{ color: '#FF4757', background: '#FF475715' }}>{t('turbo_1_vie')}</span>
         )
       }
       headerRight={
-        <span className="text-lg font-black" style={{ color: meta.color }}>Score: {correctCount}</span>
+        <span className="text-lg font-black" style={{ color: meta.color }}>{t('turbo_score')}: {correctCount}</span>
       }
-      subtitle={meta.label}
+      subtitle={mode === '3min' ? t('turbo_sprint_3') : mode === '5min' ? t('turbo_sprint_5') : t('turbo_survie')}
       question={q.question}
       signCode={q.sign}
       choices={[...q.choices]}
@@ -421,18 +417,20 @@ export default function TurboPage() {
         <>
           {/* Timer / Streak */}
           <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: meta.color }}>{meta.label}</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: meta.color }}>
+              {mode === '3min' ? t('turbo_sprint_3') : mode === '5min' ? t('turbo_sprint_5') : t('turbo_survie')}
+            </h4>
             {mode !== 'survie' && (
               <div className={`text-center mb-3 ${timeLeft <= 30 ? 'animate-pulse' : ''}`}>
                 <span className="text-4xl font-black" style={{ color: timeLeft <= 30 ? '#FF4757' : 'white' }}>{formatTime(timeLeft)}</span>
               </div>
             )}
             <div className="flex items-center justify-between">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>Score</span>
+              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('turbo_score')}</span>
               <span className="text-xl font-black" style={{ color: '#2ecc71' }}>{correctCount}</span>
             </div>
             <div className="flex items-center justify-between mt-2">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>Questions</span>
+              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('questions')}</span>
               <span className="text-sm font-bold">{currentQ + 1}</span>
             </div>
           </div>

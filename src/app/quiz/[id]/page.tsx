@@ -1,16 +1,19 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { getLessonData, getThemeForLesson, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
-import { setStars, updateQuizHistory, updateXP, checkAndUpdateStreak } from '@/lib/progressStorage';
-import { THEME_COLORS, THEME_EMOJIS, GASTON_CORRECT, GASTON_WRONG, getRandomMessage } from '@/lib/constants';
+import { getLessonDataLocalized, getThemeForLessonLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { useLang } from '@/contexts/LanguageContext';
+import { GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
+import { setStars, updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
+import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import QuizLayout from '@/components/QuizLayout';
 import Gaston from '@/components/Gaston';
 
 export default function QuizPage() {
   const params = useParams();
   const router = useRouter();
+  const { t, lang } = useLang();
   const lessonId = (params.id as string)?.toUpperCase();
 
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
@@ -18,20 +21,21 @@ export default function QuizPage() {
   const [selected, setSelected] = useState<number | null>(null);
   const [validated, setValidated] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
-  const [gastonMsg, setGastonMsg] = useState('Réfléchis bien... 🤔');
+  const [gastonMsg, setGastonMsg] = useState('');
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'impressed' | 'unhappy' | 'thinking'>('thinking');
   const [themeCode, setThemeCode] = useState('A');
   const [shakeWrong, setShakeWrong] = useState(false);
+  const startTimeRef = useRef(Date.now());
 
   useEffect(() => {
-    const lesson = getLessonData(lessonId);
+    const lesson = getLessonDataLocalized(lessonId, lang);
     if (lesson) setQuestions([...lesson.questions].sort(() => Math.random() - 0.5).map(q => {
       const s = shuffleChoices(q);
       return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
     }));
-    const t = getThemeForLesson(lessonId);
-    if (t) setThemeCode(t.theme);
-  }, [lessonId]);
+    const themeData = getThemeForLessonLocalized(lessonId, lang);
+    if (themeData) setThemeCode(themeData.theme);
+  }, [lessonId, lang]);
 
   const handleValidate = () => {
     if (selected === null || validated) return;
@@ -39,10 +43,10 @@ export default function QuizPage() {
     const isCorrect = selected === questions[currentQ].correct;
     if (isCorrect) {
       setCorrectCount(c => c + 1);
-      setGastonMsg(getRandomMessage(GASTON_CORRECT));
+      setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
       setGastonExpr('impressed');
     } else {
-      setGastonMsg(getRandomMessage(GASTON_WRONG));
+      setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
       setGastonExpr('unhappy');
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
@@ -52,7 +56,7 @@ export default function QuizPage() {
   const nextQuestion = () => {
     setSelected(null);
     setValidated(false);
-    setGastonMsg('Réfléchis bien... 🤔');
+    setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
     if (currentQ + 1 < questions.length) { setCurrentQ(q => q + 1); }
     else {
@@ -67,12 +71,13 @@ export default function QuizPage() {
       checkAndUpdateStreak();
       const xpEarned = correctCount * 10 + 50;
       updateXP(xpEarned);
+      addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
       router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&xp=${xpEarned}&lesson=${lessonId}&theme=${themeCode}`);
     }
   };
 
   if (questions.length === 0) {
-    return <div className="flex items-center justify-center min-h-screen"><p style={{ color: '#8B9DC3' }}>Chargement...</p></div>;
+    return <div className="flex items-center justify-center min-h-screen"><p style={{ color: '#8B9DC3' }}>{t('chargement')}</p></div>;
   }
 
   const q = questions[currentQ];
@@ -112,23 +117,23 @@ export default function QuizPage() {
         <>
           {/* Progress card */}
           <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Progression</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('progression')}</h4>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>Question</span>
+              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('revision_question')}</span>
               <span className="text-sm font-bold">{currentQ + 1} / {questions.length}</span>
             </div>
             <div className="h-2 rounded-full overflow-hidden mb-3" style={{ background: 'rgba(255,255,255,0.1)' }}>
               <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: '#4ecdc4' }} />
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>Correctes</span>
+              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('correctes')}</span>
               <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
             </div>
           </div>
 
           {/* Theme badge */}
           <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Thème</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('theme')}</h4>
             <div className="flex items-center gap-3">
               <span className="text-2xl">{themeEmoji}</span>
               <span className="text-xs px-2.5 py-1 rounded-md font-bold" style={{ background: color + '20', color }}>
@@ -139,7 +144,7 @@ export default function QuizPage() {
 
           {/* Gaston */}
           <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-            <Gaston message={gastonMsg} expression={gastonExpr} size="small" title="Prof. Gaston" />
+            <Gaston message={gastonMsg || t('reflechis')} expression={gastonExpr} size="small" title={t('prof_gaston')} />
           </div>
 
           {/* Explanation in sidebar after validation */}
@@ -149,7 +154,7 @@ export default function QuizPage() {
               border: `1px solid ${selected === q.correct ? 'rgba(46,204,113,0.3)' : 'rgba(231,76,60,0.3)'}`,
             }}>
               <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: selected === q.correct ? '#2ecc71' : '#e74c3c' }}>
-                {selected === q.correct ? '✓ Correct' : '✗ Incorrect'}
+                {selected === q.correct ? '✓ ' + t('correct') : '✗ ' + t('incorrect')}
               </p>
               <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{q.explanation}</p>
             </div>
@@ -158,7 +163,7 @@ export default function QuizPage() {
           {/* Upcoming questions */}
           {upcoming.length > 0 && !validated && (
             <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Questions suivantes</h4>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('flash_prochaines')}</h4>
               <div className="flex flex-col gap-2">
                 {upcoming.map((uq, i) => (
                   <p key={i} className="text-xs leading-relaxed truncate" style={{ color: '#5A6B8A' }}>

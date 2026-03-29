@@ -1,10 +1,12 @@
 'use client';
 
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback, useMemo, useRef } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import { getLessonData, getThemeForLesson, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
-import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, checkAndUpdateStreak } from '@/lib/progressStorage';
-import { THEME_COLORS, THEME_EMOJIS, GASTON_CORRECT, GASTON_WRONG, getRandomMessage } from '@/lib/constants';
+import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
+import { useLang } from '@/contexts/LanguageContext';
+import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
+import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
+import { GASTON_THEORY_TIPS, GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
 import SignImage from '@/components/SignImage';
 import Gaston from '@/components/Gaston';
 import QuizLayout from '@/components/QuizLayout';
@@ -39,25 +41,19 @@ function shuffleQuestion(q: LocalQuestion) {
   };
 }
 
-const GASTON_THEORY_TIPS = [
-  'Lis bien cette carte, c\'est important !',
-  'Retiens bien les points clés !',
-  'Prends ton temps pour comprendre.',
-  'Cette notion tombe souvent à l\'examen !',
-  'Concentre-toi bien sur les détails.',
-];
 
 export default function LessonPage() {
   const params = useParams();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { lang, t } = useLang();
   const lessonId = (params.id as string)?.toUpperCase();
   const partieParam = searchParams.get('partie');
   const isPartieMode = partieParam !== null;
   const partieIndex = isPartieMode ? parseInt(partieParam, 10) : undefined;
 
   const [phase, setPhase] = useState<Phase>('theory');
-  const [lesson, setLesson] = useState(getLessonData(lessonId));
+  const [lesson, setLesson] = useState(getLessonDataLocalized(lessonId, lang));
   const [themeCode, setThemeCode] = useState('A');
 
   // Theory
@@ -70,16 +66,17 @@ export default function LessonPage() {
   const [selected, setSelected] = useState<number | null>(null);
   const [validated, setValidated] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
-  const [gastonMsg, setGastonMsg] = useState('Réfléchis bien... 🤔');
+  const [gastonMsg, setGastonMsg] = useState(() => t('reflechis'));
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'encouraging' | 'unhappy' | 'impressed' | 'party' | 'thinking'>('thinking');
   const [shakeWrong, setShakeWrong] = useState(false);
+  const startTimeRef = useRef(Date.now());
 
   useEffect(() => {
-    const l = getLessonData(lessonId);
+    const l = getLessonDataLocalized(lessonId, lang);
     setLesson(l);
-    const t = getThemeForLesson(lessonId);
+    const t = getThemeForLessonLocalized(lessonId, lang);
     if (t) setThemeCode(t.theme);
-  }, [lessonId]);
+  }, [lessonId, lang]);
 
   const theories: LocalPartie[] = lesson?.theory ?? [];
   const allQuestions: LocalQuestion[] = lesson?.questions ?? [];
@@ -110,8 +107,8 @@ export default function LessonPage() {
   };
 
   const gastonTheoryTip = useMemo(() => {
-    return GASTON_THEORY_TIPS[currentCard % GASTON_THEORY_TIPS.length];
-  }, [currentCard]);
+    return GASTON_THEORY_TIPS[lang][currentCard % GASTON_THEORY_TIPS[lang].length];
+  }, [currentCard, lang]);
 
   const startQuiz = useCallback(() => {
     const qs = displayQuestions.map(shuffleQuestion);
@@ -120,7 +117,7 @@ export default function LessonPage() {
     setSelected(null);
     setValidated(false);
     setCorrectCount(0);
-    setGastonMsg('Réfléchis bien... 🤔');
+    setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
     setPhase('quiz');
   }, [displayQuestions]);
@@ -131,10 +128,10 @@ export default function LessonPage() {
     const isCorrect = selected === questions[currentQ].correct;
     if (isCorrect) {
       setCorrectCount(c => c + 1);
-      setGastonMsg(getRandomMessage(GASTON_CORRECT));
+      setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
       setGastonExpr('impressed');
     } else {
-      setGastonMsg(getRandomMessage(GASTON_WRONG));
+      setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
       setGastonExpr('unhappy');
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
@@ -144,7 +141,7 @@ export default function LessonPage() {
   const nextQuestion = () => {
     setSelected(null);
     setValidated(false);
-    setGastonMsg('Réfléchis bien... 🤔');
+    setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
     if (currentQ + 1 < questions.length) {
       setCurrentQ(q => q + 1);
@@ -176,6 +173,7 @@ export default function LessonPage() {
     if (earnedStars >= 2) xpEarned += 25;
     else if (earnedStars === 1) xpEarned += 10;
     updateXP(xpEarned);
+    addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
 
     router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&xp=${xpEarned}&lesson=${lessonId}&theme=${themeCode}`);
   };
@@ -184,9 +182,9 @@ export default function LessonPage() {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <p className="text-xl font-bold mb-2">Leçon introuvable</p>
+          <p className="text-xl font-bold mb-2">{t('lecon_introuvable')}</p>
           <button onClick={() => router.push('/')} className="px-6 py-3 rounded-2xl font-black text-white press-scale" style={{ background: '#4ecdc4' }}>
-            Retour
+            {t('retour')}
           </button>
         </div>
       </div>
@@ -233,7 +231,7 @@ export default function LessonPage() {
               <span className="text-sm font-bold">{currentPartieTitle || lesson.title}</span>
             </div>
             <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
-              Carte {currentCard + 1}/{totalCards}
+              {t('carte')} {currentCard + 1}/{totalCards}
             </span>
           </div>
         </div>
@@ -247,7 +245,7 @@ export default function LessonPage() {
               </span>
               <div className="flex-1" />
               <span className="text-[11px] font-bold" style={{ color: '#4ecdc4' }}>
-                Carte {currentCard + 1}/{totalCards}
+                {t('carte')} {currentCard + 1}/{totalCards}
               </span>
             </div>
             <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
@@ -311,7 +309,7 @@ export default function LessonPage() {
                       onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
                     >
                       <span>{'❓'}</span>
-                      {showSimple ? 'Fermer' : "J'ai pas compris"}
+                      {showSimple ? t('fermer_btn') : t('jai_pas_compris')}
                     </button>
                     {showSimple && (
                       <div className="mt-3 rounded-xl p-4 slide-up" style={{ background: 'rgba(253,203,110,0.12)', border: '1px solid rgba(253,203,110,0.3)' }}>
@@ -329,7 +327,7 @@ export default function LessonPage() {
                       className="h-14 px-6 rounded-xl font-bold text-sm press-scale"
                       style={{ border: `2px solid ${color}`, color }}
                     >
-                      ← Précédent
+                      {t('precedent')}
                     </button>
                   )}
                   <button
@@ -343,7 +341,7 @@ export default function LessonPage() {
                     onMouseEnter={e => { e.currentTarget.style.filter = 'brightness(1.1)'; }}
                     onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; }}
                   >
-                    {isLastCard ? '🎯 Commencer le quiz' : 'Suivant →'}
+                    {isLastCard ? t('commencer_quiz') : t('suivant')}
                   </button>
                 </div>
               </div>
@@ -355,7 +353,7 @@ export default function LessonPage() {
 
                 {/* Progress card */}
                 <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Progression</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('progression')}</h4>
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">{themeEmoji}</span>
                     <div className="flex-1">
@@ -382,14 +380,14 @@ export default function LessonPage() {
                     message={gastonTheoryTip}
                     expression="encouraging"
                     size="small"
-                    title="Prof. Gaston"
+                    title={t('prof_gaston')}
                   />
                 </div>
 
                 {/* Key points */}
                 {keyPoints.length > 0 && (
                   <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                    <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Points clés</h4>
+                    <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('points_cles')}</h4>
                     <div className="flex flex-col gap-2.5">
                       {keyPoints.map((point, i) => (
                         <div key={i} className="flex items-start gap-2">
@@ -409,7 +407,7 @@ export default function LessonPage() {
                   onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.1)'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
                 >
-                  Passer au quiz →
+                  {t('passer_quiz')}
                 </button>
               </div>
             </div>
@@ -453,28 +451,28 @@ export default function LessonPage() {
           <>
             {/* Progress card */}
             <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Progression</h4>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('progression')}</h4>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm" style={{ color: '#8B9DC3' }}>Question</span>
+                <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('revision_question')}</span>
                 <span className="text-sm font-bold">{currentQ + 1} / {questions.length}</span>
               </div>
               <div className="h-2 rounded-full overflow-hidden mb-3" style={{ background: 'rgba(255,255,255,0.1)' }}>
                 <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: '#4ecdc4' }} />
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm" style={{ color: '#8B9DC3' }}>Correctes</span>
+                <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('correctes')}</span>
                 <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
               </div>
             </div>
 
             {/* Theme badge */}
             <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Thème</h4>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('theme')}</h4>
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{themeEmoji}</span>
                 <div>
                   <span className="text-xs px-2.5 py-1 rounded-md font-bold" style={{ background: color + '20', color }}>
-                    Thème {themeCode}
+                    {t('theme')} {themeCode}
                   </span>
                   <p className="text-sm font-bold mt-1.5">{lesson.title}</p>
                 </div>
@@ -483,7 +481,7 @@ export default function LessonPage() {
 
             {/* Gaston */}
             <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-              <Gaston message={gastonMsg} expression={gastonExpr} size="small" title="Prof. Gaston" />
+              <Gaston message={gastonMsg} expression={gastonExpr} size="small" title={t('prof_gaston')} />
             </div>
 
             {/* Explanation in sidebar after validation */}
@@ -493,7 +491,7 @@ export default function LessonPage() {
                 border: `1px solid ${selected === q.correct ? 'rgba(46,204,113,0.3)' : 'rgba(231,76,60,0.3)'}`,
               }}>
                 <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: selected === q.correct ? '#2ecc71' : '#e74c3c' }}>
-                  {selected === q.correct ? '✓ Correct' : '✗ Incorrect'}
+                  {selected === q.correct ? `✓ ${t('correct')}` : `✗ ${t('incorrect')}`}
                 </p>
                 <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{q.explanation}</p>
               </div>

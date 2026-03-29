@@ -3,26 +3,28 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
+import { useLang } from '@/contexts/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const SIDEBAR_ITEMS = [
-  { href: '/', label: 'Accueil', color: '#00B894', icon: (
+  { href: '/', labelKey: 'nav_accueil', color: '#00B894', icon: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" />
     </svg>
   )},
-  { href: '/panneaux', label: 'Panneaux', color: '#FF6348', icon: (
+  { href: '/panneaux', labelKey: 'nav_panneaux', color: '#FF6348', icon: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 2L2 7l10 5 10-5-10-5z" />
       <path d="M2 17l10 5 10-5" />
       <path d="M2 12l10 5 10-5" />
     </svg>
   )},
-  { href: '/turbo', label: 'Turbo', color: '#FFD700', icon: (
+  { href: '/turbo', labelKey: 'nav_turbo', color: '#FFD700', icon: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
     </svg>
   )},
-  { href: '/profil', label: 'Profil', color: '#74B9FF', icon: (
+  { href: '/profil', labelKey: 'nav_profil', color: '#74B9FF', icon: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" />
       <circle cx="12" cy="7" r="4" />
@@ -31,24 +33,28 @@ const SIDEBAR_ITEMS = [
 ];
 
 const NAV_ITEMS = [
-  { href: '/', label: 'Accueil', icon: '🏠' },
-  { href: '/panneaux', label: 'Panneaux', icon: '🔺' },
-  { href: '/profil', label: 'Profil', icon: '👤' },
+  { href: '/', labelKey: 'nav_accueil', icon: '🏠' },
+  { href: '/panneaux', labelKey: 'nav_panneaux', icon: '🔺' },
+  { href: '/profil', labelKey: 'nav_profil', icon: '👤' },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const { user } = useAuth();
+  const { t } = useLang();
 
   return (
     <>
-      {/* Desktop sidebar — 60px, icons only, tooltips */}
+      {/* Desktop sidebar */}
       <nav className="hidden lg:flex flex-col items-start fixed left-0 top-0 h-full z-50 py-5 pl-4" style={{ width: 250, background: '#0F1923', borderRight: '1px solid #16213E' }}>
-        {/* Logo */}
-        <Link href="/" className="mb-8 flex items-center gap-2.5 px-3">
-          <span className="text-2xl">🚗</span>
-          <span className="text-lg font-black tracking-tight" style={{ color: '#00B894' }}>PermiGo</span>
-        </Link>
+        {/* Logo + Language switcher */}
+        <div className="flex items-center justify-between w-full pr-4 mb-8">
+          <Link href="/" className="flex items-center gap-2.5 px-3">
+            <span className="text-2xl">🚗</span>
+            <span className="text-lg font-black tracking-tight" style={{ color: '#00B894' }}>PermiGo</span>
+          </Link>
+          <LanguageSwitcher />
+        </div>
 
         {/* Nav items */}
         <div className="flex flex-col gap-2 flex-1 items-start">
@@ -66,7 +72,7 @@ export default function Navbar() {
               >
                 {item.icon}
                 <span className="text-sm font-bold" style={{ color: active ? item.color : '#8B9DC3' }}>
-                  {item.label}
+                  {t(item.labelKey)}
                 </span>
               </Link>
             );
@@ -85,11 +91,17 @@ export default function Navbar() {
           ) : (
             <Link href="/login" className="flex items-center gap-3 px-3 py-2.5 rounded-xl press-scale" style={{ color: '#00B894' }}>
               <span className="text-lg">🔑</span>
-              <span className="text-sm font-bold" style={{ color: '#8B9DC3' }}>Connexion</span>
+              <span className="text-sm font-bold" style={{ color: '#8B9DC3' }}>{t('nav_connexion')}</span>
             </Link>
           )}
         </div>
       </nav>
+
+      {/* Mobile top bar — language switcher */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4" style={{ height: 44, background: '#0F1923', borderBottom: '1px solid #16213E' }}>
+        <span className="text-sm font-black" style={{ color: '#00B894' }}>🚗 PermiGo</span>
+        <LanguageSwitcher />
+      </div>
 
       {/* Mobile bottom bar */}
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50" style={{ background: '#0F1923', borderTop: '1px solid #16213E' }}>
@@ -104,7 +116,7 @@ export default function Navbar() {
               >
                 <span className={`text-[22px] transition-transform ${active ? 'scale-110' : ''}`}>{item.icon}</span>
                 <span className="text-[11px] font-semibold" style={{ color: active ? '#00B894' : '#5A6B8A' }}>
-                  {item.label}
+                  {t(item.labelKey)}
                 </span>
                 {active && (
                   <div className="w-[5px] h-[5px] rounded-full mt-0.5" style={{ background: '#00B894' }} />

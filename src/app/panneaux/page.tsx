@@ -6,8 +6,10 @@ import { PANNEAU_CATEGORIES } from '@/lib/constants';
 import { SIGNS_BY_CATEGORY } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
+import { useLang } from '@/contexts/LanguageContext';
 
 export default function PanneauxPage() {
+  const { t } = useLang();
   const [selectedCat, setSelectedCat] = useState<string | null>(null);
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
   const [mobileFlash, setMobileFlash] = useState(false);
@@ -27,9 +29,9 @@ export default function PanneauxPage() {
       <div className="max-w-screen-xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-[32px] font-black">Panneaux routiers</h1>
+          <h1 className="text-[32px] font-black">{t('panneaux_titre')}</h1>
           <p className="text-sm mt-1" style={{ color: '#8B9DC3' }}>
-            Apprends à reconnaître tous les panneaux — clique sur une catégorie pour t'entraîner
+            {t('panneaux_subtitle')}
           </p>
         </div>
 
@@ -83,9 +85,9 @@ export default function PanneauxPage() {
 
                       {/* Info */}
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-black text-base mb-1">{cat.name}</h3>
+                        <h3 className="font-black text-base mb-1">{t(`panneau_cat_${cat.id}`)}</h3>
                         <p className="text-xs mb-3" style={{ color: '#8B9DC3' }}>
-                          {total} panneaux
+                          {total} {t('panneaux_count')}
                         </p>
 
                         {/* Progress bar */}
@@ -113,10 +115,10 @@ export default function PanneauxPage() {
                         onMouseEnter={e => { e.currentTarget.style.background = '#4ecdc4'; e.currentTarget.style.color = '#0a0e2a'; }}
                         onMouseLeave={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.15)'; e.currentTarget.style.color = '#4ecdc4'; }}
                       >
-                        Voir tous les panneaux →
+                        {t('panneaux_voir_tous')}
                       </Link>
                       {pct === 100 && total > 0 && (
-                        <span className="text-xs font-bold" style={{ color: '#2ecc71' }}>Complet ✓</span>
+                        <span className="text-xs font-bold" style={{ color: '#2ecc71' }}>{t('panneaux_complet')}</span>
                       )}
                     </div>
                   </div>
@@ -143,9 +145,9 @@ export default function PanneauxPage() {
               ) : (
                 <div className="rounded-2xl p-8 text-center" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
                   <span className="text-5xl block mb-4">🃏</span>
-                  <p className="font-black text-base mb-2">Flashcards</p>
+                  <p className="font-black text-base mb-2">{t('panneaux_flashcards')}</p>
                   <p className="text-sm leading-relaxed" style={{ color: '#8B9DC3' }}>
-                    Sélectionne une catégorie pour commencer à réviser les panneaux
+                    {t('panneaux_select_cat')}
                   </p>
                 </div>
               )}

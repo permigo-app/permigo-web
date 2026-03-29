@@ -185,7 +185,8 @@ export async function syncProgressToSupabase(uid: string, progress: {
         xp_data: progress.xpData,
       },
     });
-  } catch {
-    // silently ignored
+  } catch (e) {
+    console.error('[PermiGo] syncProgressToSupabase failed:', e);
+    // localStorage reste la source de vérité
   }
 }

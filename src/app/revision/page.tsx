@@ -2,7 +2,9 @@
 
 import { useState, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { getThemeData, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { getThemeDataLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { useLang } from '@/contexts/LanguageContext';
+import { GASTON_REVISION } from '@/locales/messages';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import QuizLayout from '@/components/QuizLayout';
 import Gaston from '@/components/Gaston';
@@ -16,21 +18,15 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-const GASTON_REVISION = [
-  'Prends ton temps, c\'est de la révision !',
-  'Chaque question est une chance de progresser.',
-  'Tu connais déjà la réponse, cherche bien.',
-  'Bonne révision, tu gères !',
-];
-
 export default function RevisionPage() {
   const params = useSearchParams();
   const router = useRouter();
+  const { t, lang } = useLang();
   const themeCode = params.get('theme') || 'A';
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🔄';
 
-  const themeData = getThemeData(themeCode);
+  const themeData = getThemeDataLocalized(themeCode, lang);
 
   const [questions, setQuestions] = useState<LocalQuestion[]>(() => {
     if (!themeData) return [];
@@ -46,18 +42,18 @@ export default function RevisionPage() {
   const [correctCount, setCorrectCount] = useState(0);
   const [done, setDone] = useState(false);
   const [shakeWrong, setShakeWrong] = useState(false);
-  const [gastonMsg, setGastonMsg] = useState(GASTON_REVISION[0]);
+  const [gastonMsg, setGastonMsg] = useState(GASTON_REVISION[lang][0]);
 
   const validateSelected = useCallback(() => {
     if (selected === null || validated) return;
     setValidated(true);
     if (selected === questions[index].correct) {
       setCorrectCount(c => c + 1);
-      setGastonMsg('Bien joué ! Continue comme ça !');
+      setGastonMsg(t('revision_bien_joue'));
     } else {
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
-      setGastonMsg('Pas grave, retiens la bonne réponse !');
+      setGastonMsg(t('revision_pas_grave'));
     }
   }, [selected, validated, questions, index]);
 
@@ -70,7 +66,7 @@ export default function RevisionPage() {
     setSelected(null);
     setValidated(false);
     setShakeWrong(false);
-    setGastonMsg(GASTON_REVISION[(index + 1) % GASTON_REVISION.length]);
+    setGastonMsg(GASTON_REVISION[lang][(index + 1) % GASTON_REVISION[lang].length]);
   }, [index, questions.length]);
 
   const restart = useCallback(() => {
@@ -90,9 +86,9 @@ export default function RevisionPage() {
   if (!themeData || questions.length === 0) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4">
-        <p style={{ color: '#8B9DC3' }}>Aucune question disponible.</p>
+        <p style={{ color: '#8B9DC3' }}>{t('revision_aucune')}</p>
         <button onClick={() => router.back()} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: '#16213E' }}>
-          {'← Retour'}
+          {t('flash_retour')}
         </button>
       </div>
     );
@@ -105,10 +101,10 @@ export default function RevisionPage() {
     const pct = Math.round((correctCount / questions.length) * 100);
     const emoji = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '📚';
     const msg = pct >= 80
-      ? 'Excellent ! Tu maîtrise ce thème.'
+      ? t('revision_excellent')
       : pct >= 60
-      ? 'Bien ! Quelques points à retravailler.'
-      : 'Continue à réviser, ça viendra !';
+      ? t('revision_bien')
+      : t('revision_continue');
 
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-8 gap-4">
@@ -119,25 +115,25 @@ export default function RevisionPage() {
         <div className="w-full max-w-md flex items-center justify-around rounded-2xl p-5 my-2" style={{ background: '#16213E' }}>
           <div className="text-center">
             <p className="text-[28px] font-black" style={{ color: '#2ecc71' }}>{correctCount}</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>Correctes</p>
+            <p className="text-xs" style={{ color: '#8B9DC3' }}>{t('revision_correctes')}</p>
           </div>
           <div className="w-[1px] h-10" style={{ background: '#2A3550' }} />
           <div className="text-center">
             <p className="text-[28px] font-black" style={{ color: '#e74c3c' }}>{questions.length - correctCount}</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>Incorrectes</p>
+            <p className="text-xs" style={{ color: '#8B9DC3' }}>{t('revision_incorrectes')}</p>
           </div>
           <div className="w-[1px] h-10" style={{ background: '#2A3550' }} />
           <div className="text-center">
             <p className="text-[28px] font-black">{questions.length}</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>Total</p>
+            <p className="text-xs" style={{ color: '#8B9DC3' }}>{t('revision_total')}</p>
           </div>
         </div>
 
         <button onClick={() => router.back()} className="w-full max-w-md h-[54px] rounded-2xl font-bold text-white press-scale" style={{ background: themeColor }}>
-          {'Retour à la carte'}
+          {t('revision_retour_carte')}
         </button>
         <button onClick={restart} className="w-full max-w-md h-[54px] rounded-2xl font-bold press-scale" style={{ background: '#16213E', border: '1px solid #2A3550', color: themeColor }}>
-          🔁 Recommencer
+          {t('revision_recommencer')}
         </button>
       </div>
     );
@@ -156,9 +152,9 @@ export default function RevisionPage() {
         </button>
       }
       headerCenter={
-        <span className="text-sm font-bold">{themeEmoji} Révision — Thème {themeCode}</span>
+        <span className="text-sm font-bold">{themeEmoji} {t('revision_titre')} {themeCode}</span>
       }
-      subtitle={`Révision — Thème ${themeCode}`}
+      subtitle={`${t('revision_titre')} ${themeCode}`}
       question={q.question}
       signCode={q.sign}
       choices={[...q.choices]}
@@ -176,13 +172,13 @@ export default function RevisionPage() {
         <>
           {/* Question info */}
           <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>Progression</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('revision_progression')}</h4>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>Question</span>
+              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('revision_question')}</span>
               <span className="text-sm font-bold">{index + 1} / {questions.length}</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>Correctes</span>
+              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('revision_correctes')}</span>
               <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
             </div>
             <div className="mt-3">
@@ -194,7 +190,7 @@ export default function RevisionPage() {
 
           {/* Gaston */}
           <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-            <Gaston message={gastonMsg} expression={validated ? (selected === q.correct ? 'impressed' : 'unhappy') : 'encouraging'} size="small" title="Prof. Gaston" />
+            <Gaston message={gastonMsg} expression={validated ? (selected === q.correct ? 'impressed' : 'unhappy') : 'encouraging'} size="small" title={t('prof_gaston')} />
           </div>
         </>
       }

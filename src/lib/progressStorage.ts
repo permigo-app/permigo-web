@@ -265,13 +265,35 @@ export function addTurboAllTime(mode: '3min' | '5min' | 'survie', timeSeconds: n
   setItem('turbo_alltime', JSON.stringify(current));
 }
 
+// ── Study time tracking (seconds) ──
+const KEY_STUDY_TIME = '@study_time';
+
+export function getStudyTime(): number {
+  const raw = getItem(KEY_STUDY_TIME);
+  return raw ? Number(raw) : 0;
+}
+
+export function addStudyTime(seconds: number): void {
+  if (seconds <= 0) return;
+  const current = getStudyTime();
+  setItem(KEY_STUDY_TIME, String(current + seconds));
+}
+
+export function formatStudyTime(totalSeconds: number): string {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  if (hours === 0) return `${minutes}min`;
+  if (minutes === 0) return `${hours}h`;
+  return `${hours}h${String(minutes).padStart(2, '0')}`;
+}
+
 // ── Reset all progress ──
 export function resetAllProgress(): void {
   if (typeof window === 'undefined') return;
   const keys = Object.keys(localStorage);
   keys.forEach(k => {
     if (k.startsWith('@progress') || k.startsWith('lessonProgress_') || k.startsWith('lessonPartiesDone_') ||
-        k === KEY_QUIZ || k === KEY_STREAK || k === KEY_XP || k === 'survie_best_score') {
+        k === KEY_QUIZ || k === KEY_STREAK || k === KEY_XP || k === KEY_STUDY_TIME || k === 'survie_best_score') {
       localStorage.removeItem(k);
     }
   });

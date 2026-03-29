@@ -5,10 +5,12 @@ import { Suspense } from 'react';
 import Link from 'next/link';
 import Gaston from '@/components/Gaston';
 import { THEME_COLORS } from '@/lib/constants';
+import { useLang } from '@/contexts/LanguageContext';
 
 function ResultsContent() {
   const params = useSearchParams();
   const router = useRouter();
+  const { t } = useLang();
 
   const correct = Number(params.get('correct') ?? 0);
   const total = Number(params.get('total') ?? 1);
@@ -23,19 +25,19 @@ function ResultsContent() {
   const color = THEME_COLORS[themeCode] || '#74B9FF';
 
   let emoji = '💪';
-  let title = 'Courage !';
+  let title = t('resultats_courage');
   let gastonExpr: 'party' | 'impressed' | 'encouraging' | 'unhappy' = 'encouraging';
-  let gastonMsg = 'Continue à t\'entraîner, tu vas y arriver ! 💪';
+  let gastonMsg = t('resultats_continue_msg');
 
   if (pct === 100) {
-    emoji = '🏆'; title = 'Parfait !'; gastonExpr = 'party';
-    gastonMsg = 'INCROYABLE ! Score parfait ! Tu es un génie ! 🎉';
+    emoji = '🏆'; title = t('resultats_parfait'); gastonExpr = 'party';
+    gastonMsg = t('resultats_parfait_msg');
   } else if (passed) {
-    emoji = '🎉'; title = 'Bravo !'; gastonExpr = 'impressed';
-    gastonMsg = 'Super résultat ! Je suis fier de toi ! 🌟';
+    emoji = '🎉'; title = t('resultats_bravo'); gastonExpr = 'impressed';
+    gastonMsg = t('resultats_bravo_msg');
   } else {
-    emoji = '💪'; title = 'Courage !'; gastonExpr = 'unhappy';
-    gastonMsg = 'Pas grave, on apprend de ses erreurs ! Réessaie ! 💪';
+    emoji = '💪'; title = t('resultats_courage'); gastonExpr = 'unhappy';
+    gastonMsg = t('resultats_courage_msg');
   }
 
   const scoreColor = passed ? '#00B894' : '#FFD700';
@@ -88,17 +90,17 @@ function ResultsContent() {
       <div className="flex items-center justify-around mb-8 py-4" style={{ borderTop: '1px solid #2A3550', borderBottom: '1px solid #2A3550' }}>
         <div className="text-center">
           <span className="text-[28px] font-black block" style={{ color: '#00B894' }}>{correct}</span>
-          <span className="text-xs" style={{ color: '#5A6B8A' }}>Correct</span>
+          <span className="text-xs" style={{ color: '#5A6B8A' }}>{t('resultats_correct')}</span>
         </div>
         <div className="w-[1px] h-10" style={{ background: '#2A3550' }} />
         <div className="text-center">
           <span className="text-[28px] font-black block" style={{ color: '#FF6B6B' }}>{total - correct}</span>
-          <span className="text-xs" style={{ color: '#5A6B8A' }}>Erreurs</span>
+          <span className="text-xs" style={{ color: '#5A6B8A' }}>{t('resultats_erreurs')}</span>
         </div>
         <div className="w-[1px] h-10" style={{ background: '#2A3550' }} />
         <div className="text-center">
           <span className="text-[28px] font-black block" style={{ color: scoreColor }}>{pct}%</span>
-          <span className="text-xs" style={{ color: '#5A6B8A' }}>Score</span>
+          <span className="text-xs" style={{ color: '#5A6B8A' }}>{t('resultats_score')}</span>
         </div>
       </div>
 
@@ -115,7 +117,7 @@ function ResultsContent() {
             className="w-full py-4 rounded-3xl font-black text-sm press-scale"
             style={{ background: '#16213E', border: '1px solid #2A3550' }}
           >
-            🔄 Réessayer
+            {t('resultats_reessayer')}
           </button>
         )}
         <Link
@@ -123,7 +125,7 @@ function ResultsContent() {
           className="w-full py-4 rounded-3xl font-black text-sm text-center press-scale text-white"
           style={{ background: passed ? '#27AE60' : '#00B894', boxShadow: '0 4px 12px rgba(0,184,148,0.4)' }}
         >
-          {passed ? '✓ Continuer' : '← Retour'}
+          {passed ? t('resultats_continuer') : t('resultats_retour')}
         </Link>
       </div>
     </div>

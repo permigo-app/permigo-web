@@ -2,6 +2,7 @@
 
 import { type ReactNode } from 'react';
 import SignImage from '@/components/SignImage';
+import { useLang } from '@/contexts/LanguageContext';
 
 const CHOICE_LABELS = ['A', 'B', 'C', 'D'];
 
@@ -66,6 +67,7 @@ export default function QuizLayout({
   explanation,
   shakeWrong,
 }: QuizLayoutProps) {
+  const { t } = useLang();
   const isCorrect = selected === correctIndex;
 
   return (
@@ -202,7 +204,7 @@ export default function QuizLayout({
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-2xl">{isCorrect ? '🎉' : '😅'}</span>
                   <span className="text-base font-bold" style={{ color: isCorrect ? '#2ecc71' : '#e74c3c' }}>
-                    {isCorrect ? 'Correct !' : 'Incorrect'}
+                    {isCorrect ? t('correct') : t('incorrect')}
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{explanation}</p>
@@ -224,7 +226,7 @@ export default function QuizLayout({
                 onMouseEnter={e => { if (selected !== null) { e.currentTarget.style.filter = 'brightness(1.1)'; e.currentTarget.style.transform = 'scale(1.01)'; } }}
                 onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; e.currentTarget.style.transform = 'scale(1)'; }}
               >
-                VALIDER
+                {t('valider')}
               </button>
             ) : (
               <button
@@ -234,7 +236,7 @@ export default function QuizLayout({
                 onMouseEnter={e => { e.currentTarget.style.filter = 'brightness(1.1)'; e.currentTarget.style.transform = 'scale(1.01)'; }}
                 onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; e.currentTarget.style.transform = 'scale(1)'; }}
               >
-                {isLastQuestion ? lastLabel : 'Question suivante →'}
+                {isLastQuestion ? lastLabel : t('question_suivante')}
               </button>
             )}
           </div>

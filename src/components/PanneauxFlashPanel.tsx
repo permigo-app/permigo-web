@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { SIGNS_BY_CATEGORY, type SignDef } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
+import { useLang } from '@/contexts/LanguageContext';
 
 /* ── Shared localStorage helpers (key: panneaux_mastered) ── */
 export function loadAllMastered(): Record<string, boolean> {
@@ -38,6 +39,7 @@ interface FlashPanelProps {
 }
 
 export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMasteredChange }: FlashPanelProps) {
+  const { t } = useLang();
   const signs = useMemo(() => SIGNS_BY_CATEGORY[catId] || [], [catId]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -97,7 +99,7 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
   if (!loaded || signs.length === 0) {
     return (
       <div className="flex items-center justify-center py-12" style={{ color: '#5A6B8A' }}>
-        <p className="text-sm">Aucun panneau dans cette catégorie</p>
+        <p className="text-sm">{t('panneaux_aucun')}</p>
       </div>
     );
   }
@@ -120,7 +122,7 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
 
       {allDone && (
         <div className="w-full text-center mb-4 py-3 rounded-xl" style={{ background: '#2ecc7120' }}>
-          <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>Tous maîtrisés ! Bravo !</span>
+          <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{t('panneaux_tous_maitrises')}</span>
         </div>
       )}
 
@@ -149,7 +151,7 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
               <SignImage code={current.code} size={150} />
               <p className="text-lg font-black mt-2" style={{ color: '#CCD6E6' }}>{current.code}</p>
               {isMastered && (
-                <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: '#2ecc7120', color: '#2ecc71' }}>Maîtrisé</span>
+                <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: '#2ecc7120', color: '#2ecc71' }}>{t('panneaux_maitrise')}</span>
               )}
               {/* Reveal button */}
               <button
@@ -159,7 +161,7 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
                 onMouseEnter={e => { e.currentTarget.style.background = '#4ecdc420'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
               >
-                <span>👁️</span> Révéler la description
+                <span>👁️</span> {t('panneaux_reveler')}
               </button>
             </div>
 
@@ -184,7 +186,7 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
                 className="mt-2 text-xs press-scale"
                 style={{ color: '#5A6B8A' }}
               >
-                Retourner
+                {t('panneaux_retourner')}
               </button>
             </div>
           </div>
@@ -219,14 +221,14 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
             className="flex-1 rounded-xl text-sm font-bold press-scale transition-all"
             style={{ background: '#e74c3c', color: 'white', padding: '12px 24px' }}
           >
-            À revoir
+            {t('panneaux_a_revoir')}
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); handleMastered(true); }}
             className="flex-1 rounded-xl text-sm font-bold press-scale transition-all"
             style={{ background: '#2ecc71', color: 'white', padding: '12px 24px' }}
           >
-            Maîtrisé ✓
+            {t('panneaux_maitrise_btn')}
           </button>
         </div>
       </div>

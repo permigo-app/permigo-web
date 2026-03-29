@@ -3,10 +3,13 @@
 import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { THEME_ORDER, getThemeData, getLessonData } from '@/lib/lessonData';
-import { THEME_COLORS, THEME_EMOJIS, CITY_NAMES_UPPER, GASTON_GREETINGS, getRandomMessage } from '@/lib/constants';
+import { THEME_ORDER, getThemeDataLocalized, getLessonDataLocalized } from '@/lib/lessonData';
+import { useLang } from '@/contexts/LanguageContext';
+import { THEME_COLORS, THEME_EMOJIS, CITY_NAMES_UPPER } from '@/lib/constants';
+import { GASTON_GREETINGS, getRandomMsg } from '@/locales/messages';
 import { getUnlockedThemes, getAllStars, getAllExams, getXPData, checkAndUpdateStreak, getStreakData, getCompletedParties, getLessonProgress } from '@/lib/progressStorage';
 import Gaston from '@/components/Gaston';
+import CarSVG from '@/components/CarSVG';
 
 // ── Road constants ──
 const ROAD_W = 65;
@@ -107,12 +110,14 @@ interface PathNode {
 
 export default function HomePage() {
   const router = useRouter();
+  const { lang } = useLang();
   const [stars, setStarsState] = useState<Record<string, number>>({});
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [xp, setXp] = useState({ totalXP: 0, level: 1 });
   const [streak, setStreak] = useState({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
-  const [greeting] = useState(getRandomMessage(GASTON_GREETINGS));
+  const [greeting] = useState(getRandomMsg(GASTON_GREETINGS[lang]));
   const [mounted, setMounted] = useState(false);
+  const [userCar, setUserCar] = useState<{ carType: string; carColor: string }>({ carType: 'berline', carColor: '#00B894' });
 
   const DEFAULT_ADJ: Record<string, { dx: number; dy: number; scale: number; rot: number }> = {
     "mon-A-0": { dx: -140, dy: -140, scale: 1.3, rot: 0 },
@@ -165,6 +170,13 @@ export default function HomePage() {
     setExams(getAllExams());
     setXp(getXPData());
     setStreak(checkAndUpdateStreak());
+    try {
+      const raw = localStorage.getItem('userProfile');
+      if (raw) {
+        const p = JSON.parse(raw);
+        if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#00B894' });
+      }
+    } catch {}
   }, []);
 
   useEffect(() => {
@@ -223,7 +235,7 @@ export default function HomePage() {
     const themeAt = new Map<number, string>();
 
     for (const themeCode of THEME_ORDER) {
-      const theme = getThemeData(themeCode);
+      const theme = getThemeDataLocalized(themeCode, lang);
       if (!theme) continue;
 
       const themeIndex = THEME_ORDER.indexOf(themeCode);
@@ -231,7 +243,7 @@ export default function HomePage() {
 
       let prevExamPassed = true;
       if (prevThemeCode) {
-        const prevTheme = getThemeData(prevThemeCode);
+        const prevTheme = getThemeDataLocalized(prevThemeCode, lang);
         if (prevTheme) {
           const allPrevDone = prevTheme.lessons.every((_, idx) => {
             const lid = prevThemeCode + (idx + 1);
@@ -341,7 +353,7 @@ export default function HomePage() {
     }
 
     return { nodes, themeAt, pts, totalH, pathD: d, curIdx, SVG_W, CX, AMP, carTilt, finishY };
-  }, [mounted, stars, exams]);
+  }, [mounted, stars, exams, lang]);
 
   if (!mounted || !layout) return <div className="min-h-screen" />;
 
@@ -599,7 +611,7 @@ export default function HomePage() {
             const p = pts[idx];
             const tc = THEME_COLORS[themeCode] || '#74B9FF';
             const em = THEME_EMOJIS[themeCode] || '📚';
-            const theme = getThemeData(themeCode);
+            const theme = getThemeDataLocalized(themeCode, lang);
             const isLocked = nodes[idx]?.isLocked;
 
             // Compute barrier road center (same logic as barrier code)
@@ -934,18 +946,7 @@ export default function HomePage() {
               zIndex: 20,
               transform: `rotate(${carTilt}deg)`,
             }}>
-              <svg width={CAR_SIZE + 10} height={CAR_SIZE + 10} viewBox="0 0 45 45">
-                <rect x={5} y={15} width={35} height={14} rx={3} fill="#00B894" />
-                <rect x={12} y={5} width={20} height={12} rx={4} fill="#00A380" />
-                <rect x={24} y={6} width={6} height={9} rx={1.5} fill="#BDE3F5" opacity={0.9} />
-                <rect x={14} y={6} width={6} height={9} rx={1.5} fill="#BDE3F5" opacity={0.9} />
-                <circle cx={30} cy={29} r={4.5} fill="#1A1A2E" />
-                <circle cx={30} cy={29} r={2} fill="#555" />
-                <circle cx={14} cy={29} r={4.5} fill="#1A1A2E" />
-                <circle cx={14} cy={29} r={2} fill="#555" />
-                <rect x={38} y={16} width={3} height={4} rx={1} fill="#FFD700" opacity={0.9} />
-                <rect x={4} y={16} width={3} height={4} rx={1} fill="#FF6B6B" />
-              </svg>
+              <CarSVG type={userCar.carType} color={userCar.carColor} size={CAR_SIZE + 10} />
             </div>
           )}
 
@@ -1108,7 +1109,7 @@ export default function HomePage() {
           {/* Per-theme mini progress */}
           <div className="mt-4 flex flex-col gap-1.5">
             {THEME_ORDER.map(tc => {
-              const theme = getThemeData(tc);
+              const theme = getThemeDataLocalized(tc, lang);
               if (!theme) return null;
               const done = theme.lessons.filter((_, idx) => {
                 const lid = theme.lessons[idx]?.id || (tc + (idx + 1));
@@ -1138,7 +1139,7 @@ export default function HomePage() {
 
       {/* ── Lesson Modal ── */}
       {modalNode && (() => {
-        const lesson = getLessonData(modalNode.id);
+        const lesson = getLessonDataLocalized(modalNode.id, lang);
         const tc = THEME_COLORS[modalNode.themeCode] || '#74B9FF';
         const em = THEME_EMOJIS[modalNode.themeCode] || '📚';
         const theories = lesson?.theory ?? [];

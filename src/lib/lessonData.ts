@@ -131,3 +131,71 @@ export function getNextThemeCode(code: string): string | null {
   if (idx < 0 || idx >= THEME_ORDER.length - 1) return null;
   return THEME_ORDER[idx + 1];
 }
+
+// ── Language-aware wrappers ──
+import { localizeTheme } from './contentLoader';
+
+type Lang = 'fr' | 'nl';
+
+export function getThemeDataLocalized(code: string, lang: Lang): LocalTheme | null {
+  const theme = THEMES[code];
+  if (!theme) return null;
+  return localizeTheme(theme, lang);
+}
+
+export function getLessonDataLocalized(lessonId: string, lang: Lang): LocalLesson | null {
+  const needle = (lessonId || '').toUpperCase();
+  for (const theme of Object.values(THEMES)) {
+    const idx = theme.lessons.findIndex((l) => l.id.toUpperCase() === needle);
+    if (idx >= 0) {
+      const localized = localizeTheme(theme, lang);
+      return localized.lessons[idx];
+    }
+  }
+  return null;
+}
+
+export function getThemeForLessonLocalized(lessonId: string, lang: Lang): LocalTheme | null {
+  const needle = (lessonId || '').toUpperCase();
+  for (const theme of Object.values(THEMES)) {
+    if (theme.lessons.some((l) => l.id.toUpperCase() === needle)) {
+      return localizeTheme(theme, lang);
+    }
+  }
+  return null;
+}
+
+export function getExamQuestionsLocalized(themeCode: string, lang: Lang, count: number = 20): LocalQuestion[] {
+  const allQuestions: LocalQuestion[] = [];
+  if (themeCode === 'FINAL') {
+    for (const theme of Object.values(THEMES)) {
+      const loc = localizeTheme(theme, lang);
+      for (const lesson of loc.lessons) {
+        allQuestions.push(...lesson.questions);
+      }
+    }
+  } else {
+    const theme = THEMES[themeCode];
+    if (!theme) return [];
+    const loc = localizeTheme(theme, lang);
+    for (const lesson of loc.lessons) {
+      allQuestions.push(...lesson.questions);
+    }
+  }
+  for (let i = allQuestions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
+  }
+  return allQuestions.slice(0, Math.min(count, allQuestions.length));
+}
+
+export function getAllQuestionsLocalized(lang: Lang): LocalQuestion[] {
+  const all: LocalQuestion[] = [];
+  for (const theme of Object.values(THEMES)) {
+    const loc = localizeTheme(theme, lang);
+    for (const lesson of loc.lessons) {
+      all.push(...lesson.questions);
+    }
+  }
+  return all;
+}

@@ -6,10 +6,12 @@ import { PANNEAU_CATEGORIES } from '@/lib/constants';
 import { SIGNS_BY_CATEGORY } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
+import { useLang } from '@/contexts/LanguageContext';
 
 export default function PanneauCategoriePage() {
   const params = useParams();
   const router = useRouter();
+  const { t } = useLang();
   const catId = params.categorie as string;
 
   const category = PANNEAU_CATEGORIES.find(c => c.id === catId);
@@ -30,9 +32,9 @@ export default function PanneauCategoriePage() {
   if (!category) {
     return (
       <div className="max-w-lg mx-auto px-4 py-12 text-center">
-        <p className="text-xl font-bold">Catégorie introuvable</p>
+        <p className="text-xl font-bold">{t('panneaux_categorie_introuvable')}</p>
         <button onClick={() => router.push('/panneaux')} className="mt-4 px-6 py-3 rounded-2xl font-black press-scale" style={{ background: '#4ecdc4' }}>
-          Retour
+          {t('retour')}
         </button>
       </div>
     );
@@ -47,7 +49,7 @@ export default function PanneauCategoriePage() {
       <div className="max-w-screen-xl mx-auto">
         {/* Header */}
         <button onClick={() => router.push('/panneaux')} className="text-sm mb-4 block press-scale" style={{ color: '#8B9DC3' }}>
-          ← Retour aux catégories
+          {t('panneaux_retour_categories')}
         </button>
 
         <div className="flex items-center gap-4 mb-2">
@@ -62,9 +64,9 @@ export default function PanneauCategoriePage() {
             )}
           </div>
           <div className="flex-1">
-            <h1 className="text-2xl font-black">{category.name}</h1>
+            <h1 className="text-2xl font-black">{t(`panneau_cat_${category.id}`)}</h1>
             <p className="text-sm mt-0.5" style={{ color: '#4ecdc4' }}>
-              {masteredCount}/{total} maîtrisés
+              {masteredCount}/{total} {t('panneaux_maitrises')}
             </p>
           </div>
         </div>
@@ -88,7 +90,7 @@ export default function PanneauCategoriePage() {
             {signs.length === 0 ? (
               <div className="text-center py-12">
                 <span className="text-4xl block mb-3">🚧</span>
-                <p className="font-bold" style={{ color: '#8B9DC3' }}>Les panneaux de cette catégorie arrivent bientôt !</p>
+                <p className="font-bold" style={{ color: '#8B9DC3' }}>{t('panneaux_bientot')}</p>
               </div>
             ) : (
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -142,7 +144,7 @@ export default function PanneauCategoriePage() {
             <div className="sticky top-6">
               <div className="rounded-2xl p-5" style={{ background: '#16213E', border: `1px solid ${category.color}30` }}>
                 <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">
-                  <span>🃏</span> Flashcard — {category.name}
+                  <span>🃏</span> Flashcard — {t(`panneau_cat_${category.id}`)}
                 </h3>
                 <PanneauxFlashPanel
                   key={`${catId}-${selectedSign || 'default'}`}
@@ -170,7 +172,7 @@ export default function PanneauCategoriePage() {
               </div>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-sm font-extrabold flex items-center gap-2">
-                  <span>🃏</span> Flashcard — {category.name}
+                  <span>🃏</span> Flashcard — {t(`panneau_cat_${category.id}`)}
                 </h3>
                 <button
                   onClick={() => setMobileFlash(false)}

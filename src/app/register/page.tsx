@@ -5,9 +5,11 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Gaston from '@/components/Gaston';
 import { useAuth } from '@/contexts/AuthContext';
+import { useLang } from '@/contexts/LanguageContext';
 
 export default function RegisterPage() {
   const router = useRouter();
+  const { t } = useLang();
   const { signUp, user } = useAuth();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -26,16 +28,16 @@ export default function RegisterPage() {
     return (
       <div className="max-w-md mx-auto px-5 py-12 text-center">
         <span className="text-[80px] block mb-4">📧</span>
-        <h1 className="text-2xl font-black mb-3">Vérifie ta boîte mail !</h1>
+        <h1 className="text-2xl font-black mb-3">{t('register_verif_titre')}</h1>
         <p className="text-sm mb-6" style={{ color: '#8B9DC3' }}>
-          Un email de confirmation a été envoyé à <strong style={{ color: '#00B894' }}>{email}</strong>.
-          <br />Clique sur le lien pour activer ton compte.
+          {t('register_verif_msg')} <strong style={{ color: '#00B894' }}>{email}</strong>.
+          <br />{t('register_verif_lien')}
         </p>
         <div className="mb-6">
-          <Gaston message="Vérifie aussi tes spams ! 📬" expression="happy" size="small" />
+          <Gaston message={t('register_gaston_spam')} expression="happy" size="small" />
         </div>
         <Link href="/login" className="inline-block py-3.5 px-8 rounded-2xl font-black text-white press-scale" style={{ background: '#00B894' }}>
-          Retour à la connexion
+          {t('register_retour')}
         </Link>
       </div>
     );
@@ -44,15 +46,15 @@ export default function RegisterPage() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!username || !email || !password || !confirmPassword) {
-      setError('Remplis tous les champs');
+      setError(t('register_remplir'));
       return;
     }
     if (password !== confirmPassword) {
-      setError('Les mots de passe ne correspondent pas');
+      setError(t('register_mdp_mismatch'));
       return;
     }
     if (password.length < 6) {
-      setError('Min. 6 caractères pour le mot de passe');
+      setError(t('register_mdp_min'));
       return;
     }
 
@@ -74,38 +76,38 @@ export default function RegisterPage() {
     <div className="max-w-md mx-auto px-5 py-12">
       <div className="text-center mb-8">
         <span className="text-[64px] block mb-3">🎓</span>
-        <h1 className="text-2xl font-black">Inscription</h1>
-        <p className="text-sm" style={{ color: '#8B9DC3' }}>Crée ton compte PermiGo</p>
+        <h1 className="text-2xl font-black">{t('register_titre')}</h1>
+        <p className="text-sm" style={{ color: '#8B9DC3' }}>{t('register_subtitle')}</p>
       </div>
 
       <div className="mb-6">
-        <Gaston message="Bienvenue ! On va conquérir le permis ensemble ! 🚗" expression="party" size="small" />
+        <Gaston message={t('register_gaston')} expression="party" size="small" />
       </div>
 
       <form onSubmit={handleRegister} className="flex flex-col gap-3 mb-6">
-        <input type="text" placeholder="Nom d'utilisateur" value={username} onChange={e => setUsername(e.target.value)}
+        <input type="text" placeholder={t('register_nom')} value={username} onChange={e => setUsername(e.target.value)}
           className="rounded-2xl px-4 py-3.5 text-white placeholder-[#5A6B8A] focus:outline-none"
           style={{ background: '#16213E', border: '2px solid #2A3550' }} />
-        <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}
+        <input type="email" placeholder={t('register_email')} value={email} onChange={e => setEmail(e.target.value)}
           className="rounded-2xl px-4 py-3.5 text-white placeholder-[#5A6B8A] focus:outline-none"
           style={{ background: '#16213E', border: '2px solid #2A3550' }} />
-        <input type="password" placeholder="Mot de passe (min. 6 car.)" value={password} onChange={e => setPassword(e.target.value)}
+        <input type="password" placeholder={t('register_mdp')} value={password} onChange={e => setPassword(e.target.value)}
           className="rounded-2xl px-4 py-3.5 text-white placeholder-[#5A6B8A] focus:outline-none"
           style={{ background: '#16213E', border: '2px solid #2A3550' }} />
-        <input type="password" placeholder="Confirmer le mot de passe" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)}
+        <input type="password" placeholder={t('register_mdp_confirm')} value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)}
           className="rounded-2xl px-4 py-3.5 text-white placeholder-[#5A6B8A] focus:outline-none"
           style={{ background: '#16213E', border: '2px solid #2A3550' }} />
         {error && <p className="text-sm" style={{ color: '#FF6B6B' }}>{error}</p>}
         <button type="submit" disabled={loading}
           className="py-3.5 rounded-2xl font-black text-white press-scale disabled:opacity-50"
           style={{ background: '#00B894' }}>
-          {loading ? 'Création...' : 'Créer mon compte'}
+          {loading ? t('register_loading') : t('register_creer')}
         </button>
       </form>
 
       <p className="text-center text-sm" style={{ color: '#8B9DC3' }}>
-        Déjà un compte ?{' '}
-        <Link href="/login" className="font-bold" style={{ color: '#00B894' }}>Se connecter</Link>
+        {t('register_deja_compte')}{' '}
+        <Link href="/login" className="font-bold" style={{ color: '#00B894' }}>{t('se_connecter')}</Link>
       </p>
     </div>
   );
