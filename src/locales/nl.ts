@@ -321,6 +321,26 @@ const nl: Record<string, string> = {
   examen_correct_count: 'correct',
   examen_corrects_count: 'correct',
 
+  // ── Premium ──
+  premium_titre: 'Upgrade naar PermiGo Premium',
+  premium_subtitle: 'Ontgrendel alle inhoud en bereid je voor als een pro!',
+  premium_avantage_1: "Alle thema's ontgrendeld",
+  premium_avantage_2: 'Onbeperkte proefexamens',
+  premium_avantage_3: 'Onbeperkte Turbo modus',
+  premium_prix: '7€/maand',
+  premium_annulable: 'Op elk moment opzegbaar',
+  premium_souscrire: 'Nu abonneren',
+  premium_gratuit: 'Gratis doorgaan',
+  premium_loading: 'Doorverwijzing...',
+  premium_erreur: 'Fout bij doorverwijzing. Probeer opnieuw.',
+  premium_success_titre: 'Welkom bij PermiGo Premium!',
+  premium_success_msg: 'Gefeliciteerd! Je hebt nu toegang tot alle inhoud.',
+  premium_success_gaston: 'Bravo! Nu heb je alle wapens om te slagen! 🏆',
+  premium_success_btn: 'Nu beginnen',
+  premium_bloque_titre: 'Premium inhoud',
+  premium_bloque_msg: 'Dit thema is voorbehouden aan Premium-leden.',
+  premium_bloque_btn: 'Premium ontgrendelen',
+
   // ── Général ──
   chargement: 'Laden...',
   questions: 'Vragen',

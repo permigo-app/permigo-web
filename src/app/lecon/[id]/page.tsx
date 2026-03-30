@@ -7,6 +7,8 @@ import { useLang } from '@/contexts/LanguageContext';
 import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { GASTON_THEORY_TIPS, GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
+import { isPremium, isThemeFree } from '@/lib/premium';
+import PremiumGate from '@/components/PremiumGate';
 import SignImage from '@/components/SignImage';
 import Gaston from '@/components/Gaston';
 import QuizLayout from '@/components/QuizLayout';
@@ -177,6 +179,11 @@ export default function LessonPage() {
 
     router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&xp=${xpEarned}&lesson=${lessonId}&theme=${themeCode}`);
   };
+
+  // Premium gate: themes B-I require premium
+  if (!isThemeFree(themeCode) && !isPremium()) {
+    return <PremiumGate><></></PremiumGate>;
+  }
 
   if (!lesson) {
     return (

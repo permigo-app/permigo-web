@@ -7,6 +7,7 @@ import { THEME_ORDER, getThemeDataLocalized, getLessonDataLocalized } from '@/li
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS, CITY_NAMES_UPPER } from '@/lib/constants';
 import { GASTON_GREETINGS, getRandomMsg } from '@/locales/messages';
+import { isPremium, isThemeFree } from '@/lib/premium';
 import { getUnlockedThemes, getAllStars, getAllExams, getXPData, checkAndUpdateStreak, getStreakData, getCompletedParties, getLessonProgress } from '@/lib/progressStorage';
 import Gaston from '@/components/Gaston';
 import CarSVG from '@/components/CarSVG';
@@ -261,8 +262,8 @@ export default function HomePage() {
         const lessonStars = stars[lid] ?? 0;
         const done = lessonStars > 0;
 
-        // Everything unlocked
-        const locked = false;
+        // Lock non-free themes for non-premium users
+        const locked = !isThemeFree(themeCode) && !isPremium();
 
         const isCurrent = !done && !foundCurrent;
         if (isCurrent) foundCurrent = true;
@@ -820,7 +821,7 @@ export default function HomePage() {
 
                 {/* Node circle */}
                 {node.isLocked ? (
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <button onClick={() => router.push('/premium')} className="absolute inset-0 flex items-center justify-center cursor-pointer">
                     <div className="rounded-full flex items-center justify-center" style={{
                       width: nodeRadius * 2,
                       height: nodeRadius * 2,
@@ -829,7 +830,7 @@ export default function HomePage() {
                     }}>
                       {nodeContent}
                     </div>
-                  </div>
+                  </button>
                 ) : (
                   <button onClick={() => openLessonModal(node)} className="absolute inset-0 flex items-center justify-center node-hover cursor-pointer">
                     <div className={`rounded-full flex items-center justify-center ${isActive ? 'node-pulse' : ''}`} style={{

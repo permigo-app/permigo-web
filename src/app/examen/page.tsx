@@ -7,6 +7,8 @@ import { useLang } from '@/contexts/LanguageContext';
 import { setExamPassed, unlockTheme, updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
 import { THEME_COLORS } from '@/lib/constants';
 import { GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
+import { isPremium, isThemeFree } from '@/lib/premium';
+import PremiumGate from '@/components/PremiumGate';
 import QuizLayout from '@/components/QuizLayout';
 import Gaston from '@/components/Gaston';
 
@@ -29,6 +31,12 @@ function ExamContent() {
   const startTimeRef = useRef(Date.now());
 
   const color = THEME_COLORS[themeCode] || '#74B9FF';
+
+  // Premium gate: exams for themes B-I require premium (FINAL always requires premium)
+  const examThemeFree = themeCode === 'A';
+  if (!examThemeFree && !isPremium()) {
+    return <PremiumGate><></></PremiumGate>;
+  }
 
   const startExam = () => {
     const qs = getExamQuestionsLocalized(themeCode, lang, questionCount).map(q => {

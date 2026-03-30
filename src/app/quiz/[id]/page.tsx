@@ -5,6 +5,8 @@ import { useParams, useRouter } from 'next/navigation';
 import { getLessonDataLocalized, getThemeForLessonLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
+import { isPremium, isThemeFree } from '@/lib/premium';
+import PremiumGate from '@/components/PremiumGate';
 import { setStars, updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import QuizLayout from '@/components/QuizLayout';
@@ -87,6 +89,11 @@ export default function QuizPage() {
 
   // Upcoming questions preview
   const upcoming = questions.slice(currentQ + 1, currentQ + 4);
+
+  // Premium gate: themes B-I require premium
+  if (!isThemeFree(themeCode) && !isPremium()) {
+    return <PremiumGate><></></PremiumGate>;
+  }
 
   return (
     <QuizLayout

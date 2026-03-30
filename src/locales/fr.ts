@@ -321,6 +321,26 @@ const fr: Record<string, string> = {
   examen_correct_count: 'correct',
   examen_corrects_count: 'corrects',
 
+  // ── Premium ──
+  premium_titre: 'Passe à PermiGo Premium',
+  premium_subtitle: 'Débloque tout le contenu et prépare-toi comme un pro !',
+  premium_avantage_1: 'Tous les thèmes débloqués',
+  premium_avantage_2: 'Examens blancs illimités',
+  premium_avantage_3: 'Mode Turbo illimité',
+  premium_prix: '7€/mois',
+  premium_annulable: 'Annulable à tout moment',
+  premium_souscrire: "S'abonner maintenant",
+  premium_gratuit: 'Continuer en gratuit',
+  premium_loading: 'Redirection...',
+  premium_erreur: "Erreur lors de la redirection. Réessaie.",
+  premium_success_titre: 'Bienvenue dans PermiGo Premium !',
+  premium_success_msg: 'Félicitations ! Tu as maintenant accès à tout le contenu.',
+  premium_success_gaston: 'Bravo ! Maintenant tu as toutes les armes pour réussir ! 🏆',
+  premium_success_btn: 'Commencer maintenant',
+  premium_bloque_titre: 'Contenu Premium',
+  premium_bloque_msg: 'Ce thème est réservé aux membres Premium.',
+  premium_bloque_btn: 'Débloquer Premium',
+
   // ── Général ──
   chargement: 'Chargement...',
   questions: 'Questions',
