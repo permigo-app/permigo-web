@@ -82,7 +82,7 @@ export default function OnboardingPage() {
   };
   const goNext = () => goTo(step + 1);
   const goBack = () => {
-    if (step === 3 && showLogin) { setShowLogin(false); return; }
+    if (step === 2 && showLogin) { setShowLogin(false); return; }
     goTo(step - 1);
   };
 
@@ -98,7 +98,9 @@ export default function OnboardingPage() {
     if (result.error) {
       setAuthError(result.error);
     } else {
-      goNext();
+      // User logged in with existing account — skip to route
+      localStorage.setItem('@onboarding_done', 'true');
+      router.push('/');
     }
   };
 
@@ -149,7 +151,7 @@ export default function OnboardingPage() {
   // Sidebar recap items
   const recapItems: { label: string; value: string; emoji: string }[] = [];
   if (name.trim()) recapItems.push({ emoji: '👤', label: t('onboarding_prenom'), value: name.trim() });
-  if (step > 3 && email.trim()) recapItems.push({ emoji: '📧', label: 'Email', value: email.trim() });
+  if (step > 2 && email.trim()) recapItems.push({ emoji: '📧', label: 'Email', value: email.trim() });
   if (selectedCarType) recapItems.push({ emoji: '🚗', label: t('onboarding_voiture'), value: CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label || selectedCarType });
   if (step > 5) recapItems.push({ emoji: '🎨', label: t('onboarding_couleur'), value: CAR_COLORS.find(c => c.id === selectedColor)?.label || selectedColor });
   if (goal) recapItems.push({ emoji: '🎯', label: t('onboarding_objectif'), value: goalLabel(goal) });
@@ -206,40 +208,8 @@ export default function OnboardingPage() {
             </>
           )}
 
-          {/* ═══════════════ STEP 2 — Prénom ═══════════════ */}
+          {/* ═══════════════ STEP 2 — Email / Password ═══════════════ */}
           {step === 2 && (
-            <>
-              <span className="text-[64px] mb-4">👋</span>
-              <h2 className="text-2xl font-black text-white text-center mb-2">{t('onboarding_nom_titre')}</h2>
-              <p className="text-base text-center mb-7" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                {t('onboarding_nom_subtitle')}
-              </p>
-
-              <input
-                type="text"
-                placeholder={t('onboarding_nom_placeholder')}
-                value={name}
-                onChange={e => setName(e.target.value)}
-                onKeyDown={e => { if (e.key === 'Enter' && name.trim()) goNext(); }}
-                maxLength={25}
-                autoFocus
-                className="w-full rounded-2xl px-5 py-4 text-[22px] font-extrabold text-white text-center mb-6 focus:outline-none"
-                style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid rgba(255,255,255,0.12)' }}
-              />
-
-              <button
-                onClick={() => { if (name.trim()) goNext(); }}
-                disabled={!name.trim()}
-                className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
-                style={name.trim() ? cyanBtn : disabledBtn}
-              >
-                {t('onboarding_continuer')}
-              </button>
-            </>
-          )}
-
-          {/* ═══════════════ STEP 3 — Email / Password ═══════════════ */}
-          {step === 3 && (
             <>
               <span className="text-[64px] mb-4">{showLogin ? '🔑' : '📧'}</span>
               <h2 className="text-2xl font-black text-white text-center mb-2">
@@ -303,6 +273,38 @@ export default function OnboardingPage() {
                 <span className="text-sm font-semibold" style={{ color: '#4ecdc4' }}>
                   {showLogin ? t('onboarding_pas_compte') : t('onboarding_deja_compte')}
                 </span>
+              </button>
+            </>
+          )}
+
+          {/* ═══════════════ STEP 3 — Prénom ═══════════════ */}
+          {step === 3 && (
+            <>
+              <span className="text-[64px] mb-4">👋</span>
+              <h2 className="text-2xl font-black text-white text-center mb-2">{t('onboarding_nom_titre')}</h2>
+              <p className="text-base text-center mb-7" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                {t('onboarding_nom_subtitle')}
+              </p>
+
+              <input
+                type="text"
+                placeholder={t('onboarding_nom_placeholder')}
+                value={name}
+                onChange={e => setName(e.target.value)}
+                onKeyDown={e => { if (e.key === 'Enter' && name.trim()) goNext(); }}
+                maxLength={25}
+                autoFocus
+                className="w-full rounded-2xl px-5 py-4 text-[22px] font-extrabold text-white text-center mb-6 focus:outline-none"
+                style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid rgba(255,255,255,0.12)' }}
+              />
+
+              <button
+                onClick={() => { if (name.trim()) goNext(); }}
+                disabled={!name.trim()}
+                className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
+                style={name.trim() ? cyanBtn : disabledBtn}
+              >
+                {t('onboarding_continuer')}
               </button>
             </>
           )}
