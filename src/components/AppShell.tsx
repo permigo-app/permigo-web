@@ -12,7 +12,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const done = localStorage.getItem('@onboarding_done') === 'true';
     setOnboardingDone(done);
-  }, []);
+  }, [pathname]);
 
   const isOnboardingPage = pathname === '/onboarding';
 
