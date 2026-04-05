@@ -432,7 +432,7 @@ export default function HomePage() {
           {/* ── Toll barriers (same as mobile app) ── */}
           {Array.from(themeAt.entries()).map(([idx, themeCode], i) => {
             if (idx >= pts.length) return null;
-            const cityName = CITY_NAMES_UPPER[themeCode] || themeCode;
+            const cityName = t(`city_${themeCode}`) || themeCode;
             const tc = THEME_COLORS[themeCode] || '#74B9FF';
             const isLocked = nodes[idx]?.isLocked;
 
@@ -660,7 +660,7 @@ export default function HomePage() {
                       Thème {themeCode}
                     </div>
                     <div className="text-[14px] font-extrabold text-white">
-                      {theme?.title || THEME_TITLES[themeCode] || ''}
+                      {theme?.title || t(`theme_title_${themeCode}`) || ''}
                     </div>
                   </div>
                 </div>
@@ -720,7 +720,7 @@ export default function HomePage() {
                       top: EXAM_RING_SIZE + 4,
                       width: 80,
                     }}>
-                      <span className="text-xs font-black tracking-wider" style={{ color: '#F39C12' }}>EXAMEN</span>
+                      <span className="text-xs font-black tracking-wider" style={{ color: '#F39C12' }}>{t('examen_node')}</span>
                     </div>
 
                     <div className="absolute" style={{ left: EXAM_R + 10, top: -16 }}>
@@ -744,24 +744,24 @@ export default function HomePage() {
                       <>
                         <div className="flex items-center gap-2 py-1.5">
                           <span>🃏</span>
-                          <span className="text-[13px] font-bold" style={{ color: '#6C5CE7' }}>Flash</span>
+                          <span className="text-[13px] font-bold" style={{ color: '#6C5CE7' }}>{t('flash_label')}</span>
                         </div>
                         <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
                         <div className="flex items-center gap-2 py-1.5">
                           <span>🔄</span>
-                          <span className="text-[13px] font-bold" style={{ color: '#74B9FF' }}>Révision</span>
+                          <span className="text-[13px] font-bold" style={{ color: '#74B9FF' }}>{t('revision_label')}</span>
                         </div>
                       </>
                     ) : (
                       <>
                         <Link href={`/flash?theme=${node.themeCode}`} className="flex items-center gap-2 py-1.5 press-scale">
                           <span>🃏</span>
-                          <span className="text-[13px] font-bold" style={{ color: '#6C5CE7' }}>Flash</span>
+                          <span className="text-[13px] font-bold" style={{ color: '#6C5CE7' }}>{t('flash_label')}</span>
                         </Link>
                         <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
                         <Link href={`/revision?theme=${node.themeCode}`} className="flex items-center gap-2 py-1.5 press-scale">
                           <span>🔄</span>
-                          <span className="text-[13px] font-bold" style={{ color: '#74B9FF' }}>Révision</span>
+                          <span className="text-[13px] font-bold" style={{ color: '#74B9FF' }}>{t('revision_label')}</span>
                         </Link>
                       </>
                     )}
@@ -868,7 +868,7 @@ export default function HomePage() {
                       zIndex: 18,
                     }}
                   >
-                    COMMENCER ▶
+                    {t('commencer')} ▶
                   </button>
                 )}
 
@@ -1213,7 +1213,7 @@ export default function HomePage() {
                   className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
                   style={{ background: tc }}
                 >
-                  COMMENCER LA PARTIE {selectedPartieIdx + 1} ▶
+                  {t('commencer_partie')} {selectedPartieIdx + 1} ▶
                 </button>
               ) : !lessonFullyDone && theories.length > 0 ? (
                 <button

@@ -341,6 +341,32 @@ const fr: Record<string, string> = {
   premium_bloque_msg: 'Ce thème est réservé aux membres Premium.',
   premium_bloque_btn: 'Débloquer Premium',
 
+  // ── Titres thèmes ──
+  theme_title_A: 'La route',
+  theme_title_B: 'Usagers vulnérables',
+  theme_title_C: 'Le véhicule',
+  theme_title_D: 'Vitesse & distances',
+  theme_title_E: 'Manœuvres',
+  theme_title_F: 'Priorités & intersections',
+  theme_title_G: 'Conduite en ville',
+  theme_title_H: 'Stationnement',
+  theme_title_I: 'Documents & responsabilités',
+
+  // ── Route / carte ──
+  commencer_partie: 'COMMENCER LA PARTIE',
+  examen_node: 'EXAMEN',
+  flash_label: 'Flash',
+  revision_label: 'Révision',
+  city_A: 'BRUXELLES',
+  city_B: 'LIÈGE',
+  city_C: 'ANVERS',
+  city_D: 'SPA',
+  city_E: 'GAND',
+  city_F: 'NAMUR',
+  city_G: 'BRUGES',
+  city_H: 'MONS',
+  city_I: 'BELGIQUE',
+
   // ── Sidebar Home ──
   stats_du_jour: 'Stats du jour',
   jour_sing: 'jour',

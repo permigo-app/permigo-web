@@ -341,6 +341,32 @@ const nl: Record<string, string> = {
   premium_bloque_msg: 'Dit thema is voorbehouden aan Premium-leden.',
   premium_bloque_btn: 'Premium ontgrendelen',
 
+  // ── Titres thèmes ──
+  theme_title_A: 'De weg',
+  theme_title_B: 'Kwetsbare weggebruikers',
+  theme_title_C: 'Het voertuig',
+  theme_title_D: 'Snelheid & afstanden',
+  theme_title_E: 'Manoeuvres',
+  theme_title_F: 'Voorrang & kruispunten',
+  theme_title_G: 'Rijden in de stad',
+  theme_title_H: 'Parkeren',
+  theme_title_I: 'Documenten & verantwoordelijkheden',
+
+  // ── Route / carte ──
+  commencer_partie: 'DEEL STARTEN',
+  examen_node: 'EXAMEN',
+  flash_label: 'Flash',
+  revision_label: 'Herziening',
+  city_A: 'BRUSSEL',
+  city_B: 'LUIK',
+  city_C: 'ANTWERPEN',
+  city_D: 'SPA',
+  city_E: 'GENT',
+  city_F: 'NAMEN',
+  city_G: 'BRUGGE',
+  city_H: 'BERGEN',
+  city_I: 'BELGIË',
+
   // ── Sidebar Home ──
   stats_du_jour: 'Statistieken van de dag',
   jour_sing: 'dag',
