@@ -6,6 +6,7 @@ import CarSVG, { getCarTypes, CAR_COLORS } from '@/components/CarSVG';
 import Gaston from '@/components/Gaston';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { GASTON_STEP_MESSAGES } from '@/locales/messages';
 
 const TOTAL_STEPS = 7;
@@ -158,6 +159,11 @@ export default function OnboardingPage() {
 
   return (
     <div className="fixed inset-0 z-[100] overflow-y-auto" style={{ background: '#1B1B2F' }}>
+      {/* Language switcher */}
+      <div className="fixed top-6 right-6 z-[110]">
+        <LanguageSwitcher />
+      </div>
+
       {/* Back button */}
       {step >= 2 && step <= 6 && (
         <button

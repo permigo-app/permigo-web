@@ -116,7 +116,7 @@ export default function HomePage() {
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [xp, setXp] = useState({ totalXP: 0, level: 1 });
   const [streak, setStreak] = useState({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
-  const [greeting] = useState(getRandomMsg(GASTON_GREETINGS[lang]));
+  const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
   const [mounted, setMounted] = useState(false);
   const [userCar, setUserCar] = useState<{ carType: string; carColor: string }>({ carType: 'berline', carColor: '#00B894' });
 

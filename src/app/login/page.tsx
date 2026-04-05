@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Gaston from '@/components/Gaston';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 
@@ -56,7 +57,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto px-5 py-12">
+    <div className="max-w-md mx-auto px-5 py-12 relative">
+      <div className="absolute top-0 right-0"><LanguageSwitcher /></div>
       <div className="text-center mb-8">
         <span className="text-[64px] block mb-3">🚗</span>
         <h1 className="text-2xl font-black">{t('login_titre')}</h1>
