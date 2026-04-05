@@ -392,7 +392,7 @@ export default function HomePage() {
 
         {/* ── Mobile-only header with stats ── */}
         <div className="lg:hidden flex items-center justify-between mb-4 px-3">
-          <h1 className="text-[24px] font-black">PermiGo</h1>
+          <h1 className="text-[24px] font-black"><span style={{ color: '#ffffff' }}>My</span><span style={{ color: '#00B894' }}>Permi</span><span style={{ color: '#4ecdc4' }}>Go</span></h1>
           <div className="flex items-center gap-2">
             {streak.currentStreak > 0 && (
               <div className="flex items-center gap-1 px-2.5 py-1 rounded-full" style={{ background: 'rgba(255,99,72,0.15)' }}>

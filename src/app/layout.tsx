@@ -5,8 +5,8 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 import AppShell from '@/components/AppShell';
 
 export const metadata: Metadata = {
-  title: 'PermiGo — Permis de conduire belge',
-  description: 'Prépare ton permis de conduire théorique belge avec PermiGo !',
+  title: 'MyPermiGo — Permis de conduire belge',
+  description: 'Prépare ton permis de conduire théorique belge avec MyPermiGo !',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

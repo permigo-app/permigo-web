@@ -49,9 +49,10 @@ export default function Navbar() {
       <nav className="hidden lg:flex flex-col items-start fixed left-0 top-0 h-full z-50 py-5 pl-4" style={{ width: 250, background: '#0F1923', borderRight: '1px solid #16213E' }}>
         {/* Logo + Language switcher */}
         <div className="flex items-center justify-between w-full pr-4 mb-8">
-          <Link href="/" className="flex items-center gap-2.5 px-3">
-            <span className="text-2xl">🚗</span>
-            <span className="text-lg font-black tracking-tight" style={{ color: '#00B894' }}>PermiGo</span>
+          <Link href="/" className="flex items-center px-3">
+            <span className="text-xl font-black tracking-tight" style={{ color: '#ffffff' }}>My</span>
+            <span className="text-xl font-black tracking-tight" style={{ color: '#00B894' }}>Permi</span>
+            <span className="text-xl font-black tracking-tight" style={{ color: '#4ecdc4' }}>Go</span>
           </Link>
           <LanguageSwitcher />
         </div>
@@ -99,7 +100,11 @@ export default function Navbar() {
 
       {/* Mobile top bar — language switcher */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4" style={{ height: 44, background: '#0F1923', borderBottom: '1px solid #16213E' }}>
-        <span className="text-sm font-black" style={{ color: '#00B894' }}>🚗 PermiGo</span>
+        <span className="text-sm font-black">
+          <span style={{ color: '#ffffff' }}>My</span>
+          <span style={{ color: '#00B894' }}>Permi</span>
+          <span style={{ color: '#4ecdc4' }}>Go</span>
+        </span>
         <LanguageSwitcher />
       </div>
 
