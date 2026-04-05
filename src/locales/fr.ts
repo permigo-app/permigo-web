@@ -341,6 +341,13 @@ const fr: Record<string, string> = {
   premium_bloque_msg: 'Ce thème est réservé aux membres Premium.',
   premium_bloque_btn: 'Débloquer Premium',
 
+  // ── Sidebar Home ──
+  stats_du_jour: 'Stats du jour',
+  jour_sing: 'jour',
+  jours_plur: 'jours',
+  progression_label: 'Progression',
+  examens_label: 'Examens',
+
   // ── Général ──
   chargement: 'Chargement...',
   questions: 'Questions',

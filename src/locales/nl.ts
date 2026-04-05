@@ -341,6 +341,13 @@ const nl: Record<string, string> = {
   premium_bloque_msg: 'Dit thema is voorbehouden aan Premium-leden.',
   premium_bloque_btn: 'Premium ontgrendelen',
 
+  // ── Sidebar Home ──
+  stats_du_jour: 'Statistieken van de dag',
+  jour_sing: 'dag',
+  jours_plur: 'dagen',
+  progression_label: 'Voortgang',
+  examens_label: 'Examens',
+
   // ── Général ──
   chargement: 'Laden...',
   questions: 'Vragen',

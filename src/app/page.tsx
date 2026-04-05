@@ -111,7 +111,7 @@ interface PathNode {
 
 export default function HomePage() {
   const router = useRouter();
-  const { lang } = useLang();
+  const { lang, t } = useLang();
   const [stars, setStarsState] = useState<Record<string, number>>({});
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [xp, setXp] = useState({ totalXP: 0, level: 1 });
@@ -1037,27 +1037,27 @@ export default function HomePage() {
 
         {/* ── Stats du jour ── */}
         <div className="stat-card stat-card-glow">
-          <h3 className="text-xs font-black uppercase tracking-wider mb-4" style={{ color: '#8B9DC3' }}>Stats du jour</h3>
+          <h3 className="text-xs font-black uppercase tracking-wider mb-4" style={{ color: '#8B9DC3' }}>{t('stats_du_jour')}</h3>
           <div className="flex flex-col gap-3">
             {/* Streak badge */}
             <div className="flex items-center gap-3 px-3 py-2.5 rounded-xl" style={{ background: '#FF6348' }}>
               <span className="text-xl">🔥</span>
-              <span className="text-sm font-black text-white">{streak.currentStreak} jour{streak.currentStreak !== 1 ? 's' : ''}</span>
+              <span className="text-sm font-black text-white">{streak.currentStreak} {streak.currentStreak !== 1 ? t('jours_plur') : t('jour_sing')}</span>
             </div>
             {/* XP badge */}
             <div className="flex items-center gap-3 px-3 py-2 rounded-xl" style={{ background: 'rgba(255,215,0,0.08)' }}>
               <span className="text-xl">⚡</span>
               <div className="flex-1">
                 <div className="text-sm font-extrabold" style={{ color: '#FFD700' }}>{xp.totalXP}</div>
-                <div className="text-[10px] font-semibold" style={{ color: '#5A6B8A' }}>XP total</div>
+                <div className="text-[10px] font-semibold" style={{ color: '#5A6B8A' }}>{t('xp_total')}</div>
               </div>
             </div>
             {/* Level badge */}
             <div className="flex items-center gap-3 px-3 py-2 rounded-xl" style={{ background: 'rgba(0,184,148,0.1)' }}>
               <span className="text-xl">🎯</span>
               <div className="flex-1">
-                <div className="text-sm font-extrabold" style={{ color: '#00B894' }}>Niveau {xp.level}</div>
-                <div className="text-[10px] font-semibold" style={{ color: '#5A6B8A' }}>Progression</div>
+                <div className="text-sm font-extrabold" style={{ color: '#00B894' }}>{t('niveau')} {xp.level}</div>
+                <div className="text-[10px] font-semibold" style={{ color: '#5A6B8A' }}>{t('progression_label')}</div>
               </div>
             </div>
           </div>
@@ -1068,19 +1068,19 @@ export default function HomePage() {
         <div className="stat-card">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-lg">🎓</span>
-            <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#8B9DC3' }}>Prof. Gaston dit...</span>
+            <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#8B9DC3' }}>{t('prof_gaston_dit')}</span>
           </div>
           <Gaston message={greeting} expression="happy" compact />
         </div>
 
         {/* ── Progression ── */}
         <div className="stat-card">
-          <h3 className="text-xs font-black uppercase tracking-wider mb-3" style={{ color: '#8B9DC3' }}>Progression</h3>
+          <h3 className="text-xs font-black uppercase tracking-wider mb-3" style={{ color: '#8B9DC3' }}>{t('progression_label')}</h3>
 
           {/* Leçons progress */}
           <div className="mb-3">
             <div className="flex justify-between items-center mb-1.5">
-              <span className="text-xs font-bold">Leçons</span>
+              <span className="text-xs font-bold">{t('lecons')}</span>
               <span className="text-xs font-bold" style={{ color: '#00B894' }}>{totalCompleted}/{totalLessons}</span>
             </div>
             <div className="w-full h-2.5 rounded-full" style={{ background: '#2D2D3D' }}>
@@ -1095,7 +1095,7 @@ export default function HomePage() {
           {/* Examens progress */}
           <div>
             <div className="flex justify-between items-center mb-1.5">
-              <span className="text-xs font-bold">Examens</span>
+              <span className="text-xs font-bold">{t('examens_label')}</span>
               <span className="text-xs font-bold" style={{ color: '#F39C12' }}>{totalExamsPassed}/{THEME_ORDER.length}</span>
             </div>
             <div className="w-full h-2.5 rounded-full" style={{ background: '#2D2D3D' }}>
