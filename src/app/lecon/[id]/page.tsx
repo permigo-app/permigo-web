@@ -212,12 +212,54 @@ export default function LessonPage() {
     const partieInfo = getCurrentPartieInfo();
     const progressPct = totalCards > 0 ? ((currentCard + 1) / totalCards) * 100 : 0;
 
-    // Extract key points from card content (first 2-3 sentences as bullets)
-    const keyPoints = card.content
-      .split(/[.!?]+/)
-      .map(s => s.trim())
-      .filter(s => s.length > 15)
-      .slice(0, 3);
+    // Parse 5-section content into structured blocks
+    const SECTION_DEFS = [
+      { emoji: '📋', label: 'La règle' },
+      { emoji: '💡', label: 'Pourquoi' },
+      { emoji: '🚗', label: 'En pratique' },
+      { emoji: '📍', label: 'Exemple' },
+      { emoji: '⚠️', label: 'Erreur fréquente' },
+    ];
+
+    function parseContentSections(raw: string) {
+      const result: { emoji: string; label: string; body: string }[] = [];
+      let current: { emoji: string; label: string; body: string } | null = null;
+      for (const line of raw.split('\n')) {
+        const def = SECTION_DEFS.find(s => line.trim().startsWith(s.emoji));
+        if (def) {
+          if (current) result.push({ ...current, body: current.body.trim() });
+          current = { emoji: def.emoji, label: def.label, body: '' };
+        } else if (current) {
+          current.body += (current.body ? '\n' : '') + line;
+        }
+      }
+      if (current) result.push({ ...current, body: current.body.trim() });
+      return result.length >= 3 ? result : null;
+    }
+
+    // Strip emojis from a string (used for plain text fallback)
+    function stripEmojis(s: string) {
+      return s.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '').trim();
+    }
+
+    const contentSections = parseContentSections(card.content);
+
+    // Smart key points: first sentence of La règle, En pratique, Erreur fréquente
+    const KEY_SECTION_LABELS = ['La règle', 'En pratique', 'Erreur fréquente'];
+    const keyPoints: string[] = contentSections
+      ? KEY_SECTION_LABELS
+          .map(lbl => contentSections.find(s => s.label === lbl)?.body ?? '')
+          .filter(Boolean)
+          .map(body => {
+            const sentence = body.split(/[.!?](?:\s|$)/)[0].trim();
+            return sentence.length > 80 ? sentence.slice(0, 77) + '…' : sentence;
+          })
+          .filter(s => s.length > 5)
+      : card.content
+          .split(/[.!?]+/)
+          .map(s => stripEmojis(s).trim())
+          .filter(s => s.length > 15)
+          .slice(0, 3);
 
     return (
       <div style={{ minHeight: '100vh' }}>
@@ -288,8 +330,22 @@ export default function LessonPage() {
                 {/* Title */}
                 <h3 className="text-2xl font-black text-white mb-3">{card.title}</h3>
 
-                {/* Content */}
-                <p className="text-base leading-relaxed mb-4" style={{ color: '#d1d5db' }}>{card.content}</p>
+                {/* Content — 5-section blocks or plain fallback */}
+                {contentSections ? (
+                  <div className="flex flex-col gap-5 mb-4">
+                    {contentSections.map((sec, i) => (
+                      <div key={i} className="rounded-xl px-5 py-4" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}>
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-lg leading-none">{sec.emoji}</span>
+                          <span className="text-xs font-black uppercase tracking-widest" style={{ color: '#4ecdc4' }}>{sec.label}</span>
+                        </div>
+                        <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: '#d1d5db' }}>{sec.body}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-base leading-relaxed mb-4" style={{ color: '#d1d5db' }}>{stripEmojis(card.content)}</p>
+                )}
 
                 {/* Signs */}
                 {card.signs && card.signs.length > 0 && (
