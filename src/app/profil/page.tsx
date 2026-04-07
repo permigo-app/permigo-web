@@ -249,11 +249,21 @@ export default function ProfilePage() {
               <span className="text-xs font-bold" style={{ color: '#5A6B8A' }}>{unlockedBadges.length}/{BADGES.length} {t('debloques')}</span>
             </div>
 
-            {badgeCategories.map(category => (
-              <div key={category} className="mb-6">
-                <h3 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#5A6B8A' }}>{
-                  { Progression: t('badge_cat_progression'), Régularité: t('badge_cat_regularite'), Précision: t('badge_cat_precision'), Examens: t('badge_cat_examens') }[category] || category
-                }</h3>
+            {badgeCategories.map(category => {
+              const catKeyMap: Record<string, string> = {
+                Progression: 'badge_cat_progression',
+                Régularité: 'badge_cat_regularite',
+                Précision: 'badge_cat_precision',
+                Examens: 'badge_cat_examens',
+                Survie: 'badge_cat_survie',
+                Exploration: 'badge_cat_exploration',
+                Niveaux: 'badge_cat_niveaux',
+              };
+              return (
+              <div key={category} className="mb-8">
+                <h3 className="text-xs font-black uppercase tracking-widest mb-4" style={{ color: '#4ecdc4' }}>
+                  {t(catKeyMap[category] ?? category)}
+                </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                   {BADGES.filter(b => b.category === category).map(badge => {
                     const unlocked = unlockedBadges.includes(badge.id);
@@ -261,48 +271,59 @@ export default function ProfilePage() {
                     return (
                       <div
                         key={badge.id}
-                        className="rounded-2xl p-4 text-center transition-all duration-200 relative"
+                        className="rounded-2xl p-4 text-center transition-all duration-200 relative cursor-default"
                         style={{
-                          background: unlocked ? 'rgba(78,205,196,0.15)' : 'rgba(255,255,255,0.03)',
-                          border: unlocked ? '1.5px solid rgba(78,205,196,0.5)' : '1.5px solid #2A3550',
-                          boxShadow: unlocked ? '0 0 12px rgba(78,205,196,0.4)' : 'none',
+                          background: unlocked ? 'rgba(78,205,196,0.2)' : 'rgba(255,255,255,0.03)',
+                          border: unlocked ? '2px solid #4ecdc4' : '1px solid rgba(255,255,255,0.08)',
+                          boxShadow: unlocked
+                            ? '0 0 15px rgba(78,205,196,0.4)'
+                            : isHovered ? '0 0 10px rgba(78,205,196,0.15)' : 'none',
                         }}
                         onMouseEnter={() => setHoveredBadge(badge.id)}
                         onMouseLeave={() => setHoveredBadge(null)}
                       >
-                        {/* Unlocked: green checkmark */}
+                        {/* Unlocked checkmark */}
                         {unlocked && (
-                          <div className="absolute top-2 right-2 w-5 h-5 rounded-full flex items-center justify-center text-[10px]" style={{ background: '#2ecc71', color: 'white' }}>✓</div>
+                          <div className="absolute top-2 right-2 w-5 h-5 rounded-full flex items-center justify-center text-xs font-black" style={{ background: '#2ecc71', color: 'white' }}>✓</div>
                         )}
-                        {/* Locked: lock icon */}
+                        {/* Locked icon */}
                         {!unlocked && (
-                          <div className="absolute top-2 right-2 text-[10px]" style={{ opacity: 0.5 }}>🔒</div>
+                          <div className="absolute top-2 right-2 text-xs" style={{ opacity: 0.6 }}>🔒</div>
                         )}
 
                         {/* Tooltip on hover for locked */}
                         {!unlocked && isHovered && (
                           <div
-                            className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1.5 rounded-lg text-[10px] font-bold z-10"
-                            style={{ background: '#0F1923', border: '1px solid #4ecdc4', color: '#4ecdc4' }}
+                            className="absolute -top-11 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1.5 rounded-lg text-[10px] font-bold z-20 pointer-events-none"
+                            style={{ background: '#0F1923', border: '1px solid #4ecdc4', color: '#4ecdc4', boxShadow: '0 0 8px rgba(78,205,196,0.3)' }}
                           >
-                            {t('debloquer') + ' : '}{t(`badge_${badge.id}_desc`)}
+                            {t('debloquer')} : {t(`badge_${badge.id}_desc` as any)}
                           </div>
                         )}
 
                         <span
-                          className={`text-[28px] block mb-1.5 ${unlocked ? 'node-pulse' : ''}`}
-                          style={{ filter: unlocked ? 'none' : 'grayscale(1) opacity(0.4)' }}
+                          className="block mb-2"
+                          style={{
+                            fontSize: 48,
+                            lineHeight: 1,
+                            filter: unlocked ? 'none' : 'grayscale(1) opacity(0.4)',
+                          }}
                         >
                           {badge.emoji}
                         </span>
-                        <p className="text-xs font-bold" style={{ color: unlocked ? '#FFFFFF' : '#5A6B8A' }}>{t(`badge_${badge.id}`)}</p>
-                        <p className="text-[10px] mt-0.5" style={{ color: unlocked ? '#8B9DC3' : '#3A4560' }}>{t(`badge_${badge.id}_desc`)}</p>
+                        <p className="text-xs font-black leading-tight" style={{ color: unlocked ? '#FFFFFF' : '#5A6B8A' }}>
+                          {t(`badge_${badge.id}` as any)}
+                        </p>
+                        <p className="text-[10px] mt-1 leading-tight" style={{ color: unlocked ? '#8B9DC3' : '#3A4560' }}>
+                          {t(`badge_${badge.id}_desc` as any)}
+                        </p>
                       </div>
                     );
                   })}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
