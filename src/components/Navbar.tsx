@@ -24,6 +24,15 @@ const SIDEBAR_ITEMS = [
       <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
     </svg>
   )},
+  { href: '/examen', labelKey: 'examen_blanc', color: '#A29BFE', icon: (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="16" y1="13" x2="8" y2="13" />
+      <line x1="16" y1="17" x2="8" y2="17" />
+      <polyline points="10 9 9 9 8 9" />
+    </svg>
+  )},
   { href: '/profil', labelKey: 'nav_profil', color: '#74B9FF', icon: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" />
@@ -35,6 +44,7 @@ const SIDEBAR_ITEMS = [
 const NAV_ITEMS = [
   { href: '/', labelKey: 'nav_accueil', icon: '🏠' },
   { href: '/panneaux', labelKey: 'nav_panneaux', icon: '🔺' },
+  { href: '/examen', labelKey: 'examen_blanc', icon: '📝' },
   { href: '/profil', labelKey: 'nav_profil', icon: '👤' },
 ];
 
