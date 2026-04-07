@@ -72,10 +72,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const FREE_ACCESS_EMAILS = ['ycroitor8096@gmail.com'];
+
   const loadProfile = useCallback(async (sbUser: SupabaseUser) => {
     const profile = await getUserProfile(sbUser.id);
     if (profile) {
       setUser(mapProfileToUser(profile));
+      if (FREE_ACCESS_EMAILS.includes(sbUser.email ?? '')) {
+        localStorage.setItem('isPremium', 'true');
+      }
     }
   }, []);
 
