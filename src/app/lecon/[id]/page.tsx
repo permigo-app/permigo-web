@@ -285,26 +285,6 @@ export default function LessonPage() {
           </div>
         </div>
 
-        {/* ── Progress bar ── */}
-        <div className="px-6 pt-4 pb-2">
-          <div className="max-w-screen-xl mx-auto">
-            <div className="flex items-center gap-3 mb-1">
-              <span className="text-[11px] font-bold" style={{ color: '#5A6B8A' }}>
-                {currentPartieTitle || partieInfo?.partieTitle || lesson.title}
-              </span>
-              <div className="flex-1" />
-              <span className="text-[11px] font-bold" style={{ color: '#4ecdc4' }}>
-                {t('carte')} {currentCard + 1}/{totalCards}
-              </span>
-            </div>
-            <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
-              <div
-                className="h-full rounded-full transition-all duration-500"
-                style={{ width: `${progressPct}%`, background: '#4ecdc4' }}
-              />
-            </div>
-          </div>
-        </div>
 
         {/* ── 2-column layout ── */}
         <div className="px-6 py-6">
