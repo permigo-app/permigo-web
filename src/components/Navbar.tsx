@@ -91,7 +91,9 @@ export default function Navbar() {
         </div>
 
         {/* User avatar at bottom */}
-        <div className="mt-auto pt-3" style={{ borderTop: '1px solid #16213E' }}>
+        <div className="mt-auto" style={{ width: '100%' }}>
+          <div style={{ height: '1px', background: '#16213E', marginLeft: '-16px', marginRight: '-16px' }} />
+        <div className="pt-3">
           {user ? (
             <Link href="/profil" className="flex items-center gap-3 px-3 py-2.5 rounded-xl press-scale">
               <span className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0" style={{ background: '#00B894' }}>
@@ -105,6 +107,7 @@ export default function Navbar() {
               <span className="text-sm font-bold" style={{ color: '#8B9DC3' }}>{t('nav_connexion')}</span>
             </Link>
           )}
+        </div>
         </div>
       </nav>
 
