@@ -7,8 +7,9 @@ import { useLang } from '@/contexts/LanguageContext';
 import { setExamPassed, unlockTheme, updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
 import { THEME_COLORS } from '@/lib/constants';
 import { GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
-import { isPremium, isThemeFree } from '@/lib/premium';
+import { isPremium, isThemeFree, canPlayExam, recordExamPlayed, daysUntilNextExam } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
+import Link from 'next/link';
 import QuizLayout from '@/components/QuizLayout';
 import Gaston from '@/components/Gaston';
 
@@ -38,7 +39,34 @@ function ExamContent() {
     return <PremiumGate><></></PremiumGate>;
   }
 
+  // Weekly limit for non-premium on theme A
+  if (!isPremium() && !canPlayExam()) {
+    const days = daysUntilNextExam();
+    return (
+      <div className="max-w-lg mx-auto px-4 py-16 text-center">
+        <span className="text-[80px] block mb-4">⏳</span>
+        <h1 className="text-2xl font-black mb-3">Examen déjà passé cette semaine</h1>
+        <p className="text-base mb-2" style={{ color: '#8B9DC3' }}>
+          {days > 0
+            ? `Reviens dans ${days} jour${days > 1 ? 's' : ''} pour repasser l'examen.`
+            : "Tu pourras repasser l'examen dès demain."}
+        </p>
+        <p className="text-sm mb-8" style={{ color: '#5A6B8A' }}>
+          Les membres Premium peuvent passer l'examen sans limite.
+        </p>
+        <Link
+          href="/premium"
+          className="inline-block px-8 py-3.5 rounded-2xl font-black text-base press-scale"
+          style={{ background: '#FFD700', color: '#0a0e2a', boxShadow: '0 4px 16px rgba(255,215,0,0.4)' }}
+        >
+          Passer Premium ✨
+        </Link>
+      </div>
+    );
+  }
+
   const startExam = () => {
+    if (!isPremium()) recordExamPlayed();
     const qs = getExamQuestionsLocalized(themeCode, lang, questionCount).map(q => {
       const s = shuffleChoices(q);
       return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };

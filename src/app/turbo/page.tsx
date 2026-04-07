@@ -12,9 +12,11 @@ import {
   type TurboSession, type TurboAllTimeStats,
 } from '@/lib/progressStorage';
 import { GASTON_CORRECT, GASTON_WRONG, GASTON_TIPS, getRandomMsg } from '@/locales/messages';
+import { isPremium, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
 import SignImage from '@/components/SignImage';
 import Gaston from '@/components/Gaston';
 import QuizLayout from '@/components/QuizLayout';
+import Link from 'next/link';
 
 type Mode = null | '3min' | '5min' | 'survie';
 
@@ -77,6 +79,11 @@ export default function TurboPage() {
 
   const [tipIndex, setTipIndex] = useState(0);
   const [tipFade, setTipFade] = useState(true);
+  const [turboCount, setTurboCount] = useState(0);
+
+  useEffect(() => {
+    setTurboCount(getTurboDailyCount());
+  }, []);
 
   useEffect(() => {
     if (mode) return;
@@ -114,6 +121,8 @@ export default function TurboPage() {
   }, [correctCount, currentQ, mode, timeLeft]);
 
   const startGame = (m: '3min' | '5min' | 'survie') => {
+    incrementTurboDailyCount();
+    setTurboCount(getTurboDailyCount());
     setMode(m);
     const allQ = getAllQuestionsLocalized(lang);
     const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
@@ -183,6 +192,29 @@ export default function TurboPage() {
               <p className="text-sm mt-1 italic" style={{ color: '#94a3b8' }}>{t('turbo_subtitle')}</p>
             </div>
 
+            {/* Freemium banner — shown when limit reached */}
+            {!isPremium() && turboCount >= 5 && (
+              <div className="rounded-2xl p-5 mb-6 flex flex-col sm:flex-row items-center gap-4" style={{ background: 'rgba(255,107,107,0.12)', border: '1.5px solid rgba(255,107,107,0.4)' }}>
+                <span className="text-3xl">⏰</span>
+                <div className="flex-1 text-center sm:text-left">
+                  <p className="font-black text-white mb-1">Tu as atteint ta limite du jour</p>
+                  <p className="text-sm" style={{ color: '#8B9DC3' }}>Passe Premium pour jouer sans limite — reviens demain sinon.</p>
+                </div>
+                <Link href="/premium" className="flex-shrink-0 px-5 py-2.5 rounded-xl font-black text-sm press-scale" style={{ background: '#FFD700', color: '#0a0e2a' }}>
+                  Passer Premium ✨
+                </Link>
+              </div>
+            )}
+
+            {/* Daily counter badge for free users */}
+            {!isPremium() && turboCount < 5 && (
+              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ background: 'rgba(78,205,196,0.1)', border: '1px solid rgba(78,205,196,0.2)' }}>
+                <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
+                  {5 - turboCount} partie{5 - turboCount > 1 ? 's' : ''} restante{5 - turboCount > 1 ? 's' : ''} aujourd&apos;hui
+                </span>
+              </div>
+            )}
+
             {/* 3 mode cards — same height */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {(['3min', '5min', 'survie'] as const).map((m) => {
@@ -190,6 +222,7 @@ export default function TurboPage() {
                 const best = m === '3min' ? best3 : m === '5min' ? best5 : bestSurvie;
                 const labelKey = m === '3min' ? 'turbo_sprint_3' : m === '5min' ? 'turbo_sprint_5' : 'turbo_survie';
                 const descKey = m === '3min' ? 'turbo_sprint_3_desc' : m === '5min' ? 'turbo_sprint_5_desc' : 'turbo_survie_desc';
+                const blocked = !isPremium() && turboCount >= 5;
                 return (
                   <div
                     key={m}
@@ -198,8 +231,10 @@ export default function TurboPage() {
                       background: meta.gradient,
                       border: `1.5px solid ${meta.border}30`,
                       minHeight: 280,
+                      opacity: blocked ? 0.5 : 1,
                     }}
                     onMouseEnter={e => {
+                      if (blocked) return;
                       e.currentTarget.style.transform = 'scale(1.02)';
                       e.currentTarget.style.boxShadow = `0 8px 32px ${meta.border}35`;
                       e.currentTarget.style.borderColor = `${meta.border}60`;
@@ -217,15 +252,17 @@ export default function TurboPage() {
                       {best > 0 ? `${t('turbo_meilleur')} : ${best}` : t('turbo_pas_joue')}
                     </p>
                     <button
-                      onClick={() => startGame(m)}
+                      onClick={() => { if (!blocked) startGame(m); }}
+                      disabled={blocked}
                       className="w-full py-3 rounded-xl font-black text-sm press-scale transition-all mt-5"
                       style={{
-                        background: meta.btnColor,
-                        color: 'white',
-                        boxShadow: `0 4px 16px ${meta.btnColor}40`,
+                        background: blocked ? '#3A4560' : meta.btnColor,
+                        color: blocked ? '#5A6B8A' : 'white',
+                        boxShadow: blocked ? 'none' : `0 4px 16px ${meta.btnColor}40`,
+                        cursor: blocked ? 'not-allowed' : 'pointer',
                       }}
                     >
-                      {t('turbo_lancer')}
+                      {blocked ? '🔒 Limite atteinte' : t('turbo_lancer')}
                     </button>
                   </div>
                 );
