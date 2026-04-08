@@ -21,8 +21,6 @@ const PREMIUM_FEATURES = [
   { icon: '📝', label: 'Examens blancs illimités' },
   { icon: '⚡', label: 'Mode Turbo sans limite' },
   { icon: '🃏', label: 'Cartes Flash & Révision' },
-  { icon: '📊', label: 'Statistiques détaillées' },
-  { icon: '🎯', label: 'Préparation complète à l\'examen' },
 ];
 
 const TESTIMONIALS = [
@@ -116,7 +114,7 @@ export default function PremiumPage() {
               <p className="text-sm" style={{ color: '#8B9DC3' }}>Accès complet à toute l&apos;app</p>
             </div>
             <div className="text-right">
-              <p className="text-3xl font-black text-white">4,99€</p>
+              <p className="text-3xl font-black text-white">7€</p>
               <p className="text-xs" style={{ color: '#8B9DC3' }}>/mois</p>
             </div>
           </div>
@@ -137,9 +135,9 @@ export default function PremiumPage() {
             disabled={loading}
             className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3 transition-all"
             style={{
-              background: loading ? 'rgba(255,215,0,0.4)' : 'linear-gradient(135deg, #FFD700, #F39C12)',
+              background: loading ? 'rgba(78,205,196,0.4)' : '#4ecdc4',
               color: '#0a0e2a',
-              boxShadow: loading ? 'none' : '0 4px 24px rgba(255,215,0,0.4)',
+              boxShadow: loading ? 'none' : '0 4px 24px rgba(78,205,196,0.4)',
             }}
           >
             {loading ? 'Chargement…' : 'Commencer l\'essai gratuit — 7 jours ✨'}

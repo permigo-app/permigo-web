@@ -1278,7 +1278,6 @@ export default function HomePage() {
                 { icon: '📚', label: '8 thèmes supplémentaires débloqués' },
                 { icon: '📝', label: 'Examens blancs illimités' },
                 { icon: '⚡', label: 'Mode Turbo sans limite quotidienne' },
-                { icon: '🎯', label: 'Suivi détaillé de ta progression' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl" style={{ background: 'rgba(255,215,0,0.06)', border: '1px solid rgba(255,215,0,0.12)' }}>
                   <span className="text-xl">{item.icon}</span>
@@ -1292,14 +1291,14 @@ export default function HomePage() {
               <span className="text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block" style={{ background: 'rgba(255,215,0,0.15)', color: '#FFD700' }}>
                 ✨ Essai gratuit 7 jours
               </span>
-              <p className="text-3xl font-black text-white mb-0.5">4,99€ <span className="text-base font-normal" style={{ color: '#8B9DC3' }}>/mois</span></p>
+              <p className="text-3xl font-black text-white mb-0.5">7€ <span className="text-base font-normal" style={{ color: '#8B9DC3' }}>/mois</span></p>
               <p className="text-xs" style={{ color: '#5A6B8A' }}>Annulable à tout moment</p>
             </div>
 
             <button
               onClick={() => { setShowPremiumModal(false); router.push('/premium'); }}
               className="w-full py-4 rounded-2xl font-extrabold text-lg press-scale mb-3"
-              style={{ background: 'linear-gradient(135deg, #FFD700, #F39C12)', color: '#0a0e2a', boxShadow: '0 4px 20px rgba(255,215,0,0.4)' }}
+              style={{ background: '#4ecdc4', color: '#0a0e2a', boxShadow: '0 4px 20px rgba(78,205,196,0.4)' }}
             >
               Commencer l&apos;essai gratuit ✨
             </button>
