@@ -1145,7 +1145,10 @@ export default function HomePage() {
         const em = THEME_EMOJIS[modalNode.themeCode] || '📚';
         const theories = lesson?.theory ?? [];
         const progress = getLessonProgress(modalNode.id);
-        const lessonFullyDone = progress.quizDone || modalNode.isCompleted;
+        // lessonFullyDone = only when full lesson quiz (non-partie) was completed
+        // Do NOT use modalNode.isCompleted (stars > 0) — a partie quiz also grants stars
+        // and would incorrectly mark all parties as done
+        const lessonFullyDone = progress.quizDone;
 
         const nextPartieIdx = completedParties.length < theories.length ? completedParties.length : 0;
 
