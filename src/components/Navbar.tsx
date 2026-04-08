@@ -73,8 +73,8 @@ export default function Navbar() {
         </div>
 
         {/* Nav items */}
-        <div className="flex flex-col gap-2 flex-1 items-start">
-          {SIDEBAR_ITEMS.map((item) => {
+        <div className="flex flex-col gap-2 flex-1 items-start w-full">
+          {SIDEBAR_ITEMS.slice(0, 4).map((item) => {
             const active = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
             return (
               <Link
@@ -93,6 +93,45 @@ export default function Navbar() {
               </Link>
             );
           })}
+
+          {/* Premium button */}
+          {premium ? (
+            <Link
+              href="/profil"
+              className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl press-scale"
+              style={{ background: 'rgba(78,205,196,0.1)', border: '1px solid rgba(78,205,196,0.25)' }}
+            >
+              <span className="text-xl">⭐</span>
+              <span className="text-sm font-bold" style={{ color: '#4ecdc4' }}>Premium ✓</span>
+            </Link>
+          ) : (
+            <Link
+              href="/premium"
+              className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl press-scale premium-pulse"
+              style={{ background: 'rgba(255,215,0,0.15)', border: '1px solid rgba(255,215,0,0.4)' }}
+            >
+              <span className="text-xl">⭐</span>
+              <span className="text-sm font-bold" style={{ color: '#FFD700' }}>Passer Premium</span>
+            </Link>
+          )}
+
+          {/* Profil */}
+          {(() => {
+            const item = SIDEBAR_ITEMS[4];
+            const active = pathname === item.href || pathname.startsWith(item.href);
+            return (
+              <Link
+                href={item.href}
+                className="sidebar-icon-btn group relative flex items-center gap-3 w-full px-3 py-2.5 rounded-xl transition-all press-scale"
+                style={active ? { background: `${item.color}20`, color: item.color } : { color: item.color }}
+              >
+                {item.icon}
+                <span className="text-sm font-bold" style={{ color: active ? item.color : '#8B9DC3' }}>
+                  {t(item.labelKey)}
+                </span>
+              </Link>
+            );
+          })()}
         </div>
 
         {/* User avatar at bottom */}

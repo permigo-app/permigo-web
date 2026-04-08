@@ -149,6 +149,13 @@ body {
 }
 .node-pulse { animation: nodePulseGlow 1.8s ease-in-out infinite; }
 
+/* ── Premium sidebar button pulse ── */
+@keyframes premiumPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(255,215,0,0); }
+}
+.premium-pulse { animation: premiumPulse 2.2s ease-in-out infinite; }
+
 /* ── Hover scale for unlocked nodes ── */
 .node-hover { transition: transform 200ms ease, filter 200ms ease; }
 .node-hover:hover { transform: scale(1.1); filter: brightness(1.15); }
