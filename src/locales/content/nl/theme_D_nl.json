@@ -1,145 +1,169 @@
 {
-  "theme_title": "De snelheid",
+  "theme": "D",
+  "city": "Spa",
+  "title": "De snelheid",
   "lessons": [
     {
       "id": "D1",
       "title": "De maximumsnelheid",
-      "parties": [
+      "theory": [
         {
-          "id": "D1_partie_0",
-          "title": "Overzicht van de maximumsnelheden"
+          "title": "Overzicht van de maximumsnelheden",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Autosnelweg",
+              "content": "📋 De regel\nOp de Belgische autosnelweg is de snelheidslimiet vastgesteld op maximum 120 km/u en minimum 70 km/u.\n\n💡 Waarom\nDe minimumsnelheid van 70 km/u vermijdt te grote snelheidsverschillen tussen voertuigen, een belangrijke oorzaak van ongevallen. De limiet van 120 km/u houdt rekening met de remafstand en de reactietijd.\n\n🚗 In de praktijk\nPas uw snelheid aan aan het verkeer en de weersomstandigheden. Zelfs als de limiet 120 km/u is, is rijden aan 100-110 km/u bij regen vaak veiliger. Controleer regelmatig uw snelheidsmeter.\n\n📍 Voorbeeld\nU rijdt op de E411 richting Namen. De limiet is 120 km/u, maar het regent hard: u vertraagt naar 100 km/u. Een tractor die aan 50 km/u rijdt, mag niet op deze autosnelweg want hij kan 70 km/u niet halen.\n\n⚠️ Veelgemaakte fout\nDenken dat 120 km/u een verplichte snelheid is. Het is een maximum, geen doel. Omgekeerd, vergeten dat er een minimumsnelheid van 70 km/u bestaat op de autosnelweg.",
+              "emoji": "🛣️",
+              "explanation_simple": "Op de Belgische autosnelweg is het maximum 120 km/u en minimum 70 km/u. Onder 70 km/u hindert u iedereen en is het gevaarlijk."
+            },
+            {
+              "type": "text",
+              "title": "Autoweg / 2x2 rijstroken met middenberm",
+              "content": "📋 De regel\nOp autowegen en gewone wegen met 2x2 rijstroken gescheiden door een middenberm is de limiet 120 km/u buiten de bebouwde kom.\n\n💡 Waarom\nDeze wegen bieden gelijkaardige omstandigheden als de autosnelweg (fysieke scheiding van de rijrichtingen), wat dezelfde limiet van 120 km/u rechtvaardigt.\n\n🚗 In de praktijk\nHerkent u de middenberm (fysieke scheiding tussen de twee rijrichtingen). Als die er is, mag u tot 120 km/u rijden. Zonder middenberm geldt een andere limiet.\n\n📍 Voorbeeld\nU rijdt op een nationale weg met 2x2 rijstroken en een begraasd middeneiland tussen Luik en Verviers. De limiet is er 120 km/u, net als op de autosnelweg.\n\n⚠️ Veelgemaakte fout\nEen weg met 2x2 rijstroken gescheiden door een eenvoudige verfstreep verwarren met een weg gescheiden door een middenberm. Alleen de middenberm (fysieke scheiding) geeft recht op 120 km/u.",
+              "emoji": "🚗",
+              "explanation_simple": "Op grote wegen met 2x2 rijstroken en een middenberm is het maximum 120 km/u. Het lijkt bijna op een autosnelweg, maar het is er geen."
+            },
+            {
+              "type": "text",
+              "title": "Wegen buiten de bebouwde kom gescheiden door wegmarkering",
+              "content": "📋 De regel\nOp gewone wegen met 2x2 rijstroken gescheiden door wegmarkering, buiten de bebouwde kom: Vlaams Gewest: 70 km/u. Waals Gewest: 90 km/u. Brussels Gewest: 70 km/u.\n\n💡 Waarom\nZonder fysieke scheiding tussen de rijrichtingen is het risico op een frontale botsing groter. Elk Gewest heeft zijn eigen limiet vastgesteld op basis van zijn verkeersveiligheidsbeleid.\n\n🚗 In de praktijk\nLet op de gewestelijke borden wanneer u van Gewest verandert. In Wallonië is de standaardlimiet 90 km/u, maar in Vlaanderen en Brussel is het 70 km/u op dit type weg.\n\n📍 Voorbeeld\nU rijdt op een weg met 2x2 rijstroken gescheiden door verfstrepen tussen Bergen (Wallonië) en Halle (Vlaanderen). In Wallonië mag u 90 km/u rijden, maar zodra u Vlaanderen binnenrijdt, daalt de limiet naar 70 km/u.\n\n⚠️ Veelgemaakte fout\nDezelfde limiet overal in België toepassen. De snelheden verschillen per Gewest, en u moet uw rijgedrag aanpassen zodra u de gewestgrens overschrijdt.",
+              "emoji": "📍",
+              "explanation_simple": "Op wegen met 2x2 rijstroken gescheiden enkel door verfstrepen (geen middenberm) verschilt de snelheid per gewest: 70 in Vlaanderen, 90 in Wallonië, 70 in Brussel."
+            },
+            {
+              "type": "text",
+              "title": "Rijbaan met middenrijstrook",
+              "content": "📋 De regel\nOp een rijbaan met middenrijstrook is de maximumsnelheid 70 km/u, ongeacht het Gewest.\n\n💡 Waarom\nDe middenrijstrook wordt door beide rijrichtingen gedeeld voor inhaalmanoeuvres. Deze riskantere inrichting vereist een lagere snelheid om de veiligheid te garanderen.\n\n🚗 In de praktijk\nHerkent u een rijbaan met middenrijstrook: twee smalle zijstroken en een gedeelde middenstrook. Rijd op uw zijstrook en gebruik de middenstrook enkel om in te halen.\n\n📍 Voorbeeld\nOp een plattelandsweg in Wallonië met een middenrijstrook rijdt u maximum 70 km/u op uw rechterstrook. Een fietser rijdt voor u: u gebruikt de middenstrook even om hem in te halen.\n\n⚠️ Veelgemaakte fout\nPermanent op de middenrijstrook rijden in plaats van op uw zijstrook te blijven. De middenstrook is geen gewone rijstrook, hij dient enkel voor inhalen.",
+              "emoji": "↔️",
+              "explanation_simple": "Op een rijbaan met middenrijstrook (de gedeelde middenstrook) is het overal in België 70 km/u. Deze wegen zijn smaller en gevaarlijker."
+            },
+            {
+              "type": "text",
+              "title": "In de bebouwde kom",
+              "content": "📋 De regel\nIn de bebouwde kom is de limiet 50 km/u in het Vlaams en het Waals Gewest, en 30 km/u in het Brussels Gewest.\n\n💡 Waarom\nIn de stad leven voetgangers, fietsers en voertuigen samen. Bij 30 km/u heeft een aangereden voetganger 90% kans om te overleven; bij 50 km/u daalt dat drastisch. Brussel heeft gekozen voor 30 km/u om kwetsbare gebruikers beter te beschermen.\n\n🚗 In de praktijk\nLet op de borden bij het binnenrijden van de bebouwde kom (witte achtergrond met stadssilhouet). In Brussel is de standaardlimiet 30 km/u tenzij anders aangegeven. In Wallonië en Vlaanderen is het 50 km/u.\n\n📍 Voorbeeld\nU rijdt Brussel binnen via de Waterloosesteenweg. Vanaf het bebouwde-kombord vertraagt u naar 30 km/u. Bepaalde hoofdassen tonen echter 50 km/u via een specifiek bord.\n\n⚠️ Veelgemaakte fout\nVergeten dat Brussel standaard 30 km/u heeft en verder aan 50 km/u rijden. Omgekeerd, aan 30 km/u rijden in Wallonië waar de limiet 50 km/u is.",
+              "emoji": "🏙️",
+              "explanation_simple": "In de bebouwde kom is het 50 km/u in Vlaanderen en Wallonië, maar 30 km/u in Brussel. Brussel heeft de limiet verlaagd om voetgangers en fietsers beter te beschermen."
+            },
+            {
+              "type": "text",
+              "title": "Speciale zones",
+              "content": "📋 De regel\nWoonerf / erftoegangsweg: 20 km/u. Voorbehouden weg: 30 km/u. Speelstraat en schoolstraat: stapvoets. Schoolomgeving: 30 km/u. Voetgangerszone: stapvoets. Fietszone: 30 km/u.\n\n💡 Waarom\nDeze zones beschermen de kwetsbaarste gebruikers (kinderen, voetgangers, fietsers). Hoe lager de snelheid, hoe meer tijd de bestuurder heeft om te reageren en hoe minder ernstig de letsels bij een aanrijding.\n\n🚗 In de praktijk\nLet op de specifieke borden van elke zone. Stapvoets betekent ongeveer 5 km/u, de snelheid van een voetganger. In een woonerf hebben voetgangers voorrang over de volledige rijbaanbreedte.\n\n📍 Voorbeeld\nU rijdt door een schoolstraat na schooltijd: u rijdt stapvoets (ongeveer 5 km/u). Kinderen kunnen op elk moment tussen geparkeerde auto's opduiken.\n\n⚠️ Veelgemaakte fout\nEen woonerf (20 km/u) verwarren met een zone 30 (ook 20 km/u maar andere regels). Andere fout: 30 km/u rijden in een schoolstraat terwijl stapvoets van toepassing is.",
+              "emoji": "🚶",
+              "explanation_simple": "Woonerf = 20 km/u, zone 30 of schoolstraat = geen auto's of stapvoets. Dit zijn zones waar voetgangers en kinderen voorrang hebben."
+            },
+            {
+              "type": "text",
+              "title": "Verhoogde inrichting",
+              "content": "📋 De regel\nBij verhoogde inrichtingen is de limiet in bepaalde gevallen 30 km/u. Bestuurders moeten voorzichtig naderen en aan een gematigde snelheid rijden.\n\n💡 Waarom\nVerhoogde inrichtingen (verkeersdrempels, plateaus) worden geplaatst om vertraging af te dwingen in gevoelige zones. Te snel rijden kan uw voertuig beschadigen en voetgangers in de omgeving in gevaar brengen.\n\n🚗 In de praktijk\nVerlangzaam geleidelijk bij het naderen van de inrichting. Rem er niet abrupt op. Handhaaf 30 km/u of minder bij het passeren van de inrichting.\n\n📍 Voorbeeld\nU nadert een verhoogd plateau voor een school in Namen, aangekondigd door een bord A14. U vertraagt naar 30 km/u voor u het plateau bereikt.\n\n⚠️ Veelgemaakte fout\nOp het laatste moment remmen op de verhoogde inrichting in plaats van vooraf geleidelijk te vertragen. Dit slijt de remmen en creëert een risico voor de voertuigen achter u.",
+              "emoji": "🚧",
+              "explanation_simple": "Op verkeersdrempels is het in bepaalde gevallen maximaal 30 km/u. Ze zijn er speciaal om u te dwingen te vertragen."
+            },
+            {
+              "type": "text",
+              "title": "Gemotoriseerde voortbewegingstoestellen",
+              "content": "📋 De regel\nOp de toegestane wegen mogen gemotoriseerde voortbewegingstoestellen (elektrische steps, enz.) niet meer dan 25 km/u rijden.\n\n💡 Waarom\nDeze toestellen bieden geen bescherming (geen carrosserie, geen gordel). De snelheid beperken tot 25 km/u vermindert de ernst van letsels bij een val of botsing.\n\n🚗 In de praktijk\nAls u een elektrische step bestuurt, controleer dan of uw toestel begrensd is op 25 km/u. Als automobilist, anticipeer dat deze toestellen langzamer rijden dan u.\n\n📍 Voorbeeld\nU rijdt met een elektrische step op een weg met 50 km/u in Luik. Uw maximumsnelheid blijft 25 km/u, ook al laat de weg meer toe voor auto's.\n\n⚠️ Veelgemaakte fout\nDenken dat een elektrische step even snel kan rijden als auto's. Uw toestel deblokkeren is illegaal en zeer gevaarlijk.",
+              "emoji": "🛴",
+              "explanation_simple": "Elektrische steps zijn beperkt tot 25 km/u op de weg. Dat is al behoorlijk snel voor een toestel zonder carrosserie!"
+            }
+          ]
         },
         {
-          "id": "D1_partie_1",
-          "title": "Te traag rijden"
+          "title": "Te traag rijden",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Overtreding door te traag te rijden",
+              "content": "📋 De regel\nTe traag rijden is een overtreding van de verkeersregels. Plots remmen zonder geldige reden is ook strafbaar.\n\n💡 Waarom\nEen te traag voertuig is een obstakel voor andere weggebruikers, veroorzaakt files en dwingt gevaarlijke inhaalmanoeuvres af. Dit verhoogt het risico op een aanrijding van achteren.\n\n🚗 In de praktijk\nPas uw snelheid aan aan de omstandigheden maar blijf binnen een redelijke marge. In de bebouwde kom bij 50 km/u rijdt u niet aan 25 km/u zonder reden. Op de weg bij 90 km/u rijdt u niet aan 50 km/u.\n\n📍 Voorbeeld\nTijdens uw praktisch examen rijdt u aan 30 km/u in een zone van 50 km/u uit overdreven voorzichtigheid. De examinator kan u bestraffen voor een niet-aangepaste snelheid (te traag).\n\n⚠️ Veelgemaakte fout\nGeloven dat langzaam rijden altijd veiliger is. In werkelijkheid is een te lage snelheid ten opzichte van de verkeersstroom even gevaarlijk als een te hoge snelheid.",
+              "emoji": "🐢",
+              "explanation_simple": "Te traag rijden is ook een overtreding! U veroorzaakt een file en dwingt anderen om u in te halen, wat gevaarlijk is."
+            },
+            {
+              "type": "text",
+              "title": "Plots remmen zonder reden",
+              "content": "📋 De regel\nPlots remmen zonder geldige reden wordt beschouwd als een overtreding.\n\n💡 Waarom\nEen onverwachte abrupte remmanoeuvre kan een kettingbotsing veroorzaken. De bestuurder achter u heeft geen tijd om te reageren, zeker bij hoge snelheid of bij regen.\n\n🚗 In de praktijk\nRem geleidelijk tenzij in noodgeval. Als u sterk moet vertragen, gebruik uw gevaarlichten om bestuurders achter u te waarschuwen.\n\n📍 Voorbeeld\nU rijdt op de E40 aan 120 km/u en remt abrupt omdat u bijna uw afrit gemist hebt. Het voertuig achter u moet hard remmen: dat is een overtreding van uw kant.\n\n⚠️ Veelgemaakte fout\nHard remmen bij het zien van een flitser terwijl u aan de juiste snelheid rijdt. Dit nutteloze reflex brengt de bestuurders achter u in gevaar.",
+              "emoji": "🛑",
+              "explanation_simple": "Plots remmen zonder geldige reden is verboden. U riskeert een kettingbotsing met de voertuigen achter u."
+            }
+          ]
         },
         {
-          "id": "D1_partie_2",
-          "title": "Snelheidswedstrijden"
+          "title": "Snelheidswedstrijden",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Verbod",
+              "content": "📋 De regel\nElke snelheidswedstrijd, regelmatigheidswedstrijd of behendigheidswedstrijd, alsook elke sportwedstrijd, is verboden op de openbare weg zonder speciale toelating van de bevoegde overheid.\n\n💡 Waarom\nWedstrijden op de openbare weg brengen alle weggebruikers in gevaar. De wegen zijn niet ontworpen voor competitie: geen bescherming, geen uitwijkzones, aanwezigheid van voetgangers en fietsers.\n\n🚗 In de praktijk\nNeem nooit deel aan snelheidsuitdagingen, ook niet spontane. Als u aan competitie wilt doen, ga naar een homologeerd autocircuit.\n\n📍 Voorbeeld\nAan een rood licht daagt een andere bestuurder u uit door zijn motor te laten brullen voor een race bij groen licht. U weigert: deelnemen zou een ernstige overtreding zijn.\n\n⚠️ Veelgemaakte fout\nDenken dat een wedstrijdje 'even' of 'over een korte afstand' niet erg is. Elke snelheidswedstrijd op de openbare weg is een overtreding, ongeacht de afstand.",
+              "emoji": "🏁",
+              "explanation_simple": "Snelheidswedstrijden op de openbare weg zijn totaal verboden, behalve met een speciale toelating. De weg is geen racecircuit!"
+            },
+            {
+              "type": "text",
+              "title": "Overtreding van de vierde graad",
+              "content": "📋 De regel\nEen snelheidswedstrijd op de openbare weg organiseren of eraan deelnemen is een overtreding van de vierde graad, de zwaarste categorie.\n\n💡 Waarom\nDe 4e graad is voorbehouden voor overtredingen die het leven van anderen rechtstreeks in gevaar brengen. Straatracen heeft een uiterst hoog dodelijk potentieel, voor de deelnemers en voor onschuldige omstanders.\n\n🚗 In de praktijk\nWeet dat de gevolgen zeer zwaar zijn: zeer hoge boete, intrekking van het rijbewijs, zelfs gevangenisstraf. Zelfs als passagier van een deelnemend voertuig bent u medeplichtig.\n\n📍 Voorbeeld\nTwee bestuurders racen op de ring van Brussel aan 180 km/u. Ze worden aangehouden door de politie: overtreding van de 4e graad, onmiddellijke intrekking van het rijbewijs, verschijning voor de rechtbank en boete die 4.000 euro kan overschrijden.\n\n⚠️ Veelgemaakte fout\nGeloven dat men enkel een boete riskeert. De 4e graad kan leiden tot verval van het recht tot sturen en zelfs een gevangenisstraf.",
+              "emoji": "⚠️",
+              "explanation_simple": "Deelnemen aan een straatrace is de zwaarste overtreding (4e graad). U riskeert een flinke boete en intrekking van uw rijbewijs."
+            }
+          ]
         },
         {
-          "id": "D1_partie_3",
-          "title": "Onmiddellijke intrekking van het rijbewijs (Politie)"
+          "title": "Onmiddellijke intrekking van het rijbewijs (Politie)",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Autosnelweg en gewone weg",
+              "content": "📋 De regel\nAls u de toegestane snelheid op een autosnelweg, een autoweg of een gewone weg met meer dan 30 km/u overschrijdt, riskeert u de onmiddellijke intrekking van uw rijbewijs.\n\n💡 Waarom\nEen overschrijding van meer dan 30 km/u is een ernstig en onmiddellijk gevaar. De politie moet ter plaatse kunnen optreden om andere weggebruikers te beschermen.\n\n🚗 In de praktijk\nOp de autosnelweg bij 120 km/u geldt de onmiddellijke intrekking vanaf 151 km/u. Op een weg bij 90 km/u, vanaf 121 km/u. Houd altijd een veiligheidsmarge onder de limiet.\n\n📍 Voorbeeld\nU rijdt 155 km/u op de E411 (limiet 120 km/u). De politie houdt u aan: overschrijding van 35 km/u. Uw rijbewijs wordt onmiddellijk ter plaatse ingetrokken.\n\n⚠️ Veelgemaakte fout\nDenken dat er altijd een ruime tolerantiemarge is. De politie kan uw rijbewijs intrekken vanaf +30 km/u boven de limiet.",
+              "emoji": "🛣️",
+              "explanation_simple": "Als u meer dan 30 km/u te snel rijdt op de autosnelweg of gewone weg, kan de politie uw rijbewijs ter plaatse intrekken. Onmiddellijk, geen discussie."
+            },
+            {
+              "type": "text",
+              "title": "Bebouwde kom, zone 30, woonerf",
+              "content": "📋 De regel\nAls u de limiet in de bebouwde kom, in een zone 30 of in een woonerf met meer dan 20 km/u overschrijdt, kan uw rijbewijs ter plaatse worden ingetrokken.\n\n💡 Waarom\nIn stedelijk milieu zijn kwetsbare gebruikers (voetgangers, kinderen, fietsers) talrijk aanwezig. Een overschrijding van 20 km/u in een zone 30 betekent rijden aan 50 km/u, wat het risico op dodelijke letsels aanzienlijk vergroot.\n\n🚗 In de praktijk\nIn een zone 30 geldt de onmiddellijke intrekking vanaf 51 km/u. In de Waalse bebouwde kom (50 km/u), vanaf 71 km/u. In Brussel (standaard 30 km/u), vanaf 51 km/u.\n\n📍 Voorbeeld\nU rijdt 55 km/u in een zone 30 nabij een school in Gent. Overschrijding van 25 km/u: de politie trekt uw rijbewijs onmiddellijk in.\n\n⚠️ Veelgemaakte fout\nDenken dat de drempel voor onmiddellijke intrekking overal dezelfde is. In de bebouwde kom en zones 30 is het +20 km/u (strenger dan de +30 km/u op de autosnelweg).",
+              "emoji": "🏙️",
+              "explanation_simple": "In de bebouwde kom of zone 30 meer dan 20 km/u te snel = onmiddellijke intrekking van het rijbewijs. Het is strenger omdat er voetgangers en kinderen zijn."
+            },
+            {
+              "type": "text",
+              "title": "Wie beslist, wie voert uit",
+              "content": "📋 De regel\nDe onmiddellijke intrekking wordt beslist door de Procureur des Konings of een Officier van Gerechtelijke Politie. De uitvoering wordt verzekerd door de Politie ter plaatse.\n\n💡 Waarom\nDeze procedure garandeert een snelle reactie op ernstige overtredingen, terwijl het wettelijk kader wordt gerespecteerd. De Procureur des Konings, een onafhankelijk magistraat, superviseert de beslissing om misbruiken te voorkomen.\n\n🚗 In de praktijk\nBij een controle, als uw snelheidsoverschrijding een onmiddellijke intrekking rechtvaardigt, contacteert de politie de Procureur die de intrekking autoriseert. U moet uw rijbewijs ter plaatse afgeven.\n\n📍 Voorbeeld\nDe politie houdt u aan op de E40 voor een overschrijding van 35 km/u. De agent contacteert de dienstdoende Procureur des Konings die de intrekking beveelt. De agent neemt uw rijbewijs in en geeft u een document.\n\n⚠️ Veelgemaakte fout\nDe rol van de politie en die van de Procureur verwarren. De politie voert de intrekking uit, maar het is de Procureur (of de OGP) die de juridische beslissing neemt.",
+              "emoji": "👮",
+              "explanation_simple": "De politie neemt uw rijbewijs in, maar het is de Procureur des Konings die de beslissing heeft genomen. De politie voert uit, de procureur beslist."
+            }
+          ]
         },
         {
-          "id": "D1_partie_4",
-          "title": "Verval van het recht tot sturen (Rechter)"
-        }
-      ],
-      "cards": [
-        {
-          "id": "D1_p0_c0",
-          "title": "Autosnelweg",
-          "content": "Maximumsnelheid: 120 km/u. Minimumsnelheid: 70 km/u.",
-          "explanation_simple": "Op de Belgische autosnelweg is het maximum 120 km/u en minimum 70 km/u. Onder 70 km/u hindert u iedereen en is het gevaarlijk."
-        },
-        {
-          "id": "D1_p0_c1",
-          "title": "Autoweg / 2x2 rijstroken met middenberm",
-          "content": "Buiten de bebouwde kom: 120 km/u (minstens 2 rijstroken per richting + middenberm).",
-          "explanation_simple": "Op grote wegen met 2x2 rijstroken en een middenberm is het maximum 120 km/u. Het lijkt bijna op een autosnelweg, maar het is er geen."
-        },
-        {
-          "id": "D1_p0_c2",
-          "title": "Wegen buiten de bebouwde kom gescheiden door wegmarkering",
-          "content": "Vlaanderen: 70 km/u. Wallonie: 90 km/u. Brussel: 70 km/u.",
-          "explanation_simple": "Op wegen met 2x2 rijstroken die alleen door wegmarkering gescheiden zijn (geen middenberm), hangt de snelheid af van het gewest: 70 km/u in Vlaanderen, 90 km/u in Wallonië, 70 km/u in Brussel."
-        },
-        {
-          "id": "D1_p0_c3",
-          "title": "Rijbaan met middenrijstrook",
-          "content": "70 km/u overal (alle gewesten samen).",
-          "explanation_simple": "Op een rijbaan met middenrijstrook (de gedeelde middenstrook) is het overal in België 70 km/u. Deze wegen zijn smaller en gevaarlijker."
-        },
-        {
-          "id": "D1_p0_c4",
-          "title": "In de bebouwde kom",
-          "content": "Vlaanderen: 50 km/u. Wallonie: 50 km/u. Brussel: 30 km/u.",
-          "explanation_simple": "In de bebouwde kom is het 50 km/u in Vlaanderen en Wallonië, maar 30 km/u in Brussel. Brussel heeft de limiet verlaagd om voetgangers beter te beschermen."
-        },
-        {
-          "id": "D1_p0_c5",
-          "title": "Speciale zones",
-          "content": "Woonerf / erftoegangsweg: 20 km/u. Voorbehouden weg: 30 km/u. Speelstraat: stapvoets. Schoolstraat: stapvoets. Schoolomgeving: 30 km/u. Voetgangerszone: stapvoets. Fietszone: 30 km/u.",
-          "explanation_simple": "Woonerf = 20 km/u, zone 30 of schoolstraat = geen auto's of stapvoets. Dit zijn zones waar voetgangers en kinderen voorrang hebben."
-        },
-        {
-          "id": "D1_p0_c6",
-          "title": "Verhoogde inrichting",
-          "content": "De maximumsnelheid is 30 km/u bij het naderen en het passeren van een verhoogde inrichting (verkeersdrempel, Berlijnse kussen, verhoogd plateau).",
-          "explanation_simple": "Op verkeersdrempels is het in bepaalde gevallen maximaal 30 km/u. Ze zijn er speciaal om u te dwingen te vertragen."
-        },
-        {
-          "id": "D1_p0_c7",
-          "title": "Gemotoriseerde voortbewegingstoestellen",
-          "content": "Gemotoriseerde voortbewegingstoestellen (elektrische steps, enz.) hebben een maximumsnelheid van 25 km/u op de toegestane wegen.",
-          "explanation_simple": "Elektrische steps zijn beperkt tot 25 km/u op de weg. Dat is al behoorlijk snel voor een toestel zonder carrosserie!"
-        },
-        {
-          "id": "D1_p1_c0",
-          "title": "Overtreding door te traag te rijden",
-          "content": "Te traag rijden is een overtreding. Overdreven traag rijden zonder reden, waardoor anderen je moeten inhalen, is strafbaar.",
-          "explanation_simple": "Te traag rijden is ook een overtreding! U veroorzaakt een file en dwingt anderen om u in te halen, wat gevaarlijk is."
-        },
-        {
-          "id": "D1_p1_c1",
-          "title": "Plots remmen zonder reden",
-          "content": "Plots remmen zonder reden is ook een overtreding.",
-          "explanation_simple": "Plots remmen zonder geldige reden is verboden. U riskeert een kettingbotsing met de voertuigen achter u."
-        },
-        {
-          "id": "D1_p2_c0",
-          "title": "Verbod",
-          "content": "Behalve met een speciale toelating zijn alle snelheidswedstrijden en sportwedstrijden verboden op de openbare weg (snelheidswedstrijden, regelmatigheidswedstrijden of behendigheidswedstrijden).",
-          "explanation_simple": "Snelheidswedstrijden op de openbare weg zijn totaal verboden, behalve met een speciale toelating. De weg is geen racecircuit."
-        },
-        {
-          "id": "D1_p2_c1",
-          "title": "Overtreding van de vierde graad",
-          "content": "Deelnemen aan een snelheidswedstrijd op de openbare weg is een overtreding van de vierde graad, de zwaarste.",
-          "explanation_simple": "Deelnemen aan een straatrace is de zwaarste overtreding (4e graad). U riskeert een flinke boete en intrekking van uw rijbewijs."
-        },
-        {
-          "id": "D1_p3_c0",
-          "title": "Autosnelweg en gewone weg",
-          "content": "Onmiddellijke intrekking bij een overschrijding van meer dan 30 km/u op een autosnelweg, autoweg of gewone weg.",
-          "explanation_simple": "Als u meer dan 30 km/u te snel rijdt op een autosnelweg of gewone weg, kan de politie uw rijbewijs ter plaatse intrekken."
-        },
-        {
-          "id": "D1_p3_c1",
-          "title": "Bebouwde kom, zone 30, woonerf",
-          "content": "Onmiddellijke intrekking bij een overschrijding van meer dan 20 km/u.",
-          "explanation_simple": "In de bebouwde kom of zone 30, meer dan 20 km/u te snel = onmiddellijke intrekking van het rijbewijs. Het is strenger omdat er voetgangers en kinderen zijn."
-        },
-        {
-          "id": "D1_p3_c2",
-          "title": "Wie beslist, wie voert uit",
-          "content": "De beslissing tot intrekking ligt bij de Procureur des Konings of een Officier van Gerechtelijke Politie. De uitvoering gebeurt door de Politie.",
-          "explanation_simple": "De politie neemt uw rijbewijs in, maar het is de Procureur des Konings die de beslissing heeft genomen. De politie voert uit, de procureur beslist."
-        },
-        {
-          "id": "D1_p4_c0",
-          "title": "Autosnelweg en gewone weg",
-          "content": "Verval bij een overschrijding van meer dan 40 km/u.",
-          "explanation_simple": "Meer dan 40 km/u boven de limiet op de autosnelweg = u verschijnt voor de rechter. Het is niet zomaar een boete meer, het is een rechterlijke beslissing."
-        },
-        {
-          "id": "D1_p4_c1",
-          "title": "Bebouwde kom, zone 30, woonerf",
-          "content": "Verval bij een overschrijding van meer dan 30 km/u.",
-          "explanation_simple": "In de bebouwde kom, +30 km/u boven de limiet = verschijning voor de rechtbank. De rechter kan uw rijbewijs voor een lange periode intrekken."
-        },
-        {
-          "id": "D1_p4_c2",
-          "title": "Duur",
-          "content": "Minimum 8 dagen, maximum 5 jaar. Geldt ook voor motorvoertuigen waarvoor geen rijbewijs vereist is.",
-          "explanation_simple": "Het verval kan van 8 dagen tot 5 jaar duren. De rechter beslist hoe lang u niet mag rijden."
-        },
-        {
-          "id": "D1_p4_c3",
-          "title": "Verschil onmiddellijke intrekking vs verval",
-          "content": "Onmiddellijke intrekking = beslissing van de Procureur/OGP, ter plaatse uitgevoerd door de Politie. Verval = beslissing van een Rechter in de rechtbank, later uitgesproken.",
-          "explanation_simple": "Onmiddellijke intrekking = de politie neemt uw rijbewijs meteen in (beslissing van de Procureur). Verval = een rechter ontneemt het u na een procedure. Twee verschillende dingen."
+          "title": "Verval van het recht tot sturen (Rechter)",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Autosnelweg en gewone weg",
+              "content": "📋 De regel\nAls u de toegestane snelheid op een autosnelweg, een autoweg of een gewone weg met meer dan 40 km/u overschrijdt, stelt u zich bloot aan het verval van het recht tot sturen.\n\n💡 Waarom\nEen overschrijding van meer dan 40 km/u is een uiterst gevaarlijk gedrag. De rechter treedt op om te beoordelen of u nog geschikt bent om te rijden en een evenredige sanctie te bepalen.\n\n🚗 In de praktijk\nOp de autosnelweg bij 120 km/u is het verval mogelijk vanaf 161 km/u. Dit betekent een verschijning voor de rechtbank, een zitting voor een rechter, en mogelijk te herhalen medische en psychologische onderzoeken.\n\n📍 Voorbeeld\nU wordt geflitst aan 165 km/u op de E19 (limiet 120 km/u). Overschrijding van 45 km/u: u ontvangt een dagvaarding voor de politierechtbank. De rechter kan een verval van meerdere maanden uitspreken.\n\n⚠️ Veelgemaakte fout\nDe onmiddellijke intrekking (+30 km/u, door de politie) en het verval (+40 km/u, door de rechter) verwarren. Beide kunnen worden gecumuleerd.",
+              "emoji": "🛣️",
+              "explanation_simple": "Meer dan 40 km/u boven de limiet op de autosnelweg = u verschijnt voor de rechter. Het is niet zomaar een boete meer, het is een rechterlijke beslissing."
+            },
+            {
+              "type": "text",
+              "title": "Bebouwde kom, zone 30, woonerf",
+              "content": "📋 De regel\nIn de bebouwde kom, in een zone 30 of in een woonerf kan een overschrijding van meer dan 30 km/u van de toegestane limiet het verval van het recht tot sturen tot gevolg hebben.\n\n💡 Waarom\nDe limiet in een stedelijke zone met 30 km/u overschrijden is uiterst ernstig: in een zone 30 betekent dit rijden aan 60 km/u, het dubbele van de limiet, in een omgeving waar kinderen kunnen oversteken.\n\n🚗 In de praktijk\nIn een zone 30 is het verval mogelijk vanaf 61 km/u. In de Waalse bebouwde kom (50 km/u), vanaf 81 km/u. De rechter kan ook opleggen om de theoretische en praktische examens opnieuw af te leggen.\n\n📍 Voorbeeld\nU rijdt 65 km/u in een woonerf beperkt tot 30 km/u in Ukkel. Overschrijding van 35 km/u: u verschijnt voor de rechtbank. De rechter spreekt een verval van 3 maanden uit.\n\n⚠️ Veelgemaakte fout\nDenken dat het verval enkel geldt bij grote overschrijdingen op de autosnelweg. In een zone 30 wordt de drempel bereikt vanaf +30 km/u, dus al bij 60 km/u.",
+              "emoji": "🏙️",
+              "explanation_simple": "In de bebouwde kom, +30 km/u boven de limiet = verschijning voor de rechtbank. De rechter kan uw rijbewijs voor een lange periode intrekken."
+            },
+            {
+              "type": "text",
+              "title": "Duur",
+              "content": "📋 De regel\nHet verval kan gaan van minimum 8 dagen tot maximum 5 jaar, naargelang het uitgesproken vonnis. Het is ook van toepassing op motorvoertuigen waarvoor geen rijbewijs vereist is.\n\n💡 Waarom\nDe ruime marge laat de rechter toe de sanctie aan te passen aan de ernst van de overtreding en het profiel van de bestuurder (recidive, omstandigheden, enz.).\n\n🚗 In de praktijk\nTijdens het verval mag u geen enkel motorvoertuig besturen, zelfs geen bromfiets klasse A waarvoor normaal geen rijbewijs nodig is. Rijden tijdens een verval is een strafrechtelijk misdrijf.\n\n📍 Voorbeeld\nNa een vonnis voor een grote snelheidsoverschrijding spreekt de rechter een verval van 2 maanden uit. Gedurende deze 2 maanden mag u noch een auto, noch een scooter, noch enig gemotoriseerd voertuig besturen.\n\n⚠️ Veelgemaakte fout\nGeloven dat men tijdens een verval nog een bromfiets mag besturen. Het verval geldt voor ALLE motorvoertuigen, zelfs die waarvoor geen rijbewijs vereist is.",
+              "emoji": "📅",
+              "explanation_simple": "Het verval van het recht tot sturen duurt minimaal 8 dagen. De rechter beslist hoe lang u niet mag rijden."
+            },
+            {
+              "type": "text",
+              "title": "Verschil onmiddellijke intrekking vs verval",
+              "content": "📋 De regel\nDe onmiddellijke intrekking wordt beslist door de Procureur des Konings (of een OGP) en ter plaatse uitgevoerd door de Politie. Het verval van het recht tot sturen wordt uitgesproken door een Rechter in de rechtbank.\n\n💡 Waarom\nDit zijn twee complementaire mechanismen: de onmiddellijke intrekking is een noodmaatregel om een onmiddellijk gevaar weg te nemen. Het verval is een gerechtelijke sanctie uitgesproken na onderzoek van het dossier.\n\n🚗 In de praktijk\nBeide kunnen worden gecumuleerd: de politie trekt uw rijbewijs ter plaatse in (onmiddellijke intrekking), daarna trekt de rechter het in voor een langere periode (verval) bij het vonnis.\n\n📍 Voorbeeld\nU wordt aangehouden aan 170 km/u op de autosnelweg (limiet 120). De politie trekt uw rijbewijs onmiddellijk in (intrekking, +30 km/u). Enkele weken later spreekt de rechter een verval van 3 maanden uit (+40 km/u).\n\n⚠️ Veelgemaakte fout\nDe twee maatregelen verwarren op het theoretisch examen. Onthoud: Politie + Procureur = onmiddellijke intrekking (ter plaatse). Rechter + Rechtbank = verval (na vonnis).",
+              "emoji": "⚖️",
+              "explanation_simple": "Onmiddellijke intrekking = de politie neemt uw rijbewijs meteen in (beslissing van de Procureur). Verval = een rechter ontneemt het u na een procedure. Twee verschillende dingen!"
+            }
+          ]
         }
       ],
       "questions": [
@@ -1287,186 +1311,216 @@
     {
       "id": "D2",
       "title": "De stopafstand",
-      "parties": [
+      "theory": [
         {
-          "id": "D2_partie_0",
-          "title": "De veiligheidsafstand"
+          "title": "De veiligheidsafstand",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Formule: snelheid / 2",
+              "content": "📋 De regel\nDe veiligheidsafstand met het voertuig voor u berekent u door uw snelheid door twee te delen. Voorbeeld: bij 120 km/u → 60 m; bij 100 km/u → 50 m.\n\n💡 Waarom\nDeze afstand geeft u voldoende tijd om te reageren en te remmen als het voertuig voor u plots stopt. Zonder deze marge is een kettingbotsing bijna onvermijdelijk.\n\n🚗 In de praktijk\nHoud bij 120 km/u 60 m aan (ongeveer 4 verfstrepen op de autosnelweg). Vergroot deze afstand bij slecht weer.\n\n📍 Voorbeeld\nU rijdt aan 100 km/u op de E40. De veiligheidsafstand is 50 m. De vrachtwagen voor u remt: dankzij uw marge van 50 m heeft u de tijd om veilig te reageren en te remmen.\n\n⚠️ Veelgemaakte fout\nAchter het voertuig voor u rijden om 'tijd te winnen'. In werkelijkheid wint u slechts enkele seconden maar vergroot u het risico op een ongeval.",
+              "emoji": "📏",
+              "explanation_simple": "Om te weten hoeveel afstand u moet houden tot de auto voor u, deelt u uw snelheid door 2. Bij 100 km/u = minstens 50 meter."
+            },
+            {
+              "type": "text",
+              "title": "Regel van de twee seconden (droog wegdek)",
+              "content": "📋 De regel\nKies een vast punt. Wanneer het voertuig voor u dat punt passeert, tel 'een krokodil, twee krokodillen'. Als u dat punt passeert nadat u klaar bent met tellen, is de afstand voldoende.\n\n💡 Waarom\nDeze methode is praktischer dan meters schatten, want ze past zich automatisch aan aan uw snelheid. Hoe sneller u rijdt, hoe groter de afstand die u in 2 seconden aflegt.\n\n🚗 In de praktijk\nKies een goed zichtbaar referentiepunt (brug, bord, boom). Zodra het voertuig voor u dat passeert, begint u te tellen. Het is een betrouwbare en gemakkelijk toe te passen techniek.\n\n📍 Voorbeeld\nOp de autosnelweg rijdt de vrachtwagen voor u onder een brug door. U telt 'een krokodil, twee krokodillen' en u bent nog niet onder de brug: perfect, uw afstand is goed.\n\n⚠️ Veelgemaakte fout\nTe snel tellen ('een-twee') in plaats van het volledige woord 'krokodil' uit te spreken dat ongeveer een seconde duurt. Dit verstoort de evaluatie van de afstand.",
+              "emoji": "🐊",
+              "explanation_simple": "Kies een vast punt langs de weg. Wanneer de auto voor u dat punt passeert, tel 'een krokodil, twee krokodillen'. Als u het punt bereikt voordat u klaar bent met tellen, zit u te dicht."
+            },
+            {
+              "type": "text",
+              "title": "Nat wegdek (+50%, 3 seconden)",
+              "content": "📋 De regel\nOp nat wegdek voegt u 50% toe aan de veiligheidsafstand. Bij 120 km/u: 60 m + 30 m = 90 m, of ongeveer 3 seconden.\n\n💡 Waarom\nWater op de weg vermindert de grip van de banden en vergroot de remafstand aanzienlijk. U heeft dus meer marge nodig om veilig te stoppen.\n\n🚗 In de praktijk\nGa van 2 naar 3 krokodillen: 'een krokodil, twee krokodillen, drie krokodillen'. Verlaag ook uw snelheid bij regen.\n\n📍 Voorbeeld\nHet regent op de E411. U rijdt aan 100 km/u. Normale afstand: 50 m. Afstand op nat wegdek: 50 + 25 = 75 m, of 3 seconden.\n\n⚠️ Veelgemaakte fout\nDezelfde afstand bewaren als bij droog weer wanneer het regent. De remafstand kan verdubbelen op nat wegdek, en aquaplaning is altijd mogelijk.",
+              "emoji": "🌧️",
+              "explanation_simple": "Nat wegdek = 50% extra afstand erbij. Ga van 2 naar 3 seconden. Water tussen de banden en het wegdek zorgt voor gladheid!"
+            },
+            {
+              "type": "text",
+              "title": "Besneeuwd/ijzig wegdek (4 seconden)",
+              "content": "📋 De regel\nBij sneeuw of ijzel voorziet u minstens 4 seconden afstand ('een krokodil, twee krokodillen, drie krokodillen, vier krokodillen').\n\n💡 Waarom\nOp sneeuw of ijzel is de grip bijna nul. De remafstand kan 4 tot 10 keer groter zijn dan op droog wegdek.\n\n🚗 In de praktijk\nTel minstens 4 krokodillen. Verlaag uw snelheid sterk. Vermijd abrupte remmanoeuvres en scherpe stuuringrepen. Anticipeer maximaal.\n\n📍 Voorbeeld\nHet sneeuwt in de Ardennen. U rijdt aan 50 km/u op een weg die normaal beperkt is tot 90 km/u. Ondanks deze verlaagde snelheid houdt u 4 seconden afstand met het voertuig voor u.\n\n⚠️ Veelgemaakte fout\nVertrouwen op uw 'goede banden'. Zelfs met winterbanden blijft de remafstand op ijzel zeer lang. Maximale voorzichtigheid is geboden.",
+              "emoji": "❄️",
+              "explanation_simple": "Op sneeuw of ijzel telt u 4 seconden in plaats van 2. De weg is een ijsbaan, uw auto heeft veel meer afstand nodig om te stoppen."
+            }
+          ]
         },
         {
-          "id": "D2_partie_1",
-          "title": "De reactieafstand"
+          "title": "De reactieafstand",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Definitie",
+              "content": "📋 De regel\nDe reactieafstand is de afstand die u aflegt tussen het moment waarop u het gevaar waarneemt en het moment waarop u effectief begint te remmen.\n\n💡 Waarom\nHet menselijk brein heeft tijd nodig om een gevaar waar te nemen, te analyseren en het bevel aan de spieren te sturen om op de rem te trappen. Tijdens die tijd blijft het voertuig vooruitrijden.\n\n🚗 In de praktijk\nAnticipeer op mogelijke gevaren: een kind op het trottoir, een bal die op de weg rolt. Hoe meer u anticipeert, hoe korter uw reactietijd.\n\n📍 Voorbeeld\nU rijdt aan 90 km/u en een ree schiet de weg op. Uw brein heeft ongeveer 1 seconde nodig om te reageren: tijdens die seconde legt uw auto 25 meter af voordat u zelfs de rem aanraakt.\n\n⚠️ Veelgemaakte fout\nDenken dat u onmiddellijk remt wanneer u een gevaar ziet. Er is altijd een vertraging tussen waarneming en handeling, zelfs voor de meest ervaren bestuurders.",
+              "emoji": "👁️",
+              "explanation_simple": "De reactieafstand is de afstand die uw auto aflegt terwijl uw hersenen beseffen dat u moet remmen. U ziet het gevaar, maar uw voet is nog niet op het rempedaal."
+            },
+            {
+              "type": "text",
+              "title": "Reactietijd = 1 seconde",
+              "content": "📋 De regel\nDe gemiddelde reactietijd is één seconde. Deze vertraging varieert niet naargelang de snelheid, maar de afstand die tijdens die seconde wordt afgelegd, neemt toe met de snelheid.\n\n💡 Waarom\nEén seconde is de minimale fysiologische tijd voor het brein om een prikkel waar te nemen, te analyseren en erop te reageren. Het is een menselijke biologische constante.\n\n🚗 In de praktijk\nBij 50 km/u legt u ongeveer 14 m af in 1 seconde. Bij 120 km/u, ongeveer 33 m. Hoe sneller u rijdt, hoe groter de afstand die u 'blindelings' aflegt.\n\n📍 Voorbeeld\nBij 120 km/u op de autosnelweg legt uw auto tijdens uw reactieseconde 33 meter af. Dat is de lengte van een olympisch zwembad, afgelegd zonder enig remmen.\n\n⚠️ Veelgemaakte fout\nGeloven dat uw reactietijd sneller is dan het gemiddelde. Zelfs professionele piloten hebben een reactietijd van ongeveer 0,5 seconde in de beste omstandigheden.",
+              "emoji": "⏱️",
+              "explanation_simple": "Uw hersenen hebben ongeveer 1 seconde nodig om te reageren. Dat lijkt weinig, maar bij 120 km/u legt u 33 meter af in 1 seconde!"
+            },
+            {
+              "type": "text",
+              "title": "Formule: snelheid / 10 x 3",
+              "content": "📋 De regel\nDe in één seconde afgelegde afstand wordt geschat met de formule: snelheid / 10 × 3. Deze berekening geeft een licht hogere benadering dan de werkelijkheid.\n\n💡 Waarom\nDeze vereenvoudigde formule laat toe om mentaal en snel de reactieafstand te berekenen. Ze overschat licht, wat een extra veiligheidsmarge biedt.\n\n🚗 In de praktijk\nBij 90 km/u: 90 / 10 × 3 = 27 m. Bij 50 km/u: 50 / 10 × 3 = 15 m. Memoriseer deze formule voor het theoretisch examen.\n\n📍 Voorbeeld\nOp het examen vraagt men u de reactieafstand bij 120 km/u. Berekening: 120 / 10 = 12, dan 12 × 3 = 36 meter.\n\n⚠️ Veelgemaakte fout\nDe formule voor de reactieafstand (/10 ×3) verwarren met die voor de veiligheidsafstand (/2). Het zijn twee verschillende berekeningen die verschillende dingen meten.",
+              "emoji": "🧮",
+              "explanation_simple": "Om de reactieafstand te berekenen: neem uw snelheid, deel door 10, vermenigvuldig met 3. Bij 50 km/u: 5 × 3 = 15 meter. Eenvoudig!"
+            },
+            {
+              "type": "text",
+              "title": "Voorbeelden",
+              "content": "📋 De regel\nOngeveer afgelegde afstanden in 1 seconde: 30 km/u ≈ 9 m, 50 km/u ≈ 15 m, 70 km/u ≈ 21 m, 90 km/u ≈ 27 m, 120 km/u ≈ 36 m.\n\n💡 Waarom\nDeze concrete afstanden kennen helpt u het werkelijke gevaar van snelheid te visualiseren. Zelfs bij 'slechts' 50 km/u in de stad legt u 15 m af voor u begint te remmen.\n\n🚗 In de praktijk\nMemoriseer minstens de waarden bij 50 km/u (15 m) en 120 km/u (36 m) voor het examen. Voor de anderen past u de formule snelheid / 10 × 3 toe.\n\n📍 Voorbeeld\nU rijdt aan 50 km/u in de stad en een kind steekt plotseling over op 15 m voor u. Tijdens uw reactieseconde legt u precies die 15 m af zonder al te hebben geremd.\n\n⚠️ Veelgemaakte fout\nDe reactieafstand bij lage snelheid onderschatten. Zelfs bij 30 km/u legt u 9 meter af voor u remt, de lengte van een bus.",
+              "emoji": "📊",
+              "explanation_simple": "Bij 30 = 9 m, bij 50 = 15 m, bij 120 = 36 m. Hoe sneller u rijdt, hoe meer afstand u aflegt voordat u begint te remmen."
+            },
+            {
+              "type": "text",
+              "title": "Alcohol en drugs",
+              "content": "📋 De regel\nOnder invloed van alcohol stijgt de reactietijd naar 2-3 seconden. Met drugs kan die oplopen tot 5-8 seconden.\n\n💡 Waarom\nAlcohol en drugs tasten de cognitieve functies aan: wazig zicht, onjuist oordeel, vertraagde reflexen. De afgelegde afstand voor u reageert, wordt vermenigvuldigd.\n\n🚗 In de praktijk\nRijd nooit onder invloed van alcohol of drugs. Zorg voor een aangewezen bestuurder, neem een taxi of het openbaar vervoer.\n\n📍 Voorbeeld\nBij 120 km/u met een reactietijd van 3 seconden (alcohol) legt u 100 m af voor u remt in plaats van 33 m. Dat is drie keer verder, drie keer gevaarlijker.\n\n⚠️ Veelgemaakte fout\nDenken dat 'twee glazen nog wel gaan'. Alcohol vermindert de reflexen al ver voor de wettelijke limiet wordt bereikt. En drugs vermenigvuldigen de reactietijd met 5 tot 8.",
+              "emoji": "🍺",
+              "explanation_simple": "Onder invloed van alcohol stijgt uw reactietijd naar 2-3 seconden. Onder invloed van drugs tot 8 seconden! Het is alsof u met gesloten ogen rijdt."
+            },
+            {
+              "type": "text",
+              "title": "Factoren die de reactietijd verhogen",
+              "content": "📋 De regel\nMeerdere elementen verlengen de reactietijd: leeftijd, concentratieniveau, omgevingstemperatuur, inname van geneesmiddelen, drugs of alcohol.\n\n💡 Waarom\nAl deze factoren beïnvloeden de werking van het brein en de spieren. Een vermoeide, oudere of onder medicijnen verkerende bestuurder zal trager reageren.\n\n🚗 In de praktijk\nEvalueer uw toestand voor u achter het stuur kruipt: bent u moe? Heeft u geneesmiddelen genomen die slaperigheid kunnen veroorzaken? Pas uw rijgedrag dienovereenkomstig aan.\n\n📍 Voorbeeld\nU heeft een antihistaminicum genomen voor uw allergie. De bijsluiter vermeldt 'kan slaperigheid veroorzaken'. Uw reactietijd kan verlengd zijn: rijd voorzichtiger.\n\n⚠️ Veelgemaakte fout\nHet effect van geneesmiddelen op het rijden negeren. Bepaalde gangbare geneesmiddelen (antihistaminica, pijnstillers, anxiolytica) tasten de reflexen significant aan.",
+              "emoji": "⚠️",
+              "explanation_simple": "Uw reactietijd neemt toe als u moe bent, afgeleid door uw telefoon, bij warmte of als u geneesmiddelen heeft ingenomen."
+            }
+          ]
         },
         {
-          "id": "D2_partie_2",
-          "title": "De remafstand"
+          "title": "De remafstand",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Definitie",
+              "content": "📋 De regel\nDe remafstand is het traject afgelegd tussen het moment waarop u op de rem trapt en de volledige stilstand van het voertuig.\n\n💡 Waarom\nZelfs bij maximaal remmen stopt een voertuig niet onmiddellijk. De kinetische energie moet door de remmen worden gedissipeerd, wat tijd en afstand kost.\n\n🚗 In de praktijk\nDe remafstand neemt exponentieel toe met de snelheid: als u uw snelheid verdubbelt, wordt de remafstand viermaal groter (en niet tweemaal).\n\n📍 Voorbeeld\nBij 50 km/u op droog wegdek bedraagt uw remafstand ongeveer 13 m. Bij 100 km/u (het dubbele) stijgt hij naar ongeveer 52 m (viermaal meer).\n\n⚠️ Veelgemaakte fout\nGeloven dat de remafstand verdubbelt wanneer de snelheid verdubbelt. In werkelijkheid verviervoudigt hij. Daarom zijn zelfs matige snelheidsoverschrijdingen zo gevaarlijk.",
+              "emoji": "🛑",
+              "explanation_simple": "De remafstand is de afstand die uw auto aflegt tussen het moment dat u op de rem trapt en de volledige stilstand. Zelfs met de beste remmen, kost dat tijd."
+            },
+            {
+              "type": "text",
+              "title": "Factoren die de remafstand beïnvloeden",
+              "content": "📋 De regel\nDe remafstand hangt af van: weersomstandigheden, kwaliteit en staat van de banden, staat van de rijbaan, gewicht van het voertuig, helling en slijtage van de remmen.\n\n💡 Waarom\nElke factor beïnvloedt de grip of de efficiëntie van het remsysteem. Een ongunstige combinatie (regen + versleten banden + afdaling) kan de remafstand dramatisch vergroten.\n\n🚗 In de praktijk\nControleer regelmatig de staat van uw banden en remmen. Pas uw snelheid en afstanden aan aan de omstandigheden: regen, sneeuw, afdaling, beladen voertuig.\n\n📍 Voorbeeld\nU daalt een helling af in de Ardennen bij regen met een volle koffer bagage. Drie ongunstige factoren stapelen zich op: vergroot uw veiligheidsafstand aanzienlijk.\n\n⚠️ Veelgemaakte fout\nAlleen het weer in aanmerking nemen en de andere factoren vergeten. Versleten banden op droog wegdek kunnen gevaarlijker zijn dan nieuwe banden op nat wegdek.",
+              "emoji": "🔧",
+              "explanation_simple": "Uw remafstand hangt af van veel factoren: de staat van de weg, uw banden, uw remmen, het gewicht van uw auto, de helling van de weg."
+            },
+            {
+              "type": "text",
+              "title": "Droge vs natte rijbaan",
+              "content": "📋 De regel\nDe remafstand is aanzienlijk groter op nat wegdek dan op droog wegdek.\n\n💡 Waarom\nWater vormt een film tussen de band en de weg, wat de grip vermindert. Bij hoge snelheid kan aquaplaning elk contact tussen de banden en de weg doen verdwijnen.\n\n🚗 In de praktijk\nVanaf de eerste regendruppels vergroot u uw afstanden en verlaagt u uw snelheid. Het begin van de regen is het gevaarlijkste moment omdat water zich mengt met stof en olie op de weg.\n\n📍 Voorbeeld\nOp droog wegdek bij 90 km/u bedraagt uw remafstand ongeveer 40 m. Op dezelfde natte weg kan hij 60 tot 80 m bereiken.\n\n⚠️ Veelgemaakte fout\nNiet vertragen bij het begin van de regen. De eerste minuten zijn het glibberigst omdat het water olieresten en rubberresten die in het asfalt zijn ingebakken naar boven brengt.",
+              "emoji": "💧",
+              "explanation_simple": "Op nat wegdek is uw remafstand aanzienlijk langer dan op droog. Het is het verschil tussen remmen met sportschoenen op droge of natte vloer."
+            }
+          ]
         },
         {
-          "id": "D2_partie_3",
-          "title": "De stopafstand"
+          "title": "De stopafstand",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Definitie (reactie + remmen)",
+              "content": "📋 De regel\nDe stopafstand is de som van de reactieafstand en de remafstand.\n\n💡 Waarom\nOm volledig te stoppen, moet u eerst reageren (reactieafstand) en dan remmen (remafstand). Beide tellen op om de totale benodigde afstand te geven.\n\n🚗 In de praktijk\nStopafstand = reactieafstand + remafstand. Het is deze totale afstand die bepaalt of u tijdig kunt stoppen voor een obstakel.\n\n📍 Voorbeeld\nBij 90 km/u: reactieafstand = 27 m, remafstand ≈ 40 m. Totale stopafstand = 67 m. Uw obstakel moet meer dan 67 m verwijderd zijn zodat u kunt stoppen.\n\n⚠️ Veelgemaakte fout\nAlleen de remafstand in aanmerking nemen en de reactieafstand vergeten. In werkelijkheid vertegenwoordigt de reactieafstand een belangrijk deel van de totale stopafstand.",
+              "emoji": "🚗",
+              "explanation_simple": "De stopafstand = reactieafstand + remafstand. Het is het totale traject tussen 'ik zie het gevaar' en 'de auto staat stil'."
+            },
+            {
+              "type": "text",
+              "title": "Sneller = langer",
+              "content": "📋 De regel\nHoe hoger de snelheid, hoe groter de stopafstand.\n\n💡 Waarom\nDe reactieafstand neemt proportioneel toe met de snelheid, en de remafstand neemt toe met het kwadraat van de snelheid. Het gecombineerde effect laat de stopafstand bij hoge snelheid exploderen.\n\n🚗 In de praktijk\nBij 50 km/u is de stopafstand ongeveer 28 m. Bij 100 km/u is het niet 56 m (het dubbele) maar ongeveer 80 m (bijna het drievoudige).\n\n📍 Voorbeeld\nBij 50 km/u kunt u in 28 m stoppen. Als u uw snelheid verdubbelt naar 100 km/u, heeft u ongeveer 80 m nodig: bijna 3 keer meer, niet 2 keer meer.\n\n⚠️ Veelgemaakte fout\nDenken dat de snelheid verdubbelen simpelweg de stopafstand verdubbelt. De relatie is niet lineair: ze is veel ongunstiger bij hoge snelheid.",
+              "emoji": "📈",
+              "explanation_simple": "Hoe sneller u rijdt, hoe meer afstand u nodig heeft om te stoppen. Bij dubbele snelheid is de stopafstand bijna viermaal zo lang!"
+            },
+            {
+              "type": "text",
+              "title": "Nat wegdek = langer",
+              "content": "📋 De regel\nDe stopafstand is merkelijk langer op nat wegdek dan op droog wegdek.\n\n💡 Waarom\nOp nat wegdek neemt de remafstand sterk toe (verminderde grip), terwijl de reactieafstand gelijk blijft. Het totaal is dus aanzienlijk groter.\n\n🚗 In de praktijk\nOp nat wegdek verlaagt u uw snelheid en vergroot u uw afstanden. Combineer de snelheidsvermindering met de 3-secondenregel (in plaats van 2).\n\n📍 Voorbeeld\nBij 90 km/u op droog wegdek is uw stopafstand ongeveer 67 m. Op hetzelfde natte wegdek kan hij 90 m overschrijden.\n\n⚠️ Veelgemaakte fout\nDezelfde snelheid en afstanden bewaren op nat wegdek. Veel uitwegen doen zich voor bij regenweer simpelweg omdat de bestuurder zijn rijgedrag niet heeft aangepast.",
+              "emoji": "🌧️",
+              "explanation_simple": "Op nat wegdek is uw stopafstand veel langer. Reden te meer om te vertragen wanneer het regent."
+            }
+          ]
         },
         {
-          "id": "D2_partie_4",
-          "title": "Het ABS"
+          "title": "Het ABS",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Definitie en functie",
+              "content": "📋 De regel\nHet ABS (Anti-Blocking System) voorkomt dat de wielen blokkeren bij een abrupte remmanoeuvre, ook op nat wegdek.\n\n💡 Waarom\nGeblokkeerde wielen glijden over de weg en het voertuig wordt oncontroleerbaar. Het ABS geeft tientallen keren per seconde de rem vrij en drukt hem terug in om de grip te bewaren.\n\n🚗 In de praktijk\nBij noodremmen trapt u stevig op het pedaal en houdt u de druk aan. Pomp niet: het ABS doet dat automatisch. Het pedaal zal trillen, dat is normaal.\n\n📍 Voorbeeld\nEen voetganger steekt over voor u in de regen. U remt tot het uiterste: het pedaal trilt (het ABS werkt). Uw wielen blokkeren niet en u kunt nog sturen om hem te vermijden.\n\n⚠️ Veelgemaakte fout\nHet rempedaal loslaten wanneer u de ABS-trilling voelt. Deze trilling is normaal en betekent dat het systeem werkt. Handhaaf de druk.",
+              "emoji": "🔒",
+              "explanation_simple": "ABS voorkomt dat uw wielen blokkeren bij hard remmen. Zonder ABS blokkeren uw wielen en glijdt uw auto als een slee. Met ABS behoudt u de controle over de stuurrichting."
+            },
+            {
+              "type": "text",
+              "title": "Controle over de stuurrichting behouden",
+              "content": "📋 De regel\nHet antiblokkeersysteem stelt de bestuurder in staat de controle over de stuurrichting van het voertuig te behouden tijdens het remmen.\n\n💡 Waarom\nZolang de wielen draaien (dankzij het ABS), kan de bestuurder het voertuig nog sturen. Zonder ABS glijden geblokkeerde wielen rechtdoor, ongeacht de stuuringrepen.\n\n🚗 In de praktijk\nBij noodremmen met ABS kunt u tegelijk remmen en sturen om een obstakel te vermijden. Dat is het voornaamste voordeel van het ABS.\n\n📍 Voorbeeld\nEen voertuig stopt abrupt voor u op de autosnelweg. U remt maximaal (ABS geactiveerd) terwijl u het stuur naar de linkerstrook draait om het te vermijden.\n\n⚠️ Veelgemaakte fout\nGeloven dat ABS korter remt. Het ABS verkort de remafstand niet: het laat u toe de controle over de stuurrichting te behouden terwijl u remt.",
+              "emoji": "🕹️",
+              "explanation_simple": "Dankzij ABS kunt u vol op de rem trappen EN tegelijk sturen. Zonder ABS werkt het stuur niet meer als u hard remt."
+            },
+            {
+              "type": "text",
+              "title": "ABS ≠ kortere remafstand",
+              "content": "📋 De regel\nRemmen met ABS garandeert geen kortere remafstand. Op nat wegdek blijft de remafstand met ABS langer dan op droog wegdek.\n\n💡 Waarom\nHet ABS optimaliseert het remmen om de stuurbesturing te bewaren, niet om de afstand te verkorten. De grip van de weg blijft de bepalende factor.\n\n🚗 In de praktijk\nVertrouw niet op het ABS om een te hoge snelheid of te korte afstanden te compenseren. Het ABS is een hulpmiddel, geen wonder.\n\n📍 Voorbeeld\nU remt met ABS op een ijzige weg. Ondanks het ABS heeft uw auto 100 m nodig om te stoppen in plaats van 40 m op droog wegdek. Het ABS heeft u de controle laten bewaren, maar de afstand niet verkort.\n\n⚠️ Veelgemaakte fout\nZich veilig voelen dankzij het ABS en uw rijgedrag niet aanpassen. Het ABS vervangt de voorzichtigheid niet.",
+              "emoji": "⚠️",
+              "explanation_simple": "Let op, ABS zorgt niet voor een kortere remafstand! Op grind of sneeuw kan het zelfs langer zijn. ABS laat u enkel toe de controle te bewaren."
+            }
+          ]
         },
         {
-          "id": "D2_partie_5",
-          "title": "De banden"
+          "title": "De banden",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Enig contact voertuig-wegdek",
+              "content": "📋 De regel\nDe banden vormen de enige verbinding tussen het voertuig en de weg. Ze moeten in perfecte staat worden gehouden om veilig te kunnen remmen.\n\n💡 Waarom\nAlle grip van uw voertuig hangt af van het contactoppervlak van de banden met de weg (ongeveer de grootte van een briefkaart per band). Banden in slechte staat verminderen deze grip drastisch.\n\n🚗 In de praktijk\nInspecteer uw banden regelmatig visueel: slijtage, snijwonden, vervormingen. Controleer de druk minstens een keer per maand en voor elke lange rit.\n\n📍 Voorbeeld\nVoor vertrek op vakantie in de Ardennen controleert u uw banden. U merkt dat de rechtervoorbande aan één kant sterk versleten is: u laat hem vervangen voor vertrek.\n\n⚠️ Veelgemaakte fout\nHet onderhoud van de banden verwaarlozen omdat 'de auto goed remt'. Versleten banden kunnen normaal aanvoelen in het dagelijks gebruik maar gevaarlijk worden bij noodremmen.",
+              "emoji": "⚫",
+              "explanation_simple": "Uw banden zijn het enige dat de weg raakt. Als uw banden versleten zijn, is het alsof u loopt met gladde zolen op een natte vloer."
+            },
+            {
+              "type": "text",
+              "title": "Minimale profieldiepte (1,6 mm)",
+              "content": "📋 De regel\nDe profieldiepte moet minstens 1,6 mm bedragen. Dit is het wettelijk minimum, maar het is aanbevolen de banden ruim voor die grens te vervangen.\n\n💡 Waarom\nDe groeven voeren het water onder de band af. Onder 1,6 mm wordt het water niet meer goed afgevoerd en stijgt het risico op aquaplaning sterk.\n\n🚗 In de praktijk\nGebruik een slijtage-indicator (1-eurostuk of speciale meter). Professionals raden aan de zomerbanden te vervangen bij 3 mm, en de winterbanden bij 4 mm.\n\n📍 Voorbeeld\nU steekt een 1-eurostuk in de groef van uw band. Als de gouden rand van het stuk zichtbaar is, zijn uw groeven minder dan 3 mm diep: het is tijd om uw banden te vervangen.\n\n⚠️ Veelgemaakte fout\nWachten tot u precies 1,6 mm bereikt om uw banden te vervangen. Op dat punt zijn de prestaties bij regen al sterk verminderd.",
+              "emoji": "📐",
+              "explanation_simple": "Uw banden moeten minstens 1,6 mm profieldiepte hebben. Maar eerlijk gezegd is het bij 3 mm al tijd om ze te vervangen. De groeven voeren het water af."
+            },
+            {
+              "type": "text",
+              "title": "Slijtage-indicatoren (TWI)",
+              "content": "📋 De regel\nSlijtage-indicatoren (TWI) bevinden zich in de hoofdgroeven. Wanneer het loopvlak hun hoogte bereikt, moeten de banden worden vervangen.\n\n💡 Waarom\nDe TWI-indicatoren zijn een visuele indicator die door de fabrikant in de band is geïntegreerd, waardoor controle zonder speciaal gereedschap mogelijk is. Ze zijn gekalibreerd op 1,6 mm, het wettelijk minimum.\n\n🚗 In de praktijk\nZoek de 'TWI'-markeringen op de zijkant van de band: ze geven de locatie van de indicatoren in de groef aan. Voel met uw vinger in de groef of de indicator bijna vlak is.\n\n📍 Voorbeeld\nBij het inspecteren van uw banden merkt u dat het rubber op hetzelfde niveau zit als de kleine bobbeltjes (TWI-indicatoren) in de groeven. Uw banden zijn op het wettelijk minimum: vervang ze onmiddellijk.\n\n⚠️ Veelgemaakte fout\nNiet weten waar de TWI-indicatoren zich bevinden. Zoek de letters 'TWI' gegraveerd op de zijkant van de band: ze wijzen naar de locatie van de indicator in de groef.",
+              "emoji": "🔍",
+              "explanation_simple": "De kleine bultjes in de groeven van uw banden (TWI) zijn slijtage-indicatoren: als het rubber op hetzelfde niveau zit, zijn uw banden op en moet u ze vervangen."
+            },
+            {
+              "type": "text",
+              "title": "Bandenspanning",
+              "content": "📋 De regel\nDe bandenspanning moet overeenkomen met de aanbevelingen van de constructeur, vermeld op een etiket in het bestuurdersportier, het passagiersportier of de tankklep. Verhoog de druk licht voor een lange rit of een zware lading.\n\n💡 Waarom\nEen onjuiste spanning beïnvloedt het remmen, de wegligging en het brandstofverbruik. Een ondergeïnflateerde band warmt op en kan barsten; een overgeïnflateerde band verliest grip.\n\n🚗 In de praktijk\nControleer de druk koud (voor het rijden of na minder dan 3 km). Gebruik de waarden van de constructeur, niet die op de band (die het maximaal te verdragen aangeven).\n\n📍 Voorbeeld\nU vertrekt op vakantie met 4 passagiers en een volle koffer. Het etiket in uw portier geeft 2,3 bar voor en 2,5 bar achter aan bij belading. U past de druk aan bij het tankstation.\n\n⚠️ Veelgemaakte fout\nDe bandenspanning controleren na 30 minuten rijden. Warme banden geven een hogere druk aan, wat de meting verstoort. Controleer altijd koud.",
+              "emoji": "💨",
+              "explanation_simple": "Controleer regelmatig de spanning van uw banden. Banden met te weinig lucht slijten sneller, verbruiken meer brandstof en remmen slechter."
+            }
+          ]
         },
         {
-          "id": "D2_partie_6",
-          "title": "Automatische remsystemen en pauzes"
-        }
-      ],
-      "cards": [
-        {
-          "id": "D2_p0_c0",
-          "title": "Formule: snelheid / 2",
-          "content": "Hoe sneller je rijdt, hoe groter de veiligheidsafstand moet zijn. Formule: snelheid / 2. Aan 120 km/u = 60 meter. Aan 100 km/u = 50 meter.",
-          "explanation_simple": "Om te weten hoeveel afstand u moet houden tot de auto voor u, deelt u uw snelheid door 2. Bij 100 km/u = minstens 50 meter."
-        },
-        {
-          "id": "D2_p0_c1",
-          "title": "Regel van de twee seconden (droog wegdek)",
-          "content": "Kies een vast punt (paal, boom, brug). Wanneer het voertuig voor je dat punt passeert, zeg 'een krokodil, twee krokodillen' (2 seconden). Als je daarna het punt passeert, is de afstand gerespecteerd.",
-          "explanation_simple": "Kies een vast punt langs de weg. Wanneer de auto voor u dat punt passeert, tel \"één krokodil, twee krokodillen\". Als u het punt bereikt voordat u klaar bent met tellen, zit u te dicht."
-        },
-        {
-          "id": "D2_p0_c2",
-          "title": "Nat wegdek (+50%, 3 seconden)",
-          "content": "Op nat wegdek 50% toevoegen. Aan 120 km/u: 60 + 30 = 90 meter = 3 seconden (3 krokodillen).",
-          "explanation_simple": "Nat wegdek = 50% extra afstand erbij. Ga van 2 naar 3 seconden. Water tussen de banden en het wegdek zorgt voor gladheid!"
-        },
-        {
-          "id": "D2_p0_c3",
-          "title": "Besneeuwd/ijzig wegdek (4 seconden)",
-          "content": "Op besneeuwd of ijzig wegdek: minstens 4 seconden (4 krokodillen).",
-          "explanation_simple": "Op sneeuw of ijzel telt u 4 seconden in plaats van 2. De weg is een ijsbaan, uw auto heeft veel meer afstand nodig om te stoppen."
-        },
-        {
-          "id": "D2_p1_c0",
-          "title": "Definitie",
-          "content": "De reactieafstand is de afstand die je aflegt tussen het herkennen van het gevaar en het begin van het remmen.",
-          "explanation_simple": "De reactieafstand is de afstand die uw auto aflegt terwijl uw hersenen beseffen dat u moet remmen. U ziet het gevaar, maar uw voet is nog niet op het rempedaal."
-        },
-        {
-          "id": "D2_p1_c1",
-          "title": "Reactietijd = 1 seconde",
-          "content": "Over het algemeen is de reactietijd ongeveer 1 seconde. Hij wordt niet beïnvloed door de snelheid, maar de afgelegde afstand tijdens die tijd hangt wel af van de snelheid.",
-          "explanation_simple": "Uw hersenen hebben ongeveer 1 seconde nodig om te reageren. Dat lijkt weinig, maar bij 120 km/u legt u 33 meter af in 1 seconde!"
-        },
-        {
-          "id": "D2_p1_c2",
-          "title": "Formule: snelheid / 10 x 3",
-          "content": "Om de geschatte afstand in 1 seconde te berekenen: snelheid / 10 x 3.",
-          "explanation_simple": "Om de afgelegde afstand in 1 seconde te berekenen: neem uw snelheid, deel door 10, vermenigvuldig met 3. Bij 50 km/u: 5 x 3 = 15 meter."
-        },
-        {
-          "id": "D2_p1_c3",
-          "title": "Voorbeelden",
-          "content": "Aan 30 km/u: 9 m. Aan 50 km/u: 15 m (werkelijk: 14 m). Aan 70 km/u: 21 m. Aan 90 km/u: 27 m (werkelijk: 25 m). Aan 120 km/u: 36 m (werkelijk: 33 m).",
-          "explanation_simple": "Bij 30 = 9 m, bij 50 = 15 m, bij 120 = 36 m. Hoe sneller u rijdt, hoe meer afstand u aflegt voordat u begint te remmen."
-        },
-        {
-          "id": "D2_p1_c4",
-          "title": "Alcohol en drugs",
-          "content": "Alcohol: reactietijd stijgt naar 2-3 seconden. Drugs: 5-8 seconden.",
-          "explanation_simple": "Onder invloed van alcohol stijgt uw reactietijd naar 2-3 seconden. Bij drugs: tot 8 seconden! Het is alsof u met gesloten ogen rijdt."
-        },
-        {
-          "id": "D2_p1_c5",
-          "title": "Factoren die de reactietijd verhogen",
-          "content": "De leeftijd van de bestuurder, de concentratie, de temperatuur, medicijnen, drugs, alcohol.",
-          "explanation_simple": "Uw reactietijd neemt toe als u moe bent, afgeleid door uw telefoon, bij warmte of als u medicijnen heeft ingenomen."
-        },
-        {
-          "id": "D2_p2_c0",
-          "title": "Definitie",
-          "content": "De remafstand is de afstand die het voertuig aflegt vanaf het moment dat de bestuurder op de rem trapt tot het voertuig volledig stilstaat.",
-          "explanation_simple": "De remafstand is het traject dat uw auto aflegt tussen het moment dat u op de rem trapt en de volledige stilstand. Het is de \"remprestatie\" van uw auto."
-        },
-        {
-          "id": "D2_p2_c1",
-          "title": "Factoren die de remafstand beïnvloeden",
-          "content": "De weersomstandigheden, de kwaliteit van de banden, de staat van het wegdek, het gewicht van het voertuig, helling op- of afwaarts, de slijtage van de remmen. Een voertuig stopt nooit onmiddellijk.",
-          "explanation_simple": "Uw remafstand hangt af van veel factoren: de staat van de weg, uw banden, uw remmen, het gewicht van uw auto, de helling van de weg."
-        },
-        {
-          "id": "D2_p2_c2",
-          "title": "Droge vs natte rijbaan",
-          "content": "De remafstand is aanzienlijk langer op nat wegdek dan op droog wegdek.",
-          "explanation_simple": "Op nat wegdek is uw remafstand aanzienlijk langer dan op droog wegdek. Het verschil is enorm."
-        },
-        {
-          "id": "D2_p3_c0",
-          "title": "Definitie (reactie + remmen)",
-          "content": "De stopafstand = reactieafstand + remafstand.",
-          "explanation_simple": "De stopafstand = reactieafstand + remafstand. Het is het totale traject tussen \"ik zie het gevaar\" en \"de auto staat stil\"."
-        },
-        {
-          "id": "D2_p3_c1",
-          "title": "Sneller = langer",
-          "content": "Hoe sneller je rijdt, hoe langer de stopafstand.",
-          "explanation_simple": "Hoe sneller u rijdt, hoe meer afstand u nodig heeft om te stoppen. Bij dubbele snelheid is de stopafstand bijna vier keer zo lang."
-        },
-        {
-          "id": "D2_p3_c2",
-          "title": "Nat wegdek = langer",
-          "content": "De stopafstand is langer op nat wegdek dan op droog wegdek.",
-          "explanation_simple": "Op nat wegdek is uw stopafstand veel langer. Reden te meer om te vertragen wanneer het regent."
-        },
-        {
-          "id": "D2_p4_c0",
-          "title": "Definitie en functie",
-          "content": "ABS = Anti-Blocking System. Voorkomt dat de banden gaan glijden op de rijbaan bij hard remmen, zelfs op natte rijbaan.",
-          "explanation_simple": "ABS voorkomt dat uw wielen blokkeren bij hard remmen. Zonder ABS blokkeren uw wielen en glijdt uw auto als een slee op ijs."
-        },
-        {
-          "id": "D2_p4_c1",
-          "title": "Controle over de stuurrichting behouden",
-          "content": "Het ABS laat de bestuurder toe om de controle over de stuurrichting van het voertuig te behouden tijdens het remmen.",
-          "explanation_simple": "Dankzij ABS kunt u vol op de rem trappen EN tegelijk sturen. Zonder ABS werkt het stuur niet meer als u hard remt."
-        },
-        {
-          "id": "D2_p4_c2",
-          "title": "ABS ≠ kortere remafstand",
-          "content": "Remmen met ABS betekent niet noodzakelijk een kortere remafstand dan zonder ABS. Op nat wegdek blijft de afstand langer dan op droog wegdek, zelfs met ABS.",
-          "explanation_simple": "Let op, ABS zorgt niet voor een kortere remafstand! Op grind of sneeuw kan het zelfs langer zijn. ABS laat u sturen tijdens het remmen, dat is het voordeel."
-        },
-        {
-          "id": "D2_p5_c0",
-          "title": "Enig contact voertuig-wegdek",
-          "content": "De banden zijn het enige contact tussen het voertuig en het wegdek. Ze moeten in perfecte staat zijn.",
-          "explanation_simple": "Uw banden zijn het enige dat de weg raakt. Als uw banden versleten zijn, is het alsof u loopt met gladde zolen op een natte vloer."
-        },
-        {
-          "id": "D2_p5_c1",
-          "title": "Minimale profieldiepte (1,6 mm)",
-          "content": "De wettelijke minimale profieldiepte is 1,6 mm. Het is een wettelijk minimum: je moet de banden vervangen voordat je dit niveau bereikt.",
-          "explanation_simple": "Uw banden moeten minstens 1,6 mm profieldiepte hebben. Maar eerlijk gezegd is het bij 3 mm al tijd om ze te vervangen. De groeven voeren het water af."
-        },
-        {
-          "id": "D2_p5_c2",
-          "title": "Slijtage-indicatoren (TWI)",
-          "content": "Slijtage-indicatoren (TWI) bevinden zich in de hoofdgroeven. Als het loopvlak op hun hoogte komt, zijn de banden te versleten.",
-          "explanation_simple": "De kleine bultjes in de groeven van uw banden (TWI) zijn slijtage-indicatoren: als het rubber op hetzelfde niveau zit, zijn uw banden op en moet u ze vervangen."
-        },
-        {
-          "id": "D2_p5_c3",
-          "title": "Bandenspanning",
-          "content": "De spanning moet overeenkomen met die voorgeschreven door de fabrikant. Het etiket bevindt zich in het bestuurdersportier, het passagiersportier of de tankklep. Voor een lange rit of zware lading de spanning lichtjes verhogen.",
-          "explanation_simple": "Controleer regelmatig de spanning van uw banden. Banden met te weinig lucht slijten sneller, verbruiken meer brandstof en remmen slechter."
-        },
-        {
-          "id": "D2_p6_c0",
-          "title": "Automatische systemen zijn niet 100% betrouwbaar",
-          "content": "Automatische remsystemen kunnen onterecht remmen of niet activeren wanneer het nodig is. Ze verminderen het risico op een ongeval maar elimineren het niet. De bestuurder moet aandachtig blijven.",
-          "explanation_simple": "Automatische remsystemen zijn goed, maar ze kunnen falen. Vertrouw er niet voor 100% op, blijf altijd zelf opletten."
-        },
-        {
-          "id": "D2_p6_c1",
-          "title": "Pauze om de 2 uur, minimum 15 minuten",
-          "content": "Tijdens een lange rit neem je ongeveer om de 2 uur een pauze. De pauze moet minstens 15 minuten duren. Stap uit het voertuig, strek je uit, adem en drink water.",
-          "explanation_simple": "Neem om de 2 uur een pauze van minstens 15 minuten. Vermoeidheid verlengt uw reactietijd. Een koffie en even buiten lopen doet wonderen."
+          "title": "Automatische remsystemen en pauzes",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Automatische systemen zijn niet 100% betrouwbaar",
+              "content": "📋 De regel\nAutomatische remsystemen zijn niet 100% betrouwbaar. Ze kunnen onterecht activeren of niet reageren wanneer dat nodig is.\n\n💡 Waarom\nDeze technologieën gebruiken sensoren (camera's, radars) die kunnen worden misleid door het weer, vuil of ongebruikelijke situaties. Geen enkel elektronisch systeem is onfeilbaar.\n\n🚗 In de praktijk\nBeschouw deze systemen als een extra veiligheidsnet, niet als een vervanging van uw waakzaamheid. Blijf oplettend, houd uw handen aan het stuur en uw voet klaar om te remmen.\n\n📍 Voorbeeld\nUw auto is uitgerust met automatisch noodremmen. Bij het verlaten van een tunnel wordt de sensor verblind door de zon en detecteert het gestopte voertuig voor u niet. Uw waakzaamheid redt u.\n\n⚠️ Veelgemaakte fout\nBlindelings vertrouwen op de technologie en uw aandacht laten verslappen. Rijhulpsystemen ondersteunen de bestuurder maar vervangen hem niet.",
+              "emoji": "🤖",
+              "explanation_simple": "Automatische remsystemen zijn goed, maar ze kunnen falen. Vertrouw er niet voor 100% op, blijf altijd zelf opletten."
+            },
+            {
+              "type": "text",
+              "title": "Pauze om de 2 uur, minimum 15 minuten",
+              "content": "📋 De regel\nNeem om de twee uur rijden een pauze van minstens 15 minuten. Stap uit, strek u uit, adem frisse lucht en drink water.\n\n💡 Waarom\nVermoeidheid achter het stuur is een van de voornaamste oorzaken van dodelijke ongevallen. Na 2 uur daalt de concentratie en stijgt de reactietijd significant.\n\n🚗 In de praktijk\nPlan uw pauzes van tevoren bij lange ritten. Stop op een rustplaats, drink water of koffie, wandel een paar minuten. Vecht nooit tegen slaperigheid.\n\n📍 Voorbeeld\nU rijdt van Brussel naar de kust (ongeveer 1u30). Eén stop is voldoende. Voor een rit Brussel-Luxemburg (3u) voorziet u minstens één stop na 2 uur, bijvoorbeeld op de rustplaats Wanlin op de E411.\n\n⚠️ Veelgemaakte fout\nDenken dat u het kunt 'volhouden' zonder stop door het raam open te doen of de muziek luider te zetten. Deze trucs compenseren de vermoeidheid niet. Alleen een echte pauze is effectief.",
+              "emoji": "⏸️",
+              "explanation_simple": "Neem om de 2 uur een pauze van minstens 15 minuten. Vermoeidheid verlengt uw reactietijd. Een koffie en even buiten lopen doet wonderen."
+            }
+          ]
         }
       ],
       "questions": [
