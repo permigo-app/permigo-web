@@ -13,6 +13,7 @@ export async function POST(req: Request) {
       success_url: `${process.env.NEXT_PUBLIC_URL}/premium/success`,
       cancel_url: `${process.env.NEXT_PUBLIC_URL}/premium`,
       customer_email: email,
+      subscription_data: { trial_period_days: 7 },
       metadata: { userId: userId || 'guest' },
     });
 

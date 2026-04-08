@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
+import PremiumBanner from '@/components/PremiumBanner';
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -35,6 +36,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
+      <PremiumBanner />
       <main className="pt-11 lg:pt-0 lg:ml-[250px] pb-20 lg:pb-6">
         {children}
       </main>

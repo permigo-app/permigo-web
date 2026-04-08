@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -52,6 +53,10 @@ export default function Navbar() {
   const pathname = usePathname();
   const { user } = useAuth();
   const { t } = useLang();
+  const [premium, setPremium] = useState(false);
+  useEffect(() => {
+    setPremium(localStorage.getItem('isPremium') === 'true');
+  }, []);
 
   return (
     <>
@@ -100,6 +105,7 @@ export default function Navbar() {
                 {user.username?.charAt(0).toUpperCase() || '?'}
               </span>
               <span className="text-sm font-bold truncate" style={{ color: '#8B9DC3' }}>{user.username}</span>
+              {premium && <span className="text-sm flex-shrink-0" title="Premium" style={{ filter: 'drop-shadow(0 0 3px #FFD700)' }}>⭐</span>}
             </Link>
           ) : (
             <Link href="/login" className="flex items-center gap-3 px-3 py-2.5 rounded-xl press-scale" style={{ color: '#00B894' }}>

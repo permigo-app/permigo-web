@@ -164,6 +164,7 @@ export default function HomePage() {
   const [modalNode, setModalNode] = useState<PathNode | null>(null);
   const [selectedPartieIdx, setSelectedPartieIdx] = useState<number | null>(null);
   const [completedParties, setCompletedParties] = useState<number[]>([]);
+  const [showPremiumModal, setShowPremiumModal] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -384,7 +385,7 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
-    <div className="flex gap-0">
+    <div className="flex gap-0" style={{ overflowX: 'hidden' }}>
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
@@ -413,7 +414,7 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div ref={roadContainerRef} className="relative overflow-visible" style={{ height: totalH, width: SVG_W }}>
+        <div ref={roadContainerRef} className="relative" style={{ height: totalH, width: SVG_W, overflowX: 'hidden', overflowY: 'visible' }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -780,8 +781,8 @@ export default function HomePage() {
             const ringProgress = node.isCompleted ? 1 : 0;
 
             // Theme color for all states except locked
-            const bg = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#555555' : '#141937';
-            const borderColor = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#666666' : tc;
+            const bg = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#2A1F00' : '#141937';
+            const borderColor = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#C9A227' : tc;
             const ringColor = tc;
 
             // Node icon
@@ -789,7 +790,7 @@ export default function HomePage() {
             if (node.isCompleted) {
               nodeContent = <span className="text-white text-xl font-black">✓</span>;
             } else if (node.isLocked) {
-              nodeContent = <span className="text-base">🔒</span>;
+              nodeContent = <span className="text-base" style={{ filter: 'drop-shadow(0 0 4px #C9A227)' }}>🔒</span>;
             } else if (isActive) {
               nodeContent = <span className="text-white text-2xl font-black">📖</span>;
             } else {
@@ -821,12 +822,13 @@ export default function HomePage() {
 
                 {/* Node circle */}
                 {node.isLocked ? (
-                  <button onClick={() => router.push('/premium')} className="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <button onClick={() => setShowPremiumModal(true)} className="absolute inset-0 flex items-center justify-center cursor-pointer">
                     <div className="rounded-full flex items-center justify-center" style={{
                       width: nodeRadius * 2,
                       height: nodeRadius * 2,
                       background: bg,
                       border: `3px solid ${borderColor}`,
+                      boxShadow: '0 0 10px rgba(201,162,39,0.4)',
                     }}>
                       {nodeContent}
                     </div>
@@ -1249,6 +1251,69 @@ export default function HomePage() {
           </div>
         );
       })()}
+
+      {/* ── Premium Modal ── */}
+      {showPremiumModal && (
+        <div className="fixed inset-0 z-[60] flex items-end justify-center" onClick={() => setShowPremiumModal(false)}>
+          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.75)' }} />
+          <div
+            className="relative w-full max-w-lg rounded-t-[28px] px-6 pt-6 pb-10 slide-up"
+            style={{ background: '#1C2345' }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: '#5A6B8A' }} />
+
+            {/* Header */}
+            <div className="text-center mb-6">
+              <span className="text-5xl block mb-3">🔒</span>
+              <h2 className="text-2xl font-black text-white mb-2">Débloquer tous les thèmes</h2>
+              <p className="text-sm" style={{ color: '#8B9DC3' }}>
+                Les thèmes B→I sont réservés aux membres Premium.
+              </p>
+            </div>
+
+            {/* Benefits */}
+            <div className="space-y-3 mb-6">
+              {[
+                { icon: '📚', label: '8 thèmes supplémentaires débloqués' },
+                { icon: '📝', label: 'Examens blancs illimités' },
+                { icon: '⚡', label: 'Mode Turbo sans limite quotidienne' },
+                { icon: '🎯', label: 'Suivi détaillé de ta progression' },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl" style={{ background: 'rgba(255,215,0,0.06)', border: '1px solid rgba(255,215,0,0.12)' }}>
+                  <span className="text-xl">{item.icon}</span>
+                  <span className="text-sm font-semibold text-white">{item.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Price + CTA */}
+            <div className="text-center mb-4">
+              <span className="text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block" style={{ background: 'rgba(255,215,0,0.15)', color: '#FFD700' }}>
+                ✨ Essai gratuit 7 jours
+              </span>
+              <p className="text-3xl font-black text-white mb-0.5">4,99€ <span className="text-base font-normal" style={{ color: '#8B9DC3' }}>/mois</span></p>
+              <p className="text-xs" style={{ color: '#5A6B8A' }}>Annulable à tout moment</p>
+            </div>
+
+            <button
+              onClick={() => { setShowPremiumModal(false); router.push('/premium'); }}
+              className="w-full py-4 rounded-2xl font-extrabold text-lg press-scale mb-3"
+              style={{ background: 'linear-gradient(135deg, #FFD700, #F39C12)', color: '#0a0e2a', boxShadow: '0 4px 20px rgba(255,215,0,0.4)' }}
+            >
+              Commencer l&apos;essai gratuit ✨
+            </button>
+
+            <button
+              onClick={() => setShowPremiumModal(false)}
+              className="w-full py-2 text-sm"
+              style={{ color: '#5A6B8A' }}
+            >
+              Rester sur le thème gratuit
+            </button>
+          </div>
+        </div>
+      )}
 
     </div>
   );
