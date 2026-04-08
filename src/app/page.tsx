@@ -500,11 +500,68 @@ export default function HomePage() {
             const lpX = lpLeftAbs - svgLeft;
             const rpX = rpLeftAbs - svgLeft;
 
+            // Fences from reasonable extent to posts
+            const FENCE_H = 30;
+            const PLANK_W = 8;
+            const PLANK_GAP = 3;
+            const PLANK_STRIDE = PLANK_W + PLANK_GAP;
+            const CROSSBAR_H = 4;
+            const fenceTop = barrierTop + PANEL_H + POST_H / 2 - FENCE_H / 2;
+            // Fences extend very far — sidebars (z-50) naturally cover them
+            const FENCE_EXTEND = 2000;
+            const leftFenceEnd = lpLeftAbs;
+            const leftFenceStart = leftFenceEnd - FENCE_EXTEND;
+            const leftFenceW = FENCE_EXTEND;
+            const rightFenceStart = rpLeftAbs + POST_W;
+            const rightFenceW = FENCE_EXTEND;
+            const leftPlankCount = Math.ceil(leftFenceW / PLANK_STRIDE);
+            const rightPlankCount = Math.ceil(rightFenceW / PLANK_STRIDE);
+
             return (
               <div key={`toll-${i}`} style={{
                 transformOrigin: `${roadCenterX}px ${barrierCenterY}px`,
                 transform: roadAngleDeg !== 0 ? `rotate(${roadAngleDeg}deg)` : undefined,
               }}>
+                {/* Left fence (to left post) */}
+                {leftFenceW > 0 && (
+                  <svg className="absolute" style={{ left: leftFenceStart, top: fenceTop, pointerEvents: 'none', zIndex: 4 }} width={leftFenceW} height={FENCE_H}>
+                    <defs>
+                      <linearGradient id={`fwl${i}`} x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stopColor={tc} stopOpacity={0.6} />
+                        <stop offset="0.5" stopColor={tc} />
+                        <stop offset="1" stopColor={tc} stopOpacity={0.6} />
+                      </linearGradient>
+                    </defs>
+                    {Array.from({ length: leftPlankCount }, (_, p) => {
+                      const px = leftFenceW - (p + 1) * PLANK_STRIDE;
+                      const ph = p % 2 === 0 ? FENCE_H : FENCE_H - 4;
+                      const py = (FENCE_H - ph) / 2;
+                      return <rect key={p} x={px} y={py} width={PLANK_W} height={ph} fill={`url(#fwl${i})`} stroke={tc} strokeOpacity={0.4} strokeWidth={1} />;
+                    })}
+                    <rect x={0} y={FENCE_H / 2 - CROSSBAR_H / 2} width={leftFenceW} height={CROSSBAR_H} fill={tc} opacity={0.7} />
+                  </svg>
+                )}
+
+                {/* Right fence (right post outward) */}
+                {rightFenceW > 0 && (
+                  <svg className="absolute" style={{ left: rightFenceStart, top: fenceTop, pointerEvents: 'none', zIndex: 4 }} width={rightFenceW} height={FENCE_H}>
+                    <defs>
+                      <linearGradient id={`fwr${i}`} x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stopColor={tc} stopOpacity={0.6} />
+                        <stop offset="0.5" stopColor={tc} />
+                        <stop offset="1" stopColor={tc} stopOpacity={0.6} />
+                      </linearGradient>
+                    </defs>
+                    {Array.from({ length: rightPlankCount }, (_, p) => {
+                      const px = p * PLANK_STRIDE;
+                      const ph = p % 2 === 0 ? FENCE_H : FENCE_H - 4;
+                      const py = (FENCE_H - ph) / 2;
+                      return <rect key={p} x={px} y={py} width={PLANK_W} height={ph} fill={`url(#fwr${i})`} stroke={tc} strokeOpacity={0.4} strokeWidth={1} />;
+                    })}
+                    <rect x={0} y={FENCE_H / 2 - CROSSBAR_H / 2} width={rightFenceW} height={CROSSBAR_H} fill={tc} opacity={0.7} />
+                  </svg>
+                )}
+
                 {/* Posts + panel + arm */}
                 <svg className="absolute" style={{ left: svgLeft, top: barrierTop, pointerEvents: 'none', zIndex: 12 }} width={svgW} height={TOTAL_H + 20}>
                   <defs>
