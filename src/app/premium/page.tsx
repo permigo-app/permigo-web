@@ -23,11 +23,6 @@ const PREMIUM_FEATURES = [
   { icon: '🃏', label: 'Cartes Flash & Révision' },
 ];
 
-const TESTIMONIALS = [
-  { name: 'Sarah M.', text: 'Réussi du premier coup grâce à MyPermiGo ! Les thèmes sont super bien expliqués.', stars: 5 },
-  { name: 'Lucas D.', text: 'J\'ai passé des heures sur d\'autres applis, ici en 2 semaines j\'étais prêt.', stars: 5 },
-  { name: 'Emma V.', text: 'Le mode Turbo est incroyable pour mémoriser vite. Vraiment utile.', stars: 5 },
-];
 
 export default function PremiumPage() {
   const { t } = useLang();
@@ -148,23 +143,7 @@ export default function PremiumPage() {
           </p>
         </div>
 
-        {/* Testimonials */}
-        <div className="mb-8">
-          <h3 className="text-center text-sm font-black uppercase tracking-widest mb-4" style={{ color: '#5A6B8A' }}>Ce qu&apos;ils en disent</h3>
-          <div className="flex flex-col gap-3">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="rounded-xl px-5 py-4" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-sm font-bold text-white">{t.name}</span>
-                  <span className="text-xs" style={{ color: '#FFD700' }}>{'★'.repeat(t.stars)}</span>
-                </div>
-                <p className="text-sm" style={{ color: '#8B9DC3' }}>{t.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Back link */}
+{/* Back link */}
         <div className="text-center">
           <Link href="/" className="text-sm" style={{ color: '#5A6B8A' }}>
             Revenir à l&apos;accueil
