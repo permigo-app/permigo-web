@@ -1,37 +1,8 @@
 import type { LocalTheme, LocalLesson, LocalQuestion } from './lessonData';
 
-// ── NL translation content structure ──
-interface NlCard {
-  id: string;
-  title: string;
-  content: string;
-  explanation_simple?: string;
-}
-
-interface NlQuestion {
-  id: string;
-  question: string;
-  choices: string[];
-  explanation?: string;
-}
-
-interface NlPartie {
-  id: string;
-  title: string;
-}
-
-interface NlLesson {
-  id: string;
-  title: string;
-  parties: NlPartie[];
-  cards: NlCard[];
-  questions: NlQuestion[];
-}
-
-interface NlThemeContent {
-  theme_title: string;
-  lessons: NlLesson[];
-}
+// ── NL content has same structure as FR (full translated files) ──
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type NlThemeContent = Record<string, any>;
 
 // ── Static imports for NL content ──
 import nlA from '../locales/content/nl/theme_A_nl.json';
@@ -49,37 +20,30 @@ const NL_CONTENT: Record<string, NlThemeContent> = {
 };
 
 /**
- * Apply NL translations over a FR theme, keeping all structural fields (correct, emoji, etc.)
+ * Apply NL translations over a FR theme.
+ * NL files mirror the FR structure: lessons[].theory[].cards[]
+ * Cards are matched by position (index). Questions fall back to FR.
  */
 export function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): LocalTheme {
   if (lang === 'fr') return frTheme;
 
   const nl = NL_CONTENT[frTheme.theme];
-  if (!nl) return frTheme; // fallback FR
+  if (!nl) return frTheme;
 
   const localizedLessons = frTheme.lessons.map(frLesson => {
-    const nlLesson = nl.lessons.find(l => l.id === frLesson.id);
-    if (!nlLesson) return frLesson; // fallback FR
-
-    // Build card lookup by id
-    const nlCardMap = new Map(nlLesson.cards.map(c => [c.id, c]));
-    // Build partie lookup by index-based id
-    const nlPartieMap = new Map(nlLesson.parties.map(p => [p.id, p]));
-    // Build question lookup by id
-    const nlQMap = new Map(nlLesson.questions.map(q => [q.id, q]));
+    const nlLesson = (nl.lessons ?? []).find((l: NlThemeContent) => l.id === frLesson.id);
+    if (!nlLesson) return frLesson;
 
     const localizedTheory = frLesson.theory.map((partie, pi) => {
-      const partieId = `${frLesson.id}_partie_${pi}`;
-      const nlPartie = nlPartieMap.get(partieId);
+      const nlPartie = nlLesson.theory?.[pi];
 
       const localizedCards = partie.cards.map((card, ci) => {
-        const cardId = `${frLesson.id}_p${pi}_c${ci}`;
-        const nlCard = nlCardMap.get(cardId);
-        if (!nlCard) return card; // fallback FR
+        const nlCard = nlPartie?.cards?.[ci];
+        if (!nlCard) return card;
         return {
           ...card,
-          title: nlCard.title,
-          content: nlCard.content,
+          title: nlCard.title ?? card.title,
+          content: nlCard.content ?? card.content,
           ...(nlCard.explanation_simple ? { explanation_simple: nlCard.explanation_simple } : {}),
         };
       });
@@ -91,20 +55,12 @@ export function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): LocalThem
       };
     });
 
-    const localizedQuestions: LocalQuestion[] = frLesson.questions.map(q => {
-      const nlQ = nlQMap.get(q.id);
-      if (!nlQ) return q; // fallback FR
-      return {
-        ...q,
-        question: nlQ.question,
-        choices: nlQ.choices as [string, string, string, string],
-        ...(nlQ.explanation ? { explanation: nlQ.explanation } : {}),
-      };
-    });
+    // Questions: use FR (NL files keep FR questions as-is)
+    const localizedQuestions: LocalQuestion[] = frLesson.questions;
 
     return {
       ...frLesson,
-      title: nlLesson.title,
+      title: nlLesson.title ?? frLesson.title,
       theory: localizedTheory,
       questions: localizedQuestions,
     } as LocalLesson;
@@ -112,7 +68,7 @@ export function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): LocalThem
 
   return {
     ...frTheme,
-    title: nl.theme_title,
+    title: nl.title ?? frTheme.title,
     lessons: localizedLessons,
   };
 }
