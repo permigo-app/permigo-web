@@ -13,7 +13,7 @@ const FREE_FEATURES = [
   { ok: false, label: 'Thèmes B → I (8 thèmes)' },
   { ok: false, label: 'Examens blancs illimités' },
   { ok: false, label: 'Turbo illimité' },
-  { ok: false, label: 'Cartes Flash & Révision' },
+  { ok: true,  label: 'Cartes Flash & Révision' },
 ];
 
 const PREMIUM_FEATURES = [
