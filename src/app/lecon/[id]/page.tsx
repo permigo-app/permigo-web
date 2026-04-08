@@ -72,6 +72,7 @@ export default function LessonPage() {
   const [gastonMsg, setGastonMsg] = useState(() => t('reflechis'));
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'encouraging' | 'unhappy' | 'impressed' | 'party' | 'thinking'>('thinking');
   const [shakeWrong, setShakeWrong] = useState(false);
+  const [partieFailScore, setPartieFailScore] = useState<{ correct: number; total: number } | null>(null);
   const startTimeRef = useRef(Date.now());
 
   useEffect(() => {
@@ -156,6 +157,14 @@ export default function LessonPage() {
   const finishQuiz = () => {
     const total = questions.length;
     const pct = total > 0 ? correctCount / total : 0;
+
+    // In partie mode: require 70% to validate
+    if (isPartieMode && partieIndex !== undefined && pct < 0.7) {
+      updateQuizHistory(correctCount, total);
+      setPartieFailScore({ correct: correctCount, total });
+      return;
+    }
+
     let earnedStars = 0;
     if (pct >= 1) earnedStars = 3;
     else if (pct >= 0.7) earnedStars = 2;
@@ -179,6 +188,23 @@ export default function LessonPage() {
     addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
 
     router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&xp=${xpEarned}&lesson=${lessonId}&theme=${themeCode}`);
+  };
+
+  const retryPartie = () => {
+    setPartieFailScore(null);
+    setCurrentQ(0);
+    setSelected(null);
+    setValidated(false);
+    setCorrectCount(0);
+    setGastonMsg(t('reflechis'));
+    setGastonExpr('thinking');
+    startTimeRef.current = Date.now();
+    // Re-shuffle questions
+    const lesson = getLessonDataLocalized(lessonId, lang);
+    const src = isPartieMode && partieIndex !== undefined
+      ? getQuestionsForPartie(lesson?.questions ?? [], partieIndex, lesson?.theory?.length ?? 1)
+      : lesson?.questions ?? [];
+    setQuestions(src.map(q => shuffleQuestion(q)));
   };
 
   // Premium gate: themes B-I require premium
@@ -461,6 +487,41 @@ export default function LessonPage() {
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── PARTIE FAIL SCREEN ──
+  if (partieFailScore) {
+    const pct = partieFailScore.total > 0 ? Math.round((partieFailScore.correct / partieFailScore.total) * 100) : 0;
+    return (
+      <div className="min-h-screen flex items-center justify-center px-6">
+        <div className="max-w-md w-full text-center">
+          <div className="text-7xl mb-6">😓</div>
+          <h2 className="text-2xl font-black text-white mb-3">Pas encore !</h2>
+          <p className="text-base mb-2" style={{ color: '#d1d5db' }}>
+            Tu dois avoir <span className="font-black" style={{ color: '#4ecdc4' }}>70%</span> de bonnes réponses pour valider cette partie.
+          </p>
+          <p className="text-sm mb-8" style={{ color: '#8B9DC3' }}>
+            Tu as obtenu <span className="font-black" style={{ color: pct >= 50 ? '#e67e22' : '#e74c3c' }}>{pct}%</span> ({partieFailScore.correct}/{partieFailScore.total} bonnes réponses).
+          </p>
+          <div className="flex flex-col gap-3">
+            <button
+              onClick={retryPartie}
+              className="w-full py-4 rounded-2xl font-black text-base press-scale"
+              style={{ background: '#4ecdc4', color: '#0a0e2a', boxShadow: '0 4px 16px rgba(78,205,196,0.3)' }}
+            >
+              🔄 Réessayer
+            </button>
+            <button
+              onClick={() => router.push('/')}
+              className="w-full py-3 rounded-2xl font-bold text-sm press-scale"
+              style={{ background: 'transparent', border: '1.5px solid #2A3550', color: '#8B9DC3' }}
+            >
+              Retour à la carte
+            </button>
           </div>
         </div>
       </div>
