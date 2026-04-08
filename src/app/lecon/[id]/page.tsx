@@ -228,7 +228,8 @@ export default function LessonPage() {
         const def = SECTION_DEFS.find(s => line.trim().startsWith(s.emoji));
         if (def) {
           if (current) result.push({ ...current, body: current.body.trim() });
-          current = { emoji: def.emoji, label: def.label, body: '' };
+          const lineLabel = line.trim().slice(def.emoji.length).trim();
+          current = { emoji: def.emoji, label: lineLabel || def.label, body: '' };
         } else if (current) {
           current.body += (current.body ? '\n' : '') + line;
         }
