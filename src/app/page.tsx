@@ -781,8 +781,8 @@ export default function HomePage() {
             const ringProgress = node.isCompleted ? 1 : 0;
 
             // Theme color for all states except locked
-            const bg = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#2A1F00' : '#141937';
-            const borderColor = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#C9A227' : tc;
+            const bg = node.isCompleted ? tc : isActive ? tc : node.isLocked ? tc : '#141937';
+            const borderColor = node.isCompleted ? tc : isActive ? tc : node.isLocked ? tc : tc;
             const ringColor = tc;
 
             // Node icon
@@ -790,7 +790,7 @@ export default function HomePage() {
             if (node.isCompleted) {
               nodeContent = <span className="text-white text-xl font-black">✓</span>;
             } else if (node.isLocked) {
-              nodeContent = <span className="text-base" style={{ filter: 'drop-shadow(0 0 4px #C9A227)' }}>🔒</span>;
+              nodeContent = <span className="text-base text-white">🔒</span>;
             } else if (isActive) {
               nodeContent = <span className="text-white text-2xl font-black">📖</span>;
             } else {
@@ -804,7 +804,7 @@ export default function HomePage() {
                 width: ringSize,
                 height: ringSize,
                 zIndex: isActive ? 16 : 14,
-                opacity: node.isLocked ? 0.5 : 1,
+                opacity: 1,
               }}>
                 {/* Progress ring */}
                 <svg width={ringSize} height={ringSize} className="absolute inset-0">
