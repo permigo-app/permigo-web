@@ -3,6 +3,7 @@
 import { type ReactNode } from 'react';
 import SignImage from '@/components/SignImage';
 import { useLang } from '@/contexts/LanguageContext';
+import ImageRequestButton from '@/components/ImageRequestButton';
 
 const CHOICE_LABELS = ['A', 'B', 'C', 'D'];
 
@@ -43,6 +44,9 @@ interface QuizLayoutProps {
   /* Feedback */
   explanation?: string;
   shakeWrong?: boolean;
+
+  /* Image request */
+  questionId?: string;
 }
 
 export default function QuizLayout({
@@ -66,6 +70,7 @@ export default function QuizLayout({
   sidebar,
   explanation,
   shakeWrong,
+  questionId,
 }: QuizLayoutProps) {
   const { t } = useLang();
   const isCorrect = selected === correctIndex;
@@ -120,7 +125,14 @@ export default function QuizLayout({
             )}
 
             {/* Question */}
-            <p className="text-xl font-bold text-white text-center mb-6 leading-relaxed max-w-2xl mx-auto">{question}</p>
+            <p className="text-xl font-bold text-white text-center mb-3 leading-relaxed max-w-2xl mx-auto">{question}</p>
+
+            {/* Image request */}
+            {questionId && (
+              <div className="flex justify-center mb-4">
+                <ImageRequestButton id={questionId} />
+              </div>
+            )}
 
             {/* Answer grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">

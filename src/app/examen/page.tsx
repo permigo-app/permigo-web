@@ -191,6 +191,7 @@ function ExamContent() {
       isLastQuestion={currentQ + 1 >= questions.length}
       explanation={q.explanation}
       shakeWrong={shakeWrong}
+      questionId={q.id || `exam_${themeCode}_q${currentQ}`}
       sidebar={
         <>
           {/* Score en temps réel */}

@@ -12,6 +12,7 @@ import PremiumGate from '@/components/PremiumGate';
 import SignImage from '@/components/SignImage';
 import Gaston from '@/components/Gaston';
 import QuizLayout from '@/components/QuizLayout';
+import ImageRequestButton from '@/components/ImageRequestButton';
 
 type Phase = 'theory' | 'quiz';
 
@@ -335,6 +336,11 @@ export default function LessonPage() {
                   </div>
                 )}
 
+                {/* Image request */}
+                <div className="flex justify-end mb-2">
+                  <ImageRequestButton id={`${lessonId}_c${currentCard}`} />
+                </div>
+
                 {/* Separator */}
                 <div className="my-6" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }} />
 
@@ -491,6 +497,7 @@ export default function LessonPage() {
         isLastQuestion={currentQ + 1 >= questions.length}
         explanation={q.explanation}
         shakeWrong={shakeWrong}
+        questionId={q.id || `${lessonId}_q${currentQ}`}
         sidebar={
           <>
             {/* Progress card */}
