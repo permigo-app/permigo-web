@@ -385,7 +385,7 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
-    <div className="flex gap-0" style={{ overflowX: 'hidden' }}>
+    <div className="flex gap-0">
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
@@ -414,7 +414,7 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div ref={roadContainerRef} className="relative" style={{ height: totalH, width: SVG_W, overflowX: 'hidden', overflowY: 'visible' }}>
+        <div ref={roadContainerRef} className="relative overflow-visible" style={{ height: totalH, width: SVG_W }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
