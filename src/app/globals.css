@@ -149,6 +149,19 @@ body {
 }
 .node-pulse { animation: nodePulseGlow 1.8s ease-in-out infinite; }
 
+/* ── Locked node hover ── */
+.locked-node-btn:hover ~ div,
+.locked-node-btn:hover {
+  /* handled via parent opacity transition in inline style */
+}
+.locked-node-btn:hover + div { opacity: 1; }
+
+/* Parent wrapper hover — increase opacity */
+.locked-node-wrapper:hover {
+  opacity: 0.7 !important;
+  filter: blur(0px) !important;
+}
+
 /* ── Premium sidebar button pulse ── */
 @keyframes premiumPulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.4); }

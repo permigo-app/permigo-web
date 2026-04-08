@@ -781,8 +781,8 @@ export default function HomePage() {
             const ringProgress = node.isCompleted ? 1 : 0;
 
             // Theme color for all states except locked
-            const bg = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#2A1F00' : '#141937';
-            const borderColor = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#C9A227' : tc;
+            const bg = node.isCompleted ? tc : isActive ? tc : node.isLocked ? 'rgba(255,215,0,0.12)' : '#141937';
+            const borderColor = node.isCompleted ? tc : isActive ? tc : node.isLocked ? '#FFD700' : tc;
             const ringColor = tc;
 
             // Node icon
@@ -790,7 +790,7 @@ export default function HomePage() {
             if (node.isCompleted) {
               nodeContent = <span className="text-white text-xl font-black">✓</span>;
             } else if (node.isLocked) {
-              nodeContent = <span className="text-base" style={{ filter: 'drop-shadow(0 0 4px #C9A227)' }}>🔒</span>;
+              nodeContent = <span className="text-base" style={{ filter: 'drop-shadow(0 0 6px #FFD700)' }}>⭐</span>;
             } else if (isActive) {
               nodeContent = <span className="text-white text-2xl font-black">📖</span>;
             } else {
@@ -798,13 +798,15 @@ export default function HomePage() {
             }
 
             return (
-              <div key={node.id} className="absolute" style={{
+              <div key={node.id} className={`absolute${node.isLocked ? ' locked-node-wrapper' : ''}`} style={{
                 left: p.x - ringSize / 2,
                 top: p.y - ringSize / 2,
                 width: ringSize,
                 height: ringSize,
                 zIndex: isActive ? 16 : 14,
                 opacity: node.isLocked ? 0.5 : 1,
+                filter: node.isLocked ? 'blur(0.8px)' : 'none',
+                transition: 'opacity 0.2s, filter 0.2s',
               }}>
                 {/* Progress ring */}
                 <svg width={ringSize} height={ringSize} className="absolute inset-0">
@@ -822,13 +824,17 @@ export default function HomePage() {
 
                 {/* Node circle */}
                 {node.isLocked ? (
-                  <button onClick={() => setShowPremiumModal(true)} className="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <button
+                    onClick={() => setShowPremiumModal(true)}
+                    title="🔒 Débloque avec Premium"
+                    className="locked-node-btn absolute inset-0 flex items-center justify-center cursor-pointer"
+                  >
                     <div className="rounded-full flex items-center justify-center" style={{
                       width: nodeRadius * 2,
                       height: nodeRadius * 2,
                       background: bg,
-                      border: `3px solid ${borderColor}`,
-                      boxShadow: '0 0 10px rgba(201,162,39,0.4)',
+                      border: `2px solid #FFD700`,
+                      boxShadow: '0 0 12px rgba(255,215,0,0.3)',
                     }}>
                       {nodeContent}
                     </div>
@@ -872,6 +878,18 @@ export default function HomePage() {
                   >
                     {t('commencer')} ▶
                   </button>
+                )}
+
+                {/* Premium badge under locked node */}
+                {node.isLocked && (
+                  <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1 px-2 py-0.5 rounded-full" style={{
+                    top: ringSize + 4,
+                    background: 'rgba(255,215,0,0.15)',
+                    border: '1px solid rgba(255,215,0,0.35)',
+                    whiteSpace: 'nowrap',
+                  }}>
+                    <span className="text-[9px] font-black uppercase tracking-wider" style={{ color: '#FFD700' }}>Premium</span>
+                  </div>
                 )}
 
                 {/* Star for completed nodes */}
@@ -1014,16 +1032,27 @@ export default function HomePage() {
                   zIndex: 25,
                   pointerEvents: 'none',
                 }}>
-                  {Array.from({ length: cloudCount }, (_, ci) => (
-                    <span key={ci} className="absolute" style={{
-                      left: (ci * 97 + 15) % (SVG_W * 0.85),
-                      top: ((ci * 0.137 + 0.05) % 0.9) * zoneH,
-                      fontSize: 18 + (ci % 5) * 3,
-                      opacity: 0.5,
-                    }}>
-                      ☁️
-                    </span>
-                  ))}
+                  {Array.from({ length: cloudCount }, (_, ci) => {
+                    // Alternate clouds left/right of the road
+                    const onLeft = ci % 2 === 0;
+                    const roadEdgeL = CX - ROAD_W / 2 - 10;
+                    const roadEdgeR = CX + ROAD_W / 2 + 10;
+                    const leftZoneW = Math.max(roadEdgeL, 20);
+                    const rightZoneW = Math.max(SVG_W - roadEdgeR, 20);
+                    const cloudLeft = onLeft
+                      ? ((ci * 53) % leftZoneW)
+                      : roadEdgeR + ((ci * 71) % rightZoneW);
+                    return (
+                      <span key={ci} className="absolute" style={{
+                        left: cloudLeft,
+                        top: ((ci * 0.137 + 0.05) % 0.9) * zoneH,
+                        fontSize: 18 + (ci % 5) * 3,
+                        opacity: 0.5,
+                      }}>
+                        ☁️
+                      </span>
+                    );
+                  })}
                 </div>
               );
             });
