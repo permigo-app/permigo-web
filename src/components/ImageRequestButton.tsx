@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useLang } from '@/contexts/LanguageContext';
 
 const STORAGE_KEY = 'image_requests';
 const VOTED_KEY = 'image_requests_voted';
@@ -34,7 +35,14 @@ interface Props {
   id: string; // e.g. "A1_c0" or "A1_q3"
 }
 
+const LABELS = {
+  fr: { suggest: 'Une image aiderait ici', thanks: 'Merci !', title: "Signaler qu'une image serait utile ici" },
+  nl: { suggest: 'Een afbeelding zou helpen', thanks: 'Bedankt!', title: 'Melden dat een afbeelding nuttig zou zijn' },
+};
+
 export default function ImageRequestButton({ id }: Props) {
+  const { lang } = useLang();
+  const labels = LABELS[lang] ?? LABELS.fr;
   const [voted, setVoted] = useState(false);
 
   useEffect(() => {
@@ -58,10 +66,10 @@ export default function ImageRequestButton({ id }: Props) {
         color: voted ? '#2ecc71' : '#5A6B8A',
         cursor: voted ? 'default' : 'pointer',
       }}
-      title="Signaler qu'une image serait utile ici"
+      title={labels.title}
     >
       <span>{voted ? '✓' : '🖼️'}</span>
-      <span>{voted ? 'Merci !' : 'Une image aiderait ici'}</span>
+      <span>{voted ? labels.thanks : labels.suggest}</span>
     </button>
   );
 }
