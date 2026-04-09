@@ -415,7 +415,7 @@ export default function HomePage() {
 
         {/* ── Mobile Gaston ── */}
         <div className="lg:hidden mb-5 px-3 flex items-end gap-3">
-          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" style={{ flexShrink: 0, objectFit: 'contain' }} />
+          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
           <div style={{
             background: '#FFF8E7',
             border: '1.5px solid #1B3A6B',
@@ -1100,7 +1100,7 @@ export default function HomePage() {
         {/* ── Prof. Gaston dit... ── */}
         <div className="stat-card">
           <div className="flex items-center gap-2 mb-3">
-            <Image src="/images/gaston.png" width={40} height={40} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
+            <Image src="/images/gaston.png" width={40} height={40} alt="Prof. Gaston" className="gaston-float" style={{ objectFit: 'contain' }} />
             <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#8B9DC3' }}>{t('prof_gaston_dit')}</span>
           </div>
           <div style={{

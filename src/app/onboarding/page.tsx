@@ -196,8 +196,8 @@ export default function OnboardingPage() {
 
             {/* Gaston grand + bulle de bienvenue */}
             <div className="flex items-center gap-4 w-full mb-8">
-              <div className="flex-shrink-0" style={{ animation: 'gastonBounce 2.2s ease-in-out infinite' }}>
-                <Image src="/images/gaston.png" width={140} height={140} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
+              <div className="flex-shrink-0">
+                <Image src="/images/gaston.png" width={140} height={140} alt="Prof. Gaston" className="gaston-float" style={{ objectFit: 'contain' }} />
               </div>
               <div style={{
                 flex: 1,
@@ -545,15 +545,9 @@ export default function OnboardingPage() {
       </div>
 
       {/* Gaston — bas gauche, caché sur step 1 */}
-      <style>{`
-        @keyframes gastonBounce {
-          0%, 100% { transform: translateY(0px); }
-          50%       { transform: translateY(-6px); }
-        }
-      `}</style>
       {step > 1 && (
         <div className="fixed bottom-4 left-4 z-50 flex items-end gap-2" style={{ maxWidth: 280, animation: 'gastonBounce 2.2s ease-in-out infinite' }}>
-          <Image src="/images/gaston.png" width={80} height={80} alt="Prof. Gaston" style={{ flexShrink: 0, objectFit: 'contain' }} />
+          <Image src="/images/gaston.png" width={80} height={80} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
           <div style={{
             background: '#FFF8E7',
             border: '1.5px solid #1B3A6B',

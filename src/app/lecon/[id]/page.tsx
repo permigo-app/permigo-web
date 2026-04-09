@@ -75,6 +75,7 @@ export default function LessonPage() {
   const [correctCount, setCorrectCount] = useState(0);
   const [gastonMsg, setGastonMsg] = useState(() => t('reflechis'));
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'encouraging' | 'unhappy' | 'impressed' | 'party' | 'thinking'>('thinking');
+  const [gastonAnim, setGastonAnim] = useState('gaston-think');
   const [shakeWrong, setShakeWrong] = useState(false);
   const [partieFailScore, setPartieFailScore] = useState<{ correct: number; total: number } | null>(null);
   const startTimeRef = useRef(Date.now());
@@ -138,11 +139,15 @@ export default function LessonPage() {
       setCorrectCount(c => c + 1);
       setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
       setGastonExpr('impressed');
+      setGastonAnim('gaston-jump');
+      setTimeout(() => setGastonAnim('gaston-float'), 800);
     } else {
       setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
       setGastonExpr('unhappy');
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
+      setGastonAnim('gaston-shake');
+      setTimeout(() => setGastonAnim('gaston-float'), 600);
     }
   };
 
@@ -151,6 +156,7 @@ export default function LessonPage() {
     setValidated(false);
     setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
+    setGastonAnim('gaston-think');
     if (currentQ + 1 < questions.length) {
       setCurrentQ(q => q + 1);
     } else {
@@ -620,7 +626,7 @@ export default function LessonPage() {
 
             {/* Gaston */}
             <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-              <Gaston message={gastonMsg} expression={gastonExpr} size="small" title={t('prof_gaston')} />
+              <Gaston message={gastonMsg} expression={gastonExpr} size="small" title={t('prof_gaston')} animClass={gastonAnim} />
             </div>
 
             {/* Explanation in sidebar after validation */}

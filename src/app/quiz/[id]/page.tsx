@@ -25,6 +25,7 @@ export default function QuizPage() {
   const [correctCount, setCorrectCount] = useState(0);
   const [gastonMsg, setGastonMsg] = useState('');
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'impressed' | 'unhappy' | 'thinking'>('thinking');
+  const [gastonAnim, setGastonAnim] = useState('gaston-think');
   const [themeCode, setThemeCode] = useState('A');
   const [shakeWrong, setShakeWrong] = useState(false);
   const startTimeRef = useRef(Date.now());
@@ -47,11 +48,15 @@ export default function QuizPage() {
       setCorrectCount(c => c + 1);
       setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
       setGastonExpr('impressed');
+      setGastonAnim('gaston-jump');
+      setTimeout(() => setGastonAnim('gaston-float'), 800);
     } else {
       setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
       setGastonExpr('unhappy');
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
+      setGastonAnim('gaston-shake');
+      setTimeout(() => setGastonAnim('gaston-float'), 600);
     }
   };
 
@@ -60,6 +65,7 @@ export default function QuizPage() {
     setValidated(false);
     setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
+    setGastonAnim('gaston-think');
     if (currentQ + 1 < questions.length) { setCurrentQ(q => q + 1); }
     else {
       const total = questions.length;
@@ -151,7 +157,7 @@ export default function QuizPage() {
 
           {/* Gaston */}
           <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-            <Gaston message={gastonMsg || t('reflechis')} expression={gastonExpr} size="small" title={t('prof_gaston')} />
+            <Gaston message={gastonMsg || t('reflechis')} expression={gastonExpr} size="small" title={t('prof_gaston')} animClass={gastonAnim} />
           </div>
 
           {/* Explanation in sidebar after validation */}

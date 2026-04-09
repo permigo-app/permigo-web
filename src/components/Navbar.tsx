@@ -75,7 +75,7 @@ export default function Navbar() {
 
         {/* Prof. Gaston */}
         <div className="flex items-center gap-2 px-3 mb-6">
-          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" style={{ objectFit: 'contain', flexShrink: 0 }} />
+          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ objectFit: 'contain', flexShrink: 0 }} />
           <span className="text-xs font-black uppercase tracking-wide" style={{ color: '#8B9DC3' }}>Prof. Gaston</span>
         </div>
 

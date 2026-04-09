@@ -11,6 +11,7 @@ interface GastonProps {
   size?: 'normal' | 'small';
   title?: string;
   compact?: boolean;
+  animClass?: string;
 }
 
 // ── Gaston SVG — exact copy of GastonMascot.tsx from the RN app ──
@@ -229,7 +230,7 @@ function GastonSVG({ expression = 'happy', w, h }: { expression: GastonExpressio
   );
 }
 
-export default function Gaston({ message, expression = 'happy', size = 'normal', title, compact }: GastonProps) {
+export default function Gaston({ message, expression = 'happy', size = 'normal', title, compact, animClass = 'gaston-float' }: GastonProps) {
   const [visible, setVisible] = useState(false);
   useEffect(() => { setVisible(true); }, []);
 
@@ -241,7 +242,7 @@ export default function Gaston({ message, expression = 'happy', size = 'normal',
     <div className={`flex items-start gap-1 transition-all duration-500 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
       {/* Gaston avatar */}
       <div className="flex-shrink-0" style={{ width: isSmall ? 54 : 74, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
-        <Image src="/images/gaston.png" width={gastonW} height={gastonH} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
+        <Image src="/images/gaston.png" width={gastonW} height={gastonH} alt="Prof. Gaston" className={animClass} style={{ objectFit: 'contain' }} />
       </div>
 
       {/* Speech bubble — cream color like RN */}

@@ -275,7 +275,7 @@ export default function TurboPage() {
               className="mt-6 rounded-2xl p-5 flex items-center gap-4"
               style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.25)' }}
             >
-              <Image src="/images/gaston.png" width={52} height={52} alt="Prof. Gaston" style={{ objectFit: 'contain', flexShrink: 0 }} />
+              <Image src="/images/gaston.png" width={52} height={52} alt="Prof. Gaston" className="gaston-float" style={{ objectFit: 'contain', flexShrink: 0 }} />
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-bold mb-1.5" style={{ color: '#4ecdc4' }}>{t('turbo_gaston_conseille')}</p>
                 <p
