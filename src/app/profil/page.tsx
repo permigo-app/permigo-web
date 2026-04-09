@@ -91,7 +91,7 @@ export default function ProfilePage() {
             <div className="lg:sticky lg:top-6 flex flex-col gap-5">
 
               {/* Profile card */}
-              <div className="rounded-2xl p-6" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+              <div className="rounded-2xl p-6 fade-in-up" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
                 {/* Avatar + name */}
                 <div className="flex flex-col items-center mb-5">
                   <div
@@ -117,7 +117,7 @@ export default function ProfilePage() {
                     <span className="text-[11px] font-bold" style={{ color: '#8B9DC3' }}>XP</span>
                     <span className="text-[11px] font-bold" style={{ color: '#4ecdc4' }}>{xpInLevel}/100 → {t('niveau')} {xp.level + 1}</span>
                   </div>
-                  <div className="h-2.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                  <div className="h-3.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
                     <div
                       className="h-full rounded-full transition-all duration-700"
                       style={{ width: `${Math.max(xpInLevel, 2)}%`, background: 'linear-gradient(90deg, #4ecdc4, #2ecc71)' }}
@@ -136,7 +136,7 @@ export default function ProfilePage() {
                     { emoji: '📖', value: completedLessons, label: t('lecons') },
                     { emoji: '⏱', value: formatStudyTime(studyTime), label: t('temps_etudie') },
                   ].map((stat) => (
-                    <div key={stat.label} className="rounded-xl p-3 text-center" style={{ background: 'rgba(255,255,255,0.04)' }}>
+                    <div key={stat.label} className="rounded-xl p-3 text-center card-hover" style={{ background: 'rgba(255,255,255,0.04)' }}>
                       <span className="text-lg block mb-0.5">{stat.emoji}</span>
                       <span className="text-xl font-black block">{stat.value}</span>
                       <p className="text-[10px] font-bold" style={{ color: '#5A6B8A' }}>{stat.label}</p>
@@ -220,7 +220,7 @@ export default function ProfilePage() {
                 return (
                   <div
                     key={code}
-                    className="rounded-xl p-3.5 flex items-center gap-3"
+                    className="rounded-xl p-3.5 flex items-center gap-3 card-hover"
                     style={{ background: '#16213E', borderLeft: `4px solid ${col}` }}
                   >
                     <span className="text-xl flex-shrink-0">{THEME_EMOJIS[code]}</span>
@@ -281,7 +281,7 @@ export default function ProfilePage() {
                     return (
                       <div
                         key={badge.id}
-                        className="rounded-2xl p-4 text-center transition-all duration-200 relative cursor-default"
+                        className={`rounded-2xl p-4 text-center transition-all duration-200 relative cursor-default card-hover ${unlocked ? 'badge-unlocked-glow' : ''}`}
                         style={{
                           background: unlocked ? cc.bgStrong : 'rgba(255,255,255,0.03)',
                           border: unlocked ? `2px solid ${cc.border}` : '1px solid rgba(255,255,255,0.08)',
