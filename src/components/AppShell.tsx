@@ -16,19 +16,20 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   }, [pathname]);
 
   const isOnboardingPage = pathname === '/onboarding';
+  const isAuthPage = pathname === '/login' || pathname === '/register';
 
   useEffect(() => {
     if (onboardingDone === null) return;
-    if (!onboardingDone && !isOnboardingPage) {
+    if (!onboardingDone && !isOnboardingPage && !isAuthPage) {
       router.replace('/onboarding');
     }
-  }, [onboardingDone, isOnboardingPage, router]);
+  }, [onboardingDone, isOnboardingPage, isAuthPage, router]);
 
   // Still loading
   if (onboardingDone === null) return <div className="min-h-screen" />;
 
-  // Onboarding page — no navbar, no margin
-  if (isOnboardingPage) {
+  // Onboarding / auth pages — no navbar, no margin
+  if (isOnboardingPage || isAuthPage) {
     return <>{children}</>;
   }
 
