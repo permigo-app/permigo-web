@@ -194,6 +194,25 @@ export function markPartieDone(lessonId: string, partieIndex: number): void {
     done.push(partieIndex);
     setItem(lessonPartiesDoneKey(lessonId), JSON.stringify(done));
   }
+  setItem(`partie_completed_${lessonId}_p${partieIndex}`, 'true');
+}
+
+// ── Lesson ordered completion ──
+export function isLessonCompleted(lessonId: string): boolean {
+  if (typeof window === 'undefined') return false;
+  if (localStorage.getItem(`lesson_completed_${lessonId}`) === 'true') return true;
+  // Fallback: stars > 0 means completed ≥ 70%
+  return getStars(lessonId) > 0;
+}
+
+export function markLessonCompleted(lessonId: string): void {
+  setItem(`lesson_completed_${lessonId}`, 'true');
+}
+
+export function isPartieCompleted(lessonId: string, partieIdx: number): boolean {
+  if (typeof window === 'undefined') return false;
+  if (localStorage.getItem(`partie_completed_${lessonId}_p${partieIdx}`) === 'true') return true;
+  return getCompletedParties(lessonId).includes(partieIdx);
 }
 
 // ── Survival best score ──

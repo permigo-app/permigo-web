@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback, useMemo, useRef } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
-import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
+import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, markLessonCompleted, isPartieCompleted, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { GASTON_THEORY_TIPS, GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
 import { isPremium, isThemeFree } from '@/lib/premium';
@@ -52,8 +52,12 @@ export default function LessonPage() {
   const { lang, t } = useLang();
   const lessonId = (params.id as string)?.toUpperCase();
   const partieParam = searchParams.get('partie');
+  const isRevisionMode = searchParams.get('revision') === '1';
   const isPartieMode = partieParam !== null;
   const partieIndex = isPartieMode ? parseInt(partieParam, 10) : undefined;
+  // Block partie access if previous partie not completed (unless revision mode or partie 0)
+  const partieAccessBlocked = isPartieMode && !isRevisionMode && partieIndex !== undefined && partieIndex > 0
+    && !isPartieCompleted(lessonId, partieIndex - 1);
 
   const [phase, setPhase] = useState<Phase>('theory');
   const [lesson, setLesson] = useState(getLessonDataLocalized(lessonId, lang));
@@ -180,6 +184,7 @@ export default function LessonPage() {
     } else {
       saveLessonQuizDone(lessonId);
     }
+    if (pct >= 0.7) markLessonCompleted(lessonId);
 
     let xpEarned = correctCount * 10 + 50;
     if (earnedStars >= 2) xpEarned += 25;
@@ -210,6 +215,28 @@ export default function LessonPage() {
   // Premium gate: themes B-I require premium
   if (!isThemeFree(themeCode) && !isPremium()) {
     return <PremiumGate><></></PremiumGate>;
+  }
+
+  // Partie order gate: partie N requires partie N-1 completed (except revision mode)
+  if (partieAccessBlocked) {
+    return (
+      <div className="flex items-center justify-center min-h-screen px-6">
+        <div className="max-w-sm w-full text-center">
+          <span className="text-6xl block mb-4">🔒</span>
+          <h2 className="text-xl font-black text-white mb-2">Partie verrouillée</h2>
+          <p className="text-sm mb-6" style={{ color: '#8B9DC3' }}>
+            Termine la partie précédente avec au moins 70% pour débloquer celle-ci.
+          </p>
+          <button
+            onClick={() => router.push('/')}
+            className="w-full py-3.5 rounded-2xl font-extrabold text-white press-scale"
+            style={{ background: '#4ecdc4' }}
+          >
+            Retour à l&apos;accueil
+          </button>
+        </div>
+      </div>
+    );
   }
 
   if (!lesson) {

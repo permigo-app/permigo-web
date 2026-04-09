@@ -104,7 +104,8 @@ interface PathNode {
   localIndex: number;
   title: string;
   isCompleted: boolean;
-  isLocked: boolean;
+  isLocked: boolean;       // theme lock (premium required)
+  isOrderLocked: boolean;  // lesson order lock (previous lesson not done)
   isCurrent: boolean;
   stars: number;
 }
@@ -165,6 +166,7 @@ export default function HomePage() {
   const [selectedPartieIdx, setSelectedPartieIdx] = useState<number | null>(null);
   const [completedParties, setCompletedParties] = useState<number[]>([]);
   const [showPremiumModal, setShowPremiumModal] = useState(false);
+  const [showOrderLockedModal, setShowOrderLockedModal] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -264,9 +266,15 @@ export default function HomePage() {
         const done = lessonStars > 0;
 
         // Lock non-free themes for non-premium users
-        const locked = !isThemeFree(themeCode) && !isPremium();
+        const themeLocked = !isThemeFree(themeCode) && !isPremium();
 
-        const isCurrent = !done && !foundCurrent;
+        // Lock lesson N+1 if lesson N not completed (within unlocked theme)
+        const prevLid = lessonIdx > 0 ? (theme.lessons[lessonIdx - 1]?.id || (themeCode + lessonIdx)) : null;
+        const orderLocked = !themeLocked && lessonIdx > 0 && prevLid !== null && (stars[prevLid] ?? 0) === 0;
+
+        const locked = themeLocked;
+
+        const isCurrent = !done && !locked && !orderLocked && !foundCurrent;
         if (isCurrent) foundCurrent = true;
 
         nodes.push({
@@ -277,18 +285,14 @@ export default function HomePage() {
           title: lesson.title,
           isCompleted: done,
           isLocked: locked,
+          isOrderLocked: orderLocked,
           isCurrent,
           stars: lessonStars,
         });
       });
 
       // Exam node
-      const allLessonsDone = theme.lessons.every((_, idx) => {
-        const lid = theme.lessons[idx]?.id || (themeCode + (idx + 1));
-        return (stars[lid] ?? 0) > 0;
-      });
       const examDone = exams[themeCode] === true;
-      const examLocked = false;
       const examIsCurrent = !examDone && !foundCurrent;
 
       nodes.push({
@@ -298,7 +302,8 @@ export default function HomePage() {
         localIndex: 0,
         title: `Examen ${themeCode}`,
         isCompleted: examDone,
-        isLocked: examLocked,
+        isLocked: false,
+        isOrderLocked: false,
         isCurrent: examIsCurrent,
         stars: 0,
       });
@@ -780,9 +785,9 @@ export default function HomePage() {
             const ringCirc = isActive ? ACTIVE_RING_CIRC : RING_CIRC;
             const ringProgress = node.isCompleted ? 1 : 0;
 
-            // Theme color for all states except locked
+            // Colors
             const bg = node.isCompleted ? tc : isActive ? tc : node.isLocked ? tc : '#141937';
-            const borderColor = node.isCompleted ? tc : isActive ? tc : node.isLocked ? tc : tc;
+            const borderColor = tc;
             const ringColor = tc;
 
             // Node icon
@@ -791,6 +796,8 @@ export default function HomePage() {
               nodeContent = <span className="text-white text-xl font-black">✓</span>;
             } else if (node.isLocked) {
               nodeContent = <span className="text-base text-white">🔒</span>;
+            } else if (node.isOrderLocked) {
+              nodeContent = <span className="text-lg font-black" style={{ color: 'rgba(255,255,255,0.45)' }}>{node.localIndex}</span>;
             } else if (isActive) {
               nodeContent = <span className="text-white text-2xl font-black">📖</span>;
             } else {
@@ -804,7 +811,7 @@ export default function HomePage() {
                 width: ringSize,
                 height: ringSize,
                 zIndex: isActive ? 16 : 14,
-                opacity: 1,
+                opacity: node.isOrderLocked ? 0.55 : 1,
               }}>
                 {/* Progress ring */}
                 <svg width={ringSize} height={ringSize} className="absolute inset-0">
@@ -822,15 +829,26 @@ export default function HomePage() {
 
                 {/* Node circle */}
                 {node.isLocked ? (
-                  <button onClick={() => setShowPremiumModal(true)} className="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <button onClick={() => setShowPremiumModal(true)} title="🔒 Débloque avec Premium" className="absolute inset-0 flex items-center justify-center cursor-pointer">
                     <div className="rounded-full flex items-center justify-center" style={{
                       width: nodeRadius * 2,
                       height: nodeRadius * 2,
                       background: bg,
                       border: `3px solid ${borderColor}`,
-                      boxShadow: '0 0 10px rgba(201,162,39,0.4)',
                     }}>
                       {nodeContent}
+                    </div>
+                  </button>
+                ) : node.isOrderLocked ? (
+                  <button onClick={() => setShowOrderLockedModal(true)} title="🔒 Termine la leçon précédente d'abord" className="absolute inset-0 flex items-center justify-center cursor-pointer">
+                    <div className="rounded-full flex items-center justify-center relative" style={{
+                      width: nodeRadius * 2,
+                      height: nodeRadius * 2,
+                      background: '#141937',
+                      border: `3px solid ${tc}40`,
+                    }}>
+                      {nodeContent}
+                      <span className="absolute text-[9px]" style={{ top: -3, right: -3 }}>🔒</span>
                     </div>
                   </button>
                 ) : (
@@ -850,7 +868,7 @@ export default function HomePage() {
                 )}
 
                 {/* ── COMMENCER floating button (active node only) ── */}
-                {isActive && !node.isLocked && (
+                {isActive && !node.isLocked && !node.isOrderLocked && (
                   <button
                     onClick={() => openLessonModal(node)}
                     className="commencer-float commencer-shimmer absolute cursor-pointer press-scale"
@@ -1181,8 +1199,8 @@ export default function HomePage() {
                 <div className="mb-4">
                   {theories.map((partie, idx) => {
                     const done = completedParties.includes(idx) || lessonFullyDone;
-                    // All parties unlocked for now (free version)
-                    const unlocked = true;
+                    // Partie N+1 locked until partie N completed (except partie 0 always accessible)
+                    const unlocked = idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
                     const isSelected = selectedPartieIdx === idx;
 
                     return (
@@ -1251,6 +1269,32 @@ export default function HomePage() {
           </div>
         );
       })()}
+
+      {/* ── Order Locked Modal ── */}
+      {showOrderLockedModal && (
+        <div className="fixed inset-0 z-[60] flex items-end justify-center" onClick={() => setShowOrderLockedModal(false)}>
+          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.6)' }} />
+          <div
+            className="relative w-full max-w-lg rounded-t-[28px] px-6 pt-6 pb-10 slide-up text-center"
+            style={{ background: '#1C2345' }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: '#5A6B8A' }} />
+            <span className="text-5xl block mb-4">🔒</span>
+            <h2 className="text-xl font-black text-white mb-2">Leçon verrouillée</h2>
+            <p className="text-sm mb-6" style={{ color: '#8B9DC3' }}>
+              Termine la leçon précédente avec au moins 70% pour débloquer celle-ci.
+            </p>
+            <button
+              onClick={() => setShowOrderLockedModal(false)}
+              className="w-full py-3.5 rounded-2xl font-extrabold text-white press-scale"
+              style={{ background: '#4ecdc4' }}
+            >
+              Compris
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* ── Premium Modal ── */}
       {showPremiumModal && (
