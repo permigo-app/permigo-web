@@ -290,26 +290,53 @@ export default function OnboardingPage() {
               Elle t&apos;accompagnera tout au long de ton apprentissage
             </p>
 
-            {/* Live preview with emoji + hue-rotate color filter */}
-            <div className="relative flex items-center justify-center mb-4" style={{ width: 160, height: 110 }}>
+            {/* Live preview — SVG voiture avec couleur directe */}
+            <div className="relative flex items-center justify-center mb-4" style={{ width: 220, height: 130 }}>
+              {/* glow derrière */}
               <div className="absolute rounded-full" style={{
-                width: 140, height: 90,
+                width: 180, height: 90,
                 background: `radial-gradient(circle, ${carColor}55 0%, transparent 70%)`,
-                filter: 'blur(18px)',
+                filter: 'blur(22px)',
               }} />
-              <span
+              <svg
+                width="200" height="120"
+                viewBox="0 0 200 120"
                 className="relative z-10"
                 style={{
-                  fontSize: selectedCarType ? 72 : 64,
-                  filter: selectedColor
-                    ? `sepia(1) saturate(4) hue-rotate(${hexToHue(carColor) - 30}deg) drop-shadow(0 0 10px ${carColor}99)`
-                    : selectedCarType ? 'none' : 'opacity(0.3)',
-                  opacity: selectedCarType ? 1 : 0.3,
-                  transition: 'filter 0.25s ease, opacity 0.2s',
+                  opacity: selectedCarType ? 1 : 0.25,
+                  transition: 'opacity 0.2s',
+                  filter: `drop-shadow(0 4px 12px ${carColor}88)`,
                 }}
               >
-                {CAR_EMOJIS[carType]}
-              </span>
+                {/* Carrosserie principale */}
+                <rect x="10" y="60" width="180" height="42" rx="10" fill={carColor} />
+                {/* Toit / cabine */}
+                <path d="M50 60 Q60 28 100 26 Q140 28 150 60 Z" fill={carColor} />
+                {/* Vitre avant */}
+                <path d="M103 30 Q135 30 148 58 L103 58 Z" fill="#a8d8f0" opacity="0.85" />
+                {/* Vitre arrière */}
+                <path d="M97 30 Q65 30 52 58 L97 58 Z" fill="#a8d8f0" opacity="0.85" />
+                {/* Montant central vitre */}
+                <rect x="98" y="30" width="4" height="28" fill={carColor} />
+                {/* Bande chromée bas de caisse */}
+                <rect x="10" y="92" width="180" height="5" rx="2" fill="rgba(255,255,255,0.18)" />
+                {/* Phare avant */}
+                <ellipse cx="178" cy="72" rx="10" ry="7" fill="#FFD700" />
+                <ellipse cx="178" cy="72" rx="6" ry="4" fill="#fff" opacity="0.5" />
+                {/* Phare arrière */}
+                <ellipse cx="22" cy="72" rx="9" ry="6" fill="#e74c3c" />
+                <ellipse cx="22" cy="72" rx="5" ry="3" fill="#c0392b" opacity="0.6" />
+                {/* Roue arrière */}
+                <circle cx="52" cy="102" r="16" fill="#222" />
+                <circle cx="52" cy="102" r="9" fill="#555" />
+                <circle cx="52" cy="102" r="4" fill="#333" />
+                {/* Roue avant */}
+                <circle cx="148" cy="102" r="16" fill="#222" />
+                <circle cx="148" cy="102" r="9" fill="#555" />
+                <circle cx="148" cy="102" r="4" fill="#333" />
+                {/* Poignée de porte */}
+                <rect x="87" y="73" width="26" height="5" rx="2.5" fill="rgba(255,255,255,0.25)" />
+              </svg>
             </div>
 
             {/* Color palette (only when car selected) */}
@@ -460,16 +487,17 @@ export default function OnboardingPage() {
                 background: 'rgba(255,255,255,0.05)',
                 border: '1px solid rgba(78,205,196,0.2)',
               }}>
-                <span
-                  className="text-3xl mb-2 block"
-                  style={{
-                    filter: selectedColor
-                      ? `sepia(1) saturate(4) hue-rotate(${hexToHue(carColor) - 30}deg)`
-                      : 'none',
-                  }}
-                >
-                  {CAR_EMOJIS[selectedCarType || 'berline'] || '🚗'}
-                </span>
+                <svg width="64" height="38" viewBox="0 0 200 120" className="mb-2" style={{ filter: `drop-shadow(0 2px 6px ${carColor}88)` }}>
+                  <rect x="10" y="60" width="180" height="42" rx="10" fill={carColor} />
+                  <path d="M50 60 Q60 28 100 26 Q140 28 150 60 Z" fill={carColor} />
+                  <path d="M103 30 Q135 30 148 58 L103 58 Z" fill="#a8d8f0" opacity="0.85" />
+                  <path d="M97 30 Q65 30 52 58 L97 58 Z" fill="#a8d8f0" opacity="0.85" />
+                  <rect x="98" y="30" width="4" height="28" fill={carColor} />
+                  <ellipse cx="178" cy="72" rx="10" ry="7" fill="#FFD700" />
+                  <ellipse cx="22" cy="72" rx="9" ry="6" fill="#e74c3c" />
+                  <circle cx="52" cy="102" r="16" fill="#222" /><circle cx="52" cy="102" r="9" fill="#555" />
+                  <circle cx="148" cy="102" r="16" fill="#222" /><circle cx="148" cy="102" r="9" fill="#555" />
+                </svg>
                 <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>Voiture</p>
                 <p className="text-sm font-black text-white leading-tight">
                   {CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label || '—'}
