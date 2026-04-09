@@ -48,6 +48,20 @@ const goalLabels: Record<string, string> = {
   fun:   "M'amuser en apprenant",
 };
 
+// Convert hex color to HSL hue (0-360)
+function hexToHue(hex: string): number {
+  const r = parseInt(hex.slice(1, 3), 16) / 255;
+  const g = parseInt(hex.slice(3, 5), 16) / 255;
+  const b = parseInt(hex.slice(5, 7), 16) / 255;
+  const max = Math.max(r, g, b), min = Math.min(r, g, b), d = max - min;
+  if (d === 0) return 0;
+  let h = 0;
+  if (max === r)      h = ((g - b) / d) % 6;
+  else if (max === g) h = (b - r) / d + 2;
+  else                h = (r - g) / d + 4;
+  return Math.round(h * 60 + 360) % 360;
+}
+
 export default function OnboardingPage() {
   const router = useRouter();
   const { signUp, user } = useAuth();
@@ -276,7 +290,7 @@ export default function OnboardingPage() {
               Elle t&apos;accompagnera tout au long de ton apprentissage
             </p>
 
-            {/* Live preview with emoji + color glow */}
+            {/* Live preview with emoji + hue-rotate color filter */}
             <div className="relative flex items-center justify-center mb-4" style={{ width: 160, height: 110 }}>
               <div className="absolute rounded-full" style={{
                 width: 140, height: 90,
@@ -287,11 +301,11 @@ export default function OnboardingPage() {
                 className="relative z-10"
                 style={{
                   fontSize: selectedCarType ? 72 : 64,
-                  filter: selectedCarType && selectedColor
-                    ? `drop-shadow(0 0 12px ${carColor}) drop-shadow(0 0 4px ${carColor})`
-                    : 'none',
+                  filter: selectedColor
+                    ? `sepia(1) saturate(4) hue-rotate(${hexToHue(carColor) - 30}deg) drop-shadow(0 0 10px ${carColor}99)`
+                    : selectedCarType ? 'none' : 'opacity(0.3)',
                   opacity: selectedCarType ? 1 : 0.3,
-                  transition: 'all 0.2s',
+                  transition: 'filter 0.25s ease, opacity 0.2s',
                 }}
               >
                 {CAR_EMOJIS[carType]}
@@ -430,41 +444,49 @@ export default function OnboardingPage() {
               Ton aventure commence maintenant 🚀
             </p>
 
-            {/* Recap summary */}
-            <div className="w-full rounded-2xl p-5 mb-6 flex flex-col gap-3" style={{
-              background: 'rgba(78,205,196,0.06)',
-              border: '1px solid rgba(78,205,196,0.2)',
-            }}>
-              {name.trim() && (
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">👤</span>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase" style={{ color: '#5A6B8A' }}>Pilote</p>
-                    <p className="text-sm font-black text-white">{name.trim()}</p>
-                  </div>
-                </div>
-              )}
-              {selectedCarType && (
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">{CAR_EMOJIS[selectedCarType] || '🚗'}</span>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase" style={{ color: '#5A6B8A' }}>Voiture</p>
-                    <p className="text-sm font-black text-white">
-                      {CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label}
-                      {selectedColor && ` · ${CAR_COLORS.find(c => c.id === selectedColor)?.label || ''}`}
-                    </p>
-                  </div>
-                </div>
-              )}
-              {goal && (
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">🎯</span>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase" style={{ color: '#5A6B8A' }}>Objectif</p>
-                    <p className="text-sm font-black text-white">{goalLabels[goal] ?? goal}</p>
-                  </div>
-                </div>
-              )}
+            {/* Recap summary — 3 cards côte à côte */}
+            <div className="w-full flex justify-center gap-4 mb-6">
+              {/* Card 1 — Pilote */}
+              <div className="flex-1 flex flex-col items-center rounded-2xl p-5 text-center" style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(78,205,196,0.2)',
+              }}>
+                <span className="text-3xl mb-2">👤</span>
+                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>Pilote</p>
+                <p className="text-sm font-black text-white leading-tight">{name.trim() || '—'}</p>
+              </div>
+              {/* Card 2 — Voiture */}
+              <div className="flex-1 flex flex-col items-center rounded-2xl p-5 text-center" style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(78,205,196,0.2)',
+              }}>
+                <span
+                  className="text-3xl mb-2 block"
+                  style={{
+                    filter: selectedColor
+                      ? `sepia(1) saturate(4) hue-rotate(${hexToHue(carColor) - 30}deg)`
+                      : 'none',
+                  }}
+                >
+                  {CAR_EMOJIS[selectedCarType || 'berline'] || '🚗'}
+                </span>
+                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>Voiture</p>
+                <p className="text-sm font-black text-white leading-tight">
+                  {CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label || '—'}
+                  {selectedColor && (
+                    <><br /><span style={{ color: '#4ecdc4', fontSize: 10 }}>{CAR_COLORS.find(c => c.id === selectedColor)?.label}</span></>
+                  )}
+                </p>
+              </div>
+              {/* Card 3 — Objectif */}
+              <div className="flex-1 flex flex-col items-center rounded-2xl p-5 text-center" style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(78,205,196,0.2)',
+              }}>
+                <span className="text-3xl mb-2">{GOALS.find(g => g.key === goal)?.icon || '🎯'}</span>
+                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>Objectif</p>
+                <p className="text-sm font-black text-white leading-tight">{goal ? goalLabels[goal] : '—'}</p>
+              </div>
             </div>
 
             {authError && (
@@ -486,9 +508,19 @@ export default function OnboardingPage() {
 
       </div>
 
-      {/* Gaston — discreet bottom right, message changes per step */}
-      <div className="fixed bottom-5 right-5 z-50" style={{ maxWidth: 210 }}>
-        <Gaston message={GASTON_MESSAGES[step]} expression="happy" size="small" />
+      {/* Gaston — bottom right, bigger + bounce */}
+      <style>{`
+        @keyframes gastonBounce {
+          0%, 100% { transform: translateY(0px); }
+          50%       { transform: translateY(-6px); }
+        }
+        .gaston-onboarding { animation: gastonBounce 2.2s ease-in-out infinite; }
+        .gaston-onboarding svg { width: 64px !important; height: 48px !important; }
+        .gaston-onboarding > div:first-child { width: 72px !important; }
+        .gaston-onboarding p.font-semibold { font-size: 15px !important; line-height: 1.4 !important; }
+      `}</style>
+      <div className="fixed bottom-6 right-6 z-50 gaston-onboarding" style={{ maxWidth: 260 }}>
+        <Gaston message={GASTON_MESSAGES[step]} expression="happy" />
       </div>
 
     </div>
