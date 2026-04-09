@@ -43,10 +43,29 @@ function ResultsContent() {
   const scoreColor = passed ? '#00B894' : '#FFD700';
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-8" style={{ background: '#1B1B2F', minHeight: '100vh' }}>
+    <div className="max-w-lg mx-auto px-4 py-8" style={{ background: '#0a0e2a', minHeight: '100vh' }}>
+      {/* Confetti on pass */}
+      {passed && (
+        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+          {Array.from({ length: 20 }, (_, i) => (
+            <div
+              key={i}
+              className="absolute w-2.5 h-2.5 rounded-sm"
+              style={{
+                left: `${5 + (i * 4.7) % 95}%`,
+                top: '-20px',
+                background: ['#FFD700','#4ecdc4','#2ecc71','#FF6348','#A29BFE','#FD79A8'][i % 6],
+                animation: `confettiFall ${1.5 + (i * 0.13) % 1.5}s ${(i * 0.08) % 0.8}s ease-in forwards`,
+                transform: `rotate(${(i * 37) % 360}deg)`,
+              }}
+            />
+          ))}
+        </div>
+      )}
+
       {/* Big result emoji */}
-      <div className="text-center mb-6 slide-up">
-        <span className="text-[80px] block mb-2">{emoji}</span>
+      <div className="text-center mb-6 fade-in-up">
+        <span style={{ fontSize: 96 }} className="block mb-2">{emoji}</span>
         <h1 className="text-[28px] font-black" style={{ color: scoreColor }}>{title}</h1>
       </div>
 
@@ -56,10 +75,11 @@ function ResultsContent() {
           {[1, 2, 3].map(i => (
             <span
               key={i}
-              className="text-4xl transition-all"
+              className={`text-4xl ${i <= earnedStars ? 'star-pop' : ''}`}
               style={{
                 opacity: i <= earnedStars ? 1 : 0.2,
-                animationDelay: `${i * 200}ms`,
+                animationDelay: `${i * 150}ms`,
+                display: 'inline-block',
               }}
             >
               ⭐
@@ -71,7 +91,7 @@ function ResultsContent() {
       {/* Score circle */}
       <div className="flex justify-center mb-6">
         <div
-          className="w-40 h-40 rounded-full flex flex-col items-center justify-center"
+          className="w-40 h-40 rounded-full flex flex-col items-center justify-center score-reveal"
           style={{ border: `5px solid ${scoreColor}`, background: scoreColor + '15' }}
         >
           <span className="text-[42px] font-black">{pct}%</span>
@@ -81,8 +101,8 @@ function ResultsContent() {
 
       {/* XP earned */}
       <div className="flex justify-center mb-6">
-        <div className="px-6 py-2.5 rounded-full" style={{ background: 'rgba(255,215,0,0.15)' }}>
-          <span className="text-xl font-black" style={{ color: '#FFD700' }}>+{xp} XP ⚡</span>
+        <div className="xp-burst px-8 py-3 rounded-full" style={{ background: 'rgba(255,215,0,0.18)', border: '2px solid rgba(255,215,0,0.4)' }}>
+          <span className="text-2xl font-black" style={{ color: '#FFD700' }}>+{xp} XP ⚡</span>
         </div>
       </div>
 
@@ -106,7 +126,7 @@ function ResultsContent() {
 
       {/* Gaston */}
       <div className="mb-6">
-        <Gaston message={gastonMsg} expression={gastonExpr} size="small" />
+        <Gaston message={gastonMsg} expression={gastonExpr} size="large" />
       </div>
 
       {/* Buttons */}
@@ -114,7 +134,7 @@ function ResultsContent() {
         {!passed && lessonId && (
           <button
             onClick={() => router.push(`/lecon/${lessonId}`)}
-            className="w-full py-4 rounded-3xl font-black text-sm press-scale"
+            className="w-full py-4 rounded-3xl font-black text-sm press-scale btn-glow-teal"
             style={{ background: '#16213E', border: '1px solid #2A3550' }}
           >
             {t('resultats_reessayer')}
@@ -122,8 +142,8 @@ function ResultsContent() {
         )}
         <Link
           href="/"
-          className="w-full py-4 rounded-3xl font-black text-sm text-center press-scale text-white"
-          style={{ background: passed ? '#27AE60' : '#00B894', boxShadow: '0 4px 12px rgba(0,184,148,0.4)' }}
+          className="w-full py-4 rounded-3xl font-black text-sm text-center press-scale text-white btn-glow-green"
+          style={{ background: passed ? 'linear-gradient(135deg, #2ecc71, #27ae60)' : 'linear-gradient(135deg, #00B894, #00a884)', boxShadow: '0 4px 12px rgba(0,184,148,0.4)' }}
         >
           {passed ? t('resultats_continuer') : t('resultats_retour')}
         </Link>
@@ -134,7 +154,7 @@ function ResultsContent() {
 
 export default function ResultsPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen" style={{ background: '#1B1B2F' }} />}>
+    <Suspense fallback={<div className="min-h-screen" style={{ background: '#0a0e2a' }} />}>
       <ResultsContent />
     </Suspense>
   );
