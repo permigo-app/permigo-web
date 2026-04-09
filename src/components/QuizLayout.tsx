@@ -125,7 +125,7 @@ export default function QuizLayout({
             )}
 
             {/* Question */}
-            <p className="text-xl font-bold text-white text-center mb-3 leading-relaxed max-w-2xl mx-auto">{question}</p>
+            <p className="text-2xl font-bold text-white text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up">{question}</p>
 
             {/* Image request */}
             {questionId && (
@@ -175,7 +175,7 @@ export default function QuizLayout({
                     disabled={validated}
                     className={`rounded-xl p-5 flex items-center gap-3 text-left transition-all duration-150 press-scale ${
                       shakeWrong && validated && i === selected && i !== correctIndex ? 'shake' : ''
-                    }`}
+                    } ${validated && i === correctIndex ? 'choice-correct' : ''}`}
                     style={{ background: bg, border, minHeight: 80, cursor: validated ? 'default' : 'pointer' }}
                     onMouseEnter={e => {
                       if (!validated && i !== selected) {
@@ -204,22 +204,31 @@ export default function QuizLayout({
               })}
             </div>
 
+            {/* XP float particle on correct */}
+            {validated && isCorrect && (
+              <div className="relative flex justify-center pointer-events-none" style={{ height: 0 }}>
+                <span className="absolute xp-float-particle text-lg font-black" style={{ color: '#FFD700', top: -20 }}>
+                  +10 ✨
+                </span>
+              </div>
+            )}
+
             {/* Feedback panel after validation */}
-            {validated && explanation && (
+            {validated && (
               <div
-                className="rounded-xl p-5 mb-5 slide-up"
+                className="rounded-2xl p-5 mb-5 feedback-slide"
                 style={{
-                  background: isCorrect ? 'rgba(46,204,113,0.1)' : 'rgba(231,76,60,0.1)',
-                  borderLeft: `4px solid ${isCorrect ? '#2ecc71' : '#e74c3c'}`,
+                  background: isCorrect ? 'rgba(46,204,113,0.12)' : 'rgba(231,76,60,0.12)',
+                  border: `1.5px solid ${isCorrect ? 'rgba(46,204,113,0.4)' : 'rgba(231,76,60,0.4)'}`,
                 }}
               >
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-2xl">{isCorrect ? '🎉' : '😅'}</span>
-                  <span className="text-base font-bold" style={{ color: isCorrect ? '#2ecc71' : '#e74c3c' }}>
+                  <span className="text-base font-black" style={{ color: isCorrect ? '#2ecc71' : '#e74c3c' }}>
                     {isCorrect ? t('correct') : t('incorrect')}
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{explanation}</p>
+                {explanation && <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{explanation}</p>}
               </div>
             )}
 
@@ -228,25 +237,21 @@ export default function QuizLayout({
               <button
                 onClick={onValidate}
                 disabled={selected === null}
-                className="w-full py-4 rounded-xl font-black text-base press-scale transition-all"
+                className="w-full py-4 rounded-xl font-black text-base press-scale btn-glow-teal"
                 style={{
-                  background: selected !== null ? '#4ecdc4' : 'rgba(255,255,255,0.05)',
+                  background: selected !== null ? 'linear-gradient(135deg, #4ecdc4, #26a69a)' : 'rgba(255,255,255,0.05)',
                   color: selected !== null ? '#0a0e2a' : '#5A6B8A',
                   cursor: selected !== null ? 'pointer' : 'not-allowed',
                   opacity: selected !== null ? 1 : 0.6,
                 }}
-                onMouseEnter={e => { if (selected !== null) { e.currentTarget.style.filter = 'brightness(1.1)'; e.currentTarget.style.transform = 'scale(1.01)'; } }}
-                onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; e.currentTarget.style.transform = 'scale(1)'; }}
               >
                 {t('valider')}
               </button>
             ) : (
               <button
                 onClick={onNext}
-                className="w-full py-4 rounded-xl font-black text-base press-scale transition-all"
-                style={{ background: '#2ecc71', color: 'white' }}
-                onMouseEnter={e => { e.currentTarget.style.filter = 'brightness(1.1)'; e.currentTarget.style.transform = 'scale(1.01)'; }}
-                onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; e.currentTarget.style.transform = 'scale(1)'; }}
+                className="w-full py-4 rounded-xl font-black text-base press-scale btn-glow-green"
+                style={{ background: 'linear-gradient(135deg, #2ecc71, #27ae60)', color: 'white' }}
               >
                 {isLastQuestion ? lastLabel : t('question_suivante')}
               </button>
