@@ -8,20 +8,55 @@ interface PremiumGateProps {
   children?: React.ReactNode;
 }
 
-const FAKE_QUESTIONS = [
-  'Tu approches d\'un carrefour avec un feu orange clignotant. Quelle est la bonne conduite à adopter ?',
+const FAKE_QUESTIONS_FR = [
+  "Tu approches d'un carrefour avec un feu orange clignotant. Quelle est la bonne conduite à adopter ?",
   'Sur une route à 90 km/h, quelle est la distance de sécurité minimale recommandée derrière le véhicule qui vous précède ?',
-  'Un piéton traverse en dehors d\'un passage pour piétons. Qui est prioritaire ?',
+  "Un piéton traverse en dehors d'un passage pour piétons. Qui est prioritaire ?",
   'Vous doublez un cycliste sur une route à 70 km/h. Quelle distance latérale minimale devez-vous respecter ?',
 ];
 
-const FAKE_CHOICES = [
-  ['Continuer normalement', 'Ralentir et être prêt à céder le passage', 'S\'arrêter obligatoirement', 'Accélérer pour passer'],
+const FAKE_CHOICES_FR = [
+  ["Continuer normalement", "Ralentir et être prêt à céder le passage", "S'arrêter obligatoirement", "Accélérer pour passer"],
   ['20 mètres', '50 mètres', '2 secondes de distance', '1 mètre par km/h de vitesse'],
 ];
 
+const FAKE_QUESTIONS_NL = [
+  'Je nadert een kruispunt met een knipperend oranje licht. Welk rijgedrag is correct?',
+  'Op een weg met 90 km/h, wat is de aanbevolen minimale veiligheidsafstand achter het voertuig voor u?',
+  'Een voetganger steekt over buiten een zebrapad. Wie heeft voorrang?',
+  'U haalt een fietser in op een weg met 70 km/h. Welke minimale zijdelingse afstand moet u respecteren?',
+];
+
+const FAKE_CHOICES_NL = [
+  ['Normaal doorrijden', 'Vertragen en klaar zijn om voorrang te verlenen', 'Verplicht stoppen', 'Versnellen om door te rijden'],
+  ['20 meter', '50 meter', '2 seconden afstand', '1 meter per km/u snelheid'],
+];
+
 export default function PremiumGate({ children }: PremiumGateProps) {
-  const { t } = useLang();
+  const { lang } = useLang();
+
+  const isNL = lang === 'nl';
+  const FAKE_QUESTIONS = isNL ? FAKE_QUESTIONS_NL : FAKE_QUESTIONS_FR;
+  const FAKE_CHOICES   = isNL ? FAKE_CHOICES_NL   : FAKE_CHOICES_FR;
+
+  const headline   = isNL ? 'Deze 2286 vragen mis je 😔' : 'Ces 2286 questions te manquent 😔';
+  const subtext    = isNL
+    ? "Het volledige proefexamen, onbeperkte Turbo-modus, alle thema's B→I. Ontgrendel alles voor"
+    : "L'examen blanc complet, le mode Turbo illimité, tous les thèmes B→I. Débloque tout pour";
+  const ctaLabel   = isNL ? '⭐ 7 dagen GRATIS uitproberen' : '⭐ Essayer 7 jours GRATUITS';
+  const noCommit   = isNL ? 'Geen verbintenis · Op elk moment opzegbaar' : 'Sans engagement · Annulable à tout moment';
+
+  const stats = isNL
+    ? [
+        { value: '2286', label: 'vragen',   color: '#4ecdc4' },
+        { value: '9',    label: "thema's",  color: '#FFD700' },
+        { value: '7d',   label: 'gratis',   color: '#2ecc71' },
+      ]
+    : [
+        { value: '2286', label: 'questions', color: '#4ecdc4' },
+        { value: '9',    label: 'thèmes',    color: '#FFD700' },
+        { value: '7j',   label: 'gratuits',  color: '#2ecc71' },
+      ];
 
   return (
     <div className="min-h-screen relative overflow-hidden" style={{ background: '#0a0e2a' }}>
@@ -63,21 +98,16 @@ export default function PremiumGate({ children }: PremiumGateProps) {
 
         {/* Emotional headline */}
         <h2 className="text-center font-black mb-3" style={{ color: '#fff', fontSize: 26, letterSpacing: '-0.5px' }}>
-          Ces 2286 questions te manquent 😔
+          {headline}
         </h2>
 
         <p className="text-center mb-8" style={{ color: 'rgba(255,255,255,0.55)', fontSize: 15, maxWidth: 360, lineHeight: 1.6 }}>
-          L&apos;examen blanc complet, le mode Turbo illimité, tous les thèmes B→I.
-          Débloque tout pour <strong style={{ color: '#FFD700' }}>7€/mois</strong>.
+          {subtext} <strong style={{ color: '#FFD700' }}>7€/mois</strong>.
         </p>
 
         {/* Stats */}
         <div className="flex gap-8 mb-8">
-          {[
-            { value: '2286', label: 'questions', color: '#4ecdc4' },
-            { value: '9',    label: 'thèmes',    color: '#FFD700' },
-            { value: '7j',   label: 'gratuits',  color: '#2ecc71' },
-          ].map(s => (
+          {stats.map(s => (
             <div key={s.label} className="text-center">
               <div className="font-black" style={{ color: s.color, fontSize: 24 }}>{s.value}</div>
               <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: 12, marginTop: 2 }}>{s.label}</div>
@@ -101,11 +131,11 @@ export default function PremiumGate({ children }: PremiumGateProps) {
             display: 'inline-block',
           }}
         >
-          ⭐ Essayer 7 jours GRATUITS
+          {ctaLabel}
         </Link>
 
         <p className="mt-3 text-center" style={{ color: 'rgba(255,255,255,0.3)', fontSize: 12 }}>
-          Sans engagement · Annulable à tout moment
+          {noCommit}
         </p>
 
         {children}
