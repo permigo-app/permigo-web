@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, Suspense } from 'react';
+import { useState, useRef, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getExamQuestionsLocalized, getNextThemeCode, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
@@ -29,9 +29,57 @@ function ExamContent() {
   const [gastonMsg, setGastonMsg] = useState('');
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'impressed' | 'unhappy' | 'thinking'>('thinking');
   const [shakeWrong, setShakeWrong] = useState(false);
+  const [isResuming, setIsResuming] = useState(false);
   const startTimeRef = useRef(Date.now());
+  const hasRestoredRef = useRef(false);
 
   const color = THEME_COLORS[themeCode] || '#74B9FF';
+
+  // Check if there's an active (non-completed) exam for this theme
+  const hasActiveExam = typeof window !== 'undefined' && (() => {
+    try {
+      const saved = localStorage.getItem('exam_active');
+      if (!saved) return false;
+      const data = JSON.parse(saved);
+      return !data.completed && data.themeCode === themeCode;
+    } catch { return false; }
+  })();
+
+  // Restore exam session on mount
+  useEffect(() => {
+    if (hasRestoredRef.current) return;
+    hasRestoredRef.current = true;
+    try {
+      const saved = localStorage.getItem('exam_active');
+      if (!saved) return;
+      const data = JSON.parse(saved);
+      if (data.completed || data.themeCode !== themeCode) return;
+      if (!data.questionIds || data.questionIds.length === 0) return;
+
+      // Rebuild question list from stored IDs (reshuffle choices)
+      const allQs = getExamQuestionsLocalized(themeCode, lang, 500);
+      const orderedQs: LocalQuestion[] = data.questionIds
+        .map((id: string) => allQs.find((q: LocalQuestion) => q.id === id))
+        .filter(Boolean)
+        .map((q: LocalQuestion) => {
+          const s = shuffleChoices(q);
+          return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+        });
+
+      if (orderedQs.length === 0) return;
+
+      setQuestions(orderedQs);
+      setCurrentQ(data.currentQ || 0);
+      setCorrectCount(data.correctCount || 0);
+      setStarted(true);
+      setIsResuming(true);
+      startTimeRef.current = data.startTime || Date.now();
+      setGastonMsg(t('reflechis'));
+      setGastonExpr('thinking');
+    } catch {
+      localStorage.removeItem('exam_active');
+    }
+  }, [themeCode, lang]);
 
   // Premium gate: exams for themes B-I require premium (FINAL always requires premium)
   const examThemeFree = themeCode === 'A';
@@ -39,8 +87,8 @@ function ExamContent() {
     return <PremiumGate><></></PremiumGate>;
   }
 
-  // Weekly limit for non-premium on theme A
-  if (!isPremium() && !canPlayExam()) {
+  // Weekly limit — bypass if there's already an active (resumed) exam
+  if (!isPremium() && !canPlayExam() && !hasActiveExam) {
     const days = daysUntilNextExam();
     return (
       <div className="max-w-lg mx-auto px-4 py-16 text-center">
@@ -52,7 +100,7 @@ function ExamContent() {
             : "Tu pourras repasser l'examen dès demain."}
         </p>
         <p className="text-sm mb-8" style={{ color: '#5A6B8A' }}>
-          Les membres Premium peuvent passer l'examen sans limite.
+          Les membres Premium peuvent passer l&apos;examen sans limite.
         </p>
         <Link
           href="/premium"
@@ -66,17 +114,28 @@ function ExamContent() {
   }
 
   const startExam = () => {
-    if (!isPremium()) recordExamPlayed();
     const qs = getExamQuestionsLocalized(themeCode, lang, questionCount).map(q => {
       const s = shuffleChoices(q);
       return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
     });
+
+    // Save session — exam is NOT counted as used yet
+    localStorage.setItem('exam_active', JSON.stringify({
+      startTime: Date.now(),
+      themeCode,
+      currentQ: 0,
+      correctCount: 0,
+      questionIds: qs.map(q => q.id),
+      completed: false,
+    }));
+
     setQuestions(qs);
     setCurrentQ(0);
     setSelected(null);
     setValidated(false);
     setCorrectCount(0);
     setStarted(true);
+    setIsResuming(false);
     startTimeRef.current = Date.now();
     setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
@@ -86,8 +145,23 @@ function ExamContent() {
     if (selected === null || validated) return;
     setValidated(true);
     const isCorrect = selected === questions[currentQ].correct;
+    const newScore = isCorrect ? correctCount + 1 : correctCount;
+
+    // Sync to localStorage
+    try {
+      const saved = localStorage.getItem('exam_active');
+      if (saved) {
+        const data = JSON.parse(saved);
+        localStorage.setItem('exam_active', JSON.stringify({
+          ...data,
+          correctCount: newScore,
+          currentQ,
+        }));
+      }
+    } catch { /* ignore */ }
+
     if (isCorrect) {
-      setCorrectCount(c => c + 1);
+      setCorrectCount(newScore);
       setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
       setGastonExpr('impressed');
     } else {
@@ -103,11 +177,36 @@ function ExamContent() {
     setValidated(false);
     setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
+
+    // Sync to localStorage
+    try {
+      const saved = localStorage.getItem('exam_active');
+      if (saved) {
+        const data = JSON.parse(saved);
+        localStorage.setItem('exam_active', JSON.stringify({
+          ...data,
+          currentQ: currentQ + 1,
+          correctCount,
+        }));
+      }
+    } catch { /* ignore */ }
+
     if (currentQ + 1 < questions.length) { setCurrentQ(q => q + 1); }
     else { finishExam(); }
   };
 
   const finishExam = () => {
+    // Mark completed in localStorage — exam now counts as used
+    try {
+      const saved = localStorage.getItem('exam_active');
+      if (saved) {
+        const data = JSON.parse(saved);
+        localStorage.setItem('exam_active', JSON.stringify({ ...data, completed: true }));
+      }
+    } catch { /* ignore */ }
+
+    if (!isPremium()) recordExamPlayed(); // Only counted HERE (50 questions done)
+
     const total = questions.length;
     const pct = total > 0 ? (correctCount / total) * 100 : 0;
     const passed = pct >= 82;
@@ -125,6 +224,19 @@ function ExamContent() {
     updateXP(xpEarned);
     addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
     router.push(`/resultats?correct=${correctCount}&total=${total}&stars=0&xp=${xpEarned}&theme=${themeCode}&exam=1`);
+  };
+
+  // Explicit abandon — counts as used
+  const handleAbandon = () => {
+    try {
+      const saved = localStorage.getItem('exam_active');
+      if (saved) {
+        const data = JSON.parse(saved);
+        localStorage.setItem('exam_active', JSON.stringify({ ...data, completed: true }));
+      }
+    } catch { /* ignore */ }
+    if (!isPremium()) recordExamPlayed();
+    router.push('/');
   };
 
   // Start screen
@@ -166,7 +278,7 @@ function ExamContent() {
       progress={pctDone}
       progressLabel={`${currentQ + 1}/${questions.length}`}
       headerLeft={
-        <button onClick={() => router.push('/')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+        <button onClick={handleAbandon} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
           {'✕'}
         </button>
       }
@@ -194,6 +306,15 @@ function ExamContent() {
       questionId={q.id || `exam_${themeCode}_q${currentQ}`}
       sidebar={
         <>
+          {/* Reprise banner */}
+          {isResuming && (
+            <div className="rounded-2xl p-4" style={{ background: 'rgba(78,205,196,0.1)', border: '1px solid rgba(78,205,196,0.3)' }}>
+              <p className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
+                📝 Tu avais commencé cet examen — on reprend là où tu en étais
+              </p>
+            </div>
+          )}
+
           {/* Score en temps réel */}
           <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
             <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('examen_score_direct')}</h4>
