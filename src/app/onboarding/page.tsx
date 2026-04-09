@@ -48,6 +48,109 @@ const goalLabels: Record<string, string> = {
   fun:   "M'amuser en apprenant",
 };
 
+// SVG body différent selon le type de voiture
+function CarBodySVG({ type, color }: { type: string; color: string }) {
+  const c = color;
+  const glass = '#a8d8f0';
+  switch (type) {
+    case 'suv':
+      return <>
+        {/* SUV — cabine large et haute */}
+        <rect x="12" y="60" width="176" height="42" rx="9" fill={c} />
+        <path d="M28 60 Q30 20 100 18 Q170 20 172 60 Z" fill={c} />
+        <path d="M106 22 Q162 24 170 58 L106 58 Z" fill={glass} opacity="0.85" />
+        <path d="M94 22 Q38 24 30 58 L94 58 Z" fill={glass} opacity="0.85" />
+        <rect x="94" y="20" width="12" height="38" fill={c} />
+        <rect x="12" y="90" width="176" height="5" rx="2" fill="rgba(255,255,255,0.18)" />
+        <ellipse cx="178" cy="72" rx="10" ry="7" fill="#FFD700" /><ellipse cx="178" cy="72" rx="6" ry="4" fill="#fff" opacity="0.5" />
+        <ellipse cx="22" cy="72" rx="9" ry="6" fill="#e74c3c" />
+        <circle cx="50" cy="102" r="17" fill="#222" /><circle cx="50" cy="102" r="10" fill="#555" /><circle cx="50" cy="102" r="4" fill="#333" />
+        <circle cx="150" cy="102" r="17" fill="#222" /><circle cx="150" cy="102" r="10" fill="#555" /><circle cx="150" cy="102" r="4" fill="#333" />
+      </>;
+    case 'sportive':
+      return <>
+        {/* Sportive — basse et allongée */}
+        <rect x="5" y="70" width="190" height="33" rx="12" fill={c} />
+        <path d="M60 70 Q72 46 105 44 Q138 46 148 70 Z" fill={c} />
+        {/* Capot long avant */}
+        <path d="M148 70 L190 68 L190 82 L148 82 Z" fill={c} />
+        <path d="M110 47 Q137 47 146 69 L110 69 Z" fill={glass} opacity="0.85" />
+        <path d="M100 47 Q73 47 64 69 L100 69 Z" fill={glass} opacity="0.85" />
+        <rect x="100" y="45" width="10" height="24" fill={c} />
+        <rect x="5" y="93" width="190" height="4" rx="2" fill="rgba(255,255,255,0.18)" />
+        <ellipse cx="184" cy="76" rx="9" ry="5" fill="#FFD700" /><ellipse cx="184" cy="76" rx="5" ry="3" fill="#fff" opacity="0.5" />
+        <ellipse cx="18" cy="78" rx="7" ry="5" fill="#e74c3c" />
+        <circle cx="44" cy="103" r="15" fill="#222" /><circle cx="44" cy="103" r="8" fill="#555" /><circle cx="44" cy="103" r="3" fill="#333" />
+        <circle cx="155" cy="103" r="15" fill="#222" /><circle cx="155" cy="103" r="8" fill="#555" /><circle cx="155" cy="103" r="3" fill="#333" />
+      </>;
+    case 'mini':
+      return <>
+        {/* Mini — courte et ronde */}
+        <rect x="28" y="64" width="144" height="38" rx="14" fill={c} />
+        <path d="M58 64 Q68 34 100 32 Q132 34 142 64 Z" fill={c} />
+        <path d="M103 36 Q130 36 140 63 L103 63 Z" fill={glass} opacity="0.85" />
+        <path d="M97 36 Q70 36 60 63 L97 63 Z" fill={glass} opacity="0.85" />
+        <rect x="97" y="34" width="6" height="29" fill={c} />
+        <rect x="28" y="92" width="144" height="4" rx="2" fill="rgba(255,255,255,0.18)" />
+        <ellipse cx="164" cy="74" rx="8" ry="6" fill="#FFD700" /><ellipse cx="164" cy="74" rx="5" ry="3" fill="#fff" opacity="0.5" />
+        <ellipse cx="36" cy="74" rx="7" ry="5" fill="#e74c3c" />
+        <circle cx="58" cy="102" r="15" fill="#222" /><circle cx="58" cy="102" r="8" fill="#555" /><circle cx="58" cy="102" r="3" fill="#333" />
+        <circle cx="142" cy="102" r="15" fill="#222" /><circle cx="142" cy="102" r="8" fill="#555" /><circle cx="142" cy="102" r="3" fill="#333" />
+      </>;
+    case 'van':
+      return <>
+        {/* Van — grand et carré */}
+        <rect x="14" y="38" width="170" height="64" rx="8" fill={c} />
+        {/* Pare-brise avant */}
+        <path d="M152 42 Q180 44 182 65 L152 65 Z" fill={glass} opacity="0.85" />
+        {/* Vitres latérales */}
+        <rect x="18" y="44" width="42" height="26" rx="4" fill={glass} opacity="0.75" />
+        <rect x="68" y="44" width="42" height="26" rx="4" fill={glass} opacity="0.75" />
+        <rect x="118" y="44" width="28" height="26" rx="4" fill={glass} opacity="0.75" />
+        <rect x="14" y="92" width="170" height="5" rx="2" fill="rgba(255,255,255,0.18)" />
+        <ellipse cx="180" cy="74" rx="9" ry="7" fill="#FFD700" /><ellipse cx="180" cy="74" rx="5" ry="4" fill="#fff" opacity="0.5" />
+        <ellipse cx="18" cy="74" rx="8" ry="6" fill="#e74c3c" />
+        <circle cx="46" cy="102" r="16" fill="#222" /><circle cx="46" cy="102" r="9" fill="#555" /><circle cx="46" cy="102" r="4" fill="#333" />
+        <circle cx="154" cy="102" r="16" fill="#222" /><circle cx="154" cy="102" r="9" fill="#555" /><circle cx="154" cy="102" r="4" fill="#333" />
+      </>;
+    case 'pickup':
+      return <>
+        {/* Pick-up — cabine + plateau arrière */}
+        {/* Plateau */}
+        <rect x="10" y="68" width="80" height="34" rx="5" fill={c} />
+        {/* Bords plateau */}
+        <rect x="10" y="56" width="5" height="14" rx="2" fill={c} />
+        <rect x="85" y="56" width="5" height="14" rx="2" fill={c} />
+        <rect x="10" y="56" width="80" height="5" rx="2" fill={c} />
+        {/* Cabine */}
+        <rect x="90" y="54" width="100" height="48" rx="9" fill={c} />
+        <path d="M148 58 Q182 58 188 74 L148 74 Z" fill={glass} opacity="0.85" />
+        <path d="M142 58 Q108 58 94 74 L142 74 Z" fill={glass} opacity="0.85" />
+        <rect x="142" y="56" width="8" height="18" fill={c} />
+        <rect x="10" y="92" width="180" height="4" rx="2" fill="rgba(255,255,255,0.18)" />
+        <ellipse cx="183" cy="72" rx="9" ry="6" fill="#FFD700" /><ellipse cx="183" cy="72" rx="5" ry="3" fill="#fff" opacity="0.5" />
+        <ellipse cx="14" cy="78" rx="7" ry="5" fill="#e74c3c" />
+        <circle cx="36" cy="102" r="16" fill="#222" /><circle cx="36" cy="102" r="9" fill="#555" /><circle cx="36" cy="102" r="4" fill="#333" />
+        <circle cx="158" cy="102" r="16" fill="#222" /><circle cx="158" cy="102" r="9" fill="#555" /><circle cx="158" cy="102" r="4" fill="#333" />
+      </>;
+    default: // berline
+      return <>
+        {/* Berline — standard */}
+        <rect x="10" y="60" width="180" height="42" rx="10" fill={c} />
+        <path d="M50 60 Q60 28 100 26 Q140 28 150 60 Z" fill={c} />
+        <path d="M103 30 Q135 30 148 58 L103 58 Z" fill={glass} opacity="0.85" />
+        <path d="M97 30 Q65 30 52 58 L97 58 Z" fill={glass} opacity="0.85" />
+        <rect x="98" y="30" width="4" height="28" fill={c} />
+        <rect x="10" y="92" width="180" height="5" rx="2" fill="rgba(255,255,255,0.18)" />
+        <ellipse cx="178" cy="72" rx="10" ry="7" fill="#FFD700" /><ellipse cx="178" cy="72" rx="6" ry="4" fill="#fff" opacity="0.5" />
+        <ellipse cx="22" cy="72" rx="9" ry="6" fill="#e74c3c" />
+        <circle cx="52" cy="102" r="16" fill="#222" /><circle cx="52" cy="102" r="9" fill="#555" /><circle cx="52" cy="102" r="4" fill="#333" />
+        <circle cx="148" cy="102" r="16" fill="#222" /><circle cx="148" cy="102" r="9" fill="#555" /><circle cx="148" cy="102" r="4" fill="#333" />
+        <rect x="87" y="73" width="26" height="5" rx="2.5" fill="rgba(255,255,255,0.25)" />
+      </>;
+  }
+}
+
 // Convert hex color to HSL hue (0-360)
 function hexToHue(hex: string): number {
   const r = parseInt(hex.slice(1, 3), 16) / 255;
@@ -316,34 +419,7 @@ export default function OnboardingPage() {
                   filter: `drop-shadow(0 4px 12px ${carColor}88)`,
                 }}
               >
-                {/* Carrosserie principale */}
-                <rect x="10" y="60" width="180" height="42" rx="10" fill={carColor} />
-                {/* Toit / cabine */}
-                <path d="M50 60 Q60 28 100 26 Q140 28 150 60 Z" fill={carColor} />
-                {/* Vitre avant */}
-                <path d="M103 30 Q135 30 148 58 L103 58 Z" fill="#a8d8f0" opacity="0.85" />
-                {/* Vitre arrière */}
-                <path d="M97 30 Q65 30 52 58 L97 58 Z" fill="#a8d8f0" opacity="0.85" />
-                {/* Montant central vitre */}
-                <rect x="98" y="30" width="4" height="28" fill={carColor} />
-                {/* Bande chromée bas de caisse */}
-                <rect x="10" y="92" width="180" height="5" rx="2" fill="rgba(255,255,255,0.18)" />
-                {/* Phare avant */}
-                <ellipse cx="178" cy="72" rx="10" ry="7" fill="#FFD700" />
-                <ellipse cx="178" cy="72" rx="6" ry="4" fill="#fff" opacity="0.5" />
-                {/* Phare arrière */}
-                <ellipse cx="22" cy="72" rx="9" ry="6" fill="#e74c3c" />
-                <ellipse cx="22" cy="72" rx="5" ry="3" fill="#c0392b" opacity="0.6" />
-                {/* Roue arrière */}
-                <circle cx="52" cy="102" r="16" fill="#222" />
-                <circle cx="52" cy="102" r="9" fill="#555" />
-                <circle cx="52" cy="102" r="4" fill="#333" />
-                {/* Roue avant */}
-                <circle cx="148" cy="102" r="16" fill="#222" />
-                <circle cx="148" cy="102" r="9" fill="#555" />
-                <circle cx="148" cy="102" r="4" fill="#333" />
-                {/* Poignée de porte */}
-                <rect x="87" y="73" width="26" height="5" rx="2.5" fill="rgba(255,255,255,0.25)" />
+                <CarBodySVG type={carType} color={carColor} />
               </svg>
             </div>
 

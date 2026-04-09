@@ -488,7 +488,6 @@ export default function LessonPage() {
                   <Gaston
                     message={gastonTheoryTip}
                     expression="encouraging"
-                    size="small"
                     title={t('prof_gaston')}
                   />
                 </div>
@@ -626,7 +625,7 @@ export default function LessonPage() {
 
             {/* Gaston */}
             <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-              <Gaston message={gastonMsg} expression={gastonExpr} size="small" title={t('prof_gaston')} animClass={gastonAnim} />
+              <Gaston message={gastonMsg} expression={gastonExpr} title={t('prof_gaston')} animClass={gastonAnim} />
             </div>
 
             {/* Explanation in sidebar after validation */}

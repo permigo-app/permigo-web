@@ -157,7 +157,7 @@ export default function QuizPage() {
 
           {/* Gaston */}
           <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-            <Gaston message={gastonMsg || t('reflechis')} expression={gastonExpr} size="small" title={t('prof_gaston')} animClass={gastonAnim} />
+            <Gaston message={gastonMsg || t('reflechis')} expression={gastonExpr} title={t('prof_gaston')} animClass={gastonAnim} />
           </div>
 
           {/* Explanation in sidebar after validation */}
