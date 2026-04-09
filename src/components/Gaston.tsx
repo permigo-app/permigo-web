@@ -8,7 +8,7 @@ type GastonExpression = 'happy' | 'encouraging' | 'unhappy' | 'impressed' | 'par
 interface GastonProps {
   message?: string;
   expression?: GastonExpression;
-  size?: 'normal' | 'small';
+  size?: 'normal' | 'small' | 'large';
   title?: string;
   compact?: boolean;
   animClass?: string;
@@ -235,13 +235,14 @@ export default function Gaston({ message, expression = 'happy', size = 'normal',
   useEffect(() => { setVisible(true); }, []);
 
   const isSmall = size === 'small' || compact;
-  const gastonH = isSmall ? 40 : 55;
+  const isLarge = size === 'large';
+  const gastonH = isSmall ? 40 : isLarge ? 100 : 55;
   const gastonW = gastonH * (160 / 120);
 
   return (
     <div className={`flex items-start gap-1 transition-all duration-500 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
       {/* Gaston avatar */}
-      <div className="flex-shrink-0" style={{ width: isSmall ? 54 : 74, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
+      <div className="flex-shrink-0" style={{ width: isSmall ? 54 : isLarge ? 135 : 74, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
         <Image src="/images/gaston.png" width={gastonW} height={gastonH} alt="Prof. Gaston" className={animClass} style={{ objectFit: 'contain' }} />
       </div>
 

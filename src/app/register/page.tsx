@@ -36,7 +36,7 @@ export default function RegisterPage() {
           <br />{t('register_verif_lien')}
         </p>
         <div className="mb-6">
-          <Gaston message={t('register_gaston_spam')} expression="happy" size="small" />
+          <Gaston message={t('register_gaston_spam')} expression="happy" size="large" />
         </div>
         <Link href="/login" className="inline-block py-3.5 px-8 rounded-2xl font-black text-white press-scale" style={{ background: '#00B894' }}>
           {t('register_retour')}
@@ -84,7 +84,7 @@ export default function RegisterPage() {
       </div>
 
       <div className="mb-6">
-        <Gaston message={t('register_gaston')} expression="party" size="small" />
+        <Gaston message={t('register_gaston')} expression="party" size="large" />
       </div>
 
       <form onSubmit={handleRegister} className="flex flex-col gap-3 mb-6">

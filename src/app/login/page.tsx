@@ -66,7 +66,7 @@ export default function LoginPage() {
       </div>
 
       <div className="mb-6">
-        <Gaston message={t('login_gaston')} expression="happy" size="small" />
+        <Gaston message={t('login_gaston')} expression="happy" size="large" />
       </div>
 
       <form onSubmit={handleLogin} className="flex flex-col gap-3 mb-4">
