@@ -119,7 +119,7 @@ export default function HomePage() {
   const [streak, setStreak] = useState({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
   const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
   const [mounted, setMounted] = useState(false);
-  const [userCar, setUserCar] = useState<{ carType: string; carColor: string }>({ carType: 'berline', carColor: '#1E88E5' });
+  const [userCar, setUserCar] = useState<{ carType: string; carColor: string; carImage?: string }>({ carType: 'berline', carColor: '#1E88E5' });
 
   const DEFAULT_ADJ: Record<string, { dx: number; dy: number; scale: number; rot: number }> = {
     "mon-A-0": { dx: -140, dy: -140, scale: 1.3, rot: 0 },
@@ -175,10 +175,17 @@ export default function HomePage() {
     setXp(getXPData());
     setStreak(checkAndUpdateStreak());
     try {
-      const raw = localStorage.getItem('userProfile');
-      if (raw) {
-        const p = JSON.parse(raw);
-        if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#1E88E5' });
+      // Try new userCar key first (PNG cars from onboarding v2)
+      const rawCar = localStorage.getItem('userCar');
+      if (rawCar) {
+        const c = JSON.parse(rawCar);
+        setUserCar({ carType: c.id, carColor: c.color || '#1E88E5', carImage: c.image });
+      } else {
+        const raw = localStorage.getItem('userProfile');
+        if (raw) {
+          const p = JSON.parse(raw);
+          if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#1E88E5' });
+        }
       }
     } catch {}
   }, []);
@@ -980,7 +987,12 @@ export default function HomePage() {
               zIndex: 20,
               transform: `rotate(${carTilt}deg)`,
             }}>
-              <CarSVG type={userCar.carType} color={userCar.carColor} size={CAR_SIZE + 10} />
+              {userCar.carImage ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={userCar.carImage} alt="car" width={CAR_SIZE + 10} height={CAR_SIZE + 10} style={{ objectFit: 'contain', filter: `drop-shadow(0 4px 8px ${userCar.carColor}88)` }} />
+              ) : (
+                <CarSVG type={userCar.carType} color={userCar.carColor} size={CAR_SIZE + 10} />
+              )}
             </div>
           )}
 
