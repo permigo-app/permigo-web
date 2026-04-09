@@ -31,7 +31,7 @@ const CAR_EMOJIS: Record<string, string> = {
   sportive:  '🏎️',
   mini:      '🚕',
   van:       '🚐',
-  pickup:    '🛻',
+  pickup:    '🚚',
 };
 
 const GASTON_MESSAGES: Record<number, string> = {
@@ -519,7 +519,7 @@ export default function OnboardingPage() {
         .gaston-onboarding > div:first-child { width: 72px !important; }
         .gaston-onboarding p.font-semibold { font-size: 15px !important; line-height: 1.4 !important; }
       `}</style>
-      <div className="fixed bottom-6 right-6 z-50 gaston-onboarding" style={{ maxWidth: 260 }}>
+      <div className="fixed bottom-6 left-4 z-50 gaston-onboarding" style={{ maxWidth: 260 }}>
         <Gaston message={GASTON_MESSAGES[step]} expression="happy" />
       </div>
 
