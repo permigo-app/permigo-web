@@ -313,9 +313,9 @@ export default function HomePage() {
     // Available width between left sidebar (250px) and right sidebar (500px)
     const availableW = typeof window !== 'undefined' ? window.innerWidth - 250 - 500 : 400;
     const SVG_W = Math.min(600, Math.max(300, availableW));
-    const CX = SVG_W * 0.14;  // road shifted more left
+    const CX = SVG_W * 0.5;  // road centered in available space
     // Zigzag amplitude
-    const AMP = Math.min((SVG_W - 100) / 2, 110);
+    const AMP = Math.min((SVG_W - 80) / 2, 120);
 
     // ── Positions with extra gap at theme boundaries ──
     const themeStartSet = new Set(themeAt.keys());
