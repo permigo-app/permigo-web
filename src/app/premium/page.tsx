@@ -6,30 +6,29 @@ import { useLang } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
 import Link from 'next/link';
 
-const FREE_FEATURES = [
-  { ok: true,  label: 'Thème A complet (La route)' },
-  { ok: true,  label: '1 examen blanc / semaine' },
-  { ok: true,  label: '5 sessions Turbo / jour' },
-  { ok: false, label: 'Thèmes B → I (8 thèmes)' },
-  { ok: false, label: 'Examens blancs illimités' },
-  { ok: false, label: 'Turbo illimité' },
-  { ok: true,  label: 'Cartes Flash & Révision' },
-];
-
-const PREMIUM_FEATURES = [
-  { icon: '📚', label: 'Tous les thèmes A → I débloqués' },
-  { icon: '📝', label: 'Examens blancs illimités' },
-  { icon: '⚡', label: 'Mode Turbo sans limite' },
-  { icon: '🃏', label: 'Cartes Flash & Révision' },
-];
-
-
 export default function PremiumPage() {
   const { t } = useLang();
   const { supabaseUser } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  const FREE_FEATURES = [
+    { ok: true,  label: t('premium_f1') },
+    { ok: true,  label: t('premium_f2') },
+    { ok: true,  label: t('premium_f3') },
+    { ok: false, label: t('premium_f4') },
+    { ok: false, label: t('premium_f5') },
+    { ok: false, label: t('premium_f6') },
+    { ok: true,  label: t('premium_f7') },
+  ];
+
+  const PREMIUM_FEATURES = [
+    { icon: '📚', label: t('premium_pf1') },
+    { icon: '📝', label: t('premium_pf2') },
+    { icon: '⚡', label: t('premium_pf3') },
+    { icon: '🃏', label: t('premium_pf4') },
+  ];
 
   const handleSubscribe = async () => {
     setLoading(true);
@@ -64,14 +63,14 @@ export default function PremiumPage() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black mb-5 uppercase tracking-widest"
             style={{ background: 'rgba(255,215,0,0.12)', border: '1px solid rgba(255,215,0,0.3)', color: '#FFD700' }}>
-            ✨ Essai gratuit 7 jours
+            {t('premium_badge')}
           </div>
           <h1 className="text-4xl font-black text-white mb-3 leading-tight">
-            Prépare ton permis<br />
-            <span style={{ color: '#FFD700' }}>sans limites</span>
+            {t('premium_hero_titre')}<br />
+            <span style={{ color: '#FFD700' }}>{t('premium_hero_accent')}</span>
           </h1>
           <p className="text-base" style={{ color: '#8B9DC3' }}>
-            Débloque les 8 thèmes restants et passe ton examen du premier coup.
+            {t('premium_hero_subtitle')}
           </p>
         </div>
 
@@ -80,7 +79,7 @@ export default function PremiumPage() {
           <div className="grid grid-cols-3">
             <div className="px-4 py-3" style={{ background: '#16213E' }} />
             <div className="px-4 py-3 text-center" style={{ background: '#16213E', borderLeft: '1px solid #2A3550' }}>
-              <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#5A6B8A' }}>Gratuit</span>
+              <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#5A6B8A' }}>{t('premium_gratuit_col')}</span>
             </div>
             <div className="px-4 py-3 text-center" style={{ background: 'rgba(255,215,0,0.06)', borderLeft: '1px solid rgba(255,215,0,0.2)' }}>
               <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#FFD700' }}>⭐ Premium</span>
@@ -105,12 +104,12 @@ export default function PremiumPage() {
         <div className="rounded-2xl p-8 mb-8" style={{ background: 'linear-gradient(135deg, #1C2345, #16213E)', border: '2px solid rgba(255,215,0,0.3)', boxShadow: '0 8px 40px rgba(255,215,0,0.1)' }}>
           <div className="flex items-start justify-between mb-6">
             <div>
-              <h2 className="text-2xl font-black text-white mb-1">MyPermiGo Premium</h2>
-              <p className="text-sm" style={{ color: '#8B9DC3' }}>Accès complet à toute l&apos;app</p>
+              <h2 className="text-2xl font-black text-white mb-1">{t('premium_card_titre')}</h2>
+              <p className="text-sm" style={{ color: '#8B9DC3' }}>{t('premium_card_acces')}</p>
             </div>
             <div className="text-right">
               <p className="text-3xl font-black text-white">7€</p>
-              <p className="text-xs" style={{ color: '#8B9DC3' }}>/mois</p>
+              <p className="text-xs" style={{ color: '#8B9DC3' }}>{t('premium_card_mois')}</p>
             </div>
           </div>
 
@@ -135,18 +134,18 @@ export default function PremiumPage() {
               boxShadow: loading ? 'none' : '0 4px 24px rgba(78,205,196,0.4)',
             }}
           >
-            {loading ? 'Chargement…' : 'Commencer l\'essai gratuit — 7 jours ✨'}
+            {loading ? t('premium_chargement') : t('premium_essai_btn')}
           </button>
 
           <p className="text-center text-xs" style={{ color: '#5A6B8A' }}>
-            Aucun paiement maintenant · Annulable à tout moment
+            {t('premium_sans_paiement')}
           </p>
         </div>
 
-{/* Back link */}
+        {/* Back link */}
         <div className="text-center">
           <Link href="/" className="text-sm" style={{ color: '#5A6B8A' }}>
-            Revenir à l&apos;accueil
+            {t('premium_retour')}
           </Link>
         </div>
       </div>

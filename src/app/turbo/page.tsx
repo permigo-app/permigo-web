@@ -257,11 +257,11 @@ export default function TurboPage() {
               <div className="rounded-2xl p-5 mb-6 flex flex-col sm:flex-row items-center gap-4" style={{ background: 'rgba(255,107,107,0.12)', border: '1.5px solid rgba(255,107,107,0.4)' }}>
                 <span className="text-3xl">⏰</span>
                 <div className="flex-1 text-center sm:text-left">
-                  <p className="font-black text-white mb-1">Tu as atteint ta limite du jour</p>
-                  <p className="text-sm" style={{ color: '#8B9DC3' }}>Passe Premium pour jouer sans limite — reviens demain sinon.</p>
+                  <p className="font-black text-white mb-1">{t('turbo_limite_titre')}</p>
+                  <p className="text-sm" style={{ color: '#8B9DC3' }}>{t('turbo_limite_msg')}</p>
                 </div>
                 <Link href="/premium" className="flex-shrink-0 px-5 py-2.5 rounded-xl font-black text-sm press-scale" style={{ background: '#FFD700', color: '#0a0e2a' }}>
-                  Passer Premium ✨
+                  {t('passer_premium')} ✨
                 </Link>
               </div>
             )}
@@ -270,7 +270,7 @@ export default function TurboPage() {
             {!isPremium() && turboCount < 5 && (
               <div className="mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ background: 'rgba(78,205,196,0.1)', border: '1px solid rgba(78,205,196,0.2)' }}>
                 <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
-                  {5 - turboCount} partie{5 - turboCount > 1 ? 's' : ''} restante{5 - turboCount > 1 ? 's' : ''} aujourd&apos;hui
+                  {5 - turboCount} {t(5 - turboCount > 1 ? 'turbo_parties_restantes' : 'turbo_partie_restante')}
                 </span>
               </div>
             )}

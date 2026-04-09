@@ -118,7 +118,7 @@ export default function Navbar() {
               style={{ background: 'rgba(255,215,0,0.15)', border: '1px solid rgba(255,215,0,0.4)' }}
             >
               <span className="text-xl">⭐</span>
-              <span className="text-sm font-bold" style={{ color: '#FFD700' }}>Passer Premium</span>
+              <span className="text-sm font-bold" style={{ color: '#FFD700' }}>{t('passer_premium')}</span>
             </Link>
           )}
 
