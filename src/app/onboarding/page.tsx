@@ -194,15 +194,23 @@ export default function OnboardingPage() {
               Belgique • FR + NL
             </p>
 
-            {/* Car with glow */}
-            <div className="relative flex items-center justify-center mb-8" style={{ width: 220, height: 140 }}>
-              <div className="absolute rounded-full" style={{
-                width: 180, height: 120,
-                background: 'radial-gradient(circle, rgba(78,205,196,0.35) 0%, transparent 70%)',
-                filter: 'blur(20px)',
-              }} />
-              <div className="car-bounce relative z-10">
-                <CarSVG type="berline" color="#4ecdc4" size={190} />
+            {/* Gaston grand + bulle de bienvenue */}
+            <div className="flex items-center gap-4 w-full mb-8">
+              <div className="gaston-big flex-shrink-0" style={{ width: 130, animation: 'gastonBounce 2.2s ease-in-out infinite', overflow: 'visible' }}>
+                <Gaston expression="happy" />
+              </div>
+              <div style={{
+                flex: 1,
+                background: '#1a2040',
+                border: '1.5px solid rgba(78,205,196,0.3)',
+                borderRadius: '16px 16px 16px 0',
+                padding: '16px 20px',
+                fontSize: 15,
+                color: 'white',
+                lineHeight: 1.55,
+                fontWeight: 600,
+              }}>
+                Bienvenue&nbsp;! Je suis <strong>Prof.&nbsp;Gaston</strong>, ton guide vers le permis belge.&nbsp;🎓
               </div>
             </div>
 
@@ -536,7 +544,7 @@ export default function OnboardingPage() {
 
       </div>
 
-      {/* Gaston — bottom right, bigger + bounce */}
+      {/* Gaston — bas gauche, caché sur step 1 (déjà affiché en grand) */}
       <style>{`
         @keyframes gastonBounce {
           0%, 100% { transform: translateY(0px); }
@@ -546,10 +554,13 @@ export default function OnboardingPage() {
         .gaston-onboarding svg { width: 64px !important; height: 48px !important; }
         .gaston-onboarding > div:first-child { width: 72px !important; }
         .gaston-onboarding p.font-semibold { font-size: 15px !important; line-height: 1.4 !important; }
+        .gaston-big svg { width: 128px !important; height: 96px !important; }
       `}</style>
-      <div className="fixed bottom-6 left-4 z-50 gaston-onboarding" style={{ maxWidth: 260 }}>
-        <Gaston message={GASTON_MESSAGES[step]} expression="happy" />
-      </div>
+      {step > 1 && (
+        <div className="fixed bottom-6 left-4 z-50 gaston-onboarding" style={{ maxWidth: 260 }}>
+          <Gaston message={GASTON_MESSAGES[step]} expression="happy" />
+        </div>
+      )}
 
     </div>
   );
