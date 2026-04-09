@@ -41,27 +41,31 @@ interface FlashPanelProps {
 export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMasteredChange }: FlashPanelProps) {
   const { t, lang } = useLang();
   const signs = useMemo(() => getSignsByCategory(catId, lang), [catId, lang]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // deck = ordered list of sign codes to review; "revoir" pushes to end, "maîtrisé" removes
+  const [deck, setDeck] = useState<string[]>([]);
+  const [deckPos, setDeckPos] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setMasteredMap(loadAllMastered());
+    const all = loadAllMastered();
+    setMasteredMap(all);
     setFlipped(false);
-    if (initialSignCode) {
-      const idx = signs.findIndex(s => s.code === initialSignCode);
-      if (idx >= 0) setCurrentIndex(idx);
-      else setCurrentIndex(0);
+    // Build deck: unmastered first, then mastered; start on initialSignCode if provided
+    const unmastered = signs.filter(s => !all[s.code]).map(s => s.code);
+    const mastered   = signs.filter(s =>  all[s.code]).map(s => s.code);
+    const newDeck = [...unmastered, ...mastered];
+    setDeck(newDeck);
+    if (initialSignCode && newDeck.includes(initialSignCode)) {
+      setDeckPos(newDeck.indexOf(initialSignCode));
     } else {
-      const all = loadAllMastered();
-      const firstUnmastered = signs.findIndex(s => !all[s.code]);
-      setCurrentIndex(firstUnmastered >= 0 ? firstUnmastered : 0);
+      setDeckPos(0);
     }
     setLoaded(true);
   }, [catId, signs, initialSignCode]);
 
-  const current = signs[currentIndex] || null;
+  const current = deck.length > 0 ? (signs.find(s => s.code === deck[deckPos]) ?? null) : null;
   const total = signs.length;
   const masteredCount = signs.filter(s => masteredMap[s.code]).length;
   const isMastered = current ? !!masteredMap[current.code] : false;
@@ -75,26 +79,32 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
     setMasteredMap(updated);
     setFlipped(false);
     onMasteredChange?.();
-    if (mastered) {
-      const nextUnmastered = signs.findIndex((s, i) => i > currentIndex && !updated[s.code]);
-      if (nextUnmastered >= 0) setCurrentIndex(nextUnmastered);
-      else {
-        const wrapUnmastered = signs.findIndex(s => !updated[s.code]);
-        if (wrapUnmastered >= 0) setCurrentIndex(wrapUnmastered);
-        else if (currentIndex < total - 1) setCurrentIndex(currentIndex + 1);
+
+    setDeck(prev => {
+      const newDeck = [...prev];
+      if (mastered) {
+        // Maîtrisé : retire la carte du deck
+        newDeck.splice(deckPos, 1);
+      } else {
+        // À revoir : déplace la carte à la fin du deck
+        const [code] = newDeck.splice(deckPos, 1);
+        newDeck.push(code);
       }
-    }
-  }, [current, masteredMap, currentIndex, signs, total, onMasteredChange]);
+      // Ajuste la position si on était à la fin
+      setDeckPos(p => (newDeck.length === 0 ? 0 : p >= newDeck.length ? 0 : p));
+      return newDeck;
+    });
+  }, [current, masteredMap, deckPos, onMasteredChange]);
 
   const goPrev = useCallback(() => {
     setFlipped(false);
-    setCurrentIndex(i => (i - 1 + total) % total);
-  }, [total]);
+    setDeckPos(i => (i - 1 + deck.length) % Math.max(1, deck.length));
+  }, [deck.length]);
 
   const goNext = useCallback(() => {
     setFlipped(false);
-    setCurrentIndex(i => (i + 1) % total);
-  }, [total]);
+    setDeckPos(i => (i + 1) % Math.max(1, deck.length));
+  }, [deck.length]);
 
   if (!loaded || signs.length === 0) {
     return (
@@ -204,7 +214,7 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
           >
             <span style={{ color: '#8B9DC3' }}>←</span>
           </button>
-          <span className="text-xs font-bold" style={{ color: '#8B9DC3' }}>{currentIndex + 1} / {total}</span>
+          <span className="text-xs font-bold" style={{ color: '#8B9DC3' }}>{deck.length > 0 ? deckPos + 1 : 0} / {total}</span>
           <button
             onClick={(e) => { e.stopPropagation(); goNext(); }}
             className="w-10 h-10 rounded-xl flex items-center justify-center press-scale"
