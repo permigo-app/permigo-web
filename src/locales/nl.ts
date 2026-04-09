@@ -390,7 +390,6 @@ const nl: Record<string, string> = {
   onboarding_final_subtitle: 'Jouw avontuur begint nu 🚀',
   onboarding_voiture_ma: 'Dit is mijn auto →',
   onboarding_voiture_couleur: 'Kies een kleur',
-  onboarding_voiture_choisir: 'Kies een auto',
   banner_debloquer: 'Ontgrendel de 8 resterende thema\'s —',
   banner_essai: '7 dagen gratis uitproberen',
   banner_essayer: 'Probeer',

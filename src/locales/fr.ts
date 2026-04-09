@@ -390,7 +390,6 @@ const fr: Record<string, string> = {
   onboarding_final_subtitle: 'Ton aventure commence maintenant 🚀',
   onboarding_voiture_ma: "C'est ma voiture →",
   onboarding_voiture_couleur: 'Choisis une couleur',
-  onboarding_voiture_choisir: 'Choisis une voiture',
   banner_debloquer: 'Débloque les 8 thèmes restants —',
   banner_essai: 'Essai gratuit 7 jours',
   banner_essayer: 'Essayer',
