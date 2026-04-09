@@ -251,7 +251,7 @@ export default function OnboardingPage() {
         <div className="flex items-center justify-center gap-6 w-full mb-6">
           <Image
             src="/images/gaston.png"
-            width={120} height={120}
+            width={140} height={140}
             alt="Prof. Gaston"
             className="gaston-float"
             style={{ objectFit: 'contain', flexShrink: 0 }}
@@ -260,12 +260,12 @@ export default function OnboardingPage() {
             background: '#1a2040',
             border: '1.5px solid rgba(78,205,196,0.3)',
             borderRadius: '16px 16px 16px 0',
-            padding: '16px 20px',
-            fontSize: 15,
+            padding: '18px 22px',
+            fontSize: 16,
             color: 'white',
             lineHeight: 1.55,
             fontWeight: 600,
-            maxWidth: 280,
+            maxWidth: 300,
           }}>
             {GASTON_MESSAGES[step]}
           </div>
@@ -274,6 +274,11 @@ export default function OnboardingPage() {
         {/* ═══════════ STEP 1 — Accueil ═══════════ */}
         {step === 1 && (
           <>
+            {/* Titre MyPermiGo */}
+            <div style={{ fontSize: '28px', fontWeight: 900, color: '#4ecdc4', letterSpacing: '-1px', marginBottom: '24px' }}>
+              MyPermiGo
+            </div>
+
             {/* Eyebrow */}
             <p className="text-xs font-black uppercase tracking-widest mb-5" style={{ color: 'rgba(78,205,196,0.7)' }}>
               Belgique • FR + NL
