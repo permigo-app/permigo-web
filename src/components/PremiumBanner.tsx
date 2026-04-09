@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useLang } from '@/contexts/LanguageContext';
 
 const HIDDEN_PATHS = ['/premium', '/login', '/signup'];
 
@@ -10,6 +11,7 @@ export default function PremiumBanner() {
   const [show, setShow] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const pathname = usePathname();
+  const { t } = useLang();
 
   useEffect(() => {
     const isPremium = localStorage.getItem('isPremium') === 'true';
@@ -35,8 +37,8 @@ export default function PremiumBanner() {
         <div className="flex items-center gap-2.5 min-w-0">
           <span className="text-lg flex-shrink-0">🔓</span>
           <p className="text-xs font-semibold truncate" style={{ color: '#d1d5db' }}>
-            Débloque les 8 thèmes restants —{' '}
-            <span style={{ color: '#FFD700' }}>Essai gratuit 7 jours</span>
+            {t('banner_debloquer')}{' '}
+            <span style={{ color: '#FFD700' }}>{t('banner_essai')}</span>
           </p>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0 ml-3">
@@ -45,7 +47,7 @@ export default function PremiumBanner() {
             className="px-3 py-1.5 rounded-lg text-xs font-black press-scale"
             style={{ background: 'linear-gradient(135deg, #FFD700, #F39C12)', color: '#0a0e2a' }}
           >
-            Essayer
+            {t('banner_essayer')}
           </Link>
           <button
             onClick={hide}

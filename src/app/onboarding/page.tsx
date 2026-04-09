@@ -11,20 +11,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const TOTAL_STEPS = 5;
 
-const GOALS = [
-  { key: 'soon',  icon: '🎯', label: 'Passer mon permis bientôt',   sub: 'Mode intensif, je suis prêt(e)' },
-  { key: 'relax', icon: '📚', label: 'Réviser tranquillement',        sub: 'À mon rythme, sans pression' },
-  { key: 'fun',   icon: '🎮', label: "M'amuser en apprenant",         sub: 'Le jeu avant tout' },
-];
-
 const CAR_TYPE_OPTIONS = getCarTypes();
-
-const PILLS = [
-  '2286 questions officielles',
-  'Gamifié & interactif',
-  'FR + NL',
-  'Examen blanc',
-];
 
 const CAR_EMOJIS: Record<string, string> = {
   berline:   '🚗',
@@ -35,19 +22,6 @@ const CAR_EMOJIS: Record<string, string> = {
   pickup:    '🚚',
 };
 
-const GASTON_MESSAGES: Record<number, string> = {
-  1: 'Bienvenue ! Je suis Prof. Gaston, ton guide vers le permis belge. 🎓',
-  2: 'Dis-moi ton prénom, je personnaliserai tout pour toi !',
-  3: 'Choisis bien, cette voiture te suivra tout au long du parcours !',
-  4: "Je m'adapte à ton rythme, promis !",
-  5: 'Tout est prêt ! En route vers le permis !',
-};
-
-const goalLabels: Record<string, string> = {
-  soon:  'Passer mon permis bientôt',
-  relax: 'Réviser tranquillement',
-  fun:   "M'amuser en apprenant",
-};
 
 const CAR_SVGS: Record<string, (color: string, w?: number, h?: number) => React.ReactElement> = {
   berline: (color, w = 200, h = 100) => (
@@ -127,6 +101,33 @@ export default function OnboardingPage() {
   const router = useRouter();
   const { signUp, user } = useAuth();
   const { t } = useLang();
+
+  const GOALS = [
+    { key: 'soon',  icon: '🎯', label: t('onboarding_goal_soon_label'),  sub: t('onboarding_goal_soon_sub') },
+    { key: 'relax', icon: '📚', label: t('onboarding_goal_relax_label'), sub: t('onboarding_goal_relax_sub') },
+    { key: 'fun',   icon: '🎮', label: t('onboarding_goal_fun_label'),   sub: t('onboarding_goal_fun_sub') },
+  ];
+
+  const PILLS = [
+    t('onboarding_pill_1'),
+    t('onboarding_pill_2'),
+    t('onboarding_pill_3'),
+    t('onboarding_pill_4'),
+  ];
+
+  const GASTON_MESSAGES: Record<number, string> = {
+    1: t('gaston_onboarding_1'),
+    2: t('gaston_onboarding_2'),
+    3: t('gaston_onboarding_3'),
+    4: t('gaston_onboarding_4'),
+    5: t('gaston_onboarding_5'),
+  };
+
+  const goalLabels: Record<string, string> = {
+    soon:  t('onboarding_goal_soon_label'),
+    relax: t('onboarding_goal_relax_label'),
+    fun:   t('onboarding_goal_fun_label'),
+  };
 
   const [step, setStep]                   = useState(1);
   const [name, setName]                   = useState('');
@@ -285,12 +286,12 @@ export default function OnboardingPage() {
             </p>
 
             <h1 className="text-[38px] font-black text-white text-center leading-tight mb-3" style={{ letterSpacing: '-0.5px' }}>
-              Ton permis,<br />
-              <span style={{ color: '#4ecdc4' }}>en mode jeu</span>
+              {t('onboarding_hero_titre')}<br />
+              <span style={{ color: '#4ecdc4' }}>{t('onboarding_hero_accent')}</span>
             </h1>
 
             <p className="text-sm text-center mb-7" style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, maxWidth: 340 }}>
-              2286 questions officielles belges. Progresse leçon par leçon, gagne des XP, décroche ton permis.
+              {t('onboarding_hero_desc')}
             </p>
 
             {/* Feature pills */}
@@ -311,11 +312,11 @@ export default function OnboardingPage() {
               className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3"
               style={cyanBtn}
             >
-              C&apos;est parti ! 🚀
+              {t('onboarding_cta_start')}
             </button>
 
             <button onClick={() => router.push('/login')} className="py-2 text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
-              J&apos;ai déjà un compte
+              {t('onboarding_deja_compte_btn')}
             </button>
           </>
         )}
@@ -439,7 +440,7 @@ export default function OnboardingPage() {
               className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
               style={carStep3Ready ? cyanBtn : disabledBtn}
             >
-              {carStep3Ready ? "C'est ma voiture →" : selectedCarType ? 'Choisis une couleur' : 'Choisis une voiture'}
+              {carStep3Ready ? t('onboarding_voiture_ma') : selectedCarType ? t('onboarding_voiture_couleur') : t('onboarding_voiture_choisir')}
             </button>
           </>
         )}
@@ -487,7 +488,7 @@ export default function OnboardingPage() {
               className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
               style={goal ? cyanBtn : disabledBtn}
             >
-              C&apos;est mon objectif →
+              {t('onboarding_objectif_cta')}
             </button>
           </>
         )}
@@ -517,7 +518,7 @@ export default function OnboardingPage() {
               {name.trim() ? `C'est parti, ${name.trim()} !` : "C'est parti !"}
             </h2>
             <p className="text-sm text-center mb-7" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Ton aventure commence maintenant 🚀
+              {t('onboarding_final_subtitle')}
             </p>
 
             {/* Recap summary — 3 cards côte à côte */}
