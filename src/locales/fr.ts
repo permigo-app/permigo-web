@@ -151,7 +151,8 @@ const fr: Record<string, string> = {
   onboarding_feature_1: '✅  Théorie complète & quiz interactifs',
   onboarding_feature_2: '🏆  Progression thème par thème',
   onboarding_feature_3: '🚦  Prépare ton examen officiel',
-  onboarding_commencer: 'Commencer',
+  onboarding_commencer: "Commencer l'aventure 🏁",
+  onboarding_cest_parti: "C'est parti",
   onboarding_nom_titre: "Comment tu t'appelles ?",
   onboarding_nom_subtitle: "On personnalisera l'expérience pour toi",
   onboarding_nom_placeholder: 'Ton prénom…',
@@ -264,8 +265,6 @@ const fr: Record<string, string> = {
   color_rose: 'Rose',
   color_violet: 'Violet',
   color_noir: 'Noir',
-  onboarding_commencer: "Commencer l'aventure 🏁",
-  onboarding_cest_parti: "C'est parti",
 
   // ── Panneaux ──
   panneaux_titre: 'Panneaux routiers',

@@ -151,7 +151,8 @@ const nl: Record<string, string> = {
   onboarding_feature_1: '✅  Volledige theorie & interactieve quizzen',
   onboarding_feature_2: '🏆  Voortgang per thema',
   onboarding_feature_3: '🚦  Bereid je officieel examen voor',
-  onboarding_commencer: 'Beginnen',
+  onboarding_commencer: 'Het avontuur beginnen 🏁',
+  onboarding_cest_parti: 'Op weg',
   onboarding_nom_titre: 'Hoe heet je?',
   onboarding_nom_subtitle: 'We passen de ervaring aan jou aan',
   onboarding_nom_placeholder: 'Je voornaam…',
@@ -264,8 +265,6 @@ const nl: Record<string, string> = {
   color_rose: 'Roze',
   color_violet: 'Paars',
   color_noir: 'Zwart',
-  onboarding_commencer: 'Het avontuur beginnen 🏁',
-  onboarding_cest_parti: 'Op weg',
 
   // ── Panneaux ──
   panneaux_titre: 'Verkeersborden',
