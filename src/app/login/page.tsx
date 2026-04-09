@@ -68,28 +68,32 @@ export default function LoginPage() {
         <Gaston message={t('login_gaston')} expression="happy" size="large" />
       </div>
 
-      <form onSubmit={handleLogin} className="flex flex-col gap-3 mb-4">
+      <form onSubmit={handleLogin} className="flex flex-col gap-3 mb-4 fade-in-up">
         <input type="email" placeholder={t('login_email')} value={email} onChange={e => setEmail(e.target.value)}
-          className="rounded-2xl px-4 py-3.5 text-white placeholder-[#5A6B8A] focus:outline-none"
-          style={{ background: '#16213E', border: '2px solid #2A3550' }} />
+          className="rounded-2xl px-4 py-3.5 text-white placeholder-[#5A6B8A] focus:outline-none transition-all duration-200"
+          style={{ background: '#16213E', border: '2px solid #2A3550' }}
+          onFocus={e => { e.currentTarget.style.borderColor = '#4ecdc4'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(78,205,196,0.15)'; }}
+          onBlur={e => { e.currentTarget.style.borderColor = '#2A3550'; e.currentTarget.style.boxShadow = 'none'; }} />
         {!showForgot && (
           <input type="password" placeholder={t('login_mdp')} value={password} onChange={e => setPassword(e.target.value)}
-            className="rounded-2xl px-4 py-3.5 text-white placeholder-[#5A6B8A] focus:outline-none"
-            style={{ background: '#16213E', border: '2px solid #2A3550' }} />
+            className="rounded-2xl px-4 py-3.5 text-white placeholder-[#5A6B8A] focus:outline-none transition-all duration-200"
+            style={{ background: '#16213E', border: '2px solid #2A3550' }}
+            onFocus={e => { e.currentTarget.style.borderColor = '#4ecdc4'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(78,205,196,0.15)'; }}
+            onBlur={e => { e.currentTarget.style.borderColor = '#2A3550'; e.currentTarget.style.boxShadow = 'none'; }} />
         )}
         {error && <p className="text-sm" style={{ color: '#FF6B6B' }}>{error}</p>}
         {success && <p className="text-sm" style={{ color: '#00B894' }}>{success}</p>}
 
         {showForgot ? (
           <button type="button" onClick={handleForgotPassword} disabled={loading}
-            className="py-3.5 rounded-2xl font-black text-white press-scale disabled:opacity-50"
-            style={{ background: '#00B894' }}>
+            className="py-3.5 rounded-2xl font-black text-white press-scale disabled:opacity-50 btn-glow-teal"
+            style={{ background: 'linear-gradient(135deg, #4ecdc4, #26a69a)', color: '#0a0e2a' }}>
             {loading ? t('login_reset_loading') : t('login_reset_link')}
           </button>
         ) : (
           <button type="submit" disabled={loading}
-            className="py-3.5 rounded-2xl font-black text-white press-scale disabled:opacity-50"
-            style={{ background: '#00B894' }}>
+            className="py-3.5 rounded-2xl font-black press-scale disabled:opacity-50 btn-glow-teal"
+            style={{ background: 'linear-gradient(135deg, #4ecdc4, #26a69a)', color: '#0a0e2a' }}>
             {loading ? t('login_connexion_loading') : t('login_connexion')}
           </button>
         )}

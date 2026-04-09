@@ -86,7 +86,7 @@ export default function PremiumPage() {
             </div>
           </div>
           {FREE_FEATURES.map((f, i) => (
-            <div key={i} className="grid grid-cols-3" style={{ borderTop: '1px solid #2A3550' }}>
+            <div key={i} className="grid grid-cols-3 card-hover" style={{ borderTop: '1px solid #2A3550' }}>
               <div className="px-4 py-3 text-sm font-medium" style={{ color: '#d1d5db', background: i % 2 === 0 ? '#0F1923' : '#111827' }}>
                 {f.label}
               </div>
@@ -127,11 +127,10 @@ export default function PremiumPage() {
           <button
             onClick={handleSubscribe}
             disabled={loading}
-            className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3 transition-all"
+            className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3 btn-glow-teal"
             style={{
-              background: loading ? 'rgba(78,205,196,0.4)' : '#4ecdc4',
+              background: loading ? 'rgba(78,205,196,0.4)' : 'linear-gradient(135deg, #4ecdc4, #26a69a)',
               color: '#0a0e2a',
-              boxShadow: loading ? 'none' : '0 4px 24px rgba(78,205,196,0.4)',
             }}
           >
             {loading ? t('premium_chargement') : t('premium_essai_btn')}
