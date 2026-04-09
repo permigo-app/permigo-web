@@ -241,3 +241,122 @@ body {
   align-items: center;
   gap: 10px;
 }
+
+/* ── Phase 1: Enhanced animations & visual polish ── */
+
+/* Page fade-in */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up { animation: fadeInUp 0.4s ease-out forwards; }
+
+/* Correct answer pulse */
+@keyframes correctPulse {
+  0% { box-shadow: 0 0 0 0 rgba(46,204,113,0.6); }
+  50% { box-shadow: 0 0 0 12px rgba(46,204,113,0); }
+  100% { box-shadow: 0 0 0 0 rgba(46,204,113,0); }
+}
+.correct-pulse { animation: correctPulse 0.6s ease-out forwards; }
+
+/* Wrong answer flash */
+@keyframes wrongFlash {
+  0%, 100% { background-color: rgba(231,76,60,0.15); }
+  30% { background-color: rgba(231,76,60,0.35); }
+}
+.wrong-flash { animation: wrongFlash 0.5s ease-out; }
+
+/* Star pop entrance */
+@keyframes starPop {
+  0% { opacity: 0; transform: scale(0) rotate(-20deg); }
+  60% { transform: scale(1.3) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.star-pop { animation: starPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+/* XP burst badge entrance */
+@keyframes xpBurst {
+  0% { opacity: 0; transform: scale(0.5) translateY(10px); }
+  60% { transform: scale(1.15) translateY(-3px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+.xp-burst { animation: xpBurst 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s forwards; opacity: 0; }
+
+/* Score circle entrance */
+@keyframes scoreReveal {
+  0% { opacity: 0; transform: scale(0.7); }
+  70% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.score-reveal { animation: scoreReveal 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s forwards; opacity: 0; }
+
+/* Confetti particle */
+@keyframes confettiFall {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* Glow button */
+.btn-glow-green {
+  box-shadow: 0 4px 20px rgba(46,204,113,0.4);
+  transition: box-shadow 0.2s ease, transform 0.15s ease, filter 0.15s ease;
+}
+.btn-glow-green:hover { box-shadow: 0 6px 28px rgba(46,204,113,0.55); filter: brightness(1.08); transform: translateY(-1px); }
+
+.btn-glow-teal {
+  box-shadow: 0 4px 20px rgba(78,205,196,0.4);
+  transition: box-shadow 0.2s ease, transform 0.15s ease, filter 0.15s ease;
+}
+.btn-glow-teal:hover { box-shadow: 0 6px 28px rgba(78,205,196,0.55); filter: brightness(1.08); transform: translateY(-1px); }
+
+/* Badge unlock glow */
+@keyframes badgeUnlock {
+  0%, 100% { box-shadow: 0 0 8px 0 rgba(78,205,196,0.3); }
+  50% { box-shadow: 0 0 20px 6px rgba(78,205,196,0.5); }
+}
+.badge-unlocked-glow { animation: badgeUnlock 2.5s ease-in-out infinite; }
+
+/* Smooth hover lift for cards */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* XP float particle */
+@keyframes xpFloat {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-60px) scale(0.8); }
+}
+.xp-float-particle { animation: xpFloat 1.4s ease-out forwards; pointer-events: none; }
+
+/* Combo streak burst */
+@keyframes comboBurst {
+  0% { transform: scale(0.8); opacity: 0; }
+  40% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.combo-burst { animation: comboBurst 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+/* Feedback panel slide up */
+@keyframes feedbackSlideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.feedback-slide { animation: feedbackSlideUp 0.3s ease-out forwards; }
+
+/* Progress bar fill animation */
+@keyframes progressFill {
+  from { width: 0%; }
+}
+.progress-animate { animation: progressFill 0.8s ease-out forwards; }
+
+/* Pulse correct choice */
+@keyframes choiceCorrect {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+.choice-correct { animation: choiceCorrect 0.4s ease-out; }
