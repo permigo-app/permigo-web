@@ -3,6 +3,7 @@ import './globals.css';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import AppShell from '@/components/AppShell';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'MyPermiGo — Permis de conduire belge',
@@ -31,6 +32,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AppShell>
               {children}
             </AppShell>
+            <footer style={{ background: '#0a0e2a', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '14px 24px', textAlign: 'center' }}>
+              <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
+                <span>© 2025 MyPermiGo</span>
+                <Link href="/privacy" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Politique de confidentialité</Link>
+                <Link href="/terms" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>CGU</Link>
+              </p>
+            </footer>
           </AuthProvider>
         </LanguageProvider>
       </body>
