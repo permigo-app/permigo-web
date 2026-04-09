@@ -259,9 +259,19 @@ export default function ProfilePage() {
                 Exploration: 'badge_cat_exploration',
                 Niveaux: 'badge_cat_niveaux',
               };
+              const catColors: Record<string, { bg: string; bgStrong: string; border: string; glow: string; check: string }> = {
+                Progression: { bg: 'rgba(52,152,219,0.12)', bgStrong: 'rgba(52,152,219,0.25)', border: '#3498DB', glow: 'rgba(52,152,219,0.45)', check: '#3498DB' },
+                Régularité:  { bg: 'rgba(230,126,34,0.12)',  bgStrong: 'rgba(230,126,34,0.25)',  border: '#E67E22', glow: 'rgba(230,126,34,0.45)',  check: '#E67E22' },
+                Précision:   { bg: 'rgba(241,196,15,0.12)',  bgStrong: 'rgba(241,196,15,0.25)',  border: '#F1C40F', glow: 'rgba(241,196,15,0.45)',  check: '#F1C40F' },
+                Examens:     { bg: 'rgba(78,205,196,0.12)',  bgStrong: 'rgba(78,205,196,0.25)',  border: '#4ecdc4', glow: 'rgba(78,205,196,0.45)',  check: '#4ecdc4' },
+                Survie:      { bg: 'rgba(231,76,60,0.12)',   bgStrong: 'rgba(231,76,60,0.25)',   border: '#E74C3C', glow: 'rgba(231,76,60,0.45)',   check: '#E74C3C' },
+                Exploration: { bg: 'rgba(46,204,113,0.12)',  bgStrong: 'rgba(46,204,113,0.25)',  border: '#2ECC71', glow: 'rgba(46,204,113,0.45)',  check: '#2ECC71' },
+                Niveaux:     { bg: 'rgba(155,89,182,0.12)',  bgStrong: 'rgba(155,89,182,0.25)',  border: '#9B59B6', glow: 'rgba(155,89,182,0.45)',  check: '#9B59B6' },
+              };
+              const cc = catColors[category] ?? catColors['Examens'];
               return (
               <div key={category} className="mb-8">
-                <h3 className="text-xs font-black uppercase tracking-widest mb-4" style={{ color: '#4ecdc4' }}>
+                <h3 className="text-xs font-black uppercase tracking-widest mb-4" style={{ color: cc.border }}>
                   {t(catKeyMap[category] ?? category)}
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -273,40 +283,38 @@ export default function ProfilePage() {
                         key={badge.id}
                         className="rounded-2xl p-4 text-center transition-all duration-200 relative cursor-default"
                         style={{
-                          background: unlocked ? 'rgba(78,205,196,0.2)' : 'rgba(255,255,255,0.03)',
-                          border: unlocked ? '2px solid #4ecdc4' : '1px solid rgba(255,255,255,0.08)',
-                          boxShadow: unlocked
-                            ? '0 0 15px rgba(78,205,196,0.4)'
-                            : isHovered ? '0 0 10px rgba(78,205,196,0.15)' : 'none',
+                          background: unlocked ? cc.bgStrong : 'rgba(255,255,255,0.03)',
+                          border: unlocked ? `2px solid ${cc.border}` : '1px solid rgba(255,255,255,0.08)',
+                          boxShadow: unlocked ? `0 0 15px ${cc.glow}` : 'none',
                         }}
                         onMouseEnter={() => setHoveredBadge(badge.id)}
                         onMouseLeave={() => setHoveredBadge(null)}
                       >
                         {/* Unlocked checkmark */}
                         {unlocked && (
-                          <div className="absolute top-2 right-2 w-5 h-5 rounded-full flex items-center justify-center text-xs font-black" style={{ background: '#2ecc71', color: 'white' }}>✓</div>
+                          <div className="absolute top-2 right-2 w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-black text-white" style={{ background: cc.check }}>✓</div>
                         )}
                         {/* Locked icon */}
                         {!unlocked && (
-                          <div className="absolute top-2 right-2 text-xs" style={{ opacity: 0.6 }}>🔒</div>
+                          <div className="absolute top-2 right-2 text-[11px]" style={{ opacity: 0.5 }}>🔒</div>
                         )}
 
                         {/* Tooltip on hover for locked */}
                         {!unlocked && isHovered && (
                           <div
                             className="absolute -top-11 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1.5 rounded-lg text-[10px] font-bold z-20 pointer-events-none"
-                            style={{ background: '#0F1923', border: '1px solid #4ecdc4', color: '#4ecdc4', boxShadow: '0 0 8px rgba(78,205,196,0.3)' }}
+                            style={{ background: '#0F1923', border: `1px solid ${cc.border}`, color: cc.border }}
                           >
-                            {t('debloquer')} : {t(`badge_${badge.id}_desc` as any)}
+                            {t(`badge_${badge.id}_desc` as any)}
                           </div>
                         )}
 
                         <span
                           className="block mb-2"
                           style={{
-                            fontSize: 48,
+                            fontSize: 56,
                             lineHeight: 1,
-                            filter: unlocked ? 'none' : 'grayscale(1) opacity(0.4)',
+                            filter: unlocked ? 'none' : 'grayscale(1) opacity(0.3)',
                           }}
                         >
                           {badge.emoji}
@@ -314,7 +322,7 @@ export default function ProfilePage() {
                         <p className="text-xs font-black leading-tight" style={{ color: unlocked ? '#FFFFFF' : '#5A6B8A' }}>
                           {t(`badge_${badge.id}` as any)}
                         </p>
-                        <p className="text-[10px] mt-1 leading-tight" style={{ color: unlocked ? '#8B9DC3' : '#3A4560' }}>
+                        <p className="text-[10px] mt-1 leading-tight" style={{ color: unlocked ? 'rgba(255,255,255,0.6)' : '#3A4560' }}>
                           {t(`badge_${badge.id}_desc` as any)}
                         </p>
                       </div>
