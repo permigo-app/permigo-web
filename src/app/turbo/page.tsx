@@ -62,6 +62,7 @@ export default function TurboPage() {
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'impressed' | 'unhappy'>('happy');
   const timerRef = useRef<ReturnType<typeof setInterval>>(null);
   const startTimeRef = useRef(0);
+  const hasRestoredRef = useRef(false);
 
   // Stats
   const [best3, setBest3] = useState(0);
@@ -77,6 +78,37 @@ export default function TurboPage() {
     setHistory(getTurboHistory());
     setAllTime(getTurboAllTime());
   }, [mode]);
+
+  // Restauration d'une session interrompue
+  useEffect(() => {
+    if (hasRestoredRef.current) return;
+    hasRestoredRef.current = true;
+    try {
+      const saved = localStorage.getItem('turbo_active');
+      if (!saved) return;
+      const data = JSON.parse(saved);
+      const elapsed = Date.now() - data.startTime;
+      const remaining = data.mode === 'survie' ? 1 : (data.duration - elapsed);
+      if (remaining > 0) {
+        const allQ = getAllQuestionsLocalized(lang);
+        const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
+          const s = shuffleChoices(q);
+          return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+        });
+        setQuestions(shuffled);
+        setMode(data.mode as Mode);
+        if (data.mode !== 'survie') setTimeLeft(Math.floor((data.duration - elapsed) / 1000));
+        setCorrectCount(data.score || 0);
+        setCurrentQ(data.questionsAnswered || 0);
+        startTimeRef.current = data.startTime;
+      } else {
+        // Temps écoulé pendant l'absence
+        localStorage.removeItem('turbo_active');
+      }
+    } catch {
+      localStorage.removeItem('turbo_active');
+    }
+  }, [lang]);
 
   const [tipIndex, setTipIndex] = useState(0);
   const [tipFade, setTipFade] = useState(true);
@@ -100,6 +132,7 @@ export default function TurboPage() {
 
   const endGame = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
+    localStorage.removeItem('turbo_active');
     setGameOver(true);
     updateQuizHistory(correctCount, currentQ);
     checkAndUpdateStreak();
@@ -122,8 +155,19 @@ export default function TurboPage() {
   }, [correctCount, currentQ, mode, timeLeft]);
 
   const startGame = (m: '3min' | '5min' | 'survie') => {
-    incrementTurboDailyCount();
-    setTurboCount(getTurboDailyCount());
+    // N'incrémente que si pas de session déjà active (évite double-comptage)
+    if (!localStorage.getItem('turbo_active')) {
+      incrementTurboDailyCount();
+      setTurboCount(getTurboDailyCount());
+    }
+    const duration = m === '3min' ? 180000 : m === '5min' ? 300000 : null;
+    localStorage.setItem('turbo_active', JSON.stringify({
+      startTime: Date.now(),
+      duration,
+      mode: m,
+      questionsAnswered: 0,
+      score: 0,
+    }));
     setMode(m);
     const allQ = getAllQuestionsLocalized(lang);
     const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
@@ -153,8 +197,16 @@ export default function TurboPage() {
     if (selected === null || validated) return;
     setValidated(true);
     const isCorrect = selected === questions[currentQ].correct;
+    const newScore = isCorrect ? correctCount + 1 : correctCount;
+    try {
+      const saved = localStorage.getItem('turbo_active');
+      if (saved) {
+        const data = JSON.parse(saved);
+        localStorage.setItem('turbo_active', JSON.stringify({ ...data, score: newScore, questionsAnswered: currentQ }));
+      }
+    } catch { /* ignore */ }
     if (isCorrect) {
-      setCorrectCount(c => c + 1);
+      setCorrectCount(newScore);
       setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
       setGastonExpr('impressed');
     } else {
@@ -168,6 +220,13 @@ export default function TurboPage() {
     if (gameOver) return;
     setSelected(null);
     setValidated(false);
+    try {
+      const saved = localStorage.getItem('turbo_active');
+      if (saved) {
+        const data = JSON.parse(saved);
+        localStorage.setItem('turbo_active', JSON.stringify({ ...data, questionsAnswered: currentQ + 1, score: correctCount }));
+      }
+    } catch { /* ignore */ }
     if (currentQ + 1 < questions.length) { setCurrentQ(q => q + 1); }
     else { endGame(); }
   };
@@ -420,7 +479,7 @@ export default function TurboPage() {
       progress={turboProgress}
       headerLeft={
         <button
-          onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setMode(null); setGameOver(false); }}
+          onClick={() => endGame()}
           className="w-9 h-9 rounded-full flex items-center justify-center press-scale"
           style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}
         >
