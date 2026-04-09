@@ -119,7 +119,7 @@ export default function HomePage() {
   const [streak, setStreak] = useState({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
   const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
   const [mounted, setMounted] = useState(false);
-  const [userCar, setUserCar] = useState<{ carType: string; carColor: string }>({ carType: 'berline', carColor: '#00B894' });
+  const [userCar, setUserCar] = useState<{ carType: string; carColor: string }>({ carType: 'berline', carColor: '#1E88E5' });
 
   const DEFAULT_ADJ: Record<string, { dx: number; dy: number; scale: number; rot: number }> = {
     "mon-A-0": { dx: -140, dy: -140, scale: 1.3, rot: 0 },
@@ -178,7 +178,7 @@ export default function HomePage() {
       const raw = localStorage.getItem('userProfile');
       if (raw) {
         const p = JSON.parse(raw);
-        if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#00B894' });
+        if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#1E88E5' });
       }
     } catch {}
   }, []);

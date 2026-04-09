@@ -35,7 +35,7 @@ const CAR_EMOJIS: Record<string, string> = {
 };
 
 const GASTON_MESSAGES: Record<number, string> = {
-  1: 'Bienvenue ! Je suis ton guide vers le permis belge.',
+  1: 'Bienvenue ! Je suis Prof. Gaston, ton guide vers le permis belge. 🎓',
   2: 'Dis-moi ton prénom, je personnaliserai tout pour toi !',
   3: 'Choisis bien, cette voiture te suivra tout au long du parcours !',
   4: "Je m'adapte à ton rythme, promis !",
@@ -285,37 +285,41 @@ export default function OnboardingPage() {
 
       {/* Content */}
       <div
-        className={`w-full max-w-[480px] mx-auto flex flex-col items-center px-6 pt-20 pb-28 transition-opacity duration-150 ${fade ? 'opacity-100' : 'opacity-0'}`}
+        className={`w-full max-w-[480px] mx-auto flex flex-col items-center px-6 pt-16 pb-28 transition-opacity duration-150 ${fade ? 'opacity-100' : 'opacity-0'}`}
         style={{ minHeight: '100vh' }}
       >
+
+        {/* ═══ Gaston + bulle — partagé sur tous les écrans ═══ */}
+        <div className="flex items-center justify-center gap-6 w-full mb-6">
+          <Image
+            src="/images/gaston.png"
+            width={120} height={120}
+            alt="Prof. Gaston"
+            className="gaston-float"
+            style={{ objectFit: 'contain', flexShrink: 0 }}
+          />
+          <div style={{
+            background: '#1a2040',
+            border: '1.5px solid rgba(78,205,196,0.3)',
+            borderRadius: '16px 16px 16px 0',
+            padding: '16px 20px',
+            fontSize: 15,
+            color: 'white',
+            lineHeight: 1.55,
+            fontWeight: 600,
+            maxWidth: 280,
+          }}>
+            {GASTON_MESSAGES[step]}
+          </div>
+        </div>
 
         {/* ═══════════ STEP 1 — Accueil ═══════════ */}
         {step === 1 && (
           <>
             {/* Eyebrow */}
-            <p className="text-xs font-black uppercase tracking-widest mb-6" style={{ color: 'rgba(78,205,196,0.7)' }}>
+            <p className="text-xs font-black uppercase tracking-widest mb-5" style={{ color: 'rgba(78,205,196,0.7)' }}>
               Belgique • FR + NL
             </p>
-
-            {/* Gaston grand + bulle de bienvenue */}
-            <div className="flex items-center gap-4 w-full mb-8">
-              <div className="flex-shrink-0">
-                <Image src="/images/gaston.png" width={140} height={140} alt="Prof. Gaston" className="gaston-float" style={{ objectFit: 'contain' }} />
-              </div>
-              <div style={{
-                flex: 1,
-                background: '#1a2040',
-                border: '1.5px solid rgba(78,205,196,0.3)',
-                borderRadius: '16px 16px 16px 0',
-                padding: '16px 20px',
-                fontSize: 15,
-                color: 'white',
-                lineHeight: 1.55,
-                fontWeight: 600,
-              }}>
-                Bienvenue&nbsp;! Je suis <strong>Prof.&nbsp;Gaston</strong>, ton guide vers le permis belge.&nbsp;🎓
-              </div>
-            </div>
 
             <h1 className="text-[38px] font-black text-white text-center leading-tight mb-3" style={{ letterSpacing: '-0.5px' }}>
               Ton permis,<br />
@@ -620,25 +624,6 @@ export default function OnboardingPage() {
 
       </div>
 
-      {/* Gaston — bas gauche, caché sur step 1 */}
-      {step > 1 && (
-        <div className="fixed bottom-4 left-4 z-50 flex items-end gap-2" style={{ maxWidth: 280, animation: 'gastonBounce 2.2s ease-in-out infinite' }}>
-          <Image src="/images/gaston.png" width={80} height={80} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
-          <div style={{
-            background: '#FFF8E7',
-            border: '1.5px solid #1B3A6B',
-            borderRadius: '16px 16px 16px 0',
-            padding: '10px 14px',
-            fontSize: 14,
-            fontWeight: 600,
-            color: '#1A1A2E',
-            lineHeight: 1.4,
-            boxShadow: '0 3px 8px rgba(0,0,0,0.2)',
-          }}>
-            {GASTON_MESSAGES[step]}
-          </div>
-        </div>
-      )}
 
     </div>
   );
