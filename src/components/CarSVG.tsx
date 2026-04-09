@@ -94,12 +94,12 @@ export function getCarTypes() {
 }
 
 export const CAR_COLORS = [
-  { id: '#E53935', label: 'Rouge' },
-  { id: '#1E88E5', label: 'Bleu' },
-  { id: '#43A047', label: 'Vert' },
-  { id: '#FDD835', label: 'Jaune' },
-  { id: '#FF9800', label: 'Orange' },
-  { id: '#E91E63', label: 'Rose' },
-  { id: '#8E24AA', label: 'Violet' },
-  { id: '#424242', label: 'Noir' },
+  { id: '#E53935', label: 'Rouge', labelKey: 'color_rouge' },
+  { id: '#1E88E5', label: 'Bleu',  labelKey: 'color_bleu' },
+  { id: '#43A047', label: 'Vert',  labelKey: 'color_vert' },
+  { id: '#FDD835', label: 'Jaune', labelKey: 'color_jaune' },
+  { id: '#FF9800', label: 'Orange',labelKey: 'color_orange' },
+  { id: '#E91E63', label: 'Rose',  labelKey: 'color_rose' },
+  { id: '#8E24AA', label: 'Violet',labelKey: 'color_violet' },
+  { id: '#424242', label: 'Noir',  labelKey: 'color_noir' },
 ];

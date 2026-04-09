@@ -256,6 +256,16 @@ const fr: Record<string, string> = {
   profil_champion: 'Tu es un vrai champion de la route ! 🏆',
   profil_niveau_msg: 'Tu es impressionnant ! 🌟',
   pilote: 'Pilote',
+  color_rouge: 'Rouge',
+  color_bleu: 'Bleu',
+  color_vert: 'Vert',
+  color_jaune: 'Jaune',
+  color_orange: 'Orange',
+  color_rose: 'Rose',
+  color_violet: 'Violet',
+  color_noir: 'Noir',
+  onboarding_commencer: "Commencer l'aventure 🏁",
+  onboarding_cest_parti: "C'est parti",
 
   // ── Panneaux ──
   panneaux_titre: 'Panneaux routiers',

@@ -256,6 +256,16 @@ const nl: Record<string, string> = {
   profil_champion: 'Je bent een echte kampioen van de weg! 🏆',
   profil_niveau_msg: 'Je bent indrukwekkend! 🌟',
   pilote: 'Bestuurder',
+  color_rouge: 'Rood',
+  color_bleu: 'Blauw',
+  color_vert: 'Groen',
+  color_jaune: 'Geel',
+  color_orange: 'Oranje',
+  color_rose: 'Roze',
+  color_violet: 'Paars',
+  color_noir: 'Zwart',
+  onboarding_commencer: 'Het avontuur beginnen 🏁',
+  onboarding_cest_parti: 'Op weg',
 
   // ── Panneaux ──
   panneaux_titre: 'Verkeersborden',

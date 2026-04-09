@@ -326,15 +326,15 @@ export default function OnboardingPage() {
           <>
             <span className="text-[64px] mb-5 block">👋</span>
             <h2 className="text-3xl font-black text-white text-center mb-2">
-              Comment tu t&apos;appelles ?
+              {t('onboarding_nom_titre')}
             </h2>
             <p className="text-sm text-center mb-8" style={{ color: 'rgba(255,255,255,0.4)' }}>
-              On va personnaliser ton expérience
+              {t('onboarding_nom_subtitle')}
             </p>
 
             <input
               type="text"
-              placeholder="Ton prénom..."
+              placeholder={t('onboarding_nom_placeholder')}
               value={name}
               onChange={e => setName(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter' && name.trim()) goNext(); }}
@@ -354,7 +354,7 @@ export default function OnboardingPage() {
               className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
               style={name.trim() ? cyanBtn : disabledBtn}
             >
-              Continuer →
+              {t('onboarding_continuer')}
             </button>
           </>
         )}
@@ -363,10 +363,10 @@ export default function OnboardingPage() {
         {step === 3 && (
           <>
             <h2 className="text-3xl font-black text-white text-center mb-1">
-              Choisis ta voiture !
+              {t('onboarding_voiture_titre')}
             </h2>
             <p className="text-sm text-center mb-5" style={{ color: 'rgba(255,255,255,0.4)' }}>
-              Elle t&apos;accompagnera tout au long de ton apprentissage
+              {t('onboarding_voiture_subtitle')}
             </p>
 
             {/* Live preview — SVG voiture avec couleur directe */}
@@ -450,10 +450,10 @@ export default function OnboardingPage() {
           <>
             <span className="text-[60px] mb-4 block">🏁</span>
             <h2 className="text-3xl font-black text-white text-center mb-2">
-              Ton objectif ?
+              {t('onboarding_objectif_titre')}
             </h2>
             <p className="text-sm text-center mb-8" style={{ color: 'rgba(255,255,255,0.4)' }}>
-              Pour personnaliser ton parcours
+              {t('onboarding_objectif_subtitle')}
             </p>
 
             <div className="w-full flex flex-col gap-3 mb-6">
@@ -515,7 +515,7 @@ export default function OnboardingPage() {
             </div>
 
             <h2 className="text-4xl font-black text-white text-center mb-2">
-              {name.trim() ? `C'est parti, ${name.trim()} !` : "C'est parti !"}
+              {name.trim() ? `${t('onboarding_cest_parti')}, ${name.trim()} !` : `${t('onboarding_cest_parti')} !`}
             </h2>
             <p className="text-sm text-center mb-7" style={{ color: 'rgba(255,255,255,0.5)' }}>
               {t('onboarding_final_subtitle')}
@@ -529,7 +529,7 @@ export default function OnboardingPage() {
                 border: '1px solid rgba(78,205,196,0.2)',
               }}>
                 <span className="text-3xl mb-2">👤</span>
-                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>Pilote</p>
+                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>{t('pilote')}</p>
                 <p className="text-sm font-black text-white leading-tight">{name.trim() || '—'}</p>
               </div>
               {/* Card 2 — Voiture */}
@@ -540,11 +540,11 @@ export default function OnboardingPage() {
                 <div className="mb-2" style={{ filter: `drop-shadow(0 2px 6px ${carColor}88)` }}>
                   {(CAR_SVGS[selectedCarType || 'berline'] ?? CAR_SVGS.berline)(carColor, 64, 32)}
                 </div>
-                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>Voiture</p>
+                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>{t('onboarding_voiture')}</p>
                 <p className="text-sm font-black text-white leading-tight">
                   {CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label || '—'}
                   {selectedColor && (
-                    <><br /><span style={{ color: '#4ecdc4', fontSize: 10 }}>{CAR_COLORS.find(c => c.id === selectedColor)?.label}</span></>
+                    <><br /><span style={{ color: '#4ecdc4', fontSize: 10 }}>{t(CAR_COLORS.find(c => c.id === selectedColor)?.labelKey ?? '')}</span></>
                   )}
                 </p>
               </div>
@@ -554,7 +554,7 @@ export default function OnboardingPage() {
                 border: '1px solid rgba(78,205,196,0.2)',
               }}>
                 <span className="text-3xl mb-2">{GOALS.find(g => g.key === goal)?.icon || '🎯'}</span>
-                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>Objectif</p>
+                <p className="text-[9px] font-black uppercase tracking-widest mb-1" style={{ color: '#5A6B8A' }}>{t('onboarding_objectif')}</p>
                 <p className="text-sm font-black text-white leading-tight">{goal ? goalLabels[goal] : '—'}</p>
               </div>
             </div>
@@ -571,7 +571,7 @@ export default function OnboardingPage() {
               className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-50"
               style={cyanBtn}
             >
-              {saving ? 'Chargement…' : "Commencer l'aventure 🏁"}
+              {saving ? t('premium_chargement') : t('onboarding_commencer')}
             </button>
           </>
         )}
