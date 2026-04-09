@@ -127,12 +127,8 @@ export default function QuizLayout({
             {/* Question */}
             <p className="text-2xl font-bold text-white text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up">{question}</p>
 
-            {/* Image request */}
-            {questionId && (
-              <div className="flex justify-center mb-4">
-                <ImageRequestButton id={questionId} />
-              </div>
-            )}
+            {/* Image request — juste sous la question */}
+            {questionId && <ImageRequestButton id={questionId} />}
 
             {/* Answer grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">

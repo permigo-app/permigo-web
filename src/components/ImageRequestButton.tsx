@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLang } from '@/contexts/LanguageContext';
 
 const STORAGE_KEY = 'image_requests';
@@ -18,7 +18,7 @@ function getVoted(): Record<string, boolean> {
 
 export function recordImageRequest(id: string): boolean {
   const voted = getVoted();
-  if (voted[id]) return false; // already voted
+  if (voted[id]) return false;
   const requests = getRequests();
   requests[id] = (requests[id] || 0) + 1;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(requests));
@@ -32,44 +32,85 @@ export function hasVoted(id: string): boolean {
 }
 
 interface Props {
-  id: string; // e.g. "A1_c0" or "A1_q3"
+  id: string;
 }
-
-const LABELS = {
-  fr: { suggest: 'Une image aiderait ici', thanks: 'Merci !', title: "Signaler qu'une image serait utile ici" },
-  nl: { suggest: 'Een afbeelding zou helpen', thanks: 'Bedankt!', title: 'Melden dat een afbeelding nuttig zou zijn' },
-};
 
 export default function ImageRequestButton({ id }: Props) {
   const { lang } = useLang();
-  const labels = LABELS[lang] ?? LABELS.fr;
   const [voted, setVoted] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const toastMsg = lang === 'nl' ? 'Bedankt! We noteren het 👍' : 'Merci ! On en prend note 👍';
+  const btnLabel = lang === 'nl' ? '📸 Een afbeelding zou hier helpen — Stemmen' : '📸 Une image ici aiderait à comprendre — Voter';
+  const votedLabel = lang === 'nl' ? '✓ Stem geregistreerd !' : '✓ Vote enregistré !';
 
   useEffect(() => {
     setVoted(hasVoted(id));
   }, [id]);
 
+  useEffect(() => {
+    return () => { if (toastTimer.current) clearTimeout(toastTimer.current); };
+  }, []);
+
   const handleClick = () => {
     if (voted) return;
     recordImageRequest(id);
     setVoted(true);
+    setShowToast(true);
+    toastTimer.current = setTimeout(() => setShowToast(false), 2800);
   };
 
   return (
-    <button
-      onClick={handleClick}
-      disabled={voted}
-      className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold transition-all"
-      style={{
-        background: 'transparent',
-        border: voted ? '1px solid #2ecc71' : '1px solid rgba(255,255,255,0.15)',
-        color: voted ? '#2ecc71' : '#5A6B8A',
-        cursor: voted ? 'default' : 'pointer',
-      }}
-      title={labels.title}
-    >
-      <span>{voted ? '✓' : '🖼️'}</span>
-      <span>{voted ? labels.thanks : labels.suggest}</span>
-    </button>
+    <>
+      <div className="flex justify-center" style={{ marginBottom: 24 }}>
+        <button
+          onClick={handleClick}
+          disabled={voted}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+            background: voted ? 'rgba(46,204,113,0.12)' : 'rgba(78,205,196,0.15)',
+            border: voted ? '1.5px solid #2ecc71' : '1.5px dashed #4ecdc4',
+            borderRadius: 12,
+            padding: '10px 20px',
+            color: voted ? '#2ecc71' : '#4ecdc4',
+            fontSize: 14,
+            fontWeight: 700,
+            cursor: voted ? 'default' : 'pointer',
+            transition: 'all 0.2s',
+            whiteSpace: 'nowrap',
+          }}
+          onMouseEnter={e => { if (!voted) e.currentTarget.style.background = 'rgba(78,205,196,0.25)'; }}
+          onMouseLeave={e => { if (!voted) e.currentTarget.style.background = 'rgba(78,205,196,0.15)'; }}
+        >
+          {voted ? votedLabel : btnLabel}
+        </button>
+      </div>
+
+      {/* Toast */}
+      {showToast && (
+        <div
+          className="fixed z-[200] left-1/2 fade-in-up"
+          style={{
+            bottom: 80,
+            transform: 'translateX(-50%)',
+            background: '#16213E',
+            border: '1px solid rgba(78,205,196,0.35)',
+            borderRadius: 12,
+            padding: '12px 22px',
+            color: '#4ecdc4',
+            fontSize: 14,
+            fontWeight: 700,
+            boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+            whiteSpace: 'nowrap',
+            pointerEvents: 'none',
+          }}
+        >
+          {toastMsg}
+        </div>
+      )}
+    </>
   );
 }

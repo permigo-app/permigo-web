@@ -371,6 +371,9 @@ export default function LessonPage() {
                 {/* Title */}
                 <h3 className="text-2xl font-black text-white mb-3">{card.title}</h3>
 
+                {/* Image request — juste sous le titre */}
+                <ImageRequestButton id={`${lessonId}_c${currentCard}`} />
+
                 {/* Content — 5-section blocks or plain fallback */}
                 {contentSections ? (
                   <div className="flex flex-col gap-5 mb-4">
@@ -394,11 +397,6 @@ export default function LessonPage() {
                     {card.signs.map(s => <SignImage key={s} code={s} size={64} />)}
                   </div>
                 )}
-
-                {/* Image request */}
-                <div className="flex justify-end mb-2">
-                  <ImageRequestButton id={`${lessonId}_c${currentCard}`} />
-                </div>
 
                 {/* Separator */}
                 <div className="my-6" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }} />
