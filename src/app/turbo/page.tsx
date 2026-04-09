@@ -15,6 +15,7 @@ import { GASTON_CORRECT, GASTON_WRONG, GASTON_TIPS, getRandomMsg } from '@/local
 import { isPremium, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
 import SignImage from '@/components/SignImage';
 import Gaston from '@/components/Gaston';
+import Image from 'next/image';
 import QuizLayout from '@/components/QuizLayout';
 import Link from 'next/link';
 
@@ -274,7 +275,7 @@ export default function TurboPage() {
               className="mt-6 rounded-2xl p-5 flex items-center gap-4"
               style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.25)' }}
             >
-              <span className="text-3xl flex-shrink-0">🚗</span>
+              <Image src="/images/gaston.png" width={52} height={52} alt="Prof. Gaston" style={{ objectFit: 'contain', flexShrink: 0 }} />
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-bold mb-1.5" style={{ color: '#4ecdc4' }}>{t('turbo_gaston_conseille')}</p>
                 <p
