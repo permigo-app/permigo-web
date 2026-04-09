@@ -7,120 +7,102 @@ import Gaston from '@/components/Gaston';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { GASTON_STEP_MESSAGES } from '@/locales/messages';
 
-const TOTAL_STEPS = 7;
+const TOTAL_STEPS = 5;
 
 const GOALS = [
-  { key: 'soon', icon: '🎯', labelKey: 'onboarding_objectif_permis', subKey: 'onboarding_objectif_permis_sub' },
-  { key: 'relax', icon: '📚', labelKey: 'onboarding_objectif_reviser', subKey: 'onboarding_objectif_reviser_sub' },
-  { key: 'fun', icon: '🎮', labelKey: 'onboarding_objectif_amuser', subKey: 'onboarding_objectif_amuser_sub' },
+  { key: 'soon',  icon: '🎯', label: 'Passer mon permis bientôt',   sub: 'Mode intensif, je suis prêt(e)' },
+  { key: 'relax', icon: '📚', label: 'Réviser tranquillement',        sub: 'À mon rythme, sans pression' },
+  { key: 'fun',   icon: '🎮', label: "M'amuser en apprenant",         sub: 'Le jeu avant tout' },
 ];
 
 const CAR_TYPE_OPTIONS = getCarTypes();
 
-// Default colors per car type — visible dès l'affichage
-const CAR_DEFAULT_COLORS: Record<string, string> = {
-  berline: '#e74c3c',
-  suv: '#3498db',
-  sportive: '#e67e22',
-  mini: '#2ecc71',
-  van: '#9b59b6',
-  pickup: '#f1c40f',
+const PILLS = [
+  '2286 questions officielles',
+  'Gamifié & interactif',
+  'FR + NL',
+  'Examen blanc',
+];
+
+const CAR_EMOJIS: Record<string, string> = {
+  berline:   '🚗',
+  suv:       '🚙',
+  sportive:  '🏎️',
+  mini:      '🚕',
+  van:       '🚐',
+  pickup:    '🛻',
+};
+
+const GASTON_MESSAGES: Record<number, string> = {
+  1: 'Bienvenue ! Je suis ton guide vers le permis belge.',
+  2: 'Dis-moi ton prénom, je personnaliserai tout pour toi !',
+  3: 'Choisis bien, cette voiture te suivra tout au long du parcours !',
+  4: "Je m'adapte à ton rythme, promis !",
+  5: 'Tout est prêt ! En route vers le permis !',
+};
+
+const goalLabels: Record<string, string> = {
+  soon:  'Passer mon permis bientôt',
+  relax: 'Réviser tranquillement',
+  fun:   "M'amuser en apprenant",
 };
 
 export default function OnboardingPage() {
   const router = useRouter();
-  const { signUp, signIn, user } = useAuth();
-  const { t, lang } = useLang();
+  const { signUp, user } = useAuth();
+  const { t } = useLang();
 
-  const [step, setStep] = useState(1);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [step, setStep]                   = useState(1);
+  const [name, setName]                   = useState('');
+  const [email]                           = useState('');
+  const [password]                        = useState('');
   const [selectedCarType, setSelectedCarType] = useState<string | null>(null);
-  const [selectedColor, setSelectedColor] = useState('#1E88E5');
-  const [goal, setGoal] = useState<string | null>(null);
-  const [saving, setSaving] = useState(false);
-  const [authError, setAuthError] = useState('');
-  const [showLogin, setShowLogin] = useState(false);
-  const [fade, setFade] = useState(true);
-  const [mounted, setMounted] = useState(false);
-
-  const goalLabel = (key: string) => {
-    const map: Record<string, string> = { soon: t('onboarding_goal_soon'), relax: t('onboarding_goal_relax'), fun: t('onboarding_goal_fun') };
-    return map[key] || key;
-  };
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [goal, setGoal]                   = useState<string | null>(null);
+  const [saving, setSaving]               = useState(false);
+  const [authError, setAuthError]         = useState('');
+  const [fade, setFade]                   = useState(true);
+  const [mounted, setMounted]             = useState(false);
 
   useEffect(() => {
     setMounted(true);
     if (typeof window !== 'undefined') {
-      const done = localStorage.getItem('@onboarding_done');
-      if (done === 'true') {
-        router.replace('/');
-      }
+      if (localStorage.getItem('@onboarding_done') === 'true') router.replace('/');
     }
   }, [router]);
 
   useEffect(() => {
     if (user && typeof window !== 'undefined') {
-      const done = localStorage.getItem('@onboarding_done');
-      if (done === 'true') {
-        router.replace('/');
-      }
+      if (localStorage.getItem('@onboarding_done') === 'true') router.replace('/');
     }
   }, [user, router]);
 
-  if (!mounted) return <div className="min-h-screen" />;
+  if (!mounted) return <div className="min-h-screen" style={{ background: '#0a0e2a' }} />;
 
   const goTo = (next: number) => {
     setFade(false);
-    setTimeout(() => {
-      setStep(next);
-      setAuthError('');
-      setFade(true);
-    }, 150);
+    setTimeout(() => { setStep(next); setAuthError(''); setFade(true); }, 150);
   };
   const goNext = () => goTo(step + 1);
-  const goBack = () => {
-    if (step === 2 && showLogin) { setShowLogin(false); return; }
-    goTo(step - 1);
-  };
-
-  const handleLoginExisting = async () => {
-    if (!email.trim() || !password.trim()) {
-      setAuthError(t('onboarding_remplir_email'));
-      return;
-    }
-    setSaving(true);
-    setAuthError('');
-    const result = await signIn(email.trim().toLowerCase(), password);
-    setSaving(false);
-    if (result.error) {
-      setAuthError(result.error);
-    } else {
-      // User logged in with existing account — skip to route
-      localStorage.setItem('@onboarding_done', 'true');
-      router.push('/');
-    }
-  };
+  const goBack = () => { if (step > 1) goTo(step - 1); };
 
   const handleFinish = async () => {
     if (saving) return;
     setSaving(true);
     setAuthError('');
 
-    const carType = selectedCarType || 'berline';
-    const profile = {
-      name: name.trim() || t('pilote'),
-      carColor: selectedColor,
+    const carType  = selectedCarType || 'berline';
+    const carColor = selectedColor   || '#1E88E5';
+    const profile  = {
+      name:      name.trim() || t('pilote'),
+      carColor,
       carType,
       objective: goal ?? 'relax',
     };
-
     localStorage.setItem('userProfile', JSON.stringify(profile));
 
-    if (email.trim() && password.trim() && !showLogin) {
+    if (email.trim() && password.trim()) {
       const result = await signUp(email.trim().toLowerCase(), password, profile.name);
       if (result.error) {
         setAuthError(result.error);
@@ -134,14 +116,10 @@ export default function OnboardingPage() {
     router.push('/');
   };
 
-  const carType = selectedCarType || 'berline';
-  const gastonData = GASTON_STEP_MESSAGES[lang][step] || GASTON_STEP_MESSAGES[lang][1];
-
-  // Cyan button style — always the same
   const cyanBtn = {
     background: '#4ecdc4',
     color: '#0a0e2a',
-    boxShadow: '0 4px 16px rgba(78,205,196,0.38)',
+    boxShadow: '0 4px 20px rgba(78,205,196,0.4)',
   };
   const disabledBtn = {
     background: 'rgba(255,255,255,0.06)',
@@ -149,410 +127,370 @@ export default function OnboardingPage() {
     boxShadow: 'none',
   };
 
-  // Sidebar recap items
-  const recapItems: { label: string; value: string; emoji: string }[] = [];
-  if (name.trim()) recapItems.push({ emoji: '👤', label: t('onboarding_prenom'), value: name.trim() });
-  if (step > 2 && email.trim()) recapItems.push({ emoji: '📧', label: 'Email', value: email.trim() });
-  if (selectedCarType) recapItems.push({ emoji: '🚗', label: t('onboarding_voiture'), value: CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label || selectedCarType });
-  if (step > 5) recapItems.push({ emoji: '🎨', label: t('onboarding_couleur'), value: CAR_COLORS.find(c => c.id === selectedColor)?.label || selectedColor });
-  if (goal) recapItems.push({ emoji: '🎯', label: t('onboarding_objectif'), value: goalLabel(goal) });
+  const carType      = selectedCarType || 'berline';
+  const carColor     = selectedColor   || '#4ecdc4';
+  const carStep3Ready = !!selectedCarType && !!selectedColor;
 
   return (
-    <div className="fixed inset-0 z-[100] overflow-y-auto" style={{ background: '#1B1B2F' }}>
+    <div className="fixed inset-0 z-[100] overflow-y-auto" style={{ background: '#0a0e2a' }}>
+
       {/* Language switcher */}
-      <div className="fixed top-6 right-6 z-[110]">
+      <div className="fixed top-5 right-5 z-[110]">
         <LanguageSwitcher />
       </div>
 
       {/* Back button */}
-      {step >= 2 && step <= 6 && (
+      {step >= 2 && step <= 4 && (
         <button
           onClick={goBack}
-          className="fixed top-6 left-6 z-[110] w-11 h-11 rounded-full flex items-center justify-center text-xl press-scale"
-          style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.65)' }}
+          className="fixed top-5 left-5 z-[110] w-10 h-10 rounded-full flex items-center justify-center press-scale"
+          style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.5)' }}
         >
           ←
         </button>
       )}
 
-      {/* ── Main layout: center + sidebar ── */}
-      <div className="w-full max-w-screen-xl mx-auto flex items-start justify-center gap-8 px-4 pt-16 pb-10">
+      {/* Progress bar — thin segments */}
+      {step >= 2 && (
+        <div className="fixed top-0 left-0 right-0 z-[110] flex gap-1 p-2">
+          {Array.from({ length: TOTAL_STEPS }, (_, i) => (
+            <div
+              key={i}
+              className="flex-1 rounded-full transition-all duration-300"
+              style={{
+                height: 3,
+                background: i + 1 <= step ? '#4ecdc4' : 'rgba(255,255,255,0.12)',
+              }}
+            />
+          ))}
+        </div>
+      )}
 
-        {/* ── Center content (~500px) ── */}
-        <div
-          className={`w-full max-w-[500px] flex flex-col items-center transition-opacity duration-150 ${fade ? 'opacity-100' : 'opacity-0'}`}
-        >
-          {/* ═══════════════ STEP 1 — Bienvenue ═══════════════ */}
-          {step === 1 && (
-            <>
-              <div
-                className="w-[130px] h-[130px] rounded-full flex items-center justify-center mb-7 animate-bounce-slow"
-                style={{ background: 'rgba(78,205,196,0.1)', border: '3px solid #4ecdc4' }}
-              >
-                <span className="text-6xl">🚗</span>
+      {/* Content */}
+      <div
+        className={`w-full max-w-[480px] mx-auto flex flex-col items-center px-6 pt-20 pb-28 transition-opacity duration-150 ${fade ? 'opacity-100' : 'opacity-0'}`}
+        style={{ minHeight: '100vh' }}
+      >
+
+        {/* ═══════════ STEP 1 — Accueil ═══════════ */}
+        {step === 1 && (
+          <>
+            {/* Eyebrow */}
+            <p className="text-xs font-black uppercase tracking-widest mb-6" style={{ color: 'rgba(78,205,196,0.7)' }}>
+              Belgique • FR + NL
+            </p>
+
+            {/* Car with glow */}
+            <div className="relative flex items-center justify-center mb-8" style={{ width: 220, height: 140 }}>
+              <div className="absolute rounded-full" style={{
+                width: 180, height: 120,
+                background: 'radial-gradient(circle, rgba(78,205,196,0.35) 0%, transparent 70%)',
+                filter: 'blur(20px)',
+              }} />
+              <div className="car-bounce relative z-10">
+                <CarSVG type="berline" color="#4ecdc4" size={190} />
               </div>
+            </div>
 
-              <p className="text-lg" style={{ color: 'rgba(255,255,255,0.55)' }}>{t('onboarding_bienvenue')}</p>
-              <h1 className="text-4xl font-black text-white text-center mb-2">{t('onboarding_permigo')}</h1>
-              <p className="text-base text-center mb-8" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                {t('onboarding_subtitle')}
-              </p>
+            <h1 className="text-[38px] font-black text-white text-center leading-tight mb-3" style={{ letterSpacing: '-0.5px' }}>
+              Ton permis,<br />
+              <span style={{ color: '#4ecdc4' }}>en mode jeu</span>
+            </h1>
 
-              <div className="w-full rounded-2xl p-5 mb-8 flex flex-col gap-3" style={{ background: 'rgba(255,255,255,0.05)' }}>
-                <p className="text-[15px] font-semibold" style={{ color: 'rgba(255,255,255,0.78)' }}>{t('onboarding_feature_1')}</p>
-                <p className="text-[15px] font-semibold" style={{ color: 'rgba(255,255,255,0.78)' }}>{t('onboarding_feature_2')}</p>
-                <p className="text-[15px] font-semibold" style={{ color: 'rgba(255,255,255,0.78)' }}>{t('onboarding_feature_3')}</p>
-              </div>
+            <p className="text-sm text-center mb-7" style={{ color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, maxWidth: 340 }}>
+              2286 questions officielles belges. Progresse leçon par leçon, gagne des XP, décroche ton permis.
+            </p>
 
-              <button
-                onClick={goNext}
-                className="w-full py-4 rounded-2xl font-black text-lg press-scale"
-                style={cyanBtn}
-              >
-                {t('onboarding_commencer')}
-              </button>
-            </>
-          )}
-
-          {/* ═══════════════ STEP 2 — Email / Password ═══════════════ */}
-          {step === 2 && (
-            <>
-              <span className="text-[64px] mb-4">{showLogin ? '🔑' : '📧'}</span>
-              <h2 className="text-2xl font-black text-white text-center mb-2">
-                {showLogin ? t('login_titre') : t('onboarding_creer_compte')}
-              </h2>
-              <p className="text-base text-center mb-7" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                {showLogin ? t('onboarding_identifiants') : t('onboarding_sauvegarder')}
-              </p>
-
-              {authError && (
-                <div className="w-full rounded-xl p-3 mb-4" style={{ background: 'rgba(255,80,80,0.12)', borderLeft: '3px solid #FF5050' }}>
-                  <p className="text-sm font-semibold" style={{ color: '#FF8080' }}>{authError}</p>
-                </div>
-              )}
-
-              <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                className="w-full rounded-xl px-4 py-4 text-base font-semibold text-white mb-3 focus:outline-none"
-                style={{ background: 'rgba(255,255,255,0.07)', border: '1.5px solid rgba(255,255,255,0.12)' }}
-              />
-              <input
-                type="password"
-                placeholder="Mot de passe (min. 6 caractères)"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                onKeyDown={e => { if (e.key === 'Enter') showLogin ? handleLoginExisting() : goNext(); }}
-                className="w-full rounded-xl px-4 py-4 text-base font-semibold text-white mb-4 focus:outline-none"
-                style={{ background: 'rgba(255,255,255,0.07)', border: '1.5px solid rgba(255,255,255,0.12)' }}
-              />
-
-              {showLogin ? (
-                <button
-                  onClick={handleLoginExisting}
-                  disabled={saving}
-                  className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-50"
-                  style={cyanBtn}
-                >
-                  {saving ? t('onboarding_connexion_loading') : t('onboarding_se_connecter')}
-                </button>
-              ) : (
-                <button
-                  onClick={goNext}
-                  className="w-full py-4 rounded-2xl font-black text-lg press-scale"
-                  style={cyanBtn}
-                >
-                  {t('onboarding_creer_btn')}
-                </button>
-              )}
-
-              <button onClick={goNext} className="mt-3 py-2">
-                <span className="text-sm underline" style={{ color: 'rgba(255,255,255,0.35)' }}>{t('onboarding_jouer_sans')}</span>
-              </button>
-
-              <button
-                onClick={() => { setShowLogin(!showLogin); setAuthError(''); }}
-                className="mt-2 py-2"
-              >
-                <span className="text-sm font-semibold" style={{ color: '#4ecdc4' }}>
-                  {showLogin ? t('onboarding_pas_compte') : t('onboarding_deja_compte')}
+            {/* Feature pills */}
+            <div className="flex flex-wrap justify-center gap-2 mb-8">
+              {PILLS.map(pill => (
+                <span key={pill} className="px-3 py-1.5 rounded-full text-xs font-black" style={{
+                  background: 'rgba(78,205,196,0.1)',
+                  border: '1px solid rgba(78,205,196,0.3)',
+                  color: '#4ecdc4',
+                }}>
+                  {pill}
                 </span>
-              </button>
-            </>
-          )}
+              ))}
+            </div>
 
-          {/* ═══════════════ STEP 3 — Prénom ═══════════════ */}
-          {step === 3 && (
-            <>
-              <span className="text-[64px] mb-4">👋</span>
-              <h2 className="text-2xl font-black text-white text-center mb-2">{t('onboarding_nom_titre')}</h2>
-              <p className="text-base text-center mb-7" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                {t('onboarding_nom_subtitle')}
-              </p>
+            <button
+              onClick={goNext}
+              className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3"
+              style={cyanBtn}
+            >
+              C&apos;est parti ! 🚀
+            </button>
 
-              <input
-                type="text"
-                placeholder={t('onboarding_nom_placeholder')}
-                value={name}
-                onChange={e => setName(e.target.value)}
-                onKeyDown={e => { if (e.key === 'Enter' && name.trim()) goNext(); }}
-                maxLength={25}
-                autoFocus
-                className="w-full rounded-2xl px-5 py-4 text-[22px] font-extrabold text-white text-center mb-6 focus:outline-none"
-                style={{ background: 'rgba(255,255,255,0.07)', border: '2px solid rgba(255,255,255,0.12)' }}
-              />
+            <button onClick={() => router.push('/login')} className="py-2 text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
+              J&apos;ai déjà un compte
+            </button>
+          </>
+        )}
 
-              <button
-                onClick={() => { if (name.trim()) goNext(); }}
-                disabled={!name.trim()}
-                className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
-                style={name.trim() ? cyanBtn : disabledBtn}
+        {/* ═══════════ STEP 2 — Prénom ═══════════ */}
+        {step === 2 && (
+          <>
+            <span className="text-[64px] mb-5 block">👋</span>
+            <h2 className="text-3xl font-black text-white text-center mb-2">
+              Comment tu t&apos;appelles ?
+            </h2>
+            <p className="text-sm text-center mb-8" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              On va personnaliser ton expérience
+            </p>
+
+            <input
+              type="text"
+              placeholder="Ton prénom..."
+              value={name}
+              onChange={e => setName(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter' && name.trim()) goNext(); }}
+              maxLength={25}
+              autoFocus
+              className="w-full rounded-2xl px-5 py-5 text-[24px] font-black text-white text-center mb-6 focus:outline-none"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: name.trim() ? '2px solid #4ecdc4' : '2px solid rgba(255,255,255,0.1)',
+                caretColor: '#4ecdc4',
+              }}
+            />
+
+            <button
+              onClick={() => name.trim() && goNext()}
+              disabled={!name.trim()}
+              className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
+              style={name.trim() ? cyanBtn : disabledBtn}
+            >
+              Continuer →
+            </button>
+          </>
+        )}
+
+        {/* ═══════════ STEP 3 — Voiture + Couleur (fusionnés) ═══════════ */}
+        {step === 3 && (
+          <>
+            <h2 className="text-3xl font-black text-white text-center mb-1">
+              Choisis ta voiture !
+            </h2>
+            <p className="text-sm text-center mb-5" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              Elle t&apos;accompagnera tout au long de ton apprentissage
+            </p>
+
+            {/* Live preview with emoji + color glow */}
+            <div className="relative flex items-center justify-center mb-4" style={{ width: 160, height: 110 }}>
+              <div className="absolute rounded-full" style={{
+                width: 140, height: 90,
+                background: `radial-gradient(circle, ${carColor}55 0%, transparent 70%)`,
+                filter: 'blur(18px)',
+              }} />
+              <span
+                className="relative z-10"
+                style={{
+                  fontSize: selectedCarType ? 72 : 64,
+                  filter: selectedCarType && selectedColor
+                    ? `drop-shadow(0 0 12px ${carColor}) drop-shadow(0 0 4px ${carColor})`
+                    : 'none',
+                  opacity: selectedCarType ? 1 : 0.3,
+                  transition: 'all 0.2s',
+                }}
               >
-                {t('onboarding_continuer')}
-              </button>
-            </>
-          )}
+                {CAR_EMOJIS[carType]}
+              </span>
+            </div>
 
-          {/* ═══════════════ STEP 4 — Choix voiture (type) ═══════════════ */}
-          {step === 4 && (
-            <>
-              <h2 className="text-2xl font-black text-white text-center mb-2">{t('onboarding_voiture_titre')}</h2>
-              <p className="text-base text-center mb-7" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                {t('onboarding_voiture_subtitle')}
-              </p>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full mb-6">
-                {CAR_TYPE_OPTIONS.map(car => {
-                  const isSelected = selectedCarType === car.id;
-                  const defaultColor = CAR_DEFAULT_COLORS[car.id] || '#5A6680';
-                  return (
-                    <button
-                      key={car.id}
-                      onClick={() => setSelectedCarType(car.id)}
-                      className="rounded-2xl p-4 flex flex-col items-center transition-all duration-150 press-scale relative"
-                      style={{
-                        background: isSelected ? 'rgba(78,205,196,0.15)' : 'rgba(255,255,255,0.05)',
-                        border: isSelected ? '2px solid #4ecdc4' : '2px solid rgba(255,255,255,0.09)',
-                      }}
-                    >
-                      <CarSVG type={car.id} color={isSelected ? '#4ecdc4' : defaultColor} size={80} />
-                      <span className="text-[13px] font-bold mt-2" style={{ color: isSelected ? '#4ecdc4' : 'rgba(255,255,255,0.6)' }}>
-                        {car.label}
-                      </span>
-                      {isSelected && <span className="absolute top-2 right-2 text-lg font-black" style={{ color: '#4ecdc4' }}>✓</span>}
-                    </button>
-                  );
-                })}
-              </div>
-
-              <button
-                onClick={() => { if (selectedCarType) goNext(); }}
-                disabled={!selectedCarType}
-                className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
-                style={selectedCarType ? cyanBtn : disabledBtn}
-              >
-                {selectedCarType
-                  ? `${CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label} ${t('onboarding_choisie')}`
-                  : t('onboarding_voiture_choisir')}
-              </button>
-            </>
-          )}
-
-          {/* ═══════════════ STEP 5 — Couleur ═══════════════ */}
-          {step === 5 && (
-            <>
-              <h2 className="text-2xl font-black text-white text-center mb-2">{t('onboarding_couleur_titre')}</h2>
-              <p className="text-base text-center mb-7" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                {t('onboarding_couleur_subtitle')}
-              </p>
-
-              <div className="flex items-center justify-center mb-7 h-[120px]">
-                <CarSVG color={selectedColor} size={180} type={carType} />
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-3.5 mb-7 w-4/5">
+            {/* Color palette (only when car selected) */}
+            {selectedCarType && (
+              <div className="flex flex-wrap justify-center gap-2.5 mb-5">
                 {CAR_COLORS.map(c => (
                   <button
                     key={c.id}
                     onClick={() => setSelectedColor(c.id)}
-                    className="w-11 h-11 rounded-full transition-all duration-150 press-scale"
+                    className="w-9 h-9 rounded-full press-scale transition-all"
                     style={{
                       background: c.id,
                       border: selectedColor === c.id ? '3px solid white' : '2px solid transparent',
-                      boxShadow: selectedColor === c.id ? '0 0 12px rgba(255,255,255,0.4)' : 'none',
+                      boxShadow: selectedColor === c.id ? `0 0 10px ${c.id}99` : 'none',
                     }}
                     title={c.label}
                   />
                 ))}
               </div>
+            )}
 
-              <button
-                onClick={goNext}
-                className="w-full py-4 rounded-2xl font-black text-lg press-scale"
-                style={cyanBtn}
-              >
-                {t('onboarding_continuer')}
-              </button>
-            </>
-          )}
+            {/* Car grid 3x2 */}
+            <div className="grid grid-cols-3 gap-2.5 w-full mb-6">
+              {CAR_TYPE_OPTIONS.map(car => {
+                const isSelected = selectedCarType === car.id;
+                return (
+                  <button
+                    key={car.id}
+                    onClick={() => setSelectedCarType(car.id)}
+                    className="rounded-2xl p-3 flex flex-col items-center transition-all duration-150 press-scale relative"
+                    style={{
+                      background: isSelected ? 'rgba(78,205,196,0.15)' : 'rgba(255,255,255,0.04)',
+                      border: isSelected ? '2px solid #4ecdc4' : '2px solid rgba(255,255,255,0.07)',
+                    }}
+                  >
+                    <span className="text-3xl mb-1">{CAR_EMOJIS[car.id] || '🚗'}</span>
+                    <span className="text-[11px] font-bold" style={{ color: isSelected ? '#4ecdc4' : 'rgba(255,255,255,0.5)' }}>
+                      {car.label}
+                    </span>
+                    {isSelected && (
+                      <span className="absolute top-1.5 right-1.5 text-[10px] font-black" style={{ color: '#4ecdc4' }}>✓</span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
 
-          {/* ═══════════════ STEP 6 — Objectif ═══════════════ */}
-          {step === 6 && (
-            <>
-              <h2 className="text-2xl font-black text-white text-center mb-2">{t('onboarding_objectif_titre')}</h2>
-              <p className="text-base text-center mb-7" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                {t('onboarding_objectif_subtitle')}
-              </p>
+            <button
+              onClick={() => carStep3Ready && goNext()}
+              disabled={!carStep3Ready}
+              className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
+              style={carStep3Ready ? cyanBtn : disabledBtn}
+            >
+              {carStep3Ready ? "C'est ma voiture →" : selectedCarType ? 'Choisis une couleur' : 'Choisis une voiture'}
+            </button>
+          </>
+        )}
 
-              <div className="w-full flex flex-col gap-3 mb-6">
-                {GOALS.map(g => {
-                  const isSelected = goal === g.key;
-                  return (
-                    <button
-                      key={g.key}
-                      onClick={() => setGoal(g.key)}
-                      className="flex items-center gap-3.5 rounded-2xl p-4 text-left transition-all duration-150 press-scale"
-                      style={{
-                        background: isSelected ? 'rgba(78,205,196,0.15)' : 'rgba(255,255,255,0.05)',
-                        border: isSelected ? '2px solid #4ecdc4' : '2px solid rgba(255,255,255,0.09)',
-                      }}
-                    >
-                      <span className="text-[34px]" style={{ filter: isSelected ? 'brightness(1.3)' : 'none' }}>{g.icon}</span>
-                      <div className="flex-1">
-                        <p className="text-[15px] font-extrabold" style={{ color: isSelected ? 'white' : 'rgba(255,255,255,0.65)' }}>
-                          {t(g.labelKey)}
-                        </p>
-                        <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>{t(g.subKey)}</p>
-                      </div>
-                      {isSelected && <span className="text-[22px] font-black" style={{ color: '#4ecdc4' }}>✓</span>}
-                    </button>
-                  );
-                })}
-              </div>
+        {/* ═══════════ STEP 4 — Objectif ═══════════ */}
+        {step === 4 && (
+          <>
+            <span className="text-[60px] mb-4 block">🏁</span>
+            <h2 className="text-3xl font-black text-white text-center mb-2">
+              Ton objectif ?
+            </h2>
+            <p className="text-sm text-center mb-8" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              Pour personnaliser ton parcours
+            </p>
 
-              <button
-                onClick={() => { if (goal) goNext(); }}
-                disabled={!goal}
-                className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
-                style={goal ? cyanBtn : disabledBtn}
-              >
-                {t('onboarding_continuer')}
-              </button>
-            </>
-          )}
+            <div className="w-full flex flex-col gap-3 mb-6">
+              {GOALS.map(g => {
+                const isSelected = goal === g.key;
+                return (
+                  <button
+                    key={g.key}
+                    onClick={() => setGoal(g.key)}
+                    className="flex items-center gap-4 rounded-2xl px-5 py-4 text-left transition-all duration-150 press-scale"
+                    style={{
+                      background: isSelected ? 'rgba(78,205,196,0.12)' : 'rgba(255,255,255,0.04)',
+                      border: isSelected ? '2px solid #4ecdc4' : '2px solid rgba(255,255,255,0.07)',
+                    }}
+                  >
+                    <span className="text-[36px]">{g.icon}</span>
+                    <div className="flex-1">
+                      <p className="text-[15px] font-black" style={{ color: isSelected ? '#fff' : 'rgba(255,255,255,0.7)' }}>
+                        {g.label}
+                      </p>
+                      <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.3)' }}>{g.sub}</p>
+                    </div>
+                    {isSelected && <span className="text-xl font-black" style={{ color: '#4ecdc4' }}>✓</span>}
+                  </button>
+                );
+              })}
+            </div>
 
-          {/* ═══════════════ STEP 7 — C'est parti ! ═══════════════ */}
-          {step === 7 && (
-            <>
-              <span className="text-[72px] mb-4">🎉</span>
-              <h2 className="text-4xl font-black text-white text-center mb-2">{t('onboarding_pret')}</h2>
-              <p className="text-lg text-center mb-6" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                {t('onboarding_tout_pret')}{name.trim() ? `, ${name.trim()}` : ''} !
-              </p>
+            <button
+              onClick={() => goal && goNext()}
+              disabled={!goal}
+              className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-30"
+              style={goal ? cyanBtn : disabledBtn}
+            >
+              C&apos;est mon objectif →
+            </button>
+          </>
+        )}
 
-              <div className="flex items-center justify-center mb-6 animate-drive-in">
-                <CarSVG color={selectedColor} size={150} type={carType} />
-              </div>
+        {/* ═══════════ STEP 5 — C'est parti ! ═══════════ */}
+        {step === 5 && (
+          <>
+            {/* Confetti-style emojis */}
+            <div className="relative w-full flex justify-center mb-6" style={{ height: 60 }}>
+              {['🎉', '⭐', '🏆', '✨', '🎊', '💫'].map((e, i) => (
+                <span
+                  key={i}
+                  className="absolute text-2xl"
+                  style={{
+                    left: `${10 + i * 16}%`,
+                    top: `${i % 2 === 0 ? 0 : 20}px`,
+                    animation: `star-twinkle ${1 + i * 0.2}s ease-in-out infinite`,
+                    animationDelay: `${i * 0.15}s`,
+                  }}
+                >
+                  {e}
+                </span>
+              ))}
+            </div>
 
-              {goal && (
-                <p className="text-base font-semibold text-center mb-6" style={{ color: 'rgba(255,255,255,0.65)' }}>
-                  {t('onboarding_objectif_label')} : {goalLabel(goal)}
-                </p>
-              )}
+            <h2 className="text-4xl font-black text-white text-center mb-2">
+              {name.trim() ? `C'est parti, ${name.trim()} !` : "C'est parti !"}
+            </h2>
+            <p className="text-sm text-center mb-7" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              Ton aventure commence maintenant 🚀
+            </p>
 
-              {/* Mobile Gaston */}
-              <div className="lg:hidden mb-6 w-full">
-                <Gaston
-                  message={`${t('onboarding_en_route')} ${name.trim() || t('pilote')} !`}
-                  expression="party"
-                  size="small"
-                />
-              </div>
-
-              {authError && (
-                <div className="w-full rounded-xl p-3 mb-4" style={{ background: 'rgba(255,80,80,0.12)', borderLeft: '3px solid #FF5050' }}>
-                  <p className="text-sm font-semibold" style={{ color: '#FF8080' }}>{authError}</p>
+            {/* Recap summary */}
+            <div className="w-full rounded-2xl p-5 mb-6 flex flex-col gap-3" style={{
+              background: 'rgba(78,205,196,0.06)',
+              border: '1px solid rgba(78,205,196,0.2)',
+            }}>
+              {name.trim() && (
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">👤</span>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase" style={{ color: '#5A6B8A' }}>Pilote</p>
+                    <p className="text-sm font-black text-white">{name.trim()}</p>
+                  </div>
                 </div>
               )}
-
-              <button
-                onClick={handleFinish}
-                disabled={saving}
-                className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-50"
-                style={cyanBtn}
-              >
-                {saving ? t('register_loading') : t('onboarding_aventure')}
-              </button>
-            </>
-          )}
-
-          {/* Step dots */}
-          <div className="flex justify-center gap-2 mt-8">
-            {Array.from({ length: TOTAL_STEPS }, (_, i) => (
-              <div
-                key={i}
-                className="h-2 rounded-full transition-all"
-                style={{
-                  width: i + 1 === step ? 24 : 8,
-                  background: i + 1 === step ? '#4ecdc4' : 'rgba(255,255,255,0.18)',
-                }}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* ── Desktop sidebar — recap + Gaston ── */}
-        <div className="hidden lg:flex flex-col gap-5 w-72 flex-shrink-0 mt-16">
-
-          {/* Gaston contextuel */}
-          <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-            <Gaston message={gastonData.msg} expression={gastonData.expr} size="small" title={t('prof_gaston')} />
-          </div>
-
-          {/* Recap */}
-          {recapItems.length > 0 && (
-            <div className="rounded-2xl p-5" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4ecdc4' }}>{t('onboarding_profil')}</h4>
-              <div className="flex flex-col gap-3">
-                {recapItems.map(item => (
-                  <div key={item.label} className="flex items-center gap-3">
-                    <span className="text-lg">{item.emoji}</span>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-[10px] font-bold uppercase" style={{ color: '#5A6B8A' }}>{item.label}</p>
-                      <p className="text-sm font-bold truncate text-white">{item.value}</p>
-                    </div>
+              {selectedCarType && (
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">{CAR_EMOJIS[selectedCarType] || '🚗'}</span>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase" style={{ color: '#5A6B8A' }}>Voiture</p>
+                    <p className="text-sm font-black text-white">
+                      {CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label}
+                      {selectedColor && ` · ${CAR_COLORS.find(c => c.id === selectedColor)?.label || ''}`}
+                    </p>
                   </div>
-                ))}
+                </div>
+              )}
+              {goal && (
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">🎯</span>
+                  <div>
+                    <p className="text-[10px] font-bold uppercase" style={{ color: '#5A6B8A' }}>Objectif</p>
+                    <p className="text-sm font-black text-white">{goalLabels[goal] ?? goal}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {authError && (
+              <div className="w-full rounded-xl p-3 mb-4" style={{ background: 'rgba(255,80,80,0.12)', borderLeft: '3px solid #FF5050' }}>
+                <p className="text-sm font-semibold" style={{ color: '#FF8080' }}>{authError}</p>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Color preview in sidebar when on color step */}
-          {step >= 4 && selectedCarType && (
-            <div className="rounded-2xl p-5 flex flex-col items-center" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-3 self-start" style={{ color: '#4ecdc4' }}>{t('onboarding_ta_voiture')}</h4>
-              <CarSVG type={carType} color={selectedColor} size={140} />
-              <p className="text-xs font-bold mt-2" style={{ color: '#8B9DC3' }}>
-                {CAR_TYPE_OPTIONS.find(c => c.id === selectedCarType)?.label} — {CAR_COLORS.find(c => c.id === selectedColor)?.label || 'Bleu'}
-              </p>
-            </div>
-          )}
+            <button
+              onClick={handleFinish}
+              disabled={saving}
+              className="w-full py-4 rounded-2xl font-black text-lg press-scale disabled:opacity-50"
+              style={cyanBtn}
+            >
+              {saving ? 'Chargement…' : "Commencer l'aventure 🏁"}
+            </button>
+          </>
+        )}
 
-          {/* Step indicator */}
-          <div className="rounded-2xl p-5" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('onboarding_etape')}</h4>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-black" style={{ color: '#4ecdc4' }}>{step}</span>
-              <span className="text-sm" style={{ color: '#5A6B8A' }}>/ {TOTAL_STEPS}</span>
-            </div>
-            <div className="h-1.5 rounded-full mt-3 overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
-              <div className="h-full rounded-full transition-all duration-300" style={{ width: `${(step / TOTAL_STEPS) * 100}%`, background: '#4ecdc4' }} />
-            </div>
-          </div>
-        </div>
       </div>
+
+      {/* Gaston — discreet bottom right, message changes per step */}
+      <div className="fixed bottom-5 right-5 z-50" style={{ maxWidth: 210 }}>
+        <Gaston message={GASTON_MESSAGES[step]} expression="happy" size="small" />
+      </div>
+
     </div>
   );
 }
