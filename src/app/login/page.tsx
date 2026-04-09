@@ -60,7 +60,6 @@ export default function LoginPage() {
     <div className="max-w-md mx-auto px-5 py-12 relative">
       <div className="absolute top-0 right-0"><LanguageSwitcher /></div>
       <div className="text-center mb-8">
-        <span className="text-[64px] block mb-3">🚗</span>
         <h1 className="text-2xl font-black">{t('login_titre')}</h1>
         <p className="text-sm" style={{ color: '#8B9DC3' }}>{t('login_subtitle')}</p>
       </div>
