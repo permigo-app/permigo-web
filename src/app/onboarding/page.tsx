@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -17,11 +16,6 @@ const CARS = [
 ];
 
 
-const CAR_SVGS: Record<string, (color: string, w?: number, h?: number) => React.ReactElement> = {
-  berline: (color, w = 200, h = 100) => (
-    <svg viewBox="0 0 200 100" width={w} height={h}>
-      <rect x="20" y="45" width="160" height="40" rx="8" fill={color}/>
-      <ellipse cx="100" cy="45" rx="55" ry="22" fill={color}/>
 export default function OnboardingPage() {
   const router = useRouter();
   const { signUp, user } = useAuth();
