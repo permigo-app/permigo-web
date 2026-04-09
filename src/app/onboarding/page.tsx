@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import CarSVG, { getCarTypes, CAR_COLORS } from '@/components/CarSVG';
-import Gaston from '@/components/Gaston';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -196,8 +196,8 @@ export default function OnboardingPage() {
 
             {/* Gaston grand + bulle de bienvenue */}
             <div className="flex items-center gap-4 w-full mb-8">
-              <div className="gaston-big flex-shrink-0" style={{ width: 130, animation: 'gastonBounce 2.2s ease-in-out infinite', overflow: 'visible' }}>
-                <Gaston expression="happy" />
+              <div className="flex-shrink-0" style={{ animation: 'gastonBounce 2.2s ease-in-out infinite' }}>
+                <Image src="/images/gaston.png" width={140} height={140} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
               </div>
               <div style={{
                 flex: 1,
@@ -544,21 +544,29 @@ export default function OnboardingPage() {
 
       </div>
 
-      {/* Gaston — bas gauche, caché sur step 1 (déjà affiché en grand) */}
+      {/* Gaston — bas gauche, caché sur step 1 */}
       <style>{`
         @keyframes gastonBounce {
           0%, 100% { transform: translateY(0px); }
           50%       { transform: translateY(-6px); }
         }
-        .gaston-onboarding { animation: gastonBounce 2.2s ease-in-out infinite; }
-        .gaston-onboarding svg { width: 64px !important; height: 48px !important; }
-        .gaston-onboarding > div:first-child { width: 72px !important; }
-        .gaston-onboarding p.font-semibold { font-size: 15px !important; line-height: 1.4 !important; }
-        .gaston-big svg { width: 128px !important; height: 96px !important; }
       `}</style>
       {step > 1 && (
-        <div className="fixed bottom-6 left-4 z-50 gaston-onboarding" style={{ maxWidth: 260 }}>
-          <Gaston message={GASTON_MESSAGES[step]} expression="happy" />
+        <div className="fixed bottom-4 left-4 z-50 flex items-end gap-2" style={{ maxWidth: 280, animation: 'gastonBounce 2.2s ease-in-out infinite' }}>
+          <Image src="/images/gaston.png" width={80} height={80} alt="Prof. Gaston" style={{ flexShrink: 0, objectFit: 'contain' }} />
+          <div style={{
+            background: '#FFF8E7',
+            border: '1.5px solid #1B3A6B',
+            borderRadius: '16px 16px 16px 0',
+            padding: '10px 14px',
+            fontSize: 14,
+            fontWeight: 600,
+            color: '#1A1A2E',
+            lineHeight: 1.4,
+            boxShadow: '0 3px 8px rgba(0,0,0,0.2)',
+          }}>
+            {GASTON_MESSAGES[step]}
+          </div>
         </div>
       )}
 

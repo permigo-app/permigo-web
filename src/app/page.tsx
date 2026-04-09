@@ -9,7 +9,7 @@ import { THEME_COLORS, THEME_EMOJIS, CITY_NAMES_UPPER } from '@/lib/constants';
 import { GASTON_GREETINGS, getRandomMsg } from '@/locales/messages';
 import { isPremium, isThemeFree } from '@/lib/premium';
 import { getUnlockedThemes, getAllStars, getAllExams, getXPData, checkAndUpdateStreak, getStreakData, getCompletedParties, getLessonProgress } from '@/lib/progressStorage';
-import Gaston from '@/components/Gaston';
+import Image from 'next/image';
 import CarSVG from '@/components/CarSVG';
 
 // ── Road constants ──
@@ -414,8 +414,21 @@ export default function HomePage() {
         </div>
 
         {/* ── Mobile Gaston ── */}
-        <div className="lg:hidden mb-5 px-3">
-          <Gaston message={greeting} expression="happy" title="Prof. Gaston" />
+        <div className="lg:hidden mb-5 px-3 flex items-end gap-3">
+          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" style={{ flexShrink: 0, objectFit: 'contain' }} />
+          <div style={{
+            background: '#FFF8E7',
+            border: '1.5px solid #1B3A6B',
+            borderRadius: '16px 16px 16px 0',
+            padding: '10px 14px',
+            fontSize: 13,
+            fontWeight: 600,
+            color: '#1A1A2E',
+            lineHeight: 1.4,
+            boxShadow: '0 3px 6px rgba(0,0,0,0.15)',
+          }}>
+            {greeting}
+          </div>
         </div>
 
         {/* SVG Road */}
@@ -1086,11 +1099,22 @@ export default function HomePage() {
 
         {/* ── Prof. Gaston dit... ── */}
         <div className="stat-card">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-lg">🎓</span>
+          <div className="flex items-center gap-2 mb-3">
+            <Image src="/images/gaston.png" width={40} height={40} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
             <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#8B9DC3' }}>{t('prof_gaston_dit')}</span>
           </div>
-          <Gaston message={greeting} expression="happy" compact />
+          <div style={{
+            background: '#FFF8E7',
+            border: '1.5px solid #1B3A6B',
+            borderRadius: '12px',
+            padding: '10px 14px',
+            fontSize: 13,
+            fontWeight: 600,
+            color: '#1A1A2E',
+            lineHeight: 1.45,
+          }}>
+            {greeting}
+          </div>
         </div>
 
         {/* ── Progression ── */}

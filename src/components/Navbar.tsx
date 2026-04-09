@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
@@ -63,13 +64,19 @@ export default function Navbar() {
       {/* Desktop sidebar */}
       <nav className="hidden lg:flex flex-col items-start fixed left-0 top-0 h-full z-50 py-5 pl-4" style={{ width: 250, background: '#0F1923', borderRight: '1px solid #16213E' }}>
         {/* Logo + Language switcher */}
-        <div className="flex items-center justify-between w-full pr-4 mb-8">
+        <div className="flex items-center justify-between w-full pr-4 mb-4">
           <Link href="/" className="flex items-center px-3">
             <span className="text-xl font-black tracking-tight" style={{ color: '#ffffff' }}>My</span>
             <span className="text-xl font-black tracking-tight" style={{ color: '#00B894' }}>Permi</span>
             <span className="text-xl font-black tracking-tight" style={{ color: '#4ecdc4' }}>Go</span>
           </Link>
           <LanguageSwitcher />
+        </div>
+
+        {/* Prof. Gaston */}
+        <div className="flex items-center gap-2 px-3 mb-6">
+          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" style={{ objectFit: 'contain', flexShrink: 0 }} />
+          <span className="text-xs font-black uppercase tracking-wide" style={{ color: '#8B9DC3' }}>Prof. Gaston</span>
         </div>
 
         {/* Nav items */}
