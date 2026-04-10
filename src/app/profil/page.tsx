@@ -7,7 +7,6 @@ import { getUnlockedBadges } from '@/lib/badges';
 import { BADGES, THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { getThemeDataLocalized, THEME_ORDER } from '@/lib/lessonData';
 import Gaston from '@/components/Gaston';
-import CarSVG from '@/components/CarSVG';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import { GASTON_PROFILE, getRandomMsg } from '@/locales/messages';
@@ -25,7 +24,7 @@ export default function ProfilePage() {
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [survivalBest, setSurvivalBest] = useState(0);
   const [studyTime, setStudyTime] = useState(0);
-  const [userCar, setUserCar] = useState<{ carType: string; carColor: string }>({ carType: 'berline', carColor: '#1E88E5' });
+  const [userCar, setUserCar] = useState<{ carType: string; carColor: string; carImage?: string }>({ carType: 'berline', carColor: '#1E88E5', carImage: '/images/cars/car-red.png' });
   const [unlockedBadges, setUnlockedBadges] = useState<string[]>([]);
   const [hasLocalData, setHasLocalData] = useState(false);
   const [hoveredBadge, setHoveredBadge] = useState<string | null>(null);
@@ -45,10 +44,16 @@ export default function ProfilePage() {
     setSurvivalBest(getSurvivalBest());
     setStudyTime(getStudyTime());
     try {
-      const raw = localStorage.getItem('userProfile');
-      if (raw) {
-        const p = JSON.parse(raw);
-        if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#1E88E5' });
+      const rawCar = localStorage.getItem('userCar');
+      if (rawCar) {
+        const c = JSON.parse(rawCar);
+        setUserCar({ carType: c.id || 'berline', carColor: c.color || '#1E88E5', carImage: c.image || '/images/cars/car-red.png' });
+      } else {
+        const raw = localStorage.getItem('userProfile');
+        if (raw) {
+          const p = JSON.parse(raw);
+          if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#1E88E5', carImage: '/images/cars/car-red.png' });
+        }
       }
     } catch {}
     setUnlockedBadges(getUnlockedBadges());
@@ -98,7 +103,13 @@ export default function ProfilePage() {
                     className="w-[100px] h-[100px] rounded-full flex items-center justify-center mb-3 car-bounce"
                     style={{ background: '#0F1923', border: '4px solid #4ecdc4', boxShadow: '0 0 24px rgba(78,205,196,0.25)' }}
                   >
-                    <CarSVG type={userCar.carType} color={userCar.carColor} size={70} />
+                    <Image
+                      src={userCar.carImage || '/images/cars/car-red.png'}
+                      alt="car"
+                      width={80}
+                      height={80}
+                      style={{ objectFit: 'contain', filter: `drop-shadow(0 4px 8px ${userCar.carColor}88)` }}
+                    />
                   </div>
                   <h1 className="text-xl font-black">{user?.username || t('pilote')}</h1>
                   {user?.email && (
