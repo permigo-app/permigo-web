@@ -6,6 +6,7 @@ import { getXPData, getStreakData, getQuizHistory, getAllStars, getUnlockedTheme
 import { getUnlockedBadges } from '@/lib/badges';
 import { BADGES, THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { getThemeDataLocalized, THEME_ORDER } from '@/lib/lessonData';
+import Image from 'next/image';
 import Gaston from '@/components/Gaston';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
