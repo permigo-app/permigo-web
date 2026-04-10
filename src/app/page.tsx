@@ -34,7 +34,6 @@ const EXAM_RING_CIRC = 2 * Math.PI * EXAM_RING_R;
 const CAR_SIZE = 45;
 const CAR_AHEAD = 38;
 const THEME_EXTRA_GAP = 160;  // room for banner + barrier between themes
-const DESIGN_SVG_W = 520;    // fixed design width — road is always built at this size
 
 // Monument images per theme
 interface MonumentDef {
@@ -121,9 +120,6 @@ export default function HomePage() {
   const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
   const [mounted, setMounted] = useState(false);
   const [userCar, setUserCar] = useState<{ carType: string; carColor: string; carImage?: string }>({ carType: 'berline', carColor: '#1E88E5' });
-  const [roadAreaWidth, setRoadAreaWidth] = useState(DESIGN_SVG_W);
-  const [isDesktop, setIsDesktop] = useState(false);
-  const roadAreaRef = useRef<HTMLDivElement>(null);
 
   const DEFAULT_ADJ: Record<string, { dx: number; dy: number; scale: number; rot: number }> = {
     "mon-A-0": { dx: -140, dy: -140, scale: 1.3, rot: 0 },
@@ -193,26 +189,6 @@ export default function HomePage() {
       }
     } catch {}
   }, []);
-
-  // Measure available road area width for responsive scaling (desktop only)
-  useEffect(() => {
-    if (!mounted) return;
-    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
-    checkDesktop();
-    window.addEventListener('resize', checkDesktop);
-    return () => window.removeEventListener('resize', checkDesktop);
-  }, [mounted]);
-
-  useEffect(() => {
-    if (!mounted) return;
-    const el = roadAreaRef.current;
-    if (!el) return;
-    const update = () => setRoadAreaWidth(el.clientWidth || DESIGN_SVG_W);
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [mounted]);
 
   useEffect(() => {
     setSelectedPartieIdx(null);
@@ -340,8 +316,10 @@ export default function HomePage() {
       });
     }
 
-    // ── Width calculation — fixed design width, scaled at render time ──
-    const SVG_W = DESIGN_SVG_W;
+    // ── Width calculation ──
+    // Available width between left sidebar (250px) and right sidebar (320px)
+    const availableW = typeof window !== 'undefined' ? window.innerWidth - 250 - 320 : 400;
+    const SVG_W = Math.min(600, Math.max(300, availableW));
     const CX = SVG_W * 0.14;  // road shifted more left
     // Zigzag amplitude
     const AMP = Math.min((SVG_W - 100) / 2, 110);
@@ -418,19 +396,12 @@ export default function HomePage() {
   // ── Total lessons for progression ──
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
-  // ── Road scale for responsive desktop (1 on mobile = no scaling) ──
-  const roadScale = isDesktop ? Math.min(1.6, Math.max(0.45, roadAreaWidth / DESIGN_SVG_W)) : 1;
-
   return (
-    <div className="flex gap-0 overflow-x-hidden">
+    <div className="flex gap-0">
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div
-        ref={roadAreaRef}
-        className="flex-1 min-w-0 py-6 overflow-hidden"
-        style={{ paddingRight: 'clamp(220px, 20vw, 340px)' }}
-      >
+      <div className="flex-1 min-w-0 px-2 py-6 lg:pr-[340px] lg:max-w-none" style={{ overflow: 'visible' }}>
 
         {/* ── Mobile-only header with stats ── */}
         <div className="lg:hidden flex items-center justify-between mb-4 px-3">
@@ -467,14 +438,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* SVG Road — scaled on desktop, normal on mobile */}
-        <div style={{
-          transformOrigin: 'top center',
-          transform: `scale(${roadScale})`,
-          height: totalH * roadScale,
-          width: DESIGN_SVG_W,
-          margin: '0 auto',
-        }}>
+        {/* SVG Road */}
         <div ref={roadContainerRef} className="relative overflow-visible" style={{ height: totalH, width: SVG_W }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
@@ -1108,14 +1072,13 @@ export default function HomePage() {
             });
           })()}
         </div>
-        </div>{/* end scale wrapper */}
 
       </div>
 
       {/* ═══════════════════════════════════════ */}
       {/* RIGHT SIDEBAR — Desktop only (~300px) */}
       {/* ═══════════════════════════════════════ */}
-      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 'clamp(220px, 20vw, 340px)', background: '#0F1923', borderLeft: '1px solid #16213E' }}>
+      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 320, background: '#0F1923', borderLeft: '1px solid #16213E' }}>
 
         {/* ── Stats du jour ── */}
         <div className="stat-card stat-card-glow">
