@@ -7,8 +7,17 @@ import Link from 'next/link';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'MyPermiGo — Permis de conduire belge',
-  description: 'Prépare ton permis de conduire théorique belge avec MyPermiGo !',
+  title: 'MyPermiGo — Permis Théorique Belge en Mode Jeu',
+  description: 'Prépare ton examen théorique belge avec 2286 questions officielles. Gamifié, interactif, FR + NL. Essai gratuit 7 jours.',
+  keywords: 'permis belge, code de la route belgique, examen théorique belgique',
+  openGraph: {
+    title: 'MyPermiGo — Permis Théorique Belge',
+    description: "Prépare ton permis belge en t'amusant. 2286 questions officielles.",
+    url: 'https://mypermigo.be',
+    siteName: 'MyPermiGo',
+    locale: 'fr_BE',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
