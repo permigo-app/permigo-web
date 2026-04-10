@@ -4,6 +4,7 @@ import { AuthProvider } from '@/contexts/AuthContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import AppShell from '@/components/AppShell';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'MyPermiGo — Permis de conduire belge',
@@ -32,12 +33,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AppShell>
               {children}
             </AppShell>
-            <footer style={{ background: '#0a0e2a', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '14px 24px', textAlign: 'center' }}>
-              <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
-                <span>© 2025 MyPermiGo</span>
-                <Link href="/privacy" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>Politique de confidentialité</Link>
-                <Link href="/terms" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>CGU</Link>
-              </p>
+            <footer style={{ background: '#0a0e2a', padding: '12px 24px', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)' }}>© 2025 MyPermiGo</span>
+
+                <a href="https://www.iubenda.com/privacy-policy/43486445"
+                   className="iubenda-white iubenda-noiframe iubenda-embed"
+                   target="_blank"
+                   style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>
+                  Politique de confidentialité
+                </a>
+
+                <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy"
+                   className="iubenda-white iubenda-noiframe iubenda-embed"
+                   target="_blank"
+                   style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>
+                  Politique relative aux Cookies
+                </a>
+
+                <Link href="/terms" style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>
+                  CGU
+                </Link>
+              </div>
+
+              <Script id="iubenda-script" strategy="lazyOnload">
+                {`(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);`}
+              </Script>
             </footer>
           </AuthProvider>
         </LanguageProvider>
