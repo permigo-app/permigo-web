@@ -160,6 +160,31 @@ export default function Navbar() {
             </Link>
           )}
         </div>
+
+        {/* Legal links */}
+        <div style={{
+          padding: '12px 16px',
+          borderTop: '1px solid rgba(255,255,255,0.06)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '6px',
+        }}>
+          <a href="https://www.iubenda.com/privacy-policy/43486445"
+             target="_blank"
+             style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', textDecoration: 'none' }}>
+            Politique de confidentialité
+          </a>
+          <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy"
+             target="_blank"
+             style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', textDecoration: 'none' }}>
+            Cookies
+          </a>
+          <a href="/terms"
+             style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', textDecoration: 'none' }}>
+            CGU
+          </a>
+          <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.2)' }}>© 2025 MyPermiGo</span>
+        </div>
         </div>
       </nav>
 
