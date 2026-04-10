@@ -31,7 +31,7 @@ const ACTIVE_RING_CIRC = 2 * Math.PI * ACTIVE_RING_R;
 const EXAM_RING_R = EXAM_R + RING_GAP;
 const EXAM_RING_SIZE = (EXAM_RING_R + RING_STROKE / 2) * 2;
 const EXAM_RING_CIRC = 2 * Math.PI * EXAM_RING_R;
-const CAR_SIZE = 40;
+const CAR_SIZE = 45;
 const CAR_AHEAD = 38;
 const THEME_EXTRA_GAP = 160;  // room for banner + barrier between themes
 
