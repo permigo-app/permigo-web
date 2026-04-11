@@ -61,16 +61,7 @@ export default function OnboardingPage() {
 
   useEffect(() => {
     setMounted(true);
-    if (typeof window !== 'undefined') {
-      if (localStorage.getItem('@onboarding_done') === 'true') router.replace('/');
-    }
-  }, [router]);
-
-  useEffect(() => {
-    if (user && typeof window !== 'undefined') {
-      if (localStorage.getItem('@onboarding_done') === 'true') router.replace('/');
-    }
-  }, [user, router]);
+  }, []);
 
   if (!mounted) return <div className="min-h-screen" style={{ background: '#0a0e2a' }} />;
 
