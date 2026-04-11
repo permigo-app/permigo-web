@@ -317,14 +317,10 @@ export default function HomePage() {
     }
 
     // ── Width calculation ──
-    // Sidebar gauche: clamp(180,16vw,250) — Sidebar droite: clamp(240,22vw,380)
-    const leftW = typeof window !== 'undefined' ? Math.min(250, Math.max(180, window.innerWidth * 0.16)) : 220;
-    const rightW = typeof window !== 'undefined' ? Math.min(500, Math.max(300, window.innerWidth * 0.26)) : 350;
-    const availableW = typeof window !== 'undefined' ? window.innerWidth - leftW - rightW : 500;
-    const SVG_W = Math.min(1100, Math.max(380, availableW));
-    const CX = SVG_W * 0.14;  // road shifted more left
-    // Zigzag amplitude — scales with SVG_W but capped so road stays readable
-    const AMP = Math.min((SVG_W - 100) / 2, 180);
+    const availableW = typeof window !== 'undefined' ? window.innerWidth - 250 - 500 : 400;
+    const SVG_W = Math.min(600, Math.max(300, availableW));
+    const CX = SVG_W * 0.14;
+    const AMP = Math.min((SVG_W - 100) / 2, 110);
 
     // ── Positions with extra gap at theme boundaries ──
     const themeStartSet = new Set(themeAt.keys());
@@ -403,7 +399,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-2 py-6" style={{ overflow: 'visible' }}>
+      <div className="flex-1 min-w-0 px-2 py-6 lg:max-w-[640px] lg:mx-auto" style={{ overflow: 'visible' }}>
 
         {/* ── Mobile-only header with stats ── */}
         <div className="lg:hidden flex items-center justify-between mb-4 px-3">
@@ -1080,7 +1076,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* RIGHT SIDEBAR — Desktop only (~300px) */}
       {/* ═══════════════════════════════════════ */}
-      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 'clamp(300px, 26vw, 500px)', background: '#0F1923', borderLeft: '1px solid #16213E' }}>
+      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 500, background: '#0F1923', borderLeft: '1px solid #16213E' }}>
 
         {/* ── Stats du jour ── */}
         <div className="stat-card stat-card-glow">

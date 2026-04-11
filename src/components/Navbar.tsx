@@ -62,7 +62,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop sidebar */}
-      <nav className="hidden lg:flex flex-col items-start fixed left-0 top-0 h-full z-50 py-5 pl-4" style={{ width: 'clamp(180px, 16vw, 250px)', background: '#0F1923', borderRight: '1px solid #16213E' }}>
+      <nav className="hidden lg:flex flex-col items-start fixed left-0 top-0 h-full z-50 py-5 pl-4" style={{ width: 250, background: '#0F1923', borderRight: '1px solid #16213E' }}>
         {/* Logo + Language switcher */}
         <div className="flex items-center justify-between w-full pr-4 mb-4">
           <Link href="/" className="flex items-center px-3">
