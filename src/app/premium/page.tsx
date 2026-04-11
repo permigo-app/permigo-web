@@ -33,10 +33,12 @@ export default function PremiumPage() {
   const handleSubscribe = async () => {
     setLoading(true);
     setError('');
+    const controller = new AbortController();
     try {
       const res = await fetch('/api/stripe/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({
           userId: supabaseUser?.id || 'guest',
           email: supabaseUser?.email || '',

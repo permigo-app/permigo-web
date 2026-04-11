@@ -104,8 +104,7 @@ export default function FlashPage() {
       setQueue(remaining.length > 0 ? remaining : allCards);
     }
     setLoaded(true);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [themeCode, allCards, totalCards]);
 
   const flipCard = useCallback(() => {
     if (animating) return;
