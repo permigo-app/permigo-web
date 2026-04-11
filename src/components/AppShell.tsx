@@ -16,7 +16,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   }, [pathname]);
 
   const isOnboardingPage = pathname === '/onboarding';
-  const isAuthPage = pathname === '/login' || pathname === '/register';
+  const isAuthPage = pathname === '/login' || pathname === '/register' || pathname === '/auth';
 
   useEffect(() => {
     if (onboardingDone === null) return;

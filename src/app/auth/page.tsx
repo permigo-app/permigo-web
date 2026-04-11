@@ -36,11 +36,13 @@ export default function AuthPage() {
       setLoading(false);
       if (result.error) { setError(result.error); return; }
       if (result.needsConfirmation) { setConfirmed(true); return; }
-      window.location.href = '/';
+      window.location.href = '/onboarding';
     } else {
       const result = await signIn(email.trim().toLowerCase(), password);
       setLoading(false);
       if (result.error) { setError(result.error); return; }
+      localStorage.setItem('@onboarding_done', 'true');
+      document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
       window.location.href = '/';
     }
   };
@@ -181,7 +183,11 @@ export default function AuthPage() {
         {/* Skip */}
         <p style={{ textAlign: 'center', marginTop: 12 }}>
           <button
-            onClick={() => { window.location.href = '/onboarding'; }}
+            onClick={() => {
+              localStorage.setItem('@onboarding_done', 'true');
+              document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
+              window.location.href = '/';
+            }}
             style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.25)', fontSize: 13, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
           >
             Continuer sans compte →

@@ -35,9 +35,9 @@ export default function LandingPage() {
         </p>
         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link
-            href="/register"
+            href="/auth"
             style={{
-              background: 'linear-gradient(135deg, #FFD700, #FFA500)',
+              background: 'linear-gradient(135deg, #4ecdc4, #26a69a)',
               color: '#0a0e2a',
               fontWeight: 900,
               fontSize: 16,
@@ -47,13 +47,13 @@ export default function LandingPage() {
               display: 'inline-block',
             }}
           >
-            Essayer 7 jours GRATUITS
+            C'est parti ! →
           </Link>
           <Link
-            href="/login"
+            href="/auth"
             style={{
-              border: '2px solid #4ecdc4',
-              color: '#4ecdc4',
+              border: '2px solid rgba(255,255,255,0.2)',
+              color: 'rgba(255,255,255,0.6)',
               fontWeight: 700,
               fontSize: 16,
               borderRadius: 100,
@@ -132,10 +132,10 @@ export default function LandingPage() {
             ))}
           </ul>
           <Link
-            href="/register"
+            href="/auth"
             style={{
               display: 'block',
-              background: 'linear-gradient(135deg, #FFD700, #FFA500)',
+              background: 'linear-gradient(135deg, #4ecdc4, #26a69a)',
               color: '#0a0e2a',
               fontWeight: 900,
               fontSize: 16,
@@ -144,7 +144,7 @@ export default function LandingPage() {
               textDecoration: 'none',
             }}
           >
-            Commencer l'essai gratuit
+            C'est parti ! →
           </Link>
         </div>
       </section>
