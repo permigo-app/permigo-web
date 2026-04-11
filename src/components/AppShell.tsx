@@ -16,12 +16,12 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   }, [pathname]);
 
   const isOnboardingPage = pathname === '/onboarding';
-  const isAuthPage = pathname === '/login' || pathname === '/register' || pathname === '/auth';
+  const isAuthPage = pathname === '/login' || pathname === '/register' || pathname === '/auth' || pathname === '/landing';
 
   useEffect(() => {
     if (onboardingDone === null) return;
     if (!onboardingDone && !isOnboardingPage && !isAuthPage) {
-      router.replace('/auth');
+      router.replace('/landing');
     }
   }, [onboardingDone, isOnboardingPage, isAuthPage, router]);
 
