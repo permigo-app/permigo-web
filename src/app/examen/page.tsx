@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getExamQuestionsLocalized, getNextThemeCode, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
