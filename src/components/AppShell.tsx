@@ -38,7 +38,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     <>
       <Navbar />
       <PremiumBanner />
-      <main className="pt-11 lg:pt-0 lg:ml-[250px] pb-20 lg:pb-6">
+      <main className="pt-11 lg:pt-0 pb-20 lg:pb-6" style={{ marginLeft: 'clamp(180px, 16vw, 250px)' } as React.CSSProperties}>
         {children}
       </main>
     </>

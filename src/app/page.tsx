@@ -317,8 +317,10 @@ export default function HomePage() {
     }
 
     // ── Width calculation ──
-    // Available width between left sidebar (250px) and right sidebar (500px)
-    const availableW = typeof window !== 'undefined' ? window.innerWidth - 250 - 500 : 400;
+    // Sidebar gauche: clamp(180,16vw,250) — Sidebar droite: clamp(240,22vw,380)
+    const leftW = typeof window !== 'undefined' ? Math.min(250, Math.max(180, window.innerWidth * 0.16)) : 220;
+    const rightW = typeof window !== 'undefined' ? Math.min(380, Math.max(240, window.innerWidth * 0.22)) : 300;
+    const availableW = typeof window !== 'undefined' ? window.innerWidth - leftW - rightW : 400;
     const SVG_W = Math.min(600, Math.max(300, availableW));
     const CX = SVG_W * 0.14;  // road shifted more left
     // Zigzag amplitude
@@ -1078,7 +1080,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* RIGHT SIDEBAR — Desktop only (~300px) */}
       {/* ═══════════════════════════════════════ */}
-      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 500, background: '#0F1923', borderLeft: '1px solid #16213E' }}>
+      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 'clamp(240px, 22vw, 380px)', background: '#0F1923', borderLeft: '1px solid #16213E' }}>
 
         {/* ── Stats du jour ── */}
         <div className="stat-card stat-card-glow">
