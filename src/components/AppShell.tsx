@@ -1,13 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import PremiumBanner from '@/components/PremiumBanner';
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const router = useRouter();
   const [onboardingDone, setOnboardingDone] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -15,23 +14,15 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     setOnboardingDone(done);
   }, [pathname]);
 
-  const isOnboardingPage = pathname === '/onboarding';
-  const isAuthPage = pathname === '/login' || pathname === '/register';
+  const isFullPage = pathname === '/onboarding' || pathname === '/auth' || pathname === '/login' || pathname === '/register' || pathname === '/landing';
 
-  useEffect(() => {
-    if (onboardingDone === null) return;
-    if (!onboardingDone && !isOnboardingPage && !isAuthPage) {
-      router.replace('/onboarding');
-    }
-  }, [onboardingDone, isOnboardingPage, isAuthPage, router]);
+  // Full-page routes — no navbar, no margin, no redirect
+  if (isFullPage) {
+    return <>{children}</>;
+  }
 
   // Still loading — fond opaque pour éviter le FOUC
   if (onboardingDone === null) return <div style={{ background: '#0a0e2a', width: '100vw', height: '100vh' }} />;
-
-  // Onboarding / auth pages — no navbar, no margin
-  if (isOnboardingPage || isAuthPage) {
-    return <>{children}</>;
-  }
 
   // Normal app layout
   return (
