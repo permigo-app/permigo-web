@@ -61,7 +61,16 @@ export default function OnboardingPage() {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    if (typeof window !== 'undefined') {
+      if (localStorage.getItem('@onboarding_done') === 'true') router.replace('/');
+    }
+  }, [router]);
+
+  useEffect(() => {
+    if (user && typeof window !== 'undefined') {
+      if (localStorage.getItem('@onboarding_done') === 'true') router.replace('/');
+    }
+  }, [user, router]);
 
   if (!mounted) return <div className="min-h-screen" style={{ background: '#0a0e2a' }} />;
 
@@ -87,10 +96,18 @@ export default function OnboardingPage() {
     localStorage.setItem('userProfile', JSON.stringify(profile));
     localStorage.setItem('userCar', JSON.stringify({ id: car.id, name: car.name, image: car.image, color: car.color }));
 
+    if (email.trim() && password.trim()) {
+      const result = await signUp(email.trim().toLowerCase(), password, profile.name);
+      if (result.error) {
+        setAuthError(result.error);
+        setSaving(false);
+        return;
+      }
+    }
+
     localStorage.setItem('@onboarding_done', 'true');
-    document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
     setSaving(false);
-    window.location.href = '/auth';
+    router.push('/');
   };
 
   const cyanBtn = {
@@ -207,7 +224,7 @@ export default function OnboardingPage() {
             </div>
 
             <button
-              onClick={() => { window.location.href = '/auth'; }}
+              onClick={goNext}
               className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3"
               style={cyanBtn}
             >
