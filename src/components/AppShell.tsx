@@ -21,7 +21,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (onboardingDone === null) return;
     if (!onboardingDone && !isOnboardingPage && !isAuthPage) {
-      router.replace('/onboarding');
+      router.replace('/auth');
     }
   }, [onboardingDone, isOnboardingPage, isAuthPage, router]);
 

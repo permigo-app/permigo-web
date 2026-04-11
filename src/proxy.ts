@@ -12,7 +12,7 @@ export function proxy(request: NextRequest) {
   const done = request.cookies.get('onboarding_done')?.value === 'true';
 
   if (!done) {
-    return NextResponse.redirect(new URL('/onboarding', request.url));
+    return NextResponse.redirect(new URL('/auth', request.url));
   }
 
   return NextResponse.next();
