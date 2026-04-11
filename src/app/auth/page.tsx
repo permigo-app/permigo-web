@@ -185,6 +185,8 @@ export default function AuthPage() {
           <button
             onClick={() => {
               localStorage.setItem('@onboarding_done', 'true');
+              localStorage.setItem('userCar', JSON.stringify({ id: 'red', name: 'Rouge', image: '/images/cars/car-red.png', color: '#e74c3c' }));
+              localStorage.setItem('userProfile', JSON.stringify({ name: 'Pilote', carColor: '#e74c3c', carType: 'red', objective: 'relax' }));
               document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
               window.location.href = '/';
             }}
