@@ -320,11 +320,11 @@ export default function HomePage() {
     // Sidebar gauche: clamp(180,16vw,250) — Sidebar droite: clamp(240,22vw,380)
     const leftW = typeof window !== 'undefined' ? Math.min(250, Math.max(180, window.innerWidth * 0.16)) : 220;
     const rightW = typeof window !== 'undefined' ? Math.min(500, Math.max(300, window.innerWidth * 0.26)) : 350;
-    const availableW = typeof window !== 'undefined' ? window.innerWidth - leftW - rightW : 500;
-    const SVG_W = Math.min(1100, Math.max(380, availableW));
+    const availableW = typeof window !== 'undefined' ? window.innerWidth - leftW - rightW : 400;
+    const SVG_W = Math.min(600, Math.max(300, availableW));
     const CX = SVG_W * 0.14;  // road shifted more left
-    // Zigzag amplitude — scales with SVG_W but capped so road stays readable
-    const AMP = Math.min((SVG_W - 100) / 2, 180);
+    // Zigzag amplitude
+    const AMP = Math.min((SVG_W - 100) / 2, 110);
 
     // ── Positions with extra gap at theme boundaries ──
     const themeStartSet = new Set(themeAt.keys());
@@ -403,7 +403,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-2 py-6" style={{ overflow: 'visible' }}>
+      <div className="flex-1 min-w-0 px-2 py-6 lg:max-w-[640px] lg:mx-auto" style={{ overflow: 'visible' }}>
 
         {/* ── Mobile-only header with stats ── */}
         <div className="lg:hidden flex items-center justify-between mb-4 px-3">
