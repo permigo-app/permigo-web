@@ -216,7 +216,7 @@ export default function OnboardingPage() {
             </div>
 
             <button
-              onClick={goNext}
+              onClick={() => { window.location.href = '/auth'; }}
               className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3"
               style={cyanBtn}
             >
