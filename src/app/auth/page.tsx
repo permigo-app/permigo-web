@@ -181,7 +181,11 @@ export default function AuthPage() {
         {/* Skip */}
         <p style={{ textAlign: 'center', marginTop: 12 }}>
           <button
-            onClick={() => { window.location.href = '/'; }}
+            onClick={() => {
+              localStorage.setItem('@onboarding_done', 'true');
+              document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
+              window.location.href = '/';
+            }}
             style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.25)', fontSize: 13, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
           >
             Continuer sans compte →
