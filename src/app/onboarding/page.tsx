@@ -96,19 +96,10 @@ export default function OnboardingPage() {
     localStorage.setItem('userProfile', JSON.stringify(profile));
     localStorage.setItem('userCar', JSON.stringify({ id: car.id, name: car.name, image: car.image, color: car.color }));
 
-    if (email.trim() && password.trim()) {
-      const result = await signUp(email.trim().toLowerCase(), password, profile.name);
-      if (result.error) {
-        setAuthError(result.error);
-        setSaving(false);
-        return;
-      }
-    }
-
     localStorage.setItem('@onboarding_done', 'true');
     document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
     setSaving(false);
-    window.location.href = '/';
+    window.location.href = '/auth';
   };
 
   const cyanBtn = {

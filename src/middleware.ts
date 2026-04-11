@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server';
 // Paths that never require onboarding
 const BYPASS = [
   '/onboarding',
+  '/auth',
   '/login',
   '/register',
   '/landing',
