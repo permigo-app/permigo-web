@@ -70,7 +70,7 @@ export default function RegisterPage() {
     } else if (result.needsConfirmation) {
       setShowConfirmation(true);
     } else {
-      router.push('/');
+      window.location.href = '/onboarding';
     }
   };
 

@@ -121,7 +121,7 @@ export default function LoginPage() {
 
       <p className="text-center text-sm mt-6" style={{ color: '#8B9DC3' }}>
         {t('login_pas_compte')}{' '}
-        <Link href="/register" className="font-bold" style={{ color: '#00B894' }}>{t('s_inscrire')}</Link>
+        <Link href="/auth" className="font-bold" style={{ color: '#00B894' }}>{t('s_inscrire')}</Link>
       </p>
     </div>
   );
