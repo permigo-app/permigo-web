@@ -4,11 +4,11 @@ import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 const SCREENS = [
-  { src: '/images/screenshots/Capture d\'écran 1.png', alt: 'Route de progression' },
-  { src: '/images/screenshots/Capture d\'écran 2.png', alt: 'Panneaux routiers' },
-  { src: '/images/screenshots/Capture d\'écran 3.png', alt: 'Mode Turbo' },
-  { src: '/images/screenshots/Capture d\'écran 4.png', alt: 'Mode Turbo en jeu' },
-  { src: '/images/screenshots/Capture d\'écran 5.png', alt: 'Profil et progression' },
+  { src: '/images/screenshots/screen1.png', alt: 'Route de progression' },
+  { src: '/images/screenshots/screen2.png', alt: 'Panneaux routiers' },
+  { src: '/images/screenshots/screen3.png', alt: 'Mode Turbo' },
+  { src: '/images/screenshots/screen4.png', alt: 'Mode Turbo en jeu' },
+  { src: '/images/screenshots/screen5.png', alt: 'Profil et progression' },
 ];
 
 export default function ScreenshotCarousel() {
