@@ -32,16 +32,12 @@ export default function ScreenshotCarousel() {
     resetTimer();
   }, [resetTimer]);
 
-  const arrowStyle = (side: 'left' | 'right'): React.CSSProperties => ({
-    position: 'absolute',
-    [side]: 16,
-    top: '50%',
-    transform: 'translateY(-50%)',
-    zIndex: 10,
-    background: 'rgba(10,14,42,0.65)',
+  const arrowStyle = (_side: 'left' | 'right'): React.CSSProperties => ({
+    flexShrink: 0,
+    background: 'rgba(78,205,196,0.12)',
     backdropFilter: 'blur(4px)',
     WebkitBackdropFilter: 'blur(4px)',
-    border: '1px solid rgba(255,255,255,0.2)',
+    border: '1px solid rgba(78,205,196,0.3)',
     borderRadius: '50%',
     width: 44,
     height: 44,
@@ -49,7 +45,7 @@ export default function ScreenshotCarousel() {
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
-    color: '#fff',
+    color: '#4ecdc4',
     fontSize: 26,
     padding: 0,
   });
@@ -57,49 +53,44 @@ export default function ScreenshotCarousel() {
   return (
     <div style={{ width: '100%', fontFamily: 'Nunito, sans-serif' }}>
 
-      {/* Image frame — aspect-ratio 16/9 pour afficher les screenshots en entier */}
-      <div style={{
-        position: 'relative',
-        width: '100%',
-        aspectRatio: '16/9',
-        overflow: 'hidden',
-        borderRadius: 12,
-        background: '#0F1923',
-      }}>
+      {/* Wrapper avec flèches sur les côtés */}
+      <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 12 }}>
 
-        {/* Slide strip */}
-        <div style={{
-          display: 'flex',
-          width: `${N * 100}%`,
-          height: '100%',
-          transform: `translateX(${-current * (100 / N)}%)`,
-          transition: 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
-        }}>
-          {SCREENS.map((s, i) => (
-            <div
-              key={i}
-              style={{
-                width: `${100 / N}%`,
-                height: '100%',
-                flexShrink: 0,
-                position: 'relative',
-              }}
-            >
-              <Image
-                src={s.src}
-                alt={s.label}
-                fill
-                style={{ objectFit: 'contain', objectPosition: 'center center' }}
-                priority={i === 0}
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Flèche gauche — dans l'image */}
+        {/* Flèche gauche */}
         <button onClick={() => go(-1)} style={arrowStyle('left')}>‹</button>
 
-        {/* Flèche droite — dans l'image */}
+        {/* Image frame */}
+        <div style={{
+          flex: 1,
+          aspectRatio: '16/9',
+          overflow: 'hidden',
+          borderRadius: 12,
+          background: '#0F1923',
+          position: 'relative',
+        }}>
+          {/* Slide strip */}
+          <div style={{
+            display: 'flex',
+            width: `${N * 100}%`,
+            height: '100%',
+            transform: `translateX(${-current * (100 / N)}%)`,
+            transition: 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}>
+            {SCREENS.map((s, i) => (
+              <div key={i} style={{ width: `${100 / N}%`, height: '100%', flexShrink: 0, position: 'relative' }}>
+                <Image
+                  src={s.src}
+                  alt={s.label}
+                  fill
+                  style={{ objectFit: 'contain', objectPosition: 'center center' }}
+                  priority={i === 0}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Flèche droite */}
         <button onClick={() => go(1)} style={arrowStyle('right')}>›</button>
       </div>
 
