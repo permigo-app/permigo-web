@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function AuthPage() {
   const router = useRouter();
@@ -84,6 +85,9 @@ export default function AuthPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#0a0e2a', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: 'Nunito, sans-serif' }}>
+      <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 50 }}>
+        <LanguageSwitcher />
+      </div>
       <div style={{ maxWidth: 420, width: '100%' }}>
 
         {/* Gaston */}

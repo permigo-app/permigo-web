@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ScreenshotCarousel from '@/components/ScreenshotCarousel';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function LandingContent() {
   useEffect(() => {
@@ -23,6 +24,11 @@ export default function LandingContent() {
 
   return (
     <div style={{ background: '#0a0e2a', color: '#fff', fontFamily: 'Nunito, sans-serif', minHeight: '100vh' }}>
+
+      {/* Language switcher — fixed top right */}
+      <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 50 }}>
+        <LanguageSwitcher />
+      </div>
 
       {/* Hero */}
       <section style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px 50px', textAlign: 'center' }}>
