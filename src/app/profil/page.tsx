@@ -83,7 +83,9 @@ export default function ProfilePage() {
 
   const handleSignOut = async () => {
     await signOut();
-    router.push('/login');
+    localStorage.removeItem('@onboarding_done');
+    document.cookie = 'onboarding_done=; path=/; max-age=0; SameSite=Lax';
+    window.location.href = '/landing';
   };
 
   return (

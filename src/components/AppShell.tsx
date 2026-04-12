@@ -4,19 +4,39 @@ import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import PremiumBanner from '@/components/PremiumBanner';
+import { supabase, hasSupabase } from '@/lib/supabase';
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const [onboardingDone, setOnboardingDone] = useState<boolean | null>(null);
 
-  useEffect(() => {
-    const done = localStorage.getItem('@onboarding_done') === 'true';
-    setOnboardingDone(done);
-  }, [pathname]);
-
   const isOnboardingPage = pathname === '/onboarding';
   const isAuthPage = pathname === '/login' || pathname === '/register' || pathname === '/auth' || pathname === '/landing';
+
+  useEffect(() => {
+    const localDone = localStorage.getItem('@onboarding_done') === 'true';
+    if (localDone) {
+      setOnboardingDone(true);
+      return;
+    }
+
+    // localStorage vide — vérifie si une session Supabase active existe avant de rediriger
+    if (hasSupabase && supabase) {
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        if (session?.user) {
+          // Session active → restaure les marqueurs et laisse passer
+          localStorage.setItem('@onboarding_done', 'true');
+          document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
+          setOnboardingDone(true);
+        } else {
+          setOnboardingDone(false);
+        }
+      });
+    } else {
+      setOnboardingDone(false);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (onboardingDone === null) return;
