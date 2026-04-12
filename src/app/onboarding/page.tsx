@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useAuth } from '@/contexts/AuthContext';
+import { updateUserProfile } from '@/lib/supabaseUser';
 import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
@@ -18,7 +19,7 @@ const CARS = [
 
 export default function OnboardingPage() {
   const router = useRouter();
-  const { signUp, user } = useAuth();
+  const { signUp, user, supabaseUser } = useAuth();
   const { t, lang } = useLang();
 
   const GOALS = [
@@ -86,6 +87,16 @@ export default function OnboardingPage() {
     };
     localStorage.setItem('userProfile', JSON.stringify(profile));
     localStorage.setItem('userCar', JSON.stringify({ id: car.id, name: car.name, image: car.image, color: car.color }));
+
+    // Persist to Supabase if user is already authenticated
+    if (supabaseUser?.id) {
+      updateUserProfile(supabaseUser.id, {
+        username: profile.name,
+        car_type: profile.carType,
+        car_color: profile.carColor,
+        objective: profile.objective,
+      }).catch(console.error);
+    }
 
     if (email.trim() && password.trim()) {
       const result = await signUp(email.trim().toLowerCase(), password, profile.name);

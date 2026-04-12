@@ -152,6 +152,25 @@ export function mapProfileToUser(p: SupabaseProfile): AppUser {
   };
 }
 
+export async function updateUserProfile(uid: string, data: {
+  username?: string;
+  car_type?: string;
+  car_color?: string;
+  objective?: string;
+}): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.from('profiles').upsert({
+      id: uid,
+      ...data,
+      updated_at: new Date().toISOString(),
+    });
+    await supabase.auth.updateUser({ data });
+  } catch (e) {
+    console.error('[PermiGo] updateUserProfile failed:', e);
+  }
+}
+
 export async function syncProgressToSupabase(uid: string, progress: {
   stars: Record<string, number>;
   themes: string[];

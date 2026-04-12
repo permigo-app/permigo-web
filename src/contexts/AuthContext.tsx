@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 import { supabase, hasSupabase } from '@/lib/supabase';
 import { getUserProfile, createUserProfile, mapProfileToUser, type AppUser } from '@/lib/supabaseUser';
+import { syncAllToSupabase, getXPData, getStreakData } from '@/lib/progressStorage';
 import { useLang } from '@/contexts/LanguageContext';
 
 type Lang = 'fr' | 'nl';
@@ -74,6 +75,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const FREE_ACCESS_EMAILS = ['ycroitor8096@gmail.com'];
 
+  const CAR_MAP: Record<string, { id: string; name: string; image: string; color: string }> = {
+    red:   { id: 'red',   name: 'Rouge', image: '/images/cars/car-red.png',   color: '#e74c3c' },
+    blue:  { id: 'blue',  name: 'Bleue', image: '/images/cars/car-blue.png',  color: '#3498db' },
+    green: { id: 'green', name: 'Verte', image: '/images/cars/car-green.png', color: '#2ecc71' },
+  };
+
   const loadProfile = useCallback(async (sbUser: SupabaseUser) => {
     const profile = await getUserProfile(sbUser.id);
     if (profile) {
@@ -81,7 +88,39 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (FREE_ACCESS_EMAILS.includes(sbUser.email ?? '')) {
         localStorage.setItem('isPremium', 'true');
       }
+
+      // ── Sync Supabase → localStorage ──────────────────────────
+      if (typeof window === 'undefined') return;
+
+      // Car + profile
+      if (profile.car_type && CAR_MAP[profile.car_type]) {
+        const car = CAR_MAP[profile.car_type];
+        const color = profile.car_color ?? car.color;
+        localStorage.setItem('userCar', JSON.stringify({ id: car.id, name: car.name, image: car.image, color }));
+        localStorage.setItem('userProfile', JSON.stringify({
+          name: profile.username,
+          carColor: color,
+          carType: profile.car_type,
+          objective: profile.objective ?? 'relax',
+        }));
+      }
+
+      // Progress: take whichever has more XP, sync loser to winner
+      const localXP = getXPData();
+      const remoteXP = profile.xp_data?.totalXP ?? 0;
+      if (remoteXP > localXP.totalXP) {
+        // Supabase wins → overwrite localStorage
+        localStorage.setItem('xpData', JSON.stringify(profile.xp_data));
+        if (profile.streak_data) localStorage.setItem('streakData', JSON.stringify(profile.streak_data));
+        if (profile.stars && Object.keys(profile.stars).length > 0) localStorage.setItem('@progress_stars', JSON.stringify(profile.stars));
+        if (profile.quiz_history) localStorage.setItem('quizHistory', JSON.stringify(profile.quiz_history));
+        if (profile.survival_best > 0) localStorage.setItem('survie_best_score', String(profile.survival_best));
+      } else if (localXP.totalXP > remoteXP) {
+        // localStorage wins → auto-migrate to Supabase
+        syncAllToSupabase(sbUser.id).catch(console.error);
+      }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
