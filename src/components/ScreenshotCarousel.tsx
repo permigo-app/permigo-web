@@ -12,8 +12,6 @@ const SCREENS = [
 ];
 
 const N = SCREENS.length;
-const IMG_W = 65; // % of container — center image width
-const SIDE_OFFSET = 90; // % of image width — lateral offset
 
 export default function ScreenshotCarousel() {
   const [current, setCurrent] = useState(0);
@@ -34,147 +32,92 @@ export default function ScreenshotCarousel() {
     resetTimer();
   }, [resetTimer]);
 
-  const getPos = (idx: number): number => {
-    let pos = idx - current;
-    if (pos > N / 2) pos -= N;
-    if (pos < -N / 2) pos += N;
-    return pos;
-  };
-
   return (
-    /* Wrapper externe — overflow hidden strict, zéro border/outline */
-    <div style={{ width: '100%', overflow: 'hidden', fontFamily: 'Nunito, sans-serif' }}>
+    <div style={{ width: '100%', fontFamily: 'Nunito, sans-serif' }}>
 
       {/* Track */}
-      <div style={{ position: 'relative', width: '100%', height: 480 }}>
-
-        {SCREENS.map((s, i) => {
-          const pos = getPos(i);
-          const isCenter = pos === 0;
-          const isVisible = Math.abs(pos) <= 1;
-
-          return (
-            <div
-              key={i}
-              onClick={() => isVisible && !isCenter && go(pos > 0 ? 1 : -1)}
-              style={{
-                position: 'absolute',
-                top: 0,
-                height: '100%',
-                width: `${IMG_W}%`,
-                left: '50%',
-                transform: `translateX(calc(-50% + ${pos * SIDE_OFFSET}%)) scale(${isCenter ? 1 : 0.82})`,
-                opacity: isVisible ? (isCenter ? 1 : 0.35) : 0,
-                filter: isCenter ? 'none' : 'blur(3px)',
-                zIndex: isCenter ? 2 : 1,
-                transition: 'all 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
-                borderRadius: 12,
-                overflow: 'hidden',
-                cursor: isVisible && !isCenter ? 'pointer' : 'default',
-                pointerEvents: isVisible ? 'auto' : 'none',
-              }}
-            >
+      <div style={{
+        position: 'relative',
+        width: '100%',
+        height: 500,
+        overflow: 'hidden',
+        borderRadius: 12,
+      }}>
+        {/* Slide strip */}
+        <div style={{
+          display: 'flex',
+          width: `${N * 100}%`,
+          height: '100%',
+          transform: `translateX(${-current * (100 / N)}%)`,
+          transition: 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
+        }}>
+          {SCREENS.map((s, i) => (
+            <div key={i} style={{ width: `${100 / N}%`, height: '100%', flexShrink: 0, position: 'relative' }}>
               <Image
                 src={s.src}
                 alt={s.label}
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
                 priority={i === 0}
               />
             </div>
-          );
-        })}
+          ))}
+        </div>
 
         {/* Left arrow */}
         <button
           onClick={() => go(-1)}
           style={{
-            position: 'absolute',
-            left: `calc(${(100 - IMG_W) / 2}% + 14px)`,
-            top: '50%',
-            transform: 'translateY(-50%)',
+            position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)',
             zIndex: 10,
             background: 'rgba(10,14,42,0.65)',
             backdropFilter: 'blur(4px)',
             WebkitBackdropFilter: 'blur(4px)',
-            border: '1px solid rgba(255,255,255,0.15)',
+            border: '1px solid rgba(255,255,255,0.2)',
             borderRadius: '50%',
-            width: 44,
-            height: 44,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            color: '#fff',
-            fontSize: 24,
-            lineHeight: 1,
-            padding: 0,
+            width: 44, height: 44,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            cursor: 'pointer', color: '#fff', fontSize: 26, padding: 0,
           }}
-        >
-          ‹
-        </button>
+        >‹</button>
 
         {/* Right arrow */}
         <button
           onClick={() => go(1)}
           style={{
-            position: 'absolute',
-            right: `calc(${(100 - IMG_W) / 2}% + 14px)`,
-            top: '50%',
-            transform: 'translateY(-50%)',
+            position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)',
             zIndex: 10,
             background: 'rgba(10,14,42,0.65)',
             backdropFilter: 'blur(4px)',
             WebkitBackdropFilter: 'blur(4px)',
-            border: '1px solid rgba(255,255,255,0.15)',
+            border: '1px solid rgba(255,255,255,0.2)',
             borderRadius: '50%',
-            width: 44,
-            height: 44,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            color: '#fff',
-            fontSize: 24,
-            lineHeight: 1,
-            padding: 0,
+            width: 44, height: 44,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            cursor: 'pointer', color: '#fff', fontSize: 26, padding: 0,
           }}
-        >
-          ›
-        </button>
+        >›</button>
       </div>
 
       {/* Dots */}
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 8, marginTop: 20 }}>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: 8, marginTop: 16 }}>
         {SCREENS.map((_, i) => (
           <button
             key={i}
             onClick={() => { setCurrent(i); resetTimer(); }}
             style={{
-              width: i === current ? 28 : 8,
-              height: 8,
+              width: i === current ? 28 : 8, height: 8,
               borderRadius: 4,
               background: i === current ? '#4ecdc4' : 'rgba(255,255,255,0.2)',
-              border: 'none',
-              cursor: 'pointer',
-              padding: 0,
-              transition: 'all 0.35s ease',
+              border: 'none', cursor: 'pointer', padding: 0,
+              transition: 'all 0.3s ease',
             }}
           />
         ))}
       </div>
 
       {/* Caption */}
-      <p style={{
-        textAlign: 'center',
-        marginTop: 10,
-        fontSize: 13,
-        fontWeight: 600,
-        color: 'rgba(255,255,255,0.4)',
-        minHeight: 20,
-        margin: '10px 0 0',
-        padding: 0,
-      }}>
+      <p style={{ textAlign: 'center', marginTop: 10, fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.4)' }}>
         {SCREENS[current].label}
       </p>
     </div>
