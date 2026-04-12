@@ -12,9 +12,8 @@ const SCREENS = [
 ];
 
 const N = SCREENS.length;
-// Center image: width 65% of container, so left edge at 17.5%, right edge at 82.5%
-const IMG_W = 65; // % of container
-const SIDE_OFFSET = 90; // % of image width — how far side images slide
+const IMG_W = 65; // % of container — center image width
+const SIDE_OFFSET = 90; // % of image width — lateral offset
 
 export default function ScreenshotCarousel() {
   const [current, setCurrent] = useState(0);
@@ -35,7 +34,6 @@ export default function ScreenshotCarousel() {
     resetTimer();
   }, [resetTimer]);
 
-  // Compute circular position relative to current: -1, 0, 1, or hidden
   const getPos = (idx: number): number => {
     let pos = idx - current;
     if (pos > N / 2) pos -= N;
@@ -44,10 +42,11 @@ export default function ScreenshotCarousel() {
   };
 
   return (
-    <div style={{ width: '100%', fontFamily: 'Nunito, sans-serif', border: 'none', outline: 'none' }}>
+    /* Wrapper externe — overflow hidden strict, zéro border/outline */
+    <div style={{ width: '100%', overflow: 'hidden', fontFamily: 'Nunito, sans-serif' }}>
 
-      {/* ── Track ── */}
-      <div style={{ position: 'relative', width: '100%', height: 480, overflow: 'hidden', border: 'none', outline: 'none', background: 'transparent', clipPath: 'inset(0)' }}>
+      {/* Track */}
+      <div style={{ position: 'relative', width: '100%', height: 480 }}>
 
         {SCREENS.map((s, i) => {
           const pos = getPos(i);
@@ -64,7 +63,6 @@ export default function ScreenshotCarousel() {
                 height: '100%',
                 width: `${IMG_W}%`,
                 left: '50%',
-                // translateX(-50%) centers the image, then offset by pos * SIDE_OFFSET% of its own width
                 transform: `translateX(calc(-50% + ${pos * SIDE_OFFSET}%)) scale(${isCenter ? 1 : 0.82})`,
                 opacity: isVisible ? (isCenter ? 1 : 0.35) : 0,
                 filter: isCenter ? 'none' : 'blur(3px)',
@@ -80,14 +78,14 @@ export default function ScreenshotCarousel() {
                 src={s.src}
                 alt={s.label}
                 fill
-                style={{ objectFit: 'cover', objectPosition: '30% center' }}
+                style={{ objectFit: 'cover', objectPosition: 'center center' }}
                 priority={i === 0}
               />
             </div>
           );
         })}
 
-        {/* ── Left arrow — inside left edge of center image ── */}
+        {/* Left arrow */}
         <button
           onClick={() => go(-1)}
           style={{
@@ -116,7 +114,7 @@ export default function ScreenshotCarousel() {
           ‹
         </button>
 
-        {/* ── Right arrow — inside right edge of center image ── */}
+        {/* Right arrow */}
         <button
           onClick={() => go(1)}
           style={{
@@ -146,7 +144,7 @@ export default function ScreenshotCarousel() {
         </button>
       </div>
 
-      {/* ── Dots ── */}
+      {/* Dots */}
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 8, marginTop: 20 }}>
         {SCREENS.map((_, i) => (
           <button
@@ -166,7 +164,7 @@ export default function ScreenshotCarousel() {
         ))}
       </div>
 
-      {/* ── Caption ── */}
+      {/* Caption */}
       <p style={{
         textAlign: 'center',
         marginTop: 10,
@@ -174,7 +172,8 @@ export default function ScreenshotCarousel() {
         fontWeight: 600,
         color: 'rgba(255,255,255,0.4)',
         minHeight: 20,
-        transition: 'opacity 0.3s',
+        margin: '10px 0 0',
+        padding: 0,
       }}>
         {SCREENS[current].label}
       </p>
