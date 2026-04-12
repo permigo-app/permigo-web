@@ -44,10 +44,10 @@ export default function ScreenshotCarousel() {
   };
 
   return (
-    <div style={{ width: '100%', fontFamily: 'Nunito, sans-serif' }}>
+    <div style={{ width: '100%', fontFamily: 'Nunito, sans-serif', border: 'none', outline: 'none' }}>
 
       {/* ── Track ── */}
-      <div style={{ position: 'relative', width: '100%', height: 480, overflow: 'hidden' }}>
+      <div style={{ position: 'relative', width: '100%', height: 480, overflow: 'hidden', border: 'none', outline: 'none', background: 'transparent', clipPath: 'inset(0)' }}>
 
         {SCREENS.map((s, i) => {
           const pos = getPos(i);
@@ -80,7 +80,7 @@ export default function ScreenshotCarousel() {
                 src={s.src}
                 alt={s.label}
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'cover', objectPosition: '30% center' }}
                 priority={i === 0}
               />
             </div>
