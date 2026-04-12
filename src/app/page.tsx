@@ -317,8 +317,12 @@ export default function HomePage() {
     }
 
     // ── Width calculation ──
-    // Available width between left sidebar (250px) and right sidebar (500px)
-    const availableW = typeof window !== 'undefined' ? window.innerWidth - 250 - 500 : 400;
+    // Sidebars are only visible at xl (1280px+) for right, lg (1024px+) for left
+    const isMobileW = typeof window !== 'undefined' && window.innerWidth < 1024;
+    const isXlW = typeof window !== 'undefined' && window.innerWidth >= 1280;
+    const leftW = isMobileW ? 0 : 250;
+    const rightW = isXlW ? 500 : 0;
+    const availableW = typeof window !== 'undefined' ? window.innerWidth - leftW - rightW - 32 : 400;
     const SVG_W = Math.min(600, Math.max(300, availableW));
     const CX = SVG_W * 0.14;  // road shifted more left
     // Zigzag amplitude
@@ -397,7 +401,7 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
-    <div className="flex gap-0">
+    <div className="flex gap-0 w-full overflow-x-hidden">
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
@@ -959,7 +963,7 @@ export default function HomePage() {
               return (
                 <div
                   key={monId}
-                  className="absolute pointer-events-none monument-reveal"
+                  className="absolute pointer-events-none monument-reveal hidden md:block"
                   style={{
                     left: left + adj.dx,
                     top: top + adj.dy,
@@ -1078,7 +1082,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* RIGHT SIDEBAR — Desktop only (~300px) */}
       {/* ═══════════════════════════════════════ */}
-      <aside className="hidden lg:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 500, background: '#0F1923', borderLeft: '1px solid #16213E' }}>
+      <aside className="hidden xl:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 500, background: '#0F1923', borderLeft: '1px solid #16213E' }}>
 
         {/* ── Stats du jour ── */}
         <div className="stat-card stat-card-glow">
