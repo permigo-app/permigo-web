@@ -318,12 +318,17 @@ export default function HomePage() {
 
     // ── Width calculation ──
     // Sidebars are only visible at xl (1280px+) for right, lg (1024px+) for left
-    const isMobileW = typeof window !== 'undefined' && window.innerWidth < 1024;
-    const isXlW = typeof window !== 'undefined' && window.innerWidth >= 1280;
+    const vw = typeof window !== 'undefined' ? window.innerWidth : 1920;
+    const isMobileW = vw < 1024;
+    const isXlW = vw >= 1280;
     const leftW = isMobileW ? 0 : 250;
     const rightW = isXlW ? 500 : 0;
-    const availableW = typeof window !== 'undefined' ? window.innerWidth - leftW - rightW - 32 : 400;
-    const SVG_W = Math.min(600, Math.max(300, availableW));
+    const availableW = vw - leftW - rightW - 32;
+    // For screens wider than 1920px: scale road proportionally (TV / large monitors)
+    const oversize = Math.max(0, vw - 1920);
+    const svgMaxW = Math.min(1000, 600 + Math.round(oversize * 0.3));
+    const roadZoneMaxW = Math.min(1100, 640 + Math.round(oversize * 0.3));
+    const SVG_W = Math.min(svgMaxW, Math.max(300, availableW));
     const CX = SVG_W * 0.14;  // road shifted more left
     // Zigzag amplitude
     const AMP = Math.min((SVG_W - 100) / 2, 110);
@@ -370,12 +375,12 @@ export default function HomePage() {
       carTilt = (dx / (AMP * 2)) * 20;
     }
 
-    return { nodes, themeAt, pts, totalH, pathD: d, curIdx, SVG_W, CX, AMP, carTilt, finishY };
+    return { nodes, themeAt, pts, totalH, pathD: d, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW };
   }, [mounted, stars, exams, lang]);
 
   if (!mounted || !layout) return <div className="min-h-screen" />;
 
-  const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY } = layout;
+  const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
 
   // ── Car position ──
   let carX = 0, carY = 0;
@@ -405,7 +410,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-2 py-6 lg:max-w-[640px] lg:mx-auto" style={{ overflow: 'visible' }}>
+      <div className="flex-1 min-w-0 px-2 py-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
         {/* ── Mobile-only header with stats ── */}
         <div className="lg:hidden flex items-center justify-between mb-4 px-3">
@@ -443,7 +448,7 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div ref={roadContainerRef} className="relative overflow-visible" style={{ height: totalH, width: SVG_W }}>
+        <div ref={roadContainerRef} className="relative overflow-visible mx-auto" style={{ height: totalH, width: SVG_W }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
