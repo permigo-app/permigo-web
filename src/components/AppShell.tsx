@@ -13,6 +13,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   const isOnboardingPage = pathname === '/onboarding';
   const isAuthPage = pathname === '/login' || pathname === '/register' || pathname === '/auth' || pathname === '/landing';
+  const isAdminPage = pathname.startsWith('/admin');
 
   useEffect(() => {
     const localDone = localStorage.getItem('@onboarding_done') === 'true';
@@ -40,16 +41,16 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (onboardingDone === null) return;
-    if (!onboardingDone && !isOnboardingPage && !isAuthPage) {
+    if (!onboardingDone && !isOnboardingPage && !isAuthPage && !isAdminPage) {
       router.replace('/landing');
     }
-  }, [onboardingDone, isOnboardingPage, isAuthPage, router]);
+  }, [onboardingDone, isOnboardingPage, isAuthPage, isAdminPage, router]);
 
   // Still loading — fond opaque pour éviter le FOUC
   if (onboardingDone === null) return <div style={{ background: '#0a0e2a', width: '100vw', height: '100vh' }} />;
 
-  // Onboarding / auth pages — no navbar, no margin
-  if (isOnboardingPage || isAuthPage) {
+  // Onboarding / auth / admin pages — no navbar, no margin
+  if (isOnboardingPage || isAuthPage || isAdminPage) {
     return <>{children}</>;
   }
 
