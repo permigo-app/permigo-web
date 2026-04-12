@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ScreenshotCarousel from '@/components/ScreenshotCarousel';
 
 export const metadata: Metadata = {
   title: 'MyPermiGo — Prépare ton Permis Théorique Belge en Mode Jeu',
@@ -127,73 +128,15 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Product preview mockup */}
+      {/* Screenshots carousel */}
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 60px' }}>
         <h2 style={{ textAlign: 'center', fontSize: 24, fontWeight: 900, marginBottom: 8 }}>
           Une expérience vraiment différente
         </h2>
         <p style={{ textAlign: 'center', fontSize: 15, color: 'rgba(255,255,255,0.45)', marginBottom: 32 }}>
-          Conduis sur la route de l'apprentissage — débloque les thèmes un à un
+          Vois par toi-même — la route, les quiz, le turbo, ton profil
         </p>
-        <div style={{
-          background: '#0F1923',
-          border: '1px solid #2A3550',
-          borderRadius: 20,
-          padding: '32px 24px',
-          position: 'relative',
-          overflow: 'hidden',
-        }}>
-          {/* Top bar mockup */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
-            <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#e74c3c' }} />
-            <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#f39c12' }} />
-            <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#2ecc71' }} />
-            <div style={{ flex: 1, height: 24, borderRadius: 8, background: 'rgba(255,255,255,0.05)', marginLeft: 8 }} />
-          </div>
-          {/* Road mockup */}
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 20 }}>
-            {/* Sidebar left mockup */}
-            <div style={{ width: 140, flexShrink: 0 }}>
-              <div style={{ background: '#16213E', borderRadius: 12, padding: 12, marginBottom: 8 }}>
-                <div style={{ fontSize: 11, fontWeight: 900, color: '#4ecdc4', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1 }}>MyPermiGo</div>
-                {['A', 'B', 'C', 'D', 'E'].map((t, i) => (
-                  <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '5px 6px', borderRadius: 6, marginBottom: 3, background: i === 0 ? 'rgba(78,205,196,0.15)' : 'transparent' }}>
-                    <div style={{ width: 20, height: 20, borderRadius: '50%', background: i === 0 ? '#4ecdc4' : i === 1 ? '#3498db' : 'rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 9, fontWeight: 900, color: i < 2 ? '#0a0e2a' : 'rgba(255,255,255,0.3)' }}>{t}</div>
-                    <div style={{ height: 6, flex: 1, borderRadius: 3, background: i === 0 ? '#4ecdc4' : i === 1 ? '#3498db' : 'rgba(255,255,255,0.07)' }} />
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Route center mockup */}
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', marginBottom: 10, fontWeight: 700 }}>THÈME A — SIGNALISATION</div>
-              {/* Road */}
-              <div style={{ width: '100%', maxWidth: 320, background: '#16213E', borderRadius: 16, padding: '16px 12px', border: '1px solid #2A3550' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                  {['A', 'B', 'C', 'D', 'E', 'F'].map((s, i) => (
-                    <div key={s} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-                      <div style={{ width: 28, height: 28, borderRadius: '50%', background: i < 3 ? '#4ecdc4' : i === 3 ? '#FFD700' : 'rgba(255,255,255,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 900, color: '#0a0e2a', border: i === 3 ? '2px solid #FFD700' : 'none', boxShadow: i === 3 ? '0 0 8px #FFD700' : 'none' }}>{i < 3 ? '✓' : s}</div>
-                      {i < 5 && <div style={{ width: 20, height: 2, background: i < 3 ? '#4ecdc4' : 'rgba(255,255,255,0.1)', borderRadius: 2, marginTop: -16, marginLeft: 28 }} />}
-                    </div>
-                  ))}
-                </div>
-                <div style={{ textAlign: 'center', marginTop: 8 }}>
-                  <div style={{ display: 'inline-block', background: 'rgba(78,205,196,0.15)', border: '1px solid rgba(78,205,196,0.4)', borderRadius: 8, padding: '4px 12px', fontSize: 11, fontWeight: 700, color: '#4ecdc4' }}>
-                    🚗 COMMENCER D →
-                  </div>
-                </div>
-              </div>
-              {/* XP bar */}
-              <div style={{ width: '100%', maxWidth: 320, marginTop: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ fontSize: 10, color: '#FFD700', fontWeight: 900 }}>⭐ 1240 XP</span>
-                <div style={{ flex: 1, height: 6, background: 'rgba(255,255,255,0.08)', borderRadius: 3 }}>
-                  <div style={{ width: '62%', height: '100%', background: 'linear-gradient(90deg, #4ecdc4, #26a69a)', borderRadius: 3 }} />
-                </div>
-                <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.3)', fontWeight: 700 }}>Niv. 4</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ScreenshotCarousel />
       </section>
 
       {/* Pricing */}
