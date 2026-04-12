@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useAuth } from '@/contexts/AuthContext';
+import { useLang } from '@/contexts/LanguageContext';
 
 export default function AuthPage() {
   const router = useRouter();
   const { signUp, signIn, user } = useAuth();
+  const { t } = useLang();
 
   const [mode, setMode] = useState<'signup' | 'login'>('signup');
   const [email, setEmail] = useState('');
@@ -26,7 +28,7 @@ export default function AuthPage() {
     e.preventDefault();
     setError('');
     if (!email.trim() || !password.trim()) {
-      setError('Remplis tous les champs.');
+      setError(t('login_remplir'));
       return;
     }
     setLoading(true);
@@ -64,16 +66,16 @@ export default function AuthPage() {
       <div style={{ minHeight: '100vh', background: '#0a0e2a', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: 'Nunito, sans-serif' }}>
         <div style={{ maxWidth: 400, width: '100%', textAlign: 'center' }}>
           <div style={{ fontSize: 72, marginBottom: 16 }}>📧</div>
-          <h1 style={{ fontSize: 24, fontWeight: 900, color: '#fff', marginBottom: 12 }}>Vérifie ton email !</h1>
+          <h1 style={{ fontSize: 24, fontWeight: 900, color: '#fff', marginBottom: 12 }}>{t('register_verif_titre')}</h1>
           <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 15, lineHeight: 1.6, marginBottom: 32 }}>
-            Un lien de confirmation a été envoyé à <strong style={{ color: '#4ecdc4' }}>{email}</strong>.<br />
-            Clique dessus pour activer ton compte.
+            {t('register_verif_msg')} <strong style={{ color: '#4ecdc4' }}>{email}</strong>.<br />
+            {t('register_verif_lien')}
           </p>
           <button
             onClick={() => { setConfirmed(false); setMode('login'); }}
             style={{ background: '#4ecdc4', color: '#0a0e2a', fontWeight: 900, fontSize: 16, borderRadius: 100, padding: '14px 40px', border: 'none', cursor: 'pointer' }}
           >
-            Se connecter
+            {t('se_connecter')}
           </button>
         </div>
       </div>
@@ -90,17 +92,17 @@ export default function AuthPage() {
         </div>
 
         <h1 style={{ textAlign: 'center', fontSize: 26, fontWeight: 900, color: '#fff', marginBottom: 6 }}>
-          {mode === 'signup' ? 'Crée ton compte' : 'Content de te revoir !'}
+          {mode === 'signup' ? t('auth_titre_signup') : t('auth_titre_login')}
         </h1>
         <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.45)', fontSize: 14, marginBottom: 32 }}>
-          {mode === 'signup' ? 'Pour sauvegarder ta progression' : 'Connecte-toi pour continuer'}
+          {mode === 'signup' ? t('auth_subtitle_signup') : t('auth_subtitle_login')}
         </p>
 
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 
           {mode === 'signup' && (
             <div>
-              <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>Prénom</label>
+              <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('onboarding_prenom')}</label>
               <input
                 type="text"
                 value={username}
@@ -113,7 +115,7 @@ export default function AuthPage() {
           )}
 
           <div>
-            <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>Email</label>
+            <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('login_email')}</label>
             <input
               type="email"
               value={email}
@@ -125,7 +127,7 @@ export default function AuthPage() {
           </div>
 
           <div>
-            <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>Mot de passe</label>
+            <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('login_mdp')}</label>
             <input
               type="password"
               value={password}
@@ -159,22 +161,22 @@ export default function AuthPage() {
               fontFamily: 'Nunito, sans-serif',
             }}
           >
-            {loading ? '...' : mode === 'signup' ? "S'inscrire" : 'Se connecter'}
+            {loading ? '...' : mode === 'signup' ? t('s_inscrire') : t('se_connecter')}
           </button>
         </form>
 
         {/* Toggle mode */}
         <p style={{ textAlign: 'center', marginTop: 20, fontSize: 14, color: 'rgba(255,255,255,0.4)' }}>
           {mode === 'signup' ? (
-            <>Déjà un compte ?{' '}
+            <>{t('register_deja_compte')}{' '}
               <button onClick={() => { setMode('login'); setError(''); }} style={{ background: 'none', border: 'none', color: '#4ecdc4', fontWeight: 700, cursor: 'pointer', fontSize: 14, fontFamily: 'Nunito, sans-serif' }}>
-                Se connecter
+                {t('se_connecter')}
               </button>
             </>
           ) : (
-            <>Pas encore de compte ?{' '}
+            <>{t('login_pas_compte')}{' '}
               <button onClick={() => { setMode('signup'); setError(''); }} style={{ background: 'none', border: 'none', color: '#4ecdc4', fontWeight: 700, cursor: 'pointer', fontSize: 14, fontFamily: 'Nunito, sans-serif' }}>
-                S'inscrire
+                {t('s_inscrire')}
               </button>
             </>
           )}
@@ -192,7 +194,7 @@ export default function AuthPage() {
             }}
             style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.25)', fontSize: 13, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
           >
-            Continuer sans compte →
+            {t('auth_sans_compte')}
           </button>
         </p>
 

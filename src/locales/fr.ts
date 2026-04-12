@@ -459,6 +459,13 @@ const fr: Record<string, string> = {
   progression_label: 'Progression',
   examens_label: 'Examens',
 
+  // ── Auth page (/auth) ──
+  auth_titre_signup: 'Crée ton compte',
+  auth_subtitle_signup: 'Pour sauvegarder ta progression',
+  auth_titre_login: 'Content de te revoir !',
+  auth_subtitle_login: 'Connecte-toi pour continuer',
+  auth_sans_compte: 'Continuer sans compte →',
+
   // ── Général ──
   chargement: 'Chargement...',
   questions: 'Questions',

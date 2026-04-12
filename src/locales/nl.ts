@@ -151,13 +151,13 @@ const nl: Record<string, string> = {
   onboarding_feature_1: '✅  Volledige theorie & interactieve quizzen',
   onboarding_feature_2: '🏆  Voortgang per thema',
   onboarding_feature_3: '🚦  Bereid je officieel examen voor',
-  onboarding_commencer: 'Het avontuur beginnen 🏁',
+  onboarding_commencer: 'Start het avontuur 🏁',
   onboarding_cest_parti: 'Op weg',
   onboarding_nom_titre: 'Hoe heet je?',
-  onboarding_nom_subtitle: 'We passen de ervaring aan jou aan',
-  onboarding_nom_placeholder: 'Je voornaam…',
+  onboarding_nom_subtitle: 'We personaliseren de ervaring voor jou',
+  onboarding_nom_placeholder: 'Jouw voornaam…',
   onboarding_continuer: 'Doorgaan →',
-  onboarding_voiture_titre: 'Kies je auto! 🚗',
+  onboarding_voiture_titre: 'Welke auto kies je? 🚗',
   onboarding_voiture_subtitle: 'Hij vergezelt je tijdens het hele parcours',
   onboarding_voiture_choisir: 'Kies een auto',
   onboarding_couleur_titre: 'Welke kleur? 🎨',
@@ -458,6 +458,13 @@ const nl: Record<string, string> = {
   jours_plur: 'dagen',
   progression_label: 'Voortgang',
   examens_label: 'Examens',
+
+  // ── Auth page (/auth) ──
+  auth_titre_signup: 'Maak je account aan',
+  auth_subtitle_signup: 'Om je voortgang op te slaan',
+  auth_titre_login: 'Blij je terug te zien!',
+  auth_subtitle_login: 'Log in om door te gaan',
+  auth_sans_compte: 'Doorgaan zonder account →',
 
   // ── Général ──
   chargement: 'Laden...',
