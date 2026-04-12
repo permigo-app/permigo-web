@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { isSoundMuted, toggleMute } from '@/lib/sounds';
 
 const SIDEBAR_ITEMS = [
   { href: '/', labelKey: 'nav_accueil', color: '#00B894', icon: (
@@ -55,9 +56,16 @@ export default function Navbar() {
   const { user } = useAuth();
   const { t } = useLang();
   const [premium, setPremium] = useState(false);
+  const [muted, setMuted] = useState(false);
   useEffect(() => {
     setPremium(localStorage.getItem('isPremium') === 'true');
+    setMuted(isSoundMuted());
   }, []);
+
+  const handleToggleMute = () => {
+    const next = toggleMute();
+    setMuted(next);
+  };
 
   return (
     <>
@@ -159,6 +167,22 @@ export default function Navbar() {
               <span className="text-sm font-bold" style={{ color: '#8B9DC3' }}>{t('nav_connexion')}</span>
             </Link>
           )}
+        </div>
+
+        {/* Sound toggle */}
+        <div style={{ padding: '8px 16px' }}>
+          <button
+            onClick={handleToggleMute}
+            style={{
+              display: 'flex', alignItems: 'center', gap: 8,
+              background: 'none', border: 'none', cursor: 'pointer',
+              padding: '6px 8px', borderRadius: 8, width: '100%',
+              color: muted ? '#5A6B8A' : '#8B9DC3',
+            }}
+          >
+            <span style={{ fontSize: 16 }}>{muted ? '🔇' : '🔊'}</span>
+            <span style={{ fontSize: 12, fontWeight: 600 }}>{muted ? 'Sons coupés' : 'Sons actifs'}</span>
+          </button>
         </div>
 
         {/* Legal links */}

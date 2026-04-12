@@ -1,9 +1,10 @@
 'use client';
 
-import { type ReactNode } from 'react';
+import { type ReactNode, useEffect } from 'react';
 import SignImage from '@/components/SignImage';
 import { useLang } from '@/contexts/LanguageContext';
 import ImageRequestButton from '@/components/ImageRequestButton';
+import { playSound } from '@/lib/sounds';
 
 const CHOICE_LABELS = ['A', 'B', 'C', 'D'];
 
@@ -74,6 +75,12 @@ export default function QuizLayout({
 }: QuizLayoutProps) {
   const { t } = useLang();
   const isCorrect = selected === correctIndex;
+
+  useEffect(() => {
+    if (validated) {
+      playSound(isCorrect ? 'correct' : 'wrong');
+    }
+  }, [validated, isCorrect]);
 
   return (
     <div style={{ minHeight: '100vh' }}>
