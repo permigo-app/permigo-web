@@ -43,6 +43,12 @@ export default function AdminImageRequests() {
     setLoaded(true);
   }, []);
 
+  const resetAll = () => {
+    if (!confirm('Remettre tous les votes à zéro ?')) return;
+    localStorage.removeItem('image_requests');
+    setEntries([]);
+  };
+
   const exportCSV = () => {
     const header = 'ID,Thème,Type,Votes';
     const rows = entries.map(e => `${e.id},${e.theme},${e.type},${e.votes}`);
@@ -68,13 +74,22 @@ export default function AdminImageRequests() {
             <h1 className="text-2xl font-black text-white mb-1">🖼️ Demandes d&apos;images</h1>
             <p className="text-sm" style={{ color: '#8B9DC3' }}>{entries.length} éléments · {totalVotes} votes au total</p>
           </div>
-          <button
-            onClick={exportCSV}
-            className="px-4 py-2 rounded-xl font-bold text-sm press-scale"
-            style={{ background: '#4ecdc4', color: '#0a0e2a' }}
-          >
-            Exporter CSV
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={exportCSV}
+              className="px-4 py-2 rounded-xl font-bold text-sm press-scale"
+              style={{ background: '#4ecdc4', color: '#0a0e2a' }}
+            >
+              Exporter CSV
+            </button>
+            <button
+              onClick={resetAll}
+              className="px-4 py-2 rounded-xl font-bold text-sm press-scale"
+              style={{ background: 'rgba(231,76,60,0.15)', border: '1px solid #e74c3c', color: '#e74c3c' }}
+            >
+              Remettre à zéro
+            </button>
+          </div>
         </div>
 
         {entries.length === 0 ? (
