@@ -18,7 +18,7 @@ export default function AuthPage() {
   const [confirmed, setConfirmed] = useState(false);
 
   if (user) {
-    router.replace('/');
+    router.replace('/app');
     return null;
   }
 
@@ -43,7 +43,7 @@ export default function AuthPage() {
       if (result.error) { setError(result.error); return; }
       localStorage.setItem('@onboarding_done', 'true');
       document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
-      window.location.href = '/';
+      window.location.href = '/app';
     }
   };
 
@@ -188,7 +188,7 @@ export default function AuthPage() {
               localStorage.setItem('userCar', JSON.stringify({ id: 'red', name: 'Rouge', image: '/images/cars/car-red.png', color: '#e74c3c' }));
               localStorage.setItem('userProfile', JSON.stringify({ name: 'Pilote', carColor: '#e74c3c', carType: 'red', objective: 'relax' }));
               document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
-              window.location.href = '/';
+              window.location.href = '/app';
             }}
             style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.25)', fontSize: 13, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
           >

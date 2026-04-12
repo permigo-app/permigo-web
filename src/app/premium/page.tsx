@@ -145,7 +145,7 @@ export default function PremiumPage() {
 
         {/* Back link */}
         <div className="text-center">
-          <Link href="/" className="text-sm" style={{ color: '#5A6B8A' }}>
+          <Link href="/app" className="text-sm" style={{ color: '#5A6B8A' }}>
             {t('premium_retour')}
           </Link>
         </div>

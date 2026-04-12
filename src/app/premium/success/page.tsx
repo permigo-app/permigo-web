@@ -41,7 +41,7 @@ export default function PremiumSuccessPage() {
           </div>
 
           <button
-            onClick={() => router.push('/')}
+            onClick={() => router.push('/app')}
             className="w-full py-4 rounded-xl font-bold text-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400 transition-all"
           >
             {t('premium_success_btn')}

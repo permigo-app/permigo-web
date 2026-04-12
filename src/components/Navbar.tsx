@@ -10,7 +10,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
 
 const SIDEBAR_ITEMS = [
-  { href: '/', labelKey: 'nav_accueil', color: '#00B894', icon: (
+  { href: '/app', labelKey: 'nav_accueil', color: '#00B894', icon: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" />
     </svg>
@@ -45,7 +45,7 @@ const SIDEBAR_ITEMS = [
 ];
 
 const NAV_ITEMS = [
-  { href: '/', labelKey: 'nav_accueil', icon: '🏠' },
+  { href: '/app', labelKey: 'nav_accueil', icon: '🏠' },
   { href: '/panneaux', labelKey: 'nav_panneaux', icon: '🔺' },
   { href: '/examen', labelKey: 'examen_blanc', icon: '📝' },
   { href: '/profil', labelKey: 'nav_profil', icon: '👤' },
@@ -73,7 +73,7 @@ export default function Navbar() {
       <nav className="hidden lg:flex flex-col items-start fixed left-0 top-0 h-full z-50 py-5 pl-4" style={{ width: 250, background: '#0F1923', borderRight: '1px solid #16213E' }}>
         {/* Logo + Language switcher */}
         <div className="flex items-center justify-between w-full pr-4 mb-4">
-          <Link href="/" className="flex items-center px-3">
+          <Link href="/app" className="flex items-center px-3">
             <span className="text-xl font-black tracking-tight" style={{ color: '#ffffff' }}>My</span>
             <span className="text-xl font-black tracking-tight" style={{ color: '#00B894' }}>Permi</span>
             <span className="text-xl font-black tracking-tight" style={{ color: '#4ecdc4' }}>Go</span>

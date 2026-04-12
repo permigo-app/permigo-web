@@ -106,7 +106,7 @@ export default function QuizPage() {
       progress={pctDone}
       progressLabel={`${currentQ + 1}/${questions.length}`}
       headerLeft={
-        <button onClick={() => router.push('/')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+        <button onClick={() => router.push('/app')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
           {'✕'}
         </button>
       }

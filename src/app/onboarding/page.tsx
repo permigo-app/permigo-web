@@ -110,7 +110,7 @@ export default function OnboardingPage() {
     localStorage.setItem('@onboarding_done', 'true');
     document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
     setSaving(false);
-    window.location.href = '/';
+    window.location.href = '/app';
   };
 
   const cyanBtn = {

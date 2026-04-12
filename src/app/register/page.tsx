@@ -21,7 +21,7 @@ export default function RegisterPage() {
   const [showConfirmation, setShowConfirmation] = useState(false);
 
   if (user) {
-    router.push('/');
+    router.push('/app');
     return null;
   }
 

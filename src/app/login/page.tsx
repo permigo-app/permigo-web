@@ -21,7 +21,7 @@ export default function LoginPage() {
 
   // Redirect if already logged in
   if (user) {
-    router.push('/');
+    router.push('/app');
     return null;
   }
 
@@ -37,7 +37,7 @@ export default function LoginPage() {
     } else {
       localStorage.setItem('@onboarding_done', 'true');
       document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
-      window.location.href = '/';
+      window.location.href = '/app';
     }
   };
 
@@ -59,7 +59,7 @@ export default function LoginPage() {
     localStorage.setItem('userCar', JSON.stringify({ id: 'red', name: 'Rouge', image: '/images/cars/car-red.png', color: '#e74c3c' }));
     localStorage.setItem('userProfile', JSON.stringify({ name: 'Pilote', carColor: '#e74c3c', carType: 'red', objective: 'relax' }));
     document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
-    window.location.href = '/';
+    window.location.href = '/app';
   };
 
   return (

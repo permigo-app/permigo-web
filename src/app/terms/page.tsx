@@ -7,7 +7,7 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <div className="max-w-2xl mx-auto px-5 py-12" style={{ minHeight: '100vh' }}>
-      <Link href="/" className="text-sm font-bold mb-8 inline-block" style={{ color: '#4ecdc4' }}>
+      <Link href="/app" className="text-sm font-bold mb-8 inline-block" style={{ color: '#4ecdc4' }}>
         ← Retour
       </Link>
 

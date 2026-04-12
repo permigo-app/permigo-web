@@ -234,7 +234,7 @@ export default function LessonPage() {
             Termine la partie précédente avec au moins 70% pour débloquer celle-ci.
           </p>
           <button
-            onClick={() => router.push('/')}
+            onClick={() => router.push('/app')}
             className="w-full py-3.5 rounded-2xl font-extrabold text-white press-scale"
             style={{ background: '#4ecdc4' }}
           >
@@ -250,7 +250,7 @@ export default function LessonPage() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <p className="text-xl font-bold mb-2">{t('lecon_introuvable')}</p>
-          <button onClick={() => router.push('/')} className="px-6 py-3 rounded-2xl font-black text-white press-scale" style={{ background: '#4ecdc4' }}>
+          <button onClick={() => router.push('/app')} className="px-6 py-3 rounded-2xl font-black text-white press-scale" style={{ background: '#4ecdc4' }}>
             {t('retour')}
           </button>
         </div>
@@ -331,7 +331,7 @@ export default function LessonPage() {
         >
           <div className="max-w-screen-xl mx-auto flex items-center gap-4">
             <button
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/app')}
               className="w-9 h-9 rounded-full flex items-center justify-center press-scale"
               style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}
             >
@@ -546,7 +546,7 @@ export default function LessonPage() {
               🔄 Réessayer
             </button>
             <button
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/app')}
               className="w-full py-3 rounded-2xl font-bold text-sm press-scale"
               style={{ background: 'transparent', border: '1.5px solid #2A3550', color: '#8B9DC3' }}
             >
@@ -568,7 +568,7 @@ export default function LessonPage() {
         progress={pctDone}
         progressLabel={`${currentQ + 1}/${questions.length}`}
         headerLeft={
-          <button onClick={() => router.push('/')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+          <button onClick={() => router.push('/app')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
             {'✕'}
           </button>
         }

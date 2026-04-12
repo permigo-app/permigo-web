@@ -236,7 +236,7 @@ function ExamContent() {
       }
     } catch { /* ignore */ }
     if (!isPremium()) recordExamPlayed();
-    router.push('/');
+    router.push('/app');
   };
 
   // Start screen
