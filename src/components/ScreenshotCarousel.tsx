@@ -57,13 +57,14 @@ export default function ScreenshotCarousel() {
   return (
     <div style={{ width: '100%', fontFamily: 'Nunito, sans-serif' }}>
 
-      {/* Image frame — position: relative pour les flèches absolues */}
+      {/* Image frame — aspect-ratio 16/9 pour afficher les screenshots en entier */}
       <div style={{
         position: 'relative',
         width: '100%',
-        height: 500,
+        aspectRatio: '16/9',
         overflow: 'hidden',
         borderRadius: 12,
+        background: '#0F1923',
       }}>
 
         {/* Slide strip */}
@@ -88,7 +89,7 @@ export default function ScreenshotCarousel() {
                 src={s.src}
                 alt={s.label}
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center center' }}
                 priority={i === 0}
               />
             </div>
