@@ -5,6 +5,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 import AppShell from '@/components/AppShell';
 import Link from 'next/link';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'MyPermiGo — Permis Théorique Belge en Mode Jeu',
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </footer>
           </AuthProvider>
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
