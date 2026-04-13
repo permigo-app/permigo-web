@@ -56,7 +56,8 @@ export default function LessonPage() {
   const isPartieMode = partieParam !== null;
   const partieIndex = isPartieMode ? parseInt(partieParam, 10) : undefined;
   // Block partie access if previous partie not completed (unless revision mode or partie 0)
-  const partieAccessBlocked = isPartieMode && !isRevisionMode && partieIndex !== undefined && partieIndex > 0
+  const isVipUser = typeof window !== 'undefined' && localStorage.getItem('permigo_vip') === 'true';
+  const partieAccessBlocked = !isVipUser && isPartieMode && !isRevisionMode && partieIndex !== undefined && partieIndex > 0
     && !isPartieCompleted(lessonId, partieIndex - 1);
 
   const [phase, setPhase] = useState<Phase>('theory');
