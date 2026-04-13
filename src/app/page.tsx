@@ -119,6 +119,7 @@ export default function HomePage() {
   const [streak, setStreak] = useState({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
   const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
   const [mounted, setMounted] = useState(false);
+  const [isVip, setIsVip] = useState(false);
   const [userCar, setUserCar] = useState<{ carType: string; carColor: string; carImage?: string }>({ carType: 'berline', carColor: '#1E88E5' });
 
   const DEFAULT_ADJ: Record<string, { dx: number; dy: number; scale: number; rot: number }> = {
@@ -170,6 +171,7 @@ export default function HomePage() {
 
   useEffect(() => {
     setMounted(true);
+    setIsVip(localStorage.getItem('permigo_vip') === 'true');
     setStarsState(getAllStars());
     setExams(getAllExams());
     setXp(getXPData());
@@ -277,7 +279,6 @@ export default function HomePage() {
 
         // Lock lesson N+1 if lesson N not completed (within unlocked theme)
         const prevLid = lessonIdx > 0 ? (theme.lessons[lessonIdx - 1]?.id || (themeCode + lessonIdx)) : null;
-        const isVip = typeof window !== 'undefined' && localStorage.getItem('permigo_vip') === 'true';
         const orderLocked = !isVip && !themeLocked && lessonIdx > 0 && prevLid !== null && (stars[prevLid] ?? 0) === 0;
 
         const locked = themeLocked;
@@ -377,7 +378,7 @@ export default function HomePage() {
     }
 
     return { nodes, themeAt, pts, totalH, pathD: d, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW };
-  }, [mounted, stars, exams, lang]);
+  }, [mounted, stars, exams, lang, isVip]);
 
   if (!mounted || !layout) return <div className="min-h-screen" />;
 
@@ -1246,8 +1247,7 @@ export default function HomePage() {
                   {theories.map((partie, idx) => {
                     const done = completedParties.includes(idx) || lessonFullyDone;
                     // Partie N+1 locked until partie N completed (except partie 0 always accessible)
-                    const vipUser = typeof window !== 'undefined' && localStorage.getItem('permigo_vip') === 'true';
-                    const unlocked = vipUser || idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
+                    const unlocked = isVip || idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
                     const isSelected = selectedPartieIdx === idx;
 
                     return (
