@@ -240,7 +240,7 @@ export default function TurboPage() {
   // ── MODE SELECTION (desktop redesign) ──
   if (!mode) {
     return (
-      <div className="py-8 px-6" style={{ minHeight: '100vh' }}>
+      <div className="py-8 px-3 sm:px-6" style={{ minHeight: '100vh' }}>
         <div className="max-w-screen-xl mx-auto flex gap-6">
           {/* Main area */}
           <div className="flex-1 min-w-0">
@@ -276,7 +276,7 @@ export default function TurboPage() {
             )}
 
             {/* 3 mode cards — same height */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
               {(['3min', '5min', 'survie'] as const).map((m) => {
                 const meta = MODE_META[m];
                 const best = m === '3min' ? best3 : m === '5min' ? best5 : bestSurvie;

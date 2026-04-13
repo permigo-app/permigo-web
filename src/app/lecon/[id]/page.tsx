@@ -327,7 +327,7 @@ export default function LessonPage() {
       <div style={{ minHeight: '100vh' }}>
         {/* ── Sticky header ── */}
         <div
-          className="sticky top-0 z-30 px-6 py-3"
+          className="sticky top-0 z-30 px-3 sm:px-6 py-3"
           style={{ background: 'rgba(10,14,42,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #2A3550' }}
         >
           <div className="max-w-screen-xl mx-auto flex items-center gap-4">
@@ -349,7 +349,7 @@ export default function LessonPage() {
 
 
         {/* ── 2-column layout ── */}
-        <div className="px-6 py-6">
+        <div className="px-3 sm:px-6 py-6">
           <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6">
 
             {/* ── Left: Theory card (60%) ── */}

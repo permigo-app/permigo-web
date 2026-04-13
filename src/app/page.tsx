@@ -384,6 +384,11 @@ export default function HomePage() {
 
   const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
 
+  // ── Mobile scale ──
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
+  const svgWidth = isMobile ? window.innerWidth - 32 : SVG_W;
+  const scale = isMobile && SVG_W > 0 ? svgWidth / SVG_W : 1;
+
   // ── Car position ──
   let carX = 0, carY = 0;
   if (curIdx >= 0 && pts.length > 0) {
@@ -450,7 +455,8 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div ref={roadContainerRef} className="relative overflow-visible mx-auto" style={{ height: totalH, width: SVG_W }}>
+        <div ref={roadContainerRef} className="relative overflow-visible mx-auto" style={{ height: totalH * scale, width: svgWidth }}>
+          <div style={{ transform: `scale(${scale})`, transformOrigin: 'top center', width: SVG_W, height: totalH }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -1082,7 +1088,8 @@ export default function HomePage() {
               );
             });
           })()}
-        </div>
+          </div>{/* end scale wrapper */}
+        </div>{/* end outer road container */}
 
       </div>
 

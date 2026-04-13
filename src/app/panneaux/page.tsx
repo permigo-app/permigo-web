@@ -25,7 +25,7 @@ export default function PanneauxPage() {
   const selectedMeta = PANNEAU_CATEGORIES.find(c => c.id === selectedCat);
 
   return (
-    <div className="py-8 px-6" style={{ minHeight: '100vh' }}>
+    <div className="py-8 px-3 sm:px-6" style={{ minHeight: '100vh' }}>
       <div className="max-w-screen-xl mx-auto">
         {/* Header */}
         <div className="mb-8">

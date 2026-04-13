@@ -185,7 +185,7 @@ export default function OnboardingPage() {
             color: 'white',
             lineHeight: 1.55,
             fontWeight: 600,
-            maxWidth: 300,
+            maxWidth: 'min(300px, 85vw)',
           }}>
             {GASTON_MESSAGES[step]}
           </div>
@@ -313,20 +313,20 @@ export default function OnboardingPage() {
             </div>
 
             {/* 3 car cards */}
-            <div className="grid grid-cols-3 gap-3 w-full mb-6">
+            <div className="grid grid-cols-3 gap-2 w-full mb-6">
               {CARS.map(car => {
                 const isSelected = selectedCar?.id === car.id;
                 return (
                   <button
                     key={car.id}
                     onClick={() => setSelectedCar(car)}
-                    className="rounded-2xl p-3 flex flex-col items-center transition-all duration-150 press-scale relative"
+                    className="rounded-2xl p-2 sm:p-3 flex flex-col items-center transition-all duration-150 press-scale relative"
                     style={{
                       background: isSelected ? `${car.color}22` : 'rgba(255,255,255,0.04)',
                       border: isSelected ? `2px solid ${car.color}` : '2px solid rgba(255,255,255,0.07)',
                     }}
                   >
-                    <Image src={car.image} width={72} height={44} alt={car.name} style={{ objectFit: 'contain' }} />
+                    <Image src={car.image} width={56} height={36} alt={car.name} className="sm:w-[72px] sm:h-[44px]" style={{ objectFit: 'contain' }} />
                     <span className="text-[11px] font-bold mt-1" style={{ color: isSelected ? car.color : 'rgba(255,255,255,0.5)' }}>
                       {lang === 'nl' ? car.nameNL : car.name}
                     </span>
