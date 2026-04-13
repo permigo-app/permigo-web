@@ -277,7 +277,8 @@ export default function HomePage() {
 
         // Lock lesson N+1 if lesson N not completed (within unlocked theme)
         const prevLid = lessonIdx > 0 ? (theme.lessons[lessonIdx - 1]?.id || (themeCode + lessonIdx)) : null;
-        const orderLocked = !themeLocked && lessonIdx > 0 && prevLid !== null && (stars[prevLid] ?? 0) === 0;
+        const isVip = typeof window !== 'undefined' && localStorage.getItem('permigo_vip') === 'true';
+        const orderLocked = !isVip && !themeLocked && lessonIdx > 0 && prevLid !== null && (stars[prevLid] ?? 0) === 0;
 
         const locked = themeLocked;
 
@@ -1245,7 +1246,8 @@ export default function HomePage() {
                   {theories.map((partie, idx) => {
                     const done = completedParties.includes(idx) || lessonFullyDone;
                     // Partie N+1 locked until partie N completed (except partie 0 always accessible)
-                    const unlocked = idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
+                    const vipUser = typeof window !== 'undefined' && localStorage.getItem('permigo_vip') === 'true';
+                    const unlocked = vipUser || idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
                     const isSelected = selectedPartieIdx === idx;
 
                     return (
