@@ -87,6 +87,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setUser(mapProfileToUser(profile));
       if (FREE_ACCESS_EMAILS.includes(sbUser.email ?? '')) {
         localStorage.setItem('isPremium', 'true');
+        localStorage.setItem('permigo_vip', 'true');
       }
 
       // ── Sync Supabase → localStorage ──────────────────────────

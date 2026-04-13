@@ -7,6 +7,11 @@ import { THEME_ORDER } from './lessonData';
 export function getUnlockedBadges(): string[] {
   if (typeof window === 'undefined') return [];
 
+  // VIP users get all badges unlocked
+  if (localStorage.getItem('permigo_vip') === 'true') {
+    return BADGES.map(b => b.id);
+  }
+
   const unlocked: string[] = [];
   const stars = getAllStars();
   const streak = getStreakData();
