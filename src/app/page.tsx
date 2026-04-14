@@ -386,8 +386,8 @@ export default function HomePage() {
 
   // ── Mobile scale ──
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
-  const svgWidth = isMobile ? window.innerWidth - 32 : SVG_W;
-  const scale = isMobile && SVG_W > 0 ? svgWidth / SVG_W : 1;
+  const availableWidth = isMobile ? window.innerWidth - 32 : SVG_W;
+  const scale = isMobile && SVG_W > 0 ? availableWidth / SVG_W : 1;
 
   // ── Car position ──
   let carX = 0, carY = 0;
@@ -455,8 +455,8 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div ref={roadContainerRef} className="relative overflow-visible mx-auto" style={{ height: totalH * scale, width: svgWidth }}>
-          <div style={{ transform: `scale(${scale})`, transformOrigin: 'top center', width: SVG_W, height: totalH }}>
+        <div ref={roadContainerRef} style={{ width: '100%', overflowX: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', height: totalH * scale }}>
+          <div style={{ transform: `scale(${scale})`, transformOrigin: 'top left', width: SVG_W, height: totalH, marginLeft: `${(availableWidth - SVG_W * scale) / 2}px`, flexShrink: 0 }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
