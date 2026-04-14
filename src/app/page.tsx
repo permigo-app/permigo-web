@@ -120,6 +120,9 @@ export default function HomePage() {
   const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
   const [mounted, setMounted] = useState(false);
   const [isVip, setIsVip] = useState(false);
+  const [visibleTheme, setVisibleTheme] = useState<string>('A');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const layoutRef = useRef<any>(null);
   const [userCar, setUserCar] = useState<{ carType: string; carColor: string; carImage?: string }>({ carType: 'berline', carColor: '#1E88E5' });
 
   const DEFAULT_ADJ: Record<string, { dx: number; dy: number; scale: number; rot: number }> = {
@@ -213,6 +216,33 @@ export default function HomePage() {
     const els = document.querySelectorAll('.monument-reveal');
     els.forEach(el => observer.observe(el));
     return () => observer.disconnect();
+  }, [mounted]);
+
+  // Mobile only: update visible theme based on scroll position
+  useEffect(() => {
+    if (!mounted || typeof window === 'undefined' || window.innerWidth >= 1024) return;
+    const handleScroll = () => {
+      const current = layoutRef.current;
+      if (!current) return;
+      const { pts: lPts, nodes: lNodes, SVG_W: lSVG_W } = current;
+      const scale = lSVG_W > 0 ? Math.min((window.innerWidth - 32) / lSVG_W, 0.60) : 1;
+      const midY = window.scrollY + window.innerHeight / 2;
+      const container = roadContainerRef.current;
+      if (!container) return;
+      const containerTop = container.getBoundingClientRect().top + window.scrollY;
+      let closest = 0;
+      let minDist = Infinity;
+      lPts.forEach((pt: { x: number; y: number }, i: number) => {
+        const scaledY = containerTop + pt.y * scale;
+        const dist = Math.abs(scaledY - midY);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      const theme = lNodes[closest]?.themeCode;
+      if (theme) setVisibleTheme(theme);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [mounted]);
 
   const openLessonModal = useCallback((node: PathNode) => {
@@ -380,6 +410,9 @@ export default function HomePage() {
     return { nodes, themeAt, pts, totalH, pathD: d, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW };
   }, [mounted, stars, exams, lang, isVip]);
 
+  // Keep layoutRef in sync for the scroll effect
+  layoutRef.current = layout;
+
   if (!mounted || !layout) return <div className="min-h-screen" />;
 
   const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
@@ -387,7 +420,7 @@ export default function HomePage() {
   // ── Mobile scale (only affects < 1024px) ──
   const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
   const mobileAvailableW = isMobileView ? window.innerWidth - 32 : SVG_W;
-  const mobileScale = isMobileView && SVG_W > 0 ? Math.min(1, mobileAvailableW / SVG_W) : 1;
+  const mobileScale = isMobileView && SVG_W > 0 ? Math.min(mobileAvailableW / SVG_W, 0.60) : 1;
 
   // ── Car position ──
   let carX = 0, carY = 0;
@@ -436,20 +469,18 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* ── Mobile active theme banner ── */}
+        {/* ── Mobile active theme banner (scroll-driven) ── */}
         {(() => {
-          const activeNode = curIdx >= 0 ? nodes[curIdx] : nodes.find(n => !n.isCompleted && !n.isLocked);
-          const activeTheme = activeNode?.themeCode || nodes[0]?.themeCode || 'A';
-          const tc = THEME_COLORS[activeTheme] || '#74B9FF';
-          const em = THEME_EMOJIS[activeTheme] || '📚';
-          const themeData = getThemeDataLocalized(activeTheme, lang);
-          const themeDone = nodes.filter(n => n.themeCode === activeTheme && n.type === 'lesson' && n.isCompleted).length;
-          const themeTotal = nodes.filter(n => n.themeCode === activeTheme && n.type === 'lesson').length;
+          const tc = THEME_COLORS[visibleTheme] || '#74B9FF';
+          const em = THEME_EMOJIS[visibleTheme] || '📚';
+          const themeData = getThemeDataLocalized(visibleTheme, lang);
+          const themeDone = nodes.filter(n => n.themeCode === visibleTheme && n.type === 'lesson' && n.isCompleted).length;
+          const themeTotal = nodes.filter(n => n.themeCode === visibleTheme && n.type === 'lesson').length;
           return (
             <div className="lg:hidden mb-3 mx-3 flex items-center gap-3 px-4 rounded-xl" style={{ height: 44, background: '#1a2a3a', border: `1px solid ${tc}40` }}>
               <span style={{ fontSize: 18 }}>{em}</span>
               <div className="flex-1 min-w-0">
-                <span className="text-xs font-black uppercase tracking-wider" style={{ color: tc }}>Thème {activeTheme}</span>
+                <span className="text-xs font-black uppercase tracking-wider" style={{ color: tc }}>Thème {visibleTheme}</span>
                 <span className="text-xs font-semibold text-white ml-2 truncate">{themeData?.title || ''}</span>
               </div>
               <span className="text-xs font-bold" style={{ color: 'rgba(255,255,255,0.4)' }}>{themeDone}/{themeTotal}</span>
