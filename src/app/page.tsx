@@ -420,7 +420,7 @@ export default function HomePage() {
       <div className="flex-1 min-w-0 px-2 py-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
         {/* ── Mobile-only header with stats ── */}
-        <div className="lg:hidden flex items-center justify-between mb-4 px-3">
+        <div className="flex lg:!hidden items-center justify-between mb-4 px-3">
           <h1 className="text-[24px] font-black"><span style={{ color: '#ffffff' }}>My</span><span style={{ color: '#00B894' }}>Permi</span><span style={{ color: '#4ecdc4' }}>Go</span></h1>
           <div className="flex items-center gap-2">
             {streak.currentStreak > 0 && (
@@ -437,7 +437,7 @@ export default function HomePage() {
         </div>
 
         {/* ── Mobile Gaston ── */}
-        <div className="lg:hidden mb-5 px-3 flex items-end gap-3">
+        <div className="flex lg:!hidden mb-5 px-3 items-end gap-3">
           <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
           <div style={{
             background: '#FFF8E7',
