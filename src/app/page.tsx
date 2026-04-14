@@ -455,8 +455,8 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div ref={roadContainerRef} style={{ width: '100%', overflowX: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'flex-start', height: totalH * scale }}>
-          <div style={{ transform: `scale(${scale})`, transformOrigin: 'top left', width: SVG_W, height: totalH, marginLeft: `${(availableWidth - SVG_W * scale) / 2}px`, flexShrink: 0 }}>
+        <div ref={roadContainerRef} style={{ width: '100%', overflowX: 'hidden', height: totalH * scale, position: 'relative' }}>
+          <div style={{ transform: `scale(${scale})`, transformOrigin: 'top left', width: SVG_W, height: totalH, position: 'absolute', left: `${Math.max(0, (availableWidth - SVG_W * scale) / 2)}px`, top: 0 }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
