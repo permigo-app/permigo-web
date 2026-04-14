@@ -331,7 +331,7 @@ export default function HomePage() {
     const svgMaxW = Math.min(1000, 600 + Math.round(oversize * 0.3));
     const roadZoneMaxW = Math.min(1100, 640 + Math.round(oversize * 0.3));
     const SVG_W = Math.min(svgMaxW, Math.max(300, availableW));
-    const CX = SVG_W * 0.14;  // road shifted more left
+    const CX = isMobileW ? SVG_W * 0.48 : SVG_W * 0.14;  // centered on mobile, shifted left on desktop
     // Zigzag amplitude
     const AMP = Math.min((SVG_W - 100) / 2, 110);
 
@@ -383,6 +383,11 @@ export default function HomePage() {
   if (!mounted || !layout) return <div className="min-h-screen" />;
 
   const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
+
+  // ── Mobile scale (only affects < 1024px) ──
+  const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
+  const mobileAvailableW = isMobileView ? window.innerWidth - 32 : SVG_W;
+  const mobileScale = isMobileView && SVG_W > 0 ? Math.min(1, mobileAvailableW / SVG_W) : 1;
 
   // ── Car position ──
   let carX = 0, carY = 0;
@@ -450,7 +455,8 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div ref={roadContainerRef} className="relative overflow-visible mx-auto" style={{ height: totalH, width: SVG_W }}>
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflowX: 'hidden', height: totalH * mobileScale }}>
+        <div ref={roadContainerRef} style={{ transform: `scale(${mobileScale})`, transformOrigin: 'top center', width: SVG_W, height: totalH, flexShrink: 0 }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -1083,6 +1089,7 @@ export default function HomePage() {
             });
           })()}
         </div>
+        </div>{/* end flex wrapper */}
 
       </div>
 
