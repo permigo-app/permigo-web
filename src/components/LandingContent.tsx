@@ -46,13 +46,13 @@ export default function LandingContent() {
   return (
     <div style={{ background: '#0a0e2a', color: '#fff', fontFamily: 'Nunito, sans-serif', minHeight: '100vh' }}>
 
-      {/* Hero */}
-      <section style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px 50px', textAlign: 'center', position: 'relative' }}>
+      {/* Language switcher — fixed top right */}
+      <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 50 }}>
+        <LanguageSwitcher />
+      </div>
 
-        {/* Language switcher — absolute top right inside hero, no overlap */}
-        <div style={{ position: 'absolute', top: 16, right: 16, zIndex: 50 }}>
-          <LanguageSwitcher />
-        </div>
+      {/* Hero */}
+      <section style={{ maxWidth: 800, margin: '0 auto', padding: '60px 24px 50px', textAlign: 'center' }}>
 
         {/* Logo + Gaston */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, marginBottom: 32 }}>

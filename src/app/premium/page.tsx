@@ -78,7 +78,7 @@ export default function PremiumPage() {
 
         {/* Comparison table */}
         <div className="rounded-2xl overflow-hidden mb-8" style={{ border: '1px solid #2A3550' }}>
-          <div className="grid grid-cols-1 sm:grid-cols-3">
+          <div className="grid grid-cols-3">
             <div className="px-4 py-3" style={{ background: '#16213E' }} />
             <div className="px-4 py-3 text-center" style={{ background: '#16213E', borderLeft: '1px solid #2A3550' }}>
               <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#5A6B8A' }}>{t('premium_gratuit_col')}</span>
@@ -88,7 +88,7 @@ export default function PremiumPage() {
             </div>
           </div>
           {FREE_FEATURES.map((f, i) => (
-            <div key={i} className="grid grid-cols-1 sm:grid-cols-3 card-hover" style={{ borderTop: '1px solid #2A3550' }}>
+            <div key={i} className="grid grid-cols-3 card-hover" style={{ borderTop: '1px solid #2A3550' }}>
               <div className="px-4 py-3 text-sm font-medium" style={{ color: '#d1d5db', background: i % 2 === 0 ? '#0F1923' : '#111827' }}>
                 {f.label}
               </div>

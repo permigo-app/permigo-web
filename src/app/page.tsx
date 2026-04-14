@@ -384,11 +384,6 @@ export default function HomePage() {
 
   const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
 
-  // ── Mobile scale ──
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
-  const availableWidth = isMobile ? window.innerWidth - 32 : SVG_W;
-  const scale = isMobile && SVG_W > 0 ? availableWidth / SVG_W : 1;
-
   // ── Car position ──
   let carX = 0, carY = 0;
   if (curIdx >= 0 && pts.length > 0) {
@@ -420,7 +415,7 @@ export default function HomePage() {
       <div className="flex-1 min-w-0 px-2 py-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
         {/* ── Mobile-only header with stats ── */}
-        <div className="flex lg:!hidden items-center justify-between mb-4 px-3">
+        <div className="lg:hidden flex items-center justify-between mb-4 px-3">
           <h1 className="text-[24px] font-black"><span style={{ color: '#ffffff' }}>My</span><span style={{ color: '#00B894' }}>Permi</span><span style={{ color: '#4ecdc4' }}>Go</span></h1>
           <div className="flex items-center gap-2">
             {streak.currentStreak > 0 && (
@@ -437,7 +432,7 @@ export default function HomePage() {
         </div>
 
         {/* ── Mobile Gaston ── */}
-        <div className="flex lg:!hidden mb-5 px-3 items-end gap-3">
+        <div className="lg:hidden mb-5 px-3 flex items-end gap-3">
           <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
           <div style={{
             background: '#FFF8E7',
@@ -455,8 +450,7 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div ref={roadContainerRef} style={{ width: '100%', overflowX: 'hidden', height: totalH * scale, position: 'relative' }}>
-          <div style={{ transform: `scale(${scale})`, transformOrigin: 'top left', width: SVG_W, height: totalH, position: 'absolute', left: `${Math.max(0, (availableWidth - SVG_W * scale) / 2)}px`, top: 0 }}>
+        <div ref={roadContainerRef} className="relative overflow-visible mx-auto" style={{ height: totalH, width: SVG_W }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -1088,8 +1082,7 @@ export default function HomePage() {
               );
             });
           })()}
-          </div>{/* end scale wrapper */}
-        </div>{/* end outer road container */}
+        </div>
 
       </div>
 
