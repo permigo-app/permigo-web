@@ -436,6 +436,27 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* ── Mobile active theme banner ── */}
+        {(() => {
+          const activeNode = curIdx >= 0 ? nodes[curIdx] : nodes.find(n => !n.isCompleted && !n.isLocked);
+          const activeTheme = activeNode?.themeCode || nodes[0]?.themeCode || 'A';
+          const tc = THEME_COLORS[activeTheme] || '#74B9FF';
+          const em = THEME_EMOJIS[activeTheme] || '📚';
+          const themeData = getThemeDataLocalized(activeTheme, lang);
+          const themeDone = nodes.filter(n => n.themeCode === activeTheme && n.type === 'lesson' && n.isCompleted).length;
+          const themeTotal = nodes.filter(n => n.themeCode === activeTheme && n.type === 'lesson').length;
+          return (
+            <div className="lg:hidden mb-3 mx-3 flex items-center gap-3 px-4 rounded-xl" style={{ height: 44, background: '#1a2a3a', border: `1px solid ${tc}40` }}>
+              <span style={{ fontSize: 18 }}>{em}</span>
+              <div className="flex-1 min-w-0">
+                <span className="text-xs font-black uppercase tracking-wider" style={{ color: tc }}>Thème {activeTheme}</span>
+                <span className="text-xs font-semibold text-white ml-2 truncate">{themeData?.title || ''}</span>
+              </div>
+              <span className="text-xs font-bold" style={{ color: 'rgba(255,255,255,0.4)' }}>{themeDone}/{themeTotal}</span>
+            </div>
+          );
+        })()}
+
         {/* ── Mobile Gaston ── */}
         <div className="lg:hidden mb-5 px-3 flex items-end gap-3">
           <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
@@ -682,7 +703,7 @@ export default function HomePage() {
             return (
               <div
                 key={`theme-${themeCode}`}
-                className="absolute"
+                className="absolute hidden lg:block"
                 style={{
                   top: bannerY + bAdj.dy,
                   left: bannerX + bAdj.dx,
