@@ -47,6 +47,7 @@ const SIDEBAR_ITEMS = [
 const NAV_ITEMS = [
   { href: '/app', labelKey: 'nav_accueil', icon: '🏠' },
   { href: '/panneaux', labelKey: 'nav_panneaux', icon: '🔺' },
+  { href: '/turbo', labelKey: 'nav_turbo', icon: '⚡' },
   { href: '/examen', labelKey: 'examen_blanc', icon: '📝' },
   { href: '/profil', labelKey: 'nav_profil', icon: '👤' },
 ];

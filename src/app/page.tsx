@@ -225,7 +225,7 @@ export default function HomePage() {
       const current = layoutRef.current;
       if (!current) return;
       const { pts: lPts, nodes: lNodes, SVG_W: lSVG_W } = current;
-      const scale = lSVG_W > 0 ? Math.min((window.innerWidth - 32) / lSVG_W, 0.60) : 1;
+      const scale = lSVG_W > 0 ? Math.min((window.innerWidth - 16) / lSVG_W, 0.58) : 1;
       const midY = window.scrollY + window.innerHeight / 2;
       const container = roadContainerRef.current;
       if (!container) return;
@@ -419,8 +419,8 @@ export default function HomePage() {
 
   // ── Mobile scale (only affects < 1024px) ──
   const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
-  const mobileAvailableW = isMobileView ? window.innerWidth - 32 : SVG_W;
-  const mobileScale = isMobileView && SVG_W > 0 ? Math.min(mobileAvailableW / SVG_W, 0.60) : 1;
+  const mobileAvailableW = isMobileView ? window.innerWidth - 16 : SVG_W;
+  const mobileScale = isMobileView && SVG_W > 0 ? Math.min(mobileAvailableW / SVG_W, 0.58) : 1;
 
   // ── Car position ──
   let carX = 0, carY = 0;
