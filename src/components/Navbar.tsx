@@ -193,8 +193,8 @@ export default function Navbar() {
           })()}
         </div>
 
-        {/* User avatar at bottom */}
-        <div className="mt-auto" style={{ width: '100%' }}>
+        {/* User avatar at bottom — hidden on mobile (redundant safety) */}
+        <div className="hidden lg:flex flex-col mt-auto" style={{ width: '100%' }}>
           <div style={{ height: '1px', background: '#16213E', marginLeft: '-16px', marginRight: '-16px' }} />
         <div className="pt-3">
           {user ? (
