@@ -340,7 +340,7 @@ export default function HomePage() {
 
     // ── Mobile-specific geometry (native sizing, no scale transform) ──
     const mVSpace = isMobileW ? 110 : V_SPACE;
-    const mPadTop = isMobileW ? 90 : PAD_TOP;
+    const mPadTop = isMobileW ? 130 : PAD_TOP;
     const mPadBot = isMobileW ? 0 : PAD_BOTTOM;
     const mThemeGap = isMobileW ? 70 : THEME_EXTRA_GAP;
 
