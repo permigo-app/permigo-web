@@ -341,7 +341,7 @@ export default function HomePage() {
     // ── Mobile-specific geometry (native sizing, no scale transform) ──
     const mVSpace = isMobileW ? 110 : V_SPACE;
     const mPadTop = isMobileW ? 90 : PAD_TOP;
-    const mPadBot = isMobileW ? 10 : PAD_BOTTOM;
+    const mPadBot = isMobileW ? 5 : PAD_BOTTOM;
     const mThemeGap = isMobileW ? 70 : THEME_EXTRA_GAP;
 
     // ── Positions with extra gap at theme boundaries ──
@@ -362,7 +362,7 @@ export default function HomePage() {
 
     // Build smooth bezier path with proper S-curves
     const startPt = pts.length > 0 ? { x: pts[0].x, y: pts[0].y - mPadTop } : { x: CX, y: 0 };
-    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 180 : 250);
+    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 130 : 250);
     const allPts = [startPt, ...pts, { x: CX, y: finishY }];
 
     let d = `M ${allPts[0].x} ${allPts[0].y}`;
