@@ -428,7 +428,7 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
-    <div className="flex gap-0 w-full overflow-x-hidden">
+    <div className="flex gap-0 w-full overflow-x-hidden" style={isMobileView ? { background: '#0a0e2a', minHeight: '100dvh' } : undefined}>
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
