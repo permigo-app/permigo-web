@@ -458,19 +458,40 @@ export default function HomePage() {
         <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflowX: 'hidden', height: totalH }}>
         <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: totalH, flexShrink: 0 }}>
 
-          {/* ── Mobile: background color bands per theme ── */}
+          {/* ── Mobile: background color bands per theme — smooth cross-fade at boundaries ── */}
           {isMobileView && (() => {
             const themeEntries = Array.from(themeAt.entries()).sort((a, b) => a[0] - b[0]);
+            const FADE = 80; // px of overlap for cross-fade
             return themeEntries.map(([startIdx, themeCode], sIdx) => {
               const nextEntry = themeEntries[sIdx + 1];
-              const startY = startIdx > 0 && pts[startIdx - 1] ? pts[startIdx - 1].y + 30 : 0;
-              const endY = nextEntry && pts[nextEntry[0] - 1] ? pts[nextEntry[0] - 1].y + 30 : totalH;
+              const rawStart = startIdx > 0 && pts[startIdx - 1] ? pts[startIdx - 1].y + 30 : 0;
+              const rawEnd = nextEntry && pts[nextEntry[0] - 1] ? pts[nextEntry[0] - 1].y + 30 : totalH;
               const tc = THEME_COLORS[themeCode] || '#74B9FF';
+              const nextTc = nextEntry ? (THEME_COLORS[nextEntry[1]] || '#74B9FF') : null;
+              // Extend slightly to overlap with next band for a seamless cross-fade
+              const bandStart = sIdx === 0 ? 0 : rawStart - FADE / 2;
+              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH;
+              const height = bandEnd - bandStart;
+              // Build gradient: fade in from prev color → solid mid → fade out to next color
+              let gradient: string;
+              if (!nextTc) {
+                // Last theme: fade in at top, hold
+                gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}20 8%, ${tc}18 100%)`;
+              } else if (sIdx === 0) {
+                // First theme: hold then cross-fade into next
+                const fadeStartPct = Math.round(((rawEnd - rawStart - FADE / 2) / height) * 100);
+                gradient = `linear-gradient(180deg, ${tc}20 0%, ${tc}20 ${fadeStartPct}%, ${nextTc}00 100%)`;
+              } else {
+                // Middle theme: fade in from prev, hold, fade out to next
+                const midPct = Math.round((FADE / 2 / height) * 100);
+                const fadeStartPct = Math.round(((FADE / 2 + rawEnd - rawStart - FADE / 2) / height) * 100);
+                gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}20 ${midPct}%, ${tc}20 ${fadeStartPct}%, ${nextTc}00 100%)`;
+              }
               return (
                 <div key={`bg-${themeCode}`} style={{
                   position: 'absolute', left: 0, width: '100%',
-                  top: startY, height: endY - startY,
-                  background: `linear-gradient(180deg, ${tc}28 0%, ${tc}12 50%, ${tc}28 100%)`,
+                  top: bandStart, height,
+                  background: gradient,
                   pointerEvents: 'none',
                   zIndex: 0,
                 }} />
@@ -837,15 +858,13 @@ export default function HomePage() {
                       </Link>
                     )}
 
-                    {/* "EXAMEN" label — desktop only on mobile it clutters */}
-                    {!isMobileView && (
-                      <div className="absolute left-1/2 -translate-x-1/2 text-center" style={{
-                        top: eRingSize + 4,
-                        width: 80,
-                      }}>
-                        <span className="text-xs font-black tracking-wider" style={{ color: '#F39C12' }}>{t('examen_node')}</span>
-                      </div>
-                    )}
+                    {/* "EXAMEN" label */}
+                    <div className="absolute left-1/2 -translate-x-1/2 text-center" style={{
+                      top: eRingSize + 2,
+                      width: 80,
+                    }}>
+                      <span style={{ fontSize: isMobileView ? 9 : 11, fontWeight: 900, letterSpacing: 1, color: '#F39C12' }}>{t('examen_node')}</span>
+                    </div>
 
                     <div className="absolute" style={{ left: eR + 10, top: -16 }}>
                       <span className="text-base star-twinkle">⭐</span>
