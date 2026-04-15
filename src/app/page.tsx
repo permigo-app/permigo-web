@@ -341,7 +341,7 @@ export default function HomePage() {
     // ── Mobile-specific geometry (native sizing, no scale transform) ──
     const mVSpace = isMobileW ? 110 : V_SPACE;
     const mPadTop = isMobileW ? 90 : PAD_TOP;
-    const mPadBot = isMobileW ? 100 : PAD_BOTTOM;
+    const mPadBot = isMobileW ? 20 : PAD_BOTTOM;
     const mThemeGap = isMobileW ? 70 : THEME_EXTRA_GAP;
 
     // ── Positions with extra gap at theme boundaries ──
@@ -432,7 +432,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-20 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, minHeight: isMobileView ? '100dvh' : undefined }}>
+      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-20 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
