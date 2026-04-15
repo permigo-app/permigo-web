@@ -432,7 +432,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-2 pt-[52px] pb-20 lg:pt-6 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
+      <div className="flex-1 min-w-0 px-2 pt-[44px] pb-20 lg:pt-6 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
@@ -489,7 +489,9 @@ export default function HomePage() {
               }
               return (
                 <div key={`bg-${themeCode}`} style={{
-                  position: 'absolute', left: 0, width: '100%',
+                  position: 'absolute',
+                  left: '50%', transform: 'translateX(-50%)',
+                  width: '100vw',
                   top: bandStart, height,
                   background: gradient,
                   pointerEvents: 'none',
@@ -705,7 +707,7 @@ export default function HomePage() {
             const cardW = SVG_W - 24;
             const cardX = 12;
             // For first theme: position at very top; for others: in the gap above first node
-            const cardY = ti === 0 ? 6 : p.y - 72;
+            const cardY = ti === 0 ? 0 : p.y - 72;
             return (
               <div key={`mcard-${themeCode}`} className="absolute" style={{ left: cardX, top: cardY, width: cardW, zIndex: 10 }}>
                 <div style={{
@@ -1031,8 +1033,8 @@ export default function HomePage() {
                   </button>
                 )}
 
-                {/* Stars for completed nodes — 3-star display, centred below ring */}
-                {node.isCompleted && (
+                {/* Stars for completed nodes — desktop only */}
+                {!isMobileView && node.isCompleted && (
                   <div style={{
                     position: 'absolute',
                     top: ringSize + 2,
@@ -1044,7 +1046,7 @@ export default function HomePage() {
                     gap: 1,
                   }}>
                     {[1, 2, 3].map(s => (
-                      <span key={s} style={{ fontSize: isMobileView ? 9 : 11, opacity: node.stars >= s ? 1 : 0.18, lineHeight: 1 }}>⭐</span>
+                      <span key={s} style={{ fontSize: 11, opacity: node.stars >= s ? 1 : 0.18, lineHeight: 1 }}>⭐</span>
                     ))}
                   </div>
                 )}
