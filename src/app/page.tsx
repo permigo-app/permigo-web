@@ -428,11 +428,11 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
-    <div className="flex gap-0 w-full overflow-x-hidden" style={isMobileView ? { background: '#0a0e2a', minHeight: '100dvh' } : undefined}>
+    <div className="flex gap-0 w-full overflow-x-hidden">
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
+      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, ...(isMobileView ? { background: '#0a0e2a', minHeight: '100dvh' } : {}) }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
