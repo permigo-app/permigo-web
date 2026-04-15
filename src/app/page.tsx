@@ -438,7 +438,7 @@ export default function HomePage() {
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
         {/* ── Mobile Gaston — desktop only ── */}
-        <div className="hidden lg:flex mb-5 px-3 items-end gap-3">
+        <div className="hidden lg:flex mb-5 px-3 items-end gap-3" style={{ position: 'relative', zIndex: 50 }}>
           <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
           <div style={{
             background: '#FFF8E7',
