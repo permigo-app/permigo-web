@@ -432,7 +432,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-2 pt-[44px] pb-20 lg:pt-6 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
+      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-20 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
@@ -455,7 +455,7 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflowX: 'hidden', height: totalH }}>
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', height: totalH }}>
         <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: totalH, flexShrink: 0 }}>
 
           {/* ── Mobile: background color bands per theme — smooth cross-fade at boundaries ── */}
@@ -707,7 +707,7 @@ export default function HomePage() {
             const cardW = SVG_W - 24;
             const cardX = 12;
             // For first theme: position at very top; for others: in the gap above first node
-            const cardY = ti === 0 ? 0 : p.y - 72;
+            const cardY = ti === 0 ? 46 : p.y - 72;
             return (
               <div key={`mcard-${themeCode}`} className="absolute" style={{ left: cardX, top: cardY, width: cardW, zIndex: 10 }}>
                 <div style={{
