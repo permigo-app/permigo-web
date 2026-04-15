@@ -120,7 +120,6 @@ export default function HomePage() {
   const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
   const [mounted, setMounted] = useState(false);
   const [isVip, setIsVip] = useState(false);
-  const [visibleTheme, setVisibleTheme] = useState<string>('A');
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const layoutRef = useRef<any>(null);
   const [userCar, setUserCar] = useState<{ carType: string; carColor: string; carImage?: string }>({ carType: 'berline', carColor: '#1E88E5' });
@@ -218,32 +217,7 @@ export default function HomePage() {
     return () => observer.disconnect();
   }, [mounted]);
 
-  // Mobile only: update visible theme based on scroll position
-  useEffect(() => {
-    if (!mounted || typeof window === 'undefined' || window.innerWidth >= 1024) return;
-    const handleScroll = () => {
-      const current = layoutRef.current;
-      if (!current) return;
-      const { pts: lPts, nodes: lNodes } = current;
-      const scale = 1; // native sizing, no scale transform on mobile
-      const midY = window.scrollY + window.innerHeight / 2;
-      const container = roadContainerRef.current;
-      if (!container) return;
-      const containerTop = container.getBoundingClientRect().top + window.scrollY;
-      let closest = 0;
-      let minDist = Infinity;
-      lPts.forEach((pt: { x: number; y: number }, i: number) => {
-        const scaledY = containerTop + pt.y * scale;
-        const dist = Math.abs(scaledY - midY);
-        if (dist < minDist) { minDist = dist; closest = i; }
-      });
-      const theme = lNodes[closest]?.themeCode;
-      if (theme) setVisibleTheme(theme);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [mounted]);
+  // scroll effect removed — section cards on-road handle theme identification
 
   const openLessonModal = useCallback((node: PathNode) => {
     setModalNode(node);
@@ -366,8 +340,8 @@ export default function HomePage() {
 
     // ── Mobile-specific geometry (native sizing, no scale transform) ──
     const mVSpace = isMobileW ? 110 : V_SPACE;
-    const mPadTop = isMobileW ? 180 : PAD_TOP;
-    const mPadBot = isMobileW ? 100 : PAD_BOTTOM;
+    const mPadTop = isMobileW ? 90 : PAD_TOP;
+    const mPadBot = isMobileW ? 80 : PAD_BOTTOM;
     const mThemeGap = isMobileW ? 70 : THEME_EXTRA_GAP;
 
     // ── Positions with extra gap at theme boundaries ──
@@ -415,9 +389,6 @@ export default function HomePage() {
     return { nodes, themeAt, pts, totalH, pathD: d, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW };
   }, [mounted, stars, exams, lang, isVip]);
 
-  // Keep layoutRef in sync for the scroll effect
-  layoutRef.current = layout;
-
   if (!mounted || !layout) return <div className="min-h-screen" />;
 
   const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
@@ -463,37 +434,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       <div className="flex-1 min-w-0 px-2 pt-[52px] pb-20 lg:pt-6 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
-        {/* ── Mobile active theme banner (scroll-driven, sticky) ── */}
-        {(() => {
-          const tc = THEME_COLORS[visibleTheme] || '#74B9FF';
-          const em = THEME_EMOJIS[visibleTheme] || '📚';
-          const themeData = getThemeDataLocalized(visibleTheme, lang);
-          const themeDone = nodes.filter(n => n.themeCode === visibleTheme && n.type === 'lesson' && n.isCompleted).length;
-          const themeTotal = nodes.filter(n => n.themeCode === visibleTheme && n.type === 'lesson').length;
-          const pct = themeTotal > 0 ? Math.round((themeDone / themeTotal) * 100) : 0;
-          return (
-            <div className="lg:hidden sticky z-40 mb-3" style={{ top: 44, background: '#0d1821', borderBottom: `2px solid ${tc}50` }}>
-              <div className="flex items-center gap-2.5 px-4 py-2">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ background: `${tc}25`, border: `1.5px solid ${tc}60` }}>
-                  <span style={{ fontSize: 16, lineHeight: 1 }}>{em}</span>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1.5 mb-1">
-                    <span style={{ fontSize: 10, fontWeight: 900, color: tc, letterSpacing: 1.5, textTransform: 'uppercase' }}>Thème {visibleTheme}</span>
-                    <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', fontWeight: 600 }} className="truncate">— {themeData?.title || ''}</span>
-                  </div>
-                  <div style={{ height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.07)', overflow: 'hidden' }}>
-                    <div style={{ height: '100%', borderRadius: 3, background: `linear-gradient(90deg, ${tc}, ${tc}bb)`, width: `${pct}%`, transition: 'width 0.5s ease', minWidth: pct > 0 ? 8 : 0 }} />
-                  </div>
-                </div>
-                <div className="flex-shrink-0 text-right" style={{ minWidth: 36 }}>
-                  <span style={{ fontSize: 11, fontWeight: 800, color: tc }}>{pct}%</span>
-                  <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.35)', fontWeight: 600 }}>{themeDone}/{themeTotal}</div>
-                </div>
-              </div>
-            </div>
-          );
-        })()}
+        {/* sticky banner removed — section cards on the road handle theme identification */}
 
         {/* ── Mobile Gaston — desktop only ── */}
         <div className="hidden lg:flex mb-5 px-3 items-end gap-3">
@@ -529,7 +470,7 @@ export default function HomePage() {
                 <div key={`bg-${themeCode}`} style={{
                   position: 'absolute', left: 0, width: '100%',
                   top: startY, height: endY - startY,
-                  background: `linear-gradient(180deg, ${tc}09 0%, ${tc}05 50%, ${tc}09 100%)`,
+                  background: `linear-gradient(180deg, ${tc}28 0%, ${tc}12 50%, ${tc}28 100%)`,
                   pointerEvents: 'none',
                   zIndex: 0,
                 }} />
@@ -742,7 +683,8 @@ export default function HomePage() {
             const themeTotal = nodes.filter(n => n.themeCode === themeCode && n.type === 'lesson').length;
             const cardW = SVG_W - 24;
             const cardX = 12;
-            const cardY = p.y - 75;
+            // For first theme: position at very top; for others: in the gap above first node
+            const cardY = ti === 0 ? 6 : p.y - 72;
             return (
               <div key={`mcard-${themeCode}`} className="absolute" style={{ left: cardX, top: cardY, width: cardW, zIndex: 10 }}>
                 <div style={{
