@@ -65,24 +65,26 @@ function MobileTopBar() {
     } catch {}
   }, []);
   return (
-    <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center px-3 gap-2" style={{ height: 44, background: '#0F1923', borderBottom: '1px solid #16213E' }}>
+    <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center px-3 gap-2" style={{ height: 44, background: '#0a1220', borderBottom: '1px solid #1a2535' }}>
       {/* Logo */}
-      <span className="text-sm font-black flex-shrink-0">
-        <span style={{ color: '#fff' }}>My</span>
-        <span style={{ color: '#00B894' }}>Permi</span>
-        <span style={{ color: '#4ecdc4' }}>Go</span>
-      </span>
+      <Link href="/app" className="flex-shrink-0">
+        <span style={{ fontSize: 15, fontWeight: 900, letterSpacing: -0.5 }}>
+          <span style={{ color: '#fff' }}>My</span>
+          <span style={{ color: '#00B894' }}>Permi</span>
+          <span style={{ color: '#4ecdc4' }}>Go</span>
+        </span>
+      </Link>
       {/* Streak + XP — centre */}
       <div className="flex-1 flex items-center justify-center gap-2">
         {streak > 0 && (
-          <div className="flex items-center gap-1 px-2 py-0.5 rounded-full" style={{ background: 'rgba(255,99,72,0.15)' }}>
-            <span className="text-xs">🔥</span>
-            <span className="text-xs font-black" style={{ color: '#FF6348' }}>{streak}</span>
+          <div className="flex items-center gap-1 px-2.5 py-1 rounded-full" style={{ background: 'rgba(255,99,72,0.18)', border: '1px solid rgba(255,99,72,0.25)' }}>
+            <span style={{ fontSize: 13 }}>🔥</span>
+            <span style={{ fontSize: 12, fontWeight: 900, color: '#FF6348' }}>{streak}</span>
           </div>
         )}
-        <div className="flex items-center gap-1 px-2 py-0.5 rounded-full" style={{ background: '#16213E' }}>
-          <span className="text-xs">⚡</span>
-          <span className="text-xs font-bold text-white">{xp}</span>
+        <div className="flex items-center gap-1 px-2.5 py-1 rounded-full" style={{ background: 'rgba(255,215,0,0.12)', border: '1px solid rgba(255,215,0,0.2)' }}>
+          <span style={{ fontSize: 13 }}>⚡</span>
+          <span style={{ fontSize: 12, fontWeight: 800, color: '#FFD700' }}>{xp}</span>
         </div>
       </div>
       {/* Lang switcher */}
@@ -258,23 +260,46 @@ export default function Navbar() {
       <MobileTopBar />
 
       {/* Mobile bottom bar */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50" style={{ background: '#0F1923', borderTop: '1px solid #16213E' }}>
-        <div className="flex justify-around items-center" style={{ height: 60 }}>
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50" style={{ background: '#0F1923', borderTop: '1px solid #1e2d3d' }}>
+        <div className="flex justify-around items-end px-1" style={{ height: 60 }}>
           {NAV_ITEMS.map((item) => {
             const active = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
+            const itemColor = item.href === '/app' ? '#00B894'
+              : item.href === '/panneaux' ? '#FF6348'
+              : item.href === '/turbo' ? '#FFD700'
+              : item.href === '/examen' ? '#A29BFE'
+              : '#74B9FF';
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex flex-col items-center gap-0.5 press-scale"
+                className="flex flex-col items-center press-scale"
+                style={{ flex: 1, paddingBottom: 8, paddingTop: 6, position: 'relative' }}
               >
-                <span className={`text-[22px] transition-transform ${active ? 'scale-110' : ''}`}>{item.icon}</span>
-                <span className="text-[11px] font-semibold" style={{ color: active ? '#00B894' : '#5A6B8A' }}>
+                {/* Active highlight bar at top */}
+                <div style={{
+                  position: 'absolute', top: 0, left: '20%', right: '20%',
+                  height: 2, borderRadius: 2,
+                  background: active ? itemColor : 'transparent',
+                  transition: 'background 0.2s',
+                }} />
+                {/* Icon with background highlight when active */}
+                <div style={{
+                  width: 42, height: 28,
+                  borderRadius: 14,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  background: active ? `${itemColor}20` : 'transparent',
+                  transition: 'background 0.2s',
+                }}>
+                  <span style={{ fontSize: active ? 20 : 18, transition: 'font-size 0.15s', filter: active ? 'none' : 'grayscale(0.4)' }}>{item.icon}</span>
+                </div>
+                <span style={{
+                  fontSize: 10, fontWeight: active ? 800 : 600, marginTop: 1,
+                  color: active ? itemColor : '#4a5a78',
+                  transition: 'color 0.2s',
+                }}>
                   {t(item.labelKey)}
                 </span>
-                {active && (
-                  <div className="w-[5px] h-[5px] rounded-full mt-0.5" style={{ background: '#00B894' }} />
-                )}
               </Link>
             );
           })}

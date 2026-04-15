@@ -224,8 +224,8 @@ export default function HomePage() {
     const handleScroll = () => {
       const current = layoutRef.current;
       if (!current) return;
-      const { pts: lPts, nodes: lNodes, SVG_W: lSVG_W } = current;
-      const scale = lSVG_W > 0 ? Math.min((window.innerWidth - 16) / lSVG_W, 0.58) : 1;
+      const { pts: lPts, nodes: lNodes } = current;
+      const scale = 1; // native sizing, no scale transform on mobile
       const midY = window.scrollY + window.innerHeight / 2;
       const container = roadContainerRef.current;
       if (!container) return;
@@ -364,12 +364,18 @@ export default function HomePage() {
     // Mobile: gentler 2-3 wave Duolingo style, desktop: full amplitude
     const AMP = isMobileW ? Math.min((SVG_W - 80) / 2, 70) : Math.min((SVG_W - 100) / 2, 110);
 
+    // ── Mobile-specific geometry (native sizing, no scale transform) ──
+    const mVSpace = isMobileW ? 110 : V_SPACE;
+    const mPadTop = isMobileW ? 180 : PAD_TOP;
+    const mPadBot = isMobileW ? 100 : PAD_BOTTOM;
+    const mThemeGap = isMobileW ? 70 : THEME_EXTRA_GAP;
+
     // ── Positions with extra gap at theme boundaries ──
     const themeStartSet = new Set(themeAt.keys());
     let yExtra = 0;
     const pts = nodes.map((node, i) => {
       if (i > 0 && themeStartSet.has(i)) {
-        yExtra += THEME_EXTRA_GAP;
+        yExtra += mThemeGap;
       }
       const isExam = node.type === 'exam';
       const isThemeStart = themeStartSet.has(i);
@@ -377,12 +383,12 @@ export default function HomePage() {
       const side = i % 2 === 0 ? -1 : 1;
       // Give exam/theme-start a slight offset so the road curves through them
       const x = (isExam || isThemeStart) ? CX + AMP * side * 0.3 : CX + AMP * side;
-      return { x, y: PAD_TOP + i * V_SPACE + yExtra };
+      return { x, y: mPadTop + i * mVSpace + yExtra };
     });
 
     // Build smooth bezier path with proper S-curves
-    const startPt = pts.length > 0 ? { x: pts[0].x, y: pts[0].y - 220 } : { x: CX, y: PAD_TOP - 220 };
-    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : PAD_TOP) + 250;
+    const startPt = pts.length > 0 ? { x: pts[0].x, y: pts[0].y - mPadTop } : { x: CX, y: 0 };
+    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 150 : 250);
     const allPts = [startPt, ...pts, { x: CX, y: finishY }];
 
     let d = `M ${allPts[0].x} ${allPts[0].y}`;
@@ -395,7 +401,7 @@ export default function HomePage() {
       d += ` C ${p.x} ${p.y + dy * 0.7}, ${c.x} ${c.y - dy * 0.7}, ${c.x} ${c.y}`;
     }
 
-    const totalH = finishY + PAD_BOTTOM;
+    const totalH = finishY + mPadBot;
     const curIdx = nodes.findIndex(n => n.isCurrent);
 
     let carTilt = 0;
@@ -416,12 +422,9 @@ export default function HomePage() {
 
   const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
 
-  // ── Mobile scale (only affects < 1024px) ──
+  // ── No scale on mobile — geometry is natively sized ──
   const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
-  // On mobile SVG_W = innerWidth-32 already, scale stays at 1 unless SVG is wider
-  const mobileScale = isMobileView && SVG_W > 0
-    ? Math.min((window.innerWidth - 32) / SVG_W, 0.58)
-    : 1;
+  const mobileScale = 1; // native sizing, no transform
 
   // ── Car position ──
   let carX = 0, carY = 0;
@@ -440,10 +443,10 @@ export default function HomePage() {
     carY = p.y + fwdY;
   }
 
-  // ── Mobile node size overrides ──
-  const mNODE_R = isMobileView ? 28 : NODE_R;
-  const mACTIVE_R = isMobileView ? 34 : ACTIVE_R;
-  const mEXAM_R = isMobileView ? 32 : EXAM_R;
+  // ── Mobile node size overrides (smaller = native feel at scale 1) ──
+  const mNODE_R = isMobileView ? 22 : NODE_R;
+  const mACTIVE_R = isMobileView ? 28 : ACTIVE_R;
+  const mEXAM_R = isMobileView ? 24 : EXAM_R;
   const mRING_GAP = RING_GAP;
   const mRING_STROKE = RING_STROKE;
 
@@ -458,23 +461,36 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-2 py-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
+      <div className="flex-1 min-w-0 px-2 pt-[52px] pb-20 lg:pt-6 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
-        {/* ── Mobile active theme banner (scroll-driven) ── */}
+        {/* ── Mobile active theme banner (scroll-driven, sticky) ── */}
         {(() => {
           const tc = THEME_COLORS[visibleTheme] || '#74B9FF';
           const em = THEME_EMOJIS[visibleTheme] || '📚';
           const themeData = getThemeDataLocalized(visibleTheme, lang);
           const themeDone = nodes.filter(n => n.themeCode === visibleTheme && n.type === 'lesson' && n.isCompleted).length;
           const themeTotal = nodes.filter(n => n.themeCode === visibleTheme && n.type === 'lesson').length;
+          const pct = themeTotal > 0 ? Math.round((themeDone / themeTotal) * 100) : 0;
           return (
-            <div className="lg:hidden mb-2 mx-2 flex items-center gap-2 px-3 rounded-xl" style={{ height: 40, background: '#1a2a3a', border: `1px solid ${tc}40` }}>
-              <span style={{ fontSize: 16 }}>{em}</span>
-              <div className="flex-1 min-w-0 flex items-center gap-1">
-                <span style={{ fontSize: 12, fontWeight: 800, color: tc, textTransform: 'uppercase', letterSpacing: 1 }}>Thème {visibleTheme}</span>
-                <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)' }} className="truncate">— {themeData?.title || ''}</span>
+            <div className="lg:hidden sticky z-40 mb-3" style={{ top: 44, background: '#0d1821', borderBottom: `2px solid ${tc}50` }}>
+              <div className="flex items-center gap-2.5 px-4 py-2">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ background: `${tc}25`, border: `1.5px solid ${tc}60` }}>
+                  <span style={{ fontSize: 16, lineHeight: 1 }}>{em}</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-1.5 mb-1">
+                    <span style={{ fontSize: 10, fontWeight: 900, color: tc, letterSpacing: 1.5, textTransform: 'uppercase' }}>Thème {visibleTheme}</span>
+                    <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', fontWeight: 600 }} className="truncate">— {themeData?.title || ''}</span>
+                  </div>
+                  <div style={{ height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.07)', overflow: 'hidden' }}>
+                    <div style={{ height: '100%', borderRadius: 3, background: `linear-gradient(90deg, ${tc}, ${tc}bb)`, width: `${pct}%`, transition: 'width 0.5s ease', minWidth: pct > 0 ? 8 : 0 }} />
+                  </div>
+                </div>
+                <div className="flex-shrink-0 text-right" style={{ minWidth: 36 }}>
+                  <span style={{ fontSize: 11, fontWeight: 800, color: tc }}>{pct}%</span>
+                  <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.35)', fontWeight: 600 }}>{themeDone}/{themeTotal}</div>
+                </div>
               </div>
-              <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.4)', flexShrink: 0 }}>{themeDone}/{themeTotal}</span>
             </div>
           );
         })()}
@@ -498,8 +514,8 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflowX: 'hidden', height: totalH * mobileScale }}>
-        <div ref={roadContainerRef} style={{ transform: `scale(${mobileScale})`, transformOrigin: 'top center', width: SVG_W, height: totalH, flexShrink: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflowX: 'hidden', height: totalH }}>
+        <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: totalH, flexShrink: 0 }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -817,8 +833,8 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Bonus card (Flash/Révision) */}
-                  <div className="absolute rounded-xl py-1.5 px-2" style={{
+                  {/* Bonus card (Flash/Révision) — desktop only */}
+                  <div className="absolute hidden lg:block rounded-xl py-1.5 px-2" style={{
                     left: eRingSize + 15,
                     top: i === nodes.length - 1 ? 50 : 20,
                     width: 110,
@@ -874,17 +890,18 @@ export default function HomePage() {
             const ringColor = tc;
 
             // Node icon
+            const iconSize = isMobileView ? nodeRadius * 0.9 : nodeRadius;
             let nodeContent: React.ReactNode;
             if (node.isCompleted) {
-              nodeContent = <span className="text-white text-xl font-black">✓</span>;
+              nodeContent = <span style={{ color: '#fff', fontSize: iconSize, fontWeight: 900, lineHeight: 1 }}>✓</span>;
             } else if (node.isLocked) {
-              nodeContent = <span className="text-base text-white">🔒</span>;
+              nodeContent = <span style={{ fontSize: iconSize * 0.75, lineHeight: 1 }}>🔒</span>;
             } else if (node.isOrderLocked) {
-              nodeContent = <span className="text-lg font-black" style={{ color: 'rgba(255,255,255,0.45)' }}>{node.localIndex}</span>;
+              nodeContent = <span style={{ fontSize: iconSize * 0.75, fontWeight: 900, color: 'rgba(255,255,255,0.45)', lineHeight: 1 }}>{node.localIndex}</span>;
             } else if (isActive) {
-              nodeContent = <span className="text-white text-2xl font-black">📖</span>;
+              nodeContent = <span style={{ fontSize: iconSize * 0.9, lineHeight: 1 }}>▶</span>;
             } else {
-              nodeContent = <span className="text-lg font-black" style={{ color: tc }}>{node.localIndex}</span>;
+              nodeContent = <span style={{ fontSize: iconSize * 0.75, fontWeight: 900, color: tc, lineHeight: 1 }}>{node.localIndex}</span>;
             }
 
             return (
@@ -961,24 +978,32 @@ export default function HomePage() {
                       transform: 'translateX(-50%)',
                       background: tc,
                       color: '#fff',
-                      fontSize: 11,
+                      fontSize: isMobileView ? 13 : 11,
                       fontWeight: 900,
-                      padding: '6px 14px',
+                      padding: isMobileView ? '9px 20px' : '6px 14px',
                       borderRadius: 20,
                       whiteSpace: 'nowrap',
-                      boxShadow: `0 4px 14px ${tc}80`,
+                      boxShadow: `0 6px 20px ${tc}90`,
                       letterSpacing: '0.5px',
                       zIndex: 18,
+                      border: `1.5px solid ${tc}`,
                     }}
                   >
                     {t('commencer')} ▶
                   </button>
                 )}
 
-                {/* Star for completed nodes */}
-                {node.isCompleted && node.stars >= 3 && (
-                  <div className="absolute" style={{ right: -6, top: -8 }}>
-                    <span className="text-sm star-twinkle" style={{ animationDelay: `${i * 0.3}s` }}>⭐</span>
+                {/* Stars for completed nodes — 3-star display */}
+                {node.isCompleted && (
+                  <div className="absolute flex items-center gap-0.5" style={{
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    top: ringSize + (isActive ? 0 : 3),
+                    whiteSpace: 'nowrap',
+                  }}>
+                    {[1, 2, 3].map(s => (
+                      <span key={s} style={{ fontSize: isMobileView ? 10 : 12, opacity: node.stars >= s ? 1 : 0.2, lineHeight: 1 }}>⭐</span>
+                    ))}
                   </div>
                 )}
               </div>
