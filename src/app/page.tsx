@@ -432,7 +432,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-10 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
+      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
@@ -1206,6 +1206,21 @@ export default function HomePage() {
           })()}
         </div>
         </div>{/* end flex wrapper */}
+
+        {/* ── Mobile: last theme color strip to bottom nav ── */}
+        {isMobileView && (() => {
+          const themeEntries = Array.from(themeAt.entries()).sort((a, b) => a[0] - b[0]);
+          const lastEntry = themeEntries[themeEntries.length - 1];
+          const lastTc = lastEntry ? (THEME_COLORS[lastEntry[1]] || '#74B9FF') : '#74B9FF';
+          return (
+            <div style={{
+              width: '100vw',
+              marginLeft: 'calc(-50vw + 50%)',
+              height: 40,
+              background: `linear-gradient(180deg, ${lastTc}20 0%, ${lastTc}10 100%)`,
+            }} />
+          );
+        })()}
 
       </div>
 
