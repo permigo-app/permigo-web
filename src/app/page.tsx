@@ -329,9 +329,9 @@ export default function HomePage() {
     const leftW = isMobileW ? 0 : 250;
     const rightW = isXlW ? 500 : 0;
     const availableW = vw - leftW - rightW - 32;
-    const oversize = Math.max(0, vw - 1920);
-    const svgMaxW = Math.min(1000, 600 + Math.round(oversize * 0.3));
-    const roadZoneMaxW = Math.min(1100, 640 + Math.round(oversize * 0.3));
+    const oversize = Math.max(0, vw - 1440);
+    const svgMaxW = Math.min(1000, 700 + Math.round(oversize * 0.4));
+    const roadZoneMaxW = Math.min(1100, 760 + Math.round(oversize * 0.4));
     // Mobile: exact screen width minus 32px padding
     const SVG_W = isMobileW ? Math.max(300, vw - 32) : Math.min(svgMaxW, Math.max(300, availableW));
     const CX = isMobileW ? SVG_W * 0.5 : SVG_W * 0.14;

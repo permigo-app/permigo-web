@@ -59,7 +59,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     <>
       <Navbar />
       <PremiumBanner />
-      <main className="pt-11 lg:pt-0 lg:ml-[250px] pb-20 lg:pb-6">
+      <main className="pt-11 lg:pt-0 lg:ml-[250px] xl:mr-[500px] pb-20 lg:pb-6">
         {children}
       </main>
     </>
