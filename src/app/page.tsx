@@ -516,6 +516,26 @@ export default function HomePage() {
         {/* SVG Road */}
         <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflowX: 'hidden', height: totalH }}>
         <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: totalH, flexShrink: 0 }}>
+
+          {/* ── Mobile: background color bands per theme ── */}
+          {isMobileView && (() => {
+            const themeEntries = Array.from(themeAt.entries()).sort((a, b) => a[0] - b[0]);
+            return themeEntries.map(([startIdx, themeCode], sIdx) => {
+              const nextEntry = themeEntries[sIdx + 1];
+              const startY = startIdx > 0 && pts[startIdx - 1] ? pts[startIdx - 1].y + 30 : 0;
+              const endY = nextEntry && pts[nextEntry[0] - 1] ? pts[nextEntry[0] - 1].y + 30 : totalH;
+              const tc = THEME_COLORS[themeCode] || '#74B9FF';
+              return (
+                <div key={`bg-${themeCode}`} style={{
+                  position: 'absolute', left: 0, width: '100%',
+                  top: startY, height: endY - startY,
+                  background: `linear-gradient(180deg, ${tc}09 0%, ${tc}05 50%, ${tc}09 100%)`,
+                  pointerEvents: 'none',
+                  zIndex: 0,
+                }} />
+              );
+            });
+          })()}
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -531,8 +551,9 @@ export default function HomePage() {
 
           </svg>
 
-          {/* ── Toll barriers (same as mobile app) ── */}
+          {/* ── Toll barriers — desktop only (replaced by section cards on mobile) ── */}
           {Array.from(themeAt.entries()).map(([idx, themeCode], i) => {
+            if (isMobileView) return null;
             if (idx >= pts.length) return null;
             const cityName = t(`city_${themeCode}`) || themeCode;
             const tc = THEME_COLORS[themeCode] || '#74B9FF';
@@ -708,6 +729,58 @@ export default function HomePage() {
             );
           })}
 
+          {/* ── Mobile section cards (replace toll barriers) ── */}
+          {isMobileView && Array.from(themeAt.entries()).map(([idx, themeCode], ti) => {
+            if (idx >= pts.length) return null;
+            const p = pts[idx];
+            const tc = THEME_COLORS[themeCode] || '#74B9FF';
+            const em = THEME_EMOJIS[themeCode] || '📚';
+            const theme = getThemeDataLocalized(themeCode, lang);
+            const isLocked = nodes[idx]?.isLocked;
+            const cityName = t(`city_${themeCode}`) || themeCode;
+            const themeDone = nodes.filter(n => n.themeCode === themeCode && n.type === 'lesson' && n.isCompleted).length;
+            const themeTotal = nodes.filter(n => n.themeCode === themeCode && n.type === 'lesson').length;
+            const cardW = SVG_W - 24;
+            const cardX = 12;
+            const cardY = p.y - 75;
+            return (
+              <div key={`mcard-${themeCode}`} className="absolute" style={{ left: cardX, top: cardY, width: cardW, zIndex: 10 }}>
+                <div style={{
+                  background: `linear-gradient(135deg, ${tc}22, ${tc}0c)`,
+                  border: `1.5px solid ${tc}50`,
+                  borderRadius: 14,
+                  padding: '7px 12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  backdropFilter: 'blur(4px)',
+                }}>
+                  <div style={{ width: 34, height: 34, borderRadius: 17, background: `${tc}30`, border: `2px solid ${tc}80`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <span style={{ fontSize: 17 }}>{em}</span>
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 9, fontWeight: 900, color: tc, textTransform: 'uppercase', letterSpacing: 1.5, marginBottom: 1 }}>
+                      THÈME {themeCode} · {cityName}
+                    </div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.9)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {theme?.title || ''}
+                    </div>
+                  </div>
+                  <div style={{ flexShrink: 0, textAlign: 'center' }}>
+                    {isLocked ? (
+                      <span style={{ fontSize: 15, opacity: 0.7 }}>🔒</span>
+                    ) : (
+                      <>
+                        <div style={{ fontSize: 12, fontWeight: 900, color: tc }}>{themeDone}/{themeTotal}</div>
+                        <div style={{ fontSize: 8, color: 'rgba(255,255,255,0.35)', fontWeight: 600 }}>leçons</div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
           {/* ── Theme banners — above-right of barrier, never overlapping road ── */}
           {Array.from(themeAt.entries()).map(([idx, themeCode], ti) => {
             if (idx >= pts.length) return null;
@@ -778,7 +851,8 @@ export default function HomePage() {
             if (node.type === 'exam') {
               const tc = THEME_COLORS[node.themeCode] || '#F39C12';
               const lockedOpacity = node.isLocked ? 0.25 : 1;
-              const eR = mEXAM_R;
+              // On mobile: same size as lesson nodes for visual consistency
+              const eR = isMobileView ? mNODE_R : mEXAM_R;
               const eRingR = eR + mRING_GAP;
               const eRingSize = (eRingR + mRING_STROKE / 2) * 2;
 
@@ -911,7 +985,7 @@ export default function HomePage() {
                 width: ringSize,
                 height: ringSize,
                 zIndex: isActive ? 16 : 14,
-                opacity: node.isOrderLocked ? 0.55 : 1,
+                opacity: node.isLocked ? (isMobileView ? 0.35 : 0.25) : node.isOrderLocked ? 0.5 : 1,
               }}>
                 {/* Progress ring */}
                 <svg width={ringSize} height={ringSize} className="absolute inset-0">
@@ -993,16 +1067,20 @@ export default function HomePage() {
                   </button>
                 )}
 
-                {/* Stars for completed nodes — 3-star display */}
+                {/* Stars for completed nodes — 3-star display, centred below ring */}
                 {node.isCompleted && (
-                  <div className="absolute flex items-center gap-0.5" style={{
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    top: ringSize + (isActive ? 0 : 3),
-                    whiteSpace: 'nowrap',
+                  <div style={{
+                    position: 'absolute',
+                    top: ringSize + 2,
+                    left: 0,
+                    width: ringSize,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 1,
                   }}>
                     {[1, 2, 3].map(s => (
-                      <span key={s} style={{ fontSize: isMobileView ? 10 : 12, opacity: node.stars >= s ? 1 : 0.2, lineHeight: 1 }}>⭐</span>
+                      <span key={s} style={{ fontSize: isMobileView ? 9 : 11, opacity: node.stars >= s ? 1 : 0.18, lineHeight: 1 }}>⭐</span>
                     ))}
                   </div>
                 )}
@@ -1124,8 +1202,9 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* ── Cloud overlays for locked themes ── */}
+          {/* ── Cloud overlays for locked themes — desktop only (mobile shows dimmed nodes) ── */}
           {(() => {
+            if (isMobileView) return null;
             const themeEntries = Array.from(themeAt.entries()).sort((a, b) => a[0] - b[0]);
             return themeEntries.map(([startIdx, themeCode], sIdx) => {
               const isLocked = nodes[startIdx]?.isLocked;
