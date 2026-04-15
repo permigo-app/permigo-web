@@ -342,7 +342,7 @@ export default function HomePage() {
     const mVSpace = isMobileW ? 110 : V_SPACE;
     const mPadTop = isMobileW ? 130 : PAD_TOP;
     const mPadBot = isMobileW ? 0 : PAD_BOTTOM;
-    const mThemeGap = isMobileW ? 70 : THEME_EXTRA_GAP;
+    const mThemeGap = isMobileW ? 110 : THEME_EXTRA_GAP;
 
     // ── Positions with extra gap at theme boundaries ──
     const themeStartSet = new Set(themeAt.keys());
@@ -707,7 +707,7 @@ export default function HomePage() {
             const cardW = SVG_W - 24;
             const cardX = 12;
             // For first theme: position at very top; for others: in the gap above first node
-            const cardY = ti === 0 ? 46 : p.y - 72;
+            const cardY = ti === 0 ? 46 : p.y - 108;
             return (
               <div key={`mcard-${themeCode}`} className="absolute" style={{ left: cardX, top: cardY, width: cardW, zIndex: 10 }}>
                 <div style={{
