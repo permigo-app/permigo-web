@@ -1034,8 +1034,8 @@ export default function HomePage() {
                   </button>
                 )}
 
-                {/* Stars for completed nodes — desktop only */}
-                {!isMobileView && node.isCompleted && (
+                {/* Stars for completed nodes — hidden everywhere */}
+                {false && !isMobileView && node.isCompleted && (
                   <div style={{
                     position: 'absolute',
                     top: ringSize + 2,
