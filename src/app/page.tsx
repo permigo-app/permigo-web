@@ -349,21 +349,20 @@ export default function HomePage() {
     }
 
     // ── Width calculation ──
-    // Sidebars are only visible at xl (1280px+) for right, lg (1024px+) for left
     const vw = typeof window !== 'undefined' ? window.innerWidth : 1920;
     const isMobileW = vw < 1024;
     const isXlW = vw >= 1280;
     const leftW = isMobileW ? 0 : 250;
     const rightW = isXlW ? 500 : 0;
     const availableW = vw - leftW - rightW - 32;
-    // For screens wider than 1920px: scale road proportionally (TV / large monitors)
     const oversize = Math.max(0, vw - 1920);
     const svgMaxW = Math.min(1000, 600 + Math.round(oversize * 0.3));
     const roadZoneMaxW = Math.min(1100, 640 + Math.round(oversize * 0.3));
-    const SVG_W = Math.min(svgMaxW, Math.max(300, availableW));
-    const CX = isMobileW ? SVG_W * 0.48 : SVG_W * 0.14;  // centered on mobile, shifted left on desktop
-    // Zigzag amplitude
-    const AMP = Math.min((SVG_W - 100) / 2, 110);
+    // Mobile: exact screen width minus 32px padding
+    const SVG_W = isMobileW ? Math.max(300, vw - 32) : Math.min(svgMaxW, Math.max(300, availableW));
+    const CX = isMobileW ? SVG_W * 0.5 : SVG_W * 0.14;
+    // Mobile: gentler 2-3 wave Duolingo style, desktop: full amplitude
+    const AMP = isMobileW ? Math.min((SVG_W - 80) / 2, 70) : Math.min((SVG_W - 100) / 2, 110);
 
     // ── Positions with extra gap at theme boundaries ──
     const themeStartSet = new Set(themeAt.keys());
@@ -419,8 +418,10 @@ export default function HomePage() {
 
   // ── Mobile scale (only affects < 1024px) ──
   const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
-  const mobileAvailableW = isMobileView ? window.innerWidth - 16 : SVG_W;
-  const mobileScale = isMobileView && SVG_W > 0 ? Math.min(mobileAvailableW / SVG_W, 0.58) : 1;
+  // On mobile SVG_W = innerWidth-32 already, scale stays at 1 unless SVG is wider
+  const mobileScale = isMobileView && SVG_W > 0
+    ? Math.min((window.innerWidth - 32) / SVG_W, 0.58)
+    : 1;
 
   // ── Car position ──
   let carX = 0, carY = 0;
@@ -439,6 +440,13 @@ export default function HomePage() {
     carY = p.y + fwdY;
   }
 
+  // ── Mobile node size overrides ──
+  const mNODE_R = isMobileView ? 28 : NODE_R;
+  const mACTIVE_R = isMobileView ? 34 : ACTIVE_R;
+  const mEXAM_R = isMobileView ? 32 : EXAM_R;
+  const mRING_GAP = RING_GAP;
+  const mRING_STROKE = RING_STROKE;
+
   // ── Finish line ──
   const SQ = Math.floor(ROAD_W / 5);
 
@@ -452,23 +460,6 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       <div className="flex-1 min-w-0 px-2 py-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
 
-        {/* ── Mobile-only header with stats ── */}
-        <div className="lg:hidden flex items-center justify-between mb-4 px-3">
-          <h1 className="text-[24px] font-black"><span style={{ color: '#ffffff' }}>My</span><span style={{ color: '#00B894' }}>Permi</span><span style={{ color: '#4ecdc4' }}>Go</span></h1>
-          <div className="flex items-center gap-2">
-            {streak.currentStreak > 0 && (
-              <div className="flex items-center gap-1 px-2.5 py-1 rounded-full" style={{ background: 'rgba(255,99,72,0.15)' }}>
-                <span className="text-sm">🔥</span>
-                <span className="text-sm font-black" style={{ color: '#FF6348' }}>{streak.currentStreak}</span>
-              </div>
-            )}
-            <div className="flex items-center gap-1 px-2.5 py-1 rounded-full" style={{ background: '#16213E' }}>
-              <span className="text-sm">⚡</span>
-              <span className="text-sm font-bold">{xp.totalXP}</span>
-            </div>
-          </div>
-        </div>
-
         {/* ── Mobile active theme banner (scroll-driven) ── */}
         {(() => {
           const tc = THEME_COLORS[visibleTheme] || '#74B9FF';
@@ -477,19 +468,19 @@ export default function HomePage() {
           const themeDone = nodes.filter(n => n.themeCode === visibleTheme && n.type === 'lesson' && n.isCompleted).length;
           const themeTotal = nodes.filter(n => n.themeCode === visibleTheme && n.type === 'lesson').length;
           return (
-            <div className="lg:hidden mb-3 mx-3 flex items-center gap-3 px-4 rounded-xl" style={{ height: 44, background: '#1a2a3a', border: `1px solid ${tc}40` }}>
-              <span style={{ fontSize: 18 }}>{em}</span>
-              <div className="flex-1 min-w-0">
-                <span className="text-xs font-black uppercase tracking-wider" style={{ color: tc }}>Thème {visibleTheme}</span>
-                <span className="text-xs font-semibold text-white ml-2 truncate">{themeData?.title || ''}</span>
+            <div className="lg:hidden mb-2 mx-2 flex items-center gap-2 px-3 rounded-xl" style={{ height: 40, background: '#1a2a3a', border: `1px solid ${tc}40` }}>
+              <span style={{ fontSize: 16 }}>{em}</span>
+              <div className="flex-1 min-w-0 flex items-center gap-1">
+                <span style={{ fontSize: 12, fontWeight: 800, color: tc, textTransform: 'uppercase', letterSpacing: 1 }}>Thème {visibleTheme}</span>
+                <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)' }} className="truncate">— {themeData?.title || ''}</span>
               </div>
-              <span className="text-xs font-bold" style={{ color: 'rgba(255,255,255,0.4)' }}>{themeDone}/{themeTotal}</span>
+              <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.4)', flexShrink: 0 }}>{themeDone}/{themeTotal}</span>
             </div>
           );
         })()}
 
-        {/* ── Mobile Gaston ── */}
-        <div className="lg:hidden mb-5 px-3 flex items-end gap-3">
+        {/* ── Mobile Gaston — desktop only ── */}
+        <div className="hidden lg:flex mb-5 px-3 items-end gap-3">
           <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
           <div style={{
             background: '#FFF8E7',
@@ -771,25 +762,28 @@ export default function HomePage() {
             if (node.type === 'exam') {
               const tc = THEME_COLORS[node.themeCode] || '#F39C12';
               const lockedOpacity = node.isLocked ? 0.25 : 1;
+              const eR = mEXAM_R;
+              const eRingR = eR + mRING_GAP;
+              const eRingSize = (eRingR + mRING_STROKE / 2) * 2;
 
               return (
                 <div key={node.id} className="absolute" style={{
-                  left: p.x - EXAM_RING_SIZE / 2,
-                  top: p.y - EXAM_RING_SIZE / 2,
-                  width: EXAM_RING_SIZE,
-                  height: EXAM_RING_SIZE,
+                  left: p.x - eRingSize / 2,
+                  top: p.y - eRingSize / 2,
+                  width: eRingSize,
+                  height: eRingSize,
                   zIndex: 14,
                   overflow: 'visible',
                 }}>
                   <div style={{ opacity: lockedOpacity }}>
-                    <svg width={EXAM_RING_SIZE} height={EXAM_RING_SIZE} className="absolute inset-0">
-                      <circle cx={EXAM_RING_SIZE / 2} cy={EXAM_RING_SIZE / 2} r={EXAM_RING_R} stroke="#F39C12" strokeWidth={RING_STROKE} fill="none" />
+                    <svg width={eRingSize} height={eRingSize} className="absolute inset-0">
+                      <circle cx={eRingSize / 2} cy={eRingSize / 2} r={eRingR} stroke="#F39C12" strokeWidth={mRING_STROKE} fill="none" />
                     </svg>
                     {node.isLocked ? (
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="rounded-full flex items-center justify-center" style={{
-                          width: EXAM_R * 2,
-                          height: EXAM_R * 2,
+                          width: eR * 2,
+                          height: eR * 2,
                           background: '#F39C12',
                           border: '4px solid #E67E22',
                           boxShadow: '0 0 14px rgba(243,156,18,0.6)',
@@ -800,8 +794,8 @@ export default function HomePage() {
                     ) : (
                       <Link href={`/examen?theme=${node.themeCode}`} className="absolute inset-0 flex items-center justify-center node-hover">
                         <div className="rounded-full flex items-center justify-center" style={{
-                          width: EXAM_R * 2,
-                          height: EXAM_R * 2,
+                          width: eR * 2,
+                          height: eR * 2,
                           background: node.isCompleted ? '#27AE60' : '#F39C12',
                           border: `4px solid ${node.isCompleted ? '#1E8449' : '#E67E22'}`,
                           boxShadow: node.isCompleted ? '0 0 12px rgba(39,174,96,0.4)' : '0 0 14px rgba(243,156,18,0.6)',
@@ -812,20 +806,20 @@ export default function HomePage() {
                     )}
 
                     <div className="absolute left-1/2 -translate-x-1/2 text-center" style={{
-                      top: EXAM_RING_SIZE + 4,
+                      top: eRingSize + 4,
                       width: 80,
                     }}>
                       <span className="text-xs font-black tracking-wider" style={{ color: '#F39C12' }}>{t('examen_node')}</span>
                     </div>
 
-                    <div className="absolute" style={{ left: EXAM_R + 10, top: -16 }}>
+                    <div className="absolute" style={{ left: eR + 10, top: -16 }}>
                       <span className="text-base star-twinkle">⭐</span>
                     </div>
                   </div>
 
                   {/* Bonus card (Flash/Révision) */}
                   <div className="absolute rounded-xl py-1.5 px-2" style={{
-                    left: EXAM_RING_SIZE + 15,
+                    left: eRingSize + 15,
                     top: i === nodes.length - 1 ? 50 : 20,
                     width: 110,
                     transform: 'scale(0.92)',
@@ -868,10 +862,10 @@ export default function HomePage() {
             // ── Lesson node ──
             const tc = THEME_COLORS[node.themeCode] || '#74B9FF';
             const isActive = node.isCurrent;
-            const nodeRadius = isActive ? ACTIVE_R : NODE_R;
-            const ringRadius = isActive ? ACTIVE_RING_R : RING_R;
-            const ringSize = isActive ? ACTIVE_RING_SIZE : RING_SIZE;
-            const ringCirc = isActive ? ACTIVE_RING_CIRC : RING_CIRC;
+            const nodeRadius = isActive ? mACTIVE_R : mNODE_R;
+            const ringRadius = nodeRadius + mRING_GAP;
+            const ringSize = (ringRadius + mRING_STROKE / 2) * 2;
+            const ringCirc = 2 * Math.PI * ringRadius;
             const ringProgress = node.isCompleted ? 1 : 0;
 
             // Colors

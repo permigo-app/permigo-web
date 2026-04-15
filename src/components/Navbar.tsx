@@ -52,6 +52,47 @@ const NAV_ITEMS = [
   { href: '/profil', labelKey: 'nav_profil', icon: '👤' },
 ];
 
+function MobileTopBar() {
+  const { t } = useLang();
+  const [streak, setStreak] = useState(0);
+  const [xp, setXp] = useState(0);
+  useEffect(() => {
+    try {
+      const s = localStorage.getItem('streakData');
+      if (s) setStreak(JSON.parse(s).currentStreak ?? 0);
+      const x = localStorage.getItem('xpData');
+      if (x) setXp(JSON.parse(x).totalXP ?? 0);
+    } catch {}
+  }, []);
+  return (
+    <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center px-3 gap-2" style={{ height: 44, background: '#0F1923', borderBottom: '1px solid #16213E' }}>
+      {/* Logo */}
+      <span className="text-sm font-black flex-shrink-0">
+        <span style={{ color: '#fff' }}>My</span>
+        <span style={{ color: '#00B894' }}>Permi</span>
+        <span style={{ color: '#4ecdc4' }}>Go</span>
+      </span>
+      {/* Streak + XP — centre */}
+      <div className="flex-1 flex items-center justify-center gap-2">
+        {streak > 0 && (
+          <div className="flex items-center gap-1 px-2 py-0.5 rounded-full" style={{ background: 'rgba(255,99,72,0.15)' }}>
+            <span className="text-xs">🔥</span>
+            <span className="text-xs font-black" style={{ color: '#FF6348' }}>{streak}</span>
+          </div>
+        )}
+        <div className="flex items-center gap-1 px-2 py-0.5 rounded-full" style={{ background: '#16213E' }}>
+          <span className="text-xs">⚡</span>
+          <span className="text-xs font-bold text-white">{xp}</span>
+        </div>
+      </div>
+      {/* Lang switcher */}
+      <div className="flex-shrink-0">
+        <LanguageSwitcher />
+      </div>
+    </div>
+  );
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const { user } = useAuth();
@@ -213,15 +254,8 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile top bar — language switcher */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4" style={{ height: 44, background: '#0F1923', borderBottom: '1px solid #16213E' }}>
-        <span className="text-sm font-black">
-          <span style={{ color: '#ffffff' }}>My</span>
-          <span style={{ color: '#00B894' }}>Permi</span>
-          <span style={{ color: '#4ecdc4' }}>Go</span>
-        </span>
-        <LanguageSwitcher />
-      </div>
+      {/* Mobile top bar — logo + streak/XP + lang */}
+      <MobileTopBar />
 
       {/* Mobile bottom bar */}
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50" style={{ background: '#0F1923', borderTop: '1px solid #16213E' }}>
