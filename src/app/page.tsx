@@ -341,7 +341,7 @@ export default function HomePage() {
     // ── Mobile-specific geometry (native sizing, no scale transform) ──
     const mVSpace = isMobileW ? 110 : V_SPACE;
     const mPadTop = isMobileW ? 90 : PAD_TOP;
-    const mPadBot = isMobileW ? 80 : PAD_BOTTOM;
+    const mPadBot = isMobileW ? 30 : PAD_BOTTOM;
     const mThemeGap = isMobileW ? 70 : THEME_EXTRA_GAP;
 
     // ── Positions with extra gap at theme boundaries ──
@@ -362,7 +362,7 @@ export default function HomePage() {
 
     // Build smooth bezier path with proper S-curves
     const startPt = pts.length > 0 ? { x: pts[0].x, y: pts[0].y - mPadTop } : { x: CX, y: 0 };
-    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 150 : 250);
+    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 100 : 250);
     const allPts = [startPt, ...pts, { x: CX, y: finishY }];
 
     let d = `M ${allPts[0].x} ${allPts[0].y}`;
@@ -820,7 +820,7 @@ export default function HomePage() {
                           border: '4px solid #E67E22',
                           boxShadow: '0 0 14px rgba(243,156,18,0.6)',
                         }}>
-                          <span className="text-3xl">📝</span>
+                          <span style={{ fontSize: eR * 0.85, lineHeight: 1 }}>📝</span>
                         </div>
                       </div>
                     ) : (
@@ -832,17 +832,20 @@ export default function HomePage() {
                           border: `4px solid ${node.isCompleted ? '#1E8449' : '#E67E22'}`,
                           boxShadow: node.isCompleted ? '0 0 12px rgba(39,174,96,0.4)' : '0 0 14px rgba(243,156,18,0.6)',
                         }}>
-                          <span className="text-3xl">{node.isCompleted ? '👑' : '📝'}</span>
+                          <span style={{ fontSize: eR * 0.85, lineHeight: 1 }}>{node.isCompleted ? '👑' : '📝'}</span>
                         </div>
                       </Link>
                     )}
 
-                    <div className="absolute left-1/2 -translate-x-1/2 text-center" style={{
-                      top: eRingSize + 4,
-                      width: 80,
-                    }}>
-                      <span className="text-xs font-black tracking-wider" style={{ color: '#F39C12' }}>{t('examen_node')}</span>
-                    </div>
+                    {/* "EXAMEN" label — desktop only on mobile it clutters */}
+                    {!isMobileView && (
+                      <div className="absolute left-1/2 -translate-x-1/2 text-center" style={{
+                        top: eRingSize + 4,
+                        width: 80,
+                      }}>
+                        <span className="text-xs font-black tracking-wider" style={{ color: '#F39C12' }}>{t('examen_node')}</span>
+                      </div>
+                    )}
 
                     <div className="absolute" style={{ left: eR + 10, top: -16 }}>
                       <span className="text-base star-twinkle">⭐</span>

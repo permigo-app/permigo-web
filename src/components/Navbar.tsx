@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -45,32 +44,12 @@ const SIDEBAR_ITEMS = [
   )},
 ];
 
-const NAV_ITEMS: { href: string; labelKey: string; color: string; icon: React.ReactNode }[] = [
-  { href: '/app', labelKey: 'nav_accueil', color: '#00B894', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
-    </svg>
-  )},
-  { href: '/panneaux', labelKey: 'nav_panneaux', color: '#FF6348', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" />
-    </svg>
-  )},
-  { href: '/turbo', labelKey: 'nav_turbo', color: '#FFD700', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-    </svg>
-  )},
-  { href: '/examen', labelKey: 'examen_blanc', color: '#A29BFE', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
-    </svg>
-  )},
-  { href: '/profil', labelKey: 'nav_profil', color: '#74B9FF', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
-    </svg>
-  )},
+const NAV_ITEMS: { href: string; labelKey: string; color: string; emoji: string }[] = [
+  { href: '/app',     labelKey: 'nav_accueil',  color: '#00B894', emoji: '🏠' },
+  { href: '/panneaux',labelKey: 'nav_panneaux', color: '#FF6348', emoji: '🔺' },
+  { href: '/turbo',   labelKey: 'nav_turbo',    color: '#FFD700', emoji: '⚡' },
+  { href: '/examen',  labelKey: 'examen_blanc', color: '#A29BFE', emoji: '📝' },
+  { href: '/profil',  labelKey: 'nav_profil',   color: '#74B9FF', emoji: '👤' },
 ];
 
 function MobileTopBar() {
@@ -285,7 +264,6 @@ export default function Navbar() {
         <div className="flex justify-around items-end px-1" style={{ height: 60 }}>
           {NAV_ITEMS.map((item) => {
             const active = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
-            const itemColor = item.color;
             return (
               <Link
                 key={item.href}
@@ -297,24 +275,23 @@ export default function Navbar() {
                 <div style={{
                   position: 'absolute', top: 0, left: '20%', right: '20%',
                   height: 2, borderRadius: 2,
-                  background: active ? itemColor : 'transparent',
-                  transition: 'background 0.2s',
+                  background: active ? item.color : 'transparent',
                 }} />
-                {/* Icon */}
+                {/* Emoji icon — always colorful, brighter when active */}
                 <div style={{
-                  width: 42, height: 28,
-                  borderRadius: 14,
+                  width: 44, height: 30,
+                  borderRadius: 15,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  background: active ? `${itemColor}20` : 'transparent',
-                  color: active ? itemColor : '#4a5a78',
-                  transition: 'background 0.2s, color 0.2s',
+                  background: active ? `${item.color}25` : 'transparent',
+                  filter: active ? 'none' : 'grayscale(0.15) opacity(0.7)',
+                  fontSize: active ? 22 : 20,
+                  transition: 'all 0.15s',
                 }}>
-                  {item.icon}
+                  {item.emoji}
                 </div>
                 <span style={{
                   fontSize: 10, fontWeight: active ? 800 : 600, marginTop: 1,
-                  color: active ? itemColor : '#4a5a78',
-                  transition: 'color 0.2s',
+                  color: active ? item.color : '#5a6b8a',
                 }}>
                   {t(item.labelKey)}
                 </span>
