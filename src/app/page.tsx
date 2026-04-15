@@ -470,8 +470,7 @@ export default function HomePage() {
               const nextTc = nextEntry ? (THEME_COLORS[nextEntry[1]] || '#74B9FF') : null;
               // Extend slightly to overlap with next band for a seamless cross-fade
               const bandStart = sIdx === 0 ? 0 : rawStart - FADE / 2;
-              // Last band extends far past totalH so it fills the screen bottom (past bottom nav)
-              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH + 2000;
+              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH;
               const height = bandEnd - bandStart;
               // Build gradient: fade in from prev color → solid mid → fade out to next color
               let gradient: string;
