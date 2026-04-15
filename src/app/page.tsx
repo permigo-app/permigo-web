@@ -341,7 +341,7 @@ export default function HomePage() {
     // ── Mobile-specific geometry (native sizing, no scale transform) ──
     const mVSpace = isMobileW ? 110 : V_SPACE;
     const mPadTop = isMobileW ? 90 : PAD_TOP;
-    const mPadBot = isMobileW ? 30 : PAD_BOTTOM;
+    const mPadBot = isMobileW ? 100 : PAD_BOTTOM;
     const mThemeGap = isMobileW ? 70 : THEME_EXTRA_GAP;
 
     // ── Positions with extra gap at theme boundaries ──
@@ -362,7 +362,7 @@ export default function HomePage() {
 
     // Build smooth bezier path with proper S-curves
     const startPt = pts.length > 0 ? { x: pts[0].x, y: pts[0].y - mPadTop } : { x: CX, y: 0 };
-    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 100 : 250);
+    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 240 : 250);
     const allPts = [startPt, ...pts, { x: CX, y: finishY }];
 
     let d = `M ${allPts[0].x} ${allPts[0].y}`;
@@ -432,7 +432,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-20 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW }}>
+      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-20 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, minHeight: isMobileView ? '100dvh' : undefined }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
@@ -470,7 +470,8 @@ export default function HomePage() {
               const nextTc = nextEntry ? (THEME_COLORS[nextEntry[1]] || '#74B9FF') : null;
               // Extend slightly to overlap with next band for a seamless cross-fade
               const bandStart = sIdx === 0 ? 0 : rawStart - FADE / 2;
-              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH;
+              // Last band extends far past totalH so it fills the screen bottom (past bottom nav)
+              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH + 2000;
               const height = bandEnd - bandStart;
               // Build gradient: fade in from prev color → solid mid → fade out to next color
               let gradient: string;
