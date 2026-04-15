@@ -415,9 +415,9 @@ export default function HomePage() {
   }
 
   // ── Mobile node size overrides (smaller = native feel at scale 1) ──
-  const mNODE_R = isMobileView ? 22 : NODE_R;
-  const mACTIVE_R = isMobileView ? 28 : ACTIVE_R;
-  const mEXAM_R = isMobileView ? 24 : EXAM_R;
+  const mNODE_R = isMobileView ? 30 : NODE_R;
+  const mACTIVE_R = isMobileView ? 38 : ACTIVE_R;
+  const mEXAM_R = isMobileView ? 32 : EXAM_R;
   const mRING_GAP = RING_GAP;
   const mRING_STROKE = RING_STROKE;
 
