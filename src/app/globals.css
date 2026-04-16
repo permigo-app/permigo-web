@@ -374,14 +374,17 @@ body {
 
 /* ── Hide iubenda floating widget globally (links already in footer) ── */
 #iubenda-cs-banner,
+#iubenda-widget,
+[id*="iubenda"],
+[class*="iubenda"],
+.iubenda-tp-btn,
+.iubenda-tp-circle,
 ._iub_cs_activate,
-.iubenda-cs-opt-group,
-[id^="iubenda-cs"],
-[class^="iubenda-cs"],
-.iubenda-badge,
-#iub-pp-btn,
-.__iub_opt_out_iframe {
+.__iub_opt_out_iframe,
+#iub-pp-btn {
   display: none !important;
   visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 

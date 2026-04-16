@@ -25,6 +25,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
+        {/* Force-hide iubenda floating widget — links are in the footer */}
+        <style>{`
+          #iubenda-cs-banner, #iubenda-widget,
+          [class*="iubenda"], [id*="iubenda"],
+          .iubenda-tp-btn, .iubenda-tp-circle,
+          ._iub_cs_activate, .__iub_opt_out_iframe {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+          }
+        `}</style>
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script
           type="text/javascript"
