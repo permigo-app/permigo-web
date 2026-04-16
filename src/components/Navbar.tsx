@@ -49,7 +49,7 @@ const NAV_ITEMS: { href: string; labelKey: string; color: string; emoji: string 
   { href: '/panneaux',labelKey: 'nav_panneaux', color: '#FF6348', emoji: '🔺' },
   { href: '/turbo',   labelKey: 'nav_turbo',    color: '#FFD700', emoji: '⚡' },
   { href: '/examen',  labelKey: 'examen_blanc', color: '#A29BFE', emoji: '📝' },
-  { href: '/profil',  labelKey: 'nav_profil',   color: '#74B9FF', emoji: '👤' },
+  { href: '/profil',  labelKey: 'nav_profil',   color: '#74B9FF', emoji: '🧑' },
 ];
 
 function MobileTopBar() {
@@ -283,7 +283,7 @@ export default function Navbar() {
                   borderRadius: 15,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   background: active ? `${item.color}25` : 'transparent',
-                  filter: active ? 'none' : 'grayscale(0.15) opacity(0.7)',
+                  filter: active ? 'none' : 'opacity(0.65)',
                   fontSize: active ? 22 : 20,
                   transition: 'all 0.15s',
                 }}>
