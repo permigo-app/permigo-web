@@ -372,7 +372,7 @@ body {
   transform: translateY(0);
 }
 
-/* ── Hide iubenda floating cookie/privacy widget on mobile ── */
+/* ── Reposition iubenda floating widget above bottom nav on mobile ── */
 @media (max-width: 1023px) {
   #iubenda-cs-banner,
   ._iub_cs_activate,
@@ -382,8 +382,7 @@ body {
   .iubenda-badge,
   #iub-pp-btn,
   .__iub_opt_out_iframe {
-    display: none !important;
-    visibility: hidden !important;
+    bottom: 64px !important;
   }
 }
 
