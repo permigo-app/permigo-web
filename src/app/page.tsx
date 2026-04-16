@@ -874,50 +874,61 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Bonus card (Flash/Révision) */}
-                  <div className="absolute rounded-xl" style={{
-                    left: eRingSize + (isMobileView ? 8 : 15),
-                    top: isMobileView ? 10 : (i === nodes.length - 1 ? 50 : 20),
-                    width: isMobileView ? 90 : 110,
-                    padding: isMobileView ? '5px 8px' : '6px 8px',
-                    transform: isMobileView ? 'scale(0.88)' : 'scale(0.92)',
-                    transformOrigin: 'top left',
-                    background: '#16213E',
-                    borderRadius: 12,
-                    zIndex: 12,
-                    opacity: lockedOpacity,
-                  }}>
+                  {/* Bonus card (Flash/Révision) — always RIGHT side */}
+                  {(() => {
+                    // Road is ROAD_W=65px wide + 16px glow = visual half = 40.5px from centerline.
+                    // Worst case (left exam, incoming right lesson): road visual right edge ≈ p.x + 58px
+                    // at the card's top row. left: eRingSize+28 = 100 puts card left at p.x+64 → 6px clear.
+                    const cardStyle: React.CSSProperties = {
+                      position: 'absolute',
+                      top: isMobileView ? 22 : (i === nodes.length - 1 ? 50 : 20),
+                      left: isMobileView ? eRingSize + 14 : eRingSize + 15,
+                      width: isMobileView ? 108 : 110,
+                      padding: isMobileView ? '7px 10px' : '6px 8px',
+                      transform: isMobileView ? 'none' : 'scale(0.92)',
+                      transformOrigin: 'top left',
+                      background: '#16213E',
+                      border: '1px solid rgba(139,157,195,0.12)',
+                      borderRadius: 12,
+                      zIndex: 20,
+                      opacity: lockedOpacity,
+                    };
+                    return (
+                  <div className="rounded-xl" style={cardStyle}>
                     {(() => {
-                      const fs = isMobileView ? 11 : 13;
-                      const gap = isMobileView ? 1 : 2;
-                      const py = isMobileView ? '3px 0' : '6px 0';
+                      const fs = isMobileView ? 13 : 13;
+                      const gap = isMobileView ? 5 : 2;
+                      const py = isMobileView ? '4px 0' : '6px 0';
+                      const eSize = isMobileView ? 15 : 15;
                       return node.isLocked ? (
                         <>
                           <div className="flex items-center" style={{ gap, padding: py }}>
-                            <span style={{ fontSize: isMobileView ? 12 : 15 }}>🃏</span>
+                            <span style={{ fontSize: eSize }}>🃏</span>
                             <span style={{ fontSize: fs, fontWeight: 700, color: '#6C5CE7' }}>{t('flash_label')}</span>
                           </div>
                           <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
                           <div className="flex items-center" style={{ gap, padding: py }}>
-                            <span style={{ fontSize: isMobileView ? 12 : 15 }}>🔄</span>
+                            <span style={{ fontSize: eSize }}>🔄</span>
                             <span style={{ fontSize: fs, fontWeight: 700, color: '#74B9FF' }}>{t('revision_label')}</span>
                           </div>
                         </>
                       ) : (
                         <>
                           <Link href={`/flash?theme=${node.themeCode}`} className="flex items-center press-scale" style={{ gap, padding: py }}>
-                            <span style={{ fontSize: isMobileView ? 12 : 15 }}>🃏</span>
+                            <span style={{ fontSize: eSize }}>🃏</span>
                             <span style={{ fontSize: fs, fontWeight: 700, color: '#6C5CE7' }}>{t('flash_label')}</span>
                           </Link>
                           <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
                           <Link href={`/revision?theme=${node.themeCode}`} className="flex items-center press-scale" style={{ gap, padding: py }}>
-                            <span style={{ fontSize: isMobileView ? 12 : 15 }}>🔄</span>
+                            <span style={{ fontSize: eSize }}>🔄</span>
                             <span style={{ fontSize: fs, fontWeight: 700, color: '#74B9FF' }}>{t('revision_label')}</span>
                           </Link>
                         </>
                       );
                     })()}
                   </div>
+                    );
+                  })()}
                 </div>
               );
             }
