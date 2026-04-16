@@ -372,17 +372,16 @@ body {
   transform: translateY(0);
 }
 
-/* ── Reposition iubenda floating widget above bottom nav on mobile ── */
-@media (max-width: 1023px) {
-  #iubenda-cs-banner,
-  ._iub_cs_activate,
-  .iubenda-cs-opt-group,
-  [id^="iubenda-cs"],
-  [class^="iubenda-cs"],
-  .iubenda-badge,
-  #iub-pp-btn,
-  .__iub_opt_out_iframe {
-    bottom: 64px !important;
-  }
+/* ── Hide iubenda floating widget globally (links already in footer) ── */
+#iubenda-cs-banner,
+._iub_cs_activate,
+.iubenda-cs-opt-group,
+[id^="iubenda-cs"],
+[class^="iubenda-cs"],
+.iubenda-badge,
+#iub-pp-btn,
+.__iub_opt_out_iframe {
+  display: none !important;
+  visibility: hidden !important;
 }
 
