@@ -1187,72 +1187,99 @@ export default function HomePage() {
             });
           })}
 
-          {/* ── Monument decorations MOBILE only ── */}
-          {isMobileView && Array.from(themeAt.entries()).map(([startIdx, themeCode]) => {
-            const monuments = MONUMENTS[themeCode];
-            if (!monuments || monuments.length === 0) return null;
-
-            let endIdx = startIdx;
-            for (let j = startIdx + 1; j < nodes.length; j++) {
-              if (nodes[j].themeCode !== themeCode) { endIdx = j - 1; break; }
-              endIdx = j;
-            }
-            if (endIdx <= startIdx || startIdx >= pts.length || endIdx >= pts.length) return null;
-            const startY = pts[startIdx].y;
-            const endY = pts[endIdx].y;
-            const span = endY - startY;
-            if (span < 100) return null;
-
-            return monuments.map((mon, mi) => {
-              const monCenterY = startY + span * mon.yRatio;
-              const MON_W = (themeCode === 'A' && (mi === 0 || mi === 2)) ? 180
-                : (themeCode === 'B' && mi === 1) ? 240
-                : (themeCode === 'C') ? 180
-                : (themeCode === 'D' && mi === 1) ? 150
-                : (themeCode === 'E' && mi === 0) ? 190
-                : (themeCode === 'F' && mi === 0) ? 180
-                : (themeCode === 'F' && mi === 1) ? 120
-                : (themeCode === 'G' && mi === 0) ? 240
-                : (themeCode === 'H') ? 180
-                : 120;
-              const MON_H = Math.round(mon.h / mon.w * MON_W);
-
-              // Trouver le centre exact de la route à ce y via interpolation des pts réels
-              let roadCXAtY = CX;
-              for (let k = 0; k < pts.length - 1; k++) {
-                if (pts[k].y <= monCenterY && pts[k + 1].y >= monCenterY) {
-                  const t = (monCenterY - pts[k].y) / (pts[k + 1].y - pts[k].y);
-                  roadCXAtY = pts[k].x + t * (pts[k + 1].x - pts[k].x);
-                  break;
-                }
-              }
-              const roadL = roadCXAtY - ROAD_W / 2;
-              const roadR = roadCXAtY + ROAD_W / 2;
-
-              let left: number;
-              if (mon.side === 'left') {
-                left = Math.max(0, roadL - MON_W);
-              } else {
-                left = Math.min(SVG_W - MON_W, roadR);
-              }
-              const top = monCenterY - MON_H / 2;
-
-              const monId = `m-mob-${themeCode}-${mi}`;
-              return (
-                <MobileMonument
-                  key={monId}
-                  id={monId}
-                  src={mon.src}
-                  baseLeft={left}
-                  baseTop={top}
-                  baseW={MON_W}
-                  baseH={MON_H}
-                  adj={mobileMonAdj[monId] ?? { dx: 0, dy: 0, scale: 1 }}
-                  onUpdate={updateMobileMonAdj}
-                />
-              );
-            });
-          })}
+          {/* ── Monument decorations MOBILE only — positions fixes ── */}
+          {isMobileView && (<>
+            {/* A-0 atomium */}
+            <div className="absolute pointer-events-none" style={{ left: -17, top: 182, width: 180, height: 180, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/atomium.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* A-1 manneken_pis */}
+            <div className="absolute pointer-events-none" style={{ left: 220.5, top: 619.6, width: 120, height: 156, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/manneken_pis.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* A-2 grandplace */}
+            <div className="absolute pointer-events-none" style={{ left: -20, top: 771.6, width: 180, height: 162, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/grandplace.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* B-0 interallie */}
+            <div className="absolute pointer-events-none" style={{ left: -11, top: 1375.2, width: 120, height: 206, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/interallie.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* B-1 gare_guillemins */}
+            <div className="absolute pointer-events-none" style={{ left: 139, top: 1270.4, width: 240, height: 156, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/gare_guillemins.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* C-0 cathedrale_anvers */}
+            <div className="absolute pointer-events-none" style={{ left: -14.25, top: 1683.9, width: 180, height: 283, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/cathedrale_anvers.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* C-1 mas_museum */}
+            <div className="absolute pointer-events-none" style={{ left: 196.25, top: 1869.6, width: 180, height: 320, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/mas_museum.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* D-0 panneaux_vitesse */}
+            <div className="absolute pointer-events-none" style={{ left: 211.25, top: 2173.7, width: 180, height: 429, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/panneaux_vitesse.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* D-1 circuit_spa */}
+            <div className="absolute pointer-events-none" style={{ left: 9, top: 2469.3, width: 150, height: 145, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/circuit_spa.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* E-0 beffroi_gand */}
+            <div className="absolute pointer-events-none" style={{ left: 184, top: 2760.5, width: 190, height: 475, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/beffroi_gand.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* F-0 citadelle_namur */}
+            <div className="absolute pointer-events-none" style={{ left: 178, top: 3613.8, width: 180, height: 144, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/citadelle_namur.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* F-1 tortue_namur */}
+            <div className="absolute pointer-events-none" style={{ left: 4.5, top: 4047.2, width: 120, height: 120, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/tortue_namur.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* G-0 beffroi_bruges */}
+            <div className="absolute pointer-events-none" style={{ left: -53, top: 4448, width: 240, height: 570, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/beffroi_bruges.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* H-0 collegiale_mons */}
+            <div className="absolute pointer-events-none" style={{ left: 179.25, top: 5187.4, width: 180, height: 144, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/collegiale_mons.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* H-1 singe_mons */}
+            <div className="absolute pointer-events-none" style={{ left: -34.25, top: 5333.1, width: 180, height: 225, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/singe_mons.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* I-0 frites */}
+            <div className="absolute pointer-events-none" style={{ left: 215.5, top: 5803, width: 120, height: 240, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/frites.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* I-1 gaufre */}
+            <div className="absolute pointer-events-none" style={{ left: -10.5, top: 6014, width: 120, height: 120, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/gaufre.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+            {/* I-2 chocolat */}
+            <div className="absolute pointer-events-none" style={{ left: 220.5, top: 6133.5, width: 120, height: 195, zIndex: 6, opacity: 0.92 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/monuments/chocolat.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+          </>)}
 
           {/* ── Car ── */}
           {curIdx >= 0 && (
