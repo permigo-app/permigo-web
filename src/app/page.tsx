@@ -337,10 +337,10 @@ export default function HomePage() {
     const SVG_W = isMobileW ? Math.max(300, vw - 32) : Math.min(svgMaxW, Math.max(300, availableW));
     const CX = isMobileW ? SVG_W * 0.5 : SVG_W * 0.14;
     // Mobile: gentler 2-3 wave Duolingo style, desktop: full amplitude
-    const AMP = isMobileW ? Math.min((SVG_W - 80) / 2, 70) : Math.min((SVG_W - 100) / 2, 110);
+    const AMP = isMobileW ? Math.min((SVG_W - 80) / 2, 95) : Math.min((SVG_W - 100) / 2, 110);
 
     // ── Mobile-specific geometry (native sizing, no scale transform) ──
-    const mVSpace = isMobileW ? 110 : V_SPACE;
+    const mVSpace = isMobileW ? 136 : V_SPACE;
     const mPadTop = isMobileW ? 160 : PAD_TOP;
     const mPadBot = isMobileW ? 0 : PAD_BOTTOM;
     const mThemeGap = isMobileW ? 110 : THEME_EXTRA_GAP;
@@ -416,9 +416,9 @@ export default function HomePage() {
   }
 
   // ── Mobile node size overrides (smaller = native feel at scale 1) ──
-  const mNODE_R = isMobileView ? 30 : NODE_R;
-  const mACTIVE_R = isMobileView ? 38 : ACTIVE_R;
-  const mEXAM_R = isMobileView ? 32 : EXAM_R;
+  const mNODE_R = isMobileView ? 38 : NODE_R;
+  const mACTIVE_R = isMobileView ? 48 : ACTIVE_R;
+  const mEXAM_R = isMobileView ? 40 : EXAM_R;
   const mRING_GAP = RING_GAP;
   const mRING_STROKE = RING_STROKE;
 
@@ -882,7 +882,7 @@ export default function HomePage() {
                     const cardStyle: React.CSSProperties = {
                       position: 'absolute',
                       top: isMobileView ? 22 : (i === nodes.length - 1 ? 50 : 20),
-                      left: isMobileView ? eRingSize + 14 : eRingSize + 15,
+                      left: isMobileView ? eRingSize + 16 : eRingSize + 15,
                       width: isMobileView ? 108 : 110,
                       padding: isMobileView ? '7px 10px' : '6px 8px',
                       transform: isMobileView ? 'none' : 'scale(0.92)',
