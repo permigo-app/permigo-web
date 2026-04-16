@@ -337,7 +337,7 @@ export default function HomePage() {
     const SVG_W = isMobileW ? Math.max(300, vw - 32) : Math.min(svgMaxW, Math.max(300, availableW));
     const CX = isMobileW ? SVG_W * 0.5 : SVG_W * 0.14;
     // Mobile: gentler 2-3 wave Duolingo style, desktop: full amplitude
-    const AMP = isMobileW ? Math.min((SVG_W - 80) / 2, 95) : Math.min((SVG_W - 100) / 2, 110);
+    const AMP = isMobileW ? Math.min((SVG_W - 80) / 2, 75) : Math.min((SVG_W - 100) / 2, 110);
 
     // ── Mobile-specific geometry (native sizing, no scale transform) ──
     const mVSpace = isMobileW ? 136 : V_SPACE;
@@ -398,29 +398,32 @@ export default function HomePage() {
   const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
   const mobileScale = 1; // native sizing, no transform
 
-  // ── Car position ──
-  let carX = 0, carY = 0;
-  if (curIdx >= 0 && pts.length > 0) {
-    const p = pts[curIdx];
-    let fwdX = 0, fwdY = CAR_AHEAD;
-    if (curIdx < pts.length - 1) {
-      const n = pts[curIdx + 1];
-      const dx = n.x - p.x;
-      const dy = n.y - p.y;
-      const len = Math.sqrt(dx * dx + dy * dy);
-      fwdX = (dx / len) * CAR_AHEAD;
-      fwdY = (dy / len) * CAR_AHEAD;
-    }
-    carX = p.x + fwdX;
-    carY = p.y + fwdY;
-  }
-
   // ── Mobile node size overrides (smaller = native feel at scale 1) ──
   const mNODE_R = isMobileView ? 38 : NODE_R;
   const mACTIVE_R = isMobileView ? 48 : ACTIVE_R;
   const mEXAM_R = isMobileView ? 40 : EXAM_R;
   const mRING_GAP = RING_GAP;
   const mRING_STROKE = RING_STROKE;
+  // Place car just outside the active node ring on mobile
+  const carAhead = isMobileView ? mACTIVE_R + mRING_GAP + mRING_STROKE / 2 + 14 : CAR_AHEAD;
+  const carDisplaySize = isMobileView ? 58 : CAR_SIZE + 10;
+
+  // ── Car position ──
+  let carX = 0, carY = 0;
+  if (curIdx >= 0 && pts.length > 0) {
+    const p = pts[curIdx];
+    let fwdX = 0, fwdY = carAhead;
+    if (curIdx < pts.length - 1) {
+      const n = pts[curIdx + 1];
+      const dx = n.x - p.x;
+      const dy = n.y - p.y;
+      const len = Math.sqrt(dx * dx + dy * dy);
+      fwdX = (dx / len) * carAhead;
+      fwdY = (dy / len) * carAhead;
+    }
+    carX = p.x + fwdX;
+    carY = p.y + fwdY;
+  }
 
   // ── Finish line ──
   const SQ = Math.floor(ROAD_W / 5);
@@ -882,8 +885,8 @@ export default function HomePage() {
                     const cardStyle: React.CSSProperties = {
                       position: 'absolute',
                       top: isMobileView ? 22 : (i === nodes.length - 1 ? 50 : 20),
-                      left: isMobileView ? eRingSize + 16 : eRingSize + 15,
-                      width: isMobileView ? 108 : 110,
+                      left: isMobileView ? eRingSize + 8 : eRingSize + 15,
+                      width: isMobileView ? 96 : 110,
                       padding: isMobileView ? '7px 10px' : '6px 8px',
                       transform: isMobileView ? 'none' : 'scale(0.92)',
                       transformOrigin: 'top left',
@@ -1011,7 +1014,7 @@ export default function HomePage() {
                   </button>
                 ) : (
                   <button onClick={() => openLessonModal(node)} className="absolute inset-0 flex items-center justify-center node-hover cursor-pointer">
-                    <div className={`rounded-full flex items-center justify-center ${isActive ? 'node-pulse' : ''}`} style={{
+                    <div className="rounded-full flex items-center justify-center" style={{
                       width: nodeRadius * 2,
                       height: nodeRadius * 2,
                       background: bg,
@@ -1029,7 +1032,7 @@ export default function HomePage() {
                 {isActive && !node.isLocked && !node.isOrderLocked && (
                   <button
                     onClick={() => openLessonModal(node)}
-                    className="commencer-float commencer-shimmer absolute cursor-pointer press-scale"
+                    className="absolute cursor-pointer press-scale"
                     style={{
                       left: '50%',
                       top: ringSize + 6,
@@ -1041,7 +1044,7 @@ export default function HomePage() {
                       padding: isMobileView ? '9px 20px' : '6px 14px',
                       borderRadius: 20,
                       whiteSpace: 'nowrap',
-                      boxShadow: `0 6px 20px ${tc}90`,
+                      boxShadow: 'none',
                       letterSpacing: '0.5px',
                       zIndex: 18,
                       border: `1.5px solid ${tc}`,
@@ -1129,19 +1132,19 @@ export default function HomePage() {
 
           {/* ── Car ── */}
           {curIdx >= 0 && (
-            <div className="absolute car-bounce" style={{
-              left: carX - CAR_SIZE / 2,
-              top: carY - CAR_SIZE / 2,
-              width: CAR_SIZE + 10,
-              height: CAR_SIZE + 10,
+            <div className="absolute" style={{
+              left: carX - carDisplaySize / 2,
+              top: carY - carDisplaySize / 2,
+              width: carDisplaySize,
+              height: carDisplaySize,
               zIndex: 20,
               transform: `rotate(${carTilt}deg)`,
             }}>
               {userCar.carImage ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={userCar.carImage} alt="car" width={CAR_SIZE + 10} height={CAR_SIZE + 10} style={{ objectFit: 'contain', filter: `drop-shadow(0 4px 8px ${userCar.carColor}88)` }} />
+                <img src={userCar.carImage} alt="car" width={carDisplaySize} height={carDisplaySize} style={{ objectFit: 'contain', filter: `drop-shadow(0 4px 8px ${userCar.carColor}88)` }} />
               ) : (
-                <CarSVG type={userCar.carType} color={userCar.carColor} size={CAR_SIZE + 10} />
+                <CarSVG type={userCar.carType} color={userCar.carColor} size={carDisplaySize} />
               )}
             </div>
           )}
