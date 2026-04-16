@@ -1289,7 +1289,7 @@ export default function HomePage() {
               width: carDisplaySize,
               height: carDisplaySize,
               zIndex: 20,
-              transform: `rotate(${carTilt}deg)`,
+              transform: 'none',
             }}>
               {userCar.carImage ? (
                 // eslint-disable-next-line @next/next/no-img-element
