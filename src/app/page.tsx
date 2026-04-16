@@ -110,6 +110,50 @@ interface PathNode {
   stars: number;
 }
 
+// ── Mobile monument : drag (1 doigt) + pinch (2 doigts) ──
+type MonAdj = { dx: number; dy: number; scale: number };
+function MobileMonument({ id, src, baseLeft, baseTop, baseW, baseH, adj, onUpdate }: {
+  id: string; src: string;
+  baseLeft: number; baseTop: number;
+  baseW: number; baseH: number;
+  adj: MonAdj;
+  onUpdate: (id: string, adj: MonAdj) => void;
+}) {
+  const t = useRef<{ x: number; y: number; dx: number; dy: number; dist: number; scale: number; n: number } | null>(null);
+  const onTouchStart = (e: React.TouchEvent) => {
+    e.stopPropagation();
+    if (e.touches.length === 1) {
+      t.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, dx: adj.dx, dy: adj.dy, dist: 0, scale: adj.scale, n: 1 };
+    } else if (e.touches.length >= 2) {
+      const dx = e.touches[1].clientX - e.touches[0].clientX;
+      const dy = e.touches[1].clientY - e.touches[0].clientY;
+      t.current = { x: 0, y: 0, dx: adj.dx, dy: adj.dy, dist: Math.hypot(dx, dy), scale: adj.scale, n: 2 };
+    }
+  };
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (!t.current) return;
+    e.stopPropagation();
+    if (t.current.n === 1 && e.touches.length === 1) {
+      onUpdate(id, { dx: t.current.dx + e.touches[0].clientX - t.current.x, dy: t.current.dy + e.touches[0].clientY - t.current.y, scale: adj.scale });
+    } else if (t.current.n === 2 && e.touches.length >= 2) {
+      const d = Math.hypot(e.touches[1].clientX - e.touches[0].clientX, e.touches[1].clientY - e.touches[0].clientY);
+      const s = Math.max(0.2, Math.min(4, t.current.scale * d / t.current.dist));
+      onUpdate(id, { dx: adj.dx, dy: adj.dy, scale: s });
+    }
+  };
+  return (
+    <div
+      className="absolute"
+      style={{ left: baseLeft + adj.dx, top: baseTop + adj.dy, width: baseW * adj.scale, height: baseH * adj.scale, zIndex: 30, touchAction: 'none', opacity: 0.92 }}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain', userSelect: 'none' }} draggable={false} />
+    </div>
+  );
+}
+
 export default function HomePage() {
   const router = useRouter();
   const { lang, t } = useLang();
@@ -148,6 +192,7 @@ export default function HomePage() {
     "banner-H": { dx: -25, dy: 0, scale: 1, rot: 0 },
   };
   const [elemAdj, setElemAdj] = useState<Record<string, { dx: number; dy: number; scale: number; rot: number }>>(DEFAULT_ADJ);
+  const [mobileMonAdj, setMobileMonAdj] = useState<Record<string, MonAdj>>({});
 
   useEffect(() => {
     try {
@@ -157,6 +202,18 @@ export default function HomePage() {
         setElemAdj({ ...DEFAULT_ADJ, ...local });
       }
     } catch {}
+    try {
+      const raw2 = localStorage.getItem('mob_mon_adj');
+      if (raw2) setMobileMonAdj(JSON.parse(raw2));
+    } catch {}
+  }, []);
+
+  const updateMobileMonAdj = useCallback((id: string, adj: MonAdj) => {
+    setMobileMonAdj(prev => {
+      const next = { ...prev, [id]: adj };
+      try { localStorage.setItem('mob_mon_adj', JSON.stringify(next)); } catch {}
+      return next;
+    });
   }, []);
 
   const getElemAdj = useCallback((id: string) => {
@@ -1130,6 +1187,73 @@ export default function HomePage() {
             });
           })}
 
+          {/* ── Monument decorations MOBILE only ── */}
+          {isMobileView && Array.from(themeAt.entries()).map(([startIdx, themeCode]) => {
+            const monuments = MONUMENTS[themeCode];
+            if (!monuments || monuments.length === 0) return null;
+
+            let endIdx = startIdx;
+            for (let j = startIdx + 1; j < nodes.length; j++) {
+              if (nodes[j].themeCode !== themeCode) { endIdx = j - 1; break; }
+              endIdx = j;
+            }
+            if (endIdx <= startIdx || startIdx >= pts.length || endIdx >= pts.length) return null;
+            const startY = pts[startIdx].y;
+            const endY = pts[endIdx].y;
+            const span = endY - startY;
+            if (span < 100) return null;
+
+            return monuments.map((mon, mi) => {
+              const monCenterY = startY + span * mon.yRatio;
+              const MON_W = (themeCode === 'A' && (mi === 0 || mi === 2)) ? 180
+                : (themeCode === 'B' && mi === 1) ? 240
+                : (themeCode === 'C') ? 180
+                : (themeCode === 'D' && mi === 1) ? 150
+                : (themeCode === 'E' && mi === 0) ? 190
+                : (themeCode === 'F' && mi === 0) ? 180
+                : (themeCode === 'F' && mi === 1) ? 120
+                : (themeCode === 'G' && mi === 0) ? 240
+                : (themeCode === 'H') ? 180
+                : 120;
+              const MON_H = Math.round(mon.h / mon.w * MON_W);
+
+              // Trouver le centre exact de la route à ce y via interpolation des pts réels
+              let roadCXAtY = CX;
+              for (let k = 0; k < pts.length - 1; k++) {
+                if (pts[k].y <= monCenterY && pts[k + 1].y >= monCenterY) {
+                  const t = (monCenterY - pts[k].y) / (pts[k + 1].y - pts[k].y);
+                  roadCXAtY = pts[k].x + t * (pts[k + 1].x - pts[k].x);
+                  break;
+                }
+              }
+              const roadL = roadCXAtY - ROAD_W / 2;
+              const roadR = roadCXAtY + ROAD_W / 2;
+
+              let left: number;
+              if (mon.side === 'left') {
+                left = Math.max(0, roadL - MON_W);
+              } else {
+                left = Math.min(SVG_W - MON_W, roadR);
+              }
+              const top = monCenterY - MON_H / 2;
+
+              const monId = `m-mob-${themeCode}-${mi}`;
+              return (
+                <MobileMonument
+                  key={monId}
+                  id={monId}
+                  src={mon.src}
+                  baseLeft={left}
+                  baseTop={top}
+                  baseW={MON_W}
+                  baseH={MON_H}
+                  adj={mobileMonAdj[monId] ?? { dx: 0, dy: 0, scale: 1 }}
+                  onUpdate={updateMobileMonAdj}
+                />
+              );
+            });
+          })}
+
           {/* ── Car ── */}
           {curIdx >= 0 && (
             <div className="absolute" style={{
@@ -1189,42 +1313,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* ── Cloud overlays for locked themes — desktop only (mobile shows dimmed nodes) ── */}
-          {(() => {
-            if (isMobileView) return null;
-            const themeEntries = Array.from(themeAt.entries()).sort((a, b) => a[0] - b[0]);
-            return themeEntries.map(([startIdx, themeCode], sIdx) => {
-              const isLocked = nodes[startIdx]?.isLocked;
-              if (!isLocked) return null;
-
-              const endIdx = sIdx < themeEntries.length - 1 ? themeEntries[sIdx + 1][0] - 1 : nodes.length - 1;
-              if (startIdx >= pts.length || endIdx >= pts.length) return null;
-              const startY = pts[startIdx].y;
-              const endY = pts[endIdx].y;
-              const zoneH = endY - startY + V_SPACE + 170;
-              const cloudCount = Math.max(7, Math.floor(zoneH / 120) * 3);
-
-              return (
-                <div key={`cloud-${themeCode}`} className="absolute left-0 w-full" style={{
-                  top: startY - V_SPACE,
-                  height: zoneH,
-                  zIndex: 25,
-                  pointerEvents: 'none',
-                }}>
-                  {Array.from({ length: cloudCount }, (_, ci) => (
-                    <span key={ci} className="absolute" style={{
-                      left: (ci * 97 + 15) % (SVG_W * 0.85),
-                      top: ((ci * 0.137 + 0.05) % 0.9) * zoneH,
-                      fontSize: 18 + (ci % 5) * 3,
-                      opacity: 0.5,
-                    }}>
-                      ☁️
-                    </span>
-                  ))}
-                </div>
-              );
-            });
-          })()}
         </div>
         </div>{/* end flex wrapper */}
 
