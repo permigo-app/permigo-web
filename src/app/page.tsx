@@ -874,43 +874,49 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Bonus card (Flash/Révision) — desktop only */}
-                  <div className="absolute hidden lg:block rounded-xl py-1.5 px-2" style={{
-                    left: eRingSize + 15,
-                    top: i === nodes.length - 1 ? 50 : 20,
-                    width: 110,
-                    transform: 'scale(0.92)',
+                  {/* Bonus card (Flash/Révision) */}
+                  <div className="absolute rounded-xl" style={{
+                    left: eRingSize + (isMobileView ? 8 : 15),
+                    top: isMobileView ? 10 : (i === nodes.length - 1 ? 50 : 20),
+                    width: isMobileView ? 90 : 110,
+                    padding: isMobileView ? '5px 8px' : '6px 8px',
+                    transform: isMobileView ? 'scale(0.88)' : 'scale(0.92)',
                     transformOrigin: 'top left',
                     background: '#16213E',
                     borderRadius: 12,
                     zIndex: 12,
                     opacity: lockedOpacity,
                   }}>
-                    {node.isLocked ? (
-                      <>
-                        <div className="flex items-center gap-2 py-1.5">
-                          <span>🃏</span>
-                          <span className="text-[13px] font-bold" style={{ color: '#6C5CE7' }}>{t('flash_label')}</span>
-                        </div>
-                        <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
-                        <div className="flex items-center gap-2 py-1.5">
-                          <span>🔄</span>
-                          <span className="text-[13px] font-bold" style={{ color: '#74B9FF' }}>{t('revision_label')}</span>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <Link href={`/flash?theme=${node.themeCode}`} className="flex items-center gap-2 py-1.5 press-scale">
-                          <span>🃏</span>
-                          <span className="text-[13px] font-bold" style={{ color: '#6C5CE7' }}>{t('flash_label')}</span>
-                        </Link>
-                        <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
-                        <Link href={`/revision?theme=${node.themeCode}`} className="flex items-center gap-2 py-1.5 press-scale">
-                          <span>🔄</span>
-                          <span className="text-[13px] font-bold" style={{ color: '#74B9FF' }}>{t('revision_label')}</span>
-                        </Link>
-                      </>
-                    )}
+                    {(() => {
+                      const fs = isMobileView ? 11 : 13;
+                      const gap = isMobileView ? 1 : 2;
+                      const py = isMobileView ? '3px 0' : '6px 0';
+                      return node.isLocked ? (
+                        <>
+                          <div className="flex items-center" style={{ gap, padding: py }}>
+                            <span style={{ fontSize: isMobileView ? 12 : 15 }}>🃏</span>
+                            <span style={{ fontSize: fs, fontWeight: 700, color: '#6C5CE7' }}>{t('flash_label')}</span>
+                          </div>
+                          <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
+                          <div className="flex items-center" style={{ gap, padding: py }}>
+                            <span style={{ fontSize: isMobileView ? 12 : 15 }}>🔄</span>
+                            <span style={{ fontSize: fs, fontWeight: 700, color: '#74B9FF' }}>{t('revision_label')}</span>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <Link href={`/flash?theme=${node.themeCode}`} className="flex items-center press-scale" style={{ gap, padding: py }}>
+                            <span style={{ fontSize: isMobileView ? 12 : 15 }}>🃏</span>
+                            <span style={{ fontSize: fs, fontWeight: 700, color: '#6C5CE7' }}>{t('flash_label')}</span>
+                          </Link>
+                          <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
+                          <Link href={`/revision?theme=${node.themeCode}`} className="flex items-center press-scale" style={{ gap, padding: py }}>
+                            <span style={{ fontSize: isMobileView ? 12 : 15 }}>🔄</span>
+                            <span style={{ fontSize: fs, fontWeight: 700, color: '#74B9FF' }}>{t('revision_label')}</span>
+                          </Link>
+                        </>
+                      );
+                    })()}
                   </div>
                 </div>
               );
