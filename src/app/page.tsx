@@ -468,12 +468,19 @@ export default function HomePage() {
   if (curIdx >= 0 && pts.length > 0) {
     const p = pts[curIdx];
     const activeR = isMobileView ? mACTIVE_R : ACTIVE_R;
-    // Offset en diagonale bas-droite : rayon + moitié taille voiture + petit gap
-    const offset = activeR + carDisplaySize / 2 + 6;
-    const diagX = Math.round(offset * Math.cos(Math.PI / 4)); // 45°
-    const diagY = Math.round(offset * Math.sin(Math.PI / 4));
-    carX = p.x + diagX;
-    carY = p.y + diagY;
+    if (isMobileView) {
+      // Mobile : même formule que PC — diagonale bas-droite 45°, collée au bord
+      const mOffset = activeR + carDisplaySize / 2 + 6;
+      carX = p.x + Math.round(mOffset * Math.cos(Math.PI / 4));
+      carY = p.y + Math.round(mOffset * Math.sin(Math.PI / 4));
+    } else {
+      // PC : diagonale bas-droite à 45°, inchangé
+      const offset = activeR + carDisplaySize / 2 + 6;
+      const diagX = Math.round(offset * Math.cos(Math.PI / 4));
+      const diagY = Math.round(offset * Math.sin(Math.PI / 4));
+      carX = p.x + diagX;
+      carY = p.y + diagY;
+    }
   }
 
   // ── Finish line ──
@@ -483,7 +490,7 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
-    <div className="flex gap-0 w-full overflow-x-hidden" style={isMobileView ? { background: 'transparent' } : {}}>
+    <div className="flex gap-0 w-full overflow-x-hidden" style={isMobileView ? { background: 'transparent', minHeight: 'unset', height: 'auto' } : {}}>
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
@@ -510,34 +517,28 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', height: totalH }}>
-        <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: totalH, flexShrink: 0 }}>
+        <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', height: isMobileView ? totalH + 80 : totalH }}>
 
-          {/* ── Mobile: background color bands per theme — smooth cross-fade at boundaries ── */}
+          {/* ── Mobile: background color bands — outside roadContainer, pleine largeur écran ── */}
           {isMobileView && (() => {
             const themeEntries = Array.from(themeAt.entries()).sort((a, b) => a[0] - b[0]);
-            const FADE = 80; // px of overlap for cross-fade
+            const FADE = 80;
             return themeEntries.map(([startIdx, themeCode], sIdx) => {
               const nextEntry = themeEntries[sIdx + 1];
               const rawStart = startIdx > 0 && pts[startIdx - 1] ? pts[startIdx - 1].y + 30 : 0;
               const rawEnd = nextEntry && pts[nextEntry[0] - 1] ? pts[nextEntry[0] - 1].y + 30 : totalH;
               const tc = THEME_COLORS[themeCode] || '#74B9FF';
               const nextTc = nextEntry ? (THEME_COLORS[nextEntry[1]] || '#74B9FF') : null;
-              // Extend slightly to overlap with next band for a seamless cross-fade
               const bandStart = sIdx === 0 ? 0 : rawStart - FADE / 2;
-              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH + 500;
-              const height = !nextTc ? 9999 : bandEnd - bandStart;
-              // Build gradient: fade in from prev color → solid mid → fade out to next color
+              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH + 80;
+              const height = Math.max(0, bandEnd - bandStart);
               let gradient: string;
               if (!nextTc) {
-                // Last theme: fade in at top, hold
-                gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}20 8%, ${tc}18 100%)`;
+                gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}20 8%, ${tc}20 100%)`;
               } else if (sIdx === 0) {
-                // First theme: hold then cross-fade into next
                 const fadeStartPct = Math.round(((rawEnd - rawStart - FADE / 2) / height) * 100);
                 gradient = `linear-gradient(180deg, ${tc}20 0%, ${tc}20 ${fadeStartPct}%, ${nextTc}00 100%)`;
               } else {
-                // Middle theme: fade in from prev, hold, fade out to next
                 const midPct = Math.round((FADE / 2 / height) * 100);
                 const fadeStartPct = Math.round(((FADE / 2 + rawEnd - rawStart - FADE / 2) / height) * 100);
                 gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}20 ${midPct}%, ${tc}20 ${fadeStartPct}%, ${nextTc}00 100%)`;
@@ -545,8 +546,7 @@ export default function HomePage() {
               return (
                 <div key={`bg-${themeCode}`} style={{
                   position: 'absolute',
-                  left: '50%', transform: 'translateX(-50%)',
-                  width: '100vw',
+                  left: 0, right: 0,
                   top: bandStart, height,
                   background: gradient,
                   pointerEvents: 'none',
@@ -555,6 +555,8 @@ export default function HomePage() {
               );
             });
           })()}
+
+        <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: isMobileView ? totalH + 80 : totalH, flexShrink: 0, overflow: 'hidden', clipPath: 'inset(0)' }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -648,13 +650,12 @@ export default function HomePage() {
             const PLANK_STRIDE = PLANK_W + PLANK_GAP;
             const CROSSBAR_H = 4;
             const fenceTop = barrierTop + PANEL_H + POST_H / 2 - FENCE_H / 2;
-            // Fences extend very far — sidebars (z-50) naturally cover them
-            const FENCE_EXTEND = 2000;
+            // Fences bounded to road container width
             const leftFenceEnd = lpLeftAbs;
-            const leftFenceStart = leftFenceEnd - FENCE_EXTEND;
-            const leftFenceW = FENCE_EXTEND;
+            const leftFenceStart = 0;
+            const leftFenceW = Math.max(0, leftFenceEnd - leftFenceStart);
             const rightFenceStart = rpLeftAbs + POST_W;
-            const rightFenceW = FENCE_EXTEND;
+            const rightFenceW = Math.max(0, SVG_W - rightFenceStart);
             const leftPlankCount = Math.ceil(leftFenceW / PLANK_STRIDE);
             const rightPlankCount = Math.ceil(rightFenceW / PLANK_STRIDE);
 

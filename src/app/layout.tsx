@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AppShell>
               {children}
             </AppShell>
-            <footer style={{ background: '#0a0e2a', padding: '12px 24px', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+            <footer className="bg-transparent lg:bg-[#0a0e2a] py-3 px-6 text-center border-t border-white/[0.06]">
               <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
                 <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)' }}>© 2025 MyPermiGo</span>
 
