@@ -510,7 +510,7 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', ...(isMobileView ? { minHeight: totalH, paddingBottom: 60 } : { height: totalH }) }}>
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', height: totalH }}>
         <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: totalH, flexShrink: 0 }}>
 
           {/* ── Mobile: background color bands per theme — smooth cross-fade at boundaries ── */}
@@ -1337,12 +1337,6 @@ export default function HomePage() {
         </div>
         </div>{/* end flex wrapper */}
 
-        {/* ── Mobile: fill zone sous SVG avec couleur du dernier thème ── */}
-        {isMobileView && (() => {
-          const lastEntry = Array.from(themeAt.entries()).sort((a, b) => b[0] - a[0])[0];
-          const lastTc = lastEntry ? (THEME_COLORS[lastEntry[1]] || '#0a0e2a') : '#0a0e2a';
-          return <div style={{ flex: 1, minHeight: 80, background: lastTc + '18' }} />;
-        })()}
 
       </div>
 
