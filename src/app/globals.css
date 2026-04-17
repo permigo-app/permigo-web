@@ -317,6 +317,18 @@ body {
   }
 }
 
+/* Footer */
+.footer-main {
+  background: #0a0e2a;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+@media (max-width: 1023px) {
+  .footer-main {
+    background: transparent;
+    border-top: none;
+  }
+}
+
 /* ImageRequestButton — compact on mobile */
 @media (max-width: 1023px) {
   .image-request-wrapper {

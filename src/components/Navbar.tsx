@@ -195,7 +195,6 @@ export default function Navbar() {
 
         {/* User avatar at bottom — hidden on mobile (redundant safety) */}
         <div className="hidden lg:flex flex-col mt-auto" style={{ width: '100%' }}>
-          <div style={{ height: '1px', background: '#16213E', marginLeft: '-16px', marginRight: '-16px' }} />
         <div className="pt-3">
           {user ? (
             <Link href="/profil" className="flex items-center gap-3 px-3 py-2.5 rounded-xl press-scale">

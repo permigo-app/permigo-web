@@ -463,12 +463,17 @@ export default function HomePage() {
   const mRING_STROKE = RING_STROKE;
   const carDisplaySize = isMobileView ? 58 : CAR_SIZE + 10;
 
-  // ── Car position — légèrement en bas à droite du centre du nœud actif ──
+  // ── Car position — en dehors du cercle play, en bas à droite ──
   let carX = 0, carY = 0;
   if (curIdx >= 0 && pts.length > 0) {
     const p = pts[curIdx];
-    carX = p.x + 14;
-    carY = p.y + 14;
+    const activeR = isMobileView ? mACTIVE_R : ACTIVE_R;
+    // Offset en diagonale bas-droite : rayon + moitié taille voiture + petit gap
+    const offset = activeR + carDisplaySize / 2 + 6;
+    const diagX = Math.round(offset * Math.cos(Math.PI / 4)); // 45°
+    const diagY = Math.round(offset * Math.sin(Math.PI / 4));
+    carX = p.x + diagX;
+    carY = p.y + diagY;
   }
 
   // ── Finish line ──
@@ -478,11 +483,11 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
-    <div className="flex gap-0 w-full overflow-x-hidden">
+    <div className="flex gap-0 w-full overflow-x-hidden" style={isMobileView ? { background: 'transparent' } : {}}>
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, ...(isMobileView ? { background: '#0a0e2a', minHeight: '100dvh', display: 'flex', flexDirection: 'column' } : {}) }}>
+      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, ...(isMobileView ? { background: 'transparent' } : {}) }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
@@ -505,7 +510,7 @@ export default function HomePage() {
         </div>
 
         {/* SVG Road */}
-        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', height: totalH }}>
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', ...(isMobileView ? { minHeight: totalH, paddingBottom: 60 } : { height: totalH }) }}>
         <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: totalH, flexShrink: 0 }}>
 
           {/* ── Mobile: background color bands per theme — smooth cross-fade at boundaries ── */}
@@ -520,8 +525,8 @@ export default function HomePage() {
               const nextTc = nextEntry ? (THEME_COLORS[nextEntry[1]] || '#74B9FF') : null;
               // Extend slightly to overlap with next band for a seamless cross-fade
               const bandStart = sIdx === 0 ? 0 : rawStart - FADE / 2;
-              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH;
-              const height = bandEnd - bandStart;
+              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH + 500;
+              const height = !nextTc ? 9999 : bandEnd - bandStart;
               // Build gradient: fade in from prev color → solid mid → fade out to next color
               let gradient: string;
               if (!nextTc) {
@@ -1332,20 +1337,11 @@ export default function HomePage() {
         </div>
         </div>{/* end flex wrapper */}
 
-        {/* ── Mobile: last theme color fills remaining space to bottom nav ── */}
+        {/* ── Mobile: fill zone sous SVG avec couleur du dernier thème ── */}
         {isMobileView && (() => {
-          const themeEntries = Array.from(themeAt.entries()).sort((a, b) => a[0] - b[0]);
-          const lastEntry = themeEntries[themeEntries.length - 1];
-          const lastTc = lastEntry ? (THEME_COLORS[lastEntry[1]] || '#74B9FF') : '#74B9FF';
-          return (
-            <div style={{
-              flex: 1,
-              width: '100vw',
-              marginLeft: 'calc(-50vw + 50%)',
-              minHeight: 20,
-              background: `linear-gradient(180deg, ${lastTc}20 0%, ${lastTc}08 100%)`,
-            }} />
-          );
+          const lastEntry = Array.from(themeAt.entries()).sort((a, b) => b[0] - a[0])[0];
+          const lastTc = lastEntry ? (THEME_COLORS[lastEntry[1]] || '#0a0e2a') : '#0a0e2a';
+          return <div style={{ flex: 1, minHeight: 80, background: lastTc + '20' }} />;
         })()}
 
       </div>
