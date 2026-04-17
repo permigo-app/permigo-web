@@ -31,15 +31,22 @@ async function loadFromSupabase(): Promise<RequestEntry[] | null> {
   try {
     const { data, error } = await supabase
       .from('image_requests')
-      .select('id, votes')
+      .select('id, theme, votes')
       .order('votes', { ascending: false });
-    if (error) return null;
-    return (data ?? []).map(row => ({
-      id: row.id,
-      question_id: row.id,
-      votes: row.votes,
-      ...parseId(row.id),
-    }));
+    if (error) {
+      console.warn('[Admin] Supabase load error:', error.message);
+      return null;
+    }
+    return (data ?? []).map(row => {
+      const parsed = parseId(row.id);
+      return {
+        id: row.id,
+        question_id: row.id,
+        votes: row.votes,
+        theme: row.theme ?? parsed.theme,
+        type: parsed.type,
+      };
+    });
   } catch {
     return null;
   }

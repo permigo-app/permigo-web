@@ -23,6 +23,12 @@ function markVotedLocal(id: string) {
   localStorage.setItem(VOTED_KEY, JSON.stringify(voted));
 }
 
+function getThemeFromId(id: string): string {
+  if (id.startsWith('exam_')) return id.split('_')[1] ?? '?';
+  const m = id.match(/^([A-I]\d+)_/);
+  return m ? m[1].charAt(0) : '?';
+}
+
 async function recordImageRequestSupabase(id: string): Promise<boolean> {
   if (!hasSupabase || !supabase) return false;
   try {
@@ -33,20 +39,30 @@ async function recordImageRequestSupabase(id: string): Promise<boolean> {
       .eq('id', id)
       .single();
 
-    if (fetchError && fetchError.code !== 'PGRST116') return false; // PGRST116 = row not found
+    if (fetchError && fetchError.code !== 'PGRST116') {
+      console.warn('[ImageRequest] fetch error:', fetchError.message, fetchError.code);
+      return false;
+    }
 
     const currentVotes = data?.votes ?? 0;
+    const theme = getThemeFromId(id);
 
     // Upsert on id (PRIMARY KEY): increment if exists, insert if not
     const { error: upsertError } = await supabase
       .from('image_requests')
       .upsert(
-        { id, question_id: id, votes: currentVotes + 1 },
+        { id, question_id: id, theme, votes: currentVotes + 1 },
         { onConflict: 'id' }
       );
 
-    return !upsertError;
-  } catch {
+    if (upsertError) {
+      console.warn('[ImageRequest] upsert error:', upsertError.message, upsertError.code);
+      return false;
+    }
+
+    return true;
+  } catch (e) {
+    console.warn('[ImageRequest] exception:', e);
     return false;
   }
 }
