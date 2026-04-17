@@ -420,7 +420,7 @@ export default function HomePage() {
 
     // Build smooth bezier path with proper S-curves
     const startPt = pts.length > 0 ? { x: pts[0].x, y: pts[0].y - mPadTop } : { x: CX, y: 0 };
-    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 90 : 250);
+    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 200 : 250);
     const allPts = [startPt, ...pts, { x: CX, y: finishY }];
 
     let d = `M ${allPts[0].x} ${allPts[0].y}`;
