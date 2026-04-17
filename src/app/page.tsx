@@ -453,6 +453,16 @@ export default function HomePage() {
 
   // ── No scale on mobile — geometry is natively sized ──
   const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
+
+  // ── Mobile: apply last theme color to <main> so pb-20 padding matches ──
+  useEffect(() => {
+    if (!isMobileView) return;
+    const lastEntry = Array.from(themeAt.entries()).sort((a, b) => b[0] - a[0])[0];
+    const lastTc = lastEntry ? (THEME_COLORS[lastEntry[1]] || '') : '';
+    const mainEl = document.querySelector('main') as HTMLElement | null;
+    if (mainEl && lastTc) mainEl.style.background = lastTc + '18';
+    return () => { if (mainEl) mainEl.style.background = ''; };
+  }, [isMobileView, themeAt]);
   const mobileScale = 1; // native sizing, no transform
 
   // ── Mobile node size overrides (smaller = native feel at scale 1) ──
@@ -487,7 +497,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, ...(isMobileView ? { background: 'transparent' } : {}) }}>
+      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, ...(isMobileView ? { display: 'flex', flexDirection: 'column', background: 'transparent' } : {}) }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
