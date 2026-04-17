@@ -1,16 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { supabase, hasSupabase } from '@/lib/supabase';
 
 interface RequestEntry {
   id: string;
+  question_id: string;
   theme: string;
   type: 'carte' | 'question';
   votes: number;
 }
 
 function parseId(id: string): { theme: string; type: 'carte' | 'question' } {
-  // Format: "A1_c3" (carte) or "A1_q5" / "exam_A_q3"
   if (id.startsWith('exam_')) {
     const parts = id.split('_');
     return { theme: parts[1] ?? '?', type: 'question' };
@@ -25,26 +26,61 @@ function parseId(id: string): { theme: string; type: 'carte' | 'question' } {
   return { theme: '?', type: 'carte' };
 }
 
+async function loadFromSupabase(): Promise<RequestEntry[] | null> {
+  if (!hasSupabase || !supabase) return null;
+  try {
+    const { data, error } = await supabase
+      .from('image_requests')
+      .select('question_id, votes, created_at')
+      .order('votes', { ascending: false });
+    if (error) return null;
+    return (data ?? []).map(row => ({
+      id: row.question_id,
+      question_id: row.question_id,
+      votes: row.votes,
+      ...parseId(row.question_id),
+    }));
+  } catch {
+    return null;
+  }
+}
+
+function loadFromLocalStorage(): RequestEntry[] {
+  try {
+    const raw = localStorage.getItem('image_requests');
+    const data: Record<string, number> = raw ? JSON.parse(raw) : {};
+    return Object.entries(data)
+      .map(([id, votes]) => ({ id, question_id: id, votes, ...parseId(id) }))
+      .sort((a, b) => b.votes - a.votes);
+  } catch {
+    return [];
+  }
+}
+
 export default function AdminImageRequests() {
   const [entries, setEntries] = useState<RequestEntry[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [source, setSource] = useState<'supabase' | 'localStorage'>('supabase');
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem('image_requests');
-      const data: Record<string, number> = raw ? JSON.parse(raw) : {};
-      const list: RequestEntry[] = Object.entries(data)
-        .map(([id, votes]) => ({ id, votes, ...parseId(id) }))
-        .sort((a, b) => b.votes - a.votes);
-      setEntries(list);
-    } catch {
-      setEntries([]);
-    }
-    setLoaded(true);
+    (async () => {
+      const fromSupabase = await loadFromSupabase();
+      if (fromSupabase !== null) {
+        setEntries(fromSupabase);
+        setSource('supabase');
+      } else {
+        setEntries(loadFromLocalStorage());
+        setSource('localStorage');
+      }
+      setLoaded(true);
+    })();
   }, []);
 
-  const resetAll = () => {
+  const resetAll = async () => {
     if (!confirm('Remettre tous les votes à zéro ?')) return;
+    if (hasSupabase && supabase) {
+      await supabase.from('image_requests').delete().neq('question_id', '');
+    }
     localStorage.removeItem('image_requests');
     setEntries([]);
   };
@@ -64,7 +100,11 @@ export default function AdminImageRequests() {
 
   const totalVotes = entries.reduce((s, e) => s + e.votes, 0);
 
-  if (!loaded) return <div className="min-h-screen flex items-center justify-center"><p style={{ color: '#8B9DC3' }}>Chargement…</p></div>;
+  if (!loaded) return (
+    <div className="min-h-screen flex items-center justify-center">
+      <p style={{ color: '#8B9DC3' }}>Chargement…</p>
+    </div>
+  );
 
   return (
     <div className="py-8 px-6" style={{ minHeight: '100vh' }}>
@@ -72,7 +112,12 @@ export default function AdminImageRequests() {
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-2xl font-black text-white mb-1">🖼️ Demandes d&apos;images</h1>
-            <p className="text-sm" style={{ color: '#8B9DC3' }}>{entries.length} éléments · {totalVotes} votes au total</p>
+            <p className="text-sm" style={{ color: '#8B9DC3' }}>
+              {entries.length} éléments · {totalVotes} votes au total
+            </p>
+            <p className="text-xs mt-1" style={{ color: source === 'supabase' ? '#2ecc71' : '#e67e22' }}>
+              {source === 'supabase' ? '🟢 Données Supabase (tous les utilisateurs)' : '🟡 Fallback localStorage (données locales uniquement)'}
+            </p>
           </div>
           <div className="flex gap-2">
             <button

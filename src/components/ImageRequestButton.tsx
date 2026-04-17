@@ -2,11 +2,12 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useLang } from '@/contexts/LanguageContext';
+import { supabase, hasSupabase } from '@/lib/supabase';
 
 const STORAGE_KEY = 'image_requests';
 const VOTED_KEY = 'image_requests_voted';
 
-function getRequests(): Record<string, number> {
+function getRequestsLocal(): Record<string, number> {
   if (typeof window === 'undefined') return {};
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch { return {}; }
 }
@@ -16,14 +17,49 @@ function getVoted(): Record<string, boolean> {
   try { return JSON.parse(localStorage.getItem(VOTED_KEY) || '{}'); } catch { return {}; }
 }
 
-export function recordImageRequest(id: string): boolean {
+function markVotedLocal(id: string) {
   const voted = getVoted();
-  if (voted[id]) return false;
-  const requests = getRequests();
-  requests[id] = (requests[id] || 0) + 1;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(requests));
   voted[id] = true;
   localStorage.setItem(VOTED_KEY, JSON.stringify(voted));
+}
+
+async function recordImageRequestSupabase(id: string): Promise<boolean> {
+  if (!hasSupabase || !supabase) return false;
+  try {
+    // Get current votes
+    const { data, error: fetchError } = await supabase
+      .from('image_requests')
+      .select('votes')
+      .eq('question_id', id)
+      .single();
+
+    if (fetchError && fetchError.code !== 'PGRST116') return false; // PGRST116 = not found
+
+    const currentVotes = data?.votes ?? 0;
+
+    const { error: upsertError } = await supabase
+      .from('image_requests')
+      .upsert({ question_id: id, votes: currentVotes + 1 }, { onConflict: 'question_id' });
+
+    return !upsertError;
+  } catch {
+    return false;
+  }
+}
+
+export async function recordImageRequest(id: string): Promise<boolean> {
+  const voted = getVoted();
+  if (voted[id]) return false;
+
+  // Try Supabase first
+  const ok = await recordImageRequestSupabase(id);
+
+  // Always fallback to localStorage
+  const requests = getRequestsLocal();
+  requests[id] = (requests[id] || 0) + 1;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(requests));
+  markVotedLocal(id);
+
   return true;
 }
 
@@ -53,9 +89,9 @@ export default function ImageRequestButton({ id }: Props) {
     return () => { if (toastTimer.current) clearTimeout(toastTimer.current); };
   }, []);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     if (voted) return;
-    recordImageRequest(id);
+    await recordImageRequest(id);
     setVoted(true);
     setShowToast(true);
     toastTimer.current = setTimeout(() => setShowToast(false), 2800);
@@ -63,10 +99,11 @@ export default function ImageRequestButton({ id }: Props) {
 
   return (
     <>
-      <div className="flex justify-center" style={{ marginBottom: 24 }}>
+      <div className="image-request-wrapper flex justify-center" style={{ marginBottom: 24 }}>
         <button
           onClick={handleClick}
           disabled={voted}
+          className="image-request-btn"
           style={{
             display: 'flex',
             alignItems: 'center',

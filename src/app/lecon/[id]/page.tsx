@@ -355,10 +355,12 @@ export default function LessonPage() {
             {/* ── Left: Theory card (60%) ── */}
             <div className="flex-1 min-w-0 lg:flex-[3]">
               <div
-                className="rounded-2xl p-8 xl:p-10 slide-up"
+                className="rounded-2xl p-4 lg:p-8 xl:p-10 slide-up"
                 style={{
                   background: '#111827',
                   border: '1px solid rgba(78,205,196,0.2)',
+                  overflow: 'hidden',
+                  wordBreak: 'break-word',
                 }}
               >
                 {/* Theme badge */}
@@ -428,7 +430,7 @@ export default function LessonPage() {
                 )}
 
                 {/* Navigation buttons */}
-                <div className="flex gap-3">
+                <div className="flex gap-3 mb-20 lg:mb-0">
                   {currentCard > 0 && (
                     <button
                       onClick={() => { setShowSimple(false); setCurrentCard(c => c - 1); }}

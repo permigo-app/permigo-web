@@ -309,6 +309,28 @@ body {
 }
 .btn-glow-teal:hover { box-shadow: 0 6px 28px rgba(78,205,196,0.55); filter: brightness(1.08); transform: translateY(-1px); }
 
+/* Lesson modal — parties list scrollable on mobile */
+@media (max-width: 1023px) {
+  .partie-list-scroll {
+    max-height: 45vh;
+    overflow-y: auto;
+  }
+}
+
+/* ImageRequestButton — compact on mobile */
+@media (max-width: 1023px) {
+  .image-request-wrapper {
+    margin-bottom: 8px !important;
+  }
+  .image-request-btn {
+    padding: 4px 8px !important;
+    font-size: 10px !important;
+    max-height: 28px !important;
+    border-radius: 6px !important;
+    opacity: 0.7 !important;
+  }
+}
+
 /* Badge unlock glow */
 @keyframes badgeUnlock {
   0%, 100% { box-shadow: 0 0 8px 0 rgba(78,205,196,0.3); }

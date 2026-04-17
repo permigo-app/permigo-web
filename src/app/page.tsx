@@ -461,25 +461,14 @@ export default function HomePage() {
   const mEXAM_R = isMobileView ? 40 : EXAM_R;
   const mRING_GAP = RING_GAP;
   const mRING_STROKE = RING_STROKE;
-  // Place car just outside the active node ring on mobile
-  const carAhead = isMobileView ? mACTIVE_R + mRING_GAP + mRING_STROKE / 2 + 14 : CAR_AHEAD;
   const carDisplaySize = isMobileView ? 58 : CAR_SIZE + 10;
 
-  // ── Car position ──
+  // ── Car position — légèrement en bas à droite du centre du nœud actif ──
   let carX = 0, carY = 0;
   if (curIdx >= 0 && pts.length > 0) {
     const p = pts[curIdx];
-    let fwdX = 0, fwdY = carAhead;
-    if (curIdx < pts.length - 1) {
-      const n = pts[curIdx + 1];
-      const dx = n.x - p.x;
-      const dy = n.y - p.y;
-      const len = Math.sqrt(dx * dx + dy * dy);
-      fwdX = (dx / len) * carAhead;
-      fwdY = (dy / len) * carAhead;
-    }
-    carX = p.x + fwdX;
-    carY = p.y + fwdY;
+    carX = p.x + 14;
+    carY = p.y + 14;
   }
 
   // ── Finish line ──
@@ -1225,7 +1214,7 @@ export default function HomePage() {
               <img src="/monuments/mas_museum.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </div>
             {/* D-0 panneaux_vitesse */}
-            <div className="absolute pointer-events-none" style={{ left: 211.25, top: 2173.7, width: 180, height: 429, zIndex: 6, opacity: 0.92 }}>
+            <div className="absolute pointer-events-none" style={{ left: 211.25, top: 2223.7, width: 140, height: 333, zIndex: 6, opacity: 0.92 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/monuments/panneaux_vitesse.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </div>
@@ -1499,94 +1488,100 @@ export default function HomePage() {
             <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.6)' }} />
 
             <div
-              className="relative w-full max-w-lg rounded-t-[28px] px-6 pt-6 pb-10 slide-up"
-              style={{ background: '#1C2345', maxHeight: '88vh', overflowY: 'auto' }}
+              className="relative w-full max-w-lg rounded-t-[28px] pt-6 slide-up flex flex-col"
+              style={{ background: '#1C2345', maxHeight: '88vh' }}
               onClick={e => e.stopPropagation()}
             >
-              <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: '#5A6B8A' }} />
+              {/* Scrollable area */}
+              <div className="px-6 overflow-y-auto" style={{ flex: '1 1 auto' }}>
+                <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: '#5A6B8A' }} />
 
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-14 h-14 rounded-full flex items-center justify-center text-3xl" style={{ background: tc + '20' }}>
-                  {em}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-14 h-14 rounded-full flex items-center justify-center text-3xl" style={{ background: tc + '20' }}>
+                    {em}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-bold uppercase tracking-wider" style={{ color: tc }}>
+                      Thème {modalNode.themeCode} · Leçon {modalNode.localIndex}
+                    </p>
+                    <p className="text-xl font-extrabold truncate">{modalNode.title}</p>
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-xs font-bold uppercase tracking-wider" style={{ color: tc }}>
-                    Thème {modalNode.themeCode} · Leçon {modalNode.localIndex}
-                  </p>
-                  <p className="text-xl font-extrabold truncate">{modalNode.title}</p>
-                </div>
+
+                {theories.length > 0 && (
+                  <div className="mb-4" style={{ maxHeight: '40vh', overflowY: 'auto' }}>
+                    {theories.map((partie, idx) => {
+                      const done = completedParties.includes(idx) || lessonFullyDone;
+                      // Partie N+1 locked until partie N completed (except partie 0 always accessible)
+                      const unlocked = isVip || idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
+                      const isSelected = selectedPartieIdx === idx;
+
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => unlocked ? setSelectedPartieIdx(isSelected ? null : idx) : undefined}
+                          disabled={!unlocked}
+                          className="w-full flex items-center gap-3 py-3 px-3 rounded-xl mb-1.5 transition-all text-left"
+                          style={{
+                            background: isSelected ? tc + '18' : 'transparent',
+                            border: isSelected ? `2px solid ${tc}` : '1px solid rgba(255,255,255,0.08)',
+                            opacity: unlocked ? 1 : 0.4,
+                          }}
+                        >
+                          <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-extrabold text-white flex-shrink-0" style={{
+                            background: done ? '#27AE60' : isSelected ? tc : 'rgba(255,255,255,0.12)',
+                          }}>
+                            {done ? '✓' : unlocked ? idx + 1 : '🔒'}
+                          </div>
+                          <span className={`flex-1 text-sm font-semibold truncate ${done ? 'line-through opacity-40' : ''}`}>
+                            {partie.title}
+                          </span>
+                          {isSelected && <span className="text-base">✓</span>}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
 
-              {theories.length > 0 && (
-                <div className="mb-4">
-                  {theories.map((partie, idx) => {
-                    const done = completedParties.includes(idx) || lessonFullyDone;
-                    // Partie N+1 locked until partie N completed (except partie 0 always accessible)
-                    const unlocked = isVip || idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
-                    const isSelected = selectedPartieIdx === idx;
-
-                    return (
-                      <button
-                        key={idx}
-                        onClick={() => unlocked ? setSelectedPartieIdx(isSelected ? null : idx) : undefined}
-                        disabled={!unlocked}
-                        className="w-full flex items-center gap-3 py-3 px-3 rounded-xl mb-1.5 transition-all text-left"
-                        style={{
-                          background: isSelected ? tc + '18' : 'transparent',
-                          border: isSelected ? `2px solid ${tc}` : '1px solid rgba(255,255,255,0.08)',
-                          opacity: unlocked ? 1 : 0.4,
-                        }}
-                      >
-                        <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-extrabold text-white flex-shrink-0" style={{
-                          background: done ? '#27AE60' : isSelected ? tc : 'rgba(255,255,255,0.12)',
-                        }}>
-                          {done ? '✓' : unlocked ? idx + 1 : '🔒'}
-                        </div>
-                        <span className={`flex-1 text-sm font-semibold truncate ${done ? 'line-through opacity-40' : ''}`}>
-                          {partie.title}
-                        </span>
-                        {isSelected && <span className="text-base">✓</span>}
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-
-              {selectedPartieIdx !== null ? (
-                <button
-                  onClick={() => startPartie(selectedPartieIdx)}
-                  className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
-                  style={{ background: tc }}
-                >
-                  {t('commencer_partie')} {selectedPartieIdx + 1} ▶
-                </button>
-              ) : !lessonFullyDone && theories.length > 0 ? (
-                <button
-                  onClick={() => startPartie(nextPartieIdx)}
-                  className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
-                  style={{ background: tc }}
-                >
-                  {completedParties.length > 0
-                    ? `Continuer — Partie ${nextPartieIdx + 1} ▶`
-                    : 'Commencer la Partie 1 ▶'}
-                </button>
-              ) : theories.length === 0 ? (
-                <button
-                  onClick={startFullLesson}
-                  className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
-                  style={{ background: tc }}
-                >
-                  Commencer la leçon ▶
-                </button>
-              ) : (
-                <button
-                  onClick={startFullLesson}
-                  className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
-                  style={{ background: tc }}
-                >
-                  🔄 Recommencer la leçon
-                </button>
-              )}
+              {/* Button — always visible at bottom */}
+              <div className="px-6 pb-10 pt-3 flex-shrink-0">
+                {selectedPartieIdx !== null ? (
+                  <button
+                    onClick={() => startPartie(selectedPartieIdx)}
+                    className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
+                    style={{ background: tc }}
+                  >
+                    {t('commencer_partie')} {selectedPartieIdx + 1} ▶
+                  </button>
+                ) : !lessonFullyDone && theories.length > 0 ? (
+                  <button
+                    onClick={() => startPartie(nextPartieIdx)}
+                    className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
+                    style={{ background: tc }}
+                  >
+                    {completedParties.length > 0
+                      ? `Continuer — Partie ${nextPartieIdx + 1} ▶`
+                      : 'Commencer la Partie 1 ▶'}
+                  </button>
+                ) : theories.length === 0 ? (
+                  <button
+                    onClick={startFullLesson}
+                    className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
+                    style={{ background: tc }}
+                  >
+                    Commencer la leçon ▶
+                  </button>
+                ) : (
+                  <button
+                    onClick={startFullLesson}
+                    className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
+                    style={{ background: tc }}
+                  >
+                    🔄 Recommencer la leçon
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         );

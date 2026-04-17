@@ -112,7 +112,7 @@ export default function QuizLayout({
       </div>
 
       {/* ── 2-column layout ── */}
-      <div className="px-6 py-6">
+      <div className="px-4 lg:px-6 pt-5 lg:pt-6 pb-6">
         <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6">
 
           {/* ── Left: Question + Answers (60%) ── */}
@@ -176,10 +176,10 @@ export default function QuizLayout({
                     key={i}
                     onClick={() => !validated && onSelect(i)}
                     disabled={validated}
-                    className={`rounded-xl p-5 flex items-center gap-3 text-left transition-all duration-150 press-scale ${
+                    className={`rounded-xl p-5 flex items-center gap-3 text-left press-scale ${
                       shakeWrong && validated && i === selected && i !== correctIndex ? 'shake' : ''
                     } ${validated && i === correctIndex ? 'choice-correct' : ''}`}
-                    style={{ background: bg, border, minHeight: 80, cursor: validated ? 'default' : 'pointer' }}
+                    style={{ background: bg, border, minHeight: 80, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
                     onMouseEnter={e => {
                       if (!validated && i !== selected) {
                         e.currentTarget.style.background = 'rgba(78,205,196,0.12)';
@@ -242,10 +242,10 @@ export default function QuizLayout({
                 disabled={selected === null}
                 className="w-full py-4 rounded-xl font-black text-base press-scale btn-glow-teal"
                 style={{
-                  background: selected !== null ? 'linear-gradient(135deg, #4ecdc4, #26a69a)' : 'rgba(255,255,255,0.05)',
-                  color: selected !== null ? '#0a0e2a' : '#5A6B8A',
+                  background: selected !== null ? 'linear-gradient(135deg, #4ecdc4, #26a69a)' : 'linear-gradient(135deg, #4ecdc4, #26a69a)',
+                  color: selected !== null ? '#0a0e2a' : '#0a0e2a',
                   cursor: selected !== null ? 'pointer' : 'not-allowed',
-                  opacity: selected !== null ? 1 : 0.6,
+                  opacity: selected !== null ? 1 : 0.35,
                 }}
               >
                 {t('valider')}
