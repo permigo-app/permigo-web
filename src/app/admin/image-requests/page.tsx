@@ -31,14 +31,14 @@ async function loadFromSupabase(): Promise<RequestEntry[] | null> {
   try {
     const { data, error } = await supabase
       .from('image_requests')
-      .select('question_id, votes, created_at')
+      .select('id, votes')
       .order('votes', { ascending: false });
     if (error) return null;
     return (data ?? []).map(row => ({
-      id: row.question_id,
-      question_id: row.question_id,
+      id: row.id,
+      question_id: row.id,
       votes: row.votes,
-      ...parseId(row.question_id),
+      ...parseId(row.id),
     }));
   } catch {
     return null;
@@ -79,7 +79,7 @@ export default function AdminImageRequests() {
   const resetAll = async () => {
     if (!confirm('Remettre tous les votes à zéro ?')) return;
     if (hasSupabase && supabase) {
-      await supabase.from('image_requests').delete().neq('question_id', '');
+      await supabase.from('image_requests').delete().neq('id', '');
     }
     localStorage.removeItem('image_requests');
     setEntries([]);

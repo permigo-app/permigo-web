@@ -26,20 +26,24 @@ function markVotedLocal(id: string) {
 async function recordImageRequestSupabase(id: string): Promise<boolean> {
   if (!hasSupabase || !supabase) return false;
   try {
-    // Get current votes
+    // Fetch current votes for this id (PRIMARY KEY)
     const { data, error: fetchError } = await supabase
       .from('image_requests')
       .select('votes')
-      .eq('question_id', id)
+      .eq('id', id)
       .single();
 
-    if (fetchError && fetchError.code !== 'PGRST116') return false; // PGRST116 = not found
+    if (fetchError && fetchError.code !== 'PGRST116') return false; // PGRST116 = row not found
 
     const currentVotes = data?.votes ?? 0;
 
+    // Upsert on id (PRIMARY KEY): increment if exists, insert if not
     const { error: upsertError } = await supabase
       .from('image_requests')
-      .upsert({ question_id: id, votes: currentVotes + 1 }, { onConflict: 'question_id' });
+      .upsert(
+        { id, question_id: id, votes: currentVotes + 1 },
+        { onConflict: 'id' }
+      );
 
     return !upsertError;
   } catch {
