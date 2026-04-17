@@ -1341,7 +1341,7 @@ export default function HomePage() {
         {isMobileView && (() => {
           const lastEntry = Array.from(themeAt.entries()).sort((a, b) => b[0] - a[0])[0];
           const lastTc = lastEntry ? (THEME_COLORS[lastEntry[1]] || '#0a0e2a') : '#0a0e2a';
-          return <div style={{ flex: 1, minHeight: 80, background: lastTc + '20' }} />;
+          return <div style={{ flex: 1, minHeight: 80, background: lastTc + '18' }} />;
         })()}
 
       </div>
