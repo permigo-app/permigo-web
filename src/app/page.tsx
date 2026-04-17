@@ -447,25 +447,22 @@ export default function HomePage() {
     return { nodes, themeAt, pts, totalH, pathD: d, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW };
   }, [mounted, stars, exams, lang, isVip]);
 
-  // ── Mobile: apply last theme color to <main> so pb-20 padding matches ──
-  // Must be before any conditional return (Rules of Hooks)
-  useEffect(() => {
-    if (!layout) return;
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
-    if (!isMobile) return;
-    const lastEntry = Array.from(layout.themeAt.entries()).sort((a, b) => b[0] - a[0])[0];
-    const lastTc = lastEntry ? (THEME_COLORS[lastEntry[1]] || '') : '';
-    const mainEl = document.querySelector('main') as HTMLElement | null;
-    if (mainEl && lastTc) mainEl.style.background = lastTc + '18';
-    return () => { if (mainEl) mainEl.style.background = ''; };
-  }, [layout]);
-
   if (!mounted || !layout) return <div className="min-h-screen" />;
 
   const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
 
   // ── No scale on mobile — geometry is natively sized ──
   const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
+
+  // ── Mobile: apply last theme color to <main> so pb-20 padding matches ──
+  useEffect(() => {
+    if (!isMobileView) return;
+    const lastEntry = Array.from(themeAt.entries()).sort((a, b) => b[0] - a[0])[0];
+    const lastTc = lastEntry ? (THEME_COLORS[lastEntry[1]] || '') : '';
+    const mainEl = document.querySelector('main') as HTMLElement | null;
+    if (mainEl && lastTc) mainEl.style.background = lastTc + '18';
+    return () => { if (mainEl) mainEl.style.background = ''; };
+  }, [isMobileView, themeAt]);
   const mobileScale = 1; // native sizing, no transform
 
   // ── Mobile node size overrides (smaller = native feel at scale 1) ──
