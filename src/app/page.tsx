@@ -49,7 +49,7 @@ const MONUMENTS: Record<string, MonumentDef[]> = {
   A: [
     { src: '/monuments/atomium.png', side: 'left', w: 280, h: 280, yRatio: 0.25, xOffset: -60, yOffset: 20 },
     { src: '/monuments/manneken_pis.png', side: 'left', w: 200, h: 260, yRatio: 0.6, xOffset: -20, yOffset: -40 },
-    { src: '/monuments/grandplace.png', side: 'right', w: 200, h: 180, yRatio: 0.85, xOffset: 10, yOffset: -20 },
+    { src: '/monuments/grandplace.png', side: 'right', w: 200, h: 180, yRatio: 0.85, xOffset: -40, yOffset: -20 },
   ],
   B: [
     { src: '/monuments/interallie.png', side: 'left', w: 140, h: 240, yRatio: 0.35, xOffset: 0, yOffset: -10 },
@@ -490,7 +490,7 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
-    <div className="flex gap-0 w-full overflow-x-hidden" style={isMobileView ? { background: 'transparent', minHeight: 'unset', height: 'auto' } : {}}>
+    <div className="flex gap-0 w-full overflow-x-hidden lg:overflow-x-visible" style={isMobileView ? { background: 'transparent', minHeight: 'unset', height: 'auto' } : {}}>
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
       {/* ═══════════════════════════════════════ */}
@@ -556,7 +556,7 @@ export default function HomePage() {
             });
           })()}
 
-        <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: isMobileView ? totalH + 80 : totalH, flexShrink: 0, overflow: 'hidden', clipPath: 'inset(0)' }}>
+        <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: isMobileView ? totalH + 80 : totalH, flexShrink: 0, overflow: 'visible', clipPath: 'none' }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
             <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -650,12 +650,13 @@ export default function HomePage() {
             const PLANK_STRIDE = PLANK_W + PLANK_GAP;
             const CROSSBAR_H = 4;
             const fenceTop = barrierTop + PANEL_H + POST_H / 2 - FENCE_H / 2;
-            // Fences bounded to road container width
+            // Fences: mobile = bounded to SVG_W, desktop = extend 500px beyond SVG_W
+            const FENCE_SIDE_EXT = isMobileView ? 0 : 500;
             const leftFenceEnd = lpLeftAbs;
-            const leftFenceStart = 0;
+            const leftFenceStart = Math.max(isMobileView ? 0 : -FENCE_SIDE_EXT, -FENCE_SIDE_EXT);
             const leftFenceW = Math.max(0, leftFenceEnd - leftFenceStart);
             const rightFenceStart = rpLeftAbs + POST_W;
-            const rightFenceW = Math.max(0, SVG_W - rightFenceStart);
+            const rightFenceW = Math.max(0, (isMobileView ? SVG_W : SVG_W + FENCE_SIDE_EXT) - rightFenceStart);
             const leftPlankCount = Math.ceil(leftFenceW / PLANK_STRIDE);
             const rightPlankCount = Math.ceil(rightFenceW / PLANK_STRIDE);
 
@@ -1338,6 +1339,20 @@ export default function HomePage() {
         </div>
         </div>{/* end flex wrapper */}
 
+        {/* ── Mobile: prolonge la couleur du dernier thème sous la route ── */}
+        {isMobileView && (() => {
+          const lastEntry = [...themeAt.entries()].sort((a, b) => b[0] - a[0])[0];
+          const lastColor = lastEntry ? (THEME_COLORS[lastEntry[1]] || '#FD79A8') : '#FD79A8';
+          return (
+            <div style={{
+              width: '100%',
+              height: 160,
+              background: `linear-gradient(180deg, ${lastColor}20 0%, ${lastColor}00 100%)`,
+              pointerEvents: 'none',
+              marginTop: -2,
+            }} />
+          );
+        })()}
 
       </div>
 
