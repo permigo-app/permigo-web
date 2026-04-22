@@ -198,6 +198,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (supabase) await supabase.auth.signOut();
     setUser(null);
     setSupabaseUser(null);
+    // Clear all progress and premium data from localStorage on logout
+    const PROGRESS_KEYS = [
+      'isPremium', 'permigo_vip',
+      'xpData', 'streakData',
+      '@progress_stars', '@progress_exams', '@progress_themes',
+      'quizHistory', 'survie_best_score',
+      'streakAnimationShownDate', 'userCar', 'userProfile',
+    ];
+    PROGRESS_KEYS.forEach(k => localStorage.removeItem(k));
+    Object.keys(localStorage)
+      .filter(k =>
+        k.startsWith('lessonPartiesDone_') ||
+        k.startsWith('partie_completed_') ||
+        k.startsWith('lesson_completed_') ||
+        k.startsWith('badge_seen_') ||
+        k.startsWith('lesson_quiz_done_')
+      )
+      .forEach(k => localStorage.removeItem(k));
   };
 
   const resetPassword = async (email: string) => {

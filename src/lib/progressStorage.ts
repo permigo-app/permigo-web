@@ -111,6 +111,8 @@ export function getStreakData(): StreakData {
 
 export function checkAndUpdateStreak(): StreakData {
   const data = getStreakData();
+  // No prior activity recorded → guest or fresh install; don't auto-start a streak
+  if (!data.lastActiveDate) return data;
   const today = new Date().toISOString().slice(0, 10);
   const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
   let { currentStreak, bestStreak } = data;

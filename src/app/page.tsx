@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { THEME_ORDER, getThemeDataLocalized, getLessonDataLocalized } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
+import { useAuth } from '@/contexts/AuthContext';
 import { THEME_COLORS, THEME_EMOJIS, CITY_NAMES_UPPER } from '@/lib/constants';
 import { GASTON_GREETINGS, getRandomMsg } from '@/locales/messages';
 import { isPremium, isThemeFree } from '@/lib/premium';
@@ -225,6 +226,7 @@ function getCompactStreakLabel(streakCount: number, lang: 'fr' | 'nl'): string {
 export default function HomePage() {
   const router = useRouter();
   const { lang, t } = useLang();
+  const { user } = useAuth();
   const [stars, setStarsState] = useState<Record<string, number>>({});
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [xp, setXp] = useState({ totalXP: 0, level: 1 });
@@ -301,23 +303,9 @@ export default function HomePage() {
 
   useEffect(() => {
     setMounted(true);
-    setIsVip(localStorage.getItem('permigo_vip') === 'true');
     setStarsState(getAllStars());
     setExams(getAllExams());
     setXp(getXPData());
-    const prevStreak = getStreakData();
-    const updatedStreak = checkAndUpdateStreak();
-    setStreak(updatedStreak);
-    // Afficher l'animation streak uniquement à la 1re connexion du jour
-    const today = new Date().toISOString().slice(0, 10);
-    const lastShown = localStorage.getItem('streakAnimationShownDate');
-    if (lastShown !== today && updatedStreak.currentStreak >= 1) {
-      const isReset = prevStreak.currentStreak > 1 && updatedStreak.currentStreak === 1;
-      setStreakIsReset(isReset);
-      localStorage.setItem('streakAnimationShownDate', today);
-      // Léger délai pour laisser la page se rendre d'abord
-      setTimeout(() => setShowStreakCelebration(true), 600);
-    }
     try {
       // Try new userCar key first (PNG cars from onboarding v2)
       const rawCar = localStorage.getItem('userCar');
@@ -340,6 +328,30 @@ export default function HomePage() {
       }
     } catch {}
   }, []);
+
+  // Streak + isVip : resolved once auth state is known (guest → always 0/false)
+  useEffect(() => {
+    if (!mounted) return;
+    if (user) {
+      // Logged-in user: update streak and show animation
+      setIsVip(localStorage.getItem('permigo_vip') === 'true');
+      const prevStreak = getStreakData();
+      const updatedStreak = checkAndUpdateStreak();
+      setStreak(updatedStreak);
+      const today = new Date().toISOString().slice(0, 10);
+      const lastShown = localStorage.getItem('streakAnimationShownDate');
+      if (lastShown !== today && updatedStreak.currentStreak >= 1) {
+        const isReset = prevStreak.currentStreak > 1 && updatedStreak.currentStreak === 1;
+        setStreakIsReset(isReset);
+        localStorage.setItem('streakAnimationShownDate', today);
+        setTimeout(() => setShowStreakCelebration(true), 600);
+      }
+    } else {
+      // Guest: no VIP, no streak
+      setIsVip(false);
+      setStreak({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
+    }
+  }, [mounted, user]);
 
   useEffect(() => {
     setSelectedPartieIdx(null);
