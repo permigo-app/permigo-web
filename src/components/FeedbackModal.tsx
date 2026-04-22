@@ -208,7 +208,7 @@ interface FormViewProps {
   canSubmit: boolean;
   loading: boolean;
   error: string;
-  textareaRef: React.RefObject<HTMLTextAreaElement>;
+  textareaRef: React.RefObject<HTMLTextAreaElement | null>;
   onSubmit: () => void;
   onClose: () => void;
   categories: typeof CATEGORIES_DATA['fr'];
