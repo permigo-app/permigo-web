@@ -23,6 +23,7 @@ export interface SupabaseProfile {
   quiz_history: { totalCorrect: number; totalAnswers: number };
   streak_data: { currentStreak: number; lastActiveDate: string; bestStreak: number };
   xp_data: { totalXP: number; level: number };
+  is_premium: boolean;
   created_at: string | null;
   updated_at: string | null;
 }
@@ -75,6 +76,7 @@ function mergeProfile(
     quiz_history: row.quiz_history ?? meta.quiz_history ?? { totalCorrect: 0, totalAnswers: 0 },
     streak_data: row.streak_data ?? meta.streak_data ?? { currentStreak: 0, lastActiveDate: '', bestStreak: 0 },
     xp_data: row.xp_data ?? meta.xp_data ?? { totalXP: 0, level: 1 },
+    is_premium: row.is_premium === true,
     created_at: row.created_at ?? new Date().toISOString(),
     updated_at: row.updated_at ?? new Date().toISOString(),
   };

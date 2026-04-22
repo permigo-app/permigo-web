@@ -86,6 +86,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // ── Sync Supabase → localStorage ──────────────────────────
       if (typeof window === 'undefined') return;
 
+      // Premium : Supabase fait foi — efface tout bypass local
+      if (profile.is_premium) {
+        localStorage.setItem('isPremium', 'true');
+        localStorage.setItem('permigo_vip', 'true');
+      } else {
+        localStorage.removeItem('isPremium');
+        localStorage.removeItem('permigo_vip');
+      }
+
       // Car + profile
       if (profile.car_type && CAR_MAP[profile.car_type]) {
         const car = CAR_MAP[profile.car_type];
