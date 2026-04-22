@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </AppShell>
             <footer className="bg-transparent lg:bg-[#0a0e2a] py-3 px-6 text-center border-t border-white/[0.06]">
               <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
-                <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)' }}>© 2025 MyPermiGo</span>
+                <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)' }}>© 2025-2026 MyPermiGo</span>
 
                 <a href="https://www.iubenda.com/privacy-policy/43486445"
                    className="iubenda-white iubenda-noiframe iubenda-embed"

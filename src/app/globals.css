@@ -22,7 +22,11 @@
   --border-light: #3A3A5C;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  /* Supprime le highlight gris/bleu natif iOS & Android au tap */
+  -webkit-tap-highlight-color: transparent;
+}
 
 html {
   overflow-x: hidden;
@@ -34,6 +38,23 @@ body {
   font-family: 'Nunito', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+/* ── Touch optimizations globales ─────────────────────────────
+   touch-action: manipulation → supprime le délai 300ms
+   (évite que le browser attende un double-tap avant d'agir)
+   user-select: none → évite la sélection de texte au long-press
+   ─────────────────────────────────────────────────────────── */
+button,
+a,
+[role="button"],
+label[for],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -96,6 +117,7 @@ body {
 }
 .car-bounce { animation: carBounce 2s ease-in-out infinite; }
 
+
 /* Float up for XP */
 @keyframes floatUp {
   0% { opacity: 1; transform: translateY(0); }
@@ -113,16 +135,30 @@ body {
 }
 .shake { animation: shake 0.4s ease-in-out; }
 
-/* Scale press effect */
-.press-scale { transition: transform 0.15s ease; }
-.press-scale:active { transform: scale(0.96); }
+/* Scale press effect — GPU-promoted, 120ms for instant feel */
+.press-scale {
+  transition: transform 0.12s ease, opacity 0.1s ease;
+  will-change: transform;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+.press-scale:active {
+  transform: scale(0.96);
+  opacity: 0.82;
+}
+/* Keyboard/focus accessibility preserved */
+.press-scale:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
 
 /* Smooth card entrance */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.slide-up { animation: slideUp 0.4s ease-out forwards; }
+.slide-up { animation: slideUp 0.4s ease-out both; }
 
 /* Slow bounce for onboarding logo */
 @keyframes bounceSlow {
@@ -138,16 +174,8 @@ body {
 }
 .animate-drive-in { animation: driveIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
 
-/* ── Node pulse — heartbeat glow for active node ── */
-@keyframes nodePulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 8px 0 rgba(78,205,196,0.4), 0 0 0 0 rgba(78,205,196,0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px 8px rgba(78,205,196,0.6), 0 0 0 14px rgba(78,205,196,0);
-  }
-}
-.node-pulse { animation: nodePulseGlow 1.8s ease-in-out infinite; }
+/* ── Ring segment — transition stroke color on partie completion ── */
+.ring-segment { transition: stroke 0.5s ease-out; }
 
 /* ── Premium sidebar button pulse ── */
 @keyframes premiumPulse {
@@ -157,41 +185,32 @@ body {
 .premium-pulse { animation: premiumPulse 2.2s ease-in-out infinite; }
 
 /* ── Hover scale for unlocked nodes ── */
-.node-hover { transition: transform 200ms ease, filter 200ms ease; }
+.node-hover {
+  transition: transform 150ms ease, filter 150ms ease;
+  will-change: transform;
+  touch-action: manipulation;
+}
 .node-hover:hover { transform: scale(1.1); filter: brightness(1.15); }
+.node-hover:active { transform: scale(0.97); opacity: 0.85; }
 
-/* ── COMMENCER floating button bounce ── */
+/* ── COMMENCER floating button — subtle breathing (3s, Apple style) ── */
 @keyframes floatBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-4px); }
+  0%, 100% { transform: translateX(-50%) translateY(0) scale(1); }
+  50% { transform: translateX(-50%) translateY(-4px) scale(1); }
 }
-.commencer-float { animation: floatBounce 2s ease-in-out infinite; }
-
-/* ── Shimmer sweep on COMMENCER button ── */
-@keyframes shimmerSweep {
-  0% { left: -100%; }
-  50%, 100% { left: 200%; }
-}
-.commencer-shimmer {
-  position: relative;
-  overflow: hidden;
-}
-.commencer-shimmer::after {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%;
-  width: 60%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  animation: shimmerSweep 2.5s ease-in-out infinite;
-  pointer-events: none;
+.commencer-float { animation: floatBounce 3s ease-in-out infinite; }
+.commencer-float:active {
+  animation-play-state: paused;
+  transform: translateX(-50%) scale(0.96) !important;
+  opacity: 0.82;
 }
 
-/* ── Star twinkle on exam nodes ── */
+/* ── Star twinkle — finite, opacity only (no scale blur) ── */
 @keyframes starTwinkle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.85); }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
-.star-twinkle { animation: starTwinkle 2s ease-in-out infinite; display: inline-block; }
+.star-twinkle { animation: starTwinkle 0.8s ease-in-out 3; display: inline-block; }
 
 /* ── Barrier blinking red lights ── */
 @keyframes barrierBlink {
@@ -204,20 +223,18 @@ body {
 
 /* ── Monument scroll reveal ── */
 @keyframes monumentReveal {
-  from { opacity: 0; transform: translateY(40px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .monument-reveal {
   opacity: 0;
-  animation: monumentReveal 0.8s ease-out forwards;
+  animation: monumentReveal 0.55s ease-out forwards;
   animation-play-state: paused;
 }
 .monument-reveal.visible {
   animation-play-state: running;
 }
 
-/* ── Gaston animations — désactivées, Gaston est statique ── */
-.gaston-float, .gaston-jump, .gaston-shake, .gaston-think { animation: none; }
 
 /* ── Sidebar tooltip ── */
 .sidebar-icon-btn:hover { background: rgba(255,255,255,0.06) !important; }
@@ -299,13 +316,15 @@ body {
 /* Glow button */
 .btn-glow-green {
   box-shadow: 0 4px 20px rgba(46,204,113,0.4);
-  transition: box-shadow 0.2s ease, transform 0.15s ease, filter 0.15s ease;
+  transition: box-shadow 0.15s ease, transform 0.12s ease, filter 0.12s ease, opacity 0.1s ease;
+  will-change: transform;
 }
 .btn-glow-green:hover { box-shadow: 0 6px 28px rgba(46,204,113,0.55); filter: brightness(1.08); transform: translateY(-1px); }
 
 .btn-glow-teal {
   box-shadow: 0 4px 20px rgba(78,205,196,0.4);
-  transition: box-shadow 0.2s ease, transform 0.15s ease, filter 0.15s ease;
+  transition: box-shadow 0.15s ease, transform 0.12s ease, filter 0.12s ease, opacity 0.1s ease;
+  will-change: transform;
 }
 .btn-glow-teal:hover { box-shadow: 0 6px 28px rgba(78,205,196,0.55); filter: brightness(1.08); transform: translateY(-1px); }
 
@@ -340,11 +359,17 @@ body {
 
 /* Smooth hover lift for cards */
 .card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.1s ease;
+  will-change: transform;
+  touch-action: manipulation;
 }
 .card-hover:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.card-hover:active {
+  transform: scale(0.98);
+  opacity: 0.88;
 }
 
 /* XP float particle */
@@ -375,13 +400,7 @@ body {
 }
 .progress-animate { animation: progressFill 0.8s ease-out forwards; }
 
-/* Pulse correct choice */
-@keyframes choiceCorrect {
-  0% { transform: scale(1); }
-  30% { transform: scale(1.02); }
-  100% { transform: scale(1); }
-}
-.choice-correct { animation: choiceCorrect 0.4s ease-out; }
+/* choiceCorrect removed — replaced by correct-pulse + wrong-flash in QuizLayout */
 
 /* Scroll reveal */
 .reveal {

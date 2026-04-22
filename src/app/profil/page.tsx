@@ -83,8 +83,15 @@ export default function ProfilePage() {
   if (!mounted || authLoading) return <div className="min-h-screen" />;
 
   const completedLessons = Object.values(stars).filter(s => s > 0).length;
-  const xpInLevel = xp.totalXP % 100;
   const passedExams = Object.values(exams).filter(Boolean).length;
+  // XP dans le niveau actuel (formule : niveau(N) = (N-1)² × 30)
+  const xpForCurrentLevel = (xp.level - 1) ** 2 * 30;
+  const xpForNextLevel    = xp.level ** 2 * 30;
+  const xpInLevel         = xp.totalXP - xpForCurrentLevel;
+  const xpNeededInLevel   = xpForNextLevel - xpForCurrentLevel;
+  const xpBarPct          = xpNeededInLevel > 0
+    ? Math.min(100, Math.round((xpInLevel / xpNeededInLevel) * 100))
+    : 100;
   const badgeCategories = [...new Set(BADGES.map(b => b.category))];
 
   const handleSignOut = async () => {
@@ -123,12 +130,12 @@ export default function ProfilePage() {
             {/* 2. Barre XP */}
             <div>
               <div className="flex justify-between items-center mb-1.5">
-                <span className="text-[11px] font-bold" style={{ color: '#8B9DC3' }}>XP</span>
-                <span className="text-[11px] font-bold" style={{ color: '#4ecdc4' }}>{xpInLevel}/100 → {t('niveau')} {xp.level + 1}</span>
+                <span className="text-[11px] font-bold" style={{ color: '#8B9DC3' }}>XP vers {t('niveau')} {xp.level + 1}</span>
+                <span className="text-[11px] font-bold" style={{ color: '#4ecdc4' }}>{xpInLevel} / {xpNeededInLevel}</span>
               </div>
               <div className="h-3 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
-                <div className="h-full rounded-full transition-all duration-700"
-                  style={{ width: `${Math.max(xpInLevel, 2)}%`, background: 'linear-gradient(90deg, #4ecdc4, #2ecc71)' }} />
+                <div className="h-full rounded-full progress-animate"
+                  style={{ width: `${Math.max(xpBarPct, 2)}%`, background: 'linear-gradient(90deg, #4ecdc4, #2ecc71)' }} />
               </div>
             </div>
           </div>
@@ -321,7 +328,7 @@ export default function ProfilePage() {
             </button>
           )}
 
-          <p className="text-center text-xs" style={{ color: 'rgba(255,255,255,0.15)' }}>© 2025 MyPermiGo</p>
+          <p className="text-center text-xs" style={{ color: 'rgba(255,255,255,0.15)' }}>© 2025-2026 MyPermiGo</p>
         </div>
 
         {/* ════════════════════════════════════════
@@ -364,13 +371,13 @@ export default function ProfilePage() {
                 {/* XP bar */}
                 <div className="mb-5">
                   <div className="flex justify-between items-center mb-1.5">
-                    <span className="text-[11px] font-bold" style={{ color: '#8B9DC3' }}>XP</span>
-                    <span className="text-[11px] font-bold" style={{ color: '#4ecdc4' }}>{xpInLevel}/100 → {t('niveau')} {xp.level + 1}</span>
+                    <span className="text-[11px] font-bold" style={{ color: '#8B9DC3' }}>XP vers {t('niveau')} {xp.level + 1}</span>
+                    <span className="text-[11px] font-bold" style={{ color: '#4ecdc4' }}>{xpInLevel} / {xpNeededInLevel}</span>
                   </div>
                   <div className="h-3.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
                     <div
-                      className="h-full rounded-full transition-all duration-700"
-                      style={{ width: `${Math.max(xpInLevel, 2)}%`, background: 'linear-gradient(90deg, #4ecdc4, #2ecc71)' }}
+                      className="h-full rounded-full progress-animate"
+                      style={{ width: `${Math.max(xpBarPct, 2)}%`, background: 'linear-gradient(90deg, #4ecdc4, #2ecc71)' }}
                     />
                   </div>
                 </div>

@@ -5,6 +5,8 @@ import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, markLessonCompleted, isPartieCompleted, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
+import { getUnlockedBadges } from '@/lib/badges';
+import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { GASTON_THEORY_TIPS, GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
 import { isPremium, isThemeFree } from '@/lib/premium';
@@ -76,7 +78,6 @@ export default function LessonPage() {
   const [correctCount, setCorrectCount] = useState(0);
   const [gastonMsg, setGastonMsg] = useState(() => t('reflechis'));
   const [gastonExpr, setGastonExpr] = useState<'happy' | 'encouraging' | 'unhappy' | 'impressed' | 'party' | 'thinking'>('thinking');
-  const [gastonAnim, setGastonAnim] = useState('gaston-think');
   const [shakeWrong, setShakeWrong] = useState(false);
   const [partieFailScore, setPartieFailScore] = useState<{ correct: number; total: number } | null>(null);
   const startTimeRef = useRef(Date.now());
@@ -140,15 +141,11 @@ export default function LessonPage() {
       setCorrectCount(c => c + 1);
       setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
       setGastonExpr('impressed');
-      setGastonAnim('gaston-jump');
-      setTimeout(() => setGastonAnim('gaston-float'), 800);
     } else {
       setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
       setGastonExpr('unhappy');
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
-      setGastonAnim('gaston-shake');
-      setTimeout(() => setGastonAnim('gaston-float'), 600);
     }
   };
 
@@ -157,7 +154,6 @@ export default function LessonPage() {
     setValidated(false);
     setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
-    setGastonAnim('gaston-think');
     if (currentQ + 1 < questions.length) {
       setCurrentQ(q => q + 1);
     } else {
@@ -182,6 +178,7 @@ export default function LessonPage() {
     else if (pct >= 0.5) earnedStars = 1;
 
     setStars(lessonId, earnedStars);
+    const prevBadges = getUnlockedBadges();
     updateQuizHistory(correctCount, total);
     checkAndUpdateStreak();
 
@@ -196,8 +193,13 @@ export default function LessonPage() {
     let xpEarned = correctCount * 10 + 50;
     if (earnedStars >= 2) xpEarned += 25;
     else if (earnedStars === 1) xpEarned += 10;
-    updateXP(xpEarned);
+    const xpResult = updateXP(xpEarned);
     addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
+
+    const newBadges = getUnlockedBadges().filter(id => !prevBadges.includes(id));
+    const leveledUp = xpResult.level > xpResult.prevLevel;
+    if (leveledUp) dispatchLevelUp(xpResult.prevLevel, xpResult.level, 1200);
+    if (newBadges.length > 0) dispatchBadges(newBadges, leveledUp ? 4500 : 1200);
 
     router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&xp=${xpEarned}&lesson=${lessonId}&theme=${themeCode}`);
   };
@@ -626,7 +628,7 @@ export default function LessonPage() {
 
             {/* Gaston */}
             <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-              <Gaston message={gastonMsg} expression={gastonExpr} title={t('prof_gaston')} animClass={gastonAnim} />
+              <Gaston message={gastonMsg} expression={gastonExpr} title={t('prof_gaston')} />
             </div>
 
             {/* Explanation in sidebar after validation */}

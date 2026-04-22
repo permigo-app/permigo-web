@@ -92,7 +92,7 @@ export default function PremiumGate({ children }: PremiumGateProps) {
           width={110}
           height={110}
           alt="Prof. Gaston"
-          className="gaston-think mb-4"
+          className="mb-4"
           style={{ objectFit: 'contain' }}
         />
 

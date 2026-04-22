@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import PremiumBanner from '@/components/PremiumBanner';
+import RewardOverlay from '@/components/RewardOverlay';
 import { supabase, hasSupabase } from '@/lib/supabase';
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
@@ -62,6 +63,8 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       <main className="pt-11 lg:pt-0 lg:ml-[250px] pb-20 lg:pb-6">
         {children}
       </main>
+      {/* Animations de récompense — persistantes entre navigations */}
+      <RewardOverlay />
     </>
   );
 }

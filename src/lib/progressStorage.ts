@@ -132,21 +132,28 @@ export interface XPData {
   level: number;
 }
 
+// ── Niveau depuis XP total : niveau(N) = (N-1)² × 30 ──────────
+// Inverse : Math.floor(Math.sqrt(totalXP / 30)) + 1
+// Seuils clés : niv.5 = 480 XP, niv.10 = 2 430 XP, niv.20 = 10 830 XP
+function calcLevel(totalXP: number): number {
+  return Math.floor(Math.sqrt(totalXP / 30)) + 1;
+}
+
 export function getXPData(): XPData {
   const raw = getItem(KEY_XP);
   if (!raw) return { totalXP: 0, level: 1 };
   const data = JSON.parse(raw) as XPData;
-  const level = Math.floor(data.totalXP / 100) + 1;
-  return { totalXP: data.totalXP, level };
+  return { totalXP: data.totalXP, level: calcLevel(data.totalXP) };
 }
 
-export function updateXP(xpToAdd: number): XPData {
+export function updateXP(xpToAdd: number): XPData & { prevLevel: number } {
   const current = getXPData();
+  const prevLevel = current.level;
   const totalXP = current.totalXP + xpToAdd;
-  const level = Math.floor(totalXP / 100) + 1;
+  const level = calcLevel(totalXP);
   const updated: XPData = { totalXP, level };
   setItem(KEY_XP, JSON.stringify(updated));
-  return updated;
+  return { ...updated, prevLevel };
 }
 
 // ── Lesson Progress ──

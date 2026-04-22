@@ -11,6 +11,8 @@ import { isPremium, isThemeFree } from '@/lib/premium';
 import { getUnlockedThemes, getAllStars, getAllExams, getXPData, checkAndUpdateStreak, getStreakData, getCompletedParties, getLessonProgress } from '@/lib/progressStorage';
 import Image from 'next/image';
 import CarSVG from '@/components/CarSVG';
+import StreakCelebration from '@/components/StreakCelebration';
+import FeedbackButton from '@/components/FeedbackButton';
 
 // ── Road constants ──
 const ROAD_W = 65;
@@ -108,6 +110,7 @@ interface PathNode {
   isOrderLocked: boolean;  // lesson order lock (previous lesson not done)
   isCurrent: boolean;
   stars: number;
+  totalParties?: number;   // lesson only — number of theory parties
 }
 
 // ── Mobile monument : drag (1 doigt) + pinch (2 doigts) ──
@@ -154,6 +157,71 @@ function MobileMonument({ id, src, baseLeft, baseTop, baseW, baseH, adj, onUpdat
   );
 }
 
+function getWelcomeMessage(username: string, streakCount: number, lang: 'fr' | 'nl'): { salutation: string; body: string } {
+  const hour = new Date().getHours();
+  let salutation: string;
+  if (lang === 'nl') {
+    if (hour >= 5 && hour < 12) salutation = 'Goedemorgen';
+    else if (hour >= 12 && hour < 18) salutation = 'Goedemiddag';
+    else if (hour >= 18 && hour < 22) salutation = 'Goedenavond';
+    else salutation = 'Hey';
+    if (username) salutation += ` ${username}`;
+    salutation += '!';
+  } else {
+    if (hour >= 5 && hour < 12) salutation = 'Bonjour';
+    else if (hour >= 12 && hour < 18) salutation = 'Bon après-midi';
+    else if (hour >= 18 && hour < 22) salutation = 'Bonsoir';
+    else salutation = 'Salut';
+    if (username) salutation += ` ${username}`;
+    salutation += ' !';
+  }
+
+  let body: string;
+  if (lang === 'nl') {
+    if (streakCount === 0) body = 'Klaar om de weg te veroveren? 🚗';
+    else if (streakCount === 1) body = 'Het avontuur begint! 🔥';
+    else if (streakCount < 7) body = `Dag ${streakCount}, blijf doorgaan! 💪`;
+    else if (streakCount === 7) body = '1 week compleet, proficiat! 🎉';
+    else if (streakCount < 30) body = `Dag ${streakCount}, indrukwekkend! 🔥`;
+    else if (streakCount === 30) body = '1 maand, je bent geweldig! 👑';
+    else if (streakCount < 100) body = `Dag ${streakCount} regelmaat! ⭐`;
+    else body = `Dag ${streakCount}, je bent een legende! 🏆`;
+  } else {
+    if (streakCount === 0) body = 'Prêt à conquérir la route ? 🚗';
+    else if (streakCount === 1) body = "C'est parti pour l'aventure 🔥";
+    else if (streakCount < 7) body = `Jour ${streakCount}, continue 💪`;
+    else if (streakCount === 7) body = '1 semaine complète, bravo ! 🎉';
+    else if (streakCount < 30) body = `Jour ${streakCount}, impressionnant 🔥`;
+    else if (streakCount === 30) body = '1 mois, tu es incroyable 👑';
+    else if (streakCount < 100) body = `Jour ${streakCount} de régularité ⭐`;
+    else body = `Jour ${streakCount}, tu es une légende 🏆`;
+  }
+
+  return { salutation, body };
+}
+
+function getCompactStreakLabel(streakCount: number, lang: 'fr' | 'nl'): string {
+  const d = lang === 'nl' ? 'Dag' : 'Jour';
+  if (lang === 'nl') {
+    if (streakCount === 0)  return 'Klaar om te starten 🚗';
+    if (streakCount === 1)  return 'Dag 1 🔥';
+    if (streakCount < 7)   return `Dag ${streakCount} 💪`;
+    if (streakCount === 7) return '1 week! 🎉';
+    if (streakCount < 30)  return `Dag ${streakCount} 🔥`;
+    if (streakCount === 30) return '1 maand! 👑';
+    if (streakCount < 100) return `Dag ${streakCount} ⭐`;
+    return `Dag ${streakCount} 🏆`;
+  }
+  if (streakCount === 0)  return 'Prêt à commencer 🚗';
+  if (streakCount === 1)  return `${d} 1 🔥`;
+  if (streakCount < 7)   return `${d} ${streakCount} 💪`;
+  if (streakCount === 7) return '1 semaine ! 🎉';
+  if (streakCount < 30)  return `${d} ${streakCount} 🔥`;
+  if (streakCount === 30) return '1 mois ! 👑';
+  if (streakCount < 100) return `${d} ${streakCount} ⭐`;
+  return `${d} ${streakCount} 🏆`;
+}
+
 export default function HomePage() {
   const router = useRouter();
   const { lang, t } = useLang();
@@ -161,6 +229,9 @@ export default function HomePage() {
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [xp, setXp] = useState({ totalXP: 0, level: 1 });
   const [streak, setStreak] = useState({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
+  const [showStreakCelebration, setShowStreakCelebration] = useState(false);
+  const [streakIsReset, setStreakIsReset] = useState(false);
+  const [username, setUsername] = useState('');
   const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
   const [mounted, setMounted] = useState(false);
   const [isVip, setIsVip] = useState(false);
@@ -234,7 +305,19 @@ export default function HomePage() {
     setStarsState(getAllStars());
     setExams(getAllExams());
     setXp(getXPData());
-    setStreak(checkAndUpdateStreak());
+    const prevStreak = getStreakData();
+    const updatedStreak = checkAndUpdateStreak();
+    setStreak(updatedStreak);
+    // Afficher l'animation streak uniquement à la 1re connexion du jour
+    const today = new Date().toISOString().slice(0, 10);
+    const lastShown = localStorage.getItem('streakAnimationShownDate');
+    if (lastShown !== today && updatedStreak.currentStreak >= 1) {
+      const isReset = prevStreak.currentStreak > 1 && updatedStreak.currentStreak === 1;
+      setStreakIsReset(isReset);
+      localStorage.setItem('streakAnimationShownDate', today);
+      // Léger délai pour laisser la page se rendre d'abord
+      setTimeout(() => setShowStreakCelebration(true), 600);
+    }
     try {
       // Try new userCar key first (PNG cars from onboarding v2)
       const rawCar = localStorage.getItem('userCar');
@@ -247,6 +330,13 @@ export default function HomePage() {
           const p = JSON.parse(raw);
           if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#1E88E5' });
         }
+      }
+    } catch {}
+    try {
+      const raw = localStorage.getItem('userProfile');
+      if (raw) {
+        const p = JSON.parse(raw);
+        if (p.name && p.name !== 'Pilote' && p.name !== 'pilote') setUsername(p.name);
       }
     } catch {}
   }, []);
@@ -268,7 +358,7 @@ export default function HomePage() {
       entries.forEach(e => {
         if (e.isIntersecting) e.target.classList.add('visible');
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.2 });
     const els = document.querySelectorAll('.monument-reveal');
     els.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -358,6 +448,7 @@ export default function HomePage() {
           isOrderLocked: orderLocked,
           isCurrent,
           stars: lessonStars,
+          totalParties: lesson.theory.length,
         });
       });
 
@@ -490,6 +581,16 @@ export default function HomePage() {
   const totalLessons = nodes.filter(n => n.type === 'lesson').length;
 
   return (
+    <>
+    {/* ── Streak celebration overlay ── */}
+    {showStreakCelebration && (
+      <StreakCelebration
+        streak={streak.currentStreak}
+        isReset={streakIsReset}
+        onClose={() => setShowStreakCelebration(false)}
+      />
+    )}
+
     <div className="flex gap-0 w-full overflow-x-hidden lg:overflow-x-visible" style={isMobileView ? { background: 'transparent', minHeight: 'unset', height: 'auto' } : {}}>
       {/* ═══════════════════════════════════════ */}
       {/* MAIN ROAD AREA */}
@@ -498,23 +599,33 @@ export default function HomePage() {
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
 
-        {/* ── Mobile Gaston — desktop only ── */}
-        <div className="hidden lg:flex mb-5 px-3 items-end gap-3" style={{ position: 'relative', zIndex: 50 }}>
-          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ flexShrink: 0, objectFit: 'contain' }} />
-          <div style={{
-            background: '#FFF8E7',
-            border: '1.5px solid #1B3A6B',
-            borderRadius: '16px 16px 16px 0',
-            padding: '10px 14px',
-            fontSize: 13,
-            fontWeight: 600,
-            color: '#1A1A2E',
-            lineHeight: 1.4,
-            boxShadow: '0 3px 6px rgba(0,0,0,0.15)',
-          }}>
-            {greeting}
-          </div>
-        </div>
+        {/* Mobile welcome est positionné en absolu dans le SVG Road container ci-dessous */}
+
+        {/* ── Desktop uniquement : Welcome centré ── */}
+        {mounted && (() => {
+          const { salutation, body } = getWelcomeMessage(username, streak.currentStreak, lang);
+          return (
+            <div
+              className="fade-in-up hidden xl:block text-center px-4"
+              style={{ animationDuration: '0.5s', position: 'relative', zIndex: 50, marginBottom: 12 }}
+            >
+              <p className="font-black" style={{ fontSize: 'clamp(18px, 4.5vw, 26px)', color: '#FFFFFF', lineHeight: 1.3 }}>{salutation}</p>
+              <p className="font-semibold mx-auto" style={{ fontSize: 'clamp(13px, 3.5vw, 17px)', color: '#00B894', marginTop: 3, maxWidth: '90%', whiteSpace: 'normal', wordBreak: 'break-word', lineHeight: 1.4 }}>{body}</p>
+            </div>
+          );
+        })()}
+
+        {/* ── Welcome mobile — au-dessus du Thème A, aligné droite ── */}
+        {mounted && isMobileView && (() => {
+          const { salutation } = getWelcomeMessage(username, streak.currentStreak, lang);
+          const streakLabel = getCompactStreakLabel(streak.currentStreak, lang);
+          return (
+            <div className="fade-in-up" style={{ textAlign: 'right', paddingRight: 14, paddingTop: 18, paddingBottom: 6, animationDuration: '0.5s' }}>
+              <p style={{ fontSize: 14, fontWeight: 900, color: '#FFFFFF', lineHeight: 1.2 }}>{salutation}</p>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#00B894', marginTop: 2, lineHeight: 1.2 }}>{streakLabel}</p>
+            </div>
+          );
+        })()}
 
         {/* SVG Road */}
         <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', height: isMobileView ? totalH + 80 : totalH }}>
@@ -537,7 +648,7 @@ export default function HomePage() {
                 gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}20 8%, ${tc}20 100%)`;
               } else if (sIdx === 0) {
                 const fadeStartPct = Math.round(((rawEnd - rawStart - FADE / 2) / height) * 100);
-                gradient = `linear-gradient(180deg, ${tc}20 0%, ${tc}20 ${fadeStartPct}%, ${nextTc}00 100%)`;
+                gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}18 15%, ${tc}20 ${fadeStartPct}%, ${nextTc}00 100%)`;
               } else {
                 const midPct = Math.round((FADE / 2 / height) * 100);
                 const fadeStartPct = Math.round(((FADE / 2 + rawEnd - rawStart - FADE / 2) / height) * 100);
@@ -926,7 +1037,7 @@ export default function HomePage() {
                     </div>
 
                     <div className="absolute" style={{ left: eR + 10, top: -16 }}>
-                      <span className="text-base star-twinkle">⭐</span>
+                      <span className="text-base">⭐</span>
                     </div>
                   </div>
 
@@ -996,24 +1107,37 @@ export default function HomePage() {
             const ringRadius = nodeRadius + mRING_GAP;
             const ringSize = (ringRadius + mRING_STROKE / 2) * 2;
             const ringCirc = 2 * Math.PI * ringRadius;
-            const ringProgress = node.isCompleted ? 1 : 0;
+            const ringCx = ringSize / 2;
+            const ringCy = ringSize / 2;
+
+            // Segmented ring — read fresh from localStorage (not in useMemo) so it updates on return
+            const completedParties = getCompletedParties(node.id);
+            const N = Math.max(1, node.totalParties ?? 1);
+            const SEG_GAP_DEG = 2;
+            const segDeg = N > 1 ? (360 / N) - SEG_GAP_DEG : 360;
+            const segLen = (segDeg / 360) * ringCirc;
+
+            // True completion = every partie done (not just stars > 0)
+            const allPartiesDone = completedParties.length >= N;
+            // In progress = some parties done, but not all, and not locked
+            const isInProgress = completedParties.length > 0 && !allPartiesDone && !node.isLocked;
 
             // Colors
-            const bg = node.isCompleted ? tc : isActive ? tc : node.isLocked ? tc : '#141937';
+            const bg = (allPartiesDone || isInProgress || isActive || node.isLocked) ? tc : '#141937';
             const borderColor = tc;
             const ringColor = tc;
 
-            // Node icon
+            // Node icon — 3 states: not started / in progress / fully done
             const iconSize = isMobileView ? nodeRadius * 0.9 : nodeRadius;
             let nodeContent: React.ReactNode;
-            if (node.isCompleted) {
+            if (allPartiesDone) {
               nodeContent = <span style={{ color: '#fff', fontSize: iconSize, fontWeight: 900, lineHeight: 1 }}>✓</span>;
             } else if (node.isLocked) {
               nodeContent = <span style={{ fontSize: iconSize * 0.75, lineHeight: 1 }}>🔒</span>;
             } else if (node.isOrderLocked) {
               nodeContent = <span style={{ fontSize: iconSize * 0.75, fontWeight: 900, color: 'rgba(255,255,255,0.45)', lineHeight: 1 }}>{node.localIndex}</span>;
-            } else if (isActive) {
-              nodeContent = <span style={{ fontSize: iconSize * 0.9, lineHeight: 1 }}>▶</span>;
+            } else if (isInProgress || isActive) {
+              nodeContent = <span style={{ color: '#fff', fontSize: iconSize * 0.9, lineHeight: 1 }}>▶</span>;
             } else {
               nodeContent = <span style={{ fontSize: iconSize * 0.75, fontWeight: 900, color: tc, lineHeight: 1 }}>{node.localIndex}</span>;
             }
@@ -1027,23 +1151,40 @@ export default function HomePage() {
                 zIndex: isActive ? 16 : 14,
                 opacity: node.isLocked ? (isMobileView ? 0.35 : 0.25) : node.isOrderLocked ? 0.5 : 1,
               }}>
-                {/* Progress ring */}
+                {/* Segmented progress ring */}
                 <svg width={ringSize} height={ringSize} className="absolute inset-0">
-                  <circle cx={ringSize / 2} cy={ringSize / 2} r={ringRadius} stroke="#2D2D3D" strokeWidth={RING_STROKE} fill="none" />
-                  {ringProgress > 0 && (
-                    <circle cx={ringSize / 2} cy={ringSize / 2} r={ringRadius}
-                      stroke={ringColor} strokeWidth={RING_STROKE} fill="none"
-                      strokeDasharray={`${ringCirc}`}
-                      strokeDashoffset={`${ringCirc * (1 - ringProgress)}`}
-                      strokeLinecap="round"
-                      transform={`rotate(-90 ${ringSize / 2} ${ringSize / 2})`}
-                    />
+                  {N <= 1 ? (
+                    <>
+                      <circle cx={ringCx} cy={ringCy} r={ringRadius} stroke="#2D2D3D" strokeWidth={RING_STROKE} fill="none" />
+                      {allPartiesDone && (
+                        <circle cx={ringCx} cy={ringCy} r={ringRadius}
+                          stroke={ringColor} strokeWidth={RING_STROKE} fill="none"
+                          transform={`rotate(-90, ${ringCx}, ${ringCy})`}
+                        />
+                      )}
+                    </>
+                  ) : (
+                    Array.from({ length: N }, (_, i) => {
+                      const filled = allPartiesDone || completedParties.includes(i);
+                      return (
+                        <circle
+                          key={i}
+                          cx={ringCx} cy={ringCy} r={ringRadius}
+                          className="ring-segment"
+                          strokeWidth={RING_STROKE}
+                          fill="none"
+                          strokeDasharray={`${segLen} ${ringCirc - segLen}`}
+                          transform={`rotate(${i * (360 / N) - 90}, ${ringCx}, ${ringCy})`}
+                          style={{ stroke: filled ? ringColor : '#2D2D3D' }}
+                        />
+                      );
+                    })
                   )}
                 </svg>
 
                 {/* Node circle */}
                 {node.isLocked ? (
-                  <button onClick={() => setShowPremiumModal(true)} title="🔒 Débloque avec Premium" className="absolute inset-0 flex items-center justify-center cursor-pointer">
+                  <button onClick={() => setShowPremiumModal(true)} title="🔒 Débloque avec Premium" className="absolute inset-0 flex items-center justify-center cursor-pointer relative">
                     <div className="rounded-full flex items-center justify-center" style={{
                       width: nodeRadius * 2,
                       height: nodeRadius * 2,
@@ -1052,6 +1193,8 @@ export default function HomePage() {
                     }}>
                       {nodeContent}
                     </div>
+                    <span className="barrier-light-left absolute" style={{ width: 5, height: 5, borderRadius: '50%', background: '#e74c3c', top: '12%', left: '22%', pointerEvents: 'none' }} />
+                    <span className="barrier-light-right absolute" style={{ width: 5, height: 5, borderRadius: '50%', background: '#e74c3c', top: '12%', right: '22%', pointerEvents: 'none' }} />
                   </button>
                 ) : node.isOrderLocked ? (
                   <button onClick={() => setShowOrderLockedModal(true)} title="🔒 Termine la leçon précédente d'abord" className="absolute inset-0 flex items-center justify-center cursor-pointer">
@@ -1073,9 +1216,7 @@ export default function HomePage() {
                       background: bg,
                       border: `3px solid ${borderColor}`,
                       boxShadow: isActive ? '0 0 20px rgba(78,205,196,0.6)' : node.isCompleted ? '0 0 10px rgba(39,174,96,0.3)' : 'none',
-                      // @ts-ignore -- CSS custom property for pulse color
-                      '--pulse-color': 'rgba(78,205,196,0.5)',
-                    } as React.CSSProperties}>
+                    }}>
                       {nodeContent}
                     </div>
                   </button>
@@ -1085,11 +1226,10 @@ export default function HomePage() {
                 {isActive && !node.isLocked && !node.isOrderLocked && (
                   <button
                     onClick={() => openLessonModal(node)}
-                    className="absolute cursor-pointer press-scale"
+                    className="absolute cursor-pointer press-scale commencer-float"
                     style={{
                       left: '50%',
                       top: ringSize + 6,
-                      transform: 'translateX(-50%)',
                       background: tc,
                       color: '#fff',
                       fontSize: isMobileView ? 13 : 11,
@@ -1177,7 +1317,16 @@ export default function HomePage() {
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={mon.src} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <picture>
+                    <source srcSet={mon.src.replace('.png', '.webp')} type="image/webp" />
+                    <img
+                      src={mon.src}
+                      alt=""
+                      loading={themeCode === 'A' && mi === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    />
+                  </picture>
                 </div>
               );
             });
@@ -1185,95 +1334,149 @@ export default function HomePage() {
 
           {/* ── Monument decorations MOBILE only — positions fixes ── */}
           {isMobileView && (<>
-            {/* A-0 atomium */}
-            <div className="absolute pointer-events-none" style={{ left: -17, top: 182, width: 180, height: 180, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/atomium.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            {/* A-0 atomium — eager : visible dès l'arrivée */}
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: -17, top: 182, width: 180, height: 180, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/atomium.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/atomium.png" alt="" loading="eager" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* A-1 manneken_pis */}
-            <div className="absolute pointer-events-none" style={{ left: 220.5, top: 619.6, width: 120, height: 156, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/manneken_pis.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 220.5, top: 619.6, width: 120, height: 156, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/manneken_pis.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/manneken_pis.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* A-2 grandplace */}
-            <div className="absolute pointer-events-none" style={{ left: -20, top: 771.6, width: 180, height: 162, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/grandplace.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: -20, top: 771.6, width: 180, height: 162, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/grandplace.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/grandplace.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* B-0 interallie */}
-            <div className="absolute pointer-events-none" style={{ left: -11, top: 1375.2, width: 120, height: 206, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/interallie.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: -11, top: 1375.2, width: 120, height: 206, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/interallie.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/interallie.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* B-1 gare_guillemins */}
-            <div className="absolute pointer-events-none" style={{ left: 139, top: 1270.4, width: 240, height: 156, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/gare_guillemins.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 139, top: 1270.4, width: 240, height: 156, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/gare_guillemins.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/gare_guillemins.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* C-0 cathedrale_anvers */}
-            <div className="absolute pointer-events-none" style={{ left: -14.25, top: 1683.9, width: 180, height: 283, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/cathedrale_anvers.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: -14.25, top: 1683.9, width: 180, height: 283, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/cathedrale_anvers.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/cathedrale_anvers.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* C-1 mas_museum */}
-            <div className="absolute pointer-events-none" style={{ left: 196.25, top: 1869.6, width: 180, height: 320, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/mas_museum.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 196.25, top: 1869.6, width: 180, height: 320, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/mas_museum.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/mas_museum.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* D-0 panneaux_vitesse */}
-            <div className="absolute pointer-events-none" style={{ left: 211.25, top: 2223.7, width: 140, height: 333, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/panneaux_vitesse.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 211.25, top: 2223.7, width: 140, height: 333, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/panneaux_vitesse.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/panneaux_vitesse.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* D-1 circuit_spa */}
-            <div className="absolute pointer-events-none" style={{ left: 9, top: 2469.3, width: 150, height: 145, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/circuit_spa.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 9, top: 2469.3, width: 150, height: 145, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/circuit_spa.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/circuit_spa.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* E-0 beffroi_gand */}
-            <div className="absolute pointer-events-none" style={{ left: 184, top: 2760.5, width: 190, height: 475, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/beffroi_gand.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 184, top: 2760.5, width: 190, height: 475, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/beffroi_gand.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/beffroi_gand.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* F-0 citadelle_namur */}
-            <div className="absolute pointer-events-none" style={{ left: 178, top: 3613.8, width: 180, height: 144, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/citadelle_namur.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 178, top: 3613.8, width: 180, height: 144, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/citadelle_namur.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/citadelle_namur.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* F-1 tortue_namur */}
-            <div className="absolute pointer-events-none" style={{ left: 4.5, top: 4047.2, width: 120, height: 120, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/tortue_namur.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 4.5, top: 4047.2, width: 120, height: 120, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/tortue_namur.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/tortue_namur.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* G-0 beffroi_bruges */}
-            <div className="absolute pointer-events-none" style={{ left: -53, top: 4448, width: 240, height: 570, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/beffroi_bruges.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: -53, top: 4448, width: 240, height: 570, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/beffroi_bruges.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/beffroi_bruges.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* H-0 collegiale_mons */}
-            <div className="absolute pointer-events-none" style={{ left: 179.25, top: 5187.4, width: 180, height: 144, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/collegiale_mons.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 179.25, top: 5187.4, width: 180, height: 144, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/collegiale_mons.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/collegiale_mons.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* H-1 singe_mons */}
-            <div className="absolute pointer-events-none" style={{ left: -34.25, top: 5333.1, width: 180, height: 225, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/singe_mons.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: -34.25, top: 5333.1, width: 180, height: 225, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/singe_mons.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/singe_mons.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* I-0 frites */}
-            <div className="absolute pointer-events-none" style={{ left: 215.5, top: 5803, width: 120, height: 240, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/frites.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 215.5, top: 5803, width: 120, height: 240, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/frites.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/frites.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* I-1 gaufre */}
-            <div className="absolute pointer-events-none" style={{ left: -10.5, top: 6014, width: 120, height: 120, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/gaufre.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: -10.5, top: 6014, width: 120, height: 120, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/gaufre.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/gaufre.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
             {/* I-2 chocolat */}
-            <div className="absolute pointer-events-none" style={{ left: 220.5, top: 6133.5, width: 120, height: 195, zIndex: 6, opacity: 0.92 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/monuments/chocolat.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: 220.5, top: 6133.5, width: 120, height: 195, zIndex: 6, opacity: 0.92 }}>
+              <picture>
+                <source srcSet="/monuments/chocolat.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/monuments/chocolat.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </picture>
             </div>
           </>)}
 
@@ -1346,13 +1549,26 @@ export default function HomePage() {
           return (
             <div style={{
               width: '100%',
-              height: 160,
+              height: 180,
               background: `linear-gradient(180deg, ${lastColor}20 0%, ${lastColor}00 100%)`,
               pointerEvents: 'none',
               marginTop: -2,
             }} />
           );
         })()}
+
+        {/* ── Gradient de fin — mobile uniquement ── */}
+        {/* Solidifie proprement la sortie de la route vers le fond du body (#0a0e2a) */}
+        {isMobileView && (
+          <div style={{
+            height: 56,
+            background: 'linear-gradient(to bottom, rgba(10,14,42,0) 0%, #0a0e2a 100%)',
+            pointerEvents: 'none',
+            position: 'relative',
+            zIndex: 50,
+            marginTop: -56,
+          }} />
+        )}
 
       </div>
 
@@ -1393,7 +1609,7 @@ export default function HomePage() {
         {/* ── Prof. Gaston dit... ── */}
         <div className="stat-card">
           <div className="flex items-center gap-2 mb-3">
-            <Image src="/images/gaston.png" width={40} height={40} alt="Prof. Gaston" className="gaston-float" style={{ objectFit: 'contain' }} />
+            <Image src="/images/gaston.png" width={40} height={40} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
             <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#8B9DC3' }}>{t('prof_gaston_dit')}</span>
           </div>
           <div style={{
@@ -1682,5 +1898,8 @@ export default function HomePage() {
       )}
 
     </div>
+
+    <FeedbackButton />
+    </>
   );
 }

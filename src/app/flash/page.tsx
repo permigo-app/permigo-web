@@ -326,7 +326,7 @@ export default function FlashPage() {
               {/* Shuffle button */}
               <button
                 onClick={shuffleQueue}
-                className="w-full py-3 rounded-xl font-bold text-sm press-scale transition-all"
+                className="w-full py-3 rounded-xl font-bold text-sm press-scale"
                 style={{
                   background: 'transparent',
                   border: '1.5px solid #4ecdc4',
@@ -393,7 +393,7 @@ export default function FlashPage() {
                   {/* CTA button */}
                   <button
                     onClick={(e) => { e.stopPropagation(); flipCard(); }}
-                    className="mt-4 px-6 py-2.5 rounded-xl font-bold text-sm press-scale transition-all"
+                    className="mt-4 px-6 py-2.5 rounded-xl font-bold text-sm press-scale"
                     style={{
                       background: 'transparent',
                       border: '1.5px solid #4ecdc4',
@@ -442,7 +442,7 @@ export default function FlashPage() {
             <div className="flex gap-4 w-full max-w-[420px] mt-5 sticky bottom-6 z-20">
               <button
                 onClick={handleReview}
-                className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale transition-all active:scale-95"
+                className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale"
                 style={{
                   background: 'rgba(231,76,60,0.15)',
                   border: '1.5px solid rgba(231,76,60,0.5)',
@@ -456,7 +456,7 @@ export default function FlashPage() {
               </button>
               <button
                 onClick={handleMastered}
-                className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale transition-all active:scale-95"
+                className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale"
                 style={{
                   background: 'rgba(46,204,113,0.15)',
                   border: '1.5px solid rgba(46,204,113,0.5)',
@@ -511,7 +511,7 @@ export default function FlashPage() {
               {/* End session button */}
               <button
                 onClick={() => router.back()}
-                className="w-full py-3 rounded-xl font-bold text-sm press-scale transition-all"
+                className="w-full py-3 rounded-xl font-bold text-sm press-scale"
                 style={{
                   background: 'transparent',
                   border: '1.5px solid #4ecdc4',

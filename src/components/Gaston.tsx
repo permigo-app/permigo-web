@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 type GastonExpression = 'happy' | 'encouraging' | 'unhappy' | 'impressed' | 'party' | 'thinking' | 'surprised' | 'proud' | 'sleepy';
@@ -11,7 +10,6 @@ interface GastonProps {
   size?: 'normal' | 'small' | 'large';
   title?: string;
   compact?: boolean;
-  animClass?: string;
 }
 
 // ── Gaston SVG — exact copy of GastonMascot.tsx from the RN app ──
@@ -230,20 +228,17 @@ function GastonSVG({ expression = 'happy', w, h }: { expression: GastonExpressio
   );
 }
 
-export default function Gaston({ message, expression = 'happy', size = 'normal', title, compact, animClass = 'gaston-float' }: GastonProps) {
-  const [visible, setVisible] = useState(false);
-  useEffect(() => { setVisible(true); }, []);
-
+export default function Gaston({ message, expression = 'happy', size = 'normal', title, compact }: GastonProps) {
   const isSmall = size === 'small' || compact;
   const isLarge = size === 'large';
   const gastonH = isSmall ? 40 : isLarge ? 100 : 55;
   const gastonW = gastonH * (160 / 120);
 
   return (
-    <div className={`flex items-start gap-1 transition-all duration-500 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+    <div className="animate-drive-in flex items-start gap-1">
       {/* Gaston avatar */}
       <div className="flex-shrink-0" style={{ width: isSmall ? 54 : isLarge ? 135 : 74, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
-        <Image src="/images/gaston.png" width={gastonW} height={gastonH} alt="Prof. Gaston" className={animClass} style={{ objectFit: 'contain' }} />
+        <Image src="/images/gaston.png" width={gastonW} height={gastonH} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
       </div>
 
       {/* Speech bubble — cream color like RN */}

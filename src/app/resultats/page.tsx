@@ -75,11 +75,13 @@ function ResultsContent() {
           {[1, 2, 3].map(i => (
             <span
               key={i}
-              className={`text-4xl ${i <= earnedStars ? 'star-pop' : ''}`}
               style={{
+                fontSize: '2.25rem',
                 opacity: i <= earnedStars ? 1 : 0.2,
-                animationDelay: `${i * 150}ms`,
                 display: 'inline-block',
+                animation: i <= earnedStars
+                  ? `starPop 0.5s cubic-bezier(0.175,0.885,0.32,1.275) ${i * 150}ms forwards, starTwinkle 0.8s ease-in-out 3 ${i * 150 + 700}ms`
+                  : 'none',
               }}
             >
               ⭐
@@ -100,14 +102,14 @@ function ResultsContent() {
       </div>
 
       {/* XP earned */}
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-6 slide-up" style={{ animationDelay: '200ms' }}>
         <div className="xp-burst px-8 py-3 rounded-full" style={{ background: 'rgba(255,215,0,0.18)', border: '2px solid rgba(255,215,0,0.4)' }}>
           <span className="text-2xl font-black" style={{ color: '#FFD700' }}>+{xp} XP ⚡</span>
         </div>
       </div>
 
       {/* Stats row with dividers */}
-      <div className="flex items-center justify-around mb-8 py-4" style={{ borderTop: '1px solid #2A3550', borderBottom: '1px solid #2A3550' }}>
+      <div className="flex items-center justify-around mb-8 py-4 slide-up" style={{ borderTop: '1px solid #2A3550', borderBottom: '1px solid #2A3550', animationDelay: '350ms' }}>
         <div className="text-center">
           <span className="text-[28px] font-black block" style={{ color: '#00B894' }}>{correct}</span>
           <span className="text-xs" style={{ color: '#5A6B8A' }}>{t('resultats_correct')}</span>

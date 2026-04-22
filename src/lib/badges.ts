@@ -54,7 +54,7 @@ export function getUnlockedBadges(): string[] {
   // Examens
   if (exams['A'])           unlocked.push('graduate');
   if (passedExams >= 3)     unlocked.push('honors');
-  if (passedExams >= 8)     unlocked.push('major');
+  if (passedExams >= 9)     unlocked.push('major');
 
   // Survie (games played, not best score)
   if (survieGames >= 10) unlocked.push('survivor');

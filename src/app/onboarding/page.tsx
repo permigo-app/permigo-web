@@ -173,7 +173,6 @@ export default function OnboardingPage() {
             src="/images/gaston.png"
             width={140} height={140}
             alt="Prof. Gaston"
-            className="gaston-float"
             style={{ objectFit: 'contain', flexShrink: 0 }}
           />
           <div style={{

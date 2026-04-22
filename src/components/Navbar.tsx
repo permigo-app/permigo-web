@@ -127,7 +127,7 @@ export default function Navbar() {
 
         {/* Prof. Gaston */}
         <div className="flex items-center gap-2 px-3 mb-6">
-          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" className="gaston-float" style={{ objectFit: 'contain', flexShrink: 0 }} />
+          <Image src="/images/gaston.png" width={64} height={64} alt="Prof. Gaston" style={{ objectFit: 'contain', flexShrink: 0 }} />
           <span className="text-xs font-black uppercase tracking-wide" style={{ color: '#8B9DC3' }}>Prof. Gaston</span>
         </div>
 
@@ -139,7 +139,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="sidebar-icon-btn group relative flex items-center gap-3 w-full px-3 py-2.5 rounded-xl transition-all press-scale"
+                className="sidebar-icon-btn group relative flex items-center gap-3 w-full px-3 py-2.5 rounded-xl press-scale"
                 style={active
                   ? { background: `${item.color}20`, color: item.color }
                   : { color: item.color }
@@ -181,7 +181,7 @@ export default function Navbar() {
             return (
               <Link
                 href={item.href}
-                className="sidebar-icon-btn group relative flex items-center gap-3 w-full px-3 py-2.5 rounded-xl transition-all press-scale"
+                className="sidebar-icon-btn group relative flex items-center gap-3 w-full px-3 py-2.5 rounded-xl press-scale"
                 style={active ? { background: `${item.color}20`, color: item.color } : { color: item.color }}
               >
                 {item.icon}
@@ -250,7 +250,7 @@ export default function Navbar() {
              style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', textDecoration: 'none' }}>
             CGU
           </a>
-          <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.2)' }}>© 2025 MyPermiGo</span>
+          <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.2)' }}>© 2025-2026 MyPermiGo</span>
         </div>
         </div>
       </nav>

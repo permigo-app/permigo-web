@@ -73,8 +73,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const FREE_ACCESS_EMAILS = ['ycroitor8096@gmail.com'];
-
   const CAR_MAP: Record<string, { id: string; name: string; image: string; color: string }> = {
     red:   { id: 'red',   name: 'Rouge', image: '/images/cars/car-red.png',   color: '#e74c3c' },
     blue:  { id: 'blue',  name: 'Bleue', image: '/images/cars/car-blue.png',  color: '#3498db' },
@@ -85,11 +83,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const profile = await getUserProfile(sbUser.id);
     if (profile) {
       setUser(mapProfileToUser(profile));
-      if (FREE_ACCESS_EMAILS.includes(sbUser.email ?? '')) {
-        localStorage.setItem('isPremium', 'true');
-        localStorage.setItem('permigo_vip', 'true');
-      }
-
       // ── Sync Supabase → localStorage ──────────────────────────
       if (typeof window === 'undefined') return;
 

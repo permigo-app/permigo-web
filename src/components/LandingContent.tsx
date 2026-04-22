@@ -198,7 +198,7 @@ export default function LandingContent() {
       {/* Footer */}
       <footer style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '20px 24px', textAlign: 'center' }}>
         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
-          <span>© 2025 MyPermiGo</span>
+          <span>© 2025-2026 MyPermiGo</span>
           <a href="https://www.iubenda.com/privacy-policy/43486445" target="_blank" style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>Politique de confidentialité</a>
           <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy" target="_blank" style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>Cookies</a>
           <Link href="/terms" style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>CGU</Link>

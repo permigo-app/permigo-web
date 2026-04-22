@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { getAllQuestionsLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
+import { getUnlockedBadges } from '@/lib/badges';
+import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
 import {
   updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime,
   setSurvivalBest, getSurvivalBest,
@@ -135,9 +137,14 @@ export default function TurboPage() {
     if (timerRef.current) clearInterval(timerRef.current);
     localStorage.removeItem('turbo_active');
     setGameOver(true);
+    const prevBadges = getUnlockedBadges();
     updateQuizHistory(correctCount, currentQ);
     checkAndUpdateStreak();
-    updateXP(correctCount * 10);
+    const xpResult = updateXP(correctCount * 10);
+    const newBadges = getUnlockedBadges().filter(id => !prevBadges.includes(id));
+    const leveledUp = xpResult.level > xpResult.prevLevel;
+    if (leveledUp) dispatchLevelUp(xpResult.prevLevel, xpResult.level, 2000);
+    if (newBadges.length > 0) dispatchBadges(newBadges, leveledUp ? 5500 : 2000);
     if (mode === 'survie') setSurvivalBest(correctCount);
     if (mode) {
       setTurboBest(mode, correctCount);
@@ -481,7 +488,7 @@ export default function TurboPage() {
               className="mt-6 rounded-2xl p-5 flex items-center gap-4"
               style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.25)' }}
             >
-              <Image src="/images/gaston.png" width={52} height={52} alt="Prof. Gaston" className="gaston-float" style={{ objectFit: 'contain', flexShrink: 0 }} />
+              <Image src="/images/gaston.png" width={52} height={52} alt="Prof. Gaston" style={{ objectFit: 'contain', flexShrink: 0 }} />
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-bold mb-1.5" style={{ color: '#4ecdc4' }}>{t('turbo_gaston_conseille')}</p>
                 <p
@@ -644,7 +651,7 @@ export default function TurboPage() {
         )
       }
       headerRight={
-        <span className="text-lg font-black" style={{ color: meta.color }}>{t('turbo_score')}: {correctCount}</span>
+        <span className="text-lg font-black" style={{ color: meta.color }}>{t('turbo_score')}: <span key={correctCount} className="combo-burst inline-block">{correctCount}</span></span>
       }
       subtitle={mode === '3min' ? t('turbo_sprint_3') : mode === '5min' ? t('turbo_sprint_5') : t('turbo_survie')}
       question={q.question}
@@ -672,7 +679,7 @@ export default function TurboPage() {
             )}
             <div className="flex items-center justify-between">
               <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('turbo_score')}</span>
-              <span className="text-xl font-black" style={{ color: '#2ecc71' }}>{correctCount}</span>
+              <span key={correctCount} className="text-xl font-black combo-burst inline-block" style={{ color: '#2ecc71' }}>{correctCount}</span>
             </div>
             <div className="flex items-center justify-between mt-2">
               <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('questions')}</span>

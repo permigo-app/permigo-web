@@ -121,7 +121,7 @@ export const BADGES = [
   // Survie
   { id: 'survivor', emoji: '💀', name: 'Survivant', desc: '10+ en mode survie', category: 'Survie' },
   { id: 'pilot', emoji: '🏎️', name: 'Pilote', desc: '20+ en mode survie', category: 'Survie' },
-  { id: 'invincible', emoji: '☠️', name: 'Invincible', desc: '30+ en mode survie', category: 'Survie' },
+  { id: 'invincible', emoji: '🛡️', name: 'Invincible', desc: '30+ en mode survie', category: 'Survie' },
   // Exploration
   { id: 'explorer', emoji: '🗺️', name: 'Explorateur', desc: '3 thèmes débloqués', category: 'Exploration' },
   { id: 'unlocker', emoji: '🔓', name: 'Débloqueur', desc: '5 thèmes débloqués', category: 'Exploration' },

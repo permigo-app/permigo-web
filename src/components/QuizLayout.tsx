@@ -134,8 +134,8 @@ export default function QuizLayout({
             {/* Question */}
             <p className="text-2xl font-bold text-white text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up">{question}</p>
 
-            {/* Image request — juste sous la question */}
-            {questionId && <ImageRequestButton id={questionId} />}
+            {/* Image request — juste sous la question, masqué si un panneau est déjà affiché */}
+            {questionId && !signCode && <ImageRequestButton id={questionId} />}
 
             {/* Answer grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
@@ -178,7 +178,8 @@ export default function QuizLayout({
                     disabled={validated}
                     className={`rounded-xl p-5 flex items-center gap-3 text-left press-scale ${
                       shakeWrong && validated && i === selected && i !== correctIndex ? 'shake' : ''
-                    } ${validated && i === correctIndex ? 'choice-correct' : ''}`}
+                    } ${validated && i === correctIndex ? 'correct-pulse' : ''
+                    } ${validated && i === selected && i !== correctIndex ? 'wrong-flash' : ''}`}
                     style={{ background: bg, border, minHeight: 80, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
                     onMouseEnter={e => {
                       if (!validated && i !== selected) {
