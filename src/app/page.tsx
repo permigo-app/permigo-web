@@ -14,6 +14,7 @@ import Image from 'next/image';
 import CarSVG from '@/components/CarSVG';
 import StreakCelebration from '@/components/StreakCelebration';
 import FeedbackButton from '@/components/FeedbackButton';
+import ReviewsBlock from '@/components/ReviewsBlock';
 
 // ── Road constants ──
 const ROAD_W = 65;
@@ -610,6 +611,9 @@ export default function HomePage() {
       <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, ...(isMobileView ? { background: 'transparent' } : {}) }}>
 
         {/* sticky banner removed — section cards on the road handle theme identification */}
+
+        {/* ── Bloc révisions (connecté uniquement, disparaît si 0 due) ── */}
+        {mounted && <ReviewsBlock />}
 
         {/* Mobile welcome est positionné en absolu dans le SVG Road container ci-dessous */}
 

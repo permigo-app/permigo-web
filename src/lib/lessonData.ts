@@ -199,3 +199,16 @@ export function getAllQuestionsLocalized(lang: Lang): LocalQuestion[] {
   }
   return all;
 }
+
+/** Lookup a question by its ID (e.g. "A1_Q1") across all themes/lessons. */
+export function getQuestionById(id: string, lang: Lang = 'fr'): LocalQuestion | null {
+  for (const code of THEME_ORDER) {
+    const theme = getThemeDataLocalized(code, lang);
+    if (!theme) continue;
+    for (const lesson of theme.lessons) {
+      const q = lesson.questions.find(q => q.id === id);
+      if (q) return q;
+    }
+  }
+  return null;
+}

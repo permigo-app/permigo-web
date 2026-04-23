@@ -5,6 +5,7 @@ import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, markLessonCompleted, isPartieCompleted, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
+import { recordQuestionReview } from '@/lib/reviewApi';
 import { getUnlockedBadges } from '@/lib/badges';
 import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
@@ -81,6 +82,7 @@ export default function LessonPage() {
   const [shakeWrong, setShakeWrong] = useState(false);
   const [partieFailScore, setPartieFailScore] = useState<{ correct: number; total: number } | null>(null);
   const startTimeRef = useRef(Date.now());
+  const questionStartRef = useRef(Date.now());
 
   useEffect(() => {
     const l = getLessonDataLocalized(lessonId, lang);
@@ -137,6 +139,10 @@ export default function LessonPage() {
     if (selected === null || validated) return;
     setValidated(true);
     const isCorrect = selected === questions[currentQ].correct;
+    const timeSpent = (Date.now() - questionStartRef.current) / 1000;
+    const qId = questions[currentQ].id;
+    // Fire-and-forget: record answer for spaced repetition
+    recordQuestionReview(qId, isCorrect, timeSpent).catch(() => {});
     if (isCorrect) {
       setCorrectCount(c => c + 1);
       setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
@@ -154,6 +160,7 @@ export default function LessonPage() {
     setValidated(false);
     setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
+    questionStartRef.current = Date.now();
     if (currentQ + 1 < questions.length) {
       setCurrentQ(q => q + 1);
     } else {
@@ -213,6 +220,7 @@ export default function LessonPage() {
     setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
     startTimeRef.current = Date.now();
+    questionStartRef.current = Date.now();
     // Re-shuffle questions
     const lesson = getLessonDataLocalized(lessonId, lang);
     const src = isPartieMode && partieIndex !== undefined

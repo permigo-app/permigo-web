@@ -71,6 +71,12 @@ export function getUnlockedBadges(): string[] {
   if (xp.level >= 10) unlocked.push('level10');
   if (xp.level >= 20) unlocked.push('level20');
 
+  // Révision (counters stored in localStorage by revisions page)
+  const reviewCorrect = parseInt(localStorage.getItem('review_total_correct') ?? '0', 10);
+  const reviewMastered = parseInt(localStorage.getItem('review_mastered_count') ?? '0', 10);
+  if (reviewCorrect >= 50)  unlocked.push('reviseur');
+  if (reviewMastered >= 100) unlocked.push('elephant');
+
   return unlocked;
 }
 

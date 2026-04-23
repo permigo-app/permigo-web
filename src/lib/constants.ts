@@ -130,6 +130,9 @@ export const BADGES = [
   { id: 'level5', emoji: '⚡', name: 'Niveau 5', desc: 'Atteindre le niveau 5', category: 'Niveaux' },
   { id: 'level10', emoji: '💫', name: 'Niveau 10', desc: 'Atteindre le niveau 10', category: 'Niveaux' },
   { id: 'level20', emoji: '🌠', name: 'Niveau 20', desc: 'Atteindre le niveau 20', category: 'Niveaux' },
+  // Révision
+  { id: 'reviseur', emoji: '🔁', name: 'Réviseur', desc: '50 révisions effectuées', category: 'Révision' },
+  { id: 'elephant', emoji: '🧠', name: "Mémoire d'éléphant", desc: '100 questions maîtrisées', category: 'Révision' },
 ];
 
 export function getRandomMessage(messages: string[]): string {

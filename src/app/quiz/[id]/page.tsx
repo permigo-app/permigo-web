@@ -11,6 +11,7 @@ import { setStars, updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTi
 import { getUnlockedBadges } from '@/lib/badges';
 import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
+import { recordQuestionReview } from '@/lib/reviewApi';
 import QuizLayout from '@/components/QuizLayout';
 import Gaston from '@/components/Gaston';
 
@@ -30,6 +31,7 @@ export default function QuizPage() {
   const [themeCode, setThemeCode] = useState('A');
   const [shakeWrong, setShakeWrong] = useState(false);
   const startTimeRef = useRef(Date.now());
+  const questionStartRef = useRef(Date.now());
 
   useEffect(() => {
     const lesson = getLessonDataLocalized(lessonId, lang);
@@ -45,6 +47,10 @@ export default function QuizPage() {
     if (selected === null || validated) return;
     setValidated(true);
     const isCorrect = selected === questions[currentQ].correct;
+    const timeSpent = (Date.now() - questionStartRef.current) / 1000;
+    const qId = questions[currentQ].id;
+    // Fire-and-forget: record answer for spaced repetition
+    recordQuestionReview(qId, isCorrect, timeSpent).catch(() => {});
     if (isCorrect) {
       setCorrectCount(c => c + 1);
       setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
@@ -62,6 +68,7 @@ export default function QuizPage() {
     setValidated(false);
     setGastonMsg(t('reflechis'));
     setGastonExpr('thinking');
+    questionStartRef.current = Date.now();
     if (currentQ + 1 < questions.length) { setCurrentQ(q => q + 1); }
     else {
       const total = questions.length;
