@@ -55,8 +55,22 @@ export function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): LocalThem
       };
     });
 
-    // Questions: use FR (NL files keep FR questions as-is)
-    const localizedQuestions: LocalQuestion[] = frLesson.questions;
+    // Apply NL question translations where available; fall back to FR per question
+    const nlQMap = new Map<string, NlThemeContent>(
+      (nlLesson.questions ?? []).map(
+        (q: NlThemeContent) => [q.id as string, q] as [string, NlThemeContent]
+      )
+    );
+    const localizedQuestions: LocalQuestion[] = frLesson.questions.map(q => {
+      const nlQ = nlQMap.get(q.id);
+      if (!nlQ || !nlQ['question']) return q;
+      return {
+        ...q,
+        question: nlQ['question'] as string,
+        choices: nlQ['choices'] as [string, string, string, string],
+        ...(nlQ['explanation'] ? { explanation: nlQ['explanation'] as string } : {}),
+      };
+    });
 
     return {
       ...frLesson,
