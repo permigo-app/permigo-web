@@ -265,12 +265,12 @@ export default function TurboPage() {
 
           {/* 1. Header */}
           <div>
-            <h1 className="text-2xl font-black flex items-center gap-2">{t('turbo_titre')}</h1>
-            <p className="text-xs mt-1 italic" style={{ color: '#94a3b8' }}>{t('turbo_subtitle')}</p>
+            <h1 className="text-2xl font-black flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>{t('turbo_titre')}</h1>
+            <p className="text-xs mt-1 italic" style={{ color: 'var(--text-secondary)' }}>{t('turbo_subtitle')}</p>
             {!isPremium() && !blocked && (
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg mt-2"
-                style={{ background: 'rgba(78,205,196,0.1)', border: '1px solid rgba(78,205,196,0.2)' }}>
-                <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
+                style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
+                <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>
                   {remaining} {t(remaining > 1 ? 'turbo_parties_restantes' : 'turbo_partie_restante')}
                 </span>
               </div>
@@ -280,11 +280,11 @@ export default function TurboPage() {
                 style={{ background: 'rgba(255,107,107,0.12)', border: '1.5px solid rgba(255,107,107,0.4)' }}>
                 <span>⏰</span>
                 <div className="flex-1">
-                  <p className="text-xs font-black text-white">{t('turbo_limite_titre')}</p>
-                  <p className="text-xs mt-0.5" style={{ color: '#8B9DC3' }}>{t('turbo_limite_msg')}</p>
+                  <p className="text-xs font-black" style={{ color: 'var(--text-primary)' }}>{t('turbo_limite_titre')}</p>
+                  <p className="text-xs mt-0.5" style={{ color: 'var(--text-secondary)' }}>{t('turbo_limite_msg')}</p>
                 </div>
                 <Link href="/premium" className="px-3 py-1.5 rounded-lg font-black text-xs press-scale flex-shrink-0"
-                  style={{ background: '#FFD700', color: '#0a0e2a' }}>{t('passer_premium')}</Link>
+                  style={{ background: 'var(--premium)', color: '#0a0e2a' }}>{t('passer_premium')}</Link>
               </div>
             )}
           </div>
@@ -292,13 +292,13 @@ export default function TurboPage() {
           {/* 2. Stats clés du mode sélectionné */}
           <div className="grid grid-cols-2 gap-3">
             <div className="rounded-2xl p-4 flex flex-col items-center gap-1"
-              style={{ background: '#16213E', border: `1px solid ${mMeta.border}40` }}>
-              <span className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: '#5A6B8A' }}>Record du jour</span>
+              style={{ background: 'var(--card-primary)', border: `1px solid ${mMeta.border}40` }}>
+              <span className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: 'var(--text-disabled)' }}>Record du jour</span>
               <span className="text-2xl font-black" style={{ color: mMeta.color }}>{todayBest || '—'}</span>
             </div>
             <div className="rounded-2xl p-4 flex flex-col items-center gap-1"
-              style={{ background: '#16213E', border: `1px solid ${mMeta.border}40` }}>
-              <span className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: '#5A6B8A' }}>Meilleur absolu</span>
+              style={{ background: 'var(--card-primary)', border: `1px solid ${mMeta.border}40` }}>
+              <span className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: 'var(--text-disabled)' }}>Meilleur absolu</span>
               <span className="text-2xl font-black" style={{ color: mMeta.color }}>{mBest || '—'}</span>
             </div>
           </div>
@@ -314,16 +314,16 @@ export default function TurboPage() {
                 <button key={m} onClick={() => setMobileSelectedMode(m)}
                   className="w-full rounded-2xl p-4 flex items-center gap-3 text-left press-scale transition-all"
                   style={{
-                    background: sel ? `${meta.color}18` : '#16213E',
-                    border: `2px solid ${sel ? meta.color : '#2A3550'}`,
+                    background: sel ? `${meta.color}18` : 'var(--card-primary)',
+                    border: sel ? `2px solid ${meta.color}` : '2px solid var(--border-subtle)',
                   }}>
                   <span style={{ fontSize: 28 }}>{meta.icon}</span>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-black" style={{ color: sel ? meta.color : '#fff' }}>{t(labelKey)}</p>
-                    <p className="text-xs mt-0.5 leading-tight" style={{ color: '#8B9DC3' }}>{t(descKey)}</p>
+                    <p className="text-sm font-black" style={{ color: sel ? meta.color : 'var(--text-primary)' }}>{t(labelKey)}</p>
+                    <p className="text-xs mt-0.5 leading-tight" style={{ color: 'var(--text-secondary)' }}>{t(descKey)}</p>
                   </div>
                   <div className="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center"
-                    style={{ border: `2px solid ${sel ? meta.color : '#3A4560'}`, background: sel ? meta.color : 'transparent' }}>
+                    style={{ border: `2px solid ${sel ? meta.color : 'var(--border-subtle)'}`, background: sel ? meta.color : 'transparent' }}>
                     {sel && <div className="w-2 h-2 rounded-full bg-white" />}
                   </div>
                 </button>
@@ -337,8 +337,8 @@ export default function TurboPage() {
             disabled={blocked}
             className="w-full py-4 rounded-2xl font-black text-base press-scale"
             style={{
-              background: blocked ? '#3A4560' : mMeta.btnColor,
-              color: blocked ? '#5A6B8A' : (mobileSelectedMode === '5min' ? '#1A1A2E' : 'white'),
+              background: blocked ? 'var(--card-secondary)' : mMeta.btnColor,
+              color: blocked ? 'var(--text-disabled)' : 'white',
               boxShadow: blocked ? 'none' : `0 4px 20px ${mMeta.btnColor}50`,
               cursor: blocked ? 'not-allowed' : 'pointer',
             }}>
@@ -346,8 +346,8 @@ export default function TurboPage() {
           </button>
 
           {/* 5. Parties jouées par mode */}
-          <div className="rounded-2xl p-4" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h3 className="text-xs font-extrabold uppercase tracking-widest mb-3 flex items-center gap-2" style={{ color: '#4ecdc4' }}>
+          <div className="rounded-2xl p-4" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+            <h3 className="text-xs font-extrabold uppercase tracking-widest mb-3 flex items-center gap-2" style={{ color: 'var(--brand)' }}>
               <span>📊</span> {t('turbo_parties_jouees')}
             </h3>
             <div className="flex flex-col gap-2.5">
@@ -357,36 +357,36 @@ export default function TurboPage() {
                 { icon: '💀', label: t('turbo_survie'), value: allTime.gamesSurvie, color: '#e74c3c' },
               ].map(row => (
                 <div key={row.label} className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>{row.icon} {row.label}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>{row.icon} {row.label}</span>
                   <span className="text-sm font-bold" style={{ color: row.color }}>{row.value} parties</span>
                 </div>
               ))}
-              <div className="h-px my-1" style={{ background: '#2A3550' }} />
+              <div className="h-px my-1" style={{ background: 'var(--border-subtle)' }} />
               <div className="flex justify-between items-center">
-                <span className="text-xs" style={{ color: '#8B9DC3' }}>Parties total jouées</span>
-                <span className="text-sm font-bold">{allTime.games3min + allTime.games5min + allTime.gamesSurvie}</span>
+                <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>Parties total jouées</span>
+                <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{allTime.games3min + allTime.games5min + allTime.gamesSurvie}</span>
               </div>
             </div>
           </div>
 
           {/* 6. Historique */}
-          <div className="rounded-2xl p-4" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h3 className="text-xs font-extrabold uppercase tracking-widest mb-3 flex items-center gap-2" style={{ color: '#4ecdc4' }}>
+          <div className="rounded-2xl p-4" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+            <h3 className="text-xs font-extrabold uppercase tracking-widest mb-3 flex items-center gap-2" style={{ color: 'var(--brand)' }}>
               <span>📋</span> {t('turbo_historique')}
             </h3>
             {history.length === 0 ? (
-              <p className="text-xs text-center py-3" style={{ color: '#5A6B8A' }}>{t('turbo_aucune_partie')}</p>
+              <p className="text-xs text-center py-3" style={{ color: 'var(--text-disabled)' }}>{t('turbo_aucune_partie')}</p>
             ) : (
               <div className="flex flex-col">
                 {history.slice(0, 15).map((s, i) => (
                   <div key={i} className="flex items-center gap-2 py-2.5"
-                    style={{ borderBottom: i < Math.min(history.length, 15) - 1 ? '1px solid #1a2535' : undefined }}>
-                    <span className="text-xs flex-1" style={{ color: '#8B9DC3' }}>{formatDate(s.date)}</span>
+                    style={{ borderBottom: i < Math.min(history.length, 15) - 1 ? '1px solid var(--border-subtle)' : undefined }}>
+                    <span className="text-xs flex-1" style={{ color: 'var(--text-secondary)' }}>{formatDate(s.date)}</span>
                     <span className="text-[11px] font-bold px-2 py-0.5 rounded-md flex-shrink-0"
                       style={{ background: `${MODE_META[s.mode]?.color}20`, color: MODE_META[s.mode]?.color }}>
                       {modeLabel(s.mode)}
                     </span>
-                    <span className="text-sm font-black w-6 text-right flex-shrink-0">{s.score}</span>
+                    <span className="text-sm font-black w-6 text-right flex-shrink-0" style={{ color: 'var(--text-primary)' }}>{s.score}</span>
                   </div>
                 ))}
               </div>
@@ -400,10 +400,10 @@ export default function TurboPage() {
           <div className="flex-1 min-w-0">
             {/* Title */}
             <div className="mb-8">
-              <h1 className="text-4xl font-black flex items-center gap-3">
+              <h1 className="text-4xl font-black flex items-center gap-3" style={{ color: 'var(--text-primary)' }}>
                 {t('turbo_titre')}
               </h1>
-              <p className="text-sm mt-1 italic" style={{ color: '#94a3b8' }}>{t('turbo_subtitle')}</p>
+              <p className="text-sm mt-1 italic" style={{ color: 'var(--text-secondary)' }}>{t('turbo_subtitle')}</p>
             </div>
 
             {/* Freemium banner — shown when limit reached */}
@@ -411,10 +411,10 @@ export default function TurboPage() {
               <div className="rounded-2xl p-5 mb-6 flex flex-col sm:flex-row items-center gap-4" style={{ background: 'rgba(255,107,107,0.12)', border: '1.5px solid rgba(255,107,107,0.4)' }}>
                 <span className="text-3xl">⏰</span>
                 <div className="flex-1 text-center sm:text-left">
-                  <p className="font-black text-white mb-1">{t('turbo_limite_titre')}</p>
-                  <p className="text-sm" style={{ color: '#8B9DC3' }}>{t('turbo_limite_msg')}</p>
+                  <p className="font-black mb-1" style={{ color: 'var(--text-primary)' }}>{t('turbo_limite_titre')}</p>
+                  <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('turbo_limite_msg')}</p>
                 </div>
-                <Link href="/premium" className="flex-shrink-0 px-5 py-2.5 rounded-xl font-black text-sm press-scale" style={{ background: '#FFD700', color: '#0a0e2a' }}>
+                <Link href="/premium" className="flex-shrink-0 px-5 py-2.5 rounded-xl font-black text-sm press-scale" style={{ background: 'var(--premium)', color: '#0a0e2a' }}>
                   {t('passer_premium')} ✨
                 </Link>
               </div>
@@ -422,8 +422,8 @@ export default function TurboPage() {
 
             {/* Daily counter badge for free users */}
             {!isPremium() && turboCount < 5 && (
-              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ background: 'rgba(78,205,196,0.1)', border: '1px solid rgba(78,205,196,0.2)' }}>
-                <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
+              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
+                <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>
                   {5 - turboCount} {t(5 - turboCount > 1 ? 'turbo_parties_restantes' : 'turbo_partie_restante')}
                 </span>
               </div>
@@ -442,8 +442,8 @@ export default function TurboPage() {
                     key={m}
                     className="rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-200 cursor-pointer"
                     style={{
-                      background: meta.gradient,
-                      border: `1.5px solid ${meta.border}30`,
+                      background: 'var(--card-primary)',
+                      border: `1.5px solid ${meta.border}40`,
                       minHeight: 280,
                       opacity: blocked ? 0.5 : 1,
                     }}
@@ -460,8 +460,8 @@ export default function TurboPage() {
                     }}
                   >
                     <span className="text-5xl mb-4">{meta.icon}</span>
-                    <h2 className="text-xl font-black mb-2">{t(labelKey)}</h2>
-                    <p className="text-sm mb-4 leading-relaxed" style={{ color: '#8B9DC3' }}>{t(descKey)}</p>
+                    <h2 className="text-xl font-black mb-2" style={{ color: 'var(--text-primary)' }}>{t(labelKey)}</h2>
+                    <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{t(descKey)}</p>
                     <p className="text-xs font-bold mb-auto" style={{ color: meta.color }}>
                       {best > 0 ? `${t('turbo_meilleur')} : ${best}` : t('turbo_pas_joue')}
                     </p>
@@ -470,8 +470,8 @@ export default function TurboPage() {
                       disabled={blocked}
                       className="w-full py-3 rounded-xl font-black text-sm press-scale transition-all mt-5"
                       style={{
-                        background: blocked ? '#3A4560' : meta.btnColor,
-                        color: blocked ? '#5A6B8A' : 'white',
+                        background: blocked ? 'var(--card-secondary)' : meta.btnColor,
+                        color: blocked ? 'var(--text-disabled)' : 'white',
                         boxShadow: blocked ? 'none' : `0 4px 16px ${meta.btnColor}40`,
                         cursor: blocked ? 'not-allowed' : 'pointer',
                       }}
@@ -486,14 +486,14 @@ export default function TurboPage() {
             {/* Gaston tips section — below the cards */}
             <div
               className="mt-6 rounded-2xl p-5 flex items-center gap-4"
-              style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.25)' }}
+              style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}
             >
               <Image src="/images/gaston.png" width={52} height={52} alt="Prof. Gaston" style={{ objectFit: 'contain', flexShrink: 0 }} />
               <div className="flex-1 min-w-0">
-                <p className="text-xs font-bold mb-1.5" style={{ color: '#4ecdc4' }}>{t('turbo_gaston_conseille')}</p>
+                <p className="text-xs font-bold mb-1.5" style={{ color: 'var(--brand)' }}>{t('turbo_gaston_conseille')}</p>
                 <p
                   className="text-sm leading-relaxed transition-opacity duration-300"
-                  style={{ color: '#94a3b8', opacity: tipFade ? 1 : 0 }}
+                  style={{ color: 'var(--text-secondary)', opacity: tipFade ? 1 : 0 }}
                 >
                   💡 {GASTON_TIPS[lang][tipIndex]}
                 </p>
@@ -504,71 +504,71 @@ export default function TurboPage() {
           {/* Right sidebar — desktop only */}
           <div className="w-64 xl:w-80 flex-shrink-0 hidden lg:flex flex-col gap-5">
             {/* Parties jouées */}
-            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">
+            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
                 <span>📊</span> {t('turbo_parties_jouees')}
               </h3>
               <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>⏱️ {t('turbo_sprint_3')}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>⏱️ {t('turbo_sprint_3')}</span>
                   <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{allTime.games3min}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>🔥 {t('turbo_sprint_5')}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>🔥 {t('turbo_sprint_5')}</span>
                   <span className="text-sm font-bold" style={{ color: '#e67e22' }}>{allTime.games5min}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>💀 {t('turbo_survie')}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>💀 {t('turbo_survie')}</span>
                   <span className="text-sm font-bold" style={{ color: '#e74c3c' }}>{allTime.gamesSurvie}</span>
                 </div>
-                <div className="h-[1px] my-1" style={{ background: '#2A3550' }} />
+                <div className="h-[1px] my-1" style={{ background: 'var(--border-subtle)' }} />
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>{t('turbo_temps_total')}</span>
-                  <span className="text-sm font-bold">{formatDuration(allTime.timeSeconds)}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>{t('turbo_temps_total')}</span>
+                  <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{formatDuration(allTime.timeSeconds)}</span>
                 </div>
               </div>
             </div>
 
             {/* Records */}
-            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">
+            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
                 <span>🏆</span> {t('turbo_records')}
               </h3>
               <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>⏱️ {t('turbo_sprint_3')}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>⏱️ {t('turbo_sprint_3')}</span>
                   <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{best3 || '—'}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>🔥 {t('turbo_sprint_5')}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>🔥 {t('turbo_sprint_5')}</span>
                   <span className="text-sm font-bold" style={{ color: '#e67e22' }}>{best5 || '—'}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: '#8B9DC3' }}>💀 {t('turbo_survie')}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>💀 {t('turbo_survie')}</span>
                   <span className="text-sm font-bold" style={{ color: '#e74c3c' }}>{bestSurvie || '—'}</span>
                 </div>
               </div>
             </div>
 
             {/* Historique */}
-            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">
+            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
                 <span>📋</span> {t('turbo_historique')}
               </h3>
               {history.length === 0 ? (
-                <p className="text-xs text-center py-4" style={{ color: '#5A6B8A' }}>{t('turbo_aucune_partie')}</p>
+                <p className="text-xs text-center py-4" style={{ color: 'var(--text-disabled)' }}>{t('turbo_aucune_partie')}</p>
               ) : (
                 <div className="flex flex-col overflow-y-auto pr-1" style={{ maxHeight: 300 }}>
                   {history.slice(0, 20).map((s, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs py-2 flex-shrink-0" style={{ borderBottom: i < Math.min(history.length, 20) - 1 ? '1px solid #2A3550' : undefined }}>
-                      <span className="flex-1" style={{ color: '#8B9DC3' }}>{formatDate(s.date)}</span>
+                    <div key={i} className="flex items-center gap-2 text-xs py-2 flex-shrink-0" style={{ borderBottom: i < Math.min(history.length, 20) - 1 ? '1px solid var(--border-subtle)' : undefined }}>
+                      <span className="flex-1" style={{ color: 'var(--text-secondary)' }}>{formatDate(s.date)}</span>
                       <span
                         className="font-bold px-2 py-0.5 rounded-md text-[10px]"
                         style={{ background: `${MODE_META[s.mode]?.color}20`, color: MODE_META[s.mode]?.color }}
                       >
                         {modeLabel(s.mode)}
                       </span>
-                      <span className="font-black w-6 text-right">{s.score}</span>
+                      <span className="font-black w-6 text-right" style={{ color: 'var(--text-primary)' }}>{s.score}</span>
                     </div>
                   ))}
                 </div>
@@ -589,10 +589,10 @@ export default function TurboPage() {
         <span className="text-[80px] block mb-3">{correctCount >= 10 ? '🏆' : '💪'}</span>
         <h1 className="text-3xl font-black mb-2">{t('turbo_termine')}</h1>
         <p className="text-[56px] font-black mb-1" style={{ color: meta.color }}>{correctCount}</p>
-        <p className="text-sm mb-6" style={{ color: '#8B9DC3' }}>{t('turbo_bonnes_reponses')}</p>
+        <p className="text-sm mb-6" style={{ color: 'var(--text-secondary)' }}>{t('turbo_bonnes_reponses')}</p>
 
-        <div className="px-5 py-2 rounded-full inline-block mb-6" style={{ background: 'rgba(255,215,0,0.15)' }}>
-          <span className="font-black" style={{ color: '#FFD700' }}>+{correctCount * 10} XP ⚡</span>
+        <div className="px-5 py-2 rounded-full inline-block mb-6" style={{ background: 'rgba(255,201,40,0.15)' }}>
+          <span className="font-black" style={{ color: 'var(--premium)' }}>+{correctCount * 10} XP ⚡</span>
         </div>
 
         <div className="mb-8">
@@ -614,7 +614,7 @@ export default function TurboPage() {
           <button
             onClick={() => { setMode(null); setGameOver(false); }}
             className="flex-1 py-4 rounded-2xl font-black press-scale"
-            style={{ background: '#16213E' }}
+            style={{ background: 'var(--card-primary)', color: 'var(--text-primary)' }}
           >
             {t('turbo_changer_mode')}
           </button>
