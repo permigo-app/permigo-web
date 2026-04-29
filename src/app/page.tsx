@@ -300,7 +300,6 @@ export default function HomePage() {
   const [selectedPartieIdx, setSelectedPartieIdx] = useState<number | null>(null);
   const [completedParties, setCompletedParties] = useState<number[]>([]);
   const [showPremiumModal, setShowPremiumModal] = useState(false);
-  const [showOrderLockedModal, setShowOrderLockedModal] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -440,14 +439,9 @@ export default function HomePage() {
 
         // Lock non-free themes for non-premium users
         const themeLocked = !isThemeFree(themeCode) && !isPremium();
-
-        // Lock lesson N+1 if lesson N not completed (within unlocked theme)
-        const prevLid = lessonIdx > 0 ? (theme.lessons[lessonIdx - 1]?.id || (themeCode + lessonIdx)) : null;
-        const orderLocked = !isVip && !themeLocked && lessonIdx > 0 && prevLid !== null && (stars[prevLid] ?? 0) === 0;
-
         const locked = themeLocked;
 
-        const isCurrent = !done && !locked && !orderLocked && !foundCurrent;
+        const isCurrent = !done && !locked && !foundCurrent;
         if (isCurrent) foundCurrent = true;
 
         nodes.push({
@@ -458,7 +452,7 @@ export default function HomePage() {
           title: lesson.title,
           isCompleted: done,
           isLocked: locked,
-          isOrderLocked: orderLocked,
+          isOrderLocked: false,
           isCurrent,
           stars: lessonStars,
           totalParties: lesson.theory.length,
@@ -1150,8 +1144,6 @@ export default function HomePage() {
               nodeContent = <span style={{ color: '#fff', fontSize: iconSize, fontWeight: 900, lineHeight: 1 }}>✓</span>;
             } else if (node.isLocked) {
               nodeContent = <span style={{ fontSize: iconSize * 0.75, lineHeight: 1 }}>🔒</span>;
-            } else if (node.isOrderLocked) {
-              nodeContent = <span style={{ fontSize: iconSize * 0.75, fontWeight: 900, color: 'rgba(255,255,255,0.45)', lineHeight: 1 }}>{node.localIndex}</span>;
             } else if (isInProgress || isActive) {
               nodeContent = <span style={{ color: '#fff', fontSize: iconSize * 0.9, lineHeight: 1 }}>▶</span>;
             } else {
@@ -1165,7 +1157,7 @@ export default function HomePage() {
                 width: ringSize,
                 height: ringSize,
                 zIndex: isActive ? 16 : 14,
-                opacity: node.isLocked ? (isMobileView ? 0.35 : 0.25) : node.isOrderLocked ? 0.5 : 1,
+                opacity: node.isLocked ? (isMobileView ? 0.35 : 0.25) : 1,
               }}>
                 {/* Segmented progress ring */}
                 <svg width={ringSize} height={ringSize} className="absolute inset-0">
@@ -1212,18 +1204,6 @@ export default function HomePage() {
                     <span className="barrier-light-left absolute" style={{ width: 5, height: 5, borderRadius: '50%', background: '#e74c3c', top: '12%', left: '22%', pointerEvents: 'none' }} />
                     <span className="barrier-light-right absolute" style={{ width: 5, height: 5, borderRadius: '50%', background: '#e74c3c', top: '12%', right: '22%', pointerEvents: 'none' }} />
                   </button>
-                ) : node.isOrderLocked ? (
-                  <button onClick={() => setShowOrderLockedModal(true)} title="🔒 Termine la leçon précédente d'abord" className="absolute inset-0 flex items-center justify-center cursor-pointer">
-                    <div className="rounded-full flex items-center justify-center relative" style={{
-                      width: nodeRadius * 2,
-                      height: nodeRadius * 2,
-                      background: '#141937',
-                      border: `3px solid ${tc}40`,
-                    }}>
-                      {nodeContent}
-                      <span className="absolute text-[9px]" style={{ top: -3, right: -3 }}>🔒</span>
-                    </div>
-                  </button>
                 ) : (
                   <button onClick={() => openLessonModal(node)} className="absolute inset-0 flex items-center justify-center node-hover cursor-pointer">
                     <div className="rounded-full flex items-center justify-center" style={{
@@ -1239,7 +1219,7 @@ export default function HomePage() {
                 )}
 
                 {/* ── COMMENCER floating button (active node only) ── */}
-                {isActive && !node.isLocked && !node.isOrderLocked && (
+                {isActive && !node.isLocked && (
                   <button
                     onClick={() => openLessonModal(node)}
                     className="absolute cursor-pointer press-scale commencer-float"
@@ -1750,26 +1730,22 @@ export default function HomePage() {
                   <div className="mb-4" style={{ maxHeight: '40vh', overflowY: 'auto' }}>
                     {theories.map((partie, idx) => {
                       const done = completedParties.includes(idx) || lessonFullyDone;
-                      // Partie N+1 locked until partie N completed (except partie 0 always accessible)
-                      const unlocked = isVip || idx === 0 || completedParties.includes(idx - 1) || lessonFullyDone;
                       const isSelected = selectedPartieIdx === idx;
 
                       return (
                         <button
                           key={idx}
-                          onClick={() => unlocked ? setSelectedPartieIdx(isSelected ? null : idx) : undefined}
-                          disabled={!unlocked}
+                          onClick={() => setSelectedPartieIdx(isSelected ? null : idx)}
                           className="w-full flex items-center gap-3 py-3 px-3 rounded-xl mb-1.5 transition-all text-left"
                           style={{
                             background: isSelected ? tc + '18' : 'transparent',
                             border: isSelected ? `2px solid ${tc}` : '1px solid rgba(255,255,255,0.08)',
-                            opacity: unlocked ? 1 : 0.4,
                           }}
                         >
                           <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-extrabold text-white flex-shrink-0" style={{
                             background: done ? '#27AE60' : isSelected ? tc : 'rgba(255,255,255,0.12)',
                           }}>
-                            {done ? '✓' : unlocked ? idx + 1 : '🔒'}
+                            {done ? '✓' : idx + 1}
                           </div>
                           <span className={`flex-1 text-sm font-semibold truncate ${done ? 'line-through opacity-40' : ''}`}>
                             {partie.title}
@@ -1825,32 +1801,6 @@ export default function HomePage() {
         );
       })()}
 
-      {/* ── Order Locked Modal ── */}
-      {showOrderLockedModal && (
-        <div className="fixed inset-0 z-[60] flex items-end justify-center" onClick={() => setShowOrderLockedModal(false)}>
-          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.6)' }} />
-          <div
-            className="relative w-full max-w-lg rounded-t-[28px] px-6 pt-6 pb-10 slide-up text-center"
-            style={{ background: '#1C2345' }}
-            onClick={e => e.stopPropagation()}
-          >
-            <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: '#5A6B8A' }} />
-            <span className="text-5xl block mb-4">🔒</span>
-            <h2 className="text-xl font-black text-white mb-2">Leçon verrouillée</h2>
-            <p className="text-sm mb-6" style={{ color: '#8B9DC3' }}>
-              Termine la leçon précédente avec au moins 70% pour débloquer celle-ci.
-            </p>
-            <button
-              onClick={() => setShowOrderLockedModal(false)}
-              className="w-full py-3.5 rounded-2xl font-extrabold text-white press-scale"
-              style={{ background: '#4ecdc4' }}
-            >
-              Compris
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* ── Premium Modal ── */}
       {showPremiumModal && (
         <div className="fixed inset-0 z-[60] flex items-end justify-center" onClick={() => setShowPremiumModal(false)}>
@@ -1876,7 +1826,7 @@ export default function HomePage() {
               {[
                 { icon: '📚', label: '8 thèmes supplémentaires débloqués' },
                 { icon: '📝', label: 'Examens blancs illimités' },
-                { icon: '⚡', label: 'Mode Turbo sans limite quotidienne' },
+                { icon: '⚡', label: 'Entraînement réflexe illimité' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl" style={{ background: 'rgba(255,215,0,0.06)', border: '1px solid rgba(255,215,0,0.12)' }}>
                   <span className="text-xl">{item.icon}</span>

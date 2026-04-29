@@ -6,8 +6,8 @@ import Image from 'next/image';
 const SCREENS = [
   { src: '/images/screenshots/screen1.png', label: 'Route de progression' },
   { src: '/images/screenshots/screen2.png', label: 'Panneaux routiers' },
-  { src: '/images/screenshots/screen3.png', label: 'Mode Turbo' },
-  { src: '/images/screenshots/screen4.png', label: 'Mode Turbo en jeu' },
+  { src: '/images/screenshots/screen3.png', label: 'Entraînement réflexe' },
+  { src: '/images/screenshots/screen4.png', label: 'Entraînement réflexe en jeu' },
   { src: '/images/screenshots/screen5.png', label: 'Profil et progression' },
 ];
 

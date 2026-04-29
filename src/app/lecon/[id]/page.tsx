@@ -58,10 +58,6 @@ export default function LessonPage() {
   const isRevisionMode = searchParams.get('revision') === '1';
   const isPartieMode = partieParam !== null;
   const partieIndex = isPartieMode ? parseInt(partieParam, 10) : undefined;
-  // Block partie access if previous partie not completed (unless revision mode or partie 0)
-  const isVipUser = typeof window !== 'undefined' && localStorage.getItem('permigo_vip') === 'true';
-  const partieAccessBlocked = !isVipUser && isPartieMode && !isRevisionMode && partieIndex !== undefined && partieIndex > 0
-    && !isPartieCompleted(lessonId, partieIndex - 1);
 
   const [phase, setPhase] = useState<Phase>('theory');
   const [lesson, setLesson] = useState(getLessonDataLocalized(lessonId, lang));
@@ -232,28 +228,6 @@ export default function LessonPage() {
   // Premium gate: themes B-I require premium
   if (!isThemeFree(themeCode) && !isPremium()) {
     return <PremiumGate><></></PremiumGate>;
-  }
-
-  // Partie order gate: partie N requires partie N-1 completed (except revision mode)
-  if (partieAccessBlocked) {
-    return (
-      <div className="flex items-center justify-center min-h-screen px-6">
-        <div className="max-w-sm w-full text-center">
-          <span className="text-6xl block mb-4">🔒</span>
-          <h2 className="text-xl font-black text-white mb-2">Partie verrouillée</h2>
-          <p className="text-sm mb-6" style={{ color: '#8B9DC3' }}>
-            Termine la partie précédente avec au moins 70% pour débloquer celle-ci.
-          </p>
-          <button
-            onClick={() => router.push('/app')}
-            className="w-full py-3.5 rounded-2xl font-extrabold text-white press-scale"
-            style={{ background: '#4ecdc4' }}
-          >
-            Retour à l&apos;accueil
-          </button>
-        </div>
-      </div>
-    );
   }
 
   if (!lesson) {

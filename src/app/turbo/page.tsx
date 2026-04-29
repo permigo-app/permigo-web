@@ -265,7 +265,7 @@ export default function TurboPage() {
 
           {/* 1. Header */}
           <div>
-            <h1 className="text-2xl font-black flex items-center gap-2">🏎️ {t('turbo_titre')}</h1>
+            <h1 className="text-2xl font-black flex items-center gap-2">{t('turbo_titre')}</h1>
             <p className="text-xs mt-1 italic" style={{ color: '#94a3b8' }}>{t('turbo_subtitle')}</p>
             {!isPremium() && !blocked && (
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg mt-2"
@@ -401,7 +401,7 @@ export default function TurboPage() {
             {/* Title */}
             <div className="mb-8">
               <h1 className="text-4xl font-black flex items-center gap-3">
-                <span>🏎️</span> {t('turbo_titre')}
+                {t('turbo_titre')}
               </h1>
               <p className="text-sm mt-1 italic" style={{ color: '#94a3b8' }}>{t('turbo_subtitle')}</p>
             </div>

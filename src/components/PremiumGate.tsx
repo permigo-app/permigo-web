@@ -39,11 +39,11 @@ export default function PremiumGate({ children }: PremiumGateProps) {
   const FAKE_QUESTIONS = isNL ? FAKE_QUESTIONS_NL : FAKE_QUESTIONS_FR;
   const FAKE_CHOICES   = isNL ? FAKE_CHOICES_NL   : FAKE_CHOICES_FR;
 
-  const headline   = isNL ? 'Deze 2286 vragen mis je 😔' : 'Ces 2286 questions te manquent 😔';
+  const headline   = isNL ? 'Deze 2286 vragen mis je' : 'Ces 2286 questions te manquent';
   const subtext    = isNL
-    ? "Het volledige proefexamen, onbeperkte Turbo-modus, alle thema's B→I. Ontgrendel alles voor"
-    : "L'examen blanc complet, le mode Turbo illimité, tous les thèmes B→I. Débloque tout pour";
-  const ctaLabel   = isNL ? '⭐ 7 dagen GRATIS uitproberen' : '⭐ Essayer 7 jours GRATUITS';
+    ? "Het volledige proefexamen, onbeperkte reflextraining, alle thema's B→I. Ontgrendel alles voor"
+    : "L'examen blanc complet, l'entraînement réflexe illimité, tous les thèmes B→I. Débloque tout pour";
+  const ctaLabel   = isNL ? '7 dagen GRATIS uitproberen ✨' : 'Essayer 7 jours GRATUITS ✨';
   const noCommit   = isNL ? 'Geen verbintenis · Op elk moment opzegbaar' : 'Sans engagement · Annulable à tout moment';
 
   const stats = isNL
