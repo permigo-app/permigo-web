@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 import AppShell from '@/components/AppShell';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen">
+        <ThemeProvider>
         <LanguageProvider>
           <AuthProvider>
             <AppShell>
@@ -84,6 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </footer>
           </AuthProvider>
         </LanguageProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

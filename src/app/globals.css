@@ -75,6 +75,38 @@
   --border-light: #3A3A5C;
 }
 
+/* ── Variables CSS par thème — DISPONIBLES, pas encore utilisées ──
+   Les composants existants utilisent les variables :root ci-dessous.
+   La migration vers ces variables se fera jour par jour.
+   ─────────────────────────────────────────────────────────── */
+[data-theme='night'] {
+  --bg-primary: #050A18;
+  --bg-secondary: #071126;
+  --card-primary: #101B35;
+  --card-secondary: #172541;
+  --text-primary: #F8FAFC;
+  --text-secondary: #9FB2D8;
+  --text-disabled: #5F6F91;
+  --brand: #22D6C7;
+  --brand-hover: #55E6DA;
+  --border-subtle: rgba(159, 178, 216, 0.14);
+  --border-active: #22D6C7;
+}
+
+[data-theme='day'] {
+  --bg-primary: #F7FAFC;
+  --bg-secondary: #EEF6FA;
+  --card-primary: #FFFFFF;
+  --card-secondary: #F1F7FB;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --text-disabled: #94A3B8;
+  --brand: #00AFA5;
+  --brand-hover: #008F88;
+  --border-subtle: #D9E5EF;
+  --border-active: #13BDB4;
+}
+
 * {
   box-sizing: border-box;
   /* Supprime le highlight gris/bleu natif iOS & Android au tap */

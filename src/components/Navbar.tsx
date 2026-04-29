@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
 
 const SIDEBAR_ITEMS = [
@@ -87,8 +88,9 @@ function MobileTopBar() {
           <span style={{ fontSize: 12, fontWeight: 800, color: '#FFD700' }}>{xp}</span>
         </div>
       </div>
-      {/* Lang switcher */}
-      <div className="flex-shrink-0">
+      {/* Theme + Lang switcher */}
+      <div className="flex-shrink-0 flex items-center gap-2">
+        <ThemeToggle />
         <LanguageSwitcher />
       </div>
     </div>
@@ -212,20 +214,21 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Sound toggle */}
-        <div style={{ padding: '8px 16px' }}>
+        {/* Sound toggle + Theme toggle */}
+        <div style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <button
             onClick={handleToggleMute}
             style={{
               display: 'flex', alignItems: 'center', gap: 8,
               background: 'none', border: 'none', cursor: 'pointer',
-              padding: '6px 8px', borderRadius: 8, width: '100%',
+              padding: '6px 8px', borderRadius: 8,
               color: muted ? '#5A6B8A' : '#8B9DC3',
             }}
           >
             <span style={{ fontSize: 16 }}>{muted ? '🔇' : '🔊'}</span>
             <span style={{ fontSize: 12, fontWeight: 600 }}>{muted ? 'Sons coupés' : 'Sons actifs'}</span>
           </button>
+          <ThemeToggle />
         </div>
 
         {/* Legal links */}
