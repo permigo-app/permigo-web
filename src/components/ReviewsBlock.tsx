@@ -59,13 +59,13 @@ export default function ReviewsBlock() {
 
         {/* Text */}
         <div className="flex-1 min-w-0">
-          <p className="text-xs font-black uppercase tracking-widest" style={{ color: '#00B894', lineHeight: 1 }}>
+          <p className="text-xs font-black uppercase tracking-widest" style={{ color: 'var(--brand)', lineHeight: 1 }}>
             {S.title}
           </p>
-          <p className="font-black" style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.2, marginTop: 3 }}>
+          <p className="font-black" style={{ fontSize: 20, color: 'var(--text-primary)', lineHeight: 1.2, marginTop: 3 }}>
             {S.due(dueCount)}
           </p>
-          <p className="text-xs" style={{ color: '#8B9DC3', marginTop: 2 }}>
+          <p className="text-xs" style={{ color: 'var(--text-secondary)', marginTop: 2 }}>
             {S.sub}
           </p>
         </div>

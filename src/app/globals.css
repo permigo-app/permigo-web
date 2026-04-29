@@ -91,6 +91,15 @@
   --brand-hover: #55E6DA;
   --border-subtle: rgba(159, 178, 216, 0.14);
   --border-active: #22D6C7;
+  --success: #32D66B;
+  --error: #FF5B4A;
+  --secondary: #8B6DFF;
+  --btn-blue: #64B5FF;
+  --premium: #FFC928;
+  --exam-orange: #FF8A1E;
+  --road-asphalt: #2D2D3D;
+  --road-edge: #3A3A5C;
+  --road-marking: #FFFFFF;
 }
 
 [data-theme='day'] {
@@ -105,6 +114,15 @@
   --brand-hover: #008F88;
   --border-subtle: #D9E5EF;
   --border-active: #13BDB4;
+  --success: #22C55E;
+  --error: #EF4444;
+  --secondary: #7C3AED;
+  --btn-blue: #3B82F6;
+  --premium: #F59E0B;
+  --exam-orange: #F97316;
+  --road-asphalt: #CBD5E1;
+  --road-edge: #94A3B8;
+  --road-marking: #334155;
 }
 
 * {
@@ -118,8 +136,8 @@ html {
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: var(--bg-primary, #0a0e2a);
+  color: var(--text-primary, #FFFFFF);
   font-family: 'Nunito', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -326,13 +344,13 @@ input[type="reset"] {
 
 /* ── Right sidebar cards ── */
 .stat-card {
-  background: #16213E;
+  background: var(--card-secondary);
   border-radius: 16px;
   padding: 16px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid var(--border-subtle);
 }
 .stat-card-glow {
-  box-shadow: 0 0 20px rgba(0,184,148,0.08);
+  box-shadow: 0 0 20px rgba(34,214,199,0.06);
 }
 
 /* ── Theme banner ── */

@@ -619,8 +619,8 @@ export default function HomePage() {
               className="fade-in-up hidden xl:block text-center px-4"
               style={{ animationDuration: '0.5s', position: 'relative', zIndex: 50, marginBottom: 12 }}
             >
-              <p className="font-black" style={{ fontSize: 'clamp(18px, 4.5vw, 26px)', color: '#FFFFFF', lineHeight: 1.3 }}>{salutation}</p>
-              <p className="font-semibold mx-auto" style={{ fontSize: 'clamp(13px, 3.5vw, 17px)', color: '#00B894', marginTop: 3, maxWidth: '90%', whiteSpace: 'normal', wordBreak: 'break-word', lineHeight: 1.4 }}>{body}</p>
+              <p className="font-black" style={{ fontSize: 'clamp(18px, 4.5vw, 26px)', color: 'var(--text-primary)', lineHeight: 1.3 }}>{salutation}</p>
+              <p className="font-semibold mx-auto" style={{ fontSize: 'clamp(13px, 3.5vw, 17px)', color: 'var(--brand)', marginTop: 3, maxWidth: '90%', whiteSpace: 'normal', wordBreak: 'break-word', lineHeight: 1.4 }}>{body}</p>
             </div>
           );
         })()}
@@ -631,8 +631,8 @@ export default function HomePage() {
           const streakLabel = getCompactStreakLabel(streak.currentStreak, lang);
           return (
             <div className="fade-in-up" style={{ textAlign: 'right', paddingRight: 14, paddingTop: 18, paddingBottom: 6, animationDuration: '0.5s' }}>
-              <p style={{ fontSize: 14, fontWeight: 900, color: '#FFFFFF', lineHeight: 1.2 }}>{salutation}</p>
-              <p style={{ fontSize: 11, fontWeight: 700, color: '#00B894', marginTop: 2, lineHeight: 1.2 }}>{streakLabel}</p>
+              <p style={{ fontSize: 14, fontWeight: 900, color: 'var(--text-primary)', lineHeight: 1.2 }}>{salutation}</p>
+              <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', marginTop: 2, lineHeight: 1.2 }}>{streakLabel}</p>
             </div>
           );
         })()}
@@ -680,16 +680,16 @@ export default function HomePage() {
         <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: isMobileView ? totalH + 80 : totalH, flexShrink: 0, overflow: 'visible', clipPath: 'none' }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
             {/* Road subtle glow */}
-            <path d={pathD} stroke="rgba(45,45,61,0.5)" strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d={pathD} style={{ stroke: 'var(--road-asphalt)', strokeOpacity: 0.5 }} strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
             {/* Road border/curb */}
-            <path d={pathD} stroke="#3A3A5C" strokeWidth={ROAD_W + 6} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d={pathD} style={{ stroke: 'var(--road-edge)' }} strokeWidth={ROAD_W + 6} strokeLinecap="round" strokeLinejoin="round" fill="none" />
             {/* Road surface */}
-            <path d={pathD} stroke="#2D2D3D" strokeWidth={ROAD_W} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d={pathD} style={{ stroke: 'var(--road-asphalt)' }} strokeWidth={ROAD_W} strokeLinecap="round" strokeLinejoin="round" fill="none" />
             {/* Road edge lines */}
             <path d={pathD} stroke="rgba(255,255,255,0.07)" strokeWidth={ROAD_W + 1} strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            <path d={pathD} stroke="#2D2D3D" strokeWidth={ROAD_W - 2} strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            {/* Center dashes — white for contrast */}
-            <path d={pathD} stroke="#FFFFFF" strokeWidth={2.5} strokeDasharray="12,10" strokeLinecap="round" fill="none" opacity={0.6} />
+            <path d={pathD} style={{ stroke: 'var(--road-asphalt)' }} strokeWidth={ROAD_W - 2} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            {/* Center dashes */}
+            <path d={pathD} style={{ stroke: 'var(--road-marking)' }} strokeWidth={2.5} strokeDasharray="12,10" strokeLinecap="round" fill="none" opacity={0.6} />
 
           </svg>
 
@@ -905,7 +905,7 @@ export default function HomePage() {
                     <div style={{ fontSize: 9, fontWeight: 900, color: tc, textTransform: 'uppercase', letterSpacing: 1.5, marginBottom: 1 }}>
                       THÈME {themeCode} · {cityName}
                     </div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.9)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {theme?.title || ''}
                     </div>
                   </div>
@@ -915,7 +915,7 @@ export default function HomePage() {
                     ) : (
                       <>
                         <div style={{ fontSize: 12, fontWeight: 900, color: tc }}>{themeDone}/{themeTotal}</div>
-                        <div style={{ fontSize: 8, color: 'rgba(255,255,255,0.35)', fontWeight: 600 }}>leçons</div>
+                        <div style={{ fontSize: 8, color: 'var(--text-disabled)', fontWeight: 600 }}>leçons</div>
                       </>
                     )}
                   </div>
@@ -1010,16 +1010,16 @@ export default function HomePage() {
                 }}>
                   <div style={{ opacity: lockedOpacity }}>
                     <svg width={eRingSize} height={eRingSize} className="absolute inset-0">
-                      <circle cx={eRingSize / 2} cy={eRingSize / 2} r={eRingR} stroke="#F39C12" strokeWidth={mRING_STROKE} fill="none" />
+                      <circle cx={eRingSize / 2} cy={eRingSize / 2} r={eRingR} style={{ stroke: 'var(--exam-orange)' }} strokeWidth={mRING_STROKE} fill="none" />
                     </svg>
                     {node.isLocked ? (
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="rounded-full flex items-center justify-center" style={{
                           width: eR * 2,
                           height: eR * 2,
-                          background: '#F39C12',
-                          border: '4px solid #E67E22',
-                          boxShadow: '0 0 14px rgba(243,156,18,0.6)',
+                          background: 'var(--exam-orange)',
+                          border: '4px solid var(--exam-orange)',
+                          boxShadow: '0 0 14px rgba(243,156,18,0.4)',
                         }}>
                           <span style={{ fontSize: eR * 0.85, lineHeight: 1 }}>📝</span>
                         </div>
@@ -1029,9 +1029,9 @@ export default function HomePage() {
                         <div className="rounded-full flex items-center justify-center" style={{
                           width: eR * 2,
                           height: eR * 2,
-                          background: node.isCompleted ? '#27AE60' : '#F39C12',
-                          border: `4px solid ${node.isCompleted ? '#1E8449' : '#E67E22'}`,
-                          boxShadow: node.isCompleted ? '0 0 12px rgba(39,174,96,0.4)' : '0 0 14px rgba(243,156,18,0.6)',
+                          background: node.isCompleted ? 'var(--success)' : 'var(--exam-orange)',
+                          border: `4px solid ${node.isCompleted ? 'var(--success)' : 'var(--exam-orange)'}`,
+                          boxShadow: node.isCompleted ? '0 0 12px rgba(50,214,107,0.35)' : '0 0 14px rgba(255,138,30,0.4)',
                         }}>
                           <span style={{ fontSize: eR * 0.85, lineHeight: 1 }}>{node.isCompleted ? '👑' : '📝'}</span>
                         </div>
@@ -1043,11 +1043,11 @@ export default function HomePage() {
                       top: eRingSize + 2,
                       width: 80,
                     }}>
-                      <span style={{ fontSize: isMobileView ? 9 : 11, fontWeight: 900, letterSpacing: 1, color: '#F39C12' }}>{t('examen_node')}</span>
+                      <span style={{ fontSize: isMobileView ? 9 : 11, fontWeight: 900, letterSpacing: 1, color: 'var(--exam-orange)' }}>{t('examen_node')}</span>
                     </div>
 
                     <div className="absolute" style={{ left: eR + 10, top: -16 }}>
-                      <span className="text-base">⭐</span>
+                      <span className="text-base">✨</span>
                     </div>
                   </div>
 
@@ -1064,8 +1064,8 @@ export default function HomePage() {
                       padding: isMobileView ? '7px 10px' : '6px 8px',
                       transform: isMobileView ? 'none' : 'scale(0.92)',
                       transformOrigin: 'top left',
-                      background: '#16213E',
-                      border: '1px solid rgba(139,157,195,0.12)',
+                      background: 'var(--card-secondary)',
+                      border: '1px solid var(--border-subtle)',
                       borderRadius: 12,
                       zIndex: 20,
                       opacity: lockedOpacity,
@@ -1081,24 +1081,24 @@ export default function HomePage() {
                         <>
                           <div className="flex items-center" style={{ gap, padding: py }}>
                             <span style={{ fontSize: eSize }}>🃏</span>
-                            <span style={{ fontSize: fs, fontWeight: 700, color: '#6C5CE7' }}>{t('flash_label')}</span>
+                            <span style={{ fontSize: fs, fontWeight: 700, color: 'var(--secondary)' }}>{t('flash_label')}</span>
                           </div>
-                          <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
+                          <div className="h-px" style={{ background: 'var(--border-subtle)' }} />
                           <div className="flex items-center" style={{ gap, padding: py }}>
                             <span style={{ fontSize: eSize }}>🔄</span>
-                            <span style={{ fontSize: fs, fontWeight: 700, color: '#74B9FF' }}>{t('revision_label')}</span>
+                            <span style={{ fontSize: fs, fontWeight: 700, color: 'var(--btn-blue)' }}>{t('revision_label')}</span>
                           </div>
                         </>
                       ) : (
                         <>
                           <Link href={`/flash?theme=${node.themeCode}`} className="flex items-center press-scale" style={{ gap, padding: py }}>
                             <span style={{ fontSize: eSize }}>🃏</span>
-                            <span style={{ fontSize: fs, fontWeight: 700, color: '#6C5CE7' }}>{t('flash_label')}</span>
+                            <span style={{ fontSize: fs, fontWeight: 700, color: 'var(--secondary)' }}>{t('flash_label')}</span>
                           </Link>
-                          <div className="h-px" style={{ background: 'rgba(139,157,195,0.15)' }} />
+                          <div className="h-px" style={{ background: 'var(--border-subtle)' }} />
                           <Link href={`/revision?theme=${node.themeCode}`} className="flex items-center press-scale" style={{ gap, padding: py }}>
                             <span style={{ fontSize: eSize }}>🔄</span>
-                            <span style={{ fontSize: fs, fontWeight: 700, color: '#74B9FF' }}>{t('revision_label')}</span>
+                            <span style={{ fontSize: fs, fontWeight: 700, color: 'var(--btn-blue)' }}>{t('revision_label')}</span>
                           </Link>
                         </>
                       );
@@ -1133,7 +1133,7 @@ export default function HomePage() {
             const isInProgress = completedParties.length > 0 && !allPartiesDone && !node.isLocked;
 
             // Colors
-            const bg = (allPartiesDone || isInProgress || isActive || node.isLocked) ? tc : '#141937';
+            const bg = (allPartiesDone || isInProgress || isActive || node.isLocked) ? tc : 'var(--card-primary)';
             const borderColor = tc;
             const ringColor = tc;
 
@@ -1163,7 +1163,7 @@ export default function HomePage() {
                 <svg width={ringSize} height={ringSize} className="absolute inset-0">
                   {N <= 1 ? (
                     <>
-                      <circle cx={ringCx} cy={ringCy} r={ringRadius} stroke="#2D2D3D" strokeWidth={RING_STROKE} fill="none" />
+                      <circle cx={ringCx} cy={ringCy} r={ringRadius} style={{ stroke: 'var(--border-subtle)' }} strokeWidth={RING_STROKE} fill="none" />
                       {allPartiesDone && (
                         <circle cx={ringCx} cy={ringCy} r={ringRadius}
                           stroke={ringColor} strokeWidth={RING_STROKE} fill="none"
@@ -1183,7 +1183,7 @@ export default function HomePage() {
                           fill="none"
                           strokeDasharray={`${segLen} ${ringCirc - segLen}`}
                           transform={`rotate(${i * (360 / N) - 90}, ${ringCx}, ${ringCy})`}
-                          style={{ stroke: filled ? ringColor : '#2D2D3D' }}
+                          style={{ stroke: filled ? ringColor : 'var(--border-subtle)' }}
                         />
                       );
                     })
@@ -1211,7 +1211,7 @@ export default function HomePage() {
                       height: nodeRadius * 2,
                       background: bg,
                       border: `3px solid ${borderColor}`,
-                      boxShadow: isActive ? '0 0 20px rgba(78,205,196,0.6)' : node.isCompleted ? '0 0 10px rgba(39,174,96,0.3)' : 'none',
+                      boxShadow: isActive ? `0 0 16px ${tc}66` : node.isCompleted ? `0 0 8px ${tc}33` : 'none',
                     }}>
                       {nodeContent}
                     </div>
@@ -1505,14 +1505,14 @@ export default function HomePage() {
             <Link href="/examen?theme=FINAL" className="press-scale">
               <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center text-4xl"
                 style={{
-                  background: '#16213E',
-                  border: '4px solid #00D2FF',
-                  boxShadow: '0 0 20px rgba(0,210,255,0.4)',
+                  background: 'var(--card-primary)',
+                  border: '4px solid var(--brand)',
+                  boxShadow: '0 0 20px rgba(34,214,199,0.3)',
                 }}>
                 🎓
               </div>
             </Link>
-            <span className="text-[11px] font-black mt-1.5 uppercase tracking-wider text-center" style={{ color: '#00D2FF' }}>Examen Final</span>
+            <span className="text-[11px] font-black mt-1.5 uppercase tracking-wider text-center" style={{ color: 'var(--brand)' }}>Examen Final</span>
           </div>
 
           {/* ── Finish line ── */}
@@ -1558,7 +1558,7 @@ export default function HomePage() {
         {isMobileView && (
           <div style={{
             height: 56,
-            background: 'linear-gradient(to bottom, rgba(10,14,42,0) 0%, #0a0e2a 100%)',
+            background: 'linear-gradient(to bottom, transparent 0%, var(--bg-primary) 100%)',
             pointerEvents: 'none',
             position: 'relative',
             zIndex: 50,
@@ -1571,11 +1571,11 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════ */}
       {/* RIGHT SIDEBAR — Desktop only (~300px) */}
       {/* ═══════════════════════════════════════ */}
-      <aside className="hidden xl:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 500, background: '#0F1923', borderLeft: '1px solid #16213E' }}>
+      <aside className="hidden xl:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 500, background: 'var(--card-primary)', borderLeft: '1px solid var(--border-subtle)' }}>
 
         {/* ── Stats du jour ── */}
         <div className="stat-card stat-card-glow">
-          <h3 className="text-xs font-black uppercase tracking-wider mb-4" style={{ color: '#8B9DC3' }}>{t('stats_du_jour')}</h3>
+          <h3 className="text-xs font-black uppercase tracking-wider mb-4" style={{ color: 'var(--text-secondary)' }}>{t('stats_du_jour')}</h3>
           <div className="flex flex-col gap-3">
             {/* Streak badge */}
             <div className="flex items-center gap-3 px-3 py-2.5 rounded-xl" style={{ background: '#FF6348' }}>
@@ -1583,19 +1583,19 @@ export default function HomePage() {
               <span className="text-sm font-black text-white">{streak.currentStreak} {streak.currentStreak !== 1 ? t('jours_plur') : t('jour_sing')}</span>
             </div>
             {/* XP badge */}
-            <div className="flex items-center gap-3 px-3 py-2 rounded-xl" style={{ background: 'rgba(255,215,0,0.08)' }}>
+            <div className="flex items-center gap-3 px-3 py-2 rounded-xl" style={{ background: 'rgba(255,201,40,0.08)' }}>
               <span className="text-xl">⚡</span>
               <div className="flex-1">
-                <div className="text-sm font-extrabold" style={{ color: '#FFD700' }}>{xp.totalXP}</div>
-                <div className="text-[10px] font-semibold" style={{ color: '#5A6B8A' }}>{t('xp_total')}</div>
+                <div className="text-sm font-extrabold" style={{ color: 'var(--premium)' }}>{xp.totalXP}</div>
+                <div className="text-[10px] font-semibold" style={{ color: 'var(--text-disabled)' }}>{t('xp_total')}</div>
               </div>
             </div>
             {/* Level badge */}
-            <div className="flex items-center gap-3 px-3 py-2 rounded-xl" style={{ background: 'rgba(0,184,148,0.1)' }}>
+            <div className="flex items-center gap-3 px-3 py-2 rounded-xl" style={{ background: 'rgba(50,214,107,0.08)' }}>
               <span className="text-xl">🎯</span>
               <div className="flex-1">
-                <div className="text-sm font-extrabold" style={{ color: '#00B894' }}>{t('niveau')} {xp.level}</div>
-                <div className="text-[10px] font-semibold" style={{ color: '#5A6B8A' }}>{t('progression_label')}</div>
+                <div className="text-sm font-extrabold" style={{ color: 'var(--success)' }}>{t('niveau')} {xp.level}</div>
+                <div className="text-[10px] font-semibold" style={{ color: 'var(--text-disabled)' }}>{t('progression_label')}</div>
               </div>
             </div>
           </div>
@@ -1606,11 +1606,11 @@ export default function HomePage() {
         <div className="stat-card">
           <div className="flex items-center gap-2 mb-3">
             <Image src="/images/gaston.png" width={40} height={40} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
-            <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#8B9DC3' }}>{t('prof_gaston_dit')}</span>
+            <span className="text-xs font-black uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>{t('prof_gaston_dit')}</span>
           </div>
           <div style={{
             background: '#FFF8E7',
-            border: '1.5px solid #1B3A6B',
+            border: '1.5px solid var(--border-subtle)',
             borderRadius: '12px',
             padding: '10px 14px',
             fontSize: 13,
@@ -1624,18 +1624,18 @@ export default function HomePage() {
 
         {/* ── Progression ── */}
         <div className="stat-card">
-          <h3 className="text-xs font-black uppercase tracking-wider mb-3" style={{ color: '#8B9DC3' }}>{t('progression_label')}</h3>
+          <h3 className="text-xs font-black uppercase tracking-wider mb-3" style={{ color: 'var(--text-secondary)' }}>{t('progression_label')}</h3>
 
           {/* Leçons progress */}
           <div className="mb-3">
             <div className="flex justify-between items-center mb-1.5">
               <span className="text-xs font-bold">{t('lecons')}</span>
-              <span className="text-xs font-bold" style={{ color: '#00B894' }}>{totalCompleted}/{totalLessons}</span>
+              <span className="text-xs font-bold" style={{ color: 'var(--success)' }}>{totalCompleted}/{totalLessons}</span>
             </div>
-            <div className="w-full h-2.5 rounded-full" style={{ background: '#2D2D3D' }}>
+            <div className="w-full h-2.5 rounded-full" style={{ background: 'var(--border-subtle)' }}>
               <div className="h-full rounded-full transition-all" style={{
                 width: `${totalLessons > 0 ? (totalCompleted / totalLessons) * 100 : 0}%`,
-                background: 'linear-gradient(90deg, #00B894, #55EFC4)',
+                background: 'linear-gradient(90deg, var(--success), var(--success))',
                 minWidth: totalCompleted > 0 ? 8 : 0,
               }} />
             </div>
@@ -1645,12 +1645,12 @@ export default function HomePage() {
           <div>
             <div className="flex justify-between items-center mb-1.5">
               <span className="text-xs font-bold">{t('examens_label')}</span>
-              <span className="text-xs font-bold" style={{ color: '#F39C12' }}>{totalExamsPassed}/{THEME_ORDER.length}</span>
+              <span className="text-xs font-bold" style={{ color: 'var(--exam-orange)' }}>{totalExamsPassed}/{THEME_ORDER.length}</span>
             </div>
-            <div className="w-full h-2.5 rounded-full" style={{ background: '#2D2D3D' }}>
+            <div className="w-full h-2.5 rounded-full" style={{ background: 'var(--border-subtle)' }}>
               <div className="h-full rounded-full transition-all" style={{
                 width: `${(totalExamsPassed / THEME_ORDER.length) * 100}%`,
-                background: 'linear-gradient(90deg, #F39C12, #FDCB6E)',
+                background: 'linear-gradient(90deg, var(--exam-orange), var(--exam-orange))',
                 minWidth: totalExamsPassed > 0 ? 8 : 0,
               }} />
             </div>
@@ -1671,14 +1671,14 @@ export default function HomePage() {
               return (
                 <div key={tc} className="flex items-center gap-2">
                   <span className="text-xs w-4 text-center font-bold" style={{ color: THEME_COLORS[tc] }}>{tc}</span>
-                  <div className="flex-1 h-1.5 rounded-full" style={{ background: '#2D2D3D' }}>
+                  <div className="flex-1 h-1.5 rounded-full" style={{ background: 'var(--border-subtle)' }}>
                     <div className="h-full rounded-full" style={{
                       width: `${total > 0 ? (done / total) * 100 : 0}%`,
                       background: THEME_COLORS[tc],
                       minWidth: done > 0 ? 4 : 0,
                     }} />
                   </div>
-                  <span className="text-[10px] font-bold" style={{ color: '#5A6B8A' }}>{done}/{total}</span>
+                  <span className="text-[10px] font-bold" style={{ color: 'var(--text-disabled)' }}>{done}/{total}</span>
                   {examDone && <span className="text-[10px]">👑</span>}
                 </div>
               );
@@ -1707,12 +1707,12 @@ export default function HomePage() {
 
             <div
               className="relative w-full max-w-lg rounded-t-[28px] pt-6 slide-up flex flex-col"
-              style={{ background: '#1C2345', maxHeight: '88vh' }}
+              style={{ background: 'var(--card-secondary)', maxHeight: '88vh' }}
               onClick={e => e.stopPropagation()}
             >
               {/* Scrollable area */}
               <div className="px-6 overflow-y-auto" style={{ flex: '1 1 auto' }}>
-                <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: '#5A6B8A' }} />
+                <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: 'var(--text-disabled)' }} />
 
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-14 h-14 rounded-full flex items-center justify-center text-3xl" style={{ background: tc + '20' }}>
@@ -1739,11 +1739,12 @@ export default function HomePage() {
                           className="w-full flex items-center gap-3 py-3 px-3 rounded-xl mb-1.5 transition-all text-left"
                           style={{
                             background: isSelected ? tc + '18' : 'transparent',
-                            border: isSelected ? `2px solid ${tc}` : '1px solid rgba(255,255,255,0.08)',
+                            border: isSelected ? `2px solid ${tc}` : '1px solid var(--border-subtle)',
                           }}
                         >
-                          <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-extrabold text-white flex-shrink-0" style={{
-                            background: done ? '#27AE60' : isSelected ? tc : 'rgba(255,255,255,0.12)',
+                          <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-extrabold flex-shrink-0" style={{
+                            background: done ? 'var(--success)' : isSelected ? tc : 'var(--border-subtle)',
+                            color: (done || isSelected) ? '#ffffff' : 'var(--text-primary)',
                           }}>
                             {done ? '✓' : idx + 1}
                           </div>
@@ -1807,16 +1808,16 @@ export default function HomePage() {
           <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.75)' }} />
           <div
             className="relative w-full max-w-lg rounded-t-[28px] px-6 pt-6 pb-10 slide-up"
-            style={{ background: '#1C2345' }}
+            style={{ background: 'var(--card-secondary)' }}
             onClick={e => e.stopPropagation()}
           >
-            <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: '#5A6B8A' }} />
+            <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: 'var(--text-disabled)' }} />
 
             {/* Header */}
             <div className="text-center mb-6">
               <span className="text-5xl block mb-3">🔒</span>
-              <h2 className="text-2xl font-black text-white mb-2">Débloquer tous les thèmes</h2>
-              <p className="text-sm" style={{ color: '#8B9DC3' }}>
+              <h2 className="text-2xl font-black mb-2" style={{ color: 'var(--text-primary)' }}>Débloquer tous les thèmes</h2>
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
                 Les thèmes B→I sont réservés aux membres Premium.
               </p>
             </div>
@@ -1830,24 +1831,24 @@ export default function HomePage() {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl" style={{ background: 'rgba(255,215,0,0.06)', border: '1px solid rgba(255,215,0,0.12)' }}>
                   <span className="text-xl">{item.icon}</span>
-                  <span className="text-sm font-semibold text-white">{item.label}</span>
+                  <span className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>{item.label}</span>
                 </div>
               ))}
             </div>
 
             {/* Price + CTA */}
             <div className="text-center mb-4">
-              <span className="text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block" style={{ background: 'rgba(255,215,0,0.15)', color: '#FFD700' }}>
+              <span className="text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block" style={{ background: 'rgba(255,201,40,0.15)', color: 'var(--premium)' }}>
                 ✨ Essai gratuit 7 jours
               </span>
-              <p className="text-3xl font-black text-white mb-0.5">7€ <span className="text-base font-normal" style={{ color: '#8B9DC3' }}>/mois</span></p>
-              <p className="text-xs" style={{ color: '#5A6B8A' }}>Annulable à tout moment</p>
+              <p className="text-3xl font-black mb-0.5" style={{ color: 'var(--text-primary)' }}>7€ <span className="text-base font-normal" style={{ color: 'var(--text-secondary)' }}>/mois</span></p>
+              <p className="text-xs" style={{ color: 'var(--text-disabled)' }}>Annulable à tout moment</p>
             </div>
 
             <button
               onClick={() => { setShowPremiumModal(false); router.push('/premium'); }}
               className="w-full py-4 rounded-2xl font-extrabold text-lg press-scale mb-3"
-              style={{ background: '#4ecdc4', color: '#0a0e2a', boxShadow: '0 4px 20px rgba(78,205,196,0.4)' }}
+              style={{ background: 'var(--brand)', color: '#0a0e2a', boxShadow: '0 4px 20px rgba(34,214,199,0.3)' }}
             >
               Commencer l&apos;essai gratuit ✨
             </button>
@@ -1855,7 +1856,7 @@ export default function HomePage() {
             <button
               onClick={() => setShowPremiumModal(false)}
               className="w-full py-2 text-sm"
-              style={{ color: '#5A6B8A' }}
+              style={{ color: 'var(--text-disabled)' }}
             >
               Rester sur le thème gratuit
             </button>
