@@ -235,7 +235,7 @@ export default function LessonPage() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <p className="text-xl font-bold mb-2">{t('lecon_introuvable')}</p>
-          <button onClick={() => router.push('/app')} className="px-6 py-3 rounded-2xl font-black text-white press-scale" style={{ background: '#4ecdc4' }}>
+          <button onClick={() => router.push('/app')} className="px-6 py-3 rounded-2xl font-black press-scale" style={{ background: 'var(--brand)', color: 'var(--bg-primary)' }}>
             {t('retour')}
           </button>
         </div>
@@ -312,20 +312,20 @@ export default function LessonPage() {
         {/* ── Sticky header ── */}
         <div
           className="sticky top-0 z-30 px-6 py-3"
-          style={{ background: 'rgba(10,14,42,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #2A3550' }}
+          style={{ background: 'var(--bg-blur)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-subtle)' }}
         >
           <div className="max-w-screen-xl mx-auto flex items-center gap-4">
             <button
               onClick={() => router.push('/app')}
               className="w-9 h-9 rounded-full flex items-center justify-center press-scale"
-              style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}
+              style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}
             >
               ✕
             </button>
             <div className="flex-1 text-center">
               <span className="text-sm font-bold">{currentPartieTitle || lesson.title}</span>
             </div>
-            <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
+            <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>
               {t('carte')} {currentCard + 1}/{totalCards}
             </span>
           </div>
@@ -341,22 +341,22 @@ export default function LessonPage() {
               <div
                 className="rounded-2xl p-4 lg:p-8 xl:p-10 slide-up"
                 style={{
-                  background: '#111827',
-                  border: '1px solid rgba(78,205,196,0.2)',
+                  background: 'var(--card-primary)',
+                  border: '1px solid var(--border-subtle)',
                   overflow: 'hidden',
                   wordBreak: 'break-word',
                 }}
               >
                 {/* Theme badge */}
-                <div className="inline-block px-3 py-1.5 rounded-lg mb-4" style={{ background: 'rgba(78,205,196,0.15)' }}>
-                  <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>{lesson.id}</span>
+                <div className="inline-block px-3 py-1.5 rounded-lg mb-4" style={{ background: 'var(--card-secondary)' }}>
+                  <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>{lesson.id}</span>
                 </div>
 
                 {/* Emoji icon */}
                 <div className="text-6xl mb-4">{card.emoji}</div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-black text-white mb-3">{card.title}</h3>
+                <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>{card.title}</h3>
 
                 {/* Image request — juste sous le titre */}
                 <ImageRequestButton id={`${lessonId}_c${currentCard}`} />
@@ -365,17 +365,17 @@ export default function LessonPage() {
                 {contentSections ? (
                   <div className="flex flex-col gap-5 mb-4">
                     {contentSections.map((sec, i) => (
-                      <div key={i} className="rounded-xl px-5 py-4" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}>
+                      <div key={i} className="rounded-xl px-5 py-4" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)' }}>
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-lg leading-none">{sec.emoji}</span>
-                          <span className="text-xs font-black uppercase tracking-widest" style={{ color: '#4ecdc4' }}>{sec.label}</span>
+                          <span className="text-xs font-black uppercase tracking-widest" style={{ color: 'var(--brand)' }}>{sec.label}</span>
                         </div>
-                        <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: '#d1d5db' }}>{sec.body}</p>
+                        <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: 'var(--text-secondary)' }}>{sec.body}</p>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <p className="text-base leading-relaxed mb-4" style={{ color: '#d1d5db' }}>{stripEmojis(card.content)}</p>
+                  <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>{stripEmojis(card.content)}</p>
                 )}
 
                 {/* Signs */}
@@ -386,7 +386,7 @@ export default function LessonPage() {
                 )}
 
                 {/* Separator */}
-                <div className="my-6" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }} />
+                <div className="my-6" style={{ borderTop: '1px solid var(--border-subtle)' }} />
 
                 {/* "J'ai pas compris" button */}
                 {card.explanation_simple && (
@@ -396,8 +396,8 @@ export default function LessonPage() {
                       className="rounded-xl px-5 py-2.5 text-sm font-bold press-scale flex items-center gap-2 transition-all"
                       style={{
                         background: 'transparent',
-                        border: '1.5px solid #e74c3c',
-                        color: '#e74c3c',
+                        border: '1.5px solid var(--error)',
+                        color: 'var(--error)',
                       }}
                       onMouseEnter={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.1)'; }}
                       onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
@@ -431,7 +431,7 @@ export default function LessonPage() {
                       else { setCurrentCard(c => c + 1); }
                     }}
                     className="flex-1 h-14 rounded-xl font-black text-base press-scale transition-all"
-                    style={{ background: '#4ecdc4', color: '#0a0e2a', boxShadow: '0 4px 12px rgba(78,205,196,0.3)' }}
+                    style={{ background: 'var(--brand)', color: 'var(--bg-primary)', boxShadow: '0 4px 12px rgba(78,205,196,0.3)' }}
                     onMouseEnter={e => { e.currentTarget.style.filter = 'brightness(1.1)'; }}
                     onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; }}
                   >
@@ -446,30 +446,30 @@ export default function LessonPage() {
               <div className="lg:sticky lg:top-20 flex flex-col gap-5">
 
                 {/* Progress card */}
-                <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('progression')}</h4>
+                <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('progression')}</h4>
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">{themeEmoji}</span>
                     <div className="flex-1">
                       <p className="text-sm font-bold">{lesson.title}</p>
                       {partieInfo && !isPartieMode && (
-                        <p className="text-[11px] mt-0.5" style={{ color: '#5A6B8A' }}>{partieInfo.partieTitle}</p>
+                        <p className="text-[11px] mt-0.5" style={{ color: 'var(--text-disabled)' }}>{partieInfo.partieTitle}</p>
                       )}
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                    <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
                       <div
                         className="h-full rounded-full transition-all duration-500"
-                        style={{ width: `${progressPct}%`, background: '#4ecdc4' }}
+                        style={{ width: `${progressPct}%`, background: 'var(--brand)' }}
                       />
                     </div>
-                    <span className="text-xs font-bold" style={{ color: '#4ecdc4' }}>{currentCard + 1}/{totalCards}</span>
+                    <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>{currentCard + 1}/{totalCards}</span>
                   </div>
                 </div>
 
                 {/* Prof. Gaston */}
-                <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+                <div className="rounded-2xl p-5" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
                   <Gaston
                     message={gastonTheoryTip}
                     expression="encouraging"
@@ -479,13 +479,13 @@ export default function LessonPage() {
 
                 {/* Key points */}
                 {keyPoints.length > 0 && (
-                  <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                    <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('points_cles')}</h4>
+                  <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+                    <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('points_cles')}</h4>
                     <div className="flex flex-col gap-2.5">
                       {keyPoints.map((point, i) => (
                         <div key={i} className="flex items-start gap-2">
-                          <span className="text-xs mt-0.5" style={{ color: '#4ecdc4' }}>{'✓'}</span>
-                          <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{point}</p>
+                          <span className="text-xs mt-0.5" style={{ color: 'var(--brand)' }}>{'✓'}</span>
+                          <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{point}</p>
                         </div>
                       ))}
                     </div>
@@ -496,7 +496,7 @@ export default function LessonPage() {
                 <button
                   onClick={startQuiz}
                   className="w-full py-3 rounded-xl text-sm font-bold press-scale transition-all"
-                  style={{ background: 'transparent', border: '1.5px solid #4ecdc4', color: '#4ecdc4' }}
+                  style={{ background: 'transparent', border: '1.5px solid var(--brand)', color: 'var(--brand)' }}
                   onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.1)'; }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
                 >
@@ -517,25 +517,25 @@ export default function LessonPage() {
       <div className="min-h-screen flex items-center justify-center px-6">
         <div className="max-w-md w-full text-center">
           <div className="text-7xl mb-6">😓</div>
-          <h2 className="text-2xl font-black text-white mb-3">Pas encore !</h2>
-          <p className="text-base mb-2" style={{ color: '#d1d5db' }}>
-            Tu dois avoir <span className="font-black" style={{ color: '#4ecdc4' }}>70%</span> de bonnes réponses pour valider cette partie.
+          <h2 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>Pas encore !</h2>
+          <p className="text-base mb-2" style={{ color: 'var(--text-secondary)' }}>
+            Tu dois avoir <span className="font-black" style={{ color: 'var(--brand)' }}>70%</span> de bonnes réponses pour valider cette partie.
           </p>
-          <p className="text-sm mb-8" style={{ color: '#8B9DC3' }}>
-            Tu as obtenu <span className="font-black" style={{ color: pct >= 50 ? '#e67e22' : '#e74c3c' }}>{pct}%</span> ({partieFailScore.correct}/{partieFailScore.total} bonnes réponses).
+          <p className="text-sm mb-8" style={{ color: 'var(--text-secondary)' }}>
+            Tu as obtenu <span className="font-black" style={{ color: pct >= 50 ? '#e67e22' : 'var(--error)' }}>{pct}%</span> ({partieFailScore.correct}/{partieFailScore.total} bonnes réponses).
           </p>
           <div className="flex flex-col gap-3">
             <button
               onClick={retryPartie}
               className="w-full py-4 rounded-2xl font-black text-base press-scale"
-              style={{ background: '#4ecdc4', color: '#0a0e2a', boxShadow: '0 4px 16px rgba(78,205,196,0.3)' }}
+              style={{ background: 'var(--brand)', color: 'var(--bg-primary)', boxShadow: '0 4px 16px rgba(78,205,196,0.3)' }}
             >
               🔄 Réessayer
             </button>
             <button
               onClick={() => router.push('/app')}
               className="w-full py-3 rounded-2xl font-bold text-sm press-scale"
-              style={{ background: 'transparent', border: '1.5px solid #2A3550', color: '#8B9DC3' }}
+              style={{ background: 'transparent', border: '1.5px solid var(--border-subtle)', color: 'var(--text-secondary)' }}
             >
               Retour à la carte
             </button>
@@ -555,7 +555,7 @@ export default function LessonPage() {
         progress={pctDone}
         progressLabel={`${currentQ + 1}/${questions.length}`}
         headerLeft={
-          <button onClick={() => router.push('/app')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+          <button onClick={() => router.push('/app')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
             {'✕'}
           </button>
         }
@@ -579,24 +579,24 @@ export default function LessonPage() {
         sidebar={
           <>
             {/* Progress card */}
-            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('progression')}</h4>
+            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('progression')}</h4>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('revision_question')}</span>
+                <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('revision_question')}</span>
                 <span className="text-sm font-bold">{currentQ + 1} / {questions.length}</span>
               </div>
-              <div className="h-2 rounded-full overflow-hidden mb-3" style={{ background: 'rgba(255,255,255,0.1)' }}>
-                <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: '#4ecdc4' }} />
+              <div className="h-2 rounded-full overflow-hidden mb-3" style={{ background: 'var(--border-subtle)' }}>
+                <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: 'var(--brand)' }} />
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('correctes')}</span>
-                <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
+                <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('correctes')}</span>
+                <span className="text-sm font-bold" style={{ color: 'var(--success)' }}>{correctCount}</span>
               </div>
             </div>
 
             {/* Theme badge */}
-            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('theme')}</h4>
+            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('theme')}</h4>
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{themeEmoji}</span>
                 <div>
@@ -609,7 +609,7 @@ export default function LessonPage() {
             </div>
 
             {/* Gaston */}
-            <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+            <div className="rounded-2xl p-5" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
               <Gaston message={gastonMsg} expression={gastonExpr} title={t('prof_gaston')} />
             </div>
 
@@ -619,10 +619,10 @@ export default function LessonPage() {
                 background: selected === q.correct ? 'rgba(46,204,113,0.1)' : 'rgba(231,76,60,0.1)',
                 border: `1px solid ${selected === q.correct ? 'rgba(46,204,113,0.3)' : 'rgba(231,76,60,0.3)'}`,
               }}>
-                <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: selected === q.correct ? '#2ecc71' : '#e74c3c' }}>
+                <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: selected === q.correct ? 'var(--success)' : 'var(--error)' }}>
                   {selected === q.correct ? `✓ ${t('correct')}` : `✗ ${t('incorrect')}`}
                 </p>
-                <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{q.explanation}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{q.explanation}</p>
               </div>
             )}
           </>

@@ -201,7 +201,7 @@ export default function RevisionsPage() {
   if (phase === 'loading') {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <p style={{ color: '#8B9DC3' }}>{s.loading}</p>
+        <p style={{ color: 'var(--text-secondary)' }}>{s.loading}</p>
       </div>
     );
   }
@@ -212,24 +212,24 @@ export default function RevisionsPage() {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen px-6 gap-6">
         <div className="text-6xl">🔁</div>
-        <h1 className="text-2xl font-black text-white text-center">{s.introTitle}</h1>
+        <h1 className="text-2xl font-black text-center" style={{ color: 'var(--text-primary)' }}>{s.introTitle}</h1>
 
         {questions.length === 0 ? (
           <>
-            <p className="text-center font-bold" style={{ color: '#00B894', fontSize: 20 }}>{s.noQuestions}</p>
-            <p className="text-center text-sm" style={{ color: '#8B9DC3' }}>{s.noQSub}</p>
+            <p className="text-center font-bold" style={{ color: 'var(--success)', fontSize: 20 }}>{s.noQuestions}</p>
+            <p className="text-center text-sm" style={{ color: 'var(--text-secondary)' }}>{s.noQSub}</p>
           </>
         ) : (
           <>
-            <p className="text-center text-sm" style={{ color: '#8B9DC3', maxWidth: 320 }}>{s.introSub}</p>
+            <p className="text-center text-sm" style={{ color: 'var(--text-secondary)', maxWidth: 320 }}>{s.introSub}</p>
             <div className="flex gap-4">
-              <div className="text-center rounded-2xl px-6 py-4" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                <p className="text-2xl font-black text-white">{questions.length}</p>
-                <p className="text-xs" style={{ color: '#8B9DC3' }}>{s.introStat(questions.length).replace(`${questions.length} `, '')}</p>
+              <div className="text-center rounded-2xl px-6 py-4" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+                <p className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>{questions.length}</p>
+                <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>{s.introStat(questions.length).replace(`${questions.length} `, '')}</p>
               </div>
-              <div className="text-center rounded-2xl px-6 py-4" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                <p className="text-2xl font-black text-white">{estimatedMin}</p>
-                <p className="text-xs" style={{ color: '#8B9DC3' }}>min</p>
+              <div className="text-center rounded-2xl px-6 py-4" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+                <p className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>{estimatedMin}</p>
+                <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>min</p>
               </div>
             </div>
             <button
@@ -242,7 +242,7 @@ export default function RevisionsPage() {
           </>
         )}
 
-        <button onClick={() => router.push('/app')} className="text-sm press-scale" style={{ color: '#5A6B8A' }}>
+        <button onClick={() => router.push('/app')} className="text-sm press-scale" style={{ color: 'var(--text-disabled)' }}>
           {s.back}
         </button>
       </div>
@@ -265,42 +265,42 @@ export default function RevisionsPage() {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen px-6 gap-5">
         <div className="text-6xl">{emoji}</div>
-        <h1 className="text-2xl font-black text-white">{s.doneTitle}</h1>
+        <h1 className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>{s.doneTitle}</h1>
 
         {/* Score */}
-        <div className="w-full max-w-sm rounded-2xl p-5 flex items-center justify-around" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+        <div className="w-full max-w-sm rounded-2xl p-5 flex items-center justify-around" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
           <div className="text-center">
-            <p className="text-3xl font-black" style={{ color: '#2ecc71' }}>{correct}</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>{s.correct}</p>
+            <p className="text-3xl font-black" style={{ color: 'var(--success)' }}>{correct}</p>
+            <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>{s.correct}</p>
           </div>
-          <div style={{ width: 1, height: 40, background: '#2A3550' }} />
+          <div style={{ width: 1, height: 40, background: 'var(--border-subtle)' }} />
           <div className="text-center">
-            <p className="text-3xl font-black" style={{ color: '#e74c3c' }}>{total - correct}</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>{s.incorrect}</p>
+            <p className="text-3xl font-black" style={{ color: 'var(--error)' }}>{total - correct}</p>
+            <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>{s.incorrect}</p>
           </div>
-          <div style={{ width: 1, height: 40, background: '#2A3550' }} />
+          <div style={{ width: 1, height: 40, background: 'var(--border-subtle)' }} />
           <div className="text-center">
-            <p className="text-3xl font-black text-white">{pct}%</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>{s.score}</p>
+            <p className="text-3xl font-black" style={{ color: 'var(--text-primary)' }}>{pct}%</p>
+            <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>{s.score}</p>
           </div>
         </div>
 
         {/* XP */}
         {xpEarned > 0 && (
           <div className="w-full max-w-sm rounded-xl px-4 py-3 flex items-center justify-between" style={{ background: 'rgba(0,184,148,0.1)', border: '1px solid rgba(0,184,148,0.25)' }}>
-            <span className="text-sm font-bold" style={{ color: '#00B894' }}>{s.xpEarned}</span>
-            <span className="font-black text-white">+{xpEarned} XP ⭐</span>
+            <span className="text-sm font-bold" style={{ color: 'var(--success)' }}>{s.xpEarned}</span>
+            <span className="font-black" style={{ color: 'var(--text-primary)' }}>+{xpEarned} XP ⭐</span>
           </div>
         )}
 
         {/* Next reviews */}
         {(by1 > 0 || by3 > 0 || by7 > 0 || mastered > 0) && (
-          <div className="w-full max-w-sm rounded-2xl p-4 flex flex-col gap-2" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <p className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: '#4ecdc4' }}>{s.nextReviews}</p>
-            {by1 > 0  && <p className="text-sm" style={{ color: '#e74c3c' }}>📅 {s.day1(by1)}</p>}
+          <div className="w-full max-w-sm rounded-2xl p-4 flex flex-col gap-2" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+            <p className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: 'var(--brand)' }}>{s.nextReviews}</p>
+            {by1 > 0  && <p className="text-sm" style={{ color: 'var(--error)' }}>📅 {s.day1(by1)}</p>}
             {by3 > 0  && <p className="text-sm" style={{ color: '#FDCB6E' }}>📅 {s.day3(by3)}</p>}
-            {by7 > 0  && <p className="text-sm" style={{ color: '#8B9DC3' }}>📅 {s.day7(by7)}</p>}
-            {mastered > 0 && <p className="text-sm font-bold" style={{ color: '#00B894' }}>{s.mastered(mastered)}</p>}
+            {by7 > 0  && <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>📅 {s.day7(by7)}</p>}
+            {mastered > 0 && <p className="text-sm font-bold" style={{ color: 'var(--success)' }}>{s.mastered(mastered)}</p>}
           </div>
         )}
 
@@ -327,7 +327,7 @@ export default function RevisionsPage() {
         <button
           onClick={() => router.push('/app')}
           className="w-9 h-9 rounded-full flex items-center justify-center press-scale"
-          style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}
+          style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}
         >
           {'←'}
         </button>
@@ -350,20 +350,20 @@ export default function RevisionsPage() {
       shakeWrong={shakeWrong}
       questionId={q.id}
       sidebar={
-        <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-          <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>
+        <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+          <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>
             {s.sidebar_progress}
           </h4>
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm" style={{ color: '#8B9DC3' }}>{s.sidebar_q}</span>
+            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{s.sidebar_q}</span>
             <span className="text-sm font-bold">{currentQ + 1} / {questions.length}</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-sm" style={{ color: '#8B9DC3' }}>{s.sidebar_correct}</span>
-            <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
+            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{s.sidebar_correct}</span>
+            <span className="text-sm font-bold" style={{ color: 'var(--success)' }}>{correctCount}</span>
           </div>
           <div className="mt-3">
-            <span className="text-xs px-2 py-1 rounded-md font-bold" style={{ background: 'rgba(0,184,148,0.15)', color: '#00B894' }}>
+            <span className="text-xs px-2 py-1 rounded-md font-bold" style={{ background: 'rgba(0,184,148,0.15)', color: 'var(--success)' }}>
               🔁 Spaced Repetition
             </span>
           </div>

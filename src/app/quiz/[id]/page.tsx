@@ -93,7 +93,7 @@ export default function QuizPage() {
   };
 
   if (questions.length === 0) {
-    return <div className="flex items-center justify-center min-h-screen"><p style={{ color: '#8B9DC3' }}>{t('chargement')}</p></div>;
+    return <div className="flex items-center justify-center min-h-screen"><p style={{ color: 'var(--text-secondary)' }}>{t('chargement')}</p></div>;
   }
 
   const q = questions[currentQ];
@@ -114,7 +114,7 @@ export default function QuizPage() {
       progress={pctDone}
       progressLabel={`${currentQ + 1}/${questions.length}`}
       headerLeft={
-        <button onClick={() => router.push('/app')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+        <button onClick={() => router.push('/app')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
           {'✕'}
         </button>
       }
@@ -137,24 +137,24 @@ export default function QuizPage() {
       sidebar={
         <>
           {/* Progress card */}
-          <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('progression')}</h4>
+          <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('progression')}</h4>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('revision_question')}</span>
+              <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('revision_question')}</span>
               <span className="text-sm font-bold">{currentQ + 1} / {questions.length}</span>
             </div>
-            <div className="h-2 rounded-full overflow-hidden mb-3" style={{ background: 'rgba(255,255,255,0.1)' }}>
-              <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: '#4ecdc4' }} />
+            <div className="h-2 rounded-full overflow-hidden mb-3" style={{ background: 'var(--border-subtle)' }}>
+              <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pctDone}%`, background: 'var(--brand)' }} />
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('correctes')}</span>
-              <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
+              <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('correctes')}</span>
+              <span className="text-sm font-bold" style={{ color: 'var(--success)' }}>{correctCount}</span>
             </div>
           </div>
 
           {/* Theme badge */}
-          <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('theme')}</h4>
+          <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('theme')}</h4>
             <div className="flex items-center gap-3">
               <span className="text-2xl">{themeEmoji}</span>
               <span className="text-xs px-2.5 py-1 rounded-md font-bold" style={{ background: color + '20', color }}>
@@ -164,7 +164,7 @@ export default function QuizPage() {
           </div>
 
           {/* Gaston */}
-          <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+          <div className="rounded-2xl p-5" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
             <Gaston message={gastonMsg || t('reflechis')} expression={gastonExpr} title={t('prof_gaston')} />
           </div>
 
@@ -174,20 +174,20 @@ export default function QuizPage() {
               background: selected === q.correct ? 'rgba(46,204,113,0.1)' : 'rgba(231,76,60,0.1)',
               border: `1px solid ${selected === q.correct ? 'rgba(46,204,113,0.3)' : 'rgba(231,76,60,0.3)'}`,
             }}>
-              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: selected === q.correct ? '#2ecc71' : '#e74c3c' }}>
+              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: selected === q.correct ? 'var(--success)' : 'var(--error)' }}>
                 {selected === q.correct ? '✓ ' + t('correct') : '✗ ' + t('incorrect')}
               </p>
-              <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{q.explanation}</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{q.explanation}</p>
             </div>
           )}
 
           {/* Upcoming questions */}
           {upcoming.length > 0 && !validated && (
-            <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('flash_prochaines')}</h4>
+            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('flash_prochaines')}</h4>
               <div className="flex flex-col gap-2">
                 {upcoming.map((uq, i) => (
-                  <p key={i} className="text-xs leading-relaxed truncate" style={{ color: '#5A6B8A' }}>
+                  <p key={i} className="text-xs leading-relaxed truncate" style={{ color: 'var(--text-disabled)' }}>
                     {currentQ + 2 + i}. {uq.question}
                   </p>
                 ))}

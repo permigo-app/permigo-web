@@ -87,7 +87,7 @@ export default function QuizLayout({
       {/* ── Sticky header ── */}
       <div
         className="sticky top-0 z-30 px-6 py-3"
-        style={{ background: 'rgba(10,14,42,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #2A3550' }}
+        style={{ background: 'var(--bg-blur)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-subtle)' }}
       >
         <div className="max-w-screen-xl mx-auto">
           <div className="flex items-center gap-4 mb-2">
@@ -98,14 +98,14 @@ export default function QuizLayout({
             {headerRight}
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+            <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
               <div
                 className="h-full rounded-full transition-all duration-500"
-                style={{ width: `${progress}%`, background: '#4ecdc4' }}
+                style={{ width: `${progress}%`, background: 'var(--brand)' }}
               />
             </div>
             {progressLabel && (
-              <span className="text-xs font-bold flex-shrink-0" style={{ color: '#4ecdc4' }}>{progressLabel}</span>
+              <span className="text-xs font-bold flex-shrink-0" style={{ color: 'var(--brand)' }}>{progressLabel}</span>
             )}
           </div>
         </div>
@@ -119,20 +119,20 @@ export default function QuizLayout({
           <div className="flex-1 min-w-0 lg:flex-[3]">
             {/* Subtitle */}
             {subtitle && (
-              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#5A6B8A' }}>{subtitle}</p>
+              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'var(--text-disabled)' }}>{subtitle}</p>
             )}
 
             {/* Sign image */}
             {signCode && (
               <div className="flex justify-center mb-5">
-                <div className="rounded-xl p-4 flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                <div className="rounded-xl p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
                   <SignImage code={signCode} size={120} />
                 </div>
               </div>
             )}
 
             {/* Question */}
-            <p className="text-2xl font-bold text-white text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up">{question}</p>
+            <p className="text-2xl font-bold text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
 
             {/* Image request — juste sous la question, masqué si un panneau est déjà affiché */}
             {questionId && !signCode && <ImageRequestButton id={questionId} />}
@@ -140,35 +140,35 @@ export default function QuizLayout({
             {/* Answer grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
               {choices.map((choice, i) => {
-                let bg = 'rgba(255,255,255,0.07)';
-                let border = '1px solid rgba(255,255,255,0.15)';
-                let textCol = '#e5e7eb';
-                let labelBg = 'rgba(255,255,255,0.15)';
-                let labelCol = 'white';
+                let bg = 'var(--card-primary)';
+                let border = '1px solid var(--border-subtle)';
+                let textCol = 'var(--text-primary)';
+                let labelBg = 'var(--card-secondary)';
+                let labelCol = 'var(--text-primary)';
                 let icon: string | null = null;
 
                 if (validated) {
                   if (i === correctIndex) {
-                    bg = 'rgba(46,204,113,0.15)';
-                    border = '2px solid #2ecc71';
-                    textCol = '#2ecc71';
-                    labelBg = '#2ecc71';
-                    labelCol = 'white';
+                    bg = 'rgba(46,204,113,0.12)';
+                    border = '2px solid var(--success)';
+                    textCol = 'var(--success)';
+                    labelBg = 'var(--success)';
+                    labelCol = '#ffffff';
                     icon = '✓';
                   } else if (i === selected) {
-                    bg = 'rgba(231,76,60,0.15)';
-                    border = '2px solid #e74c3c';
-                    textCol = '#e74c3c';
-                    labelBg = '#e74c3c';
-                    labelCol = 'white';
+                    bg = 'rgba(231,76,60,0.12)';
+                    border = '2px solid var(--error)';
+                    textCol = 'var(--error)';
+                    labelBg = 'var(--error)';
+                    labelCol = '#ffffff';
                     icon = '✗';
                   }
                 } else if (i === selected) {
                   bg = 'rgba(78,205,196,0.15)';
-                  border = '2px solid #4ecdc4';
-                  labelBg = '#4ecdc4';
-                  labelCol = '#0a0e2a';
-                  textCol = 'white';
+                  border = '2px solid var(--brand)';
+                  labelBg = 'var(--brand)';
+                  labelCol = 'var(--bg-primary)';
+                  textCol = 'var(--text-primary)';
                 }
 
                 return (
@@ -183,14 +183,14 @@ export default function QuizLayout({
                     style={{ background: bg, border, minHeight: 80, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
                     onMouseEnter={e => {
                       if (!validated && i !== selected) {
-                        e.currentTarget.style.background = 'rgba(78,205,196,0.12)';
-                        e.currentTarget.style.borderColor = '#4ecdc4';
+                        (e.currentTarget as HTMLButtonElement).style.background = 'rgba(78,205,196,0.12)';
+                        (e.currentTarget as HTMLButtonElement).style.border = '1px solid var(--brand)';
                       }
                     }}
                     onMouseLeave={e => {
                       if (!validated && i !== selected) {
-                        e.currentTarget.style.background = 'rgba(255,255,255,0.07)';
-                        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+                        (e.currentTarget as HTMLButtonElement).style.background = 'var(--card-primary)';
+                        (e.currentTarget as HTMLButtonElement).style.border = '1px solid var(--border-subtle)';
                       }
                     }}
                   >
@@ -211,7 +211,7 @@ export default function QuizLayout({
             {/* XP float particle on correct */}
             {validated && isCorrect && (
               <div className="relative flex justify-center pointer-events-none" style={{ height: 0 }}>
-                <span className="absolute xp-float-particle text-lg font-black" style={{ color: '#FFD700', top: -20 }}>
+                <span className="absolute xp-float-particle text-lg font-black" style={{ color: 'var(--premium)', top: -20 }}>
                   +10 ✨
                 </span>
               </div>
@@ -222,17 +222,17 @@ export default function QuizLayout({
               <div
                 className="rounded-2xl p-5 mb-5 feedback-slide"
                 style={{
-                  background: isCorrect ? 'rgba(46,204,113,0.12)' : 'rgba(231,76,60,0.12)',
+                  background: isCorrect ? 'rgba(46,204,113,0.10)' : 'rgba(231,76,60,0.10)',
                   border: `1.5px solid ${isCorrect ? 'rgba(46,204,113,0.4)' : 'rgba(231,76,60,0.4)'}`,
                 }}
               >
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-2xl">{isCorrect ? '🎉' : '😅'}</span>
-                  <span className="text-base font-black" style={{ color: isCorrect ? '#2ecc71' : '#e74c3c' }}>
+                  <span className="text-base font-black" style={{ color: isCorrect ? 'var(--success)' : 'var(--error)' }}>
                     {isCorrect ? t('correct') : t('incorrect')}
                   </span>
                 </div>
-                {explanation && <p className="text-sm leading-relaxed" style={{ color: '#d1d5db' }}>{explanation}</p>}
+                {explanation && <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{explanation}</p>}
               </div>
             )}
 
@@ -243,8 +243,8 @@ export default function QuizLayout({
                 disabled={selected === null}
                 className="w-full py-4 rounded-xl font-black text-base press-scale btn-glow-teal"
                 style={{
-                  background: selected !== null ? 'linear-gradient(135deg, #4ecdc4, #26a69a)' : 'linear-gradient(135deg, #4ecdc4, #26a69a)',
-                  color: selected !== null ? '#0a0e2a' : '#0a0e2a',
+                  background: 'var(--brand)',
+                  color: 'var(--bg-primary)',
                   cursor: selected !== null ? 'pointer' : 'not-allowed',
                   opacity: selected !== null ? 1 : 0.35,
                 }}
@@ -255,7 +255,7 @@ export default function QuizLayout({
               <button
                 onClick={onNext}
                 className="w-full py-4 rounded-xl font-black text-base press-scale btn-glow-green"
-                style={{ background: 'linear-gradient(135deg, #2ecc71, #27ae60)', color: 'white' }}
+                style={{ background: 'var(--success)', color: '#ffffff' }}
               >
                 {isLastQuestion ? lastLabel : t('question_suivante')}
               </button>
