@@ -59,7 +59,7 @@ export default function PremiumGate({ children }: PremiumGateProps) {
       ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ background: '#0a0e2a' }}>
+    <div className="min-h-screen relative overflow-hidden" style={{ background: 'var(--bg-primary)' }}>
 
       {/* ── Background: blurred fake questions ── */}
       <div
@@ -67,15 +67,15 @@ export default function PremiumGate({ children }: PremiumGateProps) {
         style={{ filter: 'blur(6px)', opacity: 0.25, pointerEvents: 'none', userSelect: 'none' }}
       >
         {FAKE_QUESTIONS.map((q, qi) => (
-          <div key={qi} className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550', maxWidth: 640, margin: '0 auto', width: '100%' }}>
-            <p className="font-bold text-white mb-4" style={{ fontSize: 15 }}>{q}</p>
+          <div key={qi} className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', maxWidth: 640, margin: '0 auto', width: '100%' }}>
+            <p className="font-bold mb-4" style={{ fontSize: 15, color: 'var(--text-primary)' }}>{q}</p>
             <div className="grid grid-cols-2 gap-2">
               {(FAKE_CHOICES[qi] ?? FAKE_CHOICES[0]).map((c, ci) => (
-                <div key={ci} className="rounded-xl p-3 flex items-center gap-2" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <span className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-black flex-shrink-0" style={{ background: 'rgba(255,255,255,0.12)', color: 'white' }}>
+                <div key={ci} className="rounded-xl p-3 flex items-center gap-2" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
+                  <span className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-black flex-shrink-0" style={{ background: 'var(--border-subtle)', color: 'var(--text-primary)' }}>
                     {['A','B','C','D'][ci]}
                   </span>
-                  <span className="text-xs" style={{ color: '#d1d5db' }}>{c}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>{c}</span>
                 </div>
               ))}
             </div>
@@ -84,7 +84,7 @@ export default function PremiumGate({ children }: PremiumGateProps) {
       </div>
 
       {/* ── Overlay ── */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-6 py-12" style={{ background: 'rgba(10,14,42,0.82)' }}>
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-6 py-12" style={{ background: 'var(--bg-overlay)' }}>
 
         {/* Gaston */}
         <Image
@@ -97,12 +97,12 @@ export default function PremiumGate({ children }: PremiumGateProps) {
         />
 
         {/* Emotional headline */}
-        <h2 className="text-center font-black mb-3" style={{ color: '#fff', fontSize: 26, letterSpacing: '-0.5px' }}>
+        <h2 className="text-center font-black mb-3" style={{ color: 'var(--text-primary)', fontSize: 26, letterSpacing: '-0.5px' }}>
           {headline}
         </h2>
 
-        <p className="text-center mb-8" style={{ color: 'rgba(255,255,255,0.55)', fontSize: 15, maxWidth: 360, lineHeight: 1.6 }}>
-          {subtext} <strong style={{ color: '#FFD700' }}>7€/mois</strong>.
+        <p className="text-center mb-8" style={{ color: 'var(--text-secondary)', fontSize: 15, maxWidth: 360, lineHeight: 1.6 }}>
+          {subtext} <strong style={{ color: 'var(--premium)' }}>7€/mois</strong>.
         </p>
 
         {/* Stats */}
@@ -110,7 +110,7 @@ export default function PremiumGate({ children }: PremiumGateProps) {
           {stats.map(s => (
             <div key={s.label} className="text-center">
               <div className="font-black" style={{ color: s.color, fontSize: 24 }}>{s.value}</div>
-              <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: 12, marginTop: 2 }}>{s.label}</div>
+              <div style={{ color: 'var(--text-disabled)', fontSize: 12, marginTop: 2 }}>{s.label}</div>
             </div>
           ))}
         </div>
@@ -134,7 +134,7 @@ export default function PremiumGate({ children }: PremiumGateProps) {
           {ctaLabel}
         </Link>
 
-        <p className="mt-3 text-center" style={{ color: 'rgba(255,255,255,0.3)', fontSize: 12 }}>
+        <p className="mt-3 text-center" style={{ color: 'var(--text-disabled)', fontSize: 12 }}>
           {noCommit}
         </p>
 

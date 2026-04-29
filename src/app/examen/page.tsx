@@ -93,24 +93,41 @@ function ExamContent() {
   if (!isPremium() && !canPlayExam() && !hasActiveExam) {
     const days = daysUntilNextExam();
     return (
-      <div className="max-w-lg mx-auto px-4 py-16 text-center">
-        <span className="text-[80px] block mb-4">⏳</span>
-        <h1 className="text-2xl font-black mb-3">Examen déjà passé cette semaine</h1>
-        <p className="text-base mb-2" style={{ color: '#8B9DC3' }}>
-          {days > 0
-            ? `Reviens dans ${days} jour${days > 1 ? 's' : ''} pour repasser l'examen.`
-            : "Tu pourras repasser l'examen dès demain."}
-        </p>
-        <p className="text-sm mb-8" style={{ color: '#5A6B8A' }}>
-          Les membres Premium peuvent passer l&apos;examen sans limite.
-        </p>
-        <Link
-          href="/premium"
-          className="inline-block px-8 py-3.5 rounded-2xl font-black text-base press-scale"
-          style={{ background: '#FFD700', color: '#0a0e2a', boxShadow: '0 4px 16px rgba(255,215,0,0.4)' }}
-        >
-          Passer Premium ✨
-        </Link>
+      <div className="max-w-lg mx-auto px-4 py-12">
+        {/* Hero card */}
+        <div className="rounded-3xl p-8 mb-4 text-center" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+          <h1 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>Examen déjà passé cette semaine</h1>
+          <p className="text-base mb-5" style={{ color: 'var(--text-secondary)' }}>
+            {days > 0
+              ? `Reviens dans ${days} jour${days > 1 ? 's' : ''} pour repasser l'examen.`
+              : "Tu pourras repasser l'examen dès demain."}
+          </p>
+
+          {/* Stats pills — premium benefits */}
+          <div className="flex justify-center gap-3 mb-5 flex-wrap">
+            <div className="px-4 py-2 rounded-full text-sm font-bold" style={{ background: 'rgba(255,201,40,0.12)', color: 'var(--premium)' }}>
+              Examens illimités
+            </div>
+            <div className="px-4 py-2 rounded-full text-sm font-bold" style={{ background: 'rgba(50,214,107,0.10)', color: 'var(--success)' }}>
+              Tous les thèmes
+            </div>
+            <div className="px-4 py-2 rounded-full text-sm font-bold" style={{ background: 'rgba(100,181,255,0.10)', color: 'var(--btn-blue)' }}>
+              Corrections détaillées
+            </div>
+          </div>
+
+          <p className="text-sm mb-6" style={{ color: 'var(--text-disabled)' }}>
+            Les membres Premium passent l&apos;examen autant de fois qu&apos;ils veulent, sur tous les thèmes.
+          </p>
+
+          <Link
+            href="/premium"
+            className="inline-block w-full px-8 py-3.5 rounded-2xl font-black text-base press-scale"
+            style={{ background: 'var(--premium)', color: '#0a0e2a', boxShadow: '0 4px 20px rgba(255,201,40,0.35)' }}
+          >
+            Passer Premium
+          </Link>
+        </div>
       </div>
     );
   }
@@ -250,14 +267,13 @@ function ExamContent() {
   if (!started) {
     return (
       <div className="max-w-lg mx-auto px-4 py-12 text-center">
-        <span className="text-[80px] block mb-4">{'📝'}</span>
-        <h1 className="text-2xl font-black mb-2">
+        <h1 className="text-2xl font-black mb-2" style={{ color: 'var(--text-primary)' }}>
           {themeCode === 'FINAL' ? t('examen_blanc_final') : `${t('examen_theme')} ${themeCode}`}
         </h1>
-        <p className="text-sm mb-1" style={{ color: '#8B9DC3' }}>
+        <p className="text-sm mb-1" style={{ color: 'var(--text-secondary)' }}>
           {`${questionCount} ${t('examen_questions')}`}
         </p>
-        <p className="text-sm mb-8" style={{ color: '#8B9DC3' }}>
+        <p className="text-sm mb-8" style={{ color: 'var(--text-secondary)' }}>
           {t('examen_seuil')}
         </p>
         <div className="mb-8">
@@ -265,8 +281,8 @@ function ExamContent() {
         </div>
         <button
           onClick={startExam}
-          className="px-10 py-4 rounded-2xl font-black text-lg text-white press-scale"
-          style={{ background: color, boxShadow: `0 4px 16px ${color}50` }}
+          className="px-10 py-4 rounded-2xl font-black text-lg press-scale"
+          style={{ background: color, color: '#ffffff', boxShadow: `0 4px 16px ${color}50` }}
         >
           {t('examen_commencer')}
         </button>
@@ -285,12 +301,12 @@ function ExamContent() {
       progress={pctDone}
       progressLabel={`${currentQ + 1}/${questions.length}`}
       headerLeft={
-        <button onClick={handleAbandon} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+        <button onClick={handleAbandon} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
           {'✕'}
         </button>
       }
       headerCenter={
-        <span className="text-sm font-bold">{t('examen_header')} {themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}</span>
+        <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('examen_header')} {themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}</span>
       }
       headerRight={
         <div className="px-3 py-1 rounded-lg text-xs font-bold" style={{ background: 'rgba(243,156,18,0.12)', color: '#F39C12' }}>
@@ -315,33 +331,33 @@ function ExamContent() {
         <>
           {/* Reprise banner */}
           {isResuming && (
-            <div className="rounded-2xl p-4" style={{ background: 'rgba(78,205,196,0.1)', border: '1px solid rgba(78,205,196,0.3)' }}>
-              <p className="text-xs font-bold" style={{ color: '#4ecdc4' }}>
-                📝 Tu avais commencé cet examen — on reprend là où tu en étais
+            <div className="rounded-2xl p-4" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
+              <p className="text-xs font-bold" style={{ color: 'var(--brand)' }}>
+                Tu avais commencé cet examen — on reprend là où tu en étais
               </p>
             </div>
           )}
 
           {/* Score en temps réel */}
-          <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('examen_score_direct')}</h4>
+          <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('examen_score_direct')}</h4>
             <div className="flex items-center justify-between mb-3">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('examen_correctes')}</span>
+              <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('examen_correctes')}</span>
               <span className="text-xl font-black" style={{ color: '#2ecc71' }}>{correctCount}</span>
             </div>
             <div className="flex items-center justify-between mb-3">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('questions')}</span>
-              <span className="text-xl font-black">{currentQ + (validated ? 1 : 0)}/{questions.length}</span>
+              <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('questions')}</span>
+              <span className="text-xl font-black" style={{ color: 'var(--text-primary)' }}>{currentQ + (validated ? 1 : 0)}/{questions.length}</span>
             </div>
-            <div className="h-px my-2" style={{ background: '#2A3550' }} />
+            <div className="h-px my-2" style={{ background: 'var(--border-subtle)' }} />
             <div className="flex items-center justify-between">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('examen_seuil_reussite')}</span>
+              <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('examen_seuil_reussite')}</span>
               <span className="text-sm font-bold" style={{ color: '#F39C12' }}>{passThreshold}/{questions.length}</span>
             </div>
           </div>
 
           {/* Gaston */}
-          <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+          <div className="rounded-2xl p-5" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
             <Gaston message={gastonMsg} expression={gastonExpr} size="small" title={t('prof_gaston')} />
           </div>
         </>

@@ -57,25 +57,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AppShell>
               {children}
             </AppShell>
-            <footer className="bg-transparent lg:bg-[#0a0e2a] py-3 px-6 text-center border-t border-white/[0.06]">
+            <footer className="py-3 px-6 text-center" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}>
               <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
-                <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)' }}>© 2025-2026 MyPermiGo</span>
+                <span style={{ fontSize: '12px', color: 'var(--text-disabled)' }}>© 2025-2026 MyPermiGo</span>
 
                 <a href="https://www.iubenda.com/privacy-policy/43486445"
                    className="iubenda-white iubenda-noiframe iubenda-embed"
                    target="_blank"
-                   style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>
+                   style={{ fontSize: '12px', color: 'var(--text-disabled)', textDecoration: 'none' }}>
                   Politique de confidentialité
                 </a>
 
                 <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy"
                    className="iubenda-white iubenda-noiframe iubenda-embed"
                    target="_blank"
-                   style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>
+                   style={{ fontSize: '12px', color: 'var(--text-disabled)', textDecoration: 'none' }}>
                   Politique relative aux Cookies
                 </a>
 
-                <Link href="/terms" style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>
+                <Link href="/terms" style={{ fontSize: '12px', color: 'var(--text-disabled)', textDecoration: 'none' }}>
                   CGU
                 </Link>
               </div>

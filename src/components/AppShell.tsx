@@ -48,7 +48,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   }, [onboardingDone, isOnboardingPage, isAuthPage, isAdminPage, router]);
 
   // Still loading — fond opaque pour éviter le FOUC
-  if (onboardingDone === null) return <div style={{ background: '#0a0e2a', width: '100vw', height: '100vh' }} />;
+  if (onboardingDone === null) return <div style={{ background: 'var(--bg-primary)', width: '100vw', height: '100vh' }} />;
 
   // Onboarding / auth / admin pages — no navbar, no margin
   if (isOnboardingPage || isAuthPage || isAdminPage) {
