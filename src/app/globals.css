@@ -1,5 +1,58 @@
 @import "tailwindcss";
 
+/* ── Design System — Mode Nuit & Mode Jour ─────────────────────
+   Tailwind v4 : les couleurs @theme sont disponibles comme classes
+   bg-night-bg-primary, text-day-text-primary, etc.
+   Ces couleurs sont DISPONIBLES mais pas encore utilisées dans le code.
+   ─────────────────────────────────────────────────────────── */
+@theme {
+  /* ── Mode Nuit ── */
+  --color-night-bg-primary: #050A18;
+  --color-night-bg-secondary: #071126;
+  --color-night-card-primary: #101B35;
+  --color-night-card-secondary: #172541;
+
+  --color-night-border-subtle: #263A5E;
+  --color-night-border-active: #22D6C7;
+
+  --color-night-text-primary: #F8FAFC;
+  --color-night-text-secondary: #9FB2D8;
+  --color-night-text-disabled: #5F6F91;
+
+  --color-night-brand: #22D6C7;
+  --color-night-brand-hover: #55E6DA;
+  --color-night-btn-blue: #64B5FF;
+
+  --color-night-premium: #FFC928;
+  --color-night-exam-orange: #FF8A1E;
+  --color-night-error: #FF5B4A;
+  --color-night-success: #32D66B;
+  --color-night-secondary: #8B6DFF;
+
+  /* ── Mode Jour ── */
+  --color-day-bg-primary: #F7FAFC;
+  --color-day-bg-secondary: #EEF6FA;
+  --color-day-card-primary: #FFFFFF;
+  --color-day-card-secondary: #F1F7FB;
+
+  --color-day-border-subtle: #D9E5EF;
+  --color-day-border-active: #13BDB4;
+
+  --color-day-text-primary: #0F172A;
+  --color-day-text-secondary: #64748B;
+  --color-day-text-disabled: #94A3B8;
+
+  --color-day-brand: #00AFA5;
+  --color-day-brand-hover: #008F88;
+  --color-day-btn-blue: #2F8CFF;
+
+  --color-day-premium: #FFC928;
+  --color-day-exam-orange: #F97316;
+  --color-day-error: #EF4444;
+  --color-day-success: #22C55E;
+  --color-day-secondary: #7C3AED;
+}
+
 :root {
   --bg: #0a0e2a;
   --bg-dark: #0D0D1A;
