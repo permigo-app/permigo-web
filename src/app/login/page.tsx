@@ -93,13 +93,13 @@ export default function LoginPage() {
         {showForgot ? (
           <button type="button" onClick={handleForgotPassword} disabled={loading}
             className="py-3.5 rounded-2xl font-black text-white press-scale disabled:opacity-50 btn-glow-teal"
-            style={{ background: 'linear-gradient(135deg, #4ecdc4, #26a69a)', color: '#0a0e2a' }}>
+            style={{ background: 'var(--brand)', color: 'var(--bg-primary)' }}>
             {loading ? t('login_reset_loading') : t('login_reset_link')}
           </button>
         ) : (
           <button type="submit" disabled={loading}
             className="py-3.5 rounded-2xl font-black press-scale disabled:opacity-50 btn-glow-teal"
-            style={{ background: 'linear-gradient(135deg, #4ecdc4, #26a69a)', color: '#0a0e2a' }}>
+            style={{ background: 'var(--brand)', color: 'var(--bg-primary)' }}>
             {loading ? t('login_connexion_loading') : t('login_connexion')}
           </button>
         )}

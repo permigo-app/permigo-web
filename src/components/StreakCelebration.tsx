@@ -179,7 +179,7 @@ export default function StreakCelebration({ streak, isReset, onClose }: Props) {
       <div
         onClick={e => e.stopPropagation()}
         style={{
-          background: 'linear-gradient(160deg, #0F1F45 0%, #0a0e2a 100%)',
+          background: 'var(--card-primary)',
           border: '1.5px solid rgba(255,255,255,0.1)',
           borderRadius: 28,
           padding: '36px 28px 28px',
@@ -281,9 +281,7 @@ export default function StreakCelebration({ streak, isReset, onClose }: Props) {
             padding: '15px 24px',
             borderRadius: 14,
             border: 'none',
-            background: isReset
-              ? 'linear-gradient(135deg, #4ecdc4, #26a69a)'
-              : 'linear-gradient(135deg, #FF6348, #e55039)',
+            background: isReset ? 'var(--brand)' : '#FF6348',
             color: '#fff',
             fontSize: 16,
             fontWeight: 900,

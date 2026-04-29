@@ -235,7 +235,7 @@ export default function RevisionsPage() {
             <button
               onClick={startSession}
               className="w-full max-w-sm h-14 rounded-2xl font-black text-white text-lg press-scale btn-glow-green"
-              style={{ background: 'linear-gradient(135deg, #00B894, #00a884)', border: 'none' }}
+              style={{ background: 'var(--success)', border: 'none' }}
             >
               {s.startBtn}
             </button>

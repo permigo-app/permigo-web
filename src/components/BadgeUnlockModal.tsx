@@ -121,7 +121,7 @@ export default function BadgeUnlockModal({ badgeId, isFirst, onClose }: Props) {
       <div
         onClick={e => e.stopPropagation()}
         style={{
-          background: 'linear-gradient(160deg, #0F1F45 0%, #0a0e2a 100%)',
+          background: 'var(--card-primary)',
           border: '1.5px solid rgba(255,215,0,0.35)',
           borderRadius: 28,
           padding: '36px 28px 28px',

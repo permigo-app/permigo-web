@@ -44,7 +44,7 @@ export default function ReviewsBlock() {
         className="flex items-center gap-3 rounded-2xl cursor-pointer press-scale"
         onClick={() => router.push('/revisions')}
         style={{
-          background: 'linear-gradient(135deg, rgba(0,184,148,0.12) 0%, rgba(0,184,148,0.06) 100%)',
+          background: 'var(--card-secondary)',
           border: '1.5px solid rgba(0,184,148,0.35)',
           padding: '14px 16px',
         }}

@@ -125,9 +125,7 @@ export default function LevelUpCelebration({ prevLevel, newLevel, onClose }: Pro
   // ── Couleurs selon le niveau ────────────────────────────────────
   const accentColor   = isUltimate ? '#FFD700' : newLevel >= 50 ? '#e67e22' : newLevel >= 20 ? '#9b59b6' : newLevel >= 10 ? '#4ecdc4' : '#2ecc71';
   const glowColor     = isUltimate ? 'rgba(255,215,0,0.35)' : `${accentColor}30`;
-  const gradientBg    = isUltimate
-    ? 'linear-gradient(160deg, #1a1000 0%, #0a0e2a 100%)'
-    : 'linear-gradient(160deg, #0F1F45 0%, #0a0e2a 100%)';
+  const gradientBg    = 'var(--card-primary)';
 
   return (
     <div
@@ -227,7 +225,7 @@ export default function LevelUpCelebration({ prevLevel, newLevel, onClose }: Pro
             style={{
               width: '100%', padding: '15px 24px',
               borderRadius: 14, border: 'none',
-              background: `linear-gradient(135deg, ${accentColor}, ${accentColor}bb)`,
+              background: accentColor,
               color: isUltimate ? '#0a0e2a' : '#fff',
               fontSize: 16, fontWeight: 900, cursor: 'pointer',
               letterSpacing: '0.04em',

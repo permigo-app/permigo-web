@@ -146,7 +146,7 @@ export default function ProfilePage() {
       <div className={`rounded-full overflow-hidden`} style={{ height, background: 'var(--border-subtle)' }}>
         <div
           className="h-full rounded-full progress-animate"
-          style={{ width: `${Math.max(xpBarPct, 2)}%`, background: 'linear-gradient(90deg, var(--brand), var(--success))' }}
+          style={{ width: `${Math.max(xpBarPct, 2)}%`, background: 'var(--brand)' }}
         />
       </div>
     </div>

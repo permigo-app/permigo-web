@@ -103,7 +103,7 @@ export default function PremiumPage() {
         </div>
 
         {/* Premium card */}
-        <div className="rounded-2xl p-8 mb-8" style={{ background: 'linear-gradient(135deg, #1C2345, #16213E)', border: '2px solid rgba(255,215,0,0.3)', boxShadow: '0 8px 40px rgba(255,215,0,0.1)' }}>
+        <div className="rounded-2xl p-8 mb-8" style={{ background: 'var(--card-primary)', border: '2px solid var(--premium)', boxShadow: '0 8px 40px rgba(0,0,0,0.08)' }}>
           <div className="flex items-start justify-between mb-6">
             <div>
               <h2 className="text-2xl font-black text-white mb-1">{t('premium_card_titre')}</h2>
@@ -131,7 +131,7 @@ export default function PremiumPage() {
             disabled={loading}
             className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3 btn-glow-teal"
             style={{
-              background: loading ? 'rgba(78,205,196,0.4)' : 'linear-gradient(135deg, #4ecdc4, #26a69a)',
+              background: loading ? 'rgba(78,205,196,0.4)' : 'var(--brand)',
               color: '#0a0e2a',
             }}
           >

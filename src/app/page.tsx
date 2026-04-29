@@ -640,42 +640,7 @@ export default function HomePage() {
         {/* SVG Road */}
         <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', height: isMobileView ? totalH + 80 : totalH }}>
 
-          {/* ── Mobile: background color bands — outside roadContainer, pleine largeur écran ── */}
-          {isMobileView && (() => {
-            const themeEntries = Array.from(themeAt.entries()).sort((a, b) => a[0] - b[0]);
-            const FADE = 80;
-            return themeEntries.map(([startIdx, themeCode], sIdx) => {
-              const nextEntry = themeEntries[sIdx + 1];
-              const rawStart = startIdx > 0 && pts[startIdx - 1] ? pts[startIdx - 1].y + 30 : 0;
-              const rawEnd = nextEntry && pts[nextEntry[0] - 1] ? pts[nextEntry[0] - 1].y + 30 : totalH;
-              const tc = THEME_COLORS[themeCode] || '#74B9FF';
-              const nextTc = nextEntry ? (THEME_COLORS[nextEntry[1]] || '#74B9FF') : null;
-              const bandStart = sIdx === 0 ? 0 : rawStart - FADE / 2;
-              const bandEnd = nextTc ? rawEnd + FADE / 2 : totalH + 80;
-              const height = Math.max(0, bandEnd - bandStart);
-              let gradient: string;
-              if (!nextTc) {
-                gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}20 8%, ${tc}20 100%)`;
-              } else if (sIdx === 0) {
-                const fadeStartPct = Math.round(((rawEnd - rawStart - FADE / 2) / height) * 100);
-                gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}18 15%, ${tc}20 ${fadeStartPct}%, ${nextTc}00 100%)`;
-              } else {
-                const midPct = Math.round((FADE / 2 / height) * 100);
-                const fadeStartPct = Math.round(((FADE / 2 + rawEnd - rawStart - FADE / 2) / height) * 100);
-                gradient = `linear-gradient(180deg, ${tc}00 0%, ${tc}20 ${midPct}%, ${tc}20 ${fadeStartPct}%, ${nextTc}00 100%)`;
-              }
-              return (
-                <div key={`bg-${themeCode}`} style={{
-                  position: 'absolute',
-                  left: 0, right: 0,
-                  top: bandStart, height,
-                  background: gradient,
-                  pointerEvents: 'none',
-                  zIndex: 0,
-                }} />
-              );
-            });
-          })()}
+          {/* Mobile: fond uniforme — suppression des bandes colorées par thème */}
 
         <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: isMobileView ? totalH + 80 : totalH, flexShrink: 0, overflow: 'visible', clipPath: 'none' }}>
           <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
@@ -889,7 +854,7 @@ export default function HomePage() {
             return (
               <div key={`mcard-${themeCode}`} className="absolute" style={{ left: cardX, top: cardY, width: cardW, zIndex: 10 }}>
                 <div style={{
-                  background: `linear-gradient(135deg, ${tc}22, ${tc}0c)`,
+                  background: 'var(--card-primary)',
                   border: `1.5px solid ${tc}50`,
                   borderRadius: 14,
                   padding: '7px 12px',
@@ -1538,33 +1503,7 @@ export default function HomePage() {
         </div>
         </div>{/* end flex wrapper */}
 
-        {/* ── Mobile: prolonge la couleur du dernier thème sous la route ── */}
-        {isMobileView && (() => {
-          const lastEntry = [...themeAt.entries()].sort((a, b) => b[0] - a[0])[0];
-          const lastColor = lastEntry ? (THEME_COLORS[lastEntry[1]] || '#FD79A8') : '#FD79A8';
-          return (
-            <div style={{
-              width: '100%',
-              height: 180,
-              background: `linear-gradient(180deg, ${lastColor}20 0%, ${lastColor}00 100%)`,
-              pointerEvents: 'none',
-              marginTop: -2,
-            }} />
-          );
-        })()}
-
-        {/* ── Gradient de fin — mobile uniquement ── */}
-        {/* Solidifie proprement la sortie de la route vers le fond du body (#0a0e2a) */}
-        {isMobileView && (
-          <div style={{
-            height: 56,
-            background: 'linear-gradient(to bottom, transparent 0%, var(--bg-primary) 100%)',
-            pointerEvents: 'none',
-            position: 'relative',
-            zIndex: 50,
-            marginTop: -56,
-          }} />
-        )}
+        {/* Fond uniforme sous la route — pas de dégradé */}
 
       </div>
 
@@ -1635,7 +1574,7 @@ export default function HomePage() {
             <div className="w-full h-2.5 rounded-full" style={{ background: 'var(--border-subtle)' }}>
               <div className="h-full rounded-full transition-all" style={{
                 width: `${totalLessons > 0 ? (totalCompleted / totalLessons) * 100 : 0}%`,
-                background: 'linear-gradient(90deg, var(--success), var(--success))',
+                background: 'var(--success)',
                 minWidth: totalCompleted > 0 ? 8 : 0,
               }} />
             </div>
@@ -1650,7 +1589,7 @@ export default function HomePage() {
             <div className="w-full h-2.5 rounded-full" style={{ background: 'var(--border-subtle)' }}>
               <div className="h-full rounded-full transition-all" style={{
                 width: `${(totalExamsPassed / THEME_ORDER.length) * 100}%`,
-                background: 'linear-gradient(90deg, var(--exam-orange), var(--exam-orange))',
+                background: 'var(--exam-orange)',
                 minWidth: totalExamsPassed > 0 ? 8 : 0,
               }} />
             </div>

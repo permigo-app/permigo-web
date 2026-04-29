@@ -145,7 +145,7 @@ function ResultsContent() {
         <Link
           href="/app"
           className="w-full py-4 rounded-3xl font-black text-sm text-center press-scale text-white btn-glow-green"
-          style={{ background: passed ? 'linear-gradient(135deg, #2ecc71, #27ae60)' : 'linear-gradient(135deg, #00B894, #00a884)', boxShadow: '0 4px 12px rgba(0,184,148,0.4)' }}
+          style={{ background: 'var(--success)' }}
         >
           {passed ? t('resultats_continuer') : t('resultats_retour')}
         </Link>

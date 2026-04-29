@@ -153,8 +153,8 @@ export default function AuthPage() {
             disabled={loading}
             style={{
               marginTop: 8,
-              background: loading ? 'rgba(78,205,196,0.4)' : 'linear-gradient(135deg, #4ecdc4, #26a69a)',
-              color: '#0a0e2a',
+              background: loading ? 'rgba(78,205,196,0.4)' : 'var(--brand)',
+              color: 'var(--bg-primary)',
               fontWeight: 900,
               fontSize: 16,
               borderRadius: 100,

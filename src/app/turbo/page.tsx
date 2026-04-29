@@ -24,9 +24,9 @@ import Link from 'next/link';
 type Mode = null | '3min' | '5min' | 'survie';
 
 const MODE_META = {
-  '3min': { icon: '⏱️', gradient: 'linear-gradient(135deg, #0a2e4a 0%, #0d3b5c 50%, #0a3040 100%)', border: '#2ecc71', color: '#2ecc71', btnColor: '#2ecc71' },
-  '5min': { icon: '🔥', gradient: 'linear-gradient(135deg, #3a2000 0%, #4a2800 50%, #3a2200 100%)', border: '#e67e22', color: '#e67e22', btnColor: '#e67e22' },
-  'survie': { icon: '💀', gradient: 'linear-gradient(135deg, #2a0a0a 0%, #3a1010 50%, #1a0505 100%)', border: '#e74c3c', color: '#e74c3c', btnColor: '#e74c3c' },
+  '3min': { icon: '⏱️', gradient: 'var(--card-primary)', border: '#2ecc71', color: '#2ecc71', btnColor: '#2ecc71' },
+  '5min': { icon: '🔥', gradient: 'var(--card-primary)', border: '#e67e22', color: '#e67e22', btnColor: '#e67e22' },
+  'survie': { icon: '💀', gradient: 'var(--card-primary)', border: '#e74c3c', color: '#e74c3c', btnColor: '#e74c3c' },
 } as const;
 
 function formatTime(s: number) {

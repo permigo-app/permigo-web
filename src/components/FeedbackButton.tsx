@@ -31,7 +31,7 @@ export default function FeedbackButton() {
           width: 52,
           height: 52,
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #00B894, #00a884)',
+          background: 'var(--success)',
           boxShadow: '0 4px 18px rgba(0,184,148,0.45)',
           display: 'flex',
           alignItems: 'center',

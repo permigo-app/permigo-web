@@ -341,9 +341,7 @@ function FormView({
           disabled={!canSubmit}
           className="flex-[2] py-3 rounded-2xl text-sm font-black press-scale btn-glow-green"
           style={{
-            background: canSubmit
-              ? 'linear-gradient(135deg, #00B894, #00a884)'
-              : 'rgba(255,255,255,0.08)',
+            background: canSubmit ? 'var(--success)' : 'var(--card-secondary)',
             color: canSubmit ? '#FFFFFF' : '#5A6B8A',
             border: 'none',
             cursor: canSubmit ? 'pointer' : 'not-allowed',
