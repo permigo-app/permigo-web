@@ -15,7 +15,7 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 const STORAGE_KEY = 'permigo_theme';
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('night');
+  const [theme, setThemeState] = useState<Theme>('day');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
