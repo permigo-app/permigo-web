@@ -29,8 +29,8 @@ export default function PanneauxPage() {
       <div className="max-w-screen-xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-[32px] font-black">{t('panneaux_titre')}</h1>
-          <p className="text-sm mt-1" style={{ color: '#8B9DC3' }}>
+          <h1 className="text-[32px] font-black" style={{ color: 'var(--text-primary)' }}>{t('panneaux_titre')}</h1>
+          <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
             {t('panneaux_subtitle')}
           </p>
         </div>
@@ -52,8 +52,8 @@ export default function PanneauxPage() {
                     key={cat.id}
                     className="rounded-2xl p-5 cursor-pointer transition-all duration-200 group"
                     style={{
-                      background: isSelected ? `${cat.color}10` : '#16213E',
-                      border: `2px solid ${isSelected ? cat.color + '60' : '#2A3550'}`,
+                      background: isSelected ? `${cat.color}18` : 'var(--card-primary)',
+                      border: isSelected ? `2px solid ${cat.color}60` : '2px solid var(--border-subtle)',
                     }}
                     onMouseEnter={e => {
                       if (!isSelected) {
@@ -86,19 +86,19 @@ export default function PanneauxPage() {
                       {/* Info */}
                       <div className="flex-1 min-w-0">
                         <h3 className="font-black text-base mb-1">{t(`panneau_cat_${cat.id}`)}</h3>
-                        <p className="text-xs mb-3" style={{ color: '#8B9DC3' }}>
+                        <p className="text-xs mb-3" style={{ color: 'var(--text-secondary)' }}>
                           {total} {t('panneaux_count')}
                         </p>
 
                         {/* Progress bar */}
                         <div className="flex items-center gap-2">
-                          <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.12)' }}>
+                          <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
                             <div
                               className="h-full rounded-full transition-all duration-300"
-                              style={{ width: `${Math.max(pct, 2)}%`, background: '#4ecdc4' }}
+                              style={{ width: `${Math.max(pct, 2)}%`, background: 'var(--brand)' }}
                             />
                           </div>
-                          <span className="text-[11px] font-bold whitespace-nowrap" style={{ color: masteredCount === total && total > 0 ? '#2ecc71' : '#4ecdc4' }}>
+                          <span className="text-[11px] font-bold whitespace-nowrap" style={{ color: masteredCount === total && total > 0 ? 'var(--success)' : 'var(--brand)' }}>
                             {masteredCount}/{total}
                           </span>
                         </div>
@@ -106,19 +106,19 @@ export default function PanneauxPage() {
                     </div>
 
                     {/* Bottom row: see all link */}
-                    <div className="flex items-center justify-between mt-4 pt-3" style={{ borderTop: '1px solid #2A355040' }}>
+                    <div className="flex items-center justify-between mt-4 pt-3" style={{ borderTop: '1px solid var(--border-subtle)' }}>
                       <Link
                         href={`/panneaux/${cat.id}`}
-                        className="text-xs font-bold rounded-lg press-scale transition-all duration-200 cta-panneaux"
-                        style={{ background: 'rgba(78,205,196,0.15)', color: '#4ecdc4', border: '1px solid #4ecdc4', padding: '10px 20px' }}
+                        className="text-xs font-bold rounded-lg press-scale transition-all duration-200"
+                        style={{ background: 'transparent', color: 'var(--brand)', border: '1px solid var(--brand)', padding: '10px 20px' }}
                         onClick={e => e.stopPropagation()}
-                        onMouseEnter={e => { e.currentTarget.style.background = '#4ecdc4'; e.currentTarget.style.color = '#0a0e2a'; }}
-                        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.15)'; e.currentTarget.style.color = '#4ecdc4'; }}
+                        onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand)'; e.currentTarget.style.color = '#0a0e2a'; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--brand)'; }}
                       >
                         {t('panneaux_voir_tous')}
                       </Link>
                       {pct === 100 && total > 0 && (
-                        <span className="text-xs font-bold" style={{ color: '#2ecc71' }}>{t('panneaux_complet')}</span>
+                        <span className="text-xs font-bold" style={{ color: 'var(--success)' }}>{t('panneaux_complet')}</span>
                       )}
                     </div>
                   </div>
@@ -131,8 +131,8 @@ export default function PanneauxPage() {
           <div className="w-64 xl:w-80 flex-shrink-0 hidden lg:block">
             <div className="sticky top-6">
               {selectedCat && selectedMeta ? (
-                <div className="rounded-2xl p-5" style={{ background: '#16213E', border: `1px solid ${selectedMeta.color}30` }}>
-                  <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2">
+                <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: `1px solid ${selectedMeta.color}30` }}>
+                  <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
                     <span>🃏</span> Flashcards — {selectedMeta.name}
                   </h3>
                   <PanneauxFlashPanel
@@ -143,10 +143,10 @@ export default function PanneauxPage() {
                   />
                 </div>
               ) : (
-                <div className="rounded-2xl p-8 text-center" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+                <div className="rounded-2xl p-8 text-center" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
                   <span className="text-5xl block mb-4">🃏</span>
-                  <p className="font-black text-base mb-2">{t('panneaux_flashcards')}</p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#8B9DC3' }}>
+                  <p className="font-black text-base mb-2" style={{ color: 'var(--text-primary)' }}>{t('panneaux_flashcards')}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                     {t('panneaux_select_cat')}
                   </p>
                 </div>
@@ -163,23 +163,23 @@ export default function PanneauxPage() {
             {/* Sheet */}
             <div
               className="relative rounded-t-3xl p-6 pb-10 max-h-[85vh] overflow-y-auto"
-              style={{ background: '#0F1923', borderTop: `3px solid ${selectedMeta.color}` }}
+              style={{ background: 'var(--card-primary)', borderTop: `3px solid ${selectedMeta.color}` }}
               onClick={e => e.stopPropagation()}
             >
               {/* Handle */}
               <div className="flex justify-center mb-4">
-                <div className="w-10 h-1 rounded-full" style={{ background: '#2A3550' }} />
+                <div className="w-10 h-1 rounded-full" style={{ background: 'var(--text-disabled)' }} />
               </div>
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-sm font-extrabold flex items-center gap-2">
+                <h3 className="text-sm font-extrabold flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
                   <span>🃏</span> Flashcards — {selectedMeta.name}
                 </h3>
                 <button
                   onClick={() => setMobileFlash(false)}
                   className="w-8 h-8 rounded-lg flex items-center justify-center press-scale"
-                  style={{ background: '#16213E' }}
+                  style={{ background: 'var(--card-secondary)' }}
                 >
-                  <span style={{ color: '#8B9DC3' }}>✕</span>
+                  <span style={{ color: 'var(--text-secondary)' }}>✕</span>
                 </button>
               </div>
               <PanneauxFlashPanel
