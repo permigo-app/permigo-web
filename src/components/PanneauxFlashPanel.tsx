@@ -41,7 +41,6 @@ interface FlashPanelProps {
 export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMasteredChange }: FlashPanelProps) {
   const { t, lang } = useLang();
   const signs = useMemo(() => getSignsByCategory(catId, lang), [catId, lang]);
-  // deck = ordered list of sign codes to review; "revoir" pushes to end, "maîtrisé" removes
   const [deck, setDeck] = useState<string[]>([]);
   const [deckPos, setDeckPos] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -52,7 +51,6 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
     const all = loadAllMastered();
     setMasteredMap(all);
     setFlipped(false);
-    // Build deck: unmastered first, then mastered; start on initialSignCode if provided
     const unmastered = signs.filter(s => !all[s.code]).map(s => s.code);
     const mastered   = signs.filter(s =>  all[s.code]).map(s => s.code);
     const newDeck = [...unmastered, ...mastered];
@@ -83,14 +81,11 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
     setDeck(prev => {
       const newDeck = [...prev];
       if (mastered) {
-        // Maîtrisé : retire la carte du deck
         newDeck.splice(deckPos, 1);
       } else {
-        // À revoir : déplace la carte à la fin du deck
         const [code] = newDeck.splice(deckPos, 1);
         newDeck.push(code);
       }
-      // Ajuste la position si on était à la fin
       setDeckPos(p => (newDeck.length === 0 ? 0 : p >= newDeck.length ? 0 : p));
       return newDeck;
     });
@@ -108,7 +103,7 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
 
   if (!loaded || signs.length === 0) {
     return (
-      <div className="flex items-center justify-center py-12" style={{ color: '#5A6B8A' }}>
+      <div className="flex items-center justify-center py-12" style={{ color: 'var(--text-disabled)' }}>
         <p className="text-sm">{t('panneaux_aucun')}</p>
       </div>
     );
@@ -121,18 +116,18 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
     <div className="flex flex-col items-center">
       {/* Progress bar */}
       <div className="w-full flex items-center gap-2 mb-4">
-        <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.12)' }}>
+        <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
           <div
             className="h-full rounded-full transition-all duration-300"
-            style={{ width: `${pct}%`, background: '#4ecdc4' }}
+            style={{ width: `${pct}%`, background: 'var(--brand)' }}
           />
         </div>
-        <span className="text-xs font-bold whitespace-nowrap" style={{ color: '#4ecdc4' }}>{masteredCount}/{total}</span>
+        <span className="text-xs font-bold whitespace-nowrap" style={{ color: 'var(--brand)' }}>{masteredCount}/{total}</span>
       </div>
 
       {allDone && (
-        <div className="w-full text-center mb-4 py-3 rounded-xl" style={{ background: '#2ecc7120' }}>
-          <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{t('panneaux_tous_maitrises')}</span>
+        <div className="w-full text-center mb-4 py-3 rounded-xl" style={{ background: 'rgba(46,204,113,0.12)', border: '1px solid rgba(46,204,113,0.3)' }}>
+          <span className="text-sm font-bold" style={{ color: 'var(--success)' }}>{t('panneaux_tous_maitrises')}</span>
         </div>
       )}
 
@@ -152,23 +147,24 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
             <div
               className="w-full rounded-2xl flex flex-col items-center justify-center gap-3 p-6"
               style={{
-                background: '#0F1923',
-                border: `2px solid ${isMastered ? '#2ecc7150' : '#2A3550'}`,
+                background: 'var(--card-primary)',
+                border: `2px solid ${isMastered ? 'rgba(46,204,113,0.4)' : 'var(--border-subtle)'}`,
                 minHeight: 300,
                 backfaceVisibility: 'hidden',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
               }}
             >
               <SignImage code={current.code} size={150} />
-              <p className="text-lg font-black mt-2" style={{ color: '#CCD6E6' }}>{current.code}</p>
+              <p className="text-lg font-black mt-2" style={{ color: 'var(--text-primary)' }}>{current.code}</p>
               {isMastered && (
-                <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: '#2ecc7120', color: '#2ecc71' }}>{t('panneaux_maitrise')}</span>
+                <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'rgba(46,204,113,0.12)', color: 'var(--success)' }}>{t('panneaux_maitrise')}</span>
               )}
               {/* Reveal button */}
               <button
                 onClick={(e) => { e.stopPropagation(); setFlipped(true); }}
                 className="mt-2 px-5 py-2.5 rounded-xl text-sm font-bold press-scale transition-all flex items-center gap-2"
-                style={{ background: 'transparent', border: '1.5px solid #4ecdc4', color: '#4ecdc4' }}
-                onMouseEnter={e => { e.currentTarget.style.background = '#4ecdc420'; }}
+                style={{ background: 'transparent', border: '1.5px solid var(--brand)', color: 'var(--brand)' }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'var(--bg-secondary)'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
               >
                 <span>👁️</span> {t('panneaux_reveler')}
@@ -179,22 +175,23 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
             <div
               className="w-full rounded-2xl flex flex-col items-center justify-center gap-3 p-6 absolute top-0 left-0"
               style={{
-                background: '#0F1923',
-                border: `2px solid ${color}60`,
+                background: 'var(--card-secondary)',
+                border: `2px solid ${color}50`,
                 minHeight: 300,
                 backfaceVisibility: 'hidden',
                 transform: 'rotateY(180deg)',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
               }}
             >
               <SignImage code={current.code} size={100} />
-              <p className="text-sm font-bold" style={{ color: '#CCD6E6' }}>{current.code}</p>
-              <p className="text-[14px] font-semibold text-center leading-relaxed mt-1 px-2" style={{ color: 'white' }}>
+              <p className="text-sm font-bold" style={{ color: 'var(--text-secondary)' }}>{current.code}</p>
+              <p className="text-[14px] font-semibold text-center leading-relaxed mt-1 px-2" style={{ color: 'var(--text-primary)' }}>
                 {current.name}
               </p>
               <button
                 onClick={(e) => { e.stopPropagation(); setFlipped(false); }}
                 className="mt-2 text-xs press-scale"
-                style={{ color: '#5A6B8A' }}
+                style={{ color: 'var(--text-disabled)' }}
               >
                 {t('panneaux_retourner')}
               </button>
@@ -210,33 +207,33 @@ export default function PanneauxFlashPanel({ catId, color, initialSignCode, onMa
           <button
             onClick={(e) => { e.stopPropagation(); goPrev(); }}
             className="w-10 h-10 rounded-xl flex items-center justify-center press-scale"
-            style={{ background: '#16213E' }}
+            style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}
           >
-            <span style={{ color: '#8B9DC3' }}>←</span>
+            <span style={{ color: 'var(--text-secondary)' }}>←</span>
           </button>
-          <span className="text-xs font-bold" style={{ color: '#8B9DC3' }}>{deck.length > 0 ? deckPos + 1 : 0} / {total}</span>
+          <span className="text-xs font-bold" style={{ color: 'var(--text-secondary)' }}>{deck.length > 0 ? deckPos + 1 : 0} / {total}</span>
           <button
             onClick={(e) => { e.stopPropagation(); goNext(); }}
             className="w-10 h-10 rounded-xl flex items-center justify-center press-scale"
-            style={{ background: '#16213E' }}
+            style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}
           >
-            <span style={{ color: '#8B9DC3' }}>→</span>
+            <span style={{ color: 'var(--text-secondary)' }}>→</span>
           </button>
         </div>
 
-        {/* Action buttons — bigger, solid background */}
+        {/* Action buttons */}
         <div className="flex gap-3">
           <button
             onClick={(e) => { e.stopPropagation(); handleMastered(false); }}
             className="flex-1 rounded-xl text-sm font-bold press-scale transition-all"
-            style={{ background: '#e74c3c', color: 'white', padding: '12px 24px' }}
+            style={{ background: 'var(--error)', color: 'white', padding: '12px 24px' }}
           >
             {t('panneaux_a_revoir')}
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); handleMastered(true); }}
             className="flex-1 rounded-xl text-sm font-bold press-scale transition-all"
-            style={{ background: '#2ecc71', color: 'white', padding: '12px 24px' }}
+            style={{ background: 'var(--success)', color: 'white', padding: '12px 24px' }}
           >
             {t('panneaux_maitrise_btn')}
           </button>
