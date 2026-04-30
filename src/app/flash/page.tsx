@@ -119,7 +119,6 @@ export default function FlashPage() {
       updateFn();
       setAnimating(false);
       setSessionViewed(v => v + 1);
-      // Rotate Gaston message every 3 cards
       if ((sessionViewed + 1) % 3 === 0) {
         setGastonMsg(getRandomMsg(GASTON_FLASH[lang]));
       }
@@ -175,8 +174,8 @@ export default function FlashPage() {
   if (!themeData || totalCards === 0) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4">
-        <p style={{ color: '#8B9DC3' }}>{t('flash_aucune_carte')}</p>
-        <button onClick={() => router.back()} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: '#16213E' }}>
+        <p style={{ color: 'var(--text-secondary)' }}>{t('flash_aucune_carte')}</p>
+        <button onClick={() => router.back()} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}>
           {t('flash_retour')}
         </button>
       </div>
@@ -190,17 +189,17 @@ export default function FlashPage() {
       <div className="min-h-screen flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-5 pt-5 pb-3">
-          <button onClick={() => router.back()} className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold press-scale" style={{ background: '#16213E' }}>
+          <button onClick={() => router.back()} className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold press-scale" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}>
             ←
           </button>
-          <span className="text-lg font-extrabold">{themeEmoji} Flash</span>
+          <span className="text-lg font-extrabold" style={{ color: 'var(--text-primary)' }}>{themeEmoji} Flash</span>
           <div className="w-10" />
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center px-8 gap-4 max-w-lg mx-auto w-full">
           <span className="text-[72px]">🏆</span>
-          <h1 className="text-[30px] font-black">{t('flash_toutes_maitrisees')}</h1>
-          <p className="text-center" style={{ color: '#8B9DC3' }}>
+          <h1 className="text-[30px] font-black" style={{ color: 'var(--text-primary)' }}>{t('flash_toutes_maitrisees')}</h1>
+          <p className="text-center" style={{ color: 'var(--text-secondary)' }}>
             Tu as validé {masteredUids.length} fiche{masteredUids.length > 1 ? 's' : ''} sur {totalCards}
           </p>
 
@@ -210,14 +209,14 @@ export default function FlashPage() {
           </div>
 
           {/* Progress bar */}
-          <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: '#1E2D4A' }}>
+          <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
             <div className="h-full rounded-full transition-all" style={{ width: `${pct}%`, background: themeColor }} />
           </div>
 
           <button onClick={() => router.back()} className="w-full h-[54px] rounded-2xl font-bold text-white press-scale mt-2" style={{ background: themeColor }}>
             {t('flash_retour_carte')}
           </button>
-          <button onClick={restart} className="w-full h-[54px] rounded-2xl font-bold press-scale" style={{ background: '#16213E', border: '1px solid #2A3550', color: themeColor }}>
+          <button onClick={restart} className="w-full h-[54px] rounded-2xl font-bold press-scale" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: themeColor }}>
             {t('flash_recommencer')}
           </button>
         </div>
@@ -240,22 +239,22 @@ export default function FlashPage() {
       {/* ── Sticky header ── */}
       <div
         className="sticky top-0 z-30 px-6 py-3"
-        style={{ background: 'rgba(10,14,42,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #2A3550' }}
+        style={{ background: 'var(--bg-blur)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-subtle)' }}
       >
         <div className="max-w-screen-xl mx-auto">
           <div className="flex items-center gap-4 mb-2">
-            <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+            <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
               ✕
             </button>
             <div className="flex-1 flex items-center justify-center gap-2">
-              <span className="text-sm font-bold">{t('flash_titre')} {themeCode}</span>
+              <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('flash_titre')} {themeCode}</span>
             </div>
             <span className="text-sm font-extrabold" style={{ color: themeColor }}>
               {masteredCount + 1}/{totalCards}
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
+            <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
               <div
                 className="h-full rounded-full transition-all duration-500"
                 style={{ width: `${progressPct}%`, background: themeColor }}
@@ -277,19 +276,19 @@ export default function FlashPage() {
             <div className="sticky top-20 flex flex-col gap-5">
 
               {/* Progression */}
-              <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4ecdc4' }}>{t('flash_progression')}</h4>
+              <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+                <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'var(--brand)' }}>{t('flash_progression')}</h4>
 
                 {/* Mastered bar */}
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-lg">✅</span>
                   <div className="flex-1">
                     <div className="flex justify-between mb-1">
-                      <span className="text-xs font-bold" style={{ color: '#2ecc71' }}>{masteredCount} {t('flash_maitrisees')}</span>
-                      <span className="text-xs font-bold" style={{ color: '#5A6B8A' }}>{Math.round(progressPct)}%</span>
+                      <span className="text-xs font-bold" style={{ color: 'var(--success)' }}>{masteredCount} {t('flash_maitrisees')}</span>
+                      <span className="text-xs font-bold" style={{ color: 'var(--text-disabled)' }}>{Math.round(progressPct)}%</span>
                     </div>
-                    <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
-                      <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progressPct}%`, background: '#2ecc71' }} />
+                    <div className="h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
+                      <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progressPct}%`, background: 'var(--success)' }} />
                     </div>
                   </div>
                 </div>
@@ -299,11 +298,11 @@ export default function FlashPage() {
                   <span className="text-lg">🔄</span>
                   <div className="flex-1">
                     <div className="flex justify-between mb-1">
-                      <span className="text-xs font-bold" style={{ color: '#e74c3c' }}>{remainingCount} {t('flash_restantes')}</span>
-                      <span className="text-xs font-bold" style={{ color: '#5A6B8A' }}>{totalCards > 0 ? Math.round((remainingCount / totalCards) * 100) : 0}%</span>
+                      <span className="text-xs font-bold" style={{ color: 'var(--error)' }}>{remainingCount} {t('flash_restantes')}</span>
+                      <span className="text-xs font-bold" style={{ color: 'var(--text-disabled)' }}>{totalCards > 0 ? Math.round((remainingCount / totalCards) * 100) : 0}%</span>
                     </div>
-                    <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.1)' }}>
-                      <div className="h-full rounded-full transition-all duration-500" style={{ width: `${totalCards > 0 ? (remainingCount / totalCards) * 100 : 0}%`, background: '#e74c3c' }} />
+                    <div className="h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
+                      <div className="h-full rounded-full transition-all duration-500" style={{ width: `${totalCards > 0 ? (remainingCount / totalCards) * 100 : 0}%`, background: 'var(--error)' }} />
                     </div>
                   </div>
                 </div>
@@ -311,11 +310,11 @@ export default function FlashPage() {
 
               {/* Upcoming cards */}
               {upcoming.length > 0 && (
-                <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('flash_prochaines')}</h4>
+                <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('flash_prochaines')}</h4>
                   <div className="flex flex-col gap-2">
                     {upcoming.map((uq, i) => (
-                      <p key={i} className="text-xs leading-relaxed truncate" style={{ color: '#5A6B8A' }}>
+                      <p key={i} className="text-xs leading-relaxed truncate" style={{ color: 'var(--text-disabled)' }}>
                         {i + 1}. {uq.title}
                       </p>
                     ))}
@@ -329,10 +328,10 @@ export default function FlashPage() {
                 className="w-full py-3 rounded-xl font-bold text-sm press-scale"
                 style={{
                   background: 'transparent',
-                  border: '1.5px solid #4ecdc4',
-                  color: '#4ecdc4',
+                  border: '1.5px solid var(--brand)',
+                  color: 'var(--brand)',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.1)'; }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'var(--bg-secondary)'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
               >
                 {t('flash_melanger')}
@@ -345,10 +344,10 @@ export default function FlashPage() {
 
             {/* Mobile stats chips */}
             <div className="lg:hidden flex gap-2 mb-3 justify-center">
-              <span className="px-3 py-1 rounded-full text-xs font-bold" style={{ background: 'rgba(46,204,113,0.15)', color: '#2ecc71' }}>
+              <span className="px-3 py-1 rounded-full text-xs font-bold" style={{ background: 'rgba(46,204,113,0.15)', color: 'var(--success)' }}>
                 ✅ {masteredCount} {t('flash_maitrisees')}
               </span>
-              <span className="px-3 py-1 rounded-full text-xs font-bold" style={{ background: '#16213E', color: '#8B9DC3' }}>
+              <span className="px-3 py-1 rounded-full text-xs font-bold" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
                 🔄 {remainingCount} {t('flash_restantes')}
               </span>
             </div>
@@ -373,15 +372,15 @@ export default function FlashPage() {
                   className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-2xl p-8"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: '#16213E',
-                    border: '1px solid rgba(78,205,196,0.2)',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
+                    background: 'var(--card-primary)',
+                    border: `1px solid ${themeColor}30`,
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
                   }}
-                  onMouseEnter={e => { e.currentTarget.style.boxShadow = `0 8px 32px rgba(0,0,0,0.35), 0 0 20px ${themeColor}20`; }}
-                  onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.35)'; }}
+                  onMouseEnter={e => { e.currentTarget.style.boxShadow = `0 8px 32px rgba(0,0,0,0.12), 0 0 20px ${themeColor}20`; }}
+                  onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.12)'; }}
                 >
                   <span className="text-[80px] leading-none">{themeEmoji}</span>
-                  <h2 className="text-2xl font-black text-center leading-snug text-white">
+                  <h2 className="text-2xl font-black text-center leading-snug" style={{ color: 'var(--text-primary)' }}>
                     {card.title}
                   </h2>
                   <div className="px-3 py-1.5 rounded-lg" style={{ background: themeColor + '18' }}>
@@ -396,10 +395,10 @@ export default function FlashPage() {
                     className="mt-4 px-6 py-2.5 rounded-xl font-bold text-sm press-scale"
                     style={{
                       background: 'transparent',
-                      border: '1.5px solid #4ecdc4',
-                      color: '#4ecdc4',
+                      border: '1.5px solid var(--brand)',
+                      color: 'var(--brand)',
                     }}
-                    onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.12)'; }}
+                    onMouseEnter={e => { e.currentTarget.style.background = 'var(--bg-secondary)'; }}
                     onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
                   >
                     {t('flash_voir_explication')}
@@ -413,23 +412,23 @@ export default function FlashPage() {
                   style={{
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)',
-                    background: '#1E1E35',
-                    border: '1px solid rgba(78,205,196,0.2)',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
+                    background: 'var(--card-secondary)',
+                    border: `1px solid ${themeColor}30`,
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
                   }}
                 >
                   <h3 className="text-lg font-black mb-3" style={{ color: themeColor }}>
                     {card.title}
                   </h3>
-                  <p className="text-base leading-relaxed mb-4" style={{ color: '#e5e7eb', lineHeight: '26px' }}>
+                  <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-primary)', lineHeight: '26px' }}>
                     {card.content}
                   </p>
                   {card.explanation_simple && (
-                    <div className="rounded-xl p-4" style={{ background: 'rgba(78,205,196,0.08)', borderLeft: `3px solid ${themeColor}` }}>
+                    <div className="rounded-xl p-4" style={{ background: 'var(--bg-secondary)', borderLeft: `3px solid ${themeColor}` }}>
                       <p className="text-xs font-bold uppercase tracking-wider mb-1.5" style={{ color: themeColor }}>
                         {t('flash_en_simple')}
                       </p>
-                      <p className="text-sm leading-relaxed" style={{ color: '#8B9DC3' }}>
+                      <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                         {card.explanation_simple}
                       </p>
                     </div>
@@ -444,12 +443,12 @@ export default function FlashPage() {
                 onClick={handleReview}
                 className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale"
                 style={{
-                  background: 'rgba(231,76,60,0.15)',
-                  border: '1.5px solid rgba(231,76,60,0.5)',
-                  color: '#e74c3c',
+                  background: 'rgba(231,76,60,0.12)',
+                  border: '1.5px solid rgba(231,76,60,0.45)',
+                  color: 'var(--error)',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.25)'; }}
-                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.15)'; }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.22)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.12)'; }}
               >
                 <span className="text-lg">🔄</span>
                 <span className="text-sm font-bold">{t('flash_a_revoir')}</span>
@@ -458,12 +457,12 @@ export default function FlashPage() {
                 onClick={handleMastered}
                 className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale"
                 style={{
-                  background: 'rgba(46,204,113,0.15)',
-                  border: '1.5px solid rgba(46,204,113,0.5)',
-                  color: '#2ecc71',
+                  background: 'rgba(46,204,113,0.12)',
+                  border: '1.5px solid rgba(46,204,113,0.45)',
+                  color: 'var(--success)',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(46,204,113,0.25)'; }}
-                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(46,204,113,0.15)'; }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(46,204,113,0.22)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(46,204,113,0.12)'; }}
               >
                 <span className="text-lg">✅</span>
                 <span className="text-sm font-bold">{t('flash_je_savais')}</span>
@@ -474,7 +473,7 @@ export default function FlashPage() {
             <button
               onClick={shuffleQueue}
               className="lg:hidden mt-3 px-5 py-2 rounded-lg text-xs font-bold press-scale"
-              style={{ color: '#4ecdc4', background: 'transparent', border: '1px solid rgba(78,205,196,0.3)' }}
+              style={{ color: 'var(--brand)', background: 'transparent', border: '1px solid var(--border-subtle)' }}
             >
               {t('flash_melanger')}
             </button>
@@ -485,24 +484,24 @@ export default function FlashPage() {
             <div className="sticky top-20 flex flex-col gap-5">
 
               {/* Gaston */}
-              <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
+              <div className="rounded-2xl p-5" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)' }}>
                 <Gaston message={gastonMsg} expression="encouraging" size="small" title={t('prof_gaston')} />
               </div>
 
               {/* Session stats */}
-              <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
-                <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#4ecdc4' }}>{t('flash_session')}</h4>
+              <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+                <h4 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'var(--brand)' }}>{t('flash_session')}</h4>
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('flash_cartes_vues')}</span>
-                    <span className="text-sm font-bold">{sessionViewed}</span>
+                    <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('flash_cartes_vues')}</span>
+                    <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{sessionViewed}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('flash_maitrisees')}</span>
-                    <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{sessionPct}%</span>
+                    <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('flash_maitrisees')}</span>
+                    <span className="text-sm font-bold" style={{ color: 'var(--success)' }}>{sessionPct}%</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('flash_temps_passe')}</span>
+                    <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('flash_temps_passe')}</span>
                     <span className="text-sm font-bold" style={{ color: themeColor }}>{formatTime(elapsed)}</span>
                   </div>
                 </div>
@@ -514,10 +513,10 @@ export default function FlashPage() {
                 className="w-full py-3 rounded-xl font-bold text-sm press-scale"
                 style={{
                   background: 'transparent',
-                  border: '1.5px solid #4ecdc4',
-                  color: '#4ecdc4',
+                  border: '1.5px solid var(--brand)',
+                  color: 'var(--brand)',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.1)'; }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'var(--bg-secondary)'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
               >
                 {t('flash_terminer')}

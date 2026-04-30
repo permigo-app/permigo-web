@@ -1163,8 +1163,9 @@ export default function HomePage() {
 
                 {/* Node circle */}
                 {node.isLocked ? (
-                  <button onClick={() => setShowPremiumModal(true)} title="🔒 Débloque avec Premium" className="absolute inset-0 flex items-center justify-center cursor-pointer relative">
-                    <div className="rounded-full flex items-center justify-center" style={{
+                  <button onClick={() => setShowPremiumModal(true)} title="🔒 Débloque avec Premium" className="absolute inset-0 cursor-pointer">
+                    <div className="absolute rounded-full flex items-center justify-center" style={{
+                      left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
                       width: nodeRadius * 2,
                       height: nodeRadius * 2,
                       background: bg,
@@ -1176,8 +1177,9 @@ export default function HomePage() {
                     <span className="barrier-light-right absolute" style={{ width: 5, height: 5, borderRadius: '50%', background: '#e74c3c', top: '12%', right: '22%', pointerEvents: 'none' }} />
                   </button>
                 ) : (
-                  <button onClick={() => openLessonModal(node)} className="absolute inset-0 flex items-center justify-center node-hover cursor-pointer">
-                    <div className="rounded-full flex items-center justify-center" style={{
+                  <button onClick={() => openLessonModal(node)} className="absolute inset-0 node-hover cursor-pointer">
+                    <div className="absolute rounded-full flex items-center justify-center" style={{
+                      left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
                       width: nodeRadius * 2,
                       height: nodeRadius * 2,
                       background: bg,
@@ -1318,7 +1320,7 @@ export default function HomePage() {
               </picture>
             </div>
             {/* A-2 grandplace */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: -20, top: 771.6, width: 180, height: 162, zIndex: 6, opacity: 0.92 }}>
+            <div className="absolute pointer-events-none monument-reveal" style={{ left: -35, top: 771.6, width: 180, height: 162, zIndex: 6, opacity: 0.92 }}>
               <picture>
                 <source srcSet="/monuments/grandplace.webp" type="image/webp" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
