@@ -363,8 +363,8 @@ export default function TurboPage() {
               ))}
               <div className="h-px my-1" style={{ background: 'var(--border-subtle)' }} />
               <div className="flex justify-between items-center">
-                <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>Parties total jouées</span>
-                <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{allTime.games3min + allTime.games5min + allTime.gamesSurvie}</span>
+                <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>{t('turbo_temps_total')}</span>
+                <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{formatDuration(allTime.timeSeconds)}</span>
               </div>
             </div>
           </div>
