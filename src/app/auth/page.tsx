@@ -54,9 +54,9 @@ export default function AuthPage() {
     width: '100%',
     padding: '14px 16px',
     borderRadius: 12,
-    border: '1.5px solid #2A3550',
-    background: '#16213E',
-    color: '#fff',
+    border: '1.5px solid var(--border-subtle)',
+    background: 'var(--card-secondary)',
+    color: 'var(--text-primary)',
     fontSize: 15,
     fontFamily: 'Nunito, sans-serif',
     outline: 'none',
@@ -64,17 +64,17 @@ export default function AuthPage() {
 
   if (confirmed) {
     return (
-      <div style={{ minHeight: '100vh', background: '#0a0e2a', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: 'Nunito, sans-serif' }}>
+      <div style={{ minHeight: '100vh', background: 'var(--bg-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: 'Nunito, sans-serif' }}>
         <div style={{ maxWidth: 400, width: '100%', textAlign: 'center' }}>
           <div style={{ fontSize: 72, marginBottom: 16 }}>📧</div>
-          <h1 style={{ fontSize: 24, fontWeight: 900, color: '#fff', marginBottom: 12 }}>{t('register_verif_titre')}</h1>
-          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 15, lineHeight: 1.6, marginBottom: 32 }}>
-            {t('register_verif_msg')} <strong style={{ color: '#4ecdc4' }}>{email}</strong>.<br />
+          <h1 style={{ fontSize: 24, fontWeight: 900, color: 'var(--text-primary)', marginBottom: 12 }}>{t('register_verif_titre')}</h1>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 15, lineHeight: 1.6, marginBottom: 32 }}>
+            {t('register_verif_msg')} <strong style={{ color: 'var(--brand)' }}>{email}</strong>.<br />
             {t('register_verif_lien')}
           </p>
           <button
             onClick={() => { setConfirmed(false); setMode('login'); }}
-            style={{ background: '#4ecdc4', color: '#0a0e2a', fontWeight: 900, fontSize: 16, borderRadius: 100, padding: '14px 40px', border: 'none', cursor: 'pointer' }}
+            style={{ background: 'var(--brand)', color: 'var(--bg-primary)', fontWeight: 900, fontSize: 16, borderRadius: 100, padding: '14px 40px', border: 'none', cursor: 'pointer' }}
           >
             {t('se_connecter')}
           </button>
@@ -84,7 +84,7 @@ export default function AuthPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#0a0e2a', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: 'Nunito, sans-serif' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--bg-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', fontFamily: 'Nunito, sans-serif' }}>
       <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 50 }}>
         <LanguageSwitcher />
       </div>
@@ -95,10 +95,10 @@ export default function AuthPage() {
           <Image src="/images/gaston.png" width={90} height={90} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
         </div>
 
-        <h1 style={{ textAlign: 'center', fontSize: 26, fontWeight: 900, color: '#fff', marginBottom: 6 }}>
+        <h1 style={{ textAlign: 'center', fontSize: 26, fontWeight: 900, color: 'var(--text-primary)', marginBottom: 6 }}>
           {mode === 'signup' ? t('auth_titre_signup') : t('auth_titre_login')}
         </h1>
-        <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.45)', fontSize: 14, marginBottom: 32 }}>
+        <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: 14, marginBottom: 32 }}>
           {mode === 'signup' ? t('auth_subtitle_signup') : t('auth_subtitle_login')}
         </p>
 
@@ -106,7 +106,7 @@ export default function AuthPage() {
 
           {mode === 'signup' && (
             <div>
-              <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('onboarding_prenom')}</label>
+              <label style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('onboarding_prenom')}</label>
               <input
                 type="text"
                 value={username}
@@ -119,7 +119,7 @@ export default function AuthPage() {
           )}
 
           <div>
-            <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('login_email')}</label>
+            <label style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('login_email')}</label>
             <input
               type="email"
               value={email}
@@ -131,7 +131,7 @@ export default function AuthPage() {
           </div>
 
           <div>
-            <label style={{ fontSize: 12, fontWeight: 700, color: '#8B9DC3', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('login_mdp')}</label>
+            <label style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: 1, display: 'block', marginBottom: 6 }}>{t('login_mdp')}</label>
             <input
               type="password"
               value={password}
@@ -143,7 +143,7 @@ export default function AuthPage() {
           </div>
 
           {error && (
-            <div style={{ background: 'rgba(231,76,60,0.12)', border: '1px solid rgba(231,76,60,0.4)', borderRadius: 10, padding: '10px 14px', color: '#e74c3c', fontSize: 14 }}>
+            <div style={{ background: 'rgba(231,76,60,0.12)', border: '1px solid rgba(231,76,60,0.4)', borderRadius: 10, padding: '10px 14px', color: 'var(--error)', fontSize: 14 }}>
               {error}
             </div>
           )}
@@ -170,16 +170,16 @@ export default function AuthPage() {
         </form>
 
         {/* Toggle mode */}
-        <p style={{ textAlign: 'center', marginTop: 20, fontSize: 14, color: 'rgba(255,255,255,0.4)' }}>
+        <p style={{ textAlign: 'center', marginTop: 20, fontSize: 14, color: 'var(--text-disabled)' }}>
           {mode === 'signup' ? (
             <>{t('register_deja_compte')}{' '}
-              <button onClick={() => { setMode('login'); setError(''); }} style={{ background: 'none', border: 'none', color: '#4ecdc4', fontWeight: 700, cursor: 'pointer', fontSize: 14, fontFamily: 'Nunito, sans-serif' }}>
+              <button onClick={() => { setMode('login'); setError(''); }} style={{ background: 'none', border: 'none', color: 'var(--brand)', fontWeight: 700, cursor: 'pointer', fontSize: 14, fontFamily: 'Nunito, sans-serif' }}>
                 {t('se_connecter')}
               </button>
             </>
           ) : (
             <>{t('login_pas_compte')}{' '}
-              <button onClick={() => { setMode('signup'); setError(''); }} style={{ background: 'none', border: 'none', color: '#4ecdc4', fontWeight: 700, cursor: 'pointer', fontSize: 14, fontFamily: 'Nunito, sans-serif' }}>
+              <button onClick={() => { setMode('signup'); setError(''); }} style={{ background: 'none', border: 'none', color: 'var(--brand)', fontWeight: 700, cursor: 'pointer', fontSize: 14, fontFamily: 'Nunito, sans-serif' }}>
                 {t('s_inscrire')}
               </button>
             </>
@@ -196,7 +196,7 @@ export default function AuthPage() {
               document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
               window.location.href = '/app';
             }}
-            style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.25)', fontSize: 13, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
+            style={{ background: 'none', border: 'none', color: 'var(--text-disabled)', fontSize: 13, cursor: 'pointer', fontFamily: 'Nunito, sans-serif' }}
           >
             {t('auth_sans_compte')}
           </button>
