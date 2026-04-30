@@ -58,7 +58,7 @@ export default function PremiumPage() {
   };
 
   return (
-    <div className="min-h-screen" style={{ background: '#0a0e2a' }}>
+    <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
       <div className="max-w-2xl mx-auto px-4 py-12">
 
         {/* Hero */}
@@ -67,36 +67,36 @@ export default function PremiumPage() {
             style={{ background: 'rgba(255,215,0,0.12)', border: '1px solid rgba(255,215,0,0.3)', color: '#FFD700' }}>
             {t('premium_badge')}
           </div>
-          <h1 className="text-4xl font-black text-white mb-3 leading-tight">
+          <h1 className="text-4xl font-black mb-3 leading-tight" style={{ color: 'var(--text-primary)' }}>
             {t('premium_hero_titre')}<br />
             <span style={{ color: '#FFD700' }}>{t('premium_hero_accent')}</span>
           </h1>
-          <p className="text-base" style={{ color: '#8B9DC3' }}>
+          <p className="text-base" style={{ color: 'var(--text-secondary)' }}>
             {t('premium_hero_subtitle')}
           </p>
         </div>
 
         {/* Comparison table */}
-        <div className="rounded-2xl overflow-hidden mb-8" style={{ border: '1px solid #2A3550' }}>
+        <div className="rounded-2xl overflow-hidden mb-8" style={{ border: '1px solid var(--border-subtle)' }}>
           <div className="grid grid-cols-3">
-            <div className="px-4 py-3" style={{ background: '#16213E' }} />
-            <div className="px-4 py-3 text-center" style={{ background: '#16213E', borderLeft: '1px solid #2A3550' }}>
-              <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#5A6B8A' }}>{t('premium_gratuit_col')}</span>
+            <div className="px-4 py-3" style={{ background: 'var(--card-secondary)' }} />
+            <div className="px-4 py-3 text-center" style={{ background: 'var(--card-secondary)', borderLeft: '1px solid var(--border-subtle)' }}>
+              <span className="text-xs font-black uppercase tracking-wider" style={{ color: 'var(--text-disabled)' }}>{t('premium_gratuit_col')}</span>
             </div>
             <div className="px-4 py-3 text-center" style={{ background: 'rgba(255,215,0,0.06)', borderLeft: '1px solid rgba(255,215,0,0.2)' }}>
               <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#FFD700' }}>⭐ Premium</span>
             </div>
           </div>
           {FREE_FEATURES.map((f, i) => (
-            <div key={i} className="grid grid-cols-3 card-hover" style={{ borderTop: '1px solid #2A3550' }}>
-              <div className="px-4 py-3 text-sm font-medium" style={{ color: '#d1d5db', background: i % 2 === 0 ? '#0F1923' : '#111827' }}>
+            <div key={i} className="grid grid-cols-3 card-hover" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+              <div className="px-4 py-3 text-sm font-medium" style={{ color: 'var(--text-primary)', background: i % 2 === 0 ? 'var(--card-primary)' : 'var(--card-secondary)' }}>
                 {f.label}
               </div>
-              <div className="px-4 py-3 text-center" style={{ background: i % 2 === 0 ? '#0F1923' : '#111827', borderLeft: '1px solid #2A3550' }}>
-                <span style={{ color: f.ok ? '#2ecc71' : '#e74c3c' }}>{f.ok ? '✓' : '✕'}</span>
+              <div className="px-4 py-3 text-center" style={{ background: i % 2 === 0 ? 'var(--card-primary)' : 'var(--card-secondary)', borderLeft: '1px solid var(--border-subtle)' }}>
+                <span style={{ color: f.ok ? 'var(--success)' : 'var(--error)' }}>{f.ok ? '✓' : '✕'}</span>
               </div>
               <div className="px-4 py-3 text-center" style={{ background: i % 2 === 0 ? 'rgba(255,215,0,0.03)' : 'rgba(255,215,0,0.05)', borderLeft: '1px solid rgba(255,215,0,0.15)' }}>
-                <span style={{ color: '#2ecc71' }}>✓</span>
+                <span style={{ color: 'var(--success)' }}>✓</span>
               </div>
             </div>
           ))}
@@ -106,12 +106,12 @@ export default function PremiumPage() {
         <div className="rounded-2xl p-8 mb-8" style={{ background: 'var(--card-primary)', border: '2px solid var(--premium)', boxShadow: '0 8px 40px rgba(0,0,0,0.08)' }}>
           <div className="flex items-start justify-between mb-6">
             <div>
-              <h2 className="text-2xl font-black text-white mb-1">{t('premium_card_titre')}</h2>
-              <p className="text-sm" style={{ color: '#8B9DC3' }}>{t('premium_card_acces')}</p>
+              <h2 className="text-2xl font-black mb-1" style={{ color: 'var(--text-primary)' }}>{t('premium_card_titre')}</h2>
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('premium_card_acces')}</p>
             </div>
             <div className="text-right">
-              <p className="text-3xl font-black text-white">7€</p>
-              <p className="text-xs" style={{ color: '#8B9DC3' }}>{t('premium_card_mois')}</p>
+              <p className="text-3xl font-black" style={{ color: 'var(--text-primary)' }}>7€</p>
+              <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>{t('premium_card_mois')}</p>
             </div>
           </div>
 
@@ -119,12 +119,12 @@ export default function PremiumPage() {
             {PREMIUM_FEATURES.map((f, i) => (
               <div key={i} className="flex items-center gap-2.5">
                 <span className="text-lg">{f.icon}</span>
-                <span className="text-sm font-medium" style={{ color: '#d1d5db' }}>{f.label}</span>
+                <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>{f.label}</span>
               </div>
             ))}
           </div>
 
-          {error && <p className="text-sm mb-4" style={{ color: '#e74c3c' }}>{error}</p>}
+          {error && <p className="text-sm mb-4" style={{ color: 'var(--error)' }}>{error}</p>}
 
           <button
             onClick={handleSubscribe}
@@ -132,20 +132,20 @@ export default function PremiumPage() {
             className="w-full py-4 rounded-2xl font-black text-lg press-scale mb-3 btn-glow-teal"
             style={{
               background: loading ? 'rgba(78,205,196,0.4)' : 'var(--brand)',
-              color: '#0a0e2a',
+              color: 'var(--bg-primary)',
             }}
           >
             {loading ? t('premium_chargement') : t('premium_essai_btn')}
           </button>
 
-          <p className="text-center text-xs" style={{ color: '#5A6B8A' }}>
+          <p className="text-center text-xs" style={{ color: 'var(--text-disabled)' }}>
             {t('premium_sans_paiement')}
           </p>
         </div>
 
         {/* Back link */}
         <div className="text-center">
-          <Link href="/app" className="text-sm" style={{ color: '#5A6B8A' }}>
+          <Link href="/app" className="text-sm" style={{ color: 'var(--text-disabled)' }}>
             {t('premium_retour')}
           </Link>
         </div>
