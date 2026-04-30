@@ -271,10 +271,10 @@ export default function LandingContent() {
           <div className="flex items-center gap-2 lg:gap-3">
             <LanguageSwitcher />
 
-            {/* Theme toggle — hidden on mobile to save space */}
+            {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-              className="hidden sm:flex w-9 h-9 rounded-full items-center justify-center text-base flex-shrink-0"
+              className="w-9 h-9 rounded-full flex items-center justify-center text-base flex-shrink-0"
               style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)', border: '1px solid var(--border-subtle)' }}
               title={theme === 'night' ? 'Mode jour' : 'Mode nuit'}
             >
@@ -290,10 +290,10 @@ export default function LandingContent() {
               {s.login}
             </Link>
 
-            {/* Register CTA */}
+            {/* Register CTA — hidden on mobile */}
             <Link
               href="/auth"
-              className="flex items-center px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-black press-scale whitespace-nowrap"
+              className="hidden sm:flex items-center px-4 py-2 rounded-full text-sm font-black press-scale"
               style={{ background: 'var(--brand)', color: 'var(--bg-primary)', textDecoration: 'none' }}
             >
               {s.register}
