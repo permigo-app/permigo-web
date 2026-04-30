@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { THEME_ORDER, getThemeDataLocalized, getLessonDataLocalized } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
+import { useTheme } from '@/contexts/ThemeContext';
 import { THEME_COLORS, THEME_EMOJIS, CITY_NAMES_UPPER } from '@/lib/constants';
 import { GASTON_GREETINGS, getRandomMsg } from '@/locales/messages';
 import { isPremium, isThemeFree } from '@/lib/premium';
@@ -228,6 +229,7 @@ export default function HomePage() {
   const router = useRouter();
   const { lang, t } = useLang();
   const { user } = useAuth();
+  const { theme: uiTheme } = useTheme();
   const [stars, setStarsState] = useState<Record<string, number>>({});
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [xp, setXp] = useState({ totalXP: 0, level: 1 });
@@ -632,7 +634,7 @@ export default function HomePage() {
           return (
             <div className="fade-in-up" style={{ textAlign: 'right', paddingRight: 14, paddingTop: 18, paddingBottom: 6, animationDuration: '0.5s' }}>
               <p style={{ fontSize: 14, fontWeight: 900, color: 'var(--text-primary)', lineHeight: 1.2 }}>{salutation}</p>
-              <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--brand)', marginTop: 2, lineHeight: 1.2 }}>{streakLabel}</p>
+              <p style={{ fontSize: 11, fontWeight: 700, color: uiTheme === 'day' ? '#FF8C42' : 'var(--brand)', marginTop: 2, lineHeight: 1.2 }}>{streakLabel}</p>
             </div>
           );
         })()}
@@ -862,6 +864,7 @@ export default function HomePage() {
                   alignItems: 'center',
                   gap: 10,
                   backdropFilter: 'blur(4px)',
+                  boxShadow: uiTheme === 'day' ? '0 8px 24px rgba(15, 23, 42, 0.08)' : 'none',
                 }}>
                   <div style={{ width: 34, height: 34, borderRadius: 17, background: `${tc}30`, border: `2px solid ${tc}80`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <span style={{ fontSize: 17 }}>{em}</span>
@@ -1098,7 +1101,10 @@ export default function HomePage() {
             const isInProgress = completedParties.length > 0 && !allPartiesDone && !node.isLocked;
 
             // Colors
-            const bg = (allPartiesDone || isInProgress || isActive || node.isLocked) ? tc : 'var(--card-primary)';
+            const isUnstarted = !allPartiesDone && !isInProgress && !isActive && !node.isLocked;
+            const bg = (allPartiesDone || isInProgress || isActive || node.isLocked)
+              ? tc
+              : (uiTheme === 'day' ? '#2B7FFF' : 'var(--card-primary)');
             const borderColor = tc;
             const ringColor = tc;
 
@@ -1112,7 +1118,7 @@ export default function HomePage() {
             } else if (isInProgress || isActive) {
               nodeContent = <span style={{ color: '#fff', fontSize: iconSize * 0.9, lineHeight: 1 }}>▶</span>;
             } else {
-              nodeContent = <span style={{ fontSize: iconSize * 0.75, fontWeight: 900, color: tc, lineHeight: 1 }}>{node.localIndex}</span>;
+              nodeContent = <span style={{ fontSize: iconSize * 0.75, fontWeight: 900, color: isUnstarted && uiTheme === 'day' ? '#FFFFFF' : tc, lineHeight: 1 }}>{node.localIndex}</span>;
             }
 
             return (
@@ -1198,7 +1204,7 @@ export default function HomePage() {
                       padding: isMobileView ? '9px 20px' : '6px 14px',
                       borderRadius: 20,
                       whiteSpace: 'nowrap',
-                      boxShadow: 'none',
+                      boxShadow: uiTheme === 'day' ? '0 8px 24px rgba(100, 181, 255, 0.4)' : 'none',
                       letterSpacing: '0.5px',
                       zIndex: 18,
                       border: `1.5px solid ${tc}`,

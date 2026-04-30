@@ -105,8 +105,8 @@
 }
 
 [data-theme='day'] {
-  --bg-primary: #F7FAFC;
-  --bg-secondary: #EEF6FA;
+  --bg-primary: #E8F1FB;
+  --bg-secondary: #DCE9F5;
   --card-primary: #FFFFFF;
   --card-secondary: #F1F7FB;
   --text-primary: #0F172A;
@@ -122,11 +122,11 @@
   --btn-blue: #3B82F6;
   --premium: #F59E0B;
   --exam-orange: #F97316;
-  --road-asphalt: #CBD5E1;
-  --road-edge: #94A3B8;
-  --road-marking: #334155;
-  --bg-overlay: rgba(247, 250, 252, 0.90);
-  --bg-blur: rgba(247, 250, 252, 0.93);
+  --road-asphalt: #3A4A5C;
+  --road-edge: #5A6B7D;
+  --road-marking: #FFFFFF;
+  --bg-overlay: rgba(232, 241, 251, 0.90);
+  --bg-blur: rgba(232, 241, 251, 0.93);
 }
 
 * {
@@ -356,6 +356,19 @@ input[type="reset"] {
 }
 .stat-card-glow {
   box-shadow: 0 0 20px rgba(34,214,199,0.06);
+}
+
+/* ── Mode Jour — intensité visuelle accrue ── */
+[data-theme='day'] .stat-card {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border-color: #D9E5EF;
+}
+[data-theme='day'] .commencer-float {
+  box-shadow: 0 8px 24px rgba(100, 181, 255, 0.4) !important;
+}
+[data-theme='day'] .theme-toggle-wrap {
+  background: rgba(255, 201, 40, 0.15) !important;
+  border-color: rgba(255, 201, 40, 0.4) !important;
 }
 
 /* ── Theme banner ── */
