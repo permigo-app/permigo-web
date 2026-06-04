@@ -7,11 +7,8 @@ import { getXPData, getStreakData, getQuizHistory, getAllStars, getUnlockedTheme
 import { getUnlockedBadges } from '@/lib/badges';
 import { BADGES, THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { getThemeDataLocalized, THEME_ORDER } from '@/lib/lessonData';
-import Image from 'next/image';
-import Gaston from '@/components/Gaston';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
-import { GASTON_PROFILE, getRandomMsg } from '@/locales/messages';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
 
 // Semantic category colors — intentionally hardcoded, not theme vars
@@ -44,7 +41,6 @@ export default function ProfilePage() {
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [survivalBest, setSurvivalBest] = useState(0);
   const [studyTime, setStudyTime] = useState(0);
-  const [userCar, setUserCar] = useState<{ carType: string; carColor: string; carImage?: string }>({ carType: 'berline', carColor: '#1E88E5', carImage: '/images/cars/car-red.png' });
   const [unlockedBadges, setUnlockedBadges] = useState<string[]>([]);
   const [hasLocalData, setHasLocalData] = useState(false);
   const [hoveredBadge, setHoveredBadge] = useState<string | null>(null);
@@ -65,19 +61,6 @@ export default function ProfilePage() {
     setExams(getAllExams());
     setSurvivalBest(getSurvivalBest());
     setStudyTime(getStudyTime());
-    try {
-      const rawCar = localStorage.getItem('userCar');
-      if (rawCar) {
-        const c = JSON.parse(rawCar);
-        setUserCar({ carType: c.id || 'berline', carColor: c.color || '#1E88E5', carImage: c.image || '/images/cars/car-red.png' });
-      } else {
-        const raw = localStorage.getItem('userProfile');
-        if (raw) {
-          const p = JSON.parse(raw);
-          if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#1E88E5', carImage: '/images/cars/car-red.png' });
-        }
-      }
-    } catch {}
     setUnlockedBadges(getUnlockedBadges());
     setMuted(isSoundMuted());
     setPremium(localStorage.getItem('isPremium') === 'true');
@@ -88,13 +71,6 @@ export default function ProfilePage() {
       Object.keys(starsData).length > 0
     );
   }, []);
-
-  const gastonMsg = useMemo(() => {
-    if (!mounted) return '';
-    if (xp.level >= 10) return t('profil_champion');
-    if (xp.level >= 5) return `${t('niveau')} ${xp.level} ! ${t('profil_niveau_msg')}`;
-    return getRandomMsg(GASTON_PROFILE[lang]);
-  }, [mounted, xp.level, lang]);
 
   if (!mounted || authLoading) return <div className="min-h-screen" />;
 
@@ -113,25 +89,32 @@ export default function ProfilePage() {
     await signOut();
     localStorage.removeItem('@onboarding_done');
     document.cookie = 'onboarding_done=; path=/; max-age=0; SameSite=Lax';
-    window.location.href = '/landing';
+    window.location.href = '/login';
   };
 
   // ── Reusable sub-components (inline for single-file clarity) ──
 
-  const AvatarCard = ({ size }: { size: 'sm' | 'lg' }) => (
-    <div
-      className={`rounded-full flex items-center justify-center ${size === 'lg' ? 'w-[100px] h-[100px] car-bounce' : 'w-[88px] h-[88px]'} mb-3`}
-      style={{ background: 'var(--card-secondary)', border: '4px solid var(--brand)', boxShadow: '0 0 24px rgba(78,205,196,0.2)' }}
-    >
-      <Image
-        src={userCar.carImage || '/images/cars/car-red.png'}
-        alt="car"
-        width={size === 'lg' ? 80 : 68}
-        height={size === 'lg' ? 80 : 68}
-        style={{ objectFit: 'contain', filter: `drop-shadow(0 4px 8px ${userCar.carColor}88)` }}
-      />
-    </div>
-  );
+  const AvatarCard = ({ size }: { size: 'sm' | 'lg' }) => {
+    const sz = size === 'lg' ? 88 : 72;
+    const initial = (user?.username?.charAt(0) || '?').toUpperCase();
+    return (
+      <div
+        className="rounded-full flex items-center justify-center mb-3"
+        style={{
+          width: sz, height: sz,
+          background: '#0b2659',
+          border: '3px solid #f59e0b',
+          fontSize: sz * 0.38,
+          fontWeight: 800,
+          color: '#f59e0b',
+          fontFamily: 'Sora, sans-serif',
+          flexShrink: 0,
+        }}
+      >
+        {initial}
+      </div>
+    );
+  };
 
   const XPBar = ({ height }: { height: string }) => (
     <div>
@@ -244,7 +227,15 @@ export default function ProfilePage() {
   );
 
   return (
-    <div className="py-8 px-4" style={{ minHeight: '100vh' }}>
+    <div style={{ background: '#f0f2f5', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
+
+      {/* Page header */}
+      <div style={{ background: '#ffffff', borderBottom: '1px solid #e8eaed', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
+        <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: '#a0a8b8' }}>Compte</p>
+        <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: '#0d1b3e', letterSpacing: -0.5 }}>Mon profil</h1>
+      </div>
+
+      <div className="py-6 px-4">
       <div className="max-w-screen-xl mx-auto">
 
         {/* ════════════════════════════════════════
@@ -259,9 +250,9 @@ export default function ProfilePage() {
               <h1 className="text-xl font-black" style={{ color: 'var(--text-primary)' }}>{user?.username || t('pilote')}</h1>
               {user?.email && <p className="text-xs mt-0.5" style={{ color: 'var(--text-secondary)' }}>{user.email}</p>}
               <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full mt-2"
-                style={{ background: 'var(--card-secondary)', border: '1px solid var(--brand)' }}>
-                <span className="text-sm">⚡</span>
-                <span className="text-sm font-black" style={{ color: 'var(--brand)' }}>{t('niveau')} {xp.level}</span>
+                style={{ background: '#0b2659' }}>
+                <span className="text-sm" style={{ color: '#f59e0b' }}>⚡</span>
+                <span className="text-sm font-bold" style={{ color: '#f59e0b', fontFamily: 'Sora, sans-serif' }}>{t('niveau')} {xp.level}</span>
               </div>
             </div>
             <XPBar height="12px" />
@@ -303,12 +294,7 @@ export default function ProfilePage() {
             <BadgeGrid cols="grid-cols-2" />
           </div>
 
-          {/* 5. Gaston */}
-          <div className="rounded-2xl p-4" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-            <Gaston message={gastonMsg} expression="proud" size="small" title={t('prof_gaston_dit')} />
-          </div>
-
-          {/* 6. Séparateur */}
+          {/* 5. Séparateur */}
           <div style={{ height: 1, background: 'var(--border-subtle)' }} />
 
           {/* 7. Paramètres */}
@@ -423,10 +409,6 @@ export default function ProfilePage() {
                   ))}
                 </div>
 
-                {/* Gaston */}
-                <div className="rounded-xl p-3" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                  <Gaston message={gastonMsg} expression="proud" size="small" title={t('prof_gaston_dit')} />
-                </div>
               </div>
 
               {/* Share */}
@@ -573,6 +555,7 @@ export default function ProfilePage() {
           </div>
         </div>
 
+      </div>
       </div>
     </div>
   );

@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Gaston from '@/components/Gaston';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
@@ -35,9 +34,6 @@ export default function RegisterPage() {
           {t('register_verif_msg')} <strong style={{ color: 'var(--success)' }}>{email}</strong>.
           <br />{t('register_verif_lien')}
         </p>
-        <div className="mb-6">
-          <Gaston message={t('register_gaston_spam')} expression="happy" size="large" />
-        </div>
         <Link href="/login" className="inline-block py-3.5 px-8 rounded-2xl font-black press-scale" style={{ background: 'var(--success)', color: '#fff' }}>
           {t('register_retour')}
         </Link>
@@ -70,7 +66,9 @@ export default function RegisterPage() {
     } else if (result.needsConfirmation) {
       setShowConfirmation(true);
     } else {
-      window.location.href = '/onboarding';
+      localStorage.setItem('@onboarding_done', 'true');
+      document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
+      window.location.href = '/';
     }
   };
 
@@ -87,10 +85,6 @@ export default function RegisterPage() {
         <span className="text-[64px] block mb-3">🎓</span>
         <h1 className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>{t('register_titre')}</h1>
         <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('register_subtitle')}</p>
-      </div>
-
-      <div className="mb-6">
-        <Gaston message={t('register_gaston')} expression="party" size="large" />
       </div>
 
       <form onSubmit={handleRegister} className="flex flex-col gap-3 mb-6">

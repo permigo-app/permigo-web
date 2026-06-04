@@ -102,37 +102,83 @@
   --road-marking: #FFFFFF;
   --bg-overlay: rgba(5, 10, 24, 0.85);
   --bg-blur: rgba(5, 10, 24, 0.93);
+  /* ── v3 semantic vars ── */
+  --bg-page: #0f1117;
+  --bg-card: #1a1d27;
+  --bg-card-hover: #1e2130;
+  --bg-header: #13161f;
+  --border-card: #2a2d3a;
+  --border-header: #2a2d3a;
+  --border-row: #22253a;
+  --text-title: #f1f3f9;
+  --text-sub: #8b90a0;
+  --text-hint: #555b6e;
+  --text-navy: #4d8bff;
+  --bg-icon: #1e2540;
+  --bg-input: #22253a;
+  --bg-rule: #1a2035;
+  --bg-why: #2a2210;
+  --bg-prac: #0f2018;
+  --bg-example: #0c1a2e;
+  --bg-error-section: #2a1010;
+  --pm-shadow: rgba(0,0,0,.30);
+  --nav-bg: #13161f;
+  --nav-border: #2a2d3a;
 }
 
 [data-theme='day'] {
-  --bg-primary: #E8F1FB;
-  --bg-secondary: #DCE9F5;
-  --card-primary: #FFFFFF;
-  --card-secondary: #F1F7FB;
-  --text-primary: #0F172A;
-  --text-secondary: #64748B;
-  --text-disabled: #94A3B8;
-  --brand: #00AFA5;
-  --brand-hover: #008F88;
-  --border-subtle: #D9E5EF;
-  --border-active: #13BDB4;
-  --success: #22C55E;
-  --error: #EF4444;
-  --secondary: #7C3AED;
-  --btn-blue: #3B82F6;
-  --premium: #F59E0B;
-  --exam-orange: #F97316;
-  --road-asphalt: #3A4A5C;
-  --road-edge: #5A6B7D;
-  --road-marking: #FFFFFF;
-  --bg-overlay: rgba(232, 241, 251, 0.90);
-  --bg-blur: rgba(232, 241, 251, 0.93);
+  --bg-primary:    #f0f2f5;
+  --bg-secondary:  #e8edf3;
+  --card-primary:  #ffffff;
+  --card-secondary:#f4f6f9;
+  --text-primary:  #0d1b3e;
+  --text-secondary:#6b7280;
+  --text-disabled: #a0a8b8;
+  --brand:         #0b2659;
+  --brand-hover:   #0e3080;
+  --border-subtle: #e8eaed;
+  --border-active: #f59e0b;
+  --success:       #22c55e;
+  --error:         #ef4444;
+  --secondary:     #7c3aed;
+  --btn-blue:      #3b82f6;
+  --premium:       #f59e0b;
+  --exam-orange:   #f97316;
+  --road-asphalt:  #3a4a5c;
+  --road-edge:     #5a6b7d;
+  --road-marking:  #ffffff;
+  --bg-overlay:    rgba(240, 242, 245, 0.90);
+  --bg-blur:       rgba(240, 242, 245, 0.93);
+  /* ── v3 semantic vars ── */
+  --bg-page: #f0f2f5;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-header: #ffffff;
+  --border-card: #e8eaed;
+  --border-header: #e8eaed;
+  --border-row: #f1f5f9;
+  --text-title: #0d1b3e;
+  --text-sub: #6b7280;
+  --text-hint: #a0a8b8;
+  --text-navy: #0b2659;
+  --bg-icon: #edf2ff;
+  --bg-input: #f0f2f5;
+  --bg-rule: #edf2ff;
+  --bg-why: #fff8e1;
+  --bg-prac: #e8f5e9;
+  --bg-example: #f0f9ff;
+  --bg-error-section: #fef2f2;
+  --pm-shadow: rgba(11,38,89,.08);
+  --nav-bg: #ffffff;
+  --nav-border: #e8eaed;
 }
 
 * {
   box-sizing: border-box;
   /* Supprime le highlight gris/bleu natif iOS & Android au tap */
   -webkit-tap-highlight-color: transparent;
+  /* Theme transition — n'affecte pas transform/opacity (animations intactes) */
+  transition: background-color 0.25s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 html {
@@ -140,10 +186,22 @@ html {
   background: var(--bg-primary, #050A18);
 }
 
+/* ── MyPermiGo Design System v2 ─────────────────────────────── */
+:root {
+  --pm-navy:    #0b2659;
+  --pm-amber:   #f59e0b;
+  --pm-asphalt: #1a2035;
+  --pm-bg:      #f0f2f5;
+  --pm-white:   #ffffff;
+  --pm-card-border: #e8eaed;
+  --pm-amber-light: #fef3c7;
+  --pm-navy-light: #eff6ff;
+}
+
 body {
   background: var(--bg-primary, #0a0e2a);
   color: var(--text-primary, #FFFFFF);
-  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  font-family: 'Sora', 'Nunito', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -245,7 +303,7 @@ input[type="reset"] {
 
 /* Scale press effect — GPU-promoted, 120ms for instant feel */
 .press-scale {
-  transition: transform 0.12s ease, opacity 0.1s ease;
+  transition: transform 0.12s ease, opacity 0.1s ease, background-color 0.25s ease, color 0.2s ease, border-color 0.2s ease;
   will-change: transform;
   -webkit-user-select: none;
   user-select: none;
@@ -259,6 +317,182 @@ input[type="reset"] {
 .press-scale:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
+}
+
+/* ── Reviews-due card (home page) ───────────────────────────── */
+.reviews-due-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 2px solid #f59e0b;
+  margin-bottom: 14px;
+}
+.reviews-due-left { flex: 1; min-width: 0; }
+.reviews-due-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #f59e0b;
+  margin: 0 0 4px;
+}
+.reviews-due-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-title);
+  margin: 0 0 3px;
+}
+.reviews-due-sub {
+  font-size: 12px;
+  color: var(--text-sub);
+  line-height: 1.5;
+  margin: 0;
+}
+.reviews-due-btn {
+  flex-shrink: 0;
+  background: #f59e0b;
+  color: #1a2035;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.reviews-due-btn:hover { opacity: 0.85; }
+
+/* ── Theme quick-tool buttons (/lecons/[code]) ───────────────── */
+.theme-tools {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+.tool-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--bg-card);
+  border: 2px solid var(--text-navy);
+  border-radius: 12px;
+  color: var(--text-navy);
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+.tool-btn:hover {
+  background: var(--bg-icon);
+  box-shadow: 0 4px 12px var(--pm-shadow);
+}
+.tool-icon {
+  font-size: 18px;
+}
+.tool-btn--locked {
+  border-color: var(--border-card);
+  color: var(--text-hint);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ── Theme exam block (/lecons/[code]) ───────────────────────── */
+.theme-exam-block {
+  margin-top: 24px;
+  margin-bottom: 100px;
+}
+.theme-exam-separator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.separator-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border-card);
+}
+.separator-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-hint);
+  white-space: nowrap;
+}
+.theme-exam-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 2px solid #0b2659;
+  box-shadow: 0 2px 12px rgba(11,38,89,.10);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.15s;
+  text-decoration: none;
+  width: 100%;
+}
+.theme-exam-card:hover {
+  box-shadow: 0 6px 20px rgba(11,38,89,.15);
+  transform: translateY(-2px);
+}
+[data-theme="night"] .theme-exam-card {
+  border-color: #4d8bff;
+  box-shadow: 0 2px 12px rgba(0,0,0,.3);
+}
+.theme-exam-card--locked {
+  border-color: var(--border-card);
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.theme-exam-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-icon);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.theme-exam-info { flex: 1; }
+.theme-exam-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-navy);
+  margin: 0 0 3px;
+}
+.theme-exam-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-title);
+  margin: 0 0 3px;
+}
+.theme-exam-sub {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin: 0;
+}
+.theme-exam-status {
+  font-size: 20px;
+  color: var(--text-navy);
+  font-weight: 800;
+  flex-shrink: 0;
 }
 
 /* Smooth card entrance */
@@ -554,5 +788,136 @@ input[type="reset"] {
   footer {
     background: transparent !important;
   }
+}
+
+/* ── Design Update Modal ─────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.modal-box {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-icon {
+  font-size: 42px;
+  margin-bottom: 4px;
+}
+
+.modal-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-title);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.modal-text {
+  font-size: 14px;
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.modal-checks {
+  background: var(--bg-input);
+  border-radius: 14px;
+  padding: 16px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.modal-checks p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #16a34a;
+  margin: 0;
+}
+
+.modal-sub {
+  font-size: 13px;
+  color: var(--text-hint);
+  margin: 0;
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 16px;
+  background: #0b2659;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+[data-theme="night"] .modal-box {
+  border: 1px solid var(--border-card);
+}
+
+/* ── Desktop Layout (≥1024px) ────────────────────────────────── */
+@media (min-width: 1024px) {
+
+  /* ── Home page 2-column grid ── */
+  .home-body {
+    max-width: 1100px !important;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 20px;
+    align-items: start;
+  }
+  .home-progress-card {
+    grid-column: 1 / -1;
+    margin-bottom: 0 !important;
+  }
+  .home-col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .home-col-left .reviews-due-card {
+    margin-bottom: 0;
+  }
+  .home-col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* ── Leçons list — wider single column ── */
+  .lecons-body {
+    max-width: 920px !important;
+  }
+
 }
 

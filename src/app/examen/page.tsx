@@ -8,12 +8,10 @@ import { setExamPassed, unlockTheme, updateQuizHistory, updateXP, checkAndUpdate
 import { getUnlockedBadges } from '@/lib/badges';
 import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
 import { THEME_COLORS } from '@/lib/constants';
-import { GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
 import { isPremium, isThemeFree, canPlayExam, recordExamPlayed, daysUntilNextExam } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
 import Link from 'next/link';
 import QuizLayout from '@/components/QuizLayout';
-import Gaston from '@/components/Gaston';
 
 function ExamContent() {
   const params = useSearchParams();
@@ -28,8 +26,6 @@ function ExamContent() {
   const [selected, setSelected] = useState<number | null>(null);
   const [validated, setValidated] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
-  const [gastonMsg, setGastonMsg] = useState('');
-  const [gastonExpr, setGastonExpr] = useState<'happy' | 'impressed' | 'unhappy' | 'thinking'>('thinking');
   const [shakeWrong, setShakeWrong] = useState(false);
   const [isResuming, setIsResuming] = useState(false);
   const startTimeRef = useRef(Date.now());
@@ -76,8 +72,6 @@ function ExamContent() {
       setStarted(true);
       setIsResuming(true);
       startTimeRef.current = data.startTime || Date.now();
-      setGastonMsg(t('reflechis'));
-      setGastonExpr('thinking');
     } catch {
       localStorage.removeItem('exam_active');
     }
@@ -156,8 +150,6 @@ function ExamContent() {
     setStarted(true);
     setIsResuming(false);
     startTimeRef.current = Date.now();
-    setGastonMsg(t('reflechis'));
-    setGastonExpr('thinking');
   };
 
   const handleValidate = () => {
@@ -181,11 +173,7 @@ function ExamContent() {
 
     if (isCorrect) {
       setCorrectCount(newScore);
-      setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
-      setGastonExpr('impressed');
     } else {
-      setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
-      setGastonExpr('unhappy');
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
     }
@@ -194,8 +182,6 @@ function ExamContent() {
   const nextQuestion = () => {
     setSelected(null);
     setValidated(false);
-    setGastonMsg(t('reflechis'));
-    setGastonExpr('thinking');
 
     // Sync to localStorage
     try {
@@ -265,27 +251,79 @@ function ExamContent() {
 
   // Start screen
   if (!started) {
+    const passCount = Math.ceil(questionCount * 0.82); // 41/50
+    const examTitle = themeCode === 'FINAL' ? t('examen_blanc_final') : `${t('examen_theme')} ${themeCode}`;
+    const EXAM_STATS = [
+      { label: 'Questions', value: `${questionCount}` },
+      { label: 'Durée', value: '~45 min' },
+      { label: 'Pour réussir', value: `${passCount}/${questionCount}` },
+      { label: 'Format', value: 'Officiel' },
+    ];
     return (
-      <div className="max-w-lg mx-auto px-4 py-12 text-center">
-        <h1 className="text-2xl font-black mb-2" style={{ color: 'var(--text-primary)' }}>
-          {themeCode === 'FINAL' ? t('examen_blanc_final') : `${t('examen_theme')} ${themeCode}`}
-        </h1>
-        <p className="text-sm mb-1" style={{ color: 'var(--text-secondary)' }}>
-          {`${questionCount} ${t('examen_questions')}`}
-        </p>
-        <p className="text-sm mb-8" style={{ color: 'var(--text-secondary)' }}>
-          {t('examen_seuil')}
-        </p>
-        <div className="mb-8">
-          <Gaston message={t('examen_pret')} expression="happy" />
+      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', padding: '0 0 32px' }}>
+
+        {/* Navy hero card */}
+        <div style={{ background: '#0b2659', padding: '52px 20px 28px' }}>
+          <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
+              Examen blanc
+            </p>
+            <h1 style={{ margin: '6px 0 0', fontSize: 26, fontWeight: 800, color: '#ffffff', lineHeight: 1.2 }}>
+              {examTitle}
+            </h1>
+            <p style={{ margin: '8px 0 0', fontSize: 13, color: 'rgba(255,255,255,0.6)', fontWeight: 500 }}>
+              {questionCount} questions · format officiel belge
+            </p>
+          </div>
         </div>
-        <button
-          onClick={startExam}
-          className="px-10 py-4 rounded-2xl font-black text-lg press-scale"
-          style={{ background: color, color: '#ffffff', boxShadow: `0 4px 16px ${color}50` }}
-        >
-          {t('examen_commencer')}
-        </button>
+
+        <div style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px' }}>
+
+          {/* 2x2 stat grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
+            {EXAM_STATS.map(s => (
+              <div key={s.label} style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px 14px', textAlign: 'center' }}>
+                <p style={{ margin: 0, fontSize: 22, fontWeight: 800, color: 'var(--text-navy)', lineHeight: 1 }}>{s.value}</p>
+                <p style={{ margin: '5px 0 0', fontSize: 11, fontWeight: 500, color: 'var(--text-hint)' }}>{s.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Advisory banner */}
+          <div style={{ background: 'var(--bg-why)', border: '1.5px solid #fde68a', borderRadius: 14, padding: '13px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+            <span style={{ fontSize: 18, flexShrink: 0 }}>⚡</span>
+            <p style={{ margin: 0, fontSize: 13, color: '#92400e', lineHeight: 1.5, fontWeight: 500 }}>
+              Il faut répondre correctement à <strong>{passCount} questions sur {questionCount}</strong> (82%) pour réussir l'examen.
+            </p>
+          </div>
+
+          {/* Resume banner (if there's an active exam) */}
+          {hasActiveExam && (
+            <div style={{ background: 'var(--bg-rule)', border: '1.5px solid #c7d2fe', borderRadius: 14, padding: '13px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+              <span style={{ fontSize: 18, flexShrink: 0 }}>💾</span>
+              <p style={{ margin: 0, fontSize: 13, color: '#3730a3', lineHeight: 1.5, fontWeight: 500 }}>
+                Tu as un examen en cours. En cliquant sur Commencer, tu reprends là où tu en étais.
+              </p>
+            </div>
+          )}
+
+          {/* CTA button */}
+          <button
+            onClick={startExam}
+            className="press-scale"
+            style={{
+              width: '100%', padding: '16px', borderRadius: 14, border: 'none',
+              background: '#0b2659', color: '#fff', fontWeight: 700, fontSize: 16,
+              cursor: 'pointer', boxShadow: '0 4px 20px rgba(11,38,89,.30)',
+            }}
+          >
+            {hasActiveExam ? 'Reprendre l\'examen →' : t('examen_commencer')}
+          </button>
+
+          <p style={{ textAlign: 'center', margin: '14px 0 0', fontSize: 11, color: 'var(--text-hint)', fontWeight: 500 }}>
+            Les questions sont tirées au sort depuis la banque officielle.
+          </p>
+        </div>
       </div>
     );
   }
@@ -356,10 +394,6 @@ function ExamContent() {
             </div>
           </div>
 
-          {/* Gaston */}
-          <div className="rounded-2xl p-5" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-            <Gaston message={gastonMsg} expression={gastonExpr} size="small" title={t('prof_gaston')} />
-          </div>
         </>
       }
     />

@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Gaston from '@/components/Gaston';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
@@ -74,10 +73,6 @@ export default function LoginPage() {
       <div className="text-center mb-8">
         <h1 className="text-2xl font-black" style={{ color: 'var(--text-primary)' }}>{t('login_titre')}</h1>
         <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('login_subtitle')}</p>
-      </div>
-
-      <div className="mb-6">
-        <Gaston message={t('login_gaston')} expression="happy" size="large" />
       </div>
 
       <form onSubmit={handleLogin} className="flex flex-col gap-3 mb-4 fade-in-up">

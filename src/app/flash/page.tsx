@@ -5,9 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { getThemeDataLocalized, type LocalTheoryCard } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
-import { GASTON_FLASH, getRandomMsg } from '@/locales/messages';
 import { addStudyTime } from '@/lib/progressStorage';
-import Gaston from '@/components/Gaston';
 
 interface FlashCard extends LocalTheoryCard {
   lessonTitle: string;
@@ -72,7 +70,6 @@ export default function FlashPage() {
   const [done, setDone] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [animating, setAnimating] = useState(false);
-  const [gastonMsg, setGastonMsg] = useState(getRandomMsg(GASTON_FLASH[lang]));
   const [sessionViewed, setSessionViewed] = useState(0);
   const sessionStartRef = useRef(Date.now());
   const [elapsed, setElapsed] = useState(0);
@@ -119,9 +116,6 @@ export default function FlashPage() {
       updateFn();
       setAnimating(false);
       setSessionViewed(v => v + 1);
-      if ((sessionViewed + 1) % 3 === 0) {
-        setGastonMsg(getRandomMsg(GASTON_FLASH[lang]));
-      }
     }, 150);
   }, [animating, sessionViewed]);
 
@@ -482,11 +476,6 @@ export default function FlashPage() {
           {/* ── Right sidebar (desktop only) ── */}
           <div className="hidden lg:block lg:w-56 xl:w-72 lg:flex-shrink-0">
             <div className="sticky top-20 flex flex-col gap-5">
-
-              {/* Gaston */}
-              <div className="rounded-2xl p-5" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)' }}>
-                <Gaston message={gastonMsg} expression="encouraging" size="small" title={t('prof_gaston')} />
-              </div>
 
               {/* Session stats */}
               <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>

@@ -1,1819 +1,317 @@
 'use client';
 
-import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { THEME_ORDER, getThemeDataLocalized, getLessonDataLocalized } from '@/lib/lessonData';
-import { useLang } from '@/contexts/LanguageContext';
+import { THEME_ORDER, getThemeData } from '@/lib/lessonData';
 import { useAuth } from '@/contexts/AuthContext';
-import { useTheme } from '@/contexts/ThemeContext';
-import { THEME_COLORS, THEME_EMOJIS, CITY_NAMES_UPPER } from '@/lib/constants';
-import { GASTON_GREETINGS, getRandomMsg } from '@/locales/messages';
-import { isPremium, isThemeFree } from '@/lib/premium';
-import { getUnlockedThemes, getAllStars, getAllExams, getXPData, checkAndUpdateStreak, getStreakData, getCompletedParties, getLessonProgress } from '@/lib/progressStorage';
-import Image from 'next/image';
-import CarSVG from '@/components/CarSVG';
-import StreakCelebration from '@/components/StreakCelebration';
-import FeedbackButton from '@/components/FeedbackButton';
-import ReviewsBlock from '@/components/ReviewsBlock';
+import { useLang } from '@/contexts/LanguageContext';
+import DesignUpdateModal from '@/components/DesignUpdateModal';
+import { THEME_EMOJIS, THEME_CITIES } from '@/lib/constants';
+import {
+  getXPData, getStreakData, checkAndUpdateStreak,
+  isLessonCompleted, getLessonProgress, getQuizHistory,
+} from '@/lib/progressStorage';
+import { fetchDueReviews } from '@/lib/reviewApi';
+import ProgressBar from '@/components/ui/ProgressBar';
 
-// ── Road constants ──
-const ROAD_W = 65;
-const NODE_R = 32;       // 64px diameter
-const ACTIVE_R = 40;     // 80px diameter for active node
-const EXAM_R = 38;
-const V_SPACE = 160;     // generous vertical spacing between nodes
-const PAD_TOP = 220;     // room for banner + barrier above first node
-const PAD_BOTTOM = 200;
-const RING_GAP = 4;
-const RING_STROKE = 4;
-const RING_R = NODE_R + RING_GAP;
-const RING_SIZE = (RING_R + RING_STROKE / 2) * 2;
-const RING_CIRC = 2 * Math.PI * RING_R;
-const ACTIVE_RING_R = ACTIVE_R + RING_GAP;
-const ACTIVE_RING_SIZE = (ACTIVE_RING_R + RING_STROKE / 2) * 2;
-const ACTIVE_RING_CIRC = 2 * Math.PI * ACTIVE_RING_R;
-const EXAM_RING_R = EXAM_R + RING_GAP;
-const EXAM_RING_SIZE = (EXAM_RING_R + RING_STROKE / 2) * 2;
-const EXAM_RING_CIRC = 2 * Math.PI * EXAM_RING_R;
-const CAR_SIZE = 45;
-const CAR_AHEAD = 38;
-const THEME_EXTRA_GAP = 160;  // room for banner + barrier between themes
-
-// Monument images per theme
-interface MonumentDef {
-  src: string;
-  side: 'left' | 'right';
-  w: number;
-  h: number;
-  yRatio: number;
-  xOffset?: number;
-  yOffset?: number;
+// ── helpers ──────────────────────────────────────────────────────
+function todayLabel() {
+  return new Date().toLocaleDateString('fr-BE', { weekday: 'long', day: 'numeric', month: 'long' });
 }
-const MONUMENTS: Record<string, MonumentDef[]> = {
-  A: [
-    { src: '/monuments/atomium.png', side: 'left', w: 280, h: 280, yRatio: 0.25, xOffset: -60, yOffset: 20 },
-    { src: '/monuments/manneken_pis.png', side: 'left', w: 200, h: 260, yRatio: 0.6, xOffset: -20, yOffset: -40 },
-    { src: '/monuments/grandplace.png', side: 'right', w: 200, h: 180, yRatio: 0.85, xOffset: -40, yOffset: -20 },
-  ],
-  B: [
-    { src: '/monuments/interallie.png', side: 'left', w: 140, h: 240, yRatio: 0.35, xOffset: 0, yOffset: -10 },
-    { src: '/monuments/gare_guillemins.png', side: 'right', w: 200, h: 130, yRatio: 0.7, xOffset: 10, yOffset: 0 },
-  ],
-  C: [
-    { src: '/monuments/cathedrale_anvers.png', side: 'left', w: 140, h: 220, yRatio: 0.3, xOffset: 10, yOffset: -10 },
-    { src: '/monuments/mas_museum.png', side: 'right', w: 180, h: 320, yRatio: 0.7, xOffset: 10, yOffset: 0 },
-  ],
-  D: [
-    { src: '/monuments/panneaux_vitesse.png', side: 'left', w: 70, h: 250, yRatio: 0.35, xOffset: 0, yOffset: 0 },
-    { src: '/monuments/circuit_spa.png', side: 'right', w: 160, h: 155, yRatio: 0.65, xOffset: 0, yOffset: 0 },
-  ],
-  E: [
-    { src: '/monuments/beffroi_gand.png', side: 'right', w: 200, h: 500, yRatio: 0.5, xOffset: 0, yOffset: 0 },
-  ],
-  F: [
-    { src: '/monuments/citadelle_namur.png', side: 'right', w: 200, h: 160, yRatio: 0.3, xOffset: 0, yOffset: 0 },
-    { src: '/monuments/tortue_namur.png', side: 'left', w: 160, h: 160, yRatio: 0.7, xOffset: 0, yOffset: 0 },
-  ],
-  G: [
-    { src: '/monuments/beffroi_bruges.png', side: 'right', w: 160, h: 380, yRatio: 0.5, xOffset: 0, yOffset: 0 },
-  ],
-  H: [
-    { src: '/monuments/collegiale_mons.png', side: 'right', w: 200, h: 160, yRatio: 0.3, xOffset: 10, yOffset: 0 },
-    { src: '/monuments/singe_mons.png', side: 'left', w: 140, h: 175, yRatio: 0.7, xOffset: 0, yOffset: 0 },
-  ],
-  I: [
-    { src: '/monuments/frites.png', side: 'right', w: 160, h: 320, yRatio: 0.25, xOffset: 0, yOffset: 0 },
-    { src: '/monuments/gaufre.png', side: 'left', w: 110, h: 110, yRatio: 0.5, xOffset: 0, yOffset: 0 },
-    { src: '/monuments/chocolat.png', side: 'right', w: 160, h: 260, yRatio: 0.75, xOffset: 0, yOffset: 0 },
-  ],
+
+interface Stats {
+  globalPct: number;
+  completedLessons: number;
+  totalLessons: number;
+  streak: number;
+  xp: number;
+  level: number;
+  lastScore: number | null;
+  activeLesson: { themeCode: string; lessonId: string; lessonTitle: string; pct: number } | null;
+}
+
+function buildStats(): Stats {
+  let totalLessons = 0;
+  let completedLessons = 0;
+  let activeLesson: Stats['activeLesson'] = null;
+
+  for (const code of THEME_ORDER) {
+    const theme = getThemeData(code);
+    if (!theme) continue;
+    for (const lesson of theme.lessons) {
+      totalLessons++;
+      const done = isLessonCompleted(lesson.id);
+      if (done) completedLessons++;
+      if (!done && !activeLesson) {
+        const prog = getLessonProgress(lesson.id);
+        const pct = prog.total > 0 ? Math.round((prog.cardsViewed / prog.total) * 100) : 0;
+        activeLesson = { themeCode: code, lessonId: lesson.id, lessonTitle: lesson.title, pct };
+      }
+    }
+  }
+
+  const globalPct = totalLessons > 0 ? Math.round((completedLessons / totalLessons) * 100) : 0;
+  const xpData = getXPData();
+  const streakData = getStreakData();
+  const quiz = getQuizHistory();
+  const lastScore = quiz.totalAnswers > 0 ? Math.round((quiz.totalCorrect / quiz.totalAnswers) * 100) : null;
+
+  return { globalPct, completedLessons, totalLessons, streak: streakData.currentStreak, xp: xpData.totalXP, level: xpData.level, lastScore, activeLesson };
+}
+
+const TILE_ICONS = {
+  lecons: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+    </svg>
+  ),
+  turbo: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+    </svg>
+  ),
+  examen: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="16" y1="13" x2="8" y2="13" />
+      <line x1="16" y1="17" x2="8" y2="17" />
+    </svg>
+  ),
+  panneaux: (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+      <line x1="12" y1="9" x2="12" y2="13" />
+      <line x1="12" y1="17" x2="12.01" y2="17" />
+    </svg>
+  ),
 };
 
-// Theme titles
-const THEME_TITLES: Record<string, string> = {
-  A: 'La route',
-  B: 'Usagers vulnérables',
-  C: 'Le véhicule',
-  D: 'Vitesse & distances',
-  E: 'Manœuvres',
-  F: 'Priorités & intersections',
-  G: 'Conduite en ville',
-  H: 'Stationnement',
-  I: 'Documents & responsabilités',
-};
-
-interface PathNode {
-  type: 'lesson' | 'exam';
-  id: string;
-  themeCode: string;
-  localIndex: number;
-  title: string;
-  isCompleted: boolean;
-  isLocked: boolean;       // theme lock (premium required)
-  isOrderLocked: boolean;  // lesson order lock (previous lesson not done)
-  isCurrent: boolean;
-  stars: number;
-  totalParties?: number;   // lesson only — number of theory parties
-}
-
-// ── Mobile monument : drag (1 doigt) + pinch (2 doigts) ──
-type MonAdj = { dx: number; dy: number; scale: number };
-function MobileMonument({ id, src, baseLeft, baseTop, baseW, baseH, adj, onUpdate }: {
-  id: string; src: string;
-  baseLeft: number; baseTop: number;
-  baseW: number; baseH: number;
-  adj: MonAdj;
-  onUpdate: (id: string, adj: MonAdj) => void;
-}) {
-  const t = useRef<{ x: number; y: number; dx: number; dy: number; dist: number; scale: number; n: number } | null>(null);
-  const onTouchStart = (e: React.TouchEvent) => {
-    e.stopPropagation();
-    if (e.touches.length === 1) {
-      t.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, dx: adj.dx, dy: adj.dy, dist: 0, scale: adj.scale, n: 1 };
-    } else if (e.touches.length >= 2) {
-      const dx = e.touches[1].clientX - e.touches[0].clientX;
-      const dy = e.touches[1].clientY - e.touches[0].clientY;
-      t.current = { x: 0, y: 0, dx: adj.dx, dy: adj.dy, dist: Math.hypot(dx, dy), scale: adj.scale, n: 2 };
-    }
-  };
-  const onTouchMove = (e: React.TouchEvent) => {
-    if (!t.current) return;
-    e.stopPropagation();
-    if (t.current.n === 1 && e.touches.length === 1) {
-      onUpdate(id, { dx: t.current.dx + e.touches[0].clientX - t.current.x, dy: t.current.dy + e.touches[0].clientY - t.current.y, scale: adj.scale });
-    } else if (t.current.n === 2 && e.touches.length >= 2) {
-      const d = Math.hypot(e.touches[1].clientX - e.touches[0].clientX, e.touches[1].clientY - e.touches[0].clientY);
-      const s = Math.max(0.2, Math.min(4, t.current.scale * d / t.current.dist));
-      onUpdate(id, { dx: adj.dx, dy: adj.dy, scale: s });
-    }
-  };
-  return (
-    <div
-      className="absolute"
-      style={{ left: baseLeft + adj.dx, top: baseTop + adj.dy, width: baseW * adj.scale, height: baseH * adj.scale, zIndex: 30, touchAction: 'none', opacity: 0.92 }}
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain', userSelect: 'none' }} draggable={false} />
-    </div>
-  );
-}
-
-function getWelcomeMessage(username: string, streakCount: number, lang: 'fr' | 'nl'): { salutation: string; body: string } {
-  const hour = new Date().getHours();
-  let salutation: string;
-  if (lang === 'nl') {
-    if (hour >= 5 && hour < 12) salutation = 'Goedemorgen';
-    else if (hour >= 12 && hour < 18) salutation = 'Goedemiddag';
-    else if (hour >= 18 && hour < 22) salutation = 'Goedenavond';
-    else salutation = 'Hey';
-    if (username) salutation += ` ${username}`;
-    salutation += '!';
-  } else {
-    if (hour >= 5 && hour < 12) salutation = 'Bonjour';
-    else if (hour >= 12 && hour < 18) salutation = 'Bon après-midi';
-    else if (hour >= 18 && hour < 22) salutation = 'Bonsoir';
-    else salutation = 'Salut';
-    if (username) salutation += ` ${username}`;
-    salutation += ' !';
-  }
-
-  let body: string;
-  if (lang === 'nl') {
-    if (streakCount === 0) body = 'Klaar om de weg te veroveren? 🚗';
-    else if (streakCount === 1) body = 'Het avontuur begint! 🔥';
-    else if (streakCount < 7) body = `Dag ${streakCount}, blijf doorgaan! 💪`;
-    else if (streakCount === 7) body = '1 week compleet, proficiat! 🎉';
-    else if (streakCount < 30) body = `Dag ${streakCount}, indrukwekkend! 🔥`;
-    else if (streakCount === 30) body = '1 maand, je bent geweldig! 👑';
-    else if (streakCount < 100) body = `Dag ${streakCount} regelmaat! ⭐`;
-    else body = `Dag ${streakCount}, je bent een legende! 🏆`;
-  } else {
-    if (streakCount === 0) body = 'Prêt à conquérir la route ? 🚗';
-    else if (streakCount === 1) body = "C'est parti pour l'aventure 🔥";
-    else if (streakCount < 7) body = `Jour ${streakCount}, continue 💪`;
-    else if (streakCount === 7) body = '1 semaine complète, bravo ! 🎉';
-    else if (streakCount < 30) body = `Jour ${streakCount}, impressionnant 🔥`;
-    else if (streakCount === 30) body = '1 mois, tu es incroyable 👑';
-    else if (streakCount < 100) body = `Jour ${streakCount} de régularité ⭐`;
-    else body = `Jour ${streakCount}, tu es une légende 🏆`;
-  }
-
-  return { salutation, body };
-}
-
-function getCompactStreakLabel(streakCount: number, lang: 'fr' | 'nl'): string {
-  const d = lang === 'nl' ? 'Dag' : 'Jour';
-  if (lang === 'nl') {
-    if (streakCount === 0)  return 'Klaar om te starten 🚗';
-    if (streakCount === 1)  return 'Dag 1 🔥';
-    if (streakCount < 7)   return `Dag ${streakCount} 💪`;
-    if (streakCount === 7) return '1 week! 🎉';
-    if (streakCount < 30)  return `Dag ${streakCount} 🔥`;
-    if (streakCount === 30) return '1 maand! 👑';
-    if (streakCount < 100) return `Dag ${streakCount} ⭐`;
-    return `Dag ${streakCount} 🏆`;
-  }
-  if (streakCount === 0)  return 'Prêt à commencer 🚗';
-  if (streakCount === 1)  return `${d} 1 🔥`;
-  if (streakCount < 7)   return `${d} ${streakCount} 💪`;
-  if (streakCount === 7) return '1 semaine ! 🎉';
-  if (streakCount < 30)  return `${d} ${streakCount} 🔥`;
-  if (streakCount === 30) return '1 mois ! 👑';
-  if (streakCount < 100) return `${d} ${streakCount} ⭐`;
-  return `${d} ${streakCount} 🏆`;
-}
-
+// ── component ────────────────────────────────────────────────────
 export default function HomePage() {
-  const router = useRouter();
-  const { lang, t } = useLang();
   const { user } = useAuth();
-  const { theme: uiTheme } = useTheme();
-  const [stars, setStarsState] = useState<Record<string, number>>({});
-  const [exams, setExams] = useState<Record<string, boolean>>({});
-  const [xp, setXp] = useState({ totalXP: 0, level: 1 });
-  const [streak, setStreak] = useState({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
-  const [showStreakCelebration, setShowStreakCelebration] = useState(false);
-  const [streakIsReset, setStreakIsReset] = useState(false);
-  const [username, setUsername] = useState('');
-  const greeting = useMemo(() => getRandomMsg(GASTON_GREETINGS[lang]), [lang]);
-  const [mounted, setMounted] = useState(false);
-  const [isVip, setIsVip] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const layoutRef = useRef<any>(null);
-  const [userCar, setUserCar] = useState<{ carType: string; carColor: string; carImage?: string }>({ carType: 'berline', carColor: '#1E88E5' });
-
-  const DEFAULT_ADJ: Record<string, { dx: number; dy: number; scale: number; rot: number }> = {
-    "mon-A-0": { dx: -140, dy: -140, scale: 1.3, rot: 0 },
-    "mon-A-1": { dx: 235, dy: 97, scale: 1.2, rot: 0 },
-    "mon-A-2": { dx: -535, dy: 85, scale: 1.6, rot: 0 },
-    "mon-B-0": { dx: -185, dy: 20, scale: 1.4, rot: 0 },
-    "mon-B-1": { dx: -115, dy: -135, scale: 2.0, rot: 0 },
-    "mon-C-0": { dx: -230, dy: -175, scale: 2.2, rot: 0 },
-    "mon-C-1": { dx: -125, dy: -115, scale: 1.6, rot: 0 },
-    "mon-D-0": { dx: 245, dy: -60, scale: 2.05, rot: 0 },
-    "mon-D-1": { dx: -630, dy: -105, scale: 1.8, rot: 0 },
-    "mon-E-0": { dx: -125, dy: -385, scale: 1.9, rot: 0 },
-    "mon-F-0": { dx: -110, dy: -195, scale: 1.55, rot: 0 },
-    "mon-F-1": { dx: -210, dy: -85, scale: 1.7, rot: 0 },
-    "mon-G-0": { dx: -640, dy: -225, scale: 2.8, rot: 0 },
-    "mon-H-0": { dx: -145, dy: -45, scale: 1.5, rot: 0 },
-    "mon-H-1": { dx: -270, dy: 10, scale: 1.8, rot: 0 },
-    "mon-I-0": { dx: -90, dy: -60, scale: 1.4, rot: 0 },
-    "mon-I-1": { dx: -130, dy: -10, scale: 1.55, rot: 0 },
-    "mon-I-2": { dx: -125, dy: 0, scale: 1.45, rot: 0 },
-    "banner-B": { dx: -15, dy: 0, scale: 1, rot: 0 },
-    "banner-E": { dx: 0, dy: 0, scale: 0.9, rot: 0 },
-    "banner-H": { dx: -25, dy: 0, scale: 1, rot: 0 },
-  };
-  const [elemAdj, setElemAdj] = useState<Record<string, { dx: number; dy: number; scale: number; rot: number }>>(DEFAULT_ADJ);
-  const [mobileMonAdj, setMobileMonAdj] = useState<Record<string, MonAdj>>({});
+  const { t } = useLang();
+  const [stats, setStats] = useState<Stats>({
+    globalPct: 0, completedLessons: 0, totalLessons: 0,
+    streak: 0, xp: 0, level: 1, lastScore: null, activeLesson: null,
+  });
+  const [dueCount, setDueCount] = useState(0);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem('monument_adjustments');
-      if (raw) {
-        const local = JSON.parse(raw);
-        setElemAdj({ ...DEFAULT_ADJ, ...local });
-      }
-    } catch {}
-    try {
-      const raw2 = localStorage.getItem('mob_mon_adj');
-      if (raw2) setMobileMonAdj(JSON.parse(raw2));
-    } catch {}
+    checkAndUpdateStreak();
+    setStats(buildStats());
+    fetchDueReviews().then(records => setDueCount(records.length));
   }, []);
 
-  const updateMobileMonAdj = useCallback((id: string, adj: MonAdj) => {
-    setMobileMonAdj(prev => {
-      const next = { ...prev, [id]: adj };
-      try { localStorage.setItem('mob_mon_adj', JSON.stringify(next)); } catch {}
-      return next;
-    });
-  }, []);
+  const initials = user?.username?.charAt(0).toUpperCase() || '?';
 
-  const getElemAdj = useCallback((id: string) => {
-    return elemAdj[id] || { dx: 0, dy: 0, scale: 1, rot: 0 };
-  }, [elemAdj]);
-
-
-  // ── Lesson modal state ──
-  const [modalNode, setModalNode] = useState<PathNode | null>(null);
-  const [selectedPartieIdx, setSelectedPartieIdx] = useState<number | null>(null);
-  const [completedParties, setCompletedParties] = useState<number[]>([]);
-  const [showPremiumModal, setShowPremiumModal] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    setStarsState(getAllStars());
-    setExams(getAllExams());
-    setXp(getXPData());
-    try {
-      // Try new userCar key first (PNG cars from onboarding v2)
-      const rawCar = localStorage.getItem('userCar');
-      if (rawCar) {
-        const c = JSON.parse(rawCar);
-        setUserCar({ carType: c.id, carColor: c.color || '#1E88E5', carImage: c.image });
-      } else {
-        const raw = localStorage.getItem('userProfile');
-        if (raw) {
-          const p = JSON.parse(raw);
-          if (p.carType) setUserCar({ carType: p.carType, carColor: p.carColor || '#1E88E5' });
-        }
-      }
-    } catch {}
-    try {
-      const raw = localStorage.getItem('userProfile');
-      if (raw) {
-        const p = JSON.parse(raw);
-        if (p.name && p.name !== 'Pilote' && p.name !== 'pilote') setUsername(p.name);
-      }
-    } catch {}
-  }, []);
-
-  // Streak + isVip : resolved once auth state is known (guest → always 0/false)
-  useEffect(() => {
-    if (!mounted) return;
-    if (user) {
-      // Logged-in user: update streak and show animation
-      setIsVip(localStorage.getItem('permigo_vip') === 'true');
-      const prevStreak = getStreakData();
-      const updatedStreak = checkAndUpdateStreak();
-      setStreak(updatedStreak);
-      const today = new Date().toISOString().slice(0, 10);
-      const lastShown = localStorage.getItem('streakAnimationShownDate');
-      if (lastShown !== today && updatedStreak.currentStreak >= 1) {
-        const isReset = prevStreak.currentStreak > 1 && updatedStreak.currentStreak === 1;
-        setStreakIsReset(isReset);
-        localStorage.setItem('streakAnimationShownDate', today);
-        setTimeout(() => setShowStreakCelebration(true), 600);
-      }
-    } else {
-      // Guest: no VIP, no streak
-      setIsVip(false);
-      setStreak({ currentStreak: 0, lastActiveDate: '', bestStreak: 0 });
-    }
-  }, [mounted, user]);
-
-  useEffect(() => {
-    setSelectedPartieIdx(null);
-    if (modalNode && modalNode.type === 'lesson') {
-      setCompletedParties(getCompletedParties(modalNode.id));
-    } else {
-      setCompletedParties([]);
-    }
-  }, [modalNode?.id]);
-
-  // Scroll reveal for monuments
-  const roadContainerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!mounted) return;
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    const els = document.querySelectorAll('.monument-reveal');
-    els.forEach(el => observer.observe(el));
-    return () => observer.disconnect();
-  }, [mounted]);
-
-  // scroll effect removed — section cards on-road handle theme identification
-
-  const openLessonModal = useCallback((node: PathNode) => {
-    setModalNode(node);
-  }, []);
-
-  const closeModal = useCallback(() => {
-    setModalNode(null);
-    setSelectedPartieIdx(null);
-  }, []);
-
-  const startPartie = useCallback((partieIdx: number) => {
-    if (!modalNode) return;
-    closeModal();
-    router.push(`/lecon/${modalNode.id}?partie=${partieIdx}`);
-  }, [modalNode, closeModal, router]);
-
-  const startFullLesson = useCallback(() => {
-    if (!modalNode) return;
-    closeModal();
-    router.push(`/lecon/${modalNode.id}`);
-  }, [modalNode, closeModal, router]);
-
-  // ── Compute stats ──
-  const totalCompleted = useMemo(() => Object.values(stars).filter(s => s > 0).length, [stars]);
-  const totalExamsPassed = useMemo(() => Object.values(exams).filter(Boolean).length, [exams]);
-
-  // ── Build path items ──
-  const layout = useMemo(() => {
-    if (!mounted) return null;
-
-    const nodes: PathNode[] = [];
-    const themeAt = new Map<number, string>();
-
-    for (const themeCode of THEME_ORDER) {
-      const theme = getThemeDataLocalized(themeCode, lang);
-      if (!theme) continue;
-
-      const themeIndex = THEME_ORDER.indexOf(themeCode);
-      const prevThemeCode = themeIndex > 0 ? THEME_ORDER[themeIndex - 1] : null;
-
-      let prevExamPassed = true;
-      if (prevThemeCode) {
-        const prevTheme = getThemeDataLocalized(prevThemeCode, lang);
-        if (prevTheme) {
-          const allPrevDone = prevTheme.lessons.every((_, idx) => {
-            const lid = prevThemeCode + (idx + 1);
-            return (stars[lid] ?? 0) > 0;
-          });
-          prevExamPassed = exams[prevThemeCode] === true || allPrevDone;
-        }
-      }
-
-      themeAt.set(nodes.length, themeCode);
-
-      let foundCurrent = false;
-      theme.lessons.forEach((lesson, lessonIdx) => {
-        const lid = lesson.id || (themeCode + (lessonIdx + 1));
-        const lessonStars = stars[lid] ?? 0;
-        const done = lessonStars > 0;
-
-        // Lock non-free themes for non-premium users
-        const themeLocked = !isThemeFree(themeCode) && !isPremium();
-        const locked = themeLocked;
-
-        const isCurrent = !done && !locked && !foundCurrent;
-        if (isCurrent) foundCurrent = true;
-
-        nodes.push({
-          type: 'lesson',
-          id: lid,
-          themeCode,
-          localIndex: lessonIdx + 1,
-          title: lesson.title,
-          isCompleted: done,
-          isLocked: locked,
-          isOrderLocked: false,
-          isCurrent,
-          stars: lessonStars,
-          totalParties: lesson.theory.length,
-        });
-      });
-
-      // Exam node
-      const examDone = exams[themeCode] === true;
-      const examIsCurrent = !examDone && !foundCurrent;
-
-      nodes.push({
-        type: 'exam',
-        id: `exam-${themeCode}`,
-        themeCode,
-        localIndex: 0,
-        title: `Examen ${themeCode}`,
-        isCompleted: examDone,
-        isLocked: false,
-        isOrderLocked: false,
-        isCurrent: examIsCurrent,
-        stars: 0,
-      });
-    }
-
-    // ── Width calculation ──
-    const vw = typeof window !== 'undefined' ? window.innerWidth : 1920;
-    const isMobileW = vw < 1024;
-    const isXlW = vw >= 1280;
-    const leftW = isMobileW ? 0 : 250;
-    const rightW = isXlW ? 500 : 0;
-    const availableW = vw - leftW - rightW - 32;
-    const oversize = Math.max(0, vw - 1920);
-    const svgMaxW = Math.min(1000, 600 + Math.round(oversize * 0.3));
-    // roadZoneMaxW = space between left sidebar (250px) and right sidebar (500px when xl)
-    const roadZoneMaxW = !isMobileW ? Math.min(availableW + 32, 1100) : Math.min(1100, 640);
-    // Mobile: exact screen width minus 32px padding
-    const SVG_W = isMobileW ? Math.max(300, vw - 32) : Math.min(svgMaxW, Math.max(300, availableW));
-    const CX = isMobileW ? SVG_W * 0.5 : SVG_W * 0.14;
-    // Mobile: gentler 2-3 wave Duolingo style, desktop: full amplitude
-    const AMP = isMobileW ? Math.min((SVG_W - 80) / 2, 75) : Math.min((SVG_W - 100) / 2, 110);
-
-    // ── Mobile-specific geometry (native sizing, no scale transform) ──
-    const mVSpace = isMobileW ? 136 : V_SPACE;
-    const mPadTop = isMobileW ? 160 : PAD_TOP;
-    const mPadBot = isMobileW ? 0 : PAD_BOTTOM;
-    const mThemeGap = isMobileW ? 110 : THEME_EXTRA_GAP;
-
-    // ── Positions with extra gap at theme boundaries ──
-    const themeStartSet = new Set(themeAt.keys());
-    let yExtra = 0;
-    const pts = nodes.map((node, i) => {
-      if (i > 0 && themeStartSet.has(i)) {
-        yExtra += mThemeGap;
-      }
-      const isExam = node.type === 'exam';
-      const isThemeStart = themeStartSet.has(i);
-      // Alternating left-right serpentine like Duolingo
-      const side = i % 2 === 0 ? -1 : 1;
-      // Give exam/theme-start a slight offset so the road curves through them
-      const x = (isExam || isThemeStart) ? CX + AMP * side * 0.3 : CX + AMP * side;
-      return { x, y: mPadTop + i * mVSpace + yExtra };
-    });
-
-    // Build smooth bezier path with proper S-curves
-    const startPt = pts.length > 0 ? { x: pts[0].x, y: pts[0].y - mPadTop } : { x: CX, y: 0 };
-    const finishY = (pts.length > 0 ? pts[pts.length - 1].y : mPadTop) + (isMobileW ? 200 : 250);
-    const allPts = [startPt, ...pts, { x: CX, y: finishY }];
-
-    let d = `M ${allPts[0].x} ${allPts[0].y}`;
-    for (let i = 1; i < allPts.length; i++) {
-      const p = allPts[i - 1];
-      const c = allPts[i];
-      const dy = c.y - p.y;
-      // Control points stay at the X of their own point, pushed vertically toward the middle
-      // This creates round U-turns instead of sharp S-curves
-      d += ` C ${p.x} ${p.y + dy * 0.7}, ${c.x} ${c.y - dy * 0.7}, ${c.x} ${c.y}`;
-    }
-
-    const totalH = finishY + mPadBot;
-    const curIdx = nodes.findIndex(n => n.isCurrent);
-
-    let carTilt = 0;
-    if (curIdx >= 0 && pts.length >= 2) {
-      const dx = curIdx < pts.length - 1
-        ? pts[curIdx + 1].x - pts[curIdx].x
-        : pts[curIdx].x - pts[curIdx - 1].x;
-      carTilt = (dx / (AMP * 2)) * 20;
-    }
-
-    return { nodes, themeAt, pts, totalH, pathD: d, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW };
-  }, [mounted, stars, exams, lang, isVip]);
-
-  if (!mounted || !layout) return <div className="min-h-screen" />;
-
-  const { nodes, themeAt, pts, totalH, pathD, curIdx, SVG_W, CX, AMP, carTilt, finishY, roadZoneMaxW } = layout;
-
-  // ── No scale on mobile — geometry is natively sized ──
-  const isMobileView = typeof window !== 'undefined' && window.innerWidth < 1024;
-  const mobileScale = 1; // native sizing, no transform
-
-  // ── Mobile node size overrides (smaller = native feel at scale 1) ──
-  const mNODE_R = isMobileView ? 38 : NODE_R;
-  const mACTIVE_R = isMobileView ? 48 : ACTIVE_R;
-  const mEXAM_R = isMobileView ? 40 : EXAM_R;
-  const mRING_GAP = RING_GAP;
-  const mRING_STROKE = RING_STROKE;
-  const carDisplaySize = isMobileView ? 58 : CAR_SIZE + 10;
-
-  // ── Car position — en dehors du cercle play, en bas à droite ──
-  let carX = 0, carY = 0;
-  if (curIdx >= 0 && pts.length > 0) {
-    const p = pts[curIdx];
-    const activeR = isMobileView ? mACTIVE_R : ACTIVE_R;
-    if (isMobileView) {
-      // Mobile : même formule que PC — diagonale bas-droite 45°, collée au bord
-      const mOffset = activeR + carDisplaySize / 2 + 6;
-      carX = p.x + Math.round(mOffset * Math.cos(Math.PI / 4));
-      carY = p.y + Math.round(mOffset * Math.sin(Math.PI / 4));
-    } else {
-      // PC : diagonale bas-droite à 45°, inchangé
-      const offset = activeR + carDisplaySize / 2 + 6;
-      const diagX = Math.round(offset * Math.cos(Math.PI / 4));
-      const diagY = Math.round(offset * Math.sin(Math.PI / 4));
-      carX = p.x + diagX;
-      carY = p.y + diagY;
-    }
-  }
-
-  // ── Finish line ──
-  const SQ = Math.floor(ROAD_W / 5);
-
-  // ── Total lessons for progression ──
-  const totalLessons = nodes.filter(n => n.type === 'lesson').length;
+  const TILES = [
+    { href: '/lecons', label: t('nav_lecons'), sub: t('tile_lecons_sub'), icon: TILE_ICONS.lecons },
+    { href: '/turbo', label: t('tile_reflexe_label'), sub: t('tile_reflexe_sub'), icon: TILE_ICONS.turbo },
+    { href: '/examen', label: t('tile_examen_label'), sub: t('tile_examen_sub'), icon: TILE_ICONS.examen },
+    { href: '/panneaux', label: t('nav_panneaux'), sub: t('tile_panneaux_sub'), icon: TILE_ICONS.panneaux },
+  ];
 
   return (
     <>
-    {/* ── Streak celebration overlay ── */}
-    {showStreakCelebration && (
-      <StreakCelebration
-        streak={streak.currentStreak}
-        isReset={streakIsReset}
-        onClose={() => setShowStreakCelebration(false)}
-      />
-    )}
+    <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
 
-    <div className="flex gap-0 w-full overflow-x-hidden lg:overflow-x-visible" style={isMobileView ? { background: 'transparent', minHeight: 'unset', height: 'auto' } : {}}>
-      {/* ═══════════════════════════════════════ */}
-      {/* MAIN ROAD AREA */}
-      {/* ═══════════════════════════════════════ */}
-      <div className="flex-1 min-w-0 px-0 lg:px-2 pt-0 lg:pt-6 pb-0 lg:pb-6 lg:mx-auto" style={{ overflow: 'visible', maxWidth: roadZoneMaxW, ...(isMobileView ? { background: 'transparent' } : {}) }}>
-
-        {/* sticky banner removed — section cards on the road handle theme identification */}
-
-        {/* ── Bloc révisions (connecté uniquement, disparaît si 0 due) ── */}
-        {mounted && <ReviewsBlock />}
-
-        {/* Mobile welcome est positionné en absolu dans le SVG Road container ci-dessous */}
-
-        {/* ── Desktop uniquement : Welcome centré ── */}
-        {mounted && (() => {
-          const { salutation, body } = getWelcomeMessage(username, streak.currentStreak, lang);
-          return (
-            <div
-              className="fade-in-up hidden xl:block text-center px-4"
-              style={{ animationDuration: '0.5s', position: 'relative', zIndex: 50, marginBottom: 12 }}
-            >
-              <p className="font-black" style={{ fontSize: 'clamp(18px, 4.5vw, 26px)', color: 'var(--text-primary)', lineHeight: 1.3 }}>{salutation}</p>
-              <p className="font-semibold mx-auto" style={{ fontSize: 'clamp(13px, 3.5vw, 17px)', color: 'var(--brand)', marginTop: 3, maxWidth: '90%', whiteSpace: 'normal', wordBreak: 'break-word', lineHeight: 1.4 }}>{body}</p>
+      {/* ── HEADER ───────────────────────────────────────────────── */}
+      <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
+        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+            <div>
+              <p style={{ margin: 0, fontSize: 11, fontWeight: 500, color: 'var(--text-hint)', letterSpacing: '0.5px', textTransform: 'capitalize' }}>
+                {todayLabel()}
+              </p>
+              <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>
+                {user?.username ? `${t('home_bonjour')}, ${user.username} 👋` : `${t('home_bonjour')} 👋`}
+              </h1>
             </div>
-          );
-        })()}
 
-        {/* ── Welcome mobile — au-dessus du Thème A, aligné droite ── */}
-        {mounted && isMobileView && (() => {
-          const { salutation } = getWelcomeMessage(username, streak.currentStreak, lang);
-          const streakLabel = getCompactStreakLabel(streak.currentStreak, lang);
-          return (
-            <div className="fade-in-up" style={{ textAlign: 'right', paddingRight: 14, paddingTop: 18, paddingBottom: 6, animationDuration: '0.5s' }}>
-              <p style={{ fontSize: 14, fontWeight: 900, color: 'var(--text-primary)', lineHeight: 1.2 }}>{salutation}</p>
-              <p style={{ fontSize: 11, fontWeight: 700, color: uiTheme === 'day' ? '#FF8C42' : 'var(--brand)', marginTop: 2, lineHeight: 1.2 }}>{streakLabel}</p>
-            </div>
-          );
-        })()}
-
-        {/* SVG Road */}
-        <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', width: '100%', overflow: 'visible', height: isMobileView ? totalH + 80 : totalH }}>
-
-          {/* Mobile: fond uniforme — suppression des bandes colorées par thème */}
-
-        <div ref={roadContainerRef} style={{ position: 'relative', width: SVG_W, height: isMobileView ? totalH + 80 : totalH, flexShrink: 0, overflow: 'visible', clipPath: 'none' }}>
-          <svg width={SVG_W} height={totalH} className="absolute left-0 top-0" style={{ overflow: 'visible' }}>
-            {/* Road subtle glow */}
-            <path d={pathD} style={{ stroke: 'var(--road-asphalt)', strokeOpacity: 0.5 }} strokeWidth={ROAD_W + 16} strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            {/* Road border/curb */}
-            <path d={pathD} style={{ stroke: 'var(--road-edge)' }} strokeWidth={ROAD_W + 6} strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            {/* Road surface */}
-            <path d={pathD} style={{ stroke: 'var(--road-asphalt)' }} strokeWidth={ROAD_W} strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            {/* Road edge lines */}
-            <path d={pathD} stroke="rgba(255,255,255,0.07)" strokeWidth={ROAD_W + 1} strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            <path d={pathD} style={{ stroke: 'var(--road-asphalt)' }} strokeWidth={ROAD_W - 2} strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            {/* Center dashes */}
-            <path d={pathD} style={{ stroke: 'var(--road-marking)' }} strokeWidth={2.5} strokeDasharray="12,10" strokeLinecap="round" fill="none" opacity={0.6} />
-
-          </svg>
-
-          {/* ── Toll barriers — desktop only (replaced by section cards on mobile) ── */}
-          {Array.from(themeAt.entries()).map(([idx, themeCode], i) => {
-            if (isMobileView) return null;
-            if (idx >= pts.length) return null;
-            const cityName = t(`city_${themeCode}`) || themeCode;
-            const tc = THEME_COLORS[themeCode] || '#74B9FF';
-            const isLocked = nodes[idx]?.isLocked;
-
-            const POST_W = 18;
-            const POST_H = 35;
-            const PANEL_H = 28;
-            const TOTAL_H = PANEL_H + POST_H;
-            const halfRoad = ROAD_W / 2;
-
-            let barrierCenterY: number;
-            let roadCenterX: number;
-
-            let roadAngleDeg = 0;
-            if (i === 0) {
-              barrierCenterY = pts[idx].y - 80;
-              roadCenterX = pts[idx].x;
-              // First theme — road is straight at the top
-              roadAngleDeg = 0;
-            } else {
-              const examY = pts[idx - 1].y;
-              const firstLessonY = pts[idx].y;
-              barrierCenterY = examY + (firstLessonY - examY) / 2;
-              if (barrierCenterY < examY + 55) barrierCenterY = examY + 55;
-              if (barrierCenterY > firstLessonY - 45) barrierCenterY = firstLessonY - 45;
-              const t = (barrierCenterY - examY) / (firstLessonY - examY);
-              roadCenterX = pts[idx - 1].x + t * (pts[idx].x - pts[idx - 1].x);
-              // Compute road tangent using bezier derivative at barrier position
-              // The bezier segment goes from pts[idx-1] to pts[idx]
-              // C p.x, p.y+dy*0.7, c.x, c.y-dy*0.7, c.x, c.y
-              const p0 = pts[idx - 1];
-              const p3 = pts[idx];
-              const segDy = p3.y - p0.y;
-              const cp1 = { x: p0.x, y: p0.y + segDy * 0.7 };
-              const cp2 = { x: p3.x, y: p3.y - segDy * 0.7 };
-              const t2 = (barrierCenterY - p0.y) / (p3.y - p0.y);
-              const tClamped = Math.max(0, Math.min(1, t2));
-              // Bezier derivative: 3(1-t)²(cp1-p0) + 6(1-t)t(cp2-cp1) + 3t²(p3-cp2)
-              const mt = 1 - tClamped;
-              const tangentX = 3 * mt * mt * (cp1.x - p0.x) + 6 * mt * tClamped * (cp2.x - cp1.x) + 3 * tClamped * tClamped * (p3.x - cp2.x);
-              const tangentY = 3 * mt * mt * (cp1.y - p0.y) + 6 * mt * tClamped * (cp2.y - cp1.y) + 3 * tClamped * tClamped * (p3.y - cp2.y);
-              roadAngleDeg = -Math.atan2(tangentX, tangentY) * (180 / Math.PI);
-            }
-
-            const barrierTop = barrierCenterY - TOTAL_H / 2;
-            // Use outermost visible road width (glow = ROAD_W + 16)
-            const visualHalf = (ROAD_W + 16) / 2;
-            const roadLeft = roadCenterX - visualHalf;
-            const roadRight = roadCenterX + visualHalf;
-
-            // Posts outside road — outer edge flush with visible road border
-            const lpLeftAbs = roadLeft - POST_W;   // left post right edge = road left visible edge
-            const rpLeftAbs = roadRight;             // right post left edge = road right visible edge
-
-            // Panel to the left of the road (right edge = left post left edge - 2px gap)
-            const PANEL_W = 80;
-            const actualPanelW = PANEL_W;
-            const panelLeftAbs = lpLeftAbs - PANEL_W - 2;
-
-            // SVG container encompasses everything
-            const svgLeft = Math.min(lpLeftAbs, panelLeftAbs) - 2;
-            const svgRight = Math.max(rpLeftAbs + POST_W, panelLeftAbs + PANEL_W) + 2;
-            const svgW = svgRight - svgLeft;
-            const pnlX = panelLeftAbs - svgLeft;
-            const lpX = lpLeftAbs - svgLeft;
-            const rpX = rpLeftAbs - svgLeft;
-
-            // Fences from reasonable extent to posts
-            const FENCE_H = 30;
-            const PLANK_W = 8;
-            const PLANK_GAP = 3;
-            const PLANK_STRIDE = PLANK_W + PLANK_GAP;
-            const CROSSBAR_H = 4;
-            const fenceTop = barrierTop + PANEL_H + POST_H / 2 - FENCE_H / 2;
-            // Fences: mobile = bounded to SVG_W, desktop = extend 500px beyond SVG_W
-            const FENCE_SIDE_EXT = isMobileView ? 0 : 500;
-            const leftFenceEnd = lpLeftAbs;
-            const leftFenceStart = Math.max(isMobileView ? 0 : -FENCE_SIDE_EXT, -FENCE_SIDE_EXT);
-            const leftFenceW = Math.max(0, leftFenceEnd - leftFenceStart);
-            const rightFenceStart = rpLeftAbs + POST_W;
-            const rightFenceW = Math.max(0, (isMobileView ? SVG_W : SVG_W + FENCE_SIDE_EXT) - rightFenceStart);
-            const leftPlankCount = Math.ceil(leftFenceW / PLANK_STRIDE);
-            const rightPlankCount = Math.ceil(rightFenceW / PLANK_STRIDE);
-
-            return (
-              <div key={`toll-${i}`} style={{
-                transformOrigin: `${roadCenterX}px ${barrierCenterY}px`,
-                transform: roadAngleDeg !== 0 ? `rotate(${roadAngleDeg}deg)` : undefined,
-              }}>
-                {/* Left fence (to left post) */}
-                {leftFenceW > 0 && (
-                  <svg className="absolute" style={{ left: leftFenceStart, top: fenceTop, pointerEvents: 'none', zIndex: 4 }} width={leftFenceW} height={FENCE_H}>
-                    <defs>
-                      <linearGradient id={`fwl${i}`} x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0" stopColor={tc} stopOpacity={0.6} />
-                        <stop offset="0.5" stopColor={tc} />
-                        <stop offset="1" stopColor={tc} stopOpacity={0.6} />
-                      </linearGradient>
-                    </defs>
-                    {Array.from({ length: leftPlankCount }, (_, p) => {
-                      const px = leftFenceW - (p + 1) * PLANK_STRIDE;
-                      const ph = p % 2 === 0 ? FENCE_H : FENCE_H - 4;
-                      const py = (FENCE_H - ph) / 2;
-                      return <rect key={p} x={px} y={py} width={PLANK_W} height={ph} fill={`url(#fwl${i})`} stroke={tc} strokeOpacity={0.4} strokeWidth={1} />;
-                    })}
-                    <rect x={0} y={FENCE_H / 2 - CROSSBAR_H / 2} width={leftFenceW} height={CROSSBAR_H} fill={tc} opacity={0.7} />
-                  </svg>
-                )}
-
-                {/* Right fence (right post outward) */}
-                {rightFenceW > 0 && (
-                  <svg className="absolute" style={{ left: rightFenceStart, top: fenceTop, pointerEvents: 'none', zIndex: 4 }} width={rightFenceW} height={FENCE_H}>
-                    <defs>
-                      <linearGradient id={`fwr${i}`} x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0" stopColor={tc} stopOpacity={0.6} />
-                        <stop offset="0.5" stopColor={tc} />
-                        <stop offset="1" stopColor={tc} stopOpacity={0.6} />
-                      </linearGradient>
-                    </defs>
-                    {Array.from({ length: rightPlankCount }, (_, p) => {
-                      const px = p * PLANK_STRIDE;
-                      const ph = p % 2 === 0 ? FENCE_H : FENCE_H - 4;
-                      const py = (FENCE_H - ph) / 2;
-                      return <rect key={p} x={px} y={py} width={PLANK_W} height={ph} fill={`url(#fwr${i})`} stroke={tc} strokeOpacity={0.4} strokeWidth={1} />;
-                    })}
-                    <rect x={0} y={FENCE_H / 2 - CROSSBAR_H / 2} width={rightFenceW} height={CROSSBAR_H} fill={tc} opacity={0.7} />
-                  </svg>
-                )}
-
-                {/* Posts + panel + arm */}
-                <svg className="absolute" style={{ left: svgLeft, top: barrierTop, pointerEvents: 'none', zIndex: 12 }} width={svgW} height={TOTAL_H + 20}>
-                  <defs>
-                    <linearGradient id={`twp${i}`} x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stopColor={tc} stopOpacity={0.5} />
-                      <stop offset="0.3" stopColor={tc} />
-                      <stop offset="0.7" stopColor={tc} stopOpacity={0.8} />
-                      <stop offset="1" stopColor={tc} stopOpacity={0.5} />
-                    </linearGradient>
-                    <linearGradient id={`twpnl${i}`} x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0" stopColor={tc} />
-                      <stop offset="1" stopColor={tc} stopOpacity={0.7} />
-                    </linearGradient>
-                  </defs>
-
-                  {/* Left post */}
-                  <rect x={lpX} y={PANEL_H} width={POST_W} height={POST_H} fill={`url(#twp${i})`} stroke={tc} strokeOpacity={0.3} strokeWidth={2} />
-                  <line x1={lpX + 3} y1={PANEL_H + 7} x2={lpX + POST_W - 3} y2={PANEL_H + 7} stroke="#FFF" strokeWidth={0.6} opacity={0.15} />
-                  <line x1={lpX + 3} y1={PANEL_H + 14} x2={lpX + POST_W - 3} y2={PANEL_H + 14} stroke="#FFF" strokeWidth={0.6} opacity={0.15} />
-                  <line x1={lpX + 3} y1={PANEL_H + 21} x2={lpX + POST_W - 3} y2={PANEL_H + 21} stroke="#FFF" strokeWidth={0.6} opacity={0.15} />
-                  <line x1={lpX + 3} y1={PANEL_H + 28} x2={lpX + POST_W - 3} y2={PANEL_H + 28} stroke="#FFF" strokeWidth={0.6} opacity={0.15} />
-
-                  {/* Right post */}
-                  <rect x={rpX} y={PANEL_H} width={POST_W} height={POST_H} fill={`url(#twp${i})`} stroke={tc} strokeOpacity={0.3} strokeWidth={2} />
-                  <line x1={rpX + 3} y1={PANEL_H + 8} x2={rpX + POST_W - 3} y2={PANEL_H + 8} stroke="#FFF" strokeWidth={0.6} opacity={0.15} />
-                  <line x1={rpX + 3} y1={PANEL_H + 16} x2={rpX + POST_W - 3} y2={PANEL_H + 16} stroke="#FFF" strokeWidth={0.6} opacity={0.15} />
-                  <line x1={rpX + 3} y1={PANEL_H + 23} x2={rpX + POST_W - 3} y2={PANEL_H + 23} stroke="#FFF" strokeWidth={0.6} opacity={0.15} />
-                  <line x1={rpX + 3} y1={PANEL_H + 30} x2={rpX + POST_W - 3} y2={PANEL_H + 30} stroke="#FFF" strokeWidth={0.6} opacity={0.15} />
-                  {/* Traffic light on right post */}
-                  <circle cx={rpX + POST_W / 2} cy={PANEL_H - 8} r={6} fill={isLocked ? '#E74C3C' : '#4CAF50'} />
-                  <circle cx={rpX + POST_W / 2 - 1.5} cy={PANEL_H - 10} r={2} fill="#FFF" opacity={0.3} />
-
-                  {/* Name panel */}
-                  <rect x={pnlX} y={0} width={actualPanelW} height={PANEL_H} rx={4} fill={`url(#twpnl${i})`} stroke={tc} strokeOpacity={0.4} strokeWidth={2.5} />
-                  <circle cx={pnlX + 6} cy={6} r={3} fill="#FFF" opacity={0.5} />
-                  <circle cx={pnlX + actualPanelW - 6} cy={6} r={3} fill="#FFF" opacity={0.5} />
-                  <circle cx={pnlX + 6} cy={PANEL_H - 6} r={3} fill="#FFF" opacity={0.5} />
-                  <circle cx={pnlX + actualPanelW - 6} cy={PANEL_H - 6} r={3} fill="#FFF" opacity={0.5} />
-                  <text x={pnlX + actualPanelW / 2} y={PANEL_H / 2 + 4} fontSize={actualPanelW < 65 ? 9 : 11} fill="#FFF" fontWeight="bold" textAnchor="middle" letterSpacing={actualPanelW < 65 ? 0 : 2}>{cityName}</text>
-
-                </svg>
-              </div>
-            );
-          })}
-
-          {/* ── Mobile section cards (replace toll barriers) ── */}
-          {isMobileView && Array.from(themeAt.entries()).map(([idx, themeCode], ti) => {
-            if (idx >= pts.length) return null;
-            const p = pts[idx];
-            const tc = THEME_COLORS[themeCode] || '#74B9FF';
-            const em = THEME_EMOJIS[themeCode] || '📚';
-            const theme = getThemeDataLocalized(themeCode, lang);
-            const isLocked = nodes[idx]?.isLocked;
-            const cityName = t(`city_${themeCode}`) || themeCode;
-            const themeDone = nodes.filter(n => n.themeCode === themeCode && n.type === 'lesson' && n.isCompleted).length;
-            const themeTotal = nodes.filter(n => n.themeCode === themeCode && n.type === 'lesson').length;
-            const cardW = SVG_W - 24;
-            const cardX = 12;
-            // For first theme: position at very top; for others: in the gap above first node
-            const cardY = ti === 0 ? 46 : p.y - 108;
-            return (
-              <div key={`mcard-${themeCode}`} className="absolute" style={{ left: cardX, top: cardY, width: cardW, zIndex: 10 }}>
-                <div style={{
-                  background: 'var(--card-primary)',
-                  border: `1.5px solid ${tc}50`,
-                  borderRadius: 14,
-                  padding: '7px 12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  backdropFilter: 'blur(4px)',
-                  boxShadow: uiTheme === 'day' ? '0 8px 24px rgba(15, 23, 42, 0.08)' : 'none',
-                }}>
-                  <div style={{ width: 34, height: 34, borderRadius: 17, background: `${tc}30`, border: `2px solid ${tc}80`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <span style={{ fontSize: 17 }}>{em}</span>
-                  </div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: 9, fontWeight: 900, color: tc, textTransform: 'uppercase', letterSpacing: 1.5, marginBottom: 1 }}>
-                      THÈME {themeCode} · {cityName}
-                    </div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      {theme?.title || ''}
-                    </div>
-                  </div>
-                  <div style={{ flexShrink: 0, textAlign: 'center' }}>
-                    {isLocked ? (
-                      <span style={{ fontSize: 15, opacity: 0.7 }}>🔒</span>
-                    ) : (
-                      <>
-                        <div style={{ fontSize: 12, fontWeight: 900, color: tc }}>{themeDone}/{themeTotal}</div>
-                        <div style={{ fontSize: 8, color: 'var(--text-disabled)', fontWeight: 600 }}>leçons</div>
-                      </>
-                    )}
-                  </div>
+            {/* XP + avatar */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
+              {stats.streak > 0 && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '5px 10px', borderRadius: 20, background: '#fff7ed', border: '1px solid #fed7aa' }}>
+                  <span style={{ fontSize: 13 }}>🔥</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: '#ea580c' }}>{stats.streak}</span>
                 </div>
-              </div>
-            );
-          })}
-
-          {/* ── Theme banners — above-right of barrier, never overlapping road ── */}
-          {Array.from(themeAt.entries()).map(([idx, themeCode], ti) => {
-            if (idx >= pts.length) return null;
-            const p = pts[idx];
-            const tc = THEME_COLORS[themeCode] || '#74B9FF';
-            const em = THEME_EMOJIS[themeCode] || '📚';
-            const theme = getThemeDataLocalized(themeCode, lang);
-            const isLocked = nodes[idx]?.isLocked;
-
-            // Compute barrier road center (same logic as barrier code)
-            let roadCX: number;
-            if (ti === 0) {
-              roadCX = pts[idx].x;
-            } else {
-              const examY = pts[idx - 1].y;
-              const firstY = pts[idx].y;
-              let bCY = firstY - 90;
-              if (bCY < examY + 70) bCY = examY + 70;
-              const t = (bCY - examY) / (firstY - examY);
-              roadCX = pts[idx - 1].x + t * (pts[idx].x - pts[idx - 1].x);
-            }
-
-            // Banner sits above the barrier, to the right of the fence
-            const barrierTopY = p.y - 90 - 32; // barrier top approx
-            const bannerY = barrierTopY - 48;
-            // Right of the right fence edge — nudge left for themes where road is far right
-            const bannerNudge: Record<string, number> = { E: -35, F: -20 };
-            const bannerX = roadCX + ROAD_W / 2 + 55 + (bannerNudge[themeCode] || 0);
-
-            const bAdj = getElemAdj(`banner-${themeCode}`);
-            return (
-              <div
-                key={`theme-${themeCode}`}
-                className="absolute hidden lg:block"
-                style={{
-                  top: bannerY + bAdj.dy,
-                  left: bannerX + bAdj.dx,
-                  opacity: isLocked ? 0.25 : 1,
-                  zIndex: 15,
-                  transform: bAdj.scale !== 1 || bAdj.rot !== 0 ? `scale(${bAdj.scale}) rotate(${bAdj.rot}deg)` : undefined,
-                  transformOrigin: 'center center',
-                }}
-              >
-                <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-2xl" style={{
-                  background: tc,
-                  boxShadow: `0 4px 16px ${tc}40`,
-                  whiteSpace: 'nowrap',
-                }}>
-                  <span className="text-xl">{em}</span>
-                  <div>
-                    <div className="text-[9px] font-black uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                      Thème {themeCode}
-                    </div>
-                    <div className="text-[14px] font-extrabold text-white">
-                      {theme?.title || t(`theme_title_${themeCode}`) || ''}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-
-          {/* ── Node circles ── */}
-          {nodes.map((node, i) => {
-            if (i >= pts.length) return null;
-            const p = pts[i];
-
-            if (node.type === 'exam') {
-              const tc = THEME_COLORS[node.themeCode] || '#F39C12';
-              const lockedOpacity = node.isLocked ? 0.25 : 1;
-              // On mobile: same size as lesson nodes for visual consistency
-              const eR = isMobileView ? mNODE_R : mEXAM_R;
-              const eRingR = eR + mRING_GAP;
-              const eRingSize = (eRingR + mRING_STROKE / 2) * 2;
-
-              return (
-                <div key={node.id} className="absolute" style={{
-                  left: p.x - eRingSize / 2,
-                  top: p.y - eRingSize / 2,
-                  width: eRingSize,
-                  height: eRingSize,
-                  zIndex: 14,
-                  overflow: 'visible',
-                }}>
-                  <div style={{ opacity: lockedOpacity }}>
-                    <svg width={eRingSize} height={eRingSize} className="absolute inset-0">
-                      <circle cx={eRingSize / 2} cy={eRingSize / 2} r={eRingR} style={{ stroke: 'var(--exam-orange)' }} strokeWidth={mRING_STROKE} fill="none" />
-                    </svg>
-                    {node.isLocked ? (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="rounded-full flex items-center justify-center" style={{
-                          width: eR * 2,
-                          height: eR * 2,
-                          background: 'var(--exam-orange)',
-                          border: '4px solid var(--exam-orange)',
-                          boxShadow: '0 0 14px rgba(243,156,18,0.4)',
-                        }}>
-                          <span style={{ fontSize: eR * 0.85, lineHeight: 1 }}>📝</span>
-                        </div>
-                      </div>
-                    ) : (
-                      <Link href={`/examen?theme=${node.themeCode}`} className="absolute inset-0 flex items-center justify-center node-hover">
-                        <div className="rounded-full flex items-center justify-center" style={{
-                          width: eR * 2,
-                          height: eR * 2,
-                          background: node.isCompleted ? 'var(--success)' : 'var(--exam-orange)',
-                          border: `4px solid ${node.isCompleted ? 'var(--success)' : 'var(--exam-orange)'}`,
-                          boxShadow: node.isCompleted ? '0 0 12px rgba(50,214,107,0.35)' : '0 0 14px rgba(255,138,30,0.4)',
-                        }}>
-                          <span style={{ fontSize: eR * 0.85, lineHeight: 1 }}>{node.isCompleted ? '👑' : '📝'}</span>
-                        </div>
-                      </Link>
-                    )}
-
-                    {/* "EXAMEN" label */}
-                    <div className="absolute left-1/2 -translate-x-1/2 text-center" style={{
-                      top: eRingSize + 2,
-                      width: 80,
-                    }}>
-                      <span style={{ fontSize: isMobileView ? 9 : 11, fontWeight: 900, letterSpacing: 1, color: 'var(--exam-orange)' }}>{t('examen_node')}</span>
-                    </div>
-
-                    <div className="absolute" style={{ left: eR + 10, top: -16 }}>
-                      <span className="text-base">✨</span>
-                    </div>
-                  </div>
-
-                  {/* Bonus card (Flash/Révision) — always RIGHT side */}
-                  {(() => {
-                    // Road is ROAD_W=65px wide + 16px glow = visual half = 40.5px from centerline.
-                    // Worst case (left exam, incoming right lesson): road visual right edge ≈ p.x + 58px
-                    // at the card's top row. left: eRingSize+28 = 100 puts card left at p.x+64 → 6px clear.
-                    const cardStyle: React.CSSProperties = {
-                      position: 'absolute',
-                      top: isMobileView ? 22 : (i === nodes.length - 1 ? 50 : 20),
-                      left: isMobileView ? eRingSize + 8 : eRingSize + 15,
-                      width: isMobileView ? 96 : 110,
-                      padding: isMobileView ? '7px 10px' : '6px 8px',
-                      transform: isMobileView ? 'none' : 'scale(0.92)',
-                      transformOrigin: 'top left',
-                      background: 'var(--card-secondary)',
-                      border: '1px solid var(--border-subtle)',
-                      borderRadius: 12,
-                      zIndex: 20,
-                      opacity: lockedOpacity,
-                    };
-                    return (
-                  <div className="rounded-xl" style={cardStyle}>
-                    {(() => {
-                      const fs = isMobileView ? 13 : 13;
-                      const gap = isMobileView ? 5 : 2;
-                      const py = isMobileView ? '4px 0' : '6px 0';
-                      const eSize = isMobileView ? 15 : 15;
-                      return node.isLocked ? (
-                        <>
-                          <div className="flex items-center" style={{ gap, padding: py }}>
-                            <span style={{ fontSize: eSize }}>🃏</span>
-                            <span style={{ fontSize: fs, fontWeight: 700, color: 'var(--secondary)' }}>{t('flash_label')}</span>
-                          </div>
-                          <div className="h-px" style={{ background: 'var(--border-subtle)' }} />
-                          <div className="flex items-center" style={{ gap, padding: py }}>
-                            <span style={{ fontSize: eSize }}>🔄</span>
-                            <span style={{ fontSize: fs, fontWeight: 700, color: 'var(--btn-blue)' }}>{t('revision_label')}</span>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <Link href={`/flash?theme=${node.themeCode}`} className="flex items-center press-scale" style={{ gap, padding: py }}>
-                            <span style={{ fontSize: eSize }}>🃏</span>
-                            <span style={{ fontSize: fs, fontWeight: 700, color: 'var(--secondary)' }}>{t('flash_label')}</span>
-                          </Link>
-                          <div className="h-px" style={{ background: 'var(--border-subtle)' }} />
-                          <Link href={`/revision?theme=${node.themeCode}`} className="flex items-center press-scale" style={{ gap, padding: py }}>
-                            <span style={{ fontSize: eSize }}>🔄</span>
-                            <span style={{ fontSize: fs, fontWeight: 700, color: 'var(--btn-blue)' }}>{t('revision_label')}</span>
-                          </Link>
-                        </>
-                      );
-                    })()}
-                  </div>
-                    );
-                  })()}
-                </div>
-              );
-            }
-
-            // ── Lesson node ──
-            const tc = THEME_COLORS[node.themeCode] || '#74B9FF';
-            const isActive = node.isCurrent;
-            const nodeRadius = isActive ? mACTIVE_R : mNODE_R;
-            const ringRadius = nodeRadius + mRING_GAP;
-            const ringSize = (ringRadius + mRING_STROKE / 2) * 2;
-            const ringCirc = 2 * Math.PI * ringRadius;
-            const ringCx = ringSize / 2;
-            const ringCy = ringSize / 2;
-
-            // Segmented ring — read fresh from localStorage (not in useMemo) so it updates on return
-            const completedParties = getCompletedParties(node.id);
-            const N = Math.max(1, node.totalParties ?? 1);
-            const SEG_GAP_DEG = 2;
-            const segDeg = N > 1 ? (360 / N) - SEG_GAP_DEG : 360;
-            const segLen = (segDeg / 360) * ringCirc;
-
-            // True completion = every partie done (not just stars > 0)
-            const allPartiesDone = completedParties.length >= N;
-            // In progress = some parties done, but not all, and not locked
-            const isInProgress = completedParties.length > 0 && !allPartiesDone && !node.isLocked;
-
-            // Colors
-            const isUnstarted = !allPartiesDone && !isInProgress && !isActive && !node.isLocked;
-            const bg = (allPartiesDone || isInProgress || isActive || node.isLocked)
-              ? tc
-              : (uiTheme === 'day' ? '#2B7FFF' : 'var(--card-primary)');
-            const borderColor = tc;
-            const ringColor = tc;
-
-            // Node icon — 3 states: not started / in progress / fully done
-            const iconSize = isMobileView ? nodeRadius * 0.9 : nodeRadius;
-            let nodeContent: React.ReactNode;
-            if (allPartiesDone) {
-              nodeContent = <span style={{ color: '#fff', fontSize: iconSize, fontWeight: 900, lineHeight: 1 }}>✓</span>;
-            } else if (node.isLocked) {
-              nodeContent = <span style={{ fontSize: iconSize * 0.75, lineHeight: 1 }}>🔒</span>;
-            } else if (isInProgress || isActive) {
-              nodeContent = <span style={{ color: '#fff', fontSize: iconSize * 0.9, lineHeight: 1 }}>▶</span>;
-            } else {
-              nodeContent = <span style={{ fontSize: iconSize * 0.75, fontWeight: 900, color: isUnstarted && uiTheme === 'day' ? '#FFFFFF' : tc, lineHeight: 1 }}>{node.localIndex}</span>;
-            }
-
-            return (
-              <div key={node.id} className="absolute" style={{
-                left: p.x - ringSize / 2,
-                top: p.y - ringSize / 2,
-                width: ringSize,
-                height: ringSize,
-                zIndex: isActive ? 16 : 14,
-                opacity: node.isLocked ? (isMobileView ? 0.35 : 0.25) : 1,
-              }}>
-                {/* Segmented progress ring */}
-                <svg width={ringSize} height={ringSize} className="absolute inset-0">
-                  {N <= 1 ? (
-                    <>
-                      <circle cx={ringCx} cy={ringCy} r={ringRadius} style={{ stroke: 'var(--border-subtle)' }} strokeWidth={RING_STROKE} fill="none" />
-                      {allPartiesDone && (
-                        <circle cx={ringCx} cy={ringCy} r={ringRadius}
-                          stroke={ringColor} strokeWidth={RING_STROKE} fill="none"
-                          transform={`rotate(-90, ${ringCx}, ${ringCy})`}
-                        />
-                      )}
-                    </>
-                  ) : (
-                    Array.from({ length: N }, (_, i) => {
-                      const filled = allPartiesDone || completedParties.includes(i);
-                      return (
-                        <circle
-                          key={i}
-                          cx={ringCx} cy={ringCy} r={ringRadius}
-                          className="ring-segment"
-                          strokeWidth={RING_STROKE}
-                          fill="none"
-                          strokeDasharray={`${segLen} ${ringCirc - segLen}`}
-                          transform={`rotate(${i * (360 / N) - 90}, ${ringCx}, ${ringCy})`}
-                          style={{ stroke: filled ? ringColor : 'var(--border-subtle)' }}
-                        />
-                      );
-                    })
-                  )}
-                </svg>
-
-                {/* Node circle */}
-                {node.isLocked ? (
-                  <button onClick={() => setShowPremiumModal(true)} title="🔒 Débloque avec Premium" className="absolute inset-0 cursor-pointer">
-                    <div className="absolute rounded-full flex items-center justify-center" style={{
-                      left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
-                      width: nodeRadius * 2,
-                      height: nodeRadius * 2,
-                      background: bg,
-                      border: `3px solid ${borderColor}`,
-                    }}>
-                      {nodeContent}
-                    </div>
-                    <span className="barrier-light-left absolute" style={{ width: 5, height: 5, borderRadius: '50%', background: '#e74c3c', top: '12%', left: '22%', pointerEvents: 'none' }} />
-                    <span className="barrier-light-right absolute" style={{ width: 5, height: 5, borderRadius: '50%', background: '#e74c3c', top: '12%', right: '22%', pointerEvents: 'none' }} />
-                  </button>
-                ) : (
-                  <button onClick={() => openLessonModal(node)} className="absolute inset-0 node-hover cursor-pointer">
-                    <div className="absolute rounded-full flex items-center justify-center" style={{
-                      left: '50%', top: '50%', transform: 'translate(-50%, -50%)',
-                      width: nodeRadius * 2,
-                      height: nodeRadius * 2,
-                      background: bg,
-                      border: `3px solid ${borderColor}`,
-                      boxShadow: isActive ? `0 0 16px ${tc}66` : node.isCompleted ? `0 0 8px ${tc}33` : 'none',
-                    }}>
-                      {nodeContent}
-                    </div>
-                  </button>
-                )}
-
-                {/* ── COMMENCER floating button (active node only) ── */}
-                {isActive && !node.isLocked && (
-                  <button
-                    onClick={() => openLessonModal(node)}
-                    className="absolute cursor-pointer press-scale commencer-float"
-                    style={{
-                      left: '50%',
-                      top: ringSize + 6,
-                      background: tc,
-                      color: '#fff',
-                      fontSize: isMobileView ? 13 : 11,
-                      fontWeight: 900,
-                      padding: isMobileView ? '9px 20px' : '6px 14px',
-                      borderRadius: 20,
-                      whiteSpace: 'nowrap',
-                      boxShadow: uiTheme === 'day' ? '0 8px 24px rgba(100, 181, 255, 0.4)' : 'none',
-                      letterSpacing: '0.5px',
-                      zIndex: 18,
-                      border: `1.5px solid ${tc}`,
-                    }}
-                  >
-                    {t('commencer')} ▶
-                  </button>
-                )}
-
-                {/* Stars for completed nodes — hidden everywhere */}
-                {false && !isMobileView && node.isCompleted && (
-                  <div style={{
-                    position: 'absolute',
-                    top: ringSize + 2,
-                    left: 0,
-                    width: ringSize,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: 1,
-                  }}>
-                    {[1, 2, 3].map(s => (
-                      <span key={s} style={{ fontSize: 11, opacity: node.stars >= s ? 1 : 0.18, lineHeight: 1 }}>⭐</span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-
-          {/* ── Monument decorations ── */}
-          {Array.from(themeAt.entries()).map(([startIdx, themeCode]) => {
-            const monuments = MONUMENTS[themeCode];
-            if (!monuments || monuments.length === 0) return null;
-
-            let endIdx = startIdx;
-            for (let j = startIdx + 1; j < nodes.length; j++) {
-              if (nodes[j].themeCode !== themeCode) { endIdx = j - 1; break; }
-              endIdx = j;
-            }
-
-            if (endIdx <= startIdx || startIdx >= pts.length || endIdx >= pts.length) return null;
-            const startY = pts[startIdx].y;
-            const endY = pts[endIdx].y;
-            const span = endY - startY;
-            if (span < 100) return null;
-
-            return monuments.map((mon, mi) => {
-              const monCenterY = startY + span * mon.yRatio + (mon.yOffset || 0);
-              const monI = (monCenterY - PAD_TOP) / V_SPACE;
-              const roadCXAtY = CX + AMP * Math.cos((monI * Math.PI) / 1.8);
-              const roadL = roadCXAtY - ROAD_W / 2;
-              const roadR = roadCXAtY + ROAD_W / 2;
-
-              let left: number;
-              if (mon.side === 'left') {
-                left = roadL / 2 - mon.w / 2 + (mon.xOffset || 0);
-              } else {
-                left = roadR + (SVG_W - roadR) / 2 - mon.w / 2 + (mon.xOffset || 0);
-              }
-              const top = Math.max(0, monCenterY - mon.h / 2);
-
-              const monId = `mon-${themeCode}-${mi}`;
-              const adj = getElemAdj(monId);
-              return (
-                <div
-                  key={monId}
-                  className="absolute pointer-events-none monument-reveal hidden md:block"
-                  style={{
-                    left: left + adj.dx,
-                    top: top + adj.dy,
-                    width: mon.w * adj.scale,
-                    height: mon.h * adj.scale,
-                    zIndex: 6,
-                    transform: adj.rot !== 0 ? `rotate(${adj.rot}deg)` : undefined,
-                    transformOrigin: 'center center',
-                  }}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <picture>
-                    <source srcSet={mon.src.replace('.png', '.webp')} type="image/webp" />
-                    <img
-                      src={mon.src}
-                      alt=""
-                      loading={themeCode === 'A' && mi === 0 ? 'eager' : 'lazy'}
-                      decoding="async"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                    />
-                  </picture>
-                </div>
-              );
-            });
-          })}
-
-          {/* ── Monument decorations MOBILE only — positions fixes ── */}
-          {isMobileView && (<>
-            {/* A-0 atomium — eager : visible dès l'arrivée */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: -17, top: 182, width: 180, height: 180, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/atomium.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/atomium.png" alt="" loading="eager" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* A-1 manneken_pis */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 220.5, top: 619.6, width: 120, height: 156, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/manneken_pis.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/manneken_pis.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* A-2 grandplace */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: -35, top: 771.6, width: 180, height: 162, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/grandplace.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/grandplace.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* B-0 interallie */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: -11, top: 1375.2, width: 120, height: 206, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/interallie.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/interallie.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* B-1 gare_guillemins */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 139, top: 1270.4, width: 240, height: 156, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/gare_guillemins.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/gare_guillemins.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* C-0 cathedrale_anvers */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: -14.25, top: 1683.9, width: 180, height: 283, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/cathedrale_anvers.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/cathedrale_anvers.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* C-1 mas_museum */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 196.25, top: 1869.6, width: 180, height: 320, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/mas_museum.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/mas_museum.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* D-0 panneaux_vitesse */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 211.25, top: 2223.7, width: 140, height: 333, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/panneaux_vitesse.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/panneaux_vitesse.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* D-1 circuit_spa */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 9, top: 2469.3, width: 150, height: 145, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/circuit_spa.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/circuit_spa.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* E-0 beffroi_gand */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 184, top: 2760.5, width: 190, height: 475, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/beffroi_gand.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/beffroi_gand.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* F-0 citadelle_namur */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 178, top: 3613.8, width: 180, height: 144, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/citadelle_namur.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/citadelle_namur.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* F-1 tortue_namur */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 4.5, top: 4047.2, width: 120, height: 120, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/tortue_namur.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/tortue_namur.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* G-0 beffroi_bruges */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: -53, top: 4448, width: 240, height: 570, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/beffroi_bruges.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/beffroi_bruges.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* H-0 collegiale_mons */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 179.25, top: 5187.4, width: 180, height: 144, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/collegiale_mons.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/collegiale_mons.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* H-1 singe_mons */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: -34.25, top: 5333.1, width: 180, height: 225, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/singe_mons.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/singe_mons.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* I-0 frites */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 215.5, top: 5803, width: 120, height: 240, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/frites.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/frites.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* I-1 gaufre */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: -10.5, top: 6014, width: 120, height: 120, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/gaufre.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/gaufre.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-            {/* I-2 chocolat */}
-            <div className="absolute pointer-events-none monument-reveal" style={{ left: 220.5, top: 6133.5, width: 120, height: 195, zIndex: 6, opacity: 0.92 }}>
-              <picture>
-                <source srcSet="/monuments/chocolat.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/monuments/chocolat.png" alt="" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </picture>
-            </div>
-          </>)}
-
-          {/* ── Car ── */}
-          {curIdx >= 0 && (
-            <div className="absolute" style={{
-              left: carX - carDisplaySize / 2,
-              top: carY - carDisplaySize / 2,
-              width: carDisplaySize,
-              height: carDisplaySize,
-              zIndex: 20,
-              transform: 'none',
-            }}>
-              {userCar.carImage ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={userCar.carImage} alt="car" width={carDisplaySize} height={carDisplaySize} style={{ objectFit: 'contain', filter: `drop-shadow(0 4px 8px ${userCar.carColor}88)` }} />
-              ) : (
-                <CarSVG type={userCar.carType} color={userCar.carColor} size={carDisplaySize} />
               )}
+              <div style={{
+                width: 40, height: 40, borderRadius: '50%',
+                background: '#0b2659',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 16, fontWeight: 800, color: '#f59e0b',
+              }}>
+                {initials}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── BODY ─────────────────────────────────────────────────── */}
+      <div className="home-body" style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px 40px' }}>
+
+        {/* PROGRESSION GLOBALE — card navy fixe */}
+        <div className="home-progress-card" style={{
+          background: '#0b2659',
+          borderRadius: 18,
+          padding: '20px 22px',
+          marginBottom: 20,
+          color: '#fff',
+        }}>
+          <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
+            {t('home_progression_globale')}
+          </p>
+          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginTop: 8, marginBottom: 14 }}>
+            <p style={{ margin: 0, fontSize: 38, fontWeight: 800, color: '#f59e0b', lineHeight: 1 }}>
+              {stats.globalPct}%
+            </p>
+            <div style={{ textAlign: 'right' }}>
+              <p style={{ margin: 0, fontSize: 13, fontWeight: 700, color: '#fff' }}>{stats.completedLessons}/{stats.totalLessons}</p>
+              <p style={{ margin: '2px 0 0', fontSize: 10, color: 'rgba(255,255,255,0.4)', fontWeight: 500 }}>{t('home_lecons_terminees')}</p>
+            </div>
+          </div>
+          <div style={{ height: 8, borderRadius: 8, background: 'rgba(255,255,255,0.15)', overflow: 'hidden' }}>
+            <div style={{
+              height: '100%', borderRadius: 8,
+              width: `${stats.globalPct}%`,
+              background: '#f59e0b',
+              transition: 'width 0.6s ease-out',
+            }} />
+          </div>
+        </div>
+
+        {/* LEFT COLUMN — reviews + tiles */}
+        <div className="home-col-left">
+          {/* RÉVISIONS DU JOUR */}
+          {dueCount > 0 && (
+            <div className="reviews-due-card">
+              <div className="reviews-due-left">
+                <p className="reviews-due-eyebrow">{t('reviews_due_eyebrow')}</p>
+                <p className="reviews-due-title">{dueCount} {dueCount > 1 ? t('reviews_due_count_pl') : t('reviews_due_count_sing')}</p>
+                <p className="reviews-due-sub">{t('reviews_due_sub')}</p>
+              </div>
+              <Link href="/revisions" className="reviews-due-btn">{t('reviews_due_btn')}</Link>
             </div>
           )}
 
-          {/* ── Final Exam Button ── */}
-          <div className="absolute flex flex-col items-center" style={{
-            left: CX - 50,
-            top: finishY - 130,
-            width: 100,
-            zIndex: 30,
-          }}>
-            <Link href="/examen?theme=FINAL" className="press-scale">
-              <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center text-4xl"
-                style={{
-                  background: 'var(--card-primary)',
-                  border: '4px solid var(--brand)',
-                  boxShadow: '0 0 20px rgba(34,214,199,0.3)',
-                }}>
-                🎓
-              </div>
-            </Link>
-            <span className="text-[11px] font-black mt-1.5 uppercase tracking-wider text-center" style={{ color: 'var(--brand)' }}>Examen Final</span>
+          {/* GRILLE 2x2 */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
+            {TILES.map((tile) => (
+              <Link key={tile.href} href={tile.href} style={{ textDecoration: 'none' }}>
+                <div
+                  className="press-scale"
+                  style={{
+                    background: 'var(--bg-card)',
+                    border: '1.5px solid var(--border-card)',
+                    borderRadius: 18,
+                    padding: '18px 16px',
+                    cursor: 'pointer',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.boxShadow = '0 4px 18px var(--pm-shadow)')}
+                  onMouseLeave={e => (e.currentTarget.style.boxShadow = 'none')}
+                >
+                  <div style={{
+                    width: 44, height: 44, borderRadius: 12,
+                    background: '#0b2659',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    color: '#f59e0b', marginBottom: 12,
+                  }}>
+                    {tile.icon}
+                  </div>
+                  <p style={{ margin: 0, fontSize: 15, fontWeight: 700, color: 'var(--text-title)', lineHeight: 1.2 }}>{tile.label}</p>
+                  <p style={{ margin: '5px 0 0', fontSize: 11, fontWeight: 400, color: 'var(--text-sub)', lineHeight: 1.4 }}>{tile.sub}</p>
+                </div>
+              </Link>
+            ))}
           </div>
+        </div>
 
-          {/* ── Finish line ── */}
-          <div className="absolute" style={{
-            left: CX - ROAD_W / 2,
-            top: finishY - SQ,
-            width: ROAD_W,
-            zIndex: 12,
-          }}>
-            {[0, 1].map(row => (
-              <div key={row} className="flex">
-                {[...Array(5)].map((_, col) => (
-                  <div key={col} style={{
-                    width: SQ,
-                    height: SQ,
-                    backgroundColor: (row + col) % 2 === 0 ? 'rgba(255,255,255,0.85)' : 'rgba(0,0,0,0.5)',
-                  }} />
-                ))}
+        {/* RIGHT COLUMN — en cours + stats */}
+        <div className="home-col-right">
+          {/* EN COURS */}
+          {stats.activeLesson && (
+            <div style={{ marginBottom: 20 }}>
+              <p style={{ margin: '0 0 10px', fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
+                {t('home_en_cours')}
+              </p>
+              <div style={{
+                background: 'var(--bg-card)',
+                border: '1.5px solid var(--border-card)',
+                borderRadius: 18,
+                padding: '18px 20px',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
+                  <div style={{
+                    width: 44, height: 44, borderRadius: 12,
+                    background: 'var(--bg-input)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 22, flexShrink: 0,
+                  }}>
+                    {THEME_EMOJIS[stats.activeLesson.themeCode] || '📖'}
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: '#f59e0b' }}>
+                      {THEME_CITIES[stats.activeLesson.themeCode] || stats.activeLesson.themeCode}
+                    </p>
+                    <p style={{ margin: '3px 0 0', fontSize: 14, fontWeight: 700, color: 'var(--text-title)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      {stats.activeLesson.lessonTitle}
+                    </p>
+                  </div>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--text-navy)', flexShrink: 0 }}>{stats.activeLesson.pct}%</span>
+                </div>
+                <ProgressBar pct={stats.activeLesson.pct} height={6} color="#0b2659" />
+                <Link href={`/lecon/${stats.activeLesson.lessonId}`} style={{ textDecoration: 'none' }}>
+                  <div
+                    className="press-scale"
+                    style={{
+                      marginTop: 14,
+                      background: '#0b2659',
+                      borderRadius: 12,
+                      padding: '13px',
+                      textAlign: 'center',
+                      fontWeight: 700,
+                      fontSize: 14,
+                      color: '#fff',
+                    }}
+                  >
+                    {stats.activeLesson.pct > 0 ? t('home_reprendre') : t('home_commencer_cta')}
+                  </div>
+                </Link>
+              </div>
+            </div>
+          )}
+
+          {/* STATS RAPIDES */}
+          <p style={{ margin: '0 0 10px', fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
+            {t('home_mes_stats')}
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+            {[
+              { label: t('stat_lecons_label'), value: `${stats.completedLessons}/${stats.totalLessons}`, accent: '#0b2659' },
+              { label: t('stat_serie_label'), value: stats.streak > 0 ? `🔥 ${stats.streak}${t('jour_abbr')}` : '—', accent: '#ea580c' },
+              { label: t('stat_score_label'), value: stats.lastScore !== null ? `${stats.lastScore}%` : '—', accent: '#0b2659' },
+            ].map((s) => (
+              <div key={s.label} style={{
+                background: 'var(--bg-card)',
+                border: '1.5px solid var(--border-card)',
+                borderRadius: 16,
+                padding: '16px 12px',
+                textAlign: 'center',
+              }}>
+                <p style={{ margin: 0, fontSize: 22, fontWeight: 800, color: s.accent, lineHeight: 1 }}>{s.value}</p>
+                <p style={{ margin: '5px 0 0', fontSize: 11, fontWeight: 500, color: 'var(--text-hint)' }}>{s.label}</p>
               </div>
             ))}
           </div>
-
         </div>
-        </div>{/* end flex wrapper */}
-
-        {/* Fond uniforme sous la route — pas de dégradé */}
 
       </div>
-
-      {/* ═══════════════════════════════════════ */}
-      {/* RIGHT SIDEBAR — Desktop only (~300px) */}
-      {/* ═══════════════════════════════════════ */}
-      <aside className="hidden xl:flex flex-col gap-5 fixed right-0 top-0 h-full overflow-y-auto py-6 px-5 z-50" style={{ width: 500, background: 'var(--card-primary)', borderLeft: '1px solid var(--border-subtle)' }}>
-
-        {/* ── Stats du jour ── */}
-        <div className="stat-card stat-card-glow">
-          <h3 className="text-xs font-black uppercase tracking-wider mb-4" style={{ color: 'var(--text-secondary)' }}>{t('stats_du_jour')}</h3>
-          <div className="flex flex-col gap-3">
-            {/* Streak badge */}
-            <div className="flex items-center gap-3 px-3 py-2.5 rounded-xl" style={{ background: '#FF6348' }}>
-              <span className="text-xl">🔥</span>
-              <span className="text-sm font-black text-white">{streak.currentStreak} {streak.currentStreak !== 1 ? t('jours_plur') : t('jour_sing')}</span>
-            </div>
-            {/* XP badge */}
-            <div className="flex items-center gap-3 px-3 py-2 rounded-xl" style={{ background: 'rgba(255,201,40,0.08)' }}>
-              <span className="text-xl">⚡</span>
-              <div className="flex-1">
-                <div className="text-sm font-extrabold" style={{ color: 'var(--premium)' }}>{xp.totalXP}</div>
-                <div className="text-[10px] font-semibold" style={{ color: 'var(--text-disabled)' }}>{t('xp_total')}</div>
-              </div>
-            </div>
-            {/* Level badge */}
-            <div className="flex items-center gap-3 px-3 py-2 rounded-xl" style={{ background: 'rgba(50,214,107,0.08)' }}>
-              <span className="text-xl">🎯</span>
-              <div className="flex-1">
-                <div className="text-sm font-extrabold" style={{ color: 'var(--success)' }}>{t('niveau')} {xp.level}</div>
-                <div className="text-[10px] font-semibold" style={{ color: 'var(--text-disabled)' }}>{t('progression_label')}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        {/* ── Prof. Gaston dit... ── */}
-        <div className="stat-card">
-          <div className="flex items-center gap-2 mb-3">
-            <Image src="/images/gaston.png" width={40} height={40} alt="Prof. Gaston" style={{ objectFit: 'contain' }} />
-            <span className="text-xs font-black uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>{t('prof_gaston_dit')}</span>
-          </div>
-          <div style={{
-            background: '#FFF8E7',
-            border: '1.5px solid var(--border-subtle)',
-            borderRadius: '12px',
-            padding: '10px 14px',
-            fontSize: 13,
-            fontWeight: 600,
-            color: '#1A1A2E',
-            lineHeight: 1.45,
-          }}>
-            {greeting}
-          </div>
-        </div>
-
-        {/* ── Progression ── */}
-        <div className="stat-card">
-          <h3 className="text-xs font-black uppercase tracking-wider mb-3" style={{ color: 'var(--text-secondary)' }}>{t('progression_label')}</h3>
-
-          {/* Leçons progress */}
-          <div className="mb-3">
-            <div className="flex justify-between items-center mb-1.5">
-              <span className="text-xs font-bold">{t('lecons')}</span>
-              <span className="text-xs font-bold" style={{ color: 'var(--success)' }}>{totalCompleted}/{totalLessons}</span>
-            </div>
-            <div className="w-full h-2.5 rounded-full" style={{ background: 'var(--border-subtle)' }}>
-              <div className="h-full rounded-full transition-all" style={{
-                width: `${totalLessons > 0 ? (totalCompleted / totalLessons) * 100 : 0}%`,
-                background: 'var(--success)',
-                minWidth: totalCompleted > 0 ? 8 : 0,
-              }} />
-            </div>
-          </div>
-
-          {/* Examens progress */}
-          <div>
-            <div className="flex justify-between items-center mb-1.5">
-              <span className="text-xs font-bold">{t('examens_label')}</span>
-              <span className="text-xs font-bold" style={{ color: 'var(--exam-orange)' }}>{totalExamsPassed}/{THEME_ORDER.length}</span>
-            </div>
-            <div className="w-full h-2.5 rounded-full" style={{ background: 'var(--border-subtle)' }}>
-              <div className="h-full rounded-full transition-all" style={{
-                width: `${(totalExamsPassed / THEME_ORDER.length) * 100}%`,
-                background: 'var(--exam-orange)',
-                minWidth: totalExamsPassed > 0 ? 8 : 0,
-              }} />
-            </div>
-          </div>
-
-          {/* Per-theme mini progress */}
-          <div className="mt-4 flex flex-col gap-1.5">
-            {THEME_ORDER.map(tc => {
-              const theme = getThemeDataLocalized(tc, lang);
-              if (!theme) return null;
-              const done = theme.lessons.filter((_, idx) => {
-                const lid = theme.lessons[idx]?.id || (tc + (idx + 1));
-                return (stars[lid] ?? 0) > 0;
-              }).length;
-              const total = theme.lessons.length;
-              const examDone = exams[tc] === true;
-
-              return (
-                <div key={tc} className="flex items-center gap-2">
-                  <span className="text-xs w-4 text-center font-bold" style={{ color: THEME_COLORS[tc] }}>{tc}</span>
-                  <div className="flex-1 h-1.5 rounded-full" style={{ background: 'var(--border-subtle)' }}>
-                    <div className="h-full rounded-full" style={{
-                      width: `${total > 0 ? (done / total) * 100 : 0}%`,
-                      background: THEME_COLORS[tc],
-                      minWidth: done > 0 ? 4 : 0,
-                    }} />
-                  </div>
-                  <span className="text-[10px] font-bold" style={{ color: 'var(--text-disabled)' }}>{done}/{total}</span>
-                  {examDone && <span className="text-[10px]">👑</span>}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </aside>
-
-      {/* ── Lesson Modal ── */}
-      {modalNode && (() => {
-        const lesson = getLessonDataLocalized(modalNode.id, lang);
-        const tc = THEME_COLORS[modalNode.themeCode] || '#74B9FF';
-        const em = THEME_EMOJIS[modalNode.themeCode] || '📚';
-        const theories = lesson?.theory ?? [];
-        const progress = getLessonProgress(modalNode.id);
-        // lessonFullyDone = only when full lesson quiz (non-partie) was completed
-        // Do NOT use modalNode.isCompleted (stars > 0) — a partie quiz also grants stars
-        // and would incorrectly mark all parties as done
-        const lessonFullyDone = progress.quizDone;
-
-        const nextPartieIdx = completedParties.length < theories.length ? completedParties.length : 0;
-
-        return (
-          <div className="fixed inset-0 z-50 flex items-end justify-center" onClick={closeModal}>
-            <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.6)' }} />
-
-            <div
-              className="relative w-full max-w-lg rounded-t-[28px] pt-6 slide-up flex flex-col"
-              style={{ background: 'var(--card-secondary)', maxHeight: '88vh' }}
-              onClick={e => e.stopPropagation()}
-            >
-              {/* Scrollable area */}
-              <div className="px-6 overflow-y-auto" style={{ flex: '1 1 auto' }}>
-                <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: 'var(--text-disabled)' }} />
-
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-14 h-14 rounded-full flex items-center justify-center text-3xl" style={{ background: tc + '20' }}>
-                    {em}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs font-bold uppercase tracking-wider" style={{ color: tc }}>
-                      Thème {modalNode.themeCode} · Leçon {modalNode.localIndex}
-                    </p>
-                    <p className="text-xl font-extrabold truncate">{modalNode.title}</p>
-                  </div>
-                </div>
-
-                {theories.length > 0 && (
-                  <div className="mb-4" style={{ maxHeight: '40vh', overflowY: 'auto' }}>
-                    {theories.map((partie, idx) => {
-                      const done = completedParties.includes(idx) || lessonFullyDone;
-                      const isSelected = selectedPartieIdx === idx;
-
-                      return (
-                        <button
-                          key={idx}
-                          onClick={() => setSelectedPartieIdx(isSelected ? null : idx)}
-                          className="w-full flex items-center gap-3 py-3 px-3 rounded-xl mb-1.5 transition-all text-left"
-                          style={{
-                            background: isSelected ? tc + '18' : 'transparent',
-                            border: isSelected ? `2px solid ${tc}` : '1px solid var(--border-subtle)',
-                          }}
-                        >
-                          <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-extrabold flex-shrink-0" style={{
-                            background: done ? 'var(--success)' : isSelected ? tc : 'var(--border-subtle)',
-                            color: (done || isSelected) ? '#ffffff' : 'var(--text-primary)',
-                          }}>
-                            {done ? '✓' : idx + 1}
-                          </div>
-                          <span className={`flex-1 text-sm font-semibold truncate ${done ? 'line-through opacity-40' : ''}`}>
-                            {partie.title}
-                          </span>
-                          {isSelected && <span className="text-base">✓</span>}
-                        </button>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-
-              {/* Button — always visible at bottom */}
-              <div className="px-6 pb-10 pt-3 flex-shrink-0">
-                {selectedPartieIdx !== null ? (
-                  <button
-                    onClick={() => startPartie(selectedPartieIdx)}
-                    className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
-                    style={{ background: tc }}
-                  >
-                    {t('commencer_partie')} {selectedPartieIdx + 1} ▶
-                  </button>
-                ) : !lessonFullyDone && theories.length > 0 ? (
-                  <button
-                    onClick={() => startPartie(nextPartieIdx)}
-                    className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
-                    style={{ background: tc }}
-                  >
-                    {completedParties.length > 0
-                      ? `Continuer — Partie ${nextPartieIdx + 1} ▶`
-                      : 'Commencer la Partie 1 ▶'}
-                  </button>
-                ) : theories.length === 0 ? (
-                  <button
-                    onClick={startFullLesson}
-                    className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
-                    style={{ background: tc }}
-                  >
-                    Commencer la leçon ▶
-                  </button>
-                ) : (
-                  <button
-                    onClick={startFullLesson}
-                    className="w-full py-4 rounded-2xl font-extrabold text-white text-lg press-scale"
-                    style={{ background: tc }}
-                  >
-                    🔄 Recommencer la leçon
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-        );
-      })()}
-
-      {/* ── Premium Modal ── */}
-      {showPremiumModal && (
-        <div className="fixed inset-0 z-[60] flex items-end justify-center" onClick={() => setShowPremiumModal(false)}>
-          <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.75)' }} />
-          <div
-            className="relative w-full max-w-lg rounded-t-[28px] px-6 pt-6 pb-10 slide-up"
-            style={{ background: 'var(--card-secondary)' }}
-            onClick={e => e.stopPropagation()}
-          >
-            <div className="w-10 h-[5px] rounded-full mx-auto mb-5" style={{ background: 'var(--text-disabled)' }} />
-
-            {/* Header */}
-            <div className="text-center mb-6">
-              <span className="text-5xl block mb-3">🔒</span>
-              <h2 className="text-2xl font-black mb-2" style={{ color: 'var(--text-primary)' }}>Débloquer tous les thèmes</h2>
-              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                Les thèmes B→I sont réservés aux membres Premium.
-              </p>
-            </div>
-
-            {/* Benefits */}
-            <div className="space-y-3 mb-6">
-              {[
-                { icon: '📚', label: '8 thèmes supplémentaires débloqués' },
-                { icon: '📝', label: 'Examens blancs illimités' },
-                { icon: '⚡', label: 'Entraînement réflexe illimité' },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-xl" style={{ background: 'rgba(255,215,0,0.06)', border: '1px solid rgba(255,215,0,0.12)' }}>
-                  <span className="text-xl">{item.icon}</span>
-                  <span className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>{item.label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Price + CTA */}
-            <div className="text-center mb-4">
-              <span className="text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block" style={{ background: 'rgba(255,201,40,0.15)', color: 'var(--premium)' }}>
-                ✨ Essai gratuit 7 jours
-              </span>
-              <p className="text-3xl font-black mb-0.5" style={{ color: 'var(--text-primary)' }}>7€ <span className="text-base font-normal" style={{ color: 'var(--text-secondary)' }}>/mois</span></p>
-              <p className="text-xs" style={{ color: 'var(--text-disabled)' }}>Annulable à tout moment</p>
-            </div>
-
-            <button
-              onClick={() => { setShowPremiumModal(false); router.push('/premium'); }}
-              className="w-full py-4 rounded-2xl font-extrabold text-lg press-scale mb-3"
-              style={{ background: 'var(--brand)', color: '#0a0e2a', boxShadow: '0 4px 20px rgba(34,214,199,0.3)' }}
-            >
-              Commencer l&apos;essai gratuit ✨
-            </button>
-
-            <button
-              onClick={() => setShowPremiumModal(false)}
-              className="w-full py-2 text-sm"
-              style={{ color: 'var(--text-disabled)' }}
-            >
-              Rester sur le thème gratuit
-            </button>
-          </div>
-        </div>
-      )}
-
     </div>
-
-    <FeedbackButton />
+    <DesignUpdateModal userId={user?.id} />
     </>
   );
 }

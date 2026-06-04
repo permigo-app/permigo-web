@@ -3,7 +3,6 @@
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Suspense } from 'react';
 import Link from 'next/link';
-import Gaston from '@/components/Gaston';
 import { THEME_COLORS } from '@/lib/constants';
 import { useLang } from '@/contexts/LanguageContext';
 
@@ -26,18 +25,13 @@ function ResultsContent() {
 
   let emoji = '💪';
   let title = t('resultats_courage');
-  let gastonExpr: 'party' | 'impressed' | 'encouraging' | 'unhappy' = 'encouraging';
-  let gastonMsg = t('resultats_continue_msg');
 
   if (pct === 100) {
-    emoji = '🏆'; title = t('resultats_parfait'); gastonExpr = 'party';
-    gastonMsg = t('resultats_parfait_msg');
+    emoji = '🏆'; title = t('resultats_parfait');
   } else if (passed) {
-    emoji = '🎉'; title = t('resultats_bravo'); gastonExpr = 'impressed';
-    gastonMsg = t('resultats_bravo_msg');
+    emoji = '🎉'; title = t('resultats_bravo');
   } else {
-    emoji = '💪'; title = t('resultats_courage'); gastonExpr = 'unhappy';
-    gastonMsg = t('resultats_courage_msg');
+    emoji = '💪'; title = t('resultats_courage');
   }
 
   const scoreColor = passed ? '#00B894' : '#FFD700';
@@ -124,11 +118,6 @@ function ResultsContent() {
           <span className="text-[28px] font-black block" style={{ color: scoreColor }}>{pct}%</span>
           <span className="text-xs" style={{ color: '#5A6B8A' }}>{t('resultats_score')}</span>
         </div>
-      </div>
-
-      {/* Gaston */}
-      <div className="mb-6">
-        <Gaston message={gastonMsg} expression={gastonExpr} size="large" />
       </div>
 
       {/* Buttons */}

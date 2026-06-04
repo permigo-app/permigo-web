@@ -13,10 +13,8 @@ import {
   getTurboAllTime, addTurboAllTime,
   type TurboSession, type TurboAllTimeStats,
 } from '@/lib/progressStorage';
-import { GASTON_CORRECT, GASTON_WRONG, GASTON_TIPS, getRandomMsg } from '@/locales/messages';
 import { isPremium, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
 import SignImage from '@/components/SignImage';
-import Gaston from '@/components/Gaston';
 import Image from 'next/image';
 import QuizLayout from '@/components/QuizLayout';
 import Link from 'next/link';
@@ -60,8 +58,6 @@ export default function TurboPage() {
   const [correctCount, setCorrectCount] = useState(0);
   const [timeLeft, setTimeLeft] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-  const [gastonMsg, setGastonMsg] = useState('');
-  const [gastonExpr, setGastonExpr] = useState<'happy' | 'impressed' | 'unhappy'>('happy');
   const timerRef = useRef<ReturnType<typeof setInterval>>(null);
   const startTimeRef = useRef(0);
   const hasRestoredRef = useRef(false);
@@ -112,26 +108,12 @@ export default function TurboPage() {
     }
   }, [lang]);
 
-  const [tipIndex, setTipIndex] = useState(0);
-  const [tipFade, setTipFade] = useState(true);
   const [turboCount, setTurboCount] = useState(0);
   const [mobileSelectedMode, setMobileSelectedMode] = useState<'3min' | '5min' | 'survie'>('3min');
 
   useEffect(() => {
     setTurboCount(getTurboDailyCount());
   }, []);
-
-  useEffect(() => {
-    if (mode) return;
-    const interval = setInterval(() => {
-      setTipFade(false);
-      setTimeout(() => {
-        setTipIndex(i => (i + 1) % GASTON_TIPS[lang].length);
-        setTipFade(true);
-      }, 300);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [mode, lang]);
 
   const endGame = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -215,11 +197,7 @@ export default function TurboPage() {
     } catch { /* ignore */ }
     if (isCorrect) {
       setCorrectCount(newScore);
-      setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
-      setGastonExpr('impressed');
     } else {
-      setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
-      setGastonExpr('unhappy');
       if (mode === 'survie') { setTimeout(() => endGame(), 1200); }
     }
   };
@@ -247,7 +225,6 @@ export default function TurboPage() {
 
   // ── MODE SELECTION ──
   if (!mode) {
-    const mMeta = MODE_META[mobileSelectedMode];
     const mBest = mobileSelectedMode === '3min' ? best3 : mobileSelectedMode === '5min' ? best5 : bestSurvie;
     const todayStr = new Date().toLocaleDateString('fr-BE');
     const todayBest = history
@@ -256,327 +233,131 @@ export default function TurboPage() {
     const blocked = !isPremium() && turboCount >= 5;
     const remaining = Math.max(0, 5 - turboCount);
 
+    const MODES = [
+      { key: '3min' as const, label: t('turbo_sprint_3'), desc: t('turbo_sprint_3_desc'), icon: '⏱️', best: best3 },
+      { key: '5min' as const, label: t('turbo_sprint_5'), desc: t('turbo_sprint_5_desc'), icon: '🔥', best: best5 },
+      { key: 'survie' as const, label: t('turbo_survie'),  desc: t('turbo_survie_desc'),  icon: '💀', best: bestSurvie },
+    ];
+
     return (
-      <div className="py-8 px-4 lg:px-6" style={{ minHeight: '100vh' }}>
-        <div className="max-w-screen-xl mx-auto">
+      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
 
-        {/* ════════ MOBILE LAYOUT ════════ */}
-        <div className="lg:hidden flex flex-col gap-4 pb-24">
+        {/* Header */}
+        <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
+          <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Entraînement</p>
+            <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>{t('turbo_titre')}</h1>
+            <p style={{ margin: '4px 0 0', fontSize: 14, color: 'var(--text-sub)' }}>{t('turbo_subtitle')}</p>
+          </div>
+        </div>
 
-          {/* 1. Header */}
-          <div>
-            <h1 className="text-2xl font-black flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>{t('turbo_titre')}</h1>
-            <p className="text-xs mt-1 italic" style={{ color: 'var(--text-secondary)' }}>{t('turbo_subtitle')}</p>
-            {!isPremium() && !blocked && (
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg mt-2"
-                style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>
-                  {remaining} {t(remaining > 1 ? 'turbo_parties_restantes' : 'turbo_partie_restante')}
-                </span>
+        <div style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px 40px' }}>
+
+          {/* limit banner */}
+          {blocked && (
+            <div style={{ background: '#fff1f2', border: '1.5px solid #fca5a5', borderRadius: 16, padding: '14px 18px', display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+              <span style={{ fontSize: 20 }}>⏰</span>
+              <div style={{ flex: 1 }}>
+                <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: 'var(--text-title)' }}>{t('turbo_limite_titre')}</p>
+                <p style={{ margin: '2px 0 0', fontSize: 12, color: 'var(--text-sub)' }}>{t('turbo_limite_msg')}</p>
               </div>
-            )}
-            {blocked && (
-              <div className="rounded-xl p-3 mt-2 flex items-center gap-3"
-                style={{ background: 'rgba(255,107,107,0.12)', border: '1.5px solid rgba(255,107,107,0.4)' }}>
-                <span>⏰</span>
-                <div className="flex-1">
-                  <p className="text-xs font-black" style={{ color: 'var(--text-primary)' }}>{t('turbo_limite_titre')}</p>
-                  <p className="text-xs mt-0.5" style={{ color: 'var(--text-secondary)' }}>{t('turbo_limite_msg')}</p>
-                </div>
-                <Link href="/premium" className="px-3 py-1.5 rounded-lg font-black text-xs press-scale flex-shrink-0"
-                  style={{ background: 'var(--premium)', color: '#0a0e2a' }}>{t('passer_premium')}</Link>
-              </div>
-            )}
+              <Link href="/premium" className="press-scale" style={{ textDecoration: 'none', background: '#0b2659', color: '#f59e0b', padding: '8px 14px', borderRadius: 10, fontSize: 12, fontWeight: 700, flexShrink: 0 }}>
+                Premium
+              </Link>
+            </div>
+          )}
+
+          {/* remaining badge */}
+          {!isPremium() && !blocked && (
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '5px 12px', borderRadius: 20, background: 'var(--bg-input)', border: '1px solid var(--border-card)', marginBottom: 20 }}>
+              <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--text-sub)' }}>{remaining} {t(remaining > 1 ? 'turbo_parties_restantes' : 'turbo_partie_restante')}</span>
+            </div>
+          )}
+
+          {/* stats cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
+            <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
+              <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Record du jour</p>
+              <p style={{ margin: '6px 0 0', fontSize: 28, fontWeight: 800, color: '#0b2659' }}>{todayBest || '—'}</p>
+            </div>
+            <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
+              <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Meilleur absolu</p>
+              <p style={{ margin: '6px 0 0', fontSize: 28, fontWeight: 800, color: '#0b2659' }}>{mBest || '—'}</p>
+            </div>
           </div>
 
-          {/* 2. Stats clés du mode sélectionné */}
-          <div className="grid grid-cols-2 gap-3">
-            <div className="rounded-2xl p-4 flex flex-col items-center gap-1"
-              style={{ background: 'var(--card-primary)', border: `1px solid ${mMeta.border}40` }}>
-              <span className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: 'var(--text-disabled)' }}>Record du jour</span>
-              <span className="text-2xl font-black" style={{ color: mMeta.color }}>{todayBest || '—'}</span>
-            </div>
-            <div className="rounded-2xl p-4 flex flex-col items-center gap-1"
-              style={{ background: 'var(--card-primary)', border: `1px solid ${mMeta.border}40` }}>
-              <span className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: 'var(--text-disabled)' }}>Meilleur absolu</span>
-              <span className="text-2xl font-black" style={{ color: mMeta.color }}>{mBest || '—'}</span>
-            </div>
-          </div>
-
-          {/* 3. Sélection du mode */}
-          <div className="flex flex-col gap-2">
-            {(['3min', '5min', 'survie'] as const).map(m => {
-              const meta = MODE_META[m];
-              const labelKey = m === '3min' ? 'turbo_sprint_3' : m === '5min' ? 'turbo_sprint_5' : 'turbo_survie';
-              const descKey = m === '3min' ? 'turbo_sprint_3_desc' : m === '5min' ? 'turbo_sprint_5_desc' : 'turbo_survie_desc';
-              const sel = mobileSelectedMode === m;
+          {/* mode selector */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 20 }}>
+            {MODES.map((m) => {
+              const sel = mobileSelectedMode === m.key;
               return (
-                <button key={m} onClick={() => setMobileSelectedMode(m)}
-                  className="w-full rounded-2xl p-4 flex items-center gap-3 text-left press-scale transition-all"
+                <button key={m.key}
+                  onClick={() => setMobileSelectedMode(m.key)}
+                  className="press-scale"
                   style={{
-                    background: sel ? `${meta.color}18` : 'var(--card-primary)',
-                    border: sel ? `2px solid ${meta.color}` : '2px solid var(--border-subtle)',
+                    width: '100%', textAlign: 'left', cursor: 'pointer',
+                    background: sel ? 'rgba(11,38,89,0.08)' : 'var(--bg-card)',
+                    border: sel ? '2px solid #0b2659' : `1.5px solid var(--border-card)`,
+                    borderRadius: 16,
+                    padding: '16px 18px',
+                    display: 'flex', alignItems: 'center', gap: 14,
                   }}>
-                  <span style={{ fontSize: 28 }}>{meta.icon}</span>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-black" style={{ color: sel ? meta.color : 'var(--text-primary)' }}>{t(labelKey)}</p>
-                    <p className="text-xs mt-0.5 leading-tight" style={{ color: 'var(--text-secondary)' }}>{t(descKey)}</p>
+                  <span style={{ fontSize: 24 }}>{m.icon}</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: sel ? '#0b2659' : 'var(--text-title)' }}>{m.label}</p>
+                    <p style={{ margin: '2px 0 0', fontSize: 12, color: 'var(--text-sub)' }}>{m.desc}</p>
+                    {m.best > 0 && <p style={{ margin: '2px 0 0', fontSize: 11, fontWeight: 600, color: '#f59e0b' }}>Record : {m.best}</p>}
                   </div>
-                  <div className="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center"
-                    style={{ border: `2px solid ${sel ? meta.color : 'var(--border-subtle)'}`, background: sel ? meta.color : 'transparent' }}>
-                    {sel && <div className="w-2 h-2 rounded-full bg-white" />}
+                  {/* radio */}
+                  <div style={{
+                    width: 20, height: 20, borderRadius: '50%', flexShrink: 0,
+                    border: `2px solid ${sel ? '#0b2659' : 'var(--border-card)'}`,
+                    background: sel ? '#0b2659' : 'var(--bg-input)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    {sel && <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#fff' }} />}
                   </div>
                 </button>
               );
             })}
           </div>
 
-          {/* 4. Bouton LANCER */}
+          {/* CTA */}
           <button
             onClick={() => { if (!blocked) startGame(mobileSelectedMode); }}
             disabled={blocked}
-            className="w-full py-4 rounded-2xl font-black text-base press-scale"
+            className="press-scale"
             style={{
-              background: blocked ? 'var(--card-secondary)' : mMeta.btnColor,
-              color: blocked ? 'var(--text-disabled)' : 'white',
-              boxShadow: blocked ? 'none' : `0 4px 20px ${mMeta.btnColor}50`,
+              width: '100%', padding: '16px', borderRadius: 14,
+              background: blocked ? 'var(--bg-input)' : '#0b2659',
+              color: blocked ? 'var(--text-hint)' : '#ffffff',
+              fontSize: 15, fontWeight: 700,
               cursor: blocked ? 'not-allowed' : 'pointer',
+              border: 'none',
+              fontFamily: 'Sora, sans-serif',
+              marginBottom: 24,
             }}>
-            {blocked ? '🔒 Limite atteinte' : `${t('turbo_lancer')} ${mMeta.icon}`}
+            {blocked ? '🔒 Limite atteinte' : `${t('turbo_lancer')} →`}
           </button>
 
-          {/* 5. Parties jouées par mode */}
-          <div className="rounded-2xl p-4" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-            <h3 className="text-xs font-extrabold uppercase tracking-widest mb-3 flex items-center gap-2" style={{ color: 'var(--brand)' }}>
-              <span>📊</span> {t('turbo_parties_jouees')}
-            </h3>
-            <div className="flex flex-col gap-2.5">
-              {[
-                { icon: '⏱️', label: t('turbo_sprint_3'), value: allTime.games3min, color: '#2ecc71' },
-                { icon: '🔥', label: t('turbo_sprint_5'), value: allTime.games5min, color: '#e67e22' },
-                { icon: '💀', label: t('turbo_survie'), value: allTime.gamesSurvie, color: '#e74c3c' },
-              ].map(row => (
-                <div key={row.label} className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>{row.icon} {row.label}</span>
-                  <span className="text-sm font-bold" style={{ color: row.color }}>{row.value} parties</span>
-                </div>
-              ))}
-              <div className="h-px my-1" style={{ background: 'var(--border-subtle)' }} />
-              <div className="flex justify-between items-center">
-                <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>Parties total jouées</span>
-                <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{allTime.games3min + allTime.games5min + allTime.gamesSurvie}</span>
-              </div>
+          {/* historique */}
+          <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 18, overflow: 'hidden' }}>
+            <div style={{ padding: '16px 20px', borderBottom: '1px solid var(--border-row)' }}>
+              <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Parties jouées</p>
             </div>
+            {[
+              { icon: '⏱️', label: t('turbo_sprint_3'), value: allTime.games3min },
+              { icon: '🔥', label: t('turbo_sprint_5'), value: allTime.games5min },
+              { icon: '💀', label: t('turbo_survie'),   value: allTime.gamesSurvie },
+            ].map((row, i) => (
+              <div key={row.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 20px', borderBottom: i < 2 ? '1px solid var(--border-row)' : 'none' }}>
+                <span style={{ fontSize: 13, color: 'var(--text-sub)' }}>{row.icon} {row.label}</span>
+                <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--text-navy)' }}>{row.value} parties</span>
+              </div>
+            ))}
           </div>
 
-          {/* 6. Historique */}
-          <div className="rounded-2xl p-4" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-            <h3 className="text-xs font-extrabold uppercase tracking-widest mb-3 flex items-center gap-2" style={{ color: 'var(--brand)' }}>
-              <span>📋</span> {t('turbo_historique')}
-            </h3>
-            {history.length === 0 ? (
-              <p className="text-xs text-center py-3" style={{ color: 'var(--text-disabled)' }}>{t('turbo_aucune_partie')}</p>
-            ) : (
-              <div className="flex flex-col">
-                {history.slice(0, 15).map((s, i) => (
-                  <div key={i} className="flex items-center gap-2 py-2.5"
-                    style={{ borderBottom: i < Math.min(history.length, 15) - 1 ? '1px solid var(--border-subtle)' : undefined }}>
-                    <span className="text-xs flex-1" style={{ color: 'var(--text-secondary)' }}>{formatDate(s.date)}</span>
-                    <span className="text-[11px] font-bold px-2 py-0.5 rounded-md flex-shrink-0"
-                      style={{ background: `${MODE_META[s.mode]?.color}20`, color: MODE_META[s.mode]?.color }}>
-                      {modeLabel(s.mode)}
-                    </span>
-                    <span className="text-sm font-black w-6 text-right flex-shrink-0" style={{ color: 'var(--text-primary)' }}>{s.score}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
         </div>
-
-        {/* ════════ DESKTOP LAYOUT ════════ */}
-        <div className="hidden lg:flex gap-6">
-          {/* Main area */}
-          <div className="flex-1 min-w-0">
-            {/* Title */}
-            <div className="mb-8">
-              <h1 className="text-4xl font-black flex items-center gap-3" style={{ color: 'var(--text-primary)' }}>
-                {t('turbo_titre')}
-              </h1>
-              <p className="text-sm mt-1 italic" style={{ color: 'var(--text-secondary)' }}>{t('turbo_subtitle')}</p>
-            </div>
-
-            {/* Freemium banner — shown when limit reached */}
-            {!isPremium() && turboCount >= 5 && (
-              <div className="rounded-2xl p-5 mb-6 flex flex-col sm:flex-row items-center gap-4" style={{ background: 'rgba(255,107,107,0.12)', border: '1.5px solid rgba(255,107,107,0.4)' }}>
-                <span className="text-3xl">⏰</span>
-                <div className="flex-1 text-center sm:text-left">
-                  <p className="font-black mb-1" style={{ color: 'var(--text-primary)' }}>{t('turbo_limite_titre')}</p>
-                  <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('turbo_limite_msg')}</p>
-                </div>
-                <Link href="/premium" className="flex-shrink-0 px-5 py-2.5 rounded-xl font-black text-sm press-scale" style={{ background: 'var(--premium)', color: '#0a0e2a' }}>
-                  {t('passer_premium')} ✨
-                </Link>
-              </div>
-            )}
-
-            {/* Daily counter badge for free users */}
-            {!isPremium() && turboCount < 5 && (
-              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>
-                  {5 - turboCount} {t(5 - turboCount > 1 ? 'turbo_parties_restantes' : 'turbo_partie_restante')}
-                </span>
-              </div>
-            )}
-
-            {/* 3 mode cards — same height */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {(['3min', '5min', 'survie'] as const).map((m) => {
-                const meta = MODE_META[m];
-                const best = m === '3min' ? best3 : m === '5min' ? best5 : bestSurvie;
-                const labelKey = m === '3min' ? 'turbo_sprint_3' : m === '5min' ? 'turbo_sprint_5' : 'turbo_survie';
-                const descKey = m === '3min' ? 'turbo_sprint_3_desc' : m === '5min' ? 'turbo_sprint_5_desc' : 'turbo_survie_desc';
-                const blocked = !isPremium() && turboCount >= 5;
-                return (
-                  <div
-                    key={m}
-                    className="rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-200 cursor-pointer"
-                    style={{
-                      background: 'var(--card-primary)',
-                      border: `1.5px solid ${meta.border}40`,
-                      minHeight: 280,
-                      opacity: blocked ? 0.5 : 1,
-                    }}
-                    onMouseEnter={e => {
-                      if (blocked) return;
-                      e.currentTarget.style.transform = 'scale(1.02)';
-                      e.currentTarget.style.boxShadow = `0 8px 32px ${meta.border}35`;
-                      e.currentTarget.style.borderColor = `${meta.border}60`;
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.transform = 'scale(1)';
-                      e.currentTarget.style.boxShadow = 'none';
-                      e.currentTarget.style.borderColor = `${meta.border}30`;
-                    }}
-                  >
-                    <span className="text-5xl mb-4">{meta.icon}</span>
-                    <h2 className="text-xl font-black mb-2" style={{ color: 'var(--text-primary)' }}>{t(labelKey)}</h2>
-                    <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{t(descKey)}</p>
-                    <p className="text-xs font-bold mb-auto" style={{ color: meta.color }}>
-                      {best > 0 ? `${t('turbo_meilleur')} : ${best}` : t('turbo_pas_joue')}
-                    </p>
-                    <button
-                      onClick={() => { if (!blocked) startGame(m); }}
-                      disabled={blocked}
-                      className="w-full py-3 rounded-xl font-black text-sm press-scale transition-all mt-5"
-                      style={{
-                        background: blocked ? 'var(--card-secondary)' : meta.btnColor,
-                        color: blocked ? 'var(--text-disabled)' : 'white',
-                        boxShadow: blocked ? 'none' : `0 4px 16px ${meta.btnColor}40`,
-                        cursor: blocked ? 'not-allowed' : 'pointer',
-                      }}
-                    >
-                      {blocked ? '🔒 Limite atteinte' : t('turbo_lancer')}
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Gaston tips section — below the cards */}
-            <div
-              className="mt-6 rounded-2xl p-5 flex items-center gap-4"
-              style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}
-            >
-              <Image src="/images/gaston.png" width={52} height={52} alt="Prof. Gaston" style={{ objectFit: 'contain', flexShrink: 0 }} />
-              <div className="flex-1 min-w-0">
-                <p className="text-xs font-bold mb-1.5" style={{ color: 'var(--brand)' }}>{t('turbo_gaston_conseille')}</p>
-                <p
-                  className="text-sm leading-relaxed transition-opacity duration-300"
-                  style={{ color: 'var(--text-secondary)', opacity: tipFade ? 1 : 0 }}
-                >
-                  💡 {GASTON_TIPS[lang][tipIndex]}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right sidebar — desktop only */}
-          <div className="w-64 xl:w-80 flex-shrink-0 hidden lg:flex flex-col gap-5">
-            {/* Parties jouées */}
-            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                <span>📊</span> {t('turbo_parties_jouees')}
-              </h3>
-              <div className="flex flex-col gap-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>⏱️ {t('turbo_sprint_3')}</span>
-                  <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{allTime.games3min}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>🔥 {t('turbo_sprint_5')}</span>
-                  <span className="text-sm font-bold" style={{ color: '#e67e22' }}>{allTime.games5min}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>💀 {t('turbo_survie')}</span>
-                  <span className="text-sm font-bold" style={{ color: '#e74c3c' }}>{allTime.gamesSurvie}</span>
-                </div>
-                <div className="h-[1px] my-1" style={{ background: 'var(--border-subtle)' }} />
-                <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>Parties total jouées</span>
-                  <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{allTime.games3min + allTime.games5min + allTime.gamesSurvie}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Records */}
-            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                <span>🏆</span> {t('turbo_records')}
-              </h3>
-              <div className="flex flex-col gap-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>⏱️ {t('turbo_sprint_3')}</span>
-                  <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{best3 || '—'}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>🔥 {t('turbo_sprint_5')}</span>
-                  <span className="text-sm font-bold" style={{ color: '#e67e22' }}>{best5 || '—'}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>💀 {t('turbo_survie')}</span>
-                  <span className="text-sm font-bold" style={{ color: '#e74c3c' }}>{bestSurvie || '—'}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Historique */}
-            <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-              <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                <span>📋</span> {t('turbo_historique')}
-              </h3>
-              {history.length === 0 ? (
-                <p className="text-xs text-center py-4" style={{ color: 'var(--text-disabled)' }}>{t('turbo_aucune_partie')}</p>
-              ) : (
-                <div className="flex flex-col overflow-y-auto pr-1" style={{ maxHeight: 300 }}>
-                  {history.slice(0, 20).map((s, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs py-2 flex-shrink-0" style={{ borderBottom: i < Math.min(history.length, 20) - 1 ? '1px solid var(--border-subtle)' : undefined }}>
-                      <span className="flex-1" style={{ color: 'var(--text-secondary)' }}>{formatDate(s.date)}</span>
-                      <span
-                        className="font-bold px-2 py-0.5 rounded-md text-[10px]"
-                        style={{ background: `${MODE_META[s.mode]?.color}20`, color: MODE_META[s.mode]?.color }}
-                      >
-                        {modeLabel(s.mode)}
-                      </span>
-                      <span className="font-black w-6 text-right" style={{ color: 'var(--text-primary)' }}>{s.score}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        </div>{/* end hidden lg:flex desktop */}
-        </div>{/* end max-w-screen-xl */}
       </div>
     );
   }
@@ -593,14 +374,6 @@ export default function TurboPage() {
 
         <div className="px-5 py-2 rounded-full inline-block mb-6" style={{ background: 'rgba(255,201,40,0.15)' }}>
           <span className="font-black" style={{ color: 'var(--premium)' }}>+{correctCount * 10} XP ⚡</span>
-        </div>
-
-        <div className="mb-8">
-          <Gaston
-            message={correctCount >= 10 ? t('turbo_impressionnant') : t('turbo_continue')}
-            expression={correctCount >= 10 ? 'party' : 'encouraging'}
-            size="small"
-          />
         </div>
 
         <div className="flex gap-4 max-w-md mx-auto">
@@ -687,12 +460,6 @@ export default function TurboPage() {
             </div>
           </div>
 
-          {/* Gaston */}
-          {gastonMsg && (
-            <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-              <Gaston message={gastonMsg} expression={gastonExpr} size="small" />
-            </div>
-          )}
         </>
       }
     />

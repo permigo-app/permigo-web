@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback, useMemo, useRef } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
@@ -9,11 +9,9 @@ import { recordQuestionReview } from '@/lib/reviewApi';
 import { getUnlockedBadges } from '@/lib/badges';
 import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
-import { GASTON_THEORY_TIPS, GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
 import { isPremium, isThemeFree } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
 import SignImage from '@/components/SignImage';
-import Gaston from '@/components/Gaston';
 import QuizLayout from '@/components/QuizLayout';
 import ImageRequestButton from '@/components/ImageRequestButton';
 
@@ -73,8 +71,6 @@ export default function LessonPage() {
   const [selected, setSelected] = useState<number | null>(null);
   const [validated, setValidated] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
-  const [gastonMsg, setGastonMsg] = useState(() => t('reflechis'));
-  const [gastonExpr, setGastonExpr] = useState<'happy' | 'encouraging' | 'unhappy' | 'impressed' | 'party' | 'thinking'>('thinking');
   const [shakeWrong, setShakeWrong] = useState(false);
   const [partieFailScore, setPartieFailScore] = useState<{ correct: number; total: number } | null>(null);
   const startTimeRef = useRef(Date.now());
@@ -115,10 +111,6 @@ export default function LessonPage() {
     return null;
   };
 
-  const gastonTheoryTip = useMemo(() => {
-    return GASTON_THEORY_TIPS[lang][currentCard % GASTON_THEORY_TIPS[lang].length];
-  }, [currentCard, lang]);
-
   const startQuiz = useCallback(() => {
     const qs = displayQuestions.map(shuffleQuestion);
     setQuestions(qs);
@@ -126,8 +118,6 @@ export default function LessonPage() {
     setSelected(null);
     setValidated(false);
     setCorrectCount(0);
-    setGastonMsg(t('reflechis'));
-    setGastonExpr('thinking');
     setPhase('quiz');
   }, [displayQuestions]);
 
@@ -141,11 +131,7 @@ export default function LessonPage() {
     recordQuestionReview(qId, isCorrect, timeSpent).catch(() => {});
     if (isCorrect) {
       setCorrectCount(c => c + 1);
-      setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
-      setGastonExpr('impressed');
     } else {
-      setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
-      setGastonExpr('unhappy');
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
     }
@@ -154,8 +140,6 @@ export default function LessonPage() {
   const nextQuestion = () => {
     setSelected(null);
     setValidated(false);
-    setGastonMsg(t('reflechis'));
-    setGastonExpr('thinking');
     questionStartRef.current = Date.now();
     if (currentQ + 1 < questions.length) {
       setCurrentQ(q => q + 1);
@@ -213,8 +197,6 @@ export default function LessonPage() {
     setSelected(null);
     setValidated(false);
     setCorrectCount(0);
-    setGastonMsg(t('reflechis'));
-    setGastonExpr('thinking');
     startTimeRef.current = Date.now();
     questionStartRef.current = Date.now();
     // Re-shuffle questions
@@ -307,205 +289,182 @@ export default function LessonPage() {
           .filter(s => s.length > 15)
           .slice(0, 3);
 
+    // ── Section style config ─────────────────────────────────────
+    type SectionStyle = { bg: string; border: string; labelColor: string };
+    function getSectionStyle(sec: { emoji: string; label: string }): SectionStyle {
+      const lbl = sec.label.toLowerCase();
+      const e = sec.emoji;
+      if (e === '📋' || lbl.includes('règle') || lbl.includes('rule')) return { bg: 'var(--bg-rule)', border: '#0b2659', labelColor: 'var(--text-navy)' };
+      if (e === '💡' || lbl.includes('pourquoi') || lbl.includes('why')) return { bg: 'var(--bg-why)', border: '#f59e0b', labelColor: '#b45309' };
+      if (e === '🚗' || lbl.includes('pratique') || lbl.includes('practice')) return { bg: 'var(--bg-prac)', border: '#22c55e', labelColor: '#166534' };
+      if (e === '📍' || lbl.includes('exemple') || lbl.includes('example')) return { bg: 'var(--bg-example)', border: '#0ea5e9', labelColor: '#0369a1' };
+      if (e === '⚠️' || lbl.includes('erreur') || lbl.includes('error')) return { bg: 'var(--bg-error-section)', border: '#ef4444', labelColor: '#b91c1c' };
+      return { bg: 'var(--bg-input)', border: 'var(--border-card)', labelColor: 'var(--text-hint)' };
+    }
+
     return (
-      <div style={{ minHeight: '100vh' }}>
-        {/* ── Sticky header ── */}
-        <div
-          className="sticky top-0 z-30 px-6 py-3"
-          style={{ background: 'var(--bg-blur)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-subtle)' }}
-        >
-          <div className="max-w-screen-xl mx-auto flex items-center gap-4">
-            <button
-              onClick={() => router.push('/app')}
-              className="w-9 h-9 rounded-full flex items-center justify-center press-scale"
-              style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}
-            >
-              ✕
-            </button>
-            <div className="flex-1 text-center">
-              <span className="text-sm font-bold">{currentPartieTitle || lesson.title}</span>
-            </div>
-            <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>
-              {t('carte')} {currentCard + 1}/{totalCards}
-            </span>
-          </div>
-        </div>
+      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', paddingBottom: 140 }}>
 
-
-        {/* ── 2-column layout ── */}
-        <div className="px-6 py-6">
-          <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6">
-
-            {/* ── Left: Theory card (60%) ── */}
-            <div className="flex-1 min-w-0 lg:flex-[3]">
-              <div
-                className="rounded-2xl p-4 lg:p-8 xl:p-10 slide-up"
+        {/* ── Sticky header ───────────────────────────────────────── */}
+        <div style={{
+          position: 'sticky', top: 0, zIndex: 30,
+          background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)',
+          padding: '12px 16px 12px',
+        }}>
+          <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+              <button
+                onClick={() => router.back()}
                 style={{
-                  background: 'var(--card-primary)',
-                  border: '1px solid var(--border-subtle)',
-                  overflow: 'hidden',
-                  wordBreak: 'break-word',
+                  width: 34, height: 34, borderRadius: 10, border: '1.5px solid var(--border-card)',
+                  background: 'var(--bg-card)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  cursor: 'pointer', flexShrink: 0,
                 }}
               >
-                {/* Theme badge */}
-                <div className="inline-block px-3 py-1.5 rounded-lg mb-4" style={{ background: 'var(--card-secondary)' }}>
-                  <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>{lesson.id}</span>
-                </div>
-
-                {/* Emoji icon */}
-                <div className="text-6xl mb-4">{card.emoji}</div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>{card.title}</h3>
-
-                {/* Image request — juste sous le titre */}
-                <ImageRequestButton id={`${lessonId}_c${currentCard}`} />
-
-                {/* Content — 5-section blocks or plain fallback */}
-                {contentSections ? (
-                  <div className="flex flex-col gap-5 mb-4">
-                    {contentSections.map((sec, i) => (
-                      <div key={i} className="rounded-xl px-5 py-4" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-subtle)' }}>
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-lg leading-none">{sec.emoji}</span>
-                          <span className="text-xs font-black uppercase tracking-widest" style={{ color: 'var(--brand)' }}>{sec.label}</span>
-                        </div>
-                        <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: 'var(--text-secondary)' }}>{sec.body}</p>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>{stripEmojis(card.content)}</p>
-                )}
-
-                {/* Signs */}
-                {card.signs && card.signs.length > 0 && (
-                  <div className="flex flex-wrap gap-3 mb-4">
-                    {card.signs.map(s => <SignImage key={s} code={s} size={64} />)}
-                  </div>
-                )}
-
-                {/* Separator */}
-                <div className="my-6" style={{ borderTop: '1px solid var(--border-subtle)' }} />
-
-                {/* "J'ai pas compris" button */}
-                {card.explanation_simple && (
-                  <div className="mb-6">
-                    <button
-                      onClick={() => setShowSimple(!showSimple)}
-                      className="rounded-xl px-5 py-2.5 text-sm font-bold press-scale flex items-center gap-2 transition-all"
-                      style={{
-                        background: 'transparent',
-                        border: '1.5px solid var(--error)',
-                        color: 'var(--error)',
-                      }}
-                      onMouseEnter={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.1)'; }}
-                      onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
-                    >
-                      <span>{'❓'}</span>
-                      {showSimple ? t('fermer_btn') : t('jai_pas_compris')}
-                    </button>
-                    {showSimple && (
-                      <div className="mt-3 rounded-xl p-4 slide-up" style={{ background: 'rgba(253,203,110,0.12)', border: '1px solid rgba(253,203,110,0.3)' }}>
-                        <p className="text-sm font-semibold leading-relaxed" style={{ color: '#FDCB6E' }}>{card.explanation_simple}</p>
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {/* Navigation buttons */}
-                <div className="flex gap-3 mb-20 lg:mb-0">
-                  {currentCard > 0 && (
-                    <button
-                      onClick={() => { setShowSimple(false); setCurrentCard(c => c - 1); }}
-                      className="h-14 px-6 rounded-xl font-bold text-sm press-scale"
-                      style={{ border: `2px solid ${color}`, color }}
-                    >
-                      {t('precedent')}
-                    </button>
-                  )}
-                  <button
-                    onClick={() => {
-                      setShowSimple(false);
-                      if (isLastCard) { startQuiz(); }
-                      else { setCurrentCard(c => c + 1); }
-                    }}
-                    className="flex-1 h-14 rounded-xl font-black text-base press-scale transition-all"
-                    style={{ background: 'var(--brand)', color: 'var(--bg-primary)', boxShadow: '0 4px 12px rgba(78,205,196,0.3)' }}
-                    onMouseEnter={e => { e.currentTarget.style.filter = 'brightness(1.1)'; }}
-                    onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; }}
-                  >
-                    {isLastCard ? t('commencer_quiz') : t('suivant')}
-                  </button>
-                </div>
-              </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+              <p style={{ flex: 1, margin: 0, fontSize: 13, fontWeight: 700, color: '#0d1b3e', textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                {currentPartieTitle || lesson.title}
+              </p>
+              <span style={{ fontSize: 12, fontWeight: 700, color: '#f59e0b', flexShrink: 0 }}>
+                {currentCard + 1}/{totalCards}
+              </span>
             </div>
-
-            {/* ── Right sidebar (40%) ── */}
-            <div className="hidden lg:block lg:flex-[2] lg:max-w-[280px] xl:max-w-[380px]">
-              <div className="lg:sticky lg:top-20 flex flex-col gap-5">
-
-                {/* Progress card */}
-                <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-                  <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('progression')}</h4>
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-2xl">{themeEmoji}</span>
-                    <div className="flex-1">
-                      <p className="text-sm font-bold">{lesson.title}</p>
-                      {partieInfo && !isPartieMode && (
-                        <p className="text-[11px] mt-0.5" style={{ color: 'var(--text-disabled)' }}>{partieInfo.partieTitle}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
-                      <div
-                        className="h-full rounded-full transition-all duration-500"
-                        style={{ width: `${progressPct}%`, background: 'var(--brand)' }}
-                      />
-                    </div>
-                    <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>{currentCard + 1}/{totalCards}</span>
-                  </div>
-                </div>
-
-                {/* Prof. Gaston */}
-                <div className="rounded-2xl p-5" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                  <Gaston
-                    message={gastonTheoryTip}
-                    expression="encouraging"
-                    title={t('prof_gaston')}
-                  />
-                </div>
-
-                {/* Key points */}
-                {keyPoints.length > 0 && (
-                  <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-                    <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('points_cles')}</h4>
-                    <div className="flex flex-col gap-2.5">
-                      {keyPoints.map((point, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <span className="text-xs mt-0.5" style={{ color: 'var(--brand)' }}>{'✓'}</span>
-                          <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{point}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Skip to quiz shortcut */}
-                <button
-                  onClick={startQuiz}
-                  className="w-full py-3 rounded-xl text-sm font-bold press-scale transition-all"
-                  style={{ background: 'transparent', border: '1.5px solid var(--brand)', color: 'var(--brand)' }}
-                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(78,205,196,0.1)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
-                >
-                  {t('passer_quiz')}
-                </button>
-              </div>
+            {/* Step progress dots */}
+            <div style={{ display: 'flex', gap: 4 }}>
+              {displayTheories.map((_, i) => (
+                <div
+                  key={i}
+                  style={{
+                    flex: 1, height: 4, borderRadius: 4,
+                    background: i <= currentCard ? '#0b2659' : '#e8eaed',
+                    transition: 'background 0.3s',
+                  }}
+                />
+              ))}
             </div>
           </div>
         </div>
+
+        {/* ── Card ────────────────────────────────────────────────── */}
+        <div style={{ maxWidth: 720, margin: '0 auto', padding: '16px 16px 0' }}>
+          <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 18, padding: '22px 20px', wordBreak: 'break-word' }}>
+
+            {/* Card header: emoji + title */}
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, marginBottom: 18 }}>
+              <div style={{ width: 48, height: 48, background: 'var(--bg-input)', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, flexShrink: 0 }}>
+                {card.emoji}
+              </div>
+              <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: 'var(--text-title)', lineHeight: 1.35 }}>
+                {card.title}
+              </h2>
+            </div>
+
+            {/* ImageRequestButton kept in place */}
+            <ImageRequestButton id={`${lessonId}_c${currentCard}`} />
+
+            {/* Content sections or plain text */}
+            {contentSections ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {contentSections.map((sec, i) => {
+                  const s = getSectionStyle(sec);
+                  return (
+                    <div key={i} style={{ background: s.bg, borderLeft: `4px solid ${s.border}`, borderRadius: '0 10px 10px 0', padding: '11px 14px' }}>
+                      <p style={{ margin: '0 0 5px', fontSize: 10, fontWeight: 700, letterSpacing: '1.1px', textTransform: 'uppercase', color: s.labelColor }}>
+                        {sec.emoji} {sec.label}
+                      </p>
+                      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.65, color: 'var(--text-sub)', whiteSpace: 'pre-line' }}>
+                        {sec.body}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, color: 'var(--text-sub)' }}>
+                {stripEmojis(card.content)}
+              </p>
+            )}
+
+            {/* Signs */}
+            {card.signs && card.signs.length > 0 && (
+              <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                {card.signs.map(s => <SignImage key={s} code={s} size={56} />)}
+              </div>
+            )}
+
+            {/* "J'ai pas compris" */}
+            {card.explanation_simple && (
+              <div style={{ marginTop: 16 }}>
+                <button
+                  onClick={() => setShowSimple(!showSimple)}
+                  className="press-scale"
+                  style={{
+                    background: 'transparent', border: '1.5px solid #ef4444', color: '#ef4444',
+                    borderRadius: 10, padding: '7px 14px', fontSize: 13, fontWeight: 600,
+                    cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, transition: 'none',
+                  }}
+                >
+                  <span>❓</span>
+                  {showSimple ? t('fermer_btn') : t('jai_pas_compris')}
+                </button>
+                {showSimple && (
+                  <div style={{ marginTop: 10, background: 'var(--bg-why)', borderLeft: '4px solid #f59e0b', borderRadius: '0 10px 10px 0', padding: '11px 14px' }}>
+                    <p style={{ margin: 0, fontSize: 13, color: '#92400e', lineHeight: 1.65 }}>{card.explanation_simple}</p>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Skip to quiz link */}
+          <div style={{ textAlign: 'center', marginTop: 14 }}>
+            <button
+              onClick={startQuiz}
+              style={{ background: 'transparent', border: 'none', fontSize: 12, fontWeight: 600, color: '#a0a8b8', cursor: 'pointer', textDecoration: 'underline' }}
+            >
+              {t('passer_quiz')}
+            </button>
+          </div>
+        </div>
+
+        {/* ── Fixed bottom navigation ──────────────────────────────── */}
+        <div style={{
+          position: 'fixed', bottom: 70, left: 0, right: 0,
+          padding: '0 16px', zIndex: 40, pointerEvents: 'none',
+        }}>
+          <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', gap: 10, pointerEvents: 'auto' }}>
+            {currentCard > 0 && (
+              <button
+                onClick={() => { setShowSimple(false); setCurrentCard(c => c - 1); }}
+                className="press-scale"
+                style={{
+                  height: 52, paddingLeft: 18, paddingRight: 18, borderRadius: 14,
+                  border: '1.5px solid var(--text-navy)', color: 'var(--text-navy)', background: 'var(--bg-card)',
+                  fontWeight: 700, fontSize: 14, cursor: 'pointer', flexShrink: 0,
+                  boxShadow: '0 2px 10px var(--pm-shadow)',
+                }}
+              >
+                ← {t('precedent')}
+              </button>
+            )}
+            <button
+              onClick={() => { setShowSimple(false); if (isLastCard) { startQuiz(); } else { setCurrentCard(c => c + 1); } }}
+              className="press-scale"
+              style={{
+                flex: 1, height: 52, borderRadius: 14, border: 'none',
+                background: '#0b2659', color: '#fff',
+                fontWeight: 700, fontSize: 15, cursor: 'pointer',
+                boxShadow: '0 4px 20px rgba(11,38,89,.30)',
+              }}
+            >
+              {isLastCard ? t('commencer_quiz') : `Continuer →`}
+            </button>
+          </div>
+        </div>
+
       </div>
     );
   }
@@ -606,11 +565,6 @@ export default function LessonPage() {
                   <p className="text-sm font-bold mt-1.5">{lesson.title}</p>
                 </div>
               </div>
-            </div>
-
-            {/* Gaston */}
-            <div className="rounded-2xl p-5" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-              <Gaston message={gastonMsg} expression={gastonExpr} title={t('prof_gaston')} />
             </div>
 
             {/* Explanation in sidebar after validation */}

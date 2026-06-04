@@ -12,8 +12,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [onboardingDone, setOnboardingDone] = useState<boolean | null>(null);
 
-  const isOnboardingPage = pathname === '/onboarding';
-  const isAuthPage = pathname === '/login' || pathname === '/register' || pathname === '/auth' || pathname === '/landing';
+  const isAuthPage = pathname === '/login' || pathname === '/register' || pathname === '/auth';
   const isAdminPage = pathname.startsWith('/admin');
 
   useEffect(() => {
@@ -42,16 +41,16 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (onboardingDone === null) return;
-    if (!onboardingDone && !isOnboardingPage && !isAuthPage && !isAdminPage) {
-      router.replace('/landing');
+    if (!onboardingDone && !isAuthPage && !isAdminPage) {
+      router.replace('/login');
     }
-  }, [onboardingDone, isOnboardingPage, isAuthPage, isAdminPage, router]);
+  }, [onboardingDone, isAuthPage, isAdminPage, router]);
 
   // Still loading — fond opaque pour éviter le FOUC
   if (onboardingDone === null) return <div style={{ background: 'var(--bg-primary)', width: '100vw', height: '100vh' }} />;
 
-  // Onboarding / auth / admin pages — no navbar, no margin
-  if (isOnboardingPage || isAuthPage || isAdminPage) {
+  // Auth / admin pages — no navbar, no margin
+  if (isAuthPage || isAdminPage) {
     return <>{children}</>;
   }
 
@@ -60,7 +59,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     <>
       <Navbar />
       <PremiumBanner />
-      <main className="pt-11 lg:pt-0 lg:ml-[250px] pb-20 lg:pb-6">
+      <main className="pt-11 lg:pt-16 lg:ml-[240px] pb-20 lg:pb-6">
         {children}
       </main>
       {/* Animations de récompense — persistantes entre navigations */}

@@ -4,10 +4,8 @@ import { useState, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getThemeDataLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
-import { GASTON_REVISION } from '@/locales/messages';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import QuizLayout from '@/components/QuizLayout';
-import Gaston from '@/components/Gaston';
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -42,18 +40,15 @@ export default function RevisionPage() {
   const [correctCount, setCorrectCount] = useState(0);
   const [done, setDone] = useState(false);
   const [shakeWrong, setShakeWrong] = useState(false);
-  const [gastonMsg, setGastonMsg] = useState(GASTON_REVISION[lang][0]);
 
   const validateSelected = useCallback(() => {
     if (selected === null || validated) return;
     setValidated(true);
     if (selected === questions[index].correct) {
       setCorrectCount(c => c + 1);
-      setGastonMsg(t('revision_bien_joue'));
     } else {
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
-      setGastonMsg(t('revision_pas_grave'));
     }
   }, [selected, validated, questions, index]);
 
@@ -66,7 +61,6 @@ export default function RevisionPage() {
     setSelected(null);
     setValidated(false);
     setShakeWrong(false);
-    setGastonMsg(GASTON_REVISION[lang][(index + 1) % GASTON_REVISION[lang].length]);
   }, [index, questions.length]);
 
   const restart = useCallback(() => {
@@ -188,10 +182,6 @@ export default function RevisionPage() {
             </div>
           </div>
 
-          {/* Gaston */}
-          <div className="rounded-2xl p-5" style={{ background: 'rgba(78,205,196,0.08)', border: '1px solid rgba(78,205,196,0.15)' }}>
-            <Gaston message={gastonMsg} expression={validated ? (selected === q.correct ? 'impressed' : 'unhappy') : 'encouraging'} size="small" title={t('prof_gaston')} />
-          </div>
         </>
       }
     />

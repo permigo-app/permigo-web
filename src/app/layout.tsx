@@ -26,6 +26,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
+        {/* Anti-flash: applique le thème avant tout rendu CSS */}
+        <script dangerouslySetInnerHTML={{ __html: `
+(function(){try{var t=localStorage.getItem('permigo_theme');if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'night':'day';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+        `}} />
         {/* Force-hide iubenda floating widget — links are in the footer */}
         <style>{`
           #iubenda-cs-banner, #iubenda-widget,
@@ -46,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>

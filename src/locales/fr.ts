@@ -1,8 +1,10 @@
 const fr: Record<string, string> = {
   // ── Navigation ──
   nav_accueil: 'Accueil',
+  nav_lecons: 'Leçons',
   nav_panneaux: 'Panneaux',
   nav_turbo: 'Réflexe',
+  nav_revisions: 'Révisions',
   nav_profil: 'Profil',
   nav_connexion: 'Connexion',
 
@@ -533,6 +535,54 @@ const fr: Record<string, string> = {
   badge_reviseur_desc: '50 révisions effectuées',
   badge_elephant_name: "Mémoire d'éléphant",
   badge_elephant_desc: '100 questions maîtrisées',
+
+  // ── Accueil ──
+  home_bonjour: 'Bonjour',
+  home_progression_globale: 'MA PROGRESSION GLOBALE',
+  home_lecons_terminees: 'leçons terminées',
+  home_en_cours: 'EN COURS',
+  home_reprendre: 'Reprendre →',
+  home_commencer_cta: 'Commencer →',
+  home_mes_stats: 'MES STATS',
+  tile_lecons_sub: '9 thèmes à maîtriser',
+  tile_reflexe_label: 'Réflexe',
+  tile_reflexe_sub: 'Questions chronométrées',
+  tile_examen_label: 'Examen blanc',
+  tile_examen_sub: '50 questions · format officiel',
+  tile_panneaux_sub: 'Reconnaissance des panneaux',
+  stat_lecons_label: 'Leçons',
+  stat_serie_label: 'Série',
+  stat_score_label: 'Score',
+  jour_abbr: 'j',
+
+  // ── Page /lecons ──
+  lecons_page_title: '9 thèmes à maîtriser',
+  lecons_done_of: 'leçons terminées sur',
+  lecons_a_etudier_sing: 'LEÇON À ÉTUDIER',
+  lecons_a_etudier_pl: 'LEÇONS À ÉTUDIER',
+  lecon_commencer_cta: 'Commencer la leçon',
+  lecon_reprendre_cta: 'Reprendre la leçon',
+
+  // ── Révisions du jour (accueil) ──
+  reviews_due_eyebrow: 'RÉVISIONS DU JOUR',
+  reviews_due_count_sing: 'question à revoir',
+  reviews_due_count_pl: 'questions à revoir',
+  reviews_due_sub: 'Questions ratées lors de vos dernières sessions',
+  reviews_due_btn: 'Réviser →',
+
+  // ── Leçons / thème ──
+  tool_flashcards: 'Flashcards',
+  tool_revision: 'Révision',
+  theme_separator: 'Fin du thème',
+  theme_exam_eyebrow: 'EXAMEN DU THÈME',
+  theme_exam_validate: 'Valider le Thème',
+  theme_exam_sub: '50 questions · Format officiel',
+  theme_exam_passed: '✓ Réussi',
+  lecon_terminee: 'Terminée ✓',
+  lecon_en_cours_badge: 'En cours',
+  lecon_a_faire: 'À faire',
+  theme_finished_title: 'Thème terminé !',
+  theme_finished_sub: 'Tu as complété toutes les leçons de ce thème.',
 
   // ── Général ──
   chargement: 'Chargement...',

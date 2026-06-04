@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { getLessonDataLocalized, getThemeForLessonLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
-import { GASTON_CORRECT, GASTON_WRONG, getRandomMsg } from '@/locales/messages';
 import { isPremium, isThemeFree } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
 import { setStars, updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
@@ -13,7 +12,6 @@ import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { recordQuestionReview } from '@/lib/reviewApi';
 import QuizLayout from '@/components/QuizLayout';
-import Gaston from '@/components/Gaston';
 
 export default function QuizPage() {
   const params = useParams();
@@ -26,8 +24,6 @@ export default function QuizPage() {
   const [selected, setSelected] = useState<number | null>(null);
   const [validated, setValidated] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
-  const [gastonMsg, setGastonMsg] = useState('');
-  const [gastonExpr, setGastonExpr] = useState<'happy' | 'impressed' | 'unhappy' | 'thinking'>('thinking');
   const [themeCode, setThemeCode] = useState('A');
   const [shakeWrong, setShakeWrong] = useState(false);
   const startTimeRef = useRef(Date.now());
@@ -53,11 +49,7 @@ export default function QuizPage() {
     recordQuestionReview(qId, isCorrect, timeSpent).catch(() => {});
     if (isCorrect) {
       setCorrectCount(c => c + 1);
-      setGastonMsg(getRandomMsg(GASTON_CORRECT[lang]));
-      setGastonExpr('impressed');
     } else {
-      setGastonMsg(getRandomMsg(GASTON_WRONG[lang]));
-      setGastonExpr('unhappy');
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
     }
@@ -66,8 +58,6 @@ export default function QuizPage() {
   const nextQuestion = () => {
     setSelected(null);
     setValidated(false);
-    setGastonMsg(t('reflechis'));
-    setGastonExpr('thinking');
     questionStartRef.current = Date.now();
     if (currentQ + 1 < questions.length) { setCurrentQ(q => q + 1); }
     else {
@@ -161,11 +151,6 @@ export default function QuizPage() {
                 Thème {themeCode} — {lessonId}
               </span>
             </div>
-          </div>
-
-          {/* Gaston */}
-          <div className="rounded-2xl p-5" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-            <Gaston message={gastonMsg || t('reflechis')} expression={gastonExpr} title={t('prof_gaston')} />
           </div>
 
           {/* Explanation in sidebar after validation */}

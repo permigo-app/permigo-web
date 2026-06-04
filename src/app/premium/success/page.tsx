@@ -4,8 +4,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLang } from '@/contexts/LanguageContext';
 import { setPremium } from '@/lib/premium';
-import Gaston from '@/components/Gaston';
-
 export default function PremiumSuccessPage() {
   const { t } = useLang();
   const router = useRouter();
@@ -17,11 +15,6 @@ export default function PremiumSuccessPage() {
   return (
     <div className="min-h-screen bg-[#0f172a] flex items-center justify-center p-4">
       <div className="max-w-md w-full text-center">
-        {/* Gaston */}
-        <div className="flex justify-center mb-6">
-          <Gaston expression="happy" />
-        </div>
-
         {/* Card */}
         <div className="bg-[#1e293b] rounded-2xl p-8 border border-cyan-500/30 shadow-lg shadow-cyan-500/10">
           <h1 className="text-2xl font-bold text-white mb-4">

@@ -1,8 +1,10 @@
 const nl: Record<string, string> = {
   // ── Navigation ──
   nav_accueil: 'Startpagina',
+  nav_lecons: 'Lessen',
   nav_panneaux: 'Verkeersborden',
   nav_turbo: 'Reflex',
+  nav_revisions: 'Herhalingen',
   nav_profil: 'Profiel',
   nav_connexion: 'Inloggen',
 
@@ -533,6 +535,54 @@ const nl: Record<string, string> = {
   badge_reviseur_desc: '50 herhalingen gedaan',
   badge_elephant_name: 'Olifantengeheugen',
   badge_elephant_desc: '100 vragen beheerst',
+
+  // ── Startpagina ──
+  home_bonjour: 'Hallo',
+  home_progression_globale: 'MIJN GLOBALE VOORTGANG',
+  home_lecons_terminees: 'lessen voltooid',
+  home_en_cours: 'BEZIG',
+  home_reprendre: 'Verdergaan →',
+  home_commencer_cta: 'Beginnen →',
+  home_mes_stats: 'MIJN STATS',
+  tile_lecons_sub: "9 thema's te beheersen",
+  tile_reflexe_label: 'Reflex',
+  tile_reflexe_sub: 'Vragen op tijd',
+  tile_examen_label: 'Proefexamen',
+  tile_examen_sub: '50 vragen · officieel formaat',
+  tile_panneaux_sub: 'Verkeersborden herkennen',
+  stat_lecons_label: 'Lessen',
+  stat_serie_label: 'Reeks',
+  stat_score_label: 'Score',
+  jour_abbr: 'd',
+
+  // ── Pagina /lecons ──
+  lecons_page_title: "9 thema's te beheersen",
+  lecons_done_of: 'lessen voltooid van',
+  lecons_a_etudier_sing: 'LES TE STUDEREN',
+  lecons_a_etudier_pl: 'LESSEN TE STUDEREN',
+  lecon_commencer_cta: 'Les beginnen',
+  lecon_reprendre_cta: 'Les hervatten',
+
+  // ── Révisions du jour (startpagina) ──
+  reviews_due_eyebrow: 'HERHALINGEN VANDAAG',
+  reviews_due_count_sing: 'vraag te herhalen',
+  reviews_due_count_pl: 'vragen te herhalen',
+  reviews_due_sub: 'Vragen die je fout had tijdens je laatste sessies',
+  reviews_due_btn: 'Herhalen →',
+
+  // ── Lessen / thema ──
+  tool_flashcards: 'Flashkaarten',
+  tool_revision: 'Herhaling',
+  theme_separator: 'Einde thema',
+  theme_exam_eyebrow: 'THEMA-EXAMEN',
+  theme_exam_validate: 'Thema valideren',
+  theme_exam_sub: '50 vragen · Officieel formaat',
+  theme_exam_passed: '✓ Geslaagd',
+  lecon_terminee: 'Voltooid ✓',
+  lecon_en_cours_badge: 'Bezig',
+  lecon_a_faire: 'Te doen',
+  theme_finished_title: 'Thema voltooid!',
+  theme_finished_sub: 'Je hebt alle lessen van dit thema voltooid.',
 
   // ── Général ──
   chargement: 'Laden...',

@@ -6,6 +6,7 @@ export interface SupabaseProfile {
   id: string;
   username: string;
   email: string;
+  design_update_seen?: boolean;
   display_name: string | null;
   avatar_url: string | null;
   invite_code: string | null;
@@ -94,6 +95,7 @@ export async function createUserProfile(params: {
     await supabase.from('profiles').upsert({
       id: params.uid,
       username: params.name,
+      design_update_seen: true,
       updated_at: new Date().toISOString(),
     });
 
