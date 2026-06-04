@@ -12,6 +12,7 @@ import {
   isLessonCompleted, getLessonProgress, getQuizHistory,
 } from '@/lib/progressStorage';
 import { fetchDueReviews } from '@/lib/reviewApi';
+import { dispatchStreak } from '@/lib/rewardEvents';
 import ProgressBar from '@/components/ui/ProgressBar';
 
 // ── helpers ──────────────────────────────────────────────────────
@@ -99,7 +100,14 @@ export default function HomePage() {
   const [dueCount, setDueCount] = useState(0);
 
   useEffect(() => {
-    checkAndUpdateStreak();
+    const before = getStreakData();
+    const today = new Date().toISOString().slice(0, 10);
+    const isNewDay = !!before.lastActiveDate && before.lastActiveDate !== today;
+    const updated = checkAndUpdateStreak();
+    if (isNewDay) {
+      const isReset = updated.currentStreak === 1 && before.currentStreak > 1;
+      dispatchStreak(updated.currentStreak, isReset);
+    }
     setStats(buildStats());
     fetchDueReviews().then(records => setDueCount(records.length));
   }, []);
@@ -258,7 +266,7 @@ export default function HomePage() {
                       {THEME_CITIES[stats.activeLesson.themeCode] || stats.activeLesson.themeCode}
                     </p>
                     <p style={{ margin: '3px 0 0', fontSize: 14, fontWeight: 700, color: 'var(--text-title)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                      {stats.activeLesson.lessonTitle}
+                      {t('lesson_title_' + stats.activeLesson.lessonId)}
                     </p>
                   </div>
                   <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--text-navy)', flexShrink: 0 }}>{stats.activeLesson.pct}%</span>

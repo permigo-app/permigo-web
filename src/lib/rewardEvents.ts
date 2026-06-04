@@ -17,3 +17,10 @@ export function dispatchBadges(badgeIds: string[], delay = 1400) {
     new CustomEvent('permigo_badges', { detail: { badgeIds, delay } })
   );
 }
+
+export function dispatchStreak(streak: number, isReset: boolean, delay = 800) {
+  if (typeof window === 'undefined') return;
+  window.dispatchEvent(
+    new CustomEvent('permigo_streak', { detail: { streak, isReset, delay } })
+  );
+}

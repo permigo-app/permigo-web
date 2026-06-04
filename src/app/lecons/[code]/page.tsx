@@ -154,7 +154,7 @@ export default function ThemeDetailPage() {
                 {/* Content */}
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: 'var(--text-title)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                    {lesson.title}
+                    {t('lesson_title_' + lesson.id)}
                   </p>
                   {lesson.status === 'active' && lesson.pct > 0 && (
                     <div style={{ marginTop: 6 }}>

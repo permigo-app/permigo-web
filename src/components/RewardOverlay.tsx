@@ -19,12 +19,15 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import LevelUpCelebration from './LevelUpCelebration';
 import BadgeUnlockModal from './BadgeUnlockModal';
+import StreakCelebration from './StreakCelebration';
 
 interface LevelUpItem  { prevLevel: number; newLevel: number; }
 interface BadgeItem    { badgeId: string; isFirst: boolean; }
+interface StreakItem   { streak: number; isReset: boolean; }
 type QueueItem =
   | { type: 'levelup'; data: LevelUpItem }
-  | { type: 'badge';   data: BadgeItem };
+  | { type: 'badge';   data: BadgeItem }
+  | { type: 'streak';  data: StreakItem };
 
 export default function RewardOverlay() {
   const [queue,   setQueue]   = useState<QueueItem[]>([]);
@@ -95,15 +98,22 @@ export default function RewardOverlay() {
         const isFirst    = seenBefore === 0;
         markBadgeSeen(id);
         enqueue({ type: 'badge', data: { badgeId: id, isFirst } }, extraDelay);
-        extraDelay += 200; // badges multiples légèrement décalés dans la file
+        extraDelay += 200;
       }
+    };
+
+    const onStreak = (e: Event) => {
+      const { streak, isReset, delay = 800 } = (e as CustomEvent).detail as { streak: number; isReset: boolean; delay?: number };
+      enqueue({ type: 'streak', data: { streak, isReset } }, delay);
     };
 
     window.addEventListener('permigo_levelup', onLevelUp);
     window.addEventListener('permigo_badges',  onBadges);
+    window.addEventListener('permigo_streak',  onStreak);
     return () => {
       window.removeEventListener('permigo_levelup', onLevelUp);
       window.removeEventListener('permigo_badges',  onBadges);
+      window.removeEventListener('permigo_streak',  onStreak);
     };
   }, [enqueue]);
 
@@ -168,6 +178,16 @@ export default function RewardOverlay() {
       <LevelUpCelebration
         prevLevel={current.data.prevLevel}
         newLevel={current.data.newLevel}
+        onClose={advance}
+      />
+    );
+  }
+
+  if (current.type === 'streak') {
+    return (
+      <StreakCelebration
+        streak={current.data.streak}
+        isReset={current.data.isReset}
         onClose={advance}
       />
     );
