@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getThemeDataLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
@@ -16,7 +16,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-export default function RevisionPage() {
+function RevisionContent() {
   const params = useSearchParams();
   const router = useRouter();
   const { t, lang } = useLang();
@@ -80,8 +80,8 @@ export default function RevisionPage() {
   if (!themeData || questions.length === 0) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4">
-        <p style={{ color: '#8B9DC3' }}>{t('revision_aucune')}</p>
-        <button onClick={() => router.back()} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: '#16213E' }}>
+        <p style={{ color: 'var(--text-sub)' }}>{t('revision_aucune')}</p>
+        <button onClick={() => router.back()} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: 'var(--bg-card)' }}>
           {t('flash_retour')}
         </button>
       </div>
@@ -104,29 +104,29 @@ export default function RevisionPage() {
       <div className="min-h-screen flex flex-col items-center justify-center px-8 gap-4">
         <span className="text-[72px]">{emoji}</span>
         <h1 className="text-[48px] font-black">{pct}%</h1>
-        <p className="text-center" style={{ color: '#8B9DC3' }}>{msg}</p>
+        <p className="text-center" style={{ color: 'var(--text-sub)' }}>{msg}</p>
 
-        <div className="w-full max-w-md flex items-center justify-around rounded-2xl p-5 my-2" style={{ background: '#16213E' }}>
+        <div className="w-full max-w-md flex items-center justify-around rounded-2xl p-5 my-2" style={{ background: 'var(--bg-card)' }}>
           <div className="text-center">
             <p className="text-[28px] font-black" style={{ color: '#2ecc71' }}>{correctCount}</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>{t('revision_correctes')}</p>
+            <p className="text-xs" style={{ color: 'var(--text-sub)' }}>{t('revision_correctes')}</p>
           </div>
-          <div className="w-[1px] h-10" style={{ background: '#2A3550' }} />
+          <div className="w-[1px] h-10" style={{ background: 'var(--bg-input)' }} />
           <div className="text-center">
             <p className="text-[28px] font-black" style={{ color: '#e74c3c' }}>{questions.length - correctCount}</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>{t('revision_incorrectes')}</p>
+            <p className="text-xs" style={{ color: 'var(--text-sub)' }}>{t('revision_incorrectes')}</p>
           </div>
-          <div className="w-[1px] h-10" style={{ background: '#2A3550' }} />
+          <div className="w-[1px] h-10" style={{ background: 'var(--bg-input)' }} />
           <div className="text-center">
             <p className="text-[28px] font-black">{questions.length}</p>
-            <p className="text-xs" style={{ color: '#8B9DC3' }}>{t('revision_total')}</p>
+            <p className="text-xs" style={{ color: 'var(--text-sub)' }}>{t('revision_total')}</p>
           </div>
         </div>
 
         <button onClick={() => router.back()} className="w-full max-w-md h-[54px] rounded-2xl font-bold text-white press-scale" style={{ background: themeColor }}>
           {t('revision_retour_carte')}
         </button>
-        <button onClick={restart} className="w-full max-w-md h-[54px] rounded-2xl font-bold press-scale" style={{ background: '#16213E', border: '1px solid #2A3550', color: themeColor }}>
+        <button onClick={restart} className="w-full max-w-md h-[54px] rounded-2xl font-bold press-scale" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)', color: themeColor }}>
           {t('revision_recommencer')}
         </button>
       </div>
@@ -141,7 +141,7 @@ export default function RevisionPage() {
       progress={progress}
       progressLabel={`${index + 1}/${questions.length}`}
       headerLeft={
-        <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: '#8B9DC3' }}>
+        <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--text-sub)' }}>
           {'←'}
         </button>
       }
@@ -165,14 +165,14 @@ export default function RevisionPage() {
       sidebar={
         <>
           {/* Question info */}
-          <div className="rounded-2xl p-5" style={{ background: '#16213E', border: '1px solid #2A3550' }}>
+          <div className="rounded-2xl p-5" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)' }}>
             <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#4ecdc4' }}>{t('revision_progression')}</h4>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('revision_question')}</span>
+              <span className="text-sm" style={{ color: 'var(--text-sub)' }}>{t('revision_question')}</span>
               <span className="text-sm font-bold">{index + 1} / {questions.length}</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm" style={{ color: '#8B9DC3' }}>{t('revision_correctes')}</span>
+              <span className="text-sm" style={{ color: 'var(--text-sub)' }}>{t('revision_correctes')}</span>
               <span className="text-sm font-bold" style={{ color: '#2ecc71' }}>{correctCount}</span>
             </div>
             <div className="mt-3">
@@ -185,5 +185,17 @@ export default function RevisionPage() {
         </>
       }
     />
+  );
+}
+
+export default function RevisionPage() {
+  return (
+    <Suspense fallback={
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', color: 'var(--text-hint)', fontFamily: "'Sora',sans-serif", fontSize: 14 }}>
+        Chargement...
+      </div>
+    }>
+      <RevisionContent />
+    </Suspense>
   );
 }

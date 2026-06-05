@@ -110,7 +110,7 @@ export default function BadgeUnlockModal({ badgeId, isFirst, onClose }: Props) {
     <div
       onClick={handleClose}
       style={{
-        position: 'fixed', inset: 0, zIndex: 9200,
+        position: 'fixed', inset: 0, zIndex: 9300,
         display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24,
         background: 'rgba(5, 8, 28, 0.9)',
         backdropFilter: 'blur(10px)',

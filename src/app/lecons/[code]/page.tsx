@@ -106,7 +106,7 @@ export default function ThemeDetailPage() {
             <span className="tool-icon">🃏</span>
             <span className="tool-label">{t('tool_flashcards')}</span>
           </Link>
-          <Link href={`/revision?theme=${code}`} className="tool-btn">
+          <Link href={`/revisions?theme=${code}`} className="tool-btn">
             <span className="tool-icon">🔄</span>
             <span className="tool-label">{t('tool_revision')}</span>
           </Link>

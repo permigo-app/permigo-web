@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getThemeDataLocalized, type LocalTheoryCard } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
@@ -34,7 +34,7 @@ function saveMastered(themeCode: string, uids: string[]) {
 }
 
 
-export default function FlashPage() {
+function FlashContent() {
   const params = useSearchParams();
   const router = useRouter();
   const { t, lang } = useLang();
@@ -516,5 +516,17 @@ export default function FlashPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function FlashPage() {
+  return (
+    <Suspense fallback={
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', color: 'var(--text-hint)', fontFamily: "'Sora',sans-serif", fontSize: 14 }}>
+        Chargement...
+      </div>
+    }>
+      <FlashContent />
+    </Suspense>
   );
 }

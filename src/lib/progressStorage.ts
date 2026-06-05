@@ -43,8 +43,17 @@ export function getAllStars(): Record<string, number> {
 
 // ── Unlocked themes ──
 export function getUnlockedThemes(): string[] {
-  // All themes unlocked by default on web
-  return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+  try {
+    const stored = getItem(KEY_THEMES);
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+    }
+    // Par défaut : tous les thèmes débloqués (version web gratuite)
+    return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+  } catch {
+    return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+  }
 }
 
 export function unlockTheme(themeCode: string): void {
@@ -111,8 +120,13 @@ export function getStreakData(): StreakData {
 
 export function checkAndUpdateStreak(): StreakData {
   const data = getStreakData();
-  // No prior activity recorded → guest or fresh install; don't auto-start a streak
-  if (!data.lastActiveDate) return data;
+  // No prior activity — initialise le streak au premier passage
+  if (!data.lastActiveDate) {
+    const today = new Date().toISOString().split('T')[0];
+    const fresh = { ...data, lastActiveDate: today, currentStreak: 1, bestStreak: Math.max(1, data.bestStreak || 0) };
+    setItem(KEY_STREAK, JSON.stringify(fresh));
+    return fresh;
+  }
   const today = new Date().toISOString().slice(0, 10);
   const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
   let { currentStreak, bestStreak } = data;

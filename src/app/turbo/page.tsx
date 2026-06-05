@@ -5,6 +5,7 @@ import { getAllQuestionsLocalized, shuffleChoices, type LocalQuestion } from '@/
 import { useLang } from '@/contexts/LanguageContext';
 import { getUnlockedBadges } from '@/lib/badges';
 import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
+import { useStreakCelebration } from '@/hooks/useStreakCelebration';
 import {
   updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime,
   setSurvivalBest, getSurvivalBest,
@@ -49,6 +50,7 @@ function formatDate(iso: string) {
 }
 
 export default function TurboPage() {
+  useStreakCelebration();
   const { t, lang } = useLang();
   const [mode, setMode] = useState<Mode>(null);
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
@@ -120,7 +122,7 @@ export default function TurboPage() {
     localStorage.removeItem('turbo_active');
     setGameOver(true);
     const prevBadges = getUnlockedBadges();
-    updateQuizHistory(correctCount, currentQ);
+    updateQuizHistory(correctCount, currentQ + 1);
     checkAndUpdateStreak();
     const xpResult = updateXP(correctCount * 10);
     const newBadges = getUnlockedBadges().filter(id => !prevBadges.includes(id));
@@ -278,11 +280,11 @@ export default function TurboPage() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
             <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
               <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Record du jour</p>
-              <p style={{ margin: '6px 0 0', fontSize: 28, fontWeight: 800, color: '#0b2659' }}>{todayBest || '—'}</p>
+              <p style={{ margin: '6px 0 0', fontSize: 28, fontWeight: 800, color: 'var(--text-navy)' }}>{todayBest || '—'}</p>
             </div>
             <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
               <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Meilleur absolu</p>
-              <p style={{ margin: '6px 0 0', fontSize: 28, fontWeight: 800, color: '#0b2659' }}>{mBest || '—'}</p>
+              <p style={{ margin: '6px 0 0', fontSize: 28, fontWeight: 800, color: 'var(--text-navy)' }}>{mBest || '—'}</p>
             </div>
           </div>
 

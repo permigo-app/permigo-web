@@ -164,7 +164,7 @@ export default function StreakCelebration({ streak, isReset, onClose }: Props) {
       style={{
         position: 'fixed',
         inset: 0,
-        zIndex: 9000,
+        zIndex: 9100,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

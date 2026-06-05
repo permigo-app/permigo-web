@@ -65,8 +65,15 @@ const DESKTOP_EXTRA = [
 
 // Active-state helper — /lecon/* highlights the Leçons item
 function isNavActive(href: string, pathname: string): boolean {
-  if (href === '/app') return pathname === '/app';
-  if (href === '/lecons') return pathname.startsWith('/lecons') || pathname.startsWith('/lecon/');
+  if (href === '/app') return pathname === '/app' || pathname.startsWith('/turbo');
+  if (href === '/lecons') return (
+    pathname.startsWith('/lecons') ||
+    pathname.startsWith('/lecon/') ||
+    pathname.startsWith('/flash') ||
+    pathname.startsWith('/revision') ||
+    pathname.startsWith('/revisions') ||
+    pathname.startsWith('/resultats')
+  );
   return pathname.startsWith(href);
 }
 

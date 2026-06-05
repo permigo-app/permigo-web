@@ -1,9 +1,11 @@
 export default function sitemap() {
+  const base = 'https://mypermigo.be';
   return [
-    { url: 'https://mypermigo.be', lastModified: new Date() },
-    { url: 'https://mypermigo.be/landing', lastModified: new Date() },
-    { url: 'https://mypermigo.be/premium', lastModified: new Date() },
-    { url: 'https://mypermigo.be/privacy', lastModified: new Date() },
-    { url: 'https://mypermigo.be/terms', lastModified: new Date() },
+    { url: base, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 1.0 },
+    { url: `${base}/register`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${base}/login`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${base}/premium`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${base}/privacy`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${base}/terms`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.3 },
   ];
 }

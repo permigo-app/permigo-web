@@ -131,7 +131,7 @@ export default function LevelUpCelebration({ prevLevel, newLevel, onClose }: Pro
     <div
       onClick={handleClose}
       style={{
-        position: 'fixed', inset: 0, zIndex: 9100,
+        position: 'fixed', inset: 0, zIndex: 9200,
         display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24,
         background: 'rgba(5, 8, 28, 0.9)',
         backdropFilter: 'blur(10px)',

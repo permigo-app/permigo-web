@@ -260,7 +260,7 @@ function ExamContent() {
       { label: 'Format', value: 'Officiel' },
     ];
     return (
-      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', padding: '0 0 32px' }}>
+      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', padding: '0 0 calc(58px + env(safe-area-inset-bottom) + 24px)' }}>
 
         {/* Navy hero card */}
         <div style={{ background: '#0b2659', padding: '52px 20px 28px' }}>

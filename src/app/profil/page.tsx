@@ -227,12 +227,12 @@ export default function ProfilePage() {
   );
 
   return (
-    <div style={{ background: '#f0f2f5', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
+    <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
 
       {/* Page header */}
-      <div style={{ background: '#ffffff', borderBottom: '1px solid #e8eaed', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
-        <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: '#a0a8b8' }}>Compte</p>
-        <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: '#0d1b3e', letterSpacing: -0.5 }}>Mon profil</h1>
+      <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
+        <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Compte</p>
+        <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>Mon profil</h1>
       </div>
 
       <div className="py-6 px-4">

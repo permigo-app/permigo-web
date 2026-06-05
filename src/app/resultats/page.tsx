@@ -37,7 +37,7 @@ function ResultsContent() {
   const scoreColor = passed ? '#00B894' : '#FFD700';
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-8" style={{ background: '#0a0e2a', minHeight: '100vh' }}>
+    <div className="max-w-lg mx-auto px-4 py-8" style={{ background: 'var(--bg-page)', minHeight: '100vh' }}>
       {/* Confetti on pass */}
       {passed && (
         <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
@@ -91,7 +91,7 @@ function ResultsContent() {
           style={{ border: `5px solid ${scoreColor}`, background: scoreColor + '15' }}
         >
           <span className="text-[42px] font-black">{pct}%</span>
-          <span className="text-sm" style={{ color: '#8B9DC3' }}>{correct}/{total}</span>
+          <span className="text-sm" style={{ color: 'var(--text-hint)' }}>{correct}/{total}</span>
         </div>
       </div>
 
@@ -103,20 +103,20 @@ function ResultsContent() {
       </div>
 
       {/* Stats row with dividers */}
-      <div className="flex items-center justify-around mb-8 py-4 slide-up" style={{ borderTop: '1px solid #2A3550', borderBottom: '1px solid #2A3550', animationDelay: '350ms' }}>
+      <div className="flex items-center justify-around mb-8 py-4 slide-up" style={{ borderTop: '1px solid var(--border-row)', borderBottom: '1px solid var(--border-row)', animationDelay: '350ms' }}>
         <div className="text-center">
           <span className="text-[28px] font-black block" style={{ color: '#00B894' }}>{correct}</span>
-          <span className="text-xs" style={{ color: '#5A6B8A' }}>{t('resultats_correct')}</span>
+          <span className="text-xs" style={{ color: 'var(--text-hint)' }}>{t('resultats_correct')}</span>
         </div>
-        <div className="w-[1px] h-10" style={{ background: '#2A3550' }} />
+        <div className="w-[1px] h-10" style={{ background: 'var(--border-row)' }} />
         <div className="text-center">
           <span className="text-[28px] font-black block" style={{ color: '#FF6B6B' }}>{total - correct}</span>
-          <span className="text-xs" style={{ color: '#5A6B8A' }}>{t('resultats_erreurs')}</span>
+          <span className="text-xs" style={{ color: 'var(--text-hint)' }}>{t('resultats_erreurs')}</span>
         </div>
-        <div className="w-[1px] h-10" style={{ background: '#2A3550' }} />
+        <div className="w-[1px] h-10" style={{ background: 'var(--border-row)' }} />
         <div className="text-center">
           <span className="text-[28px] font-black block" style={{ color: scoreColor }}>{pct}%</span>
-          <span className="text-xs" style={{ color: '#5A6B8A' }}>{t('resultats_score')}</span>
+          <span className="text-xs" style={{ color: 'var(--text-hint)' }}>{t('resultats_score')}</span>
         </div>
       </div>
 
@@ -126,7 +126,7 @@ function ResultsContent() {
           <button
             onClick={() => router.push(`/lecon/${lessonId}`)}
             className="w-full py-4 rounded-3xl font-black text-sm press-scale btn-glow-teal"
-            style={{ background: '#16213E', border: '1px solid #2A3550' }}
+            style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)' }}
           >
             {t('resultats_reessayer')}
           </button>
@@ -145,7 +145,7 @@ function ResultsContent() {
 
 export default function ResultsPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen" style={{ background: '#0a0e2a' }} />}>
+    <Suspense fallback={<div className="min-h-screen" style={{ background: 'var(--bg-page)' }} />}>
       <ResultsContent />
     </Suspense>
   );

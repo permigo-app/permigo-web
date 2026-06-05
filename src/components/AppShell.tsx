@@ -12,10 +12,11 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [onboardingDone, setOnboardingDone] = useState<boolean | null>(null);
 
-  const isAuthPage = pathname === '/login' || pathname === '/register' || pathname === '/auth';
+  const isPublicPage = pathname === '/' || pathname === '/login' || pathname === '/register' || pathname === '/auth';
   const isAdminPage = pathname.startsWith('/admin');
 
   useEffect(() => {
+    if (isPublicPage) return;
     const localDone = localStorage.getItem('@onboarding_done') === 'true';
     if (localDone) {
       setOnboardingDone(true);
@@ -37,20 +38,20 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     } else {
       setOnboardingDone(false);
     }
-  }, [pathname]);
+  }, [pathname, isPublicPage]);
 
   useEffect(() => {
     if (onboardingDone === null) return;
-    if (!onboardingDone && !isAuthPage && !isAdminPage) {
+    if (!onboardingDone && !isPublicPage && !isAdminPage) {
       router.replace('/login');
     }
-  }, [onboardingDone, isAuthPage, isAdminPage, router]);
+  }, [onboardingDone, isPublicPage, isAdminPage, router]);
 
   // Still loading — fond opaque pour éviter le FOUC
-  if (onboardingDone === null) return <div style={{ background: 'var(--bg-primary)', width: '100vw', height: '100vh' }} />;
+  if (onboardingDone === null && !isPublicPage && !isAdminPage) return <div style={{ background: 'var(--bg-primary)', width: '100vw', height: '100vh' }} />;
 
-  // Auth / admin pages — no navbar, no margin
-  if (isAuthPage || isAdminPage) {
+  // Public / admin pages — no navbar, no margin
+  if (isPublicPage || isAdminPage) {
     return <>{children}</>;
   }
 

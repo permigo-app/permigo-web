@@ -8,6 +8,7 @@ import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCa
 import { recordQuestionReview } from '@/lib/reviewApi';
 import { getUnlockedBadges } from '@/lib/badges';
 import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
+import { useStreakCelebration } from '@/hooks/useStreakCelebration';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { isPremium, isThemeFree } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
@@ -47,6 +48,7 @@ function shuffleQuestion(q: LocalQuestion) {
 
 
 export default function LessonPage() {
+  useStreakCelebration();
   const params = useParams();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -325,7 +327,7 @@ export default function LessonPage() {
                   <polyline points="15 18 9 12 15 6" />
                 </svg>
               </button>
-              <p style={{ flex: 1, margin: 0, fontSize: 13, fontWeight: 700, color: '#0d1b3e', textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+              <p style={{ flex: 1, margin: 0, fontSize: 13, fontWeight: 700, color: 'var(--text-title)', textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                 {currentPartieTitle || lesson.title}
               </p>
               <span style={{ fontSize: 12, fontWeight: 700, color: '#f59e0b', flexShrink: 0 }}>
@@ -492,7 +494,7 @@ export default function LessonPage() {
               🔄 Réessayer
             </button>
             <button
-              onClick={() => router.push('/app')}
+              onClick={() => router.back()}
               className="w-full py-3 rounded-2xl font-bold text-sm press-scale"
               style={{ background: 'transparent', border: '1.5px solid var(--border-subtle)', color: 'var(--text-secondary)' }}
             >
@@ -514,7 +516,7 @@ export default function LessonPage() {
         progress={pctDone}
         progressLabel={`${currentQ + 1}/${questions.length}`}
         headerLeft={
-          <button onClick={() => router.push('/app')} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
+          <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
             {'✕'}
           </button>
         }

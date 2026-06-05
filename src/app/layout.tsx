@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Sora } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
@@ -8,23 +9,42 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 
+const sora = Sora({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-sora',
+});
+
 export const metadata: Metadata = {
-  title: 'MyPermiGo — Permis Théorique Belge en Mode Jeu',
-  description: 'Prépare ton examen théorique belge avec 2286 questions officielles. Gamifié, interactif, FR + NL. Essai gratuit 7 jours.',
-  keywords: 'permis belge, code de la route belgique, examen théorique belgique',
+  title: {
+    default: 'MyPermiGo — Permis Théorique Belge Gratuit',
+    template: '%s | MyPermiGo',
+  },
+  description: 'MyPermiGo : prépare ton permis théorique belge gratuitement. 2286 questions officielles, mode Turbo, examen blanc, panneaux. FR et NL.',
+  keywords: 'mypermigo, permis théorique belge, code de la route belgique, examen théorique permis, questions permis belge, rijbewijs theorie belgie',
+  metadataBase: new URL('https://mypermigo.be'),
   openGraph: {
     title: 'MyPermiGo — Permis Théorique Belge',
-    description: "Prépare ton permis belge en t'amusant. 2286 questions officielles.",
+    description: 'Prépare ton permis belge gratuitement. 2286 questions officielles, gamifié, FR + NL.',
     url: 'https://mypermigo.be',
     siteName: 'MyPermiGo',
     locale: 'fr_BE',
     type: 'website',
   },
+  twitter: {
+    card: 'summary',
+    title: 'MyPermiGo — Permis Théorique Belge',
+    description: 'Prépare ton permis belge gratuitement. 2286 questions officielles.',
+  },
+  alternates: {
+    canonical: 'https://mypermigo.be',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning className={sora.variable}>
       <head>
         {/* Anti-flash: applique le thème avant tout rendu CSS */}
         <script dangerouslySetInnerHTML={{ __html: `
@@ -49,10 +69,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           async
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body className="min-h-screen">
         <ThemeProvider>
