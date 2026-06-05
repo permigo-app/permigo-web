@@ -90,11 +90,9 @@ function ExamContent() {
       <div className="max-w-lg mx-auto px-4 py-12">
         {/* Hero card */}
         <div className="rounded-3xl p-8 mb-4 text-center" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-          <h1 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>Examen déjà passé cette semaine</h1>
+          <h1 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>Examen déjà passé aujourd&apos;hui</h1>
           <p className="text-base mb-5" style={{ color: 'var(--text-secondary)' }}>
-            {days > 0
-              ? `Reviens dans ${days} jour${days > 1 ? 's' : ''} pour repasser l'examen.`
-              : "Tu pourras repasser l'examen dès demain."}
+            Reviens demain pour repasser l&apos;examen, ou passe à Premium pour des examens illimités.
           </p>
 
           {/* Stats pills — premium benefits */}

@@ -13,14 +13,15 @@ export default function PremiumPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const FREE_FEATURES = [
-    { ok: true,  label: t('premium_f1') },
-    { ok: true,  label: t('premium_f2') },
-    { ok: true,  label: t('premium_f3') },
-    { ok: false, label: t('premium_f4') },
-    { ok: false, label: t('premium_f5') },
-    { ok: false, label: t('premium_f6') },
-    { ok: true,  label: t('premium_f7') },
+  type TableVal = string | boolean;
+  const TABLE_ROWS: { label: string; free: TableVal; prem: TableVal }[] = [
+    { label: t('premium_f1'),  free: true,              prem: true },
+    { label: t('premium_f4'),  free: false,             prem: true },
+    { label: t('premium_f8'),  free: '1 / jour',        prem: '✅ Illimité' },
+    { label: t('premium_f9'),  free: '3 / jour',        prem: '✅ Illimité' },
+    { label: t('premium_f10'), free: '3 catégories',    prem: '✅ 10 catégories' },
+    { label: t('premium_f7'),  free: 'Thème A',         prem: '✅ Tous les thèmes' },
+    { label: t('premium_f5'),  free: false,             prem: true },
   ];
 
   const PREMIUM_FEATURES = [
@@ -87,19 +88,33 @@ export default function PremiumPage() {
               <span className="text-xs font-black uppercase tracking-wider" style={{ color: '#FFD700' }}>⭐ Premium</span>
             </div>
           </div>
-          {FREE_FEATURES.map((f, i) => (
-            <div key={i} className="grid grid-cols-3 card-hover" style={{ borderTop: '1px solid var(--border-subtle)' }}>
-              <div className="px-4 py-3 text-sm font-medium" style={{ color: 'var(--text-primary)', background: i % 2 === 0 ? 'var(--card-primary)' : 'var(--card-secondary)' }}>
-                {f.label}
+          {TABLE_ROWS.map((row, i) => {
+            const renderVal = (val: TableVal, isOdd: boolean, isPrem: boolean) => {
+              const bg = isPrem
+                ? (isOdd ? 'rgba(255,215,0,0.05)' : 'rgba(255,215,0,0.03)')
+                : (isOdd ? 'var(--card-secondary)' : 'var(--card-primary)');
+              const border = isPrem ? '1px solid rgba(255,215,0,0.15)' : '1px solid var(--border-subtle)';
+              const content = val === true
+                ? <span style={{ color: 'var(--success)', fontSize: 16 }}>✓</span>
+                : val === false
+                ? <span style={{ color: 'var(--error)', fontSize: 16 }}>✕</span>
+                : <span style={{ fontSize: 12, fontWeight: 600, color: isPrem ? '#FFD700' : 'var(--text-secondary)' }}>{val as string}</span>;
+              return (
+                <div className="px-3 py-3 text-center flex items-center justify-center" style={{ background: bg, borderLeft: border }}>
+                  {content}
+                </div>
+              );
+            };
+            return (
+              <div key={i} className="grid grid-cols-3" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+                <div className="px-4 py-3 text-sm font-medium flex items-center" style={{ color: 'var(--text-primary)', background: i % 2 === 0 ? 'var(--card-primary)' : 'var(--card-secondary)' }}>
+                  {row.label}
+                </div>
+                {renderVal(row.free, i % 2 !== 0, false)}
+                {renderVal(row.prem, i % 2 !== 0, true)}
               </div>
-              <div className="px-4 py-3 text-center" style={{ background: i % 2 === 0 ? 'var(--card-primary)' : 'var(--card-secondary)', borderLeft: '1px solid var(--border-subtle)' }}>
-                <span style={{ color: f.ok ? 'var(--success)' : 'var(--error)' }}>{f.ok ? '✓' : '✕'}</span>
-              </div>
-              <div className="px-4 py-3 text-center" style={{ background: i % 2 === 0 ? 'rgba(255,215,0,0.03)' : 'rgba(255,215,0,0.05)', borderLeft: '1px solid rgba(255,215,0,0.15)' }}>
-                <span style={{ color: 'var(--success)' }}>✓</span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Premium card */}
@@ -140,6 +155,9 @@ export default function PremiumPage() {
 
           <p className="text-center text-xs" style={{ color: 'var(--text-disabled)' }}>
             {t('premium_sans_paiement')}
+          </p>
+          <p className="text-center text-xs mt-1" style={{ color: 'var(--text-disabled)' }}>
+            Sans engagement · Annulez quand vous voulez
           </p>
         </div>
 

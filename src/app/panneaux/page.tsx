@@ -2,17 +2,27 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { PANNEAU_CATEGORIES } from '@/lib/constants';
 import { getSignsByCategory } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
+import { isPremium } from '@/lib/premium';
+
+const FREE_PANNEAU_IDS = ['A', 'C', 'D'];
 
 export default function PanneauxPage() {
   const { t, lang } = useLang();
+  const router = useRouter();
   const [selectedCat, setSelectedCat] = useState<string | null>(null);
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
   const [mobileFlash, setMobileFlash] = useState(false);
+  const [userIsPremium, setUserIsPremium] = useState(false);
+
+  useEffect(() => {
+    setUserIsPremium(isPremium());
+  }, []);
 
   useEffect(() => {
     setMasteredMap(loadAllMastered());
@@ -40,6 +50,8 @@ export default function PanneauxPage() {
           <div className="flex-1 min-w-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {PANNEAU_CATEGORIES.map(cat => {
+                const isFree = FREE_PANNEAU_IDS.includes(cat.id);
+                const locked = !userIsPremium && !isFree;
                 const signs = getSignsByCategory(cat.id, lang);
                 const masteredCount = signs.filter(s => masteredMap[s.code]).length;
                 const total = signs.length;
@@ -50,13 +62,14 @@ export default function PanneauxPage() {
                 return (
                   <div
                     key={cat.id}
-                    className="rounded-2xl p-5 cursor-pointer transition-all duration-200 group"
+                    className="rounded-2xl p-5 cursor-pointer transition-all duration-200 group relative"
                     style={{
-                      background: isSelected ? `${cat.color}18` : 'var(--card-primary)',
-                      border: isSelected ? `2px solid ${cat.color}60` : '2px solid var(--border-subtle)',
+                      background: locked ? 'var(--card-secondary)' : isSelected ? `${cat.color}18` : 'var(--card-primary)',
+                      border: locked ? '2px solid var(--border-subtle)' : isSelected ? `2px solid ${cat.color}60` : '2px solid var(--border-subtle)',
+                      opacity: locked ? 0.75 : 1,
                     }}
                     onMouseEnter={e => {
-                      if (!isSelected) {
+                      if (!isSelected && !locked) {
                         e.currentTarget.style.transform = 'scale(1.03)';
                         e.currentTarget.style.boxShadow = `0 6px 24px ${cat.color}20`;
                       }
@@ -66,10 +79,17 @@ export default function PanneauxPage() {
                       e.currentTarget.style.boxShadow = 'none';
                     }}
                     onClick={() => {
+                      if (locked) { router.push('/premium'); return; }
                       setSelectedCat(isSelected ? null : cat.id);
                       setMobileFlash(true);
                     }}
                   >
+                    {locked && (
+                      <div style={{ position: 'absolute', top: 12, right: 12, display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(255,215,0,0.15)', border: '1px solid rgba(255,215,0,0.4)', borderRadius: 20, padding: '3px 10px' }}>
+                        <span style={{ fontSize: 11 }}>🔒</span>
+                        <span style={{ fontSize: 11, fontWeight: 700, color: '#FFD700' }}>Premium</span>
+                      </div>
+                    )}
                     <div className="flex items-start gap-4">
                       {/* Category icon */}
                       <div
@@ -107,17 +127,27 @@ export default function PanneauxPage() {
 
                     {/* Bottom row: see all link */}
                     <div className="flex items-center justify-between mt-4 pt-3" style={{ borderTop: '1px solid var(--border-subtle)' }}>
-                      <Link
-                        href={`/panneaux/${cat.id}`}
-                        className="text-xs font-bold rounded-lg press-scale transition-all duration-200"
-                        style={{ background: 'transparent', color: 'var(--brand)', border: '1px solid var(--brand)', padding: '10px 20px' }}
-                        onClick={e => e.stopPropagation()}
-                        onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand)'; e.currentTarget.style.color = '#0a0e2a'; }}
-                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--brand)'; }}
-                      >
-                        {t('panneaux_voir_tous')}
-                      </Link>
-                      {pct === 100 && total > 0 && (
+                      {locked ? (
+                        <button
+                          className="text-xs font-bold rounded-lg press-scale"
+                          style={{ background: 'rgba(255,215,0,0.1)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.3)', padding: '10px 20px' }}
+                          onClick={e => { e.stopPropagation(); router.push('/premium'); }}
+                        >
+                          🔒 Débloquer
+                        </button>
+                      ) : (
+                        <Link
+                          href={`/panneaux/${cat.id}`}
+                          className="text-xs font-bold rounded-lg press-scale transition-all duration-200"
+                          style={{ background: 'transparent', color: 'var(--brand)', border: '1px solid var(--brand)', padding: '10px 20px' }}
+                          onClick={e => e.stopPropagation()}
+                          onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand)'; e.currentTarget.style.color = '#0a0e2a'; }}
+                          onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--brand)'; }}
+                        >
+                          {t('panneaux_voir_tous')}
+                        </Link>
+                      )}
+                      {!locked && pct === 100 && total > 0 && (
                         <span className="text-xs font-bold" style={{ color: 'var(--success)' }}>{t('panneaux_complet')}</span>
                       )}
                     </div>

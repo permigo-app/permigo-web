@@ -1,7 +1,7 @@
 'use client';
 
 const KEY_PREMIUM = 'isPremium';
-const TURBO_DAILY_LIMIT = 5;
+const TURBO_DAILY_LIMIT = 3;
 
 export function isPremium(): boolean {
   if (typeof window === 'undefined') return false;
@@ -51,38 +51,28 @@ export function turboRemainingToday(): number {
   return Math.max(0, TURBO_DAILY_LIMIT - getTurboDailyCount());
 }
 
-// ── Exam weekly limit ──
+// ── Exam daily limit (1/jour) ──
 
-function getWeekStart(date: Date): string {
-  const d = new Date(date);
-  const day = d.getDay(); // 0=Sun
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1); // Monday
-  d.setDate(diff);
-  return d.toISOString().slice(0, 10); // YYYY-MM-DD of Monday
+function todayDate(): string {
+  return new Date().toISOString().slice(0, 10);
 }
 
 export function getLastExamWeek(): string | null {
   if (typeof window === 'undefined') return null;
-  return localStorage.getItem('last_exam_week');
+  return localStorage.getItem(`exam_usage_${todayDate()}`);
 }
 
 export function recordExamPlayed(): void {
   if (typeof window === 'undefined') return;
-  localStorage.setItem('last_exam_week', getWeekStart(new Date()));
+  localStorage.setItem(`exam_usage_${todayDate()}`, '1');
 }
 
 export function canPlayExam(): boolean {
   if (isPremium()) return true;
-  const lastWeek = getLastExamWeek();
-  if (!lastWeek) return true;
-  return lastWeek !== getWeekStart(new Date());
+  if (typeof window === 'undefined') return true;
+  return !localStorage.getItem(`exam_usage_${todayDate()}`);
 }
 
 export function daysUntilNextExam(): number {
-  const lastWeek = getLastExamWeek();
-  if (!lastWeek) return 0;
-  const nextMonday = new Date(lastWeek);
-  nextMonday.setDate(nextMonday.getDate() + 7);
-  const diff = Math.ceil((nextMonday.getTime() - Date.now()) / (1000 * 60 * 60 * 24));
-  return Math.max(0, diff);
+  return canPlayExam() ? 0 : 1;
 }
