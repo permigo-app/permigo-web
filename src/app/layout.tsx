@@ -49,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" suppressHydrationWarning className={sora.variable}>
       <head>
+        <meta name="google-site-verification" content="XRHdIgFO0_O_ZQ4RDynByQDcXc0x4mdUtx3RlTgx4C4" />
         {/* Anti-flash: applique le thème avant tout rendu CSS */}
         <script dangerouslySetInnerHTML={{ __html: `
 (function(){try{var t=localStorage.getItem('permigo_theme');if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'night':'day';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
