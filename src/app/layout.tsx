@@ -40,6 +40,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://mypermigo.be',
   },
+  verification: {
+    google: 'XRHdIgFO0_O_ZQ4RDynByQDcXc0x4mdUtx3RlTgx4C4',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
