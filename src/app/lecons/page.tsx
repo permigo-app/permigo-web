@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { THEME_ORDER, getThemeData } from '@/lib/lessonData';
 import { THEME_EMOJIS } from '@/lib/constants';
 import { isLessonCompleted } from '@/lib/progressStorage';
+import { isPremium } from '@/lib/premium';
 import { useLang } from '@/contexts/LanguageContext';
 import ProgressBar from '@/components/ui/ProgressBar';
 import PageHeader from '@/components/ui/PageHeader';
@@ -21,7 +23,11 @@ interface ThemeRow {
 
 export default function LeconsPage() {
   const { t } = useLang();
+  const router = useRouter();
   const [themes, setThemes] = useState<ThemeRow[]>([]);
+  const [userIsPremium, setUserIsPremium] = useState(false);
+
+  useEffect(() => { setUserIsPremium(isPremium()); }, []);
 
   useEffect(() => {
     const rows: ThemeRow[] = THEME_ORDER.map((code) => {
@@ -62,29 +68,31 @@ export default function LeconsPage() {
           borderRadius: 18,
           overflow: 'hidden',
         }}>
-          {themes.map((row, i) => (
-            <Link key={row.code} href={`/lecons/${row.code}`} style={{ textDecoration: 'none' }}>
+          {themes.map((row, i) => {
+            const locked = !userIsPremium && row.code !== 'A';
+            const inner = (
               <div
                 className="press-scale"
                 style={{
-                  display: 'flex',
-                  alignItems: 'flex-start',
-                  gap: 14,
+                  display: 'flex', alignItems: 'center', gap: 14,
                   padding: '16px 20px',
                   borderBottom: i < themes.length - 1 ? '1px solid var(--border-row)' : 'none',
                   cursor: 'pointer',
+                  opacity: locked ? 0.6 : 1,
                 }}
                 onMouseEnter={e => (e.currentTarget.style.background = 'var(--bg-card-hover)')}
                 onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
               >
-                {/* icône / check */}
+                {/* icône / check / lock */}
                 <div style={{
                   width: 44, height: 44, borderRadius: 12, flexShrink: 0,
-                  background: row.pct === 100 ? '#0b2659' : 'var(--bg-icon)',
-                  border: `1.5px solid ${row.pct === 100 ? '#f59e0b' : 'var(--border-card)'}`,
+                  background: locked ? 'var(--bg-input)' : row.pct === 100 ? '#0b2659' : 'var(--bg-icon)',
+                  border: `1.5px solid ${locked ? 'var(--border-card)' : row.pct === 100 ? '#f59e0b' : 'var(--border-card)'}`,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
-                  {row.pct === 100 ? (
+                  {locked ? (
+                    <span style={{ fontSize: 20 }}>🔒</span>
+                  ) : row.pct === 100 ? (
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
@@ -95,26 +103,44 @@ export default function LeconsPage() {
 
                 {/* content */}
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ marginBottom: 6 }}>
-                    <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--text-title)', lineHeight: 1.35, display: 'block' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: locked ? 2 : 6 }}>
+                    <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--text-title)', lineHeight: 1.35 }}>
                       {t('theme_title_' + row.code)}
                     </span>
+                    {locked && (
+                      <span style={{ fontSize: 10, fontWeight: 800, color: '#FFD700', background: 'rgba(255,215,0,0.12)', border: '1px solid rgba(255,215,0,0.3)', borderRadius: 20, padding: '2px 8px', flexShrink: 0 }}>
+                        Premium
+                      </span>
+                    )}
                   </div>
-                  <ProgressBar pct={row.pct} height={6} color="#0b2659" />
+                  {!locked && <ProgressBar pct={row.pct} height={6} color="#0b2659" />}
+                  {locked && (
+                    <span style={{ fontSize: 12, color: 'var(--text-hint)' }}>Débloquer avec Premium →</span>
+                  )}
                 </div>
 
                 {/* % + arrow */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0, paddingTop: 2 }}>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: '#f59e0b', minWidth: 34, textAlign: 'right' }}>
-                    {row.pct}%
-                  </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                  {locked ? (
+                    <span style={{ fontSize: 13, fontWeight: 700, color: '#FFD700' }}>7€/mois</span>
+                  ) : (
+                    <span style={{ fontSize: 13, fontWeight: 700, color: '#f59e0b', minWidth: 34, textAlign: 'right' }}>
+                      {row.pct}%
+                    </span>
+                  )}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-hint)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="9 18 15 12 9 6" />
                   </svg>
                 </div>
               </div>
-            </Link>
-          ))}
+            );
+
+            return locked ? (
+              <div key={row.code} onClick={() => router.push('/premium')}>{inner}</div>
+            ) : (
+              <Link key={row.code} href={`/lecons/${row.code}`} style={{ textDecoration: 'none' }}>{inner}</Link>
+            );
+          })}
         </div>
       </div>
     </div>
