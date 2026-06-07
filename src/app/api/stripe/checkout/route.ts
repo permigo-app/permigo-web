@@ -36,7 +36,7 @@ export async function POST(req: Request) {
       success_url: `${process.env.NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium/success`,
       cancel_url: `${process.env.NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium`,
       customer_email: email || undefined,
-      subscription_data: { trial_period_days: 7 },
+      subscription_data: { trial_period_days: 2 },
       metadata: { userId: userId || 'guest' },
     });
 
