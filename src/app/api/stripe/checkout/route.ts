@@ -33,7 +33,7 @@ export async function POST(req: Request) {
       mode: 'subscription',
       payment_method_types: ['card'],
       line_items: [{ price: STRIPE_PRICE_ID, quantity: 1 }],
-      success_url: `${process.env.NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium/success`,
+      success_url: `${process.env.NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium`,
       customer_email: email || undefined,
       subscription_data: { trial_period_days: 2 },
