@@ -48,6 +48,8 @@ export default function PremiumPage() {
       const data = await res.json();
       if (data.url) {
         window.location.href = data.url;
+      } else if (data.error === 'already_subscribed') {
+        router.push('/app');
       } else {
         setError(t('premium_erreur'));
         setLoading(false);

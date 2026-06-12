@@ -24,12 +24,15 @@ export async function POST(req: Request) {
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object;
       const userId = session.metadata?.userId;
-      if (userId) {
+      if (userId && userId !== 'guest') {
         await supabase
           .from('profiles')
-          .update({ is_premium: true })
+          .update({
+            is_premium: true,
+            stripe_customer_id: session.customer as string,
+          })
           .eq('id', userId);
-        console.log('[PermiGo] Premium activated for user:', userId);
+        console.log('[PermiGo] Premium activated for user:', userId, 'customer:', session.customer);
       }
     }
 
