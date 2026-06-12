@@ -76,8 +76,8 @@ function SuccessContent() {
 
       if (cancelled) return;
 
-      // Update localStorage only after Supabase confirms (prevents loadProfile from wiping it)
-      setPremium(confirmed);
+      // Always activate localStorage — payment went through regardless of Supabase timing
+      setPremium(true);
       await refreshUser();
       setStatus(confirmed ? 'done' : 'timeout');
     }

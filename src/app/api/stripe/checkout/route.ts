@@ -30,22 +30,27 @@ export async function POST(req: Request) {
     let existingCustomerId: string | null = null;
 
     if (userId && userId !== 'guest') {
-      const supabase = getServiceClient();
-      const { data: profile } = await supabase
-        .from('profiles')
-        .select('stripe_customer_id, is_premium')
-        .eq('id', userId)
-        .single();
+      try {
+        const supabase = getServiceClient();
+        const { data: profile } = await supabase
+          .from('profiles')
+          .select('stripe_customer_id, is_premium')
+          .eq('id', userId)
+          .single();
 
-      if (profile?.is_premium) {
-        console.log('[Stripe] Blocked: user already premium:', userId);
-        return NextResponse.json(
-          { error: 'already_subscribed' },
-          { status: 400 }
-        );
+        if (profile?.is_premium) {
+          console.log('[Stripe] Blocked: user already premium:', userId);
+          return NextResponse.json(
+            { error: 'already_subscribed' },
+            { status: 400 }
+          );
+        }
+
+        existingCustomerId = profile?.stripe_customer_id ?? null;
+      } catch (supabaseErr) {
+        // Supabase check failed — proceed without it, don't block the payment
+        console.warn('[Stripe] Supabase profile check failed, proceeding:', supabaseErr);
       }
-
-      existingCustomerId = profile?.stripe_customer_id ?? null;
     }
 
     console.log('[Stripe] Creating session for userId:', userId, 'existingCustomer:', existingCustomerId);
