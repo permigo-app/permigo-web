@@ -37,16 +37,32 @@ export async function POST(req: Request) {
       if (!userId || userId === 'guest') {
         console.error('[Webhook] userId manquant ou guest — premium non activé');
       } else {
-        const { error: updateError } = await supabase
+        // update() ne signale pas l'absence de ligne (0 rows = succès) — on vérifie
+        // le nombre de lignes touchées et on crée le profil s'il n'existe pas
+        const { data: updated, error: updateError } = await supabase
           .from('profiles')
           .update({
             is_premium: true,
             stripe_customer_id: session.customer as string,
+            updated_at: new Date().toISOString(),
           })
-          .eq('id', userId);
+          .eq('id', userId)
+          .select('id');
 
         if (updateError) {
           console.error('[Webhook] Erreur Supabase update:', updateError.message);
+        } else if (!updated || updated.length === 0) {
+          console.warn('[Webhook] Aucun profil pour', userId, '— création');
+          const { error: insertError } = await supabase.from('profiles').insert({
+            id: userId,
+            is_premium: true,
+            stripe_customer_id: session.customer as string,
+          });
+          if (insertError) {
+            console.error('[Webhook] Erreur Supabase insert:', insertError.message);
+          } else {
+            console.log('[Webhook] Premium activé (profil créé) pour:', userId);
+          }
         } else {
           console.log('[Webhook] Premium activé pour:', userId, '— customer:', session.customer);
         }

@@ -48,16 +48,21 @@ function SuccessContent() {
         return;
       }
 
-      // Trigger activate in background — handles cases where webhook hasn't fired
-      fetch('/api/stripe/activate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId, userId }),
-      }).catch(() => {});
-
-      // Poll Supabase for up to 30s (check immediately, then every 1s)
+      // Activate côté serveur (vérifie le paiement Stripe et écrit en base) —
+      // couvre les cas où le webhook n'a pas encore tourné
       let confirmed = false;
-      for (let i = 0; i < 30 && !cancelled; i++) {
+      try {
+        const res = await fetch('/api/stripe/activate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sessionId }),
+        });
+        const json = await res.json();
+        if (json?.ok) confirmed = true;
+      } catch {}
+
+      // Sinon, poll Supabase jusqu'à 30s (le webhook peut prendre quelques secondes)
+      for (let i = 0; i < 30 && !confirmed && !cancelled; i++) {
         if (i > 0) await new Promise(r => setTimeout(r, 1000));
 
         try {
@@ -65,7 +70,7 @@ function SuccessContent() {
             .from('profiles')
             .select('is_premium')
             .eq('id', userId)
-            .single();
+            .maybeSingle();
 
           if (data?.is_premium) {
             confirmed = true;
@@ -76,9 +81,10 @@ function SuccessContent() {
 
       if (cancelled) return;
 
-      // Always activate localStorage — payment went through regardless of Supabase timing
-      setPremium(true);
+      // refreshUser d'abord : il synchronise localStorage depuis Supabase et
+      // effacerait un setPremium(true) local si la base n'est pas encore à jour
       await refreshUser();
+      setPremium(true);
       setStatus(confirmed ? 'done' : 'timeout');
     }
 
