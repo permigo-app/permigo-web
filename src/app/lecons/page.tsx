@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { THEME_ORDER, getThemeData } from '@/lib/lessonData';
 import { THEME_EMOJIS } from '@/lib/constants';
 import { isLessonCompleted } from '@/lib/progressStorage';
-import { isPremium } from '@/lib/premium';
+import { useIsPremium } from '@/lib/premium';
 import { useLang } from '@/contexts/LanguageContext';
 import ProgressBar from '@/components/ui/ProgressBar';
 import PageHeader from '@/components/ui/PageHeader';
@@ -26,9 +26,7 @@ export default function LeconsPage() {
   const { t } = useLang();
   const router = useRouter();
   const [themes, setThemes] = useState<ThemeRow[]>([]);
-  const [userIsPremium, setUserIsPremium] = useState(false);
-
-  useEffect(() => { setUserIsPremium(isPremium()); }, []);
+  const userIsPremium = useIsPremium();
 
   useEffect(() => {
     const load = async () => {

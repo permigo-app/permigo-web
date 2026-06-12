@@ -10,6 +10,7 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
 import { THEME_ORDER, getThemeData } from '@/lib/lessonData';
 import { isLessonCompleted } from '@/lib/progressStorage';
+import { useIsPremium } from '@/lib/premium';
 
 // ── NAV ITEMS — shared by mobile bottom nav + desktop sidebar ─────
 const NAV_ITEMS = [
@@ -146,7 +147,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const { user } = useAuth();
   const { t } = useLang();
-  const [premium, setPremium] = useState(false);
+  const premium = useIsPremium();
   const [muted, setMuted] = useState(false);
   const [streak, setStreak] = useState(0);
   const [xp, setXp] = useState(0);
@@ -155,7 +156,6 @@ export default function Navbar() {
   const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
-    setPremium(localStorage.getItem('isPremium') === 'true');
     setMuted(isSoundMuted());
     try {
       const s = localStorage.getItem('streakData');

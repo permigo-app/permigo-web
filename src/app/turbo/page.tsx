@@ -14,7 +14,7 @@ import {
   getTurboAllTime, addTurboAllTime,
   type TurboSession, type TurboAllTimeStats,
 } from '@/lib/progressStorage';
-import { isPremium, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
+import { useIsPremium, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
 import SignImage from '@/components/SignImage';
 import Image from 'next/image';
 import QuizLayout from '@/components/QuizLayout';
@@ -52,6 +52,7 @@ function formatDate(iso: string) {
 export default function TurboPage() {
   useStreakCelebration();
   const { t, lang } = useLang();
+  const premiumActive = useIsPremium();
   const [mode, setMode] = useState<Mode>(null);
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
   const [currentQ, setCurrentQ] = useState(0);
@@ -234,7 +235,7 @@ export default function TurboPage() {
     const todayBest = history
       .filter(s => s.mode === mobileSelectedMode && new Date(s.date).toLocaleDateString('fr-BE') === todayStr)
       .reduce((acc, s) => Math.max(acc, s.score), 0);
-    const blocked = !isPremium() && turboCount >= 5;
+    const blocked = !premiumActive && turboCount >= 5;
     const remaining = Math.max(0, 5 - turboCount);
 
     const MODES = [
@@ -272,7 +273,7 @@ export default function TurboPage() {
           )}
 
           {/* remaining badge */}
-          {!isPremium() && !blocked && (
+          {!premiumActive && !blocked && (
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '5px 12px', borderRadius: 20, background: 'var(--bg-input)', border: '1px solid var(--border-card)', marginBottom: 20 }}>
               <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--text-sub)' }}>{remaining} {t(remaining > 1 ? 'turbo_parties_restantes' : 'turbo_partie_restante')}</span>
             </div>

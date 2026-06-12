@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { getLessonDataLocalized, getThemeForLessonLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
-import { isPremium, isThemeFree } from '@/lib/premium';
+import { useIsPremium, isThemeFree } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
 import { setStars, updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
 import { getUnlockedBadges } from '@/lib/badges';
@@ -19,6 +19,7 @@ export default function QuizPage() {
   const { t, lang } = useLang();
   const lessonId = (params.id as string)?.toUpperCase();
 
+  const premiumActive = useIsPremium();
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -98,7 +99,7 @@ export default function QuizPage() {
   const upcoming = questions.slice(currentQ + 1, currentQ + 4);
 
   // Premium gate: themes B-I require premium
-  if (!isThemeFree(themeCode) && !isPremium()) {
+  if (!isThemeFree(themeCode) && !premiumActive) {
     return <PremiumGate><></></PremiumGate>;
   }
 

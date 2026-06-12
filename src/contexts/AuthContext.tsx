@@ -94,6 +94,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         localStorage.removeItem('isPremium');
         localStorage.removeItem('permigo_vip');
       }
+      window.dispatchEvent(new Event('premiumStatusChanged'));
 
       // Car + profile
       if (profile.car_type && CAR_MAP[profile.car_type]) {

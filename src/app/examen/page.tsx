@@ -8,7 +8,7 @@ import { setExamPassed, unlockTheme, updateQuizHistory, updateXP, checkAndUpdate
 import { getUnlockedBadges } from '@/lib/badges';
 import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
 import { THEME_COLORS } from '@/lib/constants';
-import { isPremium, isThemeFree, canPlayExam, recordExamPlayed, daysUntilNextExam } from '@/lib/premium';
+import { useIsPremium, isThemeFree, canPlayExam, recordExamPlayed, daysUntilNextExam } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
 import Link from 'next/link';
 import QuizLayout from '@/components/QuizLayout';
@@ -20,6 +20,7 @@ function ExamContent() {
   const themeCode = params.get('theme') || 'FINAL';
   const questionCount = 50;
 
+  const premiumActive = useIsPremium();
   const [started, setStarted] = useState(false);
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
   const [currentQ, setCurrentQ] = useState(0);
@@ -81,12 +82,12 @@ function ExamContent() {
 
   // Premium gate: exams for themes B-I require premium (FINAL always requires premium)
   const examThemeFree = themeCode === 'A';
-  if (!examThemeFree && !isPremium()) {
+  if (!examThemeFree && !premiumActive) {
     return <PremiumGate><></></PremiumGate>;
   }
 
   // Weekly limit — bypass if there's already an active (resumed) exam
-  if (!isPremium() && !canPlayExam() && !hasActiveExam) {
+  if (!premiumActive && !canPlayExam() && !hasActiveExam) {
     const days = daysUntilNextExam();
     return (
       <div className="max-w-lg mx-auto px-4 py-12">
@@ -210,7 +211,7 @@ function ExamContent() {
       }
     } catch { /* ignore */ }
 
-    if (!isPremium()) recordExamPlayed(); // Only counted HERE (50 questions done)
+    if (!premiumActive) recordExamPlayed(); // Only counted HERE (50 questions done)
 
     const total = questions.length;
     const pct = total > 0 ? (correctCount / total) * 100 : 0;
@@ -245,7 +246,7 @@ function ExamContent() {
         localStorage.setItem('exam_active', JSON.stringify({ ...data, completed: true }));
       }
     } catch { /* ignore */ }
-    if (!isPremium()) recordExamPlayed();
+    if (!premiumActive) recordExamPlayed();
     router.push('/app');
   };
 

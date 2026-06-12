@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 const KEY_PREMIUM = 'isPremium';
 const TURBO_DAILY_LIMIT = 3;
 
@@ -15,6 +17,26 @@ export function setPremium(value: boolean): void {
   } else {
     localStorage.removeItem(KEY_PREMIUM);
   }
+  window.dispatchEvent(new Event('premiumStatusChanged'));
+}
+
+export function useIsPremium(): boolean {
+  const [premium, setPremiumState] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    return localStorage.getItem(KEY_PREMIUM) === 'true';
+  });
+
+  useEffect(() => {
+    const sync = () => setPremiumState(localStorage.getItem(KEY_PREMIUM) === 'true');
+    window.addEventListener('premiumStatusChanged', sync);
+    window.addEventListener('storage', sync);
+    return () => {
+      window.removeEventListener('premiumStatusChanged', sync);
+      window.removeEventListener('storage', sync);
+    };
+  }, []);
+
+  return premium;
 }
 
 /** Theme A is always free. Themes B-I require premium. */
@@ -25,7 +47,7 @@ export function isThemeFree(themeCode: string): boolean {
 // ── Turbo daily limit ──
 
 function todayKey(): string {
-  return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  return new Date().toISOString().slice(0, 10);
 }
 
 export function getTurboDailyCount(): number {

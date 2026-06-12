@@ -4,29 +4,28 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLang } from '@/contexts/LanguageContext';
+import { useIsPremium } from '@/lib/premium';
 
 const HIDDEN_PATHS = ['/premium', '/login', '/signup'];
 
 export default function PremiumBanner() {
-  const [show, setShow] = useState(false);
+  const isPrem = useIsPremium();
   const [dismissed, setDismissed] = useState(false);
   const pathname = usePathname();
   const { t } = useLang();
 
   useEffect(() => {
-    const isPremium = localStorage.getItem('isPremium') === 'true';
-    const wasDismissed = sessionStorage.getItem('premium_banner_dismissed') === 'true';
-    if (!isPremium && !wasDismissed) setShow(true);
-    if (wasDismissed) setDismissed(true);
+    if (sessionStorage.getItem('premium_banner_dismissed') === 'true') {
+      setDismissed(true);
+    }
   }, []);
 
   const hide = () => {
-    setShow(false);
     setDismissed(true);
     sessionStorage.setItem('premium_banner_dismissed', 'true');
   };
 
-  if (!show || dismissed || HIDDEN_PATHS.some(p => pathname.startsWith(p))) return null;
+  if (isPrem || dismissed || HIDDEN_PATHS.some(p => pathname.startsWith(p))) return null;
 
   return (
     <div

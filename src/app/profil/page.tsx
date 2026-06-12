@@ -10,6 +10,7 @@ import { getThemeDataLocalized, THEME_ORDER, type LocalTheme } from '@/lib/lesso
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
+import { useIsPremium } from '@/lib/premium';
 
 // Semantic category colors — intentionally hardcoded, not theme vars
 const CAT_COLORS: Record<string, { bg: string; bgStrong: string; border: string; glow: string; check: string }> = {
@@ -45,7 +46,7 @@ export default function ProfilePage() {
   const [hasLocalData, setHasLocalData] = useState(false);
   const [hoveredBadge, setHoveredBadge] = useState<string | null>(null);
   const [muted, setMuted] = useState(false);
-  const [premium, setPremium] = useState(false);
+  const premium = useIsPremium();
   const [themeMap, setThemeMap] = useState<Record<string, LocalTheme>>({});
 
   useEffect(() => {
@@ -64,7 +65,6 @@ export default function ProfilePage() {
     setStudyTime(getStudyTime());
     setUnlockedBadges(getUnlockedBadges());
     setMuted(isSoundMuted());
-    setPremium(localStorage.getItem('isPremium') === 'true');
     setHasLocalData(
       xpData.totalXP > 0 ||
       streakData.currentStreak > 0 ||

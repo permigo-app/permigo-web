@@ -8,7 +8,7 @@ import { getSignsByCategory } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
-import { isPremium } from '@/lib/premium';
+import { useIsPremium } from '@/lib/premium';
 import rawQuizData from '@/data/panneaux_quiz.json';
 
 // PANNEAU_CATEGORIES id → quiz category id
@@ -35,11 +35,7 @@ export default function PanneauxPage() {
   const [selectedCat, setSelectedCat] = useState<string | null>(null);
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
   const [mobileFlash, setMobileFlash] = useState(false);
-  const [userIsPremium, setUserIsPremium] = useState(false);
-
-  useEffect(() => {
-    setUserIsPremium(isPremium());
-  }, []);
+  const userIsPremium = useIsPremium();
 
   useEffect(() => {
     setMasteredMap(loadAllMastered());
