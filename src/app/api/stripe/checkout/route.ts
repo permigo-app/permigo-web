@@ -22,38 +22,51 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'STRIPE_PRICE_ID manquante' }, { status: 500 });
   }
 
+  // Récupère userId depuis le token Supabase côté serveur (pas depuis le body client)
+  const authHeader = req.headers.get('Authorization');
+  const token = authHeader?.replace('Bearer ', '');
+
+  if (!token) {
+    console.error('[Stripe] No auth token provided');
+    return NextResponse.json({ error: 'Non authentifié' }, { status: 401 });
+  }
+
+  const supabase = getServiceClient();
+  const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+
+  if (authError || !user) {
+    console.error('[Stripe] Token invalide:', authError?.message);
+    return NextResponse.json({ error: 'Token invalide' }, { status: 401 });
+  }
+
+  const userId = user.id;
+  const email = user.email;
+  console.log('[Stripe] Authenticated userId:', userId, 'email:', email);
+
   try {
     const Stripe = (await import('stripe')).default;
     const stripe = new Stripe(STRIPE_SECRET_KEY);
-    const { userId, email } = await req.json();
 
     let existingCustomerId: string | null = null;
 
-    if (userId && userId !== 'guest') {
-      try {
-        const supabase = getServiceClient();
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('stripe_customer_id, is_premium')
-          .eq('id', userId)
-          .single();
+    try {
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('stripe_customer_id, is_premium')
+        .eq('id', userId)
+        .single();
 
-        if (profile?.is_premium) {
-          console.log('[Stripe] Blocked: user already premium:', userId);
-          return NextResponse.json(
-            { error: 'already_subscribed' },
-            { status: 400 }
-          );
-        }
-
-        existingCustomerId = profile?.stripe_customer_id ?? null;
-      } catch (supabaseErr) {
-        // Supabase check failed — proceed without it, don't block the payment
-        console.warn('[Stripe] Supabase profile check failed, proceeding:', supabaseErr);
+      if (profile?.is_premium) {
+        console.log('[Stripe] Blocked: user already premium:', userId);
+        return NextResponse.json({ error: 'already_subscribed' }, { status: 400 });
       }
+
+      existingCustomerId = profile?.stripe_customer_id ?? null;
+    } catch (profileErr) {
+      console.warn('[Stripe] Profile check failed, proceeding:', profileErr);
     }
 
-    console.log('[Stripe] Creating session for userId:', userId, 'existingCustomer:', existingCustomerId);
+    console.log('[Stripe] Creating session — userId:', userId, 'existingCustomer:', existingCustomerId);
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
@@ -65,10 +78,10 @@ export async function POST(req: Request) {
         ? { customer: existingCustomerId }
         : { customer_email: email || undefined }),
       subscription_data: { trial_period_days: 2 },
-      metadata: { userId: userId || 'guest' },
+      metadata: { userId },
     });
 
-    console.log('[Stripe] Session created:', session.id);
+    console.log('[Stripe] Session created:', session.id, '— userId in metadata:', userId);
     return NextResponse.json({ url: session.url });
   } catch (error: unknown) {
     const msg = error instanceof Error ? error.message : String(error);

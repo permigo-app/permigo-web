@@ -19,44 +19,71 @@ export async function POST(req: Request) {
       process.env.STRIPE_WEBHOOK_SECRET!
     );
 
+    console.log('[Webhook] Event received:', event.type);
+
     const supabase = getServiceClient();
 
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object;
       const userId = session.metadata?.userId;
-      if (userId && userId !== 'guest') {
-        await supabase
+
+      console.log('[Webhook] checkout.session.completed:', {
+        sessionId: session.id,
+        userId,
+        customer: session.customer,
+        metadata: session.metadata,
+      });
+
+      if (!userId || userId === 'guest') {
+        console.error('[Webhook] userId manquant ou guest — premium non activé');
+      } else {
+        const { error: updateError } = await supabase
           .from('profiles')
           .update({
             is_premium: true,
             stripe_customer_id: session.customer as string,
           })
           .eq('id', userId);
-        console.log('[PermiGo] Premium activated for user:', userId, 'customer:', session.customer);
+
+        if (updateError) {
+          console.error('[Webhook] Erreur Supabase update:', updateError.message);
+        } else {
+          console.log('[Webhook] Premium activé pour:', userId, '— customer:', session.customer);
+        }
       }
     }
 
     if (event.type === 'customer.subscription.deleted') {
       const subscription = event.data.object;
-      // Find user by stripe_customer_id
       const customerId = subscription.customer as string;
+
+      console.log('[Webhook] customer.subscription.deleted — customerId:', customerId);
+
       const { data } = await supabase
         .from('profiles')
         .select('id')
         .eq('stripe_customer_id', customerId)
         .maybeSingle();
+
       if (data?.id) {
-        await supabase
+        const { error: cancelError } = await supabase
           .from('profiles')
           .update({ is_premium: false })
           .eq('id', data.id);
-        console.log('[PermiGo] Premium cancelled for user:', data.id);
+
+        if (cancelError) {
+          console.error('[Webhook] Erreur annulation Supabase:', cancelError.message);
+        } else {
+          console.log('[Webhook] Premium annulé pour:', data.id);
+        }
+      } else {
+        console.warn('[Webhook] Aucun profil trouvé pour customerId:', customerId);
       }
     }
 
     return NextResponse.json({ received: true });
   } catch (error) {
-    console.error('[PermiGo] Webhook error:', error);
+    console.error('[Webhook] Erreur:', error);
     return NextResponse.json({ error: 'Webhook error' }, { status: 400 });
   }
 }

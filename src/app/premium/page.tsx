@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLang } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
 
 export default function PremiumPage() {
@@ -34,16 +35,24 @@ export default function PremiumPage() {
   const handleSubscribe = async () => {
     setLoading(true);
     setError('');
-    const controller = new AbortController();
     try {
+      // Récupère le token de session Supabase côté client
+      const sessionData = supabase ? await supabase.auth.getSession() : null;
+      const token = sessionData?.data?.session?.access_token;
+
+      if (!token) {
+        setError(t('premium_erreur'));
+        setLoading(false);
+        return;
+      }
+
       const res = await fetch('/api/stripe/checkout', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        signal: controller.signal,
-        body: JSON.stringify({
-          userId: supabaseUser?.id || 'guest',
-          email: supabaseUser?.email || '',
-        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({}),
       });
       const data = await res.json();
       if (data.url) {
