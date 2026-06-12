@@ -10,6 +10,7 @@ import { isPremium } from '@/lib/premium';
 import { useLang } from '@/contexts/LanguageContext';
 import ProgressBar from '@/components/ui/ProgressBar';
 import PageHeader from '@/components/ui/PageHeader';
+import { SkeletonList } from '@/components/ui/SkeletonList';
 
 interface ThemeRow {
   code: string;
@@ -30,24 +31,26 @@ export default function LeconsPage() {
   useEffect(() => { setUserIsPremium(isPremium()); }, []);
 
   useEffect(() => {
-    const rows: ThemeRow[] = THEME_ORDER.map((code) => {
-      const theme = getThemeData(code);
-      if (!theme) return null;
-      const done = theme.lessons.filter((l) => isLessonCompleted(l.id)).length;
-      const total = theme.lessons.length;
-      const pct = total > 0 ? Math.round((done / total) * 100) : 0;
-      return {
-        code,
-        title: theme.title,
-
-        emoji: THEME_EMOJIS[code] || '📖',
-        pct,
-        done,
-        total,
-        firstLessonId: theme.lessons[0]?.id ?? '',
-      };
-    }).filter(Boolean) as ThemeRow[];
-    setThemes(rows);
+    const load = async () => {
+      const rows = (await Promise.all(THEME_ORDER.map(async (code) => {
+        const theme = await getThemeData(code);
+        if (!theme) return null;
+        const done = theme.lessons.filter((l) => isLessonCompleted(l.id)).length;
+        const total = theme.lessons.length;
+        const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+        return {
+          code,
+          title: theme.title,
+          emoji: THEME_EMOJIS[code] || '📖',
+          pct,
+          done,
+          total,
+          firstLessonId: theme.lessons[0]?.id ?? '',
+        };
+      }))).filter(Boolean) as ThemeRow[];
+      setThemes(rows);
+    };
+    load();
   }, []);
 
   const totalDone = themes.reduce((a, t) => a + t.done, 0);
@@ -62,6 +65,7 @@ export default function LeconsPage() {
       />
 
       <div className="lecons-body" style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px 40px' }}>
+        {themes.length === 0 && <SkeletonList count={9} height={64} />}
         <div style={{
           background: 'var(--bg-card)',
           border: '1.5px solid var(--border-card)',

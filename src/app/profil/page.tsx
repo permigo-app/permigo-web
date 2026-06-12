@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { getXPData, getStreakData, getQuizHistory, getAllStars, getUnlockedThemes, getAllExams, getSurvivalBest, getStudyTime, formatStudyTime } from '@/lib/progressStorage';
 import { getUnlockedBadges } from '@/lib/badges';
 import { BADGES, THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
-import { getThemeDataLocalized, THEME_ORDER } from '@/lib/lessonData';
+import { getThemeDataLocalized, THEME_ORDER, type LocalTheme } from '@/lib/lessonData';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
@@ -46,6 +46,7 @@ export default function ProfilePage() {
   const [hoveredBadge, setHoveredBadge] = useState<string | null>(null);
   const [muted, setMuted] = useState(false);
   const [premium, setPremium] = useState(false);
+  const [themeMap, setThemeMap] = useState<Record<string, LocalTheme>>({});
 
   useEffect(() => {
     setMounted(true);
@@ -70,7 +71,16 @@ export default function ProfilePage() {
       quizData.totalAnswers > 0 ||
       Object.keys(starsData).length > 0
     );
-  }, []);
+    // Load all theme data asynchronously
+    Promise.all(THEME_ORDER.map(async (code) => {
+      const theme = await getThemeDataLocalized(code, lang);
+      return theme ? [code, theme] as [string, LocalTheme] : null;
+    })).then(results => {
+      const map: Record<string, LocalTheme> = {};
+      for (const r of results) { if (r) map[r[0]] = r[1]; }
+      setThemeMap(map);
+    });
+  }, [lang]);
 
   if (!mounted || authLoading) return <div className="min-h-screen" />;
 
@@ -138,8 +148,10 @@ export default function ProfilePage() {
   const ThemeList = () => (
     <div className="flex flex-col gap-2">
       {THEME_ORDER.map(code => {
-        const theme = getThemeDataLocalized(code, lang);
-        if (!theme) return null;
+        const theme = themeMap[code];
+        if (!theme) return (
+          <div key={code} className="animate-pulse rounded-xl" style={{ height: 56, background: 'var(--border-subtle)' }} />
+        );
         const lessonIds = theme.lessons.map(l => l.id);
         const done = lessonIds.filter(id => (stars[id] ?? 0) > 0).length;
         const total = lessonIds.length;
@@ -462,8 +474,10 @@ export default function ProfilePage() {
             </h2>
             <div className="flex flex-col gap-2.5 mb-8">
               {THEME_ORDER.map(code => {
-                const theme = getThemeDataLocalized(code, lang);
-                if (!theme) return null;
+                const theme = themeMap[code];
+                if (!theme) return (
+                  <div key={code} className="animate-pulse rounded-xl" style={{ height: 60, background: 'var(--border-subtle)' }} />
+                );
                 const lessonIds = theme.lessons.map(l => l.id);
                 const done = lessonIds.filter(id => (stars[id] ?? 0) > 0).length;
                 const total = lessonIds.length;

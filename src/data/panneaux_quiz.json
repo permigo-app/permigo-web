@@ -1,0 +1,1633 @@
+{
+  "categories": [
+    {
+      "id": "F",
+      "title": "Indication générale",
+      "color": "#0b2659",
+      "icon": "🔵",
+      "questions": [
+        {
+          "id": "A4_Q86",
+          "sign": "F1",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Vitesse recommandée",
+            "Vitesse maximale autorisée sur la sortie : 90 km/h",
+            "Vitesse minimale sur la sortie",
+            "Distance de la sortie"
+          ],
+          "correct": 1,
+          "explanation": "Un signal rond bleu avec une vitesse dans une sortie indique la vitesse maximale autorisée sur cette bretelle."
+        },
+        {
+          "id": "A5_Q55",
+          "sign": "F1",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Direction vers cette localité",
+            "Commencement d'une agglomération",
+            "Fin d'une agglomération",
+            "Zone industrielle"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau avec le nom d'une localité sur fond blanc indique le début d'une agglomération."
+        },
+        {
+          "id": "A6_Q76",
+          "sign": "F1",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Direction vers la localité",
+            "Commencement d'une agglomération",
+            "Fin d'une agglomération",
+            "Zone industrielle"
+          ],
+          "correct": 1,
+          "explanation": "Le signal blanc avec le nom d'une localité en noir indique le commencement d'une agglomération."
+        },
+        {
+          "id": "B1_SIGN_F1__1",
+          "sign": "F1",
+          "question": "Vous voyez ce panneau en roulant. Que signifie-t-il ?",
+          "answers": [
+            "Passage pour pietons avec feux",
+            "Fin du passage pour pietons",
+            "Traversee pietonne prioritaire",
+            "Zone scolaire : ralentir"
+          ],
+          "correct": 1,
+          "explanation": "F1b signale la fin d'un passage pour piétons. Au-delà de ce signal, les piétons ne bénéficient plus de la priorité liée à un passage balisé."
+        },
+        {
+          "id": "A5_Q51",
+          "sign": "F11",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Début de route pour automobiles",
+            "Fin de route pour automobiles",
+            "Fin d'autoroute",
+            "Parking interdit"
+          ],
+          "correct": 1,
+          "explanation": "Le signal bleu barré avec une voiture indique la fin d'une route pour automobiles."
+        },
+        {
+          "id": "F2_SIGN_F11_1",
+          "sign": "F11",
+          "question": "Vous roulez sur autoroute et apercevez un panneau bleu barré d'une diagonale représentant deux voies. Que signifie-t-il ?",
+          "answers": [
+            "Vous entrez sur une autoroute",
+            "L'autoroute prend fin : les règles spécifiques à l'autoroute cessent de s'appliquer",
+            "Bifurcation autoroutière à venir",
+            "Autoroute à péage devant vous"
+          ],
+          "correct": 1,
+          "explanation": "F11 marque la fin de l'autoroute. Les règles spécifiques (interdiction aux piétons, cyclistes, vitesse minimale…) ne s'appliquent plus après ce panneau."
+        },
+        {
+          "id": "F2_SIGN_F14_1",
+          "sign": "F11",
+          "question": "Vous apercevez ce panneau en roulant sur une route pour automobiles. Que signifie-t-il ?",
+          "answers": [
+            "Vous entrez sur une route pour automobiles",
+            "La route pour automobiles prend fin : certaines règles changent",
+            "Vous êtes sur une voie rapide avec priorité",
+            "Vous êtes sur une route à chaussées séparées"
+          ],
+          "correct": 1,
+          "explanation": "F14 marque la fin d'une route pour automobiles (F13). Les règles associées à ce type de route (vitesse, usagers autorisés…) ne s'appliquent plus."
+        },
+        {
+          "id": "A6_Q91",
+          "sign": "F111",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Piste cyclable obligatoire",
+            "Rue où les cyclistes sont prioritaires, les voitures sont des invités, vitesse max 30 km/h",
+            "Rue interdite aux voitures",
+            "Zone piétonne"
+          ],
+          "correct": 1,
+          "explanation": "Dans une rue cyclable, les cyclistes sont prioritaires, les voitures sont des \"invités\" et la vitesse max est 30 km/h."
+        },
+        {
+          "id": "A6_Q93",
+          "sign": "F111",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Aucune",
+            "La zone s'applique à plusieurs rues, la rue cyclable à une seule rue",
+            "La zone interdit les voitures",
+            "La zone a une vitesse de 50 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Une zone cyclable s'applique à plusieurs rues, tandis qu'une rue cyclable concerne une seule rue."
+        },
+        {
+          "id": "A6_Q80",
+          "sign": "F12a",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Zone piétonne",
+            "Commencement d'une zone résidentielle ou zone de rencontre",
+            "Parking résidentiel",
+            "Zone scolaire"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal bleu indique le commencement d'une zone résidentielle (ou zone de rencontre)."
+        },
+        {
+          "id": "F1_SIGN_F23_1",
+          "sign": "F12b",
+          "question": "Vous passez devant ce panneau en quittant une zone résidentielle. Que signifie-t-il ?",
+          "answers": [
+            "Vous entrez dans une zone résidentielle",
+            "La zone résidentielle prend fin : les règles spéciales ne s'appliquent plus",
+            "Vous quittez une zone 30",
+            "Vous quittez une zone de rencontre"
+          ],
+          "correct": 1,
+          "explanation": "F23 marque la fin de la zone résidentielle (F21). Les restrictions propres à cette zone (vitesse max 20 km/h, piétons prioritaires partout…) ne s'appliquent plus."
+        },
+        {
+          "id": "A2_Q48",
+          "sign": "F13",
+          "question": "Vous voyez ce signal au bord de la route. Que devez-vous faire ?",
+          "answers": [
+            "Vous arrêter",
+            "Choisir votre bande de circulation en fonction de la direction souhaitée",
+            "Changer de route",
+            "Ralentir à 30 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal annonce des flèches directionnelles : vous devez anticiper et choisir la bonne bande selon votre destination."
+        },
+        {
+          "id": "E2_Q69",
+          "sign": "F13",
+          "question": "Vous apercevez un panneau annonçant des flèches sur la chaussée prescrivant le choix de bande. Que signifie ce signal ?",
+          "answers": [
+            "Interdiction de dépasser",
+            "Des flèches au sol vous indiqueront bientôt le choix d'une bande de circulation",
+            "Voie à sens unique",
+            "Zone de stationnement"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal d'indication annonce que des flèches au sol prescrivent le choix de bande."
+        },
+        {
+          "id": "E2_Q70",
+          "sign": "F13",
+          "question": "Vous apercevez un panneau avec des flèches vers le bas et des flèches obliques. Que signifie ce signal ?",
+          "answers": [
+            "Travaux en cours sur la chaussée",
+            "Les flèches vers le bas indiquent tout droit, les flèches obliques indiquent les directions sortantes",
+            "Voie à sens unique",
+            "Interdiction de dépasser"
+          ],
+          "correct": 1,
+          "explanation": "Flèches vers le bas = continuer tout droit. Flèches obliques = directions sortantes."
+        },
+        {
+          "id": "F5_Q59",
+          "sign": "F13",
+          "question": "Vous apercevez un panneau triangulaire sur pointe avec une croix à l'intérieur. Que signifie-t-il ?",
+          "answers": [
+            "Danger à proximité",
+            "Carrefour où la priorité de droite est d'application",
+            "Arrêt obligatoire (STOP)",
+            "Voie prioritaire"
+          ],
+          "correct": 1,
+          "explanation": "Triangle sur pointe avec croix = signal de priorité de droite."
+        },
+        {
+          "id": "E2_Q71",
+          "sign": "F17",
+          "question": "Vous observez un signal de choix de bande avec plusieurs flèches. À quoi correspond le nombre de flèches ?",
+          "answers": [
+            "Au nombre de destinations possibles",
+            "Au nombre de bandes de circulation",
+            "À la vitesse maximale autorisée",
+            "Au nombre de sorties disponibles"
+          ],
+          "correct": 1,
+          "explanation": "Chaque flèche correspond à une bande de circulation."
+        },
+        {
+          "id": "A6_Q89",
+          "sign": "F18",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Motos interdites",
+            "Les motocyclettes sont aussi autorisées sur le SSF",
+            "Parking moto",
+            "Zone moto"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau SSF avec pictogramme moto signifie que les motocyclettes sont autorisées sur ce SSF."
+        },
+        {
+          "id": "A5_Q56",
+          "sign": "F3",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Début d'agglomération",
+            "Fin d'une agglomération",
+            "Localité interdite",
+            "Déviation"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau barré avec le nom de la localité signale la fin de l'agglomération."
+        },
+        {
+          "id": "A6_Q77",
+          "sign": "F3",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Début d'agglomération",
+            "Fin d'une agglomération",
+            "Localité interdite",
+            "Déviation"
+          ],
+          "correct": 1,
+          "explanation": "Le signal avec le nom barré indique la fin d'une agglomération."
+        },
+        {
+          "id": "I1_SIGN_F3_1",
+          "sign": "F3",
+          "question": "Vous voyez un panneau bleu rectangulaire avec un \"H\" blanc et un pictogramme médical. Que signale-t-il ?",
+          "answers": [
+            "Un poste de secours routier",
+            "Un hôpital ou une clinique à proximité",
+            "Une pharmacie de garde",
+            "Un centre de contrôle technique"
+          ],
+          "correct": 1,
+          "explanation": "F3 signale la présence d'un hôpital. À proximité, les signaux sonores (klaxon) sont généralement interdits pour ne pas gêner les patients."
+        },
+        {
+          "id": "B1_SIGN_F33__1",
+          "sign": "F33a",
+          "question": "Vous apercevez ce panneau le long de la route. Que signifie-t-il ?",
+          "answers": [
+            "Sur le passage pour pietons lui-meme",
+            "A distance du passage pour pietons pour le signaler a l'avance",
+            "A la sortie d'une zone scolaire",
+            "Sur une voie rapide uniquement"
+          ],
+          "correct": 1,
+          "explanation": "F33a est un signal avancé indiquant qu'un passage pour piétons (ou cyclistes) est proche. Il prévient les conducteurs à l'avance pour qu'ils ralentissent."
+        },
+        {
+          "id": "H1_Q69",
+          "sign": "F33a",
+          "question": "Vous voyez un signal d'indication montrant un piéton sur un passage zébré. Que signifie-t-il pour vous ?",
+          "answers": [
+            "Vous entrez dans une zone piétonne",
+            "Un passage pour piétons se trouve à proximité",
+            "Les piétons sont interdits ici",
+            "Vous approchez d'un trottoir"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique la présence d'un passage pour piétons à proximité."
+        },
+        {
+          "id": "A3_Q73",
+          "sign": "F33b",
+          "question": "Ce signal d'indication bleu avec un vélo sur un passage signifie :",
+          "answers": [
+            "Piste cyclable obligatoire",
+            "Passage pour conducteurs de bicyclettes et cyclomoteurs à deux roues",
+            "Fin de piste cyclable",
+            "Zone cyclable"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal d'indication bleu indique un passage pour bicyclettes et cyclomoteurs à deux roues."
+        },
+        {
+          "id": "H1_Q70",
+          "sign": "F33b",
+          "question": "Vous voyez un signal d'indication montrant un vélo sur un passage. Que signifie-t-il ?",
+          "answers": [
+            "Vous approchez d'une piste cyclable",
+            "Un passage pour cyclistes et cyclomoteurs à deux roues se trouve à proximité",
+            "Vous approchez d'un parking vélo",
+            "Les vélos sont interdits ici"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique un passage pour cyclistes et cyclomoteurs à deux roues."
+        },
+        {
+          "id": "F1_SIGN_F43_1",
+          "sign": "F43",
+          "question": "Vous apercevez un panneau rectangulaire blanc barré d'une diagonale avec le chiffre 30. Que signifie-t-il ?",
+          "answers": [
+            "Vous entrez dans une nouvelle zone 30",
+            "La zone 30 prend fin et la limite de vitesse normale s'applique à nouveau",
+            "La limite est immédiatement portée à 50 km/h",
+            "Vous quittez une zone piétonne"
+          ],
+          "correct": 1,
+          "explanation": "F43 marque la fin de la zone 30 (F41). La vitesse normale pour ce type de voie (souvent 50 km/h en agglomération) s'applique à nouveau."
+        },
+        {
+          "id": "A3_Q74",
+          "sign": "F45",
+          "question": "Ce signal bleu rectangulaire avec une voie qui se termine signifie :",
+          "answers": [
+            "Sens unique",
+            "Voie sans issue",
+            "Route barrée",
+            "Déviation"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal d'indication indique une voie sans issue."
+        },
+        {
+          "id": "A3_Q75",
+          "sign": "F45b",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Interdiction pour vélos et piétons",
+            "Voie sans issue sauf pour les cyclistes et les piétons",
+            "Zone piétonne",
+            "Parking vélo"
+          ],
+          "correct": 1,
+          "explanation": "Voie sans issue pour les voitures, mais les cyclistes et les piétons peuvent continuer."
+        },
+        {
+          "id": "A1_SIGN_F5_1",
+          "sign": "F5",
+          "question": "Vous voyez un panneau bleu rectangulaire indiquant une impasse. Que signifie-t-il ?",
+          "answers": [
+            "Fin d'autoroute à l'approche",
+            "Sens unique dans cette direction",
+            "Impasse : la rue n'a pas d'issue et vous devrez faire demi-tour",
+            "Accès réservé aux riverains de cette rue"
+          ],
+          "correct": 1,
+          "explanation": "F5 indique que la voie est une impasse. Elle ne mène nulle part et vous devrez faire demi-tour. Entrez seulement si vous avez une raison d'y aller."
+        },
+        {
+          "id": "A4_Q79",
+          "sign": "F5",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Fin d'autoroute",
+            "Commencement d'une autoroute ou accès à une autoroute",
+            "Route pour automobiles",
+            "Voie rapide"
+          ],
+          "correct": 1,
+          "explanation": "Le signal vert avec une autoroute stylisée (F1) indique le début d'une autoroute ou un accès à l'autoroute."
+        },
+        {
+          "id": "A5_Q53",
+          "sign": "F5",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Route pour automobiles",
+            "Commencement d'une autoroute",
+            "Échangeur",
+            "Sortie"
+          ],
+          "correct": 1,
+          "explanation": "Le signal vert avec une autoroute stylisée indique le début d'une autoroute."
+        },
+        {
+          "id": "F1_SIGN_F50_1",
+          "sign": "F50",
+          "question": "Vous apercevez ce panneau en vous engageant dans une rue. Que signifie-t-il ?",
+          "answers": [
+            "La rue est totalement sans issue : vous devez faire demi-tour",
+            "La rue est sans issue pour les voitures, mais piétons et cyclistes peuvent continuer",
+            "Vous entrez dans une zone résidentielle avec sortie vélos",
+            "Il s'agit d'un parking réservé aux piétons et cyclistes"
+          ],
+          "correct": 1,
+          "explanation": "F50 indique que la voie est sans issue pour les véhicules à moteur, mais qu'un passage est prévu pour les piétons et les cyclistes. Ils peuvent continuer."
+        },
+        {
+          "id": "A4_Q80",
+          "sign": "F7",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Début d'autoroute",
+            "Fin d'autoroute",
+            "Sortie d'autoroute",
+            "Échangeur"
+          ],
+          "correct": 1,
+          "explanation": "Le signal vert barré (F3) indique la fin de l'autoroute."
+        },
+        {
+          "id": "A2_Q63",
+          "sign": "F85",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Sens unique",
+            "Circulation admise dans les deux sens sur une section à sens unique",
+            "Dépassement interdit",
+            "Autoroute"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal d'indication rectangulaire bleu confirme qu'une section à sens unique admet la circulation dans les deux sens."
+        },
+        {
+          "id": "A1_SIGN_F87_1",
+          "sign": "F87",
+          "question": "Vous voyez un panneau rectangulaire blanc indiquant un chiffre de vitesse (ex. : 70) sans cercle rouge. Que signifie-t-il ?",
+          "answers": [
+            "Limitation obligatoire à 70 km/h",
+            "Vitesse conseillée de 70 km/h, non obligatoire mais recommandée pour la sécurité",
+            "Vitesse minimale obligatoire de 70 km/h",
+            "Fin de limitation : retour à la vitesse de 70 km/h"
+          ],
+          "correct": 1,
+          "explanation": "F87 indique une vitesse conseillée. Ce n'est pas une obligation légale, mais une recommandation pour des raisons de sécurité ou de fluidité. La limite légale reste celle en vigueur."
+        },
+        {
+          "id": "A5_Q50",
+          "sign": "F9",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Autoroute",
+            "Route pour automobiles",
+            "Parking",
+            "Voie rapide"
+          ],
+          "correct": 1,
+          "explanation": "Le signal bleu avec une voiture blanche indique le début d'une route pour automobiles."
+        },
+        {
+          "id": "A3_Q70",
+          "sign": "M6",
+          "question": "Le panneau additionnel M6 signifie :",
+          "answers": [
+            "Cyclomoteurs classe B interdits",
+            "Cyclomoteurs classe B doivent emprunter la piste cyclable",
+            "Cyclistes interdits",
+            "Speed pedelecs autorisés"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau additionnel M6 oblige les cyclomoteurs classe B à emprunter la piste cyclable."
+        },
+        {
+          "id": "A3_Q71",
+          "sign": "M7",
+          "question": "Le panneau additionnel M7 signifie :",
+          "answers": [
+            "Cyclomoteurs classe B doivent emprunter la piste",
+            "Cyclomoteurs classe B ne peuvent PAS emprunter la piste cyclable",
+            "Cyclistes interdits",
+            "Piétons interdits"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau additionnel M7 interdit aux cyclomoteurs classe B d'emprunter la piste cyclable."
+        }
+      ]
+    },
+    {
+      "id": "A",
+      "title": "Panneaux de danger",
+      "color": "#ef4444",
+      "icon": "⚠️",
+      "questions": [
+        {
+          "id": "A1_SIGN_A16_1",
+          "sign": "A15",
+          "question": "Vous apercevez un panneau triangulaire montrant une route montante à forte pente. Que signifie-t-il ?",
+          "answers": [
+            "Une descente dangereuse à venir",
+            "Une montée à forte inclinaison vous attend",
+            "La présence d'un ralentisseur",
+            "Un dos d'âne sur la chaussée"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A16 (triangle rouge) annonce une montée à forte inclinaison. Le pourcentage indiqué précise la déclivité."
+        },
+        {
+          "id": "A1_SIGN_A21_1",
+          "sign": "A21",
+          "question": "Vous voyez un triangle rouge contenant la silhouette d'un cycliste. Que devez-vous anticiper ?",
+          "answers": [
+            "Une piste cyclable obligatoire commence",
+            "Des cyclistes peuvent traverser ou circuler sur la route : soyez vigilant",
+            "Les cyclistes sont interdits sur cette section",
+            "Une course cycliste est en cours : priorité absolue aux vélos"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A21 avertit de la présence potentielle de cyclistes sur ou traversant la chaussée. Réduisez votre vitesse et soyez prêt à céder le passage."
+        },
+        {
+          "id": "A1_SIGN_A23_1",
+          "sign": "A23",
+          "question": "Vous voyez un panneau triangulaire avec des silhouettes d'animaux domestiques. Que devez-vous anticiper ?",
+          "answers": [
+            "Des animaux sauvages pourraient traverser la route",
+            "Des animaux domestiques comme des vaches ou des chevaux pourraient traverser la chaussée",
+            "Un élevage est proche, mais vous pouvez maintenir votre vitesse",
+            "Une prairie privée avec une voie sans issue"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A23 avertit que des animaux domestiques (bétail, chevaux) peuvent traverser la chaussée. Adaptez votre vitesse."
+        },
+        {
+          "id": "A3_Q82",
+          "sign": "A25",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Piste cyclable obligatoire",
+            "Passage pour cyclistes et cyclomoteurs / endroit où ces conducteurs débouchent sur la chaussée",
+            "Zone cyclable",
+            "Parking vélo"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal de danger indique un passage pour cyclistes ou un endroit où des cyclistes débouchent sur la chaussée."
+        },
+        {
+          "id": "A3_Q83",
+          "sign": "A25",
+          "question": "Vous voyez un signal de danger avec une bicyclette. Que devez-vous anticiper ?",
+          "answers": [
+            "Rien de spécial",
+            "Des cyclistes ou cyclomoteurs peuvent déboucher sur la chaussée",
+            "La route est fermée aux cyclistes",
+            "Un parking vélo se trouve à proximité"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal vous prévient que des cyclistes peuvent arriver sur la chaussée depuis une piste cyclable."
+        },
+        {
+          "id": "H1_Q75",
+          "sign": "A25",
+          "question": "Vous voyez un signal de danger représentant un vélo. Que vous annonce-t-il ?",
+          "answers": [
+            "Une piste cyclable commence",
+            "Un passage pour cyclistes ou un endroit où des cyclistes débouchent sur la chaussée se trouve à proximité",
+            "Un parking vélo se trouve à proximité",
+            "Vous entrez dans une zone cyclable"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal de danger signale un passage pour cyclistes ou un endroit où des cyclistes débouchent."
+        },
+        {
+          "id": "A1_SIGN_A27_1",
+          "sign": "A27",
+          "question": "Vous voyez un panneau triangulaire avec un feu tricolore dessiné à l'intérieur. Qu'annonce-t-il ?",
+          "answers": [
+            "Un passage pour piétons à proximité",
+            "Un passage à niveau non gardé",
+            "Des feux de circulation à venir auxquels vous devrez peut-être vous arrêter",
+            "L'entrée d'une zone scolaire"
+          ],
+          "correct": 2,
+          "explanation": "Le panneau A27 annonce la présence prochaine de feux tricolores. Il prévient les usagers en avance pour qu'ils puissent adapter leur vitesse."
+        },
+        {
+          "id": "A1_SIGN_A31_1",
+          "sign": "A31",
+          "question": "Vous voyez un triangle rouge contenant une croix de Saint-André sans barrière dessinée. Que signifie-t-il ?",
+          "answers": [
+            "Un passage à niveau équipé de barrières automatiques",
+            "Un passage à niveau sans barrières ni demi-barrières : redoublez de vigilance",
+            "Une traversée de voie de tramway",
+            "Un passage piétons avec priorité absolue"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A31 signale un passage à niveau sans barrières ni demi-barrières. C'est une situation particulièrement dangereuse : doublez votre vigilance."
+        },
+        {
+          "id": "A2_Q56",
+          "sign": "A31",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Garage à proximité",
+            "Zone industrielle",
+            "Travaux",
+            "Dépôt de matériaux"
+          ],
+          "correct": 2,
+          "explanation": "Le panneau de danger triangulaire avec des outils signale la présence de travaux sur la route."
+        },
+        {
+          "id": "A1_SIGN_A33_1",
+          "sign": "A33",
+          "question": "Vous voyez un triangle rouge contenant un tramway. Comment devez-vous réagir ?",
+          "answers": [
+            "Accélérer pour passer avant le tram éventuel",
+            "Ralentir car une traversée de tramway est signalée à cet endroit",
+            "Klaxonner pour avertir le conducteur du tram",
+            "Ne rien faire, le tram s'arrête toujours aux intersections"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A33 annonce une traversée de tramway. Le tram a toujours la priorité sur les autres usagers à cet endroit."
+        },
+        {
+          "id": "A1_SIGN_A35_1",
+          "sign": "A35",
+          "question": "Vous voyez un triangle rouge avec un point d'exclamation ou un carrefour à configuration inhabituelle. Que signifie-t-il ?",
+          "answers": [
+            "Un passage à niveau à proximité",
+            "Un carrefour dangereux nécessitant une prudence accrue",
+            "Une intersection où vous avez la priorité absolue",
+            "Une zone de travaux temporaire"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A35 indique un carrefour dangereux où la configuration particulière (mauvaise visibilité, angle aigu…) impose une prudence accrue."
+        },
+        {
+          "id": "A2_Q58",
+          "sign": "A39",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Sens unique",
+            "Circulation admise dans les deux sens après une section à sens unique",
+            "Dépassement interdit",
+            "Route barrée"
+          ],
+          "correct": 1,
+          "explanation": "Ce panneau de danger annonce la fin d'un sens unique et le retour à la circulation en double sens."
+        },
+        {
+          "id": "A1_SIGN_A41_1",
+          "sign": "A41",
+          "question": "Vous voyez un triangle rouge contenant le mot « STOP » suivi d'une distance. Que signifie-t-il ?",
+          "answers": [
+            "Vous devez vous arrêter immédiatement à cet endroit",
+            "Un panneau STOP se trouve à la distance indiquée : commencez à ralentir",
+            "La priorité de droite est rétablie à partir de ce point",
+            "Un carrefour giratoire se situe à la distance indiquée"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A41 est un panneau de pré-signalisation : il annonce qu'un panneau STOP se trouve à la distance mentionnée. Commencez à ralentir."
+        },
+        {
+          "id": "A1_SIGN_A47_1",
+          "sign": "A47",
+          "question": "Vous voyez un triangle rouge avec plusieurs voitures serrées (file). Que signifie-t-il ?",
+          "answers": [
+            "Une zone de travaux avec circulation alternée",
+            "Un risque de formation de bouchon : réduisez votre vitesse",
+            "Un parking complet à proximité",
+            "Un croisement de routes très fréquenté avec feux"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A47 prévient d'un risque de congestion (bouchon). Réduisez votre vitesse et maintenez vos distances de sécurité."
+        },
+        {
+          "id": "A1_SIGN_A49_1",
+          "sign": "A49",
+          "question": "Vous voyez un panneau triangulaire représentant un cerf bondissant. Que devez-vous anticiper ?",
+          "answers": [
+            "L'entrée dans une réserve naturelle protégée interdite aux véhicules",
+            "Des animaux sauvages pourraient traverser la route : ralentissez",
+            "Un élevage de cerfs se trouve à proximité",
+            "Une zone de chasse : utilisez votre klaxon"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau A49 signale que des animaux sauvages (cerfs, chevreuils, sangliers…) peuvent traverser. Ralentissez et restez vigilant."
+        },
+        {
+          "id": "E1_Q57",
+          "sign": "A7a",
+          "question": "Vous apercevez un signal triangulaire avec un rétrécissement symétrique. Que signifie ce panneau ?",
+          "answers": [
+            "Route étroite avec interdiction de dépasser",
+            "Rétrécissement de la chaussée des deux côtés",
+            "Travaux en cours",
+            "Passage étroit avec priorité"
+          ],
+          "correct": 1,
+          "explanation": "Le triangle avec rétrécissement symétrique indique un rétrécissement des deux côtés."
+        },
+        {
+          "id": "E1_Q58",
+          "sign": "A7b",
+          "question": "Vous apercevez un signal triangulaire indiquant un rétrécissement du côté gauche. Que signifie ce panneau ?",
+          "answers": [
+            "Virage à gauche",
+            "Rétrécissement de la chaussée à gauche",
+            "Sens interdit à gauche",
+            "Déviation vers la gauche"
+          ],
+          "correct": 1,
+          "explanation": "Ce triangle indique que la chaussée se rétrécit du côté gauche."
+        },
+        {
+          "id": "E1_Q59",
+          "sign": "A7c",
+          "question": "Vous apercevez un signal triangulaire indiquant un rétrécissement du côté droit. Que signifie ce panneau ?",
+          "answers": [
+            "Virage à droite",
+            "Rétrécissement de la chaussée à droite",
+            "Sens interdit à droite",
+            "Travaux à droite"
+          ],
+          "correct": 1,
+          "explanation": "Ce triangle indique que la chaussée se rétrécit du côté droit."
+        }
+      ]
+    },
+    {
+      "id": "BC",
+      "title": "Interdiction & Obligation",
+      "color": "#f59e0b",
+      "icon": "⛔",
+      "questions": [
+        {
+          "id": "F3_Q61",
+          "sign": "B1",
+          "question": "Vous apercevez ce panneau en arrivant à un carrefour. Que signifie-t-il ?",
+          "answers": [
+            "Arrêt obligatoire (STOP)",
+            "Vous devez céder le passage aux conducteurs de la voie transversale",
+            "Danger à proximité",
+            "Vous circulez sur une voie prioritaire"
+          ],
+          "correct": 1,
+          "explanation": "Triangle sur pointe = cédez le passage."
+        },
+        {
+          "id": "F4_Q62",
+          "sign": "B1",
+          "question": "Vous apercevez un triangle blanc bordé de rouge, pointe vers le bas. Que signifie-t-il ?",
+          "answers": [
+            "Arrêt obligatoire (STOP)",
+            "Cédez le passage aux conducteurs de la voie transversale",
+            "Priorité de droite",
+            "Voie prioritaire"
+          ],
+          "correct": 1,
+          "explanation": "Triangle blanc bordé de rouge sur pointe = cédez le passage."
+        },
+        {
+          "id": "F5_Q60",
+          "sign": "B1",
+          "question": "Vous apercevez un triangle blanc bordé de rouge, pointe vers le bas. Que signifie-t-il ?",
+          "answers": [
+            "Arrêt obligatoire (STOP)",
+            "Cédez le passage aux conducteurs de la voie transversale",
+            "Priorité de droite",
+            "Danger"
+          ],
+          "correct": 1,
+          "explanation": "Triangle blanc bordé de rouge sur pointe = cédez le passage."
+        },
+        {
+          "id": "F4_Q61",
+          "sign": "B17",
+          "question": "Vous apercevez ce panneau triangulaire sur pointe avec une croix à l'intérieur. Que signifie-t-il ?",
+          "answers": [
+            "Danger à proximité",
+            "Carrefour où la priorité de droite est d'application",
+            "Arrêt obligatoire (STOP)",
+            "Cédez le passage"
+          ],
+          "correct": 1,
+          "explanation": "Triangle sur pointe + croix = signal de priorité de droite."
+        },
+        {
+          "id": "E1_Q60",
+          "sign": "B19",
+          "question": "Vous apercevez un signal triangulaire avec deux flèches (rouge montante, noire descendante). Que signifie-t-il ?",
+          "answers": [
+            "Passage étroit avec priorité",
+            "La circulation est admise dans les deux sens après une section à sens unique",
+            "Vous avez la priorité",
+            "Rétrécissement de chaussée"
+          ],
+          "correct": 1,
+          "explanation": "Ce triangle avertit que la route reprend son double sens après un tronçon à sens unique."
+        },
+        {
+          "id": "E1_Q61",
+          "sign": "B19",
+          "question": "Vous apercevez un signal rond rouge et blanc avec deux flèches opposées. Que signifie ce panneau ?",
+          "answers": [
+            "Voie à sens unique",
+            "Passage étroit — obligation de céder le passage aux conducteurs venant en sens opposé",
+            "Priorité de passage",
+            "Interdiction de dépasser"
+          ],
+          "correct": 1,
+          "explanation": "Le signal rond rouge/blanc impose de céder le passage dans un passage étroit."
+        },
+        {
+          "id": "G1_SIGN_B19_1",
+          "sign": "B19",
+          "question": "Vous approchez d'un passage étroit et vous voyez un rectangle bleu avec une grande flèche blanche à gauche et une petite flèche rouge à droite. Que devez-vous faire ?",
+          "answers": [
+            "Vous devez attendre que les deux sens soient libres",
+            "Vous avez la priorité de passage dans ce passage étroit",
+            "Vous devez céder le passage aux véhicules venant en sens inverse",
+            "Vous ne pouvez pas dépasser dans ce passage"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau B19 indique que vous avez la priorité dans ce passage étroit. Les véhicules venant en sens inverse doivent vous laisser passer."
+        },
+        {
+          "id": "F3_Q65",
+          "sign": "B1",
+          "question": "Vous apercevez un panneau avec une flèche large et des petites lignes sur les côtés. Que signifie-t-il ?",
+          "answers": [
+            "Sens unique devant vous",
+            "Vous avez la priorité au carrefour suivant uniquement",
+            "Rond-point devant vous",
+            "Voie prioritaire à durée indéterminée"
+          ],
+          "correct": 1,
+          "explanation": "Flèche large + petites lignes = priorité au prochain carrefour."
+        },
+        {
+          "id": "F3_Q66",
+          "sign": "B1",
+          "question": "Vous voyez un panneau additionnel bleu avec une ligne large et des lignes étroites sous le signal de priorité. Que représente-t-il ?",
+          "answers": [
+            "Le sens de circulation général",
+            "Le tracé de la voie prioritaire et les voies qui doivent céder le passage",
+            "La direction de l'hôpital le plus proche",
+            "Les bandes de circulation de la chaussée"
+          ],
+          "correct": 1,
+          "explanation": "Panneau additionnel bleu = tracé de la voie prioritaire."
+        },
+        {
+          "id": "E1_Q62",
+          "sign": "B21",
+          "question": "Vous apercevez un signal rectangulaire bleu avec deux flèches (rouge et blanche). Que signifie ce panneau ?",
+          "answers": [
+            "Obligation de céder le passage",
+            "Passage étroit — priorité de passage par rapport aux conducteurs venant en sens opposé",
+            "Voie à sens unique",
+            "Zone de rencontre"
+          ],
+          "correct": 1,
+          "explanation": "Le signal rectangulaire bleu donne la priorité de passage dans le passage étroit."
+        },
+        {
+          "id": "G1_SIGN_B21_1",
+          "sign": "B21",
+          "question": "Vous arrivez devant un passage étroit et vous voyez un panneau rond avec une flèche rouge montant et une flèche blanche descendant. Que devez-vous faire ?",
+          "answers": [
+            "Vous avez la priorité de passage",
+            "Vous devez céder le passage aux véhicules venant en sens inverse dans ce passage étroit",
+            "Vous devez klaxonner avant d'entrer",
+            "Vous devez accélérer pour passer en premier"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau B21 signifie que vous devez céder le passage aux véhicules venant en sens inverse. Attendez que la voie soit libre avant d'engager le passage étroit."
+        },
+        {
+          "id": "F4_Q63",
+          "sign": "B5",
+          "question": "Vous apercevez un panneau octogonal rouge avec le mot STOP. Que signifie-t-il ?",
+          "answers": [
+            "Cédez le passage sans vous arrêter",
+            "Marquez l'arrêt complet et cédez le passage",
+            "Priorité de droite applicable",
+            "Ralentissez"
+          ],
+          "correct": 1,
+          "explanation": "STOP = arrêt obligatoire et céder le passage."
+        },
+        {
+          "id": "F5_Q61",
+          "sign": "B5",
+          "question": "Vous apercevez un panneau octogonal rouge avec le mot STOP. Que signifie-t-il ?",
+          "answers": [
+            "Cédez le passage sans vous arrêter",
+            "Marquez l'arrêt complet et cédez le passage",
+            "Priorité de droite applicable",
+            "Ralentissez"
+          ],
+          "correct": 1,
+          "explanation": "STOP = arrêt obligatoire et céder le passage."
+        },
+        {
+          "id": "F6_Q73",
+          "sign": "B5",
+          "question": "Vous apercevez un panneau STOP octogonal rouge près d'un passage à niveau. Que signifie-t-il ?",
+          "answers": [
+            "Ralentissez simplement",
+            "Marquez l'arrêt complet et cédez le passage avant de franchir le passage à niveau",
+            "Les feux sont en panne",
+            "Le passage est totalement interdit"
+          ],
+          "correct": 1,
+          "explanation": "SSF + panneau vélo = les cyclistes peuvent aussi utiliser ce SSF."
+        },
+        {
+          "id": "F6_Q75",
+          "sign": "B5",
+          "question": "Vous apercevez un panneau STOP octogonal rouge à l'approche d'un passage à niveau. Que devez-vous faire ?",
+          "answers": [
+            "Simplement ralentir",
+            "Marquer l'arrêt complet et céder le passage",
+            "Les feux sont en panne, appliquer la priorité de droite",
+            "Le passage est totalement interdit"
+          ],
+          "correct": 1,
+          "explanation": "STOP = arrêt obligatoire et céder le passage."
+        },
+        {
+          "id": "G1_SIGN_B5_1",
+          "sign": "B5",
+          "question": "Vous venez de quitter une route prioritaire et vous apercevez un losange jaune barré suivi d'un triangle inversé blanc. Que devez-vous faire ?",
+          "answers": [
+            "Vous pouvez continuer normalement, vous êtes toujours prioritaire",
+            "Vous devez appliquer la priorité de droite et céder le passage aux véhicules venant de droite",
+            "La route prioritaire reprend 200 m plus loin",
+            "Vous devez klaxonner pour avertir les autres"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau B5 indique que la route prioritaire prend fin et que la priorité de droite ordinaire s'applique à nouveau. Cédez le passage aux véhicules venant de droite."
+        },
+        {
+          "id": "A3_Q81",
+          "sign": "C11",
+          "question": "Vous êtes cycliste et voyez ce signal d'interdiction. Que devez-vous faire ?",
+          "answers": [
+            "Vous pouvez continuer si la route est libre",
+            "Vous ne pouvez pas emprunter cette voie, vous devez trouver un autre itinéraire",
+            "Vous pouvez continuer en poussant votre vélo",
+            "Vous pouvez continuer à moins de 10 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Le signal d'accès interdit aux cyclistes vous interdit d'emprunter cette voie, que vous rouliez ou poussiez votre vélo."
+        },
+        {
+          "id": "G2_SIGN_C13_1",
+          "sign": "C13",
+          "question": "Vous voyez un panneau rond rouge avec la silhouette d'un cavalier sur un cheval. Que signifie-t-il ?",
+          "answers": [
+            "Les animaux sont interdits sur cette voie",
+            "L'accès est interdit aux cavaliers montés sur un cheval",
+            "Le dépassement est interdit pour les véhicules lents",
+            "Vous entrez dans une zone de chasse réservée"
+          ],
+          "correct": 1,
+          "explanation": "C13 interdit l'accès aux cavaliers (personnes montées à cheval). Les piétons conduisant un cheval à main restent autorisés."
+        },
+        {
+          "id": "G2_SIGN_C15_1",
+          "sign": "C15",
+          "question": "Vous voyez un panneau rond rouge avec la silhouette d'une charrette tirée par un animal. Que signifie-t-il ?",
+          "answers": [
+            "Les animaux de trait sont interdits sur cette route",
+            "Les véhicules à traction animale (charrettes, calèches...) ne peuvent pas emprunter cette voie",
+            "Les tracteurs agricoles sont interdits",
+            "Les caravanes et remorques sont interdites"
+          ],
+          "correct": 1,
+          "explanation": "C15 interdit l'accès aux véhicules attelés (charrette tirée par un animal). Il concerne les véhicules à traction animale."
+        },
+        {
+          "id": "G2_SIGN_C27_1",
+          "sign": "C27",
+          "question": "Vous conduisez un véhicule long et vous voyez un panneau rond rouge avec le chiffre \"10 m\". Que signifie-t-il ?",
+          "answers": [
+            "La vitesse est limitée à 10 km/h",
+            "Les véhicules de plus de 10 mètres de long ne peuvent pas passer",
+            "Vous devez maintenir une distance de sécurité de 10 mètres",
+            "La hauteur maximale est de 10 mètres"
+          ],
+          "correct": 1,
+          "explanation": "C27 interdit le passage aux véhicules dont la longueur (y compris chargement) dépasse la valeur indiquée — ici 10 m. Cela cible les semi-remorques et trains routiers longs."
+        },
+        {
+          "id": "G2_SIGN_C29_1",
+          "sign": "C29",
+          "question": "Vous voyez un panneau rond rouge représentant un essieu de roues avec un chiffre en tonnes. Que signifie-t-il ?",
+          "answers": [
+            "Le poids total du véhicule ne doit pas dépasser cette valeur",
+            "La charge par essieu est limitée à la valeur indiquée",
+            "Le nombre maximal d'essieux est limité",
+            "L'accès est interdit aux véhicules ayant plus de 2 essieux"
+          ],
+          "correct": 1,
+          "explanation": "C29 limite la charge par essieu. Même si le poids total du véhicule est inférieur au panneau C25, si la charge par essieu est trop élevée, vous êtes en infraction."
+        },
+        {
+          "id": "C1_Q61",
+          "sign": "C31a",
+          "question": "Vous voyez un signal rond rouge avec une fleche barree vers la gauche. Que signifie-t-il ?",
+          "answers": [
+            "Sens unique",
+            "Au prochain carrefour, interdiction de tourner a gauche",
+            "Virage a gauche",
+            "Deviation a gauche"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal interdit de tourner à gauche au prochain carrefour."
+        },
+        {
+          "id": "C1_Q62",
+          "sign": "C31a",
+          "question": "Vous voyez ce meme signal d'interdiction de tourner avec un panneau additionnel de masse. Que signifie-t-il ?",
+          "answers": [
+            "Interdiction pour tout le monde",
+            "L'interdiction de tourner ne s'applique qu'aux vehicules dont la masse en charge depasse la masse indiquee",
+            "La masse maximale pour tourner",
+            "Le poids de la route"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau additionnel de masse restreint l'interdiction aux véhicules dont la MEC dépasse la valeur indiquée."
+        },
+        {
+          "id": "C1_Q68",
+          "sign": "C31a",
+          "question": "Vous voyez un signal d'interdiction de tourner a gauche sans panneau additionnel. Votre voiture est legere. Pouvez-vous tourner ?",
+          "answers": [
+            "Oui, les voitures legeres ne sont pas concernees",
+            "Non, sans panneau additionnel l'interdiction s'applique a tous les vehicules",
+            "Oui, si le carrefour est libre",
+            "Cela depend de l'heure"
+          ],
+          "correct": 1,
+          "explanation": "Sans panneau additionnel de masse, l'interdiction s'applique à TOUS les conducteurs."
+        },
+        {
+          "id": "E3_Q64",
+          "sign": "C35",
+          "question": "Vous apercevez un signal rond rouge avec deux silhouettes de voitures. Que signifie ce panneau ?",
+          "answers": [
+            "Voie à sens unique",
+            "Interdiction de dépasser par la gauche un véhicule attelé ou à plus de deux roues",
+            "Interdiction de circuler",
+            "Zone de croisement"
+          ],
+          "correct": 1,
+          "explanation": "Le signal rond rouge (2 voitures) = interdiction de dépasser pour tous les conducteurs."
+        },
+        {
+          "id": "G2_SIGN_C35_1",
+          "sign": "C35",
+          "question": "Vous roulez et vous voyez un panneau gris/blanc avec deux voitures et des barres diagonales grises. Que signifie-t-il ?",
+          "answers": [
+            "Le dépassement est interdit",
+            "L'interdiction de dépasser prend fin",
+            "Le dépassement est réservé aux voitures",
+            "Vous entrez dans une voie de dépassement obligatoire"
+          ],
+          "correct": 1,
+          "explanation": "C35 marque la fin de l'interdiction de dépassement. À partir de ce panneau, vous pouvez à nouveau dépasser si les conditions le permettent."
+        },
+        {
+          "id": "E3_Q65",
+          "sign": "C37",
+          "question": "Vous apercevez un signal similaire au précédent mais barré. Que signifie ce panneau ?",
+          "answers": [
+            "Interdiction de circuler",
+            "Fin de l'interdiction de dépasser",
+            "Début d'une nouvelle zone d'interdiction",
+            "Interdiction de dépasser renforcée"
+          ],
+          "correct": 1,
+          "explanation": "Le signal barré = fin de l'interdiction correspondante."
+        },
+        {
+          "id": "E3_Q68",
+          "sign": "C37",
+          "question": "Vous apercevez un signal indiquant « 500 m » avant une zone d'interdiction de dépasser. Que signifie-t-il ?",
+          "answers": [
+            "La zone d'interdiction commence immédiatement",
+            "La zone d'interdiction de dépasser commence 500 mètres plus loin",
+            "La zone d'interdiction fait 500 mètres de long",
+            "Il y a 500 mètres de route droite"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal annonce que la zone d'interdiction commence 500 mètres plus loin."
+        },
+        {
+          "id": "E3_Q67",
+          "sign": "C37",
+          "question": "Vous apercevez un signal rectangulaire de zone avec deux voitures. Que signifie ce panneau ?",
+          "answers": [
+            "Fin de la zone d'interdiction",
+            "Début d'une zone où l'interdiction de dépasser s'applique",
+            "Zone de vitesse limitée",
+            "Zone piétonne"
+          ],
+          "correct": 1,
+          "explanation": "Le signal rectangulaire de zone = début de la zone d'interdiction de dépasser."
+        },
+        {
+          "id": "E3_Q69",
+          "sign": "C37",
+          "question": "Vous apercevez un signal d'autorisation de dépassement pour camions > 3,5 t. Que signifie-t-il ?",
+          "answers": [
+            "Tous les véhicules peuvent désormais dépasser",
+            "Les camions > 3,5 t sont exceptionnellement autorisés à dépasser par la gauche",
+            "Les camions sont interdits dans cette zone",
+            "Les camions doivent ralentir"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal lève l'interdiction pour les camions > 3,5 t et les autorise à dépasser."
+        },
+        {
+          "id": "E3_Q66",
+          "sign": "C39",
+          "question": "Vous apercevez un signal d'interdiction de dépasser avec un camion et une voiture. Que signifie ce panneau ?",
+          "answers": [
+            "Interdiction de dépasser pour tous les conducteurs",
+            "Interdiction pour les véhicules de transport de marchandises > 3,5 t MMA de dépasser par la gauche",
+            "Interdiction de dépasser pour les voitures",
+            "Interdiction de dépasser pour les bus"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal (voiture + camion) vise uniquement les transporteurs de marchandises > 3,5 t MMA."
+        },
+        {
+          "id": "H1_SIGN_C39_1",
+          "sign": "C39",
+          "question": "Vous voyez un panneau circulaire bleu avec deux barres rouges en croix. Que signifie-t-il pour vous ?",
+          "answers": [
+            "Seul le stationnement est interdit",
+            "L'arrêt ET le stationnement sont tous deux interdits à cet endroit",
+            "Seul l'arrêt est interdit",
+            "Le klaxon est interdit"
+          ],
+          "correct": 1,
+          "explanation": "C39 interdit toute immobilisation du véhicule, même brève. Ni l'arrêt, ni le stationnement ne sont tolérés. C'est plus restrictif que C37 (stationnement seul)."
+        },
+        {
+          "id": "G2_SIGN_C45_120_1",
+          "sign": "C45",
+          "question": "Vous sortez d'une zone de chantier sur autoroute et vous voyez \"120\" barré de gris. Que signifie-t-il ?",
+          "answers": [
+            "La vitesse minimale est de 120 km/h",
+            "La limitation de 120 km/h prend fin et vous pouvez reprendre la vitesse normale d'autoroute",
+            "La limitation de 120 km/h reprend",
+            "La vitesse est réduite à 100 km/h"
+          ],
+          "correct": 1,
+          "explanation": "C45-120 marque la fin de la limitation de 120 km/h imposée dans la zone de chantier. La vitesse normale d'autoroute (selon le pays) s'applique à nouveau."
+        },
+        {
+          "id": "G2_SIGN_C45_50_1",
+          "sign": "C45",
+          "question": "Vous rouliez sous une limitation à 50 km/h et vous voyez un panneau barré en gris avec \"50\". Que signifie-t-il ?",
+          "answers": [
+            "La limite est désormais fixée à 50 km/h",
+            "La limitation de 50 km/h prend fin",
+            "La limitation ne s'applique que de nuit",
+            "Il s'agit d'une limitation provisoire liée à des travaux"
+          ],
+          "correct": 1,
+          "explanation": "C45-50 marque la fin de la limitation à 50 km/h. La vitesse autorisée revient à la limite normale applicable sur ce type de voie."
+        },
+        {
+          "id": "G2_SIGN_C45_70_1",
+          "sign": "C45",
+          "question": "Vous sortez d'une zone à 70 km/h et vous voyez un panneau barré en gris avec \"70\". Que pouvez-vous faire ?",
+          "answers": [
+            "Vous devez maintenir 70 km/h maximum",
+            "Vous pouvez rouler à la vitesse normale autorisée sur ce type de route",
+            "Vous pouvez accélérer à 120 km/h immédiatement",
+            "Vous devez encore réduire votre vitesse"
+          ],
+          "correct": 1,
+          "explanation": "C45-70 signale la fin de la limitation à 70 km/h. Vous retournez à la vitesse maximale autorisée sur ce type de route (ex : 90 km/h en Wallonie hors agglomération)."
+        },
+        {
+          "id": "G2_SIGN_C45_90_1",
+          "sign": "C45",
+          "question": "Vous sortez d'une zone de travaux et vous voyez un panneau barré \"90\". Que signifie-t-il ?",
+          "answers": [
+            "Vous devez rouler à 90 km/h minimum",
+            "La limitation provisoire de 90 km/h se termine",
+            "La route reprend à 90 km/h et non 120",
+            "Les travaux continuent avec une limite de 90 km/h"
+          ],
+          "correct": 1,
+          "explanation": "C45-90 met fin à la limitation de 90 km/h. La vitesse applicable redevient celle normale pour ce type de voie. Souvent présent en sortie de zones de travaux."
+        },
+        {
+          "id": "G2_SIGN_C49_1",
+          "sign": "C49",
+          "question": "Vous voyez un panneau rond gris/blanc barré de plusieurs lignes. Que signifie-t-il ?",
+          "answers": [
+            "Toutes les limitations de vitesse prennent fin",
+            "Toutes les interdictions ponctuelles encore actives prennent fin simultanément",
+            "Vous quittez une zone résidentielle",
+            "Vous quittez l'autoroute"
+          ],
+          "correct": 1,
+          "explanation": "C49 annule en une seule fois toutes les interdictions ponctuelles (vitesse, dépassement, klaxon…) encore actives. C'est très pratique pour la fin des zones de chantier."
+        },
+        {
+          "id": "G2_SIGN_C5_1",
+          "sign": "C5",
+          "question": "Vous arrivez devant un panneau rond rouge avec un symbole barrant tous les véhicules à moteur. À qui s'adresse cette interdiction ?",
+          "answers": [
+            "Uniquement aux camions",
+            "À tous les véhicules à moteur (voitures, motos, camions...)",
+            "Aux vélos et aux piétons",
+            "Uniquement aux motos"
+          ],
+          "correct": 1,
+          "explanation": "C5 interdit l'accès à tous les véhicules à moteur (voitures, motos, camions…). Seuls les vélos, piétons et animaux peuvent continuer."
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "title": "Direction & Indication",
+      "color": "#22c55e",
+      "icon": "🔵",
+      "questions": [
+        {
+          "id": "A1_SIGN_D1__1",
+          "sign": "D01c",
+          "question": "Vous arrivez à un carrefour avec un panneau rond bleu montrant une flèche tout droit et une flèche à droite. Que devez-vous faire ?",
+          "answers": [
+            "Vous êtes obligé d'aller tout droit uniquement",
+            "Vous pouvez aller tout droit ou tourner à droite, mais tourner à gauche est interdit",
+            "Vous devez obligatoirement tourner à droite",
+            "Vous pouvez faire demi-tour"
+          ],
+          "correct": 1,
+          "explanation": "D1c impose d'aller tout droit ou de tourner à droite. Tourner à gauche est interdit à cet endroit."
+        },
+        {
+          "id": "A1_SIGN_D1__2",
+          "sign": "D01d",
+          "question": "Vous arrivez à un carrefour avec un panneau rond bleu montrant une flèche tout droit et une flèche à gauche. Que devez-vous faire ?",
+          "answers": [
+            "Vous êtes obligé d'aller tout droit uniquement",
+            "Vous pouvez aller tout droit ou tourner à gauche, mais tourner à droite est interdit",
+            "Vous devez obligatoirement tourner à gauche",
+            "Toutes les directions sont autorisées"
+          ],
+          "correct": 1,
+          "explanation": "D1d impose d'aller tout droit ou de tourner à gauche. Tourner à droite est interdit à cet endroit."
+        },
+        {
+          "id": "G1_SIGN_D1__1",
+          "sign": "D01a",
+          "question": "Vous arrivez à un carrefour et vous voyez un panneau rond bleu avec une flèche blanche vers la droite. Que devez-vous faire ?",
+          "answers": [
+            "Vous pouvez tourner à droite si vous le souhaitez",
+            "Vous devez obligatoirement tourner à droite",
+            "Vous avez la priorité sur les véhicules venant de droite",
+            "Vous pouvez dépasser par la droite"
+          ],
+          "correct": 1,
+          "explanation": "D1a impose la direction droite. Vous devez tourner à droite. Tout autre direction est interdite à cet endroit."
+        },
+        {
+          "id": "A1_SIGN_D10_1",
+          "sign": "D10",
+          "question": "Vous voyez un panneau rond bleu avec un piéton et un cycliste côte à côte, non séparés. Que signifie-t-il ?",
+          "answers": [
+            "Les piétons et cyclistes sont tous deux interdits",
+            "Chemin mixte : piétons et cyclistes partagent la même surface",
+            "Voie cyclable avec un trottoir latéral séparé",
+            "Piste cyclable exclusive interdite aux piétons"
+          ],
+          "correct": 1,
+          "explanation": "D10 indique un chemin mixte piétons/cyclistes non séparé. Les deux usagers partagent le même espace et doivent se respecter mutuellement."
+        },
+        {
+          "id": "A3_Q68",
+          "sign": "D10",
+          "question": "Ce signal rond bleu avec piéton et vélo côte à côte signifie :",
+          "answers": [
+            "Zone piétonne",
+            "Partie réservée aux piétons, vélos et cyclomoteurs classe A",
+            "Piste cyclable uniquement",
+            "Trottoir uniquement"
+          ],
+          "correct": 1,
+          "explanation": "Symboles côte à côte : la partie est réservée aux piétons, aux vélos et aux cyclomoteurs classe A."
+        },
+        {
+          "id": "A3_Q72",
+          "sign": "D10",
+          "question": "Ce signal indique un chemin réservé. Quels usagers y sont admis ?",
+          "answers": [
+            "Uniquement les piétons",
+            "Piétons, cyclistes et cavaliers selon les symboles",
+            "Tous les véhicules",
+            "Uniquement les cyclistes"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique un chemin partagé dont les usagers autorisés sont précisés par les symboles (piétons, cyclistes, cavaliers)."
+        },
+        {
+          "id": "A6_Q85",
+          "sign": "D10",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Zone piétonne",
+            "Chemin réservé aux usagers indiqués sur le panneau",
+            "Piste cyclable obligatoire",
+            "Passage pour piétons"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique un chemin réservé aux catégories d'usagers représentées sur le panneau."
+        },
+        {
+          "id": "A1_SIGN_D11_1",
+          "sign": "D11",
+          "question": "Vous voyez un panneau rond bleu avec un piéton à gauche et un cycliste à droite, séparés par un trait. Que signifie-t-il ?",
+          "answers": [
+            "Les piétons uniquement à gauche, pas de vélos autorisés",
+            "Chemin séparé : piétons à gauche, cyclistes à droite",
+            "Les cyclistes ont priorité sur les piétons",
+            "Sens unique pour piétons et cyclistes"
+          ],
+          "correct": 1,
+          "explanation": "D11 indique un chemin séparé en deux parties : côté gauche pour les piétons, côté droit pour les cyclistes. Chacun reste dans sa partie."
+        },
+        {
+          "id": "G1_SIGN_D1b_1",
+          "sign": "D01b",
+          "question": "Vous arrivez à un carrefour et vous voyez un panneau rond bleu avec une flèche blanche vers la gauche. Que devez-vous faire ?",
+          "answers": [
+            "Vous pouvez tourner à gauche si vous le souhaitez",
+            "Vous devez obligatoirement tourner à gauche",
+            "Les véhicules venant de gauche sont prioritaires",
+            "Cette voie est réservée au trafic local"
+          ],
+          "correct": 1,
+          "explanation": "D1b impose la direction gauche. Aller tout droit ou à droite est interdit. Vérifiez la bonne voie avant l'intersection."
+        },
+        {
+          "id": "A1_SIGN_D3_1",
+          "sign": "D03",
+          "question": "Vous voyez un panneau rond bleu avec une flèche contournant un obstacle par la droite. Que devez-vous faire ?",
+          "answers": [
+            "Dépasser obligatoirement par la gauche",
+            "Contourner l'obstacle par la droite comme indiqué",
+            "La priorité est à droite à cet endroit",
+            "Emprunter le sens giratoire obligatoirement"
+          ],
+          "correct": 1,
+          "explanation": "D3 impose le contournement d'un obstacle (îlot, refuge piéton…) par la droite. Passer à gauche de cet obstacle est interdit."
+        },
+        {
+          "id": "G2_SIGN_D5_1",
+          "sign": "D5",
+          "question": "Vous arrivez à un carrefour giratoire et vous voyez un panneau rond bleu avec des flèches en cercle. Que devez-vous faire ?",
+          "answers": [
+            "Vous pouvez aussi continuer tout droit",
+            "Vous devez obligatoirement vous engager dans le carrefour giratoire",
+            "Les véhicules déjà dans le giratoire ont la priorité",
+            "Une voie de déviation est disponible"
+          ],
+          "correct": 1,
+          "explanation": "D5 signale un carrefour giratoire obligatoire. Vous devez vous y engager et circuler en sens anti-horaire."
+        },
+        {
+          "id": "A3_Q67",
+          "sign": "D7",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Piste cyclable interdite",
+            "Piste cyclable obligatoire",
+            "Fin de piste cyclable",
+            "Parking vélo"
+          ],
+          "correct": 1,
+          "explanation": "Le signal rond bleu avec une bicyclette indique une piste cyclable obligatoire."
+        },
+        {
+          "id": "A1_SIGN_D9_1",
+          "sign": "D09",
+          "question": "Vous voyez un panneau rond bleu avec un piéton. Que signifie-t-il ?",
+          "answers": [
+            "Passage pour piétons : vous devez vous arrêter",
+            "Chemin réservé exclusivement aux piétons, aucun véhicule n'y a accès",
+            "Les piétons sont autorisés à traverser à cet endroit",
+            "Zone piétonne temporaire pendant certaines heures"
+          ],
+          "correct": 1,
+          "explanation": "D9 indique un chemin ou trottoir réservé exclusivement aux piétons. Les cyclistes et véhicules n'y ont pas accès."
+        },
+        {
+          "id": "A3_Q69",
+          "sign": "D9a",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Partie réservée aux piétons, vélos et cyclomoteurs classe A",
+            "Partie réservée aux piétons et cyclistes uniquement, cyclomoteurs classe A et B interdits",
+            "Zone piétonne",
+            "Parking mixte"
+          ],
+          "correct": 1,
+          "explanation": "Symboles l'un au-dessus de l'autre : réservé aux piétons et cyclistes seulement. Cyclomoteurs A et B interdits."
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "title": "Stationnement & Parking",
+      "color": "#8b5cf6",
+      "icon": "🅿️",
+      "questions": [
+        {
+          "id": "A4_Q84",
+          "sign": "E1",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Sortie d'autoroute",
+            "Numéro d'une route internationale",
+            "Échangeur",
+            "Zone de stationnement"
+          ],
+          "correct": 1,
+          "explanation": "La lettre E suivie d'un chiffre indique un numéro de route internationale (réseau européen)."
+        },
+        {
+          "id": "C1_Q53",
+          "sign": "E5",
+          "question": "Vous voyez un signal bleu avec un P blanc. Que signifie-t-il ?",
+          "answers": [
+            "Parking payant",
+            "Stationnement autorise",
+            "Parking interdit",
+            "Parking reserve"
+          ],
+          "correct": 1,
+          "explanation": "Le signal bleu avec P blanc indique un stationnement autorisé."
+        },
+        {
+          "id": "C1_Q54",
+          "sign": "E5",
+          "question": "Vous voyez un signal de stationnement avec un panneau additionnel indiquant une masse. Que signifie-t-il ?",
+          "answers": [
+            "Stationnement pour tous",
+            "Stationnement autorise uniquement pour les vehicules dont la MMA excede la masse indiquee",
+            "Stationnement interdit au-dessus de cette masse",
+            "Stationnement reserve aux camions"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau additionnel de masse restreint le stationnement aux véhicules dépassant la masse indiquée (ex : camions)."
+        },
+        {
+          "id": "C1_Q69",
+          "sign": "E5",
+          "question": "Vous voyez un signal de stationnement avec panneau additionnel '3,5t'. Votre voiture a une MMA de 1 600 kg. Pouvez-vous stationner ici ?",
+          "answers": [
+            "Oui, le stationnement est autorise pour tous",
+            "Non, le stationnement est reserve aux vehicules dont la MMA excede 3,5 tonnes (camions)",
+            "Oui, si vous vous garez correctement",
+            "Cela depend de l'heure"
+          ],
+          "correct": 1,
+          "explanation": "Ce stationnement est réservé aux véhicules de MMA > 3,5 tonnes. Votre voiture (1 600 kg) ne peut pas s'y garer."
+        },
+        {
+          "id": "H1_SIGN_E7_1",
+          "sign": "E7",
+          "question": "Vous cherchez à vous garer et vous voyez un panneau bleu rectangulaire avec un \"P\" et un symbole de pièce de monnaie. Que devez-vous faire ?",
+          "answers": [
+            "Vous pouvez stationner gratuitement sans limite de temps",
+            "Vous devez payer au parcomètre ou à l'horodateur pour stationner",
+            "Vous devez utiliser votre disque de stationnement",
+            "Le stationnement est réservé aux résidents"
+          ],
+          "correct": 1,
+          "explanation": "E7 indique un stationnement payant. Vous devez acquitter le tarif à l'horodateur ou au parcomètre et placer le ticket bien visible."
+        },
+        {
+          "id": "H1_SIGN_E9__1",
+          "sign": "E9a",
+          "question": "Vous voyez un panneau bleu avec un grand \"P\" accompagné d'un pictogramme de bus ou de train en périphérie de la ville. Que signifie-t-il ?",
+          "answers": [
+            "C'est un parking d'autoroute",
+            "C'est un parking relais (P+R) : garez votre voiture et prenez les transports en commun",
+            "Le stationnement est réservé aux usagers du train",
+            "Le stationnement est interdit sauf pour les véhicules de transport"
+          ],
+          "correct": 1,
+          "explanation": "E9b (parking relais / Park & Ride) vous invite à laisser votre voiture et à continuer en transports en commun. Souvent situé en périphérie des villes."
+        }
+      ]
+    },
+    {
+      "id": "FEU",
+      "title": "Signaux lumineux",
+      "color": "#f97316",
+      "icon": "🚦",
+      "questions": [
+        {
+          "id": "D1_SIGN_CROIX_ROUGE_VOIE_1",
+          "sign": "CROIX_ROUGE_VOIE",
+          "question": "Vous roulez sur l'autoroute et voyez une croix rouge éclairée au-dessus de votre voie. Que devez-vous faire ?",
+          "answers": [
+            "Ralentir : risque d'accident",
+            "Cette voie est fermée à la circulation : ne l'empruntez pas",
+            "Laisser la priorité aux véhicules d'urgence",
+            "Préparer votre paiement au péage"
+          ],
+          "correct": 1,
+          "explanation": "La croix rouge au-dessus d'une voie signifie que cette voie est totalement fermée. Il est strictement interdit d'y rouler. Changez de voie immédiatement."
+        },
+        {
+          "id": "D1_SIGN_FEU_PIETON_ROUGE_1",
+          "sign": "FEU_PIETON_ROUGE",
+          "question": "Vous êtes piéton et le feu piéton affiche un bonhomme rouge immobile. Que devez-vous faire ?",
+          "answers": [
+            "Traverser rapidement",
+            "Ne pas traverser : attendez le feu vert piéton",
+            "Traverser si aucune voiture n'arrive",
+            "Traverser car le feu est identique à un feu orange"
+          ],
+          "correct": 1,
+          "explanation": "Le feu piéton rouge signifie formellement : ne pas traverser. Même si la chaussée semble libre, vous devez attendre que le bonhomme passe au vert."
+        },
+        {
+          "id": "D1_SIGN_FEU_VELO_ROUGE_1",
+          "sign": "FEU_VELO_ROUGE",
+          "question": "Vous êtes cycliste et voyez un petit feu vélo rouge au niveau de votre piste. Que devez-vous faire ?",
+          "answers": [
+            "Vous pouvez continuer car vous n'êtes pas un véhicule à moteur",
+            "Vous devez vous arrêter et attendre le feu vert vélo",
+            "Vous devez céder le passage puis continuer",
+            "Vous suivez les feux destinés aux voitures"
+          ],
+          "correct": 1,
+          "explanation": "Le feu vélo rouge a la même valeur contraignante qu'un feu rouge pour les voitures. Le cycliste doit impérativement s'arrêter et attendre le feu vert."
+        },
+        {
+          "id": "D1_SIGN_FEU_VELO_VERT_1",
+          "sign": "FEU_VELO_VERT",
+          "question": "Vous êtes cycliste et un petit feu vélo vert s'allume à l'intersection. Que signifie-t-il ?",
+          "answers": [
+            "Vous avez la priorité absolue sur tous les véhicules",
+            "Vous pouvez vous engager mais restez prudent face aux autres usagers",
+            "C'est un feu décoratif sans valeur légale",
+            "Vous devez attendre les piétons avant de partir"
+          ],
+          "correct": 1,
+          "explanation": "Le feu vélo vert autorise le cycliste à s'engager. Il ne confère pas une priorité absolue sur tous : le cycliste doit quand même vérifier que la voie est libre et respecter les piétons."
+        },
+        {
+          "id": "D1_SIGN_FLECHE_VERTE_VOIE_1",
+          "sign": "FLECHE_VERTE_VOIE",
+          "question": "Vous roulez sur l'autoroute et voyez une flèche verte pointant vers le bas au-dessus d'une voie. Que signifie-t-elle ?",
+          "answers": [
+            "La voie va bientôt fermer",
+            "Cette voie est ouverte à la circulation",
+            "La voie est réservée aux transports en commun",
+            "Accélération recommandée sur cette voie"
+          ],
+          "correct": 1,
+          "explanation": "La flèche verte indique que la voie est ouverte. Vous pouvez l'emprunter normalement. Vérifiez les signaux au-dessus des autres voies avant de changer de file."
+        }
+      ]
+    },
+    {
+      "id": "SOL",
+      "title": "Marquages au sol",
+      "color": "#6b7280",
+      "icon": "🛣️",
+      "questions": [
+        {
+          "id": "A1_SIGN_CHEVRONS_1",
+          "sign": "CHEVRONS",
+          "question": "Vous voyez des chevrons ou des hachures peints au sol. Que signifient-ils ?",
+          "answers": [
+            "Zone où le dépassement est autorisé",
+            "Zone où il est interdit de circuler, de stationner ou même de chevaucher",
+            "Voie réservée aux cyclistes",
+            "Bande de sécurité sur laquelle vous pouvez rouler lentement"
+          ],
+          "correct": 1,
+          "explanation": "Les chevrons ou hachures au sol délimitent une zone où il est interdit de circuler, stationner ou même chevaucher. Ils se trouvent souvent aux bifurcations ou îlots directionnels."
+        },
+        {
+          "id": "A1_SIGN_FLECHE_SOL_GAUCHE_1",
+          "sign": "FLECHE_SOL_GAUCHE",
+          "question": "Vous circulez sur une voie où une flèche au sol pointe vers la gauche. Que vous impose-t-elle ?",
+          "answers": [
+            "La voie est en sens unique vers la droite",
+            "Vous devez obligatoirement tourner à gauche sur cette voie",
+            "Le dépassement par la gauche est autorisé",
+            "C'est une simple suggestion : vous pouvez aussi continuer tout droit"
+          ],
+          "correct": 1,
+          "explanation": "La flèche au sol indiquant la gauche est une obligation : tous les véhicules sur cette voie doivent tourner à gauche. Choisissez la bonne voie à l'avance."
+        },
+        {
+          "id": "A1_SIGN_FLECHE_SOL_TOUT_DROIT_1",
+          "sign": "FLECHE_SOL_TOUT_DROIT",
+          "question": "Vous circulez sur une voie où une flèche au sol pointe tout droit. Que signifie-t-elle ?",
+          "answers": [
+            "La voie est réservée aux poids lourds allant tout droit",
+            "Vous devez obligatoirement continuer tout droit sur cette voie",
+            "Vous pouvez aller tout droit ou tourner à droite",
+            "C'est une indication non contraignante"
+          ],
+          "correct": 1,
+          "explanation": "La flèche au sol \"tout droit\" oblige à continuer dans la direction indiquée. Si vous voulez tourner, vous devez vous placer sur une voie dont la flèche correspond à votre intention."
+        }
+      ]
+    }
+  ]
+}

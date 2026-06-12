@@ -111,3 +111,23 @@ export function Damier({ size = 80 }: Props) {
     </svg>
   );
 }
+
+export function FlecheSolGauche({ size = 80 }: Props) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100">
+      <rect width="100" height="100" rx="8" fill="#374151" />
+      <rect x="38" y="45" width="42" height="10" rx="3" fill="#FFFFFF" />
+      <polygon points="20,50 40,30 40,70" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
+export function FlecheSolToutDroit({ size = 80 }: Props) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100">
+      <rect width="100" height="100" rx="8" fill="#374151" />
+      <rect x="45" y="38" width="10" height="42" rx="3" fill="#FFFFFF" />
+      <polygon points="50,15 30,40 70,40" fill="#FFFFFF" />
+    </svg>
+  );
+}

@@ -30,13 +30,13 @@ interface Stats {
   activeLesson: { themeCode: string; lessonId: string; lessonTitle: string; pct: number } | null;
 }
 
-function buildStats(): Stats {
+async function buildStats(): Promise<Stats> {
   let totalLessons = 0;
   let completedLessons = 0;
   let activeLesson: Stats['activeLesson'] = null;
 
   for (const code of THEME_ORDER) {
-    const theme = getThemeData(code);
+    const theme = await getThemeData(code);
     if (!theme) continue;
     for (const lesson of theme.lessons) {
       totalLessons++;
@@ -101,7 +101,7 @@ export default function HomePage() {
 
   useEffect(() => {
     checkAndUpdateStreak();
-    setStats(buildStats());
+    buildStats().then(setStats);
     fetchDueReviews().then(records => setDueCount(records.length));
   }, []);
 

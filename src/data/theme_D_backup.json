@@ -8,7 +8,7 @@
       "title": "La vitesse maximale",
       "theory": [
         {
-          "title": "Partie 1 — Vitesses hors agglomération",
+          "title": "Récapitulatif des vitesses maximales",
           "cards": [
             {
               "type": "text",
@@ -37,12 +37,7 @@
               "content": "📋 La règle\nSur une chaussée à voie centrale, la vitesse maximale est de 70 km/h, quelle que soit la région.\n\n💡 Pourquoi\nLa voie centrale est partagée par les deux sens de circulation pour les dépassements. Cette configuration plus risquée nécessite une vitesse réduite pour garantir la sécurité.\n\n🚗 En pratique\nReconnaissez la chaussée à voie centrale : deux bandes latérales étroites et une bande centrale partagée. Roulez sur votre bande latérale et n'utilisez la voie centrale que pour dépasser.\n\n📍 Exemple\nSur une route de campagne en Wallonie avec une voie centrale, vous roulez à 70 km/h maximum sur votre bande de droite. Un cycliste vous précède : vous utilisez brièvement la voie centrale pour le dépasser.\n\n⚠️ Erreur fréquente\nRouler en permanence sur la voie centrale au lieu de rester sur sa bande latérale. La voie centrale n'est pas une bande de circulation normale, elle sert uniquement au dépassement.",
               "emoji": "↔️",
               "explanation_simple": "Sur une chaussée à voie centrale (la bande du milieu partagée), c'est 70 km/h max partout en Belgique. Ces routes sont plus étroites, donc prudence."
-            }
-          ]
-        },
-        {
-          "title": "Partie 2 — Vitesses en agglomération et zones",
-          "cards": [
+            },
             {
               "type": "text",
               "title": "En agglomération",
@@ -74,7 +69,7 @@
           ]
         },
         {
-          "title": "Partie 3 — Trop lentement et courses",
+          "title": "Conduire trop lentement",
           "cards": [
             {
               "type": "text",
@@ -89,7 +84,12 @@
               "content": "📋 La règle\nFreiner de manière soudaine sans motif légitime est considéré comme une infraction.\n\n💡 Pourquoi\nUn freinage brutal inattendu peut provoquer un carambolage en chaîne. Le conducteur derrière vous n'a pas le temps de réagir, surtout à haute vitesse ou par temps de pluie.\n\n🚗 En pratique\nFreinez progressivement sauf en cas d'urgence. Si vous devez ralentir fortement, utilisez vos feux de détresse pour avertir les conducteurs derrière vous.\n\n📍 Exemple\nVous roulez sur la E40 à 120 km/h et freinez brusquement parce que vous avez failli rater votre sortie. Le véhicule derrière vous doit piler : c'est une infraction de votre part.\n\n⚠️ Erreur fréquente\nFreiner fort en voyant un radar alors que vous roulez à la bonne vitesse. Ce réflexe inutile met en danger les conducteurs qui vous suivent.",
               "emoji": "🛑",
               "explanation_simple": "Freiner d'un coup sans raison valable, c'est interdit. Tu risques de provoquer un carambolage avec ceux qui te suivent."
-            },
+            }
+          ]
+        },
+        {
+          "title": "Courses de vitesse",
+          "cards": [
             {
               "type": "text",
               "title": "Interdiction",
@@ -107,7 +107,7 @@
           ]
         },
         {
-          "title": "Partie 4 — Retrait immédiat du permis (Police)",
+          "title": "Retrait immédiat du permis (Police)",
           "cards": [
             {
               "type": "text",
@@ -133,7 +133,7 @@
           ]
         },
         {
-          "title": "Partie 5 — Déchéance du droit de conduire (Juge)",
+          "title": "Déchéance du droit de conduire (Juge)",
           "cards": [
             {
               "type": "text",
@@ -295,7 +295,7 @@
           ],
           "correct": 1,
           "explanation": "La vitesse maximale en agglomération en Flandre est de 50 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q11",
@@ -308,7 +308,7 @@
           ],
           "correct": 1,
           "explanation": "La vitesse maximale en agglomération en Wallonie est de 50 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q12",
@@ -321,7 +321,7 @@
           ],
           "correct": 2,
           "explanation": "La vitesse maximale en agglomération à Bruxelles est de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q13",
@@ -334,7 +334,7 @@
           ],
           "correct": 1,
           "explanation": "Dans une zone résidentielle (zone de rencontre), la vitesse maximale est de 20 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q14",
@@ -347,7 +347,7 @@
           ],
           "correct": 1,
           "explanation": "Sur un chemin réservé, la vitesse maximale est de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q15",
@@ -360,7 +360,7 @@
           ],
           "correct": 2,
           "explanation": "Dans une rue réservée au jeu, la vitesse maximale est l'allure du pas.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q16",
@@ -373,7 +373,7 @@
           ],
           "correct": 2,
           "explanation": "Dans une rue scolaire, la vitesse maximale est l'allure du pas.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q17",
@@ -386,7 +386,7 @@
           ],
           "correct": 1,
           "explanation": "Aux abords d'école, la vitesse maximale est de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q18",
@@ -399,7 +399,7 @@
           ],
           "correct": 2,
           "explanation": "Dans une zone piétonne, la vitesse maximale est l'allure du pas.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q19",
@@ -412,7 +412,7 @@
           ],
           "correct": 1,
           "explanation": "Dans une zone cyclable, la vitesse maximale est de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q20",
@@ -425,7 +425,7 @@
           ],
           "correct": 1,
           "explanation": "La vitesse maximale à l'approche et lors du passage d'un dispositif surélevé est de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q21",
@@ -438,7 +438,7 @@
           ],
           "correct": 1,
           "explanation": "Les engins de déplacement motorisés (trottinettes électriques, etc.) ont une vitesse maximale de 25 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q22",
@@ -464,7 +464,7 @@
           ],
           "correct": 2,
           "explanation": "En agglomération à Bruxelles, la vitesse maximale est de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q24",
@@ -503,7 +503,7 @@
           ],
           "correct": 1,
           "explanation": "La zone résidentielle impose 20 km/h, ce qui est plus restrictif que la zone 30. On applique toujours la règle la plus stricte.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q27",
@@ -555,7 +555,7 @@
           ],
           "correct": 1,
           "explanation": "La limite à l'approche d'un dispositif surélevé est de 30 km/h. Rouler à 35 km/h est une infraction.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "D1_Q31",
@@ -568,7 +568,7 @@
           ],
           "correct": 1,
           "explanation": "Conduire trop lentement sans raison est une infraction car cela oblige les autres à vous dépasser.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q32",
@@ -581,7 +581,7 @@
           ],
           "correct": 1,
           "explanation": "Rouler excessivement lentement sans raison est une infraction, même en dessous de la limite maximale.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q33",
@@ -594,7 +594,7 @@
           ],
           "correct": 1,
           "explanation": "Freiner soudainement sans raison est une infraction qui met en danger les conducteurs derrière vous.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q34",
@@ -607,7 +607,7 @@
           ],
           "correct": 1,
           "explanation": "Freiner brusquement sans raison est une infraction et crée un danger pour le conducteur qui vous suit.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q35",
@@ -620,7 +620,7 @@
           ],
           "correct": 1,
           "explanation": "À l'examen, roulez à une vitesse adaptée : ni trop vite, ni trop lentement. Rouler inutilement lentement est une faute.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q36",
@@ -1049,7 +1049,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal vert indique le commencement d'une autoroute (120 km/h max, 70 km/h min).",
-          "theoryCardIndex": 0,
+          "theoryCardIndex": 5,
           "sign": "F5"
         },
         {
@@ -1063,7 +1063,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal bleu avec voiture blanche indique une route pour automobiles (120 km/h si 2x2 voies avec berme centrale).",
-          "theoryCardIndex": 0,
+          "theoryCardIndex": 5,
           "sign": "F9"
         },
         {
@@ -1077,7 +1077,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal indique le commencement d'une agglomération (limite de vitesse selon la région).",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q71",
@@ -1090,7 +1090,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal indique une zone résidentielle (zone de rencontre) : vitesse maximale 20 km/h.",
-          "theoryCardIndex": 1,
+          "theoryCardIndex": 5,
           "sign": "F12a"
         },
         {
@@ -1104,7 +1104,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal marque le commencement d'une zone à vitesse limitée à 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q73",
@@ -1117,7 +1117,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal de danger annonce un ou plusieurs dispositifs surélevés. La vitesse maximale est de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q74",
@@ -1130,7 +1130,7 @@
           ],
           "correct": 0,
           "explanation": "Ce signal annonce qu'un dispositif surélevé se trouve dans 200 mètres.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q75",
@@ -1143,7 +1143,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal annonce plusieurs dispositifs surélevés : ils commencent dans 150 m et s'étendent sur 500 m.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q76",
@@ -1156,7 +1156,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal (C43) indique la vitesse maximale autorisée, ici 90 km/h, applicable sur la bretelle de sortie.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q77",
@@ -1169,7 +1169,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal annonce qu'une limitation de vitesse à 60 km/h entrera en vigueur dans 200 mètres.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q78",
@@ -1182,7 +1182,7 @@
           ],
           "correct": 1,
           "explanation": "À Bruxelles, en agglomération, la vitesse maximale est de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q79",
@@ -1195,7 +1195,7 @@
           ],
           "correct": 1,
           "explanation": "Un signal de dispositif surélevé impose une vitesse maximale de 30 km/h.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q80",
@@ -1208,7 +1208,7 @@
           ],
           "correct": 2,
           "explanation": "En Wallonie, hors agglomération sur une route avec marquage, la vitesse maximale est de 90 km/h.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q81",
@@ -1221,7 +1221,7 @@
           ],
           "correct": 1,
           "explanation": "La limitation entre en vigueur dans 200 m. Vous pouvez conserver votre vitesse actuelle, mais commencez à ralentir.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q82",
@@ -1234,7 +1234,7 @@
           ],
           "correct": 1,
           "explanation": "L'interdiction de dépasser est immédiate. La limitation de vitesse à 60 km/h s'applique seulement dans 200 m.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_Q83",
@@ -1247,7 +1247,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal indique une route ordinaire. Les vitesses standards de la région s'appliquent.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 5
         },
         {
           "id": "D1_SIGN_FEU_PIETON_ROUGE_1",
@@ -1259,9 +1259,7 @@
             "Traverser car le feu est identique à un feu orange"
           ],
           "correct": 1,
-          "explanation": "Le feu piéton rouge signifie formellement : ne pas traverser. Même si la chaussée semble libre, vous devez attendre que le bonhomme passe au vert.",
-          "destination": "panneaux",
-          "sign": "FEU_PIETON_ROUGE"
+          "explanation": "Le feu piéton rouge signifie formellement : ne pas traverser. Même si la chaussée semble libre, vous devez attendre que le bonhomme passe au vert."
         },
         {
           "id": "D1_SIGN_FEU_VELO_ROUGE_1",
@@ -1273,9 +1271,7 @@
             "Vous suivez les feux destinés aux voitures"
           ],
           "correct": 1,
-          "explanation": "Le feu vélo rouge a la même valeur contraignante qu'un feu rouge pour les voitures. Le cycliste doit impérativement s'arrêter et attendre le feu vert.",
-          "destination": "panneaux",
-          "sign": "FEU_VELO_ROUGE"
+          "explanation": "Le feu vélo rouge a la même valeur contraignante qu'un feu rouge pour les voitures. Le cycliste doit impérativement s'arrêter et attendre le feu vert."
         },
         {
           "id": "D1_SIGN_FEU_VELO_VERT_1",
@@ -1287,9 +1283,7 @@
             "Vous devez attendre les piétons avant de partir"
           ],
           "correct": 1,
-          "explanation": "Le feu vélo vert autorise le cycliste à s'engager. Il ne confère pas une priorité absolue sur tous : le cycliste doit quand même vérifier que la voie est libre et respecter les piétons.",
-          "destination": "panneaux",
-          "sign": "FEU_VELO_VERT"
+          "explanation": "Le feu vélo vert autorise le cycliste à s'engager. Il ne confère pas une priorité absolue sur tous : le cycliste doit quand même vérifier que la voie est libre et respecter les piétons."
         },
         {
           "id": "D1_SIGN_CROIX_ROUGE_VOIE_1",
@@ -1301,9 +1295,7 @@
             "Préparer votre paiement au péage"
           ],
           "correct": 1,
-          "explanation": "La croix rouge au-dessus d'une voie signifie que cette voie est totalement fermée. Il est strictement interdit d'y rouler. Changez de voie immédiatement.",
-          "destination": "panneaux",
-          "sign": "CROIX_ROUGE_VOIE"
+          "explanation": "La croix rouge au-dessus d'une voie signifie que cette voie est totalement fermée. Il est strictement interdit d'y rouler. Changez de voie immédiatement."
         },
         {
           "id": "D1_SIGN_FLECHE_VERTE_VOIE_1",
@@ -1315,9 +1307,7 @@
             "Accélération recommandée sur cette voie"
           ],
           "correct": 1,
-          "explanation": "La flèche verte indique que la voie est ouverte. Vous pouvez l'emprunter normalement. Vérifiez les signaux au-dessus des autres voies avant de changer de file.",
-          "destination": "panneaux",
-          "sign": "FLECHE_VERTE_VOIE"
+          "explanation": "La flèche verte indique que la voie est ouverte. Vous pouvez l'emprunter normalement. Vérifiez les signaux au-dessus des autres voies avant de changer de file."
         }
       ]
     },

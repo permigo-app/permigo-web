@@ -1158,8 +1158,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal indique la présence d'un passage pour piétons à proximité.",
-          "destination": "panneaux",
-          "sign": "F33a"
+          "destination": "panneaux"
         },
         {
           "id": "H1_Q70",
@@ -1172,8 +1171,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal indique un passage pour cyclistes et cyclomoteurs à deux roues.",
-          "destination": "panneaux",
-          "sign": "F33b"
+          "destination": "panneaux"
         },
         {
           "id": "H1_Q71",
@@ -1239,8 +1237,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal de danger signale un passage pour cyclistes ou un endroit où des cyclistes débouchent.",
-          "destination": "panneaux",
-          "sign": "A25"
+          "destination": "panneaux"
         },
         {
           "id": "H1_SIGN_C39_1",
@@ -1253,8 +1250,7 @@
           ],
           "correct": 1,
           "explanation": "C39 interdit toute immobilisation du véhicule, même brève. Ni l'arrêt, ni le stationnement ne sont tolérés. C'est plus restrictif que C37 (stationnement seul).",
-          "destination": "panneaux",
-          "sign": "C39"
+          "destination": "panneaux"
         },
         {
           "id": "H1_SIGN_E7_1",
@@ -1267,8 +1263,7 @@
           ],
           "correct": 1,
           "explanation": "E7 indique un stationnement payant. Vous devez acquitter le tarif à l'horodateur ou au parcomètre et placer le ticket bien visible.",
-          "destination": "panneaux",
-          "sign": "E7"
+          "destination": "panneaux"
         },
         {
           "id": "H1_SIGN_E9__1",
@@ -1281,8 +1276,7 @@
           ],
           "correct": 1,
           "explanation": "E9b (parking relais / Park & Ride) vous invite à laisser votre voiture et à continuer en transports en commun. Souvent situé en périphérie des villes.",
-          "destination": "panneaux",
-          "sign": "E9a"
+          "destination": "panneaux"
         }
       ]
     },
@@ -1411,7 +1405,7 @@
           ]
         },
         {
-          "title": "Ligne jaune et signaux d'interdiction de stationnement et d'arrêt",
+          "title": "Ligne jaune discontinue",
           "cards": [
             {
               "type": "text",
@@ -1426,7 +1420,12 @@
               "content": "📋 La règle\nSi la ligne est d’une autre couleur que jaune, ou jaune mais continue, les règles sont différentes. La ligne jaune continue interdit arrêt ET stationnement.\n\n💡 Pourquoi\nChaque type de ligne a une signification précise. Les confondre peut entraîner une infraction.\n\n🚗 En pratique\nJaune discontinue = stationnement interdit, arrêt permis. Jaune continue = arrêt ET stationnement interdits.\n\n📍 Exemple\nUne ligne jaune continue devant un hôpital à Namur : même l’arrêt y est interdit.\n\n⚠️ Erreur fréquente\nNe pas faire la différence entre ligne continue et discontinue. Continue = tout interdit. Discontinue = seul le stationnement est interdit.",
               "emoji": "⬜",
               "explanation_simple": "Attention, seule la ligne jaune discontinue a cette signification. Les autres couleurs ou une ligne jaune continue, c’est autre chose."
-            },
+            }
+          ]
+        },
+        {
+          "title": "Signaux d'interdiction de stationnement et d'arrêt",
+          "cards": [
             {
               "type": "text",
               "title": "5.1 — Stationnement interdit (1 diagonale)",
@@ -1458,7 +1457,7 @@
           ]
         },
         {
-          "title": "Stationnement alterné semi-mensuel — bases",
+          "title": "Stationnement alterné semi-mensuel",
           "cards": [
             {
               "type": "text",
@@ -1487,12 +1486,7 @@
               "content": "📋 La règle\nDes flèches peuvent figurer sous les panneaux de stationnement alterné : vers le haut = début, vers le bas = fin, doubles = continuation.\n\n💡 Pourquoi\nLes flèches délimitent la zone où le stationnement alterné s’applique.\n\n🚗 En pratique\nVérifiez les flèches pour savoir si vous êtes dans la zone d’application du stationnement alterné.\n\n📍 Exemple\nUn panneau avec flèche vers le bas : la zone de stationnement alterné se termine ici.\n\n⚠️ Erreur fréquente\nIgnorer les flèches et appliquer le stationnement alterné au-delà de la zone indiquée.",
               "emoji": "↕️",
               "explanation_simple": "Des flèches sous le panneau te disent si l’interdiction commence ici ou se termine ici. Même système que les autres panneaux."
-            }
-          ]
-        },
-        {
-          "title": "Stationnement alterné — agglomération, changement et dates",
-          "cards": [
+            },
             {
               "type": "text",
               "title": "6.5 — Semi-mensuel dans toute l'agglomération",
@@ -2075,7 +2069,7 @@
           ],
           "correct": 1,
           "explanation": "Rond bleu + 1 diagonale rouge = stationnement interdit (arrêt permis), côté du signal, jusqu'au carrefour suivant.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q44",
@@ -2088,7 +2082,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal de stationnement interdit s'applique depuis le signal jusqu'au carrefour suivant.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q45",
@@ -2101,7 +2095,7 @@
           ],
           "correct": 1,
           "explanation": "Rond bleu + 2 diagonales rouges = arrêt ET stationnement interdits des deux côtés.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q46",
@@ -2114,7 +2108,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal à deux diagonales interdit également l'arrêt : vous ne pouvez pas déposer un passager.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q47",
@@ -2127,7 +2121,7 @@
           ],
           "correct": 1,
           "explanation": "Flèche vers le haut = l'interdiction commence après le signal.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q48",
@@ -2140,7 +2134,7 @@
           ],
           "correct": 1,
           "explanation": "Flèche vers le bas = l'interdiction se termine au signal (applicable jusqu'ici).",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q49",
@@ -2153,7 +2147,7 @@
           ],
           "correct": 1,
           "explanation": "Flèche vers le haut et le bas = l'interdiction s'applique de part et d'autre du signal.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q50",
@@ -2166,7 +2160,7 @@
           ],
           "correct": 1,
           "explanation": "Sans indication chiffrée, le signal s'applique à la chaussée ET à l'accotement.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q51",
@@ -2179,7 +2173,7 @@
           ],
           "correct": 1,
           "explanation": "Avec indication chiffrée, le signal s'applique uniquement à la chaussée, sur la distance indiquée.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q52",
@@ -2192,7 +2186,7 @@
           ],
           "correct": 1,
           "explanation": "L'interdiction s'applique jusqu'au carrefour suivant : à 50 m du carrefour, vous êtes toujours dans la zone interdite.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q53",
@@ -2205,7 +2199,7 @@
           ],
           "correct": 1,
           "explanation": "Les signaux d'arrêt et de stationnement ne s'appliquent pas aux véhicules en panne.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q54",
@@ -2218,7 +2212,7 @@
           ],
           "correct": 1,
           "explanation": "Avec indication chiffrée, le signal ne vise que la chaussée : l'accotement reste libre.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "H2_Q55",
@@ -2231,7 +2225,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal \"1–15\" interdit le stationnement de ce côté de la chaussée du 1er au 15 du mois.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "H2_Q56",
@@ -2244,7 +2238,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal \"16–31\" interdit le stationnement de ce côté de la chaussée du 16 à la fin du mois.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "H2_Q57",
@@ -2257,7 +2251,7 @@
           ],
           "correct": 1,
           "explanation": "Du 1er au 15, le côté \"1–15\" est interdit : vous stationnez de l'autre côté (côté \"16–31\").",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "H2_Q58",
@@ -2296,7 +2290,7 @@
           ],
           "correct": 1,
           "explanation": "Pour toute l'agglomération : du 16 à la fin = côté des numéros PAIRS.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "H2_Q61",
@@ -2387,7 +2381,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal \"1–15\" interdit le stationnement de ce côté du 1er au 15. Le 10, c'est interdit ici.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "H2_Q68",
@@ -2400,7 +2394,7 @@
           ],
           "correct": 1,
           "explanation": "Le 20, la période \"1–15\" est terminée : le signal \"1–15\" n'interdit rien. Vous pouvez stationner de ce côté.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "H2_Q69",
@@ -2413,7 +2407,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal P bleu carré indique un emplacement de stationnement autorisé.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 6
         },
         {
           "id": "H2_Q70",
@@ -2426,7 +2420,7 @@
           ],
           "correct": 1,
           "explanation": "Rond bleu + 1 diagonale rouge = stationnement interdit, arrêt permis.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 6
         },
         {
           "id": "H2_Q71",
@@ -2439,7 +2433,7 @@
           ],
           "correct": 1,
           "explanation": "Rond bleu + 2 diagonales rouges = arrêt ET stationnement interdits.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 6
         },
         {
           "id": "H2_Q72",
@@ -2452,7 +2446,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal \"1–15\" interdit le stationnement de ce côté de la chaussée du 1er au 15 du mois.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 6
         },
         {
           "id": "H2_Q73",
@@ -2465,7 +2459,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal \"16–31\" interdit le stationnement de ce côté de la chaussée du 16 à la fin du mois.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 6
         },
         {
           "id": "H2_Q74",
@@ -2478,7 +2472,7 @@
           ],
           "correct": 1,
           "explanation": "Un signal avec plage horaire interdit le stationnement sur chaussée et accotement durant l'horaire indiqué.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 6
         },
         {
           "id": "H2_Q75",
@@ -2491,7 +2485,7 @@
           ],
           "correct": 1,
           "explanation": "Flèche vers le haut = commence ici. Indication chiffrée = chaussée uniquement, sur 20 m.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 6
         }
       ]
     },
@@ -2500,7 +2494,7 @@
       "title": "Arrêt et stationnement (3)",
       "theory": [
         {
-          "title": "Zone bleue — principe, disque et placement",
+          "title": "Zone bleue — disque de stationnement",
           "cards": [
             {
               "type": "text",
@@ -2529,12 +2523,7 @@
               "content": "📋 La règle\nLa flèche du disque se place sur le trait qui suit votre heure d’arrivée (pas l’heure exacte).\n\n💡 Pourquoi\nCe système arrondit à la demi-heure supérieure pour simplifier le contrôle.\n\n🚗 En pratique\nSi vous arrivez à 14h10, placez la flèche sur 14h30 (le trait suivant).\n\n📍 Exemple\nArrivée à 10h20 dans une zone bleue à Namur : réglez la flèche sur 10h30.\n\n⚠️ Erreur fréquente\nRégler la flèche sur l’heure exacte d’arrivée au lieu du trait suivant. C’est toujours le trait suivant.",
               "emoji": "🕐",
               "explanation_simple": "Tu mets la flèche sur le prochain trait APRÈS ton arrivée. Si t’arrives à 14h10, tu mets la flèche sur 14h30, pas sur 14h00."
-            }
-          ]
-        },
-        {
-          "title": "Zone bleue — durée, signal P et jours ouvrables",
-          "cards": [
+            },
             {
               "type": "text",
               "title": "1.5 — Durée maximale",
@@ -2813,7 +2802,7 @@
           ],
           "correct": 1,
           "explanation": "La durée maximale en zone bleue est de 2 heures à compter de l'heure indiquée sur le disque.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q11",
@@ -2826,7 +2815,7 @@
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel prime : la durée maximale est 1 heure dans ce cas.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q12",
@@ -2839,7 +2828,7 @@
           ],
           "correct": 1,
           "explanation": "Il est interdit de modifier l'heure sur le disque. Vous devez déplacer le véhicule.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q13",
@@ -2852,7 +2841,7 @@
           ],
           "correct": 1,
           "explanation": "Après avoir déplacé le véhicule, vous pouvez revenir au même endroit et régler un nouveau temps de 2 heures.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q14",
@@ -2865,7 +2854,7 @@
           ],
           "correct": 1,
           "explanation": "Le disque peut être obligatoire hors zone bleue si un signal de stationnement porte la mention \"disque obligatoire\".",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q15",
@@ -2878,7 +2867,7 @@
           ],
           "correct": 1,
           "explanation": "La mention sous le signal rend le disque obligatoire, même hors zone bleue.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q16",
@@ -2891,7 +2880,7 @@
           ],
           "correct": 1,
           "explanation": "Le samedi est un jour ouvrable et 15h est dans la plage 9h–18h : le disque est obligatoire.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q17",
@@ -2904,7 +2893,7 @@
           ],
           "correct": 1,
           "explanation": "20h est après 18h, hors plage horaire obligatoire : le disque n'est pas requis (sauf autre panneau).",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q18",
@@ -2917,7 +2906,7 @@
           ],
           "correct": 1,
           "explanation": "Flèche sur 11h30 + 2 heures = vous pouvez rester jusqu'à 13h30.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 0
         },
         {
           "id": "H3_Q19",
@@ -2930,7 +2919,7 @@
           ],
           "correct": 1,
           "explanation": "La zone 3,5 t se base sur la MMA (Masse Maximale Autorisée), pas la MEC.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "H3_Q20",
@@ -2943,7 +2932,7 @@
           ],
           "correct": 1,
           "explanation": "Une MMA de 1,8 t est inférieure à 3,5 t : vous pouvez stationner dans la zone.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "H3_Q21",
@@ -2956,7 +2945,7 @@
           ],
           "correct": 1,
           "explanation": "Le paiement au parcomètre est obligatoire selon le tarif affiché.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "H3_Q22",
@@ -2969,7 +2958,7 @@
           ],
           "correct": 1,
           "explanation": "En cas de panne du parcomètre, utilisez votre disque de stationnement.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "H3_Q23",
@@ -2982,7 +2971,7 @@
           ],
           "correct": 1,
           "explanation": "Toutes les modalités (prix, heures, périodes gratuites) sont indiquées sur l'appareil lui-même.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "H3_Q24",
@@ -2995,7 +2984,7 @@
           ],
           "correct": 1,
           "explanation": "Les modalités indiquées sur l'appareil s'appliquent : gratuit le dimanche = pas de paiement le dimanche.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 1
         },
         {
           "id": "H3_Q25",
@@ -3008,7 +2997,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal P général autorise tous les véhicules sauf les vélos et cyclomoteurs.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q26",
@@ -3021,7 +3010,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal P général exclut explicitement les vélos et cyclomoteurs.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q27",
@@ -3034,7 +3023,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal P + voiture est réservé aux voitures, voitures mixtes (pick-up), minibus et motocyclettes.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q28",
@@ -3047,7 +3036,7 @@
           ],
           "correct": 1,
           "explanation": "Malgré le permis B, la camionnette est exclue du signal P + voiture.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q29",
@@ -3060,7 +3049,7 @@
           ],
           "correct": 1,
           "explanation": "Les motocyclettes sont incluses dans le signal P + voiture.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q30",
@@ -3073,7 +3062,7 @@
           ],
           "correct": 1,
           "explanation": "Une voiture mixte est un véhicule avec une partie passagers et une partie cargaison (type pick-up).",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q31",
@@ -3086,7 +3075,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal impose le stationnement sur l'accotement ou le trottoir : interdit sur la chaussée.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q32",
@@ -3099,7 +3088,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal s'applique à tous les accotements, pas seulement ceux en saillie.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q33",
@@ -3112,7 +3101,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal impose le stationnement sur la chaussée, même si l'accotement est plus large.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q34",
@@ -3125,7 +3114,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal de stationnement sur la chaussée interdit de stationner sur l'accotement et le trottoir.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q35",
@@ -3138,7 +3127,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal impose de stationner à cheval : en partie sur la chaussée et en partie sur l'accotement.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q36",
@@ -3151,7 +3140,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal impose un stationnement à cheval : ni entièrement sur l'accotement, ni entièrement sur la chaussée.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q37",
@@ -3164,7 +3153,7 @@
           ],
           "correct": 1,
           "explanation": "À 10h, l'emplacement est réservé aux vélos : votre voiture ne peut pas y stationner.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q38",
@@ -3177,7 +3166,7 @@
           ],
           "correct": 1,
           "explanation": "À 20h, c'est la plage réservée aux voitures (18h–7h30) : vous pouvez stationner.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q39",
@@ -3190,7 +3179,7 @@
           ],
           "correct": 1,
           "explanation": "Les camionnettes ne sont pas autorisées sous le signal P + voiture. Cherchez un signal P général ou P + camionnette.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q40",
@@ -3203,7 +3192,7 @@
           ],
           "correct": 1,
           "explanation": "Si l'accotement n'est pas disponible et que le signal impose d'y stationner, vous ne pouvez pas stationner à cet endroit.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 2
         },
         {
           "id": "H3_Q41",
@@ -3216,7 +3205,7 @@
           ],
           "correct": 1,
           "explanation": "La première action est de tirer le frein à main avant de descendre.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q42",
@@ -3229,7 +3218,7 @@
           ],
           "correct": 1,
           "explanation": "L'ordre est : frein à main → fenêtres/toit → moteur → clé → portes.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q43",
@@ -3242,7 +3231,7 @@
           ],
           "correct": 1,
           "explanation": "Oublier le frein à main à l'examen pratique entraîne l'obligation de repasser l'examen.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q44",
@@ -3255,7 +3244,7 @@
           ],
           "correct": 1,
           "explanation": "En voiture automatique, on met le levier en position Parking (P) à la place du frein à main.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q45",
@@ -3268,7 +3257,7 @@
           ],
           "correct": 1,
           "explanation": "Fermer les fenêtres et le toit ouvrant est obligatoire avant de quitter le véhicule.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q46",
@@ -3281,7 +3270,7 @@
           ],
           "correct": 1,
           "explanation": "Retirer la clé du contact est obligatoire, quelle que soit la durée d'absence.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q47",
@@ -3294,7 +3283,7 @@
           ],
           "correct": 1,
           "explanation": "Marcher vers l'arrière permet de voir le trafic qui vient vers vous.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q48",
@@ -3307,7 +3296,7 @@
           ],
           "correct": 1,
           "explanation": "En marchant vers l'arrière, vous voyez arriver la circulation et pouvez réagir en temps utile.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q49",
@@ -3320,7 +3309,7 @@
           ],
           "correct": 1,
           "explanation": "Approcher par l'avant du véhicule permet de voir la circulation qui arrive.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q50",
@@ -3333,7 +3322,7 @@
           ],
           "correct": 1,
           "explanation": "En approchant par l'avant, vous voyez la circulation arrivant vers vous avant de monter.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "H3_Q51",
@@ -3346,7 +3335,7 @@
           ],
           "correct": 1,
           "explanation": "Un véhicule en panne peut rester sur la voie publique au maximum 24 heures.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 4
         },
         {
           "id": "H3_Q52",
@@ -3359,7 +3348,7 @@
           ],
           "correct": 1,
           "explanation": "30 heures dépasse la limite de 24 heures : c'est une infraction.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 4
         },
         {
           "id": "H3_Q53",
@@ -3372,7 +3361,7 @@
           ],
           "correct": 1,
           "explanation": "Un véhicule publicitaire ne peut stationner sur la voie publique que 3 heures maximum.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 4
         },
         {
           "id": "H3_Q54",
@@ -3385,7 +3374,7 @@
           ],
           "correct": 1,
           "explanation": "5 heures dépasse la limite de 3 heures pour un véhicule publicitaire : c'est une infraction.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 4
         },
         {
           "id": "H3_Q55",
@@ -3398,7 +3387,7 @@
           ],
           "correct": 1,
           "explanation": "Mettre en vente un véhicule sur la voie publique est interdit.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 4
         },
         {
           "id": "H3_Q56",
@@ -3411,7 +3400,7 @@
           ],
           "correct": 1,
           "explanation": "Mettre en location un véhicule sur la voie publique est interdit.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 4
         },
         {
           "id": "H3_Q57",
@@ -3424,7 +3413,7 @@
           ],
           "correct": 1,
           "explanation": "La limite est 24 heures : après 20 heures, il reste 4 heures pour faire enlever le véhicule.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 4
         },
         {
           "id": "H3_Q58",
@@ -3437,7 +3426,7 @@
           ],
           "correct": 1,
           "explanation": "4 heures dépasse la limite de 3 heures pour un véhicule publicitaire, peu importe l'endroit.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 4
         },
         {
           "id": "H3_Q59",
@@ -3450,7 +3439,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal P bleu carré autorise le stationnement pour tous les véhicules, sauf vélos et cyclomoteurs.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         },
         {
           "id": "H3_Q60",
@@ -3463,7 +3452,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal P + voiture est réservé aux voitures, voitures mixtes, minibus et motocyclettes.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         },
         {
           "id": "H3_Q61",
@@ -3476,7 +3465,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal P + camionnette/camion est réservé aux camionnettes et camions.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         },
         {
           "id": "H3_Q62",
@@ -3489,7 +3478,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal impose le stationnement sur l'accotement ou le trottoir.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         },
         {
           "id": "H3_Q63",
@@ -3502,7 +3491,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal impose le stationnement sur la chaussée.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         },
         {
           "id": "H3_Q64",
@@ -3515,7 +3504,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal de début de zone bleue indique une zone de stationnement à durée limitée avec disque obligatoire.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 5
         },
         {
           "id": "H3_Q65",
@@ -3528,7 +3517,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal P + prise électrique indique un emplacement réservé aux véhicules électriques.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         }
       ]
     }

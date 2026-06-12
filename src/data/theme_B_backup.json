@@ -1197,8 +1197,7 @@
           ],
           "correct": 1,
           "explanation": "F1b signale la fin d'un passage pour piétons. Au-delà de ce signal, les piétons ne bénéficient plus de la priorité liée à un passage balisé.",
-          "destination": "panneaux",
-          "sign": "F1"
+          "destination": "panneaux"
         },
         {
           "id": "B1_SIGN_F33__1",
@@ -1286,7 +1285,7 @@
           ]
         },
         {
-          "title": "Partie 3 — Usagers, conducteurs et permis B",
+          "title": "Partie 3 — Usagers vs conducteurs",
           "cards": [
             {
               "type": "text",
@@ -1301,7 +1300,12 @@
               "content": "📋 La règle\nQuand le Code de la route parle de conducteurs, cela n'inclut pas les piétons. Cette distinction est essentielle.\n\n💡 Pourquoi\nLes règles applicables aux conducteurs (priorité de droite, signalisation, etc.) ne s'appliquent pas aux piétons.\n\n🚗 En pratique\nÀ l'examen, lisez bien si la question parle de \"conducteurs\" ou d'\"usagers\". La réponse peut changer.\n\n📍 Exemple\nUn panneau interdit l'accès aux conducteurs : un piéton peut quand même passer.\n\n⚠️ Erreur fréquente\nPenser que \"conducteur\" et \"usager\" sont synonymes à l'examen. Les piétons sont des usagers mais pas des conducteurs.",
               "emoji": "📋",
               "explanation_simple": "Quand le Code parle de \"conducteurs\", ça n'inclut PAS les piétons. C'est important pour savoir quelles règles s'appliquent à qui."
-            },
+            }
+          ]
+        },
+        {
+          "title": "Partie 4 — Permis de conduire B",
+          "cards": [
             {
               "type": "text",
               "title": "4.1 — Maximum 3,5 tonnes MMA",
@@ -1669,7 +1673,7 @@
           ],
           "correct": 1,
           "explanation": "Le permis B autorise les véhicules d'une MMA maximale de 3,5 tonnes.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "B2_Q28",
@@ -1682,7 +1686,7 @@
           ],
           "correct": 1,
           "explanation": "4 tonnes dépasse la limite de 3,5 tonnes du permis B.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "B2_Q29",
@@ -1695,7 +1699,7 @@
           ],
           "correct": 1,
           "explanation": "Le permis B autorise : voiture, voiture mixte, minibus et camionnette (MMA ≤ 3,5 t).",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "B2_Q30",
@@ -1708,7 +1712,7 @@
           ],
           "correct": 1,
           "explanation": "Une camionnette est autorisée avec un permis B si sa MMA ne dépasse pas 3,5 tonnes.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "B2_Q31",
@@ -1721,7 +1725,7 @@
           ],
           "correct": 1,
           "explanation": "Un minibus est autorisé avec un permis B si sa MMA ne dépasse pas 3,5 tonnes.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "B2_Q32",
@@ -1734,7 +1738,7 @@
           ],
           "correct": 1,
           "explanation": "Le permis B provisoire autorise les mêmes véhicules (MMA ≤ 3,5 t) que le permis B définitif.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "B2_Q33",
@@ -1747,7 +1751,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal de danger avertit d'une traversée de bétail possible sur la route.",
-          "theoryCardIndex": 0,
+          "theoryCardIndex": 4,
           "sign": "A29"
         },
         {
@@ -1761,7 +1765,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal vous avertit de ralentir et de rester vigilant face à d'éventuels animaux.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q35",
@@ -1774,7 +1778,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal d'interdiction interdit l'accès aux piétons.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q36",
@@ -1787,7 +1791,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal d'interdiction interdit l'accès aux conducteurs de cycles.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q37",
@@ -1800,7 +1804,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux conducteurs de cyclomoteurs.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q38",
@@ -1813,7 +1817,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux conducteurs de motocyclettes.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q39",
@@ -1826,7 +1830,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules de transport de marchandises (camions, camionnettes de livraison, etc.).",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q40",
@@ -1839,7 +1843,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux conducteurs d'autocars.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q41",
@@ -1852,7 +1856,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules attelés (charrettes, chariots, etc.).",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q42",
@@ -1865,7 +1869,7 @@
           ],
           "correct": 1,
           "explanation": "Une camionnette est un véhicule de transport de choses : le signal vous interdit l'accès.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q43",
@@ -1878,7 +1882,7 @@
           ],
           "correct": 1,
           "explanation": "Chaque signal d'interdiction vise une catégorie spécifique. Une voiture n'est pas une motocyclette.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q44",
@@ -1891,7 +1895,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal d'interdiction aux cycles signifie que vous ne pouvez pas emprunter cette voie en tant que cycliste.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q45",
@@ -1904,7 +1908,7 @@
           ],
           "correct": 1,
           "explanation": "En poussant votre vélo, vous êtes piéton. Le signal n'interdit que les cyclistes, pas les piétons.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q46",
@@ -1917,7 +1921,7 @@
           ],
           "correct": 1,
           "explanation": "En poussant votre cyclomoteur, vous êtes piéton : le signal d'interdiction aux cyclomotoristes ne vous vise pas.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q47",
@@ -1930,7 +1934,7 @@
           ],
           "correct": 1,
           "explanation": "En poussant une moto, vous êtes conducteur. Le signal vous interdit donc l'accès.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q48",
@@ -1943,7 +1947,7 @@
           ],
           "correct": 1,
           "explanation": "Un cavalier est un conducteur, pas un piéton. Le signal d'interdiction aux piétons ne le concerne pas.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q49",
@@ -1956,7 +1960,7 @@
           ],
           "correct": 1,
           "explanation": "Un fermier qui guide son bétail est un conducteur d'animaux au sens du Code de la route.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 4
         },
         {
           "id": "B2_Q50",
@@ -1969,7 +1973,7 @@
           ],
           "correct": 1,
           "explanation": "En tant que piéton (poussant un vélo), vous ne bénéficiez pas de la priorité de droite réservée aux conducteurs.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 4
         }
       ]
     }

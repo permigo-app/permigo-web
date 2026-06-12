@@ -18,6 +18,10 @@ function ResultsContent() {
   const lessonId = params.get('lesson') ?? '';
   const themeCode = params.get('theme') ?? 'A';
   const isExam = params.get('exam') === '1';
+  const partieRaw = params.get('partie');
+  const partieNum = partieRaw !== null ? Number(partieRaw) : null;
+  const totalParties = Number(params.get('totalParties') ?? 0);
+  const hasNextPartie = partieNum !== null && partieNum + 1 < totalParties;
 
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
   const passed = isExam ? pct >= 82 : earnedStars > 0;
@@ -122,9 +126,18 @@ function ResultsContent() {
 
       {/* Buttons */}
       <div className="flex flex-col gap-3">
+        {passed && hasNextPartie && lessonId && (
+          <button
+            onClick={() => router.push(`/lecon/${lessonId}?partie=${partieNum! + 1}`)}
+            className="w-full py-4 rounded-3xl font-black text-sm press-scale text-white btn-glow-green"
+            style={{ background: 'var(--success)' }}
+          >
+            Partie {partieNum! + 2} →
+          </button>
+        )}
         {!passed && lessonId && (
           <button
-            onClick={() => router.push(`/lecon/${lessonId}`)}
+            onClick={() => router.push(`/lecon/${lessonId}${partieNum !== null ? `?partie=${partieNum}` : ''}`)}
             className="w-full py-4 rounded-3xl font-black text-sm press-scale btn-glow-teal"
             style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)' }}
           >
@@ -132,11 +145,11 @@ function ResultsContent() {
           </button>
         )}
         <Link
-          href="/app"
-          className="w-full py-4 rounded-3xl font-black text-sm text-center press-scale text-white btn-glow-green"
-          style={{ background: 'var(--success)' }}
+          href={partieNum !== null && passed ? `/lecon/${lessonId}` : '/app'}
+          className="w-full py-4 rounded-3xl font-black text-sm text-center press-scale"
+          style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)', color: 'var(--text-title)', display: 'block' }}
         >
-          {passed ? t('resultats_continuer') : t('resultats_retour')}
+          {partieNum !== null && passed ? 'Voir toutes les parties' : passed ? t('resultats_continuer') : t('resultats_retour')}
         </Link>
       </div>
     </div>

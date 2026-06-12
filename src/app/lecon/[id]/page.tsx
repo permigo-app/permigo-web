@@ -15,6 +15,7 @@ import PremiumGate from '@/components/PremiumGate';
 import SignImage from '@/components/SignImage';
 import QuizLayout from '@/components/QuizLayout';
 import ImageRequestButton from '@/components/ImageRequestButton';
+import { SkeletonList } from '@/components/ui/SkeletonList';
 
 type Phase = 'theory' | 'quiz';
 
@@ -60,7 +61,7 @@ export default function LessonPage() {
   const partieIndex = isPartieMode ? parseInt(partieParam, 10) : undefined;
 
   const [phase, setPhase] = useState<Phase>('theory');
-  const [lesson, setLesson] = useState(getLessonDataLocalized(lessonId, lang));
+  const [lesson, setLesson] = useState<import('@/lib/lessonData').LocalLesson | null>(null);
   const [themeCode, setThemeCode] = useState('A');
 
   // Theory
@@ -79,11 +80,22 @@ export default function LessonPage() {
   const questionStartRef = useRef(Date.now());
 
   useEffect(() => {
-    const l = getLessonDataLocalized(lessonId, lang);
-    setLesson(l);
-    const t = getThemeForLessonLocalized(lessonId, lang);
-    if (t) setThemeCode(t.theme);
+    getLessonDataLocalized(lessonId, lang).then(l => setLesson(l));
+    getThemeForLessonLocalized(lessonId, lang).then(t => { if (t) setThemeCode(t.theme); });
   }, [lessonId, lang]);
+
+  // Reset all quiz state when the active partie changes
+  useEffect(() => {
+    setPhase('theory');
+    setCurrentCard(0);
+    setCurrentQ(0);
+    setSelected(null);
+    setValidated(false);
+    setCorrectCount(0);
+    setPartieFailScore(null);
+    setShowSimple(false);
+    setQuestions([]);
+  }, [partieIndex]);
 
   const theories: LocalPartie[] = lesson?.theory ?? [];
   const allQuestions: LocalQuestion[] = lesson?.questions ?? [];
@@ -190,7 +202,10 @@ export default function LessonPage() {
     if (leveledUp) dispatchLevelUp(xpResult.prevLevel, xpResult.level, 1200);
     if (newBadges.length > 0) dispatchBadges(newBadges, leveledUp ? 4500 : 1200);
 
-    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&xp=${xpEarned}&lesson=${lessonId}&theme=${themeCode}`);
+    const partieStr = isPartieMode && partieIndex !== undefined
+      ? `&partie=${partieIndex}&totalParties=${theories.length}`
+      : '';
+    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&xp=${xpEarned}&lesson=${lessonId}&theme=${themeCode}${partieStr}`);
   };
 
   const retryPartie = () => {
@@ -201,8 +216,7 @@ export default function LessonPage() {
     setCorrectCount(0);
     startTimeRef.current = Date.now();
     questionStartRef.current = Date.now();
-    // Re-shuffle questions
-    const lesson = getLessonDataLocalized(lessonId, lang);
+    // Re-use already-loaded lesson from state
     const src = isPartieMode && partieIndex !== undefined
       ? getQuestionsForPartie(lesson?.questions ?? [], partieIndex, lesson?.theory?.length ?? 1)
       : lesson?.questions ?? [];
@@ -216,12 +230,10 @@ export default function LessonPage() {
 
   if (!lesson) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <p className="text-xl font-bold mb-2">{t('lecon_introuvable')}</p>
-          <button onClick={() => router.push('/app')} className="px-6 py-3 rounded-2xl font-black press-scale" style={{ background: 'var(--brand)', color: 'var(--bg-primary)' }}>
-            {t('retour')}
-          </button>
+      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
+        <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 20, height: 80 }} />
+        <div style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px' }}>
+          <SkeletonList count={3} height={80} />
         </div>
       </div>
     );
@@ -229,6 +241,92 @@ export default function LessonPage() {
 
   const color = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '📖';
+
+  // ── PARTIE SELECTOR ── (quand pas de ?partie= et plusieurs parties)
+  if (!isPartieMode && theories.length > 1) {
+    return (
+      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', paddingBottom: 120 }}>
+        {/* Header */}
+        <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', padding: '52px 20px 20px' }}>
+          <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            <button
+              onClick={() => router.back()}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 16, background: 'transparent', border: 'none', cursor: 'pointer', padding: 0 }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-hint)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+              <span style={{ fontSize: 13, color: 'var(--text-hint)', fontWeight: 500 }}>Retour</span>
+            </button>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ width: 48, height: 48, borderRadius: 14, background: color + '22', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, flexShrink: 0 }}>
+                {themeEmoji}
+              </div>
+              <div>
+                <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: '1.2px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
+                  THÈME {themeCode} · {lesson.title}
+                </p>
+                <h1 style={{ margin: '2px 0 0', fontSize: 18, fontWeight: 800, color: 'var(--text-title)' }}>
+                  Choisissez une partie
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Liste des parties */}
+        <div style={{ maxWidth: 720, margin: '0 auto', padding: '24px 16px' }}>
+          <p style={{ margin: '0 0 14px', fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
+            {theories.length} PARTIES
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {theories.map((partie, i) => {
+              const done = isPartieCompleted(lessonId, i);
+              return (
+                <button
+                  key={i}
+                  onClick={() => router.push(`/lecon/${lessonId}?partie=${i}`)}
+                  className="press-scale"
+                  style={{
+                    display: 'flex', alignItems: 'center', gap: 14,
+                    background: 'var(--bg-card)',
+                    border: `1.5px solid ${done ? '#22c55e' : 'var(--border-card)'}`,
+                    borderRadius: 16, padding: '16px 18px', cursor: 'pointer', textAlign: 'left', width: '100%',
+                  }}
+                >
+                  <div style={{
+                    width: 42, height: 42, borderRadius: 12, flexShrink: 0,
+                    background: done ? '#0b2659' : 'var(--bg-input)',
+                    border: `1.5px solid ${done ? '#f59e0b' : 'var(--border-card)'}`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    {done ? (
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    ) : (
+                      <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--text-hint)' }}>{i + 1}</span>
+                    )}
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: 'var(--text-title)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {partie.title.replace(/^Partie \d+ [—–-] /, '')}
+                    </p>
+                    <p style={{ margin: '3px 0 0', fontSize: 12, color: done ? '#22c55e' : 'var(--text-hint)', fontWeight: done ? 600 : 400 }}>
+                      {done ? 'Terminée ✓' : `${partie.cards.length} carte${partie.cards.length > 1 ? 's' : ''}`}
+                    </p>
+                  </div>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-hint)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // ── THEORY PHASE ──
   if (phase === 'theory') {

@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useCallback, Suspense } from 'react';
+import { useState, useCallback, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { getThemeDataLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { getThemeDataLocalized, shuffleChoices, type LocalQuestion, type LocalTheme } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import QuizLayout from '@/components/QuizLayout';
@@ -16,6 +16,13 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+function buildQuestions(themeData: LocalTheme): LocalQuestion[] {
+  return shuffle(themeData.lessons.flatMap(l => l.questions)).map(q => {
+    const s = shuffleChoices(q);
+    return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+  });
+}
+
 function RevisionContent() {
   const params = useSearchParams();
   const router = useRouter();
@@ -24,15 +31,18 @@ function RevisionContent() {
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🔄';
 
-  const themeData = getThemeDataLocalized(themeCode, lang);
+  const [themeData, setThemeData] = useState<LocalTheme | null>(null);
+  const [questions, setQuestions] = useState<LocalQuestion[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const [questions, setQuestions] = useState<LocalQuestion[]>(() => {
-    if (!themeData) return [];
-    return shuffle(themeData.lessons.flatMap(l => l.questions)).map(q => {
-      const s = shuffleChoices(q);
-      return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+  useEffect(() => {
+    setLoading(true);
+    getThemeDataLocalized(themeCode, lang).then(data => {
+      setThemeData(data);
+      if (data) setQuestions(buildQuestions(data));
+      setLoading(false);
     });
-  });
+  }, [themeCode, lang]);
 
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -65,10 +75,7 @@ function RevisionContent() {
 
   const restart = useCallback(() => {
     if (!themeData) return;
-    setQuestions(shuffle(themeData.lessons.flatMap(l => l.questions)).map(q => {
-      const s = shuffleChoices(q);
-      return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
-    }));
+    setQuestions(buildQuestions(themeData));
     setIndex(0);
     setSelected(null);
     setValidated(false);
@@ -76,6 +83,14 @@ function RevisionContent() {
     setDone(false);
     setShakeWrong(false);
   }, [themeData]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4">
+        <div className="w-8 h-8 rounded-full border-4 border-t-transparent animate-spin" style={{ borderColor: themeColor, borderTopColor: 'transparent' }} />
+      </div>
+    );
+  }
 
   if (!themeData || questions.length === 0) {
     return (

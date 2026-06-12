@@ -164,16 +164,19 @@ export default function Navbar() {
       if (x) setXp(JSON.parse(x).totalXP ?? 0);
     } catch {}
     // Sidebar progress widget
-    let total = 0, done = 0;
-    for (const code of THEME_ORDER) {
-      const theme = getThemeData(code);
-      if (!theme) continue;
-      total += theme.lessons.length;
-      done += theme.lessons.filter(l => isLessonCompleted(l.id)).length;
-    }
-    setTotalCount(total);
-    setCompletedCount(done);
-    setGlobalPct(total > 0 ? Math.round((done / total) * 100) : 0);
+    const loadProgress = async () => {
+      let total = 0, done = 0;
+      for (const code of THEME_ORDER) {
+        const theme = await getThemeData(code);
+        if (!theme) continue;
+        total += theme.lessons.length;
+        done += theme.lessons.filter(l => isLessonCompleted(l.id)).length;
+      }
+      setTotalCount(total);
+      setCompletedCount(done);
+      setGlobalPct(total > 0 ? Math.round((done / total) * 100) : 0);
+    };
+    loadProgress();
   }, []);
 
   const handleToggleMute = () => setMuted(toggleMute());

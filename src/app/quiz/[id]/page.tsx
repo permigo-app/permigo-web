@@ -30,13 +30,16 @@ export default function QuizPage() {
   const questionStartRef = useRef(Date.now());
 
   useEffect(() => {
-    const lesson = getLessonDataLocalized(lessonId, lang);
-    if (lesson) setQuestions([...lesson.questions].sort(() => Math.random() - 0.5).map(q => {
-      const s = shuffleChoices(q);
-      return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
-    }));
-    const themeData = getThemeForLessonLocalized(lessonId, lang);
-    if (themeData) setThemeCode(themeData.theme);
+    const load = async () => {
+      const lesson = await getLessonDataLocalized(lessonId, lang);
+      if (lesson) setQuestions([...lesson.questions].sort(() => Math.random() - 0.5).map(q => {
+        const s = shuffleChoices(q);
+        return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+      }));
+      const themeData = await getThemeForLessonLocalized(lessonId, lang);
+      if (themeData) setThemeCode(themeData.theme);
+    };
+    load();
   }, [lessonId, lang]);
 
   const handleValidate = () => {

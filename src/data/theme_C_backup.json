@@ -8,7 +8,7 @@
       "title": "La MMA et le MEC",
       "theory": [
         {
-          "title": "Partie 1 — Permis B, véhicules et MMA",
+          "title": "Partie 1 — Permis B et véhicules autorisés",
           "cards": [
             {
               "type": "text",
@@ -23,7 +23,12 @@
               "content": "📋 La règle\nLa condition essentielle est que la MMA de ces véhicules ne dépasse pas 3 500 kg (3,5 tonnes).\n\n💡 Pourquoi\nAu-delà de ce poids, le véhicule nécessite des compétences de conduite et un permis spécifique.\n\n🚗 En pratique\nConsultez le certificat d'immatriculation du véhicule pour vérifier sa MMA avant de le conduire.\n\n📍 Exemple\nUn grand SUV affiche une MMA de 3 200 kg : vous pouvez le conduire avec un permis B.\n\n⚠️ Erreur fréquente\nConfondre le poids réel du véhicule avec la MMA. La MMA est le maximum théorique, pas le poids actuel.",
               "emoji": "⚖️",
               "explanation_simple": "En gros, avec ton permis B, tu peux conduire tout véhicule qui ne dépasse pas 3,5 tonnes. Au-delà, il te faut un autre permis."
-            },
+            }
+          ]
+        },
+        {
+          "title": "Partie 2 — La MMA",
+          "cards": [
             {
               "type": "text",
               "title": "2.1 — Définition de la MMA",
@@ -55,7 +60,7 @@
           ]
         },
         {
-          "title": "Partie 2 — La masse en charge (MEC)",
+          "title": "Partie 3 — La masse en charge (MEC)",
           "cards": [
             {
               "type": "text",
@@ -88,7 +93,7 @@
           ]
         },
         {
-          "title": "Partie 3 — Équipements obligatoires dans la voiture",
+          "title": "Partie 4 — Équipements obligatoires dans la voiture",
           "cards": [
             {
               "type": "text",
@@ -121,7 +126,7 @@
           ]
         },
         {
-          "title": "Partie 4 — Documents et permis provisoire",
+          "title": "Partie 5 — Documents obligatoires",
           "cards": [
             {
               "type": "text",
@@ -150,7 +155,12 @@
               "content": "📋 La règle\nTous les documents doivent être des originaux, sauf le certificat d'assurance qui peut être présenté en copie (papier, PDF ou JPEG sur téléphone).\n\n💡 Pourquoi\nLes originaux garantissent l'authenticité des documents et empêchent la fraude.\n\n🚗 En pratique\nGardez les originaux dans la voiture et, pour l'assurance, une copie numérique sur votre téléphone suffit en complément.\n\n📍 Exemple\nVous montrez votre certificat d'assurance en PDF sur votre smartphone lors d'un contrôle : c'est valable.\n\n⚠️ Erreur fréquente\nPrésenter une photocopie du certificat d'immatriculation. Seul le certificat d'assurance peut être une copie.",
               "emoji": "📄",
               "explanation_simple": "Tous ces documents doivent être des originaux, pas des photocopies. La seule exception c'est l'assurance : là, une copie suffit."
-            },
+            }
+          ]
+        },
+        {
+          "title": "Partie 6 — Permis provisoire et voyages",
+          "cards": [
             {
               "type": "text",
               "title": "6.1 — Permis provisoire valable uniquement en Belgique",
@@ -238,7 +248,7 @@
           ],
           "correct": 1,
           "explanation": "La MMA (Masse Maximale Autorisée) inclut tout : le véhicule, le carburant, le conducteur, les passagers et le chargement.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q7",
@@ -251,7 +261,7 @@
           ],
           "correct": 1,
           "explanation": "La MMA comprend tout : carburant, conducteur, passagers et chargement.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q8",
@@ -264,7 +274,7 @@
           ],
           "correct": 1,
           "explanation": "La MMA est fixée par le fabricant et inscrite sur le certificat d'immatriculation.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q9",
@@ -277,7 +287,7 @@
           ],
           "correct": 1,
           "explanation": "Dépasser la MMA signifie que le véhicule ne respecte plus les normes de sécurité pour lesquelles il a été conçu.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q10",
@@ -290,7 +300,7 @@
           ],
           "correct": 1,
           "explanation": "La MMA est proportionnelle à la taille du véhicule : petite voiture = MMA basse, grande voiture = MMA élevée.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q11",
@@ -303,7 +313,7 @@
           ],
           "correct": 1,
           "explanation": "Votre voiture a une MMA ≤ 3,5 tonnes : le signal de 90 km/h s'applique à vous.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q12",
@@ -316,7 +326,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal ne vise que les véhicules de MMA > 3,5 tonnes. Votre voiture (1 800 kg) n'est pas concernée.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q13",
@@ -329,7 +339,7 @@
           ],
           "correct": 1,
           "explanation": "2,8 tonnes < 3,5 tonnes : le signal avec panneau additionnel ne vous vise pas.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q14",
@@ -342,7 +352,7 @@
           ],
           "correct": 1,
           "explanation": "3 200 kg < 3,5 tonnes : vous roulez à 70 km/h.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q15",
@@ -355,7 +365,7 @@
           ],
           "correct": 1,
           "explanation": "La MMA est mentionnée sur le certificat d'immatriculation.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q16",
@@ -368,7 +378,7 @@
           ],
           "correct": 1,
           "explanation": "La MEC (Masse En Charge) est le poids réel du véhicule tel qu'il est au moment considéré.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q17",
@@ -381,7 +391,7 @@
           ],
           "correct": 1,
           "explanation": "MMA = poids max théorique (fixe). MEC = poids réel actuel (variable).",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q18",
@@ -394,7 +404,7 @@
           ],
           "correct": 1,
           "explanation": "La MMA est fixe (définie par le fabricant). C'est la MEC qui varie selon la charge.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q19",
@@ -407,7 +417,7 @@
           ],
           "correct": 1,
           "explanation": "Si la MEC dépasse la MMA, le véhicule est en surcharge illégale.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q20",
@@ -420,7 +430,7 @@
           ],
           "correct": 1,
           "explanation": "MEC = 1 400 + 80 + 60 + 100 = 1 640 kg.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q21",
@@ -433,7 +443,7 @@
           ],
           "correct": 1,
           "explanation": "1 665 kg < 2 000 kg : pas de surcharge.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q22",
@@ -446,7 +456,7 @@
           ],
           "correct": 1,
           "explanation": "1 800 kg < 3,5 tonnes : votre MEC est inférieure à la limite du pont.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q23",
@@ -459,7 +469,7 @@
           ],
           "correct": 1,
           "explanation": "5 tonnes > 3,5 tonnes : le camion ne peut pas passer.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q24",
@@ -472,7 +482,7 @@
           ],
           "correct": 1,
           "explanation": "Un signal de MEC concerne le poids réel du véhicule à ce moment précis.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q25",
@@ -485,7 +495,7 @@
           ],
           "correct": 1,
           "explanation": "Si c'est un signal de MEC, votre poids réel (4 t) est inférieur à la limite (5 t) : vous pouvez passer.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C1_Q26",
@@ -498,7 +508,7 @@
           ],
           "correct": 1,
           "explanation": "Le triangle de danger est obligatoire dans tout véhicule de maximum 3,5 tonnes MMA.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q27",
@@ -511,7 +521,7 @@
           ],
           "correct": 1,
           "explanation": "La trousse de secours est obligatoire dans la voiture.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q28",
@@ -524,7 +534,7 @@
           ],
           "correct": 1,
           "explanation": "L'extincteur est obligatoire et doit contenir au minimum 1 kg de poudre.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q29",
@@ -537,7 +547,7 @@
           ],
           "correct": 1,
           "explanation": "L'extincteur doit être accessible dans les 10 secondes.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q30",
@@ -550,7 +560,7 @@
           ],
           "correct": 1,
           "explanation": "Toute utilisation, même minime, signifie que l'extincteur ne contient plus exactement 1 kg : il doit être remplacé.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q31",
@@ -563,7 +573,7 @@
           ],
           "correct": 1,
           "explanation": "0,9 kg < 1 kg : l'extincteur n'est pas conforme.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q32",
@@ -576,7 +586,7 @@
           ],
           "correct": 1,
           "explanation": "Le gilet de sécurité réfléchissant est obligatoire dans la voiture.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q33",
@@ -589,7 +599,7 @@
           ],
           "correct": 1,
           "explanation": "Le gilet doit être dans l'habitacle (pas dans le coffre) pour être accessible avant de sortir.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q34",
@@ -602,7 +612,7 @@
           ],
           "correct": 1,
           "explanation": "En cas de panne sur autoroute, vous devez enfiler le gilet AVANT de sortir du véhicule — donc il doit être accessible de l'habitacle.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q35",
@@ -615,7 +625,7 @@
           ],
           "correct": 1,
           "explanation": "Les 4 équipements obligatoires : triangle de danger, trousse de secours, extincteur (1 kg de poudre), gilet réfléchissant.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q36",
@@ -628,7 +638,7 @@
           ],
           "correct": 1,
           "explanation": "Deux problèmes : l'extincteur utilisé doit être remplacé, et le gilet doit être dans l'habitacle, pas dans le coffre.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q37",
@@ -641,7 +651,7 @@
           ],
           "correct": 1,
           "explanation": "Le gilet est obligatoire avant de sortir du véhicule en cas de panne ou d'accident sur autoroute ou route pour automobiles.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C1_Q38",
@@ -654,7 +664,7 @@
           ],
           "correct": 1,
           "explanation": "Le conducteur doit avoir avec lui sa carte d'identité ET son permis de conduire.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q39",
@@ -667,7 +677,7 @@
           ],
           "correct": 1,
           "explanation": "Titulaire = en être propriétaire. Porteur = l'avoir sur soi. Les deux conditions sont requises.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q40",
@@ -680,7 +690,7 @@
           ],
           "correct": 1,
           "explanation": "L'attestation de perte ne remplace pas le permis. Il est interdit de conduire sans le document original.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q41",
@@ -693,7 +703,7 @@
           ],
           "correct": 1,
           "explanation": "En cas de perte ou vol du permis, vous ne pouvez pas conduire en attendant le duplicata.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q42",
@@ -706,7 +716,7 @@
           ],
           "correct": 1,
           "explanation": "4 documents dans la voiture : certificat de conformité, d'immatriculation, d'assurance et de contrôle technique.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q43",
@@ -719,7 +729,7 @@
           ],
           "correct": 1,
           "explanation": "Le certificat de contrôle technique fait partie des documents obligatoires dans la voiture.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q44",
@@ -732,7 +742,7 @@
           ],
           "correct": 1,
           "explanation": "Tous les documents doivent être des originaux, sauf le certificat d'assurance qui peut être en copie.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q45",
@@ -745,7 +755,7 @@
           ],
           "correct": 1,
           "explanation": "Le certificat d'assurance est le seul document qui peut être en copie, y compris numérique (PDF, JPEG).",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q46",
@@ -758,7 +768,7 @@
           ],
           "correct": 1,
           "explanation": "Le certificat d'immatriculation doit être un original. Les copies ne sont pas acceptées.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q47",
@@ -771,7 +781,7 @@
           ],
           "correct": 1,
           "explanation": "Le certificat d'assurance est le seul document pouvant être en copie. Copie papier et PDF sont tous deux valables.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q48",
@@ -784,7 +794,7 @@
           ],
           "correct": 1,
           "explanation": "Vous devez présenter personnellement votre carte d'identité et votre permis de conduire.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q49",
@@ -797,7 +807,7 @@
           ],
           "correct": 1,
           "explanation": "6 documents au total : 2 personnels (carte d'identité, permis) + 4 dans la voiture.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C1_Q50",
@@ -810,7 +820,7 @@
           ],
           "correct": 1,
           "explanation": "Le permis provisoire n'est valable qu'en Belgique.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         },
         {
           "id": "C1_Q51",
@@ -823,7 +833,7 @@
           ],
           "correct": 1,
           "explanation": "Le permis provisoire est strictement valable en Belgique uniquement.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         },
         {
           "id": "C1_Q52",
@@ -836,7 +846,7 @@
           ],
           "correct": 1,
           "explanation": "Certains pays exigent plus d'un gilet de sécurité par véhicule.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 5
         },
         {
           "id": "C1_Q53",
@@ -849,8 +859,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal bleu avec P blanc indique un stationnement autorisé.",
-          "destination": "panneaux",
-          "sign": "E5"
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q54",
@@ -863,8 +872,7 @@
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel de masse restreint le stationnement aux véhicules dépassant la masse indiquée (ex : camions).",
-          "destination": "panneaux",
-          "sign": "E5"
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q55",
@@ -877,7 +885,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal d'interdiction de dépasser vise uniquement les véhicules de transport > 3,5 tonnes. Votre voiture n'est pas concernée.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q56",
@@ -890,7 +898,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal C43 de limitation de vitesse est valable jusqu'au prochain carrefour.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q57",
@@ -903,7 +911,7 @@
           ],
           "correct": 1,
           "explanation": "Si votre MMA est inférieure au seuil indiqué, le signal avec panneau additionnel ne vous concerne pas.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q58",
@@ -916,7 +924,7 @@
           ],
           "correct": 1,
           "explanation": "Votre voiture a une MMA ≤ 3,5 tonnes : la limite de 70 km/h s'applique.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q59",
@@ -929,7 +937,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la masse en charge (MEC) dépasse la valeur indiquée.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q60",
@@ -942,7 +950,7 @@
           ],
           "correct": 1,
           "explanation": "Un tel signal de masse concerne la MEC (poids réel), pas la MMA théorique.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q61",
@@ -955,8 +963,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit de tourner à gauche au prochain carrefour.",
-          "destination": "panneaux",
-          "sign": "C31a"
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q62",
@@ -969,8 +976,7 @@
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel de masse restreint l'interdiction aux véhicules dont la MEC dépasse la valeur indiquée.",
-          "destination": "panneaux",
-          "sign": "C31a"
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q63",
@@ -983,7 +989,7 @@
           ],
           "correct": 1,
           "explanation": "1 500 kg < 3,5 tonnes : l'interdiction ne vous concerne pas.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q64",
@@ -996,7 +1002,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules de transport de marchandises.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q65",
@@ -1009,7 +1015,7 @@
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel MMA restreint l'interdiction aux véhicules de transport de marchandises dépassant cette masse.",
-          "theoryCardIndex": 0,
+          "theoryCardIndex": 6,
           "sign": "C23"
         },
         {
@@ -1023,7 +1029,7 @@
           ],
           "correct": 1,
           "explanation": "Votre voiture a une MMA ≤ 3,5 tonnes : la vitesse de 90 km/h s'applique.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q67",
@@ -1036,7 +1042,7 @@
           ],
           "correct": 1,
           "explanation": "1 800 kg < 2 000 kg : votre MEC est inférieure à la limite du pont.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q68",
@@ -1049,8 +1055,7 @@
           ],
           "correct": 1,
           "explanation": "Sans panneau additionnel de masse, l'interdiction s'applique à TOUS les conducteurs.",
-          "destination": "panneaux",
-          "sign": "C31a"
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q69",
@@ -1063,8 +1068,7 @@
           ],
           "correct": 1,
           "explanation": "Ce stationnement est réservé aux véhicules de MMA > 3,5 tonnes. Votre voiture (1 600 kg) ne peut pas s'y garer.",
-          "destination": "panneaux",
-          "sign": "E5"
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q70",
@@ -1077,7 +1081,7 @@
           ],
           "correct": 1,
           "explanation": "MMA = poids théorique fixe du fabricant. MEC = poids réel variable selon la charge du moment.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q71",
@@ -1090,7 +1094,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal porte sur la MEC. Votre MEC (3 200 kg) > 3 000 kg : vous ne pouvez pas passer.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 6
         },
         {
           "id": "C1_Q72",
@@ -1103,7 +1107,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal C43 n'est valable que jusqu'au prochain carrefour. Après celui-ci, la limitation ne s'applique plus.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 6
         }
       ]
     },

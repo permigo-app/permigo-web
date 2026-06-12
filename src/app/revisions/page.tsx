@@ -116,11 +116,12 @@ export default function RevisionsPage() {
 
     // Snapshot lang at fetch time — not a reactive dependency
     const currentLang = lang;
-    fetchDueReviews().then(records => {
+    const loadReviews = async () => {
+      const records = await fetchDueReviews();
       const resolved: LocalQuestion[] = [];
       const strMap: Record<string, number> = {};
       for (const r of records) {
-        const q = getQuestionById(r.question_id, currentLang);
+        const q = await getQuestionById(r.question_id, currentLang);
         if (!q) continue;
         const shuffled = shuffleChoices(q);
         resolved.push({ ...q, choices: shuffled.choices as [string, string, string, string], correct: shuffled.correct });
@@ -130,7 +131,8 @@ export default function RevisionsPage() {
       setQuestions(resolved);
       setStreakMap(strMap);
       setPhase('intro');
-    });
+    };
+    loadReviews();
   }, [user, loading, router]);
 
   const startSession = useCallback(() => {

@@ -47,34 +47,36 @@ function ExamContent() {
   useEffect(() => {
     if (hasRestoredRef.current) return;
     hasRestoredRef.current = true;
-    try {
-      const saved = localStorage.getItem('exam_active');
-      if (!saved) return;
-      const data = JSON.parse(saved);
-      if (data.completed || data.themeCode !== themeCode) return;
-      if (!data.questionIds || data.questionIds.length === 0) return;
+    const restore = async () => {
+      try {
+        const saved = localStorage.getItem('exam_active');
+        if (!saved) return;
+        const data = JSON.parse(saved);
+        if (data.completed || data.themeCode !== themeCode) return;
+        if (!data.questionIds || data.questionIds.length === 0) return;
 
-      // Rebuild question list from stored IDs (reshuffle choices)
-      const allQs = getExamQuestionsLocalized(themeCode, lang, 500);
-      const orderedQs: LocalQuestion[] = data.questionIds
-        .map((id: string) => allQs.find((q: LocalQuestion) => q.id === id))
-        .filter(Boolean)
-        .map((q: LocalQuestion) => {
-          const s = shuffleChoices(q);
-          return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
-        });
+        const allQs = await getExamQuestionsLocalized(themeCode, lang, 500);
+        const orderedQs: LocalQuestion[] = data.questionIds
+          .map((id: string) => allQs.find((q: LocalQuestion) => q.id === id))
+          .filter(Boolean)
+          .map((q: LocalQuestion) => {
+            const s = shuffleChoices(q);
+            return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+          });
 
-      if (orderedQs.length === 0) return;
+        if (orderedQs.length === 0) return;
 
-      setQuestions(orderedQs);
-      setCurrentQ(data.currentQ || 0);
-      setCorrectCount(data.correctCount || 0);
-      setStarted(true);
-      setIsResuming(true);
-      startTimeRef.current = data.startTime || Date.now();
-    } catch {
-      localStorage.removeItem('exam_active');
-    }
+        setQuestions(orderedQs);
+        setCurrentQ(data.currentQ || 0);
+        setCorrectCount(data.correctCount || 0);
+        setStarted(true);
+        setIsResuming(true);
+        startTimeRef.current = data.startTime || Date.now();
+      } catch {
+        localStorage.removeItem('exam_active');
+      }
+    };
+    restore();
   }, [themeCode, lang]);
 
   // Premium gate: exams for themes B-I require premium (FINAL always requires premium)
@@ -124,8 +126,8 @@ function ExamContent() {
     );
   }
 
-  const startExam = () => {
-    const qs = getExamQuestionsLocalized(themeCode, lang, questionCount).map(q => {
+  const startExam = async () => {
+    const qs = (await getExamQuestionsLocalized(themeCode, lang, questionCount)).map(q => {
       const s = shuffleChoices(q);
       return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
     });

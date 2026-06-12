@@ -1,33 +1,38 @@
 import type { LocalTheme, LocalLesson, LocalQuestion } from './lessonData';
 
-// ── NL content has same structure as FR (full translated files) ──
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type NlThemeContent = Record<string, any>;
 
-// ── Static imports for NL content ──
-import nlA from '../locales/content/nl/theme_A_nl.json';
-import nlB from '../locales/content/nl/theme_B_nl.json';
-import nlC from '../locales/content/nl/theme_C_nl.json';
-import nlD from '../locales/content/nl/theme_D_nl.json';
-import nlE from '../locales/content/nl/theme_E_nl.json';
-import nlF from '../locales/content/nl/theme_F_nl.json';
-import nlG from '../locales/content/nl/theme_G_nl.json';
-import nlH from '../locales/content/nl/theme_H_nl.json';
-import nlI from '../locales/content/nl/theme_I_nl.json';
+const nlCache: Record<string, NlThemeContent | null> = {};
 
-const NL_CONTENT: Record<string, NlThemeContent> = {
-  A: nlA, B: nlB, C: nlC, D: nlD, E: nlE, F: nlF, G: nlG, H: nlH, I: nlI,
-};
+async function loadNl(code: string): Promise<NlThemeContent | null> {
+  if (code in nlCache) return nlCache[code];
+  try {
+    let mod: { default: NlThemeContent };
+    switch (code) {
+      case 'A': mod = await import('../locales/content/nl/theme_A_nl.json'); break;
+      case 'B': mod = await import('../locales/content/nl/theme_B_nl.json'); break;
+      case 'C': mod = await import('../locales/content/nl/theme_C_nl.json'); break;
+      case 'D': mod = await import('../locales/content/nl/theme_D_nl.json'); break;
+      case 'E': mod = await import('../locales/content/nl/theme_E_nl.json'); break;
+      case 'F': mod = await import('../locales/content/nl/theme_F_nl.json'); break;
+      case 'G': mod = await import('../locales/content/nl/theme_G_nl.json'); break;
+      case 'H': mod = await import('../locales/content/nl/theme_H_nl.json'); break;
+      case 'I': mod = await import('../locales/content/nl/theme_I_nl.json'); break;
+      default: nlCache[code] = null; return null;
+    }
+    nlCache[code] = mod.default;
+    return nlCache[code];
+  } catch {
+    nlCache[code] = null;
+    return null;
+  }
+}
 
-/**
- * Apply NL translations over a FR theme.
- * NL files mirror the FR structure: lessons[].theory[].cards[]
- * Cards are matched by position (index). Questions fall back to FR.
- */
-export function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): LocalTheme {
+export async function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): Promise<LocalTheme> {
   if (lang === 'fr') return frTheme;
 
-  const nl = NL_CONTENT[frTheme.theme];
+  const nl = await loadNl(frTheme.theme);
   if (!nl) return frTheme;
 
   const localizedLessons = frTheme.lessons.map(frLesson => {
@@ -55,7 +60,6 @@ export function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): LocalThem
       };
     });
 
-    // Apply NL question translations where available; fall back to FR per question
     const nlQMap = new Map<string, NlThemeContent>(
       (nlLesson.questions ?? []).map(
         (q: NlThemeContent) => [q.id as string, q] as [string, NlThemeContent]

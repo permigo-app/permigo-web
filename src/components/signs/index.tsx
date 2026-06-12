@@ -3,6 +3,7 @@
 import {
   LigneContinue, LigneDiscontinue, DoubleContinue, LigneMixte,
   MarquageStop, MarquageCedez, Zebras, Chevrons, Damier,
+  FlecheSolGauche, FlecheSolToutDroit,
 } from './Marquages';
 import {
   FeuTricolore, FeuRouge, FeuOrange, FeuVert, FeuClignotant,
@@ -31,6 +32,8 @@ export const SVG_SIGNS: Record<string, (props: { size?: number }) => React.React
   ZEBRAS: Zebras,
   CHEVRONS: Chevrons,
   DAMIER: Damier,
+  FLECHE_SOL_GAUCHE: FlecheSolGauche,
+  FLECHE_SOL_TOUT_DROIT: FlecheSolToutDroit,
   // Feux
   FEU_TRICOLORE: FeuTricolore,
   FEU_ROUGE: FeuRouge,

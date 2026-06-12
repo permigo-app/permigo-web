@@ -9,6 +9,23 @@ import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
 import { isPremium } from '@/lib/premium';
+import rawQuizData from '@/data/panneaux_quiz.json';
+
+// PANNEAU_CATEGORIES id → quiz category id
+const PANNEAU_TO_QUIZ: Record<string, string> = {
+  A: 'A', B: 'BC', C: 'BC', D: 'D', E: 'E', F: 'F', FEU: 'FEU', LIGNE: 'SOL',
+};
+
+// Derive quiz button data from panneaux_quiz.json — button only shown when count ≥ 1
+const quizCounts: Record<string, number> = {};
+for (const cat of (rawQuizData as { categories: { id: string; questions: unknown[] }[] }).categories) {
+  quizCounts[cat.id] = cat.questions.length;
+}
+const QUIZ_MAP: Record<string, { cat: string; count: number }> = {};
+for (const [pannId, quizCat] of Object.entries(PANNEAU_TO_QUIZ)) {
+  const count = quizCounts[quizCat] ?? 0;
+  if (count > 0) QUIZ_MAP[pannId] = { cat: quizCat, count };
+}
 
 const FREE_PANNEAU_IDS = ['A', 'C', 'D'];
 
@@ -125,8 +142,8 @@ export default function PanneauxPage() {
                       </div>
                     </div>
 
-                    {/* Bottom row: see all link */}
-                    <div className="flex items-center justify-between mt-4 pt-3" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+                    {/* Bottom row: see all + quiz */}
+                    <div className="mt-4 pt-3" style={{ borderTop: '1px solid var(--border-subtle)' }}>
                       {locked ? (
                         <button
                           className="text-xs font-bold rounded-lg press-scale"
@@ -136,19 +153,39 @@ export default function PanneauxPage() {
                           🔒 Débloquer
                         </button>
                       ) : (
-                        <Link
-                          href={`/panneaux/${cat.id}`}
-                          className="text-xs font-bold rounded-lg press-scale transition-all duration-200"
-                          style={{ background: 'transparent', color: 'var(--brand)', border: '1px solid var(--brand)', padding: '10px 20px' }}
-                          onClick={e => e.stopPropagation()}
-                          onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand)'; e.currentTarget.style.color = '#0a0e2a'; }}
-                          onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--brand)'; }}
-                        >
-                          {t('panneaux_voir_tous')}
-                        </Link>
-                      )}
-                      {!locked && pct === 100 && total > 0 && (
-                        <span className="text-xs font-bold" style={{ color: 'var(--success)' }}>{t('panneaux_complet')}</span>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <Link
+                            href={`/panneaux/${cat.id}`}
+                            className="text-xs font-bold rounded-lg press-scale transition-all duration-200"
+                            style={{ background: 'transparent', color: 'var(--brand)', border: '1px solid var(--brand)', padding: '10px 20px' }}
+                            onClick={e => e.stopPropagation()}
+                            onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand)'; e.currentTarget.style.color = '#0a0e2a'; }}
+                            onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--brand)'; }}
+                          >
+                            {t('panneaux_voir_tous')}
+                          </Link>
+
+                          {QUIZ_MAP[cat.id] && (
+                            <Link
+                              href={`/panneaux/quiz?cat=${QUIZ_MAP[cat.id].cat}`}
+                              className="text-xs rounded-xl press-scale"
+                              style={{
+                                background: '#f59e0b',
+                                color: '#0b2659',
+                                fontWeight: 800,
+                                padding: '10px 20px',
+                                borderRadius: 12,
+                              }}
+                              onClick={e => e.stopPropagation()}
+                            >
+                              Quiz situations ({QUIZ_MAP[cat.id].count}q)
+                            </Link>
+                          )}
+
+                          {pct === 100 && total > 0 && (
+                            <span className="text-xs font-bold ml-auto" style={{ color: 'var(--success)' }}>{t('panneaux_complet')}</span>
+                          )}
+                        </div>
                       )}
                     </div>
                   </div>

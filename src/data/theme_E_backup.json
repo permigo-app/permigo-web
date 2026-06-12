@@ -951,8 +951,7 @@
           ],
           "correct": 1,
           "explanation": "Ce triangle avertit que la route reprend son double sens après un tronçon à sens unique.",
-          "destination": "panneaux",
-          "sign": "B19"
+          "destination": "panneaux"
         },
         {
           "id": "E1_Q61",
@@ -1095,7 +1094,7 @@
       "title": "Dépasser par la gauche",
       "theory": [
         {
-          "title": "Dépassement — généralités et cas spéciaux",
+          "title": "Dépassement et contournement",
           "cards": [
             {
               "type": "text",
@@ -1110,20 +1109,6 @@
               "content": "📋 La règle\nLorsqu'un véhicule est à l'arrêt ou en stationnement, passer devant lui n'est pas considéré comme un dépassement mais comme un contournement d'obstacle.\n\n💡 Pourquoi\nCette distinction est cruciale car les interdictions de dépassement (carrefour, passage à niveau, etc.) ne s'appliquent pas au contournement d'un véhicule à l'arrêt.\n\n🚗 En pratique\nSi une voiture est garée ou arrêtée sur votre bande, vous pouvez la contourner même dans une zone d'interdiction de dépassement, à condition de le faire en toute sécurité.\n\n📍 Exemple\nUn camion de livraison est arrêté sur votre bande juste après un panneau d'interdiction de dépasser. Vous pouvez le contourner : ce n'est pas un dépassement puisqu'il est à l'arrêt.\n\n⚠️ Erreur fréquente\nRefuser de contourner un véhicule à l'arrêt dans une zone d'interdiction de dépasser, provoquant un bouchon inutile. Le contournement d'un obstacle est toujours permis.",
               "emoji": "🔄",
               "explanation_simple": "Passer à côté d'une voiture garée, c'est contourner, pas dépasser. La différence est importante parce que les règles ne sont pas les mêmes."
-            },
-            {
-              "type": "text",
-              "title": "Hors agglomération : 1,5 m",
-              "content": "📋 La règle\nHors agglomération, lors du dépassement d'un piéton, cycliste ou cyclomotoriste, vous devez maintenir au moins 1,5 mètre de distance latérale.\n\n💡 Pourquoi\nHors agglomération, les vitesses sont plus élevées, ce qui amplifie l'appel d'air et le danger. Les 1,5 m offrent une marge de sécurité suffisante à ces usagers vulnérables.\n\n🚗 En pratique\nDécalez-vous franchement vers la gauche. Si la route est trop étroite ou qu'un véhicule arrive en face, attendez avant de dépasser.\n\n📍 Exemple\nVous roulez à 70 km/h sur une route de campagne. Un cycliste pédale devant vous. Vous attendez que la voie en face soit libre, puis vous le dépassez en laissant au moins 1,5 m d'écart.\n\n⚠️ Erreur fréquente\nDépasser un cycliste en le frôlant parce qu'un véhicule arrive en face. Mieux vaut ralentir et attendre plutôt que de risquer la vie du cycliste.",
-              "emoji": "🚲",
-              "explanation_simple": "Hors ville, laisse au moins 1,5 m quand tu dépasses un cycliste ou un piéton. C'est presque la largeur d'une voiture !"
-            },
-            {
-              "type": "text",
-              "title": "En agglomération : 1 m",
-              "content": "📋 La règle\nEn agglomération, la distance latérale minimale lors du dépassement d'un cycliste, cyclomotoriste ou piéton est de 1 mètre.\n\n💡 Pourquoi\nEn ville, les vitesses sont plus faibles, ce qui réduit l'appel d'air. Un mètre reste cependant nécessaire pour la sécurité du cycliste en cas d'écart ou de coup de vent.\n\n🚗 En pratique\nMême en ville à 30 ou 50 km/h, laissez au moins 1 m. Si c'est impossible, ralentissez fortement et attendez de pouvoir dépasser en sécurité.\n\n📍 Exemple\nVous roulez à 30 km/h dans une rue étroite de Bruxelles. Un cycliste est devant vous. La rue est trop étroite pour laisser 1 m : vous restez derrière lui jusqu'à ce que la rue s'élargisse.\n\n⚠️ Erreur fréquente\nDépasser un cycliste dans une rue trop étroite en ne laissant que 50 cm. C'est insuffisant et dangereux, même à basse vitesse.",
-              "emoji": "🏙️",
-              "explanation_simple": "En ville, c'est minimum 1 m de distance quand tu dépasses un cycliste. Moins de place qu'hors ville, mais c'est le strict minimum."
             }
           ]
         },
@@ -1218,6 +1203,25 @@
               "content": "📋 La règle\nLors du dépassement, gardez une distance latérale suffisante avec le véhicule dépassé. Le code utilise le terme « suffisante » sans chiffre exact.\n\n💡 Pourquoi\nUn écart latéral trop faible peut provoquer un accrochage ou déstabiliser le véhicule dépassé (appel d'air), surtout les deux-roues et les camions.\n\n🚗 En pratique\nGardez environ 1 m d'écart latéral avec les voitures, et davantage avec les poids lourds (appel d'air plus important). Ne frôlez jamais le véhicule dépassé.\n\n📍 Exemple\nVous dépassez un camion sur l'autoroute. Vous vous décalez bien à gauche dans votre bande pour maintenir un écart latéral confortable d'au moins 1,5 m.\n\n⚠️ Erreur fréquente\nPasser très près du véhicule dépassé pour « gagner de la place ». L'appel d'air d'un camion peut déstabiliser votre véhicule si vous êtes trop proche.",
               "emoji": "📏",
               "explanation_simple": "Quand tu dépasses, garde assez d'espace sur le côté. Le code dit \"distance latérale suffisante\" — en gros, ne frôle pas l'autre véhicule."
+            }
+          ]
+        },
+        {
+          "title": "Dépassement cycliste, cyclomotoriste, piéton",
+          "cards": [
+            {
+              "type": "text",
+              "title": "Hors agglomération : 1,5 m",
+              "content": "📋 La règle\nHors agglomération, lors du dépassement d'un piéton, cycliste ou cyclomotoriste, vous devez maintenir au moins 1,5 mètre de distance latérale.\n\n💡 Pourquoi\nHors agglomération, les vitesses sont plus élevées, ce qui amplifie l'appel d'air et le danger. Les 1,5 m offrent une marge de sécurité suffisante à ces usagers vulnérables.\n\n🚗 En pratique\nDécalez-vous franchement vers la gauche. Si la route est trop étroite ou qu'un véhicule arrive en face, attendez avant de dépasser.\n\n📍 Exemple\nVous roulez à 70 km/h sur une route de campagne. Un cycliste pédale devant vous. Vous attendez que la voie en face soit libre, puis vous le dépassez en laissant au moins 1,5 m d'écart.\n\n⚠️ Erreur fréquente\nDépasser un cycliste en le frôlant parce qu'un véhicule arrive en face. Mieux vaut ralentir et attendre plutôt que de risquer la vie du cycliste.",
+              "emoji": "🚲",
+              "explanation_simple": "Hors ville, laisse au moins 1,5 m quand tu dépasses un cycliste ou un piéton. C'est presque la largeur d'une voiture !"
+            },
+            {
+              "type": "text",
+              "title": "En agglomération : 1 m",
+              "content": "📋 La règle\nEn agglomération, la distance latérale minimale lors du dépassement d'un cycliste, cyclomotoriste ou piéton est de 1 mètre.\n\n💡 Pourquoi\nEn ville, les vitesses sont plus faibles, ce qui réduit l'appel d'air. Un mètre reste cependant nécessaire pour la sécurité du cycliste en cas d'écart ou de coup de vent.\n\n🚗 En pratique\nMême en ville à 30 ou 50 km/h, laissez au moins 1 m. Si c'est impossible, ralentissez fortement et attendez de pouvoir dépasser en sécurité.\n\n📍 Exemple\nVous roulez à 30 km/h dans une rue étroite de Bruxelles. Un cycliste est devant vous. La rue est trop étroite pour laisser 1 m : vous restez derrière lui jusqu'à ce que la rue s'élargisse.\n\n⚠️ Erreur fréquente\nDépasser un cycliste dans une rue trop étroite en ne laissant que 50 cm. C'est insuffisant et dangereux, même à basse vitesse.",
+              "emoji": "🏙️",
+              "explanation_simple": "En ville, c'est minimum 1 m de distance quand tu dépasses un cycliste. Moins de place qu'hors ville, mais c'est le strict minimum."
             }
           ]
         },
@@ -1683,7 +1687,7 @@
           ],
           "correct": 1,
           "explanation": "Hors agglomération : minimum 1,5 mètre en dépassant un cycliste.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3
         },
         {
           "id": "E2_Q30",
@@ -1696,7 +1700,7 @@
           ],
           "correct": 1,
           "explanation": "La distance de 1,5 m s'applique que le cycliste soit sur la chaussée ou sur la piste cyclable.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3
         },
         {
           "id": "E2_Q31",
@@ -1709,7 +1713,7 @@
           ],
           "correct": 1,
           "explanation": "La distance de 1,5 m s'applique aussi aux piétons marchant sur la chaussée hors agglomération.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3
         },
         {
           "id": "E2_Q32",
@@ -1722,7 +1726,7 @@
           ],
           "correct": 1,
           "explanation": "La distance de 1,5 m hors agglomération s'applique au dépassement ET au croisement d'un cycliste.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3
         },
         {
           "id": "E2_Q33",
@@ -1735,7 +1739,7 @@
           ],
           "correct": 1,
           "explanation": "En agglomération : minimum 1 mètre en dépassant un cycliste.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3
         },
         {
           "id": "E2_Q34",
@@ -1748,7 +1752,7 @@
           ],
           "correct": 1,
           "explanation": "En agglomération, la distance minimale est de 1 mètre pour cyclistes et cyclomotoristes.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3
         },
         {
           "id": "E2_Q35",
@@ -1761,7 +1765,7 @@
           ],
           "correct": 1,
           "explanation": "1 m en agglomération, 1,5 m hors agglomération — pour cyclistes, cyclomotoristes et piétons sur chaussée.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3
         },
         {
           "id": "E2_Q36",
@@ -1774,7 +1778,7 @@
           ],
           "correct": 1,
           "explanation": "1,2 m est insuffisant hors agglomération : il faut au moins 1,5 m.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3
         },
         {
           "id": "E2_Q37",
@@ -1787,7 +1791,7 @@
           ],
           "correct": 1,
           "explanation": "Quand le véhicule s'est déporté à gauche pour tourner, vous le dépassez par la droite.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q38",
@@ -1800,7 +1804,7 @@
           ],
           "correct": 1,
           "explanation": "La zone au-delà du bord fictif est réservée à l'arrêt/stationnement — interdit pour le dépassement.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q39",
@@ -1813,7 +1817,7 @@
           ],
           "correct": 1,
           "explanation": "La piste cyclable ne fait pas partie de la chaussée : l'emprunter pour dépasser est interdit.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q40",
@@ -1826,7 +1830,7 @@
           ],
           "correct": 1,
           "explanation": "L'accotement de plain-pied est autorisé pour ce dépassement, à condition de ne pas mettre en danger ses usagers.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q41",
@@ -1839,7 +1843,7 @@
           ],
           "correct": 1,
           "explanation": "La règle générale : dépasser les trams par la droite.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q42",
@@ -1852,7 +1856,7 @@
           ],
           "correct": 1,
           "explanation": "Exceptions au dépassement par la droite du tram : passage impossible à droite ou voies sur partie droite.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q43",
@@ -1865,7 +1869,7 @@
           ],
           "correct": 1,
           "explanation": "Si les voies du tram sont à droite, on le dépasse par la gauche.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q44",
@@ -1878,7 +1882,7 @@
           ],
           "correct": 1,
           "explanation": "Sans bordure surélevée, vous devez ralentir et si nécessaire vous arrêter.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q45",
@@ -1891,7 +1895,7 @@
           ],
           "correct": 1,
           "explanation": "Avec une bordure surélevée, les passagers peuvent attendre en sécurité — pas d'obligation de s'arrêter.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q46",
@@ -1904,7 +1908,7 @@
           ],
           "correct": 1,
           "explanation": "Un véhicule stationné à droite est une exception permettant de dépasser le tram par la gauche.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q47",
@@ -1917,7 +1921,7 @@
           ],
           "correct": 1,
           "explanation": "Des travaux à droite sont une exception permettant de dépasser le tram par la gauche.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q48",
@@ -1930,7 +1934,7 @@
           ],
           "correct": 1,
           "explanation": "Deux cas uniquement : le véhicule qui tourne à gauche, et le tram.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "E2_Q49",
@@ -1943,7 +1947,7 @@
           ],
           "correct": 1,
           "explanation": "En embouteillage, une file plus rapide que l'autre n'est pas considérée comme un dépassement.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q50",
@@ -1956,7 +1960,7 @@
           ],
           "correct": 1,
           "explanation": "La circulation en files multiples n'est autorisée que si la densité du trafic le justifie.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q51",
@@ -1969,7 +1973,7 @@
           ],
           "correct": 1,
           "explanation": "Uniquement les bandes de votre propre sens de circulation.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q52",
@@ -1982,7 +1986,7 @@
           ],
           "correct": 1,
           "explanation": "La chaussée à sens unique est l'un des 3 cas autorisant la circulation en plusieurs files.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q53",
@@ -1995,7 +1999,7 @@
           ],
           "correct": 1,
           "explanation": "Les 3 types de signaux lumineux au-dessus des bandes : croix rouge, flèche verte (bas), flèche orange (oblique).",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q54",
@@ -2008,7 +2012,7 @@
           ],
           "correct": 1,
           "explanation": "Les règles de dépassement ne s'appliquent pas avant les signaux de choix de bande, mais elles s'appliquent après.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q55",
@@ -2021,7 +2025,7 @@
           ],
           "correct": 1,
           "explanation": "Avant les signaux de choix de bande, les règles de dépassement ne s'appliquent pas.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q56",
@@ -2034,7 +2038,7 @@
           ],
           "correct": 1,
           "explanation": "Deux conditions cumulatives : bandes présentes ET en agglomération.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q57",
@@ -2047,7 +2051,7 @@
           ],
           "correct": 1,
           "explanation": "Sens unique en agglomération + bandes = choix libre de la bande.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q58",
@@ -2060,7 +2064,7 @@
           ],
           "correct": 1,
           "explanation": "4 bandes en agglomération (au moins 2 par sens) = choix libre de la bande.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q59",
@@ -2073,7 +2077,7 @@
           ],
           "correct": 1,
           "explanation": "Le choix libre de bande selon la destination n'est possible qu'en agglomération.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q60",
@@ -2086,7 +2090,7 @@
           ],
           "correct": 1,
           "explanation": "En agglomération, le choix de bande s'applique y compris dans les virages.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q61",
@@ -2099,7 +2103,7 @@
           ],
           "correct": 1,
           "explanation": "Sur 2 bandes (1 par sens), le choix libre de bande en agglomération ne s'applique pas.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q62",
@@ -2112,7 +2116,7 @@
           ],
           "correct": 1,
           "explanation": "Deux conditions distinctes : densité pour les files, agglomération + bandes pour le choix libre.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "E2_Q63",
@@ -2125,7 +2129,7 @@
           ],
           "correct": 1,
           "explanation": "Les motocyclettes peuvent circuler entre les files en embouteillage.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "E2_Q64",
@@ -2138,7 +2142,7 @@
           ],
           "correct": 1,
           "explanation": "Sur autoroute/route pour automobiles, les motos ne peuvent circuler qu'entre les deux bandes les plus à gauche.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "E2_Q65",
@@ -2151,7 +2155,7 @@
           ],
           "correct": 1,
           "explanation": "Vitesse maximale absolue : 50 km/h pour les motos circulant entre les files.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "E2_Q66",
@@ -2164,7 +2168,7 @@
           ],
           "correct": 1,
           "explanation": "La moto ne peut pas rouler à plus de 20 km/h par rapport aux véhicules dépassés.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "E2_Q67",
@@ -2177,7 +2181,7 @@
           ],
           "correct": 1,
           "explanation": "35 + 20 = 55 km/h max relatif. Limite absolue 50 km/h. La moto peut donc rouler à 50 km/h.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "E2_Q68",
@@ -2190,7 +2194,7 @@
           ],
           "correct": 1,
           "explanation": "0 + 20 = 20 km/h max. À 25 km/h, la moto dépasse de 25 km/h les véhicules arrêtés — c'est interdit.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "E2_Q69",
@@ -2203,8 +2207,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal d'indication annonce que des flèches au sol prescrivent le choix de bande.",
-          "sign": "F13",
-          "destination": "panneaux"
+          "theoryCardIndex": 7,
+          "sign": "F13"
         },
         {
           "id": "E2_Q70",
@@ -2217,8 +2221,8 @@
           ],
           "correct": 1,
           "explanation": "Flèches vers le bas = continuer tout droit. Flèches obliques = directions sortantes.",
-          "sign": "F13",
-          "destination": "panneaux"
+          "theoryCardIndex": 7,
+          "sign": "F13"
         },
         {
           "id": "E2_Q71",
@@ -2231,8 +2235,7 @@
           ],
           "correct": 1,
           "explanation": "Chaque flèche correspond à une bande de circulation.",
-          "destination": "panneaux",
-          "sign": "F17"
+          "theoryCardIndex": 7
         },
         {
           "id": "E2_Q72",
@@ -2245,7 +2248,7 @@
           ],
           "correct": 1,
           "explanation": "Avant les signaux de choix de bande, les règles de dépassement ne s'appliquent pas.",
-          "theoryCardIndex": 4,
+          "theoryCardIndex": 7,
           "sign": "F13"
         },
         {
@@ -2259,7 +2262,7 @@
           ],
           "correct": 1,
           "explanation": "Après les signaux de choix de bande, les règles de dépassement reprennent.",
-          "theoryCardIndex": 4,
+          "theoryCardIndex": 7,
           "sign": "F13"
         },
         {
@@ -2273,7 +2276,7 @@
           ],
           "correct": 1,
           "explanation": "Entrer en agglomération active les règles du choix de bande (si chaussée avec bandes).",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 7
         }
       ]
     },
@@ -3346,8 +3349,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal rectangulaire de zone = début de la zone d'interdiction de dépasser.",
-          "destination": "panneaux",
-          "sign": "C37"
+          "destination": "panneaux"
         },
         {
           "id": "E3_Q68",
@@ -3360,8 +3362,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal annonce que la zone d'interdiction commence 500 mètres plus loin.",
-          "destination": "panneaux",
-          "sign": "C37"
+          "destination": "panneaux"
         },
         {
           "id": "E3_Q69",
@@ -3374,8 +3375,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal lève l'interdiction pour les camions > 3,5 t et les autorise à dépasser.",
-          "destination": "panneaux",
-          "sign": "C37"
+          "destination": "panneaux"
         },
         {
           "id": "E3_Q70",

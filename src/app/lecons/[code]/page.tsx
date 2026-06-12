@@ -3,11 +3,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { getThemeData } from '@/lib/lessonData';
+import { getThemeData, type LocalTheme } from '@/lib/lessonData';
 import { THEME_EMOJIS, THEME_CITIES } from '@/lib/constants';
 import { isLessonCompleted, getLessonProgress, isExamPassed } from '@/lib/progressStorage';
 import { useLang } from '@/contexts/LanguageContext';
 import ProgressBar from '@/components/ui/ProgressBar';
+import { SkeletonList } from '@/components/ui/SkeletonList';
 
 interface LessonRow {
   id: string;
@@ -21,11 +22,20 @@ export default function ThemeDetailPage() {
   const params = useParams();
   const { t } = useLang();
   const code = (params.code as string).toUpperCase();
-  const theme = getThemeData(code);
 
+  const [theme, setTheme] = useState<LocalTheme | null>(null);
+  const [loading, setLoading] = useState(true);
   const [lessons, setLessons] = useState<LessonRow[]>([]);
   const [themePct, setThemePct] = useState(0);
   const [examPassed, setExamPassed] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    getThemeData(code).then(t => {
+      setTheme(t);
+      setLoading(false);
+    });
+  }, [code]);
 
   useEffect(() => {
     if (!theme) return;
@@ -44,6 +54,17 @@ export default function ThemeDetailPage() {
     setLessons(rows);
     setExamPassed(isExamPassed(code));
   }, [theme, code]);
+
+  if (loading) {
+    return (
+      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
+        <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 20, paddingLeft: 20, paddingRight: 20, height: 120 }} />
+        <div style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px' }}>
+          <SkeletonList count={5} height={64} />
+        </div>
+      </div>
+    );
+  }
 
   if (!theme) return null;
 

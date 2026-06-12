@@ -83,31 +83,33 @@ export default function TurboPage() {
   useEffect(() => {
     if (hasRestoredRef.current) return;
     hasRestoredRef.current = true;
-    try {
-      const saved = localStorage.getItem('turbo_active');
-      if (!saved) return;
-      const data = JSON.parse(saved);
-      const elapsed = Date.now() - data.startTime;
-      const remaining = data.mode === 'survie' ? 1 : (data.duration - elapsed);
-      if (remaining > 0) {
-        const allQ = getAllQuestionsLocalized(lang);
-        const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
-          const s = shuffleChoices(q);
-          return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
-        });
-        setQuestions(shuffled);
-        setMode(data.mode as Mode);
-        if (data.mode !== 'survie') setTimeLeft(Math.floor((data.duration - elapsed) / 1000));
-        setCorrectCount(data.score || 0);
-        setCurrentQ(data.questionsAnswered || 0);
-        startTimeRef.current = data.startTime;
-      } else {
-        // Temps écoulé pendant l'absence
+    const restore = async () => {
+      try {
+        const saved = localStorage.getItem('turbo_active');
+        if (!saved) return;
+        const data = JSON.parse(saved);
+        const elapsed = Date.now() - data.startTime;
+        const remaining = data.mode === 'survie' ? 1 : (data.duration - elapsed);
+        if (remaining > 0) {
+          const allQ = await getAllQuestionsLocalized(lang);
+          const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
+            const s = shuffleChoices(q);
+            return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+          });
+          setQuestions(shuffled);
+          setMode(data.mode as Mode);
+          if (data.mode !== 'survie') setTimeLeft(Math.floor((data.duration - elapsed) / 1000));
+          setCorrectCount(data.score || 0);
+          setCurrentQ(data.questionsAnswered || 0);
+          startTimeRef.current = data.startTime;
+        } else {
+          localStorage.removeItem('turbo_active');
+        }
+      } catch {
         localStorage.removeItem('turbo_active');
       }
-    } catch {
-      localStorage.removeItem('turbo_active');
-    }
+    };
+    restore();
   }, [lang]);
 
   const [turboCount, setTurboCount] = useState(0);
@@ -146,7 +148,7 @@ export default function TurboPage() {
     }
   }, [correctCount, currentQ, mode, timeLeft]);
 
-  const startGame = (m: '3min' | '5min' | 'survie') => {
+  const startGame = async (m: '3min' | '5min' | 'survie') => {
     // N'incrémente que si pas de session déjà active (évite double-comptage)
     if (!localStorage.getItem('turbo_active')) {
       incrementTurboDailyCount();
@@ -161,7 +163,7 @@ export default function TurboPage() {
       score: 0,
     }));
     setMode(m);
-    const allQ = getAllQuestionsLocalized(lang);
+    const allQ = await getAllQuestionsLocalized(lang);
     const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
       const s = shuffleChoices(q);
       return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };

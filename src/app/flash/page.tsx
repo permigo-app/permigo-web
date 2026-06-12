@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { getThemeDataLocalized, type LocalTheoryCard } from '@/lib/lessonData';
+import { getThemeDataLocalized, type LocalTheoryCard, type LocalTheme } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { addStudyTime } from '@/lib/progressStorage';
@@ -42,7 +42,10 @@ function FlashContent() {
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🃏';
 
-  const themeData = getThemeDataLocalized(themeCode, lang);
+  const [themeData, setThemeData] = useState<LocalTheme | null>(null);
+  useEffect(() => {
+    getThemeDataLocalized(themeCode, lang).then(setThemeData);
+  }, [themeCode, lang]);
   const themeTitle = themeData?.title || '';
 
   const allCards = useMemo<FlashCard[]>(() => {
@@ -88,8 +91,9 @@ function FlashContent() {
     return `${m}:${sec.toString().padStart(2, '0')}`;
   };
 
-  // Load saved state
+  // Load saved state — only after themeData is available
   useEffect(() => {
+    if (!themeData || totalCards === 0) return;
     const mastered = loadMastered(themeCode);
     const masteredSet = new Set(mastered);
     const remaining = allCards.filter(c => !masteredSet.has(c.uid));
@@ -101,7 +105,7 @@ function FlashContent() {
       setQueue(remaining.length > 0 ? remaining : allCards);
     }
     setLoaded(true);
-  }, [themeCode, allCards, totalCards]);
+  }, [themeCode, allCards, totalCards, themeData]);
 
   const flipCard = useCallback(() => {
     if (animating) return;
