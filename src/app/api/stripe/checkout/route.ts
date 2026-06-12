@@ -2,10 +2,11 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
 function getServiceClient() {
-  return createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
-  );
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+  // Service role preferred; anon key is sufficient for auth.getUser() token verification
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+  console.log('[Stripe] Supabase url present:', !!url, '— service key present:', !!process.env.SUPABASE_SERVICE_ROLE_KEY, '— using anon fallback:', !process.env.SUPABASE_SERVICE_ROLE_KEY);
+  return createClient(url, key);
 }
 
 export async function POST(req: Request) {
@@ -31,19 +32,26 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Non authentifié' }, { status: 401 });
   }
 
-  const supabase = getServiceClient();
-  const { data: { user }, error: authError } = await supabase.auth.getUser(token);
-
-  if (authError || !user) {
-    console.error('[Stripe] Token invalide:', authError?.message);
-    return NextResponse.json({ error: 'Token invalide' }, { status: 401 });
-  }
-
-  const userId = user.id;
-  const email = user.email;
-  console.log('[Stripe] Authenticated userId:', userId, 'email:', email);
+  let userId: string;
+  let email: string | undefined;
 
   try {
+    const supabase = getServiceClient();
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    if (authError || !user) {
+      console.error('[Stripe] Token invalide:', authError?.message);
+      return NextResponse.json({ error: 'Token invalide' }, { status: 401 });
+    }
+    userId = user.id;
+    email = user.email ?? undefined;
+    console.log('[Stripe] Authenticated userId:', userId, 'email:', email);
+  } catch (authErr) {
+    console.error('[Stripe] Auth check failed:', authErr);
+    return NextResponse.json({ error: 'Erreur authentification' }, { status: 500 });
+  }
+
+  try {
+    const supabase = getServiceClient();
     const Stripe = (await import('stripe')).default;
     const stripe = new Stripe(STRIPE_SECRET_KEY);
 
