@@ -92,12 +92,16 @@ export async function createUserProfile(params: {
   try {
     const inviteCode = generateInviteCode();
 
-    await supabase.from('profiles').upsert({
+    // NB: pas de design_update_seen ici — la colonne n'existe pas dans le schéma
+    // actuel et son inclusion faisait échouer silencieusement tout l'upsert
+    const { error: upsertError } = await supabase.from('profiles').upsert({
       id: params.uid,
       username: params.name,
-      design_update_seen: true,
       updated_at: new Date().toISOString(),
     });
+    if (upsertError) {
+      console.error('[PermiGo] createUserProfile upsert failed:', upsertError.message);
+    }
 
     await supabase.auth.updateUser({
       data: {

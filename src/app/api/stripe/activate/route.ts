@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { activatePremiumProfile } from '@/lib/activatePremiumProfile';
 
 function getSupabase() {
   return createClient(
@@ -39,34 +40,10 @@ export async function POST(req: Request) {
     const customerId = typeof session.customer === 'string' ? session.customer : session.customer?.id;
     const supabase = getSupabase();
 
-    // update() ne signale pas l'absence de ligne (0 rows = succès) — on vérifie
-    // le nombre de lignes touchées et on crée le profil s'il n'existe pas
-    const { data: updated, error } = await supabase
-      .from('profiles')
-      .update({
-        is_premium: true,
-        ...(customerId ? { stripe_customer_id: customerId } : {}),
-        updated_at: new Date().toISOString(),
-      })
-      .eq('id', userId)
-      .select('id');
-
-    if (error) {
-      console.error('[Activate] Supabase error:', error.message);
-      return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
-    }
-
-    if (!updated || updated.length === 0) {
-      console.warn('[Activate] Aucun profil pour', userId, '— création');
-      const { error: insertError } = await supabase.from('profiles').insert({
-        id: userId,
-        is_premium: true,
-        ...(customerId ? { stripe_customer_id: customerId } : {}),
-      });
-      if (insertError) {
-        console.error('[Activate] Insert error:', insertError.message);
-        return NextResponse.json({ ok: false, error: insertError.message }, { status: 500 });
-      }
+    const result = await activatePremiumProfile(supabase, userId, customerId);
+    if (!result.ok) {
+      console.error('[Activate] Supabase error:', result.error);
+      return NextResponse.json({ ok: false, error: result.error }, { status: 500 });
     }
 
     console.log('[Activate] Premium activé pour:', userId);
