@@ -12,7 +12,7 @@ import { THEME_ORDER, getThemeData } from '@/lib/lessonData';
 import { isLessonCompleted } from '@/lib/progressStorage';
 import { useIsPremium } from '@/lib/premium';
 
-const NAV_ITEMS = [
+const NAV_ITEMS: { href: string; labelKey: string; fullLabelKey?: string; icon: React.ReactNode }[] = [
   { href: '/app', labelKey: 'nav_accueil', icon: (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" />
@@ -31,7 +31,7 @@ const NAV_ITEMS = [
       <line x1="12" y1="17" x2="12.01" y2="17" />
     </svg>
   )},
-  { href: '/examen', labelKey: 'examen_blanc', icon: (
+  { href: '/examen', labelKey: 'nav_examen', fullLabelKey: 'examen_blanc', icon: (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
       <polyline points="14 2 14 8 20 8" />
@@ -242,7 +242,7 @@ export default function Navbar() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2, marginBottom: 4 }}>
           {NAV_ITEMS.slice(0, 4).map(item => (
-            <SidebarItem key={item.href} href={item.href} icon={item.icon} label={t(item.labelKey)} active={isNavActive(item.href, pathname)} />
+            <SidebarItem key={item.href} href={item.href} icon={item.icon} label={t(item.fullLabelKey ?? item.labelKey)} active={isNavActive(item.href, pathname)} />
           ))}
           {DESKTOP_EXTRA.map(item => (
             <SidebarItem key={item.href} href={item.href} icon={item.icon} label={t(item.labelKey)} active={isNavActive(item.href, pathname)} />

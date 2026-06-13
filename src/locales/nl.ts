@@ -186,6 +186,7 @@ const nl: Record<string, string> = {
   // ── Home / Route ──
   commencer: 'BEGINNEN',
   examen_blanc: 'Proefexamen',
+  nav_examen: 'Examen',
   examen_final: '🏆 Eindexamen',
 
   // ── Leçon ──

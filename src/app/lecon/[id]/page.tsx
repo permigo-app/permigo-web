@@ -462,8 +462,21 @@ export default function LessonPage() {
               </h2>
             </div>
 
-            {/* ImageRequestButton kept in place */}
-            <ImageRequestButton id={`${lessonId}_c${currentCard}`} />
+            {/* Theory image */}
+            {card.image && (
+              <div style={{ width: '100%', marginBottom: 16, borderRadius: 12, overflow: 'hidden' }}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  style={{ width: '100%', height: 'auto', maxHeight: 200, objectFit: 'cover', display: 'block' }}
+                  loading="lazy"
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+              </div>
+            )}
+
+            {/* ImageRequestButton: only when no image */}
+            {!card.image && <ImageRequestButton id={`${lessonId}_c${currentCard}`} />}
 
             {/* Content sections or plain text */}
             {contentSections ? (
