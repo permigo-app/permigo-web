@@ -57,6 +57,7 @@ export async function POST(req: Request) {
 
     let existingCustomerId: string | null = null;
 
+    // 1. Vérifie Supabase
     try {
       const { data: profile } = await supabase
         .from('profiles')
@@ -65,13 +66,46 @@ export async function POST(req: Request) {
         .single();
 
       if (profile?.is_premium) {
-        console.log('[Stripe] Blocked: user already premium:', userId);
+        console.log('[Stripe] Blocked via Supabase: user already premium:', userId);
         return NextResponse.json({ error: 'already_subscribed' }, { status: 400 });
       }
 
       existingCustomerId = profile?.stripe_customer_id ?? null;
     } catch (profileErr) {
-      console.warn('[Stripe] Profile check failed, proceeding:', profileErr);
+      console.warn('[Stripe] Profile check failed:', profileErr);
+    }
+
+    // 2. Vérifie Stripe directement (protection double-facturation)
+    if (existingCustomerId) {
+      const existing = await stripe.subscriptions.list({
+        customer: existingCustomerId,
+        status: 'all',
+        limit: 10,
+      });
+      const activeOrTrial = existing.data.filter(s =>
+        ['active', 'trialing', 'past_due'].includes(s.status)
+      );
+      if (activeOrTrial.length > 0) {
+        console.log('[Stripe] Blocked via Stripe: active subscription exists for customer:', existingCustomerId, 'statuses:', activeOrTrial.map(s => s.status));
+        // Sync Supabase au cas où
+        await supabase.from('profiles').update({ is_premium: true }).eq('id', userId);
+        return NextResponse.json({ error: 'already_subscribed' }, { status: 400 });
+      }
+    } else {
+      // Pas de customerId en base — cherche par email dans Stripe
+      if (email) {
+        const customers = await stripe.customers.list({ email, limit: 5 });
+        for (const cust of customers.data) {
+          const subs = await stripe.subscriptions.list({ customer: cust.id, status: 'all', limit: 5 });
+          const activeOrTrial = subs.data.filter(s => ['active', 'trialing', 'past_due'].includes(s.status));
+          if (activeOrTrial.length > 0) {
+            console.log('[Stripe] Blocked via Stripe email search: found active sub for', email, 'customer:', cust.id);
+            await supabase.from('profiles').update({ is_premium: true, stripe_customer_id: cust.id }).eq('id', userId);
+            return NextResponse.json({ error: 'already_subscribed' }, { status: 400 });
+          }
+          if (!existingCustomerId) existingCustomerId = cust.id;
+        }
+      }
     }
 
     console.log('[Stripe] Creating session — userId:', userId, 'existingCustomer:', existingCustomerId);
