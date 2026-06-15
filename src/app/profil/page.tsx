@@ -11,6 +11,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
 import { useIsPremium } from '@/lib/premium';
+import { supabase } from '@/lib/supabase';
 
 // Semantic category colors — intentionally hardcoded, not theme vars
 const CAT_COLORS: Record<string, { bg: string; bgStrong: string; border: string; glow: string; check: string }> = {
@@ -48,6 +49,9 @@ export default function ProfilePage() {
   const [muted, setMuted] = useState(false);
   const premium = useIsPremium();
   const [themeMap, setThemeMap] = useState<Record<string, LocalTheme>>({});
+  const [cancelling, setCancelling] = useState(false);
+  const [cancelled, setCancelled] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -95,11 +99,66 @@ export default function ProfilePage() {
     : 100;
   const badgeCategories = [...new Set(BADGES.map(b => b.category))];
 
+  const handleCancel = async () => {
+    setCancelling(true);
+    try {
+      const sessionData = supabase ? await supabase.auth.getSession() : null;
+      const token = sessionData?.data?.session?.access_token;
+      const res = await fetch('/api/stripe/cancel', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${token}` },
+      });
+      if (res.ok) { setCancelled(true); setShowConfirm(false); }
+    } catch { /* silently ignore */ }
+    finally { setCancelling(false); }
+  };
+
   const handleSignOut = async () => {
     await signOut();
     localStorage.removeItem('@onboarding_done');
     document.cookie = 'onboarding_done=; path=/; max-age=0; SameSite=Lax';
     window.location.href = '/login';
+  };
+
+  // ── Section abonnement ──
+  const SubscriptionSection = () => {
+    if (!premium) return null;
+    if (cancelled) return (
+      <div style={{ background: '#f0fdf4', borderRadius: 16, padding: 20, border: '1.5px solid #22c55e', marginTop: 16 }}>
+        <p style={{ fontWeight: 800, fontSize: 15, color: '#16a34a', marginBottom: 4 }}>✅ Résiliation confirmée</p>
+        <p style={{ fontSize: 13, color: '#374151', lineHeight: 1.6, margin: 0 }}>
+          Votre abonnement ne sera pas renouvelé. Votre accès premium reste actif jusqu&apos;à la fin de la période payée.
+        </p>
+      </div>
+    );
+    if (showConfirm) return (
+      <div style={{ background: '#fef2f2', borderRadius: 16, padding: 20, border: '1.5px solid #ef4444', marginTop: 16 }}>
+        <p style={{ fontWeight: 800, fontSize: 15, color: '#dc2626', marginBottom: 8 }}>Confirmer la résiliation ?</p>
+        <p style={{ fontSize: 13, color: '#374151', marginBottom: 16, lineHeight: 1.6, margin: '0 0 16px' }}>
+          Votre accès premium restera actif jusqu&apos;à la fin de la période en cours. Vous ne serez plus débité après.
+        </p>
+        <div style={{ display: 'flex', gap: 10 }}>
+          <button onClick={handleCancel} disabled={cancelling}
+            style={{ background: '#ef4444', color: '#fff', border: 'none', borderRadius: 10, padding: '10px 20px', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>
+            {cancelling ? 'Résiliation...' : 'Oui, résilier'}
+          </button>
+          <button onClick={() => setShowConfirm(false)}
+            style={{ background: 'var(--bg-card)', color: 'var(--text-title)', border: '1.5px solid var(--border-card)', borderRadius: 10, padding: '10px 20px', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>
+            Annuler
+          </button>
+        </div>
+      </div>
+    );
+    return (
+      <div style={{ background: 'var(--bg-card)', borderRadius: 16, padding: 20, border: '1.5px solid var(--border-card)', marginTop: 16 }}>
+        <p style={{ fontWeight: 700, fontSize: 15, color: 'var(--text-title)', marginBottom: 4 }}>Abonnement Premium actif</p>
+        <p style={{ fontSize: 13, color: 'var(--text-sub)', marginBottom: 16 }}>7€/mois · Renouvellement automatique</p>
+        <button onClick={() => setShowConfirm(true)}
+          style={{ background: 'none', border: '1.5px solid #ef4444', color: '#ef4444', borderRadius: 10, padding: '10px 20px', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>
+          Résilier mon abonnement
+        </button>
+      </div>
+    );
   };
 
   // ── Reusable sub-components (inline for single-file clarity) ──
@@ -360,7 +419,10 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* 8. Déconnexion */}
+          {/* 8. Abonnement */}
+          <SubscriptionSection />
+
+          {/* 9. Déconnexion */}
           {user && (
             <button onClick={handleSignOut}
               className="py-3 rounded-xl font-bold text-sm press-scale"
@@ -453,6 +515,9 @@ export default function ProfilePage() {
                   </button>
                 </div>
               )}
+
+              {/* Abonnement */}
+              <SubscriptionSection />
 
               {/* Sign out */}
               {user && (
