@@ -52,6 +52,7 @@ export default function ProfilePage() {
   const [cancelling, setCancelling] = useState(false);
   const [cancelled, setCancelled] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [cancelError, setCancelError] = useState('');
 
   useEffect(() => {
     setMounted(true);
@@ -101,16 +102,28 @@ export default function ProfilePage() {
 
   const handleCancel = async () => {
     setCancelling(true);
+    setCancelError('');
     try {
       const sessionData = supabase ? await supabase.auth.getSession() : null;
       const token = sessionData?.data?.session?.access_token;
+      if (!token) {
+        setCancelError('Session expirée. Reconnecte-toi puis réessaie.');
+        return;
+      }
       const res = await fetch('/api/stripe/cancel', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` },
       });
-      if (res.ok) { setCancelled(true); setShowConfirm(false); }
-    } catch { /* silently ignore */ }
-    finally { setCancelling(false); }
+      if (res.ok) {
+        setCancelled(true);
+        setShowConfirm(false);
+      } else {
+        const data = await res.json().catch(() => null);
+        setCancelError(data?.error || 'Erreur lors de la résiliation. Réessaie ou contacte le support.');
+      }
+    } catch {
+      setCancelError('Erreur réseau. Vérifie ta connexion et réessaie.');
+    } finally { setCancelling(false); }
   };
 
   const handleSignOut = async () => {
@@ -137,6 +150,9 @@ export default function ProfilePage() {
         <p style={{ fontSize: 13, color: '#374151', marginBottom: 16, lineHeight: 1.6, margin: '0 0 16px' }}>
           Votre accès premium restera actif jusqu&apos;à la fin de la période en cours. Vous ne serez plus débité après.
         </p>
+        {cancelError && (
+          <p style={{ fontSize: 13, color: '#dc2626', fontWeight: 600, margin: '0 0 12px' }}>{cancelError}</p>
+        )}
         <div style={{ display: 'flex', gap: 10 }}>
           <button onClick={handleCancel} disabled={cancelling}
             style={{ background: '#ef4444', color: '#fff', border: 'none', borderRadius: 10, padding: '10px 20px', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>

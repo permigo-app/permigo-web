@@ -23,26 +23,37 @@ export async function POST(req: Request) {
       .eq('id', user.id)
       .single();
 
-    if (!profile?.stripe_customer_id) {
-      return NextResponse.json({ error: 'Aucun abonnement trouvé' }, { status: 404 });
-    }
-
     const Stripe = (await import('stripe')).default;
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
-    // Cherche actif + trial
-    const [active, trialing] = await Promise.all([
-      stripe.subscriptions.list({ customer: profile.stripe_customer_id, status: 'active', limit: 5 }),
-      stripe.subscriptions.list({ customer: profile.stripe_customer_id, status: 'trialing', limit: 5 }),
-    ]);
+    // L'abonnement peut vivre sur un autre customer que celui du profil
+    // (les anciens checkouts en customer_email créaient un customer par paiement)
+    // → on cherche sur le customer du profil ET tous ceux qui partagent l'email
+    const candidateIds: string[] = [];
+    if (profile?.stripe_customer_id) candidateIds.push(profile.stripe_customer_id);
+    if (user.email) {
+      const customers = await stripe.customers.list({ email: user.email, limit: 10 });
+      for (const cust of customers.data) {
+        if (!candidateIds.includes(cust.id)) candidateIds.push(cust.id);
+      }
+    }
 
-    const subs = [...active.data, ...trialing.data];
+    if (candidateIds.length === 0) {
+      return NextResponse.json({ error: 'Aucun abonnement trouvé' }, { status: 404 });
+    }
+
+    const subs = [];
+    for (const custId of candidateIds) {
+      const list = await stripe.subscriptions.list({ customer: custId, status: 'all', limit: 10 });
+      subs.push(...list.data.filter(s => ['active', 'trialing', 'past_due'].includes(s.status)));
+    }
 
     if (subs.length === 0) {
       return NextResponse.json({ error: 'Aucun abonnement actif' }, { status: 404 });
     }
 
     // Annule tous (gère les doublons éventuels)
+    let keepsAccessUntilPeriodEnd = false;
     for (const sub of subs) {
       if (sub.status === 'trialing') {
         // Trial : annulation immédiate
@@ -51,8 +62,19 @@ export async function POST(req: Request) {
       } else {
         // Actif : annule à la fin de la période
         await stripe.subscriptions.update(sub.id, { cancel_at_period_end: true });
+        keepsAccessUntilPeriodEnd = true;
         console.log('[Cancel] Abonnement marqué cancel_at_period_end:', sub.id);
       }
+    }
+
+    // Trial annulé immédiatement = plus aucun accès ; en prod le webhook
+    // subscription.deleted le fait aussi, mais en local il ne tourne pas
+    if (!keepsAccessUntilPeriodEnd) {
+      const { error: updateError } = await supabase
+        .from('profiles')
+        .update({ is_premium: false })
+        .eq('id', user.id);
+      if (updateError) console.error('[Cancel] Erreur maj is_premium:', updateError.message);
     }
 
     console.log('[Cancel] Abonnement(s) annulé(s) pour:', user.email, '— nb:', subs.length);

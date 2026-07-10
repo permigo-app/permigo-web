@@ -55,7 +55,7 @@ export async function POST(req: Request) {
     const Stripe = (await import('stripe')).default;
     const stripe = new Stripe(STRIPE_SECRET_KEY);
 
-    let existingCustomerId: string | null = null;
+    let customerId: string | null = null;
 
     // 1. Vérifie Supabase
     try {
@@ -70,45 +70,51 @@ export async function POST(req: Request) {
         return NextResponse.json({ error: 'already_subscribed' }, { status: 400 });
       }
 
-      existingCustomerId = profile?.stripe_customer_id ?? null;
+      customerId = profile?.stripe_customer_id ?? null;
     } catch (profileErr) {
       console.warn('[Stripe] Profile check failed:', profileErr);
     }
 
-    // 2. Vérifie Stripe directement (protection double-facturation)
-    if (existingCustomerId) {
-      const existing = await stripe.subscriptions.list({
-        customer: existingCustomerId,
-        status: 'all',
-        limit: 10,
-      });
-      const activeOrTrial = existing.data.filter(s =>
-        ['active', 'trialing', 'past_due'].includes(s.status)
-      );
-      if (activeOrTrial.length > 0) {
-        console.log('[Stripe] Blocked via Stripe: active subscription exists for customer:', existingCustomerId, 'statuses:', activeOrTrial.map(s => s.status));
-        // Sync Supabase au cas où
-        await supabase.from('profiles').update({ is_premium: true }).eq('id', userId);
-        return NextResponse.json({ error: 'already_subscribed' }, { status: 400 });
-      }
-    } else {
-      // Pas de customerId en base — cherche par email dans Stripe
-      if (email) {
-        const customers = await stripe.customers.list({ email, limit: 5 });
-        for (const cust of customers.data) {
-          const subs = await stripe.subscriptions.list({ customer: cust.id, status: 'all', limit: 5 });
-          const activeOrTrial = subs.data.filter(s => ['active', 'trialing', 'past_due'].includes(s.status));
-          if (activeOrTrial.length > 0) {
-            console.log('[Stripe] Blocked via Stripe email search: found active sub for', email, 'customer:', cust.id);
-            await supabase.from('profiles').update({ is_premium: true, stripe_customer_id: cust.id }).eq('id', userId);
-            return NextResponse.json({ error: 'already_subscribed' }, { status: 400 });
-          }
-          if (!existingCustomerId) existingCustomerId = cust.id;
-        }
+    // 2. Rassemble TOUS les customers possibles : celui du profil ET ceux qui
+    // partagent l'email (les anciens checkouts en customer_email en ont créé
+    // plusieurs — l'abonnement réel peut vivre sur n'importe lequel)
+    const candidateIds: string[] = [];
+    if (customerId) candidateIds.push(customerId);
+    if (email) {
+      const customers = await stripe.customers.list({ email, limit: 10 });
+      for (const cust of customers.data) {
+        if (!candidateIds.includes(cust.id)) candidateIds.push(cust.id);
       }
     }
 
-    console.log('[Stripe] Creating session — userId:', userId, 'existingCustomer:', existingCustomerId);
+    // 3. Bloque si un abonnement actif existe sur N'IMPORTE lequel d'entre eux
+    for (const candId of candidateIds) {
+      const subs = await stripe.subscriptions.list({ customer: candId, status: 'all', limit: 10 });
+      const activeOrTrial = subs.data.filter(s => ['active', 'trialing', 'past_due'].includes(s.status));
+      if (activeOrTrial.length > 0) {
+        console.log('[Stripe] Blocked: active subscription on customer:', candId, 'statuses:', activeOrTrial.map(s => s.status));
+        await supabase.from('profiles').update({ is_premium: true, stripe_customer_id: candId }).eq('id', userId);
+        return NextResponse.json({ error: 'already_subscribed' }, { status: 400 });
+      }
+    }
+
+    // 4. Un seul customer par utilisateur : réutilise le premier trouvé, sinon crée.
+    // Toujours passer `customer` (jamais customer_email) pour empêcher Stripe
+    // de créer un customer en double à chaque checkout.
+    if (!customerId) customerId = candidateIds[0] ?? null;
+    if (!customerId) {
+      const created = await stripe.customers.create({ email, metadata: { userId } });
+      customerId = created.id;
+      console.log('[Stripe] Customer créé:', customerId);
+    }
+
+    try {
+      await supabase.from('profiles').update({ stripe_customer_id: customerId }).eq('id', userId);
+    } catch (saveErr) {
+      console.warn('[Stripe] Sauvegarde stripe_customer_id échouée:', saveErr);
+    }
+
+    console.log('[Stripe] Creating session — userId:', userId, 'customer:', customerId);
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
@@ -116,9 +122,7 @@ export async function POST(req: Request) {
       line_items: [{ price: STRIPE_PRICE_ID, quantity: 1 }],
       success_url: `${NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium`,
-      ...(existingCustomerId
-        ? { customer: existingCustomerId }
-        : { customer_email: email || undefined }),
+      customer: customerId,
       subscription_data: { trial_period_days: 2 },
       metadata: { userId },
     });
