@@ -38,45 +38,19 @@ export async function recordQuestionReview(
   }
 }
 
-/** Fetch due question IDs (authenticated). Returns [] for guests. */
-export async function fetchDueReviews(): Promise<{
-  question_id: string;
-  streak_correct: number;
-  difficulty_level: string;
-  next_review_at: string;
-}[]> {
+/** Fetch question IDs ever answered incorrectly (authenticated). Returns [] for guests. */
+export async function fetchMistakes(): Promise<string[]> {
   const token = await getToken();
   if (!token) return [];
 
   try {
-    const res = await fetch('/api/reviews/due', {
+    const res = await fetch('/api/reviews/mistakes', {
       headers: { Authorization: `Bearer ${token}` },
     });
     if (!res.ok) return [];
     const data = await res.json();
-    return data.reviews ?? [];
+    return data.mistakes ?? [];
   } catch {
     return [];
-  }
-}
-
-/** Fetch review stats (authenticated). Returns zeros for guests. */
-export async function fetchReviewStats(): Promise<{
-  dueCount: number;
-  learningCount: number;
-  masteredCount: number;
-  totalReviewed: number;
-}> {
-  const token = await getToken();
-  if (!token) return { dueCount: 0, learningCount: 0, masteredCount: 0, totalReviewed: 0 };
-
-  try {
-    const res = await fetch('/api/reviews/stats', {
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    if (!res.ok) return { dueCount: 0, learningCount: 0, masteredCount: 0, totalReviewed: 0 };
-    return await res.json();
-  } catch {
-    return { dueCount: 0, learningCount: 0, masteredCount: 0, totalReviewed: 0 };
   }
 }

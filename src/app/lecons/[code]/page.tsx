@@ -5,7 +5,8 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { getThemeData, type LocalTheme } from '@/lib/lessonData';
 import { THEME_EMOJIS, THEME_CITIES } from '@/lib/constants';
-import { isLessonCompleted, getLessonProgress, isExamPassed } from '@/lib/progressStorage';
+import { isLessonCompleted, getLessonProgress, getCompletedParties } from '@/lib/progressStorage';
+import { lessonEffectivelyCompleted } from '@/lib/medals';
 import { useLang } from '@/contexts/LanguageContext';
 import ProgressBar from '@/components/ui/ProgressBar';
 import { SkeletonList } from '@/components/ui/SkeletonList';
@@ -27,7 +28,6 @@ export default function ThemeDetailPage() {
   const [loading, setLoading] = useState(true);
   const [lessons, setLessons] = useState<LessonRow[]>([]);
   const [themePct, setThemePct] = useState(0);
-  const [examPassed, setExamPassed] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -40,7 +40,7 @@ export default function ThemeDetailPage() {
   useEffect(() => {
     if (!theme) return;
     const rows: LessonRow[] = theme.lessons.map((lesson, i) => {
-      const done = isLessonCompleted(lesson.id);
+      const done = lessonEffectivelyCompleted(lesson.id, lesson.theory?.length ?? 1, isLessonCompleted, getCompletedParties);
       const prog = getLessonProgress(lesson.id);
       const pct = prog.total > 0 ? Math.round((prog.cardsViewed / prog.total) * 100) : 0;
       let status: 'done' | 'active' | 'todo';
@@ -52,7 +52,6 @@ export default function ThemeDetailPage() {
     const doneCount = rows.filter(r => r.status === 'done').length;
     setThemePct(Math.round((doneCount / rows.length) * 100));
     setLessons(rows);
-    setExamPassed(isExamPassed(code));
   }, [theme, code]);
 
   if (loading) {
@@ -80,11 +79,11 @@ export default function ThemeDetailPage() {
       <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 20, paddingLeft: 20, paddingRight: 20 }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
-          <Link href="/lecons" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 16 }}>
+          <Link href="/app" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 16 }}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-hint)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>
-            <span style={{ fontSize: 13, color: 'var(--text-hint)', fontWeight: 500 }}>Leçons</span>
+            <span style={{ fontSize: 13, color: 'var(--text-hint)', fontWeight: 500 }}>{t('nav_accueil')}</span>
           </Link>
 
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14, marginBottom: 16 }}>
@@ -120,18 +119,6 @@ export default function ThemeDetailPage() {
 
       {/* ── BODY ─────────────────────────────────────────────────── */}
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px' }}>
-
-        {/* ── QUICK TOOLS ────────────────────────────────────────── */}
-        <div className="theme-tools">
-          <Link href={`/flash?theme=${code}`} className="tool-btn">
-            <span className="tool-icon">🃏</span>
-            <span className="tool-label">{t('tool_flashcards')}</span>
-          </Link>
-          <Link href={`/revision?theme=${code}`} className="tool-btn">
-            <span className="tool-icon">🔄</span>
-            <span className="tool-label">{t('tool_revision')}</span>
-          </Link>
-        </div>
 
         <p style={{ margin: '0 0 12px', fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
           {lessons.length} {lessons.length > 1 ? t('lecons_a_etudier_pl') : t('lecons_a_etudier_sing')}
@@ -206,35 +193,6 @@ export default function ThemeDetailPage() {
               </div>
             </Link>
           ))}
-        </div>
-
-        {/* ── EXAM BLOCK ─────────────────────────────────────────── */}
-        <div className="theme-exam-block">
-          <div className="theme-exam-separator">
-            <div className="separator-line" />
-            <span className="separator-label">{t('theme_separator')}</span>
-            <div className="separator-line" />
-          </div>
-
-          <Link
-            href={`/examen?theme=${code}`}
-            className="theme-exam-card"
-            title={`Passer l'examen du Thème ${code}`}
-          >
-            <div className="theme-exam-icon">📋</div>
-            <div className="theme-exam-info">
-              <p className="theme-exam-eyebrow">{t('theme_exam_eyebrow')}</p>
-              <p className="theme-exam-title">{t('theme_exam_validate')} {code}</p>
-              <p className="theme-exam-sub">{t('theme_exam_sub')}</p>
-            </div>
-            <div className="theme-exam-status">
-              {examPassed ? (
-                <span style={{ fontSize: 12, fontWeight: 700, color: '#16a34a', background: '#f0fdf4', border: '1px solid #bbf7d0', padding: '4px 10px', borderRadius: 20, whiteSpace: 'nowrap' }}>
-                  {t('theme_exam_passed')}
-                </span>
-              ) : '→'}
-            </div>
-          </Link>
         </div>
 
         {themePct === 100 && (

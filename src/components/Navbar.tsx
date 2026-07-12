@@ -8,8 +8,6 @@ import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
-import { THEME_ORDER, getThemeData } from '@/lib/lessonData';
-import { isLessonCompleted } from '@/lib/progressStorage';
 import { useIsPremium } from '@/lib/premium';
 
 const NAV_ITEMS: { href: string; labelKey: string; fullLabelKey?: string; icon: React.ReactNode }[] = [
@@ -53,33 +51,26 @@ const DESKTOP_EXTRA = [
       <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
     </svg>
   )},
-  { href: '/revisions', labelKey: 'nav_revisions', icon: (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="23 4 23 10 17 10" />
-      <polyline points="1 20 1 14 7 14" />
-      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-    </svg>
-  )},
 ];
 
 function isNavActive(href: string, pathname: string): boolean {
-  if (href === '/app') return pathname === '/app' || pathname.startsWith('/turbo');
-  if (href === '/lecons') return (
+  if (href === '/app') return (
+    pathname === '/app' ||
+    pathname.startsWith('/turbo') ||
     pathname.startsWith('/lecons') ||
     pathname.startsWith('/lecon/') ||
     pathname.startsWith('/flash') ||
     pathname.startsWith('/revision') ||
-    pathname.startsWith('/revisions') ||
     pathname.startsWith('/resultats')
   );
   return pathname.startsWith(href);
 }
 
-function MobileTopBar({ streak, xp, muted, onToggleMute }: {
-  streak: number; xp: number; muted: boolean; onToggleMute: () => void;
+function MobileTopBar({ muted, onToggleMute }: {
+  muted: boolean; onToggleMute: () => void;
 }) {
   return (
-    <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center px-3 gap-2"
+    <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-3 gap-4"
       style={{ height: 44, background: 'var(--nav-bg)', borderBottom: '1px solid var(--nav-border)' }}>
       <Link href="/app" className="flex-shrink-0">
         <span style={{ fontSize: 15, fontWeight: 900, letterSpacing: -0.5 }}>
@@ -88,20 +79,6 @@ function MobileTopBar({ streak, xp, muted, onToggleMute }: {
           <span style={{ color: '#55E6DA' }}>Go</span>
         </span>
       </Link>
-      <div className="flex-1 flex items-center justify-center gap-2">
-        {streak > 0 && (
-          <div className="flex items-center gap-1 px-2.5 py-1 rounded-full"
-            style={{ background: 'rgba(255,99,72,0.15)', border: '1px solid rgba(255,99,72,0.2)' }}>
-            <span style={{ fontSize: 12 }}>🔥</span>
-            <span style={{ fontSize: 11, fontWeight: 900, color: '#FF6348' }}>{streak}</span>
-          </div>
-        )}
-        <div className="flex items-center gap-1 px-2.5 py-1 rounded-full"
-          style={{ background: 'rgba(255,215,0,0.1)', border: '1px solid rgba(255,215,0,0.18)' }}>
-          <span style={{ fontSize: 12 }}>⚡</span>
-          <span style={{ fontSize: 11, fontWeight: 800, color: '#FFD700' }}>{xp}</span>
-        </div>
-      </div>
       <div className="flex-shrink-0 flex items-center gap-2">
         <button onClick={onToggleMute}
           style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', fontSize: 16, lineHeight: 1 }}
@@ -154,33 +131,9 @@ export default function Navbar() {
   const { t } = useLang();
   const premium = useIsPremium();
   const [muted, setMuted] = useState(false);
-  const [streak, setStreak] = useState(0);
-  const [xp, setXp] = useState(0);
-  const [globalPct, setGlobalPct] = useState(0);
-  const [completedCount, setCompletedCount] = useState(0);
-  const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
     setMuted(isSoundMuted());
-    try {
-      const s = localStorage.getItem('streakData');
-      if (s) setStreak(JSON.parse(s).currentStreak ?? 0);
-      const x = localStorage.getItem('xpData');
-      if (x) setXp(JSON.parse(x).totalXP ?? 0);
-    } catch {}
-    const loadProgress = async () => {
-      let total = 0, done = 0;
-      for (const code of THEME_ORDER) {
-        const theme = await getThemeData(code);
-        if (!theme) continue;
-        total += theme.lessons.length;
-        done += theme.lessons.filter(l => isLessonCompleted(l.id)).length;
-      }
-      setTotalCount(total);
-      setCompletedCount(done);
-      setGlobalPct(total > 0 ? Math.round((done / total) * 100) : 0);
-    };
-    loadProgress();
   }, []);
 
   const handleToggleMute = () => setMuted(toggleMute());
@@ -203,12 +156,6 @@ export default function Navbar() {
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          {streak > 0 && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 99, background: 'rgba(255,99,72,0.12)', border: '1px solid rgba(255,99,72,0.2)' }}>
-              <span style={{ fontSize: 13 }}>🔥</span>
-              <span style={{ fontSize: 13, fontWeight: 800, color: '#FF6348' }}>{streak}</span>
-            </div>
-          )}
           <button onClick={handleToggleMute}
             style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--bg-input)', border: '1px solid var(--border-card)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: 16, lineHeight: 1 }}>
             {muted ? '🔇' : '🔊'}
@@ -241,7 +188,7 @@ export default function Navbar() {
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2, marginBottom: 4 }}>
-          {NAV_ITEMS.slice(0, 4).map(item => (
+          {NAV_ITEMS.slice(0, 4).filter(item => item.href !== '/lecons').map(item => (
             <SidebarItem key={item.href} href={item.href} icon={item.icon} label={t(item.fullLabelKey ?? item.labelKey)} active={isNavActive(item.href, pathname)} />
           ))}
           {DESKTOP_EXTRA.map(item => (
@@ -268,24 +215,8 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Progress widget */}
-        <div style={{ marginTop: 'auto', padding: '14px 12px', background: 'var(--bg-input)', borderRadius: 14, border: '1px solid var(--border-card)', marginBottom: 8 }}>
-          <p style={{ margin: '0 0 4px', fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
-            {t('home_progression_globale')}
-          </p>
-          <p style={{ margin: '0 0 10px', fontSize: 28, fontWeight: 900, color: '#22D6C7', lineHeight: 1, letterSpacing: '-0.5px' }}>
-            {globalPct}%
-          </p>
-          <div style={{ height: 5, borderRadius: 99, background: 'var(--border-card)', overflow: 'hidden', marginBottom: 6 }}>
-            <div style={{ height: '100%', borderRadius: 99, background: 'linear-gradient(90deg,#22D6C7,#55E6DA)', width: `${globalPct}%`, transition: 'width 0.6s ease' }} />
-          </div>
-          <p style={{ margin: 0, fontSize: 11, color: 'var(--text-hint)' }}>
-            {completedCount}/{totalCount} {t('home_lecons_terminees')}
-          </p>
-        </div>
-
         {/* Legal */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 10px', padding: '8px 4px 0', borderTop: '1px solid var(--border-subtle)' }}>
+        <div style={{ marginTop: 'auto', display: 'flex', flexWrap: 'wrap', gap: '4px 10px', padding: '8px 4px 0', borderTop: '1px solid var(--border-subtle)' }}>
           <a href="https://www.iubenda.com/privacy-policy/43486445" target="_blank" style={{ fontSize: 10, color: 'var(--text-disabled)', textDecoration: 'none' }}>Confidentialité</a>
           <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy" target="_blank" style={{ fontSize: 10, color: 'var(--text-disabled)', textDecoration: 'none' }}>Cookies</a>
           <a href="/terms" style={{ fontSize: 10, color: 'var(--text-disabled)', textDecoration: 'none' }}>CGU</a>
@@ -294,13 +225,13 @@ export default function Navbar() {
       </nav>
 
       {/* ── Mobile top bar ──────────────────────────────────────────── */}
-      <MobileTopBar streak={streak} xp={xp} muted={muted} onToggleMute={handleToggleMute} />
+      <MobileTopBar muted={muted} onToggleMute={handleToggleMute} />
 
       {/* ── Mobile bottom nav ───────────────────────────────────────── */}
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50"
         style={{ background: 'var(--nav-bg)', borderTop: '1px solid var(--nav-border)' }}>
         <div className="flex justify-around items-end px-1" style={{ height: 58, paddingBottom: 2 }}>
-          {NAV_ITEMS.map((item) => {
+          {NAV_ITEMS.filter(item => item.href !== '/lecons').map((item) => {
             const active = isNavActive(item.href, pathname);
             return (
               <Link key={item.href} href={item.href} className="press-scale flex flex-col items-center"

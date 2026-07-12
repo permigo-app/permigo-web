@@ -146,7 +146,7 @@ export function getNextThemeCode(code: string): string | null {
 // ── Language-aware wrappers ──
 import { localizeTheme } from './contentLoader';
 
-type Lang = 'fr' | 'nl';
+export type Lang = 'fr' | 'nl';
 
 export async function getThemeDataLocalized(code: string, lang: Lang): Promise<LocalTheme | null> {
   const theme = await loadTheme(code);

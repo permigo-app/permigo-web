@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'MyPermiGo — Permis Théorique Belge Gratuit & Gamifié',
+  title: 'MyPermiGo — Permis Théorique Belge Gratuit & Complet',
   description:
     'Prépare ton permis de conduire théorique belge avec MyPermiGo. 2286 questions officielles, 9 thèmes, mode Turbo, examen blanc et panneaux. Gratuit, en français et en néerlandais.',
   keywords: [
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   ].join(', '),
   openGraph: {
     title: 'MyPermiGo — Permis Théorique Belge',
-    description: 'Prépare ton permis belge en mode jeu. 2286 questions officielles, gratuit.',
+    description: 'Prépare ton permis belge à ton rythme. 2286 questions officielles, gratuit.',
     url: 'https://mypermigo.be',
     siteName: 'MyPermiGo',
     locale: 'fr_BE',
@@ -47,7 +47,7 @@ const FEATURES = [
   { icon: '⚡', bg: 'rgba(245,158,11,0.14)',  title: 'Mode Turbo', desc: 'Sessions express de 3 à 5 minutes pour t\'entraîner à la vitesse de l\'examen réel.' },
   { icon: '📝', bg: 'rgba(34,197,94,0.14)',   title: 'Examen blanc', desc: 'Simule les conditions exactes de l\'examen officiel belge avec feedback immédiat.' },
   { icon: '🚦', bg: 'rgba(239,68,68,0.14)',   title: 'Panneaux de signalisation', desc: 'Apprends et mémorise tous les panneaux belges grâce au mode flash et aux cartes.' },
-  { icon: '🔥', bg: 'rgba(255,99,72,0.14)',   title: 'Streaks & Badges', desc: 'Reste motivé chaque jour avec un système de récompenses, séries et objectifs gamifiés.' },
+  { icon: '🔁', bg: 'rgba(255,99,72,0.14)',   title: 'Banque d\'erreurs personnelle', desc: 'Chaque question ratée revient s\'entraîner, classée par thème, jusqu\'à ce qu\'elle soit acquise.' },
   { icon: '🇧🇪', bg: 'rgba(167,139,250,0.14)', title: 'Français & Néerlandais', desc: 'Interface entièrement disponible en français et en néerlandais pour tous les Belges.' },
 ];
 
@@ -66,7 +66,7 @@ const THEMES = [
 const STEPS = [
   { num: '01', title: 'Crée ton compte', desc: 'Inscription gratuite en 30 secondes. Aucune carte bancaire requise, jamais.' },
   { num: '02', title: 'Apprends par thème', desc: 'Suis les 9 thèmes officiels avec leçons, flashcards et quiz adaptatifs.' },
-  { num: '03', title: 'Réussis l\'examen', desc: 'Mode Turbo, examens blancs, révisions espacées — tu arrives plus que préparé.' },
+  { num: '03', title: 'Réussis l\'examen', desc: 'Mode Turbo, examens blancs, banque d\'erreurs — tu arrives plus que préparé.' },
 ];
 
 const MOCK_ANSWERS = [
@@ -80,33 +80,33 @@ export default function LandingPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <main style={{ background: '#07080F', minHeight: '100vh', fontFamily: 'Sora, sans-serif', color: '#F1F5F9' }}>
+      <main style={{ background: '#FFFFFF', minHeight: '100vh', fontFamily: 'Sora, sans-serif', color: '#0B1220' }}>
 
         {/* ── STICKY NAV ─────────────────────────────────────────── */}
         <nav style={{
           position: 'sticky', top: 0, zIndex: 100,
-          background: 'rgba(7,8,15,0.85)', backdropFilter: 'blur(16px)',
+          background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
+          borderBottom: '1px solid rgba(11,18,32,0.07)',
           padding: '0 max(20px, calc((100% - 1100px) / 2))',
           height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         }}>
           <span style={{ fontSize: 18, fontWeight: 900, letterSpacing: -0.5 }}>
-            <span style={{ color: '#F1F5F9' }}>My</span>
-            <span style={{ color: '#22D6C7' }}>Permi</span>
-            <span style={{ color: '#55E6DA' }}>Go</span>
+            <span style={{ color: '#0B1220' }}>My</span>
+            <span style={{ color: '#1AB8AB' }}>Permi</span>
+            <span style={{ color: '#22D6C7' }}>Go</span>
           </span>
-          <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
             <Link href="/login" style={{
-              fontSize: 13, fontWeight: 600, color: 'rgba(241,245,249,0.5)',
-              textDecoration: 'none', padding: '8px 14px', borderRadius: 10,
+              fontSize: 12, fontWeight: 600, color: 'rgba(11,18,32,0.55)',
+              textDecoration: 'none', padding: '5px 10px', borderRadius: 8,
             }}>
               Se connecter
             </Link>
             <Link href="/register" style={{
-              fontSize: 13, fontWeight: 700, color: '#07080F',
+              fontSize: 12, fontWeight: 700, color: '#07080F',
               background: '#22D6C7', textDecoration: 'none',
-              padding: '9px 18px', borderRadius: 10, letterSpacing: '-0.1px',
+              padding: '6px 13px', borderRadius: 8, letterSpacing: '-0.1px',
             }}>
               Commencer →
             </Link>
@@ -117,7 +117,7 @@ export default function LandingPage() {
         <section style={{
           padding: 'clamp(64px,12vw,120px) 24px clamp(48px,8vw,80px)',
           position: 'relative', overflow: 'hidden',
-          background: 'linear-gradient(170deg,#07080F 0%,#0B1220 55%,#07080F 100%)',
+          background: 'linear-gradient(170deg,#FFFFFF 0%,#F0FDFC 55%,#FFFFFF 100%)',
         }}>
           {/* Decorative glow orbs */}
           <div style={{ position:'absolute', top:-120, right:-80, width:560, height:560, borderRadius:'50%', background:'radial-gradient(circle,rgba(34,214,199,0.07) 0%,transparent 60%)', pointerEvents:'none' }} />
@@ -135,7 +135,7 @@ export default function LandingPage() {
             }}>
               <span style={{ fontSize:13 }}>🇧🇪</span>
               <span style={{ fontSize:12, fontWeight:700, color:'#22D6C7', letterSpacing:'0.3px' }}>
-                Application de préparation officielle belge
+                Préparation au permis théorique officiel belge
               </span>
             </div>
 
@@ -144,14 +144,14 @@ export default function LandingPage() {
               margin:0,
               fontSize:'clamp(38px,8.5vw,66px)',
               fontWeight:900,
-              color:'#FFFFFF',
+              color:'#0B1220',
               letterSpacing:'-2px',
               lineHeight:1.04,
             }}>
               Réussis ton permis belge.
               <br />
               <span style={{
-                background:'linear-gradient(135deg,#22D6C7 0%,#55E6DA 100%)',
+                background:'linear-gradient(135deg,#1AB8AB 0%,#22D6C7 100%)',
                 WebkitBackgroundClip:'text',
                 WebkitTextFillColor:'transparent',
                 backgroundClip:'text',
@@ -164,9 +164,9 @@ export default function LandingPage() {
             <p style={{
               margin:'22px auto 0', maxWidth:500,
               fontSize:'clamp(15px,2.8vw,17px)',
-              color:'rgba(241,245,249,0.55)', lineHeight:1.7,
+              color:'rgba(11,18,32,0.6)', lineHeight:1.7,
             }}>
-              2286 questions officielles, gamifiées et 100% gratuites. Apprends comme tu joues — streaks, badges et examens blancs inclus.
+              2286 questions officielles, 100% gratuites. Apprends thème par thème, à ton rythme, jusqu'à l'examen blanc.
             </p>
 
             {/* CTAs */}
@@ -186,9 +186,9 @@ export default function LandingPage() {
               <Link href="/login" style={{
                 display:'inline-flex', alignItems:'center',
                 padding:'15px 26px',
-                background:'rgba(255,255,255,0.05)',
-                color:'rgba(255,255,255,0.75)',
-                border:'1px solid rgba(255,255,255,0.1)',
+                background:'rgba(11,18,32,0.04)',
+                color:'rgba(11,18,32,0.7)',
+                border:'1px solid rgba(11,18,32,0.1)',
                 borderRadius:13, fontWeight:600, fontSize:15,
                 textDecoration:'none',
               }}>
@@ -200,8 +200,8 @@ export default function LandingPage() {
             <div style={{ display:'flex', gap:28, justifyContent:'center', marginTop:36, flexWrap:'wrap', alignItems:'center' }}>
               {[{v:'2 286',l:'questions'},{v:'9',l:'thèmes officiels'},{v:'100%',l:'gratuit'}].map((s,i) => (
                 <div key={i} style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:3 }}>
-                  <span style={{ fontSize:'clamp(20px,4vw,26px)', fontWeight:900, color:'#F59E0B', lineHeight:1 }}>{s.v}</span>
-                  <span style={{ fontSize:11, color:'rgba(241,245,249,0.35)', fontWeight:500 }}>{s.l}</span>
+                  <span style={{ fontSize:'clamp(20px,4vw,26px)', fontWeight:900, color:'#D97706', lineHeight:1 }}>{s.v}</span>
+                  <span style={{ fontSize:11, color:'rgba(11,18,32,0.45)', fontWeight:500 }}>{s.l}</span>
                 </div>
               ))}
             </div>
@@ -209,17 +209,6 @@ export default function LandingPage() {
 
           {/* ── App preview mockup ── */}
           <div style={{ maxWidth:380, margin:'52px auto 0', position:'relative', zIndex:1 }}>
-            {/* XP badge */}
-            <div style={{
-              position:'absolute', top:-14, right:-10, zIndex:2,
-              background:'linear-gradient(135deg,#F59E0B,#D97706)',
-              color:'#000', borderRadius:10, padding:'6px 11px',
-              fontSize:12, fontWeight:800,
-              boxShadow:'0 4px 18px rgba(245,158,11,0.35)',
-            }}>
-              +10 XP 🎉
-            </div>
-
             <div style={{
               background:'linear-gradient(145deg,#0E1525,#121E35)',
               borderRadius:22,
@@ -228,21 +217,9 @@ export default function LandingPage() {
               boxShadow:'0 30px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.04)',
             }}>
               {/* Mock header */}
-              <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:14 }}>
-                <div>
-                  <p style={{ margin:0, fontSize:10, fontWeight:700, letterSpacing:'1.2px', textTransform:'uppercase', color:'#22D6C7' }}>Thème A · Leçon 3</p>
-                  <p style={{ margin:'2px 0 0', fontSize:14, fontWeight:700, color:'#F1F5F9' }}>Comportement général</p>
-                </div>
-                <div style={{ display:'flex', gap:6 }}>
-                  <div style={{ display:'flex', alignItems:'center', gap:3, padding:'4px 9px', borderRadius:99, background:'rgba(255,99,72,0.15)', border:'1px solid rgba(255,99,72,0.2)' }}>
-                    <span style={{ fontSize:11 }}>🔥</span>
-                    <span style={{ fontSize:11, fontWeight:800, color:'#FF6348' }}>7</span>
-                  </div>
-                  <div style={{ display:'flex', alignItems:'center', gap:3, padding:'4px 9px', borderRadius:99, background:'rgba(255,215,0,0.1)', border:'1px solid rgba(255,215,0,0.2)' }}>
-                    <span style={{ fontSize:11 }}>⚡</span>
-                    <span style={{ fontSize:11, fontWeight:800, color:'#FFD700' }}>450</span>
-                  </div>
-                </div>
+              <div style={{ marginBottom:14 }}>
+                <p style={{ margin:0, fontSize:10, fontWeight:700, letterSpacing:'1.2px', textTransform:'uppercase', color:'#22D6C7' }}>Thème A · Leçon 3</p>
+                <p style={{ margin:'2px 0 0', fontSize:14, fontWeight:700, color:'#F1F5F9' }}>Comportement général</p>
               </div>
 
               {/* Progress */}
@@ -283,19 +260,19 @@ export default function LandingPage() {
         </section>
 
         {/* ── FEATURES ───────────────────────────────────────────── */}
-        <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#0A0F1E' }}>
+        <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#F5F8FA' }}>
           <div style={{ maxWidth:960, margin:'0 auto' }}>
             <div style={{ textAlign:'center', marginBottom:44 }}>
-              <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#22D6C7' }}>Fonctionnalités</p>
-              <h2 style={{ margin:0, fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#FFFFFF', letterSpacing:'-1px' }}>
+              <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>Fonctionnalités</p>
+              <h2 style={{ margin:0, fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
                 Tout ce qu&apos;il te faut pour réussir
               </h2>
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(272px,1fr))', gap:16 }}>
               {FEATURES.map(f => (
                 <div key={f.title} style={{
-                  background:'#07080F', borderRadius:20, padding:'24px 22px',
-                  border:'1px solid rgba(255,255,255,0.06)',
+                  background:'#FFFFFF', borderRadius:20, padding:'24px 22px',
+                  border:'1px solid rgba(11,18,32,0.07)',
                 }}>
                   <div style={{
                     width:50, height:50, borderRadius:14, background:f.bg,
@@ -304,8 +281,8 @@ export default function LandingPage() {
                   }}>
                     {f.icon}
                   </div>
-                  <p style={{ margin:'0 0 7px', fontSize:15, fontWeight:700, color:'#F1F5F9' }}>{f.title}</p>
-                  <p style={{ margin:0, fontSize:13, color:'rgba(241,245,249,0.5)', lineHeight:1.65 }}>{f.desc}</p>
+                  <p style={{ margin:'0 0 7px', fontSize:15, fontWeight:700, color:'#0B1220' }}>{f.title}</p>
+                  <p style={{ margin:0, fontSize:13, color:'rgba(11,18,32,0.55)', lineHeight:1.65 }}>{f.desc}</p>
                 </div>
               ))}
             </div>
@@ -313,11 +290,11 @@ export default function LandingPage() {
         </section>
 
         {/* ── HOW IT WORKS ───────────────────────────────────────── */}
-        <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#07080F' }}>
+        <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#FFFFFF' }}>
           <div style={{ maxWidth:960, margin:'0 auto' }}>
             <div style={{ textAlign:'center', marginBottom:44 }}>
-              <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#22D6C7' }}>Comment ça marche</p>
-              <h2 style={{ margin:0, fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#FFFFFF', letterSpacing:'-1px' }}>
+              <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>Comment ça marche</p>
+              <h2 style={{ margin:0, fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
                 3 étapes vers le succès
               </h2>
             </div>
@@ -333,8 +310,8 @@ export default function LandingPage() {
                   }}>
                     {step.num}
                   </div>
-                  <h3 style={{ margin:'0 0 9px', fontSize:18, fontWeight:800, color:'#FFFFFF', letterSpacing:'-0.3px' }}>{step.title}</h3>
-                  <p style={{ margin:0, fontSize:14, color:'rgba(241,245,249,0.5)', lineHeight:1.7 }}>{step.desc}</p>
+                  <h3 style={{ margin:'0 0 9px', fontSize:18, fontWeight:800, color:'#0B1220', letterSpacing:'-0.3px' }}>{step.title}</h3>
+                  <p style={{ margin:0, fontSize:14, color:'rgba(11,18,32,0.55)', lineHeight:1.7 }}>{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -342,22 +319,22 @@ export default function LandingPage() {
         </section>
 
         {/* ── THEMES ─────────────────────────────────────────────── */}
-        <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#0A0F1E' }}>
+        <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#F5F8FA' }}>
           <div style={{ maxWidth:760, margin:'0 auto', textAlign:'center' }}>
-            <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#22D6C7' }}>Programme officiel</p>
-            <h2 style={{ margin:'0 0 36px', fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#FFFFFF', letterSpacing:'-1px' }}>
+            <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>Programme officiel</p>
+            <h2 style={{ margin:'0 0 36px', fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
               9 thèmes, 2 286 questions
             </h2>
             <div style={{ display:'flex', flexWrap:'wrap', gap:10, justifyContent:'center' }}>
               {THEMES.map(row => (
                 <div key={row.code} style={{
-                  background:'#07080F', borderRadius:12, padding:'10px 16px',
-                  border:'1px solid rgba(255,255,255,0.07)',
+                  background:'#FFFFFF', borderRadius:12, padding:'10px 16px',
+                  border:'1px solid rgba(11,18,32,0.08)',
                   display:'flex', alignItems:'center', gap:8,
                 }}>
                   <span style={{ fontSize:16 }}>{row.emoji}</span>
-                  <span style={{ fontSize:13, fontWeight:800, color:'#F59E0B' }}>Thème {row.code}</span>
-                  <span style={{ fontSize:12, color:'rgba(241,245,249,0.4)', fontWeight:500 }}>{row.label}</span>
+                  <span style={{ fontSize:13, fontWeight:800, color:'#D97706' }}>Thème {row.code}</span>
+                  <span style={{ fontSize:12, color:'rgba(11,18,32,0.5)', fontWeight:500 }}>{row.label}</span>
                 </div>
               ))}
             </div>
@@ -365,24 +342,24 @@ export default function LandingPage() {
         </section>
 
         {/* ── CTA FINAL ──────────────────────────────────────────── */}
-        <section style={{ padding:'clamp(48px,8vw,80px) 24px clamp(60px,10vw,100px)', background:'#07080F', textAlign:'center' }}>
+        <section style={{ padding:'clamp(48px,8vw,80px) 24px clamp(60px,10vw,100px)', background:'#FFFFFF', textAlign:'center' }}>
           <div style={{
             maxWidth:580, margin:'0 auto',
-            background:'linear-gradient(145deg,#0E1525,#0B1830)',
+            background:'linear-gradient(145deg,#F0FDFC,#E6FBF8)',
             borderRadius:28, padding:'clamp(32px,6vw,56px) clamp(24px,5vw,52px)',
-            border:'1px solid rgba(34,214,199,0.12)',
-            boxShadow:'0 0 80px rgba(34,214,199,0.05)',
+            border:'1px solid rgba(34,214,199,0.18)',
+            boxShadow:'0 0 60px rgba(34,214,199,0.08)',
             position:'relative', overflow:'hidden',
           }}>
             {/* Inner glow */}
-            <div style={{ position:'absolute', top:-60, right:-60, width:200, height:200, borderRadius:'50%', background:'radial-gradient(circle,rgba(34,214,199,0.08) 0%,transparent 70%)', pointerEvents:'none' }} />
+            <div style={{ position:'absolute', top:-60, right:-60, width:200, height:200, borderRadius:'50%', background:'radial-gradient(circle,rgba(34,214,199,0.12) 0%,transparent 70%)', pointerEvents:'none' }} />
 
             <div style={{ fontSize:40, marginBottom:14, position:'relative' }}>🏁</div>
-            <h2 style={{ margin:'0 0 12px', fontSize:'clamp(24px,5vw,34px)', fontWeight:900, color:'#FFFFFF', letterSpacing:'-1px', position:'relative' }}>
+            <h2 style={{ margin:'0 0 12px', fontSize:'clamp(24px,5vw,34px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px', position:'relative' }}>
               Prêt à décrocher ton permis ?
             </h2>
-            <p style={{ margin:'0 0 30px', fontSize:14, color:'rgba(241,245,249,0.5)', lineHeight:1.7, position:'relative' }}>
-              Rejoins des milliers d&apos;apprenants belges. Gratuit, sans engagement, en français et en néerlandais.
+            <p style={{ margin:'0 0 30px', fontSize:14, color:'rgba(11,18,32,0.55)', lineHeight:1.7, position:'relative' }}>
+              Rejoins les apprenants belges qui préparent leur permis avec MyPermiGo. Gratuit, sans engagement, en français et en néerlandais.
             </p>
             <Link href="/register" style={{
               display:'inline-flex', alignItems:'center', gap:8,
@@ -395,7 +372,7 @@ export default function LandingPage() {
             }}>
               Créer mon compte gratuit →
             </Link>
-            <p style={{ margin:'16px 0 0', fontSize:12, color:'rgba(241,245,249,0.25)', position:'relative' }}>
+            <p style={{ margin:'16px 0 0', fontSize:12, color:'rgba(11,18,32,0.4)', position:'relative' }}>
               Inscription en 30 secondes · Aucune carte requise
             </p>
           </div>

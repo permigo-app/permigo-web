@@ -4,9 +4,7 @@ import { useState, useRef, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getExamQuestionsLocalized, getNextThemeCode, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
-import { setExamPassed, unlockTheme, updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
-import { getUnlockedBadges } from '@/lib/badges';
-import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
+import { setExamPassed, unlockTheme, updateQuizHistory, addStudyTime } from '@/lib/progressStorage';
 import { THEME_COLORS } from '@/lib/constants';
 import { useIsPremium, isThemeFree, canPlayExam, recordExamPlayed, daysUntilNextExam } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
@@ -216,25 +214,17 @@ function ExamContent() {
     const total = questions.length;
     const pct = total > 0 ? (correctCount / total) * 100 : 0;
     const passed = pct >= 82;
-    const prevBadges = getUnlockedBadges();
     updateQuizHistory(correctCount, total);
-    checkAndUpdateStreak();
-    let xpEarned = correctCount * 10;
     if (passed) {
-      xpEarned += 50;
+      // 'FINAL' est aussi enregistré — il donne le trophée Diamant global
+      setExamPassed(themeCode);
       if (themeCode !== 'FINAL') {
-        setExamPassed(themeCode);
         const next = getNextThemeCode(themeCode);
         if (next) unlockTheme(next);
       }
     }
-    const xpResult = updateXP(xpEarned);
     addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
-    const newBadges = getUnlockedBadges().filter(id => !prevBadges.includes(id));
-    const leveledUp = xpResult.level > xpResult.prevLevel;
-    if (leveledUp) dispatchLevelUp(xpResult.prevLevel, xpResult.level, 1200);
-    if (newBadges.length > 0) dispatchBadges(newBadges, leveledUp ? 4500 : 1200);
-    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=0&xp=${xpEarned}&theme=${themeCode}&exam=1`);
+    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=0&theme=${themeCode}&exam=1`);
   };
 
   // Explicit abandon — counts as used

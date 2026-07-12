@@ -14,7 +14,6 @@ function ResultsContent() {
   const correct = Number(params.get('correct') ?? 0);
   const total = Number(params.get('total') ?? 1);
   const earnedStars = Number(params.get('stars') ?? 0);
-  const xp = Number(params.get('xp') ?? 0);
   const lessonId = params.get('lesson') ?? '';
   const themeCode = params.get('theme') ?? 'A';
   const isExam = params.get('exam') === '1';
@@ -27,82 +26,25 @@ function ResultsContent() {
   const passed = isExam ? pct >= 82 : earnedStars > 0;
   const color = THEME_COLORS[themeCode] || '#74B9FF';
 
-  let emoji = '💪';
-  let title = t('resultats_courage');
-
-  if (pct === 100) {
-    emoji = '🏆'; title = t('resultats_parfait');
-  } else if (passed) {
-    emoji = '🎉'; title = t('resultats_bravo');
-  } else {
-    emoji = '💪'; title = t('resultats_courage');
-  }
+  const title = pct === 100 ? t('resultats_parfait') : passed ? t('resultats_bravo') : t('resultats_courage');
 
   const scoreColor = passed ? '#00B894' : '#FFD700';
 
   return (
     <div className="max-w-lg mx-auto px-4 py-8" style={{ background: 'var(--bg-page)', minHeight: '100vh' }}>
-      {/* Confetti on pass */}
-      {passed && (
-        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
-          {Array.from({ length: 20 }, (_, i) => (
-            <div
-              key={i}
-              className="absolute w-2.5 h-2.5 rounded-sm"
-              style={{
-                left: `${5 + (i * 4.7) % 95}%`,
-                top: '-20px',
-                background: ['#FFD700','#4ecdc4','#2ecc71','#FF6348','#A29BFE','#FD79A8'][i % 6],
-                animation: `confettiFall ${1.5 + (i * 0.13) % 1.5}s ${(i * 0.08) % 0.8}s ease-in forwards`,
-                transform: `rotate(${(i * 37) % 360}deg)`,
-              }}
-            />
-          ))}
-        </div>
-      )}
-
-      {/* Big result emoji */}
-      <div className="text-center mb-6 fade-in-up">
-        <span style={{ fontSize: 96 }} className="block mb-2">{emoji}</span>
+      {/* Result title */}
+      <div className="text-center mb-6">
         <h1 className="text-[28px] font-black" style={{ color: scoreColor }}>{title}</h1>
       </div>
-
-      {/* Stars (lesson only) */}
-      {!isExam && (
-        <div className="flex justify-center gap-2 mb-6">
-          {[1, 2, 3].map(i => (
-            <span
-              key={i}
-              style={{
-                fontSize: '2.25rem',
-                opacity: i <= earnedStars ? 1 : 0.2,
-                display: 'inline-block',
-                animation: i <= earnedStars
-                  ? `starPop 0.5s cubic-bezier(0.175,0.885,0.32,1.275) ${i * 150}ms forwards, starTwinkle 0.8s ease-in-out 3 ${i * 150 + 700}ms`
-                  : 'none',
-              }}
-            >
-              ⭐
-            </span>
-          ))}
-        </div>
-      )}
 
       {/* Score circle */}
       <div className="flex justify-center mb-6">
         <div
-          className="w-40 h-40 rounded-full flex flex-col items-center justify-center score-reveal"
+          className="w-40 h-40 rounded-full flex flex-col items-center justify-center"
           style={{ border: `5px solid ${scoreColor}`, background: scoreColor + '15' }}
         >
           <span className="text-[42px] font-black">{pct}%</span>
           <span className="text-sm" style={{ color: 'var(--text-hint)' }}>{correct}/{total}</span>
-        </div>
-      </div>
-
-      {/* XP earned */}
-      <div className="flex justify-center mb-6 slide-up" style={{ animationDelay: '200ms' }}>
-        <div className="xp-burst px-8 py-3 rounded-full" style={{ background: 'rgba(255,215,0,0.18)', border: '2px solid rgba(255,215,0,0.4)' }}>
-          <span className="text-2xl font-black" style={{ color: '#FFD700' }}>+{xp} XP ⚡</span>
         </div>
       </div>
 

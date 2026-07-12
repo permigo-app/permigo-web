@@ -136,7 +136,7 @@ export default function PremiumPage() {
               <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('premium_card_acces')}</p>
             </div>
             <div className="text-right">
-              <p className="text-3xl font-black" style={{ color: 'var(--text-primary)' }}>7€</p>
+              <p className="text-3xl font-black" style={{ color: 'var(--text-primary)' }}>14,99€</p>
               <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>{t('premium_card_mois')}</p>
             </div>
           </div>

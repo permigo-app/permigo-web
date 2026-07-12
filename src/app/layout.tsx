@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://mypermigo.be'),
   openGraph: {
     title: 'MyPermiGo — Permis Théorique Belge',
-    description: 'Prépare ton permis belge gratuitement. 2286 questions officielles, gamifié, FR + NL.',
+    description: 'Prépare ton permis belge gratuitement. 2286 questions officielles, FR + NL.',
     url: 'https://mypermigo.be',
     siteName: 'MyPermiGo',
     locale: 'fr_BE',

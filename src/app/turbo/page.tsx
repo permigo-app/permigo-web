@@ -1,13 +1,11 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { getAllQuestionsLocalized, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { useState, useEffect, useRef, useCallback, useMemo, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { getAllQuestionsLocalized, getThemeDataLocalized, THEME_ORDER, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
-import { getUnlockedBadges } from '@/lib/badges';
-import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
-import { useStreakCelebration } from '@/hooks/useStreakCelebration';
 import {
-  updateQuizHistory, updateXP, checkAndUpdateStreak, addStudyTime,
+  updateQuizHistory, addStudyTime,
   setSurvivalBest, getSurvivalBest,
   getTurboBest, setTurboBest,
   getTurboHistory, addTurboSession,
@@ -19,6 +17,14 @@ import SignImage from '@/components/SignImage';
 import Image from 'next/image';
 import QuizLayout from '@/components/QuizLayout';
 import Link from 'next/link';
+
+async function loadPoolQuestions(lang: 'fr' | 'nl', themeCode: string | null): Promise<LocalQuestion[]> {
+  if (themeCode && THEME_ORDER.includes(themeCode)) {
+    const theme = await getThemeDataLocalized(themeCode, lang);
+    if (theme) return theme.lessons.flatMap(l => l.questions);
+  }
+  return getAllQuestionsLocalized(lang);
+}
 
 type Mode = null | '3min' | '5min' | 'survie';
 
@@ -49,10 +55,17 @@ function formatDate(iso: string) {
   } catch { return iso; }
 }
 
-export default function TurboPage() {
-  useStreakCelebration();
+function TurboContent() {
   const { t, lang } = useLang();
+  const params = useSearchParams();
+  const themeCode = params.get('theme');
   const premiumActive = useIsPremium();
+  const [themeTitle, setThemeTitle] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!themeCode || !THEME_ORDER.includes(themeCode)) { setThemeTitle(null); return; }
+    getThemeDataLocalized(themeCode, lang).then(theme => setThemeTitle(theme?.title ?? null));
+  }, [themeCode, lang]);
   const [mode, setMode] = useState<Mode>(null);
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
   const [currentQ, setCurrentQ] = useState(0);
@@ -92,7 +105,7 @@ export default function TurboPage() {
         const elapsed = Date.now() - data.startTime;
         const remaining = data.mode === 'survie' ? 1 : (data.duration - elapsed);
         if (remaining > 0) {
-          const allQ = await getAllQuestionsLocalized(lang);
+          const allQ = await loadPoolQuestions(lang, themeCode);
           const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
             const s = shuffleChoices(q);
             return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
@@ -124,14 +137,7 @@ export default function TurboPage() {
     if (timerRef.current) clearInterval(timerRef.current);
     localStorage.removeItem('turbo_active');
     setGameOver(true);
-    const prevBadges = getUnlockedBadges();
     updateQuizHistory(correctCount, currentQ + 1);
-    checkAndUpdateStreak();
-    const xpResult = updateXP(correctCount * 10);
-    const newBadges = getUnlockedBadges().filter(id => !prevBadges.includes(id));
-    const leveledUp = xpResult.level > xpResult.prevLevel;
-    if (leveledUp) dispatchLevelUp(xpResult.prevLevel, xpResult.level, 2000);
-    if (newBadges.length > 0) dispatchBadges(newBadges, leveledUp ? 5500 : 2000);
     if (mode === 'survie') setSurvivalBest(correctCount);
     if (mode) {
       setTurboBest(mode, correctCount);
@@ -164,7 +170,7 @@ export default function TurboPage() {
       score: 0,
     }));
     setMode(m);
-    const allQ = await getAllQuestionsLocalized(lang);
+    const allQ = await loadPoolQuestions(lang, themeCode);
     const shuffled = [...allQ].sort(() => Math.random() - 0.5).map(q => {
       const s = shuffleChoices(q);
       return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
@@ -253,6 +259,11 @@ export default function TurboPage() {
             <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Entraînement</p>
             <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>{t('turbo_titre')}</h1>
             <p style={{ margin: '4px 0 0', fontSize: 14, color: 'var(--text-sub)' }}>{t('turbo_subtitle')}</p>
+            {themeTitle && (
+              <span style={{ display: 'inline-flex', marginTop: 10, padding: '4px 10px', borderRadius: 20, background: 'var(--bg-input)', border: '1px solid var(--border-card)', fontSize: 11, fontWeight: 700, color: 'var(--text-navy)' }}>
+                {themeCode} · {themeTitle}
+              </span>
+            )}
           </div>
         </div>
 
@@ -372,14 +383,9 @@ export default function TurboPage() {
     const meta = MODE_META[mode];
     return (
       <div className="max-w-2xl mx-auto px-6 py-12 text-center">
-        <span className="text-[80px] block mb-3">{correctCount >= 10 ? '🏆' : '💪'}</span>
         <h1 className="text-3xl font-black mb-2">{t('turbo_termine')}</h1>
         <p className="text-[56px] font-black mb-1" style={{ color: meta.color }}>{correctCount}</p>
         <p className="text-sm mb-6" style={{ color: 'var(--text-secondary)' }}>{t('turbo_bonnes_reponses')}</p>
-
-        <div className="px-5 py-2 rounded-full inline-block mb-6" style={{ background: 'rgba(255,201,40,0.15)' }}>
-          <span className="font-black" style={{ color: 'var(--premium)' }}>+{correctCount * 10} XP ⚡</span>
-        </div>
 
         <div className="flex gap-4 max-w-md mx-auto">
           <button
@@ -468,5 +474,13 @@ export default function TurboPage() {
         </>
       }
     />
+  );
+}
+
+export default function TurboPage() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen" style={{ color: 'var(--text-hint)' }}>Chargement…</div>}>
+      <TurboContent />
+    </Suspense>
   );
 }

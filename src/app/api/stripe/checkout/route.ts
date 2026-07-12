@@ -123,7 +123,6 @@ export async function POST(req: Request) {
       success_url: `${NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium`,
       customer: customerId,
-      subscription_data: { trial_period_days: 2 },
       metadata: { userId },
     });
 

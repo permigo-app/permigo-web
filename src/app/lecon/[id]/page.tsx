@@ -4,11 +4,8 @@ import { useEffect, useState, useCallback, useRef } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
-import { setStars, updateQuizHistory, updateXP, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, markLessonCompleted, isPartieCompleted, checkAndUpdateStreak, addStudyTime } from '@/lib/progressStorage';
+import { setStars, updateQuizHistory, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, markLessonCompleted, isPartieCompleted, getCompletedParties, addStudyTime } from '@/lib/progressStorage';
 import { recordQuestionReview } from '@/lib/reviewApi';
-import { getUnlockedBadges } from '@/lib/badges';
-import { dispatchLevelUp, dispatchBadges } from '@/lib/rewardEvents';
-import { useStreakCelebration } from '@/hooks/useStreakCelebration';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { isPremium, isThemeFree } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
@@ -49,7 +46,6 @@ function shuffleQuestion(q: LocalQuestion) {
 
 
 export default function LessonPage() {
-  useStreakCelebration();
   const params = useParams();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -166,8 +162,8 @@ export default function LessonPage() {
     const total = questions.length;
     const pct = total > 0 ? correctCount / total : 0;
 
-    // In partie mode: require 70% to validate
-    if (isPartieMode && partieIndex !== undefined && pct < 0.7) {
+    // Mode partie : 90% de bonnes réponses requis pour valider
+    if (isPartieMode && partieIndex !== undefined && pct < 0.9) {
       updateQuizHistory(correctCount, total);
       setPartieFailScore({ correct: correctCount, total });
       return;
@@ -178,34 +174,29 @@ export default function LessonPage() {
     else if (pct >= 0.7) earnedStars = 2;
     else if (pct >= 0.5) earnedStars = 1;
 
-    setStars(lessonId, earnedStars);
-    const prevBadges = getUnlockedBadges();
     updateQuizHistory(correctCount, total);
-    checkAndUpdateStreak();
 
     if (isPartieMode && partieIndex !== undefined) {
       markPartieDone(lessonId, partieIndex);
       saveLessonCardProgress(lessonId, partieIndex + 1, theories.length);
+      // La leçon n'est terminée (et étoilée) que quand TOUTES ses parties
+      // sont faites — sinon la progression par parties saute d'un coup
+      if (pct >= 0.9 && getCompletedParties(lessonId).length >= theories.length) {
+        setStars(lessonId, earnedStars);
+        markLessonCompleted(lessonId);
+      }
     } else {
+      setStars(lessonId, earnedStars);
       saveLessonQuizDone(lessonId);
+      if (pct >= 0.7) markLessonCompleted(lessonId);
     }
-    if (pct >= 0.7) markLessonCompleted(lessonId);
 
-    let xpEarned = correctCount * 10 + 50;
-    if (earnedStars >= 2) xpEarned += 25;
-    else if (earnedStars === 1) xpEarned += 10;
-    const xpResult = updateXP(xpEarned);
     addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
-
-    const newBadges = getUnlockedBadges().filter(id => !prevBadges.includes(id));
-    const leveledUp = xpResult.level > xpResult.prevLevel;
-    if (leveledUp) dispatchLevelUp(xpResult.prevLevel, xpResult.level, 1200);
-    if (newBadges.length > 0) dispatchBadges(newBadges, leveledUp ? 4500 : 1200);
 
     const partieStr = isPartieMode && partieIndex !== undefined
       ? `&partie=${partieIndex}&totalParties=${theories.length}`
       : '';
-    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&xp=${xpEarned}&lesson=${lessonId}&theme=${themeCode}${partieStr}`);
+    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&lesson=${lessonId}&theme=${themeCode}${partieStr}`);
   };
 
   const retryPartie = () => {
@@ -290,8 +281,9 @@ export default function LessonPage() {
                   style={{
                     display: 'flex', alignItems: 'center', gap: 14,
                     background: 'var(--bg-card)',
-                    border: `1.5px solid ${done ? '#22c55e' : 'var(--border-card)'}`,
+                    border: `1.5px solid ${done ? '#0b2659' : 'var(--border-card)'}`,
                     borderRadius: 16, padding: '16px 18px', cursor: 'pointer', textAlign: 'left', width: '100%',
+                    position: 'relative',
                   }}
                 >
                   <div style={{
@@ -312,13 +304,31 @@ export default function LessonPage() {
                     <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: 'var(--text-title)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {partie.title.replace(/^Partie \d+ [—–-] /, '')}
                     </p>
-                    <p style={{ margin: '3px 0 0', fontSize: 12, color: done ? '#22c55e' : 'var(--text-hint)', fontWeight: done ? 600 : 400 }}>
-                      {done ? 'Terminée ✓' : `${partie.cards.length} carte${partie.cards.length > 1 ? 's' : ''}`}
+                    <p style={{ margin: '3px 0 0', fontSize: 12, color: 'var(--text-hint)' }}>
+                      {partie.cards.length} carte{partie.cards.length > 1 ? 's' : ''}
                     </p>
                   </div>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-hint)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
+                  {done ? (
+                    // Tampon « validé » bleu foncé, légèrement incliné
+                    <span style={{
+                      flexShrink: 0,
+                      transform: 'rotate(-7deg)',
+                      background: '#0b2659',
+                      color: '#FFFFFF',
+                      border: '2px solid rgba(245,158,11,0.85)',
+                      borderRadius: 7,
+                      padding: '4px 10px',
+                      fontSize: 10, fontWeight: 900, letterSpacing: '1.2px', textTransform: 'uppercase',
+                      display: 'inline-flex', alignItems: 'center', gap: 4,
+                      boxShadow: '0 2px 8px rgba(11,38,89,0.35)',
+                    }}>
+                      ✓ Validé
+                    </span>
+                  ) : (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-hint)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  )}
                 </button>
               );
             })}
@@ -591,7 +601,7 @@ export default function LessonPage() {
           <div className="text-7xl mb-6">😓</div>
           <h2 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>Pas encore !</h2>
           <p className="text-base mb-2" style={{ color: 'var(--text-secondary)' }}>
-            Tu dois avoir <span className="font-black" style={{ color: 'var(--brand)' }}>70%</span> de bonnes réponses pour valider cette partie.
+            Tu dois avoir <span className="font-black" style={{ color: 'var(--brand)' }}>90%</span> de bonnes réponses pour valider cette partie.
           </p>
           <p className="text-sm mb-8" style={{ color: 'var(--text-secondary)' }}>
             Tu as obtenu <span className="font-black" style={{ color: pct >= 50 ? '#e67e22' : 'var(--error)' }}>{pct}%</span> ({partieFailScore.correct}/{partieFailScore.total} bonnes réponses).

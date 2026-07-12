@@ -54,17 +54,15 @@ export default function LoginPage() {
 
   const handleGuest = () => {
     localStorage.setItem('@onboarding_done', 'true');
-    localStorage.setItem('userCar', JSON.stringify({ id: 'red', name: 'Rouge', image: '/images/cars/car-red.png', color: '#e74c3c' }));
-    localStorage.setItem('userProfile', JSON.stringify({ name: 'Pilote', carColor: '#e74c3c', carType: 'red', objective: 'relax' }));
     document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
     window.location.href = '/app';
   };
 
   const BENEFITS = [
     { icon: '📚', text: '2 286 questions officielles' },
-    { icon: '⚡', text: 'Mode Turbo & examens blancs' },
-    { icon: '🔥', text: 'Streaks, XP & badges' },
-    { icon: '🇧🇪', text: 'FR + NL · 100% gratuit' },
+    { icon: '🎯', text: '9 thèmes, leçon par leçon' },
+    { icon: '📝', text: 'Examens blancs & entraînement chronométré' },
+    { icon: '🇧🇪', text: 'FR + NL · gratuit pour commencer' },
   ];
 
   return (
@@ -264,7 +262,7 @@ export default function LoginPage() {
 
           <p style={{ textAlign: 'center', fontSize: 13, marginTop: 20, color: 'var(--text-sub)' }}>
             {t('login_pas_compte')}{' '}
-            <Link href="/auth" style={{ fontWeight: 700, color: '#22D6C7', textDecoration: 'none' }}>
+            <Link href="/register" style={{ fontWeight: 700, color: '#22D6C7', textDecoration: 'none' }}>
               {t('s_inscrire')}
             </Link>
           </p>

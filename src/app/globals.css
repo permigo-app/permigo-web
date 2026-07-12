@@ -954,3 +954,35 @@ input[type="reset"] {
 main, .page-content {
   animation: pageFadeIn 0.25s ease-out forwards;
 }
+
+/* ── Hub d'étude (accueil) ───────────────────────────────────── */
+.theme-chips-wrap { position: relative; }
+.theme-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.theme-chips::-webkit-scrollbar { display: none; }
+.theme-chips-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 8px;
+  width: 40px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--bg-page));
+}
+
+@media (min-width: 1024px) {
+  .hub-body { max-width: 1040px !important; }
+  .hub-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    align-items: start;
+  }
+}

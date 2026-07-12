@@ -33,6 +33,19 @@ function saveMastered(themeCode: string, uids: string[]) {
   } catch {}
 }
 
+// Le contenu théorique est structuré par marqueurs emoji (📋 La règle,
+// 💡 Pourquoi, 🚗 En pratique, 📍 Exemple, ⚠️ Erreur fréquente).
+// On le découpe en sections pour un verso lisible au lieu d'un pavé.
+function parseSections(content: string): { header: string; body: string }[] {
+  const chunks = content.split(/\n?(?=📋|💡|🚗|📍|⚠️)/).map(s => s.trim()).filter(Boolean);
+  if (chunks.length <= 1) return [{ header: '', body: content.trim() }];
+  return chunks.map(chunk => {
+    const nl = chunk.indexOf('\n');
+    if (nl === -1) return { header: '', body: chunk };
+    return { header: chunk.slice(0, nl).trim(), body: chunk.slice(nl + 1).trim() };
+  });
+}
+
 
 function FlashContent() {
   const params = useSearchParams();
@@ -70,6 +83,7 @@ function FlashContent() {
   const [queue, setQueue] = useState<FlashCard[]>([]);
   const [masteredUids, setMasteredUids] = useState<string[]>([]);
   const [flipped, setFlipped] = useState(false);
+  const [showDetail, setShowDetail] = useState(false);
   const [done, setDone] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [animating, setAnimating] = useState(false);
@@ -110,6 +124,7 @@ function FlashContent() {
   const flipCard = useCallback(() => {
     if (animating) return;
     setFlipped(f => !f);
+    setShowDetail(false);
   }, [animating]);
 
   const advanceCard = useCallback((updateFn: () => void) => {
@@ -117,6 +132,7 @@ function FlashContent() {
     setAnimating(true);
     setTimeout(() => {
       setFlipped(false);
+      setShowDetail(false);
       updateFn();
       setAnimating(false);
       setSessionViewed(v => v + 1);
@@ -146,17 +162,6 @@ function FlashContent() {
     });
   }, [queue, advanceCard]);
 
-  const shuffleQueue = useCallback(() => {
-    setQueue(prev => {
-      const shuffled = [...prev];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      return shuffled;
-    });
-    setFlipped(false);
-  }, []);
 
   const restart = useCallback(() => {
     localStorage.removeItem(storageKey(themeCode));
@@ -320,20 +325,6 @@ function FlashContent() {
                 </div>
               )}
 
-              {/* Shuffle button */}
-              <button
-                onClick={shuffleQueue}
-                className="w-full py-3 rounded-xl font-bold text-sm press-scale"
-                style={{
-                  background: 'transparent',
-                  border: '1.5px solid var(--brand)',
-                  color: 'var(--brand)',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'var(--bg-secondary)'; }}
-                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
-              >
-                {t('flash_melanger')}
-              </button>
             </div>
           </div>
 
@@ -354,7 +345,7 @@ function FlashContent() {
             <div
               className="cursor-pointer"
               onClick={!flipped ? flipCard : undefined}
-              style={{ perspective: 1200, width: 420, height: 420, maxWidth: 'calc(100vw - 40px)', maxHeight: 'calc(100vw - 40px)' }}
+              style={{ perspective: 1200, width: 480, height: 'clamp(420px, calc(100dvh - 330px), 600px)', maxWidth: 'calc(100vw - 32px)' }}
             >
               <div
                 className="relative w-full h-full"
@@ -377,13 +368,17 @@ function FlashContent() {
                   onMouseEnter={e => { e.currentTarget.style.boxShadow = `0 8px 32px rgba(0,0,0,0.12), 0 0 20px ${themeColor}20`; }}
                   onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.12)'; }}
                 >
-                  <span className="text-[80px] leading-none">{themeEmoji}</span>
+                  <span className="text-[64px] leading-none">{card.emoji || themeEmoji}</span>
                   <h2 className="text-2xl font-black text-center leading-snug" style={{ color: 'var(--text-primary)' }}>
                     {card.title}
                   </h2>
+                  {/* La carte pose une question — rappel actif, pas lecture passive */}
+                  <p className="text-lg font-bold text-center" style={{ color: themeColor }}>
+                    {t('flash_question_prompt')}
+                  </p>
                   <div className="px-3 py-1.5 rounded-lg" style={{ background: themeColor + '18' }}>
                     <span className="text-xs font-bold" style={{ color: themeColor }}>
-                      📚 {t('theme')} {themeCode} : {themeTitle}
+                      {t('theme')} {themeCode} : {themeTitle}
                     </span>
                   </div>
 
@@ -418,28 +413,60 @@ function FlashContent() {
                   <h3 className="text-lg font-black mb-3" style={{ color: themeColor }}>
                     {card.title}
                   </h3>
-                  <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--text-primary)', lineHeight: '26px' }}>
-                    {card.content}
-                  </p>
+
+                  {/* La réponse courte d'abord — c'est elle qu'on vérifie */}
                   {card.explanation_simple && (
-                    <div className="rounded-xl p-4" style={{ background: 'var(--bg-secondary)', borderLeft: `3px solid ${themeColor}` }}>
+                    <div className="rounded-xl p-4 mb-4" style={{ background: 'var(--bg-secondary)', borderLeft: `3px solid ${themeColor}` }}>
                       <p className="text-xs font-bold uppercase tracking-wider mb-1.5" style={{ color: themeColor }}>
-                        {t('flash_en_simple')}
+                        {t('flash_reponse_bref')}
                       </p>
-                      <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                      <p className="text-lg font-semibold leading-relaxed" style={{ color: 'var(--text-primary)' }}>
                         {card.explanation_simple}
                       </p>
                     </div>
+                  )}
+
+                  {/* Détail replié par défaut — « Voir plus » l'ouvre */}
+                  {showDetail ? (
+                    <>
+                      {parseSections(card.content).map((s, i) => (
+                        <div key={i} className="mb-3">
+                          {s.header && (
+                            <p className="text-xs font-black uppercase tracking-wider mb-1" style={{ color: 'var(--text-secondary)' }}>
+                              {s.header}
+                            </p>
+                          )}
+                          <p className="text-sm leading-relaxed" style={{ color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>
+                            {s.body}
+                          </p>
+                        </div>
+                      ))}
+                      <button
+                        onClick={(e) => { e.stopPropagation(); setShowDetail(false); }}
+                        className="w-full py-2.5 rounded-xl text-sm font-bold press-scale"
+                        style={{ background: 'transparent', border: `1.5px solid ${themeColor}50`, color: themeColor }}
+                      >
+                        {t('flash_voir_moins')} ▴
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setShowDetail(true); }}
+                      className="w-full py-2.5 rounded-xl text-sm font-bold press-scale"
+                      style={{ background: 'transparent', border: `1.5px solid ${themeColor}50`, color: themeColor }}
+                    >
+                      {t('flash_voir_plus')} ▾
+                    </button>
                   )}
                 </div>
               </div>
             </div>
 
-            {/* Action buttons — always visible, sticky on mobile */}
-            <div className="flex gap-4 w-full max-w-[420px] mt-5 sticky bottom-6 z-20">
+            {/* Action buttons — compacts, la carte garde la vedette */}
+            <div className="flex gap-3 w-full max-w-[480px] mt-3 sticky bottom-4 z-20">
               <button
                 onClick={handleReview}
-                className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale"
+                className="flex-1 px-4 py-2.5 rounded-xl flex items-center justify-center gap-1.5 font-bold press-scale"
                 style={{
                   background: 'rgba(231,76,60,0.12)',
                   border: '1.5px solid rgba(231,76,60,0.45)',
@@ -448,12 +475,12 @@ function FlashContent() {
                 onMouseEnter={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.22)'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'rgba(231,76,60,0.12)'; }}
               >
-                <span className="text-lg">🔄</span>
-                <span className="text-sm font-bold">{t('flash_a_revoir')}</span>
+                <span className="text-sm">🔄</span>
+                <span className="text-xs font-bold">{t('flash_a_revoir')}</span>
               </button>
               <button
                 onClick={handleMastered}
-                className="flex-1 px-8 py-4 rounded-2xl flex items-center justify-center gap-2 font-bold press-scale"
+                className="flex-1 px-4 py-2.5 rounded-xl flex items-center justify-center gap-1.5 font-bold press-scale"
                 style={{
                   background: 'rgba(46,204,113,0.12)',
                   border: '1.5px solid rgba(46,204,113,0.45)',
@@ -462,19 +489,11 @@ function FlashContent() {
                 onMouseEnter={e => { e.currentTarget.style.background = 'rgba(46,204,113,0.22)'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'rgba(46,204,113,0.12)'; }}
               >
-                <span className="text-lg">✅</span>
-                <span className="text-sm font-bold">{t('flash_je_savais')}</span>
+                <span className="text-sm">✅</span>
+                <span className="text-xs font-bold">{t('flash_je_savais')}</span>
               </button>
             </div>
 
-            {/* Mobile shuffle */}
-            <button
-              onClick={shuffleQueue}
-              className="lg:hidden mt-3 px-5 py-2 rounded-lg text-xs font-bold press-scale"
-              style={{ color: 'var(--brand)', background: 'transparent', border: '1px solid var(--border-subtle)' }}
-            >
-              {t('flash_melanger')}
-            </button>
           </div>
 
           {/* ── Right sidebar (desktop only) ── */}

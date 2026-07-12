@@ -45,18 +45,11 @@ export default function TermsPage() {
 
           <h3 className="font-bold text-white mb-2">3.1 Prix</h3>
           <p className="mb-3">
-            L&apos;abonnement Premium est proposé au tarif de <strong>7 € / mois</strong> (TTC). Ce prix peut être modifié
-            sur notification préalable de 30 jours.
+            L&apos;abonnement Premium est proposé au tarif de <strong>14,99 € / mois</strong> (TTC). Le paiement est
+            dû dès la souscription. Ce prix peut être modifié sur notification préalable de 30 jours.
           </p>
 
-          <h3 className="font-bold text-white mb-2">3.2 Essai gratuit</h3>
-          <p className="mb-3">
-            Un essai gratuit de <strong>7 jours</strong> est proposé aux nouveaux abonnés. Aucune somme n&apos;est
-            prélevée pendant cette période. À l&apos;issue de l&apos;essai, l&apos;abonnement est automatiquement converti
-            en abonnement payant sauf résiliation avant la fin de la période d&apos;essai.
-          </p>
-
-          <h3 className="font-bold text-white mb-2">3.3 Renouvellement et résiliation</h3>
+          <h3 className="font-bold text-white mb-2">3.2 Renouvellement et résiliation</h3>
           <p className="mb-3">
             L&apos;abonnement est renouvelé automatiquement chaque mois. Vous pouvez résilier à tout moment depuis
             votre espace client ou en nous contactant à{' '}
@@ -64,7 +57,7 @@ export default function TermsPage() {
             La résiliation prend effet à la fin de la période de facturation en cours.
           </p>
 
-          <h3 className="font-bold text-white mb-2">3.4 Remboursement</h3>
+          <h3 className="font-bold text-white mb-2">3.3 Remboursement</h3>
           <p>
             Conformément à la législation européenne sur les contrats conclus à distance, vous disposez d&apos;un
             délai de rétractation de <strong>14 jours</strong> à compter de la souscription. Pour exercer ce droit,
@@ -90,7 +83,7 @@ export default function TermsPage() {
             <li>Ne pas tenter de contourner les protections techniques (accès non autorisé à du contenu Premium).</li>
             <li>Ne pas reproduire, copier, vendre ou distribuer le contenu pédagogique sans autorisation écrite.</li>
             <li>Ne pas utiliser le service à des fins illégales ou contraires aux bonnes mœurs.</li>
-            <li>Ne pas créer de comptes multiples pour abuser des offres d&apos;essai.</li>
+            <li>Ne pas créer de comptes multiples pour contourner les limites du service.</li>
             <li>Fournir des informations exactes lors de l&apos;inscription.</li>
           </ul>
           <p className="mt-3">

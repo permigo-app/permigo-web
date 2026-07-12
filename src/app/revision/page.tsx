@@ -2,9 +2,10 @@
 
 import { useState, useCallback, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { getThemeDataLocalized, shuffleChoices, type LocalQuestion, type LocalTheme } from '@/lib/lessonData';
+import { getQuestionById, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
+import { fetchMistakes } from '@/lib/reviewApi';
 import QuizLayout from '@/components/QuizLayout';
 
 function shuffle<T>(arr: T[]): T[] {
@@ -16,8 +17,14 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function buildQuestions(themeData: LocalTheme): LocalQuestion[] {
-  return shuffle(themeData.lessons.flatMap(l => l.questions)).map(q => {
+async function buildMistakeQuestions(themeCode: string, lang: 'fr' | 'nl'): Promise<LocalQuestion[]> {
+  const mistakeIds = (await fetchMistakes()).filter(id => id.startsWith(themeCode));
+  const resolved: LocalQuestion[] = [];
+  for (const id of mistakeIds) {
+    const q = await getQuestionById(id, lang);
+    if (q) resolved.push(q);
+  }
+  return shuffle(resolved).map(q => {
     const s = shuffleChoices(q);
     return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
   });
@@ -31,15 +38,13 @@ function RevisionContent() {
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🔄';
 
-  const [themeData, setThemeData] = useState<LocalTheme | null>(null);
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-    getThemeDataLocalized(themeCode, lang).then(data => {
-      setThemeData(data);
-      if (data) setQuestions(buildQuestions(data));
+    buildMistakeQuestions(themeCode, lang).then(qs => {
+      setQuestions(qs);
       setLoading(false);
     });
   }, [themeCode, lang]);
@@ -73,16 +78,15 @@ function RevisionContent() {
     setShakeWrong(false);
   }, [index, questions.length]);
 
-  const restart = useCallback(() => {
-    if (!themeData) return;
-    setQuestions(buildQuestions(themeData));
+  const restart = useCallback(async () => {
+    setQuestions(await buildMistakeQuestions(themeCode, lang));
     setIndex(0);
     setSelected(null);
     setValidated(false);
     setCorrectCount(0);
     setDone(false);
     setShakeWrong(false);
-  }, [themeData]);
+  }, [themeCode, lang]);
 
   if (loading) {
     return (
@@ -92,10 +96,12 @@ function RevisionContent() {
     );
   }
 
-  if (!themeData || questions.length === 0) {
+  if (questions.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4">
-        <p style={{ color: 'var(--text-sub)' }}>{t('revision_aucune')}</p>
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4 text-center">
+        <span className="text-[56px]">✅</span>
+        <p style={{ fontWeight: 800, fontSize: 18, color: 'var(--text-title)' }}>{t('erreurs_aucune_titre')}</p>
+        <p style={{ color: 'var(--text-sub)', maxWidth: 320 }}>{t('erreurs_aucune_sub')}</p>
         <button onClick={() => router.back()} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: 'var(--bg-card)' }}>
           {t('flash_retour')}
         </button>
@@ -161,9 +167,9 @@ function RevisionContent() {
         </button>
       }
       headerCenter={
-        <span className="text-sm font-bold">{themeEmoji} {t('revision_titre')} {themeCode}</span>
+        <span className="text-sm font-bold">{themeEmoji} {t('erreurs_titre')} {themeCode}</span>
       }
-      subtitle={`${t('revision_titre')} ${themeCode}`}
+      subtitle={`${t('erreurs_titre')} ${themeCode}`}
       question={q.question}
       signCode={q.sign}
       choices={[...q.choices]}

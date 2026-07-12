@@ -4,16 +4,11 @@ import type { NextRequest } from 'next/server';
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Root toujours → landing (page publique)
-  if (pathname === '/') {
-    return NextResponse.redirect(new URL('/landing', request.url));
-  }
-
-  // Route de jeu protégée
+  // Route protégée : redirige vers la connexion si pas onboardé
   if (pathname === '/app') {
     const done = request.cookies.get('onboarding_done')?.value === 'true';
     if (!done) {
-      return NextResponse.redirect(new URL('/landing', request.url));
+      return NextResponse.redirect(new URL('/login', request.url));
     }
   }
 
@@ -21,5 +16,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/app'],
+  matcher: ['/app'],
 };

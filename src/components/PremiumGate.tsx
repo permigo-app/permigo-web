@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useLang } from '@/contexts/LanguageContext';
 
@@ -39,43 +38,33 @@ export default function PremiumGate({ children }: PremiumGateProps) {
   const FAKE_QUESTIONS = isNL ? FAKE_QUESTIONS_NL : FAKE_QUESTIONS_FR;
   const FAKE_CHOICES   = isNL ? FAKE_CHOICES_NL   : FAKE_CHOICES_FR;
 
-  const headline   = isNL ? 'Deze 2286 vragen mis je' : 'Ces 2286 questions te manquent';
-  const subtext    = isNL
-    ? "Het volledige proefexamen, onbeperkte reflextraining, alle thema's B→I. Ontgrendel alles voor"
-    : "L'examen blanc complet, l'entraînement réflexe illimité, tous les thèmes B→I. Débloque tout pour";
-  const ctaLabel   = isNL ? '7 dagen GRATIS uitproberen ✨' : 'Essayer 7 jours GRATUITS ✨';
-  const noCommit   = isNL ? 'Geen verbintenis · Op elk moment opzegbaar' : 'Sans engagement · Annulable à tout moment';
-
-  const stats = isNL
-    ? [
-        { value: '2286', label: 'vragen',   color: '#4ecdc4' },
-        { value: '9',    label: "thema's",  color: '#FFD700' },
-        { value: '7d',   label: 'gratis',   color: '#2ecc71' },
-      ]
-    : [
-        { value: '2286', label: 'questions', color: '#4ecdc4' },
-        { value: '9',    label: 'thèmes',    color: '#FFD700' },
-        { value: '7j',   label: 'gratuits',  color: '#2ecc71' },
-      ];
+  const eyebrow  = 'PREMIUM';
+  const headline = isNL ? 'Deze inhoud is voor Premium-leden' : 'Ce contenu est réservé aux membres Premium';
+  const features = isNL
+    ? ["Alle thema's B → I", 'Onbeperkte proefexamens', 'Onbeperkte reflextraining', 'Flashcards & foutenbank per thema']
+    : ['Tous les thèmes B → I', 'Examens blancs illimités', 'Entraînement réflexe illimité', 'Cartes flash & banque d\'erreurs par thème'];
+  const ctaLabel = isNL ? 'Premium worden — 14,99€/maand →' : 'Passer Premium — 14,99€/mois →';
+  const noCommit = isNL ? 'Zonder verbintenis · Op elk moment opzegbaar' : 'Sans engagement · Annulable à tout moment';
+  const back     = isNL ? '← Terug naar startpagina' : "← Revenir à l'accueil";
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ background: 'var(--bg-primary)' }}>
+    <div className="min-h-screen relative overflow-hidden" style={{ background: 'var(--bg-page)', fontFamily: 'Sora, sans-serif' }}>
 
-      {/* ── Background: blurred fake questions ── */}
+      {/* ── Fond : questions floutées ── */}
       <div
         className="absolute inset-0 px-6 py-16 flex flex-col gap-5"
         style={{ filter: 'blur(6px)', opacity: 0.25, pointerEvents: 'none', userSelect: 'none' }}
       >
         {FAKE_QUESTIONS.map((q, qi) => (
-          <div key={qi} className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', maxWidth: 640, margin: '0 auto', width: '100%' }}>
-            <p className="font-bold mb-4" style={{ fontSize: 15, color: 'var(--text-primary)' }}>{q}</p>
+          <div key={qi} className="rounded-2xl p-5" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)', maxWidth: 640, margin: '0 auto', width: '100%' }}>
+            <p className="font-bold mb-4" style={{ fontSize: 15, color: 'var(--text-title)' }}>{q}</p>
             <div className="grid grid-cols-2 gap-2">
               {(FAKE_CHOICES[qi] ?? FAKE_CHOICES[0]).map((c, ci) => (
-                <div key={ci} className="rounded-xl p-3 flex items-center gap-2" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                  <span className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-black flex-shrink-0" style={{ background: 'var(--border-subtle)', color: 'var(--text-primary)' }}>
+                <div key={ci} className="rounded-xl p-3 flex items-center gap-2" style={{ background: 'var(--bg-input)', border: '1px solid var(--border-card)' }}>
+                  <span className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-black flex-shrink-0" style={{ background: 'var(--border-card)', color: 'var(--text-title)' }}>
                     {['A','B','C','D'][ci]}
                   </span>
-                  <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>{c}</span>
+                  <span className="text-xs" style={{ color: 'var(--text-sub)' }}>{c}</span>
                 </div>
               ))}
             </div>
@@ -83,62 +72,72 @@ export default function PremiumGate({ children }: PremiumGateProps) {
         ))}
       </div>
 
-      {/* ── Overlay ── */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-6 py-12" style={{ background: 'var(--bg-overlay)' }}>
+      {/* ── Carte centrale ── */}
+      <div className="absolute inset-0 flex items-center justify-center px-5 py-12">
+        <div style={{
+          maxWidth: 420, width: '100%',
+          background: 'linear-gradient(135deg, #0E1828 0%, #132240 100%)',
+          border: '1px solid rgba(34,214,199,0.15)',
+          borderRadius: 22, padding: '32px 28px',
+          boxShadow: '0 20px 60px rgba(0,0,0,0.35)',
+          textAlign: 'center',
+        }}>
+          {/* Cadenas */}
+          <div style={{
+            width: 52, height: 52, borderRadius: 15, margin: '0 auto 18px',
+            background: 'rgba(34,214,199,0.12)', border: '1px solid rgba(34,214,199,0.25)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22D6C7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
 
-        {/* Gaston */}
-        <Image
-          src="/images/gaston.png"
-          width={110}
-          height={110}
-          alt="Prof. Gaston"
-          className="mb-4"
-          style={{ objectFit: 'contain' }}
-        />
+          <p style={{ margin: '0 0 8px', fontSize: 10, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(34,214,199,0.7)' }}>
+            {eyebrow}
+          </p>
+          <h2 style={{ margin: '0 0 20px', fontSize: 21, fontWeight: 900, color: '#F1F5F9', letterSpacing: '-0.5px', lineHeight: 1.25 }}>
+            {headline}
+          </h2>
 
-        {/* Emotional headline */}
-        <h2 className="text-center font-black mb-3" style={{ color: 'var(--text-primary)', fontSize: 26, letterSpacing: '-0.5px' }}>
-          {headline}
-        </h2>
+          {/* Ce qui est débloqué */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 9, marginBottom: 24, textAlign: 'left' }}>
+            {features.map(f => (
+              <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22D6C7" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span style={{ fontSize: 13, fontWeight: 600, color: 'rgba(241,245,249,0.8)' }}>{f}</span>
+              </div>
+            ))}
+          </div>
 
-        <p className="text-center mb-8" style={{ color: 'var(--text-secondary)', fontSize: 15, maxWidth: 360, lineHeight: 1.6 }}>
-          {subtext} <strong style={{ color: 'var(--premium)' }}>7€/mois</strong>.
-        </p>
+          {/* CTA */}
+          <Link
+            href="/premium"
+            className="press-scale"
+            style={{
+              display: 'block', padding: '15px',
+              background: 'linear-gradient(135deg, #22D6C7, #1AB8AB)',
+              color: '#07080F', borderRadius: 13,
+              fontWeight: 800, fontSize: 15, textDecoration: 'none',
+              boxShadow: '0 6px 24px rgba(34,214,199,0.25)',
+            }}
+          >
+            {ctaLabel}
+          </Link>
 
-        {/* Stats */}
-        <div className="flex gap-8 mb-8">
-          {stats.map(s => (
-            <div key={s.label} className="text-center">
-              <div className="font-black" style={{ color: s.color, fontSize: 24 }}>{s.value}</div>
-              <div style={{ color: 'var(--text-disabled)', fontSize: 12, marginTop: 2 }}>{s.label}</div>
-            </div>
-          ))}
+          <p style={{ margin: '12px 0 0', fontSize: 11, color: 'rgba(241,245,249,0.35)' }}>
+            {noCommit}
+          </p>
+
+          <Link href="/app" style={{ display: 'inline-block', marginTop: 18, fontSize: 12, fontWeight: 600, color: 'rgba(241,245,249,0.45)', textDecoration: 'none' }}>
+            {back}
+          </Link>
+
+          {children}
         </div>
-
-        {/* CTA */}
-        <Link
-          href="/premium"
-          className="press-scale"
-          style={{
-            background: 'linear-gradient(135deg, #FFD700, #FFA500)',
-            color: '#0a0e2a',
-            fontWeight: 900,
-            fontSize: 17,
-            borderRadius: 100,
-            padding: '16px 48px',
-            boxShadow: '0 8px 30px rgba(255,215,0,0.45)',
-            textDecoration: 'none',
-            display: 'inline-block',
-          }}
-        >
-          {ctaLabel}
-        </Link>
-
-        <p className="mt-3 text-center" style={{ color: 'var(--text-disabled)', fontSize: 12 }}>
-          {noCommit}
-        </p>
-
-        {children}
       </div>
     </div>
   );
