@@ -7,16 +7,59 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import { recordLicenseEvent, setChosenLicense, type LicenseCode } from '@/lib/licenseEvents';
 
-interface LicenseDef {
-  code: LicenseCode;
-  emoji: string;
-  available: boolean;
+// Icônes vectorielles (traits Lucide) — rendu identique sur tous les appareils,
+// contrairement aux emojis système
+function VehicleIcon({ kind, color }: { kind: LicenseCode; color: string }) {
+  const common = {
+    width: 30, height: 30, viewBox: '0 0 24 24', fill: 'none',
+    stroke: color, strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const,
+  };
+  if (kind === 'B') {
+    return (
+      <svg {...common}>
+        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+        <circle cx="7" cy="17" r="2" />
+        <path d="M9 17h6" />
+        <circle cx="17" cy="17" r="2" />
+      </svg>
+    );
+  }
+  if (kind === 'A') {
+    return (
+      <svg {...common}>
+        <circle cx="5" cy="17.5" r="3" />
+        <circle cx="19" cy="17.5" r="3" />
+        <path d="M5 17.5 8.5 11h4l2 3.5h2.5" />
+        <path d="M13.8 8.5 15.5 6H18" />
+        <path d="M8.5 11 7 8.5H4.5" />
+        <path d="M12.5 14.5 14 17.5H9" />
+      </svg>
+    );
+  }
+  return (
+    <svg {...common}>
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+      <path d="M15 18H9" />
+      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+      <circle cx="17" cy="18" r="2" />
+      <circle cx="7" cy="18" r="2" />
+    </svg>
+  );
 }
 
-const LICENSES: LicenseDef[] = [
-  { code: 'B', emoji: '🚗', available: true },
-  { code: 'A', emoji: '🏍️', available: false },
-  { code: 'C', emoji: '🚛', available: false },
+function BellIcon({ color }: { color: string }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+      <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+    </svg>
+  );
+}
+
+const LICENSES: { code: LicenseCode; available: boolean }[] = [
+  { code: 'B', available: true },
+  { code: 'A', available: false },
+  { code: 'C', available: false },
 ];
 
 export default function ChoixPermisPage() {
@@ -31,7 +74,6 @@ export default function ChoixPermisPage() {
   const handleChooseB = async () => {
     if (choosing) return;
     setChoosing(true);
-    // Tracking + persistance en parallèle, sans bloquer la navigation
     recordLicenseEvent('B', 'selected');
     await setChosenLicense('B');
     router.push('/app');
@@ -75,99 +117,137 @@ export default function ChoixPermisPage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           {LICENSES.map(lic => {
             const isNotified = notified.has(lic.code);
-            return (
-              <div key={lic.code}>
+
+            // ── Carte active (Permis B) — même anatomie que les autres :
+            //    en-tête (icône + titre/badge + description) puis rangée de pied
+            if (lic.available) {
+              return (
                 <button
-                  onClick={() => lic.available ? handleChooseB() : setNotifyOpen(notifyOpen === lic.code ? null : lic.code)}
-                  className={lic.available ? 'press-scale' : ''}
+                  key={lic.code}
+                  onClick={handleChooseB}
+                  className="press-scale"
                   style={{
-                    width: '100%', display: 'flex', alignItems: 'center', gap: 16,
-                    padding: '20px 18px', borderRadius: 18, textAlign: 'left',
+                    width: '100%', borderRadius: 18, overflow: 'hidden',
+                    textAlign: 'left', padding: 0,
                     cursor: 'pointer', fontFamily: 'Sora, sans-serif',
-                    background: lic.available ? 'var(--card-primary)' : 'var(--card-secondary)',
-                    border: lic.available ? '2px solid #22D6C7' : '2px dashed var(--border-subtle)',
-                    boxShadow: lic.available ? '0 6px 24px rgba(34,214,199,0.15)' : 'none',
-                    opacity: lic.available ? 1 : 0.8,
+                    background: 'var(--card-primary)',
+                    border: '2px solid #22D6C7',
+                    boxShadow: '0 6px 24px rgba(34,214,199,0.15)',
                   }}
                 >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 18px 14px' }}>
+                    <div style={{
+                      width: 56, height: 56, borderRadius: 15, flexShrink: 0,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      background: 'rgba(34,214,199,0.12)',
+                    }}>
+                      <VehicleIcon kind="B" color="#22D6C7" />
+                    </div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                        <span style={{ fontSize: 17, fontWeight: 900, color: 'var(--text-title)', whiteSpace: 'nowrap' }}>
+                          {t('choix_permis_B')}
+                        </span>
+                        <span style={{ fontSize: 20, color: '#22D6C7', flexShrink: 0, fontWeight: 900 }}>→</span>
+                      </div>
+                      <p style={{ margin: '4px 0 0', fontSize: 13, color: 'var(--text-sub)', lineHeight: 1.5 }}>
+                        {t('choix_permis_B_desc')}
+                      </p>
+                    </div>
+                  </div>
+                  <div style={{ borderTop: '1px solid rgba(34,214,199,0.25)', padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 7 }}>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--success)' }}>
+                      ✓ {t('choix_disponible')}
+                    </span>
+                  </div>
+                </button>
+              );
+            }
+
+            // ── Cartes "Bientôt" (Moto, Camion) — Préviens-moi intégré ──
+            return (
+              <div
+                key={lic.code}
+                style={{
+                  borderRadius: 18, overflow: 'hidden',
+                  background: 'var(--card-secondary)',
+                  border: '2px dashed var(--border-subtle)',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 18px 14px', opacity: 0.75 }}>
                   <div style={{
                     width: 56, height: 56, borderRadius: 15, flexShrink: 0,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28,
-                    background: lic.available ? 'rgba(34,214,199,0.12)' : 'var(--bg-input)',
-                    filter: lic.available ? 'none' : 'grayscale(0.6)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    background: 'var(--bg-input)',
                   }}>
-                    {lic.emoji}
+                    <VehicleIcon kind={lic.code} color="var(--text-disabled)" />
                   </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                      <span style={{ fontSize: 17, fontWeight: 900, color: 'var(--text-title)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                      <span style={{ fontSize: 17, fontWeight: 900, color: 'var(--text-title)', whiteSpace: 'nowrap' }}>
                         {t(`choix_permis_${lic.code}`)}
                       </span>
-                      {!lic.available && (
-                        <span style={{
-                          fontSize: 10, fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase',
-                          background: 'rgba(245,158,11,0.14)', color: '#f59e0b',
-                          borderRadius: 20, padding: '3px 10px',
-                        }}>
-                          {t('choix_bientot')}
-                        </span>
-                      )}
+                      <span style={{
+                        fontSize: 10, fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase',
+                        background: 'rgba(245,158,11,0.14)', color: '#f59e0b',
+                        borderRadius: 20, padding: '3px 10px', flexShrink: 0,
+                      }}>
+                        {t('choix_bientot')}
+                      </span>
                     </div>
                     <p style={{ margin: '4px 0 0', fontSize: 13, color: 'var(--text-sub)', lineHeight: 1.5 }}>
                       {t(`choix_permis_${lic.code}_desc`)}
                     </p>
                   </div>
-                  {lic.available && (
-                    <span style={{ fontSize: 20, color: '#22D6C7', flexShrink: 0, fontWeight: 900 }}>→</span>
-                  )}
-                </button>
+                </div>
 
-                {/* Préviens-moi (permis pas encore dispo) */}
-                {!lic.available && (
-                  <div style={{ padding: '8px 6px 0' }}>
-                    {isNotified ? (
-                      <p style={{ margin: 0, fontSize: 13, fontWeight: 700, color: 'var(--success)' }}>
-                        ✓ {t('choix_note')}
-                      </p>
-                    ) : notifyOpen === lic.code ? (
-                      <div style={{ display: 'flex', gap: 8 }}>
-                        <input
-                          type="email"
-                          placeholder={user?.email || t('choix_email_ph')}
-                          value={notifyEmail}
-                          onChange={e => setNotifyEmail(e.target.value)}
-                          onKeyDown={e => { if (e.key === 'Enter') handleNotify(lic.code); }}
-                          style={{
-                            flex: 1, borderRadius: 11, padding: '10px 14px', fontSize: 13,
-                            fontFamily: 'Sora, sans-serif', background: 'var(--bg-input)',
-                            border: '1.5px solid var(--border-card)', color: 'var(--text-primary)', outline: 'none',
-                          }}
-                        />
-                        <button
-                          onClick={() => handleNotify(lic.code)}
-                          className="press-scale"
-                          style={{
-                            borderRadius: 11, padding: '10px 16px', fontSize: 13, fontWeight: 800,
-                            background: '#f59e0b', color: '#0b2659', border: 'none', cursor: 'pointer',
-                            fontFamily: 'Sora, sans-serif', whiteSpace: 'nowrap',
-                          }}
-                        >
-                          OK
-                        </button>
-                      </div>
-                    ) : (
-                      <button
-                        onClick={() => { setNotifyOpen(lic.code); setNotifyEmail(user?.email || ''); }}
+                {/* Rangée Préviens-moi — DANS la carte */}
+                <div style={{ borderTop: '1px solid var(--border-subtle)', padding: '12px 18px' }}>
+                  {isNotified ? (
+                    <p style={{ margin: 0, fontSize: 13, fontWeight: 700, color: 'var(--success)' }}>
+                      ✓ {t('choix_note')}
+                    </p>
+                  ) : notifyOpen === lic.code ? (
+                    <div style={{ display: 'flex', gap: 8 }}>
+                      <input
+                        type="email"
+                        placeholder={user?.email || t('choix_email_ph')}
+                        value={notifyEmail}
+                        onChange={e => setNotifyEmail(e.target.value)}
+                        onKeyDown={e => { if (e.key === 'Enter') handleNotify(lic.code); }}
+                        autoFocus
                         style={{
-                          background: 'none', border: 'none', cursor: 'pointer', padding: 0,
-                          fontSize: 13, fontWeight: 700, color: '#f59e0b', fontFamily: 'Sora, sans-serif',
+                          flex: 1, minWidth: 0, borderRadius: 11, padding: '10px 14px', fontSize: 13,
+                          fontFamily: 'Sora, sans-serif', background: 'var(--bg-input)',
+                          border: '1.5px solid var(--border-card)', color: 'var(--text-primary)', outline: 'none',
+                        }}
+                      />
+                      <button
+                        onClick={() => handleNotify(lic.code)}
+                        className="press-scale"
+                        style={{
+                          borderRadius: 11, padding: '10px 16px', fontSize: 13, fontWeight: 800,
+                          background: '#f59e0b', color: '#0b2659', border: 'none', cursor: 'pointer',
+                          fontFamily: 'Sora, sans-serif', whiteSpace: 'nowrap', flexShrink: 0,
                         }}
                       >
-                        🔔 {t('choix_previens')}
+                        OK
                       </button>
-                    )}
-                  </div>
-                )}
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => { setNotifyOpen(lic.code); setNotifyEmail(user?.email || ''); }}
+                      style={{
+                        background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+                        display: 'inline-flex', alignItems: 'center', gap: 7,
+                        fontSize: 13, fontWeight: 700, color: '#f59e0b', fontFamily: 'Sora, sans-serif',
+                      }}
+                    >
+                      <BellIcon color="#f59e0b" />
+                      {t('choix_previens')}
+                    </button>
+                  )}
+                </div>
               </div>
             );
           })}

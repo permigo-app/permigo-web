@@ -301,6 +301,18 @@ export default function ProfilePage() {
                 <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>{t('profil_changer_permis')} →</span>
               </Link>
               <button
+                onClick={() => {
+                  // Réarme le didacticiel puis retourne à l'accueil où il démarre
+                  localStorage.removeItem('@tuto_done');
+                  router.push('/app');
+                }}
+                className="w-full flex items-center gap-3 px-4 py-3.5 press-scale"
+                style={{ background: 'none', border: 'none', cursor: 'pointer', borderBottom: '1px solid var(--border-subtle)' }}
+              >
+                <span>🎓</span>
+                <span className="text-sm font-bold" style={{ color: 'var(--text-secondary)' }}>{t('profil_revoir_tuto')}</span>
+              </button>
+              <button
                 onClick={() => { const next = toggleMute(); setMuted(next); }}
                 className="w-full flex items-center gap-3 px-4 py-3.5 press-scale"
                 style={{ background: 'none', border: 'none', cursor: 'pointer', borderBottom: '1px solid var(--border-subtle)' }}

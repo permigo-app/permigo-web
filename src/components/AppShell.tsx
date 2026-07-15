@@ -11,7 +11,9 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [onboardingDone, setOnboardingDone] = useState<boolean | null>(null);
 
-  const isPublicPage = pathname === '/' || pathname === '/login' || pathname === '/register' || pathname === '/auth';
+  // /choix-permis = étape d'onboarding : plein écran, sans navbar ni nav du bas,
+  // pour que le seul chemin possible soit de choisir son permis
+  const isPublicPage = pathname === '/' || pathname === '/login' || pathname === '/register' || pathname === '/auth' || pathname === '/choix-permis';
   const isAdminPage = pathname.startsWith('/admin');
 
   useEffect(() => {

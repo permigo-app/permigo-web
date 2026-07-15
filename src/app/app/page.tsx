@@ -12,6 +12,7 @@ import { countThemeParts, lessonEffectivelyCompleted } from '@/lib/medals';
 import ExamRoute from '@/components/ExamRoute';
 import GlobalTrophies from '@/components/GlobalTrophies';
 import RenewalNotice from '@/components/RenewalNotice';
+import OnboardingTour from '@/components/OnboardingTour';
 
 function todayLabel() {
   return new Date().toLocaleDateString('fr-BE', { weekday: 'long', day: 'numeric', month: 'long' });
@@ -138,9 +139,10 @@ export default function HomePage() {
   const themeColor = THEME_COLORS[selectedTheme] || '#22D6C7';
   const themeExamPassed = stats.examsByTheme[selectedTheme] === true;
 
-  const SECTIONS: { title: string; tiles: Tile[] }[] = [
+  const SECTIONS: { title: string; tour?: string; tiles: Tile[] }[] = [
     {
       title: t('section_apprendre'),
+      tour: 'lecons',
       tiles: [
         {
           href: `/lecons/${selectedTheme}`,
@@ -153,6 +155,7 @@ export default function HomePage() {
     },
     {
       title: t('section_entrainer'),
+      tour: 'turbo',
       tiles: [
         {
           href: `/flash?theme=${selectedTheme}`,
@@ -172,6 +175,7 @@ export default function HomePage() {
     },
     {
       title: t('section_reviser'),
+      tour: 'erreurs',
       tiles: [
         {
           href: `/revision?theme=${selectedTheme}`,
@@ -226,18 +230,20 @@ export default function HomePage() {
         <RenewalNotice />
 
         {/* ── Progression globale + trophées ── */}
-        <GlobalTrophies
-          globalPct={stats.globalPct}
-          partsCompleted={stats.partsCompleted}
-          partsTotal={stats.partsTotal}
-          finalExamPassed={stats.examsByTheme['FINAL'] === true}
-        />
+        <div data-tour="progression">
+          <GlobalTrophies
+            globalPct={stats.globalPct}
+            partsCompleted={stats.partsCompleted}
+            partsTotal={stats.partsTotal}
+            finalExamPassed={stats.examsByTheme['FINAL'] === true}
+          />
+        </div>
 
         {/* ── Sélecteur de thème ── */}
         <p style={{ margin: '0 0 10px', fontSize: 10, fontWeight: 700, letterSpacing: '1.6px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
           {t('home_choisir_theme')}
         </p>
-        <div className="theme-chips-wrap">
+        <div className="theme-chips-wrap" data-tour="themes">
         <div className="theme-chips">
           {stats.themes.map((th) => {
             const active = th.code === selectedTheme;
@@ -279,18 +285,20 @@ export default function HomePage() {
         </div>
 
         {/* ── Route du thème sélectionné (médailles + diamant) ── */}
-        <ExamRoute
-          themeCode={selectedTheme}
-          themeTitle={themeStats?.title ?? ''}
-          partsCompleted={themeStats?.partsCompleted ?? 0}
-          partsTotal={themeStats?.partsTotal ?? 0}
-          examPassed={themeExamPassed}
-        />
+        <div data-tour="route">
+          <ExamRoute
+            themeCode={selectedTheme}
+            themeTitle={themeStats?.title ?? ''}
+            partsCompleted={themeStats?.partsCompleted ?? 0}
+            partsTotal={themeStats?.partsTotal ?? 0}
+            examPassed={themeExamPassed}
+          />
+        </div>
 
         {/* ── Sections du thème ── */}
         <div className="hub-sections">
         {SECTIONS.map((section) => (
-          <div key={section.title} style={{ marginBottom: 20 }}>
+          <div key={section.title} style={{ marginBottom: 20 }} {...(section.tour ? { 'data-tour': section.tour } : {})}>
             <p style={{ margin: '0 0 10px', fontSize: 10, fontWeight: 700, letterSpacing: '1.6px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
               {section.title}
             </p>
@@ -356,6 +364,7 @@ export default function HomePage() {
       </div>
     </div>
     <DesignUpdateModal userId={user?.id} />
+    <OnboardingTour />
     </>
   );
 }
