@@ -143,6 +143,8 @@ const SIGNS_NL: Record<string, string> = {
   'F45': 'Doodlopende weg (straat zonder uitweg)',
   'F45b': 'Doodlopende weg behalve voor voetgangers en fietsers (zij mogen door)',
   'F47': 'Einde werken (de werkzone is beëindigd)',
+  'F49': 'Oversteekplaats voor voetgangers (duidt de plaats van het zebrapad aan)',
+  'F50': 'Oversteekplaats voor fietsers en bestuurders van tweewielige bromfietsen',
   'F111': 'Begin fietszone (de fiets heeft voorrang op de auto)',
   'F113': 'Einde fietszone',
   'F52': 'Nooduitgang in een tunnel (in geval van nood)',
@@ -225,6 +227,8 @@ const SIGNS_NL: Record<string, string> = {
   'ZEBRAS': 'Oversteekplaats voor voetgangers — zebrapad (witte strepen, voetgangers hebben voorrang)',
   'CHEVRONS': 'Schuine strepen (gearceerde zone, verboden voor verkeer)',
   'DAMIER': 'Dambordmarkering (bufferzone tussen twee rijstroken, niet berijden)',
+  'FLECHE_SOL_GAUCHE': 'Voorsorteerpijl op de rijbaan — links afslaan (verplicht op deze strook)',
+  'FLECHE_SOL_TOUT_DROIT': 'Voorsorteerpijl op de rijbaan — rechtdoor (verplicht op deze strook)',
 
   // LT — Controlelampjes (Témoins phares)
   'TEMOIN_VEILLEUSES': 'Standlichten — stadslichten (minimale verlichting, \'s nachts in de stad)',

@@ -277,19 +277,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "H1_Q2",
-          "question": "Vous vous arrêtez le long du trottoir pour faire descendre un passager de votre voiture. Êtes-vous à l'arrêt ou en stationnement ?",
-          "choices": [
-            "Vous êtes en stationnement",
-            "Vous êtes à l'arrêt",
-            "Vous êtes immobilisé",
-            "Vous êtes en panne"
-          ],
-          "correct": 1,
-          "explanation": "Faire descendre un passager = embarquer/débarquer des personnes = arrêt.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "H1_Q3",
           "question": "Vous observez un camion de livraison qui décharge du mazout devant une maison depuis 30 minutes. S'agit-il d'un arrêt ou d'un stationnement ?",
           "choices": [
@@ -329,19 +316,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "H1_Q6",
-          "question": "Vous avez déposé votre passager et vous restez garé pour consulter votre téléphone. Êtes-vous à l'arrêt ou en stationnement ?",
-          "choices": [
-            "Vous êtes toujours à l'arrêt",
-            "Vous êtes en stationnement, car vous restez au-delà du temps nécessaire pour débarquer",
-            "Vous êtes immobilisé",
-            "Cela dépend de la durée"
-          ],
-          "correct": 1,
-          "explanation": "Dès que le passager est sorti et que vous restez, vous êtes en stationnement.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "H1_Q7",
           "question": "Vous attendez dans votre voiture garée en bord de route, sans passager à embarquer ni marchandise à charger. Êtes-vous à l'arrêt ?",
           "choices": [
@@ -378,19 +352,6 @@
           ],
           "correct": 1,
           "explanation": "À un feu rouge, la décision est imposée : vous êtes immobilisé, pas à l'arrêt.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "H1_Q10",
-          "question": "Vous êtes bloqué dans un embouteillage depuis 10 minutes. Êtes-vous en stationnement ?",
-          "choices": [
-            "Oui, vous ne bougez plus",
-            "Non, vous êtes immobilisé car la décision ne vient pas de vous",
-            "Oui, après 10 minutes c'est du stationnement",
-            "Cela dépend du lieu"
-          ],
-          "correct": 1,
-          "explanation": "L'embouteillage vous impose l'immobilisation : vous êtes immobilisé, pas en stationnement.",
           "theoryCardIndex": 0
         },
         {
@@ -446,32 +407,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "H1_Q15",
-          "question": "Vous vous immobilisez pour laisser passer un piéton sur un passage piétons. Êtes-vous \"à l'arrêt\" au sens du code ?",
-          "choices": [
-            "Oui, c'est un arrêt",
-            "Non, vous êtes immobilisé car la décision vous est imposée",
-            "Oui, c'est un arrêt réglementaire",
-            "Cela dépend de la durée"
-          ],
-          "correct": 1,
-          "explanation": "Céder le passage impose l'immobilisation : vous êtes immobilisé, pas à l'arrêt.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "H1_Q16",
-          "question": "Vous roulez lorsqu'un pneu crève et vous êtes forcé de vous arrêter. S'agit-il d'un arrêt volontaire ?",
-          "choices": [
-            "Oui, vous avez décidé de vous arrêter",
-            "Non, la décision est imposée par la crevaison : c'est une immobilisation ou une panne",
-            "Oui, c'est toujours considéré comme volontaire",
-            "Cela dépend du pneu concerné"
-          ],
-          "correct": 1,
-          "explanation": "Une crevaison impose l'arrêt : c'est une immobilisation ou une panne, pas un arrêt volontaire.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "H1_Q17",
           "question": "Vous cherchez à vous garer en agglomération et un accotement de plain-pied est disponible. Où devez-vous stationner ?",
           "choices": [
@@ -508,19 +443,6 @@
           ],
           "correct": 1,
           "explanation": "La bande de stationnement est délimitée par une large ligne blanche à gauche : au-delà = espace pour stationner.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "H1_Q20",
-          "question": "Vous voyez une large ligne blanche à droite de la chaussée. Que délimite-t-elle ?",
-          "choices": [
-            "La piste cyclable",
-            "La bande de stationnement : l'espace au-delà de la ligne est prévu pour s'arrêter ou stationner",
-            "La bande réservée aux bus",
-            "Le site spécial franchissable"
-          ],
-          "correct": 1,
-          "explanation": "La grande ligne blanche délimite la bande de stationnement : l'espace au-delà est prévu pour s'arrêter ou stationner.",
           "theoryCardIndex": 1
         },
         {
@@ -625,32 +547,6 @@
           ],
           "correct": 1,
           "explanation": "En zone résidentielle/rencontre, le stationnement est limité aux emplacements désignés.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "H1_Q29",
-          "question": "Vous êtes en agglomération et un accotement de plain-pied est disponible à côté de la chaussée. Pouvez-vous stationner sur la chaussée ?",
-          "choices": [
-            "Oui, c'est votre choix",
-            "Non, vous devez utiliser l'accotement en priorité s'il y a de la place",
-            "Oui, si la chaussée est large",
-            "Cela dépend du marquage"
-          ],
-          "correct": 1,
-          "explanation": "L'accotement doit être utilisé en priorité s'il y a de la place.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "H1_Q30",
-          "question": "Vous vous garez sur la chaussée et vous laissez 50 cm entre votre voiture et celle devant vous. Est-ce correct ?",
-          "choices": [
-            "Oui, c'est suffisant",
-            "Non, il faut laisser au moins 1 mètre entre deux voitures stationnées",
-            "Oui, en ville c'est acceptable",
-            "Cela dépend de la taille des véhicules"
-          ],
-          "correct": 1,
-          "explanation": "L'espace minimum entre deux voitures stationnées est de 1 mètre.",
           "theoryCardIndex": 1
         },
         {
@@ -810,19 +706,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "H1_Q43",
-          "question": "Vous cherchez à stationner sur un îlot directionnel. Est-ce autorisé ?",
-          "choices": [
-            "Oui, s'il est peint au sol",
-            "Non, et c'est impossible car la circulation y est également interdite",
-            "Oui, pour un bref instant",
-            "Cela dépend du lieu"
-          ],
-          "correct": 1,
-          "explanation": "Impossible de stationner sur un îlot directionnel : la circulation même y est interdite.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "H1_Q44",
           "question": "Vous souhaitez vous garer sur un accès d'autoroute. Pouvez-vous le faire ?",
           "choices": [
@@ -888,19 +771,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "H1_Q49",
-          "question": "Vous vous êtes garé à 3 mètres du bord d'un carrefour sans feux. Êtes-vous en infraction ?",
-          "choices": [
-            "Non, c'est suffisant",
-            "Oui, il faut respecter une distance d'au moins 5 mètres",
-            "Non, en agglomération c'est acceptable",
-            "Cela dépend de la voie transversale"
-          ],
-          "correct": 1,
-          "explanation": "3 mètres est insuffisant : il faut au moins 5 mètres du bord de la voie transversale.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "H1_Q50",
           "question": "Vous cherchez à vous garer dans un carrefour équipé de feux de signalisation. À quelle distance minimum des feux devez-vous vous trouver ?",
           "choices": [
@@ -963,19 +833,6 @@
           ],
           "correct": 1,
           "explanation": "Le véhicule dépasse 1,65 m : l'exception ne s'applique pas même si le signal est à ≥ 2 m.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "H1_Q55",
-          "question": "Vous vous demandez pourquoi cette exception de distance existe. Quelle en est la raison ?",
-          "choices": [
-            "Pour favoriser les petits véhicules",
-            "Parce qu'un véhicule de 1,65 m ou moins ne masque pas un signal placé à 2 m ou plus de hauteur",
-            "Pour les parkings",
-            "Par commodité"
-          ],
-          "correct": 1,
-          "explanation": "Si le signal est visible par-dessus le véhicule, ce dernier ne représente pas une gêne.",
           "theoryCardIndex": 4
         },
         {
@@ -1109,32 +966,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "H1_Q66",
-          "question": "Vous souhaitez déposer un passager mais il y a un passage piétons à 3 mètres devant vous. Pouvez-vous vous arrêter ici ?",
-          "choices": [
-            "Oui, c'est juste un arrêt bref",
-            "Non, il faut respecter une distance d'au moins 5 mètres en deçà du passage piétons",
-            "Oui, pour quelques secondes",
-            "Cela dépend du passager"
-          ],
-          "correct": 1,
-          "explanation": "3 m est insuffisant : il faut au moins 5 m avant un passage piétons.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "H1_Q67",
-          "question": "Vous êtes dans un tunnel et vous souhaitez vous arrêter pour charger des marchandises. Pouvez-vous le faire ?",
-          "choices": [
-            "Oui, c'est un arrêt pour charger",
-            "Non, l'arrêt est interdit sur la chaussée dans les tunnels",
-            "Oui, en activant vos feux de détresse",
-            "Oui, si le tunnel est large"
-          ],
-          "correct": 1,
-          "explanation": "Dans un tunnel, l'arrêt et le stationnement sont interdits sur la chaussée.",
-          "theoryCardIndex": 5
-        },
-        {
           "id": "H1_Q68",
           "question": "Vous êtes au sommet d'une côte. Pouvez-vous stationner sur l'accotement ?",
           "choices": [
@@ -1176,32 +1007,6 @@
           "sign": "F33b"
         },
         {
-          "id": "H1_Q71",
-          "question": "Vous entrez en agglomération. Quelle vitesse maximale devez-vous respecter ?",
-          "choices": [
-            "30 km/h partout",
-            "50 km/h en Flandre et Wallonie, 30 km/h à Bruxelles",
-            "70 km/h",
-            "90 km/h"
-          ],
-          "correct": 1,
-          "explanation": "En agglomération : 50 km/h en Flandre et Wallonie, 30 km/h à Bruxelles.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "H1_Q72",
-          "question": "Vous entrez sur l'autoroute. Quelles règles devez-vous respecter concernant la vitesse et le stationnement ?",
-          "choices": [
-            "90 km/h maximum",
-            "120 km/h maximum, 70 km/h minimum, arrêt et stationnement interdits",
-            "130 km/h maximum",
-            "Aucune restriction particulière"
-          ],
-          "correct": 1,
-          "explanation": "Sur autoroute : 120 km/h max, 70 km/h min, arrêt et stationnement interdits.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "H1_Q73",
           "question": "Vous empruntez une route pour automobiles. Quelles sont les implications pour l'arrêt et le stationnement ?",
           "choices": [
@@ -1213,20 +1018,6 @@
           "correct": 1,
           "explanation": "Sur route pour automobiles : arrêt et stationnement interdits sur la route, les accès et les sorties.",
           "theoryCardIndex": 2
-        },
-        {
-          "id": "H1_Q74",
-          "question": "Vous roulez sur une voie à sens unique et vous cherchez à vous garer. Pourquoi ce signal est-il important pour le stationnement ?",
-          "choices": [
-            "Cela ne change rien au stationnement",
-            "Sur un sens unique, vous pouvez stationner à droite ET à gauche",
-            "Vous ne pouvez stationner qu'à droite",
-            "Le stationnement est interdit sur les sens uniques"
-          ],
-          "correct": 1,
-          "explanation": "Sur une voie à sens unique, le stationnement est autorisé des deux côtés.",
-          "theoryCardIndex": 5,
-          "sign": "F19"
         },
         {
           "id": "H1_Q75",
@@ -1254,7 +1045,7 @@
           "correct": 1,
           "explanation": "C39 interdit toute immobilisation du véhicule, même brève. Ni l'arrêt, ni le stationnement ne sont tolérés. C'est plus restrictif que C37 (stationnement seul).",
           "destination": "panneaux",
-          "sign": "C39"
+          "sign": "ARRET_STAT_INTERDIT"
         },
         {
           "id": "H1_SIGN_E7_1",
@@ -1282,7 +1073,7 @@
           "correct": 1,
           "explanation": "E9b (parking relais / Park & Ride) vous invite à laisser votre voiture et à continuer en transports en commun. Souvent situé en périphérie des villes.",
           "destination": "panneaux",
-          "sign": "E9a"
+          "sign": "E9b"
         }
       ]
     },
@@ -1649,58 +1440,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "H2_Q11",
-          "question": "Vous envisagez de vous garer à un endroit qui bloquerait l'accès à des emplacements de stationnement hors chaussée. Pouvez-vous stationner ?",
-          "choices": [
-            "Oui, sans problème",
-            "Non, le stationnement est interdit si vous bloquez l'accès à des emplacements hors chaussée",
-            "Oui, si les places sont vides",
-            "Cela dépend de l'heure"
-          ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit si vous bloquez l'accès à des emplacements de stationnement hors chaussée.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "H2_Q12",
-          "question": "Vous souhaitez stationner à 12 mètres d'un panneau d'arrêt de bus. Est-ce autorisé ?",
-          "choices": [
-            "Oui, 12 m c'est suffisant",
-            "Non, il faut au moins 15 mètres de chaque côté du panneau",
-            "Oui, le bus est déjà parti",
-            "Cela dépend des marques au sol"
-          ],
-          "correct": 1,
-          "explanation": "12 m est insuffisant : il faut au moins 15 m de chaque côté du panneau d'arrêt.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "H2_Q13",
-          "question": "Vous conduisez la voiture AB-123-CD et vous voyez cette même plaque affichée sur une porte de garage. Pouvez-vous stationner devant cette porte ?",
-          "choices": [
-            "Non, c'est interdit pour tous",
-            "Oui, votre plaque est reproduite sur la porte, vous êtes l'occupant autorisé",
-            "Non, même avec la plaque c'est interdit",
-            "Cela dépend de l'heure"
-          ],
-          "correct": 1,
-          "explanation": "Votre plaque est reproduite sur la porte : en tant qu'occupant, vous pouvez stationner devant.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "H2_Q14",
-          "question": "Vous souhaitez déposer un passager devant un accès carrossable. L'arrêt y est-il permis ?",
-          "choices": [
-            "Non, tout est interdit devant un accès carrossable",
-            "Oui, l'arrêt est permis devant un accès carrossable, seul le stationnement est interdit",
-            "Non, même l'arrêt est interdit",
-            "Cela dépend de la durée"
-          ],
-          "correct": 1,
-          "explanation": "Devant un accès carrossable, seul le stationnement est interdit : l'arrêt est permis.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "H2_Q15",
           "question": "Vous repérez une place mais un obstacle à cet endroit obligerait les cyclistes à rouler sur la chaussée si vous stationnez. Pouvez-vous vous garer ?",
           "choices": [
@@ -1922,19 +1661,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "H2_Q32",
-          "question": "Vous vous demandez pourquoi le stationnement à gauche est interdit hors agglomération sur une voie à deux chaussées. Quelle en est la raison ?",
-          "choices": [
-            "C'est une simple convention",
-            "Les vitesses plus élevées hors agglomération rendraient dangereuse la présence permanente de véhicules à gauche",
-            "Par habitude",
-            "Ce n'est pas réellement interdit"
-          ],
-          "correct": 1,
-          "explanation": "Les vitesses plus élevées hors agglomération rendent dangereux le stationnement côté gauche.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "H2_Q33",
           "question": "Vous circulez en agglomération sur une voie à deux chaussées. Pouvez-vous stationner du côté gauche ?",
           "choices": [
@@ -1961,58 +1687,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "H2_Q35",
-          "question": "Vous êtes hors agglomération sur une voie prioritaire et vous souhaitez déposer un passager sur la chaussée. Pouvez-vous vous y arrêter ?",
-          "choices": [
-            "Non, tout est interdit",
-            "Oui, l'arrêt est permis sur la chaussée hors agglomération sur une voie prioritaire",
-            "Non, uniquement sur l'accotement",
-            "Cela dépend du trafic"
-          ],
-          "correct": 1,
-          "explanation": "Hors agglomération sur une voie prioritaire, l'arrêt est permis sur la chaussée. Seul le stationnement y est interdit.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "H2_Q36",
-          "question": "Vous êtes en agglomération sur une voie prioritaire. Pouvez-vous stationner sur la chaussée ?",
-          "choices": [
-            "Non, une voie prioritaire interdit toujours le stationnement",
-            "Oui, en agglomération le stationnement est permis sur la chaussée d'une voie prioritaire",
-            "Non, uniquement sur l'accotement",
-            "Cela dépend du panneau"
-          ],
-          "correct": 1,
-          "explanation": "En agglomération, le stationnement est permis sur la chaussée d'une voie prioritaire.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "H2_Q37",
-          "question": "Vous roulez sur une chaussée divisée en bandes. Un panneau indique \"P autorisé\". Pouvez-vous stationner ?",
-          "choices": [
-            "Non, les bandes interdisent toujours le stationnement",
-            "Oui, car la signalisation l'autorise exceptionnellement",
-            "Non, seul l'arrêt est permis",
-            "Cela dépend du nombre de bandes"
-          ],
-          "correct": 1,
-          "explanation": "Une signalisation autorisant le stationnement constitue une exception : le stationnement est alors permis.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "H2_Q38",
-          "question": "Vous observez une moto stationnée sur l'accotement le long d'une chaussée divisée en bandes de circulation. Est-ce correct ?",
-          "choices": [
-            "Non, c'est interdit",
-            "Oui, le stationnement est autorisé sur l'accotement longeant les bandes de circulation",
-            "Non, les motos ne peuvent pas stationner là",
-            "Cela dépend du type de moto"
-          ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit sur la chaussée divisée en bandes, mais autorisé sur l'accotement.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "H2_Q39",
           "question": "Vous voyez une ligne jaune discontinue le long du bord de la chaussée. Que signifie-t-elle pour le stationnement ?",
           "choices": [
@@ -2027,15 +1701,15 @@
         },
         {
           "id": "H2_Q40",
-          "question": "Vous voyez une ligne jaune CONTINUE le long du bord de la chaussée. Interdit-elle le stationnement ?",
+          "question": "Vous voyez une ligne jaune CONTINUE le long du bord de la chaussée. Que signifie-t-elle pour l'arrêt et le stationnement ?",
           "choices": [
-            "Oui, comme la ligne discontinue",
-            "Non, une ligne jaune continue n'a aucun effet sur le stationnement",
-            "Oui, l'arrêt et le stationnement sont interdits",
-            "Cela dépend de l'endroit"
+            "Le stationnement est interdit, mais l'arrêt reste permis",
+            "L'arrêt ET le stationnement sont tous les deux interdits",
+            "Elle n'a aucune signification particulière",
+            "Elle indique une piste cyclable"
           ],
           "correct": 1,
-          "explanation": "Seule la ligne jaune DISCONTINUE interdit le stationnement. La continue ne signifie rien pour le stationnement.",
+          "explanation": "Contrairement à la ligne jaune discontinue (stationnement interdit, arrêt permis), la ligne jaune continue interdit à la fois l'arrêt ET le stationnement.",
           "theoryCardIndex": 3
         },
         {
@@ -2075,20 +1749,8 @@
           ],
           "correct": 1,
           "explanation": "Rond bleu + 1 diagonale rouge = stationnement interdit (arrêt permis), côté du signal, jusqu'au carrefour suivant.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H2_Q44",
-          "question": "Vous voyez un signal de stationnement interdit (1 diagonale). Jusqu'où s'applique cette interdiction ?",
-          "choices": [
-            "Sur les 100 prochains mètres",
-            "Depuis le signal jusqu'au carrefour suivant",
-            "Sur les 200 prochains mètres",
-            "Jusqu'au prochain signal"
-          ],
-          "correct": 1,
-          "explanation": "Le signal de stationnement interdit s'applique depuis le signal jusqu'au carrefour suivant.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "STAT_INTERDIT"
         },
         {
           "id": "H2_Q45",
@@ -2101,7 +1763,8 @@
           ],
           "correct": 1,
           "explanation": "Rond bleu + 2 diagonales rouges = arrêt ET stationnement interdits des deux côtés.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "ARRET_STAT_INTERDIT"
         },
         {
           "id": "H2_Q46",
@@ -2182,19 +1845,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "H2_Q52",
-          "question": "Vous voyez un signal de stationnement interdit (1 diagonale) sans flèche. Vous êtes à 50 m du prochain carrefour. Pouvez-vous stationner ?",
-          "choices": [
-            "Oui, vous êtes loin du signal",
-            "Non, l'interdiction s'applique jusqu'au carrefour suivant",
-            "Oui, après 30 m c'est autorisé",
-            "Cela dépend de l'accotement"
-          ],
-          "correct": 1,
-          "explanation": "L'interdiction s'applique jusqu'au carrefour suivant : à 50 m du carrefour, vous êtes toujours dans la zone interdite.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "H2_Q53",
           "question": "Votre voiture est en panne à un endroit marqué par un signal d'arrêt et stationnement interdits (2 diagonales). Êtes-vous en infraction ?",
           "choices": [
@@ -2208,19 +1858,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "H2_Q54",
-          "question": "Vous voyez un signal de stationnement interdit avec l'indication \"20 m\". Pouvez-vous stationner sur l'accotement à cet endroit ?",
-          "choices": [
-            "Non, l'accotement est inclus dans l'interdiction",
-            "Oui, avec une indication chiffrée, le signal s'applique uniquement à la chaussée",
-            "Non, c'est interdit partout",
-            "Cela dépend de la largeur"
-          ],
-          "correct": 1,
-          "explanation": "Avec indication chiffrée, le signal ne vise que la chaussée : l'accotement reste libre.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "H2_Q55",
           "question": "Vous voyez un signal avec l'indication \"1–15\". Que signifie-t-il ?",
           "choices": [
@@ -2231,7 +1868,8 @@
           ],
           "correct": 1,
           "explanation": "Le signal \"1–15\" interdit le stationnement de ce côté de la chaussée du 1er au 15 du mois.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 4,
+          "sign": "E3"
         },
         {
           "id": "H2_Q56",
@@ -2244,7 +1882,8 @@
           ],
           "correct": 1,
           "explanation": "Le signal \"16–31\" interdit le stationnement de ce côté de la chaussée du 16 à la fin du mois.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 4,
+          "sign": "E3"
         },
         {
           "id": "H2_Q57",
@@ -2286,19 +1925,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "H2_Q60",
-          "question": "Nous sommes le 20 du mois dans une agglomération à stationnement semi-mensuel. De quel côté devez-vous stationner ?",
-          "choices": [
-            "Du côté des numéros impairs",
-            "Du côté des numéros PAIRS",
-            "N'importe quel côté",
-            "Cela dépend de l'agglomération"
-          ],
-          "correct": 1,
-          "explanation": "Pour toute l'agglomération : du 16 à la fin = côté des numéros PAIRS.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "H2_Q61",
           "question": "Vous devez changer de côté pour le stationnement alterné. Quand devez-vous déplacer votre voiture ?",
           "choices": [
@@ -2309,19 +1935,6 @@
           ],
           "correct": 1,
           "explanation": "Le changement de côté se fait le dernier jour de chaque période, entre 19h30 et 20h.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "H2_Q62",
-          "question": "Nous sommes le 15 du mois entre 19h30 et 20h00. Que devez-vous faire avec votre voiture garée ?",
-          "choices": [
-            "Rien de particulier",
-            "Déplacer votre voiture de l'autre côté (le 15 est le dernier jour de la période 1-15)",
-            "Rester où vous êtes",
-            "Stationner sur l'accotement"
-          ],
-          "correct": 1,
-          "explanation": "Le 15 est le dernier jour de la période 1–15 : entre 19h30 et 20h, changez de côté.",
           "theoryCardIndex": 5
         },
         {
@@ -2364,32 +1977,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "H2_Q66",
-          "question": "Nous sommes le 30 juin à 19h45. Que devez-vous faire ?",
-          "choices": [
-            "Rien de particulier",
-            "Déplacer votre voiture de l'autre côté (le 30 juin est le dernier jour du mois)",
-            "Attendre le 1er juillet",
-            "Rester où vous êtes"
-          ],
-          "correct": 1,
-          "explanation": "Le 30 juin est le dernier jour de juin. Entre 19h30 et 20h, changement de côté obligatoire.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "H2_Q67",
-          "question": "Nous sommes le 10 du mois. Vous voyez le signal \"1–15\" de votre côté. Pouvez-vous stationner sur la chaussée de ce côté ?",
-          "choices": [
-            "Oui, c'est votre côté habituel",
-            "Non, le signal interdit le stationnement de CE côté du 1er au 15. Vous devez aller de l'autre côté",
-            "Oui, pendant 15 jours",
-            "Cela dépend de l'heure"
-          ],
-          "correct": 1,
-          "explanation": "Le signal \"1–15\" interdit le stationnement de ce côté du 1er au 15. Le 10, c'est interdit ici.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "H2_Q68",
           "question": "Nous sommes le 20 du mois. Vous voyez le signal \"1–15\" de votre côté. Pouvez-vous stationner sur la chaussée de ce côté ?",
           "choices": [
@@ -2413,59 +2000,8 @@
           ],
           "correct": 1,
           "explanation": "Le signal P bleu carré indique un emplacement de stationnement autorisé.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H2_Q70",
-          "question": "Vous voyez un signal circulaire bleu avec UNE diagonale rouge. De quel signal s'agit-il ?",
-          "choices": [
-            "Arrêt et stationnement interdits",
-            "Stationnement interdit, arrêt permis",
-            "Stationnement autorisé",
-            "Zone 30"
-          ],
-          "correct": 1,
-          "explanation": "Rond bleu + 1 diagonale rouge = stationnement interdit, arrêt permis.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H2_Q71",
-          "question": "Vous voyez un signal circulaire bleu avec DEUX diagonales rouges. De quel signal s'agit-il ?",
-          "choices": [
-            "Stationnement seul interdit",
-            "Arrêt ET stationnement interdits",
-            "Stationnement autorisé",
-            "Zone résidentielle"
-          ],
-          "correct": 1,
-          "explanation": "Rond bleu + 2 diagonales rouges = arrêt ET stationnement interdits.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H2_Q72",
-          "question": "Vous voyez un signal avec l'indication \"1–15\". De quel signal s'agit-il ?",
-          "choices": [
-            "Stationnement autorisé du 1er au 15",
-            "Stationnement interdit de ce côté de la chaussée du 1er au 15 du mois",
-            "Arrêt interdit du 1er au 15",
-            "Vitesse limitée à 15 km/h"
-          ],
-          "correct": 1,
-          "explanation": "Le signal \"1–15\" interdit le stationnement de ce côté de la chaussée du 1er au 15 du mois.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "H2_Q73",
-          "question": "Vous voyez un signal avec l'indication \"16–31\". De quel signal s'agit-il ?",
-          "choices": [
-            "Stationnement autorisé du 16 à la fin",
-            "Stationnement interdit de ce côté de la chaussée du 16 à la fin du mois",
-            "Arrêt interdit du 16 à la fin",
-            "Zone 30"
-          ],
-          "correct": 1,
-          "explanation": "Le signal \"16–31\" interdit le stationnement de ce côté de la chaussée du 16 à la fin du mois.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3,
+          "sign": "E1"
         },
         {
           "id": "H2_Q74",
@@ -2478,7 +2014,8 @@
           ],
           "correct": 1,
           "explanation": "Un signal avec plage horaire interdit le stationnement sur chaussée et accotement durant l'horaire indiqué.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 4,
+          "sign": "STAT_INTERDIT"
         },
         {
           "id": "H2_Q75",
@@ -2491,7 +2028,8 @@
           ],
           "correct": 1,
           "explanation": "Flèche vers le haut = commence ici. Indication chiffrée = chaussée uniquement, sur 20 m.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "STAT_INTERDIT"
         }
       ]
     },
@@ -2696,7 +2234,8 @@
           ],
           "correct": 1,
           "explanation": "La zone bleue est une zone de stationnement à durée limitée où l'utilisation du disque est obligatoire.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "E5"
         },
         {
           "id": "H3_Q2",
@@ -2790,19 +2329,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "H3_Q9",
-          "question": "Vous arrivez en zone bleue à 9h45. Sur quel trait placez-vous la flèche ?",
-          "choices": [
-            "Sur 9h30",
-            "Sur 10h00, car c'est le trait qui suit 9h45",
-            "Sur 9h45 exactement",
-            "Sur 10h30"
-          ],
-          "correct": 1,
-          "explanation": "Après 9h45, le trait suivant est 10h00 : c'est là que la flèche doit être placée.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "H3_Q10",
           "question": "Vous vous êtes garé en zone bleue. Combien de temps pouvez-vous rester ?",
           "choices": [
@@ -2865,19 +2391,6 @@
           ],
           "correct": 1,
           "explanation": "Le disque peut être obligatoire hors zone bleue si un signal de stationnement porte la mention \"disque obligatoire\".",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "H3_Q15",
-          "question": "Vous voyez un signal P avec un disque en dessous, hors zone bleue. Devez-vous utiliser votre disque ?",
-          "choices": [
-            "Non, vous n'êtes pas en zone bleue",
-            "Oui, la mention sous le signal rend le disque obligatoire",
-            "Non, c'est facultatif",
-            "Cela dépend de l'heure"
-          ],
-          "correct": 1,
-          "explanation": "La mention sous le signal rend le disque obligatoire, même hors zone bleue.",
           "theoryCardIndex": 1
         },
         {
@@ -3011,19 +2524,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "H3_Q26",
-          "question": "Vous êtes cycliste et vous voyez un signal P général. Pouvez-vous y stationner votre vélo ?",
-          "choices": [
-            "Oui, comme tout véhicule",
-            "Non, les vélos et cyclomoteurs sont exclus du signal P général",
-            "Oui, les vélos sont toujours autorisés",
-            "Cela dépend du lieu"
-          ],
-          "correct": 1,
-          "explanation": "Le signal P général exclut explicitement les vélos et cyclomoteurs.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "H3_Q27",
           "question": "Vous voyez un signal P avec une silhouette de voiture en dessous. Quels véhicules peuvent y stationner ?",
           "choices": [
@@ -3034,7 +2534,8 @@
           ],
           "correct": 1,
           "explanation": "Le signal P + voiture est réservé aux voitures, voitures mixtes (pick-up), minibus et motocyclettes.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "E1"
         },
         {
           "id": "H3_Q28",
@@ -3047,7 +2548,8 @@
           ],
           "correct": 1,
           "explanation": "Malgré le permis B, la camionnette est exclue du signal P + voiture.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "E1"
         },
         {
           "id": "H3_Q29",
@@ -3060,7 +2562,8 @@
           ],
           "correct": 1,
           "explanation": "Les motocyclettes sont incluses dans le signal P + voiture.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "E1"
         },
         {
           "id": "H3_Q30",
@@ -3180,19 +2683,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "H3_Q39",
-          "question": "Vous conduisez une camionnette de livraison et vous voyez un signal P + voiture. Où devez-vous stationner ?",
-          "choices": [
-            "Vous pouvez stationner ici, c'est un véhicule",
-            "Vous devez chercher un autre emplacement car les camionnettes ne sont pas autorisées sous ce signal",
-            "Vous pouvez stationner sur l'accotement",
-            "Vous pouvez stationner en double file"
-          ],
-          "correct": 1,
-          "explanation": "Les camionnettes ne sont pas autorisées sous le signal P + voiture. Cherchez un signal P général ou P + camionnette.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "H3_Q40",
           "question": "Vous voyez un signal de stationnement obligatoire sur l'accotement mais il n'y a pas d'accotement disponible. Que faites-vous ?",
           "choices": [
@@ -3258,32 +2748,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "H3_Q45",
-          "question": "Vous quittez votre véhicule. Devez-vous fermer les fenêtres et le toit ouvrant ?",
-          "choices": [
-            "Non, c'est facultatif",
-            "Oui, c'est obligatoire",
-            "Non, uniquement la nuit",
-            "Uniquement en cas de pluie"
-          ],
-          "correct": 1,
-          "explanation": "Fermer les fenêtres et le toit ouvrant est obligatoire avant de quitter le véhicule.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "H3_Q46",
-          "question": "Vous quittez votre véhicule pour quelques minutes. Devez-vous retirer la clé du contact ?",
-          "choices": [
-            "Non, si vous revenez rapidement",
-            "Oui, c'est obligatoire quelle que soit la durée d'absence",
-            "Non, uniquement la nuit",
-            "Cela dépend du lieu"
-          ],
-          "correct": 1,
-          "explanation": "Retirer la clé du contact est obligatoire, quelle que soit la durée d'absence.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "H3_Q47",
           "question": "Vous venez de descendre de votre voiture garée au bord de la route. Dans quelle direction devez-vous marcher ?",
           "choices": [
@@ -3294,19 +2758,6 @@
           ],
           "correct": 1,
           "explanation": "Marcher vers l'arrière permet de voir le trafic qui vient vers vous.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "H3_Q48",
-          "question": "Vous vous éloignez de votre voiture garée. Pourquoi est-il conseillé de marcher vers l'arrière ?",
-          "choices": [
-            "Par habitude",
-            "Pour voir le trafic qui vient vers vous et pouvoir réagir",
-            "Pour vérifier les feux arrière",
-            "Cela n'a pas d'importance"
-          ],
-          "correct": 1,
-          "explanation": "En marchant vers l'arrière, vous voyez arriver la circulation et pouvez réagir en temps utile.",
           "theoryCardIndex": 4
         },
         {
@@ -3323,19 +2774,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "H3_Q50",
-          "question": "Vous vous apprêtez à remonter dans votre véhicule. Pourquoi devez-vous approcher par l'avant ?",
-          "choices": [
-            "C'est plus rapide",
-            "Pour voir la circulation venant vers vous avant de monter",
-            "La portière avant est plus grande",
-            "Par habitude"
-          ],
-          "correct": 1,
-          "explanation": "En approchant par l'avant, vous voyez la circulation arrivant vers vous avant de monter.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "H3_Q51",
           "question": "Votre voiture est en panne sur la voie publique. Combien de temps peut-elle y rester au maximum ?",
           "choices": [
@@ -3349,19 +2787,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "H3_Q52",
-          "question": "Votre voiture est en panne sur la voie publique depuis 30 heures. Êtes-vous en infraction ?",
-          "choices": [
-            "Non, c'est raisonnable",
-            "Oui, le maximum autorisé est de 24 heures",
-            "Non, les pannes sont tolérées",
-            "Cela dépend du lieu"
-          ],
-          "correct": 1,
-          "explanation": "30 heures dépasse la limite de 24 heures : c'est une infraction.",
-          "theoryCardIndex": 5
-        },
-        {
           "id": "H3_Q53",
           "question": "Vous avez un véhicule publicitaire garé sur la voie publique. Combien de temps peut-il y rester ?",
           "choices": [
@@ -3372,19 +2797,6 @@
           ],
           "correct": 1,
           "explanation": "Un véhicule publicitaire ne peut stationner sur la voie publique que 3 heures maximum.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "H3_Q54",
-          "question": "Votre véhicule publicitaire est stationné sur la voie publique depuis 5 heures. Est-ce une infraction ?",
-          "choices": [
-            "Non, c'est autorisé",
-            "Oui, le maximum est de 3 heures pour un véhicule publicitaire",
-            "Non, c'est de la publicité",
-            "Cela dépend du lieu"
-          ],
-          "correct": 1,
-          "explanation": "5 heures dépasse la limite de 3 heures pour un véhicule publicitaire : c'est une infraction.",
           "theoryCardIndex": 5
         },
         {
@@ -3414,58 +2826,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "H3_Q57",
-          "question": "Votre voiture est en panne depuis 20 heures sur la voie publique. Vous avez placé le triangle de danger. Devez-vous la faire enlever ?",
-          "choices": [
-            "Non, le triangle suffit à la signaler",
-            "Oui, vous devez la faire enlever avant que les 24 heures ne soient écoulées",
-            "Non, les pannes n'ont pas de limite de temps",
-            "Oui, immédiatement"
-          ],
-          "correct": 1,
-          "explanation": "La limite est 24 heures : après 20 heures, il reste 4 heures pour faire enlever le véhicule.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "H3_Q58",
-          "question": "Vous garez un camion publicitaire devant votre magasin pendant 4 heures. Est-ce autorisé ?",
-          "choices": [
-            "Oui, c'est votre magasin",
-            "Non, un véhicule publicitaire ne peut rester que 3 heures maximum sur la voie publique",
-            "Oui, si c'est une propriété privée",
-            "Cela dépend de la taille du camion"
-          ],
-          "correct": 1,
-          "explanation": "4 heures dépasse la limite de 3 heures pour un véhicule publicitaire, peu importe l'endroit.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "H3_Q59",
-          "question": "Vous voyez un signal P bleu carré. De quel signal s'agit-il ?",
-          "choices": [
-            "Stationnement interdit",
-            "Stationnement autorisé pour tous les véhicules sauf vélos et cyclomoteurs",
-            "Arrêt autorisé",
-            "Zone piétonne"
-          ],
-          "correct": 1,
-          "explanation": "Le signal P bleu carré autorise le stationnement pour tous les véhicules, sauf vélos et cyclomoteurs.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H3_Q60",
-          "question": "Vous voyez un signal P accompagné d'une silhouette de voiture. À qui est-il réservé ?",
-          "choices": [
-            "À tous les véhicules",
-            "Aux voitures, voitures mixtes, minibus et motocyclettes",
-            "Uniquement aux voitures",
-            "Aux camionnettes"
-          ],
-          "correct": 1,
-          "explanation": "Le signal P + voiture est réservé aux voitures, voitures mixtes, minibus et motocyclettes.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "H3_Q61",
           "question": "Vous voyez un signal P accompagné d'une silhouette de camionnette/camion. À qui est-il réservé ?",
           "choices": [
@@ -3476,46 +2836,8 @@
           ],
           "correct": 1,
           "explanation": "Le signal P + camionnette/camion est réservé aux camionnettes et camions.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H3_Q62",
-          "question": "Vous voyez un signal montrant un véhicule positionné sur l'accotement. De quel signal s'agit-il ?",
-          "choices": [
-            "Stationnement interdit",
-            "Stationnement obligatoire sur l'accotement ou le trottoir",
-            "Stationnement sur la chaussée",
-            "Arrêt interdit"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal impose le stationnement sur l'accotement ou le trottoir.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H3_Q63",
-          "question": "Vous voyez un signal montrant un véhicule positionné sur la chaussée. De quel signal s'agit-il ?",
-          "choices": [
-            "Stationnement sur l'accotement",
-            "Stationnement obligatoire sur la chaussée",
-            "Stationnement interdit",
-            "Arrêt interdit"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal impose le stationnement sur la chaussée.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H3_Q64",
-          "question": "Vous voyez un signal de début de zone bleue. De quel signal s'agit-il ?",
-          "choices": [
-            "Zone de stationnement payant",
-            "Zone de stationnement à durée limitée avec disque obligatoire",
-            "Zone résidentielle",
-            "Zone piétonne"
-          ],
-          "correct": 1,
-          "explanation": "Le signal de début de zone bleue indique une zone de stationnement à durée limitée avec disque obligatoire.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 3,
+          "sign": "E1"
         },
         {
           "id": "H3_Q65",
@@ -3528,7 +2850,8 @@
           ],
           "correct": 1,
           "explanation": "Le signal P + prise électrique indique un emplacement réservé aux véhicules électriques.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "E1"
         }
       ]
     }

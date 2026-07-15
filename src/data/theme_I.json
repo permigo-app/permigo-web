@@ -464,19 +464,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "I1_Q20",
-          "question": "Vous avez obtenu un résultat \"P\" (Positif) au test de l'haleine. Que se passe-t-il ensuite ?",
-          "choices": [
-            "Vous pouvez reprendre le volant",
-            "Vous devez subir une analyse de l'haleine pour déterminer la quantité exacte d'alcool",
-            "Rien de particulier",
-            "Vous pouvez rentrer chez vous"
-          ],
-          "correct": 1,
-          "explanation": "Le résultat P déclenche aussi une analyse de l'haleine pour mesurer la concentration exacte.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "I1_Q21",
           "question": "Vous révisez pour l'examen. À combien de pour mille (pour mille) correspondent 0,22 mg/l d'air alvéolaire ?",
           "choices": [
@@ -513,19 +500,6 @@
           ],
           "correct": 1,
           "explanation": "Le test indique S/A/P. L'analyse donne la concentration précise et délivre un ticket imprimé.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "I1_Q24",
-          "question": "Vous venez de subir une analyse de l'haleine. Recevez-vous un document ?",
-          "choices": [
-            "Non",
-            "Oui, un ticket imprimé avec le résultat exact, dont vous recevez une copie",
-            "Non, le résultat est communiqué oralement",
-            "Oui, mais uniquement pour la police"
-          ],
-          "correct": 1,
-          "explanation": "L'analyse délivre un ticket imprimé avec le résultat exact, dont vous recevez une copie.",
           "theoryCardIndex": 2
         },
         {
@@ -568,32 +542,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "I1_Q28",
-          "question": "Votre analyse de l'haleine indique un résultat entre 0,22 et 0,35 mg/l. Pendant combien de temps votre permis est-il retiré ?",
-          "choices": [
-            "6 heures",
-            "3 heures",
-            "12 heures",
-            "24 heures"
-          ],
-          "correct": 1,
-          "explanation": "Entre 0,22 et 0,35 mg/l : retrait du permis pendant 3 heures + amende.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "I1_Q29",
-          "question": "Votre analyse de l'haleine indique un résultat d'au moins 0,35 mg/l. Pendant combien de temps votre permis est-il retiré ?",
-          "choices": [
-            "3 heures",
-            "6 heures (en pratique souvent 15 jours)",
-            "12 heures",
-            "1 heure"
-          ],
-          "correct": 1,
-          "explanation": "À partir de 0,35 mg/l : retrait 6 heures légalement, mais souvent 15 jours en pratique.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "I1_Q30",
           "question": "Vous refusez de vous soumettre à l'analyse de l'haleine. Que se passe-t-il ?",
           "choices": [
@@ -604,19 +552,6 @@
           ],
           "correct": 1,
           "explanation": "Le refus de l'analyse est considéré comme un résultat Positif : interdiction de conduire 6 heures.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "I1_Q31",
-          "question": "Vous soufflez 0,20 mg/l lors de l'analyse de l'haleine. Pouvez-vous reprendre le volant ?",
-          "choices": [
-            "Non, c'est trop élevé",
-            "Oui, 0,20 mg/l est inférieur au seuil de 0,22 mg/l",
-            "Non, votre permis est retiré",
-            "Cela dépend de la route"
-          ],
-          "correct": 1,
-          "explanation": "0,20 mg/l < 0,22 mg/l : vous pouvez conduire.",
           "theoryCardIndex": 2
         },
         {
@@ -672,19 +607,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "I1_Q36",
-          "question": "Vous êtes emmené à l'hôpital après un accident. La police peut-elle quand même vérifier votre taux d'alcool ?",
-          "choices": [
-            "Non, vous êtes à l'hôpital",
-            "Oui, par prélèvement sanguin si le test/analyse est impossible",
-            "Non, elle doit attendre votre sortie",
-            "Oui, par test de l'haleine à l'hôpital"
-          ],
-          "correct": 1,
-          "explanation": "À l'hôpital, si le test/analyse est impossible, un prélèvement sanguin peut être réalisé par un médecin.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "I1_Q37",
           "question": "Vous avez commis une infraction liée à l'alcool. Qui peut vous imposer un éthylotest antidémarrage ?",
           "choices": [
@@ -721,19 +643,6 @@
           ],
           "correct": 1,
           "explanation": "Le seuil est 0,2 ‰ : au-dessus ou égal à ce taux, le moteur ne démarre pas.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "I1_Q40",
-          "question": "Vous soufflez 0,3 pour mille dans votre éthylotest antidémarrage. Que se passe-t-il ?",
-          "choices": [
-            "Le moteur démarre normalement",
-            "Le moteur refuse de démarrer car 0,3 dépasse le seuil de 0,2 pour mille",
-            "Un avertissement sonore retentit mais le moteur démarre",
-            "Cela dépend du modèle de l'appareil"
-          ],
-          "correct": 1,
-          "explanation": "0,3 ‰ dépasse le seuil de 0,2 ‰ : le moteur ne démarre pas.",
           "theoryCardIndex": 3
         },
         {
@@ -799,19 +708,6 @@
           ],
           "correct": 1,
           "explanation": "0,15 ‰ < 0,2 ‰ : le seuil n'est pas atteint, le moteur démarre.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "I1_Q46",
-          "question": "Vous vous demandez si l'éthylotest antidémarrage peut être imposé à vie. Est-ce possible ?",
-          "choices": [
-            "Non, 3 ans maximum",
-            "Oui, le juge peut l'imposer à vie",
-            "Non, 5 ans maximum",
-            "Cela dépend de l'infraction"
-          ],
-          "correct": 1,
-          "explanation": "Le juge peut imposer l'éthylotest antidémarrage à vie.",
           "theoryCardIndex": 3
         },
         {
@@ -906,19 +802,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "I1_Q54",
-          "question": "Vous comparez les sanctions. Pour l'alcool entre 0,22 et 0,35 mg/l, le permis est retiré 3h. Pour l'alcool au-delà de 0,35 mg/l, 6h. Et pour les drogues ?",
-          "choices": [
-            "3 heures",
-            "12 heures",
-            "6 heures",
-            "24 heures"
-          ],
-          "correct": 1,
-          "explanation": "Un test positif aux drogues entraîne un retrait du permis de 12 heures, soit plus que pour l'alcool.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "I1_Q55",
           "question": "Vous avez consommé de l'alcool ET des drogues avant de prendre le volant. Est-ce plus ou moins grave que l'alcool seul ?",
           "choices": [
@@ -958,19 +841,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "I1_Q58",
-          "question": "Vous avez pris des somnifères et vous buvez une bière en soirée. Est-ce dangereux de prendre le volant ?",
-          "choices": [
-            "Non, une seule bière ne pose pas de problème",
-            "Oui, la combinaison médicaments et alcool rend la conduite particulièrement dangereuse",
-            "Non, les somnifères ne comptent pas",
-            "Cela dépend du type de somnifère"
-          ],
-          "correct": 1,
-          "explanation": "Même une petite quantité d'alcool combinée à des somnifères est particulièrement dangereuse.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "I1_SIGN_F3_1",
           "question": "Vous voyez un panneau bleu rectangulaire avec un \"H\" blanc et un pictogramme médical. Que signale-t-il ?",
           "choices": [
@@ -982,7 +852,7 @@
           "correct": 1,
           "explanation": "F3 signale la présence d'un hôpital. À proximité, les signaux sonores (klaxon) sont généralement interdits pour ne pas gêner les patients.",
           "destination": "panneaux",
-          "sign": "F3"
+          "sign": "F53"
         }
       ]
     },
@@ -1525,19 +1395,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "I2_Q22",
-          "question": "Vous êtes impliqué dans un accident SANS blessés. La police doit-elle se déplacer ?",
-          "choices": [
-            "Oui, toujours",
-            "Non, les parties remplissent le constat européen d'accident",
-            "Oui, c'est obligatoire",
-            "Cela dépend des dégâts"
-          ],
-          "correct": 1,
-          "explanation": "Sans blessés, le constat européen signé par les deux parties suffit.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "I2_Q23",
           "question": "Vous sortez de votre voiture après un accident sur l'autoroute. Le gilet fluorescent est-il obligatoire ?",
           "choices": [
@@ -1561,19 +1418,6 @@
           ],
           "correct": 1,
           "explanation": "Le gilet n'est pas obligatoire pour les passagers mais est vivement conseillé.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "I2_Q25",
-          "question": "Vous vous demandez pourquoi le gilet ne doit PAS être rangé dans le coffre. Quelle en est la raison ?",
-          "choices": [
-            "Par commodité",
-            "Vous devez pouvoir l'enfiler AVANT de sortir du véhicule sur l'autoroute ou une voie rapide",
-            "Pour ne pas l'oublier",
-            "Cela n'a pas d'importance"
-          ],
-          "correct": 1,
-          "explanation": "Le gilet doit être dans l'habitacle car le conducteur doit l'enfiler avant de sortir du véhicule.",
           "theoryCardIndex": 1
         },
         {
@@ -1821,19 +1665,6 @@
           ],
           "correct": 1,
           "explanation": "Si le blessé respire normalement, laissez le casque en place et attendez les secours.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "I2_Q45",
-          "question": "Vous arrivez sur un accident. Un véhicule est en flammes avec un blessé à l'intérieur. Que faites-vous en priorité ?",
-          "choices": [
-            "Vous attendez les pompiers",
-            "Vous sortez rapidement la victime du véhicule",
-            "Vous arrosez la voiture",
-            "Vous prenez des photos"
-          ],
-          "correct": 1,
-          "explanation": "En cas d'incendie, c'est la seule situation où vous devez déplacer la victime.",
           "theoryCardIndex": 3
         },
         {
@@ -2596,19 +2427,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "I3_Q16",
-          "question": "Vous souhaitez limiter l'impact de votre voiture sur l'environnement. Que devez-vous faire concernant le moteur ?",
-          "choices": [
-            "Rouler plus vite",
-            "Faire contrôler régulièrement votre véhicule et ne négliger aucun entretien",
-            "Ne jamais changer l'huile",
-            "Rouler au point mort"
-          ],
-          "correct": 1,
-          "explanation": "Un entretien régulier maintient le moteur efficace et limite les émissions polluantes.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "I3_Q17",
           "question": "Vous avez des objets inutiles dans votre coffre. Pourquoi devriez-vous les retirer ?",
           "choices": [
@@ -2739,32 +2557,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "I3_Q27",
-          "question": "Vous rentrez de vacances et votre coffre de toit est vide. Que faites-vous ?",
-          "choices": [
-            "Vous le gardez sur le toit",
-            "Vous le retirez pour éviter la résistance à l'air inutile",
-            "Cela ne change rien",
-            "Vous le mettez dans le coffre arrière"
-          ],
-          "correct": 1,
-          "explanation": "Un coffre de toit vide génère inutilement de la résistance à l'air. Il vaut mieux le retirer.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "I3_Q28",
-          "question": "Il fait 35 degres dehors. Que consomme le moins pour se rafraîchir en voiture : la climatisation ou les vitres ouvertes ?",
-          "choices": [
-            "Les vitres ouvertes consomment toujours moins",
-            "La ventilation avec vitres fermées est recommandée pour limiter la résistance à l'air",
-            "La climatisation consomme toujours moins",
-            "Les deux consomment la même chose"
-          ],
-          "correct": 1,
-          "explanation": "À haute vitesse, les vitres ouvertes créent plus de résistance que la clim. La ventilation avec vitres fermées est idéale.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "I3_Q29",
           "question": "Vous vérifiez la pression de vos pneus. Quelle pression devez-vous respecter ?",
           "choices": [
@@ -2882,19 +2674,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "I3_Q38",
-          "question": "Vous vous demandez pourquoi il est interdit de rouler au mazout rouge. Quelle en est la raison ?",
-          "choices": [
-            "C'est dangereux pour le moteur",
-            "Les taxes ne sont pas identiques : le mazout de chauffage est moins taxé",
-            "Cela pollue davantage",
-            "C'est une simple habitude"
-          ],
-          "correct": 1,
-          "explanation": "Le mazout de chauffage est moins taxé que le diesel routier. L'utiliser comme carburant est une fraude fiscale.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "I3_Q39",
           "question": "Vous voyez un panneau indiquant une zone de basses émissions (LEZ). De quoi s'agit-il ?",
           "choices": [
@@ -2986,19 +2765,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "I3_Q46",
-          "question": "Vous comparez deux véhicules : l'un a un éco-score de 80, l'autre de 50. Lequel est le plus respectueux de l'environnement ?",
-          "choices": [
-            "Celui avec un éco-score de 50",
-            "Celui avec un éco-score de 80, car un score plus élevé signifie plus de respect pour l'environnement",
-            "Les deux sont identiques",
-            "Cela dépend du carburant"
-          ],
-          "correct": 1,
-          "explanation": "Plus l'éco-score est élevé, plus le véhicule est respectueux de l'environnement.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "I3_Q47",
           "question": "Vous recevez votre certificat d'immatriculation. De quoi s'agit-il ?",
           "choices": [
@@ -3009,19 +2775,6 @@
           ],
           "correct": 1,
           "explanation": "Le certificat d'immatriculation est le document officiel contenant toutes les caractéristiques du véhicule.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "I3_Q48",
-          "question": "Vous cherchez la norme EURO de votre véhicule. Le certificat d'immatriculation la mentionne-t-il ?",
-          "choices": [
-            "Non",
-            "Oui, la norme EURO figure sur le certificat d'immatriculation",
-            "Cela dépend du véhicule",
-            "Uniquement pour les véhicules diesel"
-          ],
-          "correct": 1,
-          "explanation": "La norme EURO figure sur le certificat d'immatriculation.",
           "theoryCardIndex": 4
         },
         {
@@ -3087,19 +2840,6 @@
           ],
           "correct": 1,
           "explanation": "Anticiper permet de freiner plus tôt et en douceur, réduisant la distance nécessaire pour s'arrêter.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "I3_Q54",
-          "question": "Vous entendez le conseil \"regarder au-delà du conducteur devant vous\". Que signifie-t-il concrètement ?",
-          "choices": [
-            "Doubler le véhicule devant vous",
-            "Observer la circulation bien plus loin devant, pas uniquement le véhicule immédiatement devant vous",
-            "Regarder dans le rétroviseur",
-            "Fermer les yeux"
-          ],
-          "correct": 1,
-          "explanation": "Observer loin devant permet d'anticiper les freinages, ralentissements ou dangers avant d'y être confronté.",
           "theoryCardIndex": 5
         },
         {
@@ -4240,19 +3980,6 @@
           "theoryCardIndex": 6
         },
         {
-          "id": "I4_Q64",
-          "question": "Votre véhicule est en survirage. Devez-vous accélérer ?",
-          "choices": [
-            "Oui, toujours",
-            "Non, sauf si la chaussée offre une bonne adhérence et n'est pas glissante",
-            "Oui, pour reprendre le contrôle",
-            "Non, en aucun cas"
-          ],
-          "correct": 1,
-          "explanation": "Accélérer lors d'un survirage peut aggraver la situation sauf sur chaussée très adhérente.",
-          "theoryCardIndex": 6
-        },
-        {
           "id": "I4_Q65",
           "question": "Vous vérifiez le niveau de liquide de refroidissement. Quel est le rôle de ce liquide ?",
           "choices": [
@@ -4393,19 +4120,6 @@
           ],
           "correct": 1,
           "explanation": "Un feu rouge n'est pas considéré comme un arrêt au sens du code : l'utilisation reste interdite.",
-          "theoryCardIndex": 8
-        },
-        {
-          "id": "I4_Q76",
-          "question": "Vous êtes à l'arrêt complet dans un embouteillage et vous souhaitez consulter votre téléphone en main. Pouvez-vous le faire ?",
-          "choices": [
-            "Oui, vous ne bougez pas",
-            "Non, un embouteillage n'est PAS considéré comme un arrêt au sens du code",
-            "Oui, si le trafic est immobile",
-            "Oui, avec prudence"
-          ],
-          "correct": 1,
-          "explanation": "Un embouteillage ne constitue pas un arrêt au sens du code : l'utilisation du téléphone y est interdite.",
           "theoryCardIndex": 8
         },
         {

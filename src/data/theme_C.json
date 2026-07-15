@@ -176,19 +176,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "C1_Q2",
-          "question": "Vous souhaitez conduire un minibus pour une sortie entre amis. Pouvez-vous le faire avec un permis B ?",
-          "choices": [
-            "Non, il faut un permis D",
-            "Oui, si sa MMA ne depasse pas 3,5 tonnes",
-            "Uniquement pour un usage prive",
-            "Non, jamais"
-          ],
-          "correct": 1,
-          "explanation": "Un minibus est autorisé avec un permis B si sa MMA ne dépasse pas 3,5 tonnes.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "C1_Q3",
           "question": "Vous preparez votre examen theorique. Quelle est la masse maximale autorisee pour conduire avec un permis B ?",
           "choices": [
@@ -199,19 +186,6 @@
           ],
           "correct": 1,
           "explanation": "Le permis B est limité aux véhicules dont la MMA ne dépasse pas 3 500 kg.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "C1_Q4",
-          "question": "Vous trouvez un vehicule dont la MMA est de 3 800 kg. Pouvez-vous le conduire avec votre permis B ?",
-          "choices": [
-            "Oui, c'est proche de la limite",
-            "Non, la MMA depasse 3 500 kg",
-            "Oui, si vous ne le chargez pas trop",
-            "Oui, avec une autorisation speciale"
-          ],
-          "correct": 1,
-          "explanation": "3 800 kg dépasse la limite de 3 500 kg du permis B.",
           "theoryCardIndex": 0
         },
         {
@@ -238,19 +212,6 @@
           ],
           "correct": 1,
           "explanation": "La MMA (Masse Maximale Autorisée) inclut tout : le véhicule, le carburant, le conducteur, les passagers et le chargement.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "C1_Q7",
-          "question": "Vous calculez la MMA de votre vehicule. Inclut-elle le poids du conducteur et des passagers ?",
-          "choices": [
-            "Non, uniquement le vehicule et le chargement",
-            "Oui, carburant, conducteur, passagers et chargement sont inclus",
-            "Non, uniquement le carburant et le chargement",
-            "Uniquement le conducteur"
-          ],
-          "correct": 1,
-          "explanation": "La MMA comprend tout : carburant, conducteur, passagers et chargement.",
           "theoryCardIndex": 0
         },
         {
@@ -319,32 +280,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "C1_Q13",
-          "question": "Vous conduisez une camionnette de 2,8 tonnes MMA. Un signal de vitesse avec panneau additionnel limite les vehicules de MMA > 3,5 tonnes. Etes-vous concerne ?",
-          "choices": [
-            "Oui, c'est une camionnette",
-            "Non, votre MMA est inferieure a 3,5 tonnes",
-            "Oui, toutes les camionnettes sont concernees",
-            "Cela depend du chargement"
-          ],
-          "correct": 1,
-          "explanation": "2,8 tonnes < 3,5 tonnes : le signal avec panneau additionnel ne vous vise pas.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "C1_Q14",
-          "question": "Vous conduisez un minibus de MMA 3 200 kg. Un signal indique 50 km/h pour les vehicules de MMA > 3,5 tonnes et 70 km/h pour les autres. A quelle vitesse roulez-vous ?",
-          "choices": [
-            "50 km/h",
-            "70 km/h",
-            "120 km/h",
-            "90 km/h"
-          ],
-          "correct": 1,
-          "explanation": "3 200 kg < 3,5 tonnes : vous roulez à 70 km/h.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "C1_Q15",
           "question": "Vous cherchez la MMA de votre voiture. Ou est-elle mentionnee ?",
           "choices": [
@@ -381,19 +316,6 @@
           ],
           "correct": 1,
           "explanation": "MMA = poids max théorique (fixe). MEC = poids réel actuel (variable).",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "C1_Q18",
-          "question": "Vous ajoutez du chargement dans votre voiture. La MMA change-t-elle selon le chargement ?",
-          "choices": [
-            "Oui, elle augmente avec la charge",
-            "Non, la MMA reste toujours la meme, c'est la MEC qui change",
-            "Oui, si vous ajoutez des passagers",
-            "Non, ni la MMA ni la MEC ne changent"
-          ],
-          "correct": 1,
-          "explanation": "La MMA est fixe (définie par le fabricant). C'est la MEC qui varie selon la charge.",
           "theoryCardIndex": 1
         },
         {
@@ -462,19 +384,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "C1_Q24",
-          "question": "Vous voyez un signal de limitation de MEC. S'applique-t-il au poids reel ou au poids maximal theorique ?",
-          "choices": [
-            "Au poids maximal theorique (MMA)",
-            "Au poids reel du vehicule a ce moment (MEC)",
-            "Aux deux",
-            "Aucun des deux"
-          ],
-          "correct": 1,
-          "explanation": "Un signal de MEC concerne le poids réel du véhicule à ce moment précis.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "C1_Q25",
           "question": "Vous conduisez un camion vide pesant 4 tonnes. Un signal rond rouge porte le chiffre '5t'. Pouvez-vous passer ?",
           "choices": [
@@ -485,7 +394,8 @@
           ],
           "correct": 1,
           "explanation": "Si c'est un signal de MEC, votre poids réel (4 t) est inférieur à la limite (5 t) : vous pouvez passer.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "C21"
         },
         {
           "id": "C1_Q26",
@@ -553,19 +463,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "C1_Q31",
-          "question": "Vous verifiez votre extincteur et il contient 0,9 kg de poudre. Est-il conforme ?",
-          "choices": [
-            "Oui, c'est presque 1 kg",
-            "Non, il doit contenir au minimum 1 kg de poudre",
-            "Oui, la marge de tolerance le permet",
-            "Cela depend du type d'extincteur"
-          ],
-          "correct": 1,
-          "explanation": "0,9 kg < 1 kg : l'extincteur n'est pas conforme.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "C1_Q32",
           "question": "Vous verifiez votre equipement. Un gilet de securite reflechissant est-il obligatoire dans votre voiture ?",
           "choices": [
@@ -589,19 +486,6 @@
           ],
           "correct": 1,
           "explanation": "Le gilet doit être dans l'habitacle (pas dans le coffre) pour être accessible avant de sortir.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "C1_Q34",
-          "question": "Vous vous demandez pourquoi ne pas ranger le gilet dans le coffre. Quelle est la raison ?",
-          "choices": [
-            "Il s'abime",
-            "Parce que le conducteur doit le mettre avant de sortir du vehicule",
-            "Le coffre est reserve a l'extincteur",
-            "C'est une recommandation"
-          ],
-          "correct": 1,
-          "explanation": "En cas de panne sur autoroute, vous devez enfiler le gilet AVANT de sortir du véhicule — donc il doit être accessible de l'habitacle.",
           "theoryCardIndex": 2
         },
         {
@@ -683,19 +567,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "C1_Q41",
-          "question": "Vous avez perdu votre permis de conduire et attendez le duplicata. Pouvez-vous conduire entre-temps ?",
-          "choices": [
-            "Oui, avec l'attestation de la commune",
-            "Non, vous ne pouvez pas conduire",
-            "Oui, pendant une semaine",
-            "Oui, avec une copie"
-          ],
-          "correct": 1,
-          "explanation": "En cas de perte ou vol du permis, vous ne pouvez pas conduire en attendant le duplicata.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "C1_Q42",
           "question": "Vous verifiez les documents de votre voiture. Quels documents doivent s'y trouver ?",
           "choices": [
@@ -706,19 +577,6 @@
           ],
           "correct": 1,
           "explanation": "4 documents dans la voiture : certificat de conformité, d'immatriculation, d'assurance et de contrôle technique.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "C1_Q43",
-          "question": "Vous vous demandez si le certificat de controle technique doit etre dans la voiture. Est-ce le cas ?",
-          "choices": [
-            "Non, uniquement a la maison",
-            "Oui, il doit etre present en cas d'inspection",
-            "Non, c'est facultatif",
-            "Uniquement en cas de controle technique"
-          ],
-          "correct": 1,
-          "explanation": "Le certificat de contrôle technique fait partie des documents obligatoires dans la voiture.",
           "theoryCardIndex": 3
         },
         {
@@ -748,45 +606,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "C1_Q46",
-          "question": "Vous presentez une photocopie de votre certificat d'immatriculation lors d'un controle. Est-ce conforme ?",
-          "choices": [
-            "Oui, une copie suffit",
-            "Non, le certificat d'immatriculation doit etre un original",
-            "Oui, si la copie est certifiee",
-            "Cela depend du controle"
-          ],
-          "correct": 1,
-          "explanation": "Le certificat d'immatriculation doit être un original. Les copies ne sont pas acceptées.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "C1_Q47",
-          "question": "Vous avez une copie papier de votre certificat d'assurance dans la voiture et le PDF sur votre telephone. Est-ce conforme ?",
-          "choices": [
-            "Non, il faut l'original",
-            "Oui, c'est le seul document qui peut etre en copie",
-            "Non, une seule copie suffit",
-            "Cela depend de l'assureur"
-          ],
-          "correct": 1,
-          "explanation": "Le certificat d'assurance est le seul document pouvant être en copie. Copie papier et PDF sont tous deux valables.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "C1_Q48",
-          "question": "Vous etes arrete par la police. Quels documents personnels devez-vous presenter ?",
-          "choices": [
-            "Uniquement le permis",
-            "La carte d'identite et le permis de conduire",
-            "Uniquement la carte d'identite",
-            "Aucun document personnel"
-          ],
-          "correct": 1,
-          "explanation": "Vous devez présenter personnellement votre carte d'identité et votre permis de conduire.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "C1_Q49",
           "question": "Vous revisez votre theorie. Combien de documents au total devez-vous avoir (personnels + vehicule) ?",
           "choices": [
@@ -810,19 +629,6 @@
           ],
           "correct": 1,
           "explanation": "Le permis provisoire n'est valable qu'en Belgique.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "C1_Q51",
-          "question": "Vous avez un permis provisoire et prevoyez de partir en vacances en France. Pouvez-vous y conduire ?",
-          "choices": [
-            "Oui, la France est voisine",
-            "Non, le permis provisoire n'est valable qu'en Belgique",
-            "Oui, avec une autorisation",
-            "Oui, si vous etes accompagne"
-          ],
-          "correct": 1,
-          "explanation": "Le permis provisoire est strictement valable en Belgique uniquement.",
           "theoryCardIndex": 3
         },
         {
@@ -850,7 +656,7 @@
           "correct": 1,
           "explanation": "Le signal bleu avec P blanc indique un stationnement autorisé.",
           "destination": "panneaux",
-          "sign": "E5"
+          "sign": "E1"
         },
         {
           "id": "C1_Q54",
@@ -864,20 +670,7 @@
           "correct": 1,
           "explanation": "Le panneau additionnel de masse restreint le stationnement aux véhicules dépassant la masse indiquée (ex : camions).",
           "destination": "panneaux",
-          "sign": "E5"
-        },
-        {
-          "id": "C1_Q55",
-          "question": "Vous voyez un signal interdisant le depassement aux vehicules de transport de MMA > 3,5 tonnes. Vous conduisez une voiture. Pouvez-vous depasser ?",
-          "choices": [
-            "Non, c'est interdit pour tout le monde",
-            "Oui, ce signal ne concerne que les vehicules de transport > 3,5 tonnes",
-            "Non, sauf les cyclistes",
-            "Cela depend de la route"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal d'interdiction de dépasser vise uniquement les véhicules de transport > 3,5 tonnes. Votre voiture n'est pas concernée.",
-          "theoryCardIndex": 0
+          "sign": "E1"
         },
         {
           "id": "C1_Q56",
@@ -893,32 +686,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "C1_Q57",
-          "question": "Vous voyez un signal de vitesse avec panneau additionnel MMA > 3,5 tonnes. Vous conduisez une voiture. S'applique-t-il a vous ?",
-          "choices": [
-            "Oui, c'est un signal de vitesse",
-            "Non, si le panneau additionnel indique MMA > 3,5 tonnes et votre voiture ne depasse pas cette limite",
-            "Oui, toujours",
-            "Cela depend de la vitesse"
-          ],
-          "correct": 1,
-          "explanation": "Si votre MMA est inférieure au seuil indiqué, le signal avec panneau additionnel ne vous concerne pas.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "C1_Q58",
-          "question": "Vous conduisez votre voiture. Un signal indique 50 km/h pour MMA > 3,5 tonnes et 70 km/h pour les autres. Quelle vitesse devez-vous respecter ?",
-          "choices": [
-            "50 km/h",
-            "70 km/h",
-            "120 km/h",
-            "90 km/h"
-          ],
-          "correct": 1,
-          "explanation": "Votre voiture a une MMA ≤ 3,5 tonnes : la limite de 70 km/h s'applique.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "C1_Q59",
           "question": "Vous voyez un signal rond rouge avec un chiffre de masse. Que signifie-t-il ?",
           "choices": [
@@ -929,20 +696,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la masse en charge (MEC) dépasse la valeur indiquée.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "C1_Q60",
-          "question": "Vous voyez un signal indiquant '5t' en forme ronde rouge. Concerne-t-il la MMA ou la MEC ?",
-          "choices": [
-            "La MMA",
-            "La MEC (masse en charge reelle)",
-            "Les deux",
-            "Aucune"
-          ],
-          "correct": 1,
-          "explanation": "Un tel signal de masse concerne la MEC (poids réel), pas la MMA théorique.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "C21"
         },
         {
           "id": "C1_Q61",
@@ -955,20 +710,6 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit de tourner à gauche au prochain carrefour.",
-          "destination": "panneaux",
-          "sign": "C31a"
-        },
-        {
-          "id": "C1_Q62",
-          "question": "Vous voyez ce meme signal d'interdiction de tourner avec un panneau additionnel de masse. Que signifie-t-il ?",
-          "choices": [
-            "Interdiction pour tout le monde",
-            "L'interdiction de tourner ne s'applique qu'aux vehicules dont la masse en charge depasse la masse indiquee",
-            "La masse maximale pour tourner",
-            "Le poids de la route"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau additionnel de masse restreint l'interdiction aux véhicules dont la MEC dépasse la valeur indiquée.",
           "destination": "panneaux",
           "sign": "C31a"
         },
@@ -996,7 +737,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules de transport de marchandises.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "C23"
         },
         {
           "id": "C1_Q65",
@@ -1011,32 +753,6 @@
           "explanation": "Le panneau additionnel MMA restreint l'interdiction aux véhicules de transport de marchandises dépassant cette masse.",
           "theoryCardIndex": 0,
           "sign": "C23"
-        },
-        {
-          "id": "C1_Q66",
-          "question": "Vous roulez sur une route pour automobiles a 2x2 bandes avec berme centrale. Un signal indique 60 km/h (MMA > 3,5 t) et un autre 90 km/h (autres). Vous conduisez une voiture. Quelle vitesse ?",
-          "choices": [
-            "60 km/h",
-            "90 km/h",
-            "120 km/h",
-            "70 km/h"
-          ],
-          "correct": 1,
-          "explanation": "Votre voiture a une MMA ≤ 3,5 tonnes : la vitesse de 90 km/h s'applique.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "C1_Q67",
-          "question": "Vous arrivez devant un pont avec un signal de MEC limitee a 2 tonnes. Votre voiture chargee pese 1 800 kg. Pouvez-vous passer ?",
-          "choices": [
-            "Non, c'est trop risque",
-            "Oui, votre MEC est inferieure a 2 tonnes",
-            "Non, les voitures sont interdites sur les ponts limites",
-            "Cela depend de la vitesse"
-          ],
-          "correct": 1,
-          "explanation": "1 800 kg < 2 000 kg : votre MEC est inférieure à la limite du pont.",
-          "theoryCardIndex": 1
         },
         {
           "id": "C1_Q68",
@@ -1064,20 +780,7 @@
           "correct": 1,
           "explanation": "Ce stationnement est réservé aux véhicules de MMA > 3,5 tonnes. Votre voiture (1 600 kg) ne peut pas s'y garer.",
           "destination": "panneaux",
-          "sign": "E5"
-        },
-        {
-          "id": "C1_Q70",
-          "question": "Vous revisez votre theorie. Quelle est la difference entre un signal portant sur la MMA et un signal portant sur la MEC ?",
-          "choices": [
-            "Aucune difference",
-            "La MMA est le poids maximal theorique (fixe), la MEC est le poids reel (variable selon la charge)",
-            "La MMA est toujours plus basse",
-            "La MEC est toujours plus haute"
-          ],
-          "correct": 1,
-          "explanation": "MMA = poids théorique fixe du fabricant. MEC = poids réel variable selon la charge du moment.",
-          "theoryCardIndex": 1
+          "sign": "E1"
         },
         {
           "id": "C1_Q71",
@@ -1091,19 +794,6 @@
           "correct": 1,
           "explanation": "Le signal porte sur la MEC. Votre MEC (3 200 kg) > 3 000 kg : vous ne pouvez pas passer.",
           "theoryCardIndex": 0
-        },
-        {
-          "id": "C1_Q72",
-          "question": "Vous roulez et un signal C43 de vitesse est suivi 300 metres plus loin par un carrefour. Apres le carrefour, la limitation est-elle encore valable ?",
-          "choices": [
-            "Oui, jusqu'au prochain signal",
-            "Non, le C43 est valable uniquement jusqu'au prochain carrefour",
-            "Oui, sur encore 500 metres",
-            "Cela depend de la route"
-          ],
-          "correct": 1,
-          "explanation": "Le signal C43 n'est valable que jusqu'au prochain carrefour. Après celui-ci, la limitation ne s'applique plus.",
-          "theoryCardIndex": 1
         }
       ]
     },
@@ -1344,7 +1034,7 @@
           ],
           "correct": 1,
           "explanation": "La hauteur maximale d'un véhicule, chargement compris, est de 4 mètres. Au-delà, c'est un 'gabarit exceptionnel'. Les ponts et tunnels peuvent imposer une autre hauteur via un signal d'interdiction.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C2_Q2",
@@ -1357,7 +1047,7 @@
           ],
           "correct": 1,
           "explanation": "Un véhicule qui dépasse 4 mètres de hauteur (chargement compris) entre dans la catégorie des transports exceptionnels.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C2_Q3",
@@ -1370,7 +1060,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal d'interdiction de hauteur s'applique à tous les véhicules. Si votre hauteur (chargement compris) dépasse la limite indiquée, vous ne pouvez pas passer.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C2_Q4",
@@ -1383,7 +1073,7 @@
           ],
           "correct": 1,
           "explanation": "Le coffre de toit augmente la résistance à l'air et donc la consommation de carburant. Il faut le retirer dès qu'on n'en a plus besoin.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C2_Q5",
@@ -1396,7 +1086,7 @@
           ],
           "correct": 1,
           "explanation": "Les objets lourds doivent être placés dans le coffre, pas sur le toit, pour ne pas déstabiliser le véhicule dans les virages.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C2_Q6",
@@ -1409,7 +1099,7 @@
           ],
           "correct": 1,
           "explanation": "Il est préférable de fixer les vélos à l'arrière plutôt que sur le toit.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "C2_Q7",
@@ -1448,7 +1138,7 @@
           ],
           "correct": 1,
           "explanation": "La largeur d'un véhicule chargé, toutes saillies comprises, ne peut excéder 2,55 mètres.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C2_Q10",
@@ -1461,7 +1151,7 @@
           ],
           "correct": 1,
           "explanation": "Un véhicule chargé de plus de 2,55 mètres de large est un transport exceptionnel.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C2_Q11",
@@ -1474,7 +1164,7 @@
           ],
           "correct": 1,
           "explanation": "Votre voiture fait 1,80 m, ce qui est inférieur à la limite de 2 m. Vous pouvez passer.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C2_Q12",
@@ -1487,7 +1177,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal de largeur maximale concerne tous les véhicules dont la largeur (chargement compris) dépasse la limite indiquée.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "C2_Q13",
@@ -1500,20 +1190,7 @@
           ],
           "correct": 1,
           "explanation": "En aucun cas le chargement ne peut dépasser, à l'avant, l'extrémité de la carrosserie.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "C2_Q14",
-          "question": "Vous transportez une echelle sur les barres de toit. Peut-elle depasser l'avant du vehicule ?",
-          "choices": [
-            "Oui, de 50 cm",
-            "Non, jamais",
-            "Oui, avec un drapeau rouge",
-            "Oui, de 1 metre"
-          ],
-          "correct": 1,
-          "explanation": "Le chargement ne peut en aucun cas dépasser l'avant de la carrosserie.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q15",
@@ -1526,7 +1203,7 @@
           ],
           "correct": 1,
           "explanation": "Le chargement ne peut pas dépasser l'extrémité arrière du véhicule de plus d'1 mètre.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q16",
@@ -1539,7 +1216,7 @@
           ],
           "correct": 1,
           "explanation": "Au-delà d'1 mètre de dépassement, la charge doit être indivisible et un panneau d'avertissement doit être fixé à l'arrière.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q17",
@@ -1552,20 +1229,7 @@
           ],
           "correct": 1,
           "explanation": "Une charge indivisible peut dépasser de maximum 3 mètres l'arrière, à condition d'y accrocher un panneau d'avertissement. 2,5 mètres est autorisé.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "C2_Q18",
-          "question": "Vous transportez une charge indivisible. Quelle est la saillie arriere maximale autorisee ?",
-          "choices": [
-            "1 metre",
-            "2 metres",
-            "3 metres",
-            "4 metres"
-          ],
-          "correct": 2,
-          "explanation": "Une charge indivisible peut dépasser de maximum 3 mètres l'extrémité arrière du véhicule, avec un panneau d'avertissement.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q19",
@@ -1578,20 +1242,7 @@
           ],
           "correct": 1,
           "explanation": "Une charge indivisible est une charge qui ne peut être ni pliée ni rétractée.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "C2_Q20",
-          "question": "Vous transportez une planche de 5 metres qui depasse de 3,5 metres a l'arriere. Est-ce autorise ?",
-          "choices": [
-            "Oui, avec un panneau",
-            "Non, la saillie maximale est de 3 metres meme pour une charge indivisible",
-            "Oui, c'est un transport exceptionnel autorise",
-            "Oui, si vous roulez lentement"
-          ],
-          "correct": 1,
-          "explanation": "Même pour une charge indivisible, la saillie arrière maximale est de 3 mètres. 3,5 mètres n'est pas autorisé.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q21",
@@ -1604,7 +1255,7 @@
           ],
           "correct": 1,
           "explanation": "Lorsque l'éclairage est requis, le panneau d'avertissement doit être muni d'un feu rouge orienté vers l'arrière et d'un catadioptre orange de chaque côté.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q22",
@@ -1617,7 +1268,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal de longueur maximale concerne tous les véhicules et trains de véhicules, y compris voiture + caravane.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q23",
@@ -1630,7 +1281,7 @@
           ],
           "correct": 1,
           "explanation": "Le signal de longueur s'applique à l'ensemble voiture + caravane. Votre train de 11 mètres dépasse la limite de 10 mètres.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q24",
@@ -1643,7 +1294,7 @@
           ],
           "correct": 1,
           "explanation": "Un véhicule tractant une remorque forme un 'train de véhicules'.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 3
         },
         {
           "id": "C2_Q25",
@@ -1656,7 +1307,7 @@
           ],
           "correct": 1,
           "explanation": "Le conducteur doit disposer d'une largeur latérale d'au moins 55 cm.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C2_Q26",
@@ -1669,7 +1320,7 @@
           ],
           "correct": 1,
           "explanation": "Chaque passager avant doit disposer de minimum 40 cm de largeur.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C2_Q27",
@@ -1682,20 +1333,7 @@
           ],
           "correct": 1,
           "explanation": "La banquette avant pour trois personnes doit mesurer au moins 135 cm (55 cm conducteur + 2 × 40 cm passagers).",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "C2_Q28",
-          "question": "Vous calculez la largeur de la banquette avant pour 3 personnes (135 cm). Comment se decompose-t-elle ?",
-          "choices": [
-            "3 x 45 cm",
-            "55 cm conducteur + 2 x 40 cm passagers",
-            "45 cm + 45 cm + 45 cm",
-            "50 cm + 2 x 42,5 cm"
-          ],
-          "correct": 1,
-          "explanation": "135 cm = 55 cm pour le conducteur + 40 cm + 40 cm pour les deux passagers.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C2_Q29",
@@ -1708,7 +1346,7 @@
           ],
           "correct": 1,
           "explanation": "L'appui-tête doit être réglé de manière à ce que sa partie supérieure se situe à la même hauteur que le sommet de la tête.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C2_Q30",
@@ -1721,7 +1359,7 @@
           ],
           "correct": 1,
           "explanation": "Un appui-tête correctement réglé offre une protection optimale et contribue à une bonne position de conduite.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 4
         },
         {
           "id": "C2_Q31",
@@ -1734,7 +1372,7 @@
           ],
           "correct": 1,
           "explanation": "La ceinture de sécurité doit être portée toujours quand elle est présente dans le véhicule, par le conducteur comme par les passagers.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "C2_Q32",
@@ -1747,20 +1385,7 @@
           ],
           "correct": 1,
           "explanation": "La ceinture doit être portée au-dessus de l'épaule.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "C2_Q33",
-          "question": "Vous avez un passager a l'arriere. Doit-il porter la ceinture ?",
-          "choices": [
-            "Non, seulement a l'avant",
-            "Oui, quand elle est presente",
-            "Non, c'est recommande mais pas obligatoire",
-            "Uniquement les enfants"
-          ],
-          "correct": 1,
-          "explanation": "Tous les passagers, y compris à l'arrière, doivent porter la ceinture quand elle est présente.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "C2_Q34",
@@ -1773,7 +1398,7 @@
           ],
           "correct": 1,
           "explanation": "Le conducteur effectuant une marche arrière est dispensé du port de la ceinture.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "C2_Q35",
@@ -1786,7 +1411,7 @@
           ],
           "correct": 1,
           "explanation": "Un chauffeur de taxi transportant des clients est dispensé du port de la ceinture.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "C2_Q36",
@@ -1799,7 +1424,7 @@
           ],
           "correct": 1,
           "explanation": "Un facteur de La Poste distribuant le courrier de porte en porte est dispensé du port de la ceinture.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "C2_Q37",
@@ -1812,7 +1437,7 @@
           ],
           "correct": 1,
           "explanation": "Les agents qualifiés et services de secours sont dispensés du port de la ceinture si leur mission l'exige.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "C2_Q38",
@@ -1825,7 +1450,7 @@
           ],
           "correct": 1,
           "explanation": "Les femmes enceintes SONT tenues de porter la ceinture de sécurité. Elles ne bénéficient d'aucune exemption.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "C2_Q39",
@@ -1838,20 +1463,7 @@
           ],
           "correct": 2,
           "explanation": "La femme enceinte DOIT porter la ceinture. Les trois autres bénéficient d'une exemption dans leur situation respective.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "C2_Q40",
-          "question": "Vous passez votre examen. Parmi ces personnes, laquelle N'EST PAS dispensee de la ceinture ?",
-          "choices": [
-            "Le facteur en tournee",
-            "Le conducteur en marche arriere",
-            "Le chauffeur de taxi avec clients",
-            "Une femme enceinte"
-          ],
-          "correct": 3,
-          "explanation": "La femme enceinte n'est PAS dispensée de la ceinture. Les trois autres bénéficient d'une exemption.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 5
         },
         {
           "id": "C2_Q41",
@@ -1864,7 +1476,7 @@
           ],
           "correct": 1,
           "explanation": "Un enfant doit voyager dans un DRA s'il a moins de 18 ans ET mesure moins de 1,35 m. Les deux conditions doivent être réunies.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q42",
@@ -1877,7 +1489,7 @@
           ],
           "correct": 1,
           "explanation": "Cet enfant a moins de 18 ans ET mesure moins de 1,35 m : les deux conditions sont réunies, il doit utiliser un DRA.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q43",
@@ -1890,20 +1502,7 @@
           ],
           "correct": 1,
           "explanation": "Cet enfant mesure plus de 1,35 m : même s'il a moins de 18 ans, il peut utiliser uniquement la ceinture.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "C2_Q44",
-          "question": "Vous transportez un enfant de 16 ans mesurant 1,50 m. Peut-il utiliser uniquement la ceinture ?",
-          "choices": [
-            "Non, il faut un DRA",
-            "Oui, il mesure plus de 1,35 m",
-            "Non, il faut les deux",
-            "Cela depend de l'age"
-          ],
-          "correct": 1,
-          "explanation": "Cet enfant mesure plus de 1,35 m : il peut utiliser uniquement la ceinture, sans DRA.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q45",
@@ -1916,20 +1515,7 @@
           ],
           "correct": 1,
           "explanation": "Il est interdit d'installer un DRA dos à la route sur un siège avec airbag frontal actif, sauf si l'airbag a été désactivé ou se désactive automatiquement de manière fiable.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "C2_Q46",
-          "question": "Vous constatez qu'un enfant est dans un DRA dos a la route sur le siege passager avec airbag actif. Que devez-vous faire ?",
-          "choices": [
-            "Rien, c'est correct",
-            "Desactiver l'airbag ou deplacer le DRA a l'arriere",
-            "Attacher l'enfant avec la ceinture uniquement",
-            "Mettre le DRA face a la route"
-          ],
-          "correct": 1,
-          "explanation": "Un DRA dos à la route avec airbag actif est interdit. Il faut désactiver l'airbag ou déplacer le DRA à l'arrière.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q47",
@@ -1942,7 +1528,7 @@
           ],
           "correct": 1,
           "explanation": "La partie inférieure de la ceinture doit passer par-dessus les jambes de l'enfant dans le DRA.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q48",
@@ -1955,7 +1541,7 @@
           ],
           "correct": 1,
           "explanation": "Un DRA doit être homologué, c'est-à-dire conforme aux normes CEE.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q49",
@@ -1968,7 +1554,7 @@
           ],
           "correct": 1,
           "explanation": "L'exception s'applique : plus de 3 ans, courte distance, conducteur non-parent, de manière exceptionnelle. La ceinture suffit mais l'enfant doit être à l'arrière.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q50",
@@ -1981,7 +1567,7 @@
           ],
           "correct": 1,
           "explanation": "Dans cette exception, l'enfant ne peut PAS être à l'avant du véhicule.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q51",
@@ -1994,7 +1580,7 @@
           ],
           "correct": 1,
           "explanation": "L'exception ne s'applique qu'aux enfants de PLUS de 3 ans. Un enfant de 2 ans doit toujours être dans un DRA.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q52",
@@ -2007,7 +1593,7 @@
           ],
           "correct": 1,
           "explanation": "Cet enfant mesure plus de 1,35 m : il peut utiliser uniquement la ceinture. Mais il doit rester à l'arrière.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q53",
@@ -2020,7 +1606,7 @@
           ],
           "correct": 2,
           "explanation": "Une mauvaise réponse sur la ceinture des enfants fait perdre 5 points à l'examen.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q54",
@@ -2033,7 +1619,7 @@
           ],
           "correct": 2,
           "explanation": "Ne pas répondre à une question sur la ceinture des enfants fait perdre 1 point à l'examen.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 6
         },
         {
           "id": "C2_Q55",
@@ -2046,7 +1632,7 @@
           ],
           "correct": 1,
           "explanation": "Les angles morts sont les zones à côté ou derrière le véhicule que le conducteur ne peut pas voir, même avec des rétroviseurs correctement réglés.",
-          "theoryCardIndex": 6
+          "theoryCardIndex": 7
         },
         {
           "id": "C2_Q56",
@@ -2059,7 +1645,7 @@
           ],
           "correct": 1,
           "explanation": "Même avec des rétroviseurs correctement réglés, il existe toujours des angles morts.",
-          "theoryCardIndex": 6
+          "theoryCardIndex": 7
         },
         {
           "id": "C2_Q57",
@@ -2072,7 +1658,7 @@
           ],
           "correct": 1,
           "explanation": "Le Blind Spot Warning allume un voyant LED dans le rétroviseur extérieur quand un usager se trouve dans l'angle mort.",
-          "theoryCardIndex": 6
+          "theoryCardIndex": 7
         },
         {
           "id": "C2_Q58",
@@ -2085,7 +1671,7 @@
           ],
           "correct": 1,
           "explanation": "Quand le voyant est allumé, ne dépassez pas : attendez qu'il s'éteigne avant de changer de voie.",
-          "theoryCardIndex": 6
+          "theoryCardIndex": 7
         },
         {
           "id": "C2_Q59",
@@ -2098,7 +1684,7 @@
           ],
           "correct": 1,
           "explanation": "Le système de détection d'angle mort ne remplace pas la vérification manuelle : vous devez toujours regarder par-dessus votre épaule.",
-          "theoryCardIndex": 6
+          "theoryCardIndex": 7
         },
         {
           "id": "C2_Q60",
@@ -2111,7 +1697,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit le passage aux véhicules transportant certaines marchandises dangereuses.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8,
+          "sign": "C24"
         },
         {
           "id": "C2_Q61",
@@ -2124,7 +1711,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit le passage aux véhicules transportant des marchandises inflammables ou explosives.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8,
+          "sign": "C24b"
         },
         {
           "id": "C2_Q62",
@@ -2137,7 +1725,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit le passage aux véhicules transportant des marchandises polluantes.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8,
+          "sign": "C24c"
         },
         {
           "id": "C2_Q63",
@@ -2150,20 +1739,7 @@
           ],
           "correct": 2,
           "explanation": "Une mauvaise réponse sur les signaux de marchandises dangereuses fait perdre 5 points à l'examen.",
-          "theoryCardIndex": 7
-        },
-        {
-          "id": "C2_Q64",
-          "question": "Vous conduisez une voiture au GPL et voyez le signal d'interdiction pour marchandises inflammables. Pouvez-vous le franchir ?",
-          "choices": [
-            "Non, le GPL est inflammable",
-            "Oui, le signal concerne le chargement, pas le carburant utilise",
-            "Non, le GPL est un gaz dangereux",
-            "Uniquement hors agglomeration"
-          ],
-          "correct": 1,
-          "explanation": "Les signaux de marchandises dangereuses concernent le chargement transporté, pas le carburant du véhicule. Une voiture au GPL peut donc les franchir.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8
         },
         {
           "id": "C2_Q65",
@@ -2176,7 +1752,7 @@
           ],
           "correct": 1,
           "explanation": "Tous les signaux de marchandises dangereuses concernent le chargement, pas le carburant. Une voiture au GPL peut les franchir.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8
         },
         {
           "id": "C2_Q66",
@@ -2189,7 +1765,7 @@
           ],
           "correct": 1,
           "explanation": "Avec un permis provisoire, il est interdit de tracter une remorque.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8
         },
         {
           "id": "C2_Q67",
@@ -2202,7 +1778,7 @@
           ],
           "correct": 1,
           "explanation": "Avec un permis B définitif, vous pouvez tracter une remorque de MMA ≤ 750 kg sans condition supplémentaire.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8
         },
         {
           "id": "C2_Q68",
@@ -2215,7 +1791,7 @@
           ],
           "correct": 1,
           "explanation": "La remorque dépasse 750 kg mais le total (2 000 + 850 = 2 850 kg) ne dépasse pas 3 500 kg. C'est autorisé avec un permis B définitif.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8
         },
         {
           "id": "C2_Q69",
@@ -2228,20 +1804,7 @@
           ],
           "correct": 0,
           "explanation": "La remorque dépasse 750 kg ET le total (3 000 + 800 = 3 800 kg) dépasse 3 500 kg. C'est interdit avec un permis B.",
-          "theoryCardIndex": 7
-        },
-        {
-          "id": "C2_Q70",
-          "question": "Vous souhaitez tracter une remorque de plus de 750 kg avec votre permis B. Quelle est la condition ?",
-          "choices": [
-            "Avoir un permis BE",
-            "Que la MMA voiture + remorque reunies ne depasse pas 3 500 kg",
-            "Avoir un permis provisoire",
-            "Que la remorque soit freinee"
-          ],
-          "correct": 1,
-          "explanation": "Pour tracter une remorque de MMA > 750 kg avec un permis B, la MMA totale (voiture + remorque) ne doit pas dépasser 3 500 kg.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8
         },
         {
           "id": "C2_Q71",
@@ -2254,7 +1817,7 @@
           ],
           "correct": 0,
           "explanation": "La remorque est ≤ 750 kg, donc aucune condition supplémentaire n'est requise. Vous pouvez tracter.",
-          "theoryCardIndex": 7
+          "theoryCardIndex": 8
         },
         {
           "id": "C2_Q72",
@@ -2267,7 +1830,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la hauteur (chargement compris) dépasse la limite indiquée.",
-          "theoryCardIndex": 8
+          "theoryCardIndex": 1,
+          "sign": "C29"
         },
         {
           "id": "C2_Q73",
@@ -2280,7 +1844,7 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la largeur (chargement compris) dépasse la limite indiquée.",
-          "theoryCardIndex": 8,
+          "theoryCardIndex": 2,
           "sign": "C27"
         },
         {
@@ -2294,60 +1858,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la longueur totale (chargement + remorque compris) dépasse la limite indiquée.",
-          "theoryCardIndex": 8,
+          "theoryCardIndex": 3,
           "sign": "C25"
-        },
-        {
-          "id": "C2_Q75",
-          "question": "Vous transportez une charge indivisible depassant l'arriere. Quand devez-vous accrocher le panneau d'avertissement ?",
-          "choices": [
-            "Des que le chargement depasse l'arriere",
-            "Quand le chargement (indivisible) depasse de plus d'1 metre et de maximum 3 metres l'arriere",
-            "Toujours avec un chargement",
-            "Uniquement sur autoroute"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau d'avertissement est requis quand une charge indivisible dépasse de plus d'1 mètre (et de maximum 3 mètres) l'arrière du véhicule.",
-          "theoryCardIndex": 8
-        },
-        {
-          "id": "C2_Q76",
-          "question": "Vous voyez un signal d'interdiction avec un symbole d'explosion. Que signifie-t-il ?",
-          "choices": [
-            "Zone militaire",
-            "Interdit aux vehicules transportant des marchandises inflammables ou explosives",
-            "Travaux de dynamitage",
-            "Zone d'incendie"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal interdit l'accès aux véhicules transportant des marchandises inflammables ou explosives.",
-          "theoryCardIndex": 8
-        },
-        {
-          "id": "C2_Q77",
-          "question": "Vous voyez un signal d'interdiction avec un symbole de flamme. Que signifie-t-il ?",
-          "choices": [
-            "Station-service",
-            "Interdit aux vehicules transportant certaines marchandises dangereuses",
-            "Zone d'incendie",
-            "Pompiers"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal interdit l'accès aux véhicules transportant certaines marchandises dangereuses.",
-          "theoryCardIndex": 8
-        },
-        {
-          "id": "C2_Q78",
-          "question": "Vous voyez un signal d'interdiction avec un symbole de pollution. Que signifie-t-il ?",
-          "choices": [
-            "Zone ecologique",
-            "Interdit aux vehicules transportant des marchandises polluantes",
-            "Riviere protegee",
-            "Zone verte"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal interdit l'accès aux véhicules transportant des marchandises polluantes.",
-          "theoryCardIndex": 8
         },
         {
           "id": "C2_Q79",
@@ -2360,46 +1872,7 @@
           ],
           "correct": 1,
           "explanation": "Votre hauteur totale (1,60 m avec coffre) est bien inférieure à la limite de 3,5 m. Vous pouvez passer.",
-          "theoryCardIndex": 8
-        },
-        {
-          "id": "C2_Q80",
-          "question": "Vous transportez une planche indivisible depassant de 2 metres l'arriere, de nuit. Que devez-vous prevoir ?",
-          "choices": [
-            "Un drapeau rouge",
-            "Le panneau d'avertissement avec un feu rouge vers l'arriere et un catadioptre orange de chaque cote",
-            "Juste le panneau sans eclairage",
-            "Les warnings"
-          ],
-          "correct": 1,
-          "explanation": "De nuit, le panneau d'avertissement doit être muni d'un feu rouge orienté vers l'arrière et d'un catadioptre orange de chaque côté.",
-          "theoryCardIndex": 8
-        },
-        {
-          "id": "C2_Q81",
-          "question": "Vous conduisez votre voiture avec une caravane (total 12 m). Un signal interdit les vehicules de plus de 10 m. Que faites-vous ?",
-          "choices": [
-            "Vous passez, c'est pour les camions",
-            "Vous ne pouvez pas passer, votre train de vehicules depasse la limite",
-            "Vous detachez la caravane",
-            "Vous passez lentement"
-          ],
-          "correct": 1,
-          "explanation": "Le signal de longueur s'applique à tous les trains de véhicules, y compris voiture + caravane. Votre ensemble de 12 m dépasse la limite de 10 m.",
-          "theoryCardIndex": 8
-        },
-        {
-          "id": "C2_Q82",
-          "question": "Vous roulez au GPL et voyez successivement les trois signaux de marchandises dangereuses. Pouvez-vous tous les franchir ?",
-          "choices": [
-            "Non, le GPL est dangereux",
-            "Oui, les trois, car ils concernent le chargement et non le carburant",
-            "Un seul des trois",
-            "Deux sur trois"
-          ],
-          "correct": 1,
-          "explanation": "Les signaux de marchandises dangereuses concernent le chargement, pas le carburant. Une voiture au GPL peut franchir les trois signaux.",
-          "theoryCardIndex": 8
+          "theoryCardIndex": 1
         },
         {
           "id": "C2_Q83",
@@ -2412,7 +1885,7 @@
           ],
           "correct": 1,
           "explanation": "Le panneau d'avertissement n'est requis qu'au-delà d'1 mètre de dépassement. 80 cm ne nécessite pas de panneau.",
-          "theoryCardIndex": 8
+          "theoryCardIndex": 3
         }
       ]
     },
@@ -2678,19 +2151,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "C3_Q5",
-          "question": "Vous vous interrogez sur les feux de position. Sont-ils utilises pour circuler ?",
-          "choices": [
-            "Oui, en agglomeration",
-            "Non, ce ne sont pas des feux pour circuler",
-            "Oui, de jour",
-            "Oui, par beau temps"
-          ],
-          "correct": 1,
-          "explanation": "Les feux de position ne sont pas utilisés pour circuler. Ils éclairent le moins des quatre types de feux.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "C3_Q6",
           "question": "Vous verifiez votre vehicule. Toutes les voitures ont-elles des feux de stationnement ?",
           "choices": [
@@ -2743,19 +2203,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "C3_Q10",
-          "question": "Vous allumez vos feux de route. Les feux de position s'allument-ils aussi ?",
-          "choices": [
-            "Non, uniquement les feux de route",
-            "Oui, les feux de position avant et les feux rouges arriere s'allument aussi",
-            "Non, il faut les allumer separement",
-            "Uniquement en agglomeration"
-          ],
-          "correct": 1,
-          "explanation": "Quand vous allumez les feux de route, les feux de position avant et les feux rouges arrière s'allument également.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "C3_Q11",
           "question": "Vous roulez a la tombee du jour. Quand devez-vous allumer les feux de croisement ou de route ?",
           "choices": [
@@ -2782,19 +2229,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "C3_Q13",
-          "question": "Vous roulez en journee et il pleut. La visibilite est reduite a 150 metres. Devez-vous allumer vos feux ?",
-          "choices": [
-            "Non, il fait jour",
-            "Oui, la visibilite est inferieure a 200 metres",
-            "Uniquement les antibrouillard",
-            "Uniquement les feux de position"
-          ],
-          "correct": 1,
-          "explanation": "La visibilité (150 m) est inférieure à 200 m : vous devez allumer vos feux de croisement.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "C3_Q14",
           "question": "Vous oubliez d'allumer vos feux de croisement alors que c'est obligatoire. Quelle infraction commettez-vous ?",
           "choices": [
@@ -2805,19 +2239,6 @@
           ],
           "correct": 1,
           "explanation": "Ne pas allumer les feux de croisement quand c'est obligatoire est une infraction grave.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "C3_Q15",
-          "question": "Vous roulez et une eclipse solaire reduit la visibilite. Devez-vous allumer vos feux ?",
-          "choices": [
-            "Non, c'est temporaire",
-            "Oui, si la visibilite est inferieure a 200 metres",
-            "Non, c'est un phenomene naturel",
-            "Uniquement sur autoroute"
-          ],
-          "correct": 1,
-          "explanation": "L'éclipse est l'une des situations qui peut réduire la visibilité sous 200 m : vous devez allumer vos feux.",
           "theoryCardIndex": 1
         },
         {
@@ -2873,19 +2294,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "C3_Q20",
-          "question": "Vous suivez un vehicule de nuit sans intention de le depasser. A partir de quelle distance devez-vous eteindre les feux de route ?",
-          "choices": [
-            "30 metres",
-            "50 metres (sans intention immediate de le depasser)",
-            "100 metres",
-            "200 metres"
-          ],
-          "correct": 1,
-          "explanation": "Les feux de route doivent être éteints quand vous suivez un véhicule à moins de 50 mètres sans intention immédiate de le dépasser.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "C3_Q21",
           "question": "Vous vous appretez a depasser un vehicule de nuit. Pouvez-vous allumer les feux de route ?",
           "choices": [
@@ -2909,19 +2317,6 @@
           ],
           "correct": 1,
           "explanation": "Si vous avez l'intention immédiate de dépasser, vous pouvez garder les feux de route même à moins de 50 mètres.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "C3_Q23",
-          "question": "Vous etes en train de depasser un vehicule avec vos feux de route allumes. Est-ce une infraction ?",
-          "choices": [
-            "Oui, c'est interdit",
-            "Non, les feux de route peuvent etre allumes pendant un depassement",
-            "Oui, vous eblouissez le conducteur depasse",
-            "Cela depend de la vitesse"
-          ],
-          "correct": 1,
-          "explanation": "Les feux de route peuvent être allumés pendant un dépassement. Ce n'est pas une infraction.",
           "theoryCardIndex": 1
         },
         {
@@ -3016,19 +2411,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "C3_Q31",
-          "question": "Vous roulez sous la neige. Quand les feux brouillard arriere doivent-ils etre allumes ?",
-          "choices": [
-            "Toujours",
-            "Quand la visibilite est inferieure a environ 100 metres",
-            "Jamais en cas de neige",
-            "Quand la visibilite est inferieure a 200 metres"
-          ],
-          "correct": 1,
-          "explanation": "En cas de chute de neige, les feux brouillard arrière doivent être allumés quand la visibilité est inférieure à 100 mètres.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "C3_Q32",
           "question": "Vous revisez votre theorie. Quelle est la difference de condition pour les feux brouillard arriere entre brouillard/neige et forte pluie ?",
           "choices": [
@@ -3052,19 +2434,6 @@
           ],
           "correct": 1,
           "explanation": "En entrant dans un banc de brouillard, vous devez réduire progressivement votre vitesse.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "C3_Q34",
-          "question": "Vous entrez dans un banc de brouillard. Pouvez-vous freiner brusquement ?",
-          "choices": [
-            "Oui, pour votre securite",
-            "Non, vous devez reduire progressivement votre vitesse",
-            "Oui, si vous etes sur autoroute",
-            "Oui, si personne ne vous suit"
-          ],
-          "correct": 1,
-          "explanation": "Il ne faut pas freiner brusquement mais réduire progressivement votre vitesse pour ne pas surprendre les véhicules qui suivent.",
           "theoryCardIndex": 2
         },
         {
@@ -3237,32 +2606,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "C3_Q48",
-          "question": "Vous etes en panne sur la route. Pouvez-vous allumer vos warnings ?",
-          "choices": [
-            "Non, il faut uniquement le triangle",
-            "Oui, c'est l'un des cas autorises",
-            "Uniquement sur autoroute",
-            "Uniquement de nuit"
-          ],
-          "correct": 1,
-          "explanation": "La panne est l'un des 3 cas où les warnings sont autorisés.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "C3_Q49",
-          "question": "Vous voyez un danger imminent devant vous. Pouvez-vous allumer vos warnings pour prevenir les conducteurs derriere ?",
-          "choices": [
-            "Non, klaxonnez",
-            "Oui, pour signaler le risque d'accident imminent aux conducteurs derriere vous",
-            "Non, utilisez les feux de route",
-            "Uniquement si vous vous arretez"
-          ],
-          "correct": 1,
-          "explanation": "Signaler un risque d'accident imminent est l'un des 3 cas où les warnings sont autorisés.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "C3_Q50",
           "question": "Vous avez mal gare votre voiture et allumez les warnings. Est-ce autorise ?",
           "choices": [
@@ -3273,19 +2616,6 @@
           ],
           "correct": 1,
           "explanation": "Allumer les warnings pour signaler un mauvais stationnement est une infraction supplémentaire.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "C3_Q51",
-          "question": "Vous allumez les warnings pour indiquer que vous allez reculer pour vous garer. Est-ce autorise ?",
-          "choices": [
-            "Oui, c'est une bonne pratique",
-            "Non, c'est interdit",
-            "Oui, pour prevenir les autres",
-            "Oui, en agglomeration"
-          ],
-          "correct": 1,
-          "explanation": "Allumer les warnings pour reculer en stationnement est interdit.",
           "theoryCardIndex": 4
         },
         {
@@ -3338,19 +2668,6 @@
           ],
           "correct": 1,
           "explanation": "Les clignotants de direction (pas les warnings) signalent que le bus va repartir ou changer de direction.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "C3_Q56",
-          "question": "Vous voyez un bus scolaire a l'arret avec ses warnings. Un enfant traverse devant le bus. Que faites-vous ?",
-          "choices": [
-            "Vous accelerez pour passer vite",
-            "Vous vous arretez pour la securite de l'enfant",
-            "Vous klaxonnez",
-            "Vous passez par la gauche"
-          ],
-          "correct": 1,
-          "explanation": "Les warnings du bus vous ont averti : des enfants bougent. Vous devez vous arrêter pour leur sécurité.",
           "theoryCardIndex": 4
         },
         {
@@ -3458,19 +2775,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "C3_Q65",
-          "question": "Vous vous demandez pourquoi fuir a contresens dans un tunnel en feu. Quelle est la raison ?",
-          "choices": [
-            "Pour trouver la sortie plus vite",
-            "Parce que les ventilateurs poussent les fumees dans le sens de la circulation",
-            "Parce que les secours arrivent de l'autre sens",
-            "Pour ne pas gener la circulation"
-          ],
-          "correct": 1,
-          "explanation": "Les ventilateurs du tunnel poussent les fumées dans le sens de la circulation. Fuir à contresens vous éloigne des fumées.",
-          "theoryCardIndex": 5
-        },
-        {
           "id": "C3_Q66",
           "question": "Vous etes dans un tunnel en feu. Pourquoi faut-il quitter rapidement les lieux ?",
           "choices": [
@@ -3536,32 +2840,6 @@
           "theoryCardIndex": 6
         },
         {
-          "id": "C3_Q71",
-          "question": "Vous etes en agglomeration de jour et voulez depasser. Pouvez-vous klaxonner pour le signaler ?",
-          "choices": [
-            "Oui, comme hors agglomeration",
-            "Non, en agglomeration le klaxon est uniquement autorise pour eviter un accident",
-            "Oui, c'est recommande",
-            "Oui, mais brievement"
-          ],
-          "correct": 1,
-          "explanation": "En agglomération, klaxonner pour signaler un dépassement n'est pas autorisé. Seul le danger justifie le klaxon.",
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "C3_Q72",
-          "question": "Vous etes hors agglomeration de jour et voulez depasser un tracteur. Pouvez-vous klaxonner ?",
-          "choices": [
-            "Non, jamais pour depasser",
-            "Oui, hors agglomeration il est autorise d'avertir un conducteur qu'on s'apprete a le depasser",
-            "Oui, uniquement les tracteurs",
-            "Non, sauf en cas de danger"
-          ],
-          "correct": 1,
-          "explanation": "Hors agglomération de jour, vous pouvez klaxonner pour avertir un conducteur que vous vous apprêtez à le dépasser.",
-          "theoryCardIndex": 6
-        },
-        {
           "id": "C3_Q73",
           "question": "Vous roulez de nuit et souhaitez avertir un conducteur avant de le depasser. Pouvez-vous klaxonner ?",
           "choices": [
@@ -3598,19 +2876,6 @@
           ],
           "correct": 1,
           "explanation": "En cas de danger imminent, le klaxon reste autorisé même la nuit.",
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "C3_Q76",
-          "question": "Vous roulez de nuit hors agglomeration et voulez depasser un vehicule. Comment l'avertir ?",
-          "choices": [
-            "Vous klaxonnez",
-            "Vous faites un appel de phares",
-            "Vous allumez les warnings",
-            "Vous accelerez simplement"
-          ],
-          "correct": 1,
-          "explanation": "La nuit, pour avertir d'un dépassement, on utilise les appels de phares (et non le klaxon).",
           "theoryCardIndex": 6
         }
       ]

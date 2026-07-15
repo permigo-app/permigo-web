@@ -8,7 +8,7 @@
       "title": "De maximumsnelheid",
       "theory": [
         {
-          "title": "Overzicht van de maximumsnelheden",
+          "title": "Deel 1 — Snelheden buiten de bebouwde kom",
           "cards": [
             {
               "type": "text",
@@ -37,7 +37,12 @@
               "content": "📋 De regel\nOp een rijbaan met middenrijstrook is de maximumsnelheid 70 km/u, ongeacht het Gewest.\n\n💡 Waarom\nDe middenrijstrook wordt door beide rijrichtingen gedeeld voor inhaalmanoeuvres. Deze riskantere inrichting vereist een lagere snelheid om de veiligheid te garanderen.\n\n🚗 In de praktijk\nHerkent u een rijbaan met middenrijstrook: twee smalle zijstroken en een gedeelde middenstrook. Rijd op uw zijstrook en gebruik de middenstrook enkel om in te halen.\n\n📍 Voorbeeld\nOp een plattelandsweg in Wallonië met een middenrijstrook rijdt u maximum 70 km/u op uw rechterstrook. Een fietser rijdt voor u: u gebruikt de middenstrook even om hem in te halen.\n\n⚠️ Veelgemaakte fout\nPermanent op de middenrijstrook rijden in plaats van op uw zijstrook te blijven. De middenstrook is geen gewone rijstrook, hij dient enkel voor inhalen.",
               "emoji": "↔️",
               "explanation_simple": "Op een rijbaan met middenrijstrook (de gedeelde middenstrook) is het overal in België 70 km/u. Deze wegen zijn smaller en gevaarlijker."
-            },
+            }
+          ]
+        },
+        {
+          "title": "Deel 2 — Snelheden in de bebouwde kom en zones",
+          "cards": [
             {
               "type": "text",
               "title": "In de bebouwde kom",
@@ -84,12 +89,7 @@
               "content": "📋 De regel\nPlots remmen zonder geldige reden wordt beschouwd als een overtreding.\n\n💡 Waarom\nEen onverwachte abrupte remmanoeuvre kan een kettingbotsing veroorzaken. De bestuurder achter u heeft geen tijd om te reageren, zeker bij hoge snelheid of bij regen.\n\n🚗 In de praktijk\nRem geleidelijk tenzij in noodgeval. Als u sterk moet vertragen, gebruik uw gevaarlichten om bestuurders achter u te waarschuwen.\n\n📍 Voorbeeld\nU rijdt op de E40 aan 120 km/u en remt abrupt omdat u bijna uw afrit gemist hebt. Het voertuig achter u moet hard remmen: dat is een overtreding van uw kant.\n\n⚠️ Veelgemaakte fout\nHard remmen bij het zien van een flitser terwijl u aan de juiste snelheid rijdt. Dit nutteloze reflex brengt de bestuurders achter u in gevaar.",
               "emoji": "🛑",
               "explanation_simple": "Plots remmen zonder geldige reden is verboden. U riskeert een kettingbotsing met de voertuigen achter u."
-            }
-          ]
-        },
-        {
-          "title": "Snelheidswedstrijden",
-          "cards": [
+            },
             {
               "type": "text",
               "title": "Verbod",
@@ -295,7 +295,7 @@
           ],
           "explanation": "De maximumsnelheid in de bebouwde kom in Vlaanderen is 50 km/u.",
           "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q11",
@@ -308,7 +308,7 @@
           ],
           "explanation": "De maximumsnelheid in de bebouwde kom in Wallonie is 50 km/u.",
           "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q12",
@@ -321,7 +321,7 @@
           ],
           "explanation": "De maximumsnelheid in de bebouwde kom in Brussel is 30 km/u.",
           "correct": 2,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q13",
@@ -334,7 +334,7 @@
           ],
           "explanation": "In een woonerf (erftoegangsweg) is de maximumsnelheid 20 km/u.",
           "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q14",
@@ -347,7 +347,7 @@
           ],
           "explanation": "Op een voorbehouden weg is de maximumsnelheid 30 km/u.",
           "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q15",
@@ -360,7 +360,7 @@
           ],
           "explanation": "In een speelstraat is de maximumsnelheid stapvoets.",
           "correct": 2,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q16",
@@ -373,7 +373,7 @@
           ],
           "explanation": "In een schoolstraat is de maximumsnelheid stapvoets.",
           "correct": 2,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q17",
@@ -386,7 +386,7 @@
           ],
           "explanation": "In een schoolomgeving is de maximumsnelheid 30 km/u.",
           "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q18",
@@ -399,7 +399,7 @@
           ],
           "explanation": "In een voetgangerszone is de maximumsnelheid stapvoets.",
           "correct": 2,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q19",
@@ -412,7 +412,7 @@
           ],
           "explanation": "In een fietszone is de maximumsnelheid 30 km/u.",
           "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q20",
@@ -425,7 +425,7 @@
           ],
           "explanation": "De maximumsnelheid bij het naderen en het passeren van een verhoogde inrichting is 30 km/u.",
           "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q21",
@@ -438,59 +438,7 @@
           ],
           "explanation": "Gemotoriseerde voortbewegingstoestellen (elektrische steps, enz.) hebben een maximumsnelheid van 25 km/u.",
           "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D1_Q22",
-          "question": "Je rijdt in Wallonie buiten de bebouwde kom op een weg gescheiden door wegmarkering. Welke maximumsnelheid?",
-          "choices": [
-            "70 km/u",
-            "90 km/u",
-            "120 km/u",
-            "50 km/u"
-          ],
-          "explanation": "In Wallonie, buiten de bebouwde kom, weg gescheiden door wegmarkering = 90 km/u.",
-          "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D1_Q23",
-          "question": "Je rijdt de bebouwde kom van Brussel binnen. Welke maximumsnelheid?",
-          "choices": [
-            "50 km/u",
-            "40 km/u",
-            "30 km/u",
-            "70 km/u"
-          ],
-          "explanation": "In de bebouwde kom van Brussel is de maximumsnelheid 30 km/u.",
-          "correct": 2,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D1_Q24",
-          "question": "Je verlaat de bebouwde kom in Vlaanderen en je bevindt je op een weg met wegmarkering. Welke snelheid?",
-          "choices": [
-            "90 km/u",
-            "70 km/u",
-            "50 km/u",
-            "120 km/u"
-          ],
-          "explanation": "In Vlaanderen, buiten de bebouwde kom, weg gescheiden door wegmarkering = 70 km/u.",
-          "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D1_Q25",
-          "question": "Je rijdt op een rijbaan met middenrijstrook in Wallonie. Welke maximumsnelheid?",
-          "choices": [
-            "90 km/u",
-            "70 km/u",
-            "50 km/u",
-            "120 km/u"
-          ],
-          "explanation": "Op een rijbaan met middenrijstrook is het 70 km/u overal, ongeacht het gewest.",
-          "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q26",
@@ -503,7 +451,7 @@
           ],
           "explanation": "Het woonerf legt 20 km/u op, wat strenger is dan zone 30. Je past altijd de strengste regel toe.",
           "correct": 1,
-          "theoryCardIndex": 0
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q27",
@@ -516,19 +464,6 @@
           ],
           "explanation": "Een snelheidsbeperkingsbord van 90 km/u op de afrit geldt voor die invoegstrook.",
           "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D1_Q28",
-          "question": "Je bent buiten de bebouwde kom in Vlaanderen op een weg met 2x2 rijstroken en middenberm. Welke snelheid?",
-          "choices": [
-            "70 km/u",
-            "90 km/u",
-            "120 km/u",
-            "100 km/u"
-          ],
-          "explanation": "Op een weg met 2x2 rijstroken en middenberm buiten de bebouwde kom is de snelheid 120 km/u (ongeacht het gewest).",
-          "correct": 2,
           "theoryCardIndex": 0
         },
         {
@@ -545,19 +480,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "D1_Q30",
-          "question": "Je rijdt 35 km/u over een verhoogde inrichting. Begaje een overtreding?",
-          "choices": [
-            "Nee, het is onder 50 km/u",
-            "Ja, de limiet is 30 km/u",
-            "Nee, het wordt getolereerd",
-            "Ja, de limiet is 20 km/u"
-          ],
-          "explanation": "De limiet bij het naderen van een verhoogde inrichting is 30 km/u. Rijden aan 35 km/u is een overtreding.",
-          "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
           "id": "D1_Q31",
           "question": "Is te traag rijden zonder reden een overtreding?",
           "choices": [
@@ -568,20 +490,7 @@
           ],
           "explanation": "Te traag rijden zonder reden is een overtreding want het verplicht anderen om je in te halen.",
           "correct": 1,
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "D1_Q32",
-          "question": "Je rijdt 30 km/u in de bebouwde kom zonder enige reden. Is dat correct?",
-          "choices": [
-            "Ja, het is onder de limiet",
-            "Nee, te traag rijden zonder reden is een overtreding die anderen verplicht om je in te halen",
-            "Ja, dat is voorzichtig",
-            "Nee, de minimumlimiet is 40 km/u"
-          ],
-          "explanation": "Overdreven traag rijden zonder reden is een overtreding, zelfs als je onder de maximumlimiet blijft.",
-          "correct": 1,
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "D1_Q33",
@@ -594,20 +503,7 @@
           ],
           "explanation": "Plots remmen zonder reden is een overtreding die de bestuurders achter je in gevaar brengt.",
           "correct": 1,
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "D1_Q34",
-          "question": "Je remt bruusk zonder reden voor een ander voertuig. Wat riskeer je?",
-          "choices": [
-            "Niets",
-            "Het is een overtreding en je brengt de bestuurder achter je in gevaar",
-            "Gewoon een waarschuwing",
-            "Niets als niemand je aanrijdt"
-          ],
-          "explanation": "Bruusk remmen zonder reden is een overtreding en brengt de bestuurder achter je in gevaar.",
-          "correct": 1,
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "D1_Q35",
@@ -620,7 +516,7 @@
           ],
           "explanation": "Op het examen rijd je op een aangepaste snelheid: niet te snel, niet te traag. Onnodig traag rijden is een fout.",
           "correct": 1,
-          "theoryCardIndex": 1
+          "theoryCardIndex": 2
         },
         {
           "id": "D1_Q36",
@@ -662,19 +558,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "D1_Q39",
-          "question": "Mag je een snelheidswedstrijd organiseren op de openbare weg met toelating?",
-          "choices": [
-            "Nee, nooit",
-            "Ja, met een speciale toelating van de wettelijk bevoegde overheid",
-            "Ja, als de politie verwittigd is",
-            "Ja, alleen voor moto's"
-          ],
-          "explanation": "Sportwedstrijden kunnen georganiseerd worden op de openbare weg met een speciale toelating van de bevoegde overheid.",
-          "correct": 1,
-          "theoryCardIndex": 2
-        },
-        {
           "id": "D1_Q40",
           "question": "Vanaf welke snelheidsoverschrijding kan je rijbewijs onmiddellijk ingetrokken worden op de autosnelweg?",
           "choices": [
@@ -697,19 +580,6 @@
             "Alleen als je geflitst wordt"
           ],
           "explanation": "35 km/u overschrijding is meer dan 30 km/u: onmiddellijke intrekking is mogelijk.",
-          "correct": 1,
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "D1_Q42",
-          "question": "Op een gewone weg, vanaf welke overschrijding riskeer je een onmiddellijke intrekking?",
-          "choices": [
-            "> 20 km/u",
-            "> 30 km/u",
-            "> 40 km/u",
-            "> 50 km/u"
-          ],
-          "explanation": "Op een gewone weg is de drempel voor onmiddellijke intrekking een overschrijding van meer dan 30 km/u.",
           "correct": 1,
           "theoryCardIndex": 3
         },
@@ -740,19 +610,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "D1_Q45",
-          "question": "Je rijdt 45 km/u in een woonerf (limiet 20 km/u). Overschrijding van 25 km/u. Riskeer je een onmiddellijke intrekking?",
-          "choices": [
-            "Nee",
-            "Ja, je overschrijdt met meer dan 20 km/u in een woonerf",
-            "Nee, een woonerf is geen bebouwde kom",
-            "Alleen als er kinderen aanwezig zijn"
-          ],
-          "explanation": "In een woonerf is de drempel 20 km/u. Een overschrijding van 25 km/u leidt tot onmiddellijke intrekking.",
-          "correct": 1,
-          "theoryCardIndex": 3
-        },
-        {
           "id": "D1_Q46",
           "question": "Wie beslist over de onmiddellijke intrekking van het rijbewijs?",
           "choices": [
@@ -779,32 +636,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "D1_Q48",
-          "question": "Gebeurt de onmiddellijke intrekking ter plaatse of in de rechtbank?",
-          "choices": [
-            "In de rechtbank",
-            "Ter plaatse door de Politie",
-            "Per post",
-            "Op het politiekantoor"
-          ],
-          "explanation": "De onmiddellijke intrekking wordt ter plaatse uitgevoerd door de Politie.",
-          "correct": 1,
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "D1_Q49",
-          "question": "Je rijdt 95 km/u in de bebouwde kom (limiet 50 km/u). Overschrijding van 45 km/u. Onmiddellijke intrekking?",
-          "choices": [
-            "Nee",
-            "Ja, overschrijding > 20 km/u in de bebouwde kom",
-            "Alleen een boete",
-            "Nee, het is een snelle weg"
-          ],
-          "explanation": "45 km/u overschrijding in de bebouwde kom overschrijdt ruim de drempel van 20 km/u: onmiddellijke intrekking.",
-          "correct": 1,
-          "theoryCardIndex": 3
-        },
-        {
           "id": "D1_Q50",
           "question": "Je rijdt 145 km/u op de autosnelweg (limiet 120 km/u). Overschrijding van 25 km/u. Onmiddellijke intrekking?",
           "choices": [
@@ -827,19 +658,6 @@
             "Dat hangt af van het gewest"
           ],
           "explanation": "De drempel is een overschrijding van MEER dan 30 km/u. Een overschrijding van precies 30 km/u volstaat niet om de onmiddellijke intrekking te activeren.",
-          "correct": 1,
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "D1_Q52",
-          "question": "Je rijdt 52 km/u in een zone 30. Overschrijding van 22 km/u. Onmiddellijke intrekking?",
-          "choices": [
-            "Nee, het is onder 30 km/u",
-            "Ja, overschrijding > 20 km/u in een zone 30",
-            "Nee, zones 30 tellen niet mee",
-            "Alleen met een flitspaal"
-          ],
-          "explanation": "22 km/u overschrijding in een zone 30 overschrijdt de drempel van 20 km/u: onmiddellijke intrekking is mogelijk.",
           "correct": 1,
           "theoryCardIndex": 3
         },
@@ -905,19 +723,6 @@
             "Alleen een boete"
           ],
           "explanation": "35 km/u overschrijding in de bebouwde kom overschrijdt de drempel van 30 km/u: verval is mogelijk.",
-          "correct": 1,
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "D1_Q58",
-          "question": "Je rijdt 65 km/u in een zone 30. Overschrijding van 35 km/u. Verval?",
-          "choices": [
-            "Nee",
-            "Ja, overschrijding > 30 km/u in een zone 30",
-            "Alleen onmiddellijke intrekking",
-            "Nee, zone 30 telt niet mee"
-          ],
-          "explanation": "35 km/u overschrijding in een zone 30 overschrijdt de drempel van 30 km/u: verval is mogelijk.",
           "correct": 1,
           "theoryCardIndex": 4
         },
@@ -1049,7 +854,8 @@
           ],
           "explanation": "Dit groene bord geeft het begin van een autosnelweg aan (120 km/u max, 70 km/u min).",
           "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 0,
+          "sign": "F5"
         },
         {
           "id": "D1_Q69",
@@ -1062,7 +868,8 @@
           ],
           "explanation": "Dit blauwe bord met een witte auto geeft een autoweg aan (120 km/u als 2x2 rijstroken met middenberm).",
           "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 0,
+          "sign": "F9"
         },
         {
           "id": "D1_Q70",
@@ -1075,7 +882,8 @@
           ],
           "explanation": "Dit bord geeft het begin van een bebouwde kom aan (snelheidsbeperking volgens het gewest).",
           "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 1,
+          "sign": "F1"
         },
         {
           "id": "D1_Q71",
@@ -1088,7 +896,8 @@
           ],
           "explanation": "Dit bord geeft een woonerf (erftoegangsweg) aan: maximumsnelheid 20 km/u.",
           "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 1,
+          "sign": "F12a"
         },
         {
           "id": "D1_Q72",
@@ -1101,7 +910,8 @@
           ],
           "explanation": "Dit bord markeert het begin van een zone met snelheidsbeperking tot 30 km/u.",
           "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 1,
+          "sign": "F4a"
         },
         {
           "id": "D1_Q73",
@@ -1114,7 +924,8 @@
           ],
           "explanation": "Dit gevaarbord kondigt een of meer verhoogde inrichtingen aan. De maximumsnelheid is 30 km/u.",
           "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 1,
+          "sign": "A14"
         },
         {
           "id": "D1_Q74",
@@ -1127,7 +938,8 @@
           ],
           "explanation": "Dit bord kondigt aan dat een verhoogde inrichting zich op 200 meter bevindt.",
           "correct": 0,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 1,
+          "sign": "A14"
         },
         {
           "id": "D1_Q75",
@@ -1140,20 +952,8 @@
           ],
           "explanation": "Dit bord kondigt meerdere verhoogde inrichtingen aan: ze beginnen over 150 m en strekken zich uit over 500 m.",
           "correct": 1,
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "D1_Q76",
-          "question": "Dit ronde blauwe bord met 90 km/u bij een afrit betekent:",
-          "choices": [
-            "Minimumsnelheid",
-            "Maximumsnelheid toegestaan op de afrit",
-            "Afstand",
-            "Aanbevolen snelheid"
-          ],
-          "explanation": "Dit bord (C43) geeft de toegestane maximumsnelheid aan, hier 90 km/u, van toepassing op de afritstrook.",
-          "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 1,
+          "sign": "A14"
         },
         {
           "id": "D1_Q77",
@@ -1166,59 +966,8 @@
           ],
           "explanation": "Dit bord kondigt aan dat een snelheidsbeperking van 60 km/u van kracht wordt over 200 meter.",
           "correct": 1,
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "D1_Q78",
-          "question": "Je ziet een bord 'begin bebouwde kom' in Brussel. Welke snelheid neem je aan?",
-          "choices": [
-            "50 km/u",
-            "30 km/u",
-            "70 km/u",
-            "20 km/u"
-          ],
-          "explanation": "In Brussel, in de bebouwde kom, is de maximumsnelheid 30 km/u.",
-          "correct": 1,
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "D1_Q79",
-          "question": "Je ziet een bord 'verhoogde inrichting'. Welke maximumsnelheid?",
-          "choices": [
-            "20 km/u",
-            "30 km/u",
-            "50 km/u",
-            "Stapvoets"
-          ],
-          "explanation": "Een bord 'verhoogde inrichting' legt een maximumsnelheid van 30 km/u op.",
-          "correct": 1,
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "D1_Q80",
-          "question": "Je ziet een bord 'einde bebouwde kom' in Wallonie. Welke snelheid buiten de bebouwde kom?",
-          "choices": [
-            "50 km/u",
-            "70 km/u",
-            "90 km/u",
-            "120 km/u"
-          ],
-          "explanation": "In Wallonie, buiten de bebouwde kom op een weg met wegmarkering, is de maximumsnelheid 90 km/u.",
-          "correct": 2,
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "D1_Q81",
-          "question": "Je ziet een bord '200 m verderop 60 km/u'. Mag je nog op je huidige snelheid blijven rijden?",
-          "choices": [
-            "Nee, vertraag onmiddellijk",
-            "Ja, gedurende 200 m is de beperking nog niet van kracht, maar bereid je voor om te vertragen",
-            "Nee, de beperking geldt onmiddellijk",
-            "Ja, het is indicatief"
-          ],
-          "explanation": "De beperking gaat over 200 m in. Je mag je huidige snelheid behouden, maar begin te vertragen.",
-          "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 1,
+          "sign": "C43"
         },
         {
           "id": "D1_Q82",
@@ -1231,7 +980,7 @@
           ],
           "explanation": "Het inhaalverbod geldt onmiddellijk. De snelheidsbeperking van 60 km/u geldt pas over 200 m.",
           "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 1
         },
         {
           "id": "D1_Q83",
@@ -1244,7 +993,8 @@
           ],
           "explanation": "Dit bord geeft een gewone weg aan. De standaardsnelheden van het gewest zijn van toepassing.",
           "correct": 1,
-          "theoryCardIndex": 5
+          "theoryCardIndex": 0,
+          "sign": "F23a"
         },
         {
           "id": "D1_SIGN_FEU_PIETON_ROUGE_1",
@@ -1256,7 +1006,8 @@
             "Oversteken want het licht is hetzelfde als een oranje licht"
           ],
           "explanation": "Het rode voetgangerslicht betekent formeel: niet oversteken. Zelfs als de rijbaan vrij lijkt, moet je wachten tot het mannetje op groen springt.",
-          "correct": 1
+          "correct": 1,
+          "sign": "FEU_PIETON_ROUGE"
         },
         {
           "id": "D1_SIGN_FEU_VELO_ROUGE_1",
@@ -1268,7 +1019,8 @@
             "Hij volgt de verkeerslichten bestemd voor auto's"
           ],
           "explanation": "Het rode fietslicht heeft dezelfde bindende waarde als een rood licht voor auto's. De fietser moet absoluut stoppen en wachten op het groene licht.",
-          "correct": 1
+          "correct": 1,
+          "sign": "FEU_VELO_ROUGE"
         },
         {
           "id": "D1_SIGN_FEU_VELO_VERT_1",
@@ -1280,7 +1032,8 @@
             "De fietser moet wachten op de voetgangers voor hij vertrekt"
           ],
           "explanation": "Het groene fietslicht laat de fietser toe om zich te engageren. Het geeft geen absolute voorrang op iedereen: de fietser moet toch controleren of de weg vrij is en de voetgangers respecteren.",
-          "correct": 1
+          "correct": 1,
+          "sign": "FEU_VELO_VERT"
         },
         {
           "id": "D1_SIGN_CROIX_ROUGE_VOIE_1",
@@ -1292,7 +1045,8 @@
             "Tolheffing op deze rijstrook"
           ],
           "explanation": "Het rode kruis boven een rijstrook betekent dat deze rijstrook volledig afgesloten is. Het is strikt verboden om erop te rijden. Verander onmiddellijk van rijstrook.",
-          "correct": 1
+          "correct": 1,
+          "sign": "CROIX_ROUGE_VOIE"
         },
         {
           "id": "D1_SIGN_FLECHE_VERTE_VOIE_1",
@@ -1304,7 +1058,8 @@
             "Versnelling aanbevolen op deze rijstrook"
           ],
           "explanation": "De groene pijl geeft aan dat de rijstrook open is. Je mag hem normaal gebruiken. Controleer de borden boven de andere rijstroken voordat je van rijstrook verandert.",
-          "correct": 1
+          "correct": 1,
+          "sign": "FLECHE_VERTE_VOIE"
         }
       ]
     },
@@ -1551,19 +1306,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "D2_Q3",
-          "question": "Wat is de minimale veiligheidsafstand aan 100 km/u op droog wegdek?",
-          "choices": [
-            "30 meter",
-            "50 meter",
-            "75 meter",
-            "100 meter"
-          ],
-          "explanation": "Aan 100 km/u is de minimale veiligheidsafstand 100 / 2 = 50 meter (2 seconden).",
-          "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
           "id": "D2_Q4",
           "question": "Hoeveel seconden legt de tweeseconderegel je op om te behouden?",
           "choices": [
@@ -1586,19 +1328,6 @@
             "2 seconden wachten voor je vertrekt"
           ],
           "explanation": "Je kiest een vast punt, je zegt 'een krokodil, twee krokodillen' wanneer het voertuig voor je dat punt passeert. Als je het punt passeert nadat je de twee krokodillen hebt gezegd, is de afstand correct.",
-          "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D2_Q6",
-          "question": "De tweeseconderegel geldt voor welk type wegdek?",
-          "choices": [
-            "Nat wegdek",
-            "Droog wegdek",
-            "Besneeuwd wegdek",
-            "Alle wegdekken"
-          ],
-          "explanation": "De tweeseconderegel geldt op droog wegdek. Op nat of besneeuwd wegdek moet je de afstand vergroten.",
           "correct": 1,
           "theoryCardIndex": 0
         },
@@ -1629,32 +1358,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "D2_Q9",
-          "question": "Hoeveel seconden moet je respecteren op nat wegdek?",
-          "choices": [
-            "2 seconden",
-            "3 seconden",
-            "4 seconden",
-            "5 seconden"
-          ],
-          "explanation": "Op nat wegdek stijgt de veiligheidsafstand naar 3 seconden (3 krokodillen).",
-          "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D2_Q10",
-          "question": "Je rijdt aan 100 km/u op nat wegdek. Welke veiligheidsafstand?",
-          "choices": [
-            "50 meter",
-            "65 meter",
-            "75 meter",
-            "100 meter"
-          ],
-          "explanation": "Aan 100 km/u, droog wegdek: 50 m. Nat wegdek (+50%): 50 + 25 = 75 meter.",
-          "correct": 2,
-          "theoryCardIndex": 0
-        },
-        {
           "id": "D2_Q11",
           "question": "Hoeveel seconden moet je respecteren op besneeuwd of ijzig wegdek?",
           "choices": [
@@ -1668,19 +1371,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "D2_Q12",
-          "question": "Op ijzig wegdek, hoeveel 'krokodillen' moet je tellen?",
-          "choices": [
-            "2",
-            "3",
-            "Minstens 4",
-            "6"
-          ],
-          "explanation": "Op ijzig wegdek moet je minstens 4 krokodillen (4 seconden) veiligheidsafstand houden.",
-          "correct": 2,
-          "theoryCardIndex": 0
-        },
-        {
           "id": "D2_Q13",
           "question": "Rangschik van kortste naar langste: veiligheidsafstand op droog, nat, besneeuwd wegdek.",
           "choices": [
@@ -1690,19 +1380,6 @@
             "Droog < besneeuwd < nat"
           ],
           "explanation": "Droog wegdek (2 s) < nat wegdek (3 s) < besneeuwd/ijzig wegdek (4 s+).",
-          "correct": 1,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D2_Q14",
-          "question": "Je rijdt aan 90 km/u op droog wegdek. Welke veiligheidsafstand?",
-          "choices": [
-            "30 meter",
-            "45 meter",
-            "60 meter",
-            "90 meter"
-          ],
-          "explanation": "Aan 90 km/u is de minimale veiligheidsafstand 90 / 2 = 45 meter (2 seconden).",
           "correct": 1,
           "theoryCardIndex": 0
         },
@@ -1876,19 +1553,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "D2_Q28",
-          "question": "Kunnen medicijnen de reactietijd verhogen?",
-          "choices": [
-            "Nee, ze hebben geen effect",
-            "Ja, bepaalde medicijnen verhogen de reactietijd",
-            "Alleen slaaptabletten",
-            "Alleen antibiotica"
-          ],
-          "explanation": "Bepaalde medicijnen verhogen de reactietijd. Raadpleeg altijd de bijsluiter of je arts.",
-          "correct": 1,
-          "theoryCardIndex": 1
-        },
-        {
           "id": "D2_Q29",
           "question": "Beïnvloedt vermoeidheid de reactietijd?",
           "choices": [
@@ -1898,19 +1562,6 @@
             "Alleen op de autosnelweg"
           ],
           "explanation": "Vermoeidheid vertraagt de reflexen en verhoogt de reactietijd aanzienlijk.",
-          "correct": 1,
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "D2_Q30",
-          "question": "Heeft een oudere bestuurder die aan 90 km/u rijdt dezelfde reactieafstand als een jonge bestuurder op dezelfde snelheid?",
-          "choices": [
-            "Ja, de afstand is voor iedereen gelijk",
-            "Niet noodzakelijk, leeftijd kan de reactietijd verhogen en dus ook de afstand",
-            "Nee, jongeren hebben altijd een langere reactietijd",
-            "Ja, snelheid is de enige factor"
-          ],
-          "explanation": "Leeftijd is een factor die de reactietijd kan verhogen, en dus ook de reactieafstand.",
           "correct": 1,
           "theoryCardIndex": 1
         },
@@ -1928,19 +1579,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "D2_Q32",
-          "question": "Stopt een voertuig onmiddellijk wanneer je remt?",
-          "choices": [
-            "Ja, met goede remmen",
-            "Nee, een voertuig stopt nooit onmiddellijk",
-            "Ja, met ABS",
-            "Ja, op droog wegdek"
-          ],
-          "explanation": "Een voertuig stopt nooit onmiddellijk. Het blijft doorrijden tijdens de remafstand.",
-          "correct": 1,
-          "theoryCardIndex": 2
-        },
-        {
           "id": "D2_Q33",
           "question": "Welke factoren beïnvloeden de remafstand?",
           "choices": [
@@ -1954,32 +1592,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "D2_Q34",
-          "question": "Beïnvloedt bergaf rijden de remafstand?",
-          "choices": [
-            "Nee, dat heeft geen effect",
-            "Ja, de remafstand is langer bergaf",
-            "Nee, het verkort de afstand",
-            "Alleen bergop"
-          ],
-          "explanation": "Bergaf voegt de zwaartekracht zich bij het gewicht van het voertuig en verlengt de remafstand.",
-          "correct": 1,
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "D2_Q35",
-          "question": "Beïnvloedt het gewicht van het voertuig de remafstand?",
-          "choices": [
-            "Nee, het gewicht heeft geen effect",
-            "Ja, een zwaarder voertuig heeft een langere remafstand",
-            "Nee, de remmen passen zich aan",
-            "Alleen voor vrachtwagens"
-          ],
-          "explanation": "Een zwaarder voertuig heeft meer kinetische energie, waardoor de remafstand langer wordt.",
-          "correct": 1,
-          "theoryCardIndex": 2
-        },
-        {
           "id": "D2_Q36",
           "question": "Op welke rijbaan is de remafstand het langst?",
           "choices": [
@@ -1989,19 +1601,6 @@
             "Op betonnen rijbaan"
           ],
           "explanation": "De remafstand is aanzienlijk langer op natte rijbaan dan op droge rijbaan.",
-          "correct": 1,
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "D2_Q37",
-          "question": "De remafstand is 'aanzienlijk' langer op nat wegdek. Dat betekent:",
-          "choices": [
-            "Een klein beetje langer",
-            "Significant langer, je moet je rijgedrag aanpassen",
-            "Hetzelfde met goede banden",
-            "Korter dankzij het water"
-          ],
-          "explanation": "Het verschil is significant op nat wegdek: je moet absoluut je snelheid en veiligheidsafstand aanpassen.",
           "correct": 1,
           "theoryCardIndex": 2
         },
@@ -2042,19 +1641,6 @@
           ],
           "explanation": "Stopafstand = 15 m (reactie) + 25 m (remmen) = 40 meter.",
           "correct": 2,
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "D2_Q41",
-          "question": "Als je reactieafstand 33 m is en je remafstand 80 m, wat is je stopafstand?",
-          "choices": [
-            "80 meter",
-            "113 meter",
-            "33 meter",
-            "160 meter"
-          ],
-          "explanation": "Stopafstand = 33 m (reactie) + 80 m (remmen) = 113 meter.",
-          "correct": 1,
           "theoryCardIndex": 3
         },
         {
@@ -2106,19 +1692,6 @@
             "Ja, maar alleen als hij erg dronken is"
           ],
           "explanation": "Alcohol verlengt de reactietijd naar 2-3 s, waardoor de reactieafstand verdubbelt of verdrievoudigt voor het remmen.",
-          "correct": 1,
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "D2_Q46",
-          "question": "Neemt de stopafstand toe als de bestuurder vermoeid is?",
-          "choices": [
-            "Nee, vermoeidheid heeft geen effect",
-            "Ja, want vermoeidheid verhoogt de reactietijd, dus de reactieafstand en de stopafstand",
-            "Nee, alleen de banden tellen",
-            "Alleen op de autosnelweg"
-          ],
-          "explanation": "Vermoeidheid verlengt de reactietijd, waardoor de reactieafstand en dus de totale stopafstand toenemen.",
           "correct": 1,
           "theoryCardIndex": 3
         },
@@ -2214,19 +1787,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "D2_Q54",
-          "question": "Waarom moeten de banden in goede staat zijn?",
-          "choices": [
-            "Voor de esthetiek",
-            "Om veilig te kunnen remmen, want ze zijn het enige contact met het wegdek",
-            "Voor het brandstofverbruik",
-            "Alleen voor het comfort"
-          ],
-          "explanation": "Banden in goede staat zijn essentieel voor de veiligheid: ze zijn het enige contact met de weg.",
-          "correct": 1,
-          "theoryCardIndex": 5
-        },
-        {
           "id": "D2_Q55",
           "question": "Wat is de wettelijke minimale profieldiepte van banden?",
           "choices": [
@@ -2318,19 +1878,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "D2_Q62",
-          "question": "Je banden hebben groeven van 1,4 mm diep. Zijn ze conform?",
-          "choices": [
-            "Ja, het is dicht bij het minimum",
-            "Nee, het is onder het wettelijk minimum van 1,6 mm, je moet ze onmiddellijk vervangen",
-            "Ja, de tolerantie laat het toe",
-            "Dat hangt af van het seizoen"
-          ],
-          "explanation": "1,4 mm is lager dan het wettelijk minimum van 1,6 mm. De banden moeten onmiddellijk vervangen worden.",
-          "correct": 1,
-          "theoryCardIndex": 5
-        },
-        {
           "id": "D2_Q63",
           "question": "Zijn automatische remsystemen 100% betrouwbaar?",
           "choices": [
@@ -2353,19 +1900,6 @@
             "Ja, op de autosnelweg"
           ],
           "explanation": "Automatische systemen zijn hulpmiddelen, geen vervanging van de waakzaamheid. De bestuurder moet altijd aandachtig blijven.",
-          "correct": 1,
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "D2_Q65",
-          "question": "Automatische remsystemen:",
-          "choices": [
-            "Elimineren ongevallen",
-            "Verminderen het risico op een ongeval maar elimineren het niet",
-            "Zijn nutteloos",
-            "Vervangen de klassieke remmen"
-          ],
-          "explanation": "Deze systemen verminderen het risico op een ongeval maar elimineren het niet. Actief rijden blijft onmisbaar.",
           "correct": 1,
           "theoryCardIndex": 6
         },
@@ -2418,19 +1952,6 @@
             "Het is gewoon een aanbeveling"
           ],
           "explanation": "Vermoeidheid vertraagt de reflexen en verhoogt de reactietijd. Regelmatige pauzes helpen je alert te blijven.",
-          "correct": 1,
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "D2_Q70",
-          "question": "Heeft een vermoeide bestuurder dezelfde reactietijd als een uitgeruste bestuurder?",
-          "choices": [
-            "Ja, vermoeidheid beïnvloedt de reflexen niet",
-            "Nee, vermoeidheid vertraagt de reflexen en verhoogt de reactietijd",
-            "Ja, als de weg recht is",
-            "Nee, maar alleen 's nachts"
-          ],
-          "explanation": "Vermoeidheid tast de reflexen aanzienlijk aan, waardoor de reactietijd en dus de stopafstand toenemen.",
           "correct": 1,
           "theoryCardIndex": 6
         }

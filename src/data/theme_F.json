@@ -265,19 +265,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "F1_Q5",
-          "question": "Vous arrivez à un carrefour où un agent tend un bras horizontalement. Vous vous dirigez vers son dos. Que faites-vous ?",
-          "choices": [
-            "Vous pouvez avancer prudemment",
-            "Vous devez vous arrêter",
-            "Vous pouvez tourner à gauche",
-            "Vous accélérez pour passer rapidement"
-          ],
-          "correct": 1,
-          "explanation": "Se diriger vers le dos de l'agent = obligation de s'arrêter.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "F1_Q6",
           "question": "Vous approchez d'un carrefour où un agent tend un bras horizontalement. Vous arrivez du côté de sa main tendue. Que pouvez-vous faire ?",
           "choices": [
@@ -421,19 +408,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "F1_Q17",
-          "question": "Vous roulez à 50 km/h. Un agent effectue d'abord un mouvement vertical du bras, puis fait un mouvement rotatif. Que faites-vous ?",
-          "choices": [
-            "Vous vous arrêtez complètement",
-            "Vous réduisez d'abord votre vitesse, puis vous accélérez lorsqu'il fait le mouvement rotatif",
-            "Vous faites demi-tour",
-            "Vous ne changez rien à votre conduite"
-          ],
-          "correct": 1,
-          "explanation": "Chaque geste a sa signification : vertical = ralentir, rotatif = accélérer.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "F1_Q18",
           "question": "Un agent tend un bras horizontal. Vous approchez par son côté droit. Un piéton approche face à son ventre. Que se passe-t-il ?",
           "choices": [
@@ -512,19 +486,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "F1_Q24",
-          "question": "Vous conduisez un cyclomoteur. Un agent vous fait signe de vous arrêter. L'obligation d'obtempérer concerne-t-elle aussi les cyclomoteurs ?",
-          "choices": [
-            "Non, elle ne concerne que les voitures",
-            "Oui, tous les usagers sans exception : piétons, cyclistes, conducteurs de tout véhicule",
-            "Non, elle ne vise que les véhicules motorisés à quatre roues",
-            "Non, elle ne concerne que les professionnels du transport"
-          ],
-          "correct": 1,
-          "explanation": "Tous les usagers sans exception doivent obtempérer.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "F1_Q25",
           "question": "Vous arrivez à un carrefour où une personne portant un brassard vous fait signe de ralentir. Cette personne n'est pas un agent qualifié. Qui peut donner de telles indications ?",
           "choices": [
@@ -561,19 +522,6 @@
           ],
           "correct": 1,
           "explanation": "Les personnes autorisées ne donnent que des indications, pas des injonctions.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F1_Q28",
-          "question": "Un capitaine de route lors d'un cortège peut-il régler la circulation à un carrefour comme le ferait un policier ?",
-          "choices": [
-            "Oui, il a les mêmes pouvoirs qu'un policier",
-            "Non, une personne autorisée ne peut pas régler la circulation",
-            "Oui, aux carrefours sans feux",
-            "Oui, devant les écoles"
-          ],
-          "correct": 1,
-          "explanation": "Régler la circulation est réservé aux agents qualifiés.",
           "theoryCardIndex": 3
         },
         {
@@ -655,32 +603,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F1_Q35",
-          "question": "Votre véhicule est en panne au milieu de la chaussée. Pouvez-vous descendre pour diriger les autres conducteurs autour de votre véhicule ?",
-          "choices": [
-            "Oui, c'est la chose logique à faire",
-            "Non, vous ne pouvez pas régler la circulation",
-            "Oui, en activant vos feux de détresse",
-            "Oui, en agitant les bras"
-          ],
-          "correct": 1,
-          "explanation": "Régler la circulation est interdit même en cas de panne.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F1_Q36",
-          "question": "Un passant se place au milieu d'un carrefour après un accident pour diriger la circulation. Est-ce autorisé ?",
-          "choices": [
-            "Oui, c'est un geste d'aide utile",
-            "Non, personne ne peut régler la circulation en cas d'accident ou de panne",
-            "Oui, s'il porte un gilet réfléchissant",
-            "Oui, s'il est formé aux premiers secours"
-          ],
-          "correct": 1,
-          "explanation": "Personne — ni conducteur, ni passant — ne peut régler la circulation après un accident.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F1_Q37",
           "question": "Vous entendez une sirène et voyez un véhicule avec un feu bleu clignotant. À quoi reconnaît-on un véhicule prioritaire ?",
           "choices": [
@@ -720,19 +642,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "F1_Q40",
-          "question": "Un véhicule de police circule avec uniquement le feu bleu allumé, sans sirène. Pourquoi pouvez-vous continuer normalement ?",
-          "choices": [
-            "Parce que le feu bleu seul n'a aucune importance",
-            "Parce que sans l'avertisseur sonore, le véhicule n'exerce pas son droit de priorité",
-            "Parce que le bleu est simplement informatif",
-            "Parce que la police n'est pas en intervention urgente"
-          ],
-          "correct": 1,
-          "explanation": "Les deux éléments (feu bleu + sirène) sont nécessaires pour exercer la priorité.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "F1_Q41",
           "question": "Une ambulance approche derrière vous avec le feu bleu clignotant ET la sirène en fonctionnement. Que devez-vous faire ?",
           "choices": [
@@ -756,19 +665,6 @@
           ],
           "correct": 1,
           "explanation": "Si impossible de s'écarter, on ralentit ou s'arrête dès que possible.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F1_Q43",
-          "question": "Un véhicule de pompiers approche. Quelle combinaison de signaux vous oblige à réagir et à dégager la chaussée ?",
-          "choices": [
-            "Le feu bleu clignotant seul suffit",
-            "Le feu bleu clignotant ET l'avertisseur sonore activé simultanément",
-            "La sirène seule, même sans feu bleu",
-            "Un gyrophare orange clignotant"
-          ],
-          "correct": 1,
-          "explanation": "Les deux éléments combinés (feu bleu + sirène) déclenchent l'obligation de céder.",
           "theoryCardIndex": 4
         },
         {
@@ -850,32 +746,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "F1_Q50",
-          "question": "Vous êtes à un carrefour réglé par un agent. Le feu est rouge, mais l'agent vous fait signe de passer. Que faites-vous ?",
-          "choices": [
-            "Vous restez arrêté au feu rouge",
-            "Vous passez, car l'injonction de l'agent prime sur le feu rouge",
-            "Vous attendez que le feu passe au vert",
-            "Vous klaxonnez pour vérifier"
-          ],
-          "correct": 1,
-          "explanation": "L'agent prime sur les feux : si l'agent dit passez, vous passez même au rouge.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F1_Q51",
-          "question": "Le feu passe au vert, mais un agent au milieu du carrefour lève le bras verticalement. Que faites-vous ?",
-          "choices": [
-            "Vous passez, car le feu est vert",
-            "Vous vous arrêtez, car l'injonction de l'agent prime sur le feu vert",
-            "Vous hésitez entre les deux",
-            "Vous accélérez pour passer avant qu'il ne change d'avis"
-          ],
-          "correct": 1,
-          "explanation": "L'agent prime sur les feux : bras levé = stop, même feu vert.",
-          "theoryCardIndex": 5
-        },
-        {
           "id": "F1_Q52",
           "question": "Vous arrivez à un carrefour avec un feu jaune-orange clignotant et un panneau de priorité. Le feu jaune-orange clignotant est-il soumis à la hiérarchie feux > panneaux ?",
           "choices": [
@@ -915,19 +785,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "F1_Q55",
-          "question": "Vous roulez hors agglomération en Wallonie où la limite est de 90 km/h. Un panneau indique 70 km/h. À quelle vitesse devez-vous rouler ?",
-          "choices": [
-            "À 90 km/h, c'est la règle générale",
-            "À 70 km/h, car le signal routier prime sur la règle générale",
-            "À 80 km/h, en compromis entre les deux",
-            "À 90 km/h, le panneau est seulement indicatif"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau (70 km/h) prime sur la règle générale (90 km/h).",
-          "theoryCardIndex": 5
-        },
-        {
           "id": "F1_Q56",
           "question": "Vous roulez dans une zone limitée à 50 km/h par un panneau. Un agent vous fait signe d'accélérer (mouvement rotatif). Que faites-vous ?",
           "choices": [
@@ -938,32 +795,6 @@
           ],
           "correct": 1,
           "explanation": "L'agent prime sur les panneaux : son injonction l'emporte.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F1_Q57",
-          "question": "Vous arrivez à un carrefour avec un feu jaune-orange clignotant et un panneau de priorité de droite. Quel régime de priorité s'applique ?",
-          "choices": [
-            "Le feu prime sur le panneau de priorité",
-            "Les deux s'appliquent, car le feu jaune-orange clignotant est une exception à la hiérarchie",
-            "Aucun des deux ne s'applique",
-            "Le panneau annule le feu"
-          ],
-          "correct": 1,
-          "explanation": "Feu jaune-orange clignotant = exception : le panneau de priorité s'applique aussi.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F1_Q58",
-          "question": "Vous arrivez à un carrefour avec un feu vert et un signal B22 (cédez-le-passage cyclistes). Devez-vous quand même tenir compte du B22 ?",
-          "choices": [
-            "Non, le feu vert prime sur le panneau",
-            "Oui, le B22 reste applicable car il constitue une exception à la hiérarchie feux > panneaux",
-            "Oui, vous devez toujours céder le passage",
-            "Non, uniquement au panneau STOP"
-          ],
-          "correct": 1,
-          "explanation": "B22 est une exception : il reste valable même avec un feu vert.",
           "theoryCardIndex": 5
         },
         {
@@ -1032,19 +863,6 @@
           "theoryCardIndex": 6
         },
         {
-          "id": "F1_Q64",
-          "question": "Un incendie se déclare dans un bâtiment près de la route. Un pompier sur les lieux vous demande de vous arrêter. Devez-vous obéir ?",
-          "choices": [
-            "Non, seuls les policiers ont cette autorité",
-            "Oui, le pompier peut donner des ordres sur le lieu de son intervention",
-            "Non, sauf si un policier est également présent",
-            "Cela dépend de la gravité de l'incendie"
-          ],
-          "correct": 1,
-          "explanation": "Sur son lieu d'intervention, le pompier a autorité pour donner des ordres.",
-          "theoryCardIndex": 6
-        },
-        {
           "id": "F1_SIGN_F23_1",
           "question": "Vous passez devant ce panneau en quittant une zone résidentielle. Que signifie-t-il ?",
           "choices": [
@@ -1054,7 +872,7 @@
             "Vous quittez une zone de rencontre"
           ],
           "correct": 1,
-          "explanation": "F23 marque la fin de la zone résidentielle (F21). Les restrictions propres à cette zone (vitesse max 20 km/h, piétons prioritaires partout…) ne s'appliquent plus.",
+          "explanation": "F12b marque la fin de la zone résidentielle (F12a). Les restrictions propres à cette zone (vitesse max 20 km/h, piétons prioritaires partout…) ne s'appliquent plus.",
           "sign": "F12b",
           "destination": "panneaux"
         },
@@ -1070,7 +888,7 @@
           "correct": 1,
           "explanation": "F43 marque la fin de la zone 30 (F41). La vitesse normale pour ce type de voie (souvent 50 km/h en agglomération) s'applique à nouveau.",
           "destination": "panneaux",
-          "sign": "F43"
+          "sign": "F4b"
         },
         {
           "id": "F1_SIGN_F50_1",
@@ -1084,7 +902,7 @@
           "correct": 1,
           "explanation": "F50 indique que la voie est sans issue pour les véhicules à moteur, mais qu'un passage est prévu pour les piétons et les cyclistes. Ils peuvent continuer.",
           "destination": "panneaux",
-          "sign": "F50"
+          "sign": "F45b"
         }
       ]
     },
@@ -1318,19 +1136,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "F2_Q2",
-          "question": "Le feu passe au rouge, mais il n'y a aucune ligne d'arrêt tracée au sol. Où devez-vous vous arrêter ?",
-          "choices": [
-            "Devant le premier piéton visible",
-            "Devant le signal lumineux lui-même",
-            "Au milieu de la chaussée",
-            "À 10 mètres avant le feu"
-          ],
-          "correct": 1,
-          "explanation": "En l'absence de ligne d'arrêt, on s'arrête devant le signal lumineux.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "F2_Q3",
           "question": "Vous cherchez le feu de signalisation en arrivant à un carrefour. De quel côté de la chaussée le signal lumineux circulaire principal doit-il se trouver ?",
           "choices": [
@@ -1422,19 +1227,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "F2_Q10",
-          "question": "Vous êtes en voiture et vous vous arrêtez dans la zone avancée réservée aux cyclistes au feu rouge. Commettez-vous une infraction ?",
-          "choices": [
-            "Non, c'est toléré si aucun cycliste n'est présent",
-            "Oui, les voitures doivent s'arrêter devant la première ligne d'arrêt",
-            "Non, à condition qu'il n'y ait pas de cyclistes",
-            "Cela dépend de la couleur du feu"
-          ],
-          "correct": 1,
-          "explanation": "Les voitures ne peuvent pas entrer dans la zone avancée réservée aux cyclistes.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "F2_Q11",
           "question": "Le feu passe au vert. Le carrefour devant vous est encombré par des véhicules. Pouvez-vous vous y engager ?",
           "choices": [
@@ -1445,19 +1237,6 @@
           ],
           "correct": 1,
           "explanation": "Le feu vert autorise à s'engager UNIQUEMENT si le carrefour est dégagé.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "F2_Q12",
-          "question": "Vous êtes au feu vert, mais le carrefour est complètement bloqué par une file de véhicules. Que faites-vous ?",
-          "choices": [
-            "Vous vous engagez quand même puisque le feu est vert",
-            "Vous attendez devant la ligne d'arrêt que le carrefour se dégage",
-            "Vous klaxonnez pour faire avancer les véhicules",
-            "Vous contournez les véhicules par la droite"
-          ],
-          "correct": 1,
-          "explanation": "Même au feu vert, on attend que le carrefour soit dégagé.",
           "theoryCardIndex": 1
         },
         {
@@ -1478,7 +1257,7 @@
           "id": "F2_Q14",
           "question": "Les feux d'un carrefour ne fonctionnent plus (panne). Un signal de priorité est placé sous le feu éteint. Ce signal devient-il alors applicable ?",
           "choices": [
-            "Non, jamais",
+            "Non, il faut attendre un agent qualifié",
             "Oui, quand les feux ne fonctionnent pas, les signaux de priorité reprennent leur rôle",
             "Non, jamais",
             "Non, uniquement la nuit"
@@ -1619,19 +1398,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "F2_Q25",
-          "question": "Le feu jaune-orange clignote au milieu (feux en panne). Pouvez-vous franchir le carrefour ?",
-          "choices": [
-            "Non, vous devez vous arrêter et attendre",
-            "Oui, en respectant les règles de priorité et en redoublant de prudence",
-            "Non, vous devez attendre le retour du feu vert",
-            "Oui, sans aucune condition"
-          ],
-          "correct": 1,
-          "explanation": "Le feu jaune-orange clignotant (panne) peut être franchi avec prudence et en respectant les priorités.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "F2_Q26",
           "question": "Vous hésitez entre feu jaune-orange fixe et feu jaune-orange clignotant au milieu. Quelle est la différence de comportement à adopter ?",
           "choices": [
@@ -1711,19 +1477,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F2_Q32",
-          "question": "Vous conduisez un speed pedelec et allez tout droit au feu rouge grâce au B23. Un piéton traverse sur la voie transversale. Qui a la priorité ?",
-          "choices": [
-            "Vous, grâce au panneau B23",
-            "Le piéton, car vous devez céder le passage à tous les usagers de la voie transversale",
-            "Le premier arrivé au croisement",
-            "Personne n'a la priorité"
-          ],
-          "correct": 1,
-          "explanation": "L'obligation de céder à tous les usagers de la voie transversale s'applique pleinement.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F2_Q33",
           "question": "Vous arrivez à un carrefour. Au lieu d'un feu rouge circulaire, vous voyez une flèche rouge pointant vers la gauche. Que signifie-t-elle ?",
           "choices": [
@@ -1747,19 +1500,6 @@
           ],
           "correct": 1,
           "explanation": "La flèche verte n'autorise que la direction indiquée.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F2_Q35",
-          "question": "Les feux circulaires classiques ont été remplacés par des flèches de couleur à ce carrefour. Ont-elles la même signification ?",
-          "choices": [
-            "Non, ce sont des feux complètement différents",
-            "Oui, même signification que les feux circulaires, mais uniquement pour la direction indiquée par la flèche",
-            "Non, les flèches sont purement indicatives",
-            "Oui, pour toutes les directions simultanément"
-          ],
-          "correct": 1,
-          "explanation": "Même signification que les feux circulaires, mais limitée à la direction de la flèche.",
           "theoryCardIndex": 3
         },
         {
@@ -1815,19 +1555,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F2_Q40",
-          "question": "Le feu est rouge avec une flèche verte pointant vers la gauche. Pouvez-vous continuer tout droit ?",
-          "choices": [
-            "Oui, vous pouvez aller dans toutes les directions",
-            "Non, seule la direction indiquée par la flèche (gauche) est autorisée",
-            "Oui, le rouge ne s'applique pas quand il y a une flèche verte",
-            "Cela dépend du trafic"
-          ],
-          "correct": 1,
-          "explanation": "Seule la direction de la flèche est autorisée.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F2_Q41",
           "question": "Vous êtes dans un grand carrefour et apercevez une flèche verte isolée, placée à gauche au-delà du carrefour. De quoi s'agit-il ?",
           "choices": [
@@ -1838,19 +1565,6 @@
           ],
           "correct": 1,
           "explanation": "La flèche d'évacuation aide les conducteurs déjà dans le carrefour à tourner à gauche.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F2_Q42",
-          "question": "Vous êtes au milieu d'un carrefour, attendant pour tourner à gauche. La flèche d'évacuation s'allume. Que signifie-t-elle ?",
-          "choices": [
-            "Que vous pouvez entrer dans le carrefour depuis votre voie",
-            "Que le trafic en sens inverse est arrêté par un feu rouge, facilitant votre virage à gauche",
-            "Que vous devez accélérer immédiatement",
-            "Que tous les feux sont passés au vert"
-          ],
-          "correct": 1,
-          "explanation": "La flèche d'évacuation signale que le sens inverse est stoppé — idéal pour tourner à gauche.",
           "theoryCardIndex": 4
         },
         {
@@ -1867,19 +1581,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "F2_Q44",
-          "question": "Vous êtes déjà engagé dans le carrefour et attendez pour tourner à gauche. La flèche d'évacuation s'allume. Que faites-vous ?",
-          "choices": [
-            "Vous attendez le prochain feu vert",
-            "Vous tournez à gauche, car le sens inverse est maintenant arrêté",
-            "Vous faites demi-tour pour sortir du carrefour",
-            "Vous reculez vers votre voie"
-          ],
-          "correct": 1,
-          "explanation": "La flèche d'évacuation est précisément faite pour ceux déjà dans le carrefour.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "F2_Q45",
           "question": "Vous êtes dans le carrefour pour tourner à gauche. Aucun véhicule ne vient en sens inverse. Devez-vous attendre la flèche d'évacuation ?",
           "choices": [
@@ -1890,19 +1591,6 @@
           ],
           "correct": 1,
           "explanation": "Si la voie est libre, vous pouvez évacuer sans attendre la flèche d'évacuation.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F2_Q46",
-          "question": "La flèche d'évacuation dans un carrefour est destinée à quels conducteurs ?",
-          "choices": [
-            "Aux conducteurs qui souhaitent aller tout droit",
-            "Aux conducteurs qui tournent à gauche et sont déjà engagés dans le carrefour",
-            "Aux conducteurs qui tournent à droite",
-            "Aux conducteurs qui font demi-tour"
-          ],
-          "correct": 1,
-          "explanation": "La flèche d'évacuation aide les conducteurs déjà dans le carrefour à tourner à gauche.",
           "theoryCardIndex": 4
         },
         {
@@ -1958,19 +1646,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "F2_Q51",
-          "question": "Vous venez de voir une flèche jaune-orange au-dessus d'une bande. Quel signal va normalement suivre ?",
-          "choices": [
-            "Une flèche verte",
-            "Une croix rouge",
-            "Un feu blanc",
-            "Une flèche bleue"
-          ],
-          "correct": 1,
-          "explanation": "Après la flèche jaune-orange vient obligatoirement la croix rouge.",
-          "theoryCardIndex": 5
-        },
-        {
           "id": "F2_Q52",
           "question": "Vous circulez sur une bande au-dessus de laquelle une croix rouge est affichée. Que signifie ce signal ?",
           "choices": [
@@ -1981,19 +1656,6 @@
           ],
           "correct": 1,
           "explanation": "Croix rouge = interdiction d'emprunter cette bande.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F2_Q53",
-          "question": "Vous roulez sur une bande de circulation et une croix rouge apparaît au-dessus de celle-ci. Que devez-vous faire ?",
-          "choices": [
-            "Vous pouvez continuer normalement",
-            "Vous devez quitter immédiatement cette bande, car il est interdit de l'emprunter",
-            "Vous devez accélérer pour la dépasser",
-            "Vous devez klaxonner pour prévenir les autres"
-          ],
-          "correct": 1,
-          "explanation": "La croix rouge impose de quitter immédiatement la bande.",
           "theoryCardIndex": 5
         },
         {
@@ -2085,7 +1747,8 @@
           ],
           "correct": 1,
           "explanation": "Silhouette piéton = uniquement pour les piétons.",
-          "theoryCardIndex": 6
+          "theoryCardIndex": 6,
+          "sign": "FEU_PIETON_VERT"
         },
         {
           "id": "F2_Q61",
@@ -2098,7 +1761,8 @@
           ],
           "correct": 1,
           "explanation": "Silhouette vélo = uniquement cyclistes et cyclomoteurs à deux roues.",
-          "theoryCardIndex": 6
+          "theoryCardIndex": 6,
+          "sign": "FEU_VELO_VERT"
         },
         {
           "id": "F2_Q62",
@@ -2111,19 +1775,6 @@
           ],
           "correct": 1,
           "explanation": "Silhouette cycliste + piéton = cyclistes, cyclomoteurs à 2 roues ET piétons.",
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "F2_Q63",
-          "question": "Vous conduisez une voiture. Un feu affiche une silhouette verte de piéton. Devez-vous en tenir compte pour votre conduite ?",
-          "choices": [
-            "Oui, vous devez vous arrêter",
-            "Non, les conducteurs de voitures ne doivent pas se conformer à ces signaux spécifiques",
-            "Oui, s'il y a des piétons qui traversent",
-            "Cela dépend de la couleur du feu"
-          ],
-          "correct": 1,
-          "explanation": "Les feux avec silhouettes (piéton, vélo) ne s'adressent pas aux conducteurs de voitures.",
           "theoryCardIndex": 6
         },
         {
@@ -2229,7 +1880,7 @@
           "correct": 1,
           "explanation": "F11 marque la fin de l'autoroute. Les règles spécifiques (interdiction aux piétons, cyclistes, vitesse minimale…) ne s'appliquent plus après ce panneau.",
           "destination": "panneaux",
-          "sign": "F11"
+          "sign": "F7"
         },
         {
           "id": "F2_SIGN_F14_1",
@@ -2241,7 +1892,7 @@
             "Vous êtes sur une route à chaussées séparées"
           ],
           "correct": 1,
-          "explanation": "F14 marque la fin d'une route pour automobiles (F13). Les règles associées à ce type de route (vitesse, usagers autorisés…) ne s'appliquent plus.",
+          "explanation": "F11 marque la fin d'une route pour automobiles (F9). Les règles associées à ce type de route (vitesse, usagers autorisés…) ne s'appliquent plus.",
           "sign": "F11",
           "destination": "panneaux"
         }
@@ -2443,20 +2094,8 @@
           ],
           "correct": 1,
           "explanation": "Le losange jaune = voie prioritaire.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "F3_Q2",
-          "question": "Vous cherchez à identifier le signal de voie prioritaire. Quelle est sa forme et sa couleur ?",
-          "choices": [
-            "Triangulaire et rouge",
-            "Losange et jaune",
-            "Rond et bleu",
-            "Carré et vert"
-          ],
-          "correct": 1,
-          "explanation": "Le signal de voie prioritaire est un losange jaune.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "B9"
         },
         {
           "id": "F3_Q3",
@@ -2498,19 +2137,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "F3_Q6",
-          "question": "Normalement, le dépassement par la gauche est interdit dans les carrefours. Pourquoi est-il autorisé sur une voie prioritaire ?",
-          "choices": [
-            "Parce que le carrefour est suffisamment grand",
-            "Parce que vous bénéficiez de la priorité sur cette voie et le dépassement peut être sûr",
-            "Parce que le carrefour est toujours vide",
-            "Parce que vous êtes en agglomération"
-          ],
-          "correct": 1,
-          "explanation": "La priorité reconnue vous permet de dépasser dans le carrefour en toute sécurité.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "F3_Q7",
           "question": "Vous roulez sur une voie prioritaire et apercevez un losange jaune barré d'une diagonale. Que signifie-t-il ?",
           "choices": [
@@ -2521,7 +2147,8 @@
           ],
           "correct": 1,
           "explanation": "La fin de voie prioritaire est signalée par un losange jaune barré.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "B11"
         },
         {
           "id": "F3_Q8",
@@ -2534,7 +2161,8 @@
           ],
           "correct": 1,
           "explanation": "Le panneau annonce la fin de la voie prioritaire à 100 m avec obligation de céder.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "B11"
         },
         {
           "id": "F3_Q9",
@@ -2547,19 +2175,6 @@
           ],
           "correct": 1,
           "explanation": "Sans voie prioritaire, on retourne aux règles normales de priorité.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "F3_Q10",
-          "question": "Vous circulez sur une voie prioritaire. Un agent qualifié vous fait signe de vous arrêter. La voie prioritaire vous dispense-t-elle d'obéir ?",
-          "choices": [
-            "Oui, la voie prioritaire prime sur tout",
-            "Non, les injonctions des agents priment toujours, même sur la voie prioritaire",
-            "Cela dépend de la situation",
-            "Oui, tant que le feu est vert"
-          ],
-          "correct": 1,
-          "explanation": "Les agents priment sur toutes les règles, y compris la voie prioritaire.",
           "theoryCardIndex": 0
         },
         {
@@ -2586,7 +2201,8 @@
           ],
           "correct": 1,
           "explanation": "Voie prioritaire = tous les carrefours. Priorité au prochain = un seul.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "B9"
         },
         {
           "id": "F3_Q13",
@@ -2681,19 +2297,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "F3_Q20",
-          "question": "Sur le panneau additionnel bleu, la voie représentée par la ligne étroite a-t-elle la priorité ?",
-          "choices": [
-            "Oui, toutes les voies ont la priorité",
-            "Non, les conducteurs sur la ligne étroite doivent céder le passage",
-            "Cela dépend du type de carrefour",
-            "Oui, s'ils viennent de droite"
-          ],
-          "correct": 1,
-          "explanation": "La ligne étroite représente les voies qui doivent céder.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "F3_Q21",
           "question": "Vous arrivez à un carrefour et apercevez un triangle renversé sur sa pointe (bordé de rouge). Que signifie ce signal ?",
           "choices": [
@@ -2760,19 +2363,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "F3_Q26",
-          "question": "Vous voyez des dents de requin au sol. À quel signal routier sont-elles associées ?",
-          "choices": [
-            "Au STOP",
-            "Au cédez-le-passage (triangle sur pointe)",
-            "À la voie prioritaire",
-            "Au rond-point"
-          ],
-          "correct": 1,
-          "explanation": "Les dents de requin accompagnent le signal de cédez-le-passage.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "F3_Q27",
           "question": "Sous le signal de cédez-le-passage, un panneau additionnel montre des cyclistes circulant dans les deux sens. Que signifie-t-il ?",
           "choices": [
@@ -2783,7 +2373,8 @@
           ],
           "correct": 1,
           "explanation": "Le panneau signale des cyclistes et cyclomoteurs pouvant venir des deux côtés.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "sign": "B1"
         },
         {
           "id": "F3_Q28",
@@ -2812,19 +2403,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "F3_Q30",
-          "question": "Vous révisez les deux types de panneaux avancés : l'un avec « 125 m + triangle », l'autre avec « 150 m + STOP ». Quelle est la différence ?",
-          "choices": [
-            "Il n'y a aucune différence",
-            "L'un annonce un cédez-le-passage (arrêt si nécessaire), l'autre annonce un STOP (arrêt obligatoire dans tous les cas)",
-            "Les deux annoncent un STOP",
-            "Les deux annoncent un cédez-le-passage"
-          ],
-          "correct": 1,
-          "explanation": "125 m + triangle = cédez. 150 m + STOP = arrêt obligatoire.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "F3_Q31",
           "question": "Vous arrivez à un cédez-le-passage. Un seul véhicule arrive par la gauche sur la voie transversale. Que faites-vous ?",
           "choices": [
@@ -2835,19 +2413,6 @@
           ],
           "correct": 1,
           "explanation": "Vous cédez à tout conducteur sur la voie transversale.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F3_Q32",
-          "question": "Vous êtes au cédez-le-passage. Un piéton se trouve sur le trottoir de la voie transversale, mais pas sur un passage pour piétons. Le cédez-le-passage vous oblige-t-il à le laisser passer ?",
-          "choices": [
-            "Oui, le cédez-le-passage concerne aussi les piétons",
-            "Non, le cédez-le-passage concerne les conducteurs, pas les piétons hors passage piétons",
-            "Oui, dans tous les cas",
-            "Cela dépend de l'heure"
-          ],
-          "correct": 1,
-          "explanation": "Le cédez-le-passage ne concerne que les conducteurs, pas les piétons sur le trottoir.",
           "theoryCardIndex": 2
         },
         {
@@ -2903,19 +2468,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F3_Q37",
-          "question": "Vous révisez la différence entre le STOP et le cédez-le-passage. Quelle est la différence fondamentale ?",
-          "choices": [
-            "Il n'y a aucune différence pratique",
-            "Le STOP exige un arrêt complet dans tous les cas. Le cédez-le-passage permet de passer sans arrêt si la voie est libre",
-            "Le cédez-le-passage est plus restrictif que le STOP",
-            "Les deux exigent un arrêt complet"
-          ],
-          "correct": 1,
-          "explanation": "STOP = arrêt obligatoire toujours. Cédez = arrêt seulement si nécessaire.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F3_Q38",
           "question": "Vous êtes au STOP. Où exactement devez-vous immobiliser votre véhicule ?",
           "choices": [
@@ -2939,7 +2491,8 @@
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel au STOP avertit de la présence de cyclistes des deux côtés.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "B5"
         },
         {
           "id": "F3_Q40",
@@ -2952,19 +2505,6 @@
           ],
           "correct": 1,
           "explanation": "Après l'arrêt obligatoire, vous vous engagez quand la voie est libre.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F3_Q41",
-          "question": "Lors de l'examen pratique, vous ralentissez fortement au STOP sans immobiliser complètement les roues. Est-ce suffisant ?",
-          "choices": [
-            "Oui, ralentir fortement suffit",
-            "Non, le STOP exige un arrêt COMPLET avec les roues totalement immobilisées",
-            "Oui, si aucun véhicule ne circule",
-            "Cela dépend de l'appréciation de l'examinateur"
-          ],
-          "correct": 1,
-          "explanation": "Le STOP exige un arrêt complet — ralentir ne suffit pas.",
           "theoryCardIndex": 3
         },
         {
@@ -3059,32 +2599,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "F3_Q49",
-          "question": "Pourquoi devez-vous céder le passage en entrant dans le rond-point, alors que le véhicule vient de votre gauche ?",
-          "choices": [
-            "Par simple politesse entre conducteurs",
-            "Parce que toutes les entrées du rond-point sont munies d'un panneau cédez-le-passage ou STOP",
-            "Parce que le rond-point est toujours prioritaire",
-            "Parce que c'est un sens unique"
-          ],
-          "correct": 1,
-          "explanation": "B1 (cédez) ou B5 (STOP) à chaque entrée imposent de céder.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F3_Q50",
-          "question": "Vous entrez dans un rond-point. Un véhicule arrive simultanément par l'entrée précédente (à votre gauche). Qui a la priorité ?",
-          "choices": [
-            "Vous, car vous êtes à sa droite",
-            "Le véhicule de gauche, car vous devez céder à ceux déjà dans le rond-point et aux entrées précédentes",
-            "Le premier arrivé au rond-point",
-            "Personne, vous vous arrêtez tous les deux"
-          ],
-          "correct": 1,
-          "explanation": "Dans un rond-point, on cède toujours à ceux venant de gauche.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "F3_Q51",
           "question": "Vous quittez le rond-point. Une piste cyclable est aménagée autour. Un cycliste y circule. Que faites-vous ?",
           "choices": [
@@ -3111,19 +2625,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "F3_Q53",
-          "question": "Un rond-point est entouré d'une piste cyclable. À quel moment devez-vous être particulièrement prudent ?",
-          "choices": [
-            "Uniquement en entrant dans le rond-point",
-            "En sortant, car les cyclistes continuent de circuler sur la piste et les piétons peuvent traverser",
-            "Jamais, la piste cyclable est séparée",
-            "Uniquement la nuit"
-          ],
-          "correct": 1,
-          "explanation": "La sortie du rond-point est le moment critique pour les cyclistes et piétons.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "F3_Q54",
           "question": "Près d'un rond-point, un passage pour cyclistes est légèrement écarté du rond-point et les cyclistes y trouvent un petit triangle inversé. En entrant dans le rond-point, devez-vous céder aux cyclistes ?",
           "choices": [
@@ -3134,19 +2635,6 @@
           ],
           "correct": 1,
           "explanation": "Passage écarté + triangle pour cyclistes = ce sont eux qui cèdent, sauf s'ils sont déjà engagés.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F3_Q55",
-          "question": "Pourquoi n'êtes-vous pas tenu de céder aux cyclistes dans le cas d'un passage écarté avec un triangle inversé pour eux ?",
-          "choices": [
-            "Parce que les cyclistes n'ont jamais la priorité près d'un rond-point",
-            "Parce que ce sont les cyclistes qui ont le triangle inversé (cédez-le-passage) : c'est à EUX de céder",
-            "Parce que le rond-point est toujours prioritaire",
-            "Parce que c'est hors agglomération"
-          ],
-          "correct": 1,
-          "explanation": "Le triangle inversé pour les cyclistes = ils cèdent, pas vous.",
           "theoryCardIndex": 4
         },
         {
@@ -3163,32 +2651,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "F3_Q57",
-          "question": "Comment faites-vous la distinction entre un véritable rond-point et une simple place ronde ?",
-          "choices": [
-            "Par la taille de la place",
-            "Par la présence des 3 éléments : dispositif central, B1/B5 aux entrées, et signal bleu avec 3 flèches",
-            "Par la forme circulaire",
-            "Par la présence de feux de signalisation"
-          ],
-          "correct": 1,
-          "explanation": "Les 3 éléments définissent juridiquement le rond-point.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F3_Q58",
-          "question": "Vous circulez sur une place ronde sans aucun panneau de priorité. Un véhicule arrive par votre droite. Qui a la priorité ?",
-          "choices": [
-            "Vous, car vous êtes déjà sur la place",
-            "Le véhicule de droite, car la priorité de droite s'applique sur une place ronde ordinaire",
-            "Le premier arrivé sur la place",
-            "Personne n'a la priorité"
-          ],
-          "correct": 1,
-          "explanation": "Pas de rond-point = priorité de droite s'applique.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "F3_Q59",
           "question": "Vous êtes dans un rond-point et vous voulez sortir à la deuxième sortie. Quand activez-vous votre clignotant droit ?",
           "choices": [
@@ -3202,101 +2664,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "F3_Q60",
-          "question": "Vous vous apprêtez à entrer dans un rond-point. Un bus est déjà dans le rond-point, arrivant de votre gauche. Qui passe en premier ?",
-          "choices": [
-            "Vous, car les bus sont plus lents",
-            "Le bus, car vous devez céder le passage à tout véhicule déjà dans le rond-point",
-            "Le premier arrivé à l'entrée",
-            "Vous, car le bus vient de gauche"
-          ],
-          "correct": 1,
-          "explanation": "Tout véhicule déjà dans le rond-point a la priorité sur celui qui entre.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F3_Q61",
-          "question": "Vous apercevez ce panneau en arrivant à un carrefour. Que signifie-t-il ?",
-          "choices": [
-            "Arrêt obligatoire (STOP)",
-            "Vous devez céder le passage aux conducteurs de la voie transversale",
-            "Danger à proximité",
-            "Vous circulez sur une voie prioritaire"
-          ],
-          "correct": 1,
-          "explanation": "Triangle sur pointe = cédez le passage.",
-          "sign": "B1",
-          "destination": "panneaux"
-        },
-        {
-          "id": "F3_Q62",
-          "question": "Vous apercevez ce panneau octogonal rouge avec le mot STOP. Que signifie-t-il ?",
-          "choices": [
-            "Céder le passage sans vous arrêter",
-            "Marquer l'arrêt complet et céder le passage",
-            "Danger à proximité",
-            "Ralentir sans vous arrêter"
-          ],
-          "correct": 1,
-          "explanation": "STOP = arrêt obligatoire et céder le passage.",
-          "theoryCardIndex": 3,
-          "sign": "B5"
-        },
-        {
-          "id": "F3_Q63",
-          "question": "Vous apercevez un signal en forme de losange jaune. Que signifie-t-il ?",
-          "choices": [
-            "Danger à proximité",
-            "Vous circulez sur une voie prioritaire",
-            "Zone scolaire",
-            "Travaux en cours"
-          ],
-          "correct": 1,
-          "explanation": "Losange jaune = voie prioritaire.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "F3_Q64",
-          "question": "Vous apercevez un signal en forme de losange jaune barré d'une diagonale. Que signifie-t-il ?",
-          "choices": [
-            "Début d'une voie prioritaire",
-            "Fin de la voie prioritaire",
-            "Danger à proximité",
-            "Zone interdite"
-          ],
-          "correct": 1,
-          "explanation": "Losange jaune barré = fin de voie prioritaire.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "F3_Q65",
-          "question": "Vous apercevez un panneau avec une flèche large et des petites lignes sur les côtés. Que signifie-t-il ?",
-          "choices": [
-            "Sens unique devant vous",
-            "Vous avez la priorité au carrefour suivant uniquement",
-            "Rond-point devant vous",
-            "Voie prioritaire à durée indéterminée"
-          ],
-          "correct": 1,
-          "explanation": "Flèche large + petites lignes = priorité au prochain carrefour.",
-          "destination": "panneaux",
-          "sign": "B1"
-        },
-        {
-          "id": "F3_Q66",
-          "question": "Vous voyez un panneau additionnel bleu avec une ligne large et des lignes étroites sous le signal de priorité. Que représente-t-il ?",
-          "choices": [
-            "Le sens de circulation général",
-            "Le tracé de la voie prioritaire et les voies qui doivent céder le passage",
-            "La direction de l'hôpital le plus proche",
-            "Les bandes de circulation de la chaussée"
-          ],
-          "correct": 1,
-          "explanation": "Panneau additionnel bleu = tracé de la voie prioritaire.",
-          "destination": "panneaux",
-          "sign": "B1"
-        },
-        {
           "id": "F3_Q67",
           "question": "Vous apercevez un signal bleu rond avec 3 flèches en cercle. Que signifie-t-il ?",
           "choices": [
@@ -3307,46 +2674,8 @@
           ],
           "correct": 1,
           "explanation": "Signal bleu rond avec 3 flèches = sens giratoire obligatoire (rond-point).",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F3_Q68",
-          "question": "Vous voyez un signal de danger accompagné de « 125 m » et d'un triangle sur pointe. Que signifie cette combinaison ?",
-          "choices": [
-            "Un STOP se trouve à 125 mètres",
-            "Un cédez-le-passage se trouve à 125 mètres",
-            "Un rond-point se trouve à 125 mètres",
-            "Une voie prioritaire commence à 125 mètres"
-          ],
-          "correct": 1,
-          "explanation": "Signal de danger + triangle + 125 m = cédez-le-passage dans 125 m.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F3_Q69",
-          "question": "Vous voyez un signal de danger accompagné de « 150 m » et du mot STOP. Que signifie cette combinaison ?",
-          "choices": [
-            "Un cédez-le-passage se trouve à 150 mètres",
-            "Un STOP se trouve à 150 mètres",
-            "Un feu rouge se trouve à 150 mètres",
-            "Un rond-point se trouve à 150 mètres"
-          ],
-          "correct": 1,
-          "explanation": "Signal de danger + STOP + 150 m = STOP dans 150 m.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F3_Q70",
-          "question": "Vous voyez un signal indiquant « 250 m fin de voie prioritaire ». Que signifie-t-il ?",
-          "choices": [
-            "Une voie prioritaire commence dans 250 mètres",
-            "Dans 250 mètres, la voie prioritaire se termine",
-            "Une zone 30 commence dans 250 mètres",
-            "Un rond-point se trouve à 250 mètres"
-          ],
-          "correct": 1,
-          "explanation": "Le signal annonce la fin de la voie prioritaire à 250 m.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 4,
+          "sign": "D5"
         }
       ]
     },
@@ -3555,19 +2884,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "F4_Q5",
-          "question": "Vous arrivez à un carrefour sans signalisation. Un conducteur vient de votre droite et tourne à droite (il s'éloigne de vous). Conserve-t-il sa priorité ?",
-          "choices": [
-            "Non, puisqu'il ne vous gêne pas",
-            "Oui, il conserve la priorité quelle que soit la direction qu'il prend",
-            "Non, la priorité ne vaut que s'il continue tout droit",
-            "Cela dépend de la largeur de la route"
-          ],
-          "correct": 1,
-          "explanation": "Même en tournant à droite, le conducteur de droite conserve sa priorité.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "F4_Q6",
           "question": "Vous révisez les exceptions à la priorité de droite. Dans quels cas la priorité de droite ne s'applique-t-elle PAS ?",
           "choices": [
@@ -3591,19 +2907,6 @@
           ],
           "correct": 1,
           "explanation": "S'arrêter ou ralentir ne fait pas perdre la priorité de droite.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "F4_Q8",
-          "question": "La voiture venant de votre droite s'arrête pour laisser passer un piéton sur un passage piétons. Pouvez-vous en profiter pour passer avant elle ?",
-          "choices": [
-            "Oui, puisqu'elle s'est arrêtée",
-            "Non, elle conserve sa priorité de droite même si elle s'est arrêtée pour un piéton",
-            "Oui, dès que le piéton a traversé",
-            "Cela dépend de la présence du passage piétons"
-          ],
-          "correct": 1,
-          "explanation": "L'arrêt pour piéton ne supprime pas la priorité de droite.",
           "theoryCardIndex": 0
         },
         {
@@ -3721,7 +3024,8 @@
           ],
           "correct": 1,
           "explanation": "Triangle sur pointe avec croix = la priorité de droite s'applique.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "B17"
         },
         {
           "id": "F4_Q18",
@@ -3747,7 +3051,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal indique que la voie prioritaire est finie et que la priorité de droite reprend.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "B17"
         },
         {
           "id": "F4_Q20",
@@ -3838,45 +3143,6 @@
           ],
           "correct": 1,
           "explanation": "Bande cyclable suggérée ≠ piste cyclable : la priorité de droite s'applique normalement.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F4_Q27",
-          "question": "Quelle est la différence entre une piste cyclable et une bande cyclable suggérée pour la priorité de droite ?",
-          "choices": [
-            "Il n'y a aucune différence",
-            "Sur une piste cyclable, on cède aux cyclistes. Sur une bande cyclable suggérée, la priorité de droite s'applique normalement",
-            "Sur les deux, il faut céder aux cyclistes",
-            "Sur les deux, la priorité de droite s'applique"
-          ],
-          "correct": 1,
-          "explanation": "Piste cyclable = céder. Bande suggérée = priorité de droite normale.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F4_Q28",
-          "question": "La voiture de droite roule sur une bande cyclable suggérée puis s'arrête. Conserve-t-elle sa priorité de droite ?",
-          "choices": [
-            "Non, en s'arrêtant elle perd sa priorité",
-            "Oui, elle conserve sa priorité de droite même après s'être arrêtée",
-            "Non, les cyclistes sur la bande passent en premier",
-            "Cela dépend de la raison de l'arrêt"
-          ],
-          "correct": 1,
-          "explanation": "S'arrêter ne supprime pas la priorité de droite.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F4_Q29",
-          "question": "La voiture venant de droite s'immobilise pour laisser passer un piéton sur un passage piétons. Conserve-t-elle sa priorité de droite vis-à-vis de vous ?",
-          "choices": [
-            "Non, elle a renoncé à sa priorité en s'arrêtant",
-            "Oui, elle conserve la priorité même si elle s'est arrêtée pour un piéton",
-            "Non, le piéton annule sa priorité",
-            "Cela dépend du type de passage piétons"
-          ],
-          "correct": 1,
-          "explanation": "S'arrêter pour un piéton ne fait pas perdre la priorité de droite.",
           "theoryCardIndex": 2
         },
         {
@@ -3971,19 +3237,6 @@
           "theoryCardIndex": 2
         },
         {
-          "id": "F4_Q37",
-          "question": "Vous révisez : en traversant une piste cyclable, vous cédez aux cyclistes. En traversant une bande cyclable suggérée, la priorité de droite s'applique. Cet énoncé est-il correct ?",
-          "choices": [
-            "Non, c'est faux",
-            "Oui, c'est exact",
-            "Non, c'est l'inverse",
-            "Non, dans les deux cas il faut céder aux cyclistes"
-          ],
-          "correct": 1,
-          "explanation": "Piste cyclable = céder. Bande suggérée = priorité de droite. Vrai.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "F4_Q38",
           "question": "La voiture de droite s'arrête pour un piéton, puis un cycliste passe sur la piste cyclable, puis la voiture de droite s'engage. Pouvez-vous ensuite passer ?",
           "choices": [
@@ -4007,19 +3260,6 @@
           ],
           "correct": 1,
           "explanation": "Sur bande suggérée, la priorité de droite s'applique — la voiture passe.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F4_Q40",
-          "question": "Un cycliste arrive de votre droite depuis une rue en sens interdit, mais un panneau additionnel l'autorise à y circuler en contresens. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Non, c'est un sens interdit",
-            "Oui, le cycliste est autorisé par le panneau et bénéficie de la priorité de droite",
-            "Non, les cyclistes ne comptent pas pour la priorité",
-            "Cela dépend de la visibilité"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau additionnel autorise le cycliste — il bénéficie de la priorité de droite.",
           "theoryCardIndex": 2
         },
         {
@@ -4049,19 +3289,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F4_Q43",
-          "question": "Vous roulez sur une chaussée. Un cyclomoteur arrive de votre droite par un sentier. A-t-il la priorité de droite ?",
-          "choices": [
-            "Oui, il vient de droite donc il a la priorité",
-            "Non, la priorité de droite ne s'applique pas à l'intersection avec un sentier",
-            "Oui, c'est un véhicule motorisé",
-            "Cela dépend du type de sentier"
-          ],
-          "correct": 1,
-          "explanation": "Un sentier n'est pas une chaussée — pas de priorité de droite.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F4_Q44",
           "question": "Vous circulez sur un chemin de terre. Un autre véhicule arrive de votre droite par un autre chemin de terre. La priorité de droite s'applique-t-elle ?",
           "choices": [
@@ -4072,19 +3299,6 @@
           ],
           "correct": 1,
           "explanation": "Entre deux chemins de terre : priorité de droite normale.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q45",
-          "question": "Un sentier et un chemin de terre se croisent. La priorité de droite s'applique-t-elle entre eux ?",
-          "choices": [
-            "Non, il n'y a pas de règle de priorité",
-            "Oui, entre un sentier et un chemin de terre, la priorité de droite s'applique",
-            "Non, le chemin de terre prime toujours sur le sentier",
-            "Le sentier prime toujours"
-          ],
-          "correct": 1,
-          "explanation": "Sentier + chemin de terre : priorité de droite s'applique entre eux.",
           "theoryCardIndex": 3
         },
         {
@@ -4101,32 +3315,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F4_Q47",
-          "question": "Quitter un accès carrossable privé pour rejoindre la chaussée est considéré comme quoi ?",
-          "choices": [
-            "Un droit de priorité",
-            "Une manœuvre, obligeant à céder le passage à tous les usagers",
-            "Un dépassement",
-            "Un croisement ordinaire"
-          ],
-          "correct": 1,
-          "explanation": "C'est une manœuvre — on cède à tous les usagers.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q48",
-          "question": "Vous sortez de votre garage en traversant le trottoir. Un piéton y marche. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Non, le piéton doit s'arrêter car vous êtes un véhicule",
-            "Oui, vous effectuez une manœuvre et devez céder à tous les usagers, piétons compris",
-            "Non, le piéton est sur le trottoir et non sur la chaussée",
-            "Cela dépend de l'heure"
-          ],
-          "correct": 1,
-          "explanation": "Manœuvre = céder à tous, y compris aux piétons sur le trottoir.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F4_Q49",
           "question": "Vous quittez une place de stationnement en bord de chaussée. Avez-vous la priorité sur les autres usagers ?",
           "choices": [
@@ -4140,19 +3328,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F4_Q50",
-          "question": "Quitter une place de stationnement est-il juridiquement considéré comme une manœuvre ?",
-          "choices": [
-            "Non, c'est un déplacement normal",
-            "Oui, c'est une manœuvre à part entière",
-            "Non, si vous utilisez le clignotant",
-            "Cela dépend de la durée du stationnement"
-          ],
-          "correct": 1,
-          "explanation": "Oui, c'est une manœuvre à part entière.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F4_Q51",
           "question": "Vous vous apprêtez à entrer dans un rond-point. Un véhicule circule à votre gauche dans le rond-point. La priorité de droite joue-t-elle en votre faveur ?",
           "choices": [
@@ -4163,45 +3338,6 @@
           ],
           "correct": 1,
           "explanation": "Dans un rond-point, on cède à ceux déjà dedans — pas de priorité de droite à l'entrée.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q52",
-          "question": "Vous roulez sur une chaussée asphaltée. Un véhicule arrive de votre droite par un chemin de terre. Qui a la priorité ?",
-          "choices": [
-            "Le véhicule de droite, par la priorité de droite",
-            "Vous, car la priorité de droite ne s'applique pas entre chaussée et chemin de terre",
-            "Le premier arrivé au carrefour",
-            "Personne n'a la priorité"
-          ],
-          "correct": 1,
-          "explanation": "Chaussée vs chemin de terre : le chemin de terre cède.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q53",
-          "question": "Vous circulez sur un chemin de terre. Un véhicule arrive de votre droite par un autre chemin de terre. Qui a la priorité ?",
-          "choices": [
-            "Vous, car vous étiez là en premier",
-            "Le véhicule de droite, car la priorité de droite s'applique entre chemins de terre",
-            "Le premier arrivé",
-            "Personne"
-          ],
-          "correct": 1,
-          "explanation": "Entre chemins de terre : priorité de droite normale.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q54",
-          "question": "Vous sortez d'un parking commercial. Un cycliste circule sur la chaussée. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Non, le cycliste doit s'arrêter pour vous laisser sortir",
-            "Oui, sortir d'un parking est une manœuvre : vous devez céder à tous les usagers",
-            "Non, si vous avez activé votre clignotant",
-            "Cela dépend de la vitesse du cycliste"
-          ],
-          "correct": 1,
-          "explanation": "Sortir d'un parking = manœuvre, céder à tous, y compris les cyclistes.",
           "theoryCardIndex": 3
         },
         {
@@ -4231,32 +3367,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F4_Q57",
-          "question": "Un tram vient de votre gauche et une voiture vient de votre droite à un carrefour sans signalisation. Le tram passe-t-il avant la voiture de droite ?",
-          "choices": [
-            "Non, la voiture de droite a la priorité de droite sur le tram",
-            "Oui, le tram est toujours prioritaire et passe avant tout le monde",
-            "Ils passent en même temps",
-            "Cela dépend de la direction du tram"
-          ],
-          "correct": 1,
-          "explanation": "Le tram prime sur tout, y compris sur la voiture de droite.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q58",
-          "question": "Un tram arrive d'en face et une voiture arrive de votre droite à un carrefour sans signalisation. Qui passe en premier ?",
-          "choices": [
-            "La voiture de droite",
-            "Le tram, car il est toujours prioritaire",
-            "Le premier arrivé",
-            "Vous"
-          ],
-          "correct": 1,
-          "explanation": "Le tram est toujours prioritaire.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F4_Q59",
           "question": "Vous êtes à un carrefour avec feu vert. Un tram est également présent. Le tram passe-t-il quand même en premier ?",
           "choices": [
@@ -4268,33 +3378,6 @@
           "correct": 1,
           "explanation": "Aux feux, les feux régissent tout — le tram a ses propres signaux.",
           "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q60",
-          "question": "Un tram arrive à un feu rouge. Doit-il s'arrêter ou peut-il passer grâce à sa priorité ?",
-          "choices": [
-            "Non, le tram passe toujours quel que soit le feu",
-            "Oui, le tram doit respecter les feux de signalisation (ou ses propres feux spéciaux)",
-            "Non, sa priorité absolue le dispense de respecter les feux",
-            "Cela dépend de la sirène"
-          ],
-          "correct": 1,
-          "explanation": "Le tram respecte les feux comme tout le monde.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q61",
-          "question": "Vous apercevez ce panneau triangulaire sur pointe avec une croix à l'intérieur. Que signifie-t-il ?",
-          "choices": [
-            "Danger à proximité",
-            "Carrefour où la priorité de droite est d'application",
-            "Arrêt obligatoire (STOP)",
-            "Cédez le passage"
-          ],
-          "correct": 1,
-          "explanation": "Triangle sur pointe + croix = signal de priorité de droite.",
-          "sign": "B17",
-          "destination": "panneaux"
         },
         {
           "id": "F4_Q62",
@@ -4323,32 +3406,6 @@
           "explanation": "STOP = arrêt obligatoire et céder le passage.",
           "destination": "panneaux",
           "sign": "B5"
-        },
-        {
-          "id": "F4_Q64",
-          "question": "Vous apercevez le signal de priorité de droite suivi d'un carrefour. Que faites-vous concrètement ?",
-          "choices": [
-            "Vous accélérez pour franchir le carrefour",
-            "Vous ralentissez, redoublez de prudence et cédez au conducteur venant de droite",
-            "Vous passez rapidement",
-            "Vous vous arrêtez complètement"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal impose prudence et respect de la priorité de droite.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "F4_Q65",
-          "question": "Vous arrivez à un carrefour dépourvu de tout signal. Quelle règle de priorité appliquez-vous ?",
-          "choices": [
-            "Le premier arrivé passe en premier",
-            "La priorité de droite",
-            "L'arrêt obligatoire (STOP)",
-            "Le cédez-le-passage"
-          ],
-          "correct": 1,
-          "explanation": "Sans signal : la priorité de droite s'applique.",
-          "theoryCardIndex": 0
         }
       ]
     },
@@ -4532,19 +3589,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "F5_Q2",
-          "question": "Vous souhaitez tourner à gauche à un carrefour. Un véhicule arrive en face et poursuit tout droit. Que devez-vous faire ?",
-          "choices": [
-            "Passer rapidement avant qu'il n'arrive",
-            "Céder le passage au véhicule qui vient en face",
-            "Klaxonner pour le prévenir",
-            "Accélérer pour tourner avant lui"
-          ],
-          "correct": 1,
-          "explanation": "Tourner à gauche impose de céder au sens inverse.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "F5_Q3",
           "question": "Vous tournez à gauche sans céder le passage au véhicule venant en sens inverse. Quelle est la gravité de cette infraction ?",
           "choices": [
@@ -4568,19 +3612,6 @@
           ],
           "correct": 1,
           "explanation": "Celui qui tourne à droite a la priorité sur celui qui tourne à gauche.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "F5_Q5",
-          "question": "Pourquoi le conducteur qui tourne à droite a-t-il la priorité sur celui qui tourne à gauche depuis le sens opposé ?",
-          "choices": [
-            "Parce qu'il est plus rapide dans son virage",
-            "Parce que celui qui tourne à gauche doit toujours céder le passage au sens inverse",
-            "Parce qu'il se trouve à droite de la chaussée",
-            "Par simple habitude de conduite"
-          ],
-          "correct": 1,
-          "explanation": "La règle est simple : celui qui tourne à gauche cède toujours.",
           "theoryCardIndex": 0
         },
         {
@@ -4675,32 +3706,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "F5_Q13",
-          "question": "Vous tournez à gauche. Aucun véhicule ne vient en face. Un piéton traverse la rue dans laquelle vous entrez. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Non, puisque personne ne vient en sens inverse",
-            "Oui, même sans trafic en face, vous devez céder aux piétons traversant la chaussée d'engagement",
-            "Non, sans passage piétons le piéton n'a pas la priorité",
-            "Cela dépend de votre vitesse"
-          ],
-          "correct": 1,
-          "explanation": "Même sans trafic en face, vous cédez toujours aux piétons traversant la chaussée d'engagement.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "F5_Q14",
-          "question": "Vous tournez à gauche sans céder le passage aux véhicules venant en sens inverse. Quelle sanction risquez-vous ?",
-          "choices": [
-            "Un simple avertissement verbal",
-            "Une infraction grave pouvant entraîner le retrait du permis",
-            "Une simple amende",
-            "Aucune sanction"
-          ],
-          "correct": 1,
-          "explanation": "Ne pas céder au sens inverse en tournant à gauche = infraction grave.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "F5_Q15",
           "question": "Vous circulez sur une rue à sens unique et souhaitez tourner à gauche au prochain carrefour. Où devez-vous positionner votre véhicule ?",
           "choices": [
@@ -4724,19 +3729,6 @@
           ],
           "correct": 1,
           "explanation": "Double sens : se placer près de l'axe médian pour tourner à gauche.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "F5_Q17",
-          "question": "La chaussée à double sens est divisée en bandes par un marquage au sol. Pour tourner à gauche, la règle de positionnement change-t-elle ?",
-          "choices": [
-            "Oui, avec un marquage vous devez rester à droite",
-            "Non, avec ou sans marquage, vous vous placez près de l'axe médian pour tourner à gauche",
-            "Oui, vous devez vous placer sur la bande la plus à droite",
-            "Cela dépend du nombre de bandes"
-          ],
-          "correct": 1,
-          "explanation": "Avec ou sans marquage, on se place près de l'axe médian pour tourner à gauche.",
           "theoryCardIndex": 1
         },
         {
@@ -4792,19 +3784,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "F5_Q22",
-          "question": "Pourquoi est-il interdit de se placer sur la bande du sens inverse pour préparer un virage à gauche ?",
-          "choices": [
-            "Pour des raisons de consommation de carburant",
-            "Parce que cette bande est réservée aux véhicules venant en sens inverse et y circuler est dangereux",
-            "Par simple habitude de conduite",
-            "Ce n'est en fait pas interdit"
-          ],
-          "correct": 1,
-          "explanation": "Cette bande est réservée au sens inverse — y circuler crée un danger.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "F5_Q23",
           "question": "Vous souhaitez tourner à gauche. Quelle est la toute première étape de la procédure ?",
           "choices": [
@@ -4857,19 +3836,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "F5_Q27",
-          "question": "Vous venez de tourner à gauche et entrez dans une nouvelle rue. Un piéton traverse cette rue sans passage piétons. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Non, le piéton doit vous laisser passer",
-            "Oui, même en l'absence de passage pour piétons",
-            "Non, sans passage piétons le piéton n'a pas la priorité",
-            "Oui, uniquement en agglomération"
-          ],
-          "correct": 1,
-          "explanation": "Même sans passage prévu, vous cédez aux piétons dans la rue d'engagement.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "F5_Q28",
           "question": "Vous tournez à gauche après avoir vérifié le rétroviseur, mais vous oubliez de contrôler l'angle mort. Est-ce correct ?",
           "choices": [
@@ -4906,32 +3872,6 @@
           ],
           "correct": 1,
           "explanation": "Tous les usagers de la voie publique (chaussée + ses parties) doivent être respectés.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F5_Q31",
-          "question": "Vous tournez à droite dans une rue. Un cycliste circule sur la piste cyclable de cette rue. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Non, le cycliste est sur la piste, pas sur la chaussée",
-            "Oui, la piste cyclable fait partie de la voie publique et vous devez céder",
-            "Non, la piste cyclable n'est pas la chaussée",
-            "Cela dépend du panneau de signalisation"
-          ],
-          "correct": 1,
-          "explanation": "La piste cyclable est une partie de la voie publique — vous cédez au cycliste.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F5_Q32",
-          "question": "Vous changez de direction. Un piéton traverse devant vous sans qu'il y ait de passage pour piétons. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Non, sans passage pour piétons le piéton n'a aucune priorité",
-            "Oui, en changeant de direction vous devez céder aux piétons même sans passage aménagé",
-            "Non, le piéton est en infraction",
-            "Cela dépend de votre vitesse"
-          ],
-          "correct": 1,
-          "explanation": "En changeant de direction, pas besoin de passage prévu pour céder aux piétons.",
           "theoryCardIndex": 2
         },
         {
@@ -4984,19 +3924,6 @@
           ],
           "correct": 1,
           "explanation": "Une manœuvre ne donne jamais la priorité.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F5_Q37",
-          "question": "Pouvez-vous effectuer une manœuvre (par exemple un demi-tour) sans vérifier votre environnement au préalable ?",
-          "choices": [
-            "Oui, si vous êtes rapide",
-            "Non, vous devez TOUJOURS observer attentivement avant toute manœuvre",
-            "Oui, si vous activez le clignotant",
-            "Cela dépend du type de manœuvre"
-          ],
-          "correct": 1,
-          "explanation": "Observer attentivement est obligatoire avant toute manœuvre.",
           "theoryCardIndex": 2
         },
         {
@@ -5079,32 +4006,6 @@
           "sign": "C33"
         },
         {
-          "id": "F5_Q44",
-          "question": "Vous voyez un signal d'interdiction de demi-tour. 50 mètres plus loin, une intersection permet de tourner à gauche. Pouvez-vous tourner à gauche ?",
-          "choices": [
-            "Non, l'interdiction de demi-tour interdit aussi de tourner à gauche",
-            "Oui, le signal interdit uniquement le demi-tour, pas de tourner à gauche",
-            "Non, l'interdiction s'applique jusqu'au prochain carrefour",
-            "Cela dépend du type de signal"
-          ],
-          "correct": 1,
-          "explanation": "Tourner à gauche reste autorisé — seul le demi-tour est interdit.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F5_Q45",
-          "question": "Vous effectuez un demi-tour. Un piéton traverse la chaussée à cet endroit. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Non, le piéton doit attendre",
-            "Oui, le demi-tour est une manœuvre et vous devez céder à TOUS les usagers",
-            "Non, si vous avez activé le clignotant",
-            "Cela dépend de la route"
-          ],
-          "correct": 1,
-          "explanation": "Manœuvre = céder à tous, y compris aux piétons.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F5_Q46",
           "question": "Vous devez reculer pour manœuvrer. Reculer est-il considéré comme une manœuvre ?",
           "choices": [
@@ -5170,19 +4071,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F5_Q51",
-          "question": "La bande de gauche prend fin. Vous devez vous rabattre sur la bande de droite. Devez-vous céder le passage ?",
-          "choices": [
-            "Non, vous avez la priorité car vous étiez sur la bande de gauche",
-            "Oui, c'est une manœuvre et vous devez céder le passage",
-            "Non, c'est la bande de gauche qui disparaît donc vous êtes prioritaire",
-            "Cela dépend de votre vitesse"
-          ],
-          "correct": 1,
-          "explanation": "Peu importe quelle bande disparaît : l'insertion = manœuvre = céder.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F5_Q52",
           "question": "Vous circulez en file dense et une bande prend fin. Quel principe s'applique pour l'insertion ?",
           "choices": [
@@ -5235,19 +4123,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "F5_Q56",
-          "question": "Il n'y a PAS de bandes tracées et la chaussée se rétrécit par la droite. Le véhicule qui roulait à droite a-t-il la priorité ?",
-          "choices": [
-            "Non, il doit céder car c'est une manœuvre",
-            "Oui, en l'absence de bandes, le véhicule restant à droite sur la chaussée a la priorité",
-            "Non, c'est forcément une manœuvre",
-            "Cela dépend de la densité du trafic"
-          ],
-          "correct": 1,
-          "explanation": "Sans bandes, le rétrécissement donne la priorité au véhicule restant à droite.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "F5_Q57",
           "question": "Vous entrez dans une place de stationnement en créneau. Comment cette action est-elle qualifiée ?",
           "choices": [
@@ -5285,48 +4160,7 @@
           "correct": 1,
           "explanation": "Triangle sur pointe avec croix = signal de priorité de droite.",
           "destination": "panneaux",
-          "sign": "F13"
-        },
-        {
-          "id": "F5_Q60",
-          "question": "Vous apercevez un triangle blanc bordé de rouge, pointe vers le bas. Que signifie-t-il ?",
-          "choices": [
-            "Arrêt obligatoire (STOP)",
-            "Cédez le passage aux conducteurs de la voie transversale",
-            "Priorité de droite",
-            "Danger"
-          ],
-          "correct": 1,
-          "explanation": "Triangle blanc bordé de rouge sur pointe = cédez le passage.",
-          "destination": "panneaux",
-          "sign": "B1"
-        },
-        {
-          "id": "F5_Q61",
-          "question": "Vous apercevez un panneau octogonal rouge avec le mot STOP. Que signifie-t-il ?",
-          "choices": [
-            "Cédez le passage sans vous arrêter",
-            "Marquez l'arrêt complet et cédez le passage",
-            "Priorité de droite applicable",
-            "Ralentissez"
-          ],
-          "correct": 1,
-          "explanation": "STOP = arrêt obligatoire et céder le passage.",
-          "destination": "panneaux",
-          "sign": "B5"
-        },
-        {
-          "id": "F5_Q62",
-          "question": "Vous apercevez un signal d'interdiction de demi-tour. Que vous interdit-il exactement ?",
-          "choices": [
-            "De tourner à gauche et de faire demi-tour",
-            "Uniquement le demi-tour, jusqu'au prochain carrefour inclus",
-            "De tourner à droite",
-            "De reculer"
-          ],
-          "correct": 1,
-          "explanation": "L'interdiction de demi-tour ne concerne que le demi-tour, pas les virages à gauche.",
-          "theoryCardIndex": 2
+          "sign": "B17"
         }
       ]
     },
@@ -5626,7 +4460,8 @@
           ],
           "correct": 1,
           "explanation": "Signal avec barrières à 150 m = passage avec barrières dans 150 m.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "A41"
         },
         {
           "id": "F6_Q7",
@@ -5639,7 +4474,8 @@
           ],
           "correct": 1,
           "explanation": "Signal sans barrières à 150 m = passage sans barrières dans 150 m.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "A43"
         },
         {
           "id": "F6_Q8",
@@ -5746,19 +4582,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "F6_Q16",
-          "question": "Vous observez un SSF à côté de la chaussée. Le SSF fait-il partie de la chaussée ?",
-          "choices": [
-            "Oui, c'est une bande de circulation comme les autres",
-            "Non, le SSF ne fait pas partie de la chaussée",
-            "Oui, en agglomération",
-            "Cela dépend du marquage"
-          ],
-          "correct": 1,
-          "explanation": "Le SSF ne fait pas partie de la chaussée.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "F6_Q17",
           "question": "Vous observez la délimitation du SSF. Par quel type de ligne est-il délimité ?",
           "choices": [
@@ -5820,7 +4643,7 @@
             "Oui, mais uniquement de nuit"
           ],
           "correct": 1,
-          "explanation": "Trois exceptions : obstacle, carrefour, accès propriété/parking.",
+          "explanation": "Circuler sur le SSF pour contourner un obstacle est l'une des exceptions autorisées.",
           "theoryCardIndex": 1
         },
         {
@@ -5833,7 +4656,7 @@
             "Cela dépend du feu de signalisation"
           ],
           "correct": 1,
-          "explanation": "Contourner un obstacle via le SSF est autorisé.",
+          "explanation": "Traverser le SSF dans les carrefours est autorisé.",
           "theoryCardIndex": 1
         },
         {
@@ -5846,7 +4669,7 @@
             "Oui, mais uniquement en reculant"
           ],
           "correct": 1,
-          "explanation": "Traverser le SSF dans les carrefours est autorisé.",
+          "explanation": "Traverser le SSF pour accéder à une propriété ou un parking est autorisé.",
           "theoryCardIndex": 1
         },
         {
@@ -5859,7 +4682,7 @@
             "Une zone de travaux"
           ],
           "correct": 1,
-          "explanation": "Accéder à une propriété via le SSF est autorisé.",
+          "explanation": "Les marques en damier délimitent le SSF, les espaces reliant des SSF entre eux, ou un passage à niveau.",
           "theoryCardIndex": 1
         },
         {
@@ -5872,7 +4695,7 @@
             "Non, seuls les bus peuvent les franchir"
           ],
           "correct": 1,
-          "explanation": "Les marques en damier délimitent le SSF, les espaces de liaison ou un passage à niveau.",
+          "explanation": "On peut traverser les marques en damier, mais il est interdit de s'y arrêter ou d'y stationner.",
           "theoryCardIndex": 1
         },
         {
@@ -5885,8 +4708,9 @@
             "Un parking vélo est disponible"
           ],
           "correct": 1,
-          "explanation": "On peut traverser les damiers mais pas s'y arrêter ni stationner.",
-          "theoryCardIndex": 1
+          "explanation": "Un panneau additionnel avec un vélo autorise les cyclistes à emprunter le SSF.",
+          "theoryCardIndex": 1,
+          "sign": "F18"
         },
         {
           "id": "F6_Q27",
@@ -5898,7 +4722,7 @@
             "Les taxis également"
           ],
           "correct": 1,
-          "explanation": "Le panneau additionnel vélo autorise les cyclistes à emprunter le SSF.",
+          "explanation": "Sans panneau additionnel, seuls les véhicules de transport en commun (tram, bus) peuvent circuler sur le SSF.",
           "theoryCardIndex": 1
         },
         {
@@ -5911,7 +4735,7 @@
             "Cela dépend de la raison de votre présence"
           ],
           "correct": 1,
-          "explanation": "Sans panneau additionnel, seuls les TC (tram, bus) peuvent utiliser le SSF.",
+          "explanation": "Si vous circulez sur le SSF via une exception autorisée, vous devez respecter les feux de transport en commun présents.",
           "theoryCardIndex": 1
         },
         {
@@ -5924,7 +4748,7 @@
             "Cela dépend de la couleur de la ligne"
           ],
           "correct": 1,
-          "explanation": "Sur un SSF, les feux de TC s'appliquent à tous les usagers présents.",
+          "explanation": "Non, la ligne du SSF n'est pas la même : le SSF ne fait pas partie de la chaussée, contrairement aux lignes séparant les bandes ordinaires.",
           "theoryCardIndex": 1
         },
         {
@@ -5937,7 +4761,7 @@
             "En voie de service"
           ],
           "correct": 1,
-          "explanation": "La ligne du SSF n'est pas identique à celle entre bandes — le SSF n'est pas la chaussée.",
+          "explanation": "Sur certaines autoroutes belges, l'ancienne bande d'arrêt d'urgence a été transformée en site spécial franchissable (SSF) réservé aux bus.",
           "theoryCardIndex": 1
         },
         {
@@ -5950,7 +4774,7 @@
             "De panneaux directionnels bleus"
           ],
           "correct": 1,
-          "explanation": "L'ancienne bande d'arrêt d'urgence devient un SSF sur certaines autoroutes.",
+          "explanation": "Une ligne continue, le mot BUS écrit au sol et un panneau F18 permettent de reconnaître un SSF sur autoroute.",
           "theoryCardIndex": 2
         },
         {
@@ -5963,7 +4787,7 @@
             "Cela dépend de la densité du trafic"
           ],
           "correct": 1,
-          "explanation": "Ligne continue + BUS + panneau F18 = SSF sur autoroute.",
+          "explanation": "La limitation de vitesse du SSF ne s'applique qu'à cette bande ; les autres bandes conservent la vitesse normale (ex. 120 km/h).",
           "theoryCardIndex": 2
         },
         {
@@ -5976,20 +4800,7 @@
             "Cela dépend de l'heure de la journée"
           ],
           "correct": 1,
-          "explanation": "Le SSF autoroute est limité à 50 km/h dans cet exemple.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "F6_Q34",
-          "question": "Vous apercevez un signal de danger représentant un tram/train sur la chaussée. Que signifie-t-il ?",
-          "choices": [
-            "Un signal d'indication de gare",
-            "La chaussée est traversée par une ou plusieurs voies ferrées intégrées",
-            "Un signal de priorité spécial",
-            "Un feu clignotant à proximité"
-          ],
-          "correct": 1,
-          "explanation": "Les autres bandes conservent la vitesse normale — seul le SSF est limité à 50 km/h.",
+          "explanation": "Sans bouchon, les bus roulent sur la bande de droite normale plutôt que sur le SSF limité à 50 km/h.",
           "theoryCardIndex": 2
         },
         {
@@ -6002,7 +4813,7 @@
             "Non, ils sont toujours sur le trottoir"
           ],
           "correct": 1,
-          "explanation": "Sans bouchons, les bus préfèrent la bande normale pour aller plus vite.",
+          "explanation": "Oui, les rails du tram peuvent être intégrés directement dans la chaussée ; un signal de danger spécifique en avertit.",
           "theoryCardIndex": 2
         },
         {
@@ -6015,7 +4826,7 @@
             "Cela dépend du type de carrefour"
           ],
           "correct": 1,
-          "explanation": "Un signal de danger signale les voies ferrées traversant la chaussée.",
+          "explanation": "Le tram est toujours prioritaire et n'est pas soumis aux règles de priorité ordinaires, quel que soit le côté d'où il arrive.",
           "theoryCardIndex": 3
         },
         {
@@ -6028,20 +4839,7 @@
             "Il s'arrête aux passages pour piétons"
           ],
           "correct": 1,
-          "explanation": "Les rails du tram peuvent être intégrés dans la chaussée.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F6_Q38",
-          "question": "Un tram et une voiture arrivent à un carrefour sans signalisation. Le tram vient de votre gauche. Qui passe en premier ?",
-          "choices": [
-            "La voiture, grâce à la priorité de droite",
-            "Le tram, car il est toujours prioritaire peu importe de quel côté il arrive",
-            "Le premier arrivé au carrefour",
-            "Personne, tout le monde s'arrête"
-          ],
-          "correct": 1,
-          "explanation": "Le tram est toujours prioritaire — il ne respecte pas la priorité de droite.",
+          "explanation": "Le tram doit s'arrêter aux injonctions des agents qualifiés et à ses propres signaux lumineux (feux de TC).",
           "theoryCardIndex": 3
         },
         {
@@ -6054,7 +4852,7 @@
             "Cela dépend de l'agent"
           ],
           "correct": 1,
-          "explanation": "Le tram ne s'arrête qu'aux injonctions des agents et aux signaux lumineux.",
+          "explanation": "Le tram doit respecter les injonctions des agents qualifiés.",
           "theoryCardIndex": 3
         },
         {
@@ -6067,7 +4865,7 @@
             "Oui, uniquement le feu rouge"
           ],
           "correct": 1,
-          "explanation": "Le tram est toujours prioritaire, peu importe de quel côté il arrive.",
+          "explanation": "Le tram respecte les signaux lumineux, notamment ses propres feux de transport en commun.",
           "theoryCardIndex": 3
         },
         {
@@ -6080,7 +4878,7 @@
             "Il respecte uniquement les agents, pas les feux"
           ],
           "correct": 1,
-          "explanation": "Les agents qualifiés priment sur tout, y compris sur la priorité du tram.",
+          "explanation": "Le tram respecte les agents qualifiés et les signaux lumineux, mais pas les règles de priorité ordinaires comme la priorité de droite.",
           "theoryCardIndex": 3
         },
         {
@@ -6093,7 +4891,7 @@
             "Le panneau C43"
           ],
           "correct": 1,
-          "explanation": "Le tram respecte les signaux lumineux (ses propres feux de TC).",
+          "explanation": "Le panneau F17 signale une bande bus.",
           "theoryCardIndex": 3
         },
         {
@@ -6106,7 +4904,7 @@
             "Il n'y a pas de ligne"
           ],
           "correct": 1,
-          "explanation": "Tram : respecte agents et feux. Ne respecte pas les règles de priorité habituelles.",
+          "explanation": "La bande bus est délimitée par une ligne blanche discontinue.",
           "theoryCardIndex": 3
         },
         {
@@ -6119,7 +4917,7 @@
             "Oui, la nuit"
           ],
           "correct": 1,
-          "explanation": "La bande bus est signalée par le panneau F17.",
+          "explanation": "Circuler sur la bande bus en voiture est interdit, sauf indication contraire par panneau additionnel.",
           "theoryCardIndex": 4
         },
         {
@@ -6132,7 +4930,7 @@
             "Oui, hors heures de pointe"
           ],
           "correct": 1,
-          "explanation": "La bande bus est délimitée par une ligne blanche discontinue.",
+          "explanation": "L'arrêt et le stationnement sur la bande bus sont interdits, sauf indication contraire.",
           "theoryCardIndex": 4
         },
         {
@@ -6145,7 +4943,7 @@
             "Oui, pour y stationner"
           ],
           "correct": 1,
-          "explanation": "Circuler sur la bande bus est interdit, sauf indication contraire.",
+          "explanation": "À proximité immédiate d'un carrefour, vous pouvez emprunter la bande bus pour changer de direction.",
           "theoryCardIndex": 4
         },
         {
@@ -6158,7 +4956,7 @@
             "Oui, mais uniquement les camions"
           ],
           "correct": 1,
-          "explanation": "S'arrêter et stationner sur la bande bus sont interdits, sauf indication contraire.",
+          "explanation": "Contourner un obstacle via la bande bus est autorisé.",
           "theoryCardIndex": 4
         },
         {
@@ -6171,8 +4969,9 @@
             "Un parking vélo est disponible"
           ],
           "correct": 1,
-          "explanation": "À proximité immédiate d'un carrefour, vous pouvez emprunter la bande bus pour changer de direction.",
-          "theoryCardIndex": 4
+          "explanation": "Un panneau additionnel avec un vélo autorise les cyclistes à emprunter la bande bus.",
+          "theoryCardIndex": 4,
+          "sign": "F17"
         },
         {
           "id": "F6_Q49",
@@ -6184,33 +4983,7 @@
             "Il n'y a aucune différence visuelle"
           ],
           "correct": 1,
-          "explanation": "Contourner un obstacle via la bande bus est autorisé.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F6_Q50",
-          "question": "Vous voyez une ligne continue blanche à gauche d'un espace portant l'inscription BUS. S'agit-il d'une bande bus ou d'un SSF ?",
-          "choices": [
-            "C'est une bande bus",
-            "C'est un SSF (car la ligne est continue)",
-            "C'est les deux en même temps",
-            "Cela dépend du panneau"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau additionnel vélo autorise les cyclistes à utiliser la bande bus.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F6_Q51",
-          "question": "Vous voyez une ligne discontinue blanche à gauche d'un espace portant l'inscription BUS. S'agit-il d'une bande bus ou d'un SSF ?",
-          "choices": [
-            "C'est un SSF",
-            "C'est une bande bus (car la ligne est discontinue)",
-            "C'est les deux en même temps",
-            "Ni l'un ni l'autre"
-          ],
-          "correct": 1,
-          "explanation": "Ligne discontinue = bande bus. Ligne continue = SSF.",
+          "explanation": "La bande bus est délimitée par une ligne discontinue ; le SSF par une ligne continue.",
           "theoryCardIndex": 4
         },
         {
@@ -6223,7 +4996,7 @@
             "Cela dépend de la largeur de la route"
           ],
           "correct": 1,
-          "explanation": "Ligne continue = SSF.",
+          "explanation": "Circuler sur un arrêt de bus est autorisé et souvent nécessaire.",
           "theoryCardIndex": 4
         },
         {
@@ -6236,7 +5009,7 @@
             "Oui, uniquement pour les taxis"
           ],
           "correct": 1,
-          "explanation": "Ligne discontinue = bande bus.",
+          "explanation": "S'arrêter pour embarquer ou débarquer des passagers à un arrêt de bus est autorisé.",
           "theoryCardIndex": 4
         },
         {
@@ -6249,20 +5022,7 @@
             "Oui, avec les feux de détresse"
           ],
           "correct": 1,
-          "explanation": "Circuler sur un arrêt de bus est autorisé et souvent nécessaire.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F6_Q55",
-          "question": "Pourquoi n'est-il pas autorisé d'attendre le bus dans votre voiture à un arrêt ?",
-          "choices": [
-            "Parce que c'est dangereux pour les piétons",
-            "Parce qu'attendre est assimilé à du stationnement, qui est interdit à un arrêt de bus",
-            "Parce que c'est impoli envers les autres usagers",
-            "Parce que cela gêne la circulation"
-          ],
-          "correct": 1,
-          "explanation": "S'arrêter pour embarquer/débarquer est autorisé à un arrêt de bus.",
+          "explanation": "Attendre le bus dans votre voiture à un arrêt est assimilé à du stationnement, ce qui est interdit.",
           "theoryCardIndex": 5
         },
         {
@@ -6275,20 +5035,7 @@
             "À moins de 20 mètres"
           ],
           "correct": 1,
-          "explanation": "Attendre dans sa voiture = stationnement = interdit à un arrêt de bus.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F6_Q57",
-          "question": "Vous stationnez votre voiture à 10 mètres d'un poteau d'arrêt de bus (sans marques au sol). Êtes-vous en infraction ?",
-          "choices": [
-            "Non, 10 mètres sont suffisants",
-            "Oui, la distance minimale est de 15 mètres de part et d'autre",
-            "Non, puisqu'il n'y a pas de marques au sol",
-            "Cela dépend de l'heure de la journée"
-          ],
-          "correct": 1,
-          "explanation": "Attendre = stationnement = interdit à l'arrêt de bus.",
+          "explanation": "Sans marquage au sol, il est interdit de stationner à moins de 15 mètres de part et d'autre du poteau d'arrêt de bus.",
           "theoryCardIndex": 5
         },
         {
@@ -6301,7 +5048,7 @@
             "Uniquement du côté de la chaussée"
           ],
           "correct": 1,
-          "explanation": "Sans marques : interdit de stationner à moins de 15 m de part et d'autre du poteau.",
+          "explanation": "La distance de 15 mètres s'applique de part et d'autre du poteau, avant ET après.",
           "theoryCardIndex": 5
         },
         {
@@ -6314,20 +5061,7 @@
             "Cela dépend de la largeur de la route"
           ],
           "correct": 1,
-          "explanation": "10 m < 15 m minimum requis → infraction.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F6_Q60",
-          "question": "À quel moment précis devez-vous céder le passage au bus quittant son arrêt en agglomération ?",
-          "choices": [
-            "Dès que vous apercevez le bus à l'arrêt",
-            "Dès que le bus actionne son clignotant gauche",
-            "Quand le bus klaxonne",
-            "Quand le bus est déjà engagé sur la chaussée"
-          ],
-          "correct": 1,
-          "explanation": "15 m de part ET d'autre du poteau d'arrêt.",
+          "explanation": "En agglomération, vous devez céder le passage à un autobus de ligne qui active son clignotant gauche en quittant son arrêt.",
           "theoryCardIndex": 5
         },
         {
@@ -6340,20 +5074,7 @@
             "Cela dépend du nombre de passagers"
           ],
           "correct": 1,
-          "explanation": "En agglomération : céder au bus dès qu'il met son clignotant gauche.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F6_Q62",
-          "question": "Un autobus scolaire quitte son arrêt en agglomération et active son clignotant. A-t-il la même priorité qu'un bus de ligne ?",
-          "choices": [
-            "Oui, tous les bus scolaires ont la priorité",
-            "Non, les autobus scolaires ou ouvriers n'ont PAS la priorité en quittant leur arrêt",
-            "Oui, grâce au panneau d'écoliers jaune",
-            "Cela dépend de l'heure de la journée"
-          ],
-          "correct": 1,
-          "explanation": "Le déclencheur = clignotant gauche du bus.",
+          "explanation": "Les autocars ne bénéficient PAS de cette priorité, contrairement aux autobus de ligne réguliers.",
           "theoryCardIndex": 5
         },
         {
@@ -6366,7 +5087,7 @@
             "Aucun bus n'a cette priorité"
           ],
           "correct": 1,
-          "explanation": "Les autocars n'ont pas la priorité en quittant leur arrêt.",
+          "explanation": "Seuls les autobus de service régulier de transport en commun bénéficient de cette priorité (pas les autocars, bus scolaires ou ouvriers).",
           "theoryCardIndex": 5
         },
         {
@@ -6379,7 +5100,7 @@
             "Cela dépend du type de route"
           ],
           "correct": 1,
-          "explanation": "Autobus scolaires et ouvriers : pas de priorité en quittant l'arrêt.",
+          "explanation": "Hors agglomération, vous n'êtes pas tenu de céder le passage à un autobus qui quitte son arrêt.",
           "theoryCardIndex": 5
         },
         {
@@ -6392,101 +5113,8 @@
             "Uniquement hors agglomération"
           ],
           "correct": 1,
-          "explanation": "Seuls les autobus de service régulier de TC ont la priorité.",
+          "explanation": "Les trois conditions simultanées sont : en agglomération, pour un autobus de TC régulier, et dès l'activation du clignotant gauche.",
           "theoryCardIndex": 5
-        },
-        {
-          "id": "F6_Q66",
-          "question": "Vous apercevez ce panneau avec une seule barre en croix au passage à niveau. Que signifie-t-il ?",
-          "choices": [
-            "Passage à niveau à deux voies",
-            "Passage à niveau à voie unique",
-            "Travaux sur la voie ferrée",
-            "Croisement de routes ordinaires"
-          ],
-          "correct": 1,
-          "explanation": "Hors agglomération : pas d'obligation de céder au bus.",
-          "theoryCardIndex": 5,
-          "sign": "F18"
-        },
-        {
-          "id": "F6_Q67",
-          "question": "Vous apercevez ce panneau avec deux barres en croix superposées. Que signifie-t-il ?",
-          "choices": [
-            "Passage à niveau à voie unique",
-            "Passage à niveau à deux ou plusieurs voies",
-            "Croisement de routes ordinaires",
-            "Travaux ferroviaires"
-          ],
-          "correct": 1,
-          "explanation": "En agglomération + autobus TC régulier + clignotant gauche = céder.",
-          "theoryCardIndex": 5,
-          "sign": "F18"
-        },
-        {
-          "id": "F6_Q68",
-          "question": "Vous apercevez un signal de danger représentant une locomotive et des barrières, placé à 150 m. Que signifie-t-il ?",
-          "choices": [
-            "Passage à niveau sans barrières à 150 m",
-            "Passage à niveau avec barrières à 150 m",
-            "Gare ferroviaire à proximité",
-            "Travaux ferroviaires en cours"
-          ],
-          "correct": 1,
-          "explanation": "Une barre en croix = passage à niveau à voie unique.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "F6_Q69",
-          "question": "Vous apercevez le signal d'indication avec le symbole SSF et le mot BUS. Que signifie-t-il ?",
-          "choices": [
-            "Bande bus ordinaire",
-            "Site spécial franchissable réservé au transport en commun",
-            "Parking réservé aux bus",
-            "Station de bus à proximité"
-          ],
-          "correct": 1,
-          "explanation": "Deux barres en croix = passage à niveau à deux voies ou plus.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "F6_Q70",
-          "question": "Vous apercevez le signal F17 montrant des bandes de circulation dont une porte l'inscription BUS. Que signifie-t-il ?",
-          "choices": [
-            "Site spécial franchissable",
-            "Bande de circulation réservée aux autobus",
-            "Parking réservé aux bus",
-            "Station de bus à proximité"
-          ],
-          "correct": 1,
-          "explanation": "Locomotive + barrières à 150 m = passage à niveau avec barrières.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "F6_Q71",
-          "question": "Vous voyez un signal SSF accompagné d'un panneau additionnel représentant un vélo. Que signifie cette combinaison ?",
-          "choices": [
-            "Piste cyclable à proximité",
-            "SSF que les cyclistes peuvent également emprunter",
-            "Bande bus interdite aux cyclistes",
-            "Parking vélo"
-          ],
-          "correct": 1,
-          "explanation": "Signal SSF + BUS = site spécial franchissable pour TC.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "F6_Q72",
-          "question": "Vous apercevez un signal de danger représentant un tram/train sur la chaussée. Que signifie-t-il ?",
-          "choices": [
-            "Gare ferroviaire à proximité",
-            "La voie publique est traversée par une ou plusieurs voies ferrées intégrées dans la chaussée",
-            "Passage à niveau avec barrières",
-            "Site spécial franchissable"
-          ],
-          "correct": 1,
-          "explanation": "F17 = bande bus (bande réservée aux autobus).",
-          "theoryCardIndex": 3
         },
         {
           "id": "F6_Q73",
@@ -6498,7 +5126,7 @@
             "Le passage est totalement interdit"
           ],
           "correct": 1,
-          "explanation": "SSF + panneau vélo = les cyclistes peuvent aussi utiliser ce SSF.",
+          "explanation": "Un panneau STOP impose l'arrêt complet et de céder le passage avant de s'engager, y compris à l'approche d'un passage à niveau.",
           "destination": "panneaux",
           "sign": "B5"
         },
@@ -6513,21 +5141,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal indique que des voies ferrées traversent la chaussée.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "F6_Q75",
-          "question": "Vous apercevez un panneau STOP octogonal rouge à l'approche d'un passage à niveau. Que devez-vous faire ?",
-          "choices": [
-            "Simplement ralentir",
-            "Marquer l'arrêt complet et céder le passage",
-            "Les feux sont en panne, appliquer la priorité de droite",
-            "Le passage est totalement interdit"
-          ],
-          "correct": 1,
-          "explanation": "STOP = arrêt obligatoire et céder le passage.",
-          "destination": "panneaux",
-          "sign": "B5"
+          "theoryCardIndex": 3,
+          "sign": "A49"
         }
       ]
     }

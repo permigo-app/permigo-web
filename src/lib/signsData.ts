@@ -169,6 +169,8 @@ export const SIGNS_BY_CATEGORY: Record<string, SignDef[]> = {
     { code: 'F45', name: 'Voie sans issue (rue en cul-de-sac, pas de sortie)' },
     { code: 'F45b', name: 'Voie sans issue sauf piétons et cyclistes (ils peuvent passer)' },
     { code: 'F47', name: 'Fin des travaux (la zone de chantier est terminée)' },
+    { code: 'F49', name: 'Passage pour piétons (marque l\'emplacement du passage)' },
+    { code: 'F50', name: 'Passage pour cyclistes et conducteurs de cyclomoteurs à deux roues' },
     { code: 'F111', name: 'Début de zone cyclable (le vélo a la priorité sur la voiture)' },
     { code: 'F113', name: 'Fin de zone cyclable' },
     { code: 'F52', name: 'Sortie de secours dans un tunnel (en cas d\'urgence)' },
@@ -251,6 +253,8 @@ export const SIGNS_BY_CATEGORY: Record<string, SignDef[]> = {
     { code: 'ZEBRAS', name: 'Passage piétons — zèbres (bandes blanches, les piétons ont la priorité)' },
     { code: 'CHEVRONS', name: 'Chevrons (hachures, zone interdite à la circulation)' },
     { code: 'DAMIER', name: 'Damier (zone tampon entre deux voies, ne pas rouler dessus)' },
+    { code: 'FLECHE_SOL_GAUCHE', name: 'Flèche de sélection au sol — tourner à gauche (obligatoire sur cette bande)' },
+    { code: 'FLECHE_SOL_TOUT_DROIT', name: 'Flèche de sélection au sol — tout droit (obligatoire sur cette bande)' },
   ],
   LT: [
     { code: 'TEMOIN_VEILLEUSES', name: 'Feux de position — veilleuses (éclairage minimum, de nuit en ville)' },

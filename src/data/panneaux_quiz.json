@@ -7,19 +7,6 @@
       "icon": "🔵",
       "questions": [
         {
-          "id": "A4_Q86",
-          "sign": "F1",
-          "question": "Que signifie ce panneau ?",
-          "answers": [
-            "Vitesse recommandée",
-            "Vitesse maximale autorisée sur la sortie : 90 km/h",
-            "Vitesse minimale sur la sortie",
-            "Distance de la sortie"
-          ],
-          "correct": 1,
-          "explanation": "Un signal rond bleu avec une vitesse dans une sortie indique la vitesse maximale autorisée sur cette bretelle."
-        },
-        {
           "id": "A5_Q55",
           "sign": "F1",
           "question": "Que signifie ce panneau ?",
@@ -30,33 +17,15 @@
             "Zone industrielle"
           ],
           "correct": 1,
-          "explanation": "Le panneau avec le nom d'une localité sur fond blanc indique le début d'une agglomération."
-        },
-        {
-          "id": "A6_Q76",
-          "sign": "F1",
-          "question": "Que signifie ce panneau ?",
-          "answers": [
-            "Direction vers la localité",
-            "Commencement d'une agglomération",
-            "Fin d'une agglomération",
-            "Zone industrielle"
+          "explanation": "Le panneau avec le nom d'une localité sur fond blanc indique le début d'une agglomération.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Richting naar deze plaats",
+            "Begin van een bebouwde kom",
+            "Einde van een bebouwde kom",
+            "Industriezone"
           ],
-          "correct": 1,
-          "explanation": "Le signal blanc avec le nom d'une localité en noir indique le commencement d'une agglomération."
-        },
-        {
-          "id": "B1_SIGN_F1__1",
-          "sign": "F1",
-          "question": "Vous voyez ce panneau en roulant. Que signifie-t-il ?",
-          "answers": [
-            "Passage pour pietons avec feux",
-            "Fin du passage pour pietons",
-            "Traversee pietonne prioritaire",
-            "Zone scolaire : ralentir"
-          ],
-          "correct": 1,
-          "explanation": "F1b signale la fin d'un passage pour piétons. Au-delà de ce signal, les piétons ne bénéficient plus de la priorité liée à un passage balisé."
+          "explanation_nl": "Het bord met de naam van een plaats op witte achtergrond duidt het begin van een bebouwde kom aan."
         },
         {
           "id": "A5_Q51",
@@ -69,12 +38,20 @@
             "Parking interdit"
           ],
           "correct": 1,
-          "explanation": "Le signal bleu barré avec une voiture indique la fin d'une route pour automobiles."
+          "explanation": "Le signal bleu barré avec une voiture indique la fin d'une route pour automobiles.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Begin van een autoweg",
+            "Einde van een autoweg",
+            "Einde autosnelweg",
+            "Parkeren verboden"
+          ],
+          "explanation_nl": "Het doorstreepte blauwe bord met een auto duidt het einde van een autoweg aan."
         },
         {
           "id": "F2_SIGN_F11_1",
-          "sign": "F11",
-          "question": "Vous roulez sur autoroute et apercevez un panneau bleu barré d'une diagonale représentant deux voies. Que signifie-t-il ?",
+          "sign": "F7",
+          "question": "Vous roulez sur autoroute et apercevez ce panneau. Que signifie-t-il ?",
           "answers": [
             "Vous entrez sur une autoroute",
             "L'autoroute prend fin : les règles spécifiques à l'autoroute cessent de s'appliquer",
@@ -82,7 +59,15 @@
             "Autoroute à péage devant vous"
           ],
           "correct": 1,
-          "explanation": "F11 marque la fin de l'autoroute. Les règles spécifiques (interdiction aux piétons, cyclistes, vitesse minimale…) ne s'appliquent plus après ce panneau."
+          "explanation": "F7 marque la fin de l'autoroute. Les règles spécifiques (interdiction aux piétons et cyclistes, vitesse minimale…) ne s'appliquent plus après ce panneau.",
+          "question_nl": "U rijdt op de autosnelweg en ziet dit bord. Wat betekent het?",
+          "answers_nl": [
+            "U rijdt een autosnelweg op",
+            "De autosnelweg eindigt: de specifieke regels gelden niet meer",
+            "Splitsing van autosnelwegen op komst",
+            "Tolweg voor u"
+          ],
+          "explanation_nl": "F7 markeert het einde van de autosnelweg. De specifieke regels (verbod voor voetgangers en fietsers, minimumsnelheid…) gelden niet meer."
         },
         {
           "id": "F2_SIGN_F14_1",
@@ -95,7 +80,15 @@
             "Vous êtes sur une route à chaussées séparées"
           ],
           "correct": 1,
-          "explanation": "F14 marque la fin d'une route pour automobiles (F13). Les règles associées à ce type de route (vitesse, usagers autorisés…) ne s'appliquent plus."
+          "explanation": "F11 marque la fin d'une route pour automobiles (F9). Les règles associées à ce type de route (vitesse, usagers autorisés…) ne s'appliquent plus.",
+          "question_nl": "U ziet dit bord op een autoweg. Wat betekent het?",
+          "answers_nl": [
+            "U rijdt een autoweg op",
+            "De autoweg eindigt: bepaalde regels veranderen",
+            "U rijdt op een snelweg met voorrang",
+            "U rijdt op een weg met gescheiden rijbanen"
+          ],
+          "explanation_nl": "F11 markeert het einde van een autoweg (F9). De regels van dit wegtype (snelheid, toegelaten weggebruikers…) gelden niet meer."
         },
         {
           "id": "A6_Q91",
@@ -108,20 +101,36 @@
             "Zone piétonne"
           ],
           "correct": 1,
-          "explanation": "Dans une rue cyclable, les cyclistes sont prioritaires, les voitures sont des \"invités\" et la vitesse max est 30 km/h."
+          "explanation": "Dans une rue cyclable, les cyclistes sont prioritaires, les voitures sont des \"invités\" et la vitesse max est 30 km/h.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verplicht fietspad",
+            "Straat waar fietsers voorrang hebben, auto's zijn te gast, max 30 km/u",
+            "Straat verboden voor auto's",
+            "Voetgangerszone"
+          ],
+          "explanation_nl": "In een fietsstraat hebben fietsers voorrang, auto's zijn \"te gast\" en de maximumsnelheid is 30 km/u."
         },
         {
           "id": "A6_Q93",
           "sign": "F111",
-          "question": "Que signifie ce panneau ?",
+          "question": "Quelle est la différence entre une zone cyclable et une rue cyclable ?",
           "answers": [
-            "Aucune",
+            "Aucune différence",
             "La zone s'applique à plusieurs rues, la rue cyclable à une seule rue",
             "La zone interdit les voitures",
             "La zone a une vitesse de 50 km/h"
           ],
           "correct": 1,
-          "explanation": "Une zone cyclable s'applique à plusieurs rues, tandis qu'une rue cyclable concerne une seule rue."
+          "explanation": "Une zone cyclable s'applique à plusieurs rues, tandis qu'une rue cyclable concerne une seule rue.",
+          "question_nl": "Wat is het verschil tussen een fietszone en een fietsstraat?",
+          "answers_nl": [
+            "Geen verschil",
+            "De zone geldt voor meerdere straten, de fietsstraat voor één enkele straat",
+            "De zone verbiedt auto's",
+            "De zone heeft een snelheid van 50 km/u"
+          ],
+          "explanation_nl": "Een fietszone geldt voor meerdere straten, terwijl een fietsstraat één enkele straat betreft."
         },
         {
           "id": "A6_Q80",
@@ -134,12 +143,20 @@
             "Zone scolaire"
           ],
           "correct": 1,
-          "explanation": "Ce signal bleu indique le commencement d'une zone résidentielle (ou zone de rencontre)."
+          "explanation": "Ce signal bleu indique le commencement d'une zone résidentielle (ou zone de rencontre).",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Voetgangerszone",
+            "Begin van een woonerf of ontmoetingszone",
+            "Bewonersparking",
+            "Schoolzone"
+          ],
+          "explanation_nl": "Dit blauwe bord duidt het begin van een woonerf (of ontmoetingszone) aan."
         },
         {
           "id": "F1_SIGN_F23_1",
           "sign": "F12b",
-          "question": "Vous passez devant ce panneau en quittant une zone résidentielle. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Vous entrez dans une zone résidentielle",
             "La zone résidentielle prend fin : les règles spéciales ne s'appliquent plus",
@@ -147,7 +164,15 @@
             "Vous quittez une zone de rencontre"
           ],
           "correct": 1,
-          "explanation": "F23 marque la fin de la zone résidentielle (F21). Les restrictions propres à cette zone (vitesse max 20 km/h, piétons prioritaires partout…) ne s'appliquent plus."
+          "explanation": "F12b marque la fin de la zone résidentielle (F12a). Les restrictions propres à cette zone (vitesse max 20 km/h, piétons prioritaires partout…) ne s'appliquent plus.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "U rijdt een woonerf binnen",
+            "Het woonerf eindigt: de speciale regels gelden niet meer",
+            "U verlaat een zone 30",
+            "U verlaat een ontmoetingszone"
+          ],
+          "explanation_nl": "F12b markeert het einde van het woonerf (F12a). De specifieke beperkingen (max 20 km/u, voetgangers overal voorrang…) gelden niet meer."
         },
         {
           "id": "A2_Q48",
@@ -160,12 +185,20 @@
             "Ralentir à 30 km/h"
           ],
           "correct": 1,
-          "explanation": "Ce signal annonce des flèches directionnelles : vous devez anticiper et choisir la bonne bande selon votre destination."
+          "explanation": "Ce signal annonce des flèches directionnelles : vous devez anticiper et choisir la bonne bande selon votre destination.",
+          "question_nl": "U ziet dit bord langs de weg. Wat moet u doen?",
+          "answers_nl": [
+            "Stoppen",
+            "Uw rijstrook kiezen volgens de gewenste richting",
+            "Van weg veranderen",
+            "Vertragen tot 30 km/u"
+          ],
+          "explanation_nl": "Dit bord kondigt voorsorteerpijlen aan: anticipeer en kies de juiste rijstrook volgens uw bestemming."
         },
         {
           "id": "E2_Q69",
           "sign": "F13",
-          "question": "Vous apercevez un panneau annonçant des flèches sur la chaussée prescrivant le choix de bande. Que signifie ce signal ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Interdiction de dépasser",
             "Des flèches au sol vous indiqueront bientôt le choix d'une bande de circulation",
@@ -173,12 +206,20 @@
             "Zone de stationnement"
           ],
           "correct": 1,
-          "explanation": "Ce signal d'indication annonce que des flèches au sol prescrivent le choix de bande."
+          "explanation": "Ce signal d'indication annonce que des flèches au sol prescrivent le choix de bande.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Inhaalverbod",
+            "Pijlen op de grond zullen u binnenkort de keuze van een rijstrook aanduiden",
+            "Eenrichtingsweg",
+            "Parkeerzone"
+          ],
+          "explanation_nl": "Dit aanwijzingsbord kondigt aan dat pijlen op de grond de strookkeuze voorschrijven."
         },
         {
           "id": "E2_Q70",
           "sign": "F13",
-          "question": "Vous apercevez un panneau avec des flèches vers le bas et des flèches obliques. Que signifie ce signal ?",
+          "question": "Sur ce panneau, que signifient les flèches vers le bas et les flèches obliques ?",
           "answers": [
             "Travaux en cours sur la chaussée",
             "Les flèches vers le bas indiquent tout droit, les flèches obliques indiquent les directions sortantes",
@@ -186,24 +227,19 @@
             "Interdiction de dépasser"
           ],
           "correct": 1,
-          "explanation": "Flèches vers le bas = continuer tout droit. Flèches obliques = directions sortantes."
-        },
-        {
-          "id": "F5_Q59",
-          "sign": "F13",
-          "question": "Vous apercevez un panneau triangulaire sur pointe avec une croix à l'intérieur. Que signifie-t-il ?",
-          "answers": [
-            "Danger à proximité",
-            "Carrefour où la priorité de droite est d'application",
-            "Arrêt obligatoire (STOP)",
-            "Voie prioritaire"
+          "explanation": "Flèches vers le bas = continuer tout droit. Flèches obliques = directions sortantes.",
+          "question_nl": "Wat betekenen de pijlen naar beneden en de schuine pijlen op dit bord?",
+          "answers_nl": [
+            "Wegenwerken op de rijbaan",
+            "Pijlen naar beneden = rechtdoor, schuine pijlen = uitgaande richtingen",
+            "Eenrichtingsweg",
+            "Inhaalverbod"
           ],
-          "correct": 1,
-          "explanation": "Triangle sur pointe avec croix = signal de priorité de droite."
+          "explanation_nl": "Pijlen naar beneden = rechtdoor rijden. Schuine pijlen = uitgaande richtingen."
         },
         {
           "id": "E2_Q71",
-          "sign": "F17",
+          "sign": "F13",
           "question": "Vous observez un signal de choix de bande avec plusieurs flèches. À quoi correspond le nombre de flèches ?",
           "answers": [
             "Au nombre de destinations possibles",
@@ -212,20 +248,36 @@
             "Au nombre de sorties disponibles"
           ],
           "correct": 1,
-          "explanation": "Chaque flèche correspond à une bande de circulation."
+          "explanation": "Chaque flèche correspond à une bande de circulation.",
+          "question_nl": "U ziet een voorsorteersignaal met meerdere pijlen. Waarmee komt het aantal pijlen overeen?",
+          "answers_nl": [
+            "Met het aantal mogelijke bestemmingen",
+            "Met het aantal rijstroken",
+            "Met de maximumsnelheid",
+            "Met het aantal beschikbare uitritten"
+          ],
+          "explanation_nl": "Elke pijl komt overeen met een rijstrook."
         },
         {
           "id": "A6_Q89",
           "sign": "F18",
           "question": "Que signifie ce panneau ?",
           "answers": [
-            "Motos interdites",
-            "Les motocyclettes sont aussi autorisées sur le SSF",
-            "Parking moto",
-            "Zone moto"
+            "Arrêt de bus et tram",
+            "Site propre : voie réservée aux transports en commun (bus, tram)",
+            "Parking réservé aux bus",
+            "Gare routière à proximité"
           ],
           "correct": 1,
-          "explanation": "Le panneau SSF avec pictogramme moto signifie que les motocyclettes sont autorisées sur ce SSF."
+          "explanation": "F18 signale un site propre : une voie réservée aux véhicules de transport en commun. Les autres conducteurs ne peuvent pas l'emprunter.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Bus- en tramhalte",
+            "Eigen bedding: strook voorbehouden voor het openbaar vervoer (bus, tram)",
+            "Parking voorbehouden voor bussen",
+            "Busstation in de buurt"
+          ],
+          "explanation_nl": "F18 duidt een eigen bedding aan: een strook voorbehouden voor voertuigen van het openbaar vervoer. Andere bestuurders mogen ze niet gebruiken."
         },
         {
           "id": "A5_Q56",
@@ -238,25 +290,20 @@
             "Déviation"
           ],
           "correct": 1,
-          "explanation": "Le panneau barré avec le nom de la localité signale la fin de l'agglomération."
-        },
-        {
-          "id": "A6_Q77",
-          "sign": "F3",
-          "question": "Que signifie ce panneau ?",
-          "answers": [
-            "Début d'agglomération",
-            "Fin d'une agglomération",
-            "Localité interdite",
-            "Déviation"
+          "explanation": "Le panneau barré avec le nom de la localité signale la fin de l'agglomération.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Begin van een bebouwde kom",
+            "Einde van een bebouwde kom",
+            "Verboden plaats",
+            "Omleiding"
           ],
-          "correct": 1,
-          "explanation": "Le signal avec le nom barré indique la fin d'une agglomération."
+          "explanation_nl": "Het doorstreepte bord met de plaatsnaam duidt het einde van de bebouwde kom aan."
         },
         {
           "id": "I1_SIGN_F3_1",
-          "sign": "F3",
-          "question": "Vous voyez un panneau bleu rectangulaire avec un \"H\" blanc et un pictogramme médical. Que signale-t-il ?",
+          "sign": "F53",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Un poste de secours routier",
             "Un hôpital ou une clinique à proximité",
@@ -264,25 +311,20 @@
             "Un centre de contrôle technique"
           ],
           "correct": 1,
-          "explanation": "F3 signale la présence d'un hôpital. À proximité, les signaux sonores (klaxon) sont généralement interdits pour ne pas gêner les patients."
-        },
-        {
-          "id": "B1_SIGN_F33__1",
-          "sign": "F33a",
-          "question": "Vous apercevez ce panneau le long de la route. Que signifie-t-il ?",
-          "answers": [
-            "Sur le passage pour pietons lui-meme",
-            "A distance du passage pour pietons pour le signaler a l'avance",
-            "A la sortie d'une zone scolaire",
-            "Sur une voie rapide uniquement"
+          "explanation": "F53 signale la présence d'un hôpital. À proximité, évitez tout bruit inutile (klaxon) pour ne pas gêner les patients.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Een hulppost langs de weg",
+            "Een ziekenhuis of kliniek in de buurt",
+            "Een wachtapotheek",
+            "Een keuringscentrum"
           ],
-          "correct": 1,
-          "explanation": "F33a est un signal avancé indiquant qu'un passage pour piétons (ou cyclistes) est proche. Il prévient les conducteurs à l'avance pour qu'ils ralentissent."
+          "explanation_nl": "F53 duidt de aanwezigheid van een ziekenhuis aan. Vermijd in de buurt onnodig lawaai (claxon) om de patiënten niet te storen."
         },
         {
           "id": "H1_Q69",
-          "sign": "F33a",
-          "question": "Vous voyez un signal d'indication montrant un piéton sur un passage zébré. Que signifie-t-il pour vous ?",
+          "sign": "F49",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Vous entrez dans une zone piétonne",
             "Un passage pour piétons se trouve à proximité",
@@ -290,12 +332,20 @@
             "Vous approchez d'un trottoir"
           ],
           "correct": 1,
-          "explanation": "Ce signal indique la présence d'un passage pour piétons à proximité."
+          "explanation": "Ce signal indique la présence d'un passage pour piétons à proximité.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "U rijdt een voetgangerszone binnen",
+            "Er bevindt zich een oversteekplaats voor voetgangers in de buurt",
+            "Voetgangers zijn hier verboden",
+            "U nadert een voetpad"
+          ],
+          "explanation_nl": "Dit bord duidt de aanwezigheid van een oversteekplaats voor voetgangers aan."
         },
         {
           "id": "A3_Q73",
-          "sign": "F33b",
-          "question": "Ce signal d'indication bleu avec un vélo sur un passage signifie :",
+          "sign": "F50",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Piste cyclable obligatoire",
             "Passage pour conducteurs de bicyclettes et cyclomoteurs à deux roues",
@@ -303,25 +353,20 @@
             "Zone cyclable"
           ],
           "correct": 1,
-          "explanation": "Ce signal d'indication bleu indique un passage pour bicyclettes et cyclomoteurs à deux roues."
-        },
-        {
-          "id": "H1_Q70",
-          "sign": "F33b",
-          "question": "Vous voyez un signal d'indication montrant un vélo sur un passage. Que signifie-t-il ?",
-          "answers": [
-            "Vous approchez d'une piste cyclable",
-            "Un passage pour cyclistes et cyclomoteurs à deux roues se trouve à proximité",
-            "Vous approchez d'un parking vélo",
-            "Les vélos sont interdits ici"
+          "explanation": "Ce signal d'indication bleu indique un passage pour bicyclettes et cyclomoteurs à deux roues.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verplicht fietspad",
+            "Oversteekplaats voor fietsers en tweewielige bromfietsen",
+            "Einde fietspad",
+            "Fietszone"
           ],
-          "correct": 1,
-          "explanation": "Ce signal indique un passage pour cyclistes et cyclomoteurs à deux roues."
+          "explanation_nl": "Dit blauwe aanwijzingsbord duidt een oversteekplaats voor fietsers en tweewielige bromfietsers aan."
         },
         {
           "id": "F1_SIGN_F43_1",
-          "sign": "F43",
-          "question": "Vous apercevez un panneau rectangulaire blanc barré d'une diagonale avec le chiffre 30. Que signifie-t-il ?",
+          "sign": "F4b",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Vous entrez dans une nouvelle zone 30",
             "La zone 30 prend fin et la limite de vitesse normale s'applique à nouveau",
@@ -329,12 +374,20 @@
             "Vous quittez une zone piétonne"
           ],
           "correct": 1,
-          "explanation": "F43 marque la fin de la zone 30 (F41). La vitesse normale pour ce type de voie (souvent 50 km/h en agglomération) s'applique à nouveau."
+          "explanation": "F4b marque la fin de la zone 30 (F4a). La vitesse normale pour ce type de voie (souvent 50 km/h en agglomération) s'applique à nouveau.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "U rijdt een nieuwe zone 30 binnen",
+            "De zone 30 eindigt en de normale snelheidslimiet geldt opnieuw",
+            "De limiet wordt onmiddellijk 50 km/u",
+            "U verlaat een voetgangerszone"
+          ],
+          "explanation_nl": "F4b markeert het einde van de zone 30 (F4a). De normale snelheid voor dit type weg (vaak 50 km/u in de bebouwde kom) geldt opnieuw."
         },
         {
           "id": "A3_Q74",
           "sign": "F45",
-          "question": "Ce signal bleu rectangulaire avec une voie qui se termine signifie :",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Sens unique",
             "Voie sans issue",
@@ -342,7 +395,15 @@
             "Déviation"
           ],
           "correct": 1,
-          "explanation": "Ce signal d'indication indique une voie sans issue."
+          "explanation": "Ce signal d'indication indique une voie sans issue.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Eenrichtingsverkeer",
+            "Doodlopende weg",
+            "Weg afgesloten",
+            "Omleiding"
+          ],
+          "explanation_nl": "Dit aanwijzingsbord duidt een doodlopende weg aan."
         },
         {
           "id": "A3_Q75",
@@ -355,20 +416,15 @@
             "Parking vélo"
           ],
           "correct": 1,
-          "explanation": "Voie sans issue pour les voitures, mais les cyclistes et les piétons peuvent continuer."
-        },
-        {
-          "id": "A1_SIGN_F5_1",
-          "sign": "F5",
-          "question": "Vous voyez un panneau bleu rectangulaire indiquant une impasse. Que signifie-t-il ?",
-          "answers": [
-            "Fin d'autoroute à l'approche",
-            "Sens unique dans cette direction",
-            "Impasse : la rue n'a pas d'issue et vous devrez faire demi-tour",
-            "Accès réservé aux riverains de cette rue"
+          "explanation": "Voie sans issue pour les voitures, mais les cyclistes et les piétons peuvent continuer.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verboden voor fietsers en voetgangers",
+            "Doodlopende weg behalve voor fietsers en voetgangers",
+            "Voetgangerszone",
+            "Fietsenstalling"
           ],
-          "correct": 1,
-          "explanation": "F5 indique que la voie est une impasse. Elle ne mène nulle part et vous devrez faire demi-tour. Entrez seulement si vous avez une raison d'y aller."
+          "explanation_nl": "Doodlopende weg voor auto's, maar fietsers en voetgangers kunnen wel door."
         },
         {
           "id": "A4_Q79",
@@ -381,33 +437,15 @@
             "Voie rapide"
           ],
           "correct": 1,
-          "explanation": "Le signal vert avec une autoroute stylisée (F1) indique le début d'une autoroute ou un accès à l'autoroute."
-        },
-        {
-          "id": "A5_Q53",
-          "sign": "F5",
-          "question": "Que signifie ce panneau ?",
-          "answers": [
-            "Route pour automobiles",
-            "Commencement d'une autoroute",
-            "Échangeur",
-            "Sortie"
+          "explanation": "Le signal bleu avec une autoroute stylisée (F5) indique le début d'une autoroute ou un accès à l'autoroute.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Einde autosnelweg",
+            "Begin van een autosnelweg of toegang tot een autosnelweg",
+            "Autoweg",
+            "Snelweg"
           ],
-          "correct": 1,
-          "explanation": "Le signal vert avec une autoroute stylisée indique le début d'une autoroute."
-        },
-        {
-          "id": "F1_SIGN_F50_1",
-          "sign": "F50",
-          "question": "Vous apercevez ce panneau en vous engageant dans une rue. Que signifie-t-il ?",
-          "answers": [
-            "La rue est totalement sans issue : vous devez faire demi-tour",
-            "La rue est sans issue pour les voitures, mais piétons et cyclistes peuvent continuer",
-            "Vous entrez dans une zone résidentielle avec sortie vélos",
-            "Il s'agit d'un parking réservé aux piétons et cyclistes"
-          ],
-          "correct": 1,
-          "explanation": "F50 indique que la voie est sans issue pour les véhicules à moteur, mais qu'un passage est prévu pour les piétons et les cyclistes. Ils peuvent continuer."
+          "explanation_nl": "Het blauwe bord met gestileerde autosnelweg (F5) duidt het begin van een autosnelweg of een toegang ertoe aan."
         },
         {
           "id": "A4_Q80",
@@ -420,7 +458,15 @@
             "Échangeur"
           ],
           "correct": 1,
-          "explanation": "Le signal vert barré (F3) indique la fin de l'autoroute."
+          "explanation": "Le signal bleu barré (F7) indique la fin de l'autoroute.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Begin autosnelweg",
+            "Einde autosnelweg",
+            "Afrit autosnelweg",
+            "Verkeerswisselaar"
+          ],
+          "explanation_nl": "Het doorstreepte blauwe bord (F7) duidt het einde van de autosnelweg aan."
         },
         {
           "id": "A2_Q63",
@@ -433,20 +479,15 @@
             "Autoroute"
           ],
           "correct": 1,
-          "explanation": "Ce signal d'indication rectangulaire bleu confirme qu'une section à sens unique admet la circulation dans les deux sens."
-        },
-        {
-          "id": "A1_SIGN_F87_1",
-          "sign": "F87",
-          "question": "Vous voyez un panneau rectangulaire blanc indiquant un chiffre de vitesse (ex. : 70) sans cercle rouge. Que signifie-t-il ?",
-          "answers": [
-            "Limitation obligatoire à 70 km/h",
-            "Vitesse conseillée de 70 km/h, non obligatoire mais recommandée pour la sécurité",
-            "Vitesse minimale obligatoire de 70 km/h",
-            "Fin de limitation : retour à la vitesse de 70 km/h"
+          "explanation": "Ce signal d'indication rectangulaire bleu confirme qu'une section à sens unique admet la circulation dans les deux sens.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Eenrichtingsverkeer",
+            "Verkeer toegelaten in beide richtingen op een eenrichtingsgedeelte",
+            "Inhaalverbod",
+            "Autosnelweg"
           ],
-          "correct": 1,
-          "explanation": "F87 indique une vitesse conseillée. Ce n'est pas une obligation légale, mais une recommandation pour des raisons de sécurité ou de fluidité. La limite légale reste celle en vigueur."
+          "explanation_nl": "Dit blauwe rechthoekige aanwijzingsbord bevestigt dat een eenrichtingsgedeelte verkeer in beide richtingen toelaat."
         },
         {
           "id": "A5_Q50",
@@ -459,35 +500,144 @@
             "Voie rapide"
           ],
           "correct": 1,
-          "explanation": "Le signal bleu avec une voiture blanche indique le début d'une route pour automobiles."
+          "explanation": "Le signal bleu avec une voiture blanche indique le début d'une route pour automobiles.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Autosnelweg",
+            "Autoweg",
+            "Parking",
+            "Snelweg"
+          ],
+          "explanation_nl": "Het blauwe bord met een witte auto duidt het begin van een autoweg aan."
         },
         {
-          "id": "A3_Q70",
-          "sign": "M6",
-          "question": "Le panneau additionnel M6 signifie :",
+          "id": "A1Q100",
+          "sign": "F23a",
+          "question": "Que signifie ce panneau ?",
           "answers": [
-            "Cyclomoteurs classe B interdits",
-            "Cyclomoteurs classe B doivent emprunter la piste cyclable",
-            "Cyclistes interdits",
-            "Speed pedelecs autorisés"
+            "Autoroute nationale à l'approche",
+            "Une route nationale (numérotation du réseau routier belge)",
+            "Route régionale réservée",
+            "Voie rapide à accès limité"
           ],
           "correct": 1,
-          "explanation": "Le panneau additionnel M6 oblige les cyclomoteurs classe B à emprunter la piste cyclable."
+          "explanation": "F23a indique le numéro d'une route nationale belge (ex. N5).",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Nationale autosnelweg op komst",
+            "Een nationale weg (nummering van het Belgische wegennet)",
+            "Voorbehouden gewestweg",
+            "Snelweg met beperkte toegang"
+          ],
+          "explanation_nl": "F23a duidt het nummer van een Belgische nationale weg aan (bv. N5)."
         },
         {
-          "id": "A3_Q71",
-          "sign": "M7",
-          "question": "Le panneau additionnel M7 signifie :",
+          "id": "A1Q101",
+          "sign": "F45",
+          "question": "Vous voyez un panneau de voie sans issue. Pouvez-vous y entrer avec votre voiture ?",
           "answers": [
-            "Cyclomoteurs classe B doivent emprunter la piste",
-            "Cyclomoteurs classe B ne peuvent PAS emprunter la piste cyclable",
-            "Cyclistes interdits",
-            "Piétons interdits"
+            "Non, il est interdit d'y pénétrer",
+            "Oui, mais vous ne pourrez pas traverser et devrez faire demi-tour",
+            "Non, la route est en travaux",
+            "Oui, mais le stationnement y est interdit"
           ],
           "correct": 1,
-          "explanation": "Le panneau additionnel M7 interdit aux cyclomoteurs classe B d'emprunter la piste cyclable."
+          "explanation": "Voie sans issue = vous pouvez entrer mais devrez faire demi-tour.",
+          "question_nl": "U ziet een bord \"doodlopende weg\". Mag u er met uw auto inrijden?",
+          "answers_nl": [
+            "Nee, het is verboden er binnen te rijden",
+            "Ja, maar u kunt er niet doorheen en zult moeten omkeren",
+            "Nee, de weg is in werken",
+            "Ja, maar parkeren is er verboden"
+          ],
+          "explanation_nl": "Doodlopende weg = u mag inrijden maar zult moeten omkeren."
+        },
+        {
+          "id": "A1Q102",
+          "sign": "F45b",
+          "question": "Vous êtes en voiture devant un panneau de voie sans issue sauf cyclistes et piétons. Que faites-vous ?",
+          "answers": [
+            "Vous traversez normalement, le panneau ne vous concerne pas",
+            "Vous pouvez entrer mais devrez faire demi-tour, car la sortie n'est possible qu'à vélo ou à pied",
+            "Vous n'êtes pas autorisé à entrer",
+            "Vous pouvez entrer si vous êtes accompagné d'un cycliste"
+          ],
+          "correct": 1,
+          "explanation": "En voiture, ce panneau signifie impasse : entrée possible mais demi-tour obligatoire.",
+          "question_nl": "U staat met de auto voor een bord \"doodlopende weg behalve fietsers en voetgangers\". Wat doet u?",
+          "answers_nl": [
+            "U rijdt gewoon door, het bord geldt niet voor u",
+            "U mag inrijden maar zult moeten omkeren: de doorgang is enkel mogelijk te voet of per fiets",
+            "U mag niet binnenrijden",
+            "U mag binnenrijden als u een fietser vergezelt"
+          ],
+          "explanation_nl": "Met de auto betekent dit bord een doodlopende weg: inrijden kan, maar omkeren is verplicht."
+        },
+        {
+          "id": "A1Q103",
+          "sign": "F45b",
+          "question": "Vous êtes à vélo devant un panneau de voie sans issue sauf cyclistes et piétons. Que signifie-t-il pour vous ?",
+          "answers": [
+            "Vous ne pouvez pas emprunter cette rue",
+            "Vous pouvez entrer et il existe un passage réservé aux cyclistes et piétons pour continuer",
+            "Vous devez mettre pied à terre pour traverser",
+            "Vous devez faire demi-tour comme les voitures"
+          ],
+          "correct": 1,
+          "explanation": "À vélo, il existe une sortie réservée aux cyclistes et piétons.",
+          "question_nl": "U staat met de fiets voor een bord \"doodlopende weg behalve fietsers en voetgangers\". Wat betekent het voor u?",
+          "answers_nl": [
+            "U mag deze straat niet inrijden",
+            "U mag inrijden en er is een doorgang voor fietsers en voetgangers om verder te gaan",
+            "U moet afstappen om over te steken",
+            "U moet omkeren zoals de auto's"
+          ],
+          "explanation_nl": "Met de fiets is er een uitgang voorbehouden voor fietsers en voetgangers."
+        },
+        {
+          "id": "A3_Q72",
+          "sign": "F99a",
+          "question": "Ce signal indique un chemin réservé. Quels usagers y sont admis ?",
+          "answers": [
+            "Uniquement les piétons",
+            "Piétons, cyclistes et cavaliers selon les symboles",
+            "Tous les véhicules",
+            "Uniquement les cyclistes"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique un chemin partagé dont les usagers autorisés sont précisés par les symboles (piétons, cyclistes, cavaliers).",
+          "question_nl": "Dit bord duidt een voorbehouden weg aan. Welke weggebruikers zijn er toegelaten?",
+          "answers_nl": [
+            "Enkel voetgangers",
+            "Voetgangers, fietsers en ruiters volgens de symbolen",
+            "Alle voertuigen",
+            "Enkel fietsers"
+          ],
+          "explanation_nl": "Dit bord duidt een gedeelde weg aan waarvan de toegelaten gebruikers door de symbolen worden aangeduid (voetgangers, fietsers, ruiters)."
+        },
+        {
+          "id": "A6_Q85",
+          "sign": "F99a",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Zone piétonne",
+            "Chemin réservé aux usagers indiqués sur le panneau",
+            "Piste cyclable obligatoire",
+            "Passage pour piétons"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal indique un chemin réservé aux catégories d'usagers représentées sur le panneau.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Voetgangerszone",
+            "Weg voorbehouden voor de weggebruikers op het bord",
+            "Verplicht fietspad",
+            "Oversteekplaats voor voetgangers"
+          ],
+          "explanation_nl": "Dit bord duidt een weg aan die voorbehouden is voor de gebruikerscategorieën die erop staan afgebeeld."
         }
-      ]
+      ],
+      "title_nl": "Algemene aanwijzing"
     },
     {
       "id": "A",
@@ -495,45 +645,6 @@
       "color": "#ef4444",
       "icon": "⚠️",
       "questions": [
-        {
-          "id": "A1_SIGN_A16_1",
-          "sign": "A15",
-          "question": "Vous apercevez un panneau triangulaire montrant une route montante à forte pente. Que signifie-t-il ?",
-          "answers": [
-            "Une descente dangereuse à venir",
-            "Une montée à forte inclinaison vous attend",
-            "La présence d'un ralentisseur",
-            "Un dos d'âne sur la chaussée"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau A16 (triangle rouge) annonce une montée à forte inclinaison. Le pourcentage indiqué précise la déclivité."
-        },
-        {
-          "id": "A1_SIGN_A21_1",
-          "sign": "A21",
-          "question": "Vous voyez un triangle rouge contenant la silhouette d'un cycliste. Que devez-vous anticiper ?",
-          "answers": [
-            "Une piste cyclable obligatoire commence",
-            "Des cyclistes peuvent traverser ou circuler sur la route : soyez vigilant",
-            "Les cyclistes sont interdits sur cette section",
-            "Une course cycliste est en cours : priorité absolue aux vélos"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau A21 avertit de la présence potentielle de cyclistes sur ou traversant la chaussée. Réduisez votre vitesse et soyez prêt à céder le passage."
-        },
-        {
-          "id": "A1_SIGN_A23_1",
-          "sign": "A23",
-          "question": "Vous voyez un panneau triangulaire avec des silhouettes d'animaux domestiques. Que devez-vous anticiper ?",
-          "answers": [
-            "Des animaux sauvages pourraient traverser la route",
-            "Des animaux domestiques comme des vaches ou des chevaux pourraient traverser la chaussée",
-            "Un élevage est proche, mais vous pouvez maintenir votre vitesse",
-            "Une prairie privée avec une voie sans issue"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau A23 avertit que des animaux domestiques (bétail, chevaux) peuvent traverser la chaussée. Adaptez votre vitesse."
-        },
         {
           "id": "A3_Q82",
           "sign": "A25",
@@ -545,38 +656,20 @@
             "Parking vélo"
           ],
           "correct": 1,
-          "explanation": "Ce signal de danger indique un passage pour cyclistes ou un endroit où des cyclistes débouchent sur la chaussée."
-        },
-        {
-          "id": "A3_Q83",
-          "sign": "A25",
-          "question": "Vous voyez un signal de danger avec une bicyclette. Que devez-vous anticiper ?",
-          "answers": [
-            "Rien de spécial",
-            "Des cyclistes ou cyclomoteurs peuvent déboucher sur la chaussée",
-            "La route est fermée aux cyclistes",
-            "Un parking vélo se trouve à proximité"
+          "explanation": "Ce signal de danger indique un passage pour cyclistes ou un endroit où des cyclistes débouchent sur la chaussée.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verplicht fietspad",
+            "Oversteekplaats voor fietsers en bromfietsers / plaats waar zij de rijbaan oprijden",
+            "Fietszone",
+            "Fietsenstalling"
           ],
-          "correct": 1,
-          "explanation": "Ce signal vous prévient que des cyclistes peuvent arriver sur la chaussée depuis une piste cyclable."
-        },
-        {
-          "id": "H1_Q75",
-          "sign": "A25",
-          "question": "Vous voyez un signal de danger représentant un vélo. Que vous annonce-t-il ?",
-          "answers": [
-            "Une piste cyclable commence",
-            "Un passage pour cyclistes ou un endroit où des cyclistes débouchent sur la chaussée se trouve à proximité",
-            "Un parking vélo se trouve à proximité",
-            "Vous entrez dans une zone cyclable"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal de danger signale un passage pour cyclistes ou un endroit où des cyclistes débouchent."
+          "explanation_nl": "Dit gevaarsbord duidt een oversteekplaats voor fietsers aan of een plaats waar fietsers de rijbaan oprijden."
         },
         {
           "id": "A1_SIGN_A27_1",
-          "sign": "A27",
-          "question": "Vous voyez un panneau triangulaire avec un feu tricolore dessiné à l'intérieur. Qu'annonce-t-il ?",
+          "sign": "A33",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Un passage pour piétons à proximité",
             "Un passage à niveau non gardé",
@@ -584,12 +677,20 @@
             "L'entrée d'une zone scolaire"
           ],
           "correct": 2,
-          "explanation": "Le panneau A27 annonce la présence prochaine de feux tricolores. Il prévient les usagers en avance pour qu'ils puissent adapter leur vitesse."
+          "explanation": "Le panneau A33 annonce la présence prochaine de feux tricolores. Il prévient les usagers en avance pour qu'ils puissent adapter leur vitesse.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Een oversteekplaats voor voetgangers in de buurt",
+            "Een onbewaakte overweg",
+            "Verkeerslichten verderop waarvoor u misschien zult moeten stoppen",
+            "De ingang van een schoolzone"
+          ],
+          "explanation_nl": "Het bord A33 kondigt verkeerslichten aan. Het waarschuwt de weggebruikers op voorhand zodat ze hun snelheid kunnen aanpassen."
         },
         {
           "id": "A1_SIGN_A31_1",
-          "sign": "A31",
-          "question": "Vous voyez un triangle rouge contenant une croix de Saint-André sans barrière dessinée. Que signifie-t-il ?",
+          "sign": "A43",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Un passage à niveau équipé de barrières automatiques",
             "Un passage à niveau sans barrières ni demi-barrières : redoublez de vigilance",
@@ -597,7 +698,15 @@
             "Un passage piétons avec priorité absolue"
           ],
           "correct": 1,
-          "explanation": "Le panneau A31 signale un passage à niveau sans barrières ni demi-barrières. C'est une situation particulièrement dangereuse : doublez votre vigilance."
+          "explanation": "Le panneau A43 signale un passage à niveau sans barrières ni demi-barrières. C'est une situation particulièrement dangereuse : redoublez de vigilance.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Een overweg met automatische slagbomen",
+            "Een overweg zonder slagbomen of halve slagbomen: wees extra waakzaam",
+            "Een tramoversteek",
+            "Een zebrapad met absolute voorrang"
+          ],
+          "explanation_nl": "Het bord A43 duidt een overweg zonder slagbomen aan. Dit is een bijzonder gevaarlijke situatie: verdubbel uw waakzaamheid."
         },
         {
           "id": "A2_Q56",
@@ -610,12 +719,20 @@
             "Dépôt de matériaux"
           ],
           "correct": 2,
-          "explanation": "Le panneau de danger triangulaire avec des outils signale la présence de travaux sur la route."
+          "explanation": "Le panneau de danger triangulaire avec des outils signale la présence de travaux sur la route.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Garage in de buurt",
+            "Industriezone",
+            "Wegenwerken",
+            "Materiaalopslagplaats"
+          ],
+          "explanation_nl": "Het driehoekige gevaarsbord met werktuigen duidt wegenwerken aan."
         },
         {
           "id": "A1_SIGN_A33_1",
-          "sign": "A33",
-          "question": "Vous voyez un triangle rouge contenant un tramway. Comment devez-vous réagir ?",
+          "sign": "A49",
+          "question": "Vous approchez de ce panneau. Comment devez-vous réagir ?",
           "answers": [
             "Accélérer pour passer avant le tram éventuel",
             "Ralentir car une traversée de tramway est signalée à cet endroit",
@@ -623,20 +740,15 @@
             "Ne rien faire, le tram s'arrête toujours aux intersections"
           ],
           "correct": 1,
-          "explanation": "Le panneau A33 annonce une traversée de tramway. Le tram a toujours la priorité sur les autres usagers à cet endroit."
-        },
-        {
-          "id": "A1_SIGN_A35_1",
-          "sign": "A35",
-          "question": "Vous voyez un triangle rouge avec un point d'exclamation ou un carrefour à configuration inhabituelle. Que signifie-t-il ?",
-          "answers": [
-            "Un passage à niveau à proximité",
-            "Un carrefour dangereux nécessitant une prudence accrue",
-            "Une intersection où vous avez la priorité absolue",
-            "Une zone de travaux temporaire"
+          "explanation": "Le panneau A49 annonce un croisement avec des voies ferrées ou de tramway sur la chaussée. Le tram a la priorité sur les autres usagers à cet endroit.",
+          "question_nl": "U nadert dit bord. Hoe moet u reageren?",
+          "answers_nl": [
+            "Versnellen om vóór de eventuele tram te passeren",
+            "Vertragen want hier is een tramoversteek aangeduid",
+            "Claxonneren om de trambestuurder te verwittigen",
+            "Niets doen, de tram stopt altijd aan kruispunten"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A35 indique un carrefour dangereux où la configuration particulière (mauvaise visibilité, angle aigu…) impose une prudence accrue."
+          "explanation_nl": "Het bord A49 kondigt een kruising met tram- of spoorlijnen aan. De tram heeft er altijd voorrang op de andere weggebruikers."
         },
         {
           "id": "A2_Q58",
@@ -649,25 +761,20 @@
             "Route barrée"
           ],
           "correct": 1,
-          "explanation": "Ce panneau de danger annonce la fin d'un sens unique et le retour à la circulation en double sens."
-        },
-        {
-          "id": "A1_SIGN_A41_1",
-          "sign": "A41",
-          "question": "Vous voyez un triangle rouge contenant le mot « STOP » suivi d'une distance. Que signifie-t-il ?",
-          "answers": [
-            "Vous devez vous arrêter immédiatement à cet endroit",
-            "Un panneau STOP se trouve à la distance indiquée : commencez à ralentir",
-            "La priorité de droite est rétablie à partir de ce point",
-            "Un carrefour giratoire se situe à la distance indiquée"
+          "explanation": "Ce panneau de danger annonce la fin d'un sens unique et le retour à la circulation en double sens.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Eenrichtingsverkeer",
+            "Verkeer in beide richtingen toegelaten na een eenrichtingsgedeelte",
+            "Inhaalverbod",
+            "Weg afgesloten"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A41 est un panneau de pré-signalisation : il annonce qu'un panneau STOP se trouve à la distance mentionnée. Commencez à ralentir."
+          "explanation_nl": "Dit gevaarsbord kondigt het einde van het eenrichtingsverkeer aan en de terugkeer naar tweerichtingsverkeer."
         },
         {
           "id": "A1_SIGN_A47_1",
-          "sign": "A47",
-          "question": "Vous voyez un triangle rouge avec plusieurs voitures serrées (file). Que signifie-t-il ?",
+          "sign": "A50",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Une zone de travaux avec circulation alternée",
             "Un risque de formation de bouchon : réduisez votre vitesse",
@@ -675,61 +782,711 @@
             "Un croisement de routes très fréquenté avec feux"
           ],
           "correct": 1,
-          "explanation": "Le panneau A47 prévient d'un risque de congestion (bouchon). Réduisez votre vitesse et maintenez vos distances de sécurité."
+          "explanation": "Le panneau A50 prévient d'un risque de file (bouchon). Réduisez votre vitesse et maintenez vos distances de sécurité.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Een werfzone met beurtelings verkeer",
+            "Risico op filevorming: verminder uw snelheid",
+            "Een volle parking in de buurt",
+            "Een druk kruispunt met verkeerslichten"
+          ],
+          "explanation_nl": "Het bord A50 waarschuwt voor filegevaar. Verminder uw snelheid en houd voldoende afstand."
         },
         {
-          "id": "A1_SIGN_A49_1",
-          "sign": "A49",
-          "question": "Vous voyez un panneau triangulaire représentant un cerf bondissant. Que devez-vous anticiper ?",
+          "id": "A1Q63",
+          "sign": "A1b",
+          "question": "Que signifie ce panneau ?",
           "answers": [
-            "L'entrée dans une réserve naturelle protégée interdite aux véhicules",
-            "Des animaux sauvages pourraient traverser la route : ralentissez",
-            "Un élevage de cerfs se trouve à proximité",
-            "Une zone de chasse : utilisez votre klaxon"
+            "Direction obligatoire à droite au prochain carrefour",
+            "Virage dangereux à droite",
+            "Route barrée sur la droite",
+            "Déviation temporaire vers la droite"
           ],
           "correct": 1,
-          "explanation": "Le panneau A49 signale que des animaux sauvages (cerfs, chevreuils, sangliers…) peuvent traverser. Ralentissez et restez vigilant."
+          "explanation": "Triangle rouge + virage à droite = 'Virage dangereux à droite'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verplichte richting rechts aan het volgende kruispunt",
+            "Gevaarlijke bocht naar rechts",
+            "Weg afgesloten aan de rechterkant",
+            "Tijdelijke omleiding naar rechts"
+          ],
+          "explanation_nl": "Rode driehoek + bocht naar rechts = \"Gevaarlijke bocht naar rechts\"."
         },
         {
-          "id": "E1_Q57",
-          "sign": "A7a",
-          "question": "Vous apercevez un signal triangulaire avec un rétrécissement symétrique. Que signifie ce panneau ?",
+          "id": "A1Q64",
+          "sign": "A1a",
+          "question": "Que signifie ce panneau ?",
           "answers": [
-            "Route étroite avec interdiction de dépasser",
-            "Rétrécissement de la chaussée des deux côtés",
-            "Travaux en cours",
-            "Passage étroit avec priorité"
+            "Sens interdit pour tourner à gauche",
+            "Direction obligatoire à gauche",
+            "Virage dangereux à gauche",
+            "Déviation temporaire vers la gauche"
+          ],
+          "correct": 2,
+          "explanation": "Triangle rouge + virage à gauche = 'Virage dangereux à gauche'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verboden links af te slaan",
+            "Verplichte richting links",
+            "Gevaarlijke bocht naar links",
+            "Tijdelijke omleiding naar links"
+          ],
+          "explanation_nl": "Rode driehoek + bocht naar links = \"Gevaarlijke bocht naar links\"."
+        },
+        {
+          "id": "A1Q65",
+          "sign": "A1c",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Slalom obligatoire sur la chaussée",
+            "Double virage ou succession de virages, le premier à gauche",
+            "Route sinueuse interdite aux poids lourds",
+            "Double virage, le premier allant vers la droite"
           ],
           "correct": 1,
-          "explanation": "Le triangle avec rétrécissement symétrique indique un rétrécissement des deux côtés."
+          "explanation": "Deux virages, premier à gauche = 'Double virage ou succession de virages, premier à gauche'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verplicht slalommen op de rijbaan",
+            "Dubbele bocht of opeenvolging van bochten, de eerste naar links",
+            "Bochtige weg verboden voor vrachtwagens",
+            "Dubbele bocht, de eerste naar rechts"
+          ],
+          "explanation_nl": "Twee bochten, eerste naar links = \"Dubbele bocht of opeenvolging van bochten, de eerste naar links\"."
         },
         {
-          "id": "E1_Q58",
-          "sign": "A7b",
-          "question": "Vous apercevez un signal triangulaire indiquant un rétrécissement du côté gauche. Que signifie ce panneau ?",
+          "id": "A1Q66",
+          "sign": "A1d",
+          "question": "Que signifie ce panneau ?",
           "answers": [
-            "Virage à gauche",
-            "Rétrécissement de la chaussée à gauche",
-            "Sens interdit à gauche",
-            "Déviation vers la gauche"
+            "Double virage ou succession de virages, le premier à droite",
+            "Double virage, le premier allant vers la gauche",
+            "Carrefour dangereux à l'approche",
+            "Chaussée rétrécie des deux côtés"
+          ],
+          "correct": 0,
+          "explanation": "Deux virages, premier à droite = 'Double virage ou succession de virages, premier à droite'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Dubbele bocht of opeenvolging van bochten, de eerste naar rechts",
+            "Dubbele bocht, de eerste naar links",
+            "Gevaarlijk kruispunt op komst",
+            "Rijbaan versmald aan beide kanten"
+          ],
+          "explanation_nl": "Twee bochten, eerste naar rechts = \"Dubbele bocht of opeenvolging van bochten, de eerste naar rechts\"."
+        },
+        {
+          "id": "A1Q67",
+          "sign": "A3",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Montée à 10% d'inclinaison",
+            "Pente limitée à 10% maximum",
+            "Descente dangereuse à venir",
+            "Vitesse limitée à 10 km/h dans la descente"
+          ],
+          "correct": 2,
+          "explanation": "Triangle + pourcentage + descente = 'Descente dangereuse'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Helling van 10% stijgend",
+            "Helling beperkt tot maximum 10%",
+            "Gevaarlijke afdaling op komst",
+            "Snelheid beperkt tot 10 km/u in de afdaling"
+          ],
+          "explanation_nl": "Driehoek + percentage + afdaling = \"Gevaarlijke afdaling\"."
+        },
+        {
+          "id": "A1Q68",
+          "sign": "A5",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Descente dangereuse à venir",
+            "Vitesse minimale de 10 km/h requise",
+            "Montée à forte inclinaison",
+            "Zone de freinage obligatoire"
+          ],
+          "correct": 2,
+          "explanation": "Triangle + pourcentage + montée = 'Montée à forte inclinaison'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Gevaarlijke afdaling op komst",
+            "Minimumsnelheid van 10 km/u vereist",
+            "Steile helling",
+            "Verplichte remzone"
+          ],
+          "explanation_nl": "Driehoek + percentage + stijging = \"Steile helling\"."
+        },
+        {
+          "id": "A1Q69",
+          "sign": "A19",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Proximité d'une zone de montagne",
+            "Travaux de démolition en cours",
+            "Risque de chutes de pierres",
+            "Fin de la zone d'éboulement"
+          ],
+          "correct": 2,
+          "explanation": "Triangle rouge + pierres = 'Chutes de pierres'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Nabijheid van een berggebied",
+            "Sloopwerken bezig",
+            "Risico op vallende stenen",
+            "Einde van de steenslagzone"
+          ],
+          "explanation_nl": "Rode driehoek + stenen = \"Vallende stenen\"."
+        },
+        {
+          "id": "A1Q70",
+          "sign": "A17",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Route non revêtue à l'approche",
+            "Risque de projection de gravillons",
+            "Chaussée en terre battue",
+            "Travaux de revêtement en cours"
           ],
           "correct": 1,
-          "explanation": "Ce triangle indique que la chaussée se rétrécit du côté gauche."
+          "explanation": "Triangle rouge + gravillons = 'Projection de gravillons'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Onverharde weg op komst",
+            "Risico op opspattende steenslag",
+            "Weg in aarde",
+            "Wegbedekking in uitvoering"
+          ],
+          "explanation_nl": "Rode driehoek + steenslag = \"Opspattende steenslag\"."
         },
         {
-          "id": "E1_Q59",
+          "id": "A1Q71",
           "sign": "A7c",
-          "question": "Vous apercevez un signal triangulaire indiquant un rétrécissement du côté droit. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
-            "Virage à droite",
-            "Rétrécissement de la chaussée à droite",
-            "Sens interdit à droite",
-            "Travaux à droite"
+            "Rétrécissement par la gauche",
+            "Rétrécissement des deux côtés",
+            "Rétrécissement par la droite",
+            "Fin de bande d'urgence"
+          ],
+          "correct": 2,
+          "explanation": "Triangle + rétrécissement à droite = 'Rétrécissement de la chaussée par la droite'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Versmalling links",
+            "Versmalling aan beide kanten",
+            "Versmalling rechts",
+            "Einde pechstrook"
+          ],
+          "explanation_nl": "Driehoek + versmalling rechts = \"Wegversmalling aan de rechterkant\"."
+        },
+        {
+          "id": "A1Q72",
+          "sign": "A7a",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Rétrécissement par la droite",
+            "Rétrécissement des deux côtés",
+            "Rétrécissement par la gauche",
+            "Passage étroit permanent"
           ],
           "correct": 1,
-          "explanation": "Ce triangle indique que la chaussée se rétrécit du côté droit."
+          "explanation": "Triangle + rétrécissement des deux côtés = 'Rétrécissement de la chaussée des deux côtés'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Versmalling rechts",
+            "Versmalling aan beide kanten",
+            "Versmalling links",
+            "Permanente smalle doorgang"
+          ],
+          "explanation_nl": "Driehoek + versmalling beide kanten = \"Wegversmalling aan beide kanten\"."
+        },
+        {
+          "id": "A1Q73",
+          "sign": "A7b",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Rétrécissement par la droite",
+            "Rétrécissement des deux côtés",
+            "Rétrécissement par la gauche",
+            "Déviation obligatoire à gauche"
+          ],
+          "correct": 2,
+          "explanation": "Triangle + rétrécissement à gauche = 'Rétrécissement de la chaussée par la gauche'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Versmalling rechts",
+            "Versmalling aan beide kanten",
+            "Versmalling links",
+            "Verplichte omleiding links"
+          ],
+          "explanation_nl": "Driehoek + versmalling links = \"Wegversmalling aan de linkerkant\"."
+        },
+        {
+          "id": "A1Q74",
+          "sign": "A13",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Dos d'âne interdit",
+            "Cassis ou dos d'âne",
+            "Route en mauvais état",
+            "Tremplin"
+          ],
+          "correct": 1,
+          "explanation": "Triangle rouge + bosse = 'Cassis ou dos d'âne'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verkeersdrempel verboden",
+            "Uitholling of natuurlijke drempel",
+            "Weg in slechte staat",
+            "Springplank"
+          ],
+          "explanation_nl": "Rode driehoek + bult = \"Uitholling of natuurlijke verkeersdrempel\"."
+        },
+        {
+          "id": "A1Q75",
+          "sign": "A14",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Cassis ou dos d'âne",
+            "Passage à niveau",
+            "Dispositif(s) surélevé(s)",
+            "Route en travaux"
+          ],
+          "correct": 2,
+          "explanation": "Triangle rouge + dispositif surélevé = 'Dispositif(s) surélevé(s)'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Uitholling of natuurlijke drempel",
+            "Overweg",
+            "Verhoogde inrichting(en)",
+            "Weg in aanleg"
+          ],
+          "explanation_nl": "Rode driehoek + verhoogde inrichting = \"Verhoogde inrichting(en)\"."
+        },
+        {
+          "id": "A1Q76",
+          "sign": "A9",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Pont interdit aux camions",
+            "Pont en construction",
+            "Pont mobile",
+            "Passage souterrain"
+          ],
+          "correct": 2,
+          "explanation": "Triangle rouge + pont mobile = 'Pont mobile'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Brug verboden voor vrachtwagens",
+            "Brug in aanbouw",
+            "Beweegbare brug",
+            "Onderdoorgang"
+          ],
+          "explanation_nl": "Rode driehoek + beweegbare brug = \"Beweegbare brug\"."
+        },
+        {
+          "id": "A1Q77",
+          "sign": "A11",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Zone de pêche",
+            "Débouché sur un quai ou une berge",
+            "Inondation possible",
+            "Port à proximité"
+          ],
+          "correct": 1,
+          "explanation": "Triangle rouge + quai/eau = 'Débouché sur un quai ou une berge'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Viszone",
+            "Uitweg op een kaai of oever",
+            "Mogelijke overstroming",
+            "Haven in de buurt"
+          ],
+          "explanation_nl": "Rode driehoek + kaai/water = \"Uitweg op een kaai of oever\"."
+        },
+        {
+          "id": "A1Q78",
+          "sign": "A15",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Verglas interdit",
+            "Virage dangereux",
+            "Chaussée glissante",
+            "Freinage interdit"
+          ],
+          "correct": 2,
+          "explanation": "Triangle rouge + dérapage = 'Chaussée glissante'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "IJzel verboden",
+            "Gevaarlijke bocht",
+            "Gladde rijbaan",
+            "Remmen verboden"
+          ],
+          "explanation_nl": "Rode driehoek + slippend voertuig = \"Gladde rijbaan\"."
+        },
+        {
+          "id": "A1Q79",
+          "sign": "A15",
+          "question": "Vous voyez un panneau de chaussée glissante accompagné d'un panneau additionnel. Que signifie-t-il ?",
+          "answers": [
+            "Virage dangereux",
+            "Chaussée glissante, le panneau additionnel précise les conditions",
+            "Freinage d'urgence",
+            "Route verglacée en permanence"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau additionnel précise les conditions (pluie, gel...) dans lesquelles la chaussée peut être glissante.",
+          "question_nl": "U ziet een bord \"gladde rijbaan\" met een onderbord. Wat betekent het?",
+          "answers_nl": [
+            "Gevaarlijke bocht",
+            "Gladde rijbaan, het onderbord verduidelijkt de omstandigheden",
+            "Noodremming",
+            "Weg permanent met ijzel"
+          ],
+          "explanation_nl": "Het onderbord verduidelijkt de omstandigheden (regen, vorst...) waarin de rijbaan glad kan zijn."
+        },
+        {
+          "id": "A1Q81",
+          "sign": "A35",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Aéroport à proximité",
+            "Survol d'avions à basse altitude",
+            "Zone militaire",
+            "Piste d'atterrissage"
+          ],
+          "correct": 1,
+          "explanation": "Triangle rouge + avion = 'Survol d'avions à basse altitude'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Luchthaven in de buurt",
+            "Laag overvliegende vliegtuigen",
+            "Militaire zone",
+            "Landingsbaan"
+          ],
+          "explanation_nl": "Rode driehoek + vliegtuig = \"Laag overvliegende vliegtuigen\"."
+        },
+        {
+          "id": "A1Q82",
+          "sign": "A37",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Tempête annoncée",
+            "Zone de tornade",
+            "Vent latéral",
+            "Courant d'air dans un tunnel"
+          ],
+          "correct": 2,
+          "explanation": "Triangle rouge + vent = 'Vent latéral'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Storm aangekondigd",
+            "Tornadozone",
+            "Zijwind",
+            "Luchtstroom in een tunnel"
+          ],
+          "explanation_nl": "Rode driehoek + wind = \"Zijwind\"."
+        },
+        {
+          "id": "A1Q83",
+          "sign": "A51",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Zone de danger permanent",
+            "Danger non déterminé par symbole, le panneau additionnel précise la nature",
+            "Fin de zone dangereuse",
+            "Interdiction de circuler"
+          ],
+          "correct": 1,
+          "explanation": "Triangle + point d'exclamation sans symbole = danger générique, le panneau en dessous précise la nature.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Permanente gevarenzone",
+            "Gevaar niet nader bepaald, het onderbord verduidelijkt de aard",
+            "Einde gevarenzone",
+            "Verkeer verboden"
+          ],
+          "explanation_nl": "Driehoek + uitroepteken zonder symbool = algemeen gevaar, het onderbord verduidelijkt de aard."
+        },
+        {
+          "id": "A1Q84",
+          "sign": "A29",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Ferme à proximité",
+            "Vente de produits laitiers",
+            "Traversée de bétail",
+            "Zone agricole"
+          ],
+          "correct": 2,
+          "explanation": "Triangle rouge + vache = 'Traversée de bétail'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Boerderij in de buurt",
+            "Verkoop van zuivelproducten",
+            "Overstekend vee",
+            "Landbouwzone"
+          ],
+          "explanation_nl": "Rode driehoek + koe = \"Overstekend vee\"."
+        },
+        {
+          "id": "A1Q85",
+          "sign": "A27",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Réserve naturelle",
+            "Chasse autorisée",
+            "Zone de forêt",
+            "Traversée de gros gibier"
+          ],
+          "correct": 3,
+          "explanation": "Triangle rouge + cerf = 'Traversée de gros gibier'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Natuurreservaat",
+            "Jacht toegelaten",
+            "Boszone",
+            "Overstekend groot wild"
+          ],
+          "explanation_nl": "Rode driehoek + hert = \"Overstekend groot wild\"."
+        },
+        {
+          "id": "A1Q87",
+          "sign": "A49",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Gare à proximité",
+            "Passage à niveau avec barrières",
+            "Croisement par voies ferrées sur la chaussée",
+            "Arrêt de tram"
+          ],
+          "correct": 2,
+          "explanation": "Triangle rouge + voie ferrée sur chaussée = 'Croisement par voies ferrées sur la chaussée'.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Station in de buurt",
+            "Overweg met slagbomen",
+            "Kruising van spoorlijnen op de rijbaan",
+            "Tramhalte"
+          ],
+          "explanation_nl": "Rode driehoek + sporen op de rijbaan = \"Kruising van spoorlijnen op de rijbaan\"."
+        },
+        {
+          "id": "A1Q88",
+          "sign": "A19",
+          "question": "Vous apercevez un panneau signalant des chutes de pierres. Comment réagissez-vous ?",
+          "answers": [
+            "Vous accélérez pour quitter la zone rapidement",
+            "Vous ralentissez et restez vigilant",
+            "Vous faites immédiatement demi-tour",
+            "Vous klaxonnez pour avertir les autres usagers"
+          ],
+          "correct": 1,
+          "explanation": "Ralentir et rester vigilant est la bonne réaction.",
+          "question_nl": "U ziet een bord dat vallende stenen aankondigt. Hoe reageert u?",
+          "answers_nl": [
+            "U versnelt om de zone snel te verlaten",
+            "U vertraagt en blijft waakzaam",
+            "U keert onmiddellijk om",
+            "U claxonneert om de andere weggebruikers te verwittigen"
+          ],
+          "explanation_nl": "Vertragen en waakzaam blijven is de juiste reactie."
+        },
+        {
+          "id": "A1Q89",
+          "sign": "A15",
+          "question": "Vous voyez un panneau de chaussée glissante. Comment adaptez-vous votre conduite ?",
+          "answers": [
+            "Vous freinez brusquement pour ralentir immédiatement",
+            "Vous adaptez votre vitesse et évitez les manoeuvres brusques",
+            "Vous allumez vos feux de détresse",
+            "Vous vous arrêtez immédiatement sur le bas-côté"
+          ],
+          "correct": 1,
+          "explanation": "Adapter sa vitesse et éviter les manœuvres brusques sur chaussée glissante.",
+          "question_nl": "U ziet een bord \"gladde rijbaan\". Hoe past u uw rijgedrag aan?",
+          "answers_nl": [
+            "U remt bruusk om onmiddellijk te vertragen",
+            "U past uw snelheid aan en vermijdt bruuske manoeuvres",
+            "U zet uw waarschuwingslichten aan",
+            "U stopt onmiddellijk op de berm"
+          ],
+          "explanation_nl": "Snelheid aanpassen en bruuske manoeuvres vermijden op een gladde rijbaan."
+        },
+        {
+          "id": "A1Q90",
+          "sign": "A3",
+          "question": "Vous approchez d'un panneau signalant une descente dangereuse. Que faites-vous ?",
+          "answers": [
+            "Vous accélérez pour franchir la descente plus vite",
+            "Vous rétrogradez et adaptez votre vitesse avant la descente",
+            "Vous roulez au point mort pour économiser du carburant",
+            "Vous freinez en continu tout au long de la descente"
+          ],
+          "correct": 1,
+          "explanation": "Rétrograder et adapter la vitesse avant la descente.",
+          "question_nl": "U nadert een bord dat een gevaarlijke afdaling aankondigt. Wat doet u?",
+          "answers_nl": [
+            "U versnelt om de afdaling sneller af te leggen",
+            "U schakelt terug en past uw snelheid aan vóór de afdaling",
+            "U rijdt in neutraal om brandstof te besparen",
+            "U remt voortdurend tijdens de hele afdaling"
+          ],
+          "explanation_nl": "Terugschakelen en de snelheid aanpassen vóór de afdaling."
+        },
+        {
+          "id": "A1Q91",
+          "sign": "A31",
+          "question": "Vous voyez un panneau de travaux. Que devez-vous anticiper ?",
+          "answers": [
+            "Rien de particulier, la route est normale",
+            "La présence d'ouvriers, d'engins, un rétrécissement possible et un revêtement dégradé",
+            "Uniquement un changement de limitation de vitesse",
+            "La fermeture complète de la route"
+          ],
+          "correct": 1,
+          "explanation": "La zone de travaux peut comporter ouvriers, engins, rétrécissement et revêtement dégradé.",
+          "question_nl": "U ziet een bord \"wegenwerken\". Wat moet u verwachten?",
+          "answers_nl": [
+            "Niets bijzonders, de weg is normaal",
+            "Arbeiders, machines, een mogelijke versmalling en een beschadigd wegdek",
+            "Enkel een gewijzigde snelheidsbeperking",
+            "De volledige afsluiting van de weg"
+          ],
+          "explanation_nl": "Een werfzone kan arbeiders, machines, versmallingen en een beschadigd wegdek inhouden."
+        },
+        {
+          "id": "A1Q92",
+          "sign": "A9",
+          "question": "Vous apercevez un panneau signalant un pont mobile. Que devez-vous faire ?",
+          "answers": [
+            "Accélérer pour passer avant l'ouverture éventuelle du pont",
+            "Ralentir et être prêt à vous arrêter si le pont s'ouvre",
+            "Faire demi-tour pour éviter le pont",
+            "Klaxonner pour signaler votre présence au gardien du pont"
+          ],
+          "correct": 1,
+          "explanation": "Ralentir et être prêt à s'arrêter est obligatoire face à un pont mobile.",
+          "question_nl": "U ziet een bord dat een beweegbare brug aankondigt. Wat moet u doen?",
+          "answers_nl": [
+            "Versnellen om te passeren vóór de brug eventueel opengaat",
+            "Vertragen en klaar zijn om te stoppen als de brug opengaat",
+            "Omkeren om de brug te vermijden",
+            "Claxonneren om uw aanwezigheid te melden aan de brugwachter"
+          ],
+          "explanation_nl": "Vertragen en klaar zijn om te stoppen is verplicht bij een beweegbare brug."
+        },
+        {
+          "id": "A1Q93",
+          "sign": "A37",
+          "question": "Vous voyez un panneau signalant un vent latéral. Comment adaptez-vous votre conduite ?",
+          "answers": [
+            "Vous accélérez pour stabiliser votre véhicule",
+            "Vous tenez fermement le volant et adaptez votre vitesse",
+            "Vous ouvrez les fenêtres pour réduire la prise au vent",
+            "Vous allumez vos phares de croisement"
+          ],
+          "correct": 1,
+          "explanation": "Tenir le volant et adapter la vitesse protège contre le vent latéral.",
+          "question_nl": "U ziet een bord dat zijwind aankondigt. Hoe past u uw rijgedrag aan?",
+          "answers_nl": [
+            "U versnelt om uw voertuig te stabiliseren",
+            "U houdt het stuur stevig vast en past uw snelheid aan",
+            "U opent de ramen om de windvang te verminderen",
+            "U zet uw dimlichten aan"
+          ],
+          "explanation_nl": "Het stuur vasthouden en de snelheid aanpassen beschermt tegen zijwind."
+        },
+        {
+          "id": "A1Q94",
+          "sign": "A7a",
+          "question": "Vous voyez un panneau signalant un rétrécissement de la chaussée. Que devez-vous prévoir ?",
+          "answers": [
+            "Rien de particulier, vous continuez normalement",
+            "La route sera plus étroite : vous ralentissez et cédez éventuellement le passage",
+            "La route est fermée, vous devez faire demi-tour",
+            "Un feu de signalisation est obligatoirement présent"
+          ],
+          "correct": 1,
+          "explanation": "Un rétrécissement nécessite de ralentir et de céder éventuellement le passage.",
+          "question_nl": "U ziet een bord dat een wegversmalling aankondigt. Wat moet u voorzien?",
+          "answers_nl": [
+            "Niets bijzonders, u rijdt gewoon door",
+            "De weg wordt smaller: u vertraagt en verleent eventueel voorrang",
+            "De weg is afgesloten, u moet omkeren",
+            "Er staat verplicht een verkeerslicht"
+          ],
+          "explanation_nl": "Bij een versmalling moet u vertragen en eventueel voorrang verlenen."
+        },
+        {
+          "id": "A1Q95",
+          "sign": "A29",
+          "question": "Vous voyez un panneau signalant une traversée de bétail. Que faites-vous ?",
+          "answers": [
+            "Vous klaxonnez pour éloigner les animaux",
+            "Vous ralentissez et restez attentif à la présence d'animaux",
+            "Vous accélérez pour les dépasser rapidement",
+            "Vous allumez vos feux de détresse"
+          ],
+          "correct": 1,
+          "explanation": "Ralentir et être attentif à l'approche d'une traversée de bétail.",
+          "question_nl": "U ziet een bord \"oversteekend vee\". Wat doet u?",
+          "answers_nl": [
+            "U claxonneert om de dieren te verjagen",
+            "U vertraagt en blijft aandachtig voor de aanwezigheid van dieren",
+            "U versnelt om ze snel voorbij te rijden",
+            "U zet uw waarschuwingslichten aan"
+          ],
+          "explanation_nl": "Vertragen en aandachtig blijven bij het naderen van overstekend vee."
+        },
+        {
+          "id": "A1Q96",
+          "sign": "A27",
+          "question": "Vous circulez dans une zone signalée par un panneau de traversée de gros gibier. Quand le risque est-il le plus élevé ?",
+          "answers": [
+            "En plein midi quand le soleil est au zénith",
+            "À l'aube et au crépuscule",
+            "Uniquement pendant les mois d'hiver",
+            "Uniquement par temps de pluie"
+          ],
+          "correct": 1,
+          "explanation": "Le gibier traverse surtout à l'aube et au crépuscule.",
+          "question_nl": "U rijdt in een zone met een bord \"overstekend groot wild\". Wanneer is het risico het grootst?",
+          "answers_nl": [
+            "Op de middag als de zon het hoogst staat",
+            "Bij dageraad en schemering",
+            "Enkel tijdens de wintermaanden",
+            "Enkel bij regenweer"
+          ],
+          "explanation_nl": "Wild steekt vooral over bij dageraad en schemering."
+        },
+        {
+          "id": "A1Q97",
+          "sign": "A13",
+          "question": "Vous voyez un panneau signalant un cassis ou un dos d'âne. Que faites-vous ?",
+          "answers": [
+            "Vous accélérez pour franchir l'obstacle plus facilement",
+            "Vous ralentissez pour protéger votre véhicule et garder le contrôle",
+            "Vous changez de voie pour éviter le dos d'âne",
+            "Vous vous arrêtez complètement avant l'obstacle"
+          ],
+          "correct": 1,
+          "explanation": "Ralentir protège le véhicule et maintient le contrôle.",
+          "question_nl": "U ziet een bord dat een uitholling of drempel aankondigt. Wat doet u?",
+          "answers_nl": [
+            "U versnelt om het obstakel makkelijker te nemen",
+            "U vertraagt om uw voertuig te beschermen en de controle te behouden",
+            "U verandert van rijstrook om de drempel te vermijden",
+            "U stopt volledig vóór het obstakel"
+          ],
+          "explanation_nl": "Vertragen beschermt het voertuig en behoudt de controle."
         }
-      ]
+      ],
+      "title_nl": "Gevaarsborden"
     },
     {
       "id": "BC",
@@ -748,12 +1505,20 @@
             "Vous circulez sur une voie prioritaire"
           ],
           "correct": 1,
-          "explanation": "Triangle sur pointe = cédez le passage."
+          "explanation": "Triangle sur pointe = cédez le passage.",
+          "question_nl": "U ziet dit bord bij het naderen van een kruispunt. Wat betekent het?",
+          "answers_nl": [
+            "Verplicht stoppen (STOP)",
+            "U moet voorrang verlenen aan de bestuurders op de dwarsweg",
+            "Gevaar in de buurt",
+            "U rijdt op een voorrangsweg"
+          ],
+          "explanation_nl": "Driehoek op zijn punt = voorrang verlenen."
         },
         {
           "id": "F4_Q62",
           "sign": "B1",
-          "question": "Vous apercevez un triangle blanc bordé de rouge, pointe vers le bas. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Arrêt obligatoire (STOP)",
             "Cédez le passage aux conducteurs de la voie transversale",
@@ -761,25 +1526,20 @@
             "Voie prioritaire"
           ],
           "correct": 1,
-          "explanation": "Triangle blanc bordé de rouge sur pointe = cédez le passage."
-        },
-        {
-          "id": "F5_Q60",
-          "sign": "B1",
-          "question": "Vous apercevez un triangle blanc bordé de rouge, pointe vers le bas. Que signifie-t-il ?",
-          "answers": [
-            "Arrêt obligatoire (STOP)",
-            "Cédez le passage aux conducteurs de la voie transversale",
-            "Priorité de droite",
-            "Danger"
+          "explanation": "Triangle blanc bordé de rouge sur pointe = cédez le passage.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verplicht stoppen (STOP)",
+            "Voorrang verlenen aan de bestuurders op de dwarsweg",
+            "Voorrang van rechts",
+            "Voorrangsweg"
           ],
-          "correct": 1,
-          "explanation": "Triangle blanc bordé de rouge sur pointe = cédez le passage."
+          "explanation_nl": "Witte driehoek met rode rand op zijn punt = voorrang verlenen."
         },
         {
           "id": "F4_Q61",
           "sign": "B17",
-          "question": "Vous apercevez ce panneau triangulaire sur pointe avec une croix à l'intérieur. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Danger à proximité",
             "Carrefour où la priorité de droite est d'application",
@@ -787,25 +1547,20 @@
             "Cédez le passage"
           ],
           "correct": 1,
-          "explanation": "Triangle sur pointe + croix = signal de priorité de droite."
-        },
-        {
-          "id": "E1_Q60",
-          "sign": "B19",
-          "question": "Vous apercevez un signal triangulaire avec deux flèches (rouge montante, noire descendante). Que signifie-t-il ?",
-          "answers": [
-            "Passage étroit avec priorité",
-            "La circulation est admise dans les deux sens après une section à sens unique",
-            "Vous avez la priorité",
-            "Rétrécissement de chaussée"
+          "explanation": "Triangle sur pointe + croix = signal de priorité de droite.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Gevaar in de buurt",
+            "Kruispunt waar de voorrang van rechts geldt",
+            "Verplicht stoppen (STOP)",
+            "Voorrang verlenen"
           ],
-          "correct": 1,
-          "explanation": "Ce triangle avertit que la route reprend son double sens après un tronçon à sens unique."
+          "explanation_nl": "Driehoek op punt + kruis = bord voorrang van rechts."
         },
         {
           "id": "E1_Q61",
           "sign": "B19",
-          "question": "Vous apercevez un signal rond rouge et blanc avec deux flèches opposées. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Voie à sens unique",
             "Passage étroit — obligation de céder le passage aux conducteurs venant en sens opposé",
@@ -813,12 +1568,20 @@
             "Interdiction de dépasser"
           ],
           "correct": 1,
-          "explanation": "Le signal rond rouge/blanc impose de céder le passage dans un passage étroit."
+          "explanation": "Le signal rond rouge/blanc impose de céder le passage dans un passage étroit.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Eenrichtingsweg",
+            "Smalle doorgang — verplicht voorrang verlenen aan tegemoetkomende bestuurders",
+            "Voorrang van doorgang",
+            "Inhaalverbod"
+          ],
+          "explanation_nl": "Het ronde rood-witte bord verplicht voorrang te verlenen in een smalle doorgang."
         },
         {
           "id": "G1_SIGN_B19_1",
-          "sign": "B19",
-          "question": "Vous approchez d'un passage étroit et vous voyez un rectangle bleu avec une grande flèche blanche à gauche et une petite flèche rouge à droite. Que devez-vous faire ?",
+          "sign": "B21",
+          "question": "Vous approchez d'un passage étroit et voyez ce panneau. Que devez-vous faire ?",
           "answers": [
             "Vous devez attendre que les deux sens soient libres",
             "Vous avez la priorité de passage dans ce passage étroit",
@@ -826,12 +1589,20 @@
             "Vous ne pouvez pas dépasser dans ce passage"
           ],
           "correct": 1,
-          "explanation": "Le panneau B19 indique que vous avez la priorité dans ce passage étroit. Les véhicules venant en sens inverse doivent vous laisser passer."
+          "explanation": "Le panneau B21 indique que vous avez la priorité dans ce passage étroit. Les véhicules venant en sens inverse doivent vous laisser passer.",
+          "question_nl": "U nadert een smalle doorgang en ziet dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "U moet wachten tot beide richtingen vrij zijn",
+            "U heeft voorrang van doorgang in deze smalle doorgang",
+            "U moet voorrang verlenen aan tegemoetkomende voertuigen",
+            "U mag niet inhalen in deze doorgang"
+          ],
+          "explanation_nl": "Het bord B21 geeft aan dat u voorrang heeft in deze smalle doorgang. Tegemoetkomende voertuigen moeten u laten passeren."
         },
         {
           "id": "F3_Q65",
-          "sign": "B1",
-          "question": "Vous apercevez un panneau avec une flèche large et des petites lignes sur les côtés. Que signifie-t-il ?",
+          "sign": "B15",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Sens unique devant vous",
             "Vous avez la priorité au carrefour suivant uniquement",
@@ -839,12 +1610,20 @@
             "Voie prioritaire à durée indéterminée"
           ],
           "correct": 1,
-          "explanation": "Flèche large + petites lignes = priorité au prochain carrefour."
+          "explanation": "Flèche large + petites lignes = priorité au prochain carrefour.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Eenrichtingsverkeer voor u",
+            "U heeft enkel voorrang aan het volgende kruispunt",
+            "Rotonde voor u",
+            "Voorrangsweg voor onbepaalde duur"
+          ],
+          "explanation_nl": "Brede pijl + kleine streepjes = voorrang aan het volgende kruispunt."
         },
         {
           "id": "F3_Q66",
-          "sign": "B1",
-          "question": "Vous voyez un panneau additionnel bleu avec une ligne large et des lignes étroites sous le signal de priorité. Que représente-t-il ?",
+          "sign": "B15a",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Le sens de circulation général",
             "Le tracé de la voie prioritaire et les voies qui doivent céder le passage",
@@ -852,12 +1631,20 @@
             "Les bandes de circulation de la chaussée"
           ],
           "correct": 1,
-          "explanation": "Panneau additionnel bleu = tracé de la voie prioritaire."
+          "explanation": "Panneau additionnel bleu = tracé de la voie prioritaire.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "De algemene rijrichting",
+            "Het tracé van de voorrangsweg en de wegen die voorrang moeten verlenen",
+            "De richting van het dichtstbijzijnde ziekenhuis",
+            "De rijstroken van de rijbaan"
+          ],
+          "explanation_nl": "Onderbord = tracé van de voorrangsweg."
         },
         {
           "id": "E1_Q62",
           "sign": "B21",
-          "question": "Vous apercevez un signal rectangulaire bleu avec deux flèches (rouge et blanche). Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Obligation de céder le passage",
             "Passage étroit — priorité de passage par rapport aux conducteurs venant en sens opposé",
@@ -865,12 +1652,20 @@
             "Zone de rencontre"
           ],
           "correct": 1,
-          "explanation": "Le signal rectangulaire bleu donne la priorité de passage dans le passage étroit."
+          "explanation": "Le signal rectangulaire bleu donne la priorité de passage dans le passage étroit.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Verplicht voorrang verlenen",
+            "Smalle doorgang — voorrang van doorgang ten opzichte van tegemoetkomende bestuurders",
+            "Eenrichtingsweg",
+            "Ontmoetingszone"
+          ],
+          "explanation_nl": "Het rechthoekige blauwe bord geeft voorrang van doorgang in de smalle doorgang."
         },
         {
           "id": "G1_SIGN_B21_1",
-          "sign": "B21",
-          "question": "Vous arrivez devant un passage étroit et vous voyez un panneau rond avec une flèche rouge montant et une flèche blanche descendant. Que devez-vous faire ?",
+          "sign": "B19",
+          "question": "Vous arrivez devant un passage étroit et voyez ce panneau. Que devez-vous faire ?",
           "answers": [
             "Vous avez la priorité de passage",
             "Vous devez céder le passage aux véhicules venant en sens inverse dans ce passage étroit",
@@ -878,12 +1673,20 @@
             "Vous devez accélérer pour passer en premier"
           ],
           "correct": 1,
-          "explanation": "Le panneau B21 signifie que vous devez céder le passage aux véhicules venant en sens inverse. Attendez que la voie soit libre avant d'engager le passage étroit."
+          "explanation": "Le panneau B19 signifie que vous devez céder le passage aux véhicules venant en sens inverse. Attendez que la voie soit libre avant d'engager le passage étroit.",
+          "question_nl": "U komt aan een smalle doorgang en ziet dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "U heeft voorrang van doorgang",
+            "U moet voorrang verlenen aan tegemoetkomende voertuigen in deze smalle doorgang",
+            "U moet claxonneren vóór u binnenrijdt",
+            "U moet versnellen om eerst te passeren"
+          ],
+          "explanation_nl": "Het bord B19 betekent dat u voorrang moet verlenen aan tegemoetkomende voertuigen. Wacht tot de doorgang vrij is."
         },
         {
           "id": "F4_Q63",
           "sign": "B5",
-          "question": "Vous apercevez un panneau octogonal rouge avec le mot STOP. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Cédez le passage sans vous arrêter",
             "Marquez l'arrêt complet et cédez le passage",
@@ -891,38 +1694,20 @@
             "Ralentissez"
           ],
           "correct": 1,
-          "explanation": "STOP = arrêt obligatoire et céder le passage."
-        },
-        {
-          "id": "F5_Q61",
-          "sign": "B5",
-          "question": "Vous apercevez un panneau octogonal rouge avec le mot STOP. Que signifie-t-il ?",
-          "answers": [
-            "Cédez le passage sans vous arrêter",
-            "Marquez l'arrêt complet et cédez le passage",
-            "Priorité de droite applicable",
-            "Ralentissez"
+          "explanation": "STOP = arrêt obligatoire et céder le passage.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Voorrang verlenen zonder te stoppen",
+            "Volledig stoppen en voorrang verlenen",
+            "Voorrang van rechts van toepassing",
+            "Vertragen"
           ],
-          "correct": 1,
-          "explanation": "STOP = arrêt obligatoire et céder le passage."
-        },
-        {
-          "id": "F6_Q73",
-          "sign": "B5",
-          "question": "Vous apercevez un panneau STOP octogonal rouge près d'un passage à niveau. Que signifie-t-il ?",
-          "answers": [
-            "Ralentissez simplement",
-            "Marquez l'arrêt complet et cédez le passage avant de franchir le passage à niveau",
-            "Les feux sont en panne",
-            "Le passage est totalement interdit"
-          ],
-          "correct": 1,
-          "explanation": "SSF + panneau vélo = les cyclistes peuvent aussi utiliser ce SSF."
+          "explanation_nl": "STOP = verplicht stoppen en voorrang verlenen."
         },
         {
           "id": "F6_Q75",
           "sign": "B5",
-          "question": "Vous apercevez un panneau STOP octogonal rouge à l'approche d'un passage à niveau. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau à l'approche d'un passage à niveau. Que devez-vous faire ?",
           "answers": [
             "Simplement ralentir",
             "Marquer l'arrêt complet et céder le passage",
@@ -930,12 +1715,20 @@
             "Le passage est totalement interdit"
           ],
           "correct": 1,
-          "explanation": "STOP = arrêt obligatoire et céder le passage."
+          "explanation": "STOP = arrêt obligatoire et céder le passage.",
+          "question_nl": "U ziet dit bord bij het naderen van een overweg. Wat moet u doen?",
+          "answers_nl": [
+            "Gewoon vertragen",
+            "Volledig stoppen en voorrang verlenen",
+            "De lichten zijn defect, voorrang van rechts toepassen",
+            "De doorgang is volledig verboden"
+          ],
+          "explanation_nl": "STOP = verplicht stoppen en voorrang verlenen."
         },
         {
           "id": "G1_SIGN_B5_1",
-          "sign": "B5",
-          "question": "Vous venez de quitter une route prioritaire et vous apercevez un losange jaune barré suivi d'un triangle inversé blanc. Que devez-vous faire ?",
+          "sign": "B11",
+          "question": "Vous voyez ce panneau. Que devez-vous faire aux carrefours suivants ?",
           "answers": [
             "Vous pouvez continuer normalement, vous êtes toujours prioritaire",
             "Vous devez appliquer la priorité de droite et céder le passage aux véhicules venant de droite",
@@ -943,7 +1736,15 @@
             "Vous devez klaxonner pour avertir les autres"
           ],
           "correct": 1,
-          "explanation": "Le panneau B5 indique que la route prioritaire prend fin et que la priorité de droite ordinaire s'applique à nouveau. Cédez le passage aux véhicules venant de droite."
+          "explanation": "Le panneau B11 indique que la route prioritaire prend fin : la priorité de droite ordinaire s'applique à nouveau. Cédez le passage aux véhicules venant de droite.",
+          "question_nl": "U ziet dit bord. Wat moet u doen aan de volgende kruispunten?",
+          "answers_nl": [
+            "U mag gewoon doorrijden, u heeft nog steeds voorrang",
+            "U moet de voorrang van rechts toepassen en voorrang verlenen aan voertuigen van rechts",
+            "De voorrangsweg herneemt 200 m verder",
+            "U moet claxonneren om de anderen te verwittigen"
+          ],
+          "explanation_nl": "Het bord B11 geeft aan dat de voorrangsweg eindigt: de gewone voorrang van rechts geldt opnieuw. Verleen voorrang aan voertuigen van rechts."
         },
         {
           "id": "A3_Q81",
@@ -956,12 +1757,20 @@
             "Vous pouvez continuer à moins de 10 km/h"
           ],
           "correct": 1,
-          "explanation": "Le signal d'accès interdit aux cyclistes vous interdit d'emprunter cette voie, que vous rouliez ou poussiez votre vélo."
+          "explanation": "Le signal d'accès interdit aux cyclistes vous interdit d'emprunter cette voie, que vous rouliez ou poussiez votre vélo.",
+          "question_nl": "U bent fietser en ziet dit verbodsbord. Wat moet u doen?",
+          "answers_nl": [
+            "U mag doorrijden als de weg vrij is",
+            "U mag deze weg niet gebruiken en moet een andere route zoeken",
+            "U mag doorgaan als u uw fiets duwt",
+            "U mag doorrijden aan minder dan 10 km/u"
+          ],
+          "explanation_nl": "Het bord \"verboden toegang voor fietsers\" verbiedt u deze weg te gebruiken."
         },
         {
           "id": "G2_SIGN_C13_1",
-          "sign": "C13",
-          "question": "Vous voyez un panneau rond rouge avec la silhouette d'un cavalier sur un cheval. Que signifie-t-il ?",
+          "sign": "C15",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Les animaux sont interdits sur cette voie",
             "L'accès est interdit aux cavaliers montés sur un cheval",
@@ -969,12 +1778,20 @@
             "Vous entrez dans une zone de chasse réservée"
           ],
           "correct": 1,
-          "explanation": "C13 interdit l'accès aux cavaliers (personnes montées à cheval). Les piétons conduisant un cheval à main restent autorisés."
+          "explanation": "C15 interdit l'accès aux cavaliers (personnes montées à cheval). Les piétons conduisant un cheval à la main restent autorisés.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Dieren zijn verboden op deze weg",
+            "De toegang is verboden voor ruiters te paard",
+            "Inhaalverbod voor trage voertuigen",
+            "U rijdt een voorbehouden jachtgebied binnen"
+          ],
+          "explanation_nl": "C15 verbiedt de toegang voor ruiters (personen te paard). Voetgangers die een paard aan de hand leiden blijven toegelaten."
         },
         {
           "id": "G2_SIGN_C15_1",
-          "sign": "C15",
-          "question": "Vous voyez un panneau rond rouge avec la silhouette d'une charrette tirée par un animal. Que signifie-t-il ?",
+          "sign": "C13",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Les animaux de trait sont interdits sur cette route",
             "Les véhicules à traction animale (charrettes, calèches...) ne peuvent pas emprunter cette voie",
@@ -982,12 +1799,20 @@
             "Les caravanes et remorques sont interdites"
           ],
           "correct": 1,
-          "explanation": "C15 interdit l'accès aux véhicules attelés (charrette tirée par un animal). Il concerne les véhicules à traction animale."
+          "explanation": "C13 interdit l'accès aux véhicules attelés (charrette tirée par un animal). Il concerne les véhicules à traction animale.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Trekdieren zijn verboden op deze weg",
+            "Gespannen (karren, koetsen...) mogen deze weg niet gebruiken",
+            "Landbouwtractoren zijn verboden",
+            "Caravans en aanhangwagens zijn verboden"
+          ],
+          "explanation_nl": "C13 verbiedt de toegang voor gespannen (kar getrokken door een dier)."
         },
         {
           "id": "G2_SIGN_C27_1",
-          "sign": "C27",
-          "question": "Vous conduisez un véhicule long et vous voyez un panneau rond rouge avec le chiffre \"10 m\". Que signifie-t-il ?",
+          "sign": "C25",
+          "question": "Vous conduisez un véhicule long et voyez ce panneau indiquant « 10 m ». Que signifie-t-il ?",
           "answers": [
             "La vitesse est limitée à 10 km/h",
             "Les véhicules de plus de 10 mètres de long ne peuvent pas passer",
@@ -995,64 +1820,83 @@
             "La hauteur maximale est de 10 mètres"
           ],
           "correct": 1,
-          "explanation": "C27 interdit le passage aux véhicules dont la longueur (y compris chargement) dépasse la valeur indiquée — ici 10 m. Cela cible les semi-remorques et trains routiers longs."
-        },
-        {
-          "id": "G2_SIGN_C29_1",
-          "sign": "C29",
-          "question": "Vous voyez un panneau rond rouge représentant un essieu de roues avec un chiffre en tonnes. Que signifie-t-il ?",
-          "answers": [
-            "Le poids total du véhicule ne doit pas dépasser cette valeur",
-            "La charge par essieu est limitée à la valeur indiquée",
-            "Le nombre maximal d'essieux est limité",
-            "L'accès est interdit aux véhicules ayant plus de 2 essieux"
+          "explanation": "C25 interdit le passage aux véhicules dont la longueur (chargement compris) dépasse la valeur indiquée — ici 10 m. Cela cible les semi-remorques et trains routiers longs.",
+          "question_nl": "U bestuurt een lang voertuig en ziet dit bord met \"10 m\". Wat betekent het?",
+          "answers_nl": [
+            "De snelheid is beperkt tot 10 km/u",
+            "Voertuigen langer dan 10 meter mogen niet passeren",
+            "U moet 10 meter afstand houden",
+            "De maximumhoogte is 10 meter"
           ],
-          "correct": 1,
-          "explanation": "C29 limite la charge par essieu. Même si le poids total du véhicule est inférieur au panneau C25, si la charge par essieu est trop élevée, vous êtes en infraction."
+          "explanation_nl": "C25 verbiedt de doorgang voor voertuigen waarvan de lengte (lading inbegrepen) de aangeduide waarde overschrijdt — hier 10 m."
         },
         {
           "id": "C1_Q61",
           "sign": "C31a",
-          "question": "Vous voyez un signal rond rouge avec une fleche barree vers la gauche. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Sens unique",
-            "Au prochain carrefour, interdiction de tourner a gauche",
-            "Virage a gauche",
-            "Deviation a gauche"
+            "Au prochain carrefour, interdiction de tourner à gauche",
+            "Virage à gauche",
+            "Déviation à gauche"
           ],
           "correct": 1,
-          "explanation": "Ce signal interdit de tourner à gauche au prochain carrefour."
+          "explanation": "Ce signal interdit de tourner à gauche au prochain carrefour.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Eenrichtingsverkeer",
+            "Aan het volgende kruispunt is links afslaan verboden",
+            "Bocht naar links",
+            "Omleiding naar links"
+          ],
+          "explanation_nl": "Dit bord verbiedt links af te slaan aan het volgende kruispunt."
         },
         {
           "id": "C1_Q62",
           "sign": "C31a",
-          "question": "Vous voyez ce meme signal d'interdiction de tourner avec un panneau additionnel de masse. Que signifie-t-il ?",
+          "question": "Ce signal d'interdiction de tourner est accompagné d'un panneau additionnel de masse. Que signifie-t-il ?",
           "answers": [
             "Interdiction pour tout le monde",
-            "L'interdiction de tourner ne s'applique qu'aux vehicules dont la masse en charge depasse la masse indiquee",
+            "L'interdiction de tourner ne s'applique qu'aux véhicules dont la masse en charge dépasse la masse indiquée",
             "La masse maximale pour tourner",
             "Le poids de la route"
           ],
           "correct": 1,
-          "explanation": "Le panneau additionnel de masse restreint l'interdiction aux véhicules dont la MEC dépasse la valeur indiquée."
+          "explanation": "Le panneau additionnel de masse restreint l'interdiction aux véhicules dont la MEC dépasse la valeur indiquée.",
+          "question_nl": "Dit afslagverbod gaat samen met een onderbord met een massa. Wat betekent het?",
+          "answers_nl": [
+            "Verbod voor iedereen",
+            "Het afslagverbod geldt enkel voor voertuigen waarvan de massa in beladen toestand de aangeduide massa overschrijdt",
+            "De maximummassa om af te slaan",
+            "Het gewicht van de weg"
+          ],
+          "explanation_nl": "Het onderbord met massa beperkt het verbod tot voertuigen waarvan de MTM de aangeduide waarde overschrijdt."
         },
         {
           "id": "C1_Q68",
           "sign": "C31a",
-          "question": "Vous voyez un signal d'interdiction de tourner a gauche sans panneau additionnel. Votre voiture est legere. Pouvez-vous tourner ?",
+          "question": "Vous voyez un signal d'interdiction de tourner à gauche sans panneau additionnel. Votre voiture est légère. Pouvez-vous tourner ?",
           "answers": [
-            "Oui, les voitures legeres ne sont pas concernees",
-            "Non, sans panneau additionnel l'interdiction s'applique a tous les vehicules",
+            "Oui, les voitures légères ne sont pas concernées",
+            "Non, sans panneau additionnel l'interdiction s'applique à tous les véhicules",
             "Oui, si le carrefour est libre",
-            "Cela depend de l'heure"
+            "Cela dépend de l'heure"
           ],
           "correct": 1,
-          "explanation": "Sans panneau additionnel de masse, l'interdiction s'applique à TOUS les conducteurs."
+          "explanation": "Sans panneau additionnel de masse, l'interdiction s'applique à TOUS les conducteurs.",
+          "question_nl": "U ziet een verbod links af te slaan zonder onderbord. Uw auto is licht. Mag u afslaan?",
+          "answers_nl": [
+            "Ja, lichte auto's zijn niet bedoeld",
+            "Nee, zonder onderbord geldt het verbod voor alle voertuigen",
+            "Ja, als het kruispunt vrij is",
+            "Dat hangt af van het uur"
+          ],
+          "explanation_nl": "Zonder onderbord met massa geldt het verbod voor ALLE bestuurders."
         },
         {
           "id": "E3_Q64",
           "sign": "C35",
-          "question": "Vous apercevez un signal rond rouge avec deux silhouettes de voitures. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Voie à sens unique",
             "Interdiction de dépasser par la gauche un véhicule attelé ou à plus de deux roues",
@@ -1060,12 +1904,20 @@
             "Zone de croisement"
           ],
           "correct": 1,
-          "explanation": "Le signal rond rouge (2 voitures) = interdiction de dépasser pour tous les conducteurs."
+          "explanation": "Le signal rond rouge (2 voitures) = interdiction de dépasser pour tous les conducteurs.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Eenrichtingsweg",
+            "Verbod om links een gespan of voertuig met meer dan twee wielen in te halen",
+            "Verkeer verboden",
+            "Kruisingszone"
+          ],
+          "explanation_nl": "Het ronde rode bord (2 auto's) = inhaalverbod voor alle bestuurders."
         },
         {
           "id": "G2_SIGN_C35_1",
-          "sign": "C35",
-          "question": "Vous roulez et vous voyez un panneau gris/blanc avec deux voitures et des barres diagonales grises. Que signifie-t-il ?",
+          "sign": "C37",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Le dépassement est interdit",
             "L'interdiction de dépasser prend fin",
@@ -1073,25 +1925,20 @@
             "Vous entrez dans une voie de dépassement obligatoire"
           ],
           "correct": 1,
-          "explanation": "C35 marque la fin de l'interdiction de dépassement. À partir de ce panneau, vous pouvez à nouveau dépasser si les conditions le permettent."
-        },
-        {
-          "id": "E3_Q65",
-          "sign": "C37",
-          "question": "Vous apercevez un signal similaire au précédent mais barré. Que signifie ce panneau ?",
-          "answers": [
-            "Interdiction de circuler",
-            "Fin de l'interdiction de dépasser",
-            "Début d'une nouvelle zone d'interdiction",
-            "Interdiction de dépasser renforcée"
+          "explanation": "C37 marque la fin de l'interdiction de dépassement. À partir de ce panneau, vous pouvez à nouveau dépasser si les conditions le permettent.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Inhalen is verboden",
+            "Het inhaalverbod eindigt",
+            "Inhalen is voorbehouden voor auto's",
+            "U rijdt een verplichte inhaalstrook op"
           ],
-          "correct": 1,
-          "explanation": "Le signal barré = fin de l'interdiction correspondante."
+          "explanation_nl": "C37 markeert het einde van het inhaalverbod. Vanaf dit bord mag u opnieuw inhalen als de omstandigheden het toelaten."
         },
         {
           "id": "E3_Q68",
-          "sign": "C37",
-          "question": "Vous apercevez un signal indiquant « 500 m » avant une zone d'interdiction de dépasser. Que signifie-t-il ?",
+          "sign": "C35",
+          "question": "Vous apercevez un signal d'interdiction de dépasser accompagné d'un panneau additionnel « 500 m ». Que signifie-t-il ?",
           "answers": [
             "La zone d'interdiction commence immédiatement",
             "La zone d'interdiction de dépasser commence 500 mètres plus loin",
@@ -1099,25 +1946,20 @@
             "Il y a 500 mètres de route droite"
           ],
           "correct": 1,
-          "explanation": "Ce signal annonce que la zone d'interdiction commence 500 mètres plus loin."
-        },
-        {
-          "id": "E3_Q67",
-          "sign": "C37",
-          "question": "Vous apercevez un signal rectangulaire de zone avec deux voitures. Que signifie ce panneau ?",
-          "answers": [
-            "Fin de la zone d'interdiction",
-            "Début d'une zone où l'interdiction de dépasser s'applique",
-            "Zone de vitesse limitée",
-            "Zone piétonne"
+          "explanation": "Ce signal annonce que la zone d'interdiction commence 500 mètres plus loin.",
+          "question_nl": "U ziet een inhaalverbodsbord met een onderbord « 500 m ». Wat betekent het?",
+          "answers_nl": [
+            "De verbodszone begint onmiddellijk",
+            "De inhaalverbodzone begint 500 meter verder",
+            "De verbodszone is 500 meter lang",
+            "Er is 500 meter rechte weg"
           ],
-          "correct": 1,
-          "explanation": "Le signal rectangulaire de zone = début de la zone d'interdiction de dépasser."
+          "explanation_nl": "Dit bord kondigt aan dat de verbodszone 500 meter verder begint."
         },
         {
           "id": "E3_Q69",
-          "sign": "C37",
-          "question": "Vous apercevez un signal d'autorisation de dépassement pour camions > 3,5 t. Que signifie-t-il ?",
+          "sign": "C41",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Tous les véhicules peuvent désormais dépasser",
             "Les camions > 3,5 t sont exceptionnellement autorisés à dépasser par la gauche",
@@ -1125,12 +1967,20 @@
             "Les camions doivent ralentir"
           ],
           "correct": 1,
-          "explanation": "Ce signal lève l'interdiction pour les camions > 3,5 t et les autorise à dépasser."
+          "explanation": "C41 marque la fin de l'interdiction de dépasser pour les camions de plus de 3,5 t. Ils peuvent à nouveau dépasser si les conditions le permettent.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Alle voertuigen mogen voortaan inhalen",
+            "Vrachtwagens > 3,5 t mogen opnieuw links inhalen",
+            "Vrachtwagens zijn verboden in deze zone",
+            "Vrachtwagens moeten vertragen"
+          ],
+          "explanation_nl": "C41 markeert het einde van het inhaalverbod voor vrachtwagens van meer dan 3,5 t."
         },
         {
           "id": "E3_Q66",
           "sign": "C39",
-          "question": "Vous apercevez un signal d'interdiction de dépasser avec un camion et une voiture. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Interdiction de dépasser pour tous les conducteurs",
             "Interdiction pour les véhicules de transport de marchandises > 3,5 t MMA de dépasser par la gauche",
@@ -1138,25 +1988,20 @@
             "Interdiction de dépasser pour les bus"
           ],
           "correct": 1,
-          "explanation": "Ce signal (voiture + camion) vise uniquement les transporteurs de marchandises > 3,5 t MMA."
-        },
-        {
-          "id": "H1_SIGN_C39_1",
-          "sign": "C39",
-          "question": "Vous voyez un panneau circulaire bleu avec deux barres rouges en croix. Que signifie-t-il pour vous ?",
-          "answers": [
-            "Seul le stationnement est interdit",
-            "L'arrêt ET le stationnement sont tous deux interdits à cet endroit",
-            "Seul l'arrêt est interdit",
-            "Le klaxon est interdit"
+          "explanation": "Ce signal (voiture + camion) vise uniquement les transporteurs de marchandises > 3,5 t MMA.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Inhaalverbod voor alle bestuurders",
+            "Verbod voor voertuigen voor goederenvervoer > 3,5 t MTM om links in te halen",
+            "Inhaalverbod voor auto's",
+            "Inhaalverbod voor bussen"
           ],
-          "correct": 1,
-          "explanation": "C39 interdit toute immobilisation du véhicule, même brève. Ni l'arrêt, ni le stationnement ne sont tolérés. C'est plus restrictif que C37 (stationnement seul)."
+          "explanation_nl": "Dit bord (auto + vrachtwagen) geldt enkel voor goederenvervoer > 3,5 t MTM."
         },
         {
           "id": "G2_SIGN_C45_120_1",
           "sign": "C45",
-          "question": "Vous sortez d'une zone de chantier sur autoroute et vous voyez \"120\" barré de gris. Que signifie-t-il ?",
+          "question": "Vous sortez d'une zone de chantier sur autoroute et voyez ce panneau. Que signifie-t-il ?",
           "answers": [
             "La vitesse minimale est de 120 km/h",
             "La limitation de 120 km/h prend fin et vous pouvez reprendre la vitesse normale d'autoroute",
@@ -1164,12 +2009,20 @@
             "La vitesse est réduite à 100 km/h"
           ],
           "correct": 1,
-          "explanation": "C45-120 marque la fin de la limitation de 120 km/h imposée dans la zone de chantier. La vitesse normale d'autoroute (selon le pays) s'applique à nouveau."
+          "explanation": "C45-120 marque la fin de la limitation de 120 km/h imposée dans la zone de chantier. La vitesse normale d'autoroute (selon le pays) s'applique à nouveau.",
+          "question_nl": "U verlaat een werfzone op de autosnelweg en ziet dit bord. Wat betekent het?",
+          "answers_nl": [
+            "De minimumsnelheid is 120 km/u",
+            "De beperking van 120 km/u eindigt en u mag de normale autosnelwegsnelheid hernemen",
+            "De beperking van 120 km/u herneemt",
+            "De snelheid wordt verlaagd tot 100 km/u"
+          ],
+          "explanation_nl": "C45-120 markeert het einde van de 120 km/u-beperking van de werfzone. De normale autosnelwegsnelheid geldt opnieuw."
         },
         {
           "id": "G2_SIGN_C45_50_1",
           "sign": "C45",
-          "question": "Vous rouliez sous une limitation à 50 km/h et vous voyez un panneau barré en gris avec \"50\". Que signifie-t-il ?",
+          "question": "Vous rouliez sous une limitation à 50 km/h et voyez ce panneau. Que signifie-t-il ?",
           "answers": [
             "La limite est désormais fixée à 50 km/h",
             "La limitation de 50 km/h prend fin",
@@ -1177,38 +2030,20 @@
             "Il s'agit d'une limitation provisoire liée à des travaux"
           ],
           "correct": 1,
-          "explanation": "C45-50 marque la fin de la limitation à 50 km/h. La vitesse autorisée revient à la limite normale applicable sur ce type de voie."
-        },
-        {
-          "id": "G2_SIGN_C45_70_1",
-          "sign": "C45",
-          "question": "Vous sortez d'une zone à 70 km/h et vous voyez un panneau barré en gris avec \"70\". Que pouvez-vous faire ?",
-          "answers": [
-            "Vous devez maintenir 70 km/h maximum",
-            "Vous pouvez rouler à la vitesse normale autorisée sur ce type de route",
-            "Vous pouvez accélérer à 120 km/h immédiatement",
-            "Vous devez encore réduire votre vitesse"
+          "explanation": "C45-50 marque la fin de la limitation à 50 km/h. La vitesse autorisée revient à la limite normale applicable sur ce type de voie.",
+          "question_nl": "U reed onder een beperking van 50 km/u en ziet dit bord. Wat betekent het?",
+          "answers_nl": [
+            "De limiet is voortaan 50 km/u",
+            "De beperking van 50 km/u eindigt",
+            "De beperking geldt enkel 's nachts",
+            "Het is een tijdelijke beperking wegens werken"
           ],
-          "correct": 1,
-          "explanation": "C45-70 signale la fin de la limitation à 70 km/h. Vous retournez à la vitesse maximale autorisée sur ce type de route (ex : 90 km/h en Wallonie hors agglomération)."
-        },
-        {
-          "id": "G2_SIGN_C45_90_1",
-          "sign": "C45",
-          "question": "Vous sortez d'une zone de travaux et vous voyez un panneau barré \"90\". Que signifie-t-il ?",
-          "answers": [
-            "Vous devez rouler à 90 km/h minimum",
-            "La limitation provisoire de 90 km/h se termine",
-            "La route reprend à 90 km/h et non 120",
-            "Les travaux continuent avec une limite de 90 km/h"
-          ],
-          "correct": 1,
-          "explanation": "C45-90 met fin à la limitation de 90 km/h. La vitesse applicable redevient celle normale pour ce type de voie. Souvent présent en sortie de zones de travaux."
+          "explanation_nl": "C45-50 markeert het einde van de 50 km/u-beperking. De normale snelheid voor dit wegtype geldt opnieuw."
         },
         {
           "id": "G2_SIGN_C49_1",
-          "sign": "C49",
-          "question": "Vous voyez un panneau rond gris/blanc barré de plusieurs lignes. Que signifie-t-il ?",
+          "sign": "C46",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Toutes les limitations de vitesse prennent fin",
             "Toutes les interdictions ponctuelles encore actives prennent fin simultanément",
@@ -1216,22 +2051,60 @@
             "Vous quittez l'autoroute"
           ],
           "correct": 1,
-          "explanation": "C49 annule en une seule fois toutes les interdictions ponctuelles (vitesse, dépassement, klaxon…) encore actives. C'est très pratique pour la fin des zones de chantier."
+          "explanation": "C46 annule en une seule fois toutes les interdictions ponctuelles (vitesse, dépassement…) encore actives. Fréquent en fin de zone de chantier.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Alle snelheidsbeperkingen eindigen",
+            "Alle nog geldende plaatselijke verboden eindigen tegelijk",
+            "U verlaat een woonerf",
+            "U verlaat de autosnelweg"
+          ],
+          "explanation_nl": "C46 heft in één keer alle nog geldende plaatselijke verboden op (snelheid, inhalen…). Vaak op het einde van werfzones."
         },
         {
           "id": "G2_SIGN_C5_1",
           "sign": "C5",
-          "question": "Vous arrivez devant un panneau rond rouge avec un symbole barrant tous les véhicules à moteur. À qui s'adresse cette interdiction ?",
+          "question": "À qui s'adresse l'interdiction de ce panneau ?",
           "answers": [
             "Uniquement aux camions",
-            "À tous les véhicules à moteur (voitures, motos, camions...)",
+            "Aux véhicules à moteur à plus de deux roues (voitures, camions…) — les motos ne sont pas visées",
             "Aux vélos et aux piétons",
             "Uniquement aux motos"
           ],
           "correct": 1,
-          "explanation": "C5 interdit l'accès à tous les véhicules à moteur (voitures, motos, camions…). Seuls les vélos, piétons et animaux peuvent continuer."
+          "explanation": "C5 interdit l'accès aux véhicules à moteur à plus de deux roues (voitures, camions…). Les motos, vélos et piétons ne sont pas visés par ce signal.",
+          "question_nl": "Voor wie geldt het verbod van dit bord?",
+          "answers_nl": [
+            "Enkel voor vrachtwagens",
+            "Voor motorvoertuigen met meer dan twee wielen (auto's, vrachtwagens…) — motors zijn niet bedoeld",
+            "Voor fietsers en voetgangers",
+            "Enkel voor motors"
+          ],
+          "explanation_nl": "C5 verbiedt de toegang voor motorvoertuigen met meer dan twee wielen. Motors, fietsen en voetgangers zijn niet bedoeld."
+        },
+        {
+          "id": "A1_SIGN_A41_1",
+          "sign": "B7",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Vous devez vous arrêter immédiatement à cet endroit",
+            "Un panneau STOP se trouve à la distance indiquée : commencez à ralentir",
+            "La priorité de droite est rétablie à partir de ce point",
+            "Un carrefour giratoire se situe à la distance indiquée"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau B7 annonce qu'un signal STOP se trouve à la distance indiquée : commencez à ralentir.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "U moet hier onmiddellijk stoppen",
+            "Een STOP-bord bevindt zich op de aangeduide afstand: begin te vertragen",
+            "De voorrang van rechts geldt opnieuw vanaf dit punt",
+            "Een rotonde bevindt zich op de aangeduide afstand"
+          ],
+          "explanation_nl": "Het bord B7 kondigt aan dat een STOP-bord zich op de aangeduide afstand bevindt: begin te vertragen."
         }
-      ]
+      ],
+      "title_nl": "Verbod & Gebod"
     },
     {
       "id": "D",
@@ -1241,8 +2114,8 @@
       "questions": [
         {
           "id": "A1_SIGN_D1__1",
-          "sign": "D01c",
-          "question": "Vous arrivez à un carrefour avec un panneau rond bleu montrant une flèche tout droit et une flèche à droite. Que devez-vous faire ?",
+          "sign": "D3b",
+          "question": "Vous arrivez à un carrefour avec ce panneau. Que devez-vous faire ?",
           "answers": [
             "Vous êtes obligé d'aller tout droit uniquement",
             "Vous pouvez aller tout droit ou tourner à droite, mais tourner à gauche est interdit",
@@ -1250,12 +2123,20 @@
             "Vous pouvez faire demi-tour"
           ],
           "correct": 1,
-          "explanation": "D1c impose d'aller tout droit ou de tourner à droite. Tourner à gauche est interdit à cet endroit."
+          "explanation": "D3b impose d'aller tout droit ou de tourner à droite. Tourner à gauche est interdit à cet endroit.",
+          "question_nl": "U komt aan een kruispunt met dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "U bent verplicht enkel rechtdoor te rijden",
+            "U mag rechtdoor of rechts afslaan, maar links afslaan is verboden",
+            "U moet verplicht rechts afslaan",
+            "U mag omkeren"
+          ],
+          "explanation_nl": "D3b verplicht rechtdoor te rijden of rechts af te slaan. Links afslaan is hier verboden."
         },
         {
           "id": "A1_SIGN_D1__2",
-          "sign": "D01d",
-          "question": "Vous arrivez à un carrefour avec un panneau rond bleu montrant une flèche tout droit et une flèche à gauche. Que devez-vous faire ?",
+          "sign": "D3a",
+          "question": "Vous arrivez à un carrefour avec ce panneau. Que devez-vous faire ?",
           "answers": [
             "Vous êtes obligé d'aller tout droit uniquement",
             "Vous pouvez aller tout droit ou tourner à gauche, mais tourner à droite est interdit",
@@ -1263,12 +2144,20 @@
             "Toutes les directions sont autorisées"
           ],
           "correct": 1,
-          "explanation": "D1d impose d'aller tout droit ou de tourner à gauche. Tourner à droite est interdit à cet endroit."
+          "explanation": "D3a impose d'aller tout droit ou de tourner à gauche. Tourner à droite est interdit à cet endroit.",
+          "question_nl": "U komt aan een kruispunt met dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "U bent verplicht enkel rechtdoor te rijden",
+            "U mag rechtdoor of links afslaan, maar rechts afslaan is verboden",
+            "U moet verplicht links afslaan",
+            "Alle richtingen zijn toegelaten"
+          ],
+          "explanation_nl": "D3a verplicht rechtdoor te rijden of links af te slaan. Rechts afslaan is hier verboden."
         },
         {
           "id": "G1_SIGN_D1__1",
-          "sign": "D01a",
-          "question": "Vous arrivez à un carrefour et vous voyez un panneau rond bleu avec une flèche blanche vers la droite. Que devez-vous faire ?",
+          "sign": "D1f",
+          "question": "Vous arrivez à un carrefour avec ce panneau. Que devez-vous faire ?",
           "answers": [
             "Vous pouvez tourner à droite si vous le souhaitez",
             "Vous devez obligatoirement tourner à droite",
@@ -1276,12 +2165,20 @@
             "Vous pouvez dépasser par la droite"
           ],
           "correct": 1,
-          "explanation": "D1a impose la direction droite. Vous devez tourner à droite. Tout autre direction est interdite à cet endroit."
+          "explanation": "D1f impose de tourner à droite. Toute autre direction est interdite à cet endroit.",
+          "question_nl": "U komt aan een kruispunt met dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "U mag rechts afslaan als u dat wenst",
+            "U moet verplicht rechts afslaan",
+            "U heeft voorrang op voertuigen van rechts",
+            "U mag rechts inhalen"
+          ],
+          "explanation_nl": "D1f verplicht rechts af te slaan. Elke andere richting is hier verboden."
         },
         {
           "id": "A1_SIGN_D10_1",
           "sign": "D10",
-          "question": "Vous voyez un panneau rond bleu avec un piéton et un cycliste côte à côte, non séparés. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Les piétons et cyclistes sont tous deux interdits",
             "Chemin mixte : piétons et cyclistes partagent la même surface",
@@ -1289,51 +2186,20 @@
             "Piste cyclable exclusive interdite aux piétons"
           ],
           "correct": 1,
-          "explanation": "D10 indique un chemin mixte piétons/cyclistes non séparé. Les deux usagers partagent le même espace et doivent se respecter mutuellement."
-        },
-        {
-          "id": "A3_Q68",
-          "sign": "D10",
-          "question": "Ce signal rond bleu avec piéton et vélo côte à côte signifie :",
-          "answers": [
-            "Zone piétonne",
-            "Partie réservée aux piétons, vélos et cyclomoteurs classe A",
-            "Piste cyclable uniquement",
-            "Trottoir uniquement"
+          "explanation": "D10 indique un chemin mixte piétons/cyclistes non séparé. Les deux usagers partagent le même espace et doivent se respecter mutuellement.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Voetgangers en fietsers zijn beiden verboden",
+            "Gemengd pad: voetgangers en fietsers delen dezelfde ruimte",
+            "Fietspad met een apart voetpad ernaast",
+            "Exclusief fietspad verboden voor voetgangers"
           ],
-          "correct": 1,
-          "explanation": "Symboles côte à côte : la partie est réservée aux piétons, aux vélos et aux cyclomoteurs classe A."
-        },
-        {
-          "id": "A3_Q72",
-          "sign": "D10",
-          "question": "Ce signal indique un chemin réservé. Quels usagers y sont admis ?",
-          "answers": [
-            "Uniquement les piétons",
-            "Piétons, cyclistes et cavaliers selon les symboles",
-            "Tous les véhicules",
-            "Uniquement les cyclistes"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal indique un chemin partagé dont les usagers autorisés sont précisés par les symboles (piétons, cyclistes, cavaliers)."
-        },
-        {
-          "id": "A6_Q85",
-          "sign": "D10",
-          "question": "Que signifie ce panneau ?",
-          "answers": [
-            "Zone piétonne",
-            "Chemin réservé aux usagers indiqués sur le panneau",
-            "Piste cyclable obligatoire",
-            "Passage pour piétons"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal indique un chemin réservé aux catégories d'usagers représentées sur le panneau."
+          "explanation_nl": "D10 duidt een gemengd pad voetgangers/fietsers aan zonder scheiding. Beide gebruikers delen dezelfde ruimte en moeten elkaar respecteren."
         },
         {
           "id": "A1_SIGN_D11_1",
-          "sign": "D11",
-          "question": "Vous voyez un panneau rond bleu avec un piéton à gauche et un cycliste à droite, séparés par un trait. Que signifie-t-il ?",
+          "sign": "D9b",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Les piétons uniquement à gauche, pas de vélos autorisés",
             "Chemin séparé : piétons à gauche, cyclistes à droite",
@@ -1341,12 +2207,20 @@
             "Sens unique pour piétons et cyclistes"
           ],
           "correct": 1,
-          "explanation": "D11 indique un chemin séparé en deux parties : côté gauche pour les piétons, côté droit pour les cyclistes. Chacun reste dans sa partie."
+          "explanation": "D9b indique un chemin divisé en deux parties : une pour les piétons, une pour les cyclistes. Chacun reste dans la partie indiquée par le panneau.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Enkel voetgangers links, geen fietsen toegelaten",
+            "Gescheiden pad: voetgangers links, fietsers rechts",
+            "Fietsers hebben voorrang op voetgangers",
+            "Eenrichting voor voetgangers en fietsers"
+          ],
+          "explanation_nl": "D9b duidt een pad aan dat in twee delen is verdeeld: één voor voetgangers, één voor fietsers. Ieder blijft in het deel dat het bord aanduidt."
         },
         {
           "id": "G1_SIGN_D1b_1",
-          "sign": "D01b",
-          "question": "Vous arrivez à un carrefour et vous voyez un panneau rond bleu avec une flèche blanche vers la gauche. Que devez-vous faire ?",
+          "sign": "D1e",
+          "question": "Vous arrivez à un carrefour avec ce panneau. Que devez-vous faire ?",
           "answers": [
             "Vous pouvez tourner à gauche si vous le souhaitez",
             "Vous devez obligatoirement tourner à gauche",
@@ -1354,12 +2228,20 @@
             "Cette voie est réservée au trafic local"
           ],
           "correct": 1,
-          "explanation": "D1b impose la direction gauche. Aller tout droit ou à droite est interdit. Vérifiez la bonne voie avant l'intersection."
+          "explanation": "D1e impose de tourner à gauche. Aller tout droit ou à droite est interdit. Placez-vous sur la bonne voie avant l'intersection.",
+          "question_nl": "U komt aan een kruispunt met dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "U mag links afslaan als u dat wenst",
+            "U moet verplicht links afslaan",
+            "Voertuigen van links hebben voorrang",
+            "Deze weg is voorbehouden voor plaatselijk verkeer"
+          ],
+          "explanation_nl": "D1e verplicht links af te slaan. Rechtdoor of rechts is verboden. Kies op voorhand de juiste rijstrook."
         },
         {
           "id": "A1_SIGN_D3_1",
-          "sign": "D03",
-          "question": "Vous voyez un panneau rond bleu avec une flèche contournant un obstacle par la droite. Que devez-vous faire ?",
+          "sign": "D1d",
+          "question": "Que vous impose ce panneau ?",
           "answers": [
             "Dépasser obligatoirement par la gauche",
             "Contourner l'obstacle par la droite comme indiqué",
@@ -1367,12 +2249,20 @@
             "Emprunter le sens giratoire obligatoirement"
           ],
           "correct": 1,
-          "explanation": "D3 impose le contournement d'un obstacle (îlot, refuge piéton…) par la droite. Passer à gauche de cet obstacle est interdit."
+          "explanation": "La flèche diagonale (D1) impose le contournement de l'obstacle (îlot, refuge pour piétons…) par la droite. Passer à gauche de cet obstacle est interdit.",
+          "question_nl": "Wat legt dit bord u op?",
+          "answers_nl": [
+            "Verplicht links voorbijrijden",
+            "De hindernis langs rechts omzeilen zoals aangeduid",
+            "Voorrang van rechts geldt hier",
+            "Verplicht de rotonde nemen"
+          ],
+          "explanation_nl": "De diagonale pijl (D1) verplicht de hindernis (vluchtheuvel, verkeerseiland…) langs rechts te omzeilen. Links passeren is verboden."
         },
         {
           "id": "G2_SIGN_D5_1",
           "sign": "D5",
-          "question": "Vous arrivez à un carrefour giratoire et vous voyez un panneau rond bleu avec des flèches en cercle. Que devez-vous faire ?",
+          "question": "Vous arrivez à un carrefour giratoire avec ce panneau. Que devez-vous faire ?",
           "answers": [
             "Vous pouvez aussi continuer tout droit",
             "Vous devez obligatoirement vous engager dans le carrefour giratoire",
@@ -1380,7 +2270,15 @@
             "Une voie de déviation est disponible"
           ],
           "correct": 1,
-          "explanation": "D5 signale un carrefour giratoire obligatoire. Vous devez vous y engager et circuler en sens anti-horaire."
+          "explanation": "D5 signale un carrefour giratoire obligatoire. Vous devez vous y engager et circuler en sens anti-horaire.",
+          "question_nl": "U komt aan een rotonde met dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "U mag ook rechtdoor rijden",
+            "U moet verplicht de rotonde oprijden",
+            "Voertuigen op de rotonde hebben voorrang",
+            "Er is een omleidingsweg beschikbaar"
+          ],
+          "explanation_nl": "D5 duidt een verplichte rotonde aan. U moet ze oprijden en tegen de klok in rijden."
         },
         {
           "id": "A3_Q67",
@@ -1393,12 +2291,20 @@
             "Parking vélo"
           ],
           "correct": 1,
-          "explanation": "Le signal rond bleu avec une bicyclette indique une piste cyclable obligatoire."
+          "explanation": "Le signal rond bleu avec une bicyclette indique une piste cyclable obligatoire.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Fietspad verboden",
+            "Verplicht fietspad",
+            "Einde fietspad",
+            "Fietsenstalling"
+          ],
+          "explanation_nl": "Het ronde blauwe bord met een fiets duidt een verplicht fietspad aan."
         },
         {
           "id": "A1_SIGN_D9_1",
-          "sign": "D09",
-          "question": "Vous voyez un panneau rond bleu avec un piéton. Que signifie-t-il ?",
+          "sign": "D11",
+          "question": "Que signifie ce panneau ?",
           "answers": [
             "Passage pour piétons : vous devez vous arrêter",
             "Chemin réservé exclusivement aux piétons, aucun véhicule n'y a accès",
@@ -1406,22 +2312,18 @@
             "Zone piétonne temporaire pendant certaines heures"
           ],
           "correct": 1,
-          "explanation": "D9 indique un chemin ou trottoir réservé exclusivement aux piétons. Les cyclistes et véhicules n'y ont pas accès."
-        },
-        {
-          "id": "A3_Q69",
-          "sign": "D9a",
-          "question": "Que signifie ce panneau ?",
-          "answers": [
-            "Partie réservée aux piétons, vélos et cyclomoteurs classe A",
-            "Partie réservée aux piétons et cyclistes uniquement, cyclomoteurs classe A et B interdits",
-            "Zone piétonne",
-            "Parking mixte"
+          "explanation": "D11 indique un chemin réservé exclusivement aux piétons. Les cyclistes et véhicules n'y ont pas accès.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Zebrapad: u moet stoppen",
+            "Pad uitsluitend voorbehouden voor voetgangers, geen enkel voertuig toegelaten",
+            "Voetgangers mogen hier oversteken",
+            "Tijdelijke voetgangerszone tijdens bepaalde uren"
           ],
-          "correct": 1,
-          "explanation": "Symboles l'un au-dessus de l'autre : réservé aux piétons et cyclistes seulement. Cyclomoteurs A et B interdits."
+          "explanation_nl": "D11 duidt een pad of voetpad aan dat uitsluitend voorbehouden is voor voetgangers. Fietsers en voertuigen hebben er geen toegang."
         }
-      ]
+      ],
+      "title_nl": "Richting & Aanwijzing"
     },
     {
       "id": "E",
@@ -1430,61 +2332,72 @@
       "icon": "🅿️",
       "questions": [
         {
-          "id": "A4_Q84",
+          "id": "C1_Q53",
           "sign": "E1",
           "question": "Que signifie ce panneau ?",
           "answers": [
-            "Sortie d'autoroute",
-            "Numéro d'une route internationale",
-            "Échangeur",
-            "Zone de stationnement"
-          ],
-          "correct": 1,
-          "explanation": "La lettre E suivie d'un chiffre indique un numéro de route internationale (réseau européen)."
-        },
-        {
-          "id": "C1_Q53",
-          "sign": "E5",
-          "question": "Vous voyez un signal bleu avec un P blanc. Que signifie-t-il ?",
-          "answers": [
             "Parking payant",
-            "Stationnement autorise",
+            "Stationnement autorisé",
             "Parking interdit",
-            "Parking reserve"
+            "Parking réservé"
           ],
           "correct": 1,
-          "explanation": "Le signal bleu avec P blanc indique un stationnement autorisé."
+          "explanation": "Le signal bleu avec P blanc indique un stationnement autorisé.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Betalende parking",
+            "Parkeren toegelaten",
+            "Parkeren verboden",
+            "Voorbehouden parking"
+          ],
+          "explanation_nl": "Het blauwe bord met witte P duidt toegelaten parkeren aan."
         },
         {
           "id": "C1_Q54",
-          "sign": "E5",
+          "sign": "E1",
           "question": "Vous voyez un signal de stationnement avec un panneau additionnel indiquant une masse. Que signifie-t-il ?",
           "answers": [
             "Stationnement pour tous",
-            "Stationnement autorise uniquement pour les vehicules dont la MMA excede la masse indiquee",
+            "Stationnement autorisé uniquement pour les véhicules dont la MMA excède la masse indiquée",
             "Stationnement interdit au-dessus de cette masse",
-            "Stationnement reserve aux camions"
+            "Stationnement réservé aux camions"
           ],
           "correct": 1,
-          "explanation": "Le panneau additionnel de masse restreint le stationnement aux véhicules dépassant la masse indiquée (ex : camions)."
+          "explanation": "Le panneau additionnel de masse restreint le stationnement aux véhicules dépassant la masse indiquée (ex : camions).",
+          "question_nl": "U ziet een parkeerbord met een onderbord met een massa. Wat betekent het?",
+          "answers_nl": [
+            "Parkeren voor iedereen",
+            "Parkeren enkel toegelaten voor voertuigen waarvan de MTM de aangeduide massa overschrijdt",
+            "Parkeren verboden boven deze massa",
+            "Parkeren voorbehouden voor vrachtwagens"
+          ],
+          "explanation_nl": "Het onderbord met massa beperkt het parkeren tot voertuigen boven de aangeduide massa (bv. vrachtwagens)."
         },
         {
           "id": "C1_Q69",
-          "sign": "E5",
-          "question": "Vous voyez un signal de stationnement avec panneau additionnel '3,5t'. Votre voiture a une MMA de 1 600 kg. Pouvez-vous stationner ici ?",
+          "sign": "E1",
+          "question": "Vous voyez un signal de stationnement avec panneau additionnel « 3,5 t ». Votre voiture a une MMA de 1 600 kg. Pouvez-vous stationner ici ?",
           "answers": [
-            "Oui, le stationnement est autorise pour tous",
-            "Non, le stationnement est reserve aux vehicules dont la MMA excede 3,5 tonnes (camions)",
+            "Oui, le stationnement est autorisé pour tous",
+            "Non, le stationnement est réservé aux véhicules dont la MMA excède 3,5 tonnes (camions)",
             "Oui, si vous vous garez correctement",
-            "Cela depend de l'heure"
+            "Cela dépend de l'heure"
           ],
           "correct": 1,
-          "explanation": "Ce stationnement est réservé aux véhicules de MMA > 3,5 tonnes. Votre voiture (1 600 kg) ne peut pas s'y garer."
+          "explanation": "Ce stationnement est réservé aux véhicules de MMA > 3,5 tonnes. Votre voiture (1 600 kg) ne peut pas s'y garer.",
+          "question_nl": "U ziet een parkeerbord met onderbord \"3,5t\". Uw auto heeft een MTM van 1.600 kg. Mag u hier parkeren?",
+          "answers_nl": [
+            "Ja, parkeren is toegelaten voor iedereen",
+            "Nee, het parkeren is voorbehouden voor voertuigen met een MTM boven 3,5 ton (vrachtwagens)",
+            "Ja, als u correct parkeert",
+            "Dat hangt af van het uur"
+          ],
+          "explanation_nl": "Dit parkeren is voorbehouden voor voertuigen met MTM > 3,5 ton. Uw auto (1.600 kg) mag er niet parkeren."
         },
         {
           "id": "H1_SIGN_E7_1",
           "sign": "E7",
-          "question": "Vous cherchez à vous garer et vous voyez un panneau bleu rectangulaire avec un \"P\" et un symbole de pièce de monnaie. Que devez-vous faire ?",
+          "question": "Vous cherchez à vous garer et voyez ce panneau. Que devez-vous faire ?",
           "answers": [
             "Vous pouvez stationner gratuitement sans limite de temps",
             "Vous devez payer au parcomètre ou à l'horodateur pour stationner",
@@ -1492,12 +2405,20 @@
             "Le stationnement est réservé aux résidents"
           ],
           "correct": 1,
-          "explanation": "E7 indique un stationnement payant. Vous devez acquitter le tarif à l'horodateur ou au parcomètre et placer le ticket bien visible."
+          "explanation": "E7 indique un stationnement payant. Vous devez acquitter le tarif à l'horodateur ou au parcomètre et placer le ticket bien visible.",
+          "question_nl": "U zoekt een parkeerplaats en ziet dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "U mag gratis en onbeperkt parkeren",
+            "U moet betalen aan de parkeermeter of automaat om te parkeren",
+            "U moet uw parkeerschijf gebruiken",
+            "Het parkeren is voorbehouden voor bewoners"
+          ],
+          "explanation_nl": "E7 duidt betalend parkeren aan. Betaal het tarief aan de automaat en leg het ticket zichtbaar."
         },
         {
           "id": "H1_SIGN_E9__1",
-          "sign": "E9a",
-          "question": "Vous voyez un panneau bleu avec un grand \"P\" accompagné d'un pictogramme de bus ou de train en périphérie de la ville. Que signifie-t-il ?",
+          "sign": "E9b",
+          "question": "Vous voyez ce panneau en périphérie de la ville. Que signifie-t-il ?",
           "answers": [
             "C'est un parking d'autoroute",
             "C'est un parking relais (P+R) : garez votre voiture et prenez les transports en commun",
@@ -1505,9 +2426,123 @@
             "Le stationnement est interdit sauf pour les véhicules de transport"
           ],
           "correct": 1,
-          "explanation": "E9b (parking relais / Park & Ride) vous invite à laisser votre voiture et à continuer en transports en commun. Souvent situé en périphérie des villes."
+          "explanation": "E9b (parking relais / Park & Ride) vous invite à laisser votre voiture et à continuer en transports en commun. Souvent situé en périphérie des villes.",
+          "question_nl": "U ziet dit bord aan de rand van de stad. Wat betekent het?",
+          "answers_nl": [
+            "Het is een autosnelwegparking",
+            "Het is een pendelparking (P+R): parkeer uw auto en neem het openbaar vervoer",
+            "Het parkeren is voorbehouden voor treinreizigers",
+            "Parkeren is verboden behalve voor transportvoertuigen"
+          ],
+          "explanation_nl": "E9b (pendelparking / Park & Ride) nodigt u uit uw auto achter te laten en verder te reizen met het openbaar vervoer."
+        },
+        {
+          "id": "H1_SIGN_C39_1",
+          "sign": "ARRET_STAT_INTERDIT",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Seul le stationnement est interdit",
+            "L'arrêt ET le stationnement sont tous deux interdits à cet endroit",
+            "Seul l'arrêt est interdit",
+            "Le klaxon est interdit"
+          ],
+          "correct": 1,
+          "explanation": "Ce signal (rond bleu barré d'une croix rouge) interdit toute immobilisation du véhicule, même brève : ni arrêt, ni stationnement. Il est plus restrictif que le signal à une seule barre (stationnement interdit).",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Enkel parkeren is verboden",
+            "Stilstaan EN parkeren zijn hier beide verboden",
+            "Enkel stilstaan is verboden",
+            "Claxonneren is verboden"
+          ],
+          "explanation_nl": "Dit bord (blauw met rood kruis) verbiedt elke immobilisatie van het voertuig, zelfs kort: geen stilstaan, geen parkeren. Het is strenger dan het bord met één streep (enkel parkeerverbod)."
+        },
+        {
+          "id": "PQ_E_STAT_1",
+          "sign": "STAT_INTERDIT",
+          "question": "Vous voyez ce panneau. Que pouvez-vous faire ?",
+          "answers": [
+            "Ni vous arrêter, ni stationner",
+            "Vous arrêter brièvement (embarquer/débarquer), mais pas stationner",
+            "Stationner maximum 30 minutes",
+            "Stationner uniquement la nuit"
+          ],
+          "correct": 1,
+          "explanation": "Une seule barre = stationnement interdit, mais l'arrêt (le temps d'embarquer ou débarquer des personnes ou des marchandises) reste autorisé. Deux barres en croix = arrêt ET stationnement interdits.",
+          "question_nl": "U ziet dit bord. Wat mag u doen?",
+          "answers_nl": [
+            "Niet stoppen en niet parkeren",
+            "Kort stilstaan (in- of uitstappen), maar niet parkeren",
+            "Maximum 30 minuten parkeren",
+            "Enkel 's nachts parkeren"
+          ],
+          "explanation_nl": "Eén streep = parkeerverbod, maar stilstaan (om personen of goederen in of uit te laden) blijft toegelaten. Twee gekruiste strepen = stilstaan EN parkeren verboden."
+        },
+        {
+          "id": "PQ_E_E3_1",
+          "sign": "E3",
+          "question": "Que signifie ce panneau de stationnement avec « 1-15 » ou « 16-31 » ?",
+          "answers": [
+            "Stationnement limité à 15 ou 31 minutes",
+            "Stationnement alterné semi-mensuel : autorisé de ce côté selon la période du mois",
+            "Stationnement payant ces jours-là",
+            "Réservé aux riverains ces dates"
+          ],
+          "correct": 1,
+          "explanation": "E3 organise le stationnement alterné semi-mensuel : du 1er au 15 d'un côté de la rue, du 16 au 31 de l'autre. Vérifiez la date avant de vous garer.",
+          "question_nl": "Wat betekent dit parkeerbord met \"1-15\" of \"16-31\"?",
+          "answers_nl": [
+            "Parkeren beperkt tot 15 of 31 minuten",
+            "Halfmaandelijks beurtelings parkeren: toegelaten aan deze kant volgens de periode van de maand",
+            "Betalend parkeren op die dagen",
+            "Voorbehouden voor bewoners op die data"
+          ],
+          "explanation_nl": "E3 regelt het halfmaandelijks beurtelings parkeren: van de 1e tot de 15e aan één kant van de straat, van de 16e tot de 31e aan de andere kant. Controleer de datum voor u parkeert."
+        },
+        {
+          "id": "PQ_E_E5_1",
+          "sign": "E5",
+          "question": "Vous vous garez dans une zone bleue signalée par ce panneau. Que devez-vous faire ?",
+          "answers": [
+            "Payer à l'horodateur",
+            "Placer votre disque de stationnement visible derrière le pare-brise",
+            "Rien : le stationnement est libre",
+            "Laisser vos feux de position allumés"
+          ],
+          "correct": 1,
+          "explanation": "En zone bleue, le disque de stationnement est obligatoire : réglez-le sur l'heure d'arrivée et placez-le visiblement. La durée est généralement limitée à 2 heures.",
+          "question_nl": "U parkeert in een blauwe zone aangeduid door dit bord. Wat moet u doen?",
+          "answers_nl": [
+            "Betalen aan de parkeerautomaat",
+            "Uw parkeerschijf zichtbaar achter de voorruit leggen",
+            "Niets: parkeren is vrij",
+            "Uw standlichten laten branden"
+          ],
+          "explanation_nl": "In een blauwe zone is de parkeerschijf verplicht: stel ze in op het aankomstuur en leg ze zichtbaar. De duur is meestal beperkt tot 2 uur."
+        },
+        {
+          "id": "PQ_E_E9C_1",
+          "sign": "E9c",
+          "question": "Que signifie ce panneau ?",
+          "answers": [
+            "Hôpital à proximité",
+            "Emplacement réservé aux personnes handicapées titulaires de la carte",
+            "Passage pour personnes à mobilité réduite",
+            "Parking pour familles"
+          ],
+          "correct": 1,
+          "explanation": "E9c réserve l'emplacement aux véhicules des personnes handicapées disposant de la carte spéciale, apposée visiblement derrière le pare-brise. S'y garer sans carte = infraction et dépannage possible.",
+          "question_nl": "Wat betekent dit bord?",
+          "answers_nl": [
+            "Ziekenhuis in de buurt",
+            "Plaats voorbehouden voor personen met een handicap met de speciale kaart",
+            "Doorgang voor personen met beperkte mobiliteit",
+            "Parking voor gezinnen"
+          ],
+          "explanation_nl": "E9c behoudt de plaats voor aan voertuigen van personen met een handicap met de speciale kaart, zichtbaar achter de voorruit. Zonder kaart parkeren = overtreding en mogelijke takeling."
         }
-      ]
+      ],
+      "title_nl": "Stilstaan & Parkeren"
     },
     {
       "id": "FEU",
@@ -1526,7 +2561,15 @@
             "Préparer votre paiement au péage"
           ],
           "correct": 1,
-          "explanation": "La croix rouge au-dessus d'une voie signifie que cette voie est totalement fermée. Il est strictement interdit d'y rouler. Changez de voie immédiatement."
+          "explanation": "La croix rouge au-dessus d'une voie signifie que cette voie est totalement fermée. Il est strictement interdit d'y rouler. Changez de voie immédiatement.",
+          "question_nl": "U rijdt op de autosnelweg en ziet een verlicht rood kruis boven uw rijstrook. Wat moet u doen?",
+          "answers_nl": [
+            "Vertragen: gevaar voor ongeval",
+            "Deze rijstrook is gesloten voor het verkeer: gebruik ze niet",
+            "Voorrang verlenen aan prioritaire voertuigen",
+            "Uw betaling voorbereiden aan de tol"
+          ],
+          "explanation_nl": "Het rode kruis boven een rijstrook betekent dat die strook volledig gesloten is. Het is strikt verboden erop te rijden. Verander onmiddellijk van rijstrook."
         },
         {
           "id": "D1_SIGN_FEU_PIETON_ROUGE_1",
@@ -1539,7 +2582,15 @@
             "Traverser car le feu est identique à un feu orange"
           ],
           "correct": 1,
-          "explanation": "Le feu piéton rouge signifie formellement : ne pas traverser. Même si la chaussée semble libre, vous devez attendre que le bonhomme passe au vert."
+          "explanation": "Le feu piéton rouge signifie formellement : ne pas traverser. Même si la chaussée semble libre, vous devez attendre que le bonhomme passe au vert.",
+          "question_nl": "U bent voetganger en het voetgangerslicht toont een rood stilstaand mannetje. Wat moet u doen?",
+          "answers_nl": [
+            "Snel oversteken",
+            "Niet oversteken: wacht op het groene voetgangerslicht",
+            "Oversteken als er geen auto aankomt",
+            "Oversteken want het licht is hetzelfde als oranje"
+          ],
+          "explanation_nl": "Het rode voetgangerslicht betekent formeel: niet oversteken. Zelfs als de rijbaan vrij lijkt, moet u wachten tot het mannetje groen wordt."
         },
         {
           "id": "D1_SIGN_FEU_VELO_ROUGE_1",
@@ -1552,7 +2603,15 @@
             "Vous suivez les feux destinés aux voitures"
           ],
           "correct": 1,
-          "explanation": "Le feu vélo rouge a la même valeur contraignante qu'un feu rouge pour les voitures. Le cycliste doit impérativement s'arrêter et attendre le feu vert."
+          "explanation": "Le feu vélo rouge a la même valeur contraignante qu'un feu rouge pour les voitures. Le cycliste doit impérativement s'arrêter et attendre le feu vert.",
+          "question_nl": "U bent fietser en ziet een klein rood fietslicht aan uw fietspad. Wat moet u doen?",
+          "answers_nl": [
+            "U mag doorrijden want u bent geen motorvoertuig",
+            "U moet stoppen en wachten op het groene fietslicht",
+            "U moet voorrang verlenen en dan doorrijden",
+            "U volgt de lichten voor de auto's"
+          ],
+          "explanation_nl": "Het rode fietslicht heeft dezelfde dwingende waarde als een rood licht voor auto's. De fietser moet stoppen en wachten op groen."
         },
         {
           "id": "D1_SIGN_FEU_VELO_VERT_1",
@@ -1565,7 +2624,15 @@
             "Vous devez attendre les piétons avant de partir"
           ],
           "correct": 1,
-          "explanation": "Le feu vélo vert autorise le cycliste à s'engager. Il ne confère pas une priorité absolue sur tous : le cycliste doit quand même vérifier que la voie est libre et respecter les piétons."
+          "explanation": "Le feu vélo vert autorise le cycliste à s'engager. Il ne confère pas une priorité absolue sur tous : le cycliste doit quand même vérifier que la voie est libre et respecter les piétons.",
+          "question_nl": "U bent fietser en een klein groen fietslicht gaat aan bij het kruispunt. Wat betekent het?",
+          "answers_nl": [
+            "U heeft absolute voorrang op alle voertuigen",
+            "U mag doorrijden maar blijf voorzichtig voor de andere weggebruikers",
+            "Het is een decoratief licht zonder wettelijke waarde",
+            "U moet wachten op de voetgangers vóór u vertrekt"
+          ],
+          "explanation_nl": "Het groene fietslicht laat de fietser toe door te rijden. Het geeft geen absolute voorrang: controleer of de weg vrij is en respecteer de voetgangers."
         },
         {
           "id": "D1_SIGN_FLECHE_VERTE_VOIE_1",
@@ -1578,9 +2645,144 @@
             "Accélération recommandée sur cette voie"
           ],
           "correct": 1,
-          "explanation": "La flèche verte indique que la voie est ouverte. Vous pouvez l'emprunter normalement. Vérifiez les signaux au-dessus des autres voies avant de changer de file."
+          "explanation": "La flèche verte indique que la voie est ouverte. Vous pouvez l'emprunter normalement. Vérifiez les signaux au-dessus des autres voies avant de changer de file.",
+          "question_nl": "U rijdt op de autosnelweg en ziet een groene pijl naar beneden boven een rijstrook. Wat betekent die?",
+          "answers_nl": [
+            "De rijstrook gaat binnenkort sluiten",
+            "Deze rijstrook is open voor het verkeer",
+            "De strook is voorbehouden voor het openbaar vervoer",
+            "Versnellen aanbevolen op deze strook"
+          ],
+          "explanation_nl": "De groene pijl duidt aan dat de rijstrook open is. U mag ze normaal gebruiken. Controleer de signalen boven de andere stroken vóór u van rijstrook verandert."
+        },
+        {
+          "id": "PQ_FEU_ROUGE_1",
+          "sign": "FEU_ROUGE",
+          "question": "Le feu est rouge. Où devez-vous vous arrêter ?",
+          "answers": [
+            "Juste après le feu",
+            "Avant la ligne d'arrêt blanche, ou à défaut avant le feu",
+            "Au milieu du carrefour",
+            "À hauteur du feu, peu importe la ligne"
+          ],
+          "correct": 1,
+          "explanation": "Au feu rouge, arrêtez-vous avant la ligne d'arrêt. S'il n'y a pas de ligne, arrêtez-vous avant le signal lumineux, sans gêner les passages pour piétons.",
+          "question_nl": "Het licht is rood. Waar moet u stoppen?",
+          "answers_nl": [
+            "Net voorbij het licht",
+            "Vóór de witte stopstreep, of anders vóór het licht",
+            "Midden op het kruispunt",
+            "Ter hoogte van het licht, ongeacht de streep"
+          ],
+          "explanation_nl": "Bij rood licht stopt u vóór de stopstreep. Als er geen streep is, stopt u vóór het verkeerslicht, zonder het zebrapad te blokkeren."
+        },
+        {
+          "id": "PQ_FEU_ORANGE_1",
+          "sign": "FEU_ORANGE",
+          "question": "Le feu passe à l'orange alors que vous approchez du carrefour. Que devez-vous faire ?",
+          "answers": [
+            "Accélérer pour passer avant le rouge",
+            "Vous arrêter, sauf si vous êtes si proche que l'arrêt serait dangereux",
+            "Continuer : l'orange autorise le passage",
+            "Klaxonner et passer"
+          ],
+          "correct": 1,
+          "explanation": "Le feu orange impose l'arrêt, sauf si vous en êtes tellement proche qu'un freinage serait dangereux (risque de collision par l'arrière). Accélérer à l'orange est une faute.",
+          "question_nl": "Het licht springt op oranje terwijl u het kruispunt nadert. Wat moet u doen?",
+          "answers_nl": [
+            "Versnellen om vóór het rode licht te passeren",
+            "Stoppen, tenzij u zo dichtbij bent dat stoppen gevaarlijk zou zijn",
+            "Doorrijden: oranje laat doorgang toe",
+            "Claxonneren en doorrijden"
+          ],
+          "explanation_nl": "Oranje licht verplicht te stoppen, tenzij u zo dichtbij bent dat remmen gevaarlijk zou zijn (risico op een kop-staartaanrijding). Versnellen bij oranje is een fout."
+        },
+        {
+          "id": "PQ_FEU_VERT_1",
+          "sign": "FEU_VERT",
+          "question": "Le feu est vert. Pouvez-vous toujours passer ?",
+          "answers": [
+            "Oui, le vert donne un droit absolu",
+            "Non : ne vous engagez que si le carrefour est dégagé et cédez aux piétons qui terminent leur traversée",
+            "Oui, sauf la nuit",
+            "Non, il faut marquer un arrêt bref"
+          ],
+          "correct": 1,
+          "explanation": "Le feu vert autorise le passage mais ne dispense pas de prudence : ne vous engagez pas si vous risquez de bloquer le carrefour, et laissez finir les piétons déjà engagés.",
+          "question_nl": "Het licht is groen. Mag u altijd doorrijden?",
+          "answers_nl": [
+            "Ja, groen geeft een absoluut recht",
+            "Nee: rijd enkel door als het kruispunt vrij is en laat overstekende voetgangers hun oversteek beëindigen",
+            "Ja, behalve 's nachts",
+            "Nee, u moet kort stoppen"
+          ],
+          "explanation_nl": "Groen licht laat doorgang toe maar ontslaat u niet van voorzichtigheid: rijd niet door als u het kruispunt zou blokkeren, en laat reeds overstekende voetgangers eerst passeren."
+        },
+        {
+          "id": "PQ_FEU_CLIGNOTANT_1",
+          "sign": "FEU_CLIGNOTANT",
+          "question": "Le feu orange clignote à un carrefour. Que signifie-t-il ?",
+          "answers": [
+            "Le passage est interdit",
+            "Prudence : le feu ne règle plus la circulation, appliquez les règles de priorité (panneaux ou priorité de droite)",
+            "Vous avez la priorité absolue",
+            "Le feu va passer au vert"
+          ],
+          "correct": 1,
+          "explanation": "L'orange clignotant signifie que les feux ne règlent pas (ou plus) la circulation. Redoublez de prudence et appliquez la signalisation ou, à défaut, la priorité de droite.",
+          "question_nl": "Het oranje licht knippert aan een kruispunt. Wat betekent dit?",
+          "answers_nl": [
+            "Doorgang verboden",
+            "Voorzichtigheid: het licht regelt het verkeer niet meer, pas de voorrangsregels toe (borden of voorrang van rechts)",
+            "U heeft absolute voorrang",
+            "Het licht springt zo op groen"
+          ],
+          "explanation_nl": "Knipperend oranje betekent dat de lichten het verkeer niet (meer) regelen. Wees extra voorzichtig en volg de borden of, bij gebrek daaraan, de voorrang van rechts."
+        },
+        {
+          "id": "PQ_FEU_FLECHE_1",
+          "sign": "FEU_FLECHE_VERTE",
+          "question": "Une flèche verte s'allume à la place du feu vert plein. Que signifie-t-elle ?",
+          "answers": [
+            "Toutes les directions sont autorisées",
+            "Le passage n'est autorisé que dans la direction indiquée par la flèche",
+            "La flèche est réservée aux bus",
+            "Vous devez vous arrêter"
+          ],
+          "correct": 1,
+          "explanation": "La flèche verte n'autorise le passage que dans la direction qu'elle indique. Les autres directions restent régies par leurs propres feux.",
+          "question_nl": "Een groene pijl licht op in plaats van het volle groene licht. Wat betekent dit?",
+          "answers_nl": [
+            "Alle richtingen zijn toegelaten",
+            "Doorgang is enkel toegelaten in de richting van de pijl",
+            "De pijl is voorbehouden voor bussen",
+            "U moet stoppen"
+          ],
+          "explanation_nl": "De groene pijl laat enkel doorgang toe in de aangeduide richting. De andere richtingen blijven geregeld door hun eigen lichten."
+        },
+        {
+          "id": "PQ_FEU_TRAM_1",
+          "sign": "FEU_TRAM",
+          "question": "Vous voyez ce signal lumineux composé de barres blanches. À qui s'adresse-t-il ?",
+          "answers": [
+            "À tous les conducteurs",
+            "Uniquement aux conducteurs de trams et bus des transports en commun",
+            "Aux cyclistes",
+            "Aux piétons"
+          ],
+          "correct": 1,
+          "explanation": "Ces signaux à barres blanches sont réservés aux véhicules des transports en commun (trams, bus). Ils ne concernent pas les autres conducteurs, qui suivent les feux classiques.",
+          "question_nl": "U ziet dit lichtsignaal met witte balken. Voor wie is het bestemd?",
+          "answers_nl": [
+            "Voor alle bestuurders",
+            "Enkel voor bestuurders van trams en bussen van het openbaar vervoer",
+            "Voor fietsers",
+            "Voor voetgangers"
+          ],
+          "explanation_nl": "Deze signalen met witte balken zijn voorbehouden voor voertuigen van het openbaar vervoer (trams, bussen). Andere bestuurders volgen de klassieke lichten."
         }
-      ]
+      ],
+      "title_nl": "Lichtsignalen"
     },
     {
       "id": "SOL",
@@ -1591,7 +2793,7 @@
         {
           "id": "A1_SIGN_CHEVRONS_1",
           "sign": "CHEVRONS",
-          "question": "Vous voyez des chevrons ou des hachures peints au sol. Que signifient-ils ?",
+          "question": "Que signifient ces marquages au sol ?",
           "answers": [
             "Zone où le dépassement est autorisé",
             "Zone où il est interdit de circuler, de stationner ou même de chevaucher",
@@ -1599,7 +2801,15 @@
             "Bande de sécurité sur laquelle vous pouvez rouler lentement"
           ],
           "correct": 1,
-          "explanation": "Les chevrons ou hachures au sol délimitent une zone où il est interdit de circuler, stationner ou même chevaucher. Ils se trouvent souvent aux bifurcations ou îlots directionnels."
+          "explanation": "Les chevrons ou hachures au sol délimitent une zone où il est interdit de circuler, stationner ou même chevaucher. Ils se trouvent souvent aux bifurcations ou îlots directionnels.",
+          "question_nl": "Wat betekenen deze wegmarkeringen?",
+          "answers_nl": [
+            "Zone waar inhalen toegelaten is",
+            "Zone waar het verboden is te rijden, te parkeren of er zelfs overheen te rijden",
+            "Strook voorbehouden voor fietsers",
+            "Veiligheidsstrook waarop u traag mag rijden"
+          ],
+          "explanation_nl": "Visgraten of arceringen op de grond bakenen een zone af waar rijden, parkeren of eroverheen rijden verboden is. Vaak bij splitsingen of verkeerseilanden."
         },
         {
           "id": "A1_SIGN_FLECHE_SOL_GAUCHE_1",
@@ -1612,7 +2822,15 @@
             "C'est une simple suggestion : vous pouvez aussi continuer tout droit"
           ],
           "correct": 1,
-          "explanation": "La flèche au sol indiquant la gauche est une obligation : tous les véhicules sur cette voie doivent tourner à gauche. Choisissez la bonne voie à l'avance."
+          "explanation": "La flèche au sol indiquant la gauche est une obligation : tous les véhicules sur cette voie doivent tourner à gauche. Choisissez la bonne voie à l'avance.",
+          "question_nl": "U rijdt op een strook waar een pijl op de grond naar links wijst. Wat legt die u op?",
+          "answers_nl": [
+            "De strook is eenrichting naar rechts",
+            "U moet op deze strook verplicht links afslaan",
+            "Links inhalen is toegelaten",
+            "Het is slechts een suggestie: u mag ook rechtdoor"
+          ],
+          "explanation_nl": "De pijl op de grond naar links is een verplichting: alle voertuigen op deze strook moeten links afslaan. Kies op tijd de juiste strook."
         },
         {
           "id": "A1_SIGN_FLECHE_SOL_TOUT_DROIT_1",
@@ -1625,7 +2843,433 @@
             "C'est une indication non contraignante"
           ],
           "correct": 1,
-          "explanation": "La flèche au sol \"tout droit\" oblige à continuer dans la direction indiquée. Si vous voulez tourner, vous devez vous placer sur une voie dont la flèche correspond à votre intention."
+          "explanation": "La flèche au sol \"tout droit\" oblige à continuer dans la direction indiquée. Si vous voulez tourner, vous devez vous placer sur une voie dont la flèche correspond à votre intention.",
+          "question_nl": "U rijdt op een strook waar een pijl op de grond rechtdoor wijst. Wat betekent die?",
+          "answers_nl": [
+            "De strook is voorbehouden voor vrachtwagens die rechtdoor rijden",
+            "U moet op deze strook verplicht rechtdoor rijden",
+            "U mag rechtdoor of rechts afslaan",
+            "Het is een niet-bindende aanwijzing"
+          ],
+          "explanation_nl": "De pijl \"rechtdoor\" verplicht in die richting verder te rijden. Wilt u afslaan, kies dan een strook waarvan de pijl overeenkomt met uw richting."
+        },
+        {
+          "id": "PQ_SOL_CONTINUE_1",
+          "sign": "LIGNE_CONTINUE",
+          "question": "Une ligne blanche continue sépare les bandes de circulation. Que vous impose-t-elle ?",
+          "answers": [
+            "Rien de particulier",
+            "Interdiction de la franchir ou de la chevaucher",
+            "Dépassement autorisé si la voie est libre",
+            "Stationnement interdit uniquement"
+          ],
+          "correct": 1,
+          "explanation": "La ligne blanche continue ne peut être ni franchie ni chevauchée : impossible de dépasser en la traversant. Elle marque souvent les zones dangereuses (virages, sommets de côte).",
+          "question_nl": "Een doorlopende witte streep scheidt de rijstroken. Wat legt ze u op?",
+          "answers_nl": [
+            "Niets bijzonders",
+            "Verbod om ze te overschrijden of erop te rijden",
+            "Inhalen toegelaten als de strook vrij is",
+            "Enkel parkeerverbod"
+          ],
+          "explanation_nl": "De doorlopende witte streep mag niet overschreden of bereden worden: inhalen erover is onmogelijk. Ze markeert vaak gevaarlijke zones (bochten, hellingtoppen)."
+        },
+        {
+          "id": "PQ_SOL_DISCONTINUE_1",
+          "sign": "LIGNE_DISCONTINUE",
+          "question": "Une ligne blanche discontinue sépare les bandes. Que pouvez-vous faire ?",
+          "answers": [
+            "Rien : elle équivaut à une ligne continue",
+            "La franchir pour dépasser ou changer de bande, si la manœuvre est sûre",
+            "Rouler dessus en permanence",
+            "La franchir uniquement de jour"
+          ],
+          "correct": 1,
+          "explanation": "La ligne discontinue peut être franchie pour dépasser, tourner ou changer de bande — à condition que la manœuvre soit sans danger et signalée.",
+          "question_nl": "Een onderbroken witte streep scheidt de rijstroken. Wat mag u doen?",
+          "answers_nl": [
+            "Niets: ze geldt als een doorlopende streep",
+            "Ze overschrijden om in te halen of van strook te veranderen, als het veilig kan",
+            "Er voortdurend op rijden",
+            "Ze enkel overdag overschrijden"
+          ],
+          "explanation_nl": "De onderbroken streep mag overschreden worden om in te halen, af te slaan of van strook te veranderen — op voorwaarde dat het veilig gebeurt en aangekondigd wordt."
+        },
+        {
+          "id": "PQ_SOL_MIXTE_1",
+          "sign": "LIGNE_MIXTE",
+          "question": "Une ligne continue est doublée d'une ligne discontinue de votre côté. Pouvez-vous dépasser ?",
+          "answers": [
+            "Non, jamais",
+            "Oui : c'est la ligne la plus proche de vous (discontinue) qui compte",
+            "Oui, mais uniquement les vélos",
+            "Seulement la nuit"
+          ],
+          "correct": 1,
+          "explanation": "Avec une ligne mixte, seule la ligne la plus proche de votre véhicule compte : discontinue de votre côté = franchissement autorisé ; continue de votre côté = interdit.",
+          "question_nl": "Een doorlopende streep wordt aan uw kant verdubbeld met een onderbroken streep. Mag u inhalen?",
+          "answers_nl": [
+            "Nee, nooit",
+            "Ja: de streep het dichtst bij u (onderbroken) telt",
+            "Ja, maar enkel fietsen",
+            "Enkel 's nachts"
+          ],
+          "explanation_nl": "Bij een gemengde streep telt enkel de streep het dichtst bij uw voertuig: onderbroken aan uw kant = overschrijden toegelaten; doorlopend aan uw kant = verboden."
+        },
+        {
+          "id": "PQ_SOL_STOP_1",
+          "sign": "MARQUAGE_STOP",
+          "question": "Une large ligne blanche continue traverse votre bande à un carrefour avec un signal STOP. Que devez-vous faire ?",
+          "answers": [
+            "Ralentir fortement",
+            "Marquer l'arrêt complet avant la ligne, même si le carrefour semble libre",
+            "Vous arrêter uniquement si un véhicule arrive",
+            "Franchir la ligne puis vous arrêter"
+          ],
+          "correct": 1,
+          "explanation": "La ligne d'arrêt matérialise l'endroit exact où l'arrêt complet est obligatoire avec un STOP — même si aucun véhicule n'approche.",
+          "question_nl": "Een brede doorlopende witte streep kruist uw strook aan een kruispunt met een stopbord. Wat moet u doen?",
+          "answers_nl": [
+            "Sterk vertragen",
+            "Volledig stoppen vóór de streep, ook als het kruispunt vrij lijkt",
+            "Enkel stoppen als er een voertuig aankomt",
+            "De streep oversteken en dan stoppen"
+          ],
+          "explanation_nl": "De stopstreep duidt de exacte plaats aan waar u volledig moet stoppen bij een stopbord — ook als er geen enkel voertuig nadert."
+        },
+        {
+          "id": "PQ_SOL_CEDEZ_1",
+          "sign": "MARQUAGE_CEDEZ",
+          "question": "Des triangles blancs sont peints en travers de votre bande. Que signifient-ils ?",
+          "answers": [
+            "Passage pour piétons",
+            "Vous devez céder le passage aux conducteurs de la voie que vous abordez",
+            "Zone de ralentissement",
+            "Arrêt complet obligatoire"
+          ],
+          "correct": 1,
+          "explanation": "Les triangles au sol (dents de requin) reproduisent le signal « cédez le passage » : laissez passer les véhicules de la voie transversale, sans obligation d'arrêt complet si c'est libre.",
+          "question_nl": "Witte driehoeken zijn dwars over uw strook geschilderd. Wat betekenen ze?",
+          "answers_nl": [
+            "Zebrapad",
+            "U moet voorrang verlenen aan de bestuurders van de weg die u nadert",
+            "Vertragingszone",
+            "Volledig stoppen verplicht"
+          ],
+          "explanation_nl": "De driehoeken op de grond (haaientanden) herhalen het bord \"voorrang verlenen\": laat de voertuigen op de dwarsweg voorgaan, zonder verplichte volledige stop als het vrij is."
+        },
+        {
+          "id": "PQ_SOL_ZEBRAS_1",
+          "sign": "ZEBRAS",
+          "question": "Vous approchez d'un passage pour piétons (bandes blanches). Un piéton attend au bord. Que devez-vous faire ?",
+          "answers": [
+            "Continuer : il n'est pas encore engagé",
+            "Ralentir et lui céder le passage, il a la priorité dès qu'il manifeste l'intention de traverser",
+            "Klaxonner pour le prévenir",
+            "Accélérer pour libérer le passage"
+          ],
+          "correct": 1,
+          "explanation": "Le piéton a priorité sur le passage dès qu'il est engagé OU manifeste clairement l'intention de traverser. Approchez à allure modérée et arrêtez-vous si nécessaire.",
+          "question_nl": "U nadert een zebrapad. Een voetganger wacht aan de rand. Wat moet u doen?",
+          "answers_nl": [
+            "Doorrijden: hij is nog niet aan het oversteken",
+            "Vertragen en voorrang verlenen: hij heeft voorrang zodra hij duidelijk wil oversteken",
+            "Claxonneren om hem te verwittigen",
+            "Versnellen om het zebrapad vrij te maken"
+          ],
+          "explanation_nl": "De voetganger heeft voorrang op het zebrapad zodra hij oversteekt OF duidelijk de intentie toont. Nader met matige snelheid en stop indien nodig."
+        },
+        {
+          "id": "PQ_SOL_DAMIER_1",
+          "sign": "DAMIER",
+          "question": "Un marquage en damier est peint entre deux bandes de circulation. Que signifie-t-il ?",
+          "answers": [
+            "Zone de dépassement rapide",
+            "Zone tampon : il est interdit d'y circuler",
+            "Piste réservée aux motos",
+            "Zone de stationnement temporaire"
+          ],
+          "correct": 1,
+          "explanation": "Le damier délimite une zone tampon entre les voies (souvent avant une séparation). Il est interdit d'y rouler, comme pour les zones hachurées.",
+          "question_nl": "Een dambordmarkering is geschilderd tussen twee rijstroken. Wat betekent ze?",
+          "answers_nl": [
+            "Zone om snel in te halen",
+            "Bufferzone: het is verboden erop te rijden",
+            "Strook voorbehouden voor motors",
+            "Tijdelijke parkeerzone"
+          ],
+          "explanation_nl": "Het dambord bakent een bufferzone af tussen de rijstroken (vaak vóór een splitsing). Het is verboden erop te rijden, net als bij gearceerde zones."
+        }
+      ],
+      "title_nl": "Wegmarkeringen"
+    },
+    {
+      "id": "M",
+      "title": "Panneaux additionnels",
+      "title_nl": "Onderborden",
+      "color": "#FDCB6E",
+      "icon": "➕",
+      "questions": [
+        {
+          "id": "A3_Q70",
+          "sign": "M6",
+          "question": "Le panneau additionnel M6 signifie :",
+          "answers": [
+            "Cyclomoteurs classe B interdits",
+            "Cyclomoteurs classe B doivent emprunter la piste cyclable",
+            "Cyclistes interdits",
+            "Speed pedelecs autorisés"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau additionnel M6 oblige les cyclomoteurs classe B à emprunter la piste cyclable.",
+          "question_nl": "Het onderbord M6 betekent:",
+          "answers_nl": [
+            "Bromfietsen klasse B verboden",
+            "Bromfietsen klasse B moeten het fietspad gebruiken",
+            "Fietsers verboden",
+            "Speed pedelecs toegelaten"
+          ],
+          "explanation_nl": "Het onderbord M6 verplicht bromfietsen klasse B het fietspad te gebruiken."
+        },
+        {
+          "id": "A3_Q71",
+          "sign": "M7",
+          "question": "Le panneau additionnel M7 signifie :",
+          "answers": [
+            "Cyclomoteurs classe B doivent emprunter la piste",
+            "Cyclomoteurs classe B ne peuvent PAS emprunter la piste cyclable",
+            "Cyclistes interdits",
+            "Piétons interdits"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau additionnel M7 interdit aux cyclomoteurs classe B d'emprunter la piste cyclable.",
+          "question_nl": "Het onderbord M7 betekent:",
+          "answers_nl": [
+            "Bromfietsen klasse B moeten het pad gebruiken",
+            "Bromfietsen klasse B mogen het fietspad NIET gebruiken",
+            "Fietsers verboden",
+            "Voetgangers verboden"
+          ],
+          "explanation_nl": "Het onderbord M7 verbiedt bromfietsen klasse B het fietspad te gebruiken."
+        },
+        {
+          "id": "PQ_M_B22_1",
+          "sign": "B22",
+          "question": "Vous êtes cycliste et voyez ce panneau triangulaire jaune-orange sous un feu rouge. Que pouvez-vous faire ?",
+          "answers": [
+            "Rien de plus : le feu rouge s'applique normalement",
+            "Tourner à droite malgré le feu rouge, en cédant le passage aux autres usagers",
+            "Traverser tout droit malgré le feu rouge",
+            "Rouler sur le trottoir pour contourner le feu"
+          ],
+          "correct": 1,
+          "explanation": "B22 autorise les cyclistes à tourner à droite quand le feu est rouge ou orange, à condition de céder le passage aux piétons et aux autres usagers.",
+          "question_nl": "U bent fietser en ziet dit geel-oranje driehoekig bord onder een rood licht. Wat mag u doen?",
+          "answers_nl": [
+            "Niets extra: het rode licht geldt gewoon",
+            "Rechts afslaan ondanks het rode licht, met voorrang voor de andere weggebruikers",
+            "Rechtdoor rijden ondanks het rode licht",
+            "Op het voetpad rijden om het licht te vermijden"
+          ],
+          "explanation_nl": "B22 laat fietsers toe rechts af te slaan bij rood of oranje licht, op voorwaarde dat ze voorrang verlenen aan voetgangers en andere weggebruikers."
+        },
+        {
+          "id": "PQ_M_B23_1",
+          "sign": "B23",
+          "question": "Vous êtes cycliste à un feu rouge équipé de ce panneau (flèche vers le haut). Que pouvez-vous faire ?",
+          "answers": [
+            "Attendre le feu vert obligatoirement",
+            "Continuer tout droit malgré le feu rouge, en cédant le passage",
+            "Tourner à gauche librement",
+            "Faire demi-tour"
+          ],
+          "correct": 1,
+          "explanation": "B23 autorise les cyclistes à franchir le feu rouge ou orange pour continuer tout droit, en cédant le passage aux autres usagers. Valable uniquement si le panneau est présent.",
+          "question_nl": "U bent fietser aan een rood licht met dit bord (pijl omhoog). Wat mag u doen?",
+          "answers_nl": [
+            "Verplicht wachten op het groene licht",
+            "Rechtdoor rijden ondanks het rode licht, met voorrang voor de anderen",
+            "Vrij links afslaan",
+            "Rechtsomkeer maken"
+          ],
+          "explanation_nl": "B23 laat fietsers toe het rode of oranje licht voorbij te rijden om rechtdoor te gaan, met voorrang voor de andere weggebruikers. Enkel geldig als het bord aanwezig is."
+        },
+        {
+          "id": "PQ_M_M2_1",
+          "sign": "M2",
+          "question": "Un sens interdit est complété par ce panneau « excepté vélos ». Que signifie-t-il ?",
+          "answers": [
+            "Les vélos sont aussi interdits",
+            "Les cyclistes peuvent emprunter la rue malgré le sens interdit",
+            "Seuls les vélos électriques sont autorisés",
+            "Les vélos doivent être poussés à la main"
+          ],
+          "correct": 1,
+          "explanation": "Le panneau additionnel M2 excepte les cyclistes de l'interdiction : ils peuvent remonter la rue à contresens. Attention aux véhicules venant en face.",
+          "question_nl": "Een verboden richting wordt aangevuld met dit onderbord \"uitgezonderd fietsers\". Wat betekent het?",
+          "answers_nl": [
+            "Fietsen zijn ook verboden",
+            "Fietsers mogen de straat inrijden ondanks de verboden richting",
+            "Enkel elektrische fietsen zijn toegelaten",
+            "Fietsen moeten aan de hand geduwd worden"
+          ],
+          "explanation_nl": "Het onderbord M2 zondert fietsers uit van het verbod: zij mogen de straat in tegenrichting inrijden. Let op voor tegemoetkomend verkeer."
+        },
+        {
+          "id": "PQ_M_M4_1",
+          "sign": "M4",
+          "question": "Vous conduisez dans une rue à sens unique avec ce panneau sous le signal. À quoi devez-vous faire attention ?",
+          "answers": [
+            "À rien de particulier",
+            "Des cyclistes peuvent arriver en sens inverse",
+            "Les vélos sont interdits dans cette rue",
+            "La rue est réservée aux vélos"
+          ],
+          "correct": 1,
+          "explanation": "M4 signale que les cyclistes sont autorisés à circuler dans les deux sens. En voiture dans un sens unique, attendez-vous à croiser des vélos, surtout en tournant.",
+          "question_nl": "U rijdt in een eenrichtingsstraat met dit onderbord. Waarop moet u letten?",
+          "answers_nl": [
+            "Op niets bijzonders",
+            "Er kunnen fietsers uit de tegenrichting komen",
+            "Fietsen zijn verboden in deze straat",
+            "De straat is voorbehouden voor fietsen"
+          ],
+          "explanation_nl": "M4 geeft aan dat fietsers in beide richtingen mogen rijden. Verwacht als automobilist tegemoetkomende fietsers, vooral bij het afslaan."
+        },
+        {
+          "id": "PQ_M_M8_1",
+          "sign": "M8",
+          "question": "Que signifie ce panneau additionnel montrant un vélo et un cyclomoteur ?",
+          "answers": [
+            "Vélos et cyclomoteurs interdits",
+            "La voie est réservée aux vélos et cyclomoteurs indiqués",
+            "Parking deux-roues",
+            "Fin de piste cyclable"
+          ],
+          "correct": 1,
+          "explanation": "M8 précise que la voie ou la mesure concerne les vélos et les cyclomoteurs représentés. Les autres usagers ne sont pas visés.",
+          "question_nl": "Wat betekent dit onderbord met een fiets en een bromfiets?",
+          "answers_nl": [
+            "Fietsen en bromfietsen verboden",
+            "De strook is voorbehouden voor de aangeduide fietsen en bromfietsen",
+            "Parking voor tweewielers",
+            "Einde fietspad"
+          ],
+          "explanation_nl": "M8 verduidelijkt dat de strook of maatregel geldt voor de afgebeelde fietsen en bromfietsen. Andere weggebruikers zijn niet bedoeld."
+        },
+        {
+          "id": "PQ_M_M21_1",
+          "sign": "M21",
+          "question": "Que signifie ce panneau additionnel avec une trottinette ?",
+          "answers": [
+            "Trottinettes interdites",
+            "La mesure s'applique aussi aux trottinettes et engins de déplacement",
+            "Location de trottinettes",
+            "Vitesse maximale pour trottinettes"
+          ],
+          "correct": 1,
+          "explanation": "M21 étend la mesure (voie réservée, exception…) aux trottinettes et autres engins de déplacement. Ces panneaux existent depuis la réforme sur les engins de déplacement.",
+          "question_nl": "Wat betekent dit onderbord met een step?",
+          "answers_nl": [
+            "Steps verboden",
+            "De maatregel geldt ook voor steps en voortbewegingstoestellen",
+            "Verhuur van steps",
+            "Maximumsnelheid voor steps"
+          ],
+          "explanation_nl": "M21 breidt de maatregel (voorbehouden strook, uitzondering…) uit naar steps en andere voortbewegingstoestellen."
+        }
+      ]
+    },
+    {
+      "id": "LT",
+      "title": "Témoins lumineux",
+      "title_nl": "Controlelampjes",
+      "color": "#F8C291",
+      "icon": "💡",
+      "questions": [
+        {
+          "id": "PQ_LT_VEILLEUSES_1",
+          "sign": "TEMOIN_VEILLEUSES",
+          "question": "Ce témoin est allumé sur votre tableau de bord. Que signifie-t-il ?",
+          "answers": [
+            "Feux de route allumés",
+            "Feux de position (veilleuses) allumés",
+            "Feux antibrouillard allumés",
+            "Problème d'éclairage"
+          ],
+          "correct": 1,
+          "explanation": "Ce témoin (deux demi-cercles avec traits) indique que les feux de position sont allumés. Ils rendent le véhicule visible mais n'éclairent pas la route : insuffisants pour rouler de nuit.",
+          "question_nl": "Dit controlelampje brandt op uw dashboard. Wat betekent het?",
+          "answers_nl": [
+            "Grootlichten aan",
+            "Standlichten aan",
+            "Mistlichten aan",
+            "Probleem met de verlichting"
+          ],
+          "explanation_nl": "Dit lampje (twee halve cirkels met streepjes) geeft aan dat de standlichten branden. Ze maken het voertuig zichtbaar maar verlichten de weg niet: onvoldoende om 's nachts te rijden."
+        },
+        {
+          "id": "PQ_LT_CROISEMENT_1",
+          "sign": "TEMOIN_CROISEMENT",
+          "question": "Ce témoin vert est allumé. Quels feux utilisez-vous ?",
+          "answers": [
+            "Les feux de route (phares)",
+            "Les feux de croisement (codes)",
+            "Les feux de détresse",
+            "Les veilleuses uniquement"
+          ],
+          "correct": 1,
+          "explanation": "Le témoin vert (phare avec faisceau incliné vers le bas) indique les feux de croisement. C'est l'éclairage normal de nuit et par visibilité réduite : il n'éblouit pas les autres conducteurs.",
+          "question_nl": "Dit groene controlelampje brandt. Welke lichten gebruikt u?",
+          "answers_nl": [
+            "De grootlichten",
+            "De dimlichten",
+            "De waarschuwingslichten",
+            "Enkel de standlichten"
+          ],
+          "explanation_nl": "Het groene lampje (koplamp met schuin naar beneden gerichte stralen) duidt op de dimlichten. Dit is de normale verlichting 's nachts en bij slechte zichtbaarheid: ze verblinden de anderen niet."
+        },
+        {
+          "id": "PQ_LT_ROUTE_1",
+          "sign": "TEMOIN_ROUTE",
+          "question": "Ce témoin bleu est allumé sur votre tableau de bord. Que devez-vous savoir ?",
+          "answers": [
+            "Vos antibrouillards sont allumés",
+            "Vos feux de route sont allumés : éteignez-les en croisant un véhicule",
+            "Votre éclairage est en panne",
+            "Vos feux de croisement sont allumés"
+          ],
+          "correct": 1,
+          "explanation": "Le témoin bleu (phare avec faisceau horizontal) indique les feux de route. Ils éblouissent : repassez en feux de croisement dès qu'un véhicule arrive en face ou vous précède de près.",
+          "question_nl": "Dit blauwe controlelampje brandt op uw dashboard. Wat moet u weten?",
+          "answers_nl": [
+            "Uw mistlichten branden",
+            "Uw grootlichten branden: dim ze bij tegemoetkomend verkeer",
+            "Uw verlichting is defect",
+            "Uw dimlichten branden"
+          ],
+          "explanation_nl": "Het blauwe lampje (koplamp met horizontale stralen) duidt op de grootlichten. Ze verblinden: schakel over naar dimlichten zodra een voertuig nadert of dicht voor u rijdt."
+        },
+        {
+          "id": "PQ_LT_BROUILLARD_1",
+          "sign": "TEMOIN_BROUILLARD_AVANT",
+          "question": "Quand pouvez-vous utiliser les feux antibrouillard avant signalés par ce témoin ?",
+          "answers": [
+            "Dès la tombée de la nuit",
+            "Par brouillard, chute de neige ou forte pluie",
+            "En ville pour mieux voir",
+            "Uniquement sur autoroute"
+          ],
+          "correct": 1,
+          "explanation": "Les antibrouillards avant ne peuvent être utilisés que par brouillard, chute de neige ou forte pluie. Les utiliser par temps clair peut gêner les autres conducteurs.",
+          "question_nl": "Wanneer mag u de mistlichten vooraan gebruiken die dit lampje aanduidt?",
+          "answers_nl": [
+            "Zodra het donker wordt",
+            "Bij mist, sneeuwval of hevige regen",
+            "In de stad om beter te zien",
+            "Enkel op de autosnelweg"
+          ],
+          "explanation_nl": "Mistlichten vooraan mogen enkel bij mist, sneeuwval of hevige regen. Ze gebruiken bij helder weer kan andere bestuurders hinderen."
         }
       ]
     }

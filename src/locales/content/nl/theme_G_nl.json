@@ -199,7 +199,8 @@
           ],
           "correct": 1,
           "explanation": "Rond rood + witte balk = verboden richting in deze richting.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "C1"
         },
         {
           "id": "G1_Q2",
@@ -241,19 +242,6 @@
           "theoryCardIndex": 0
         },
         {
-          "id": "G1_Q5",
-          "question": "Je ziet een rond rood bord met een witte balk. Mag je deze straat inrijden?",
-          "choices": [
-            "Ja, als de straat leeg is",
-            "Nee, het is een verboden richting",
-            "Ja, als je langzaam rijdt",
-            "Ja, met de richtingaanwijzer"
-          ],
-          "correct": 1,
-          "explanation": "Rond rood + witte balk = verboden richting, inrijden verboden.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "G1_Q6",
           "question": "Je ziet een rechthoekig blauw bord met een witte pijl die naar jou wijst. Wat betekent het?",
           "choices": [
@@ -264,7 +252,8 @@
           ],
           "correct": 1,
           "explanation": "Rechthoekig blauw + pijl = eenrichtingsverkeer, toegestane richting.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "F19"
         },
         {
           "id": "G1_Q7",
@@ -290,32 +279,6 @@
           ],
           "correct": 1,
           "explanation": "Onderbord bromfiets A = zij mogen in tegengestelde richting rijden.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "G1_Q9",
-          "question": "Zonder onderbord, mag een fietser een verboden richting inrijden?",
-          "choices": [
-            "Ja, fietsers zijn altijd vrijgesteld",
-            "Nee, zonder onderbord zijn ALLE bestuurders inclusief fietsers verboden",
-            "Ja, binnen de bebouwde kom",
-            "Dat hangt af van het uur"
-          ],
-          "correct": 1,
-          "explanation": "Zonder onderbord geldt de verboden richting voor iedereen, fietsers inbegrepen.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "G1_Q10",
-          "question": "Je rijdt en ziet rechts een verboden richting. Aan de andere kant van die straat staat er:",
-          "choices": [
-            "Nog een verboden richting",
-            "Een bord van eenrichtingsverkeer",
-            "Een rood licht",
-            "Een STOP"
-          ],
-          "correct": 1,
-          "explanation": "De ingang van eenrichtingsverkeer toont het eenrichtingsbord aan de ene kant en verboden richting aan de andere kant.",
           "theoryCardIndex": 0
         },
         {
@@ -355,7 +318,8 @@
           ],
           "correct": 1,
           "explanation": "Twee balken (of lege cirkel) = verboden toegang in beide richtingen.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "C3"
         },
         {
           "id": "G1_Q14",
@@ -423,19 +387,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "G1_Q19",
-          "question": "Mag een fietser een straat inrijden met \"verboden toegang + uitgezonderd plaatselijk verkeer\"?",
-          "choices": [
-            "Nee, het bord geldt ook voor fietsers",
-            "Ja, fietsers en ruiters mogen er altijd in",
-            "Nee, alleen auto's",
-            "Dat hangt af van het onderbord"
-          ],
-          "correct": 1,
-          "explanation": "Fietsers en ruiters maken altijd deel uit van het toegestane plaatselijk verkeer.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "G1_Q20",
           "question": "Je gebruikt deze straat als sluipweg zonder er te wonen of iemand te bezoeken. Mag je de straat inrijden?",
           "choices": [
@@ -459,32 +410,6 @@
           ],
           "correct": 1,
           "explanation": "Bij het praktisch examen mag je nooit een straat met verboden toegang inrijden.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "G1_Q22",
-          "question": "Je ziet een rond rood bord met twee witte balken en GEEN onderbord. Mag je de straat in?",
-          "choices": [
-            "Ja, voor plaatselijk verkeer",
-            "Nee, zonder onderbord mag niemand er in",
-            "Ja, de bewoners",
-            "Dat hangt af van het uur"
-          ],
-          "correct": 1,
-          "explanation": "Zonder onderbord is de verboden toegang in beide richtingen absoluut.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "G1_Q23",
-          "question": "Je ziet een bord \"verboden toegang beide richtingen\" met het bord \"uitgezonderd plaatselijk verkeer\". Je vriend woont in deze straat. Mag je erin?",
-          "choices": [
-            "Nee, alleen bewoners",
-            "Ja, iemand bezoeken die in de straat woont maakt deel uit van het plaatselijk verkeer",
-            "Nee, alleen voor levering",
-            "Dat hangt af van het uur"
-          ],
-          "correct": 1,
-          "explanation": "Een vriend bezoeken in de straat = plaatselijk verkeer = toegestaan.",
           "theoryCardIndex": 1
         },
         {
@@ -602,7 +527,8 @@
           ],
           "correct": 1,
           "explanation": "Het quadbord richt zich specifiek op quads (4 wielen, terreinvoertuig, stuur, zadel).",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "sign": "C6"
         },
         {
           "id": "G1_Q33",
@@ -615,7 +541,8 @@
           ],
           "correct": 1,
           "explanation": "Zonder symbool = geldt in beide richtingen.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "sign": "C3"
         },
         {
           "id": "G1_Q34",
@@ -628,46 +555,8 @@
           ],
           "correct": 1,
           "explanation": "Met symbool = geldt alleen in deze richting.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G1_Q35",
-          "question": "Het bord \"verboden toegang beide richtingen\" (zonder symbool) illustreert deze regel. Waarom verbiedt het in beide richtingen?",
-          "choices": [
-            "Omdat het aan beide kanten rood is",
-            "Omdat een bord zonder symbool in het midden geldt in beide richtingen",
-            "Omdat er twee balken zijn",
-            "Volgens afspraak"
-          ],
-          "correct": 1,
-          "explanation": "Zonder symbool = beide richtingen, dus verboden in beide richtingen.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G1_Q36",
-          "question": "Je rijdt met een auto. Het bord verbiedt motorfietsen. Mag je door?",
-          "choices": [
-            "Nee, alle motorvoertuigen",
-            "Ja, auto's zijn niet betrokken bij het verbod voor motorfietsen",
-            "Nee, het is een verboden richting",
-            "Dat hangt af van de weg"
-          ],
-          "correct": 1,
-          "explanation": "Het verbod voor motorfietsen betreft geen auto's.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G1_Q37",
-          "question": "Je rijdt een moto zonder zijspan. Het bord verbiedt voertuigen >2 wielen + moto's met zijspan. Mag je door?",
-          "choices": [
-            "Nee, alle moto's zijn verboden",
-            "Ja, jouw moto zonder zijspan is niet betrokken bij dit bord",
-            "Nee, het is verboden",
-            "Dat hangt af van de cilinderinhoud"
-          ],
-          "correct": 1,
-          "explanation": "Moto zonder zijspan = niet betrokken bij dit specifieke bord.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "sign": "C7"
         },
         {
           "id": "G1_Q38",
@@ -693,19 +582,6 @@
           ],
           "correct": 1,
           "explanation": "MBT = werkelijk gewicht van het voertuig met alles wat het vervoert op een bepaald moment.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "G1_Q40",
-          "question": "Omvat de MBT het gewicht van de passagiers?",
-          "choices": [
-            "Nee, alleen het voertuig",
-            "Ja, ze omvat voertuig + bestuurder + passagiers + lading",
-            "Nee, alleen de lading",
-            "Dat hangt af van het voertuig"
-          ],
-          "correct": 1,
-          "explanation": "De MBT omvat alles: voertuig, bestuurder, passagiers en lading.",
           "theoryCardIndex": 3
         },
         {
@@ -800,19 +676,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "G1_Q48",
-          "question": "Het verbodsbord om links af te slaan geldt:",
-          "choices": [
-            "Overal",
-            "Op het volgende kruispunt (verbod om links af te slaan)",
-            "Onmiddellijk",
-            "Tot het tweede kruispunt"
-          ],
-          "correct": 1,
-          "explanation": "Verbod om links af te slaan = alleen op het volgende kruispunt.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "G1_Q49",
           "question": "Geldt het verbod om af te slaan ook voor fietsers?",
           "choices": [
@@ -865,32 +728,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "G1_Q53",
-          "question": "Je ziet het verbodsbord om te keren. 80 m verderop is er een kruispunt. Mag je links afslaan?",
-          "choices": [
-            "Nee, keren is verboden dus afslaan ook",
-            "Ja, het bord verbiedt alleen het keren, niet links afslaan",
-            "Nee, tot het volgende kruispunt",
-            "Dat hangt af van het bord"
-          ],
-          "correct": 1,
-          "explanation": "Links afslaan blijft toegestaan, zelfs met het verbod om te keren.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "G1_Q54",
-          "question": "\"Tot het volgende kruispunt inbegrepen\" betekent:",
-          "choices": [
-            "Voor het kruispunt",
-            "Tot je voorbij het eerste volgende kruispunt bent",
-            "Tot het tweede kruispunt",
-            "Over 100 meter"
-          ],
-          "correct": 1,
-          "explanation": "\"Inbegrepen\" = je moet voorbij het kruispunt zijn voordat je mag keren.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "G1_Q55",
           "question": "Je ziet het verbod om rechts af te slaan. Mag je op het volgende kruispunt rechtdoor rijden?",
           "choices": [
@@ -904,136 +741,6 @@
           "theoryCardIndex": 4
         },
         {
-          "id": "G1_Q56",
-          "question": "Je ziet het verbod om links af te slaan met een onderbord dat fietsers vrijstelt. Je bent fietser. Mag je links afslaan?",
-          "choices": [
-            "Nee, het verbod is absoluut",
-            "Ja, fietsers zijn vrijgesteld door het onderbord",
-            "Nee, fietsers ook",
-            "Dat hangt af van de weg"
-          ],
-          "correct": 1,
-          "explanation": "Het onderbord stelt fietsers vrij -- je mag afslaan.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "G1_Q57",
-          "question": "Rond rood bord met een witte horizontale balk:",
-          "choices": [
-            "Verboden toegang beide richtingen",
-            "Verboden richting voor elke bestuurder (een richting)",
-            "Parkeerverbod",
-            "Verbod om te keren"
-          ],
-          "correct": 1,
-          "explanation": "Rond rood + een witte balk = verboden richting.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "G1_Q58",
-          "question": "Rond rood leeg bord (of twee witte balken):",
-          "choices": [
-            "Verboden richting een richting",
-            "Verboden toegang in beide richtingen voor elke bestuurder",
-            "Parkeerverbod",
-            "Voetgangerszone"
-          ],
-          "correct": 1,
-          "explanation": "Twee balken of lege cirkel = verboden toegang in beide richtingen.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "G1_Q59",
-          "question": "Rond rood bord met silhouet van auto en moto met zijspan:",
-          "choices": [
-            "Verboden toegang voor moto's alleen",
-            "Verboden toegang voor motorvoertuigen >2 wielen en moto's met zijspan",
-            "Verboden toegang voor iedereen",
-            "Verboden richting"
-          ],
-          "correct": 1,
-          "explanation": "Silhouet auto + moto zijspan = verboden voor voertuigen >2 wielen en moto's met zijspan.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G1_Q60",
-          "question": "Rond rood bord met silhouet van een moto alleen:",
-          "choices": [
-            "Verboden toegang voor auto's",
-            "Verboden toegang voor motorfietsen",
-            "Verboden toegang voor bromfietsen",
-            "Verboden toegang voor quads"
-          ],
-          "correct": 1,
-          "explanation": "Silhouet moto = verboden voor motorfietsen.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G1_Q61",
-          "question": "Rond rood bord met een doorgestreepte pijl naar rechts:",
-          "choices": [
-            "Verbod om te keren",
-            "Verbod om rechts af te slaan op het volgende kruispunt",
-            "Verboden richting rechts",
-            "Gevaarlijke bocht"
-          ],
-          "correct": 1,
-          "explanation": "Doorgestreepte pijl rechts = verbod om rechts af te slaan op het volgende kruispunt.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "G1_Q62",
-          "question": "Rond rood bord met een doorgestreepte U-pijl:",
-          "choices": [
-            "Verbod om links af te slaan",
-            "Verbod om te keren tot het volgende kruispunt inbegrepen",
-            "Verboden richting",
-            "Verbod om achteruit te rijden"
-          ],
-          "correct": 1,
-          "explanation": "Doorgestreepte U-pijl = verbod om te keren tot het volgende kruispunt inbegrepen.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "G1_Q63",
-          "question": "Rond rood bord met \"3,5 t\":",
-          "choices": [
-            "Snelheidsbeperking",
-            "Verboden toegang voor voertuigen waarvan de MBT meer dan 3,5 t bedraagt",
-            "Veiligheidsafstand",
-            "Maximaal gewicht van de lading"
-          ],
-          "correct": 1,
-          "explanation": "3,5 t = verbod voor voertuigen waarvan de MBT meer dan 3,5 ton bedraagt.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "G1_Q64",
-          "question": "Bord F17 (rijstroken met BUS):",
-          "choices": [
-            "SSF",
-            "Rijstrook voorbehouden voor autobussen",
-            "Busparking",
-            "Bushalte"
-          ],
-          "correct": 1,
-          "explanation": "F17 = busstrook (rijstrook voorbehouden voor autobussen).",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "G1_Q65",
-          "question": "Rond rood bord met silhouet van een quad:",
-          "choices": [
-            "Verboden toegang voor moto's",
-            "Verboden toegang voor quads",
-            "Verboden toegang voor auto's",
-            "Verboden toegang voor tractoren"
-          ],
-          "correct": 1,
-          "explanation": "Silhouet quad = verboden toegang voor quads.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "G1_SIGN_B5_1",
           "question": "Je hebt net een voorrangsweg verlaten. Je ziet dit bord: een doorgestreepte gele ruit en een omgekeerde driehoek (wit). Wat betekent dit?",
           "choices": [
@@ -1043,7 +750,8 @@
             "Je bent verplicht te claxonneren"
           ],
           "correct": 1,
-          "explanation": "Het bord B5 geeft aan dat de voorrangsweg eindigt en dat de gewone voorrang van rechts weer geldt. Verleen voorrang aan voertuigen van rechts."
+          "explanation": "Het bord B5 geeft aan dat de voorrangsweg eindigt en dat de gewone voorrang van rechts weer geldt. Verleen voorrang aan voertuigen van rechts.",
+          "sign": "B11"
         },
         {
           "id": "G1_SIGN_B19_1",
@@ -1055,7 +763,8 @@
             "Inhaalverbod in deze doorgang"
           ],
           "correct": 1,
-          "explanation": "Het bord B19 geeft aan dat je voorrang hebt in deze smalle doorgang. Voertuigen uit de tegengestelde richting moeten je laten passeren."
+          "explanation": "Het bord B19 geeft aan dat je voorrang hebt in deze smalle doorgang. Voertuigen uit de tegengestelde richting moeten je laten passeren.",
+          "sign": "B21"
         },
         {
           "id": "G1_SIGN_B21_1",
@@ -1067,7 +776,8 @@
             "Versnellen om als eerste door te rijden"
           ],
           "correct": 1,
-          "explanation": "Het bord B21 betekent dat je voorrang moet verlenen aan voertuigen uit de tegengestelde richting. Wacht tot de weg vrij is voor je de smalle doorgang inrijdt."
+          "explanation": "Het bord B21 betekent dat je voorrang moet verlenen aan voertuigen uit de tegengestelde richting. Wacht tot de weg vrij is voor je de smalle doorgang inrijdt.",
+          "sign": "B19"
         },
         {
           "id": "G1_SIGN_D1__1",
@@ -1079,7 +789,8 @@
             "Inhalen rechts toegestaan"
           ],
           "correct": 1,
-          "explanation": "D1a legt de richting rechts op. Je moet rechts afslaan. Elke andere richting is hier verboden."
+          "explanation": "D1a legt de richting rechts op. Je moet rechts afslaan. Elke andere richting is hier verboden.",
+          "sign": "D1d"
         },
         {
           "id": "G1_SIGN_D1b_1",
@@ -1091,7 +802,8 @@
             "Weg voorbehouden voor plaatselijk verkeer"
           ],
           "correct": 1,
-          "explanation": "D1b legt de richting links op. Rechtdoor of rechts rijden is verboden. Controleer de juiste rijstrook voor het kruispunt."
+          "explanation": "D1b legt de richting links op. Rechtdoor of rechts rijden is verboden. Controleer de juiste rijstrook voor het kruispunt.",
+          "sign": "D1c"
         }
       ]
     },
@@ -1192,7 +904,7 @@
           ]
         },
         {
-          "title": "Keuze van richting",
+          "title": "Keuze van richting en verkeersgeleider",
           "cards": [
             {
               "type": "text",
@@ -1207,12 +919,7 @@
               "content": "📋 De regel\nDit bord betekent dat u links of rechts van de hindernis mag rijden: de keuze is aan u.\n\n💡 Waarom\nDe configuratie laat een veilige doorgang aan beide kanten toe, waardoor de bestuurder mag kiezen.\n\n🚗 In de praktijk\nBeoordeel het verkeer en kies de vlotste kant. Beide opties zijn geldig.\n\n📍 Voorbeeld\nEen richtingssteen met pijlen aan beide kanten op een laan in Luik: rij langs de minst drukke kant.\n\n⚠️ Veelgemaakte fout\nTe lang aarzelen voor de hindernis. Neem snel een beslissing en rij er resoluut langs.",
               "emoji": "↔️",
               "explanation_simple": "Ziet u een hindernis en dit bord? U rijdt langs de kant die u wilt. U beslist zelf, voor een keer!"
-            }
-          ]
-        },
-        {
-          "title": "Verkeerseiland",
-          "cards": [
+            },
             {
               "type": "text",
               "title": "5.1 — Soorten eilanden",
@@ -1275,7 +982,8 @@
           ],
           "correct": 1,
           "explanation": "Dit bord kan bevestigd zijn op een paal of op een gele zuil.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "sign": "D1f"
         },
         {
           "id": "G2_Q4",
@@ -1288,19 +996,6 @@
           ],
           "correct": 1,
           "explanation": "Dit bord is verplicht: je moet aan de kant van de pijl passeren.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "G2_Q5",
-          "question": "Je ziet een gele zuil met een schuine pijl naar rechts. Mag je links van het obstakel passeren?",
-          "choices": [
-            "Ja, het is een keuze",
-            "Nee, je moet verplicht rechts passeren",
-            "Ja, met voorzichtigheid",
-            "Dat hangt af van het zicht"
-          ],
-          "correct": 1,
-          "explanation": "De pijl is een verplichting: je moet rechts passeren.",
           "theoryCardIndex": 0
         },
         {
@@ -1340,7 +1035,8 @@
           ],
           "correct": 1,
           "explanation": "Het ronde blauwe bord legt de richting op: verplichting om rechts af te slaan.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "D1d"
         },
         {
           "id": "G2_Q9",
@@ -1353,7 +1049,8 @@
           ],
           "correct": 1,
           "explanation": "Het ronde blauwe bord met pijl rechtdoor verplicht om rechtdoor te rijden.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "D1a"
         },
         {
           "id": "G2_Q10",
@@ -1369,19 +1066,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "G2_Q11",
-          "question": "Een rond blauw bord met twee pijlen (links en rechts) betekent:",
-          "choices": [
-            "Verboden rechtdoor te rijden",
-            "Verplichting om EEN van de aangeduide richtingen te volgen",
-            "Vrije keuze",
-            "Eenrichtingsverkeer"
-          ],
-          "correct": 1,
-          "explanation": "Twee pijlen op een rond blauw bord verplichten om een van de aangeduide richtingen te volgen.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "G2_Q12",
           "question": "Een rond blauw bord met een pijl rechtdoor en een pijl rechts betekent:",
           "choices": [
@@ -1392,7 +1076,8 @@
           ],
           "correct": 1,
           "explanation": "Je moet kiezen tussen de twee opgelegde richtingen: rechtdoor of rechts.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "D3b"
         },
         {
           "id": "G2_Q13",
@@ -1405,19 +1090,6 @@
           ],
           "correct": 1,
           "explanation": "Het onderbord stelt fietsers en speed pedelecs vrij van de verplichte richting.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "G2_Q14",
-          "question": "Een onderbord \"uitgezonderd fietsers, speed pedelecs en bromfietsen klasse A\" is aanwezig. Wie is vrijgesteld?",
-          "choices": [
-            "Iedereen",
-            "Fietsers, speed pedelecs en bromfietsen klasse A",
-            "Alleen fietsers",
-            "Auto's"
-          ],
-          "correct": 1,
-          "explanation": "Alleen de weggebruikers die op het onderbord vermeld staan zijn vrijgesteld.",
           "theoryCardIndex": 1
         },
         {
@@ -1434,32 +1106,6 @@
           "theoryCardIndex": 1
         },
         {
-          "id": "G2_Q16",
-          "question": "Je rijdt met een auto. Het ronde blauwe bord duidt rechtdoor aan. Mag je links afslaan?",
-          "choices": [
-            "Ja, het is informatief",
-            "Nee, je moet verplicht de aangeduide richting volgen (rechtdoor)",
-            "Ja, met de richtingaanwijzer",
-            "Ja, als er niemand komt"
-          ],
-          "correct": 1,
-          "explanation": "Het ronde blauwe bord legt de richting op: links afslaan is verboden.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "G2_Q17",
-          "question": "Een bord met een rechte pijl is op een obstakel bevestigd. Wat betekent het?",
-          "choices": [
-            "Aanbevolen richting",
-            "Verplichting om aan de kant van de pijl te passeren",
-            "Eenrichtingsverkeer",
-            "Verboden te passeren"
-          ],
-          "correct": 1,
-          "explanation": "Dit bord legt de kant op om het obstakel te omrijden.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "G2_Q18",
           "question": "Je komt aan een kruispunt met een rond blauw bord pijl links. Mag je rechtdoor rijden?",
           "choices": [
@@ -1470,7 +1116,8 @@
           ],
           "correct": 1,
           "explanation": "Het ronde blauwe bord legt de richting op: rechtdoor rijden is verboden.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "D1c"
         },
         {
           "id": "G2_Q19",
@@ -1483,7 +1130,8 @@
           ],
           "correct": 1,
           "explanation": "Je moet een van de twee opgelegde richtingen volgen: links of rechtdoor.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "D3a"
         },
         {
           "id": "G2_Q20",
@@ -1496,7 +1144,8 @@
           ],
           "correct": 1,
           "explanation": "Het onderbord stelt je vrij van de verplichte richting.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "D1a"
         },
         {
           "id": "G2_Q21",
@@ -1509,20 +1158,8 @@
           ],
           "correct": 1,
           "explanation": "Het bord eenrichtingsverkeer is rechthoekig blauw met een witte pijl.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G2_Q22",
-          "question": "Het rechthoekige blauwe bord met een pijl betekent:",
-          "choices": [
-            "Verplichte richting",
-            "Eenrichtingsverkeer (aanduiding van de toegestane richting)",
-            "Verboden af te slaan",
-            "Voorrangsweg"
-          ],
-          "correct": 1,
-          "explanation": "Het rechthoekige blauwe bord duidt (zonder op te leggen) de richting van het eenrichtingsverkeer aan.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "sign": "F19"
         },
         {
           "id": "G2_Q23",
@@ -1535,19 +1172,6 @@
           ],
           "correct": 1,
           "explanation": "Het bord verplichte richting is rond blauw met een witte pijl.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G2_Q24",
-          "question": "Het ronde blauwe bord met een pijl betekent:",
-          "choices": [
-            "Eenrichtingsverkeer",
-            "Verplichte richting (opgelegd)",
-            "Aanduiding",
-            "Voorrangsweg"
-          ],
-          "correct": 1,
-          "explanation": "Het ronde blauwe bord legt de te volgen richting op.",
           "theoryCardIndex": 2
         },
         {
@@ -1574,7 +1198,8 @@
           ],
           "correct": 1,
           "explanation": "Het rechthoekige bord is een aanduiding (eenrichtingsverkeer), geen verplichting om af te slaan.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "sign": "F19"
         },
         {
           "id": "G2_Q27",
@@ -1587,33 +1212,8 @@
           ],
           "correct": 1,
           "explanation": "Het ronde blauwe bord legt de richting op: je moet rechts afslaan.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G2_Q28",
-          "question": "Rechthoekig blauw bord met pijl naar rechts voor een straat. Wat betekent het?",
-          "choices": [
-            "Verplichting om rechts af te slaan",
-            "Deze straat is eenrichtingsverkeer naar rechts",
-            "Parking rechts",
-            "Fietspad rechts"
-          ],
-          "correct": 1,
-          "explanation": "Het rechthoekige blauwe bord duidt aan dat de straat eenrichtingsverkeer naar rechts is.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G2_Q29",
-          "question": "Rond blauw bord met pijl naar rechts voor een kruispunt. Wat betekent het?",
-          "choices": [
-            "Eenrichtingsverkeer",
-            "Verplichting om rechts af te slaan op het kruispunt",
-            "Aanduiding",
-            "Parking"
-          ],
-          "correct": 1,
-          "explanation": "Het ronde blauwe bord legt de richting op: verplichting om rechts af te slaan.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "sign": "D1d"
         },
         {
           "id": "G2_Q30",
@@ -1642,19 +1242,6 @@
           "theoryCardIndex": 3
         },
         {
-          "id": "G2_Q32",
-          "question": "Is dit bord een verplichting of een keuze?",
-          "choices": [
-            "Een strikte verplichting",
-            "Een keuze: je bent vrij om aan de ene of de andere kant te passeren",
-            "Een verbod",
-            "Een advies"
-          ],
-          "correct": 1,
-          "explanation": "Het is een aanduidingsbord (geen verplichting): je kiest vrij je kant.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "G2_Q33",
           "question": "Is dit keuzebord hetzelfde als een bord verplichte richting met twee pijlen?",
           "choices": [
@@ -1665,7 +1252,8 @@
           ],
           "correct": 1,
           "explanation": "Het keuzebord (aanduiding) en het ronde blauwe bord met twee pijlen (verplichting) zijn fundamenteel verschillend.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "sign": "D3a"
         },
         {
           "id": "G2_Q34",
@@ -1691,20 +1279,7 @@
           ],
           "correct": 1,
           "explanation": "Het verkeerseiland is een gearceerde markering of een gebouwd element om het verkeer te geleiden.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "G2_Q36",
-          "question": "Kan een verkeerseiland gewoon op de weg geschilderd zijn?",
-          "choices": [
-            "Nee, het is altijd gebouwd",
-            "Ja, het kan een gearceerde markering (verf) of gebouwd zijn",
-            "Nee, alleen met paaltjes",
-            "Dat hangt af van de weg"
-          ],
-          "correct": 1,
-          "explanation": "Het eiland kan een eenvoudige gearceerde markering (verf) of een gebouwd element zijn.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "G2_Q37",
@@ -1717,20 +1292,7 @@
           ],
           "correct": 1,
           "explanation": "Verkeerseilanden worden altijd rechts omreden.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "G2_Q38",
-          "question": "Je komt aan bij een gearceerd eiland midden op de rijbaan. Hoe rijd je eromheen?",
-          "choices": [
-            "Eroverheen rijden",
-            "Langs rechts",
-            "Langs links",
-            "Zoals je wilt"
-          ],
-          "correct": 1,
-          "explanation": "Het eiland moet rechts worden omreden.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "G2_Q39",
@@ -1743,7 +1305,7 @@
           ],
           "correct": 1,
           "explanation": "Het is verboden over een verkeerseiland te rijden, of het nu geschilderd of gebouwd is.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "G2_Q40",
@@ -1756,7 +1318,7 @@
           ],
           "correct": 1,
           "explanation": "Stoppen is verboden op een verkeerseiland.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "G2_Q41",
@@ -1769,7 +1331,7 @@
           ],
           "correct": 1,
           "explanation": "Parkeren is verboden op een verkeerseiland.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "G2_Q42",
@@ -1782,20 +1344,7 @@
           ],
           "correct": 1,
           "explanation": "Rijden, stoppen en parkeren zijn de drie verboden op een verkeerseiland.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "G2_Q43",
-          "question": "Een gearceerd eiland ligt midden op het kruispunt. Geen verticale signalisatie. Wat doe je?",
-          "choices": [
-            "Eroverheen rijden",
-            "Rechts eromheen rijden",
-            "Links eromheen rijden",
-            "Wachten tot het verdwijnt"
-          ],
-          "correct": 1,
-          "explanation": "Zonder signalisatie moet je het eiland rechts omrijden.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 3
         },
         {
           "id": "G2_Q44",
@@ -1808,72 +1357,7 @@
           ],
           "correct": 1,
           "explanation": "Je rijdt het eiland rechts om voordat je links afslaat.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "G2_Q45",
-          "question": "Rond blauw bord met een witte pijl naar boven:",
-          "choices": [
-            "Eenrichtingsverkeer",
-            "Verplichting om rechtdoor te rijden",
-            "Snelweg",
-            "Parking vooruit"
-          ],
-          "correct": 1,
-          "explanation": "Het ronde blauwe bord met pijl naar boven verplicht om rechtdoor te rijden.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "G2_Q46",
-          "question": "Rond blauw bord met twee pijlen (links en rechtdoor):",
-          "choices": [
-            "Eenrichtingsverkeer",
-            "Verplichting om links of rechtdoor te gaan",
-            "Vrije keuze",
-            "Verbod om rechts af te slaan"
-          ],
-          "correct": 1,
-          "explanation": "Twee pijlen op een rond blauw bord verplichten om een van de twee richtingen te kiezen.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "G2_Q47",
-          "question": "Rechthoekig blauw bord met een witte pijl:",
-          "choices": [
-            "Verplichte richting",
-            "Openbare weg met eenrichtingsverkeer",
-            "Verplichting om af te slaan",
-            "Voorrangsweg"
-          ],
-          "correct": 1,
-          "explanation": "Het rechthoekige blauwe bord duidt eenrichtingsverkeer aan.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "G2_Q48",
-          "question": "Aanduidingsbord met pijlen links en rechts op gele zuil:",
-          "choices": [
-            "Verboden richting",
-            "Doorgang toegestaan rechts of links",
-            "Verplichte richting",
-            "Keren"
-          ],
-          "correct": 1,
-          "explanation": "Dit aanduidingsbord laat je kiezen om links of rechts te passeren.",
           "theoryCardIndex": 3
-        },
-        {
-          "id": "G2_Q49",
-          "question": "Onderbord \"Uitgezonderd fietsers en speed pedelecs\":",
-          "choices": [
-            "Fietsers verboden",
-            "Fietsers en speed pedelecs zijn niet verplicht de verplichte richting te volgen",
-            "Fietsers verplicht te volgen",
-            "Verplicht fietspad"
-          ],
-          "correct": 1,
-          "explanation": "Dit onderbord stelt fietsers en speed pedelecs vrij van de verplichte richting.",
-          "theoryCardIndex": 1
         },
         {
           "id": "G2_Q50",
@@ -1886,7 +1370,8 @@
           ],
           "correct": 1,
           "explanation": "Dit onderbord staat fietsers en speed pedelecs toe om in beide richtingen te rijden.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "sign": "F19"
         },
         {
           "id": "G2_SIGN_C5_1",
@@ -1898,7 +1383,8 @@
             "Alleen moto's"
           ],
           "correct": 1,
-          "explanation": "C5 verbiedt de toegang voor alle motorvoertuigen (auto's, moto's, vrachtwagens...). Alleen fietsen, voetgangers en dieren mogen door."
+          "explanation": "C5 verbiedt de toegang voor alle motorvoertuigen (auto's, moto's, vrachtwagens...). Alleen fietsen, voetgangers en dieren mogen door.",
+          "sign": "C5"
         },
         {
           "id": "G2_SIGN_C13_1",
@@ -1910,7 +1396,8 @@
             "Gereserveerd jachtgebied"
           ],
           "correct": 1,
-          "explanation": "C13 verbiedt de toegang voor ruiters (personen te paard). Voetgangers die een paard aan de hand leiden blijven toegelaten."
+          "explanation": "C13 verbiedt de toegang voor ruiters (personen te paard). Voetgangers die een paard aan de hand leiden blijven toegelaten.",
+          "sign": "C15"
         },
         {
           "id": "G2_SIGN_C15_1",
@@ -1922,7 +1409,8 @@
             "Caravans en aanhangwagens zijn verboden"
           ],
           "correct": 1,
-          "explanation": "C15 verbiedt de toegang voor bespannen voertuigen (kar getrokken door een dier). Het betreft voertuigen met dierlijke tractie."
+          "explanation": "C15 verbiedt de toegang voor bespannen voertuigen (kar getrokken door een dier). Het betreft voertuigen met dierlijke tractie.",
+          "sign": "C13"
         },
         {
           "id": "G2_SIGN_C27_1",
@@ -1934,19 +1422,8 @@
             "Maximale hoogte van 10 meter"
           ],
           "correct": 1,
-          "explanation": "C27 verbiedt de doorgang voor voertuigen waarvan de lengte (inclusief lading) de aangegeven waarde overschrijdt -- hier 10 m. Dit richt zich op lange opleggers en wegentreinen."
-        },
-        {
-          "id": "G2_SIGN_C29_1",
-          "question": "Een rond rood bord toont een wielenstel met een getal in tonnen. Wat betekent het?",
-          "choices": [
-            "Het totaalgewicht van het voertuig mag niet meer dan 2 t bedragen",
-            "De aslast is beperkt tot 2 t",
-            "Het maximaal aantal assen is 2",
-            "Verboden voor voertuigen met meer dan 2 assen"
-          ],
-          "correct": 1,
-          "explanation": "C29 beperkt de aslast. Zelfs als het totaalgewicht van het voertuig lager is dan bord C25, ben je in overtreding als de aslast te hoog is."
+          "explanation": "C27 verbiedt de doorgang voor voertuigen waarvan de lengte (inclusief lading) de aangegeven waarde overschrijdt -- hier 10 m. Dit richt zich op lange opleggers en wegentreinen.",
+          "sign": "C25"
         },
         {
           "id": "G2_SIGN_C35_1",
@@ -1958,7 +1435,8 @@
             "Verplichte inhaalstrook"
           ],
           "correct": 1,
-          "explanation": "C35 markeert het einde van het inhaalverbod. Vanaf dit bord mag je weer inhalen als de omstandigheden het toelaten."
+          "explanation": "C35 markeert het einde van het inhaalverbod. Vanaf dit bord mag je weer inhalen als de omstandigheden het toelaten.",
+          "sign": "C37"
         },
         {
           "id": "G2_SIGN_C45_50_1",
@@ -1970,31 +1448,8 @@
             "Tijdelijke beperking wegens werken"
           ],
           "correct": 1,
-          "explanation": "C45-50 markeert het einde van de beperking tot 50 km/u. De toegestane snelheid keert terug naar de normale limiet voor dit type weg."
-        },
-        {
-          "id": "G2_SIGN_C45_70_1",
-          "question": "Na een zone van 70 km/u zie je dit grijs doorgestreepte bord met \"70\". Wat mag je doen?",
-          "choices": [
-            "Maximum 70 km/u aanhouden",
-            "Rijden aan de normale toegestane snelheid op dit type weg",
-            "Onmiddellijk versnellen naar 120 km/u",
-            "Je snelheid nog verder verlagen"
-          ],
-          "correct": 1,
-          "explanation": "C45-70 geeft het einde van de beperking tot 70 km/u aan. Je keert terug naar de maximaal toegestane snelheid op dit type weg (bv. 90 km/u in Wallonie buiten de bebouwde kom)."
-        },
-        {
-          "id": "G2_SIGN_C45_90_1",
-          "question": "Een doorgestreept bord \"90\" verschijnt aan het einde van een werkzone. Wat betekent het?",
-          "choices": [
-            "Je moet minstens 90 km/u rijden",
-            "De tijdelijke beperking van 90 km/u eindigt",
-            "De weg herneemt op 90 km/u en niet 120",
-            "De werken gaan verder op 90 km/u"
-          ],
-          "correct": 1,
-          "explanation": "C45-90 beindigt de beperking van 90 km/u. De geldende snelheid wordt weer de normale voor dit type weg. Vaak aanwezig bij het verlaten van werkzones."
+          "explanation": "C45-50 markeert het einde van de beperking tot 50 km/u. De toegestane snelheid keert terug naar de normale limiet voor dit type weg.",
+          "sign": "C45"
         },
         {
           "id": "G2_SIGN_C45_120_1",
@@ -2006,7 +1461,8 @@
             "Beperking verlaagd naar 100 km/u"
           ],
           "correct": 1,
-          "explanation": "C45-120 markeert het einde van de beperking tot 120 km/u die in de werkzone was opgelegd. De normale autosnelwegsnelheid (volgens het gewest) geldt opnieuw."
+          "explanation": "C45-120 markeert het einde van de beperking tot 120 km/u die in de werkzone was opgelegd. De normale autosnelwegsnelheid (volgens het gewest) geldt opnieuw.",
+          "sign": "C45"
         },
         {
           "id": "G2_SIGN_C49_1",
@@ -2018,7 +1474,8 @@
             "Einde van de autosnelweg"
           ],
           "correct": 1,
-          "explanation": "C49 heft in een keer alle plaatselijke verboden op (snelheid, inhalen, claxon...) die nog actief zijn. Heel handig aan het einde van werkzones."
+          "explanation": "C49 heft in een keer alle plaatselijke verboden op (snelheid, inhalen, claxon...) die nog actief zijn. Heel handig aan het einde van werkzones.",
+          "sign": "C46"
         },
         {
           "id": "G2_SIGN_D5_1",
@@ -2030,7 +1487,8 @@
             "Er is een omleidingsweg beschikbaar"
           ],
           "correct": 1,
-          "explanation": "D5 duidt een verplicht rondpunt aan. Je moet het oprijden en in de richting tegen de klok rijden."
+          "explanation": "D5 duidt een verplicht rondpunt aan. Je moet het oprijden en in de richting tegen de klok rijden.",
+          "sign": "D5"
         }
       ]
     }
