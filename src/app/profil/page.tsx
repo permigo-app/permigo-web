@@ -292,6 +292,14 @@ export default function ProfilePage() {
                   <span className="text-sm font-bold" style={{ color: 'var(--text-secondary)' }}>{t('nav_connexion')}</span>
                 </Link>
               )}
+              <Link href="/choix-permis" className="flex items-center gap-3 px-4 py-3.5 press-scale"
+                style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+                <span>🪪</span>
+                <span className="text-sm font-bold flex-1" style={{ color: 'var(--text-secondary)' }}>
+                  {t('profil_mon_permis')} : B
+                </span>
+                <span className="text-xs font-bold" style={{ color: 'var(--brand)' }}>{t('profil_changer_permis')} →</span>
+              </Link>
               <button
                 onClick={() => { const next = toggleMute(); setMuted(next); }}
                 className="w-full flex items-center gap-3 px-4 py-3.5 press-scale"

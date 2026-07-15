@@ -308,6 +308,23 @@ const nl: Record<string, string> = {
   pquiz_suivante: 'Volgende vraag →',
   pquiz_voir_score: 'Score bekijken →',
 
+  // ── Choix du permis ──
+  choix_titre: 'Kies je theorie-rijbewijs',
+  choix_sub: 'Je leertraject past zich aan aan het rijbewijs dat je voorbereidt.',
+  choix_permis_B: 'Rijbewijs B — Auto',
+  choix_permis_B_desc: 'Het theorie-examen auto: 9 thema\'s, proefexamens, verkeersborden.',
+  choix_permis_A: 'Rijbewijs A — Motor',
+  choix_permis_A_desc: 'De motortheorie komt binnenkort naar MyPermiGo.',
+  choix_permis_C: 'Rijbewijs C — Vrachtwagen',
+  choix_permis_C_desc: 'De vrachtwagentheorie komt binnenkort naar MyPermiGo.',
+  choix_bientot: 'Binnenkort',
+  choix_previens: 'Verwittig me wanneer het beschikbaar is',
+  choix_email_ph: 'jouw@email.be',
+  choix_note: 'Genoteerd! Je wordt verwittigd zodra het beschikbaar is.',
+  choix_continuer: 'Beginnen met Rijbewijs B →',
+  profil_mon_permis: 'Mijn rijbewijs',
+  profil_changer_permis: 'Wijzigen',
+
   // ── Catégories panneaux ──
   panneau_cat_A: 'Gevaar',
   panneau_cat_B: 'Voorrang',

@@ -308,6 +308,23 @@ const fr: Record<string, string> = {
   pquiz_suivante: 'Question suivante →',
   pquiz_voir_score: 'Voir le score →',
 
+  // ── Choix du permis ──
+  choix_titre: 'Choisis ton permis théorique',
+  choix_sub: 'Ton parcours d\'apprentissage s\'adapte au permis que tu prépares.',
+  choix_permis_B: 'Permis B — Voiture',
+  choix_permis_B_desc: 'L\'examen théorique auto : 9 thèmes, examens blancs, panneaux.',
+  choix_permis_A: 'Permis A — Moto',
+  choix_permis_A_desc: 'La théorie moto arrive prochainement sur MyPermiGo.',
+  choix_permis_C: 'Permis C — Camion',
+  choix_permis_C_desc: 'La théorie poids lourd arrive prochainement sur MyPermiGo.',
+  choix_bientot: 'Bientôt',
+  choix_previens: 'Préviens-moi quand c\'est disponible',
+  choix_email_ph: 'ton@email.be',
+  choix_note: 'C\'est noté ! Tu seras prévenu dès que c\'est disponible.',
+  choix_continuer: 'Commencer avec le Permis B →',
+  profil_mon_permis: 'Mon permis',
+  profil_changer_permis: 'Changer',
+
   // ── Catégories panneaux ──
   panneau_cat_A: 'Danger',
   panneau_cat_B: 'Priorité',

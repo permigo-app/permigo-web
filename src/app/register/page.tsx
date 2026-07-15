@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -25,8 +25,11 @@ export default function RegisterPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
+  // Pendant l'inscription, `user` se remplit avant notre redirection vers
+  // /choix-permis — ce garde ne doit viser que les visiteurs déjà connectés.
+  const registeringRef = useRef(false);
 
-  if (user) {
+  if (user && !registeringRef.current) {
     router.push('/app');
     return null;
   }
@@ -48,8 +51,10 @@ export default function RegisterPage() {
 
     setError('');
     setLoading(true);
+    registeringRef.current = true;
     const result = await signUp(email, password, username);
     setLoading(false);
+    if (result.error) registeringRef.current = false;
 
     if (result.error) {
       setError(result.error);
@@ -58,7 +63,8 @@ export default function RegisterPage() {
     } else {
       localStorage.setItem('@onboarding_done', 'true');
       document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
-      window.location.href = '/app';
+      // Nouveau parcours : inscription → choix du permis → accueil
+      window.location.href = '/choix-permis';
     }
   };
 
