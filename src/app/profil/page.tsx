@@ -3,7 +3,8 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { getQuizHistory, getAllStars, getUnlockedThemes, getAllExams, getSurvivalBest, getStudyTime, formatStudyTime } from '@/lib/progressStorage';
+import { getQuizHistory, getAllStars, getUnlockedThemes, getAllExams, getSurvivalBest, isLessonCompleted, getCompletedParties } from '@/lib/progressStorage';
+import { lessonEffectivelyCompleted, countThemeParts } from '@/lib/medals';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { getThemeDataLocalized, THEME_ORDER, type LocalTheme } from '@/lib/lessonData';
 import { useAuth } from '@/contexts/AuthContext';
@@ -20,11 +21,9 @@ export default function ProfilePage() {
   const { t, lang } = useLang();
   const [mounted, setMounted] = useState(false);
   const [quiz, setQuiz] = useState({ totalCorrect: 0, totalAnswers: 0 });
-  const [stars, setStars] = useState<Record<string, number>>({});
   const [unlockedThemes, setUnlockedThemes] = useState<string[]>([]);
   const [exams, setExams] = useState<Record<string, boolean>>({});
   const [survivalBest, setSurvivalBest] = useState(0);
-  const [studyTime, setStudyTime] = useState(0);
   const [hasLocalData, setHasLocalData] = useState(false);
   const [muted, setMuted] = useState(false);
   const premium = useIsPremium();
@@ -39,11 +38,9 @@ export default function ProfilePage() {
     const quizData = getQuizHistory();
     const starsData = getAllStars();
     setQuiz(quizData);
-    setStars(starsData);
     setUnlockedThemes(getUnlockedThemes());
     setExams(getAllExams());
     setSurvivalBest(getSurvivalBest());
-    setStudyTime(getStudyTime());
     setMuted(isSoundMuted());
     setHasLocalData(
       quizData.totalAnswers > 0 ||
@@ -62,8 +59,24 @@ export default function ProfilePage() {
 
   if (!mounted || authLoading) return <div className="min-h-screen" />;
 
-  const completedLessons = Object.values(stars).filter(s => s > 0).length;
+  const completedLessons = Object.values(themeMap).reduce((sum, theme) =>
+    sum + theme.lessons.filter(l =>
+      lessonEffectivelyCompleted(l.id, l.theory?.length ?? 1, isLessonCompleted, getCompletedParties)
+    ).length,
+  0);
   const passedExams = Object.values(exams).filter(Boolean).length;
+
+  // Progression globale (toutes parties confondues) — la métrique « suis-je
+  // prêt pour l'examen ? », même unité que la route des thèmes et les médailles
+  const globalParts = Object.values(themeMap).reduce((acc, theme) => {
+    for (const lesson of theme.lessons) {
+      const parts = countThemeParts(lesson.id, lesson.theory?.length ?? 1, isLessonCompleted, getCompletedParties);
+      acc.done += parts.done;
+      acc.total += parts.total;
+    }
+    return acc;
+  }, { done: 0, total: 0 });
+  const globalPct = globalParts.total > 0 ? Math.round((globalParts.done / globalParts.total) * 100) : 0;
 
   const handleCancel = async () => {
     setCancelling(true);
@@ -173,9 +186,10 @@ export default function ProfilePage() {
         if (!theme) return (
           <div key={code} className="animate-pulse rounded-xl" style={{ height: 56, background: 'var(--border-subtle)' }} />
         );
-        const lessonIds = theme.lessons.map(l => l.id);
-        const done = lessonIds.filter(id => (stars[id] ?? 0) > 0).length;
-        const total = lessonIds.length;
+        const done = theme.lessons.filter(l =>
+          lessonEffectivelyCompleted(l.id, l.theory?.length ?? 1, isLessonCompleted, getCompletedParties)
+        ).length;
+        const total = theme.lessons.length;
         const pct = total > 0 ? Math.round((done / total) * 100) : 0;
         const col = THEME_COLORS[code];
         return (
@@ -228,18 +242,14 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* 2. Stats */}
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              { value: completedLessons, label: t('lecons'), color: 'var(--brand)' },
-              { value: formatStudyTime(studyTime), label: t('temps_etudie'), color: 'var(--secondary)' },
-            ].map(stat => (
-              <div key={stat.label} className="rounded-2xl p-4 flex flex-col items-center gap-1"
-                style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-                <span className="text-2xl font-black" style={{ color: stat.color }}>{stat.value}</span>
-                <span className="text-[11px] font-bold" style={{ color: 'var(--text-disabled)' }}>{stat.label}</span>
-              </div>
-            ))}
+          {/* 2. Progression globale */}
+          <div className="rounded-2xl p-4 flex flex-col items-center gap-2"
+            style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+            <span className="text-2xl font-black" style={{ color: 'var(--brand)' }}>{globalPct}%</span>
+            <div className="w-full rounded-full overflow-hidden" style={{ height: 8, background: 'var(--border-subtle)' }}>
+              <div className="h-full rounded-full transition-all duration-700" style={{ width: `${Math.max(globalPct, 2)}%`, background: 'var(--brand)' }} />
+            </div>
+            <span className="text-[11px] font-bold" style={{ color: 'var(--text-disabled)' }}>{t('profil_progression')}</span>
           </div>
 
           {/* 3. Performance par thème */}
@@ -344,18 +354,14 @@ export default function ProfilePage() {
                 {/* Separator */}
                 <div className="h-px mb-5" style={{ background: 'var(--border-subtle)' }} />
 
-                {/* Stats */}
-                <div className="grid grid-cols-2 gap-3 mb-5">
-                  {[
-                    { value: completedLessons, label: t('lecons'), color: 'var(--brand)' },
-                    { value: formatStudyTime(studyTime), label: t('temps_etudie'), color: 'var(--secondary)' },
-                  ].map(stat => (
-                    <div key={stat.label} className="rounded-xl p-3 text-center card-hover"
-                      style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                      <span className="text-xl font-black block" style={{ color: stat.color }}>{stat.value}</span>
-                      <p className="text-[10px] font-bold" style={{ color: 'var(--text-disabled)' }}>{stat.label}</p>
-                    </div>
-                  ))}
+                {/* Progression globale */}
+                <div className="rounded-xl p-4 text-center card-hover mb-5"
+                  style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
+                  <span className="text-xl font-black block mb-2" style={{ color: 'var(--brand)' }}>{globalPct}%</span>
+                  <div className="w-full rounded-full overflow-hidden mb-2" style={{ height: 7, background: 'var(--border-subtle)' }}>
+                    <div className="h-full rounded-full transition-all duration-700" style={{ width: `${Math.max(globalPct, 2)}%`, background: 'var(--brand)' }} />
+                  </div>
+                  <p className="text-[10px] font-bold" style={{ color: 'var(--text-disabled)' }}>{t('profil_progression')}</p>
                 </div>
 
               </div>
@@ -418,9 +424,10 @@ export default function ProfilePage() {
                 if (!theme) return (
                   <div key={code} className="animate-pulse rounded-xl" style={{ height: 60, background: 'var(--border-subtle)' }} />
                 );
-                const lessonIds = theme.lessons.map(l => l.id);
-                const done = lessonIds.filter(id => (stars[id] ?? 0) > 0).length;
-                const total = lessonIds.length;
+                const done = theme.lessons.filter(l =>
+                  lessonEffectivelyCompleted(l.id, l.theory?.length ?? 1, isLessonCompleted, getCompletedParties)
+                ).length;
+                const total = theme.lessons.length;
                 const pct = total > 0 ? Math.round((done / total) * 100) : 0;
                 const col = THEME_COLORS[code];
                 return (

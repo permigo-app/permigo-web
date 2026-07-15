@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_ORDER, getThemeDataLocalized } from '@/lib/lessonData';
 import { isLessonCompleted, getCompletedParties, getAllExams } from '@/lib/progressStorage';
-import { computeTier, countThemeParts, TIER_PCT, type Tier } from '@/lib/medals';
+import { computeTier, countThemeParts, TIER_PCT, TIER_COLORS, type Tier } from '@/lib/medals';
 import { MedalIcon } from '@/components/ExamRoute';
 import { TrophyIcon } from '@/components/GlobalTrophies';
 
@@ -12,6 +12,7 @@ interface ThemeMedal {
   code: string;
   title: string;
   tier: Tier;
+  examPassed: boolean;
 }
 
 // Étagère de collection : la médaille la plus haute de chaque thème
@@ -40,7 +41,10 @@ export default function MedalCollection() {
         }
         totalAll += total;
         completedAll += completed;
-        result.push({ code, title: theme.title, tier: computeTier(completed, total, exams[code] === true) });
+        // La médaille de l'étagère reflète UNIQUEMENT la progression des leçons
+        // (max Or) — l'examen réussi est signalé par la pastille diamant en coin,
+        // pas en remplaçant la médaille elle-même.
+        result.push({ code, title: theme.title, tier: computeTier(completed, total, false), examPassed: exams[code] === true });
       }
       if (cancelled) return;
       setMedals(result);
@@ -96,20 +100,35 @@ export default function MedalCollection() {
         borderRadius: 16, padding: 14,
       }}>
         {medals.map(m => (
-          <div key={m.code} title={`${m.code} · ${m.title}`}
+          <div key={m.code} title={`${m.code} · ${m.title}${m.examPassed ? ' · ' + t('route_medal_examen') : ''}`}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, minWidth: 0 }}>
-            {m.tier === 'none' ? (
-              <div style={{
-                width: 34, height: 34, borderRadius: '50%',
-                border: '2px dashed var(--border-subtle)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: 13, fontWeight: 800, color: 'var(--text-disabled)',
-              }}>
-                {m.code}
-              </div>
-            ) : (
-              <MedalIcon kind={m.tier} achieved size={34} />
-            )}
+            <div style={{ position: 'relative' }}>
+              {m.tier === 'none' ? (
+                <div style={{
+                  width: 34, height: 34, borderRadius: '50%',
+                  border: '2px dashed var(--border-subtle)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 13, fontWeight: 800, color: 'var(--text-disabled)',
+                }}>
+                  {m.code}
+                </div>
+              ) : (
+                <MedalIcon kind={m.tier} achieved size={34} />
+              )}
+              {m.examPassed && (
+                <div style={{
+                  position: 'absolute', top: -5, right: -5,
+                  width: 15, height: 15, borderRadius: '50%',
+                  background: 'var(--card-primary)',
+                  border: `1.5px solid ${TIER_COLORS.diamant.main}`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 3h10l4 6-9 12L3 9z" fill={TIER_COLORS.diamant.main} />
+                  </svg>
+                </div>
+              )}
+            </div>
             <span style={{
               fontSize: 9, fontWeight: 700, maxWidth: '100%',
               whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',

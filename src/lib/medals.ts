@@ -33,9 +33,14 @@ export function computeTier(completed: number, total: number, examPassed: boolea
  * (unité fine) et non par leçon entière — sinon un thème de 2 leçons saute
  * de 0% à 50% d'un coup.
  *
- * Les parties enregistrées font foi : le flag « leçon terminée » (et son
- * repli étoiles) a pu être posé à tort par une seule partie réussie — il ne
- * compte que pour les données d'avant le mode parties (aucune partie stockée).
+ * Les parties enregistrées font foi. Le flag « leçon terminée » (et son
+ * repli étoiles) ne sert de secours QUE pour les leçons à une seule partie,
+ * où le suivi par partie n'a jamais existé — jamais pour une leçon à
+ * plusieurs parties. Sinon, dès que `lessonPartiesDone_*` est vide pour
+ * n'importe quelle raison (rien fait ici, ou simplement pas encore
+ * synchronisé depuis un autre appareil — Supabase ne transporte que le
+ * score global, pas le détail par partie), la leçon entière réapparaît
+ * faussement validée à 100 % au lieu de 0 %.
  */
 export function countThemeParts(
   lessonId: string,
@@ -45,9 +50,10 @@ export function countThemeParts(
 ): { done: number; total: number } {
   const total = Math.max(1, partsInLesson);
   const partiesDone = getCompletedParties(lessonId).length;
+  const canFallBackToLegacyFlag = total <= 1;
   const done = partiesDone > 0
     ? Math.min(total, partiesDone)
-    : (isLessonCompleted(lessonId) ? total : 0);
+    : (canFallBackToLegacyFlag && isLessonCompleted(lessonId) ? total : 0);
   return { done, total };
 }
 

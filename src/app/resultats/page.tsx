@@ -5,6 +5,8 @@ import { Suspense } from 'react';
 import Link from 'next/link';
 import { THEME_COLORS } from '@/lib/constants';
 import { useLang } from '@/contexts/LanguageContext';
+import { TIER_COLORS, type Tier } from '@/lib/medals';
+import { MedalIcon } from '@/components/ExamRoute';
 
 function ResultsContent() {
   const params = useSearchParams();
@@ -21,6 +23,8 @@ function ResultsContent() {
   const partieNum = partieRaw !== null ? Number(partieRaw) : null;
   const totalParties = Number(params.get('totalParties') ?? 0);
   const hasNextPartie = partieNum !== null && partieNum + 1 < totalParties;
+  const medalParam = params.get('medal') as Tier | null;
+  const unlockedMedal = medalParam && medalParam !== 'none' ? medalParam : null;
 
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
   const passed = isExam ? pct >= 82 : earnedStars > 0;
@@ -36,6 +40,28 @@ function ResultsContent() {
       <div className="text-center mb-6">
         <h1 className="text-[28px] font-black" style={{ color: scoreColor }}>{title}</h1>
       </div>
+
+      {/* Médaille de thème fraîchement débloquée */}
+      {unlockedMedal && (
+        <div
+          className="flex items-center gap-3 rounded-3xl px-4 py-3 mb-6 slide-up"
+          style={{
+            background: `${TIER_COLORS[unlockedMedal].main}22`,
+            border: `1px solid ${TIER_COLORS[unlockedMedal].main}66`,
+            animationDelay: '150ms',
+          }}
+        >
+          <MedalIcon kind={unlockedMedal} achieved size={40} />
+          <div>
+            <div className="font-black text-sm" style={{ color: 'var(--text-title)' }}>
+              {t('resultats_medaille_debloquee')}
+            </div>
+            <div className="text-xs" style={{ color: 'var(--text-hint)' }}>
+              {t('resultats_medaille_theme_prefix')} {themeCode} · {t('route_medal_' + unlockedMedal)}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Score circle */}
       <div className="flex justify-center mb-6">

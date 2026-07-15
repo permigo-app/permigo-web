@@ -40,12 +40,17 @@ export default function ThemeDetailPage() {
   useEffect(() => {
     if (!theme) return;
     const rows: LessonRow[] = theme.lessons.map((lesson, i) => {
-      const done = lessonEffectivelyCompleted(lesson.id, lesson.theory?.length ?? 1, isLessonCompleted, getCompletedParties);
+      const totalParties = Math.max(1, lesson.theory?.length ?? 1);
+      const done = lessonEffectivelyCompleted(lesson.id, totalParties, isLessonCompleted, getCompletedParties);
+      // % basé sur les parties réellement VALIDÉES (quiz ≥90%), pas sur la
+      // partie la plus avancée atteinte — sinon faire la dernière partie en
+      // premier affichait ~100% alors qu'une seule partie était faite.
+      const partiesDone = getCompletedParties(lesson.id).length;
+      const pct = Math.round((Math.min(partiesDone, totalParties) / totalParties) * 100);
       const prog = getLessonProgress(lesson.id);
-      const pct = prog.total > 0 ? Math.round((prog.cardsViewed / prog.total) * 100) : 0;
       let status: 'done' | 'active' | 'todo';
       if (done) status = 'done';
-      else if (prog.cardsViewed > 0) status = 'active';
+      else if (partiesDone > 0 || prog.cardsViewed > 0) status = 'active';
       else status = 'todo';
       return { id: lesson.id, title: lesson.title, index: i + 1, status, pct };
     });

@@ -2,9 +2,10 @@
 
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie } from '@/lib/lessonData';
+import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie, type LocalLesson } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
-import { setStars, updateQuizHistory, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, markLessonCompleted, isPartieCompleted, getCompletedParties, addStudyTime } from '@/lib/progressStorage';
+import { setStars, updateQuizHistory, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, markLessonCompleted, isPartieCompleted, isLessonCompleted, getCompletedParties, getAllExams, addStudyTime } from '@/lib/progressStorage';
+import { computeTier, countThemeParts, TIER_ORDER, type Tier } from '@/lib/medals';
 import { recordQuestionReview } from '@/lib/reviewApi';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { isPremium, isThemeFree } from '@/lib/premium';
@@ -35,6 +36,18 @@ function getQuestionsForPartie(
   return questions.slice(start, start + count);
 }
 
+/** Palier de médaille du thème à l'instant T (mêmes règles que MedalCollection). */
+function themeTierNow(lessons: LocalLesson[], themeCode: string): Tier {
+  let done = 0, total = 0;
+  for (const l of lessons) {
+    const parts = countThemeParts(l.id, l.theory?.length ?? 1, isLessonCompleted, getCompletedParties);
+    done += parts.done;
+    total += parts.total;
+  }
+  const exams = getAllExams();
+  return computeTier(done, total, exams[themeCode] === true);
+}
+
 function shuffleQuestion(q: LocalQuestion) {
   const order = [0, 1, 2, 3].sort(() => Math.random() - 0.5);
   return {
@@ -57,8 +70,9 @@ export default function LessonPage() {
   const partieIndex = isPartieMode ? parseInt(partieParam, 10) : undefined;
 
   const [phase, setPhase] = useState<Phase>('theory');
-  const [lesson, setLesson] = useState<import('@/lib/lessonData').LocalLesson | null>(null);
+  const [lesson, setLesson] = useState<LocalLesson | null>(null);
   const [themeCode, setThemeCode] = useState('A');
+  const [themeLessons, setThemeLessons] = useState<LocalLesson[]>([]);
 
   // Theory
   const [currentCard, setCurrentCard] = useState(0);
@@ -77,7 +91,7 @@ export default function LessonPage() {
 
   useEffect(() => {
     getLessonDataLocalized(lessonId, lang).then(l => setLesson(l));
-    getThemeForLessonLocalized(lessonId, lang).then(t => { if (t) setThemeCode(t.theme); });
+    getThemeForLessonLocalized(lessonId, lang).then(t => { if (t) { setThemeCode(t.theme); setThemeLessons(t.lessons); } });
   }, [lessonId, lang]);
 
   // Reset all quiz state when the active partie changes
@@ -174,6 +188,12 @@ export default function LessonPage() {
     else if (pct >= 0.7) earnedStars = 2;
     else if (pct >= 0.5) earnedStars = 1;
 
+    // Palier de médaille du thème avant cette leçon — comparé au palier
+    // après pour détecter un déblocage frais et le signaler sur /resultats
+    // (sinon la seule façon de le remarquer est d'aller voir soi-même la
+    // collection de médailles).
+    const tierBefore: Tier = themeLessons.length > 0 ? themeTierNow(themeLessons, themeCode) : 'none';
+
     updateQuizHistory(correctCount, total);
 
     if (isPartieMode && partieIndex !== undefined) {
@@ -193,10 +213,13 @@ export default function LessonPage() {
 
     addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
 
+    const tierAfter: Tier = themeLessons.length > 0 ? themeTierNow(themeLessons, themeCode) : 'none';
+    const medalStr = TIER_ORDER.indexOf(tierAfter) > TIER_ORDER.indexOf(tierBefore) ? `&medal=${tierAfter}` : '';
+
     const partieStr = isPartieMode && partieIndex !== undefined
       ? `&partie=${partieIndex}&totalParties=${theories.length}`
       : '';
-    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&lesson=${lessonId}&theme=${themeCode}${partieStr}`);
+    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=${earnedStars}&lesson=${lessonId}&theme=${themeCode}${partieStr}${medalStr}`);
   };
 
   const retryPartie = () => {

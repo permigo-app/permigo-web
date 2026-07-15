@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 import { supabase, hasSupabase } from '@/lib/supabase';
 import { getUserProfile, createUserProfile, mapProfileToUser, type AppUser } from '@/lib/supabaseUser';
-import { syncAllToSupabase, getXPData, getStreakData } from '@/lib/progressStorage';
+import { syncAllToSupabase, getXPData, getStreakData, applyCompletedPartiesFromRemote, applyPanneauxMasteredFromRemote } from '@/lib/progressStorage';
 import { useLang } from '@/contexts/LanguageContext';
 
 type Lang = 'fr' | 'nl';
@@ -119,6 +119,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (profile.stars && Object.keys(profile.stars).length > 0) localStorage.setItem('@progress_stars', JSON.stringify(profile.stars));
         if (profile.quiz_history) localStorage.setItem('quizHistory', JSON.stringify(profile.quiz_history));
         if (profile.survival_best > 0) localStorage.setItem('survie_best_score', String(profile.survival_best));
+        // Détail par partie : sans ça, une leçon multi-parties commencée sur cet
+        // appareil peut réapparaître à 0% après avoir restauré `stars` seul.
+        if (profile.lesson_parties_done && Object.keys(profile.lesson_parties_done).length > 0) {
+          applyCompletedPartiesFromRemote(profile.lesson_parties_done);
+        }
+        // Examens réussis par thème : sans ça, le palier Diamant et le badge
+        // "examen réussi" restent invisibles sur un appareil qui n'a pas
+        // lui-même fait passer l'examen (seul `stars`/xp étaient restaurés).
+        if (profile.exams && Object.keys(profile.exams).length > 0) {
+          localStorage.setItem('@progress_exams', JSON.stringify(profile.exams));
+        }
+        // Panneaux maîtrisés (flashcards) — fusion avec le local
+        applyPanneauxMasteredFromRemote(profile.panneaux_mastered);
       } else if (localXP.totalXP > remoteXP) {
         // localStorage wins → auto-migrate to Supabase
         syncAllToSupabase(sbUser.id).catch(console.error);
@@ -206,6 +219,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       '@progress_stars', '@progress_exams', '@progress_themes',
       'quizHistory', 'survie_best_score',
       'streakAnimationShownDate', 'userCar', 'userProfile',
+      'panneaux_mastered',
     ];
     PROGRESS_KEYS.forEach(k => localStorage.removeItem(k));
     Object.keys(localStorage)

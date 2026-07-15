@@ -220,6 +220,53 @@ export function markPartieDone(lessonId: string, partieIndex: number): void {
   setItem(`partie_completed_${lessonId}_p${partieIndex}`, 'true');
 }
 
+/** Toutes les parties complétées, tous lessonId confondus — pour la synchro Supabase. */
+export function getAllCompletedParties(): Record<string, number[]> {
+  if (typeof window === 'undefined') return {};
+  const prefix = 'lessonPartiesDone_';
+  const result: Record<string, number[]> = {};
+  for (const key of Object.keys(localStorage)) {
+    if (!key.startsWith(prefix)) continue;
+    const lessonId = key.slice(prefix.length);
+    try {
+      const arr = JSON.parse(localStorage.getItem(key) ?? '[]');
+      if (Array.isArray(arr) && arr.length > 0) result[lessonId] = arr;
+    } catch {
+      // ignore malformed entries
+    }
+  }
+  return result;
+}
+
+/** Réécrit les parties complétées reçues de Supabase dans localStorage (une clé par leçon). */
+export function applyCompletedPartiesFromRemote(remote: Record<string, number[]>): void {
+  if (typeof window === 'undefined' || !remote) return;
+  for (const [lessonId, indices] of Object.entries(remote)) {
+    if (Array.isArray(indices) && indices.length > 0) {
+      setItem(lessonPartiesDoneKey(lessonId), JSON.stringify(indices));
+    }
+  }
+}
+
+// ── Panneaux maîtrisés (flashcards) ──
+// Même clé que PanneauxFlashPanel — ici uniquement pour la synchro Supabase.
+export function getPanneauxMastered(): Record<string, boolean> {
+  const raw = getItem('panneaux_mastered');
+  try {
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+export function applyPanneauxMasteredFromRemote(remote: Record<string, boolean>): void {
+  if (typeof window === 'undefined' || !remote || Object.keys(remote).length === 0) return;
+  // Fusion (union) avec le local : la maîtrise déjà acquise sur cet appareil
+  // ne doit pas être perdue si le remote est plus pauvre.
+  const merged = { ...getPanneauxMastered(), ...remote };
+  setItem('panneaux_mastered', JSON.stringify(merged));
+}
+
 // ── Lesson ordered completion ──
 export function isLessonCompleted(lessonId: string): boolean {
   if (typeof window === 'undefined') return false;
@@ -335,7 +382,9 @@ export function resetAllProgress(): void {
   const keys = Object.keys(localStorage);
   keys.forEach(k => {
     if (k.startsWith('@progress') || k.startsWith('lessonProgress_') || k.startsWith('lessonPartiesDone_') ||
-        k === KEY_QUIZ || k === KEY_STREAK || k === KEY_XP || k === KEY_STUDY_TIME || k === 'survie_best_score') {
+        k.startsWith('lesson_completed_') || k.startsWith('partie_completed_') ||
+        k === KEY_QUIZ || k === KEY_STREAK || k === KEY_XP || k === KEY_STUDY_TIME || k === 'survie_best_score' ||
+        k === 'panneaux_mastered') {
       localStorage.removeItem(k);
     }
   });
@@ -352,5 +401,7 @@ export async function syncAllToSupabase(uid: string): Promise<void> {
     quizHistory: getQuizHistory(),
     streakData: getStreakData(),
     xpData: getXPData(),
+    lessonPartiesDone: getAllCompletedParties(),
+    panneauxMastered: getPanneauxMastered(),
   });
 }

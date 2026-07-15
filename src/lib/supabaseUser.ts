@@ -24,6 +24,8 @@ export interface SupabaseProfile {
   quiz_history: { totalCorrect: number; totalAnswers: number };
   streak_data: { currentStreak: number; lastActiveDate: string; bestStreak: number };
   xp_data: { totalXP: number; level: number };
+  lesson_parties_done: Record<string, number[]>;
+  panneaux_mastered: Record<string, boolean>;
   is_premium: boolean;
   created_at: string | null;
   updated_at: string | null;
@@ -77,6 +79,8 @@ function mergeProfile(
     quiz_history: row.quiz_history ?? meta.quiz_history ?? { totalCorrect: 0, totalAnswers: 0 },
     streak_data: row.streak_data ?? meta.streak_data ?? { currentStreak: 0, lastActiveDate: '', bestStreak: 0 },
     xp_data: row.xp_data ?? meta.xp_data ?? { totalXP: 0, level: 1 },
+    lesson_parties_done: row.lesson_parties_done ?? meta.lesson_parties_done ?? {},
+    panneaux_mastered: row.panneaux_mastered ?? meta.panneaux_mastered ?? {},
     is_premium: row.is_premium === true,
     created_at: row.created_at ?? new Date().toISOString(),
     updated_at: row.updated_at ?? new Date().toISOString(),
@@ -118,6 +122,8 @@ export async function createUserProfile(params: {
         quiz_history: { totalCorrect: 0, totalAnswers: 0 },
         streak_data: { currentStreak: 0, lastActiveDate: '', bestStreak: 0 },
         xp_data: { totalXP: 0, level: 1 },
+        lesson_parties_done: {},
+        panneaux_mastered: {},
       },
     });
 
@@ -187,6 +193,14 @@ export async function syncProgressToSupabase(uid: string, progress: {
   quizHistory: { totalCorrect: number; totalAnswers: number };
   streakData: { currentStreak: number; lastActiveDate: string; bestStreak: number };
   xpData: { totalXP: number; level: number };
+  // Détail par partie de leçon (ex: { A1: [0,1,2] }) — colonne `lesson_parties_done`
+  // (jsonb, ajoutée par migration). Sans cette synchro, un changement d'appareil
+  // ne récupère que le score global et une leçon multi-parties peut redevenir "0%"
+  // même après avoir été commencée ailleurs (medals.ts ne triche plus en la
+  // faisant passer pour "100% terminée").
+  lessonPartiesDone: Record<string, number[]>;
+  // Panneaux maîtrisés en flashcards — colonne `panneaux_mastered` (jsonb).
+  panneauxMastered: Record<string, boolean>;
 }): Promise<void> {
   if (!supabase) return;
   try {
@@ -198,6 +212,8 @@ export async function syncProgressToSupabase(uid: string, progress: {
       quiz_history: progress.quizHistory,
       streak_data: progress.streakData,
       xp_data: progress.xpData,
+      lesson_parties_done: progress.lessonPartiesDone,
+      panneaux_mastered: progress.panneauxMastered,
       updated_at: new Date().toISOString(),
     }).eq('id', uid);
 
@@ -210,6 +226,8 @@ export async function syncProgressToSupabase(uid: string, progress: {
         quiz_history: progress.quizHistory,
         streak_data: progress.streakData,
         xp_data: progress.xpData,
+        lesson_parties_done: progress.lessonPartiesDone,
+        panneaux_mastered: progress.panneauxMastered,
       },
     });
   } catch (e) {
