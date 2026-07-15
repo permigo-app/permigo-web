@@ -22,6 +22,7 @@ const fr: Record<string, string> = {
   xp_total: 'XP total',
   lecons: 'Leçons',
   temps_etudie: 'Temps étudié',
+  profil_progression: 'Progression globale',
   partager_progres: 'Partager mon progrès 🚗',
   se_connecter: 'Se connecter',
   s_inscrire: "S'inscrire",
@@ -104,6 +105,8 @@ const fr: Record<string, string> = {
   resultats_reessayer: 'Réessayer',
   resultats_continuer: '✓ Continuer',
   resultats_retour: '← Retour',
+  resultats_medaille_debloquee: 'Médaille débloquée !',
+  resultats_medaille_theme_prefix: 'Thème',
 
   // ── Révision ──
   revision_titre: 'Révision — Thème',
@@ -295,6 +298,15 @@ const fr: Record<string, string> = {
   panneaux_categorie_introuvable: 'Catégorie introuvable',
   panneaux_retour_categories: '← Retour aux catégories',
   panneaux_bientot: 'Les panneaux de cette catégorie arrivent bientôt !',
+
+  // ── Quiz panneaux ──
+  pquiz_retour: '← Retour aux panneaux',
+  pquiz_continue: 'Continue !',
+  pquiz_categorie: 'Catégorie',
+  pquiz_recommencer: '🔄 Recommencer',
+  pquiz_bonne_reponse: 'Bonne réponse',
+  pquiz_suivante: 'Question suivante →',
+  pquiz_voir_score: 'Voir le score →',
 
   // ── Catégories panneaux ──
   panneau_cat_A: 'Danger',

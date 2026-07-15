@@ -7,6 +7,12 @@ import { getSignsByCategory } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
+import { isPremium } from '@/lib/premium';
+import PremiumGate from '@/components/PremiumGate';
+
+// Mêmes catégories gratuites que sur le hub /panneaux — le verrou doit exister
+// ici aussi, sinon l'URL directe /panneaux/B contourne le premium.
+const FREE_PANNEAU_IDS = ['A', 'C', 'D'];
 
 export default function PanneauCategoriePage() {
   const params = useParams();
@@ -19,7 +25,6 @@ export default function PanneauCategoriePage() {
 
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
   const [selectedSign, setSelectedSign] = useState<string | null>(null);
-  const [mobileFlash, setMobileFlash] = useState(false);
 
   useEffect(() => {
     setMasteredMap(loadAllMastered());
@@ -28,6 +33,10 @@ export default function PanneauCategoriePage() {
   const refreshMastered = useCallback(() => {
     setMasteredMap(loadAllMastered());
   }, []);
+
+  if (category && !FREE_PANNEAU_IDS.includes(catId) && !isPremium()) {
+    return <PremiumGate><></></PremiumGate>;
+  }
 
   if (!category) {
     return (
@@ -52,7 +61,7 @@ export default function PanneauCategoriePage() {
           {t('panneaux_retour_categories')}
         </button>
 
-        <div className="flex items-center gap-4 mb-2">
+        <div className="flex items-center gap-4 mb-6 lg:mb-2">
           <div
             className="w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0"
             style={{ background: category.color + '15', border: `1px solid ${category.color}30` }}
@@ -65,18 +74,22 @@ export default function PanneauCategoriePage() {
           </div>
           <div className="flex-1">
             <h1 className="text-2xl font-black">{t(`panneau_cat_${category.id}`)}</h1>
-            <p className="text-sm mt-0.5" style={{ color: 'var(--brand)' }}>
+            {/* Progression flashcards — desktop uniquement */}
+            <p className="text-sm mt-0.5 hidden lg:block" style={{ color: 'var(--brand)' }}>
               {masteredCount}/{total} {t('panneaux_maitrises')}
+            </p>
+            <p className="text-sm mt-0.5 lg:hidden" style={{ color: 'var(--text-secondary)' }}>
+              {total} {t('panneaux_count')}
             </p>
           </div>
         </div>
 
-        {/* Progress bar */}
-        <div className="flex items-center gap-3 mb-8">
+        {/* Progress bar — desktop uniquement */}
+        <div className="hidden lg:flex items-center gap-3 mb-8">
           <div className="flex-1 h-2.5 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
             <div
               className="h-full rounded-full transition-all duration-300"
-              style={{ width: `${Math.max(pct, 2)}%`, background: 'var(--brand)' }}
+              style={{ width: `${pct === 0 ? 0 : Math.max(pct, 2)}%`, background: 'var(--brand)' }}
             />
           </div>
           <span className="text-xs font-bold" style={{ color: pct === 100 ? 'var(--success)' : 'var(--brand)' }}>
@@ -114,13 +127,14 @@ export default function PanneauCategoriePage() {
                         e.currentTarget.style.boxShadow = 'none';
                       }}
                       onClick={() => {
+                        // Alimente la flashcard de la sidebar — desktop uniquement,
+                        // sur mobile le tap n'a volontairement aucun effet
                         setSelectedSign(sign.code);
-                        setMobileFlash(true);
                       }}
                     >
-                      {/* Mastered badge */}
+                      {/* Mastered badge — desktop uniquement */}
                       {isMastered && (
-                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full flex items-center justify-center text-xs" style={{ background: 'var(--success)', color: '#ffffff' }}>
+                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full hidden lg:flex items-center justify-center text-xs" style={{ background: 'var(--success)', color: '#ffffff' }}>
                           ✓
                         </div>
                       )}
@@ -158,40 +172,6 @@ export default function PanneauCategoriePage() {
           </div>
         </div>
 
-        {/* Mobile bottom-sheet flashcard */}
-        {mobileFlash && (
-          <div className="xl:hidden fixed inset-0 z-50 flex flex-col justify-end" onClick={() => setMobileFlash(false)}>
-            <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.6)' }} />
-            <div
-              className="relative rounded-t-3xl p-6 pb-10 max-h-[85vh] overflow-y-auto"
-              style={{ background: 'var(--card-primary)', borderTop: `3px solid ${category.color}` }}
-              onClick={e => e.stopPropagation()}
-            >
-              <div className="flex justify-center mb-4">
-                <div className="w-10 h-1 rounded-full" style={{ background: 'var(--text-disabled)' }} />
-              </div>
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-sm font-extrabold flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                  <span>🃏</span> Flashcard — {t(`panneau_cat_${category.id}`)}
-                </h3>
-                <button
-                  onClick={() => setMobileFlash(false)}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center press-scale"
-                  style={{ background: 'var(--card-secondary)' }}
-                >
-                  <span style={{ color: 'var(--text-secondary)' }}>✕</span>
-                </button>
-              </div>
-              <PanneauxFlashPanel
-                key={`mobile-${catId}-${selectedSign || 'default'}`}
-                catId={catId}
-                color={category.color}
-                initialSignCode={selectedSign}
-                onMasteredChange={refreshMastered}
-              />
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

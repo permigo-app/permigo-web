@@ -5,6 +5,13 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import SignImage from '@/components/SignImage';
 import rawQuizData from '@/data/panneaux_quiz.json';
+import { isPremium } from '@/lib/premium';
+import PremiumGate from '@/components/PremiumGate';
+import { useLang } from '@/contexts/LanguageContext';
+
+// Catégories de quiz atteignables depuis une carte gratuite du hub (A, C, D
+// → quiz A, BC, D). Les autres exigent premium, même par URL directe.
+const FREE_QUIZ_CATS = ['A', 'BC', 'D'];
 
 interface QuizQuestion {
   id: string;
@@ -13,11 +20,16 @@ interface QuizQuestion {
   answers: string[];
   correct: number;
   explanation: string;
+  // Traductions NL (repli sur le FR si absentes)
+  question_nl?: string;
+  answers_nl?: string[];
+  explanation_nl?: string;
 }
 
 interface QuizCategory {
   id: string;
   title: string;
+  title_nl?: string;
   color: string;
   icon: string;
   questions: QuizQuestion[];
@@ -42,9 +54,12 @@ function shuffle<T>(arr: T[]): T[] {
 function QuizContent() {
   const params = useSearchParams();
   const router = useRouter();
+  const { t, lang } = useLang();
   const catId = params.get('cat') ?? 'F';
 
   const cat = quizData.categories.find(c => c.id === catId);
+  const isNL = lang === 'nl';
+  const catTitle = (isNL && cat?.title_nl) || cat?.title || '';
 
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [current, setCurrent] = useState(0);
@@ -64,21 +79,28 @@ function QuizContent() {
     }
   }, [catId]); // eslint-disable-line
 
-  // Shuffle answers when question changes
+  // Shuffle answers when question changes (localized, FR fallback)
   useEffect(() => {
     const q = questions[current];
     if (!q) return;
+    const answersLoc = isNL && q.answers_nl && q.answers_nl.length === q.answers.length
+      ? q.answers_nl
+      : q.answers;
     setShuffledAnswers(
-      shuffle(q.answers.map((text, i) => ({ text, originalIdx: i })))
+      shuffle(answersLoc.map((text, i) => ({ text, originalIdx: i })))
     );
-  }, [current, questions]);
+  }, [current, questions, isNL]);
+
+  if (cat && !FREE_QUIZ_CATS.includes(catId) && !isPremium()) {
+    return <PremiumGate><></></PremiumGate>;
+  }
 
   if (!cat) {
     return (
       <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--bg-page)' }}>
         <div className="text-center">
-          <p className="text-lg font-bold mb-4" style={{ color: 'var(--text-primary)' }}>Catégorie introuvable</p>
-          <Link href="/panneaux" className="text-sm font-bold" style={{ color: 'var(--brand)' }}>← Retour aux panneaux</Link>
+          <p className="text-lg font-bold mb-4" style={{ color: 'var(--text-primary)' }}>{t('panneaux_categorie_introuvable')}</p>
+          <Link href="/panneaux" className="text-sm font-bold" style={{ color: 'var(--brand)' }}>{t('pquiz_retour')}</Link>
         </div>
       </div>
     );
@@ -121,7 +143,7 @@ function QuizContent() {
         <div className="max-w-md mx-auto w-full px-4 py-12 flex flex-col items-center text-center gap-6">
           <span style={{ fontSize: 72 }}>{passed ? '🏆' : '💪'}</span>
           <h1 className="text-3xl font-black" style={{ color: passed ? '#22c55e' : '#f59e0b' }}>
-            {passed ? 'Bravo !' : 'Continue !'}
+            {passed ? t('resultats_bravo') : t('pquiz_continue')}
           </h1>
 
           {/* Score circle */}
@@ -135,7 +157,7 @@ function QuizContent() {
 
           <div className="rounded-2xl px-6 py-3" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
             <p className="text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>
-              Catégorie <span className="font-black" style={{ color: cat.color }}>{cat.title}</span>
+              {t('pquiz_categorie')} <span className="font-black" style={{ color: cat.color }}>{catTitle}</span>
             </p>
           </div>
 
@@ -145,14 +167,14 @@ function QuizContent() {
               className="w-full py-4 rounded-2xl font-black text-sm press-scale"
               style={{ background: cat.color, color: '#fff' }}
             >
-              🔄 Recommencer
+              {t('pquiz_recommencer')}
             </button>
             <Link
               href="/panneaux"
               className="w-full py-4 rounded-2xl font-black text-sm text-center press-scale block"
               style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}
             >
-              ← Retour aux panneaux
+              {t('pquiz_retour')}
             </Link>
           </div>
         </div>
@@ -182,7 +204,7 @@ function QuizContent() {
         </button>
 
         <div className="flex-1 min-w-0">
-          <p className="text-xs font-bold truncate" style={{ color: cat.color }}>{cat.title}</p>
+          <p className="text-xs font-bold truncate" style={{ color: cat.color }}>{catTitle}</p>
           {/* Progress bar */}
           <div className="mt-1 h-1.5 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
             <div
@@ -209,7 +231,7 @@ function QuizContent() {
 
         {/* Question */}
         <p className="text-[18px] font-bold leading-snug" style={{ color: 'var(--text-primary)' }}>
-          {q.question}
+          {(isNL && q.question_nl) || q.question}
         </p>
 
         {/* Answer choices */}
@@ -261,9 +283,9 @@ function QuizContent() {
             }}
           >
             <span className="font-bold" style={{ color: selectedIsCorrect ? '#16a34a' : '#d97706' }}>
-              {selectedIsCorrect ? '✓ Bonne réponse · ' : 'ⓘ  '}
+              {selectedIsCorrect ? `✓ ${t('pquiz_bonne_reponse')} · ` : 'ⓘ  '}
             </span>
-            {q.explanation}
+            {(isNL && q.explanation_nl) || q.explanation}
           </div>
         )}
 
@@ -274,7 +296,7 @@ function QuizContent() {
             className="w-full py-4 rounded-2xl font-black text-sm press-scale"
             style={{ background: cat.color, color: cat.id === 'F' ? '#fff' : '#fff' }}
           >
-            {current + 1 < total ? 'Question suivante →' : 'Voir le score →'}
+            {current + 1 < total ? t('pquiz_suivante') : t('pquiz_voir_score')}
           </button>
         )}
       </div>
@@ -286,10 +308,7 @@ export default function PanneauxQuizPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--bg-page)' }}>
-        <div className="text-center">
-          <div className="w-10 h-10 rounded-full border-4 border-t-transparent animate-spin mx-auto mb-3" style={{ borderColor: '#f59e0b', borderTopColor: 'transparent' }} />
-          <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>Chargement…</p>
-        </div>
+        <div className="w-10 h-10 rounded-full border-4 border-t-transparent animate-spin" style={{ borderColor: '#f59e0b', borderTopColor: 'transparent' }} />
       </div>
     }>
       <QuizContent />

@@ -13,7 +13,7 @@ import rawQuizData from '@/data/panneaux_quiz.json';
 
 // PANNEAU_CATEGORIES id → quiz category id
 const PANNEAU_TO_QUIZ: Record<string, string> = {
-  A: 'A', B: 'BC', C: 'BC', D: 'D', E: 'E', F: 'F', FEU: 'FEU', LIGNE: 'SOL',
+  A: 'A', B: 'BC', C: 'BC', D: 'D', E: 'E', F: 'F', M: 'M', FEU: 'FEU', LIGNE: 'SOL', LT: 'LT',
 };
 
 // Derive quiz button data from panneaux_quiz.json — button only shown when count ≥ 1
@@ -34,7 +34,6 @@ export default function PanneauxPage() {
   const router = useRouter();
   const [selectedCat, setSelectedCat] = useState<string | null>(null);
   const [masteredMap, setMasteredMap] = useState<Record<string, boolean>>({});
-  const [mobileFlash, setMobileFlash] = useState(false);
   const userIsPremium = useIsPremium();
 
   useEffect(() => {
@@ -93,8 +92,10 @@ export default function PanneauxPage() {
                     }}
                     onClick={() => {
                       if (locked) { router.push('/premium'); return; }
+                      // Sélectionne pour la sidebar desktop — la sheet mobile ne
+                      // s'ouvre plus au tap sur la carte (trop intrusif), seulement
+                      // via le bouton Flashcards dédié.
                       setSelectedCat(isSelected ? null : cat.id);
-                      setMobileFlash(true);
                     }}
                   >
                     {locked && (
@@ -123,12 +124,12 @@ export default function PanneauxPage() {
                           {total} {t('panneaux_count')}
                         </p>
 
-                        {/* Progress bar */}
-                        <div className="flex items-center gap-2">
+                        {/* Progress bar flashcards — desktop uniquement */}
+                        <div className="hidden lg:flex items-center gap-2">
                           <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
                             <div
                               className="h-full rounded-full transition-all duration-300"
-                              style={{ width: `${Math.max(pct, 2)}%`, background: 'var(--brand)' }}
+                              style={{ width: `${pct === 0 ? 0 : Math.max(pct, 2)}%`, background: 'var(--brand)' }}
                             />
                           </div>
                           <span className="text-[11px] font-bold whitespace-nowrap" style={{ color: masteredCount === total && total > 0 ? 'var(--success)' : 'var(--brand)' }}>
@@ -178,8 +179,9 @@ export default function PanneauxPage() {
                             </Link>
                           )}
 
+
                           {pct === 100 && total > 0 && (
-                            <span className="text-xs font-bold ml-auto" style={{ color: 'var(--success)' }}>{t('panneaux_complet')}</span>
+                            <span className="text-xs font-bold ml-auto hidden lg:inline" style={{ color: 'var(--success)' }}>{t('panneaux_complet')}</span>
                           )}
                         </div>
                       )}
@@ -196,7 +198,7 @@ export default function PanneauxPage() {
               {selectedCat && selectedMeta ? (
                 <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: `1px solid ${selectedMeta.color}30` }}>
                   <h3 className="text-sm font-extrabold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                    <span>🃏</span> Flashcards — {selectedMeta.name}
+                    <span>🃏</span> Flashcards — {t(`panneau_cat_${selectedMeta.id}`)}
                   </h3>
                   <PanneauxFlashPanel
                     key={selectedCat}
@@ -218,42 +220,6 @@ export default function PanneauxPage() {
           </div>
         </div>
 
-        {/* Mobile bottom-sheet flashcard */}
-        {selectedCat && selectedMeta && mobileFlash && (
-          <div className="xl:hidden fixed inset-0 z-50 flex flex-col justify-end" onClick={() => setMobileFlash(false)}>
-            {/* Backdrop */}
-            <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.6)' }} />
-            {/* Sheet */}
-            <div
-              className="relative rounded-t-3xl p-6 pb-10 max-h-[85vh] overflow-y-auto"
-              style={{ background: 'var(--card-primary)', borderTop: `3px solid ${selectedMeta.color}` }}
-              onClick={e => e.stopPropagation()}
-            >
-              {/* Handle */}
-              <div className="flex justify-center mb-4">
-                <div className="w-10 h-1 rounded-full" style={{ background: 'var(--text-disabled)' }} />
-              </div>
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-sm font-extrabold flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                  <span>🃏</span> Flashcards — {selectedMeta.name}
-                </h3>
-                <button
-                  onClick={() => setMobileFlash(false)}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center press-scale"
-                  style={{ background: 'var(--card-secondary)' }}
-                >
-                  <span style={{ color: 'var(--text-secondary)' }}>✕</span>
-                </button>
-              </div>
-              <PanneauxFlashPanel
-                key={`mobile-${selectedCat}`}
-                catId={selectedCat}
-                color={selectedMeta.color}
-                onMasteredChange={refreshMastered}
-              />
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

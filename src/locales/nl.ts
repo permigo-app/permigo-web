@@ -22,6 +22,7 @@ const nl: Record<string, string> = {
   xp_total: 'Totaal XP',
   lecons: 'Lessen',
   temps_etudie: 'Studietijd',
+  profil_progression: 'Totale voortgang',
   partager_progres: 'Deel mijn voortgang 🚗',
   se_connecter: 'Inloggen',
   s_inscrire: 'Registreren',
@@ -104,6 +105,8 @@ const nl: Record<string, string> = {
   resultats_reessayer: 'Opnieuw proberen',
   resultats_continuer: '✓ Doorgaan',
   resultats_retour: '← Terug',
+  resultats_medaille_debloquee: 'Medaille ontgrendeld!',
+  resultats_medaille_theme_prefix: 'Thema',
 
   // ── Révision ──
   revision_titre: 'Herziening — Thema',
@@ -295,6 +298,15 @@ const nl: Record<string, string> = {
   panneaux_categorie_introuvable: 'Categorie niet gevonden',
   panneaux_retour_categories: '← Terug naar categorieën',
   panneaux_bientot: 'De borden van deze categorie komen binnenkort!',
+
+  // ── Quiz panneaux ──
+  pquiz_retour: '← Terug naar de borden',
+  pquiz_continue: 'Ga zo door!',
+  pquiz_categorie: 'Categorie',
+  pquiz_recommencer: '🔄 Opnieuw beginnen',
+  pquiz_bonne_reponse: 'Juist antwoord',
+  pquiz_suivante: 'Volgende vraag →',
+  pquiz_voir_score: 'Score bekijken →',
 
   // ── Catégories panneaux ──
   panneau_cat_A: 'Gevaar',
