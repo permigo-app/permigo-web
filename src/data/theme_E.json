@@ -752,10 +752,10 @@
           "id": "E1_Q66",
           "question": "Vous arrivez à un rétrécissement. Vous voyez le signal rond rouge/blanc. Le véhicule en face a le signal rectangulaire bleu. Qui passe ?",
           "choices": [
-            "Vous, car vous êtes arrivé en premier",
-            "Le véhicule en face, car il a la priorité (rectangulaire bleu) et vous devez céder (rond rouge/blanc)",
-            "Personne ne passe",
-            "Les deux en même temps"
+            "Vous, car vous êtes arrivé le premier",
+            "Le véhicule en face : son signal bleu lui donne la priorité",
+            "Personne, chacun attend l'autre",
+            "Le véhicule le plus large passe en premier"
           ],
           "correct": 1,
           "explanation": "Rond rouge/blanc = céder. Rectangulaire bleu = priorité. Le véhicule en face passe.",
@@ -2215,9 +2215,9 @@
           "question": "Vous voyez le signal d'interdiction de dépasser réservé aux camions > 3,5 t MMA. À qui s'adresse cette interdiction ?",
           "choices": [
             "À tous les conducteurs sans exception",
-            "Aux conducteurs de véhicules/trains de véhicules de transport de marchandises dont la MMA excède 3,5 tonnes",
-            "Uniquement aux camionnettes",
-            "À toutes les voitures"
+            "Aux transports de marchandises de plus de 3,5 t MMA",
+            "Uniquement aux camionnettes de livraison",
+            "À toutes les voitures avec remorque"
           ],
           "correct": 1,
           "explanation": "Ce signal ne vise que les poids lourds de transport de marchandises > 3,5 t MMA.",
@@ -2269,10 +2269,10 @@
           "id": "E3_Q25",
           "question": "Vous révisez les règles. De combien de manières l'interdiction de dépasser peut-elle prendre fin ?",
           "choices": [
-            "D'une seule manière : au prochain carrefour",
-            "De trois manières : au carrefour suivant, par le signal de fin spécifique, ou par le signal de fin de plusieurs interdictions",
-            "De deux manières uniquement",
-            "De quatre manières différentes"
+            "D'une seule : au prochain carrefour",
+            "De trois : carrefour, signal de fin, ou fin de toutes les interdictions",
+            "De deux : carrefour ou demi-tour",
+            "De quatre, selon le type de route"
           ],
           "correct": 1,
           "explanation": "L'interdiction prend fin de trois façons : carrefour, signal de fin spécifique, ou signal général de fin.",
@@ -2486,10 +2486,10 @@
           "id": "E3_Q47",
           "question": "Vous approchez d'un passage pour piétons. Le véhicule devant vous ralentit. Pouvez-vous le dépasser ?",
           "choices": [
-            "Oui, s'il est trop lent",
-            "Non, il est interdit de dépasser un véhicule qui approche, ralentit ou s'arrête devant un passage pour piétons",
-            "Oui, par la droite",
-            "Oui, si le passage est vide"
+            "Oui, si le véhicule roule anormalement lentement",
+            "Non, dépasser est interdit à l'approche d'un passage pour piétons",
+            "Oui, mais uniquement par la droite",
+            "Oui, si aucun piéton ne s'apprête à traverser"
           ],
           "correct": 1,
           "explanation": "Interdiction de dépasser tout véhicule qui approche, ralentit ou s'arrête devant un passage pour piétons.",
@@ -2633,9 +2633,9 @@
           "question": "Vous apercevez un signal rond rouge avec deux silhouettes de voitures. Que signifie ce panneau ?",
           "choices": [
             "Voie à sens unique",
-            "Interdiction de dépasser par la gauche un véhicule attelé ou à plus de deux roues",
-            "Interdiction de circuler",
-            "Zone de croisement"
+            "Interdiction de dépasser par la gauche",
+            "Interdiction de croiser un autre véhicule",
+            "Fin de zone de dépassement"
           ],
           "correct": 1,
           "explanation": "Le signal rond rouge (2 voitures) = interdiction de dépasser pour tous les conducteurs.",

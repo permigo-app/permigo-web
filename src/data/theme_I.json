@@ -221,9 +221,9 @@
           "question": "Vous avez bu quelques verres lors d'une soirée et vous envisagez de prendre le volant. Quels sont les effets de l'alcool sur votre conduite ?",
           "choices": [
             "L'alcool n'a aucun effet sur la conduite",
-            "Votre concentration, votre jugement et vos réflexes sont altérés, vous vous fatiguez plus vite et vous adoptez un comportement téméraire",
-            "Vous ressentez uniquement de la fatigue",
-            "Votre concentration s'améliore"
+            "Concentration, jugement et réflexes altérés, comportement téméraire",
+            "Uniquement une sensation de fatigue",
+            "Une meilleure concentration au volant"
           ],
           "correct": 1,
           "explanation": "L'alcool altère la concentration, le jugement, le temps de réaction, provoque de la fatigue et un comportement téméraire.",
@@ -247,10 +247,10 @@
           "id": "I1_Q3",
           "question": "Vous êtes arrêté par la police lors d'un contrôle routier. Qui peut être soumis à un contrôle d'alcoolémie ?",
           "choices": [
-            "Uniquement les automobilistes",
-            "Toute personne qui conduit ou s'apprête à conduire un véhicule ou une monture, y compris les cyclistes et les cavaliers",
-            "Uniquement les conducteurs de voiture",
-            "Tout le monde sur la voie publique"
+            "Uniquement les automobilistes contrôlés",
+            "Quiconque conduit un véhicule ou une monture, cyclistes inclus",
+            "Uniquement les conducteurs professionnels",
+            "Toute personne présente sur la voie publique"
           ],
           "correct": 1,
           "explanation": "Tout conducteur de véhicule ou monture peut être contrôlé : voitures, cyclistes, cavaliers, etc.",
@@ -317,10 +317,10 @@
           "id": "I1_Q8",
           "question": "Vous dormez sur la banquette arrière de votre voiture après une soirée. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
           "choices": [
-            "Oui, c'est votre voiture",
-            "Non, une personne qui dort sur un siège autre que celui du conducteur ne peut pas être contrôlée",
-            "Oui, si le moteur tourne",
-            "Cela dépend de l'heure"
+            "Oui, car c'est votre voiture",
+            "Non, un dormeur hors du siège conducteur n'est pas contrôlable",
+            "Oui, si le moteur tourne encore",
+            "Cela dépend de l'heure de la nuit"
           ],
           "correct": 1,
           "explanation": "Dormir sur la banquette arrière ne vous expose pas au contrôle d'alcoolémie.",
@@ -438,9 +438,9 @@
           "question": "Vous venez de souffler et le résultat affiche \"A\" (Alarme). À quelle concentration d'alcool cela correspond-il ?",
           "choices": [
             "Moins de 0,22 mg/l",
-            "Au moins 0,22 mg/l (0,5 pour mille) et moins de 0,35 mg/l (0,8 pour mille)",
+            "De 0,22 à moins de 0,35 mg/l",
             "Au moins 0,35 mg/l",
-            "0 mg/l"
+            "Plus de 0,44 mg/l"
           ],
           "correct": 1,
           "explanation": "A = Alarme : entre 0,22 mg/l (0,5 ‰) et 0,35 mg/l (0,8 ‰).",
@@ -506,10 +506,10 @@
           "id": "I1_Q23",
           "question": "Vous avez subi un test puis une analyse de l'haleine. Quelle est la différence entre les deux ?",
           "choices": [
-            "Il n'y a aucune différence",
-            "Le test donne une indication (S/A/P) tandis que l'analyse mesure la concentration EXACTE et délivre un ticket imprimé",
-            "L'analyse est plus rapide",
-            "Le test est plus précis"
+            "Il n'y a aucune différence entre les deux",
+            "Le test donne une indication, l'analyse mesure la concentration exacte",
+            "L'analyse est plus rapide que le test",
+            "Le test est plus précis que l'analyse"
           ],
           "correct": 1,
           "explanation": "Le test indique S/A/P. L'analyse donne la concentration précise et délivre un ticket imprimé.",
@@ -534,10 +534,10 @@
           "id": "I1_Q26",
           "question": "Vous avez subi une analyse de l'haleine et le résultat indique 0,28 mg/l. Que se passe-t-il ?",
           "choices": [
-            "Vous pouvez conduire",
-            "Votre permis est retiré 3 heures et vous recevez une amende (car entre 0,22 et 0,35 mg/l)",
-            "Votre permis est retiré 6 heures",
-            "Rien de particulier"
+            "Rien, vous pouvez reprendre la route",
+            "Permis retiré 3 heures et une amende",
+            "Permis retiré 6 heures et le tribunal",
+            "Un simple avertissement sans suite"
           ],
           "correct": 1,
           "explanation": "0,28 mg/l est entre 0,22 et 0,35 : permis retiré 3 heures + amende.",
@@ -735,10 +735,10 @@
           "id": "I1_Q47",
           "question": "Vous êtes arrêté par la police qui soupçonne une consommation de drogues. Comment se déroule le test salivaire ?",
           "choices": [
-            "Par une prise de sang",
-            "La police recueille votre salive à l'aide d'un coton-tige pour mesurer la concentration de drogues",
-            "Par un test de l'haleine",
-            "Par une analyse d'urine"
+            "Par une prise de sang au poste de police",
+            "Par un prélèvement de salive avec un coton-tige",
+            "Par un test de l'haleine approfondi",
+            "Par une analyse d'urine en laboratoire"
           ],
           "correct": 1,
           "explanation": "Le test salivaire consiste à recueillir de la salive avec un coton-tige.",
@@ -1404,10 +1404,10 @@
           "id": "I2_Q20",
           "question": "Vous arrivez sur le lieu d'un accident avec des blessés graves. Que devez-vous faire en priorité ?",
           "choices": [
-            "Partir chercher de l'aide",
-            "Tout mettre en oeuvre pour éviter que d'autres accidents ne surviennent au même endroit",
-            "Attendre sans rien faire",
-            "Déplacer les blessés"
+            "Partir immédiatement chercher de l'aide",
+            "Éviter que d'autres accidents ne surviennent au même endroit",
+            "Attendre les secours sans intervenir",
+            "Déplacer les blessés hors de la route"
           ],
           "correct": 1,
           "explanation": "En cas de blessés graves ou déplacement impossible, tout mettre en œuvre pour éviter d'autres accidents.",
@@ -3552,7 +3552,7 @@
           "question": "Vous lisez \"165/70 R 14 81 T\" sur votre pneu. Le \"T\" est un indice de quoi ?",
           "choices": [
             "De charge",
-            "De vitesse, c'est-à-dire la vitesse maximale pour laquelle le pneu est conçu",
+            "De vitesse",
             "De température",
             "De taille"
           ],
@@ -4151,9 +4151,9 @@
           "question": "Vous êtes immobilisé à un feu rouge et vous souhaitez consulter votre téléphone en main. Pouvez-vous le faire ?",
           "choices": [
             "Oui, vous êtes à l'arrêt",
-            "Non, être immobilisé au feu rouge n'est PAS considéré comme un arrêt au sens du code",
-            "Oui, le feu est rouge",
-            "Oui, pour un bref instant"
+            "Non, l'immobilisation au feu n'est pas un arrêt au sens du code",
+            "Oui, tant que le feu reste rouge",
+            "Oui, pour un bref instant seulement"
           ],
           "correct": 1,
           "explanation": "Un feu rouge n'est pas considéré comme un arrêt au sens du code : l'utilisation reste interdite.",

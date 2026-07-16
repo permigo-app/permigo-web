@@ -143,9 +143,9 @@
           "question": "U heeft een paar glazen gedronken op een feestje en overweegt achter het stuur te kruipen. Wat zijn de effecten van alcohol op uw rijgedrag?",
           "choices": [
             "Alcohol heeft geen enkel effect op het rijden",
-            "Uw concentratie, beoordelingsvermogen en reflexen zijn aangetast, u vermoeit sneller en vertoont overmoedig gedrag",
-            "U voelt enkel vermoeidheid",
-            "Uw concentratie verbetert"
+            "Aangetaste concentratie, oordeel en reflexen, overmoedig gedrag",
+            "Enkel een gevoel van vermoeidheid",
+            "Een betere concentratie achter het stuur"
           ],
           "correct": 1,
           "explanation": "Alcohol tast de concentratie, het beoordelingsvermogen, de reactietijd aan, veroorzaakt vermoeidheid en overmoedig gedrag.",
@@ -169,10 +169,10 @@
           "id": "I1_Q3",
           "question": "U wordt door de politie tegengehouden bij een verkeerscontrole. Wie kan aan een ademtest onderworpen worden?",
           "choices": [
-            "Enkel automobilisten",
-            "Elke persoon die een voertuig of rijdier bestuurt of op het punt staat te besturen, inclusief fietsers en ruiters",
-            "Enkel bestuurders van een auto",
-            "Iedereen op de openbare weg"
+            "Enkel de gecontroleerde automobilisten",
+            "Al wie een voertuig of rijdier bestuurt, fietsers inbegrepen",
+            "Enkel beroepschauffeurs",
+            "Iedereen die zich op de openbare weg bevindt"
           ],
           "correct": 1,
           "explanation": "Elke bestuurder van een voertuig of rijdier kan gecontroleerd worden: auto's, fietsers, ruiters, enz.",
@@ -239,10 +239,10 @@
           "id": "I1_Q8",
           "question": "U slaapt op de achterbank van uw auto na een feestje. Kunt u aan een ademtest onderworpen worden?",
           "choices": [
-            "Ja, het is uw auto",
-            "Nee, een persoon die op een andere plaats dan de bestuurdersplaats slaapt kan niet gecontroleerd worden",
-            "Ja, als de motor draait",
-            "Dat hangt af van het uur"
+            "Ja, want het is uw auto",
+            "Nee, wie niet op de bestuurdersplaats slaapt kan niet gecontroleerd worden",
+            "Ja, als de motor nog draait",
+            "Dat hangt af van het uur van de nacht"
           ],
           "correct": 1,
           "explanation": "Slapen op de achterbank stelt u vrij van een ademtest.",
@@ -360,9 +360,9 @@
           "question": "U blaast net en het resultaat toont \"A\" (Alarm). Met welke alcoholconcentratie stemt dit overeen?",
           "choices": [
             "Minder dan 0,22 mg/l",
-            "Minstens 0,22 mg/l (0,5 promille) en minder dan 0,35 mg/l (0,8 promille)",
+            "Van 0,22 tot minder dan 0,35 mg/l",
             "Minstens 0,35 mg/l",
-            "0 mg/l"
+            "Meer dan 0,44 mg/l"
           ],
           "correct": 1,
           "explanation": "A = Alarm: tussen 0,22 mg/l (0,5 ‰) en 0,35 mg/l (0,8 ‰).",
@@ -428,10 +428,10 @@
           "id": "I1_Q23",
           "question": "U onderging een test en vervolgens een ademanalyse. Wat is het verschil tussen beide?",
           "choices": [
-            "Er is geen verschil",
-            "De test geeft een indicatie (S/A/P) terwijl de analyse de EXACTE concentratie meet en een afgedrukt ticket levert",
-            "De analyse is sneller",
-            "De test is nauwkeuriger"
+            "Er is geen enkel verschil tussen beide",
+            "De test geeft een indicatie, de analyse meet de exacte concentratie",
+            "De analyse gaat sneller dan de test",
+            "De test is nauwkeuriger dan de analyse"
           ],
           "correct": 1,
           "explanation": "De test geeft S/A/P. De analyse geeft de precieze concentratie en levert een afgedrukt ticket.",
@@ -456,10 +456,10 @@
           "id": "I1_Q26",
           "question": "U onderging een ademanalyse en het resultaat toont 0,28 mg/l. Wat gebeurt er?",
           "choices": [
-            "U mag rijden",
-            "Uw rijbewijs wordt 3 uur ingetrokken en u krijgt een boete (want tussen 0,22 en 0,35 mg/l)",
-            "Uw rijbewijs wordt 6 uur ingetrokken",
-            "Niets bijzonders"
+            "Niets, u mag verder rijden",
+            "Rijbewijs 3 uur ingetrokken en een boete",
+            "Rijbewijs 6 uur ingetrokken en de rechtbank",
+            "Een simpele waarschuwing zonder gevolg"
           ],
           "correct": 1,
           "explanation": "0,28 mg/l ligt tussen 0,22 en 0,35: rijbewijs 3 uur ingetrokken + boete.",
@@ -657,10 +657,10 @@
           "id": "I1_Q47",
           "question": "U wordt door de politie tegengehouden op vermoeden van drugsgebruik. Hoe verloopt de speekseltest?",
           "choices": [
-            "Via een bloedafname",
-            "De politie neemt uw speeksel af met een wattenstaafje om de drugsconcentratie te meten",
-            "Via een ademtest",
-            "Via een urineanalyse"
+            "Via een bloedafname op het politiebureau",
+            "Via een speekselafname met een wattenstaafje",
+            "Via een grondige ademtest",
+            "Via een urineanalyse in het labo"
           ],
           "correct": 1,
           "explanation": "De speekseltest bestaat uit het afnemen van speeksel met een wattenstaafje.",
@@ -1229,10 +1229,10 @@
           "id": "I2_Q20",
           "question": "U komt aan op de plaats van een ongeval met zwaargewonden. Wat moet u in de eerste plaats doen?",
           "choices": [
-            "Weggaan om hulp te zoeken",
-            "Alles in het werk stellen om te vermijden dat er nog ongevallen gebeuren op dezelfde plaats",
-            "Wachten zonder iets te doen",
-            "De gewonden verplaatsen"
+            "Onmiddellijk weggaan om hulp te zoeken",
+            "Vermijden dat er nog ongevallen gebeuren op dezelfde plaats",
+            "Op de hulpdiensten wachten zonder in te grijpen",
+            "De gewonden van de weg verplaatsen"
           ],
           "correct": 1,
           "explanation": "Bij zwaargewonden of onmogelijke verplaatsing: alles in het werk stellen om bijkomende ongevallen te vermijden.",
@@ -3193,10 +3193,10 @@
           "id": "I4_Q28",
           "question": "U leest \"165/70 R 14 81 T\" op uw band. \"T\" is een index van wat?",
           "choices": [
-            "Lading",
-            "Van snelheid, dat wil zeggen de maximumsnelheid waarvoor de band ontworpen is",
-            "Temperatuur",
-            "Grootte"
+            "Van lading",
+            "Van snelheid",
+            "Van temperatuur",
+            "Van grootte"
           ],
           "correct": 1,
           "explanation": "T = snelheidsindex, geeft de maximumsnelheid aan waarvoor de band ontworpen is.",
@@ -3793,9 +3793,9 @@
           "question": "U staat stil aan een rood licht en wilt uw telefoon in de hand raadplegen. Kunt u dit doen?",
           "choices": [
             "Ja, u staat stil",
-            "Nee, stilstaan aan een rood licht wordt NIET beschouwd als een arrêt in wettelijke zin",
-            "Ja, het licht is rood",
-            "Ja, voor een kort moment"
+            "Nee, stilstaan aan het licht is geen 'stilstaan' in wettelijke zin",
+            "Ja, zolang het licht rood blijft",
+            "Ja, enkel voor een kort moment"
           ],
           "correct": 1,
           "explanation": "Een rood licht wordt niet beschouwd als een arrêt in wettelijke zin: het gebruik blijft verboden.",
