@@ -1,0 +1,331 @@
+{
+  "theme": "E",
+  "city": "Namur",
+  "title": "Vitesse et conduite à deux roues",
+  "lessons": [
+    {
+      "id": "E1",
+      "title": "Ta vitesse et tes distances",
+      "theory": [
+        {
+          "title": "Partie 1 — Quelle limite s'applique à toi ?",
+          "cards": [
+            {
+              "type": "card",
+              "title": "La règle de la limite la plus basse",
+              "content": "📋 La règle\nDeux limites te concernent en permanence : celle de ton véhicule (45 km/h en classe B, 25 en classe A) et celle du lieu (zone 30, agglomération 50, etc.). C'est toujours la PLUS BASSE qui s'applique.\n\n💡 Pourquoi\nTa bride de construction ne t'autorise pas à ignorer les panneaux : un scooter 45 dans une zone 30 roule à 30.\n\n🛵 En pratique\nHors agglomération à 90 km/h : tu restes à 45, ton maximum de construction. Zone résidentielle : 20 km/h pour tout le monde, toi compris.\n\n📍 Exemple\nRue scolaire en zone 30 : ton compteur reste sous 30, même si ton scooter en donnerait 45.\n\n⚠️ Erreur fréquente\nCroire que « 45 partout » : les zones 30, les zones résidentielles (20) et toute limite inférieure te concernent pleinement.",
+              "emoji": "🎚️",
+              "explanation_simple": "Ta limite = la plus basse entre ta bride (45 ou 25) et celle du lieu (30, 20…). Jamais l'inverse."
+            },
+            {
+              "type": "card",
+              "title": "Adapter, pas seulement respecter",
+              "content": "📋 La règle\nLa limite est un MAXIMUM, pas un objectif : tu dois adapter ta vitesse à la visibilité, à la météo, à l'état de la chaussée et à la présence d'usagers vulnérables.\n\n💡 Pourquoi\nRouler « dans la limite » mais trop vite pour les circonstances reste une infraction — et surtout la première cause de chute.\n\n🛵 En pratique\nBrouillard, pluie, sortie d'école, pavés, gravillons : chaque circonstance retire des km/h à ton allure raisonnable, quelle que soit la limite affichée.\n\n📍 Exemple\nRue à 50 sous pluie battante avec des piétons partout : l'allure correcte est peut-être 25, pas 45.\n\n⚠️ Erreur fréquente\nDéfendre son « droit aux 45 km/h » par mauvais temps : le Code exige une vitesse adaptée aux circonstances, pas la limite.",
+              "emoji": "🌧️",
+              "explanation_simple": "La limite est un plafond. Pluie, mauvaise visibilité, piétons : tu descends en dessous, c'est le Code qui l'exige."
+            }
+          ]
+        },
+        {
+          "title": "Partie 2 — Distance d'arrêt et de sécurité",
+          "cards": [
+            {
+              "type": "card",
+              "title": "Réaction + freinage = distance d'arrêt",
+              "content": "📋 La règle\nTa distance d'arrêt = distance de RÉACTION (le temps que ton cerveau décide, environ 1 seconde) + distance de FREINAGE (le temps que tes freins agissent).\n\n💡 Pourquoi\nÀ 45 km/h, tu parcours environ 12,5 mètres PAR SECONDE : avant même de toucher les freins, l'obstacle s'est déjà rapproché de 12 mètres.\n\n🛵 En pratique\nFatigue, distraction ou alcool allongent ta réaction ; pluie et pneus usés allongent ton freinage. Les deux s'additionnent toujours contre toi.\n\n📍 Exemple\nUn ballon roule sur la chaussée à 20 mètres : à 45 km/h, entre réaction et freinage, l'arrêt complet demande environ cette distance — c'est déjà juste.\n\n⚠️ Erreur fréquente\nConfondre distance de freinage et distance d'arrêt : la seconde inclut ta réaction, et c'est elle qui compte.",
+              "emoji": "📏",
+              "explanation_simple": "S'arrêter = réagir (≈1 s, soit 12 m à 45 km/h) PUIS freiner. Tout ce qui te ralentit le cerveau ou les freins allonge le total."
+            },
+            {
+              "type": "card",
+              "title": "La règle des 2 secondes",
+              "content": "📋 La règle\nGarde au moins 2 secondes d'écart avec le véhicule qui te précède : repère un point fixe, et compte « mille-et-un, mille-et-deux » entre son passage et le tien.\n\n💡 Pourquoi\nDeux secondes couvrent ta réaction et une bonne partie de ton freinage — quelle que soit ta vitesse, le compte reste valable.\n\n🛵 En pratique\nSur le mouillé, double : 4 secondes. Derrière un gros véhicule qui te masque la route, rallonge aussi — tu dois voir AU-DELÀ de lui.\n\n📍 Exemple\nLa voiture devant passe sous le pont : « mille-et-un, mille-et-deux »… tu passes le pont après « deux » ? Distance correcte.\n\n⚠️ Erreur fréquente\nColler la voiture de devant « pour ne pas se faire dépasser » : au premier freinage brusque, ton scooter s'arrête moins bien qu'elle.",
+              "emoji": "⏱️",
+              "explanation_simple": "2 secondes derrière le véhicule de devant, 4 sous la pluie. Compte-les vraiment : « mille-et-un, mille-et-deux »."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "AM_E1_Q1",
+          "question": "Ton scooter classe B (45 km/h) entre dans une zone 30. Ta vitesse maximale ?",
+          "choices": ["45 km/h, ta limite de construction", "30 km/h, la limite de la zone", "35 km/h par tolérance", "40 km/h en journée"],
+          "correct": 1,
+          "explanation": "La limite la plus basse s'applique toujours : en zone 30, tu roules à 30 km/h maximum.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E1_Q2",
+          "question": "Hors agglomération, la route est limitée à 90 km/h. Ta classe B peut rouler à :",
+          "choices": ["90 km/h comme les voitures", "70 km/h maximum", "45 km/h, sa limite de construction", "60 km/h maximum"],
+          "correct": 2,
+          "explanation": "Ta bride de construction (45 km/h) reste ton plafond absolu, même quand la route autorise plus.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E1_Q3",
+          "question": "Pluie battante, piétons nombreux, rue limitée à 50. Quelle est la bonne vitesse ?",
+          "choices": ["45 km/h, ta limite l'autorise", "50 km/h, la limite du lieu", "Une allure nettement réduite, adaptée aux circonstances", "La même que les voitures autour"],
+          "correct": 2,
+          "explanation": "La limite est un maximum : le Code impose d'adapter ta vitesse à la météo, à la visibilité et aux usagers présents.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E1_Q4",
+          "question": "De quoi se compose la distance d'arrêt ?",
+          "choices": ["Du freinage uniquement", "De la distance de réaction + la distance de freinage", "De la distance de sécurité", "Du temps de réaction uniquement"],
+          "correct": 1,
+          "explanation": "Distance d'arrêt = réaction (≈1 seconde, le temps de décider) + freinage (le temps que les freins agissent).",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_E1_Q5",
+          "question": "Environ quelle distance parcours-tu pendant 1 seconde de réaction à 45 km/h ?",
+          "choices": ["4 à 5 mètres", "12 à 13 mètres", "20 à 25 mètres", "30 mètres"],
+          "correct": 1,
+          "explanation": "45 km/h ≈ 12,5 m/s : une seconde de réaction consomme déjà plus de 12 mètres avant tout freinage.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_E1_Q6",
+          "question": "Quel écart garder avec le véhicule qui te précède sur route mouillée ?",
+          "choices": ["1 seconde suffit", "2 secondes comme sur le sec", "4 secondes, le double du sec", "10 mètres fixes"],
+          "correct": 2,
+          "explanation": "La règle des 2 secondes se double sur le mouillé : 4 secondes, car ton freinage s'allonge fortement.",
+          "theoryCardIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "title": "Rouler à deux roues : la technique",
+      "theory": [
+        {
+          "title": "Partie 1 — Les virages",
+          "cards": [
+            {
+              "type": "card",
+              "title": "Freine AVANT, jamais dedans",
+              "content": "📋 La règle\nToute la gestion du virage se fait AVANT d'y entrer : tu freines et tu descends à la bonne allure en ligne droite, puis tu prends le virage à vitesse stable.\n\n💡 Pourquoi\nEn courbe, tes pneus partagent leur adhérence entre tourner et freiner : leur demander les deux à la fois, c'est la glissade.\n\n🛵 En pratique\nSéquence : je vois le virage → je freine en ligne droite → j'entre à allure stable → j'accélère doucement en sortie.\n\n📍 Exemple\nVirage plus serré que prévu : plutôt que freiner fort dedans, redresse une fraction de seconde, freine, puis réinscris le scooter.\n\n⚠️ Erreur fréquente\nEntrer trop vite « et freiner au besoin » : le besoin arrive toujours, et le freinage en courbe couche le cyclo.",
+              "emoji": "🌀",
+              "explanation_simple": "Tout le freinage se fait avant le virage, en ligne droite. Dans la courbe : vitesse stable, gaz progressif en sortie."
+            },
+            {
+              "type": "card",
+              "title": "Le regard guide la machine",
+              "content": "📋 La règle\nRegarde LOIN, vers la sortie du virage : le deux-roues va là où tes yeux se posent. Trajectoire conseillée : extérieur à l'entrée, intérieur au point de corde, extérieur en sortie.\n\n💡 Pourquoi\nFixer l'obstacle ou le bord de route t'y emmène tout droit — c'est un réflexe moteur, pas une superstition.\n\n🛵 En pratique\nMenton levé, yeux à la sortie de courbe, et le guidon suit naturellement. La trajectoire ext-int-ext « ouvre » le virage et améliore ta visibilité.\n\n📍 Exemple\nÉpingle à droite : tu entres côté axe de la route (extérieur), frôles l'intérieur au milieu, ressors côté extérieur — le virage semble soudain plus large.\n\n⚠️ Erreur fréquente\nRegarder la roue avant ou le fossé : ton cyclo obéit à ton regard, pour le meilleur comme pour le pire.",
+              "emoji": "👁️",
+              "explanation_simple": "Regarde la sortie du virage, pas l'obstacle. Trajectoire extérieur-intérieur-extérieur : le virage s'élargit tout seul."
+            }
+          ]
+        },
+        {
+          "title": "Partie 2 — Pluie et pièges d'adhérence",
+          "cards": [
+            {
+              "type": "card",
+              "title": "La carte des zones glissantes",
+              "content": "📋 La règle\nSous la pluie, certains revêtements deviennent des patinoires : marquages peints, plaques d'égout, rails de tram, pavés, feuilles mortes et gravillons.\n\n💡 Pourquoi\nTes deux points de contact avec la route sont minuscules : ce qu'une voiture traverse sans broncher fait chuter un cyclo.\n\n🛵 En pratique\nMémorise la liste et ÉVITE de freiner, accélérer ou tourner SUR ces surfaces : passe-les droit, à vitesse constante.\n\n📍 Exemple\nPassage piéton mouillé dans un virage : tu redresses le scooter avant les bandes blanches et tu tournes après.\n\n⚠️ Erreur fréquente\nFreiner sur un marquage mouillé « parce que le feu est passé à l'orange » : c'est la glissade assurée de la roue avant.",
+              "emoji": "🧊",
+              "explanation_simple": "Peinture, plaques, rails, pavés, feuilles : mouillés, ils glissent. On les traverse droit, sans freiner ni accélérer dessus."
+            },
+            {
+              "type": "card",
+              "title": "Les premières pluies : le piège invisible",
+              "content": "📋 La règle\nAprès une longue période sèche, les premières pluies sont les plus dangereuses : les résidus d'hydrocarbures accumulés sur l'asphalte remontent et forment un film glissant.\n\n💡 Pourquoi\nCe mélange eau + huile réduit l'adhérence bien plus qu'une pluie ordinaire — et il est invisible.\n\n🛵 En pratique\nPremière averse après des semaines de sec : divise ta confiance par deux. Vitesse réduite, distances doublées (4 secondes), freinages très progressifs.\n\n📍 Exemple\nPremière pluie d'août après un mois sec : le rond-point poli par les voitures devient savonneux — tu le prends au ralenti.\n\n⚠️ Erreur fréquente\nCroire que « la route mouillée, c'est toujours pareil » : la première demi-heure de pluie après le sec est la pire de l'année.",
+              "emoji": "🛢️",
+              "explanation_simple": "Premières pluies après le sec = eau + hydrocarbures = savon invisible. Ce jour-là, roule comme sur du verglas."
+            }
+          ]
+        },
+        {
+          "title": "Partie 3 — Conduite défensive et imprévus",
+          "cards": [
+            {
+              "type": "card",
+              "title": "Anticiper : rouler dans le futur",
+              "content": "📋 La règle\nLa conduite défensive consiste à regarder LOIN devant, anticiper les erreurs des autres et te ménager toujours une échappatoire.\n\n💡 Pourquoi\nÀ deux roues, tu ne peux compter ni sur une carrosserie ni sur la ceinture : ta sécurité, c'est ce qui n'arrive PAS.\n\n🛵 En pratique\nScanne en permanence : portières, roues avant des voitures en attente, regards des piétons. Pose-toi la question : « S'il fait n'importe quoi, je passe où ? »\n\n📍 Exemple\nVoiture arrêtée à une sortie de parking, conducteur au téléphone : tu ralentis et t'écartes AVANT qu'elle démarre — pas après.\n\n⚠️ Erreur fréquente\nRouler « dans le présent » en réagissant à ce qui arrive : à cyclo, on survit en réagissant à ce qui POURRAIT arriver.",
+              "emoji": "🔭",
+              "explanation_simple": "Regarde loin, suppose que les autres feront l'erreur, garde toujours une porte de sortie : c'est la conduite défensive."
+            },
+            {
+              "type": "card",
+              "title": "En panne : tu redeviens piéton",
+              "content": "📋 La règle\nSi ton cyclomoteur tombe en panne, pousse-le : tu es alors considéré comme un PIÉTON et tu utilises le trottoir ou l'accotement.\n\n💡 Pourquoi\nUn cyclo poussé n'est plus un véhicule en circulation : ta place est avec les piétons, pas au milieu de la chaussée.\n\n🛵 En pratique\nMoteur coupé, tu pousses côté trottoir, casque à la main si tu veux. Attention en le poussant sur la chaussée pour traverser : les règles piétons s'appliquent.\n\n📍 Exemple\nPanne d'essence à 500 m de la station : tu pousses ton scooter sur le trottoir, tranquillement, comme n'importe quel piéton encombré.\n\n⚠️ Erreur fréquente\nPousser son cyclo SUR la chaussée le long des voitures : tu cumules la lenteur d'un piéton et l'exposition d'un véhicule.",
+              "emoji": "🚶",
+              "explanation_simple": "Cyclo en panne = tu le pousses en piéton, sur le trottoir. (Exception vue au thème A : pousser une MOTO reste « conducteur ».)"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "AM_E2_Q1",
+          "question": "Où se gère le freinage d'un virage à deux roues ?",
+          "choices": ["Dans le virage, progressivement", "Avant le virage, en ligne droite", "À la sortie du virage", "Au point de corde"],
+          "correct": 1,
+          "explanation": "On freine AVANT, en ligne droite : en courbe, les pneus ne peuvent pas tourner et freiner à la fois.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E2_Q2",
+          "question": "Où porter ton regard dans un virage ?",
+          "choices": ["Sur ta roue avant", "Sur le bord extérieur du virage", "Loin, vers la sortie du virage", "Sur le compteur de vitesse"],
+          "correct": 2,
+          "explanation": "Le deux-roues va où tes yeux se posent : regarde la sortie, jamais l'obstacle ni le fossé.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E2_Q3",
+          "question": "Quelle trajectoire recommandée dans une courbe ?",
+          "choices": ["Intérieur - extérieur - intérieur", "Extérieur - intérieur - extérieur", "Toujours au centre de la bande", "Le plus près possible du bord"],
+          "correct": 1,
+          "explanation": "Ext-int-ext « ouvre » le virage : meilleure visibilité à l'entrée, courbe plus douce, sortie plus sûre.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E2_Q4",
+          "question": "Comment franchir un marquage peint mouillé en deux-roues ?",
+          "choices": ["En freinant dessus par précaution", "Droit, à vitesse constante, sans freiner dessus", "En accélérant pour le passer vite", "En tournant dessus pour raccourcir"],
+          "correct": 1,
+          "explanation": "La peinture mouillée glisse : on la traverse bien droit, sans freiner, accélérer ni tourner dessus.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_E2_Q5",
+          "question": "Pourquoi les premières pluies après une période sèche sont-elles si dangereuses ?",
+          "choices": ["L'eau est plus froide qu'en hiver", "Les hydrocarbures accumulés remontent et forment un film glissant", "Les conducteurs roulent plus vite", "Les pneus sont encore chauds"],
+          "correct": 1,
+          "explanation": "Eau + résidus d'huile accumulés = film savonneux invisible : la première averse après le sec est la pire.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_E2_Q6",
+          "question": "Que signifie « conduire défensivement » à cyclomoteur ?",
+          "choices": ["Rouler le plus lentement possible", "Anticiper les erreurs des autres et garder une échappatoire", "Freiner dès qu'un véhicule approche", "Rester en permanence sur la piste cyclable"],
+          "correct": 1,
+          "explanation": "Regarder loin, supposer l'erreur des autres, se ménager une porte de sortie : ta sécurité, c'est l'accident qui n'a pas lieu.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "AM_E2_Q7",
+          "question": "Ton cyclo tombe en panne. Quel est ton statut quand tu le pousses ?",
+          "choices": ["Conducteur, comme au guidon", "Piéton : tu utilises le trottoir", "Cycliste assimilé", "Usager prioritaire"],
+          "correct": 1,
+          "explanation": "Pousser son cyclomoteur fait de toi un piéton : trottoir ou accotement, moteur coupé.",
+          "theoryCardIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "E3",
+      "title": "Passager et chargement",
+      "theory": [
+        {
+          "title": "Partie 1 — Transporter un passager",
+          "cards": [
+            {
+              "type": "card",
+              "title": "Les conditions pour prendre un passager",
+              "content": "📋 La règle\nMaximum UN passager sur un cyclo à 2 roues, et seulement si le véhicule est équipé : double selle, repose-pieds et poignée. Le CONDUCTEUR doit avoir au moins 18 ans pour transporter un passager.\n\n💡 Pourquoi\nUn passager change tout l'équilibre du deux-roues : la loi exige un conducteur expérimenté et un véhicule prévu pour.\n\n🛵 En pratique\nÀ 16 ou 17 ans avec ton permis AM tout neuf : tu roules SEUL. Le passager, ce sera pour tes 18 ans.\n\n📍 Exemple\nTon ami te demande de le déposer à l'école : à 16 ans, c'est non — même avec une double selle.\n\n⚠️ Erreur fréquente\nCroire que « permis AM = passager autorisé » : l'âge du conducteur (18 ans) est une condition à part entière.",
+              "emoji": "👥",
+              "explanation_simple": "Passager : 1 maximum, véhicule équipé (double selle, repose-pieds), et conducteur d'au moins 18 ans. Avant : tu roules seul."
+            },
+            {
+              "type": "card",
+              "title": "Enfants et position du passager",
+              "content": "📋 La règle\nLe passager doit avoir au moins 3 ans ; de 3 à 8 ans, un dispositif de retenue adapté est obligatoire. Le passager porte un casque et s'assied à califourchon : la position « en amazone » (deux jambes du même côté) est interdite.\n\n💡 Pourquoi\nUn enfant trop petit ne tient pas ; l'amazone déséquilibre le véhicule au premier virage.\n\n🛵 En pratique\nBriefe ton passager : pieds sur les repose-pieds, mains à la poignée ou à ta taille, il regarde par-dessus ton épaule INTÉRIEURE au virage et ne fait aucun geste brusque.\n\n📍 Exemple\nTu emmènes ton petit frère de 6 ans : siège enfant adapté, casque à sa taille, sinon il reste à la maison.\n\n⚠️ Erreur fréquente\nLaisser le passager s'asseoir « comme il veut » : ses mouvements sont TA stabilité.",
+              "emoji": "🧒",
+              "explanation_simple": "Passager ≥ 3 ans (3-8 ans : siège adapté), casque, à califourchon — l'amazone est interdite."
+            },
+            {
+              "type": "card",
+              "title": "Conduire chargé d'un passager",
+              "content": "📋 La règle\nAvec un passager, ton cyclo est plus lourd : les distances de freinage s'allongent, l'accélération faiblit et l'équilibre change — adapte vitesse et distances en conséquence.\n\n💡 Pourquoi\nLe poids double presque : chaque manœuvre demande plus d'espace et plus d'anticipation.\n\n🛵 En pratique\nGonfle les pneus selon les indications constructeur « avec passager », freine plus tôt, prends les virages plus calmement et allonge ta règle des 2 secondes.\n\n📍 Exemple\nPremier trajet à deux : au premier freinage, le scooter « pousse » plus loin que d'habitude — tu comprends pourquoi on anticipe.\n\n⚠️ Erreur fréquente\nConduire chargé exactement comme à vide : les distances d'hier ne suffisent plus aujourd'hui.",
+              "emoji": "⚖️",
+              "explanation_simple": "Un passager = freinages plus longs, équilibre modifié : plus d'anticipation, plus de distance, pneus ajustés."
+            }
+          ]
+        },
+        {
+          "title": "Partie 2 — Le chargement",
+          "cards": [
+            {
+              "type": "card",
+              "title": "Les limites du chargement",
+              "content": "📋 La règle\nSur un cyclo à 2 roues, le chargement ne peut PAS dépasser à l'avant, peut dépasser de 0,5 m maximum à l'arrière, ne peut excéder 1 m de largeur, et l'ensemble ne dépasse jamais 4 m de hauteur.\n\n💡 Pourquoi\nUn chargement qui déborde modifie l'équilibre et accroche les autres usagers — sur un véhicule aussi fin, quelques centimètres comptent.\n\n🛵 En pratique\nRetiens : rien devant, un demi-mètre derrière, un mètre de large. Au-delà, ce n'est plus un chargement de cyclo, c'est un déménagement.\n\n📍 Exemple\nTa canne à pêche dépasse d'un mètre à l'arrière du porte-bagages : 0,5 m de trop — démonte-la ou trouve un autre transport.\n\n⚠️ Erreur fréquente\nCharger « à la débrouille » : les limites existent parce qu'un chargement débordant fauche piétons et cyclistes.",
+              "emoji": "📦",
+              "explanation_simple": "Chargement cyclo : 0 cm devant, 50 cm max derrière, 1 m de large max, 4 m de haut max."
+            },
+            {
+              "type": "card",
+              "title": "Arrimer et rester visible",
+              "content": "📋 La règle\nLe chargement doit être solidement fixé, ne pas traîner, ne pas compromettre ta stabilité et ne jamais masquer tes feux, tes catadioptres ou ta plaque.\n\n💡 Pourquoi\nUn sac qui glisse dans une roue ou un tendeur qui lâche à 45 km/h provoque une chute immédiate — la tienne ou celle de celui qui te suit.\n\n🛵 En pratique\nSangles plutôt que « ça tiendra », poids au plus bas et au plus près du centre, et un tour du véhicule avant de partir : feux et plaque visibles ?\n\n📍 Exemple\nCabas accroché au guidon : au premier virage, il se balance et braque ton avant — top-case ou porte-bagages, pas le guidon.\n\n⚠️ Erreur fréquente\nMasquer le feu arrière avec un colis « juste pour ce trajet » : c'est justement LE trajet où on te percutera par l'arrière.",
+              "emoji": "🪢",
+              "explanation_simple": "Bien sanglé, bas et centré, rien au guidon, et feux + plaque toujours visibles."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "AM_E3_Q1",
+          "question": "À quel âge un conducteur peut-il transporter un passager en cyclomoteur ?",
+          "choices": ["Dès 16 ans, avec le permis AM", "À partir de 18 ans", "Dès 17 ans avec autorisation parentale", "Aucune condition d'âge"],
+          "correct": 1,
+          "explanation": "Le conducteur doit avoir au moins 18 ans pour transporter un passager — le permis AM à 16 ans ne suffit pas.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E3_Q2",
+          "question": "Quel équipement le cyclo doit-il avoir pour transporter un passager ?",
+          "choices": ["Un top-case homologué", "Double selle, repose-pieds et poignée", "Un pare-brise renforcé", "Des clignotants supplémentaires"],
+          "correct": 1,
+          "explanation": "Le véhicule doit être prévu pour deux : double selle, repose-pieds pour le passager et poignée de maintien.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E3_Q3",
+          "question": "Peux-tu transporter un enfant de 2 ans sur ton cyclomoteur ?",
+          "choices": ["Oui, dans un siège adapté", "Oui, tenu par un adulte", "Non, le passager doit avoir au moins 3 ans", "Oui, sur de courts trajets"],
+          "correct": 2,
+          "explanation": "Moins de 3 ans : transport interdit. De 3 à 8 ans, un dispositif de retenue adapté est obligatoire.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E3_Q4",
+          "question": "La position « en amazone » (deux jambes du même côté) est :",
+          "choices": ["Autorisée en agglomération", "Interdite pour le passager", "Réservée aux adultes", "Autorisée sous 25 km/h"],
+          "correct": 1,
+          "explanation": "Le passager s'assied à califourchon : l'amazone déséquilibre le deux-roues et est formellement interdite.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E3_Q5",
+          "question": "Avec un passager, tes distances de freinage :",
+          "choices": ["Restent identiques", "S'allongent : tu anticipes davantage", "Raccourcissent grâce au poids", "Ne changent que sous la pluie"],
+          "correct": 1,
+          "explanation": "Le poids supplémentaire allonge le freinage et modifie l'équilibre : plus d'anticipation et de distance.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_E3_Q6",
+          "question": "De combien ton chargement peut-il dépasser à l'ARRIÈRE d'un cyclo à 2 roues ?",
+          "choices": ["Pas du tout", "0,5 mètre maximum", "1 mètre maximum", "1,5 mètre avec un chiffon rouge"],
+          "correct": 1,
+          "explanation": "Limites du chargement : rien à l'avant, 0,5 m maximum à l'arrière, 1 m de largeur, 4 m de hauteur.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_E3_Q7",
+          "question": "Ton colis masque partiellement ton feu arrière. Tu :",
+          "choices": ["Peux rouler de jour uniquement", "Dois réarrimer : feux et plaque doivent rester visibles", "Peux rouler en klaxonnant régulièrement", "Ajoutes un catadioptre sur le colis"],
+          "correct": 1,
+          "explanation": "Le chargement ne doit jamais masquer feux, catadioptres ou plaque : réarrime avant de partir.",
+          "theoryCardIndex": 1
+        }
+      ]
+    }
+  ]
+}
