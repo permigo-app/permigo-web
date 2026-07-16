@@ -53,6 +53,10 @@ function BellIcon({ color }: { color: string }) {
   );
 }
 
+// En développement local, la carte AM est cliquable pour suivre la rédaction
+// du contenu en direct. En production elle reste "Bientôt" (Préviens-moi).
+const AM_TESTABLE = process.env.NODE_ENV === 'development';
+
 export default function ChoixPermisPage() {
   const router = useRouter();
   const { user } = useAuth();
@@ -67,6 +71,14 @@ export default function ChoixPermisPage() {
     setChoosing(true);
     recordLicenseEvent('B', 'selected');
     await setChosenLicense('B');
+    router.push('/app');
+  };
+
+  const handleChooseAM = async () => {
+    if (choosing) return;
+    setChoosing(true);
+    recordLicenseEvent('AM', 'selected');
+    await setChosenLicense('AM');
     router.push('/app');
   };
 
@@ -167,9 +179,22 @@ export default function ChoixPermisPage() {
             </div>
           </div>
 
-          {/* Préviens-moi */}
+          {/* Préviens-moi — ou accès direct en développement */}
           <div style={{ marginTop: 14, paddingTop: 13, borderTop: '1px solid var(--border-subtle)' }}>
-            {notified ? (
+            {AM_TESTABLE ? (
+              <button
+                onClick={handleChooseAM}
+                className="press-scale"
+                style={{
+                  width: '100%', padding: '12px', borderRadius: 12, textAlign: 'center',
+                  background: 'rgba(245,158,11,0.14)', color: '#f59e0b',
+                  fontSize: 13.5, fontWeight: 800, border: '1.5px dashed rgba(245,158,11,0.5)',
+                  cursor: 'pointer', fontFamily: 'Sora, sans-serif',
+                }}
+              >
+                🛠 Tester le permis AM (dev uniquement)
+              </button>
+            ) : notified ? (
               <p style={{ margin: 0, fontSize: 13, fontWeight: 700, color: 'var(--success)' }}>
                 ✓ {t('choix_note')}
               </p>
