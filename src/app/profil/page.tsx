@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { getQuizHistory, getAllStars, getUnlockedThemes, getAllExams, getSurvivalBest, isLessonCompleted, getCompletedParties } from '@/lib/progressStorage';
 import { lessonEffectivelyCompleted, countThemeParts } from '@/lib/medals';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
-import { getThemeDataLocalized, THEME_ORDER, type LocalTheme } from '@/lib/lessonData';
+import { getThemeDataLocalized, getThemeOrder, type LocalTheme } from '@/lib/lessonData';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import { isSoundMuted, toggleMute } from '@/lib/sounds';
@@ -47,7 +47,7 @@ export default function ProfilePage() {
       Object.keys(starsData).length > 0
     );
     // Load all theme data asynchronously
-    Promise.all(THEME_ORDER.map(async (code) => {
+    Promise.all(getThemeOrder().map(async (code) => {
       const theme = await getThemeDataLocalized(code, lang);
       return theme ? [code, theme] as [string, LocalTheme] : null;
     })).then(results => {
@@ -181,7 +181,7 @@ export default function ProfilePage() {
 
   const ThemeList = () => (
     <div className="flex flex-col gap-2">
-      {THEME_ORDER.map(code => {
+      {getThemeOrder().map(code => {
         const theme = themeMap[code];
         if (!theme) return (
           <div key={code} className="animate-pulse rounded-xl" style={{ height: 56, background: 'var(--border-subtle)' }} />
@@ -440,7 +440,7 @@ export default function ProfilePage() {
               {t('performance_theme')}
             </h2>
             <div className="flex flex-col gap-2.5 mb-8">
-              {THEME_ORDER.map(code => {
+              {getThemeOrder().map(code => {
                 const theme = themeMap[code];
                 if (!theme) return (
                   <div key={code} className="animate-pulse rounded-xl" style={{ height: 60, background: 'var(--border-subtle)' }} />

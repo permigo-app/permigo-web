@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { THEME_ORDER, getThemeDataLocalized, type Lang } from '@/lib/lessonData';
+import { getThemeOrder, getThemeDataLocalized, type Lang } from '@/lib/lessonData';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import DesignUpdateModal from '@/components/DesignUpdateModal';
@@ -43,7 +43,7 @@ async function buildStats(lang: Lang): Promise<Stats> {
   let globalPartsDone = 0;
   const themes: ThemeStats[] = [];
 
-  for (const code of THEME_ORDER) {
+  for (const code of getThemeOrder()) {
     const theme = await getThemeDataLocalized(code, lang);
     if (!theme) continue;
     let lessonsCompleted = 0;
@@ -127,7 +127,7 @@ export default function HomePage() {
   useEffect(() => {
     buildStats(lang).then(setStats);
     const saved = localStorage.getItem(THEME_STORAGE_KEY);
-    if (saved && THEME_ORDER.includes(saved)) setSelectedTheme(saved);
+    if (saved && getThemeOrder().includes(saved)) setSelectedTheme(saved);
   }, [lang]);
 
   const pickTheme = (code: string) => {

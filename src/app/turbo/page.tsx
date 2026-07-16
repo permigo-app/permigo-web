@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { getAllQuestionsLocalized, getThemeDataLocalized, THEME_ORDER, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { getAllQuestionsLocalized, getThemeDataLocalized, getThemeOrder, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import {
   updateQuizHistory, addStudyTime,
@@ -20,7 +20,7 @@ import QuizLayout from '@/components/QuizLayout';
 import Link from 'next/link';
 
 async function loadPoolQuestions(lang: 'fr' | 'nl', themeCode: string | null): Promise<LocalQuestion[]> {
-  if (themeCode && THEME_ORDER.includes(themeCode)) {
+  if (themeCode && getThemeOrder().includes(themeCode)) {
     const theme = await getThemeDataLocalized(themeCode, lang);
     if (theme) return theme.lessons.flatMap(l => l.questions);
   }
@@ -64,7 +64,7 @@ function TurboContent() {
   const [themeTitle, setThemeTitle] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!themeCode || !THEME_ORDER.includes(themeCode)) { setThemeTitle(null); return; }
+    if (!themeCode || !getThemeOrder().includes(themeCode)) { setThemeTitle(null); return; }
     getThemeDataLocalized(themeCode, lang).then(theme => setThemeTitle(theme?.title ?? null));
   }, [themeCode, lang]);
   const [mode, setMode] = useState<Mode>(null);
@@ -237,7 +237,7 @@ function TurboContent() {
 
   // Accès ciblé à un thème premium (?theme=B-I) : même verrou que les leçons.
   // Le turbo mixte sans thème reste le teaser gratuit, limité par jour.
-  if (themeCode && THEME_ORDER.includes(themeCode) && !isThemeFree(themeCode) && !premiumActive) {
+  if (themeCode && getThemeOrder().includes(themeCode) && !isThemeFree(themeCode) && !premiumActive) {
     return <PremiumGate><></></PremiumGate>;
   }
 

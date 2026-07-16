@@ -243,7 +243,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         k.startsWith('partie_completed_') ||
         k.startsWith('lesson_completed_') ||
         k.startsWith('badge_seen_') ||
-        k.startsWith('lesson_quiz_done_')
+        k.startsWith('lesson_quiz_done_') ||
+        // Progression des autres permis (clés préfixées, ex. "AM::…")
+        k.startsWith('AM::')
       )
       .forEach(k => localStorage.removeItem(k));
   };

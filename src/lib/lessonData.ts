@@ -43,29 +43,50 @@ export interface LocalTheme {
   lessons: LocalLesson[];
 }
 
+// Ordre des thèmes du permis B (permis historique)
 export const THEME_ORDER = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+// Ordre des thèmes du permis AM — squelette, complété lors de la rédaction (AM-2)
+export const AM_THEME_ORDER = ['A'];
 
+import { getActiveLicense } from './license';
+
+/** Ordre des thèmes du permis actif. Sous B : identique à THEME_ORDER. */
+export function getThemeOrder(): string[] {
+  return getActiveLicense() === 'AM' ? AM_THEME_ORDER : THEME_ORDER;
+}
+
+// Cache par permis + code thème ("B:A", "AM:A"…)
 const themeCache: Record<string, LocalTheme> = {};
 
 async function loadTheme(code: string): Promise<LocalTheme | null> {
-  if (themeCache[code]) return themeCache[code];
+  const lic = getActiveLicense();
+  const cacheKey = lic + ':' + code;
+  if (themeCache[cacheKey]) return themeCache[cacheKey];
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let mod: { default: any };
-    switch (code) {
-      case 'A': mod = await import('../data/theme_A.json'); break;
-      case 'B': mod = await import('../data/theme_B.json'); break;
-      case 'C': mod = await import('../data/theme_C.json'); break;
-      case 'D': mod = await import('../data/theme_D.json'); break;
-      case 'E': mod = await import('../data/theme_E.json'); break;
-      case 'F': mod = await import('../data/theme_F.json'); break;
-      case 'G': mod = await import('../data/theme_G.json'); break;
-      case 'H': mod = await import('../data/theme_H.json'); break;
-      case 'I': mod = await import('../data/theme_I.json'); break;
-      default: return null;
+    if (lic === 'AM') {
+      // Contenu du permis AM — dans src/data/am/ (rédigé en mission AM-2)
+      switch (code) {
+        case 'A': mod = await import('../data/am/theme_A.json'); break;
+        default: return null;
+      }
+    } else {
+      switch (code) {
+        case 'A': mod = await import('../data/theme_A.json'); break;
+        case 'B': mod = await import('../data/theme_B.json'); break;
+        case 'C': mod = await import('../data/theme_C.json'); break;
+        case 'D': mod = await import('../data/theme_D.json'); break;
+        case 'E': mod = await import('../data/theme_E.json'); break;
+        case 'F': mod = await import('../data/theme_F.json'); break;
+        case 'G': mod = await import('../data/theme_G.json'); break;
+        case 'H': mod = await import('../data/theme_H.json'); break;
+        case 'I': mod = await import('../data/theme_I.json'); break;
+        default: return null;
+      }
     }
-    themeCache[code] = mod.default as LocalTheme;
-    return themeCache[code];
+    themeCache[cacheKey] = mod.default as LocalTheme;
+    return themeCache[cacheKey];
   } catch {
     return null;
   }
@@ -78,7 +99,7 @@ export async function getThemeData(code: string): Promise<LocalTheme | null> {
 export async function getLessonData(lessonId: string): Promise<LocalLesson | null> {
   const needle = (lessonId || '').toUpperCase();
   const themeCode = needle.charAt(0);
-  if (THEME_ORDER.includes(themeCode)) {
+  if (getThemeOrder().includes(themeCode)) {
     const theme = await loadTheme(themeCode);
     if (theme) {
       const lesson = theme.lessons.find(l => l.id.toUpperCase() === needle);
@@ -91,7 +112,7 @@ export async function getLessonData(lessonId: string): Promise<LocalLesson | nul
 export async function getThemeForLesson(lessonId: string): Promise<LocalTheme | null> {
   const needle = (lessonId || '').toUpperCase();
   const themeCode = needle.charAt(0);
-  if (THEME_ORDER.includes(themeCode)) {
+  if (getThemeOrder().includes(themeCode)) {
     const theme = await loadTheme(themeCode);
     if (theme && theme.lessons.some(l => l.id.toUpperCase() === needle)) return theme;
   }
@@ -101,7 +122,7 @@ export async function getThemeForLesson(lessonId: string): Promise<LocalTheme | 
 export async function getExamQuestions(themeCode: string, count: number = 20): Promise<LocalQuestion[]> {
   const allQuestions: LocalQuestion[] = [];
   if (themeCode === 'FINAL') {
-    for (const code of THEME_ORDER) {
+    for (const code of getThemeOrder()) {
       const theme = await loadTheme(code);
       if (!theme) continue;
       for (const lesson of theme.lessons) allQuestions.push(...lesson.questions);
@@ -120,7 +141,7 @@ export async function getExamQuestions(themeCode: string, count: number = 20): P
 
 export async function getAllQuestions(): Promise<LocalQuestion[]> {
   const all: LocalQuestion[] = [];
-  for (const code of THEME_ORDER) {
+  for (const code of getThemeOrder()) {
     const theme = await loadTheme(code);
     if (!theme) continue;
     for (const lesson of theme.lessons) all.push(...lesson.questions);
@@ -141,9 +162,10 @@ export function shuffleChoices(q: LocalQuestion): { choices: string[]; correct: 
 }
 
 export function getNextThemeCode(code: string): string | null {
-  const idx = THEME_ORDER.indexOf(code);
-  if (idx < 0 || idx >= THEME_ORDER.length - 1) return null;
-  return THEME_ORDER[idx + 1];
+  const order = getThemeOrder();
+  const idx = order.indexOf(code);
+  if (idx < 0 || idx >= order.length - 1) return null;
+  return order[idx + 1];
 }
 
 // ── Language-aware wrappers ──
@@ -160,7 +182,7 @@ export async function getThemeDataLocalized(code: string, lang: Lang): Promise<L
 export async function getLessonDataLocalized(lessonId: string, lang: Lang): Promise<LocalLesson | null> {
   const needle = (lessonId || '').toUpperCase();
   const themeCode = needle.charAt(0);
-  if (THEME_ORDER.includes(themeCode)) {
+  if (getThemeOrder().includes(themeCode)) {
     const theme = await loadTheme(themeCode);
     if (theme) {
       const idx = theme.lessons.findIndex(l => l.id.toUpperCase() === needle);
@@ -176,7 +198,7 @@ export async function getLessonDataLocalized(lessonId: string, lang: Lang): Prom
 export async function getThemeForLessonLocalized(lessonId: string, lang: Lang): Promise<LocalTheme | null> {
   const needle = (lessonId || '').toUpperCase();
   const themeCode = needle.charAt(0);
-  if (THEME_ORDER.includes(themeCode)) {
+  if (getThemeOrder().includes(themeCode)) {
     const theme = await loadTheme(themeCode);
     if (theme && theme.lessons.some(l => l.id.toUpperCase() === needle)) {
       return localizeTheme(theme, lang);
@@ -188,7 +210,7 @@ export async function getThemeForLessonLocalized(lessonId: string, lang: Lang): 
 export async function getExamQuestionsLocalized(themeCode: string, lang: Lang, count: number = 20): Promise<LocalQuestion[]> {
   const allQuestions: LocalQuestion[] = [];
   if (themeCode === 'FINAL') {
-    for (const code of THEME_ORDER) {
+    for (const code of getThemeOrder()) {
       const theme = await loadTheme(code);
       if (!theme) continue;
       const loc = await localizeTheme(theme, lang);
@@ -209,7 +231,7 @@ export async function getExamQuestionsLocalized(themeCode: string, lang: Lang, c
 
 export async function getAllQuestionsLocalized(lang: Lang): Promise<LocalQuestion[]> {
   const all: LocalQuestion[] = [];
-  for (const code of THEME_ORDER) {
+  for (const code of getThemeOrder()) {
     const theme = await loadTheme(code);
     if (!theme) continue;
     const loc = await localizeTheme(theme, lang);
@@ -223,14 +245,27 @@ export async function getAllQuestionsLocalizedFlat(lang: Lang): Promise<LocalQue
 }
 
 export async function getQuestionById(id: string, lang: Lang = 'fr'): Promise<LocalQuestion | null> {
+  // Chemin rapide : la 1re lettre de l'id est le code du thème (ids permis B)
   const themeCode = (id || '').charAt(0);
-  if (THEME_ORDER.includes(themeCode)) {
+  if (getThemeOrder().includes(themeCode)) {
     const theme = await getThemeDataLocalized(themeCode, lang);
     if (theme) {
       for (const lesson of theme.lessons) {
         const q = lesson.questions.find(q => q.id === id);
         if (q) return q;
       }
+    }
+  }
+  // Repli : balayage de tous les thèmes du permis actif (ids préfixés "AM_"…).
+  // Un id d'un autre permis reste introuvable — c'est voulu : la banque
+  // d'erreurs est commune au compte, chaque permis ne résout que ses ids.
+  for (const code of getThemeOrder()) {
+    if (code === themeCode) continue;
+    const theme = await getThemeDataLocalized(code, lang);
+    if (!theme) continue;
+    for (const lesson of theme.lessons) {
+      const q = lesson.questions.find(q => q.id === id);
+      if (q) return q;
     }
   }
   return null;

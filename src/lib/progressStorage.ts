@@ -1,6 +1,13 @@
 'use client';
 
 // localStorage wrapper replacing AsyncStorage from React Native
+//
+// Multi-permis : les clés de progression (étoiles, examens, leçons…) sont
+// préfixées par permis via scopedKey — le B garde ses clés historiques sans
+// préfixe. XP, streak, temps d'étude et panneaux maîtrisés restent GLOBAUX
+// au compte (partagés entre permis), comme le streak Duolingo.
+
+import { scopedKey } from './license';
 
 const KEY_STARS = '@progress_stars';
 const KEY_THEMES = '@progress_themes';
@@ -9,12 +16,25 @@ const KEY_QUIZ = 'quizHistory';
 const KEY_STREAK = 'streakData';
 const KEY_XP = 'xpData';
 
+// Clés scopées au permis actif
 function getItem(key: string): string | null {
+  if (typeof window === 'undefined') return null;
+  return localStorage.getItem(scopedKey(key));
+}
+
+function setItem(key: string, value: string): void {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(scopedKey(key), value);
+}
+
+// Clés globales au compte (jamais préfixées) — et lectures/écritures des
+// données B brutes pour la synchro Supabase, quel que soit le permis actif
+function getItemGlobal(key: string): string | null {
   if (typeof window === 'undefined') return null;
   return localStorage.getItem(key);
 }
 
-function setItem(key: string, value: string): void {
+function setItemGlobal(key: string, value: string): void {
   if (typeof window === 'undefined') return;
   localStorage.setItem(key, value);
 }
@@ -113,7 +133,7 @@ export interface StreakData {
 }
 
 export function getStreakData(): StreakData {
-  const raw = getItem(KEY_STREAK);
+  const raw = getItemGlobal(KEY_STREAK);
   if (!raw) return { currentStreak: 0, lastActiveDate: '', bestStreak: 0 };
   return JSON.parse(raw) as StreakData;
 }
@@ -124,7 +144,7 @@ export function checkAndUpdateStreak(): StreakData {
   if (!data.lastActiveDate) {
     const today = new Date().toISOString().split('T')[0];
     const fresh = { ...data, lastActiveDate: today, currentStreak: 1, bestStreak: Math.max(1, data.bestStreak || 0) };
-    setItem(KEY_STREAK, JSON.stringify(fresh));
+    setItemGlobal(KEY_STREAK, JSON.stringify(fresh));
     return fresh;
   }
   const today = new Date().toISOString().slice(0, 10);
@@ -138,7 +158,7 @@ export function checkAndUpdateStreak(): StreakData {
   }
   bestStreak = Math.max(bestStreak, currentStreak);
   const updated: StreakData = { currentStreak, lastActiveDate: today, bestStreak };
-  setItem(KEY_STREAK, JSON.stringify(updated));
+  setItemGlobal(KEY_STREAK, JSON.stringify(updated));
   return updated;
 }
 
@@ -156,7 +176,7 @@ function calcLevel(totalXP: number): number {
 }
 
 export function getXPData(): XPData {
-  const raw = getItem(KEY_XP);
+  const raw = getItemGlobal(KEY_XP);
   if (!raw) return { totalXP: 0, level: 1 };
   const data = JSON.parse(raw) as XPData;
   return { totalXP: data.totalXP, level: calcLevel(data.totalXP) };
@@ -168,7 +188,7 @@ export function updateXP(xpToAdd: number): XPData & { prevLevel: number } {
   const totalXP = current.totalXP + xpToAdd;
   const level = calcLevel(totalXP);
   const updated: XPData = { totalXP, level };
-  setItem(KEY_XP, JSON.stringify(updated));
+  setItemGlobal(KEY_XP, JSON.stringify(updated));
   return { ...updated, prevLevel };
 }
 
@@ -223,7 +243,9 @@ export function markPartieDone(lessonId: string, partieIndex: number): void {
 /** Toutes les parties complétées, tous lessonId confondus — pour la synchro Supabase. */
 export function getAllCompletedParties(): Record<string, number[]> {
   if (typeof window === 'undefined') return {};
-  const prefix = 'lessonPartiesDone_';
+  // Préfixe scopé : sous B = 'lessonPartiesDone_' (les clés AM::… ne matchent pas) ;
+  // sous AM = 'AM::lessonPartiesDone_'
+  const prefix = scopedKey('lessonPartiesDone_');
   const result: Record<string, number[]> = {};
   for (const key of Object.keys(localStorage)) {
     if (!key.startsWith(prefix)) continue;
@@ -241,9 +263,11 @@ export function getAllCompletedParties(): Record<string, number[]> {
 /** Réécrit les parties complétées reçues de Supabase dans localStorage (une clé par leçon). */
 export function applyCompletedPartiesFromRemote(remote: Record<string, number[]>): void {
   if (typeof window === 'undefined' || !remote) return;
+  // Les colonnes Supabase contiennent la progression du permis B :
+  // on écrit les clés B brutes, quel que soit le permis actif.
   for (const [lessonId, indices] of Object.entries(remote)) {
     if (Array.isArray(indices) && indices.length > 0) {
-      setItem(lessonPartiesDoneKey(lessonId), JSON.stringify(indices));
+      setItemGlobal(lessonPartiesDoneKey(lessonId), JSON.stringify(indices));
     }
   }
 }
@@ -251,7 +275,7 @@ export function applyCompletedPartiesFromRemote(remote: Record<string, number[]>
 // ── Panneaux maîtrisés (flashcards) ──
 // Même clé que PanneauxFlashPanel — ici uniquement pour la synchro Supabase.
 export function getPanneauxMastered(): Record<string, boolean> {
-  const raw = getItem('panneaux_mastered');
+  const raw = getItemGlobal('panneaux_mastered');
   try {
     return raw ? JSON.parse(raw) : {};
   } catch {
@@ -264,13 +288,13 @@ export function applyPanneauxMasteredFromRemote(remote: Record<string, boolean>)
   // Fusion (union) avec le local : la maîtrise déjà acquise sur cet appareil
   // ne doit pas être perdue si le remote est plus pauvre.
   const merged = { ...getPanneauxMastered(), ...remote };
-  setItem('panneaux_mastered', JSON.stringify(merged));
+  setItemGlobal('panneaux_mastered', JSON.stringify(merged));
 }
 
 // ── Lesson ordered completion ──
 export function isLessonCompleted(lessonId: string): boolean {
   if (typeof window === 'undefined') return false;
-  if (localStorage.getItem(`lesson_completed_${lessonId}`) === 'true') return true;
+  if (getItem(`lesson_completed_${lessonId}`) === 'true') return true;
   // Fallback: stars > 0 means completed ≥ 70%
   return getStars(lessonId) > 0;
 }
@@ -281,7 +305,7 @@ export function markLessonCompleted(lessonId: string): void {
 
 export function isPartieCompleted(lessonId: string, partieIdx: number): boolean {
   if (typeof window === 'undefined') return false;
-  if (localStorage.getItem(`partie_completed_${lessonId}_p${partieIdx}`) === 'true') return true;
+  if (getItem(`partie_completed_${lessonId}_p${partieIdx}`) === 'true') return true;
   return getCompletedParties(lessonId).includes(partieIdx);
 }
 
@@ -358,14 +382,14 @@ export function addTurboAllTime(mode: '3min' | '5min' | 'survie', timeSeconds: n
 const KEY_STUDY_TIME = '@study_time';
 
 export function getStudyTime(): number {
-  const raw = getItem(KEY_STUDY_TIME);
+  const raw = getItemGlobal(KEY_STUDY_TIME);
   return raw ? Number(raw) : 0;
 }
 
 export function addStudyTime(seconds: number): void {
   if (seconds <= 0) return;
   const current = getStudyTime();
-  setItem(KEY_STUDY_TIME, String(current + seconds));
+  setItemGlobal(KEY_STUDY_TIME, String(current + seconds));
 }
 
 export function formatStudyTime(totalSeconds: number): string {
@@ -379,11 +403,15 @@ export function formatStudyTime(totalSeconds: number): string {
 // ── Reset all progress ──
 export function resetAllProgress(): void {
   if (typeof window === 'undefined') return;
+  // Scopé au permis actif (sous B, scopedKey('') = '' → clés historiques),
+  // plus les clés globales au compte (XP, streak, temps d'étude, panneaux)
+  const pre = scopedKey('');
   const keys = Object.keys(localStorage);
   keys.forEach(k => {
-    if (k.startsWith('@progress') || k.startsWith('lessonProgress_') || k.startsWith('lessonPartiesDone_') ||
-        k.startsWith('lesson_completed_') || k.startsWith('partie_completed_') ||
-        k === KEY_QUIZ || k === KEY_STREAK || k === KEY_XP || k === KEY_STUDY_TIME || k === 'survie_best_score' ||
+    if (k.startsWith(pre + '@progress') || k.startsWith(pre + 'lessonProgress_') || k.startsWith(pre + 'lessonPartiesDone_') ||
+        k.startsWith(pre + 'lesson_completed_') || k.startsWith(pre + 'partie_completed_') ||
+        k === pre + KEY_QUIZ || k === pre + 'survie_best_score' ||
+        k === KEY_STREAK || k === KEY_XP || k === KEY_STUDY_TIME ||
         k === 'panneaux_mastered') {
       localStorage.removeItem(k);
     }
@@ -391,17 +419,40 @@ export function resetAllProgress(): void {
 }
 
 // ── Sync all progress to Supabase ──
+// Les colonnes du profil (stars, exams, unlocked_themes…) contiennent la
+// progression du PERMIS B. On lit donc les clés B brutes (sans préfixe),
+// quel que soit le permis actif — sinon un utilisateur en mode AM écraserait
+// ses colonnes B avec sa progression AM. La progression AM aura ses propres
+// colonnes lors de la migration multi-permis (mission AM-5).
+function rawJson<T>(key: string, fallback: T): T {
+  const raw = getItemGlobal(key);
+  if (!raw) return fallback;
+  try { return JSON.parse(raw) as T; } catch { return fallback; }
+}
+
+function getAllCompletedPartiesB(): Record<string, number[]> {
+  if (typeof window === 'undefined') return {};
+  const prefix = 'lessonPartiesDone_';
+  const result: Record<string, number[]> = {};
+  for (const key of Object.keys(localStorage)) {
+    if (!key.startsWith(prefix)) continue;
+    const arr = rawJson<number[]>(key, []);
+    if (Array.isArray(arr) && arr.length > 0) result[key.slice(prefix.length)] = arr;
+  }
+  return result;
+}
+
 export async function syncAllToSupabase(uid: string): Promise<void> {
   const { syncProgressToSupabase } = await import('./supabaseUser');
   await syncProgressToSupabase(uid, {
-    stars: getAllStars(),
-    themes: getUnlockedThemes(),
-    exams: getAllExams(),
-    survivalBest: getSurvivalBest(),
-    quizHistory: getQuizHistory(),
+    stars: rawJson<Record<string, number>>(KEY_STARS, {}),
+    themes: rawJson<string[]>(KEY_THEMES, ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']),
+    exams: rawJson<Record<string, boolean>>(KEY_EXAMS, {}),
+    survivalBest: Number(getItemGlobal('survie_best_score') ?? 0),
+    quizHistory: rawJson<QuizHistory>(KEY_QUIZ, { totalCorrect: 0, totalAnswers: 0 }),
     streakData: getStreakData(),
     xpData: getXPData(),
-    lessonPartiesDone: getAllCompletedParties(),
+    lessonPartiesDone: getAllCompletedPartiesB(),
     panneauxMastered: getPanneauxMastered(),
   });
 }

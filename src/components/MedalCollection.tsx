@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useLang } from '@/contexts/LanguageContext';
-import { THEME_ORDER, getThemeDataLocalized } from '@/lib/lessonData';
+import { getThemeOrder, getThemeDataLocalized } from '@/lib/lessonData';
 import { isLessonCompleted, getCompletedParties, getAllExams } from '@/lib/progressStorage';
 import { computeTier, countThemeParts, TIER_PCT, TIER_COLORS, type Tier } from '@/lib/medals';
 import { MedalIcon } from '@/components/ExamRoute';
@@ -29,7 +29,7 @@ export default function MedalCollection() {
       const exams = getAllExams();
       const result: ThemeMedal[] = [];
       let totalAll = 0, completedAll = 0;
-      for (const code of THEME_ORDER) {
+      for (const code of getThemeOrder()) {
         const theme = await getThemeDataLocalized(code, lang);
         if (!theme) continue;
         // Progression par parties de leçons — même unité que la route du thème

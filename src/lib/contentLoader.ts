@@ -1,14 +1,24 @@
 import type { LocalTheme, LocalLesson, LocalQuestion } from './lessonData';
+import { getActiveLicense } from './license';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type NlThemeContent = Record<string, any>;
 
+// Cache par permis + code thème ("B:A", "AM:A"…)
 const nlCache: Record<string, NlThemeContent | null> = {};
 
 async function loadNl(code: string): Promise<NlThemeContent | null> {
-  if (code in nlCache) return nlCache[code];
+  const lic = getActiveLicense();
+  const cacheKey = lic + ':' + code;
+  if (cacheKey in nlCache) return nlCache[cacheKey];
   try {
     let mod: { default: NlThemeContent };
+    if (lic === 'AM') {
+      // Traductions NL du permis AM — ajoutées en mission AM-4.
+      // En attendant, null → localizeTheme retombe proprement sur le FR.
+      nlCache[cacheKey] = null;
+      return null;
+    }
     switch (code) {
       case 'A': mod = await import('../locales/content/nl/theme_A_nl.json'); break;
       case 'B': mod = await import('../locales/content/nl/theme_B_nl.json'); break;
@@ -19,12 +29,12 @@ async function loadNl(code: string): Promise<NlThemeContent | null> {
       case 'G': mod = await import('../locales/content/nl/theme_G_nl.json'); break;
       case 'H': mod = await import('../locales/content/nl/theme_H_nl.json'); break;
       case 'I': mod = await import('../locales/content/nl/theme_I_nl.json'); break;
-      default: nlCache[code] = null; return null;
+      default: nlCache[cacheKey] = null; return null;
     }
-    nlCache[code] = mod.default;
-    return nlCache[code];
+    nlCache[cacheKey] = mod.default;
+    return nlCache[cacheKey];
   } catch {
-    nlCache[code] = null;
+    nlCache[cacheKey] = null;
     return null;
   }
 }
