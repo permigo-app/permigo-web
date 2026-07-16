@@ -6,6 +6,8 @@ import { getThemeDataLocalized, type LocalTheoryCard, type LocalTheme } from '@/
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { addStudyTime } from '@/lib/progressStorage';
+import { isPremium, isThemeFree } from '@/lib/premium';
+import PremiumGate from '@/components/PremiumGate';
 
 interface FlashCard extends LocalTheoryCard {
   lessonTitle: string;
@@ -55,10 +57,15 @@ function FlashContent() {
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🃏';
 
+  // Même règle que les leçons : thème A gratuit, B-I premium — sans ce
+  // verrou, /flash?theme=B expose tout le contenu premium en flashcards
+  const locked = !isThemeFree(themeCode) && !isPremium();
+
   const [themeData, setThemeData] = useState<LocalTheme | null>(null);
   useEffect(() => {
+    if (locked) return;
     getThemeDataLocalized(themeCode, lang).then(setThemeData);
-  }, [themeCode, lang]);
+  }, [themeCode, lang, locked]);
   const themeTitle = themeData?.title || '';
 
   const allCards = useMemo<FlashCard[]>(() => {
@@ -171,6 +178,8 @@ function FlashContent() {
     setDone(false);
     setAnimating(false);
   }, [themeCode, allCards]);
+
+  if (locked) return <PremiumGate><></></PremiumGate>;
 
   if (!loaded) return <div className="min-h-screen" />;
 

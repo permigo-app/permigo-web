@@ -7,6 +7,8 @@ import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { fetchMistakes } from '@/lib/reviewApi';
 import QuizLayout from '@/components/QuizLayout';
+import { isPremium, isThemeFree } from '@/lib/premium';
+import PremiumGate from '@/components/PremiumGate';
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -87,6 +89,11 @@ function RevisionContent() {
     setDone(false);
     setShakeWrong(false);
   }, [themeCode, lang]);
+
+  // Banque d'erreurs par thème : même règle que les leçons (A gratuit, B-I premium)
+  if (!isThemeFree(themeCode) && !isPremium()) {
+    return <PremiumGate><></></PremiumGate>;
+  }
 
   if (loading) {
     return (

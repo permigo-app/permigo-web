@@ -12,7 +12,8 @@ import {
   getTurboAllTime, addTurboAllTime,
   type TurboSession, type TurboAllTimeStats,
 } from '@/lib/progressStorage';
-import { useIsPremium, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
+import { useIsPremium, isThemeFree, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
+import PremiumGate from '@/components/PremiumGate';
 import SignImage from '@/components/SignImage';
 import Image from 'next/image';
 import QuizLayout from '@/components/QuizLayout';
@@ -232,6 +233,12 @@ function TurboContent() {
     if (m === '3min') return t('turbo_3min_label');
     if (m === '5min') return t('turbo_5min_label');
     return t('turbo_survie_label');
+  }
+
+  // Accès ciblé à un thème premium (?theme=B-I) : même verrou que les leçons.
+  // Le turbo mixte sans thème reste le teaser gratuit, limité par jour.
+  if (themeCode && THEME_ORDER.includes(themeCode) && !isThemeFree(themeCode) && !premiumActive) {
+    return <PremiumGate><></></PremiumGate>;
   }
 
   // ── MODE SELECTION ──
