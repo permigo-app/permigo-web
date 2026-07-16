@@ -424,9 +424,9 @@
           "id": "I1_Q16",
           "question": "Vous venez de souffler dans l'éthylomètre et le résultat affiche \"S\" (Safe). Que signifie-t-il ?",
           "choices": [
-            "Votre test est positif",
-            "Votre concentration d'alcool est en dessous du seuil légal, vous pouvez conduire",
-            "C'est un résultat d'alarme",
+            "Votre test est positif à l'alcool",
+            "Alcool sous le seuil légal : vous pouvez conduire",
+            "C'est un résultat d'alarme (Alert)",
             "Une analyse supplémentaire est nécessaire"
           ],
           "correct": 1,
@@ -847,10 +847,10 @@
           "id": "I1_Q56",
           "question": "Vous prenez des médicaments et vous envisagez de conduire. Certains médicaments ont-ils des effets sur la conduite ?",
           "choices": [
-            "Non, les médicaments sont sans danger",
+            "Non, les médicaments sont sans danger au volant",
             "Oui, certains médicaments altèrent la concentration, les réflexes ou la vigilance",
-            "Non, seul l'alcool pose problème",
-            "Cela dépend de la dose"
+            "Non, seul l'alcool pose vraiment problème",
+            "Cela dépend uniquement de la dose prise"
           ],
           "correct": 1,
           "explanation": "Certains médicaments altèrent la concentration, les réflexes ou la vigilance.",
@@ -1825,8 +1825,8 @@
           "choices": [
             "Juste à l'entrée du tunnel",
             "Suffisamment tôt, bien avant de vous engager dans le tunnel",
-            "Au milieu du tunnel",
-            "En sortant du tunnel"
+            "Au milieu du tunnel seulement",
+            "En sortant du tunnel uniquement"
           ],
           "correct": 1,
           "explanation": "Allumer les feux de croisement bien avant de s'engager dans le tunnel.",
@@ -2374,10 +2374,10 @@
           "id": "I3_Q9",
           "question": "Vous adoptez une conduite sportive avec des accélérations fréquentes. Quel est l'impact sur votre consommation ?",
           "choices": [
-            "Cela n'a aucun impact",
+            "Cela n'a aucun impact mesurable",
             "Votre consommation de carburant augmente considérablement",
-            "C'est plus lent",
-            "Cela réduit la consommation"
+            "Vous arrivez plus lentement à destination",
+            "Cela réduit la consommation de carburant"
           ],
           "correct": 1,
           "explanation": "Maintenir un régime élevé et faire des changements de vitesse constants augmente fortement la consommation.",
@@ -2804,10 +2804,10 @@
           "id": "I3_Q47",
           "question": "Vous recevez votre certificat d'immatriculation. De quoi s'agit-il ?",
           "choices": [
-            "De votre permis de conduire",
-            "De la carte d'identité de votre voiture, reprenant toutes ses caractéristiques",
-            "De votre contrat d'assurance",
-            "Du rapport de contrôle technique"
+            "De votre permis de conduire définitif",
+            "De la carte d'identité de la voiture et ses caractéristiques",
+            "De votre contrat d'assurance auto",
+            "Du rapport du contrôle technique"
           ],
           "correct": 1,
           "explanation": "Le certificat d'immatriculation est le document officiel contenant toutes les caractéristiques du véhicule.",
@@ -3957,10 +3957,10 @@
           "id": "I4_Q59",
           "question": "Votre véhicule est en survirage. Que devez-vous faire dans l'ordre ?",
           "choices": [
-            "Freiner fortement puis accélérer",
+            "Freiner fortement puis accélérer aussitôt après",
             "Regarder la direction voulue, contre-braquer, appuyer sur l'embrayage, lâcher l'accélérateur",
-            "Accélérer et tourner le volant",
-            "Freiner et tourner brusquement le volant"
+            "Accélérer et tourner le volant vers l'extérieur",
+            "Freiner fort et tourner brusquement le volant vers l'intérieur"
           ],
           "correct": 1,
           "explanation": "En cas de survirage : 1) Regarder la direction souhaitée, 2) Contre-braquer, 3) Embrayage, 4) Lâcher l'accélérateur.",
@@ -4074,10 +4074,10 @@
           "id": "I4_Q69",
           "question": "Vous venez de changer de vitesse. Où devez-vous placer votre pied gauche ?",
           "choices": [
-            "Sur la pédale d'embrayage",
+            "Sur la pédale d'embrayage, prêt à débrayer",
             "Sur l'appui prévu à côté de la pédale d'embrayage",
-            "Sous la pédale",
-            "Devant la pédale"
+            "Sous la pédale d'embrayage",
+            "Devant la pédale d'embrayage"
           ],
           "correct": 1,
           "explanation": "Après le changement de vitesse, le pied gauche se place sur l'appui latéral prévu, pas sur la pédale.",

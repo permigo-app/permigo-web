@@ -399,9 +399,9 @@
           "question": "Vous souhaitez utiliser une rue avec \"accès interdit + excepté circulation locale\" comme raccourci. Vous n'y habitez pas et n'y rendez visite à personne. Pouvez-vous y entrer ?",
           "choices": [
             "Oui, à condition que la rue soit vide",
-            "Non, utiliser la rue comme raccourci ne constitue pas de la circulation locale",
-            "Oui, en roulant prudemment",
-            "Oui, en roulant lentement"
+            "Non, un raccourci n'est pas de la circulation locale",
+            "Oui, en roulant très prudemment",
+            "Oui, en roulant au pas"
           ],
           "correct": 1,
           "explanation": "Raccourci = pas de circulation locale = interdit.",
@@ -1210,10 +1210,10 @@
           "id": "G2_Q26",
           "question": "Vous voyez un signal rectangulaire bleu avec une flèche vers la droite à l'entrée d'une rue. Êtes-vous OBLIGÉ de tourner à droite ?",
           "choices": [
-            "Oui, c'est une obligation",
-            "Non, c'est un sens unique qui INDIQUE la direction autorisée sans l'imposer",
-            "Oui, c'est la direction imposée",
-            "Non, c'est un simple conseil"
+            "Oui, c'est une obligation formelle",
+            "Non, ce sens unique INDIQUE la direction sans l'imposer",
+            "Oui, c'est la direction imposée à tous",
+            "Non, c'est un simple conseil de prudence"
           ],
           "correct": 1,
           "explanation": "Le signal rectangulaire est une indication (sens unique), pas une obligation de tourner.",
@@ -1397,10 +1397,10 @@
           "id": "G2_SIGN_C5_1",
           "question": "Vous arrivez devant un panneau rond rouge avec un symbole barrant tous les véhicules à moteur. À qui s'adresse cette interdiction ?",
           "choices": [
-            "Uniquement aux camions",
+            "Uniquement aux camions et autocars",
             "À tous les véhicules à moteur (voitures, motos, camions...)",
-            "Aux vélos et aux piétons",
-            "Uniquement aux motos"
+            "Aux vélos et aux piétons uniquement",
+            "Uniquement aux motos et cyclomoteurs"
           ],
           "correct": 1,
           "explanation": "C5 interdit l'accès à tous les véhicules à moteur (voitures, motos, camions…). Seuls les vélos, piétons et animaux peuvent continuer.",
@@ -1483,8 +1483,8 @@
           "question": "Vous sortez d'une zone de chantier sur autoroute et vous voyez \"120\" barré de gris. Que signifie-t-il ?",
           "choices": [
             "La vitesse minimale est de 120 km/h",
-            "La limitation de 120 km/h prend fin et vous pouvez reprendre la vitesse normale d'autoroute",
-            "La limitation de 120 km/h reprend",
+            "Fin de la limitation : vous reprenez la vitesse normale d'autoroute",
+            "La limitation de 120 km/h recommence",
             "La vitesse est réduite à 100 km/h"
           ],
           "correct": 1,

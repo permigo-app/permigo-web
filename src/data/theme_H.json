@@ -568,8 +568,8 @@
           "question": "Vous roulez sur l'autoroute et vous souhaitez vous arrêter sur la bande d'arrêt d'urgence pour téléphoner. Pouvez-vous le faire ?",
           "choices": [
             "Oui, la bande d'arrêt d'urgence est prévue pour cela",
-            "Non, l'arrêt et le stationnement sont interdits sur l'autoroute, y compris sur la bande d'arrêt d'urgence",
-            "Oui, pour une courte durée",
+            "Non, c'est interdit sur l'autoroute, bande d'arrêt d'urgence comprise",
+            "Oui, mais pour une courte durée seulement",
             "Oui, pour passer un appel téléphonique"
           ],
           "correct": 1,
@@ -593,10 +593,10 @@
           "id": "H1_Q34",
           "question": "Vous voyez un dispositif surélevé (ralentisseur) et vous envisagez d'y stationner. Pouvez-vous le faire ?",
           "choices": [
-            "Oui, c'est un simple ralentisseur",
+            "Oui, ce n'est qu'un simple ralentisseur",
             "Non, sauf si un marquage ou une signalisation l'autorise expressément",
-            "Oui, c'est toujours autorisé",
-            "Non, en aucun cas"
+            "Oui, c'est toujours autorisé de jour",
+            "Non, en aucun cas ce n'est possible"
           ],
           "correct": 1,
           "explanation": "Interdit sur un dispositif surélevé, sauf si une signalisation l'autorise explicitement.",
@@ -922,9 +922,9 @@
           "question": "Vous êtes sous un pont et vous repérez une place sur l'accotement ou dans une bande de stationnement. Pouvez-vous vous y garer ?",
           "choices": [
             "Non, c'est interdit partout sous un pont",
-            "Oui, l'interdiction sous les ponts ne vise que la chaussée, pas l'accotement ni la bande de stationnement",
-            "Non, c'est interdit en toutes circonstances sous un pont",
-            "Cela dépend du marquage"
+            "Oui, l'interdiction sous les ponts ne vise que la chaussée",
+            "Non, c'est interdit en toutes circonstances",
+            "Cela dépend du marquage au sol"
           ],
           "correct": 1,
           "explanation": "L'interdiction sous les ponts ne vise que la chaussée : l'accotement ou la bande de stationnement restent possibles.",
@@ -2408,10 +2408,10 @@
           "id": "H3_Q16",
           "question": "Vous êtes en zone bleue un samedi à 15h. Le samedi est un jour ouvrable. Devez-vous utiliser le disque ?",
           "choices": [
-            "Non, c'est le week-end",
+            "Non, le samedi c'est le week-end",
             "Oui, le samedi est un jour ouvrable et 15h est entre 9h et 18h",
-            "Non, uniquement en semaine",
-            "Cela dépend de la zone"
+            "Non, uniquement du lundi au vendredi",
+            "Cela dépend de la commune"
           ],
           "correct": 1,
           "explanation": "Le samedi est un jour ouvrable et 15h est dans la plage 9h–18h : le disque est obligatoire.",
