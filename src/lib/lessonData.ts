@@ -46,7 +46,7 @@ export interface LocalTheme {
 // Ordre des thèmes du permis B (permis historique)
 export const THEME_ORDER = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
 // Ordre des thèmes du permis AM — squelette, complété lors de la rédaction (AM-2)
-export const AM_THEME_ORDER = ['A', 'B', 'C', 'D', 'E'];
+export const AM_THEME_ORDER = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 import { getActiveLicense } from './license';
 
@@ -73,6 +73,7 @@ async function loadTheme(code: string): Promise<LocalTheme | null> {
         case 'C': mod = await import('../data/am/theme_C.json'); break;
         case 'D': mod = await import('../data/am/theme_D.json'); break;
         case 'E': mod = await import('../data/am/theme_E.json'); break;
+        case 'F': mod = await import('../data/am/theme_F.json'); break;
         default: return null;
       }
     } else {

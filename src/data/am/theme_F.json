@@ -1,0 +1,210 @@
+{
+  "theme": "F",
+  "city": "Charleroi",
+  "title": "Alcool, accidents et sanctions",
+  "lessons": [
+    {
+      "id": "F1",
+      "title": "Alcool, drogues et conduite",
+      "theory": [
+        {
+          "title": "Partie 1 — Les limites et les contrôles",
+          "cards": [
+            {
+              "type": "card",
+              "title": "Les mêmes limites que tout conducteur",
+              "content": "📋 La règle\nÀ cyclomoteur, les limites d'alcool sont identiques à celles des autres conducteurs : 0,5 pour mille dans le sang (0,22 mg/l d'air expiré). Au-delà, tu es en infraction — dès 16 ans.\n\n💡 Pourquoi\nLe Code ne fait pas de différence de véhicule : un conducteur sous influence est un danger, à 45 km/h comme à 120.\n\n🛵 En pratique\nLa police peut te soumettre au test d'haleine comme n'importe quel conducteur. Refuser de souffler ? Tu es traité comme positif.\n\n📍 Exemple\nDeux bières à la fête, puis le scooter pour rentrer : tu peux déjà dépasser 0,5 pour mille — et perdre bien plus que ton permis.\n\n⚠️ Erreur fréquente\nCroire que « le scooter, ça ne compte pas » : mêmes limites, mêmes contrôles, mêmes sanctions.",
+              "emoji": "🍺",
+              "explanation_simple": "0,5 pour mille maximum, comme en voiture. Contrôles et sanctions identiques — le scooter ne change rien."
+            },
+            {
+              "type": "card",
+              "title": "Les sanctions montent vite",
+              "content": "📋 La règle\nEntre 0,5 et 0,8 pour mille : amende et interdiction immédiate de conduire de 3 heures. À partir de 0,8 : interdiction de 6 heures, amendes bien plus lourdes et tribunal possible, avec déchéance du droit de conduire à la clé.\n\n💡 Pourquoi\nLe risque d'accident explose avec le taux : la loi suit la même courbe.\n\n🛵 En pratique\nMême « juste au-dessus », ton scooter reste sur place le temps de l'interdiction — et la récidive aggrave tout.\n\n📍 Exemple\nContrôle à 0,6 pour mille : PV, amende, et tu finis le trajet à pied. À 0,9 : convocation, et ton permis AM tout neuf est en danger.\n\n⚠️ Erreur fréquente\nCalculer « je tiens bien l'alcool » : le taux dépend du corps, pas de la sensation — seul le chiffre compte.",
+              "emoji": "⚖️",
+              "explanation_simple": "0,5-0,8 : amende + 3h sans conduire. 0,8 et plus : 6h, tribunal possible, permis en jeu. La note grimpe vite."
+            }
+          ]
+        },
+        {
+          "title": "Partie 2 — Pourquoi c'est pire à deux roues",
+          "cards": [
+            {
+              "type": "card",
+              "title": "L'équilibre, première victime",
+              "content": "📋 La règle\nL'alcool altère précisément ce dont le deux-roues a le plus besoin : l'équilibre, les réflexes, l'évaluation des distances et le champ de vision.\n\n💡 Pourquoi\nUne voiture ivre zigzague ; un cyclo ivre TOMBE. Ton véhicule ne tient debout que par tes corrections permanentes.\n\n🛵 En pratique\nMême sous la limite légale, un seul verre dégrade déjà ton pilotage : à deux roues, le « zéro verre » est la seule vraie sécurité.\n\n📍 Exemple\nUn dos d'âne mal vu, une correction trop lente : sobre, tu rattrapes ; alcoolisé, tu chutes sur la mâchoire.\n\n⚠️ Erreur fréquente\nRaisonner en « limite légale » : la limite fait de toi un conducteur en règle, pas un conducteur en sécurité.",
+              "emoji": "🎯",
+              "explanation_simple": "L'alcool attaque l'équilibre — exactement ce qui te tient debout. À deux roues, la vraie limite, c'est zéro."
+            },
+            {
+              "type": "card",
+              "title": "Drogues et médicaments",
+              "content": "📋 La règle\nPour les drogues, c'est la tolérance ZÉRO : le test salivaire détecte cannabis et autres substances, et toute trace est une infraction grave. Certains médicaments (somnifères, calmants, certains antihistaminiques) altèrent aussi la conduite.\n\n💡 Pourquoi\nCes substances faussent perception, vigilance et temps de réaction — parfois des heures ou des jours après la prise.\n\n🛵 En pratique\nLis les notices : le pictogramme de mise en garde conduite existe pour toi aussi. Dans le doute, demande au pharmacien AVANT de prendre le guidon.\n\n📍 Exemple\nJoint « d'hier soir » : le test salivaire du lendemain peut encore être positif — mêmes sanctions qu'au volant d'une voiture.\n\n⚠️ Erreur fréquente\nCroire que seul l'alcool est contrôlé : les tests salivaires font partie des contrôles routiers standards.",
+              "emoji": "💊",
+              "explanation_simple": "Drogues : zéro tolérance, test salivaire. Médicaments : lis la notice — certains interdisent de fait le guidon."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "AM_F1_Q1",
+          "question": "Quelle est la limite d'alcool pour un cyclomotoriste de 16 ans ?",
+          "choices": ["1,0 pour mille, il ne conduit pas de voiture", "0,5 pour mille, comme tout conducteur", "0,8 pour mille en agglomération", "Aucune limite avant 18 ans"],
+          "correct": 1,
+          "explanation": "Les limites sont identiques pour tous les conducteurs : 0,5 pour mille (0,22 mg/l d'air expiré), dès le premier jour de permis.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_F1_Q2",
+          "question": "Que se passe-t-il si tu refuses de souffler dans l'éthylotest ?",
+          "choices": ["Rien, c'est ton droit", "Tu es traité comme un conducteur positif", "Tu reçois un simple avertissement", "Le test est reporté au lendemain"],
+          "correct": 1,
+          "explanation": "Le refus de souffler équivaut à un test positif : interdiction de conduire et sanctions à la clé.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_F1_Q3",
+          "question": "Contrôle entre 0,5 et 0,8 pour mille : que risques-tu immédiatement ?",
+          "choices": ["Une amende et 3 heures d'interdiction de conduire", "Uniquement un avertissement oral", "Le retrait définitif du permis AM", "La saisie du cyclomoteur"],
+          "correct": 0,
+          "explanation": "Entre 0,5 et 0,8 : amende et interdiction immédiate de conduire de 3 heures. À partir de 0,8, tout s'aggrave (6h, tribunal possible).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_F1_Q4",
+          "question": "Pourquoi l'alcool est-il particulièrement dangereux à deux roues ?",
+          "choices": ["Le réservoir est plus petit", "Il altère l'équilibre, vital sur un deux-roues", "Les contrôles y sont plus rares", "Il refroidit le moteur"],
+          "correct": 1,
+          "explanation": "Le deux-roues ne tient que par tes corrections permanentes : l'alcool attaque l'équilibre, les réflexes et l'évaluation des distances.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_F1_Q5",
+          "question": "Quelle est la règle pour les drogues au guidon ?",
+          "choices": ["Tolérance zéro, test salivaire à l'appui", "Une petite quantité est tolérée", "Seul le cannabis est interdit", "Les contrôles n'existent qu'en voiture"],
+          "correct": 0,
+          "explanation": "Tolérance zéro : le test salivaire détecte les substances, et toute trace constitue une infraction grave — aussi à cyclomoteur.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_F1_Q6",
+          "question": "Un médicament porte un pictogramme déconseillant la conduite. Tu :",
+          "choices": ["Peux rouler, il vise les automobilistes", "Ne prends pas le guidon, il te concerne aussi", "Roules uniquement de jour", "Réduis simplement ta vitesse"],
+          "correct": 1,
+          "explanation": "Somnifères, calmants et certains antihistaminiques altèrent la conduite : la mise en garde vaut pour tout conducteur, cyclo compris.",
+          "theoryCardIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "title": "Accident, secours et sanctions",
+      "theory": [
+        {
+          "title": "Partie 1 — En cas d'accident",
+          "cards": [
+            {
+              "type": "card",
+              "title": "Protéger, alerter, secourir",
+              "content": "📋 La règle\nEn cas d'accident : 1) PROTÉGER les lieux (sécuriser, éviter le sur-accident), 2) ALERTER les secours au 112 (lieu exact, blessés, dangers), 3) SECOURIR sans déplacer les blessés — sauf danger immédiat comme un incendie.\n\n💡 Pourquoi\nUn blessé déplacé peut être aggravé (colonne vertébrale) ; un lieu non sécurisé fait de nouvelles victimes.\n\n🛵 En pratique\nGare ton cyclo en amont, mets-toi hors trafic, et parle au blessé sans le bouger. Un motard casqué au sol : on NE retire PAS son casque, sauf s'il ne respire pas.\n\n📍 Exemple\nChute d'un cycliste devant toi : tu t'arrêtes en sécurité, 112 avec le nom de la rue, et tu restes près de lui sans le relever.\n\n⚠️ Erreur fréquente\nRelever le blessé « pour l'aider » : le geste réflexe le plus dangereux qui soit.",
+              "emoji": "🚑",
+              "explanation_simple": "Protéger → 112 → secourir SANS déplacer (sauf incendie). Et on ne retire jamais le casque d'un blessé qui respire."
+            },
+            {
+              "type": "card",
+              "title": "Dégâts matériels : le constat",
+              "content": "📋 La règle\nAccident sans blessé : tu remplis un constat amiable avec l'autre conducteur (croquis, coordonnées, assurances). Si l'autre est absent (véhicule en stationnement), tu laisses tes coordonnées OU tu préviens la police.\n\n💡 Pourquoi\nLe constat protège les deux parties : sans lui, c'est parole contre parole devant les assureurs.\n\n🛵 En pratique\nGarde un constat sous la selle. Photos des dégâts et des positions AVANT de dégager la chaussée, signatures des deux côtés — et ne reconnais jamais de responsabilité sur place.\n\n📍 Exemple\nTu érafles une voiture garée, personne en vue : petit mot avec tes coordonnées sous l'essuie-glace, ou appel à la police. Partir sans rien, c'est un délit de fuite.\n\n⚠️ Erreur fréquente\nS'arranger « à l'oral » sans constat : la version de l'autre change souvent une fois rentré chez lui.",
+              "emoji": "📝",
+              "explanation_simple": "Pas de blessé = constat amiable + photos. Véhicule garé endommagé = coordonnées ou police. Jamais partir sans rien."
+            },
+            {
+              "type": "card",
+              "title": "Le délit de fuite : la pire décision",
+              "content": "📋 La règle\nQuitter les lieux d'un accident pour échapper aux constatations est un DÉLIT DE FUITE : une infraction pénale grave, jugée au tribunal, même sans blessé.\n\n💡 Pourquoi\nLa fuite transforme un accrochage banal en dossier pénal — et laisse potentiellement un blessé sans secours.\n\n🛵 En pratique\nMême paniqué, même en tort, même sans assurance en règle : tu RESTES. Tout s'arrange mieux qu'un délit de fuite.\n\n📍 Exemple\nTu touches un rétroviseur et paniques : rester coûte une franchise ; fuir coûte un procès, ton permis et un casier.\n\n⚠️ Erreur fréquente\nCroire qu'« à cyclo, personne ne retrouve personne » : plaque, caméras et témoins font des miracles — dans le mauvais sens pour toi.",
+              "emoji": "🏃",
+              "explanation_simple": "Fuir un accident = infraction pénale, même pour une éraflure. Quoi qu'il arrive : tu restes sur place."
+            }
+          ]
+        },
+        {
+          "title": "Partie 2 — Sanctions et responsabilité",
+          "cards": [
+            {
+              "type": "card",
+              "title": "Les sanctions te concernent dès 16 ans",
+              "content": "📋 La règle\nAmendes, interdictions temporaires de conduire, voire déchéance du droit de conduire prononcée par un juge : tout l'arsenal des sanctions routières s'applique au cyclomotoriste — et ta responsabilité est engagée dès tes 16 ans.\n\n💡 Pourquoi\nLe permis AM fait de toi un conducteur à part entière : mêmes droits, mêmes devoirs, mêmes juges.\n\n🛵 En pratique\nLes infractions sont classées par degrés de gravité : plus le comportement est dangereux (vitesse, alcool, feu rouge), plus l'amende grimpe et plus le tribunal se rapproche.\n\n📍 Exemple\nFeu rouge grillé à scooter : c'est une infraction du même niveau de gravité qu'en voiture — l'amende ne regarde pas la taille du véhicule.\n\n⚠️ Erreur fréquente\nPenser que « mineur = intouchable » : à 16 ans, tes infractions de conduite te suivent, toi et ton portefeuille.",
+              "emoji": "👮",
+              "explanation_simple": "Amendes, interdictions, déchéance : tout s'applique au cyclo, et dès 16 ans c'est TA responsabilité."
+            },
+            {
+              "type": "card",
+              "title": "L'assurance : ta protection… conditionnelle",
+              "content": "📋 La règle\nTa RC couvre les dommages causés aux autres — mais l'assureur peut se retourner CONTRE TOI en cas de faute lourde : alcool, débridage, conduite sans permis valable ou prêt du cyclo à un ami non autorisé.\n\n💡 Pourquoi\nL'assurance couvre le risque déclaré, pas les infractions volontaires qui l'aggravent.\n\n🛵 En pratique\nLes trois règles d'or de l'assuré : véhicule conforme (jamais débridé), conducteur en règle (permis valable, sobre), et pas de prêt à qui n'y a pas droit.\n\n📍 Exemple\nTon ami sans permis emprunte ton scooter et blesse un piéton : l'assurance indemnise la victime… puis vous réclame tout, à lui et à toi.\n\n⚠️ Erreur fréquente\nPrêter son cyclo « cinq minutes » : tu restes responsable de qui conduit TON véhicule.",
+              "emoji": "🛡️",
+              "explanation_simple": "La RC paie les victimes, mais en cas de faute lourde (alcool, débridage, prêt illégal), elle te présente ensuite la facture."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "AM_F2_Q1",
+          "question": "Quel est l'ordre des actions en cas d'accident avec blessé ?",
+          "choices": ["Secourir, protéger, alerter", "Protéger, alerter (112), secourir", "Alerter, partir chercher de l'aide, revenir", "Déplacer le blessé, puis appeler"],
+          "correct": 1,
+          "explanation": "Protéger les lieux, alerter le 112, secourir sans déplacer le blessé (sauf danger immédiat comme un incendie).",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_F2_Q2",
+          "question": "Un motard blessé est au sol, casqué, et respire. Son casque :",
+          "choices": ["Doit être retiré doucement", "Reste en place jusqu'aux secours", "Doit être desserré et retiré", "Sert d'appui pour le relever"],
+          "correct": 1,
+          "explanation": "On ne retire jamais le casque d'un blessé qui respire : seul un danger vital (arrêt respiratoire, incendie) le justifie.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_F2_Q3",
+          "question": "Tu érafles une voiture en stationnement, propriétaire absent. Tu :",
+          "choices": ["Repars, ce n'est qu'une éraflure", "Laisses tes coordonnées ou préviens la police", "Attends une heure puis repars", "Déplaces ton scooter et observes"],
+          "correct": 1,
+          "explanation": "Coordonnées sur place ou appel à la police : partir sans rien constitue un délit de fuite, même pour une éraflure.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_F2_Q4",
+          "question": "Le délit de fuite est :",
+          "choices": ["Une infraction pénale grave, même sans blessé", "Une simple amende administrative", "Toléré pour les dégâts légers", "Impossible à prouver pour un cyclo"],
+          "correct": 0,
+          "explanation": "Quitter les lieux pour échapper aux constatations est une infraction pénale jugée au tribunal — quelle que soit la gravité de l'accident.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "AM_F2_Q5",
+          "question": "À partir de quel âge ta responsabilité de conducteur est-elle engagée ?",
+          "choices": ["18 ans, à la majorité", "Dès 16 ans, avec ton permis AM", "21 ans pour les amendes lourdes", "Jamais tant que tu es étudiant"],
+          "correct": 1,
+          "explanation": "Le permis AM fait de toi un conducteur à part entière : amendes, interdictions et déchéance te concernent dès 16 ans.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_F2_Q6",
+          "question": "Dans quel cas ton assurance peut-elle se retourner contre toi après avoir indemnisé ?",
+          "choices": ["Après tout accident, systématiquement", "En cas de faute lourde : alcool, débridage, prêt illégal", "Uniquement si tu changes d'assureur", "Jamais, la RC est définitive"],
+          "correct": 1,
+          "explanation": "La RC indemnise les victimes, mais les fautes lourdes (alcool, véhicule débridé, conducteur non autorisé) ouvrent un recours contre toi.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_F2_Q7",
+          "question": "Tu prêtes ton scooter à un ami qui n'a pas le permis AM. Qui prend un risque ?",
+          "choices": ["Lui seul, c'est lui qui conduit", "Vous deux : conducteur et propriétaire", "Personne si le trajet est court", "Uniquement l'assureur"],
+          "correct": 1,
+          "explanation": "Le conducteur est en infraction, et toi, propriétaire, tu restes responsable de qui conduit ton véhicule — l'assurance peut vous poursuivre tous les deux.",
+          "theoryCardIndex": 1
+        }
+      ]
+    }
+  ]
+}
