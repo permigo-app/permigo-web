@@ -35,7 +35,10 @@ export default function LoginPage() {
     } else {
       localStorage.setItem('@onboarding_done', 'true');
       document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
-      window.location.href = '/app';
+      // Aucun permis choisi sur cet appareil (inscription via confirmation
+      // email, ou premier login sur un nouvel appareil) → choix du permis
+      // d'abord ; sinon accueil directement
+      window.location.href = localStorage.getItem('license_type') ? '/app' : '/choix-permis';
     }
   };
 

@@ -136,6 +136,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         // localStorage wins → auto-migrate to Supabase
         syncAllToSupabase(sbUser.id).catch(console.error);
       }
+
+      // Permis choisi : restauré depuis le profil (nouvel appareil) — évite
+      // de représenter l'écran de choix à un utilisateur qui a déjà choisi
+      if (profile.license_type && !localStorage.getItem('license_type')) {
+        localStorage.setItem('license_type', profile.license_type);
+      }
+
+      // Compte créé il y a moins de 48h et didacticiel jamais vu → on l'arme.
+      // Couvre le parcours "inscription avec confirmation email" (l'utilisateur
+      // revient par /login et n'est jamais passé par le flux d'inscription).
+      const createdAt = profile.created_at ? new Date(profile.created_at).getTime() : 0;
+      const isRecent = createdAt > 0 && Date.now() - createdAt < 48 * 60 * 60 * 1000;
+      if (isRecent && localStorage.getItem('@tuto_done') !== 'true' && localStorage.getItem('@tuto_pending') !== 'true') {
+        localStorage.setItem('@tuto_pending', 'true');
+      }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

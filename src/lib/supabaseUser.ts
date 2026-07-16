@@ -26,6 +26,7 @@ export interface SupabaseProfile {
   xp_data: { totalXP: number; level: number };
   lesson_parties_done: Record<string, number[]>;
   panneaux_mastered: Record<string, boolean>;
+  license_type: string | null;
   is_premium: boolean;
   created_at: string | null;
   updated_at: string | null;
@@ -81,6 +82,7 @@ function mergeProfile(
     xp_data: row.xp_data ?? meta.xp_data ?? { totalXP: 0, level: 1 },
     lesson_parties_done: row.lesson_parties_done ?? meta.lesson_parties_done ?? {},
     panneaux_mastered: row.panneaux_mastered ?? meta.panneaux_mastered ?? {},
+    license_type: row.license_type ?? meta.license_type ?? null,
     is_premium: row.is_premium === true,
     created_at: row.created_at ?? new Date().toISOString(),
     updated_at: row.updated_at ?? new Date().toISOString(),
