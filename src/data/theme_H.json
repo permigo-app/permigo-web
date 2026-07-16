@@ -554,10 +554,10 @@
           "id": "H1_Q31",
           "question": "Vous cherchez à vous arrêter à un endroit où votre véhicule pourrait représenter un danger pour les autres usagers. Pouvez-vous le faire ?",
           "choices": [
-            "Oui, pour quelques instants",
-            "Non, l'arrêt et le stationnement sont interdits là où le véhicule constitue un danger",
+            "Oui, pour quelques instants seulement",
+            "Non, c'est interdit là où le véhicule constitue un danger",
             "Oui, en activant vos feux de détresse",
-            "Oui, en cas d'urgence"
+            "Oui, mais uniquement en cas d'urgence"
           ],
           "correct": 1,
           "explanation": "L'arrêt et le stationnement sont interdits là où le véhicule représente un danger ou gêne sans raison valable.",
@@ -1552,10 +1552,10 @@
           "id": "H2_Q23",
           "question": "Vous souhaitez stationner sur une chaussée de 4,5 m de large. Votre voiture fait 1,8 m. Pouvez-vous stationner ?",
           "choices": [
-            "Oui, il reste 2,7 m",
+            "Oui, il reste 2,7 m de passage libre",
             "Non, car 4,5 m - 1,8 m = 2,7 m, ce qui est inférieur aux 3 m requis",
-            "Oui, pour un bref instant",
-            "Cela dépend de l'heure"
+            "Oui, mais pour un bref instant",
+            "Cela dépend de l'heure de la journée"
           ],
           "correct": 1,
           "explanation": "4,5 m − 1,8 m = 2,7 m, insuffisant : il faut au moins 3 m de passage libre.",
@@ -2381,9 +2381,9 @@
           "id": "H3_Q13",
           "question": "Vous avez déplacé votre véhicule après le temps écoulé en zone bleue. Pouvez-vous revenir stationner au même endroit ?",
           "choices": [
-            "Non, c'est interdit",
-            "Oui, après avoir déplacé le véhicule, vous pouvez revenir et régler un nouveau temps",
-            "Non, vous devez changer de zone",
+            "Non, c'est interdit le même jour",
+            "Oui, vous pouvez revenir et régler un nouveau temps",
+            "Non, vous devez changer de zone bleue",
             "Cela dépend de la durée d'absence"
           ],
           "correct": 1,
@@ -2421,10 +2421,10 @@
           "id": "H3_Q17",
           "question": "Vous êtes en zone bleue un jour ouvrable à 20h. Devez-vous utiliser le disque ?",
           "choices": [
-            "Oui, le disque est toujours obligatoire en zone bleue",
-            "Non, 20h est après 18h, vous êtes hors de la plage horaire obligatoire (sauf autre panneau)",
-            "Oui, jusqu'à minuit",
-            "Cela dépend du jour"
+            "Oui, le disque est toujours obligatoire",
+            "Non, 20h est après 18h, hors plage obligatoire (sauf autre panneau)",
+            "Oui, l'obligation court jusqu'à minuit",
+            "Cela dépend du jour de la semaine"
           ],
           "correct": 1,
           "explanation": "20h est après 18h, hors plage horaire obligatoire : le disque n'est pas requis (sauf autre panneau).",
@@ -2622,8 +2622,8 @@
           "choices": [
             "Sur l'accotement, c'est plus pratique",
             "Sur la chaussée, car le signal l'impose même si elle est étroite",
-            "N'importe où",
-            "Sur le trottoir"
+            "N'importe où selon votre choix",
+            "Sur le trottoir si la chaussée est étroite"
           ],
           "correct": 1,
           "explanation": "Le signal impose le stationnement sur la chaussée, même si l'accotement est plus large.",
@@ -2724,10 +2724,10 @@
           "id": "H3_Q42",
           "question": "Vous descendez de votre véhicule. Quel est l'ordre complet des actions à effectuer ?",
           "choices": [
-            "Moteur, fenêtres, frein, clé, portes",
+            "Éteindre le moteur, fermer les fenêtres, frein à main, retirer la clé, fermer les portes",
             "Frein à main, fermer fenêtres et toit ouvrant, éteindre le moteur, retirer la clé, fermer les portes",
-            "Clé, frein, moteur, fenêtres",
-            "Portes, fenêtres, moteur, frein, clé"
+            "Retirer la clé, frein à main, éteindre le moteur, fermer les fenêtres",
+            "Fermer les portes, les fenêtres, éteindre le moteur, frein à main, retirer la clé"
           ],
           "correct": 1,
           "explanation": "L'ordre est : frein à main → fenêtres/toit → moteur → clé → portes.",

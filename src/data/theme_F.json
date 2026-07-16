@@ -270,9 +270,9 @@
           "question": "Vous approchez d'un carrefour où un agent tend un bras horizontalement. Vous arrivez du côté de sa main tendue. Que pouvez-vous faire ?",
           "choices": [
             "Vous ne pouvez que continuer tout droit",
-            "Vous pouvez vous engager dans le carrefour pour continuer tout droit, tourner à gauche ou à droite",
+            "Vous pouvez continuer tout droit, tourner à gauche ou à droite",
             "Vous ne pouvez que tourner à droite",
-            "Vous devez vous arrêter"
+            "Vous devez vous arrêter avant le carrefour"
           ],
           "correct": 1,
           "explanation": "Approcher du côté de l'agent = vous pouvez passer dans toutes les directions.",
@@ -4000,9 +4000,9 @@
           "question": "Vous entendez parler de « manœuvre » dans le code de la route. Qu'est-ce qu'une manœuvre exactement ?",
           "choices": [
             "Un changement de direction à un carrefour",
-            "Une action effectuée avec le véhicule qui n'est pas spécifiquement réglée par le code de la route",
-            "Un dépassement par la gauche",
-            "Un stationnement en créneau"
+            "Une action du véhicule non spécifiquement réglée par le code",
+            "Un dépassement par la gauche sur autoroute",
+            "Un stationnement en créneau réussi"
           ],
           "correct": 1,
           "explanation": "Une manœuvre = action non spécifiquement réglée par le code.",
