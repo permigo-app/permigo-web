@@ -1574,10 +1574,10 @@
           "id": "I2_Q35",
           "question": "Vous êtes sur la bande de gauche d'une autoroute à 2 bandes lors d'un embouteillage. De quel côté vous décalez-vous pour former le couloir ?",
           "choices": [
-            "Vers la droite",
+            "Vers la droite comme les autres bandes",
             "Encore plus à gauche pour libérer l'espace entre les deux bandes",
-            "Vous restez en place",
-            "Vous sortez de l'autoroute"
+            "Vous restez au centre de votre bande",
+            "Vous sortez de l'autoroute au plus vite"
           ],
           "correct": 1,
           "explanation": "Sur la bande de gauche d'une autoroute à 2 bandes : se décaler à gauche pour créer le couloir.",
@@ -1613,10 +1613,10 @@
           "id": "I2_Q38",
           "question": "Vous êtes sur les lieux d'un accident et le véhicule prend feu avec un blessé à l'intérieur. Devez-vous déplacer la victime ?",
           "choices": [
-            "Non, attendez toujours les secours",
-            "Oui, en cas d'incendie ou de danger d'incendie, sortez rapidement la victime du véhicule",
-            "Non, si la victime le demande",
-            "Non, en aucun cas"
+            "Non, attendez toujours les secours sur place",
+            "Oui, en cas de danger d'incendie, sortez rapidement la victime",
+            "Non, sauf si la victime le demande",
+            "Non, en aucun cas il ne faut la déplacer"
           ],
           "correct": 1,
           "explanation": "La victime ne doit être déplacée qu'en cas d'incendie ou de danger d'incendie immédiat.",
@@ -1862,10 +1862,10 @@
           "id": "I2_Q58",
           "question": "Vous rouliez avec les feux antibrouillard allumés avant d'entrer dans le tunnel. Que faites-vous dans le tunnel ?",
           "choices": [
-            "Vous les gardez allumés",
-            "Vous les éteignez car il n'y a ni neige, ni brouillard, ni forte pluie dans un tunnel",
-            "Vous ajoutez les feux de route",
-            "Cela n'a pas d'importance"
+            "Vous les gardez allumés par sécurité",
+            "Vous les éteignez : ces conditions n'existent pas dans un tunnel",
+            "Vous ajoutez les feux de route en plus",
+            "Cela n'a aucune importance dans un tunnel"
           ],
           "correct": 1,
           "explanation": "Éteindre les feux antibrouillard dans un tunnel (pas de conditions météo justifiant leur usage).",
@@ -3827,9 +3827,9 @@
           "id": "I4_Q49",
           "question": "Vous freinez sur sol sec avec l'ABS. La distance de freinage est-elle plus courte qu'une voiture sans ABS ?",
           "choices": [
-            "Oui, toujours plus courte",
-            "Non, elle peut être légèrement plus longue qu'avec un freinage optimal sans ABS",
-            "Elle est identique",
+            "Oui, elle est toujours plus courte",
+            "Non, elle peut même être légèrement plus longue",
+            "Elle est strictement identique",
             "Elle est beaucoup plus courte"
           ],
           "correct": 1,

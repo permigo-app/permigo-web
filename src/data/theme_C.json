@@ -699,10 +699,10 @@
           "id": "C1_Q59",
           "question": "Vous voyez un signal rond rouge avec un chiffre de masse. Que signifie-t-il ?",
           "choices": [
-            "MMA maximale autorisee",
+            "Indication de la MMA maximale autorisee",
             "Acces interdit si la masse en charge depasse la masse indiquee",
-            "Poids de la route",
-            "Distance en tonnes"
+            "Charge maximale supportee par le pont",
+            "Distance restante indiquee en tonnes"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la masse en charge (MEC) dépasse la valeur indiquée.",
@@ -754,10 +754,10 @@
           "id": "C1_Q65",
           "question": "Vous voyez ce signal avec panneau additionnel MMA. Que signifie-t-il ?",
           "choices": [
-            "Tous les camions sont interdits",
-            "L'interdiction ne s'applique qu'aux vehicules de transport de marchandises dont la MMA depasse la masse indiquee",
+            "Tous les camions sont interdits sans exception",
+            "Interdit seulement aux vehicules de marchandises dont la MMA depasse la masse indiquee",
             "Seuls les petits camions sont interdits",
-            "Les voitures sont aussi concernees"
+            "Les voitures particulieres sont aussi concernees"
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel MMA restreint l'interdiction aux véhicules de transport de marchandises dépassant cette masse.",
@@ -1768,10 +1768,10 @@
           "id": "C2_Q62",
           "question": "Vous voyez un signal pour marchandises polluantes. Que signifie-t-il ?",
           "choices": [
-            "Zone protegee",
+            "Zone naturelle protegee a proximite",
             "Interdit aux vehicules transportant des marchandises polluantes",
-            "Riviere a proximite",
-            "Zone industrielle polluee"
+            "Cours d'eau a proximite immediate",
+            "Zone industrielle a forte pollution"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit le passage aux véhicules transportant des marchandises polluantes.",
@@ -1834,10 +1834,10 @@
           "id": "C2_Q68",
           "question": "Vous avez un permis B definitif. Votre voiture a une MMA de 2 000 kg. Pouvez-vous tracter une remorque de 850 kg MMA ?",
           "choices": [
-            "Non, max 750 kg",
+            "Non, la limite est de 750 kg maximum",
             "Oui, car 2 000 + 850 = 2 850 kg, ce qui ne depasse pas 3 500 kg",
-            "Non, il faut un permis BE",
-            "Oui, sans condition"
+            "Non, il faut obligatoirement un permis BE",
+            "Oui, sans aucune condition de masse"
           ],
           "correct": 1,
           "explanation": "La remorque dépasse 750 kg mais le total (2 000 + 850 = 2 850 kg) ne dépasse pas 3 500 kg. C'est autorisé avec un permis B définitif.",
@@ -1928,10 +1928,10 @@
           "id": "C2_Q83",
           "question": "Vous transportez un objet depassant de 80 cm l'arriere du vehicule. Devez-vous accrocher le panneau d'avertissement ?",
           "choices": [
-            "Oui, des que ca depasse",
+            "Oui, des que la charge depasse a l'arriere",
             "Non, le panneau n'est requis qu'au-dela d'1 metre de depassement",
-            "Oui, toujours",
-            "Non, jamais pour 80 cm"
+            "Oui, c'est toujours obligatoire",
+            "Non, jamais pour un depassement arriere"
           ],
           "correct": 1,
           "explanation": "Le panneau d'avertissement n'est requis qu'au-delà d'1 mètre de dépassement. 80 cm ne nécessite pas de panneau.",
@@ -2594,10 +2594,10 @@
           "id": "C3_Q39",
           "question": "Vous stationnez de nuit en agglomeration. Pouvez-vous remplacer les feux de position par un feu de stationnement ?",
           "choices": [
-            "Non, jamais",
+            "Non, jamais en agglomeration",
             "Oui, si le vehicule est parallele a la chaussee et sans remorque",
-            "Oui, toujours",
-            "Uniquement dans les rues eclairees"
+            "Oui, toujours sans condition",
+            "Uniquement dans les rues bien eclairees"
           ],
           "correct": 1,
           "explanation": "En agglomération, le feu de stationnement peut remplacer les feux de position si le véhicule est parallèle à la chaussée et sans remorque.",
@@ -2685,10 +2685,10 @@
           "id": "C3_Q46",
           "question": "Vous revisez votre theorie. Quelles sont les conditions pour utiliser le feu de stationnement seul ?",
           "choices": [
-            "Toujours en agglomeration",
+            "Toujours possible en agglomeration, sans condition",
             "En agglomeration, vehicule parallele a la chaussee, sans remorque, feu du cote de l'axe",
-            "Partout sauf sur autoroute",
-            "Hors agglomeration uniquement"
+            "Partout sauf sur autoroute et route pour automobiles",
+            "Uniquement hors agglomeration, la nuit"
           ],
           "correct": 1,
           "explanation": "Feu de stationnement seul autorisé en agglomération, véhicule parallèle à la chaussée, sans remorque, feu allumé du côté de l'axe.",
