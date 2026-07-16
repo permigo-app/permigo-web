@@ -606,10 +606,10 @@
           "id": "H1_Q35",
           "question": "Vous souhaitez vous arrêter brièvement sur une piste cyclable pour déposer un passager. Pouvez-vous le faire ?",
           "choices": [
-            "Oui, pour un bref instant",
-            "Non, l'arrêt et le stationnement sont interdits sur une piste cyclable",
+            "Oui, pour un bref instant seulement",
+            "Non, l'arrêt et le stationnement y sont interdits",
             "Oui, pour faire descendre un passager",
-            "Oui, en dehors de l'agglomération"
+            "Oui, mais en dehors de l'agglomération"
           ],
           "correct": 1,
           "explanation": "L'arrêt et le stationnement sont interdits sur une piste cyclable.",
@@ -895,9 +895,9 @@
           "id": "H1_Q60",
           "question": "Vous passez sous un pont et vous souhaitez stationner sur la chaussée à cet endroit. Est-ce autorisé ?",
           "choices": [
-            "Oui, c'est couvert et pratique",
+            "Oui, c'est couvert et donc pratique",
             "Non, le stationnement est interdit sur la chaussée sous les ponts",
-            "Oui, pour un bref instant",
+            "Oui, mais pour un bref instant",
             "Cela dépend de la hauteur du pont"
           ],
           "correct": 1,
@@ -1447,9 +1447,9 @@
           "id": "H2_Q15",
           "question": "Vous repérez une place mais un obstacle à cet endroit obligerait les cyclistes à rouler sur la chaussée si vous stationnez. Pouvez-vous vous garer ?",
           "choices": [
-            "Oui, sans problème",
-            "Non, le stationnement est interdit à cet endroit, mais l'arrêt reste permis",
-            "Oui, s'il n'y a pas de cyclistes actuellement",
+            "Oui, sans aucun problème particulier",
+            "Non, stationnement interdit (l'arrêt reste permis)",
+            "Oui, s'il n'y a pas de cyclistes à ce moment",
             "Cela dépend de la nature de l'obstacle"
           ],
           "correct": 1,
@@ -1884,9 +1884,9 @@
           "question": "Vous voyez un signal avec l'indication \"16–31\". Que signifie-t-il ?",
           "choices": [
             "Le stationnement est autorisé du 16 à la fin",
-            "Le stationnement est INTERDIT de ce côté de la chaussée du 16 à la fin du mois",
+            "Stationnement INTERDIT de ce côté du 16 à la fin du mois",
             "Le stationnement est interdit du 1er au 15",
-            "L'arrêt est interdit"
+            "L'arrêt est interdit en permanence"
           ],
           "correct": 1,
           "explanation": "Le signal \"16–31\" interdit le stationnement de ce côté de la chaussée du 16 à la fin du mois.",
@@ -2447,10 +2447,10 @@
           "id": "H3_Q19",
           "question": "Vous entrez dans une zone 3,5 t. Votre véhicule peut-il y stationner ? Sur quelle donnée se base la limite ?",
           "choices": [
-            "Sur la masse en charge (MEC)",
+            "Sur la masse en charge (MEC) du moment",
             "Sur la Masse Maximale Autorisée (MMA) du véhicule",
-            "Sur le poids à vide",
-            "Sur la charge utile"
+            "Sur le poids à vide du véhicule",
+            "Sur la charge utile maximale"
           ],
           "correct": 1,
           "explanation": "La zone 3,5 t se base sur la MMA (Masse Maximale Autorisée), pas la MEC.",

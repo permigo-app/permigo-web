@@ -477,8 +477,8 @@
           "question": "Vous conduisez une voiture et vous arrivez devant un signal interdisant l'accès aux motocyclettes (avec ou sans side-car). Pouvez-vous passer ?",
           "choices": [
             "Non, tous les véhicules motorisés sont interdits",
-            "Oui, les voitures PEUVENT franchir ce signal qui ne concerne que les motocyclettes",
-            "Non, c'est un sens interdit",
+            "Oui, ce signal ne concerne que les motocyclettes",
+            "Non, c'est un sens interdit classique",
             "Cela dépend de la taille du véhicule"
           ],
           "correct": 1,
@@ -1116,7 +1116,7 @@
           "question": "Vous êtes cycliste et vous arrivez devant un signal de direction obligatoire sans aucun panneau additionnel. Devez-vous suivre la direction indiquée ?",
           "choices": [
             "Non, les cyclistes sont toujours exemptés",
-            "Oui, sans panneau additionnel, tous les conducteurs doivent suivre la direction",
+            "Oui, sans panneau additionnel, tous les conducteurs sont tenus",
             "Non, le signal est seulement indicatif",
             "Cela dépend du type de route"
           ],
@@ -1497,9 +1497,9 @@
           "question": "Vous voyez un panneau rond gris/blanc barré de plusieurs lignes. Que signifie-t-il ?",
           "choices": [
             "Toutes les limitations de vitesse prennent fin",
-            "Toutes les interdictions ponctuelles encore actives prennent fin simultanément",
+            "Toutes les interdictions ponctuelles prennent fin en même temps",
             "Vous quittez une zone résidentielle",
-            "Vous quittez l'autoroute"
+            "Vous quittez l'autoroute ou la route pour automobiles"
           ],
           "correct": 1,
           "explanation": "C49 annule en une seule fois toutes les interdictions ponctuelles (vitesse, dépassement, klaxon…) encore actives. C'est très pratique pour la fin des zones de chantier.",
