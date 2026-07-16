@@ -164,7 +164,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 - `A4_Q35` (carte théorie 3) : Sur une chaussée à 2 bandes, comment se forme le couloir de secours ?
   - ✅ La bande de gauche serre à gauche, la bande de droite serre à droite
 - `A4_Q36` (carte théorie 3) : Sur une chaussée à 3 bandes, où se forme le couloir de secours ?
-  - ✅ À côté de la bande de gauche (gauche serre à gauche, les autres serrent à droite)
+  - ✅ À côté de la bande de gauche
 
 ### A5 — La route pour automobiles : 2 groupe(s) de doublons potentiels
 
