@@ -1143,10 +1143,10 @@
           "id": "F2_Q1",
           "question": "Vous arrivez à un feu rouge. Où exactement devez-vous vous immobiliser ?",
           "choices": [
-            "Juste devant le feu de signalisation",
-            "Devant la ligne d'arrêt blanche, ou devant le signal lumineux en l'absence de ligne",
-            "Au milieu du carrefour",
-            "À 5 mètres avant le feu"
+            "Toujours juste devant le feu, même s'il y a une ligne",
+            "Devant la ligne d'arrêt ou, sans ligne, devant le feu",
+            "Au milieu du carrefour si celui-ci est dégagé",
+            "Cinq mètres avant le feu dans tous les cas"
           ],
           "correct": 1,
           "explanation": "La ligne d'arrêt blanche est la référence. Sans ligne, on s'arrête devant le signal.",
@@ -1279,9 +1279,9 @@
           "question": "Les feux d'un carrefour ne fonctionnent plus (panne). Un signal de priorité est placé sous le feu éteint. Ce signal devient-il alors applicable ?",
           "choices": [
             "Non, il faut attendre un agent qualifié",
-            "Oui, quand les feux ne fonctionnent pas, les signaux de priorité reprennent leur rôle",
-            "Non, jamais",
-            "Non, uniquement la nuit"
+            "Oui, les signaux de priorité reprennent leur rôle",
+            "Non, ils ne s'appliquent jamais en panne",
+            "Non, uniquement pendant la nuit"
           ],
           "correct": 1,
           "explanation": "Les signaux de priorité reprennent leur rôle quand les feux ne fonctionnent plus.",
@@ -1455,10 +1455,10 @@
           "id": "F2_Q28",
           "question": "Vous êtes cycliste au feu rouge. Un panneau B23 est placé sous le feu. Que pouvez-vous faire ?",
           "choices": [
-            "Tourner à droite",
-            "Aller tout droit malgré le feu rouge ou jaune-orange",
-            "Tourner à gauche",
-            "Faire demi-tour"
+            "Tourner à droite malgré le feu",
+            "Aller tout droit malgré le feu",
+            "Tourner à gauche malgré le feu",
+            "Faire demi-tour au carrefour"
           ],
           "correct": 1,
           "explanation": "B23 = autorisation d'aller tout droit au feu rouge ou orange.",
@@ -1470,9 +1470,9 @@
           "question": "Vous remarquez un panneau B22 sous un feu de signalisation. Ce panneau prime-t-il sur le feu rouge ?",
           "choices": [
             "Non, le feu rouge prime toujours",
-            "Oui, les panneaux B22 et B23 priment sur les feux pour les cyclistes",
-            "Non, jamais",
-            "Oui, mais uniquement le B22"
+            "Oui, B22 et B23 priment sur les feux",
+            "Non, aucun panneau ne prime jamais",
+            "Oui, mais uniquement le panneau B22"
           ],
           "correct": 1,
           "explanation": "B22 et B23 priment sur les feux : ils constituent une exception légale.",
@@ -2988,8 +2988,8 @@
           "question": "Vous arrivez à un carrefour avec priorité de droite. Un véhicule à quatre roues roule devant vous. Pouvez-vous le dépasser par la gauche dans ce carrefour ?",
           "choices": [
             "Oui, si le dépassement est rapide",
-            "Non, il est interdit de dépasser par la gauche un véhicule à plus de deux roues à ce type de carrefour",
-            "Oui, en agglomération",
+            "Non, c'est interdit à ce type de carrefour",
+            "Oui, mais uniquement en agglomération",
             "Oui, si la voie de gauche est libre"
           ],
           "correct": 1,
@@ -3128,9 +3128,9 @@
           "question": "Vous circuliez sur une voie prioritaire. Vous apercevez soudain le signal de priorité de droite (triangle avec croix). Que signifie-t-il ?",
           "choices": [
             "Vous conservez toujours la priorité",
-            "La voie prioritaire est terminée et la priorité de droite s'applique à nouveau",
-            "Vous devez vous arrêter",
-            "Rien de particulier"
+            "La voie prioritaire se termine : priorité de droite",
+            "Vous devez marquer l'arrêt complet",
+            "Rien de particulier ne change"
           ],
           "correct": 1,
           "explanation": "Ce signal indique que la voie prioritaire est finie et que la priorité de droite reprend.",
@@ -3268,7 +3268,7 @@
           "question": "Vous voyez un signal de sens unique avec un panneau additionnel autorisant les cyclistes en contresens. Comment savez-vous que c'est un sens interdit de l'autre côté ?",
           "choices": [
             "Vous ne pouvez pas le savoir",
-            "Le signal de sens unique implique que l'entrée depuis l'autre côté est un sens interdit",
+            "Un sens unique implique un sens interdit de l'autre côté",
             "Grâce aux feux de signalisation",
             "Grâce au marquage au sol"
           ],
@@ -3281,10 +3281,10 @@
           "id": "F4_Q33",
           "question": "Vous arrivez à un carrefour sans signalisation. Un tram vient de votre droite. Le tram respecte-t-il la priorité de droite ?",
           "choices": [
-            "Oui, comme tout véhicule",
-            "Non, le tram est toujours prioritaire et ne respecte pas la priorité de droite",
+            "Oui, comme tout autre véhicule",
+            "Non, le tram est toujours prioritaire",
             "Oui, sauf en agglomération",
-            "Cela dépend du carrefour"
+            "Cela dépend du type de carrefour"
           ],
           "correct": 1,
           "explanation": "Le tram est toujours prioritaire — il ne respecte pas la priorité de droite.",
@@ -3418,10 +3418,10 @@
           "id": "F4_Q49",
           "question": "Vous quittez une place de stationnement en bord de chaussée. Avez-vous la priorité sur les autres usagers ?",
           "choices": [
-            "Oui, si vous venez de la droite",
-            "Non, quitter un stationnement est une manœuvre : vous devez céder à tous les usagers, piétons compris",
-            "Oui, après avoir activé votre clignotant",
-            "Cela dépend de l'emplacement"
+            "Oui, car vous venez de la droite",
+            "Non, c'est une manœuvre : vous cédez à tous",
+            "Oui, dès que votre clignotant est activé",
+            "Cela dépend de l'emplacement occupé"
           ],
           "correct": 1,
           "explanation": "Quitter un stationnement = manœuvre, céder à tous.",
@@ -4608,10 +4608,10 @@
           "id": "F6_Q8",
           "question": "Vous arrivez à un passage à niveau sans barrières. Pourquoi est-il important de savoir qu'il n'y a pas de barrières ?",
           "choices": [
-            "Pour adapter votre vitesse uniquement",
-            "Parce que rien ne vous empêche physiquement de franchir le passage, ce qui exige une vigilance maximale",
+            "Uniquement pour adapter votre vitesse",
+            "Rien ne vous arrête physiquement : vigilance maximale",
             "Cela n'a pas d'importance particulière",
-            "Pour savoir où stationner"
+            "Uniquement pour savoir où stationner"
           ],
           "correct": 1,
           "explanation": "Sans barrières, rien ne bloque physiquement l'accès — prudence maximale requise.",
@@ -4665,9 +4665,9 @@
           "question": "Vous traversez un passage à niveau alors que les barrières sont en mouvement (en train de se fermer). Quelle est la gravité de cette infraction ?",
           "choices": [
             "C'est autorisé si vous êtes rapide",
-            "C'est une infraction grave pouvant entraîner le retrait immédiat du permis de conduire",
-            "C'est simplement toléré",
-            "C'est une infraction mineure"
+            "Une infraction grave : retrait immédiat possible",
+            "C'est simplement toléré par la police",
+            "Une infraction mineure du 1er degré"
           ],
           "correct": 1,
           "explanation": "Traverser pendant le mouvement des barrières = infraction grave, retrait immédiat possible.",
@@ -5012,9 +5012,9 @@
           "question": "Vous révisez ce que le tram respecte et ne respecte pas. Que respecte-t-il et que ne respecte-t-il pas ?",
           "choices": [
             "Il respecte tout, comme n'importe quel véhicule",
-            "Il respecte les agents qualifiés et les signaux lumineux, mais PAS les règles de priorité ordinaires (priorité de droite, etc.)",
-            "Il ne respecte rien du tout",
-            "Il respecte uniquement les agents, pas les feux"
+            "Les agents et les feux oui, la priorité de droite non",
+            "Il ne respecte absolument rien",
+            "Uniquement les agents, jamais les feux"
           ],
           "correct": 1,
           "explanation": "Le tram respecte les agents qualifiés et les signaux lumineux, mais pas les règles de priorité ordinaires comme la priorité de droite.",
@@ -5264,10 +5264,10 @@
           "id": "F6_Q73",
           "question": "Vous apercevez un panneau STOP octogonal rouge près d'un passage à niveau. Que signifie-t-il ?",
           "choices": [
-            "Ralentissez simplement",
-            "Marquez l'arrêt complet et cédez le passage avant de franchir le passage à niveau",
-            "Les feux sont en panne",
-            "Le passage est totalement interdit"
+            "Ralentissez simplement avant de traverser",
+            "Arrêt complet et céder le passage avant de franchir",
+            "Les feux du passage sont en panne",
+            "Le franchissement est totalement interdit"
           ],
           "correct": 1,
           "explanation": "Un panneau STOP impose l'arrêt complet et de céder le passage avant de s'engager, y compris à l'approche d'un passage à niveau.",

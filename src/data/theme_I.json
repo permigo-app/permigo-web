@@ -549,8 +549,8 @@
           "question": "Vous avez subi une analyse de l'haleine et le résultat indique 0,40 mg/l. Que se passe-t-il ?",
           "choices": [
             "Votre permis est retiré 3 heures",
-            "Votre permis est retiré 6 heures et vous recevez une amende. En pratique, souvent 15 jours de retrait",
-            "Vous pouvez conduire",
+            "Permis retiré 6 heures et une amende",
+            "Vous pouvez reprendre la route",
             "Vous recevez un simple avertissement"
           ],
           "correct": 1,
@@ -562,10 +562,10 @@
           "id": "I1_Q30",
           "question": "Vous refusez de vous soumettre à l'analyse de l'haleine. Que se passe-t-il ?",
           "choices": [
-            "Rien de particulier",
-            "Vous êtes considéré comme Positif (P) et il vous est interdit de conduire pendant 6 heures",
+            "Rien de particulier ne se passe",
+            "Vous êtes considéré comme Positif : 6 heures sans conduire",
             "Vous recevez uniquement une amende",
-            "Vous recevez un avertissement"
+            "Vous recevez un simple avertissement"
           ],
           "correct": 1,
           "explanation": "Le refus de l'analyse est considéré comme un résultat Positif : interdiction de conduire 6 heures.",
@@ -750,9 +750,9 @@
           "question": "Vous n'avez commis aucune infraction et il n'y a pas d'accident. La police peut-elle vous imposer un test salivaire de drogues ?",
           "choices": [
             "Oui, comme pour l'alcool",
-            "Non, il faut un soupçon basé sur des éléments objectifs, sauf en cas d'accident",
+            "Non, il faut un soupçon basé sur des éléments objectifs",
             "Oui, lors de tout contrôle routier",
-            "Non, jamais"
+            "Non, jamais sans accident ni blessé"
           ],
           "correct": 1,
           "explanation": "Le test salivaire nécessite un soupçon objectif, sauf en cas d'accident où il peut toujours être imposé.",
@@ -805,9 +805,9 @@
           "id": "I1_Q52",
           "question": "Vous êtes positif aux drogues lors d'un contrôle. Un retrait immédiat et prolongé de votre permis est-il possible ?",
           "choices": [
-            "Non, uniquement 12 heures",
-            "Oui, un retrait immédiat et prolongé du permis est également possible",
-            "Non, jamais",
+            "Non, uniquement les 12 heures",
+            "Oui, un retrait immédiat prolongé est possible",
+            "Non, ce n'est jamais possible",
             "Cela dépend du type de drogue"
           ],
           "correct": 1,
@@ -1182,10 +1182,10 @@
           "id": "I2_Q3",
           "question": "Vous êtes impliqué dans un accident et votre véhicule ne peut pas être déplacé. Que devez-vous faire en priorité ?",
           "choices": [
-            "Appeler votre assurance",
-            "Placer le triangle de danger et activer les feux de détresse",
-            "Attendre la police",
-            "Prendre des photos"
+            "Appeler votre assurance en premier",
+            "Placer le triangle et allumer les feux de détresse",
+            "Attendre la police sans rien faire",
+            "Prendre des photos pour le constat"
           ],
           "correct": 1,
           "explanation": "Si le véhicule ne peut pas être déplacé, placer le triangle et allumer les feux de détresse pour éviter un autre accident.",

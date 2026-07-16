@@ -5,7 +5,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 ## Résumé
 
 - **1766 questions** analysées
-- **46 groupes de doublons potentiels** impliquant **99 questions**
+- **47 groupes de doublons potentiels** impliquant **101 questions**
 - Économie estimée si on garde 1-2 par groupe : ~**7 questions supprimables**
 - **22 problèmes de couverture** (points sans question ou questions orphelines)
 - **39 cartes surchargées** (6+ questions)
@@ -20,7 +20,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 | F — La priorité | 304 | 4 | 8 |
 | G — Où circuler | 88 | 5 | 11 |
 | H — Arrêt et stationnement | 165 | 3 | 6 |
-| I — Divers | 242 | 7 | 14 |
+| I — Divers | 242 | 8 | 16 |
 
 ### Points théoriques sans aucune question (trous à combler)
 
@@ -454,7 +454,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 
 ## Thème I — Divers
 
-### I1 — Alcool et drogues : 1 groupe(s) de doublons potentiels
+### I1 — Alcool et drogues : 2 groupe(s) de doublons potentiels
 
 **Groupe (2 questions — à réduire à 1 ou 2)**
 
@@ -462,6 +462,13 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
   - ✅ De 0,22 à moins de 0,35 mg/l
 - `I1_Q18` (carte théorie 1) : Vous venez de souffler et le résultat affiche "P" (Positif). À quelle concentration d'alcool cela correspond-il ?
   - ✅ Au moins 0,35 mg/l (0,8 pour mille)
+
+**Groupe (2 questions — à réduire à 1 ou 2)**
+
+- `I1_Q26` (carte théorie 2) : Vous avez subi une analyse de l'haleine et le résultat indique 0,28 mg/l. Que se passe-t-il ?
+  - ✅ Permis retiré 3 heures et une amende
+- `I1_Q27` (carte théorie 2) : Vous avez subi une analyse de l'haleine et le résultat indique 0,40 mg/l. Que se passe-t-il ?
+  - ✅ Permis retiré 6 heures et une amende
 
 ### I2 — Accident : 3 groupe(s) de doublons potentiels
 

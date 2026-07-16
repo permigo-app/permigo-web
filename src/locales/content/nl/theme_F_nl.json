@@ -1140,10 +1140,10 @@
           "id": "F2_Q1",
           "question": "Waar moet je stoppen bij rood licht?",
           "choices": [
-            "Voor het verkeerslicht",
-            "Voor de witte stopstreep, of voor het verkeerslicht als er geen streep is",
-            "Midden op het kruispunt",
-            "5 meter voor het licht"
+            "Altijd net voor het licht, ook als er een streep is",
+            "Voor de stopstreep of, zonder streep, voor het licht",
+            "Midden op het kruispunt als het vrij is",
+            "Vijf meter voor het licht in alle gevallen"
           ],
           "correct": 1,
           "explanation": "De witte stopstreep is het referentiepunt. Zonder streep stop je voor het verkeerslicht.",
@@ -1275,8 +1275,8 @@
           "id": "F2_Q14",
           "question": "Wanneer worden de voorrangsborden onder het licht van toepassing?",
           "choices": [
-            "Altijd",
-            "Wanneer de lichten niet werken (defect, uit, oranje knipperend)",
+            "Altijd, ook als de lichten werken",
+            "Wanneer de lichten niet werken of oranje knipperen",
             "Nooit",
             "Alleen 's nachts"
           ],
@@ -1452,10 +1452,10 @@
           "id": "F2_Q28",
           "question": "Het verkeersbord B23 onder het licht staat fietsers en speed pedelecs toe om:",
           "choices": [
-            "Rechts af te slaan",
-            "Rechtdoor te rijden bij rood of oranje licht",
-            "Links af te slaan",
-            "Om te keren"
+            "Rechts af te slaan ondanks het licht",
+            "Rechtdoor te rijden ondanks het licht",
+            "Links af te slaan ondanks het licht",
+            "Om te keren aan het kruispunt"
           ],
           "correct": 1,
           "explanation": "B23 = toelating om rechtdoor te rijden bij rood of oranje licht.",
@@ -1466,10 +1466,10 @@
           "id": "F2_Q29",
           "question": "Hebben de borden B22 en B23 voorrang op de verkeerslichten?",
           "choices": [
-            "Nee, het rode licht gaat voor",
-            "Ja, deze borden hebben voorrang op de lichten",
-            "Nee, nooit",
-            "Alleen het B22-bord"
+            "Nee, het rode licht gaat altijd voor",
+            "Ja, B22 en B23 gaan voor op de lichten",
+            "Nee, geen enkel bord gaat ooit voor",
+            "Ja, maar enkel het bord B22"
           ],
           "correct": 1,
           "explanation": "B22 en B23 hebben voorrang op de lichten: ze vormen een wettelijke uitzondering.",
@@ -2983,9 +2983,9 @@
           "question": "Mag je op kruispunten met voorrang van rechts een auto links inhalen?",
           "choices": [
             "Ja, als het snel gaat",
-            "Nee, het is verboden om links een voertuig met meer dan twee wielen in te halen",
-            "Ja, binnen de bebouwde kom",
-            "Ja, als de weg vrij is"
+            "Nee, dat is verboden op zo'n kruispunt",
+            "Ja, maar enkel binnen de bebouwde kom",
+            "Ja, als de linkerrijstrook vrij is"
           ],
           "correct": 1,
           "explanation": "Links inhalen is verboden op kruispunten met voorrang van rechts voor voertuigen met meer dan twee wielen.",
@@ -3122,10 +3122,10 @@
           "id": "F4_Q19",
           "question": "Je reed op een voorrangsweg. Je ziet het verkeersbord voorrang van rechts. Wat betekent dat?",
           "choices": [
-            "Je hebt nog steeds voorrang",
-            "De voorrangsweg is afgelopen en de voorrang van rechts geldt opnieuw",
-            "Je moet stoppen",
-            "Niets bijzonders"
+            "Je behoudt altijd je voorrang",
+            "De voorrangsweg eindigt: voorrang van rechts",
+            "Je moet volledig stoppen",
+            "Er verandert niets bijzonders"
           ],
           "correct": 1,
           "explanation": "Dit verkeersbord geeft aan dat de voorrangsweg voorbij is en de voorrang van rechts opnieuw geldt.",
@@ -3263,7 +3263,7 @@
           "question": "Je ziet een bord eenrichtingsverkeer met een aanvullend bord voor fietsers. Hoe weet je dat er aan de andere kant een verboden richting is?",
           "choices": [
             "Dat kan je niet weten",
-            "Het bord eenrichtingsverkeer geeft aan dat het eenrichting is; de verboden richting staat aan het begin van de straat van rechts",
+            "Eenrichting impliceert een verboden richting aan de andere kant",
             "Door de verkeerslichten",
             "Door de wegmarkering"
           ],
@@ -3276,10 +3276,10 @@
           "id": "F4_Q33",
           "question": "Respecteert de tram de voorrang van rechts?",
           "choices": [
-            "Ja, zoals elk voertuig",
-            "Nee, voertuigen op rails respecteren de voorrang van rechts niet, zij hebben altijd voorrang",
+            "Ja, zoals elk ander voertuig",
+            "Nee, de tram heeft altijd voorrang",
             "Ja, behalve binnen de bebouwde kom",
-            "Dat hangt af van het kruispunt"
+            "Dat hangt af van het soort kruispunt"
           ],
           "correct": 1,
           "explanation": "De tram heeft altijd voorrang — hij respecteert de voorrang van rechts niet.",
@@ -3413,9 +3413,9 @@
           "id": "F4_Q49",
           "question": "Je verlaat een parkeerplaats. Heb je voorrang?",
           "choices": [
-            "Ja, als je van rechts komt",
-            "Nee, je voert een manoeuvre uit en moet voorrang verlenen aan alle weggebruikers, inclusief voetgangers",
-            "Ja, na het richtingaanwijzer te gebruiken",
+            "Ja, want je komt van rechts",
+            "Nee, het is een manoeuvre: je verleent iedereen voorrang",
+            "Ja, zodra je richtingaanwijzer aan staat",
             "Dat hangt af van de parkeerplaats"
           ],
           "correct": 1,
@@ -4600,10 +4600,10 @@
           "id": "F6_Q8",
           "question": "Waarom is het belangrijk om te weten of er slagbomen zijn of niet?",
           "choices": [
-            "Voor de snelheid",
-            "Een overweg zonder slagbomen vereist verhoogde waakzaamheid omdat er niets is dat je fysiek tegenhoudt",
-            "Dat maakt niet uit",
-            "Voor het parkeren"
+            "Enkel om je snelheid aan te passen",
+            "Niets houdt je fysiek tegen: maximale waakzaamheid",
+            "Dat heeft geen bijzonder belang",
+            "Enkel om te weten waar te parkeren"
           ],
           "correct": 1,
           "explanation": "Zonder slagbomen is er geen fysieke blokkering — maximale voorzichtigheid vereist.",
@@ -4657,9 +4657,9 @@
           "question": "Een overweg oversteken wanneer de slagbomen in beweging zijn, is:",
           "choices": [
             "Toegestaan als je snel bent",
-            "Een zware overtreding die kan leiden tot onmiddellijke intrekking van het rijbewijs",
-            "Gedoogd",
-            "Een lichte overtreding"
+            "Een zware overtreding: onmiddellijke intrekking mogelijk",
+            "Gewoon gedoogd door de politie",
+            "Een lichte overtreding van de 1e graad"
           ],
           "correct": 1,
           "explanation": "Oversteken tijdens de beweging van de slagbomen = zware overtreding, mogelijke onmiddellijke intrekking.",
@@ -5003,9 +5003,9 @@
           "id": "F6_Q41",
           "question": "Een agent steekt zijn arm verticaal omhoog. Moet de tram stoppen?",
           "choices": [
-            "Nee, de tram heeft voorrang",
-            "Ja, de tram moet de bevelen van bevoegde personen respecteren",
-            "Nee, behalve bij rood",
+            "Nee, de tram heeft altijd voorrang",
+            "Ja, de tram volgt de bevelen van bevoegde personen",
+            "Nee, behalve bij een rood licht",
             "Dat hangt af van de agent"
           ],
           "correct": 1,
@@ -5254,12 +5254,12 @@
         },
         {
           "id": "F6_Q73",
-          "question": "Dit sein met BOB en een fiets op een onderbord betekent:",
+          "question": "U ziet een achthoekig rood STOP-bord bij een overweg. Wat betekent het?",
           "choices": [
-            "Fietspad",
-            "BOB die ook door fietsers mag worden gebruikt",
-            "Busstrook fietsers",
-            "Fietsenstalling"
+            "Gewoon vertragen voor u oversteekt",
+            "Volledig stoppen en voorrang verlenen vóór de overweg",
+            "De lichten van de overweg zijn defect",
+            "De doorgang is volledig verboden"
           ],
           "correct": 1,
           "explanation": "BOB + onderbord fiets = fietsers mogen deze BOB ook gebruiken.",
