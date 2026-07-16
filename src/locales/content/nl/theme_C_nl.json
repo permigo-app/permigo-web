@@ -669,10 +669,10 @@
           "id": "C1_Q54",
           "question": "Dit parkeerbord met een onderbord dat een massa aangeeft. Wat betekent het?",
           "choices": [
-            "Parkeren voor iedereen",
-            "Parkeren enkel toegelaten voor voertuigen waarvan de MTM de aangegeven massa overschrijdt",
+            "Parkeren toegelaten voor alle voertuigen",
+            "Parkeren enkel voor voertuigen waarvan de MTM de massa overschrijdt",
             "Parkeren verboden boven die massa",
-            "Parkeren voorbehouden voor vrachtwagens"
+            "Parkeren voorbehouden voor leveringsvrachtwagens"
           ],
           "correct": 1,
           "explanation": "Het onderbord met massa beperkt het parkeren tot voertuigen die de aangegeven massa overschrijden (bv.: vrachtwagens).",
@@ -779,9 +779,9 @@
           "question": "Je ziet een parkeerbord met onderbord \"3,5t\". Je auto heeft een MTM van 1 600 kg. Mag je hier parkeren?",
           "choices": [
             "Ja, parkeren is voor iedereen toegelaten",
-            "Nee, het parkeren is voorbehouden voor voertuigen waarvan de MTM meer dan 3,5 ton bedraagt (vrachtwagens)",
+            "Nee, het is voorbehouden voor voertuigen met een MTM boven 3,5 ton",
             "Ja, als je correct parkeert",
-            "Dat hangt af van het uur"
+            "Dat hangt af van het uur van de dag"
           ],
           "correct": 1,
           "explanation": "Dit parkeren is voorbehouden voor voertuigen met MTM > 3,5 ton. Je auto (1 600 kg) mag hier niet parkeren.",
@@ -1436,10 +1436,10 @@
           "id": "C2_Q34",
           "question": "Moet je de gordel dragen als je achteruit rijdt?",
           "choices": [
-            "Ja, altijd",
-            "Nee, de bestuurder is ervan vrijgesteld tijdens het achteruit rijden",
+            "Ja, altijd zonder uitzondering",
+            "Nee, de bestuurder is vrijgesteld bij het achteruitrijden",
             "Ja, behalve in de bebouwde kom",
-            "Nee, nooit bij het achteruit rijden"
+            "Nee, nooit bij achteruitrijden of manoeuvres"
           ],
           "correct": 1,
           "explanation": "De bestuurder die achteruit rijdt is vrijgesteld van het dragen van de gordel.",
@@ -1475,10 +1475,10 @@
           "id": "C2_Q37",
           "question": "Moeten bevoegde agenten en hulpdiensten de gordel dragen?",
           "choices": [
-            "Nee, nooit",
+            "Nee, nooit in dienst",
             "Ze zijn ervan vrijgesteld als hun opdracht dat vereist",
-            "Ja, altijd",
-            "Nee, alleen de brandweer"
+            "Ja, altijd zoals iedereen",
+            "Nee, alleen de brandweer is vrijgesteld"
           ],
           "correct": 1,
           "explanation": "Bevoegde agenten en hulpdiensten zijn vrijgesteld van het dragen van de gordel als hun opdracht dat vereist.",
@@ -2290,10 +2290,10 @@
           "id": "C3_Q9",
           "question": "Welke andere lichten gaan aan wanneer je de dimlichten aanzet?",
           "choices": [
-            "Alleen de achterlichten",
-            "De twee standlichten aan de voorkant en twee rode lichten aan de achterkant",
-            "Alleen de mistlichten",
-            "Geen enkel ander licht"
+            "Alleen de rode achterlichten",
+            "De twee standlichten vooraan en twee rode lichten achteraan",
+            "Alleen de mistlichten vooraan",
+            "Geen enkel ander licht gaat aan"
           ],
           "correct": 1,
           "explanation": "Wanneer je de dimlichten of het grootlicht aanzet, gaan de twee standlichten aan de voorkant en twee rode lichten aan de achterkant ook aan.",
@@ -2472,10 +2472,10 @@
           "id": "C3_Q28",
           "question": "Zijn de mistlichten achter verplicht op een auto?",
           "choices": [
-            "Nee, dat is optioneel",
-            "Ja, een auto moet uitgerust zijn met een of twee rode mistlichten achter",
-            "Alleen op nieuwe auto's",
-            "Nee, net als de mistlichten voor"
+            "Nee, dat is volledig optioneel in België",
+            "Ja, een auto moet een of twee rode mistlichten achter hebben",
+            "Alleen verplicht op nieuwe auto's",
+            "Nee, ze zijn optioneel zoals die vooraan"
           ],
           "correct": 1,
           "explanation": "In tegenstelling tot de mistlichten voor zijn de mistlichten achter (een of twee rode lichten) verplicht op een auto.",
@@ -2732,10 +2732,10 @@
           "id": "C3_Q53",
           "question": "Een schoolbus heeft zijn alarmlichten aan. Wat moet je doen?",
           "choices": [
-            "Gewoon doorrijden",
+            "Gewoon je weg verderzetten",
             "Sterk vertragen en zo nodig stoppen",
             "Toeteren om de kinderen te waarschuwen",
-            "Van rijstrook wisselen"
+            "Van rijstrook wisselen om de bus voorbij te gaan"
           ],
           "correct": 1,
           "explanation": "Wanneer een schoolbus zijn alarmlichten aan heeft, moet je sterk vertragen en zo nodig stoppen.",

@@ -670,10 +670,10 @@
           "id": "C1_Q54",
           "question": "Vous voyez un signal de stationnement avec un panneau additionnel indiquant une masse. Que signifie-t-il ?",
           "choices": [
-            "Stationnement pour tous",
-            "Stationnement autorise uniquement pour les vehicules dont la MMA excede la masse indiquee",
+            "Stationnement autorise pour tous les vehicules",
+            "Stationnement reserve aux vehicules dont la MMA excede la masse indiquee",
             "Stationnement interdit au-dessus de cette masse",
-            "Stationnement reserve aux camions"
+            "Stationnement reserve aux camions de livraison"
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel de masse restreint le stationnement aux véhicules dépassant la masse indiquée (ex : camions).",
@@ -783,9 +783,9 @@
           "question": "Vous voyez un signal de stationnement avec panneau additionnel '3,5t'. Votre voiture a une MMA de 1 600 kg. Pouvez-vous stationner ici ?",
           "choices": [
             "Oui, le stationnement est autorise pour tous",
-            "Non, le stationnement est reserve aux vehicules dont la MMA excede 3,5 tonnes (camions)",
+            "Non, il est reserve aux vehicules de plus de 3,5 tonnes MMA",
             "Oui, si vous vous garez correctement",
-            "Cela depend de l'heure"
+            "Cela depend de l'heure de la journee"
           ],
           "correct": 1,
           "explanation": "Ce stationnement est réservé aux véhicules de MMA > 3,5 tonnes. Votre voiture (1 600 kg) ne peut pas s'y garer.",
@@ -1441,10 +1441,10 @@
           "id": "C2_Q34",
           "question": "Vous effectuez une marche arriere. Devez-vous porter la ceinture ?",
           "choices": [
-            "Oui, toujours",
+            "Oui, toujours sans exception",
             "Non, le conducteur en est dispense pendant la marche arriere",
             "Oui, sauf en agglomeration",
-            "Non, jamais en marche arriere"
+            "Non, jamais en marche arriere ni en manoeuvre"
           ],
           "correct": 1,
           "explanation": "Le conducteur effectuant une marche arrière est dispensé du port de la ceinture.",
@@ -1480,10 +1480,10 @@
           "id": "C2_Q37",
           "question": "Vous vous interrogez. Les agents qualifies et services de secours doivent-ils porter la ceinture ?",
           "choices": [
-            "Non, jamais",
+            "Non, jamais en service",
             "Ils en sont dispenses si leur mission l'exige",
-            "Oui, toujours",
-            "Non, uniquement les pompiers"
+            "Oui, toujours comme tout le monde",
+            "Non, uniquement les pompiers en sont dispenses"
           ],
           "correct": 1,
           "explanation": "Les agents qualifiés et services de secours sont dispensés du port de la ceinture si leur mission l'exige.",
@@ -2295,10 +2295,10 @@
           "id": "C3_Q9",
           "question": "Vous allumez vos feux de croisement. Quels autres feux s'allument simultanement ?",
           "choices": [
-            "Uniquement les feux arriere",
+            "Uniquement les feux rouges arriere",
             "Les deux feux de position a l'avant et deux feux rouges a l'arriere",
-            "Uniquement les feux antibrouillard",
-            "Aucun autre feu"
+            "Uniquement les feux antibrouillard avant",
+            "Aucun autre feu ne s'allume"
           ],
           "correct": 1,
           "explanation": "Quand vous allumez les feux de croisement ou de route, les deux feux de position à l'avant et deux feux rouges à l'arrière s'allument également.",
@@ -2477,10 +2477,10 @@
           "id": "C3_Q28",
           "question": "Vous verifiez votre vehicule. Les feux brouillard arriere sont-ils obligatoires ?",
           "choices": [
-            "Non, c'est facultatif",
+            "Non, c'est totalement facultatif en Belgique",
             "Oui, une voiture doit etre equipee d'un ou deux feux rouges brouillard arriere",
             "Uniquement sur les voitures neuves",
-            "Non, comme les feux brouillard avant"
+            "Non, ils sont facultatifs comme ceux de l'avant"
           ],
           "correct": 1,
           "explanation": "Contrairement aux feux brouillard avant, les feux brouillard arrière (un ou deux feux rouges) sont obligatoires sur une voiture.",
@@ -2737,10 +2737,10 @@
           "id": "C3_Q53",
           "question": "Vous approchez d'un autobus scolaire avec ses warnings allumes. Que devez-vous faire ?",
           "choices": [
-            "Continuer normalement",
+            "Continuer normalement votre route",
             "Reduire fortement votre vitesse et vous arreter si necessaire",
             "Klaxonner pour prevenir les enfants",
-            "Changer de voie"
+            "Changer de voie pour depasser le bus"
           ],
           "correct": 1,
           "explanation": "Quand un bus scolaire a ses warnings allumés, vous devez réduire fortement votre vitesse et vous arrêter si nécessaire.",

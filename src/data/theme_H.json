@@ -658,10 +658,10 @@
           "id": "H1_Q39",
           "question": "Vous cherchez à stationner et vous repérez un espace sur les voies ferrées du tram. Pouvez-vous vous y garer ?",
           "choices": [
-            "Oui, si aucun tram ne passe",
+            "Oui, si aucun tram ne passe à ce moment",
             "Non, le stationnement est interdit sur les voies ferrées du tram",
-            "Oui, pour un bref instant",
-            "Oui, uniquement la nuit"
+            "Oui, pour un bref instant seulement",
+            "Oui, mais uniquement la nuit"
           ],
           "correct": 1,
           "explanation": "Stationner sur les voies ferrées du tram est interdit.",
@@ -884,8 +884,8 @@
           "choices": [
             "Non, il faut 5 m aussi après le passage",
             "Oui, l'interdiction de 5 m ne concerne que l'AVANT du passage piétons",
-            "Non, il faut 20 m après",
-            "Cela dépend du lieu"
+            "Non, il faut 20 m après le passage",
+            "Cela dépend du lieu et du marquage"
           ],
           "correct": 1,
           "explanation": "L'interdiction de 5 m ne vise que l'avant du passage piétons (en deçà), pas l'après.",
@@ -2553,9 +2553,9 @@
           "id": "H3_Q28",
           "question": "Vous conduisez une camionnette et vous voyez un signal P avec silhouette de voiture. Pouvez-vous y stationner ?",
           "choices": [
-            "Oui, votre camionnette est un véhicule",
-            "Non, la camionnette n'est PAS autorisée sous le signal P + voiture, malgré le permis B",
-            "Oui, avec un permis B",
+            "Oui, votre camionnette est un véhicule comme un autre",
+            "Non, la camionnette n'y est PAS autorisée, malgré le permis B",
+            "Oui, puisque vous avez un permis B",
             "Cela dépend de la taille de la camionnette"
           ],
           "correct": 1,
@@ -2594,10 +2594,10 @@
           "id": "H3_Q31",
           "question": "Vous voyez un signal montrant un véhicule positionné sur l'accotement. Où devez-vous stationner ?",
           "choices": [
-            "Le stationnement est interdit",
-            "Vous devez stationner sur l'accotement ou le trottoir, pas sur la chaussée",
-            "Vous devez stationner sur la chaussée",
-            "L'arrêt est interdit"
+            "Le stationnement y est interdit",
+            "Sur l'accotement ou le trottoir, pas sur la chaussée",
+            "Sur la chaussée obligatoirement",
+            "L'arrêt y est également interdit"
           ],
           "correct": 1,
           "explanation": "Ce signal impose le stationnement sur l'accotement ou le trottoir : interdit sur la chaussée.",
@@ -2685,10 +2685,10 @@
           "id": "H3_Q38",
           "question": "Même signal de stationnement alterné \"vélos 7h30–18h / voitures 18h–7h30\". Il est 20h. Pouvez-vous garer votre voiture ?",
           "choices": [
-            "Non, c'est réservé aux vélos",
+            "Non, l'emplacement est réservé aux vélos",
             "Oui, de 18h à 7h30 l'emplacement est réservé aux voitures",
-            "Non, c'est la nuit",
-            "Cela dépend du jour"
+            "Non, le stationnement de nuit est interdit",
+            "Cela dépend du jour de la semaine"
           ],
           "correct": 1,
           "explanation": "À 20h, c'est la plage réservée aux voitures (18h–7h30) : vous pouvez stationner.",

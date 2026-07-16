@@ -1159,8 +1159,8 @@
           "choices": [
             "Piste cyclable obligatoire dans cette rue",
             "Zone exclusivement piétonne",
-            "Voie sans issue pour les voitures, mais les cyclistes et piétons peuvent continuer",
-            "Parking réservé aux vélos"
+            "Voie sans issue, sauf pour les cyclistes et les piétons",
+            "Parking réservé aux vélos et piétons"
           ],
           "correct": 2,
           "explanation": "Impasse pour les voitures, mais passage pour cyclistes et piétons.",
@@ -2073,9 +2073,9 @@
           "id": "A2_Q39",
           "question": "Vous voyez de larges lignes diagonales peintes au sol. De quoi s'agit-il ?",
           "choices": [
-            "D'une zone de stationnement réservée",
+            "D'une zone de stationnement réservée aux riverains",
             "D'une zone d'évitement où il est interdit de circuler, de s'arrêter et de stationner",
-            "D'une bande réservée aux bus",
+            "D'une bande réservée aux bus et taxis",
             "D'un passage pour piétons élargi"
           ],
           "correct": 1,
@@ -2221,10 +2221,10 @@
           "id": "A2_Q55",
           "question": "Ce signal montre une bande bus avec un pictogramme moto. Que signifie-t-il ?",
           "choices": [
-            "Les motocyclettes sont interdites",
+            "Les motocyclettes y sont interdites",
             "Les motocyclettes peuvent rouler sur la bande réservée aux bus",
-            "Parking moto",
-            "Vitesse limitée pour motos"
+            "Un parking réservé aux motos",
+            "Une vitesse limitée pour les motos"
           ],
           "correct": 1,
           "explanation": "Un pictogramme moto sur le signal de bande bus signifie que les motocyclettes sont autorisées à y circuler.",
@@ -3853,10 +3853,10 @@
           "id": "A4_Q9",
           "question": "Un signal de préavis indique une limitation à 1,5 km. Devez-vous déjà ralentir ?",
           "choices": [
-            "Oui, immédiatement",
+            "Oui, immédiatement dès le panneau",
             "Non, la limitation s'applique à 1,5 km plus loin",
-            "Oui, à 500 mètres",
-            "Non, c'est indicatif"
+            "Oui, mais seulement à 500 mètres",
+            "Non, ce panneau n'est qu'indicatif"
           ],
           "correct": 1,
           "explanation": "Le signal de préavis vous informe de la limitation à venir, mais celle-ci ne s'applique qu'au point indiqué.",
@@ -6489,10 +6489,10 @@
           "id": "A6_Q74",
           "question": "Si vous circulez dans un SSF, que devez-vous respecter ?",
           "choices": [
-            "Uniquement les panneaux routiers",
+            "Uniquement les panneaux routiers classiques",
             "Les feux lumineux spéciaux des véhicules de transport en commun",
-            "Rien de particulier",
-            "Uniquement la vitesse"
+            "Rien de particulier dans ce site",
+            "Uniquement la vitesse maximale"
           ],
           "correct": 1,
           "explanation": "Lorsque vous circulez dans un SSF, vous devez respecter les feux lumineux spéciaux des véhicules de transport en commun.",
@@ -6585,10 +6585,10 @@
           "id": "A6_Q85",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Zone piétonne",
+            "Début d'une zone piétonne",
             "Chemin réservé aux usagers indiqués sur le panneau",
             "Piste cyclable obligatoire",
-            "Passage pour piétons"
+            "Passage pour piétons surélevé"
           ],
           "correct": 1,
           "explanation": "Ce signal indique un chemin réservé aux catégories d'usagers représentées sur le panneau.",
@@ -6626,10 +6626,10 @@
           "id": "A6_Q88",
           "question": "Un panneau bleu rectangulaire indique un site spécial franchissable (SSF) avec le pictogramme d'un cyclomoteur. Que signifie-t-il ?",
           "choices": [
-            "Cyclomoteurs interdits",
+            "Les cyclomoteurs sont interdits sur le SSF",
             "Les cyclomotoristes sont aussi autorisés sur le SSF",
-            "Parking cyclomoteurs",
-            "Zone cyclomoteur"
+            "Un parking pour cyclomoteurs",
+            "Une zone réservée aux cyclomoteurs"
           ],
           "correct": 1,
           "explanation": "Le panneau SSF avec pictogramme cyclomoteur signifie que les cyclomotoristes sont autorisés sur ce SSF.",
