@@ -297,9 +297,9 @@
           "question": "Un agent se tient au milieu d'un carrefour, les bras tendus horizontalement. Qui doit s'arrêter et qui peut passer ?",
           "choices": [
             "Tout le monde doit s'arrêter sans exception",
-            "Les usagers face au ventre ou au dos s'arrêtent ; ceux arrivant par le côté peuvent passer dans toutes les directions",
+            "Face au ventre ou au dos : arrêt ; par le côté : passage libre",
             "Tout le monde peut passer librement",
-            "Ceux arrivant par le côté s'arrêtent ; ceux face au ventre passent"
+            "Par le côté : arrêt ; face au ventre : passage"
           ],
           "correct": 1,
           "explanation": "Ventre/dos de l'agent = stop. Côté de l'agent = peut passer dans toutes les directions.",
@@ -363,9 +363,9 @@
           "question": "Vous entendez un agent donner un coup de sifflet. Le sifflet constitue-t-il une injonction en soi ?",
           "choices": [
             "Oui, vous devez vous arrêter immédiatement",
-            "Non, le sifflet sert uniquement à attirer votre attention avant l'injonction qui va suivre",
-            "Oui, vous devez ralentir",
-            "Oui, vous devez répondre par un coup de klaxon"
+            "Non, il sert uniquement à attirer l'attention",
+            "Oui, vous devez ralentir fortement",
+            "Oui, vous devez répondre par un appel de phares"
           ],
           "correct": 1,
           "explanation": "Le sifflet n'est PAS une injonction — il attire uniquement l'attention.",
@@ -1264,7 +1264,7 @@
           "question": "Vous remarquez un signal de priorité (triangle) placé sous le feu. Les feux fonctionnent normalement. Ce signal de priorité est-il applicable ?",
           "choices": [
             "Oui, il s'applique en permanence",
-            "Non, il ne s'applique pas tant que les feux fonctionnent normalement",
+            "Non, pas tant que les feux fonctionnent",
             "Oui, en complément du feu",
             "Cela dépend du type de signal"
           ],
@@ -1294,7 +1294,7 @@
           "question": "Vous arrivez à un carrefour où le feu vert est remplacé par un feu jaune-orange clignotant en dessous. Pouvez-vous vous engager ?",
           "choices": [
             "Non, vous devez attendre un feu vert",
-            "Oui, à condition de respecter les signaux de priorité en vigueur et de redoubler de prudence",
+            "Oui, en respectant les priorités et avec prudence",
             "Non, c'est l'équivalent d'un feu rouge",
             "Oui, sans aucune condition particulière"
           ],
@@ -1308,9 +1308,9 @@
           "question": "Vous arrivez à un carrefour avec un feu jaune-orange clignotant en dessous et un panneau STOP à côté. Que faites-vous ?",
           "choices": [
             "Vous passez, le feu clignotant prime sur le STOP",
-            "Vous marquez l'arrêt au STOP, car les signaux de priorité doivent être respectés",
+            "Vous marquez l'arrêt au STOP",
             "Vous ralentissez sans vous arrêter",
-            "Vous ignorez le STOP"
+            "Vous passez, le STOP ne vaut que la nuit"
           ],
           "correct": 1,
           "explanation": "Le STOP doit être respecté même avec le feu jaune-orange clignotant.",
@@ -1567,10 +1567,10 @@
           "id": "F2_Q38",
           "question": "Le feu est rouge avec une flèche verte vers la droite. Vous tournez à droite et un piéton traverse de droite. Que faites-vous ?",
           "choices": [
-            "Vous passez, la flèche verte vous autorise",
-            "Vous cédez le passage au piéton, car vous devez céder aux usagers de toutes les directions",
+            "Vous passez : la flèche verte vous y autorise",
+            "Vous cédez le passage au piéton",
             "Vous klaxonnez pour avertir le piéton",
-            "Vous accélérez pour passer avant le piéton"
+            "Vous accélérez pour passer avant lui"
           ],
           "correct": 1,
           "explanation": "La flèche verte ne donne aucune priorité — vous cédez à tous.",
@@ -1713,10 +1713,10 @@
           "id": "F2_Q55",
           "question": "Vous approchez d'un passage à niveau. Un feu blanc lunaire clignote. Que signifie-t-il ?",
           "choices": [
-            "Danger, un train approche, arrêtez-vous",
-            "Aucun train n'approche, vous êtes autorisé à franchir le passage à niveau",
+            "Danger : un train approche, arrêtez-vous",
+            "Aucun train n'approche : passage autorisé",
             "Un train est en approche lointaine",
-            "Le passage est fermé"
+            "Le passage à niveau est fermé"
           ],
           "correct": 1,
           "explanation": "Feu blanc lunaire clignotant = autorisé à franchir le passage à niveau.",
@@ -2216,10 +2216,10 @@
           "id": "F3_Q9",
           "question": "La voie prioritaire vient de se terminer. Vous arrivez au prochain carrefour sans autre signalisation. Quelle règle s'applique ?",
           "choices": [
-            "Vous conservez encore la priorité",
-            "Vous devez respecter les signaux présents ou, en leur absence, la priorité de droite",
+            "Vous conservez encore votre priorité",
+            "Les signaux présents ou, sans signaux, la priorité de droite",
             "Vous pouvez toujours dépasser dans le carrefour",
-            "Aucune règle ne s'applique"
+            "Plus aucune règle ne s'applique"
           ],
           "correct": 1,
           "explanation": "Sans voie prioritaire, on retourne aux règles normales de priorité.",
@@ -3171,9 +3171,9 @@
           "question": "Le signal de priorité de droite crée-t-il de nouvelles règles de circulation ?",
           "choices": [
             "Oui, il modifie les règles de priorité",
-            "Non, il rappelle simplement la règle normale de priorité de droite, souvent dans des situations délicates",
-            "Oui, il donne la priorité aux véhicules venant de gauche",
-            "Non, c'est un panneau purement décoratif"
+            "Non, il rappelle simplement la règle normale",
+            "Oui, il donne la priorité à ceux de gauche",
+            "Non, ce panneau n'a aucune valeur légale"
           ],
           "correct": 1,
           "explanation": "Ce signal ne crée pas de nouvelles règles — il rappelle celles existantes.",
@@ -3184,9 +3184,9 @@
           "id": "F4_Q23",
           "question": "Vous devez traverser une piste cyclable avant d'atteindre un carrefour. Un cycliste y circule. Devez-vous lui céder le passage ?",
           "choices": [
-            "Non, la priorité de droite s'applique normalement",
-            "Oui, le conducteur qui traverse une piste cyclable doit céder le passage aux usagers qui y circulent",
-            "Non, le cycliste doit attendre que vous passiez",
+            "Non, la priorité de droite s'applique",
+            "Oui, qui traverse une piste cyclable cède le passage",
+            "Non, le cycliste doit attendre votre passage",
             "Cela dépend de la direction du cycliste"
           ],
           "correct": 1,
@@ -3198,10 +3198,10 @@
           "id": "F4_Q24",
           "question": "Vous sortez d'une propriété et devez traverser un trottoir. Un piéton y marche. Devez-vous lui céder le passage ?",
           "choices": [
-            "Non, c'est votre priorité de conducteur",
-            "Oui, le conducteur qui traverse un trottoir doit céder le passage aux usagers qui s'y trouvent",
-            "Non, le piéton doit s'arrêter et vous laisser passer",
-            "Cela dépend de votre vitesse"
+            "Non, c'est vous qui avez la priorité",
+            "Oui, celui qui traverse un trottoir cède le passage",
+            "Non, le piéton doit vous laisser passer",
+            "Cela dépend de votre vitesse d'approche"
           ],
           "correct": 1,
           "explanation": "Traverser un trottoir = céder le passage aux piétons qui s'y trouvent.",
@@ -3240,9 +3240,9 @@
           "question": "Vous arrivez à un carrefour sans signalisation. Un véhicule arrive de votre droite en circulant dans un sens interdit. Devez-vous lui céder le passage ?",
           "choices": [
             "Oui, la priorité de droite s'applique quand même",
-            "Non, vous ne devez pas céder à un conducteur circulant en sens interdit",
-            "Oui, dans tous les cas",
-            "Cela dépend de sa vitesse"
+            "Non, pas de priorité pour un sens interdit",
+            "Oui, dans absolument tous les cas",
+            "Cela dépend de sa vitesse d'arrivée"
           ],
           "correct": 1,
           "explanation": "Sens interdit = pas de priorité de droite.",
@@ -3404,10 +3404,10 @@
           "id": "F4_Q46",
           "question": "Vous sortez de votre allée privée (accès carrossable) et débouchez sur la chaussée. Avez-vous la priorité de droite ?",
           "choices": [
-            "Oui, si vous venez de la droite des autres conducteurs",
-            "Non, vous devez vous arrêter et céder le passage à TOUS les usagers, y compris les piétons",
+            "Oui, si vous venez de la droite des autres",
+            "Non, vous cédez à tous, piétons compris",
             "Oui, comme sur n'importe quelle chaussée",
-            "Cela dépend du type de route"
+            "Cela dépend du type de route abordée"
           ],
           "correct": 1,
           "explanation": "Quitter un accès privé = manœuvre, céder à tous.",
@@ -3433,8 +3433,8 @@
           "question": "Vous vous apprêtez à entrer dans un rond-point. Un véhicule circule à votre gauche dans le rond-point. La priorité de droite joue-t-elle en votre faveur ?",
           "choices": [
             "Oui, vous venez de sa droite",
-            "Non, dans un rond-point les conducteurs déjà présents ont la priorité",
-            "Oui, si vous venez de droite",
+            "Non, ceux déjà dans le rond-point ont priorité",
+            "Oui, si vous venez clairement de droite",
             "Cela dépend de la taille du rond-point"
           ],
           "correct": 1,
@@ -3446,10 +3446,10 @@
           "id": "F4_Q55",
           "question": "Vous arrivez à un carrefour sans signalisation. Un tram arrive, une voiture vient de votre droite, et vous arrivez en face. Quel est l'ordre de passage ?",
           "choices": [
-            "Vous, la voiture, puis le tram",
-            "1) Le tram (toujours prioritaire), 2) la voiture de droite, 3) vous",
-            "La voiture, le tram, puis vous",
-            "Le tram, vous, puis la voiture"
+            "Vous, la voiture de droite, puis le tram",
+            "Le tram, la voiture de droite, puis vous",
+            "La voiture de droite, le tram, puis vous",
+            "Le tram, vous, puis la voiture de droite"
           ],
           "correct": 1,
           "explanation": "Tram toujours en premier, puis priorité de droite entre les autres.",
@@ -3766,10 +3766,10 @@
           "id": "F5_Q9",
           "question": "Vous tournez à gauche. Un cycliste traverse la chaussée dans laquelle vous allez vous engager. Devez-vous lui céder le passage ?",
           "choices": [
-            "Non, vous avez la priorité puisque vous tournez",
-            "Oui, vous devez céder le passage aux cyclistes qui traversent la chaussée sur laquelle vous vous engagez",
+            "Non, vous avez la priorité en tournant",
+            "Oui, vous cédez aux cyclistes qui traversent",
             "Non, le cycliste doit s'arrêter et attendre",
-            "Oui, uniquement s'il est sur une piste cyclable"
+            "Oui, mais uniquement sur une piste cyclable"
           ],
           "correct": 1,
           "explanation": "Cyclistes traversant la chaussée d'engagement = vous cédez.",
@@ -3979,9 +3979,9 @@
           "question": "Vous changez de direction. Un cycliste circule sur une piste cyclable adjacente à la chaussée dans laquelle vous vous engagez. Devez-vous lui céder le passage ?",
           "choices": [
             "Non, seuls les piétons sont concernés",
-            "Oui, vous devez aussi céder aux conducteurs et piétons sur les autres parties de la même voie publique",
+            "Oui, aussi aux usagers des autres parties de la voie",
             "Non, vous avez la priorité sur les cyclistes",
-            "Oui, uniquement s'il s'agit de conducteurs de véhicules"
+            "Oui, mais uniquement aux conducteurs de véhicules"
           ],
           "correct": 1,
           "explanation": "Tous les usagers de la voie publique (chaussée + ses parties) doivent être respectés.",
@@ -4233,10 +4233,10 @@
           "id": "F5_Q55",
           "question": "Des bandes de circulation sont tracées au sol. La bande de droite se termine. Le véhicule de droite veut se placer sur la bande de gauche. A-t-il la priorité ?",
           "choices": [
-            "Oui, il est à droite donc il a la priorité",
-            "Non, il effectue une manœuvre (la bande prend fin) et doit céder le passage",
-            "Oui, la priorité de droite s'applique",
-            "Cela dépend du panneau"
+            "Oui, il est à droite donc prioritaire",
+            "Non, sa bande se termine : c'est une manœuvre",
+            "Oui, la priorité de droite s'applique ici",
+            "Cela dépend du panneau installé"
           ],
           "correct": 1,
           "explanation": "Bande qui prend fin = manœuvre = céder, même si on est à droite.",
@@ -4509,8 +4509,8 @@
           "question": "Vous approchez d'un passage à niveau. Pourquoi devez-vous être particulièrement prudent ?",
           "choices": [
             "Parce que les trains sont rares et imprévisibles",
-            "Parce que la distance de freinage d'un train est très longue et qu'il ne peut pas dévier sa trajectoire",
-            "Parce que les trains roulent lentement",
+            "Sa distance de freinage est très longue et il ne peut dévier",
+            "Parce que les trains roulent lentement la nuit",
             "Parce que les trains peuvent s'arrêter facilement"
           ],
           "correct": 1,

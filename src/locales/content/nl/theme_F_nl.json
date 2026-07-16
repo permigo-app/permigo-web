@@ -296,10 +296,10 @@
           "id": "F1_Q8",
           "question": "Samenvatting: horizontale armen = wie stopt, wie mag door?",
           "choices": [
-            "Iedereen stopt",
-            "Buik en rug = stop. Zijkant = mag door (rechtdoor, links, rechts)",
-            "Iedereen mag door",
-            "Zijkant = stop, buik = doorrijden"
+            "Iedereen moet zonder uitzondering stoppen",
+            "Buik of rug: stoppen; zijkant: vrije doorgang",
+            "Iedereen mag vrij doorrijden",
+            "Zijkant: stoppen; buik: doorrijden"
           ],
           "correct": 1,
           "explanation": "Buik/rug van de agent = stop. Zijkant van de agent = mag in alle richtingen door.",
@@ -362,10 +362,10 @@
           "id": "F1_Q13",
           "question": "Is het fluitje van een agent een bevel?",
           "choices": [
-            "Ja, je moet stoppen",
-            "Nee, het dient enkel om de aandacht te trekken voordat er een bevel gegeven wordt",
-            "Ja, je moet vertragen",
-            "Ja, je moet terugtoeten"
+            "Ja, u moet onmiddellijk stoppen",
+            "Nee, het dient enkel om de aandacht te trekken",
+            "Ja, u moet sterk vertragen",
+            "Ja, u moet antwoorden met een lichtsignaal"
           ],
           "correct": 1,
           "explanation": "Het fluitje is GEEN bevel — het trekt enkel de aandacht.",
@@ -1260,10 +1260,10 @@
           "id": "F2_Q13",
           "question": "Er staat een voorrangsbord onder het verkeerslicht. De lichten werken. Is het bord van toepassing?",
           "choices": [
-            "Ja, altijd",
-            "Nee, die borden zijn niet van toepassing zolang de lichten werken",
+            "Ja, het geldt permanent",
+            "Nee, niet zolang de lichten werken",
             "Ja, als aanvulling op het licht",
-            "Dat hangt af van het bord"
+            "Dat hangt af van het soort bord"
           ],
           "correct": 1,
           "explanation": "Voorrangsborden onder het licht gelden niet zolang de verkeerslichten werken.",
@@ -1290,10 +1290,10 @@
           "id": "F2_Q15",
           "question": "Het groene licht is vervangen door een oranje knipperlicht onderaan. Mag je het kruispunt oprijden?",
           "choices": [
-            "Nee, wacht op groen",
-            "Ja, op voorwaarde dat je de voorrangsborden of -regels respecteert en extra voorzichtig bent",
-            "Nee, het is een rood licht",
-            "Ja, zonder voorwaarden"
+            "Nee, wacht op een groen licht",
+            "Ja, met respect voor de voorrangsregels en voorzichtig",
+            "Nee, het staat gelijk aan een rood licht",
+            "Ja, zonder enige bijzondere voorwaarde"
           ],
           "correct": 1,
           "explanation": "Oranje knipperlicht onderaan = je mag doorrijden, maar met voorzichtigheid en met respect voor de voorrangsregels.",
@@ -1304,10 +1304,10 @@
           "id": "F2_Q16",
           "question": "Er is een oranje knipperlicht onderaan en een STOP-bord ernaast. Wat doe je?",
           "choices": [
-            "Je rijdt door, het licht gaat voor",
-            "Je stopt bij het STOP-bord want je moet de voorrangsborden respecteren",
-            "Je vertraagt alleen maar",
-            "Je negeert het STOP-bord"
+            "Je rijdt door, het knipperlicht gaat voor",
+            "Je stopt bij het STOP-bord",
+            "Je vertraagt zonder te stoppen",
+            "Je rijdt door, STOP geldt enkel 's nachts"
           ],
           "correct": 1,
           "explanation": "Het STOP-bord moet gerespecteerd worden, ook bij een oranje knipperlicht.",
@@ -1564,10 +1564,10 @@
           "id": "F2_Q38",
           "question": "Rood licht + groene pijl naar rechts. Een voetganger steekt over van rechts. Wat doe je?",
           "choices": [
-            "Je rijdt door, je hebt de groene pijl",
-            "Je verleent voorrang aan de voetganger want je moet voorrang verlenen aan weggebruikers uit alle richtingen",
-            "Je toetert",
-            "Je versnelt"
+            "Je rijdt door: de groene pijl laat het toe",
+            "Je verleent voorrang aan de voetganger",
+            "Je claxonneert om de voetganger te verwittigen",
+            "Je versnelt om vóór hem te passeren"
           ],
           "correct": 1,
           "explanation": "De groene pijl geeft geen voorrang — je verleent voorrang aan iedereen.",
@@ -1710,10 +1710,10 @@
           "id": "F2_Q55",
           "question": "Een wit knipperend maanlicht brandt bij een overweg. Wat betekent het?",
           "choices": [
-            "Gevaar, stop",
-            "Je mag de overweg oversteken",
-            "Trein nadert",
-            "Verboden over te steken"
+            "Gevaar: een trein nadert, stop",
+            "Geen trein in aantocht: oversteken mag",
+            "Een trein nadert van ver",
+            "De overweg is gesloten"
           ],
           "correct": 1,
           "explanation": "Wit knipperend maanlicht = je mag de overweg oversteken.",
@@ -2211,10 +2211,10 @@
           "id": "F3_Q9",
           "question": "Na het einde van de voorrangsweg, welke regel geldt op het volgende kruispunt?",
           "choices": [
-            "Je hebt nog steeds voorrang",
-            "Je moet de aanwezige verkeersborden respecteren of, bij afwezigheid van borden, de voorrang van rechts",
-            "Je mag altijd inhalen",
-            "Geen enkele regel"
+            "Je behoudt nog steeds je voorrang",
+            "De aanwezige borden of, zonder borden, de voorrang van rechts",
+            "Je mag altijd inhalen op het kruispunt",
+            "Er geldt geen enkele regel meer"
           ],
           "correct": 1,
           "explanation": "Zonder voorrangsweg keer je terug naar de normale voorrangsregels.",
@@ -3165,10 +3165,10 @@
           "id": "F4_Q22",
           "question": "Verandert het verkeersbord voorrang van rechts de regels?",
           "choices": [
-            "Ja, het creëert nieuwe regels",
-            "Nee, het herinnert aan de gewone regel van voorrang van rechts, vaak in gevaarlijke situaties",
-            "Ja, het geeft voorrang van links",
-            "Nee, het is decoratief"
+            "Ja, het wijzigt de voorrangsregels",
+            "Nee, het herinnert enkel aan de gewone regel",
+            "Ja, het geeft voorrang aan wie van links komt",
+            "Nee, dit bord heeft geen wettelijke waarde"
           ],
           "correct": 1,
           "explanation": "Dit verkeersbord creëert geen nieuwe regels — het herinnert aan de bestaande.",
@@ -3179,10 +3179,10 @@
           "id": "F4_Q23",
           "question": "Je steekt een fietspad over voor een kruispunt. Er rijdt een fietser op. Moet je voorrang verlenen?",
           "choices": [
-            "Nee, voorrang van rechts",
-            "Ja, de bestuurder die een fietspad oversteekt moet voorrang verlenen aan de weggebruikers die erop rijden",
-            "Nee, de fietsers moeten wachten",
-            "Dat hangt af van de richting"
+            "Nee, de voorrang van rechts geldt",
+            "Ja, wie een fietspad oversteekt verleent voorrang",
+            "Nee, de fietser moet wachten tot je door bent",
+            "Dat hangt af van de richting van de fietser"
           ],
           "correct": 1,
           "explanation": "Een fietspad oversteken = voorrang verlenen aan fietsers die erop rijden.",
@@ -3194,9 +3194,9 @@
           "question": "Je steekt een voetpad over. Er loopt een voetganger. Moet je voorrang verlenen?",
           "choices": [
             "Nee, jij hebt voorrang",
-            "Ja, de bestuurder die een voetpad oversteekt moet voorrang verlenen",
-            "Nee, de voetganger moet stoppen",
-            "Dat hangt af van de snelheid"
+            "Ja, wie een voetpad oversteekt verleent voorrang",
+            "Nee, de voetganger moet je laten passeren",
+            "Dat hangt af van je snelheid"
           ],
           "correct": 1,
           "explanation": "Een voetpad oversteken = voorrang verlenen aan de voetgangers die er lopen.",
@@ -3234,10 +3234,10 @@
           "id": "F4_Q30",
           "question": "Een voertuig komt van rechts uit een verboden richting. Moet je voorrang verlenen?",
           "choices": [
-            "Ja, voorrang van rechts",
-            "Nee, je hoeft geen voorrang te verlenen aan een bestuurder die uit een verboden richting komt",
-            "Ja, toch wel",
-            "Dat hangt af van de snelheid"
+            "Ja, de voorrang van rechts geldt toch",
+            "Nee, geen voorrang voor wie uit een verboden richting komt",
+            "Ja, in werkelijk alle gevallen",
+            "Dat hangt af van zijn snelheid"
           ],
           "correct": 1,
           "explanation": "Verboden richting = geen voorrang van rechts.",
@@ -3400,9 +3400,9 @@
           "question": "Je verlaat een private toegangsweg (je oprit). Heb je voorrang van rechts?",
           "choices": [
             "Ja, als je van rechts komt",
-            "Nee, je moet stoppen en voorrang verlenen aan ALLE weggebruikers, inclusief voetgangers",
-            "Ja, net als op een rijbaan",
-            "Dat hangt af van de weg"
+            "Nee, je verleent iedereen voorrang, ook voetgangers",
+            "Ja, net als op elke rijbaan",
+            "Dat hangt af van het wegtype"
           ],
           "correct": 1,
           "explanation": "Een private toegangsweg verlaten = manoeuvre, voorrang verlenen aan iedereen.",
@@ -3427,10 +3427,10 @@
           "id": "F4_Q51",
           "question": "Geldt de voorrang van rechts bij het oprijden van een rotonde?",
           "choices": [
-            "Ja",
-            "Nee, de bestuurders op de rotonde hebben voorrang",
-            "Ja, als je van rechts komt",
-            "Dat hangt af van de rotonde"
+            "Ja, jij komt van zijn rechterkant",
+            "Nee, wie al op de rotonde rijdt heeft voorrang",
+            "Ja, als je duidelijk van rechts komt",
+            "Dat hangt af van de grootte van de rotonde"
           ],
           "correct": 1,
           "explanation": "Op een rotonde verleen je voorrang aan wie er al op rijdt — geen voorrang van rechts bij het oprijden.",
@@ -3441,10 +3441,10 @@
           "id": "F4_Q55",
           "question": "Een kruispunt zonder signalisatie: een tram, een auto van rechts (bruin), en jij (blauw). Wat is de volgorde?",
           "choices": [
-            "Jij, de bruine auto, de tram",
-            "1) Tram, 2) bruine auto (rechts), 3) jij",
-            "Bruine auto, tram, jij",
-            "Tram, jij, bruine auto"
+            "Jij, de auto van rechts, dan de tram",
+            "De tram, de auto van rechts, dan jij",
+            "De auto van rechts, de tram, dan jij",
+            "De tram, jij, dan de auto van rechts"
           ],
           "correct": 1,
           "explanation": "De tram gaat altijd eerst, daarna voorrang van rechts tussen de anderen.",
@@ -3760,9 +3760,9 @@
           "question": "Je slaat links af. Een fietser steekt de rijbaan over waarop je gaat inrijden. Moet je voorrang verlenen?",
           "choices": [
             "Nee, je hebt voorrang bij het afslaan",
-            "Ja, je moet voorrang verlenen aan fietsers die de rijbaan oversteken waarop je inrijdt",
-            "Nee, de fietser moet wachten",
-            "Alleen op het fietspad"
+            "Ja, je verleent voorrang aan de overstekende fietsers",
+            "Nee, de fietser moet stoppen en wachten",
+            "Ja, maar enkel op een fietspad"
           ],
           "correct": 1,
           "explanation": "Fietsers die de rijbaan oversteken waarop je inrijdt = je verleent voorrang.",
@@ -3971,10 +3971,10 @@
           "id": "F5_Q30",
           "question": "Moet je bij het veranderen van richting ook voorrang verlenen aan bestuurders en voetgangers op de andere delen van dezelfde openbare weg?",
           "choices": [
-            "Nee, alleen aan voetgangers",
-            "Ja, aan bestuurders EN voetgangers op de andere delen van dezelfde weg",
-            "Nee, je hebt voorrang",
-            "Alleen aan bestuurders"
+            "Nee, enkel voetgangers tellen mee",
+            "Ja, ook aan de gebruikers van de andere delen van de weg",
+            "Nee, je hebt voorrang op fietsers",
+            "Ja, maar enkel aan bestuurders van voertuigen"
           ],
           "correct": 1,
           "explanation": "Alle weggebruikers van de openbare weg (rijbaan + aanhorigheden) moeten gerespecteerd worden.",
@@ -4226,10 +4226,10 @@
           "id": "F5_Q55",
           "question": "Er zijn gemarkeerde rijstroken en de rechterrijstrook eindigt. Het voertuig rechts wil naar links. Heeft het voorrang?",
           "choices": [
-            "Ja, het staat rechts",
-            "Nee, het voert een manoeuvre uit en moet voorrang verlenen",
-            "Ja, voorrang van rechts",
-            "Dat hangt af van het bord"
+            "Ja, hij rijdt rechts en heeft dus voorrang",
+            "Nee, zijn strook eindigt: het is een manoeuvre",
+            "Ja, de voorrang van rechts geldt hier",
+            "Dat hangt af van het geplaatste bord"
           ],
           "correct": 1,
           "explanation": "Rijstrook die eindigt = manoeuvre = voorrang verlenen, zelfs als je rechts staat.",
@@ -4500,10 +4500,10 @@
           "id": "F6_Q1",
           "question": "Waarom moet je bijzonder voorzichtig zijn bij het naderen van een overweg?",
           "choices": [
-            "Treinen zijn zeldzaam",
-            "De remafstand van een trein is heel lang en hij kan niet van zijn traject afwijken",
-            "Treinen rijden traag",
-            "Treinen stoppen gemakkelijk"
+            "Omdat treinen zeldzaam en onvoorspelbaar zijn",
+            "Zijn remafstand is heel lang en hij kan niet uitwijken",
+            "Omdat treinen 's nachts traag rijden",
+            "Omdat treinen gemakkelijk kunnen stoppen"
           ],
           "correct": 1,
           "explanation": "De heel lange remafstand en de onmogelijkheid om af te wijken maken treinen heel gevaarlijk.",
