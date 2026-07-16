@@ -1496,10 +1496,10 @@
           "id": "I2_Q29",
           "question": "Vous êtes témoin d'un accident et vous allez appeler les secours. Que devez-vous évaluer avant d'appeler ?",
           "choices": [
-            "Le coût des dégâts",
+            "Le coût approximatif des dégâts matériels des véhicules",
             "Le lieu exact, le nombre et la gravité des blessés, les personnes bloquées, et tout risque d'incendie",
-            "La marque des véhicules impliqués",
-            "L'heure exacte de l'accident"
+            "La marque, le modèle et la couleur des véhicules impliqués",
+            "L'heure exacte de l'accident et les conditions météo"
           ],
           "correct": 1,
           "explanation": "Avant d'appeler les secours : évaluer le lieu, le nombre de blessés, si des personnes sont bloquées et s'il y a risque d'incendie.",
@@ -1836,10 +1836,10 @@
           "id": "I2_Q56",
           "question": "Vous allez entrer dans un tunnel et on vous conseille de fermer un oeil. Pourquoi ?",
           "choices": [
-            "Pour vous reposer",
-            "Pour éviter l'effet \"trou noir\" en le rouvrant une fois dans le tunnel",
-            "Pour mieux voir",
-            "Par mesure de précaution"
+            "Pour reposer vos yeux avant l'obscurité",
+            "Pour éviter l'effet \"trou noir\" à l'entrée du tunnel",
+            "Pour mieux évaluer les distances",
+            "Pour éviter l'éblouissement à la sortie"
           ],
           "correct": 1,
           "explanation": "Fermer un œil permet d'éviter l'effet de \"trou noir\" à l'entrée du tunnel.",
@@ -1914,10 +1914,10 @@
           "id": "I2_Q62",
           "question": "Vous êtes témoin d'un accident dans un tunnel. Comment prévenez-vous les secours ?",
           "choices": [
-            "Uniquement par téléphone portable",
-            "De préférence par le téléphone d'urgence installé dans le tunnel, sinon par téléphone portable (112)",
-            "En klaxonnant",
-            "En sortant du tunnel pour appeler"
+            "Uniquement par téléphone portable en roulant",
+            "De préférence par le téléphone d'urgence du tunnel, sinon par GSM (112)",
+            "En klaxonnant pour alerter les autres usagers",
+            "En sortant du tunnel à pied pour appeler"
           ],
           "correct": 1,
           "explanation": "Utiliser le téléphone d'urgence du tunnel de préférence, sinon le 112.",
@@ -2270,10 +2270,10 @@
           "id": "I3_Q1",
           "question": "Vous vous apprêtez à prendre votre voiture pour un court trajet. Pourquoi devriez-vous vous demander si elle est vraiment nécessaire ?",
           "choices": [
-            "Pour gagner du temps",
+            "Pour gagner du temps sur l'ensemble du trajet",
             "Les déplacements en voiture sont coûteux ET nuisibles pour l'environnement",
-            "Par habitude",
-            "Pour éviter les embouteillages"
+            "Par simple habitude, sans autre raison",
+            "Uniquement pour éviter les embouteillages du matin"
           ],
           "correct": 1,
           "explanation": "Chaque trajet en voiture engendre un coût financier et un impact environnemental. Se poser la question permet de choisir une alternative quand c'est possible.",
@@ -2296,10 +2296,10 @@
           "id": "I3_Q3",
           "question": "Vous devez parcourir une distance de 5 km. Quel moyen de transport est recommandé pour cette distance ?",
           "choices": [
-            "La voiture",
+            "La voiture, plus rapide en ville",
             "Le vélo, adapté aux distances de 1 à 10 km",
-            "Le taxi",
-            "La marche à pied"
+            "Le taxi, pour éviter la fatigue",
+            "La marche à pied, idéale jusqu'à 5 km"
           ],
           "correct": 1,
           "explanation": "Le vélo est le moyen de transport recommandé pour les distances de 1 à 10 km.",
@@ -2387,10 +2387,10 @@
           "id": "I3_Q10",
           "question": "Vous montez sur une voie rapide ou vous devez effectuer un dépassement rapide. Pouvez-vous dépasser le régime conseillé ?",
           "choices": [
-            "Non, jamais",
-            "Oui, dans ces situations précises, dépasser le régime conseillé est justifié",
-            "Uniquement en ville",
-            "Uniquement quand la route est vide"
+            "Non, le régime conseillé ne se dépasse jamais",
+            "Oui, c'est justifié dans ces situations précises",
+            "Uniquement en ville à basse vitesse",
+            "Uniquement quand la route est complètement vide"
           ],
           "correct": 1,
           "explanation": "Dépasser le régime conseillé est acceptable pour s'insérer sur une voie rapide ou effectuer un dépassement.",
@@ -2817,10 +2817,10 @@
           "id": "I3_Q49",
           "question": "Vous entendez parler de \"conduite défensive\". En quoi cela consiste-t-il ?",
           "choices": [
-            "À rouler très lentement",
-            "À regarder au-delà du véhicule devant vous et à anticiper les problèmes ou erreurs des autres usagers",
-            "À freiner brusquement",
-            "À rouler uniquement sur la bande de gauche"
+            "À rouler nettement plus lentement que la limite",
+            "À regarder loin devant et anticiper les erreurs des autres",
+            "À freiner tôt et brusquement à chaque danger",
+            "À toujours céder le passage à tout le monde"
           ],
           "correct": 1,
           "explanation": "La conduite défensive consiste à anticiper les situations dangereuses avant qu'elles ne surviennent.",
@@ -3501,10 +3501,10 @@
           "id": "I4_Q24",
           "question": "Vous remplacez un pneu sur un essieu. Que doivent avoir en commun les deux pneus montés sur le même essieu ?",
           "choices": [
-            "Rien de particulier",
+            "Rien de particulier n'est exigé",
             "La même structure (radiale ou diagonale) et la même dimension",
-            "La même couleur",
-            "Le même fabricant"
+            "Uniquement la même marque de fabricant",
+            "Uniquement la même pression de gonflage"
           ],
           "correct": 1,
           "explanation": "Sur un même essieu, les pneus doivent avoir la même structure et la même dimension.",
@@ -3814,10 +3814,10 @@
           "id": "I4_Q48",
           "question": "Votre voiture est équipée de l'ABS. Cela vous permet-il de freiner plus court ?",
           "choices": [
-            "Oui, toujours",
-            "Non, mais la voiture reste plus facile à maîtriser pendant le freinage",
-            "Oui, sur sol mouillé",
-            "Oui, uniquement sur sol sec"
+            "Oui, toujours et sur tous les revêtements",
+            "Non, mais la voiture reste maîtrisable pendant le freinage",
+            "Oui, mais uniquement sur sol mouillé",
+            "Oui, mais uniquement sur sol sec"
           ],
           "correct": 1,
           "explanation": "L'ABS ne réduit pas forcément la distance de freinage, mais maintient la maîtrise du véhicule.",
@@ -3879,10 +3879,10 @@
           "id": "I4_Q53",
           "question": "Vous faites une manoeuvre d'évitement brusque. Dans quelles situations l'ESP intervient-il ?",
           "choices": [
-            "Uniquement en ligne droite",
+            "Uniquement en ligne droite à haute vitesse sur autoroute",
             "Lors d'une manoeuvre d'évitement brusque, d'un virage mal calculé ou sur une chaussée trompeuse",
-            "Uniquement en marche arrière",
-            "Uniquement à basse vitesse"
+            "Uniquement lors d'une marche arrière ou d'un créneau",
+            "Uniquement à basse vitesse dans les zones urbaines"
           ],
           "correct": 1,
           "explanation": "L'ESP intervient lors de manœuvres brusques, virages mal calculés ou chaussée glissante.",
@@ -4009,10 +4009,10 @@
           "id": "I4_Q63",
           "question": "Votre voiture équipée de l'ABS commence à déraper. Que devez-vous faire avec la pédale de frein ?",
           "choices": [
-            "Relâcher la pédale de frein",
-            "Appuyer encore PLUS FORT sur la pédale de frein pour activer pleinement l'ABS",
-            "Pomper la pédale de frein",
-            "Ne rien faire"
+            "Relâcher la pédale de frein progressivement",
+            "Appuyer encore PLUS FORT pour activer pleinement l'ABS",
+            "Pomper la pédale de frein par à-coups",
+            "Ne rien changer à la pression exercée"
           ],
           "correct": 1,
           "explanation": "Pour activer l'ABS en cas de dérapage, il faut appuyer encore plus fort sur la pédale de frein.",
