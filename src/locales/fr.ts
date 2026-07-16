@@ -111,6 +111,10 @@ const fr: Record<string, string> = {
   resultats_erreur_grave: 'erreur grave',
   resultats_erreurs_graves: 'erreurs graves',
   resultats_erreur_grave_regle: "comme à l'examen officiel, chaque erreur grave (feu rouge, priorité, vitesse, alcool…) coûte 5 points au lieu de 1.",
+  resultats_tes_fautes: 'Tes fautes',
+  resultats_sans_faute: 'Sans faute — parfait ! 🎯',
+  resultats_ta_reponse: 'Ta réponse',
+  resultats_bonne_reponse: 'Bonne réponse',
 
   // ── Révision ──
   revision_titre: 'Révision — Thème',

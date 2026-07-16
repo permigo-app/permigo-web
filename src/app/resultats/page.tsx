@@ -1,12 +1,24 @@
 'use client';
 
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Suspense } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { THEME_COLORS } from '@/lib/constants';
 import { useLang } from '@/contexts/LanguageContext';
 import { TIER_COLORS, type Tier } from '@/lib/medals';
 import { MedalIcon } from '@/components/ExamRoute';
+import SignImage from '@/components/SignImage';
+
+interface ExamReviewItem {
+  id: string;
+  question: string;
+  choices: string[];
+  selected: number;
+  correct: number;
+  explanation: string;
+  severe: boolean;
+  sign?: string;
+}
 
 function ResultsContent() {
   const params = useSearchParams();
@@ -35,6 +47,22 @@ function ResultsContent() {
   const examPoints = isExam && points !== null ? points : null;
   const examPct = examPoints !== null && total > 0 ? Math.round((examPoints / total) * 100) : pct;
   const passed = isExam ? examPct >= 82 : earnedStars > 0;
+
+  // Récapitulatif des fautes (déposé par la page examen dans localStorage)
+  const [faults, setFaults] = useState<ExamReviewItem[] | null>(null);
+  useEffect(() => {
+    if (!isExam) return;
+    try {
+      const raw = localStorage.getItem('exam_last_review');
+      if (!raw) return;
+      const review = JSON.parse(raw);
+      // On n'affiche que si le dépôt correspond bien à CET examen (frais + même config)
+      if (review.theme !== themeCode || review.total !== total) return;
+      if (Date.now() - (review.ts ?? 0) > 30 * 60 * 1000) return;
+      const items = (review.items as ExamReviewItem[]).filter(it => it.selected !== it.correct);
+      setFaults(items);
+    } catch { /* ignore */ }
+  }, [isExam, themeCode, total]);
   const color = THEME_COLORS[themeCode] || '#74B9FF';
 
   const title = pct === 100 ? t('resultats_parfait') : passed ? t('resultats_bravo') : t('resultats_courage');
@@ -111,6 +139,53 @@ function ResultsContent() {
           <span className="text-xs" style={{ color: 'var(--text-hint)' }}>{t('resultats_score')}</span>
         </div>
       </div>
+
+      {/* Récapitulatif des fautes (examen, conditions réelles) */}
+      {isExam && faults !== null && (
+        <div className="mb-8">
+          <h2 className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: 'var(--brand)' }}>
+            {faults.length === 0 ? t('resultats_sans_faute') : `${t('resultats_tes_fautes')} (${faults.length})`}
+          </h2>
+          {faults.length > 0 && (
+            <div className="flex flex-col gap-3">
+              {faults.map(f => (
+                <div key={f.id} className="rounded-2xl p-4" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)' }}>
+                  <div className="flex items-start gap-3 mb-3">
+                    {f.sign && (
+                      <div className="flex-shrink-0">
+                        <SignImage code={f.sign} size={52} />
+                      </div>
+                    )}
+                    <p className="text-sm font-bold flex-1" style={{ color: 'var(--text-title)', margin: 0 }}>
+                      {f.question}
+                      {f.severe && (
+                        <span className="ml-2 text-[10px] font-black px-2 py-0.5 rounded-full align-middle" style={{ background: 'rgba(239,68,68,0.12)', color: '#dc2626' }}>
+                          ⚠ -5 pts
+                        </span>
+                      )}
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-1.5 mb-3">
+                    {f.selected >= 0 && (
+                      <div className="rounded-xl px-3 py-2 text-xs" style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.35)', color: '#dc2626' }}>
+                        ✗ {t('resultats_ta_reponse')} : {f.choices[f.selected]}
+                      </div>
+                    )}
+                    <div className="rounded-xl px-3 py-2 text-xs" style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.35)', color: '#16a34a' }}>
+                      ✓ {t('resultats_bonne_reponse')} : {f.choices[f.correct]}
+                    </div>
+                  </div>
+                  {f.explanation && (
+                    <p className="text-xs leading-relaxed" style={{ color: 'var(--text-sub)', margin: 0 }}>
+                      {f.explanation}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Buttons */}
       <div className="flex flex-col gap-3">

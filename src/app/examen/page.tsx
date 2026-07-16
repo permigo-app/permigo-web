@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { getExamQuestionsLocalized, getNextThemeCode, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { setExamPassed, unlockTheme, updateQuizHistory, addStudyTime } from '@/lib/progressStorage';
+import { recordQuestionReview } from '@/lib/reviewApi';
 import { THEME_COLORS } from '@/lib/constants';
 import { useIsPremium, isThemeFree, canPlayExam, recordExamPlayed, daysUntilNextExam } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
@@ -26,6 +27,8 @@ function ExamContent() {
   const [validated, setValidated] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
   const [severeErrors, setSevereErrors] = useState(0);
+  // Réponses données (id question → index choisi) — pour le récapitulatif final
+  const answersRef = useRef<Record<string, number>>({});
   const [shakeWrong, setShakeWrong] = useState(false);
   const [isResuming, setIsResuming] = useState(false);
   const startTimeRef = useRef(Date.now());
@@ -70,6 +73,7 @@ function ExamContent() {
         setCurrentQ(data.currentQ || 0);
         setCorrectCount(data.correctCount || 0);
         setSevereErrors(data.severeErrors || 0);
+        answersRef.current = data.answers || {};
         setStarted(true);
         setIsResuming(true);
         startTimeRef.current = data.startTime || Date.now();
@@ -153,14 +157,22 @@ function ExamContent() {
     startTimeRef.current = Date.now();
   };
 
+  // Conditions réelles (GOCA) : répondre enregistre et passe à la question
+  // suivante SANS révéler la correction — tout se découvre dans le
+  // récapitulatif de fin. La réponse alimente aussi la banque d'erreurs.
   const handleValidate = () => {
-    if (selected === null || validated) return;
-    setValidated(true);
-    const isCorrect = selected === questions[currentQ].correct;
+    if (selected === null) return;
+    const q = questions[currentQ];
+    const isCorrect = selected === q.correct;
     const newScore = isCorrect ? correctCount + 1 : correctCount;
     // Règle GOCA : une erreur sur une question "grave" (3e/4e degré, vitesse)
     // coûte 5 points au lieu de 1
-    const newSevere = !isCorrect && questions[currentQ].severe ? severeErrors + 1 : severeErrors;
+    const newSevere = !isCorrect && q.severe ? severeErrors + 1 : severeErrors;
+    const newAnswers = { ...answersRef.current, [q.id]: selected };
+    answersRef.current = newAnswers;
+
+    // Banque d'erreurs / répétition espacée — comme les leçons
+    recordQuestionReview(q.id, isCorrect, 0).catch(() => {});
 
     // Sync to localStorage
     try {
@@ -171,42 +183,21 @@ function ExamContent() {
           ...data,
           correctCount: newScore,
           severeErrors: newSevere,
-          currentQ,
-        }));
-      }
-    } catch { /* ignore */ }
-
-    if (isCorrect) {
-      setCorrectCount(newScore);
-    } else {
-      setSevereErrors(newSevere);
-      setShakeWrong(true);
-      setTimeout(() => setShakeWrong(false), 400);
-    }
-  };
-
-  const nextQuestion = () => {
-    setSelected(null);
-    setValidated(false);
-
-    // Sync to localStorage
-    try {
-      const saved = localStorage.getItem('exam_active');
-      if (saved) {
-        const data = JSON.parse(saved);
-        localStorage.setItem('exam_active', JSON.stringify({
-          ...data,
+          answers: newAnswers,
           currentQ: currentQ + 1,
-          correctCount,
         }));
       }
     } catch { /* ignore */ }
 
-    if (currentQ + 1 < questions.length) { setCurrentQ(q => q + 1); }
-    else { finishExam(); }
+    setCorrectCount(newScore);
+    setSevereErrors(newSevere);
+    setSelected(null);
+
+    if (currentQ + 1 < questions.length) { setCurrentQ(c => c + 1); }
+    else { finishExam(newScore, newSevere); }
   };
 
-  const finishExam = () => {
+  const finishExam = (finalCorrect: number = correctCount, finalSevere: number = severeErrors) => {
     // Mark completed in localStorage — exam now counts as used
     try {
       const saved = localStorage.getItem('exam_active');
@@ -219,11 +210,32 @@ function ExamContent() {
     if (!premiumActive) recordExamPlayed(); // Only counted HERE (50 questions done)
 
     const total = questions.length;
+    const correctCount = finalCorrect;
+    const severeErrors = finalSevere;
     // Cotation officielle GOCA : chaque erreur coûte 1 point, mais une erreur
     // sur une question grave (3e/4e degré, vitesse) en coûte 5 (soit 4 de plus)
     const points = Math.max(0, correctCount - severeErrors * 4);
     const passed = total > 0 && points >= Math.ceil(total * 0.82);
     updateQuizHistory(correctCount, total);
+
+    // Récapitulatif des fautes pour la page résultats (trop gros pour l'URL)
+    try {
+      localStorage.setItem('exam_last_review', JSON.stringify({
+        theme: themeCode,
+        ts: Date.now(),
+        total,
+        items: questions.map(q => ({
+          id: q.id,
+          question: q.question,
+          choices: q.choices,
+          selected: answersRef.current[q.id] ?? -1,
+          correct: q.correct,
+          explanation: q.explanation,
+          severe: !!q.severe,
+          sign: q.sign,
+        })),
+      }));
+    } catch { /* ignore */ }
     if (passed) {
       // 'FINAL' est aussi enregistré — il donne le trophée Diamant global
       setExamPassed(themeCode);
@@ -347,8 +359,9 @@ function ExamContent() {
         <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('examen_header')} {themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}</span>
       }
       headerRight={
+        // Conditions réelles : pas de score en direct — seuil affiché à la place
         <div className="px-3 py-1 rounded-lg text-xs font-bold" style={{ background: 'rgba(243,156,18,0.12)', color: '#F39C12' }}>
-          {correctCount} {correctCount > 1 ? t('examen_corrects_count') : t('examen_correct_count')}
+          {t('examen_seuil_reussite')} {passThreshold}/{questions.length}
         </div>
       }
       subtitle={`Examen ${themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}`}
@@ -356,14 +369,13 @@ function ExamContent() {
       signCode={q.sign}
       choices={[...q.choices]}
       selected={selected}
-      validated={validated}
+      validated={false}
       correctIndex={q.correct}
       onSelect={setSelected}
       onValidate={handleValidate}
-      onNext={nextQuestion}
+      onNext={handleValidate}
       isLastQuestion={currentQ + 1 >= questions.length}
-      explanation={q.explanation}
-      shakeWrong={shakeWrong}
+      shakeWrong={false}
       questionId={q.id || `exam_${themeCode}_q${currentQ}`}
       sidebar={
         <>
@@ -376,22 +388,20 @@ function ExamContent() {
             </div>
           )}
 
-          {/* Score en temps réel */}
+          {/* Conditions réelles : pas de score en direct, seulement l'avancement */}
           <div className="rounded-2xl p-5" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-            <h4 className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--brand)' }}>{t('examen_score_direct')}</h4>
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('examen_correctes')}</span>
-              <span className="text-xl font-black" style={{ color: '#2ecc71' }}>{correctCount}</span>
-            </div>
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('questions')}</span>
-              <span className="text-xl font-black" style={{ color: 'var(--text-primary)' }}>{currentQ + (validated ? 1 : 0)}/{questions.length}</span>
+              <span className="text-xl font-black" style={{ color: 'var(--text-primary)' }}>{currentQ + 1}/{questions.length}</span>
             </div>
             <div className="h-px my-2" style={{ background: 'var(--border-subtle)' }} />
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-3">
               <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('examen_seuil_reussite')}</span>
               <span className="text-sm font-bold" style={{ color: '#F39C12' }}>{passThreshold}/{questions.length}</span>
             </div>
+            <p className="text-xs" style={{ color: 'var(--text-hint)', margin: 0 }}>
+              Comme à l&apos;examen officiel, tes réponses ne sont pas corrigées en direct — tu découvriras tes fautes à la fin.
+            </p>
           </div>
 
         </>

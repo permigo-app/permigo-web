@@ -111,6 +111,10 @@ const nl: Record<string, string> = {
   resultats_erreur_grave: 'zware fout',
   resultats_erreurs_graves: 'zware fouten',
   resultats_erreur_grave_regle: 'zoals op het officiële examen kost elke zware fout (rood licht, voorrang, snelheid, alcohol…) 5 punten in plaats van 1.',
+  resultats_tes_fautes: 'Jouw fouten',
+  resultats_sans_faute: 'Foutloos — perfect! 🎯',
+  resultats_ta_reponse: 'Jouw antwoord',
+  resultats_bonne_reponse: 'Juist antwoord',
 
   // ── Révision ──
   revision_titre: 'Herziening — Thema',
