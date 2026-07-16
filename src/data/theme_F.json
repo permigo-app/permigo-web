@@ -498,10 +498,10 @@
           "id": "F1_Q25",
           "question": "Vous arrivez à un carrefour où une personne portant un brassard vous fait signe de ralentir. Cette personne n'est pas un agent qualifié. Qui peut donner de telles indications ?",
           "choices": [
-            "N'importe qui peut donner des indications sur la voie publique",
-            "Les surveillants habilités, capitaines de route, signaleurs de course cycliste, chefs de groupe de piétons ou cavaliers",
-            "Uniquement les policiers en civil",
-            "Uniquement les militaires en service"
+            "N'importe qui portant un brassard réfléchissant",
+            "Surveillants habilités, capitaines de route, signaleurs et chefs de groupe",
+            "Uniquement les policiers en civil de service",
+            "Uniquement les militaires lors d'un convoi"
           ],
           "correct": 1,
           "explanation": "Ces personnes autorisées peuvent donner des indications, pas des injonctions.",
@@ -553,9 +553,9 @@
           "question": "Vous hésitez entre les pouvoirs d'un agent qualifié et ceux d'une personne autorisée. Quelle est la différence principale ?",
           "choices": [
             "Il n'y a aucune différence entre les deux",
-            "L'agent qualifié donne des injonctions, règle la circulation et rédige des PV ; la personne autorisée donne uniquement des indications",
-            "La personne autorisée a davantage de pouvoir que l'agent",
-            "L'agent qualifié ne peut pas rédiger de procès-verbal"
+            "L'agent donne des injonctions et verbalise ; la personne autorisée donne des indications",
+            "La personne autorisée a plus de pouvoirs que l'agent",
+            "L'agent qualifié ne peut pas dresser de procès-verbal"
           ],
           "correct": 1,
           "explanation": "Agent qualifié = injonctions + circulation + PV. Personne autorisée = indications uniquement.",
@@ -1428,9 +1428,9 @@
           "question": "Vous hésitez entre feu jaune-orange fixe et feu jaune-orange clignotant au milieu. Quelle est la différence de comportement à adopter ?",
           "choices": [
             "Aucune différence, le comportement est identique",
-            "Fixe = vous arrêter sauf si impossible. Clignotant au milieu = feux en panne, respecter la priorité applicable",
-            "Fixe = panne. Clignotant = vous arrêter",
-            "Dans les deux cas, vous pouvez continuer"
+            "Fixe : s'arrêter sauf si impossible ; clignotant : feux en panne",
+            "Fixe = panne ; clignotant = obligation de s'arrêter",
+            "Dans les deux cas, vous pouvez continuer normalement"
           ],
           "correct": 1,
           "explanation": "Fixe → s'arrêter. Clignotant au milieu → panne, appliquer les règles de priorité.",
@@ -1512,8 +1512,8 @@
           "id": "F2_Q33",
           "question": "Vous arrivez à un carrefour. Au lieu d'un feu rouge circulaire, vous voyez une flèche rouge pointant vers la gauche. Que signifie-t-elle ?",
           "choices": [
-            "Il est interdit de tourner à gauche, mais les autres directions restent possibles",
-            "Seule la direction indiquée par la flèche (gauche) est interdite ; les autres directions ne sont pas concernées par cette flèche",
+            "Le carrefour est fermé : attendez le feu vert circulaire",
+            "Seule la direction de la flèche (gauche) est interdite",
             "Toutes les directions sont interdites",
             "Il est interdit de tourner à droite"
           ],
@@ -1540,9 +1540,9 @@
           "question": "Vous arrivez à un carrefour. Le feu rouge circulaire est allumé, mais une flèche verte vers la droite est également allumée. Pouvez-vous tourner à droite ?",
           "choices": [
             "Non, le feu rouge interdit toute circulation",
-            "Oui, vous pouvez suivre la direction de la flèche verte en redoublant de prudence et en cédant le passage",
+            "Oui, en suivant la flèche avec prudence et en cédant le passage",
             "Oui, sans aucune condition particulière",
-            "Non, la flèche est simplement indicative"
+            "Non, la flèche est purement indicative"
           ],
           "correct": 1,
           "explanation": "Feu rouge + flèche verte = vous pouvez suivre la direction de la flèche, avec prudence.",
@@ -2244,10 +2244,10 @@
           "id": "F3_Q12",
           "question": "Vous hésitez entre le signal de voie prioritaire (losange jaune) et le signal de priorité au prochain carrefour. Quelle est la différence ?",
           "choices": [
-            "Il n'y a aucune différence",
-            "Le losange jaune donne la priorité à tous les carrefours ; le signal de priorité au prochain carrefour ne vaut que pour un seul",
-            "Le signal de priorité au prochain carrefour donne plus de priorité",
-            "Le losange jaune ne concerne qu'un seul carrefour"
+            "Il n'y a aucune différence entre les deux",
+            "Le losange vaut pour tous les carrefours ; l'autre pour un seul",
+            "Le signal du prochain carrefour donne plus de priorité",
+            "Le losange jaune ne vaut que pour un seul carrefour"
           ],
           "correct": 1,
           "explanation": "Voie prioritaire = tous les carrefours. Priorité au prochain = un seul.",
@@ -2396,9 +2396,9 @@
           "id": "F3_Q24",
           "question": "Vous révisez la différence entre le cédez-le-passage et le STOP. Quelle est la différence concernant l'obligation de s'arrêter ?",
           "choices": [
-            "Il n'y a aucune différence",
-            "Au cédez-le-passage, l'arrêt n'est obligatoire que si nécessaire. Au STOP, l'arrêt est obligatoire même si personne ne vient",
-            "Au STOP, l'arrêt est facultatif. Au cédez-le-passage, il est obligatoire",
+            "Il n'y a aucune différence entre les deux",
+            "Cédez : arrêt si nécessaire ; STOP : arrêt toujours obligatoire",
+            "STOP : arrêt facultatif ; cédez : obligatoire",
             "Les deux imposent toujours un arrêt complet"
           ],
           "correct": 1,
@@ -2574,10 +2574,10 @@
           "id": "F3_Q42",
           "question": "Vous voyez un signal de danger accompagné du panneau « 150 m STOP ». Devez-vous vous arrêter immédiatement ?",
           "choices": [
-            "Oui, arrêtez-vous immédiatement",
-            "Non, ce signal annonce un STOP dans 150 mètres ; vous vous arrêterez à cet endroit",
-            "Oui, par mesure de précaution",
-            "Non, ce signal est purement indicatif"
+            "Oui, arrêtez-vous immédiatement ici",
+            "Non, il annonce un STOP à 150 mètres",
+            "Oui, par simple mesure de précaution",
+            "Non, ce signal ne concerne que les camions"
           ],
           "correct": 1,
           "explanation": "Le signal avancé est une annonce — vous vous arrêtez à l'endroit du STOP.",
@@ -2653,9 +2653,9 @@
           "id": "F3_Q48",
           "question": "Vous vous engagez dans un rond-point. À qui devez-vous céder le passage ?",
           "choices": [
-            "À personne, vous avez la priorité en tant que nouvel entrant",
-            "Aux conducteurs venant de gauche, qu'ils soient déjà dans le rond-point ou arrivant des entrées précédentes",
-            "Uniquement aux piétons",
+            "À personne : le nouvel entrant a la priorité",
+            "Aux conducteurs venant de gauche, déjà engagés ou non",
+            "Uniquement aux piétons qui traversent",
             "Uniquement aux véhicules venant de droite"
           ],
           "correct": 1,
@@ -3098,10 +3098,10 @@
           "id": "F4_Q17",
           "question": "Vous apercevez un signal triangulaire sur pointe avec une croix à l'intérieur. Que signifie-t-il ?",
           "choices": [
-            "Danger à proximité",
-            "La priorité de droite est d'application à ce carrefour",
-            "Arrêt obligatoire (STOP)",
-            "Sens unique devant vous"
+            "Un danger à proximité immédiate",
+            "La priorité de droite s'applique à ce carrefour",
+            "Un arrêt obligatoire (STOP)",
+            "Un sens unique devant vous"
           ],
           "correct": 1,
           "explanation": "Triangle sur pointe avec croix = la priorité de droite s'applique.",
@@ -3461,9 +3461,9 @@
           "question": "Même carrefour, mais sans tram. Seule une voiture vient de votre droite. Quel est l'ordre ?",
           "choices": [
             "Vous passez en premier",
-            "La voiture de droite passe en premier (priorité de droite), puis vous",
+            "La voiture de droite, puis vous",
             "Le premier arrivé au carrefour",
-            "Vous passez en même temps"
+            "Vous passez tous les deux en même temps"
           ],
           "correct": 1,
           "explanation": "Sans tram : priorité de droite normale.",
@@ -4273,10 +4273,10 @@
           "id": "F5_Q59",
           "question": "Vous apercevez un panneau triangulaire sur pointe avec une croix à l'intérieur. Que signifie-t-il ?",
           "choices": [
-            "Danger à proximité",
-            "Carrefour où la priorité de droite est d'application",
+            "Danger à proximité immédiate",
+            "Carrefour à priorité de droite",
             "Arrêt obligatoire (STOP)",
-            "Voie prioritaire"
+            "Début de voie prioritaire"
           ],
           "correct": 1,
           "explanation": "Triangle sur pointe avec croix = signal de priorité de droite.",
@@ -4622,9 +4622,9 @@
           "id": "F6_Q9",
           "question": "Vous arrivez à un passage à niveau et un feu blanc lunaire clignote. Que signifie-t-il ?",
           "choices": [
-            "Un train approche, arrêtez-vous",
-            "Aucun train n'approche, vous êtes autorisé à franchir le passage à niveau",
-            "Le passage est interdit",
+            "Un train approche : arrêtez-vous",
+            "Aucun train n'approche : vous pouvez franchir",
+            "Le franchissement est interdit",
             "Vous devez ralentir fortement"
           ],
           "correct": 1,
@@ -4810,10 +4810,10 @@
           "id": "F6_Q24",
           "question": "Vous remarquez des marques en damier sur la chaussée. Que délimitent-elles ?",
           "choices": [
-            "Un parking en zone bleue",
-            "Le SSF, l'espace reliant des sites spéciaux, ou un passage à niveau",
-            "Un passage pour piétons spécial",
-            "Une zone de travaux"
+            "Un parking payant en zone bleue",
+            "Le SSF, l'espace entre deux SSF, ou un passage à niveau",
+            "Un passage pour piétons surélevé",
+            "Une zone de chantier temporaire"
           ],
           "correct": 1,
           "explanation": "Les marques en damier délimitent le SSF, les espaces reliant des SSF entre eux, ou un passage à niveau.",
@@ -4957,7 +4957,7 @@
           "question": "Un tram arrive de votre droite à un carrefour sans signalisation. Le tram respecte-t-il la priorité de droite ?",
           "choices": [
             "Oui, comme tout véhicule sur la route",
-            "Non, le tram est toujours prioritaire et n'est pas soumis aux règles de priorité ordinaires",
+            "Non, le tram est toujours prioritaire",
             "Oui, sauf en agglomération",
             "Cela dépend du type de carrefour"
           ],
@@ -5196,7 +5196,7 @@
           "question": "Vous roulez en agglomération. Un autobus de service régulier quitte son arrêt et active son clignotant gauche. Devez-vous lui céder le passage ?",
           "choices": [
             "Non, vous avez la priorité sur le bus",
-            "Oui, en agglomération vous devez céder le passage au bus dès qu'il active son clignotant gauche",
+            "Oui, dès qu'il active son clignotant gauche",
             "Non, sauf s'il klaxonne",
             "Cela dépend de la largeur de la route"
           ],
@@ -5238,9 +5238,9 @@
           "question": "Vous roulez hors agglomération. Un autobus de ligne quitte son arrêt et active son clignotant gauche. Devez-vous lui céder le passage ?",
           "choices": [
             "Oui, comme en agglomération",
-            "Non, hors agglomération vous n'êtes pas tenu de céder le passage au bus",
-            "Oui, c'est obligatoire partout",
-            "Cela dépend du type de route"
+            "Non, hors agglomération ce n'est pas obligatoire",
+            "Oui, c'est obligatoire partout en Belgique",
+            "Cela dépend du type de route empruntée"
           ],
           "correct": 1,
           "explanation": "Hors agglomération, vous n'êtes pas tenu de céder le passage à un autobus qui quitte son arrêt.",

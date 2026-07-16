@@ -212,8 +212,8 @@
           "question": "U steekt de straat over als voetganger en veroorzaakt een ongeval. Kunt u aan een ademtest onderworpen worden?",
           "choices": [
             "Nee, voetgangers zijn vrijgesteld",
-            "Ja, iedereen die heeft bijgedragen tot het veroorzaken van een ongeval kan gecontroleerd worden, zelfs slachtoffer-voetgangers",
-            "Nee, enkel bestuurders zijn betrokken",
+            "Ja, al wie bijdroeg tot het ongeval kan gecontroleerd worden",
+            "Nee, enkel bestuurders komen in aanmerking",
             "Dat hangt af van de ernst van het ongeval"
           ],
           "correct": 1,
@@ -254,9 +254,9 @@
           "question": "U wandelt op het voetpad zonder betrokken te zijn bij een ongeval. Kan de politie u aan een ademtest onderwerpen?",
           "choices": [
             "Ja, iedereen kan gecontroleerd worden",
-            "Nee, voetgangers die niet betrokken zijn bij een ongeval kunnen niet gecontroleerd worden",
-            "Ja, bij een verkeerscontrole",
-            "Dat hangt af van de wijk"
+            "Nee, een niet-betrokken voetganger kan dat niet",
+            "Ja, bij een georganiseerde controle",
+            "Dat hangt af van de wijk waar u wandelt"
           ],
           "correct": 1,
           "explanation": "Enkel voetgangers die betrokken zijn bij een ongeval kunnen gecontroleerd worden.",
@@ -591,10 +591,10 @@
           "id": "I1_Q41",
           "question": "U bereidt zich voor op het examen. Aan welke bestuurders KAN het alcoholslot opgelegd worden (zonder verplichting)?",
           "choices": [
-            "Aan bestuurders met 0,5 promille",
-            "Aan bestuurders met meer dan 0,8 promille, in staat van dronkenschap, of recidivisten",
-            "Aan bestuurders met 0,2 promille",
-            "Aan iedereen"
+            "Aan bestuurders gecontroleerd met 0,5 promille",
+            "Aan meer dan 0,8 promille, dronken of recidivisten",
+            "Aan bestuurders gecontroleerd met 0,2 promille",
+            "Aan alle bestuurders zonder onderscheid"
           ],
           "correct": 1,
           "explanation": "Het kan opgelegd worden (maar niet verplicht) aan bestuurders > 0,8 ‰, in staat van dronkenschap of recidivisten.",
@@ -699,10 +699,10 @@
           "id": "I1_Q50",
           "question": "U herhaalt de verschillen tussen alcohol- en drugscontrole. Wat zijn de vereiste voorwaarden voor elk?",
           "choices": [
-            "De voorwaarden zijn identiek",
-            "Voor alcohol kan elke bestuurder gecontroleerd worden. Voor drugs is een objectief vermoeden vereist (behalve bij een ongeval)",
-            "Voor drugs, iedereen. Voor alcohol is een vermoeden vereist",
-            "Beide vereisen een vermoeden"
+            "De voorwaarden zijn precies dezelfde",
+            "Alcohol: elke bestuurder; drugs: objectief vermoeden vereist",
+            "Drugs: iedereen; alcohol: vermoeden vereist",
+            "Beide vereisen altijd een vermoeden"
           ],
           "correct": 1,
           "explanation": "De alcoholcontrole geldt voor elke bestuurder. De drugscontrole vereist een objectief vermoeden (behalve bij een ongeval).",
@@ -783,9 +783,9 @@
           "question": "U neemt medicijnen en drinkt een glas alcohol voor u rijdt. Wat zijn de risico's?",
           "choices": [
             "Er is geen bijkomend gevaar",
-            "Alcohol versterkt de schadelijke effecten van de medicijnen, wat het rijden nog gevaarlijker maakt",
+            "Alcohol versterkt de schadelijke effecten van de medicijnen",
             "Dit is minder gevaarlijk dan alcohol alleen",
-            "De effecten zijn identiek"
+            "De effecten blijven strikt identiek"
           ],
           "correct": 1,
           "explanation": "Alcohol versterkt de schadelijke effecten van medicijnen, wat de combinatie nog gevaarlijker maakt.",
@@ -980,10 +980,10 @@
           "id": "I2_Q1",
           "question": "U heeft pech op de weg. Wat moet u in de eerste plaats doen?",
           "choices": [
-            "De gevarendriehoek plaatsen",
-            "Proberen uw voertuig naar een toegelaten plaats te verplaatsen",
-            "Uw verzekering bellen",
-            "De politie bellen"
+            "Onmiddellijk de gevarendriehoek plaatsen",
+            "Uw voertuig naar een toegelaten plaats verplaatsen",
+            "Eerst uw verzekering bellen",
+            "Eerst de politie bellen"
           ],
           "correct": 1,
           "explanation": "Bij pech probeert u eerst het voertuig op een toegelaten plaats te parkeren.",
@@ -1529,10 +1529,10 @@
           "id": "I2_Q46",
           "question": "U helpt een gewonde die hevig bloedt en om water vraagt. Wat doet u in de eerste plaats?",
           "choices": [
-            "U geeft hem water",
-            "U dekt de wonde af met een schoon verband en geeft hem niets te drinken",
-            "U geeft hem een medicijn",
-            "U wacht zonder iets te doen"
+            "U geeft hem water te drinken",
+            "U dekt de wonde af, zonder iets te drinken te geven",
+            "U geeft hem een pijnstiller",
+            "U wacht op de hulpdiensten zonder in te grijpen"
           ],
           "correct": 1,
           "explanation": "Prioriteit: de bloeding afdekken met een verband. Niets te drinken of te eten geven.",

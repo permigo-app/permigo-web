@@ -290,7 +290,7 @@
           "question": "Vous traversez la rue comme piéton et vous provoquez un accident. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
           "choices": [
             "Non, les piétons sont exemptés",
-            "Oui, toute personne qui a contribué à provoquer un accident peut être contrôlée, même les piétons victimes",
+            "Oui, quiconque a contribué à l'accident peut être contrôlé",
             "Non, seuls les conducteurs sont concernés",
             "Cela dépend de la gravité de l'accident"
           ],
@@ -332,9 +332,9 @@
           "question": "Vous marchez sur le trottoir sans être impliqué dans un accident. La police peut-elle vous soumettre à un contrôle d'alcoolémie ?",
           "choices": [
             "Oui, tout le monde peut être contrôlé",
-            "Non, les piétons non impliqués dans un accident ne peuvent pas être contrôlés",
-            "Oui, lors d'un contrôle routier",
-            "Cela dépend du quartier"
+            "Non, un piéton non impliqué ne peut pas l'être",
+            "Oui, lors d'un contrôle routier organisé",
+            "Cela dépend du quartier où vous marchez"
           ],
           "correct": 1,
           "explanation": "Seuls les piétons impliqués dans un accident peuvent être contrôlés.",
@@ -669,10 +669,10 @@
           "id": "I1_Q41",
           "question": "Vous révisez pour l'examen. À quels conducteurs l'éthylotest antidémarrage PEUT-il être imposé (sans obligation) ?",
           "choices": [
-            "Aux conducteurs avec 0,5 pour mille",
-            "Aux conducteurs avec plus de 0,8 pour mille, en état d'ivresse, ou récidivistes",
-            "Aux conducteurs avec 0,2 pour mille",
-            "À tout le monde"
+            "Aux conducteurs contrôlés à 0,5 pour mille",
+            "Aux plus de 0,8 pour mille, ivres ou récidivistes",
+            "Aux conducteurs contrôlés à 0,2 pour mille",
+            "À tous les conducteurs sans distinction"
           ],
           "correct": 1,
           "explanation": "Il peut être imposé (mais pas obligatoirement) aux conducteurs > 0,8 ‰, en état d'ivresse ou récidivistes.",
@@ -777,10 +777,10 @@
           "id": "I1_Q50",
           "question": "Vous révisez les différences entre contrôle alcool et contrôle drogues. Quelles sont les conditions requises pour chacun ?",
           "choices": [
-            "Les conditions sont identiques",
-            "Pour l'alcool, tout conducteur peut être contrôlé. Pour les drogues, il faut un soupçon objectif (sauf en cas d'accident)",
-            "Pour les drogues, tout le monde. Pour l'alcool, il faut un soupçon",
-            "Les deux nécessitent un soupçon"
+            "Les conditions sont exactement identiques",
+            "Alcool : tout conducteur ; drogues : soupçon objectif requis",
+            "Drogues : tout le monde ; alcool : soupçon requis",
+            "Les deux nécessitent toujours un soupçon"
           ],
           "correct": 1,
           "explanation": "Le contrôle alcool peut s'appliquer à tout conducteur. Le contrôle drogue nécessite un soupçon objectif (sauf accident).",
@@ -861,9 +861,9 @@
           "question": "Vous prenez des médicaments et vous buvez un verre d'alcool avant de conduire. Quels sont les risques ?",
           "choices": [
             "Il n'y a pas de danger supplémentaire",
-            "L'alcool renforce les effets néfastes des médicaments, rendant la conduite encore plus dangereuse",
+            "L'alcool renforce les effets néfastes des médicaments",
             "C'est moins dangereux que l'alcool seul",
-            "Les effets sont identiques"
+            "Les effets restent strictement identiques"
           ],
           "correct": 1,
           "explanation": "L'alcool amplifie les effets néfastes des médicaments, rendant la combinaison encore plus dangereuse.",
@@ -1155,10 +1155,10 @@
           "id": "I2_Q1",
           "question": "Vous êtes en panne sur la route. Que devez-vous faire en priorité ?",
           "choices": [
-            "Placer le triangle de danger",
-            "Essayer de ranger votre véhicule à un emplacement autorisé",
-            "Appeler votre assurance",
-            "Appeler la police"
+            "Placer immédiatement le triangle de danger",
+            "Ranger votre véhicule à un emplacement autorisé",
+            "Appeler votre assurance en premier",
+            "Appeler la police en premier"
           ],
           "correct": 1,
           "explanation": "En cas de panne, essayer avant tout de stationner le véhicule à un endroit autorisé.",
@@ -1704,10 +1704,10 @@
           "id": "I2_Q46",
           "question": "Vous portez secours à un blessé qui saigne abondamment et qui demande de l'eau. Que faites-vous en priorité ?",
           "choices": [
-            "Vous lui donnez de l'eau",
-            "Vous couvrez la plaie avec un bandage propre et vous ne lui donnez rien à boire",
-            "Vous lui donnez un médicament",
-            "Vous attendez sans rien faire"
+            "Vous lui donnez de l'eau à boire",
+            "Vous couvrez la plaie, sans rien lui donner à boire",
+            "Vous lui donnez un médicament antidouleur",
+            "Vous attendez les secours sans intervenir"
           ],
           "correct": 1,
           "explanation": "Priorité : couvrir l'hémorragie avec un bandage. Ne rien donner à boire ni à manger.",
