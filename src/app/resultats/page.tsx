@@ -19,6 +19,10 @@ function ResultsContent() {
   const lessonId = params.get('lesson') ?? '';
   const themeCode = params.get('theme') ?? 'A';
   const isExam = params.get('exam') === '1';
+  // Cotation examen : points après pénalités (erreur grave = -5) + nb d'erreurs graves
+  const pointsRaw = params.get('points');
+  const points = pointsRaw !== null ? Number(pointsRaw) : null;
+  const severeCount = Number(params.get('severe') ?? 0);
   const partieRaw = params.get('partie');
   const partieNum = partieRaw !== null ? Number(partieRaw) : null;
   const totalParties = Number(params.get('totalParties') ?? 0);
@@ -27,7 +31,10 @@ function ResultsContent() {
   const unlockedMedal = medalParam && medalParam !== 'none' ? medalParam : null;
 
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
-  const passed = isExam ? pct >= 82 : earnedStars > 0;
+  // Examen : le verdict se base sur les POINTS (pénalités graves incluses)
+  const examPoints = isExam && points !== null ? points : null;
+  const examPct = examPoints !== null && total > 0 ? Math.round((examPoints / total) * 100) : pct;
+  const passed = isExam ? examPct >= 82 : earnedStars > 0;
   const color = THEME_COLORS[themeCode] || '#74B9FF';
 
   const title = pct === 100 ? t('resultats_parfait') : passed ? t('resultats_bravo') : t('resultats_courage');
@@ -69,10 +76,23 @@ function ResultsContent() {
           className="w-40 h-40 rounded-full flex flex-col items-center justify-center"
           style={{ border: `5px solid ${scoreColor}`, background: scoreColor + '15' }}
         >
-          <span className="text-[42px] font-black">{pct}%</span>
-          <span className="text-sm" style={{ color: 'var(--text-hint)' }}>{correct}/{total}</span>
+          <span className="text-[42px] font-black">{examPoints !== null ? `${examPoints}/${total}` : `${pct}%`}</span>
+          <span className="text-sm" style={{ color: 'var(--text-hint)' }}>
+            {examPoints !== null ? `${t('resultats_points')} · ${correct}/${total} ${t('resultats_correct').toLowerCase()}` : `${correct}/${total}`}
+          </span>
         </div>
       </div>
+
+      {/* Erreurs graves (examen) */}
+      {isExam && severeCount > 0 && (
+        <div
+          className="rounded-2xl px-4 py-3 mb-6 text-sm"
+          style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.35)', color: 'var(--text-sub)' }}
+        >
+          <span className="font-bold" style={{ color: '#dc2626' }}>⚠ {severeCount} {severeCount > 1 ? t('resultats_erreurs_graves') : t('resultats_erreur_grave')}</span>
+          {' — '}{t('resultats_erreur_grave_regle')}
+        </div>
+      )}
 
       {/* Stats row with dividers */}
       <div className="flex items-center justify-around mb-8 py-4 slide-up" style={{ borderTop: '1px solid var(--border-row)', borderBottom: '1px solid var(--border-row)', animationDelay: '350ms' }}>

@@ -107,6 +107,10 @@ const nl: Record<string, string> = {
   resultats_retour: '← Terug',
   resultats_medaille_debloquee: 'Medaille ontgrendeld!',
   resultats_medaille_theme_prefix: 'Thema',
+  resultats_points: 'punten',
+  resultats_erreur_grave: 'zware fout',
+  resultats_erreurs_graves: 'zware fouten',
+  resultats_erreur_grave_regle: 'zoals op het officiële examen kost elke zware fout (rood licht, voorrang, snelheid, alcohol…) 5 punten in plaats van 1.',
 
   // ── Révision ──
   revision_titre: 'Herziening — Thema',

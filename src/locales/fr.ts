@@ -107,6 +107,10 @@ const fr: Record<string, string> = {
   resultats_retour: '← Retour',
   resultats_medaille_debloquee: 'Médaille débloquée !',
   resultats_medaille_theme_prefix: 'Thème',
+  resultats_points: 'points',
+  resultats_erreur_grave: 'erreur grave',
+  resultats_erreurs_graves: 'erreurs graves',
+  resultats_erreur_grave_regle: "comme à l'examen officiel, chaque erreur grave (feu rouge, priorité, vitesse, alcool…) coûte 5 points au lieu de 1.",
 
   // ── Révision ──
   revision_titre: 'Révision — Thème',

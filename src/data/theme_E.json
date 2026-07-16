@@ -441,7 +441,8 @@
           ],
           "correct": 1,
           "explanation": "Sans signaux de priorité, celui qui a l'obstacle de son côté doit céder le passage.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E1_Q31",
@@ -454,7 +455,8 @@
           ],
           "correct": 1,
           "explanation": "L'obstacle est du côté opposé, donc c'est l'autre conducteur qui doit céder.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E1_Q34",
@@ -468,7 +470,8 @@
           "correct": 1,
           "explanation": "Le signal rond rouge/blanc = obligation de céder le passage.",
           "theoryCardIndex": 2,
-          "sign": "B19"
+          "sign": "B19",
+          "severe": true
         },
         {
           "id": "E1_Q35",
@@ -482,7 +485,8 @@
           "correct": 1,
           "explanation": "Le signal rectangulaire bleu = priorité de passage dans le passage étroit.",
           "theoryCardIndex": 2,
-          "sign": "B21"
+          "sign": "B21",
+          "severe": true
         },
         {
           "id": "E1_Q36",
@@ -510,7 +514,8 @@
           "correct": 1,
           "explanation": "Les deux signaux vont toujours par paire : rond (céder) d'un côté, rectangulaire (priorité) de l'autre.",
           "theoryCardIndex": 2,
-          "sign": "B19"
+          "sign": "B19",
+          "severe": true
         },
         {
           "id": "E1_Q39",
@@ -755,7 +760,8 @@
           "correct": 1,
           "explanation": "Rond rouge/blanc = céder. Rectangulaire bleu = priorité. Le véhicule en face passe.",
           "theoryCardIndex": 2,
-          "sign": "B19"
+          "sign": "B19",
+          "severe": true
         },
         {
           "id": "E1_Q68",
@@ -1014,7 +1020,8 @@
           ],
           "correct": 1,
           "explanation": "Le dépassement normal s'effectue par la gauche.",
-          "theoryCardIndex": 0
+          "theoryCardIndex": 0,
+          "severe": true
         },
         {
           "id": "E2_Q3",
@@ -1053,7 +1060,8 @@
           ],
           "correct": 1,
           "explanation": "1re vérification : le véhicule devant roule-t-il en dessous de la vitesse maximale ?",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "severe": true
         },
         {
           "id": "E2_Q8",
@@ -1066,7 +1074,8 @@
           ],
           "correct": 1,
           "explanation": "2e vérification : puis-je dépasser rapidement sans excéder la vitesse maximale ?",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "severe": true
         },
         {
           "id": "E2_Q9",
@@ -1131,7 +1140,8 @@
           ],
           "correct": 1,
           "explanation": "Pour dépasser, vous devriez dépasser la vitesse maximale, ce qui est interdit.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "severe": true
         },
         {
           "id": "E2_Q14",
@@ -1677,7 +1687,8 @@
           ],
           "correct": 1,
           "explanation": "Vitesse maximale absolue : 50 km/h pour les motos circulant entre les files.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 5,
+          "severe": true
         },
         {
           "id": "E2_Q66",
@@ -2101,7 +2112,8 @@
           ],
           "correct": 1,
           "explanation": "Trois cas précis imposent 30 km/h sur un dispositif surélevé.",
-          "theoryCardIndex": 1
+          "theoryCardIndex": 1,
+          "severe": true
         },
         {
           "id": "E3_Q12",
@@ -2153,7 +2165,8 @@
           ],
           "correct": 1,
           "explanation": "L'interdiction vise les véhicules attelés et ceux à plus de deux roues.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q18",
@@ -2166,7 +2179,8 @@
           ],
           "correct": 1,
           "explanation": "L'interdiction dure jusqu'au carrefour suivant ou jusqu'au signal de fin.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q19",
@@ -2179,7 +2193,8 @@
           ],
           "correct": 1,
           "explanation": "Une moto a deux roues — elle n'est pas visée par l'interdiction qui cible les véhicules à plus de deux roues.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q20",
@@ -2192,7 +2207,8 @@
           ],
           "correct": 1,
           "explanation": "La voiture a plus de deux roues : un motocycliste ne peut pas la dépasser sous ce signal.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q21",
@@ -2205,7 +2221,8 @@
           ],
           "correct": 1,
           "explanation": "Ce signal ne vise que les poids lourds de transport de marchandises > 3,5 t MMA.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q22",
@@ -2218,7 +2235,8 @@
           ],
           "correct": 1,
           "explanation": "Le signal pour camions ne concerne que les transporteurs de marchandises > 3,5 t, pas les voitures.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q23",
@@ -2231,7 +2249,8 @@
           ],
           "correct": 1,
           "explanation": "L'autobus transporte des personnes (pas des marchandises) — il n'est pas visé par ce signal.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q24",
@@ -2257,7 +2276,8 @@
           ],
           "correct": 1,
           "explanation": "L'interdiction prend fin de trois façons : carrefour, signal de fin spécifique, ou signal général de fin.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q26",
@@ -2270,7 +2290,8 @@
           ],
           "correct": 1,
           "explanation": "Avec le panneau « 200 m », l'interdiction ne commence que 200 mètres plus loin.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q28",
@@ -2283,7 +2304,8 @@
           ],
           "correct": 1,
           "explanation": "Motos (2 roues), cyclistes et engins de déplacement restent dépassables même sous ce signal.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q30",
@@ -2296,7 +2318,8 @@
           ],
           "correct": 1,
           "explanation": "L'interdiction prend fin au carrefour suivant, sauf si un nouveau signal la prolonge.",
-          "theoryCardIndex": 2
+          "theoryCardIndex": 2,
+          "severe": true
         },
         {
           "id": "E3_Q31",
@@ -2309,7 +2332,8 @@
           ],
           "correct": 1,
           "explanation": "Les 3 catégories interdites au passage à niveau : attelé, plus de 2 roues, moteur à 2 roues.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "severe": true
         },
         {
           "id": "E3_Q32",
@@ -2322,7 +2346,8 @@
           ],
           "correct": 1,
           "explanation": "La présence de barrières est une exception : le dépassement est alors autorisé.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "severe": true
         },
         {
           "id": "E3_Q33",
@@ -2335,7 +2360,8 @@
           ],
           "correct": 1,
           "explanation": "Le feu blanc lunaire clignotant est la seconde exception autorisant le dépassement à un passage à niveau.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "severe": true
         },
         {
           "id": "E3_Q34",
@@ -2348,7 +2374,8 @@
           ],
           "correct": 1,
           "explanation": "Le cycliste n'est pas dans les 3 catégories interdites — il peut être dépassé même sans barrières.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "severe": true
         },
         {
           "id": "E3_Q36",
@@ -2387,7 +2414,8 @@
           ],
           "correct": 1,
           "explanation": "Le dépassement est interdit à l'approche du sommet d'une côte sans visibilité suffisante.",
-          "theoryCardIndex": 3
+          "theoryCardIndex": 3,
+          "severe": true
         },
         {
           "id": "E3_Q40",
@@ -2465,7 +2493,8 @@
           ],
           "correct": 1,
           "explanation": "Interdiction de dépasser tout véhicule qui approche, ralentit ou s'arrête devant un passage pour piétons.",
-          "theoryCardIndex": 4
+          "theoryCardIndex": 4,
+          "severe": true
         },
         {
           "id": "E3_Q49",
@@ -2569,7 +2598,8 @@
           ],
           "correct": 1,
           "explanation": "On peut dépasser un cycliste dans toutes les interdictions, sauf en virage si la visibilité est très mauvaise.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 5,
+          "severe": true
         },
         {
           "id": "E3_Q61",
@@ -2582,7 +2612,8 @@
           ],
           "correct": 1,
           "explanation": "Les engins de déplacement bénéficient de la même exception que les cyclistes.",
-          "theoryCardIndex": 5
+          "theoryCardIndex": 5,
+          "severe": true
         },
         {
           "id": "E3_Q62",
@@ -2609,7 +2640,8 @@
           "correct": 1,
           "explanation": "Le signal rond rouge (2 voitures) = interdiction de dépasser pour tous les conducteurs.",
           "sign": "C35",
-          "destination": "panneaux"
+          "destination": "panneaux",
+          "severe": true
         },
         {
           "id": "E3_Q65",
@@ -2637,7 +2669,8 @@
           "correct": 1,
           "explanation": "Ce signal (voiture + camion) vise uniquement les transporteurs de marchandises > 3,5 t MMA.",
           "sign": "C39",
-          "destination": "panneaux"
+          "destination": "panneaux",
+          "severe": true
         },
         {
           "id": "E3_Q67",
@@ -2651,7 +2684,8 @@
           "correct": 1,
           "explanation": "Le signal rectangulaire de zone = début de la zone d'interdiction de dépasser.",
           "destination": "panneaux",
-          "sign": "C35"
+          "sign": "C35",
+          "severe": true
         },
         {
           "id": "E3_Q69",

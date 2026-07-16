@@ -25,6 +25,7 @@ function ExamContent() {
   const [selected, setSelected] = useState<number | null>(null);
   const [validated, setValidated] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
+  const [severeErrors, setSevereErrors] = useState(0);
   const [shakeWrong, setShakeWrong] = useState(false);
   const [isResuming, setIsResuming] = useState(false);
   const startTimeRef = useRef(Date.now());
@@ -68,6 +69,7 @@ function ExamContent() {
         setQuestions(orderedQs);
         setCurrentQ(data.currentQ || 0);
         setCorrectCount(data.correctCount || 0);
+        setSevereErrors(data.severeErrors || 0);
         setStarted(true);
         setIsResuming(true);
         startTimeRef.current = data.startTime || Date.now();
@@ -156,6 +158,9 @@ function ExamContent() {
     setValidated(true);
     const isCorrect = selected === questions[currentQ].correct;
     const newScore = isCorrect ? correctCount + 1 : correctCount;
+    // Règle GOCA : une erreur sur une question "grave" (3e/4e degré, vitesse)
+    // coûte 5 points au lieu de 1
+    const newSevere = !isCorrect && questions[currentQ].severe ? severeErrors + 1 : severeErrors;
 
     // Sync to localStorage
     try {
@@ -165,6 +170,7 @@ function ExamContent() {
         localStorage.setItem('exam_active', JSON.stringify({
           ...data,
           correctCount: newScore,
+          severeErrors: newSevere,
           currentQ,
         }));
       }
@@ -173,6 +179,7 @@ function ExamContent() {
     if (isCorrect) {
       setCorrectCount(newScore);
     } else {
+      setSevereErrors(newSevere);
       setShakeWrong(true);
       setTimeout(() => setShakeWrong(false), 400);
     }
@@ -212,8 +219,10 @@ function ExamContent() {
     if (!premiumActive) recordExamPlayed(); // Only counted HERE (50 questions done)
 
     const total = questions.length;
-    const pct = total > 0 ? (correctCount / total) * 100 : 0;
-    const passed = pct >= 82;
+    // Cotation officielle GOCA : chaque erreur coûte 1 point, mais une erreur
+    // sur une question grave (3e/4e degré, vitesse) en coûte 5 (soit 4 de plus)
+    const points = Math.max(0, correctCount - severeErrors * 4);
+    const passed = total > 0 && points >= Math.ceil(total * 0.82);
     updateQuizHistory(correctCount, total);
     if (passed) {
       // 'FINAL' est aussi enregistré — il donne le trophée Diamant global
@@ -224,7 +233,7 @@ function ExamContent() {
       }
     }
     addStudyTime(Math.round((Date.now() - startTimeRef.current) / 1000));
-    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=0&theme=${themeCode}&exam=1`);
+    router.push(`/resultats?correct=${correctCount}&total=${total}&stars=0&theme=${themeCode}&exam=1&points=${points}&severe=${severeErrors}`);
   };
 
   // Explicit abandon — counts as used
@@ -284,7 +293,7 @@ function ExamContent() {
           <div style={{ background: 'var(--bg-why)', border: '1.5px solid #fde68a', borderRadius: 14, padding: '13px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
             <span style={{ fontSize: 18, flexShrink: 0 }}>⚡</span>
             <p style={{ margin: 0, fontSize: 13, color: '#92400e', lineHeight: 1.5, fontWeight: 500 }}>
-              Il faut répondre correctement à <strong>{passCount} questions sur {questionCount}</strong> (82%) pour réussir l'examen.
+              Il faut obtenir <strong>{passCount} points sur {questionCount}</strong> (82%) pour réussir. Comme à l'examen officiel, une erreur sur une <strong>infraction grave</strong> (feu rouge, priorité, vitesse, alcool…) coûte <strong>5 points</strong> au lieu de 1.
             </p>
           </div>
 
