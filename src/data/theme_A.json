@@ -2164,10 +2164,10 @@
           "id": "A2_Q48",
           "question": "Vous voyez ce signal au bord de la route. Que devez-vous faire ?",
           "choices": [
-            "Vous arrêter",
-            "Choisir votre bande de circulation en fonction de la direction souhaitée",
-            "Changer de route",
-            "Ralentir à 30 km/h"
+            "Vous arrêter avant le signal",
+            "Choisir votre bande selon votre direction",
+            "Changer d'itinéraire immédiatement",
+            "Ralentir à 30 km/h maximum"
           ],
           "correct": 1,
           "explanation": "Ce signal annonce des flèches directionnelles : vous devez anticiper et choisir la bonne bande selon votre destination.",
@@ -2247,10 +2247,10 @@
           "id": "A2_Q58",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Sens unique",
-            "Circulation admise dans les deux sens après une section à sens unique",
-            "Dépassement interdit",
-            "Route barrée"
+            "Début d'une voie à sens unique",
+            "Circulation dans les deux sens après un sens unique",
+            "Dépassement interdit sur cette section",
+            "Route barrée à 150 mètres"
           ],
           "correct": 1,
           "explanation": "Ce panneau de danger annonce la fin d'un sens unique et le retour à la circulation en double sens.",
@@ -2289,10 +2289,10 @@
           "id": "A2_Q63",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Sens unique",
-            "Circulation admise dans les deux sens sur une section à sens unique",
-            "Dépassement interdit",
-            "Autoroute"
+            "Voie à sens unique",
+            "Circulation admise dans les deux sens",
+            "Dépassement interdit sur la section",
+            "Entrée d'autoroute"
           ],
           "correct": 1,
           "explanation": "Ce signal d'indication rectangulaire bleu confirme qu'une section à sens unique admet la circulation dans les deux sens.",
@@ -2555,9 +2555,9 @@
           "question": "Comment reconnaît-on une piste cyclable sur la chaussée ?",
           "choices": [
             "Par sa couleur rouge ou verte",
-            "Par deux lignes discontinues parallèles blanches entre lesquelles la largeur ne permet pas la circulation automobile",
-            "Par des poteaux",
-            "Par une ligne continue jaune"
+            "Par deux lignes discontinues parallèles blanches",
+            "Par des poteaux de délimitation",
+            "Par une ligne jaune continue"
           ],
           "correct": 1,
           "explanation": "La piste cyclable est délimitée par deux lignes blanches discontinues parallèles. La couleur (ocre, jaune, rouge) ne joue aucun rôle.",
@@ -3780,10 +3780,10 @@
           "id": "A4_Q3",
           "question": "Quels véhicules sont interdits sur l'autoroute ?",
           "choices": [
-            "Uniquement les vélos",
-            "Cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et trains de véhicules forains",
-            "Uniquement les tracteurs",
-            "Les motos"
+            "Uniquement les vélos et trottinettes",
+            "Cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et véhicules forains",
+            "Uniquement les tracteurs agricoles",
+            "Les motos de moins de 400 cm³"
           ],
           "correct": 1,
           "explanation": "Plusieurs catégories de véhicules sont interdits sur l'autoroute : cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et trains forains.",
@@ -3902,10 +3902,10 @@
           "id": "A4_Q14",
           "question": "Comment la limitation smog est-elle indiquée ?",
           "choices": [
-            "Par des cônes",
-            "Par des panneaux électroniques ou un signal C43 avec panneau additionnel SMOG",
-            "Par des agents uniquement",
-            "Par la radio"
+            "Par des cônes orange sur la chaussée",
+            "Par panneaux électroniques ou C43 avec mention SMOG",
+            "Uniquement par des agents qualifiés",
+            "Par un simple message à la radio"
           ],
           "correct": 1,
           "explanation": "La limitation smog est signalée par des panneaux électroniques variables ou par le signal C43 accompagné d'un panneau additionnel SMOG.",
@@ -4521,10 +4521,10 @@
           "id": "A4_Q75",
           "question": "Qu'est-ce qu'un échangeur ?",
           "choices": [
-            "Un parking sur autoroute",
-            "L'endroit où deux autoroutes se croisent et où vous pouvez passer de l'une à l'autre",
-            "Une sortie d'autoroute",
-            "Un péage"
+            "Un parking le long de l'autoroute",
+            "Le croisement de deux autoroutes",
+            "Une sortie d'autoroute classique",
+            "Un poste de péage automatique"
           ],
           "correct": 1,
           "explanation": "Un échangeur est le point de croisement de deux autoroutes permettant de passer de l'une à l'autre.",
@@ -4897,10 +4897,10 @@
           "id": "A5_Q4",
           "question": "Quels véhicules sont interdits sur une route pour automobiles ?",
           "choices": [
-            "Uniquement les vélos",
-            "Cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et trains de véhicules forains",
-            "Uniquement les tracteurs",
-            "Les motos"
+            "Uniquement les vélos et trottinettes",
+            "Cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et véhicules forains",
+            "Uniquement les tracteurs agricoles",
+            "Les motos de moins de 400 cm³"
           ],
           "correct": 1,
           "explanation": "Les mêmes véhicules qu'en autoroute sont interdits sur les routes pour automobiles.",
@@ -5114,10 +5114,10 @@
           "id": "A5_Q32",
           "question": "Quand devez-vous porter le gilet de sécurité sur une route pour automobiles ?",
           "choices": [
-            "Toujours en conduisant",
-            "Lorsque vous quittez votre véhicule après un arrêt forcé à un endroit où le stationnement n'est pas autorisé",
-            "Uniquement la nuit",
-            "Uniquement par temps de pluie"
+            "Toujours, dès que vous conduisez",
+            "En quittant le véhicule après un arrêt forcé",
+            "Uniquement pendant la nuit",
+            "Uniquement par mauvais temps"
           ],
           "correct": 1,
           "explanation": "Le gilet est obligatoire pour le conducteur qui quitte son véhicule immobilisé à un endroit où le stationnement est interdit.",
@@ -5352,10 +5352,10 @@
           "id": "A5_Q54",
           "question": "Quelle est la différence visuelle entre le signal d'autoroute et celui de route pour automobiles ?",
           "choices": [
-            "Aucune différence",
-            "L'autoroute est sur fond vert avec un symbole d'autoroute, la route pour automobiles est sur fond bleu avec une voiture",
-            "L'autoroute est bleu, la route est verte",
-            "Les deux sont rouges"
+            "Aucune différence visuelle",
+            "Le symbole : une autoroute stylisée vs une voiture",
+            "L'un est vert, l'autre bleu",
+            "Les deux signaux montrent une voiture"
           ],
           "correct": 1,
           "explanation": "Autoroute = fond vert. Route pour automobiles = fond bleu. Deux signaux bien distincts.",
@@ -6227,10 +6227,10 @@
           "id": "A6_Q52",
           "question": "Qu'est-ce qui peut remplacer la barrière dans une rue scolaire ?",
           "choices": [
-            "Un feu clignotant",
-            "Un signal C3 fixe complété de la mention \"rue scolaire\" et de l'horaire",
-            "Un agent de police",
-            "Des cônes"
+            "Un feu orange clignotant",
+            "Un signal C3 avec la mention « rue scolaire »",
+            "Un agent de police en permanence",
+            "Des cônes de signalisation"
           ],
           "correct": 1,
           "explanation": "Un signal C3 fixe avec la mention \"rue scolaire\" et l'horaire peut remplacer la barrière déplaçable.",
@@ -6372,10 +6372,10 @@
           "id": "A6_Q66",
           "question": "Qu'est-ce qu'un site spécial franchissable ?",
           "choices": [
-            "Un trottoir élargi",
-            "Une partie de la voie publique réservée à la circulation des trams et de certains bus",
-            "Un parking",
-            "Une piste cyclable"
+            "Un trottoir élargi pour les piétons",
+            "Une partie de la voie réservée aux trams et à certains bus",
+            "Un parking réservé aux transports en commun",
+            "Une piste cyclable bidirectionnelle"
           ],
           "correct": 1,
           "explanation": "Le SSF est une partie de la voie publique réservée à la circulation des trams et de certains bus de transport en commun.",
@@ -6599,10 +6599,10 @@
           "id": "A6_Q87",
           "question": "Ce signal avec un tram/bus sur fond bleu signifie :",
           "choices": [
-            "Arrêt de tram",
-            "Site spécial franchissable réservé aux transports en commun",
-            "Gare routière",
-            "Parking bus"
+            "Un arrêt de tram ou de bus",
+            "Site spécial franchissable (transports en commun)",
+            "Une gare routière à proximité",
+            "Un parking réservé aux bus"
           ],
           "correct": 1,
           "explanation": "Ce signal indique un site spécial franchissable (SSF) réservé aux transports en commun.",
