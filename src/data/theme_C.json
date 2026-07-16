@@ -514,7 +514,7 @@
           "question": "Vous constatez que votre extincteur a ete utilise une fois et que votre gilet est dans le coffre. Combien de problemes avez-vous ?",
           "choices": [
             "Un seul",
-            "Deux : l'extincteur doit etre remplace ET le gilet doit etre dans l'habitacle",
+            "Deux",
             "Aucun",
             "Trois"
           ],
@@ -618,7 +618,7 @@
           "question": "Vous revisez votre theorie. Combien de documents au total devez-vous avoir (personnels + vehicule) ?",
           "choices": [
             "4",
-            "6 (carte d'identite, permis + certificat de conformite, d'immatriculation, d'assurance, de controle technique)",
+            "6",
             "3",
             "8"
           ],
@@ -1872,10 +1872,10 @@
           "id": "C2_Q72",
           "question": "Vous voyez un signal rond rouge avec un chiffre et une fleche verticale. Que signifie-t-il ?",
           "choices": [
-            "Poids maximum",
-            "Acces interdit si la hauteur du vehicule (chargement compris) depasse la limite indiquee",
-            "Distance minimale",
-            "Altitude"
+            "Poids maximal autorisé en charge",
+            "Hauteur maximale autorisée (chargement compris)",
+            "Distance minimale à respecter",
+            "Altitude maximale de la route"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la hauteur (chargement compris) dépasse la limite indiquée.",
@@ -1886,10 +1886,10 @@
           "id": "C2_Q73",
           "question": "Vous voyez ce panneau rond rouge avec un chiffre et deux fleches horizontales. Que signifie-t-il ?",
           "choices": [
-            "Poids maximum",
-            "Acces interdit si la largeur du vehicule (chargement compris) depasse la limite indiquee",
-            "Longueur maximale",
-            "Distance"
+            "Poids maximal autorisé en charge",
+            "Largeur maximale autorisée (chargement compris)",
+            "Longueur maximale autorisée",
+            "Distance latérale minimale"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la largeur (chargement compris) dépasse la limite indiquée.",
@@ -1900,10 +1900,10 @@
           "id": "C2_Q74",
           "question": "Vous voyez ce panneau rond rouge avec un chiffre et une fleche horizontale longue. Que signifie-t-il ?",
           "choices": [
-            "Poids maximum",
-            "Acces interdit si la longueur du vehicule (chargement + remorque compris) depasse la limite",
-            "Largeur maximale",
-            "Hauteur maximale"
+            "Poids maximal autorisé en charge",
+            "Longueur maximale autorisée (remorque comprise)",
+            "Largeur maximale autorisée",
+            "Hauteur maximale autorisée"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la longueur totale (chargement + remorque compris) dépasse la limite indiquée.",
@@ -2489,10 +2489,10 @@
           "id": "C3_Q35",
           "question": "Vous stationnez votre voiture sur la voie publique. Quand devez-vous allumer des feux ?",
           "choices": [
-            "Toujours",
-            "Entre la tombee et le lever du jour, et quand la visibilite est reduite a moins de 200 metres",
-            "Uniquement la nuit",
-            "Jamais en stationnement"
+            "Toujours, de jour comme de nuit",
+            "De la tombée au lever du jour, ou visibilité < 200 m",
+            "Uniquement en pleine nuit",
+            "Jamais lorsque vous êtes en stationnement"
           ],
           "correct": 1,
           "explanation": "En stationnement, les feux doivent être allumés entre la tombée et le lever du jour, et quand la visibilité est réduite à moins de 200 mètres.",
@@ -2879,10 +2879,10 @@
           "id": "C3_Q70",
           "question": "Vous circulez hors agglomeration pendant la journee. Quand pouvez-vous klaxonner ?",
           "choices": [
-            "Quand vous voulez",
-            "Pour eviter un accident et pour avertir un conducteur que vous vous appretez a le depasser",
-            "Uniquement pour depasser",
-            "Jamais"
+            "Quand vous le souhaitez, sans restriction",
+            "Pour éviter un accident ou annoncer un dépassement",
+            "Uniquement pour saluer un autre conducteur",
+            "Jamais en dehors des agglomérations"
           ],
           "correct": 1,
           "explanation": "Hors agglomération de jour, le klaxon est autorisé pour éviter un accident ET pour avertir d'un dépassement imminent.",

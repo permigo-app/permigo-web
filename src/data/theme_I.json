@@ -657,9 +657,9 @@
           "question": "Vous devez souffler dans l'éthylotest antidémarrage avant de démarrer. Quel est le seuil au-delà duquel le moteur refuse de démarrer ?",
           "choices": [
             "0,5 pour mille",
-            "0,2 pour mille : si ce taux est atteint ou dépassé, le moteur ne démarre pas",
+            "0,2 pour mille",
             "0,8 pour mille",
-            "0 pour mille"
+            "0,0 pour mille"
           ],
           "correct": 1,
           "explanation": "Le seuil est 0,2 ‰ : au-dessus ou égal à ce taux, le moteur ne démarre pas.",
@@ -684,7 +684,7 @@
           "question": "Vous révisez les seuils. À partir de quel taux l'éthylotest antidémarrage DOIT-il obligatoirement être imposé ?",
           "choices": [
             "0,8 pour mille",
-            "1,8 pour mille (sauf si le juge décide expressément de ne pas l'imposer et motive sa décision)",
+            "1,8 pour mille",
             "1,2 pour mille",
             "0,5 pour mille"
           ],
@@ -1313,10 +1313,10 @@
           "id": "I2_Q13",
           "question": "Vous êtes impliqué dans un accident sans blessés. Devez-vous appeler la police ?",
           "choices": [
-            "Oui, toujours",
-            "Non, ce n'est pas nécessaire si les deux parties remplissent et signent le constat européen d'accident",
-            "Oui, c'est obligatoire",
-            "Non, jamais"
+            "Oui, absolument toujours",
+            "Non, pas si le constat est rempli et signé",
+            "Oui, c'est une obligation légale",
+            "Non, la police ne vient jamais"
           ],
           "correct": 1,
           "explanation": "Sans blessés, la police n'est pas nécessaire si les deux parties signent le constat européen.",
@@ -1718,10 +1718,10 @@
           "id": "I2_Q47",
           "question": "Votre médecin vous déclare inapte à conduire. Dans quel délai devez-vous informer votre commune ?",
           "choices": [
-            "7 jours",
-            "4 jours ouvrables (samedis, dimanches et jours fériés non comptés)",
-            "10 jours",
-            "30 jours"
+            "7 jours ouvrables",
+            "4 jours ouvrables",
+            "10 jours ouvrables",
+            "30 jours calendrier"
           ],
           "correct": 1,
           "explanation": "Vous devez informer la commune dans les 4 jours ouvrables.",
@@ -1992,9 +1992,9 @@
           "question": "Vous êtes impliqué dans un accident et vous quittez les lieux en sachant que vous l'avez probablement causé. Comment appelle-t-on cela ?",
           "choices": [
             "Une fuite devant la police",
-            "Un délit de fuite : abandonner intentionnellement le lieu d'un accident en sachant ou soupçonnant l'avoir causé pour échapper aux constatations",
-            "Un excès de vitesse",
-            "Un refus de signer le constat"
+            "Un délit de fuite",
+            "Un refus d'obtempérer",
+            "Un défaut de constat"
           ],
           "correct": 1,
           "explanation": "Le délit de fuite = quitter intentionnellement les lieux d'un accident que vous avez causé pour échapper aux constatations.",
@@ -2004,10 +2004,10 @@
           "id": "I2_Q69",
           "question": "Vous révisez la notion de délit de fuite. Quels sont les 3 éléments qui le constituent ?",
           "choices": [
-            "Vitesse, accident, fuite",
-            "1) Abandonner intentionnellement le lieu, 2) savoir ou douter avoir causé l'accident, 3) intention d'échapper aux constatations et conséquences",
-            "Refus, fuite, dissimulation",
-            "Accident, constat, départ"
+            "La vitesse, l'accident et la fuite du lieu",
+            "Quitter volontairement les lieux, en se sachant impliqué, pour échapper aux constatations",
+            "Le refus, la fuite et la dissimulation de preuves",
+            "L'accident, le constat non signé et le départ"
           ],
           "correct": 1,
           "explanation": "Les 3 éléments : abandon intentionnel + connaissance d'être la cause + intention d'échapper aux constatations.",
@@ -2283,7 +2283,7 @@
           "question": "Vous devez vous rendre à un endroit situé à 800 mètres. Quel moyen de transport est le plus adapté ?",
           "choices": [
             "La voiture",
-            "La marche à pied, car jusqu'à 1 km c'est raisonnable",
+            "La marche à pied",
             "Le taxi",
             "Le bus"
           ],
@@ -2581,10 +2581,10 @@
           "id": "I3_Q26",
           "question": "Vous souhaitez réduire votre consommation. Quels équipements électriques devez-vous éteindre s'ils ne sont pas nécessaires ?",
           "choices": [
-            "Les phares",
-            "La climatisation, le ventilateur, le chauffage de la lunette arrière et des sièges",
-            "Les clignotants",
-            "La radio"
+            "Les phares et feux de position",
+            "La climatisation, la lunette et les sièges chauffants",
+            "Les clignotants et feux stop",
+            "La radio et le GPS intégré"
           ],
           "correct": 1,
           "explanation": "Tous ces équipements consomment de l'électricité et augmentent la consommation de carburant.",
@@ -3539,7 +3539,7 @@
           "question": "Vous lisez \"165/70 R 14 81 T\" sur votre pneu. Le \"81\" est un indice de quoi ?",
           "choices": [
             "De vitesse",
-            "De charge, c'est-à-dire le poids maximal supporté par le pneu",
+            "De charge",
             "De largeur",
             "De diamètre"
           ],
@@ -4124,10 +4124,10 @@
           "id": "I4_Q73",
           "question": "Vous souhaitez consulter un message sur votre téléphone en conduisant. Pouvez-vous le tenir en main ?",
           "choices": [
-            "Oui, si c'est rapide",
-            "Non, il est interdit d'utiliser, tenir ou manipuler un appareil électronique mobile avec écran en conduisant",
-            "Oui, pour téléphoner",
-            "Oui, au feu rouge"
+            "Oui, si la consultation est rapide",
+            "Non, tenir un appareil à écran est interdit au volant",
+            "Oui, mais uniquement pour téléphoner",
+            "Oui, à l'arrêt à un feu rouge"
           ],
           "correct": 1,
           "explanation": "Utiliser, tenir ou manipuler un appareil mobile avec écran est interdit pendant la conduite.",

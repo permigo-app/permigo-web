@@ -579,9 +579,9 @@
           "question": "U moet in het alcoholslot blazen voor u start. Wat is de drempel waarboven de motor weigert te starten?",
           "choices": [
             "0,5 promille",
-            "0,2 promille: als dit gehalte bereikt of overschreden wordt, start de motor niet",
+            "0,2 promille",
             "0,8 promille",
-            "0 promille"
+            "0,0 promille"
           ],
           "correct": 1,
           "explanation": "De drempel is 0,2 ‰: boven of gelijk aan dit gehalte start de motor niet.",
@@ -606,7 +606,7 @@
           "question": "U herhaalt de drempels. Vanaf welk gehalte MOET het alcoholslot verplicht opgelegd worden?",
           "choices": [
             "0,8 promille",
-            "1,8 promille (tenzij de rechter uitdrukkelijk beslist het niet op te leggen en zijn beslissing motiveert)",
+            "1,8 promille",
             "1,2 promille",
             "0,5 promille"
           ],
@@ -1138,10 +1138,10 @@
           "id": "I2_Q13",
           "question": "U bent betrokken bij een ongeval zonder gewonden. Moet u de politie bellen?",
           "choices": [
-            "Ja, altijd",
-            "Nee, dat is niet nodig als beide partijen het Europees aanrijdingsformulier invullen en ondertekenen",
-            "Ja, dat is verplicht",
-            "Nee, nooit"
+            "Ja, werkelijk altijd",
+            "Nee, niet als het formulier ingevuld en getekend is",
+            "Ja, het is wettelijk verplicht",
+            "Nee, de politie komt nooit"
           ],
           "correct": 1,
           "explanation": "Zonder gewonden is de politie niet nodig als beide partijen het Europees aanrijdingsformulier ondertekenen.",
@@ -1543,10 +1543,10 @@
           "id": "I2_Q47",
           "question": "Uw arts verklaart u ongeschikt om te rijden. Binnen welke termijn moet u uw gemeente op de hoogte brengen?",
           "choices": [
-            "7 dagen",
-            "4 werkdagen (zaterdagen, zondagen en feestdagen niet meegeteld)",
-            "10 dagen",
-            "30 dagen"
+            "7 werkdagen",
+            "4 werkdagen",
+            "10 werkdagen",
+            "30 kalenderdagen"
           ],
           "correct": 1,
           "explanation": "U moet uw gemeente binnen de 4 werkdagen op de hoogte brengen.",
@@ -1817,9 +1817,9 @@
           "question": "U bent betrokken bij een ongeval en verlaat de plaats wetende dat u het waarschijnlijk veroorzaakt heeft. Hoe noemt men dit?",
           "choices": [
             "Vlucht voor de politie",
-            "Vluchtmisdrijf: opzettelijk de plaats van een ongeval verlaten terwijl men weet of vermoedt het veroorzaakt te hebben, om de vaststellingen te ontlopen",
-            "Snelheidsovertreding",
-            "Weigering het formulier te tekenen"
+            "Vluchtmisdrijf",
+            "Weigering om te gehoorzamen",
+            "Gebrek aan aanrijdingsformulier"
           ],
           "correct": 1,
           "explanation": "Vluchtmisdrijf = opzettelijk de plaats van een ongeval verlaten dat u veroorzaakt heeft om de vaststellingen te ontlopen.",
@@ -1829,10 +1829,10 @@
           "id": "I2_Q69",
           "question": "U herhaalt het begrip vluchtmisdrijf. Welke 3 elementen vormen het?",
           "choices": [
-            "Snelheid, ongeval, vlucht",
-            "1) Opzettelijk de plaats verlaten, 2) weten of twijfelen het ongeval veroorzaakt te hebben, 3) de bedoeling hebben de vaststellingen en gevolgen te ontlopen",
-            "Weigering, vlucht, verduistering",
-            "Ongeval, formulier, vertrek"
+            "De snelheid, het ongeval en de vlucht",
+            "Vrijwillig de plaats verlaten, wetend betrokken te zijn, om de vaststellingen te ontlopen",
+            "De weigering, de vlucht en het verbergen van bewijs",
+            "Het ongeval, het niet-getekende formulier en het vertrek"
           ],
           "correct": 1,
           "explanation": "De 3 elementen: opzettelijk vertrek + weten dat men de oorzaak is + bedoeling de vaststellingen te ontlopen.",
@@ -2033,7 +2033,7 @@
           "question": "U moet zich naar een plaats op 800 meter begeven. Welk vervoermiddel is het meest geschikt?",
           "choices": [
             "De auto",
-            "Te voet, want tot 1 km is dat redelijk",
+            "Te voet",
             "De taxi",
             "De bus"
           ],
@@ -2331,10 +2331,10 @@
           "id": "I3_Q26",
           "question": "U wilt uw verbruik verminderen. Welke elektrische uitrusting moet u uitschakelen als ze niet nodig is?",
           "choices": [
-            "De koplampen",
-            "De airconditioning, de ventilator, de achterruitverwarming en de zetelverwarming",
-            "De richtingaanwijzers",
-            "De radio"
+            "De koplampen en standlichten",
+            "De airco, de achterruit- en zetelverwarming",
+            "De richtingaanwijzers en remlichten",
+            "De radio en de ingebouwde gps"
           ],
           "correct": 1,
           "explanation": "Al deze uitrustingen verbruiken elektriciteit en verhogen het brandstofverbruik.",
@@ -3180,10 +3180,10 @@
           "id": "I4_Q27",
           "question": "U leest \"165/70 R 14 81 T\" op uw band. \"81\" is een index van wat?",
           "choices": [
-            "Snelheid",
-            "Van lading, dat wil zeggen het maximale gewicht dat de band draagt",
-            "Breedte",
-            "Diameter"
+            "Van snelheid",
+            "Van lading",
+            "Van breedte",
+            "Van diameter"
           ],
           "correct": 1,
           "explanation": "81 = laadindex, overeenstemmend met het maximale gewicht dat de band kan dragen.",
@@ -3767,9 +3767,9 @@
           "question": "U wilt een bericht raadplegen op uw telefoon terwijl u rijdt. Kunt u die in de hand houden?",
           "choices": [
             "Ja, als het snel gaat",
-            "Nee, het is verboden een mobiel elektronisch toestel met scherm te gebruiken, vast te houden of te manipuleren tijdens het rijden",
-            "Ja, om te telefoneren",
-            "Ja, aan een rood licht"
+            "Nee, een toestel met scherm vasthouden is verboden achter het stuur",
+            "Ja, maar enkel om te telefoneren",
+            "Ja, stilstaand aan een rood licht"
           ],
           "correct": 1,
           "explanation": "Een mobiel toestel met scherm gebruiken, vasthouden of manipuleren is verboden tijdens het rijden.",

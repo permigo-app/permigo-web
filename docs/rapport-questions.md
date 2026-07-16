@@ -461,7 +461,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 - `I1_Q27` (carte théorie 2) : Vous avez subi une analyse de l'haleine et le résultat indique 0,40 mg/l. Que se passe-t-il ?
   - ✅ Permis retiré 6 heures et une amende
 
-### I2 — Accident : 3 groupe(s) de doublons potentiels
+### I2 — Accident : 2 groupe(s) de doublons potentiels
 
 **Groupe (2 questions — à réduire à 1 ou 2)**
 
@@ -477,13 +477,6 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 - `I2_Q36` (carte théorie 2) : Vous êtes sur la bande de droite d'une autoroute à 2 bandes lors d'un embouteillage. De quel côté vous décalez-vous ?
   - ✅ Vers la droite pour libérer l'espace entre les deux bandes
 
-**Groupe (2 questions — à réduire à 1 ou 2)**
-
-- `I2_Q47` (carte théorie 4) : Votre médecin vous déclare inapte à conduire. Dans quel délai devez-vous informer votre commune ?
-  - ✅ 4 jours ouvrables (samedis, dimanches et jours fériés non comptés)
-- `I2_Q48` (carte théorie 4) : Votre médecin vous a déclaré inapte à conduire. Les samedis, dimanches et jours fériés comptent-ils dans le délai de 4 jours ?
-  - ✅ Non, ils ne sont pas comptés dans le délai
-
 ### I3 — La consommation du carburant : 1 groupe(s) de doublons potentiels
 
 **Groupe (2 questions — à réduire à 1 ou 2)**
@@ -493,7 +486,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 - `I3_Q8` (carte théorie 1) : Vous conduisez une voiture diesel. À quel régime moteur est-il conseillé de passer à la vitesse supérieure ?
   - ✅ Entre 1500 et 2000 tours/minute
 
-### I4 — La technique : 2 groupe(s) de doublons potentiels
+### I4 — La technique : 3 groupe(s) de doublons potentiels
 
 **Groupe (2 questions — à réduire à 1 ou 2)**
 
@@ -501,6 +494,13 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
   - ✅ Les pneus sont trop peu gonflés
 - `I4_Q11` (carte théorie 0) : Vous constatez que vos pneus sont usés au CENTRE. Quelle en est la cause probable ?
   - ✅ Les pneus sont trop gonflés
+
+**Groupe (2 questions — à réduire à 1 ou 2)**
+
+- `I4_Q27` (carte théorie 2) : Vous lisez "165/70 R 14 81 T" sur votre pneu. Le "81" est un indice de quoi ?
+  - ✅ De charge
+- `I4_Q28` (carte théorie 2) : Vous lisez "165/70 R 14 81 T" sur votre pneu. Le "T" est un indice de quoi ?
+  - ✅ De vitesse
 
 **Groupe (2 questions — à réduire à 1 ou 2)**
 
