@@ -63,7 +63,9 @@ export default function RegisterPage() {
     } else {
       localStorage.setItem('@onboarding_done', 'true');
       document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
-      // Nouveau parcours : inscription → choix du permis → accueil
+      // Nouveau parcours : inscription → choix du permis → didacticiel → accueil.
+      // Le didacticiel ne se lance QUE via ce drapeau (jamais à une simple connexion).
+      localStorage.setItem('@tuto_pending', 'true');
       window.location.href = '/choix-permis';
     }
   };

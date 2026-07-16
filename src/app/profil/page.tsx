@@ -304,6 +304,7 @@ export default function ProfilePage() {
                 onClick={() => {
                   // Réarme le didacticiel puis retourne à l'accueil où il démarre
                   localStorage.removeItem('@tuto_done');
+                  localStorage.setItem('@tuto_pending', 'true');
                   router.push('/app');
                 }}
                 className="w-full flex items-center gap-3 px-4 py-3.5 press-scale"

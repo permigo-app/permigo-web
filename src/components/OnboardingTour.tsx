@@ -9,6 +9,7 @@ import { createPortal } from 'react-dom';
 import { useLang } from '@/contexts/LanguageContext';
 
 const TUTO_KEY = '@tuto_done';
+const TUTO_PENDING_KEY = '@tuto_pending';
 const PAD = 8;          // marge lumineuse autour de l'élément surligné
 const BUBBLE_W = 320;
 
@@ -43,10 +44,16 @@ export default function OnboardingTour() {
   const [step, setStep] = useState(0);
   const [rect, setRect] = useState<Rect | null>(null);
 
-  // Démarrage : une seule fois, petit délai pour laisser la page se peindre
+  // Démarrage : uniquement si le parcours l'a demandé (@tuto_pending, posé à
+  // l'inscription ou par "Revoir le didacticiel") — jamais à une simple
+  // connexion sur un compte existant. Une seule diffusion (@tuto_done).
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    if (localStorage.getItem(TUTO_KEY) === 'true') return;
+    if (localStorage.getItem(TUTO_PENDING_KEY) !== 'true') return;
+    if (localStorage.getItem(TUTO_KEY) === 'true') {
+      localStorage.removeItem(TUTO_PENDING_KEY);
+      return;
+    }
     const timer = setTimeout(() => setActive(true), 600);
     return () => clearTimeout(timer);
   }, []);
@@ -102,6 +109,7 @@ export default function OnboardingTour() {
 
   const finish = () => {
     localStorage.setItem(TUTO_KEY, 'true');
+    localStorage.removeItem(TUTO_PENDING_KEY);
     setActive(false);
   };
 
