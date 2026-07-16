@@ -1467,10 +1467,10 @@
           "id": "C2_Q36",
           "question": "Vous etes facteur et distribuez le courrier de porte en porte. Devez-vous porter la ceinture ?",
           "choices": [
-            "Oui, toujours",
+            "Oui, toujours sans exception",
             "Non, vous en etes dispense pendant la distribution",
             "Oui, sauf dans les rues residentielles",
-            "Non, jamais"
+            "Non, jamais pour un facteur"
           ],
           "correct": 1,
           "explanation": "Un facteur de La Poste distribuant le courrier de porte en porte est dispensé du port de la ceinture.",
@@ -1519,10 +1519,10 @@
           "id": "C2_Q41",
           "question": "Vous transportez un enfant. A quelles conditions doit-il voyager dans un DRA ?",
           "choices": [
-            "Moins de 12 ans",
+            "Moins de 12 ans, quelle que soit la taille",
             "Moins de 18 ans ET taille inferieure a 1,35 m",
-            "Moins de 10 ans",
-            "Moins de 18 ans uniquement"
+            "Moins de 10 ans et moins d'1 m",
+            "Moins de 18 ans, quelle que soit la taille"
           ],
           "correct": 1,
           "explanation": "Un enfant doit voyager dans un DRA s'il a moins de 18 ans ET mesure moins de 1,35 m. Les deux conditions doivent être réunies.",
@@ -2425,10 +2425,10 @@
           "id": "C3_Q24",
           "question": "Vous depassez un vehicule avec vos feux de route allumes. Un vehicule arrive en face. Que faites-vous ?",
           "choices": [
-            "Vous gardez les feux de route",
+            "Vous gardez les feux de route allumes",
             "Vous basculez sur les feux de croisement pour ne pas l'eblouir",
-            "Vous eteignez tout",
-            "Vous allumez les antibrouillard"
+            "Vous eteignez tous les feux",
+            "Vous allumez les feux antibrouillard"
           ],
           "correct": 1,
           "explanation": "Même pendant un dépassement, si un véhicule arrive en sens inverse, vous devez passer aux feux de croisement.",
@@ -2646,10 +2646,10 @@
           "id": "C3_Q43",
           "question": "Vous stationnez de nuit hors agglomeration. Pouvez-vous utiliser uniquement le feu de stationnement ?",
           "choices": [
-            "Oui, partout",
+            "Oui, partout sans condition",
             "Non, hors agglomeration il faut les feux de position",
-            "Oui, si la rue est eclairee",
-            "Oui, si vous etes parallele"
+            "Oui, si la rue est bien eclairee",
+            "Oui, si vous etes parallele a la chaussee"
           ],
           "correct": 1,
           "explanation": "Hors agglomération, le feu de stationnement ne suffit pas : il faut les feux de position.",
@@ -2763,10 +2763,10 @@
           "id": "C3_Q55",
           "question": "Vous voyez un bus scolaire qui allume ses clignotants de direction (pas les warnings). Que signifie-t-il ?",
           "choices": [
-            "Des enfants montent ou descendent",
+            "Des enfants montent ou descendent du bus",
             "Le bus s'apprete a repartir ou a changer de direction",
-            "Le bus est en panne",
-            "Rien de special"
+            "Le bus est en panne sur place",
+            "Rien de special a signaler"
           ],
           "correct": 1,
           "explanation": "Les clignotants de direction (pas les warnings) signalent que le bus va repartir ou changer de direction.",

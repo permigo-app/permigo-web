@@ -280,10 +280,10 @@
           "id": "H1_Q3",
           "question": "Vous observez un camion de livraison qui décharge du mazout devant une maison depuis 30 minutes. S'agit-il d'un arrêt ou d'un stationnement ?",
           "choices": [
-            "C'est un stationnement car la durée est longue",
-            "C'est un arrêt car c'est le temps nécessaire pour décharger des marchandises",
+            "Un stationnement car la durée est longue",
+            "Un arrêt : le temps nécessaire pour décharger",
             "Ce n'est ni l'un ni l'autre",
-            "Le camion est en panne"
+            "Le camion est considéré en panne"
           ],
           "correct": 1,
           "explanation": "Un arrêt pour décharger des marchandises peut durer longtemps : c'est toujours un arrêt.",
@@ -332,10 +332,10 @@
           "id": "H1_Q8",
           "question": "Vous décidez de vous garer pour déposer un colis chez un ami. Votre décision de vous arrêter est-elle volontaire ou imposée ?",
           "choices": [
-            "C'est un acte automatique",
+            "C'est un acte automatique du conducteur",
             "C'est un acte volontaire, relevant de votre propre décision",
-            "C'est imposé par la loi",
-            "C'est un acte involontaire"
+            "C'est imposé par le code de la route",
+            "C'est un acte involontaire et subi"
           ],
           "correct": 1,
           "explanation": "L'arrêt et le stationnement sont des actes volontaires : vous choisissez de vous immobiliser.",
@@ -425,9 +425,9 @@
           "question": "Vous roulez hors agglomération et vous souhaitez stationner. Pouvez-vous utiliser tous les types d'accotements ?",
           "choices": [
             "Non, uniquement l'accotement de plain-pied",
-            "Oui, hors agglomération vous pouvez utiliser la bande de stationnement et tout type d'accotement",
-            "Non, uniquement la chaussée",
-            "Non, le stationnement hors agglomération est interdit"
+            "Oui, la bande de stationnement et tout type d'accotement",
+            "Non, uniquement la chaussée elle-même",
+            "Non, le stationnement y est interdit"
           ],
           "correct": 1,
           "explanation": "Hors agglomération, la bande de stationnement et tous les accotements sont autorisés.",
@@ -934,8 +934,8 @@
           "id": "H1_Q63",
           "question": "Vous traversez un tunnel et vous souhaitez stationner sur la chaussée. Est-ce autorisé ?",
           "choices": [
-            "Oui, pour un bref instant",
-            "Non, l'arrêt et le stationnement sont interdits sur la chaussée dans les tunnels",
+            "Oui, pour un bref instant seulement",
+            "Non, c'est interdit sur la chaussée dans les tunnels",
             "Oui, en activant vos feux de détresse",
             "Oui, si le tunnel est suffisamment large"
           ],
@@ -1001,9 +1001,9 @@
           "question": "Vous voyez un signal d'indication montrant un vélo sur un passage. Que signifie-t-il ?",
           "choices": [
             "Vous approchez d'une piste cyclable",
-            "Un passage pour cyclistes et cyclomoteurs à deux roues se trouve à proximité",
+            "Un passage pour cyclistes et cyclomoteurs à proximité",
             "Vous approchez d'un parking vélo",
-            "Les vélos sont interdits ici"
+            "Les vélos sont interdits à cet endroit"
           ],
           "correct": 1,
           "explanation": "Ce signal indique un passage pour cyclistes et cyclomoteurs à deux roues.",
@@ -1542,7 +1542,7 @@
             "Oui, mais ce n'est pas idéal",
             "Oui, car 5 m - 1,8 m = 3,2 m, ce qui est supérieur aux 3 m requis",
             "Non, la chaussée est trop étroite",
-            "Cela dépend du trafic"
+            "Cela dépend de la densité du trafic"
           ],
           "correct": 1,
           "explanation": "5 m − 1,8 m = 3,2 m de passage libre, soit ≥ 3 m : le stationnement est autorisé.",
@@ -2251,10 +2251,10 @@
           "id": "H3_Q2",
           "question": "Vous êtes en zone bleue. La réglementation s'applique-t-elle à chaque emplacement de la zone ?",
           "choices": [
-            "Non, uniquement devant le signal",
+            "Non, uniquement devant le signal de zone",
             "Oui, sauf aux emplacements où une autre signalisation de stationnement est prévue",
             "Oui, absolument partout sans exception",
-            "Non, uniquement sur la chaussée"
+            "Non, uniquement sur la chaussée principale"
           ],
           "correct": 1,
           "explanation": "La zone bleue s'applique dans toute la zone, sauf aux emplacements avec une signalisation de stationnement différente.",
@@ -2855,10 +2855,10 @@
           "id": "H3_Q65",
           "question": "Vous voyez un signal P accompagné d'un symbole de prise électrique. De quel signal s'agit-il ?",
           "choices": [
-            "Parking gratuit",
+            "Parking gratuit pour tous",
             "Stationnement réservé aux véhicules électriques",
             "Borne de recharge à proximité",
-            "Station-service"
+            "Station-service électrique"
           ],
           "correct": 1,
           "explanation": "Le signal P + prise électrique indique un emplacement réservé aux véhicules électriques.",

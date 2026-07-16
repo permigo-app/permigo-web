@@ -584,9 +584,9 @@
           "question": "Vous chargez votre voiture avec vos passagers et vos bagages. Comment calcule-t-on la masse en charge (MEC) de votre véhicule ?",
           "choices": [
             "C'est le poids du véhicule à vide",
-            "C'est le poids du véhicule + conducteur + passagers + chargement, pesés ensemble à un moment donné",
+            "Véhicule + conducteur + passagers + chargement, pesés à un moment donné",
             "C'est le poids maximal autorisé par le constructeur",
-            "C'est uniquement le poids du conducteur"
+            "C'est uniquement le poids du chargement"
           ],
           "correct": 1,
           "explanation": "MEC = poids réel du véhicule avec tout ce qu'il transporte à un moment donné.",
@@ -1088,10 +1088,10 @@
           "id": "G2_Q12",
           "question": "Vous arrivez à un carrefour et vous voyez un signal rond bleu avec une flèche tout droit et une flèche à droite. Pouvez-vous tourner à gauche ?",
           "choices": [
-            "Oui, vous avez le choix",
+            "Oui, vous avez le libre choix",
             "Non, vous devez aller tout droit OU à droite, pas à gauche",
-            "Oui, si aucun véhicule n'arrive",
-            "C'est un sens unique"
+            "Oui, si aucun véhicule n'arrive en face",
+            "Non, c'est un sens unique vers la droite"
           ],
           "correct": 1,
           "explanation": "Vous devez choisir entre les deux directions imposées : tout droit ou à droite.",

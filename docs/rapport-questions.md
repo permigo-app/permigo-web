@@ -342,7 +342,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 - `E3_Q6` (carte théorie 0) : Vous roulez sur une route avec une ligne continue et une ligne discontinue côte à côte. La discontinue est de votre côté. Pouvez-vous dépasser ?
   - ✅ Oui, vous pouvez franchir la ligne discontinue de votre côté pour dépasser
 - `E3_Q8` (carte théorie 0) : Vous roulez sur une route avec une ligne continue et une discontinue côte à côte. La CONTINUE est de votre côté. Pouvez-vous dépasser ?
-  - ✅ Non, si la ligne continue est de votre côté vous ne pouvez pas la franchir
+  - ✅ Non, vous ne pouvez pas franchir la ligne continue de votre côté
 
 ---
 

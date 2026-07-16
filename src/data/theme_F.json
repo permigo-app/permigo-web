@@ -832,9 +832,9 @@
           "question": "Vous êtes sur une autoroute et constatez un accident. Une borne d'appel d'urgence se trouve à 50 mètres. Que devez-vous faire de préférence ?",
           "choices": [
             "Appeler le 112 depuis votre téléphone",
-            "Utiliser de préférence la borne d'appel d'urgence si elle est à proximité",
+            "Utiliser de préférence la borne d'appel d'urgence",
             "Ignorer la borne et poursuivre votre route",
-            "Appeler le 101"
+            "Appeler le 101 depuis votre téléphone"
           ],
           "correct": 1,
           "explanation": "La borne d'appel d'urgence est à privilégier si elle est disponible.",
@@ -1172,8 +1172,8 @@
           "choices": [
             "Non, le feu ne peut être qu'à droite",
             "Oui, le feu peut être répété au-dessus de la chaussée et à gauche",
-            "Non, jamais à gauche",
-            "Non, uniquement au-dessus"
+            "Non, jamais du côté gauche",
+            "Non, uniquement au-dessus de la chaussée"
           ],
           "correct": 1,
           "explanation": "Le feu principal est à droite, mais il peut être répété au-dessus et/ou à gauche.",
@@ -1675,7 +1675,7 @@
           "question": "La flèche jaune-orange est affichée au-dessus de votre bande, mais il vous est impossible de vous rabattre immédiatement. Pouvez-vous encore y circuler ?",
           "choices": [
             "Non, vous devez vous arrêter sur place",
-            "Oui, mais sachez que le signal suivant sera une croix rouge interdisant la bande",
+            "Oui, mais le signal suivant sera une croix rouge",
             "Non, vous devez faire demi-tour",
             "Oui, sans aucune limite de temps"
           ],
@@ -1703,8 +1703,8 @@
           "choices": [
             "Croix rouge, puis jaune-orange, puis flèche verte",
             "Flèche verte (autorisé), puis flèche jaune-orange (quitter), puis croix rouge (interdit)",
-            "Jaune-orange, puis verte, puis rouge",
-            "Il n'y a pas d'ordre défini"
+            "Jaune-orange, puis verte, puis croix rouge",
+            "Il n'y a pas d'ordre défini entre eux"
           ],
           "correct": 1,
           "explanation": "L'ordre est : vert (autorisé) → jaune-orange (quittez) → croix rouge (interdit).",
@@ -3841,10 +3841,10 @@
           "id": "F5_Q16",
           "question": "Vous circulez sur une chaussée à double sens et souhaitez tourner à gauche. Où devez-vous placer votre véhicule ?",
           "choices": [
-            "Le plus à droite possible",
+            "Le plus à droite possible de la chaussée",
             "Le plus près possible de l'axe médian de la chaussée",
             "Sur la bande du sens inverse",
-            "N'importe où"
+            "N'importe où sur votre bande"
           ],
           "correct": 1,
           "explanation": "Double sens : se placer près de l'axe médian pour tourner à gauche.",
@@ -5064,8 +5064,8 @@
           "choices": [
             "Oui, si elle est vide vous pouvez l'utiliser",
             "Non, la circulation y est interdite sauf indication contraire",
-            "Oui, en agglomération",
-            "Oui, la nuit"
+            "Oui, mais uniquement en agglomération",
+            "Oui, mais uniquement la nuit"
           ],
           "correct": 1,
           "explanation": "Circuler sur la bande bus en voiture est interdit, sauf indication contraire par panneau additionnel.",
