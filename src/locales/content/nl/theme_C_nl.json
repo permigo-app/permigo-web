@@ -157,6 +157,13 @@
               "content": "📋 De regel\nUw voorlopig rijbewijs is alleen geldig in België. In het buitenland heeft u het definitief rijbewijs nodig.\n\n💡 Waarom\nHet voorlopig rijbewijs is een leerdocument dat alleen door de Belgische autoriteiten erkend wordt.\n\n🚗 In de praktijk\nAls u op vakantie gaat naar het buitenland, neemt u niet het stuur over met uw voorlopig rijbewijs.\n\n📍 Voorbeeld\nU wilt rijden in Nederland met uw Belgisch voorlopig rijbewijs: dat is verboden, wacht op het definitief rijbewijs.\n\n⚠️ Veelgemaakte fout\nDenken dat het Belgisch voorlopig rijbewijs geldig is in buurlanden (Frankrijk, Nederland, Duitsland). Dat is het niet.",
               "emoji": "🌍",
               "explanation_simple": "Je voorlopig rijbewijs is als een lokaal abonnement: het werkt alleen in België. Om in het buitenland te rijden, heb je het definitief rijbewijs nodig."
+            },
+            {
+              "type": "text",
+              "title": "6.2 — Voorlopig rijbewijs: rijverbod tijdens weekendnachten",
+              "content": "📋 De regel\nMet een voorlopig rijbewijs mag u niet rijden op de openbare weg:\n- van vrijdag 22u tot zaterdag 6u;\n- van zaterdag 22u tot zondag 6u;\n- van zondag 22u tot maandag 6u;\n- de vooravond van een feestdag van 22u tot 6u;\n- de avond van de feestdag van 22u tot 6u 's ochtends.\n\n💡 Waarom\nWeekend- en feestnachten tellen de meeste zware ongevallen bij jonge bestuurders (vermoeidheid, alcohol, feestverkeer). De wetgever houdt leerlingen weg van deze risicouren.\n\n🚗 In de praktijk\nOnthoud de formule: weekends en feestdagen, van 22u tot 6u, is het stuur verboden — alleen of met uw begeleider.\n\n📍 Voorbeeld\nZaterdag 23u30 wilt u van een feestje naar huis rijden met uw voorlopig rijbewijs: dat is verboden. Rijd mee met iemand anders of wacht tot 6u.\n\n⚠️ Veelgemaakte fout\nDenken dat het verbod enkel op zaterdagavond geldt, of dat een begeleider het opheft. Het geldt voor de drie weekendnachten EN de vooravonden en avonden van feestdagen, met of zonder begeleider.",
+              "emoji": "🌙",
+              "explanation_simple": "Met je voorlopig rijbewijs zijn feestnachten verboden terrein: vrijdag, zaterdag en zondag van 22u tot 6u 's ochtends — feestdagen ook. Zelfs met je begeleider ernaast is het nee."
             }
           ]
         }
@@ -789,6 +796,45 @@
           "correct": 1,
           "explanation": "Het bord gaat over de MIB. Je MIB (3 200 kg) > 3 000 kg: je mag niet doorrijden.",
           "theoryCardIndex": 0
+        },
+        {
+          "id": "C1_PROV_1",
+          "question": "U heeft een voorlopig rijbewijs B. Wanneer mag u NIET rijden?",
+          "choices": [
+            "Nooit 's nachts, elke dag",
+            "Tijdens weekend- en feestdagnachten, van 22u tot 6u",
+            "Enkel op zondag, de hele dag",
+            "Na 20u op weekdagen"
+          ],
+          "correct": 1,
+          "explanation": "Met een voorlopig rijbewijs mag u niet rijden van vrijdag-, zaterdag- en zondagavond 22u tot 6u de volgende ochtend, en ook niet op de vooravond en avond van feestdagen.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "C1_PROV_2",
+          "question": "Zaterdagavond, 23u. U heeft een voorlopig rijbewijs en uw begeleider zit naast u. Mag u rijden?",
+          "choices": [
+            "Nee: verboden tot 6u, zelfs met begeleider",
+            "Ja, want de begeleider is aanwezig",
+            "Ja, enkel op gemeentewegen",
+            "Ja, voor een rit van minder dan 10 km"
+          ],
+          "correct": 0,
+          "explanation": "Tijdens weekendnachten (22u-6u) is rijden met een voorlopig rijbewijs verboden — de aanwezigheid van de begeleider verandert daar niets aan.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "C1_PROV_3",
+          "question": "Met een voorlopig rijbewijs wilt u rijden op de vooravond van een feestdag om 23u. Is dat toegelaten?",
+          "choices": [
+            "Nee: op vooravonden van feestdagen is rijden verboden van 22u tot 6u",
+            "Ja, want het is geen weekend",
+            "Ja, maar enkel tot middernacht",
+            "Ja, als de rit kort is"
+          ],
+          "correct": 0,
+          "explanation": "Het verbod van 22u tot 6u geldt voor weekendnachten, maar ook voor de vooravonden en avonden van feestdagen.",
+          "theoryCardIndex": 3
         }
       ]
     },

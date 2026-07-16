@@ -162,6 +162,20 @@
               "content": "📋 La règle\nLe retrait immédiat est décidé par le Procureur du Roi (ou un OPJ) et exécuté par la Police sur place. La déchéance du droit de conduire est prononcée par un Juge au tribunal.\n\n💡 Pourquoi\nCe sont deux mécanismes complémentaires : le retrait immédiat est une mesure d'urgence pour écarter un danger immédiat. La déchéance est une sanction judiciaire prononcée après examen du dossier.\n\n🚗 En pratique\nLes deux peuvent se cumuler : la police vous retire le permis sur place (retrait immédiat), puis le juge vous le retire pour une période plus longue (déchéance) lors du jugement.\n\n📍 Exemple\nVous êtes arrêté à 170 km/h sur autoroute (limite 120). La police retire votre permis immédiatement (retrait, +30 km/h). Quelques semaines plus tard, le juge prononce une déchéance de 3 mois (+40 km/h).\n\n⚠️ Erreur fréquente\nConfondre les deux mesures à l'examen théorique. Retenez : Police + Procureur = retrait immédiat (sur place). Juge + Tribunal = déchéance (après jugement).",
               "emoji": "⚖️",
               "explanation_simple": "Retrait immédiat = la police te prend ton permis tout de suite (décision du Procureur). Déchéance = un juge te l'enlève après un procès. C'est pas la même chose !"
+            },
+            {
+              "type": "text",
+              "title": "Les quatre degrés d'infractions",
+              "content": "📋 La règle\nLes infractions routières sont classées en 4 degrés selon la gravité :\n- 1er degré : infractions ordinaires, sans mise en danger directe (ex. ne pas porter la ceinture de sécurité).\n- 2e degré : mise en danger indirecte des personnes (ex. stationner sur une place réservée aux personnes handicapées).\n- 3e degré : mise en danger directe (ex. franchir un feu rouge, ignorer les injonctions d'un agent qualifié, GSM en main au volant).\n- 4e degré : mise en danger quasi certaine avec risque de blessures graves (ex. faire demi-tour ou marche arrière sur autoroute, dépasser à l'approche d'un passage à niveau, participer à une course).\n\n💡 Pourquoi\nPlus l'infraction rapproche les usagers d'un accident grave, plus le degré — et la sanction — augmente.\n\n🚗 En pratique\nÀ l'examen, on vous demande souvent de classer une infraction. Demandez-vous : « quelqu'un est-il mis en danger, indirectement, directement, ou presque sûrement ? »\n\n📍 Exemple\nFranchir un feu rouge met directement en danger les usagers qui traversent : 3e degré. Faire marche arrière sur l'autoroute rend l'accident presque inévitable : 4e degré.\n\n⚠️ Erreur fréquente\nCroire que le GSM en main au volant est une petite infraction : c'est un 3e degré, au même niveau que franchir un feu rouge.",
+              "emoji": "⚖️",
+              "explanation_simple": "Imagine 4 étages de gravité : étage 1 tu déranges (ceinture oubliée), étage 2 tu crées un risque indirect, étage 3 tu mets directement quelqu'un en danger (feu rouge, GSM en main), étage 4 l'accident est presque garanti (demi-tour sur autoroute). Plus tu montes, plus ça coûte cher."
+            },
+            {
+              "type": "text",
+              "title": "Les sanctions par degré",
+              "content": "📋 La règle\nEn cas de perception immédiate, les montants sont :\n- 1er degré : 58 €\n- 2e degré : 116 €\n- 3e degré : 174 €\n- 4e degré : pas de perception immédiate — convocation directe au tribunal de police (amende bien plus lourde et déchéance du droit de conduire possible).\n\n💡 Pourquoi\nLa perception immédiate évite un procès pour les infractions courantes. Le 4e degré est jugé trop grave pour être réglé par un simple paiement.\n\n🚗 En pratique\nRetenez la progression : 58 → 116 → 174 €, et « 4e degré = tribunal ».\n\n📍 Exemple\nVous êtes flashé en train de téléphoner GSM en main (3e degré) : 174 € de perception immédiate.\n\n⚠️ Erreur fréquente\nPenser qu'une infraction du 4e degré se règle avec une amende sur place. Non : c'est une convocation au tribunal, avec déchéance possible.",
+              "emoji": "💶",
+              "explanation_simple": "Les amendes doublent presque à chaque étage : 58 €, 116 €, 174 €. Et au 4e étage, plus de paiement sur place — c'est direct le tribunal, avec le risque de perdre ton permis."
             }
           ]
         }
@@ -1065,6 +1079,58 @@
           "explanation": "La flèche verte indique que la voie est ouverte. Vous pouvez l'emprunter normalement. Vérifiez les signaux au-dessus des autres voies avant de changer de file.",
           "destination": "panneaux",
           "sign": "FLECHE_VERTE_VOIE"
+        },
+        {
+          "id": "D1_DEG_1",
+          "question": "Faire demi-tour sur l'autoroute : de quel degré est cette infraction ?",
+          "choices": [
+            "1er degré",
+            "2e degré",
+            "3e degré",
+            "4e degré"
+          ],
+          "correct": 3,
+          "explanation": "Faire demi-tour ou marche arrière sur autoroute rend l'accident quasi inévitable : c'est une infraction du 4e degré, la plus grave.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_DEG_2",
+          "question": "Franchir un feu rouge est une infraction du…",
+          "choices": [
+            "1er degré",
+            "2e degré",
+            "3e degré",
+            "4e degré"
+          ],
+          "correct": 2,
+          "explanation": "Franchir un feu rouge met directement en danger les autres usagers : infraction du 3e degré (174 € de perception immédiate).",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_DEG_3",
+          "question": "Que risque l'auteur d'une infraction du 4e degré ?",
+          "choices": [
+            "Une perception immédiate de 58 €",
+            "Une convocation au tribunal de police, avec déchéance possible du droit de conduire",
+            "Un simple avertissement",
+            "Une perception immédiate de 174 €"
+          ],
+          "correct": 1,
+          "explanation": "Le 4e degré ne se règle pas par perception immédiate : l'auteur est cité au tribunal de police et risque une déchéance du droit de conduire.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "D1_DEG_4",
+          "question": "Stationner sur une place réservée aux personnes handicapées : quel degré ?",
+          "choices": [
+            "1er degré",
+            "2e degré",
+            "3e degré",
+            "4e degré"
+          ],
+          "correct": 1,
+          "explanation": "Stationner sur une place réservée aux personnes handicapées est une infraction du 2e degré (116 € de perception immédiate).",
+          "theoryCardIndex": 4
         }
       ]
     },

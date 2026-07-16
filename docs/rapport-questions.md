@@ -4,18 +4,18 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 
 ## Résumé
 
-- **1759 questions** analysées
+- **1766 questions** analysées
 - **46 groupes de doublons potentiels** impliquant **99 questions**
 - Économie estimée si on garde 1-2 par groupe : ~**7 questions supprimables**
 - **22 problèmes de couverture** (points sans question ou questions orphelines)
-- **38 cartes surchargées** (6+ questions)
+- **39 cartes surchargées** (6+ questions)
 
 | Thème | Questions | Groupes doublons | Questions dans doublons |
 |---|---|---|---|
 | A — La voie publique | 410 | 15 | 34 |
 | B — Les usagers de la route | 96 | 2 | 6 |
-| C — La voiture | 174 | 3 | 6 |
-| D — La vitesse | 120 | 2 | 4 |
+| C — La voiture | 177 | 3 | 6 |
+| D — La vitesse | 124 | 2 | 4 |
 | E — Croisement et dépassement | 160 | 5 | 10 |
 | F — La priorité | 304 | 4 | 8 |
 | G — Où circuler | 88 | 5 | 11 |
@@ -63,11 +63,12 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 - B1 partie 3 : 15 questions (à élaguer)
 - B2 partie 2 : 19 questions (à élaguer)
 - C1 partie 1 : 14 questions (à élaguer)
+- C1 partie 4 : 12 questions (à élaguer)
 - C2 partie 7 : 12 questions (à élaguer)
 - C3 partie 4 : 12 questions (à élaguer)
 - D1 partie 1 : 14 questions (à élaguer)
 - D1 partie 2 : 21 questions (à élaguer)
-- D1 partie 5 : 13 questions (à élaguer)
+- D1 partie 5 : 17 questions (à élaguer)
 - D2 partie 2 : 14 questions (à élaguer)
 - E1 partie 2 : 12 questions (à élaguer)
 - E1 partie 4 : 12 questions (à élaguer)

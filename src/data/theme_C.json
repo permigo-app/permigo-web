@@ -157,6 +157,13 @@
               "content": "📋 La règle\nVotre permis provisoire n'est valable qu'en Belgique. À l'étranger, il vous faut le permis définitif.\n\n💡 Pourquoi\nLe permis provisoire est un document d'apprentissage reconnu uniquement par les autorités belges.\n\n🚗 En pratique\nSi vous partez en vacances à l'étranger, ne prenez pas le volant avec votre permis provisoire.\n\n📍 Exemple\nVous voulez conduire aux Pays-Bas avec votre permis provisoire belge : c'est interdit, attendez le permis définitif.\n\n⚠️ Erreur fréquente\nPenser que le permis provisoire belge est valable dans les pays voisins (France, Pays-Bas, Allemagne). Il ne l'est pas.",
               "emoji": "🌍",
               "explanation_simple": "Ton permis provisoire, c'est comme un abonnement local : il ne marche qu'en Belgique. Pour conduire à l'étranger, il te faut le permis définitif."
+            },
+            {
+              "type": "text",
+              "title": "6.2 — Permis provisoire : conduite interdite les nuits de week-end",
+              "content": "📋 La règle\nAvec un permis provisoire, il est interdit de conduire sur la voie publique :\n- du vendredi 22h au samedi 6h ;\n- du samedi 22h au dimanche 6h ;\n- du dimanche 22h au lundi 6h ;\n- la veille d'un jour férié de 22h à 6h ;\n- le soir du jour férié de 22h au lendemain 6h.\n\n💡 Pourquoi\nLes nuits de week-end et de fête concentrent le plus d'accidents graves chez les jeunes conducteurs (fatigue, alcool, trafic festif). Le législateur écarte les apprentis de ces heures à haut risque.\n\n🚗 En pratique\nRetenez la formule : week-ends et jours fériés, de 22h à 6h, le volant est interdit — que vous conduisiez seul ou avec votre guide.\n\n📍 Exemple\nSamedi 23h30, vous voulez rentrer d'une soirée avec votre permis provisoire : c'est interdit. Rentrez avec quelqu'un d'autre ou attendez 6h du matin.\n\n⚠️ Erreur fréquente\nCroire que l'interdiction ne vaut que le samedi soir, ou qu'être accompagné du guide la lève. Elle couvre les trois nuits du week-end ET les veilles et soirs de jours fériés, guide ou pas.",
+              "emoji": "🌙",
+              "explanation_simple": "Avec ton permis provisoire, les nuits de fête c'est zéro volant : vendredi, samedi et dimanche soir de 22h à 6h du matin — pareil pour les jours fériés. Même avec ton guide à côté, c'est non."
             }
           ]
         }
@@ -794,6 +801,45 @@
           "correct": 1,
           "explanation": "Le signal porte sur la MEC. Votre MEC (3 200 kg) > 3 000 kg : vous ne pouvez pas passer.",
           "theoryCardIndex": 0
+        },
+        {
+          "id": "C1_PROV_1",
+          "question": "Vous avez un permis de conduire provisoire B. Quand ne pouvez-vous PAS conduire ?",
+          "choices": [
+            "Jamais la nuit, tous les jours",
+            "Les nuits de week-end et de jours fériés, de 22h à 6h",
+            "Uniquement le dimanche toute la journée",
+            "Après 20h en semaine"
+          ],
+          "correct": 1,
+          "explanation": "Le permis provisoire interdit de conduire du vendredi, samedi et dimanche soir 22h jusqu'au lendemain 6h, ainsi que les veilles et soirs de jours fériés.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "C1_PROV_2",
+          "question": "Samedi soir, 23h. Vous avez un permis provisoire et votre guide est assis à côté de vous. Pouvez-vous conduire ?",
+          "choices": [
+            "Non : interdit jusqu'à 6h du matin, même accompagné",
+            "Oui, puisque le guide est présent",
+            "Oui, sur les routes communales uniquement",
+            "Oui, pour un trajet de moins de 10 km"
+          ],
+          "correct": 0,
+          "explanation": "Les nuits de week-end (22h-6h), la conduite est interdite avec un permis provisoire — la présence du guide ne change rien.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "C1_PROV_3",
+          "question": "Avec un permis provisoire, vous voulez conduire la veille d'un jour férié à 23h. Est-ce autorisé ?",
+          "choices": [
+            "Non : les veilles de jours fériés, la conduite est interdite de 22h à 6h",
+            "Oui, car ce n'est pas un week-end",
+            "Oui, jusqu'à minuit seulement",
+            "Oui, si le trajet est court"
+          ],
+          "correct": 0,
+          "explanation": "L'interdiction 22h-6h couvre les nuits de week-end, mais aussi les veilles et les soirs de jours fériés.",
+          "theoryCardIndex": 3
         }
       ]
     },
