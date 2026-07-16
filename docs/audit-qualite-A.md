@@ -16,43 +16,29 @@ _Aucun_
 
 _Aucun_
 
-## Question référençant un panneau sans code "sign" (36)
+## Question référençant un panneau sans code "sign" (22)
 
-- A2_Q8 : "Vous voyez un panneau de limitation de vitesse sur une route ordinaire" — référence un panneau mais aucun code 'sign'
-- A2_Q51 : "Vous voyez un signal de rétrécissement par la droite. Vous êtes sur la" — référence un panneau mais aucun code 'sign'
-- A2_Q65 : "Vous voyez un signal indiquant que la circulation va passer en double " — référence un panneau mais aucun code 'sign'
 - A3_Q6 : "Le signal avec piéton et vélo l'un au-dessus de l'autre signifie :" — référence un panneau mais aucun code 'sign'
 - A3_Q16 : "À quelle distance se trouve le signal de danger rouge avant un passage" — référence un panneau mais aucun code 'sign'
 - A3_Q17 : "Où se trouve le signal d'indication bleu par rapport au passage pour c" — référence un panneau mais aucun code 'sign'
 - A3_Q39 : "Le signal de danger avec une bicyclette a combien de significations ?" — référence un panneau mais aucun code 'sign'
-- A3_Q85 : "Vous voyez un signal d'accès interdit aux cycles suivi d'une piste cyc" — référence un panneau mais aucun code 'sign'
-- A3_Q86 : "Vous voyez un panneau de voie sans issue sauf cyclistes et piétons. Vo" — référence un panneau mais aucun code 'sign'
-- A3_Q87 : "Vous voyez un signal de début de zone cyclable puis un panneau 30 km/h" — référence un panneau mais aucun code 'sign'
 - A4_Q8 : "Un signal indique 90 km/h sur les deux bandes de gauche et 70 km/h sur" — référence un panneau mais aucun code 'sign'
 - A4_Q9 : "Un signal de préavis indique une limitation à 1,5 km. Devez-vous déjà " — référence un panneau mais aucun code 'sign'
 - A4_Q76 : "Comment les échangeurs sont-ils signalés ?" — référence un panneau mais aucun code 'sign'
 - A4_Q77 : "Comment les sorties d'autoroute sont-elles signalées ?" — référence un panneau mais aucun code 'sign'
-- A4_Q81 : "Vous voyez le signal de fin d'autoroute. Que devez-vous savoir ?" — référence un panneau mais aucun code 'sign'
-- A4_Q85 : "Ce signal avec "Ring" signifie :" — référence un panneau mais aucun code 'sign'
-- A4_Q87 : "Vous voyez le signal de début d'autoroute. Quelles règles s'appliquent" — référence un panneau mais aucun code 'sign'
 - A4_Q88 : "Vous roulez sur une route ordinaire et voyez un signal de numéro de ro" — référence un panneau mais aucun code 'sign'
-- A4_Q89 : "Vous voyez un signal de limitation par bande indiquant 70 km/h sur la " — référence un panneau mais aucun code 'sign'
-- A5_Q52 : "Vous voyez le signal de fin de route pour automobiles. Que change-t-il" — référence un panneau mais aucun code 'sign'
 - A5_Q54 : "Quelle est la différence visuelle entre le signal d'autoroute et celui" — référence un panneau mais aucun code 'sign'
 - A5_Q59 : "Vous roulez sur une route pour automobiles hors agglomération en Wallo" — référence un panneau mais aucun code 'sign'
 - A5_Q60 : "Vous roulez sur une route pour automobiles et voyez le signal de fin d" — référence un panneau mais aucun code 'sign'
-- A5_Q61 : "Vous voyez le signal de début de route pour automobiles puis un pannea" — référence un panneau mais aucun code 'sign'
 - A6_Q2 : "Le panneau jaune à bord rouge indiquant le nom d'une commune a-t-il un" — référence un panneau mais aucun code 'sign'
 - A6_Q9 : "Un signal de limitation à 70 km/h se trouve après le panneau d'accès à" — référence un panneau mais aucun code 'sign'
 - A6_Q15 : "Vous quittez l'agglomération et voyez un panneau 50 km/h juste après l" — référence un panneau mais aucun code 'sign'
 - A6_Q44 : "Un panneau électronique de zone n'est pas illuminé. L'obligation est-e" — référence un panneau mais aucun code 'sign'
 - A6_Q46 : "Vous voyez un panneau électronique de zone 30 illuminé. Que devez-vous" — référence un panneau mais aucun code 'sign'
-- A6_Q48 : "Vous voyez un signal "présence possible d'enfants" mais pas de signal " — référence un panneau mais aucun code 'sign'
 - A6_Q63 : "Votre propriété est accessible uniquement par un chemin réservé. Pouve" — référence un panneau mais aucun code 'sign'
 - A6_Q64 : "Vous n'êtes pas repris sur le signal d'un chemin réservé et votre prop" — référence un panneau mais aucun code 'sign'
 - A6_Q84 : "Vous êtes dans une zone 30. Un panneau 50 km/h apparaît-il automatique" — référence un panneau mais aucun code 'sign'
 - A6_Q86 : "Le signal de chemin réservé peut-il être adapté en fonction des catégo" — référence un panneau mais aucun code 'sign'
-- A6_Q95 : "Vous voyez un signal de zone résidentielle suivi d'un signal de zone 3" — référence un panneau mais aucun code 'sign'
 - A6_Q97 : "Vous voyez un panneau électronique de zone 30 éteint. Devez-vous roule" — référence un panneau mais aucun code 'sign'
 
 ## Bonne réponse "devinable" (trop longue/détaillée vs les autres) (85)
