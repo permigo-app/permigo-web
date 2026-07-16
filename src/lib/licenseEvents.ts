@@ -2,7 +2,7 @@
 
 import { supabase } from './supabase';
 
-export type LicenseCode = 'B' | 'A' | 'C';
+export type LicenseCode = 'B' | 'AM' | 'A';
 
 const KEY_LICENSE = 'license_type';
 
@@ -33,7 +33,7 @@ export async function recordLicenseEvent(
 export function getChosenLicense(): LicenseCode {
   if (typeof window === 'undefined') return 'B';
   const raw = localStorage.getItem(KEY_LICENSE);
-  return raw === 'A' || raw === 'C' ? raw : 'B';
+  return raw === 'A' || raw === 'AM' ? raw : 'B';
 }
 
 export function hasChosenLicense(): boolean {

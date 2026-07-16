@@ -24,25 +24,27 @@ function VehicleIcon({ kind, color }: { kind: LicenseCode; color: string }) {
       </svg>
     );
   }
-  if (kind === 'A') {
+  if (kind === 'AM') {
+    // Scooter / cyclomoteur : plancher plat, colonne de direction, guidon
     return (
       <svg {...common}>
-        <circle cx="5" cy="17.5" r="3" />
-        <circle cx="19" cy="17.5" r="3" />
-        <path d="M5 17.5 8.5 11h4l2 3.5h2.5" />
-        <path d="M13.8 8.5 15.5 6H18" />
-        <path d="M8.5 11 7 8.5H4.5" />
-        <path d="M12.5 14.5 14 17.5H9" />
+        <circle cx="5.5" cy="17.5" r="2.5" />
+        <circle cx="18.5" cy="17.5" r="2.5" />
+        <path d="M8 17.5h5" />
+        <path d="M13 17.5 16.6 7.5" />
+        <path d="M15 7.5h3.6" />
+        <path d="M5.5 17.5 7.3 12h3.2" />
       </svg>
     );
   }
   return (
     <svg {...common}>
-      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
-      <path d="M15 18H9" />
-      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
-      <circle cx="17" cy="18" r="2" />
-      <circle cx="7" cy="18" r="2" />
+      <circle cx="5" cy="17.5" r="3" />
+      <circle cx="19" cy="17.5" r="3" />
+      <path d="M5 17.5 8.5 11h4l2 3.5h2.5" />
+      <path d="M13.8 8.5 15.5 6H18" />
+      <path d="M8.5 11 7 8.5H4.5" />
+      <path d="M12.5 14.5 14 17.5H9" />
     </svg>
   );
 }
@@ -58,8 +60,8 @@ function BellIcon({ color }: { color: string }) {
 
 const LICENSES: { code: LicenseCode; available: boolean }[] = [
   { code: 'B', available: true },
+  { code: 'AM', available: false },
   { code: 'A', available: false },
-  { code: 'C', available: false },
 ];
 
 export default function ChoixPermisPage() {
@@ -164,7 +166,7 @@ export default function ChoixPermisPage() {
               );
             }
 
-            // ── Cartes "Bientôt" (Moto, Camion) — Préviens-moi intégré ──
+            // ── Cartes "Bientôt" (AM, Moto) — Préviens-moi intégré ──
             return (
               <div
                 key={lic.code}
