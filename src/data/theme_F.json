@@ -871,8 +871,8 @@
           "question": "Vous vous demandez ce qu'un pompier peut faire en matière de circulation, comparé à un agent qualifié. Quelle est la différence ?",
           "choices": [
             "Il n'y a aucune différence entre les deux",
-            "Le pompier peut régler la circulation sur son lieu d'intervention mais ne peut pas rédiger de PV ; l'agent qualifié peut faire les deux",
-            "Le pompier a plus de pouvoir que l'agent",
+            "Le pompier règle la circulation mais ne dresse pas de PV ; l'agent peut les deux",
+            "Le pompier a plus de pouvoirs que l'agent",
             "L'agent qualifié ne peut pas régler la circulation"
           ],
           "correct": 1,
@@ -1649,7 +1649,7 @@
           "question": "La flèche verte est allumée au-dessus de la bande de gauche. Devez-vous obligatoirement y rouler ?",
           "choices": [
             "Oui, vous devez obligatoirement emprunter cette bande",
-            "Non, vous circulez normalement à droite ; les bandes de gauche ne sont utilisées que pour dépasser, choisir sa destination ou en trafic dense",
+            "Non, vous restez à droite ; la gauche sert à dépasser ou choisir sa destination",
             "Oui, la bande de gauche est toujours préférable",
             "Cela dépend de l'heure de la journée"
           ],
@@ -4781,9 +4781,9 @@
           "id": "F6_Q21",
           "question": "Un obstacle bloque votre bande de circulation. Vous devez le contourner. Le SSF se trouve juste à côté. Pouvez-vous l'emprunter ?",
           "choices": [
-            "Non, le SSF est toujours interdit",
-            "Oui, contourner un obstacle en chaussée via le SSF est l'une des exceptions autorisées",
-            "Non, faites demi-tour",
+            "Non, le SSF est interdit en toutes circonstances",
+            "Oui, contourner un obstacle est l'une des exceptions autorisées",
+            "Non, vous devez faire demi-tour",
             "Oui, mais uniquement de nuit"
           ],
           "correct": 1,
@@ -5168,9 +5168,9 @@
           "question": "Vous attendez le bus en stationnant votre voiture à l'arrêt de bus. Est-ce autorisé ?",
           "choices": [
             "Oui, puisque c'est un arrêt de bus",
-            "Non, attendre dans votre voiture est assimilé à du stationnement et c'est interdit",
-            "Oui, brièvement",
-            "Oui, avec les feux de détresse"
+            "Non, c'est assimilé à du stationnement, donc interdit",
+            "Oui, mais brièvement seulement",
+            "Oui, avec les feux de détresse allumés"
           ],
           "correct": 1,
           "explanation": "Attendre le bus dans votre voiture à un arrêt est assimilé à du stationnement, ce qui est interdit.",

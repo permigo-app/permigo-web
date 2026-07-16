@@ -917,8 +917,8 @@
           "choices": [
             "Debut d'une zone residentielle",
             "Les regles de la zone pietonne ne s'appliquent plus",
-            "Sens interdit",
-            "Zone 30"
+            "Sens interdit a tous les vehicules",
+            "Debut d'une zone 30"
           ],
           "correct": 1,
           "explanation": "Le signal de fin de zone piétonne signifie que les règles spéciales de la zone ne s'appliquent plus.",
@@ -929,10 +929,10 @@
           "id": "B1_Q70",
           "question": "Vous voyez un signal rond bleu avec pieton et velo cote a cote. Que signifie-t-il ?",
           "choices": [
-            "Zone pietonne",
+            "Zone pietonne exclusivement",
             "Partie reservee aux pietons, velos et cyclomoteurs classe A",
-            "Piste cyclable uniquement",
-            "Trottoir uniquement"
+            "Piste cyclable obligatoire uniquement",
+            "Trottoir reserve aux pietons uniquement"
           ],
           "correct": 1,
           "explanation": "Piéton et vélo côte à côte = partie réservée aux piétons, cyclistes et cyclomoteurs classe A.",
@@ -943,10 +943,10 @@
           "id": "B1_Q71",
           "question": "Vous voyez un signal rond bleu divise en deux par une ligne verticale, avec un pieton d'un cote et un velo de l'autre. Que signifie-t-il ?",
           "choices": [
-            "Partie reservee a tous les usagers",
-            "Partie reservee aux pietons et cyclistes uniquement, cyclomoteurs interdits",
-            "Piste cyclable obligatoire",
-            "Zone pietonne"
+            "Partie reservee a tous les usagers faibles",
+            "Partie reservee aux pietons et cyclistes, cyclomoteurs interdits",
+            "Piste cyclable obligatoire pour tous les velos",
+            "Debut d'une zone pietonne"
           ],
           "correct": 1,
           "explanation": "Piéton et vélo l'un au-dessus de l'autre = réservé piétons et cyclistes, cyclomoteurs interdits.",
@@ -1474,10 +1474,10 @@
           "id": "B2_Q40",
           "question": "Vous voyez un signal rond rouge avec un autocar. Que signifie-t-il ?",
           "choices": [
-            "Arret de bus",
+            "Arret de bus a proximite",
             "Acces interdit aux conducteurs d'autocars",
-            "Gare routiere",
-            "Bus prioritaire"
+            "Gare routiere a proximite",
+            "Itineraire conseille aux autocars"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux conducteurs d'autocars.",
@@ -1488,10 +1488,10 @@
           "id": "B2_Q41",
           "question": "Vous voyez un signal rond rouge avec un chariot attele. Que signifie-t-il ?",
           "choices": [
-            "Zone agricole",
+            "Zone agricole a proximite",
             "Acces interdit aux conducteurs de vehicules atteles",
-            "Ferme a proximite",
-            "Chemin de campagne"
+            "Ferme ou exploitation a proximite",
+            "Chemin reserve aux vehicules agricoles"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules attelés (charrettes, chariots, etc.).",
