@@ -722,10 +722,10 @@
           "id": "I1_Q45",
           "question": "Vous soufflez 0,15 pour mille dans votre éthylotest antidémarrage. Votre moteur démarre-t-il ?",
           "choices": [
-            "Non",
+            "Non, le moteur reste bloqué",
             "Oui, car 0,15 est inférieur au seuil de 0,2 pour mille",
-            "Cela dépend de l'appareil",
-            "Non, tout alcool est interdit"
+            "Cela dépend du réglage de l'appareil",
+            "Non, tout alcool bloque le démarrage"
           ],
           "correct": 1,
           "explanation": "0,15 ‰ < 0,2 ‰ : le seuil n'est pas atteint, le moteur démarre.",
@@ -1288,9 +1288,9 @@
           "question": "Vous cherchez votre gilet fluorescent dans le coffre. Est-ce le bon endroit pour le ranger ?",
           "choices": [
             "Oui, le coffre convient parfaitement",
-            "Non, le gilet doit être dans l'HABITACLE pour l'enfiler AVANT de sortir du véhicule",
-            "Oui, dans la boîte à gants",
-            "Peu importe, sous le siège"
+            "Non, il doit être dans l'HABITACLE, à enfiler AVANT de sortir",
+            "Oui, la boîte à gants est aussi valable",
+            "Peu importe, sous le siège par exemple"
           ],
           "correct": 1,
           "explanation": "Le gilet doit être dans l'habitacle pour pouvoir l'enfiler AVANT de sortir du véhicule sur autoroute/voie rapide.",
@@ -1378,10 +1378,10 @@
           "id": "I2_Q18",
           "question": "Vous abîmez une voiture garée et vous ne trouvez pas le propriétaire. Que devez-vous faire ?",
           "choices": [
-            "Vous partez discrètement",
+            "Vous partez discrètement sans rien faire",
             "Vous laissez vos coordonnées sur place OU vous informez la police",
-            "Vous attendez indéfiniment",
-            "Rien de particulier"
+            "Vous attendez le propriétaire indéfiniment",
+            "Rien, l'assurance s'en chargera"
           ],
           "correct": 1,
           "explanation": "En cas de dégâts sans propriétaire présent : laisser vos données d'identité ou informer la police.",
@@ -1600,10 +1600,10 @@
           "id": "I2_Q37",
           "question": "Vous arrivez sur un accident. Un blessé est au sol. Devez-vous le déplacer ?",
           "choices": [
-            "Oui, éloignez-le du véhicule",
+            "Oui, éloignez-le du véhicule accidenté",
             "Non, ne déplacez pas la victime et attendez les secours, sauf en cas d'incendie",
-            "Oui, mettez-le sur le trottoir",
-            "Cela dépend de ses blessures"
+            "Oui, mettez-le à l'abri sur le trottoir",
+            "Cela dépend de la gravité de ses blessures"
           ],
           "correct": 1,
           "explanation": "Il ne faut pas déplacer la victime et attendre les secours, sauf en cas d'incendie.",
@@ -3931,10 +3931,10 @@
           "id": "I4_Q57",
           "question": "Vous êtes en situation de sous-virage. Devez-vous freiner fortement ?",
           "choices": [
-            "Oui, c'est le bon réflexe",
+            "Oui, c'est le bon réflexe immédiat",
             "Non, freiner fortement bloque les roues et fait perdre l'adhérence",
-            "Oui, avec l'ABS activé",
-            "Cela dépend de la vitesse"
+            "Oui, mais uniquement avec l'ABS activé",
+            "Cela dépend de la vitesse du véhicule"
           ],
           "correct": 1,
           "explanation": "Freiner fort lors d'un sous-virage bloque les roues avant, aggravant la perte d'adhérence.",
@@ -4139,10 +4139,10 @@
           "id": "I4_Q74",
           "question": "Vous souhaitez utiliser votre smartphone comme GPS en conduisant. Est-ce autorisé ?",
           "choices": [
-            "Non, c'est interdit",
+            "Non, c'est interdit en toutes circonstances",
             "Oui, à condition qu'il soit placé dans un support approprié fixé au véhicule",
-            "Oui, en le tenant en main",
-            "Non, utilisez uniquement un GPS dédié"
+            "Oui, même en le tenant en main",
+            "Non, seuls les GPS dédiés sont autorisés"
           ],
           "correct": 1,
           "explanation": "Un smartphone peut servir de GPS s'il est fixé dans un support approprié.",

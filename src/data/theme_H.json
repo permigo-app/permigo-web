@@ -645,10 +645,10 @@
           "id": "H1_Q38",
           "question": "Vous voyez des marques en damier sur la chaussée et vous envisagez de vous y arrêter. Pouvez-vous le faire ?",
           "choices": [
-            "Oui, pour un bref instant",
-            "Non, l'arrêt et le stationnement sont interdits sur les marques en damier",
+            "Oui, pour un bref instant seulement",
+            "Non, l'arrêt et le stationnement y sont interdits",
             "Oui, pour charger des marchandises",
-            "Cela dépend du lieu"
+            "Cela dépend du lieu et de l'heure"
           ],
           "correct": 1,
           "explanation": "Les marques en damier interdisent l'arrêt et le stationnement.",
@@ -818,9 +818,9 @@
           "question": "Vous révisez l'exception aux règles de distance. Quelles sont les deux conditions cumulatives pour qu'elle s'applique ?",
           "choices": [
             "Le signal doit être rouge et le véhicule petit",
-            "Le bord inférieur du signal/feu doit être à 2 m minimum de haut ET le véhicule (chargement compris) ne doit pas dépasser 1,65 m",
-            "Le signal doit être vert et le véhicule neuf",
-            "Le signal doit être à 1 m et le véhicule à 2 m"
+            "Signal à 2 m de haut minimum ET véhicule (chargement compris) sous 1,65 m",
+            "Le signal doit être vert et le véhicule récent",
+            "Le signal à 1 m et le véhicule sous 2 m"
           ],
           "correct": 1,
           "explanation": "Deux conditions cumulatives : signal à ≥ 2 m de hauteur ET véhicule (chargement compris) ≤ 1,65 m.",
@@ -856,10 +856,10 @@
           "id": "H1_Q57",
           "question": "Vous cherchez à vous arrêter sur la chaussée, à 3 mètres avant un passage piétons. Est-ce autorisé ?",
           "choices": [
-            "Oui, 3 mètres suffisent",
-            "Non, il faut au moins 5 mètres en deçà d'un passage piétons sur la chaussée",
-            "Oui, 3 mètres c'est acceptable",
-            "Il faut au moins 20 mètres"
+            "Oui, 3 mètres suffisent largement",
+            "Non, il faut au moins 5 mètres avant le passage",
+            "Oui, à partir de 2 mètres c'est bon",
+            "Non, il faut au moins 20 mètres"
           ],
           "correct": 1,
           "explanation": "Il est interdit de s'arrêter ou stationner à moins de 5 m en deçà d'un passage piétons (chaussée uniquement).",
@@ -909,8 +909,8 @@
           "question": "Vous traversez un pont et vous souhaitez stationner SUR le pont. Est-ce autorisé ?",
           "choices": [
             "Non, c'est interdit sur un pont",
-            "Oui, l'interdiction concerne le stationnement SOUS les ponts, pas sur les ponts",
-            "Non, c'est toujours interdit",
+            "Oui, l'interdiction vise le dessous des ponts, pas le dessus",
+            "Non, c'est toujours interdit partout",
             "Cela dépend du type de pont"
           ],
           "correct": 1,
@@ -1434,8 +1434,8 @@
           "id": "H2_Q10",
           "question": "Vous vous garez à un endroit où votre véhicule empêche un autre véhicule de quitter sa place. Pouvez-vous stationner ?",
           "choices": [
-            "Oui, pour quelques instants",
-            "Non, le stationnement est interdit si vous empêchez un véhicule de quitter son emplacement",
+            "Oui, pour quelques instants seulement",
+            "Non, c'est interdit si vous bloquez la sortie d'un véhicule",
             "Oui, en activant vos feux de détresse",
             "Oui, si vous restez dans la voiture"
           ],
@@ -1656,10 +1656,10 @@
           "id": "H2_Q31",
           "question": "Vous êtes hors agglomération sur une voie à deux chaussées. Pouvez-vous stationner du côté gauche ?",
           "choices": [
-            "Oui, des deux côtés",
-            "Non, le stationnement est interdit du côté gauche hors agglomération",
+            "Oui, des deux côtés librement",
+            "Non, c'est interdit du côté gauche hors agglomération",
             "Oui, si c'est un sens unique",
-            "Cela dépend de la vitesse"
+            "Cela dépend de la vitesse autorisée"
           ],
           "correct": 1,
           "explanation": "Hors agglomération, le stationnement est interdit du côté gauche d'une voie à 2 chaussées.",
@@ -1748,8 +1748,8 @@
           "question": "Vous voyez un signal circulaire bleu avec UNE ligne diagonale rouge. Que signifie-t-il ?",
           "choices": [
             "L'arrêt et le stationnement sont interdits",
-            "Le stationnement est interdit (l'arrêt reste permis) sur la chaussée et l'accotement du côté du signal",
-            "Le stationnement est autorisé",
+            "Stationnement interdit (l'arrêt reste permis) du côté du signal",
+            "Le stationnement est autorisé des deux côtés",
             "Vous entrez dans une zone résidentielle"
           ],
           "correct": 1,
@@ -1762,8 +1762,8 @@
           "question": "Vous voyez un signal circulaire bleu avec DEUX lignes diagonales rouges. Que signifie-t-il ?",
           "choices": [
             "Le stationnement seul est interdit",
-            "L'arrêt ET le stationnement sont interdits sur la chaussée et l'accotement du côté du signal",
-            "Le stationnement est autorisé",
+            "L'arrêt ET le stationnement interdits du côté du signal",
+            "Le stationnement est autorisé des deux côtés",
             "Vous entrez dans une zone piétonne"
           ],
           "correct": 1,
@@ -1963,10 +1963,10 @@
           "id": "H2_Q64",
           "question": "Nous sommes le 30 avril. Devez-vous changer de côté entre 19h30 et 20h ?",
           "choices": [
-            "Non, avril a 31 jours",
-            "Oui, le 30 avril est le dernier jour du mois, vous devez changer de côté",
-            "Non, ce n'est pas le dernier jour",
-            "Cela dépend de l'année"
+            "Non, avril compte 31 jours",
+            "Oui, c'est le dernier jour du mois, il faut changer de côté",
+            "Non, ce n'est pas le dernier jour du mois",
+            "Cela dépend de l'année bissextile"
           ],
           "correct": 1,
           "explanation": "Avril a 30 jours : le 30 avril est bien le dernier jour, donc changement de côté entre 19h30 et 20h.",
@@ -2473,10 +2473,10 @@
           "id": "H3_Q21",
           "question": "Vous vous garez devant un parcomètre. Devez-vous payer ?",
           "choices": [
-            "C'est facultatif",
+            "Non, c'est facultatif en journée",
             "Oui, vous devez payer le tarif affiché sur l'appareil",
-            "Non, c'est gratuit",
-            "Uniquement le week-end"
+            "Non, le stationnement y est gratuit",
+            "Uniquement le week-end et les jours fériés"
           ],
           "correct": 1,
           "explanation": "Le paiement au parcomètre est obligatoire selon le tarif affiché.",

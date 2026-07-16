@@ -832,7 +832,7 @@
           "question": "Vous subissez un retrait immédiat sur place. Pourrez-vous aussi être déchu par un juge plus tard ?",
           "choices": [
             "Non, c'est l'un ou l'autre",
-            "Oui, vous pouvez d'abord subir un retrait immédiat puis être déchu par un juge plus tard",
+            "Oui, le retrait immédiat et la déchéance peuvent se cumuler",
             "Non, la déchéance annule le retrait",
             "Uniquement pour les récidivistes"
           ],
@@ -940,10 +940,10 @@
           "id": "D1_Q72",
           "question": "Vous voyez un panneau indiquant « zone 30 ». Que signifie-t-il ?",
           "choices": [
-            "30 mètres de zone",
+            "Une zone longue de 30 mètres",
             "Commencement d'une zone à vitesse limitée à 30 km/h",
-            "30 km avant la destination",
-            "30% de pente"
+            "30 km avant la destination indiquée",
+            "Une pente de 30 % annoncée"
           ],
           "correct": 1,
           "explanation": "Ce signal marque le commencement d'une zone à vitesse limitée à 30 km/h.",
@@ -1870,10 +1870,10 @@
           "id": "D2_Q52",
           "question": "Votre voiture est équipée de l'ABS. Pouvez-vous vous fier entièrement à ce système et relâcher votre attention ?",
           "choices": [
-            "Oui, l'ABS gère tout",
+            "Oui, l'ABS gère tout à votre place",
             "Non, le conducteur doit rester attentif et adapter sa conduite",
             "Oui, sur les voitures récentes",
-            "Oui, sur sol sec"
+            "Oui, mais uniquement sur sol sec"
           ],
           "correct": 1,
           "explanation": "L'ABS est une aide, pas un remplacement de la vigilance. Le conducteur doit toujours adapter sa conduite.",
@@ -1922,10 +1922,10 @@
           "id": "D2_Q57",
           "question": "Vous inspectez vos pneus et remarquez de petites barres dans les rainures principales. Que sont-elles ?",
           "choices": [
-            "Des capteurs électroniques",
-            "Des témoins d'usure (TWI) situés dans les rainures principales des pneus",
-            "Des marques de fabrication",
-            "Des indicateurs de pression"
+            "Des capteurs électroniques de pression",
+            "Des témoins d'usure (TWI) dans les rainures principales",
+            "Des marques de fabrication du pneu",
+            "Des indicateurs de pression intégrés"
           ],
           "correct": 1,
           "explanation": "Les TWI (Tread Wear Indicators) sont des témoins d'usure dans les rainures. Quand la bande de roulement les atteint, les pneus sont usés.",
