@@ -792,8 +792,8 @@
           "question": "Un carrefour comporte un feu vert et un panneau B22 (cédez-le-passage pour cyclistes). Le feu vert annule-t-il le B22 ?",
           "choices": [
             "Oui, le feu vert prime sur le panneau",
-            "Non, les signaux B22 et B23 ne sont pas soumis à la hiérarchie feux > panneaux",
-            "Oui, dans tous les cas",
+            "Non, les B22 et B23 échappent à la hiérarchie feux > panneaux",
+            "Oui, dans absolument tous les cas",
             "Non, ils ne sont annulés que par un agent"
           ],
           "correct": 1,
@@ -3932,8 +3932,8 @@
           "id": "F5_Q25",
           "question": "Après les rétroviseurs et l'angle mort, quelle est la troisième étape pour tourner à gauche ?",
           "choices": [
-            "Freiner",
-            "Tourner le volant",
+            "Freiner progressivement",
+            "Tourner le volant vers la gauche",
             "Activer l'indicateur de direction (clignotant)",
             "Vérifier à nouveau les rétroviseurs"
           ],
@@ -4604,9 +4604,9 @@
           "question": "Vous apercevez un signal de danger sans barrière représentée, placé à 150 mètres. Que signifie-t-il ?",
           "choices": [
             "Un passage à niveau avec barrières",
-            "Un passage à niveau SANS barrières se trouve dans 150 mètres — vigilance accrue",
+            "Un passage à niveau SANS barrières à 150 mètres",
             "Le passage est libre de tout danger",
-            "Il ne comporte qu'une seule voie"
+            "Un passage à niveau à une seule voie"
           ],
           "correct": 1,
           "explanation": "Signal sans barrières à 150 m = passage sans barrières dans 150 m.",
@@ -4863,8 +4863,8 @@
           "choices": [
             "Tous les véhicules sans restriction",
             "Uniquement les véhicules de transport en commun (tram et bus)",
-            "Uniquement les cyclistes",
-            "Les taxis également"
+            "Uniquement les cyclistes et piétons",
+            "Les taxis et bus scolaires également"
           ],
           "correct": 1,
           "explanation": "Sans panneau additionnel, seuls les véhicules de transport en commun (tram, bus) peuvent circuler sur le SSF.",
@@ -4942,7 +4942,7 @@
           "question": "Il n'y a pas de bouchon sur l'autoroute. Les bus circulent-ils quand même sur le SSF à 50 km/h ?",
           "choices": [
             "Oui, les bus doivent toujours emprunter le SSF",
-            "Non, en l'absence de bouchon ils préfèrent la bande de droite pour ne pas rouler à 50 km/h",
+            "Non, sans bouchon ils préfèrent la bande de droite",
             "Oui, c'est leur obligation légale",
             "Cela dépend de l'heure de la journée"
           ],
@@ -5128,8 +5128,8 @@
           "id": "F6_Q49",
           "question": "Vous hésitez entre une bande bus et un SSF. Comment les distinguer ?",
           "choices": [
-            "Par la couleur de la chaussée",
-            "La bande bus est délimitée par une ligne discontinue ; le SSF par une ligne continue",
+            "Par la couleur du revêtement de la chaussée",
+            "Bande bus : ligne discontinue ; SSF : ligne continue",
             "Par les panneaux uniquement, pas par la ligne",
             "Il n'y a aucune différence visuelle"
           ],

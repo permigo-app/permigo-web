@@ -711,7 +711,7 @@
           "choices": [
             "Non, c'est automatique et obligatoire",
             "Oui, mais il doit explicitement le décider et motiver sa décision",
-            "Non, en aucun cas",
+            "Non, en aucun cas ce n'est possible",
             "Oui, sans avoir à se justifier"
           ],
           "correct": 1,
@@ -1731,9 +1731,9 @@
           "id": "I2_Q48",
           "question": "Votre médecin vous a déclaré inapte à conduire. Les samedis, dimanches et jours fériés comptent-ils dans le délai de 4 jours ?",
           "choices": [
-            "Oui",
+            "Oui, tous les jours comptent",
             "Non, ils ne sont pas comptés dans le délai",
-            "Oui, uniquement les samedis",
+            "Oui, mais uniquement les samedis",
             "Cela dépend de la commune"
           ],
           "correct": 1,
@@ -1901,10 +1901,10 @@
           "id": "I2_Q61",
           "question": "Vous êtes dans un tunnel et vous souhaitez faire marche arrière. Est-ce autorisé ?",
           "choices": [
-            "Oui, pour un bref instant",
+            "Oui, mais pour un bref instant",
             "Non, la marche arrière est interdite dans un tunnel",
-            "Oui, pour stationner",
-            "Cela dépend du trafic"
+            "Oui, mais uniquement pour stationner",
+            "Cela dépend de la densité du trafic"
           ],
           "correct": 1,
           "explanation": "La marche arrière est interdite dans un tunnel.",
@@ -3567,10 +3567,10 @@
           "id": "I4_Q29",
           "question": "Vous voyez le marquage \"E\" sur votre pneu. Que signifie-t-il ?",
           "choices": [
-            "Le fabricant du pneu",
+            "Le nom du fabricant du pneu",
             "Le respect des normes de sécurité européennes",
-            "La date de fabrication",
-            "Le pays d'origine"
+            "La date de fabrication du pneu",
+            "Le pays d'origine du pneu"
           ],
           "correct": 1,
           "explanation": "Le marquage E atteste que le pneu répond aux normes de sécurité européennes.",
@@ -3710,9 +3710,9 @@
           "id": "I4_Q40",
           "question": "Vous entendez un sifflement aigu lorsque vous freinez. Que signifie-t-il ?",
           "choices": [
-            "Vos freins sont en bon état",
+            "Vos freins sont en parfait état",
             "Vos plaquettes de frein sont usées et doivent être remplacées",
-            "Vos pneus sont usés",
+            "Vos pneus sont usés à l'avant",
             "L'ABS est en train de fonctionner"
           ],
           "correct": 1,

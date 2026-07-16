@@ -355,9 +355,9 @@
           "id": "E1_Q20",
           "question": "Vous vous apprêtez à croiser un tram par la gauche à cause d'un obstacle à droite. Que devez-vous vérifier ?",
           "choices": [
-            "La vitesse exacte du tram",
-            "Qu'aucun véhicule ne vient en sens contraire et que vous ne gênez pas d'autres usagers",
-            "Que le tram va s'arrêter pour vous laisser passer",
+            "La vitesse exacte du tram qui arrive",
+            "Qu'aucun véhicule ne vient en face et que vous ne gênez personne",
+            "Que le tram va s'arrêter pour vous",
             "Que la chaussée est suffisamment sèche"
           ],
           "correct": 1,
@@ -1628,10 +1628,10 @@
           "id": "E2_Q61",
           "question": "Vous circulez en agglomération sur une chaussée à deux sens avec seulement 2 bandes (1 par sens). Pouvez-vous choisir librement votre bande ?",
           "choices": [
-            "Oui, c'est en agglomération",
+            "Oui, puisque c'est en agglomération",
             "Non, il faut au moins 4 bandes (dont 2 par sens) sur une chaussée à deux sens",
             "Oui, si la densité du trafic le justifie",
-            "Oui, dans les virages uniquement"
+            "Oui, mais dans les virages uniquement"
           ],
           "correct": 1,
           "explanation": "Sur 2 bandes (1 par sens), le choix libre de bande en agglomération ne s'applique pas.",
@@ -1707,10 +1707,10 @@
           "id": "E2_Q67",
           "question": "Vous êtes motocycliste dans un embouteillage. Les véhicules autour roulent à 35 km/h. Pouvez-vous rouler à 50 km/h entre les files ?",
           "choices": [
-            "Oui, c'est la vitesse maximale absolue",
-            "Oui, car 35 + 20 = 55 km/h (max relatif) et 50 km/h (max absolu) : les deux conditions sont remplies",
+            "Oui, c'est la vitesse maximale absolue permise",
+            "Oui : 35 + 20 = 55 (max relatif) et 50 km/h max absolu respectés",
             "Non, vous ne pouvez rouler qu'à 35 km/h",
-            "Non, vous devez vous arrêter si les véhicules roulent"
+            "Non, vous devez rester derrière les files"
           ],
           "correct": 1,
           "explanation": "35 + 20 = 55 km/h max relatif. Limite absolue 50 km/h. La moto peut donc rouler à 50 km/h.",

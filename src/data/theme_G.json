@@ -412,7 +412,7 @@
           "question": "Vous passez votre examen pratique de conduite et vous arrivez devant une rue avec \"accès interdit + excepté circulation locale\". Pouvez-vous y entrer ?",
           "choices": [
             "Oui, pour aller chez un commerçant de la rue",
-            "Non, lors de l'examen pratique, il est strictement interdit d'entrer dans une telle rue",
+            "Non, c'est strictement interdit pendant l'examen pratique",
             "Oui, si l'examinateur vous le demande",
             "Cela dépend de la rue concernée"
           ],
@@ -1102,10 +1102,10 @@
           "id": "G2_Q13",
           "question": "Vous arrivez devant un signal de direction obligatoire accompagné d'un panneau additionnel \"excepté cyclistes et speed pedelecs\". Vous êtes cycliste. Devez-vous suivre la direction indiquée ?",
           "choices": [
-            "Oui, l'obligation s'applique à tous",
-            "Non, les cyclistes et speed pedelecs ne sont pas tenus de suivre cette direction",
-            "Oui, les cyclistes sont interdits",
-            "Non, vous devez mettre pied à terre"
+            "Oui, l'obligation s'applique à tous les usagers",
+            "Non, cette obligation ne vaut pas pour les cyclistes et speed pedelecs",
+            "Oui, les cyclistes y sont même interdits",
+            "Non, mais vous devez mettre pied à terre"
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel dispense les cyclistes et speed pedelecs de suivre la direction obligatoire.",
@@ -1173,7 +1173,7 @@
             "Un signal de direction obligatoire",
             "Un signal de sens unique (rectangulaire bleu avec flèche blanche)",
             "Un signal triangulaire de danger",
-            "Un signal octogonal"
+            "Un signal octogonal d'arrêt"
           ],
           "correct": 1,
           "explanation": "Le signal de sens unique est rectangulaire bleu avec une flèche blanche.",

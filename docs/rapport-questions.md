@@ -364,7 +364,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 - `F6_Q6` (carte théorie 0) : Vous apercevez un signal de danger représentant une barrière, placé à 150 mètres. Que signifie-t-il ?
   - ✅ Un passage à niveau AVEC barrières se trouve dans 150 mètres
 - `F6_Q7` (carte théorie 0) : Vous apercevez un signal de danger sans barrière représentée, placé à 150 mètres. Que signifie-t-il ?
-  - ✅ Un passage à niveau SANS barrières se trouve dans 150 mètres — vigilance accrue
+  - ✅ Un passage à niveau SANS barrières à 150 mètres
 
 **Groupe (2 questions — à réduire à 1 ou 2)**
 
