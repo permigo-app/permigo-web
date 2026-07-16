@@ -753,10 +753,10 @@
           "id": "D1_Q57",
           "question": "Vous roulez à 85 km/h en agglomération (limite 50 km/h). Vous dépassez de 35 km/h. Risquez-vous une déchéance ?",
           "choices": [
-            "Non",
+            "Non, aucune déchéance possible",
             "Oui, dépassement > 30 km/h en agglomération",
-            "Uniquement retrait immédiat",
-            "Uniquement une amende"
+            "Uniquement un retrait immédiat",
+            "Uniquement une amende majorée"
           ],
           "correct": 1,
           "explanation": "35 km/h de dépassement en agglomération dépasse le seuil de 30 km/h : déchéance possible.",
@@ -844,10 +844,10 @@
           "id": "D1_Q65",
           "question": "Vous dépassez de 35 km/h la limite sur autoroute. Quelles sanctions risquez-vous ?",
           "choices": [
-            "Retrait immédiat uniquement",
+            "Retrait immédiat et amende doublée",
             "Retrait immédiat (> 30 km/h) mais pas déchéance (< 40 km/h)",
-            "Retrait immédiat et déchéance",
-            "Aucune sanction"
+            "Retrait immédiat et déchéance cumulés",
+            "Aucune sanction en dessous de 40 km/h"
           ],
           "correct": 1,
           "explanation": "35 km/h > 30 km/h → retrait immédiat possible. 35 km/h < 40 km/h → pas de déchéance.",

@@ -385,9 +385,9 @@
           "id": "H1_Q13",
           "question": "Votre véhicule est tombé en panne et vous ne pouvez pas le ranger en sécurité. Que devez-vous faire ?",
           "choices": [
-            "Allumer vos phares",
+            "Allumer uniquement vos phares",
             "Placer un triangle de danger pour avertir les autres usagers",
-            "Klaxonner pour prévenir",
+            "Klaxonner pour prévenir les autres",
             "Appeler immédiatement la police"
           ],
           "correct": 1,
@@ -752,10 +752,10 @@
           "id": "H1_Q47",
           "question": "Vous souhaitez vous arrêter directement SUR un passage pour piétons. Est-ce autorisé ?",
           "choices": [
-            "Oui, pour un bref instant",
-            "Non, l'arrêt et le stationnement sont interdits sur un passage piétons",
+            "Oui, pour un bref instant seulement",
+            "Non, l'arrêt et le stationnement y sont interdits",
             "Oui, pour faire descendre un passager",
-            "Cela dépend de l'heure"
+            "Cela dépend de l'heure et du lieu"
           ],
           "correct": 1,
           "explanation": "L'arrêt et le stationnement sont interdits sur les passages pour piétons, sur chaussée et accotement.",
@@ -1500,10 +1500,10 @@
           "id": "H2_Q19",
           "question": "Vous souhaitez vous ARRÊTER brièvement sur une chaussée étroite qui ne laisse que 2,5 m de passage. L'arrêt est-il permis ?",
           "choices": [
-            "Non, ni arrêt ni stationnement",
+            "Non, ni l'arrêt ni le stationnement",
             "Oui, l'arrêt est permis même si le passage est inférieur à 3 m",
-            "Non, c'est trop étroit",
-            "Cela dépend de la durée"
+            "Non, le passage est trop étroit",
+            "Cela dépend de la durée de l'arrêt"
           ],
           "correct": 1,
           "explanation": "La règle des 3 m concerne uniquement le stationnement : l'arrêt reste permis même avec moins de 3 m de passage.",
@@ -2031,8 +2031,8 @@
           "id": "H2_Q75",
           "question": "Vous voyez un signal de stationnement interdit avec l'indication \"20 m\" et une flèche vers le haut. Que signifie-t-il ?",
           "choices": [
-            "L'interdiction est terminée",
-            "L'interdiction commence après le signal sur une distance de 20 m, uniquement sur la chaussée",
+            "L'interdiction se termine à cet endroit",
+            "L'interdiction commence au signal, sur 20 m, chaussée uniquement",
             "L'interdiction commence 20 m avant le signal",
             "Le stationnement est autorisé sur 20 m"
           ],
@@ -2513,9 +2513,9 @@
           "question": "Vous voyez sur le parcomètre l'indication \"gratuit le dimanche\". Devez-vous payer le dimanche ?",
           "choices": [
             "Oui, il faut toujours payer",
-            "Non, les modalités de l'appareil s'appliquent : c'est gratuit le dimanche",
+            "Non, les modalités de l'appareil s'appliquent",
             "Oui, le dimanche comme les autres jours",
-            "Cela dépend de la zone"
+            "Cela dépend de la zone concernée"
           ],
           "correct": 1,
           "explanation": "Les modalités indiquées sur l'appareil s'appliquent : gratuit le dimanche = pas de paiement le dimanche.",
@@ -2646,10 +2646,10 @@
           "id": "H3_Q35",
           "question": "Vous voyez un signal montrant un véhicule à cheval sur la chaussée et l'accotement. Comment devez-vous stationner ?",
           "choices": [
-            "Entièrement sur la chaussée",
+            "Entièrement sur la chaussée, côté droit",
             "En partie sur la chaussée ET en partie sur l'accotement ou le trottoir",
-            "Entièrement sur l'accotement",
-            "Le stationnement est interdit"
+            "Entièrement sur l'accotement ou le trottoir",
+            "Le stationnement y est totalement interdit"
           ],
           "correct": 1,
           "explanation": "Le signal impose de stationner à cheval : en partie sur la chaussée et en partie sur l'accotement.",

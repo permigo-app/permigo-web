@@ -753,10 +753,10 @@
           "id": "D1_Q57",
           "question": "Je rijdt 85 km/u in de bebouwde kom (limiet 50 km/u). Overschrijding van 35 km/u. Verval?",
           "choices": [
-            "Nee",
+            "Nee, geen verval mogelijk",
             "Ja, overschrijding > 30 km/u in de bebouwde kom",
-            "Alleen onmiddellijke intrekking",
-            "Alleen een boete"
+            "Alleen een onmiddellijke intrekking",
+            "Alleen een verhoogde boete"
           ],
           "explanation": "35 km/u overschrijding in de bebouwde kom overschrijdt de drempel van 30 km/u: verval is mogelijk.",
           "correct": 1,
@@ -844,10 +844,10 @@
           "id": "D1_Q65",
           "question": "Overschrijding van 35 km/u op de autosnelweg. Welke sancties?",
           "choices": [
-            "Alleen onmiddellijke intrekking",
+            "Onmiddellijke intrekking en verdubbelde boete",
             "Onmiddellijke intrekking (> 30 km/u) maar geen verval (< 40 km/u)",
-            "Onmiddellijke intrekking en verval",
-            "Geen sanctie"
+            "Onmiddellijke intrekking en verval samen",
+            "Geen sanctie onder de 40 km/u"
           ],
           "explanation": "35 km/u > 30 km/u -> onmiddellijke intrekking mogelijk. 35 km/u < 40 km/u -> geen verval.",
           "correct": 1,
