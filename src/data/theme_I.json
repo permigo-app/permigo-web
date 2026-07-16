@@ -1209,9 +1209,9 @@
           "id": "I2_Q5",
           "question": "Vous êtes sur le lieu d'un accident et des curieux fument à proximité. Peuvent-ils le faire ?",
           "choices": [
-            "Oui, s'ils sont stressés",
-            "Non, il est interdit de fumer et il faut demander aux spectateurs de ne pas fumer non plus",
-            "Oui, à distance des véhicules",
+            "Oui, s'ils sont stressés par la situation",
+            "Non, fumer est interdit, pour les spectateurs aussi",
+            "Oui, à bonne distance des véhicules",
             "Cela dépend de la gravité de l'accident"
           ],
           "correct": 1,
@@ -1587,10 +1587,10 @@
           "id": "I2_Q36",
           "question": "Vous êtes sur la bande de droite d'une autoroute à 2 bandes lors d'un embouteillage. De quel côté vous décalez-vous ?",
           "choices": [
-            "Vers la gauche",
+            "Vers la gauche comme la première bande",
             "Vers la droite pour libérer l'espace entre les deux bandes",
-            "Vous restez en place",
-            "Vous sortez de l'autoroute"
+            "Vous restez au centre de votre bande",
+            "Vous sortez de l'autoroute au plus vite"
           ],
           "correct": 1,
           "explanation": "Sur la bande de droite d'une autoroute à 2 bandes : se décaler à droite pour créer le couloir.",
@@ -1652,10 +1652,10 @@
           "id": "I2_Q41",
           "question": "Vous portez secours à un blessé qui souffre. Pouvez-vous lui donner un antidouleur ?",
           "choices": [
-            "Oui, pour le soulager",
+            "Oui, pour le soulager rapidement",
             "Non, il est déconseillé d'administrer des médicaments à un blessé",
-            "Oui, du paracétamol",
-            "Cela dépend de la blessure"
+            "Oui, mais uniquement du paracétamol",
+            "Cela dépend de la gravité de la blessure"
           ],
           "correct": 1,
           "explanation": "Il est déconseillé de donner tout médicament à un blessé en attente des secours.",
@@ -1940,8 +1940,8 @@
           "id": "I2_Q64",
           "question": "Vous devez évacuer votre voiture dans un tunnel en feu. Devez-vous emporter votre clé de contact ?",
           "choices": [
-            "Oui, toujours",
-            "Non, laissez la clé sur le contact ou le transpondeur sur le siège du conducteur",
+            "Oui, toujours par réflexe de sécurité",
+            "Non, laissez la clé sur le contact (ou le transpondeur sur le siège)",
             "Oui, pour la sécurité de votre véhicule",
             "Cela dépend du type de véhicule"
           ],
@@ -3200,10 +3200,10 @@
           "id": "I4_Q1",
           "question": "Vous roulez avec des pneus usés. Quels en sont les effets sur votre conduite ?",
           "choices": [
-            "Il n'y a aucun effet",
+            "Il n'y a aucun effet notable sur la conduite",
             "La distance de freinage augmente, la consommation aussi, et la tenue de route se détériore",
-            "C'est uniquement un problème esthétique",
-            "Vos pneus adhèrent mieux à la route"
+            "C'est uniquement un problème esthétique et légal",
+            "Vos pneus adhèrent mieux à la route sèche"
           ],
           "correct": 1,
           "explanation": "Des pneus usés allongent la distance de freinage, augmentent la consommation et dégradent la tenue de route.",
@@ -3580,10 +3580,10 @@
           "id": "I4_Q30",
           "question": "Vous passez le contrôle technique et vos pneus ne portent pas le marquage E (véhicule immatriculé après le 01/01/2004). Que se passe-t-il ?",
           "choices": [
-            "Rien de particulier",
+            "Rien de particulier, un simple avertissement",
             "Vous recevez un certificat rouge, valable 15 jours pour vous mettre en règle",
-            "Vous recevez une amende immédiate",
-            "Vous ne pouvez plus rouler"
+            "Vous recevez immédiatement une amende salée",
+            "Vous ne pouvez plus rouler jusqu'au remplacement"
           ],
           "correct": 1,
           "explanation": "Sans marquage E sur un véhicule post-2004 : contrôle technique rouge (15 jours pour régulariser).",
@@ -4114,9 +4114,9 @@
           "question": "Vous voyez une voie de détresse (\"bac à sable\") en montagne. Pouvez-vous l'utiliser pour stationner ?",
           "choices": [
             "Oui, c'est pratique pour une pause",
-            "Non, cette voie est uniquement destinée aux véhicules ayant des problèmes de freins",
-            "Oui, pour les pauses courtes",
-            "Cela dépend de la route"
+            "Non, elle est réservée aux véhicules en panne de freins",
+            "Oui, mais pour les pauses courtes",
+            "Cela dépend du type de route"
           ],
           "correct": 1,
           "explanation": "La voie de détresse est réservée aux véhicules ayant perdu leurs freins. Le stationnement y est interdit.",

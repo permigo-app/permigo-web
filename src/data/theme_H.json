@@ -411,9 +411,9 @@
           "id": "H1_Q17",
           "question": "Vous cherchez à vous garer en agglomération et un accotement de plain-pied est disponible. Où devez-vous stationner ?",
           "choices": [
-            "Sur la chaussée",
+            "Sur la chaussée, c'est autorisé",
             "Sur l'accotement de plain-pied ou dans la bande de stationnement",
-            "Sur le trottoir",
+            "Sur le trottoir si la place manque",
             "N'importe où vous trouvez de la place"
           ],
           "correct": 1,
@@ -805,9 +805,9 @@
           "question": "Vous conduisez une voiture de 1,50 m de haut. Un signal est placé à 2,5 m de hauteur. Pouvez-vous stationner à moins de 20 m de ce signal ?",
           "choices": [
             "Non, la règle des 20 m s'applique toujours",
-            "Oui, car le signal est à plus de 2 m de haut et votre véhicule ne dépasse pas 1,65 m : l'exception s'applique",
+            "Oui : signal à plus de 2 m et véhicule sous 1,65 m, l'exception s'applique",
             "Non, c'est interdit en toutes circonstances",
-            "Cela dépend du type de signal"
+            "Cela dépend du type de signal concerné"
           ],
           "correct": 1,
           "explanation": "L'exception s'applique : signal à ≥ 2 m + véhicule ≤ 1,65 m = vous ne masquez pas le signal.",
@@ -1682,10 +1682,10 @@
           "id": "H2_Q34",
           "question": "Vous êtes en agglomération et vous souhaitez stationner sur un accotement en saillie à gauche. Pouvez-vous le faire ?",
           "choices": [
-            "Oui, sans restriction",
-            "Non, en agglomération on ne peut pas stationner sur un accotement en saillie",
+            "Oui, sans aucune restriction",
+            "Non, pas sur un accotement en saillie en agglomération",
             "Oui, en utilisant le clignotant",
-            "Cela dépend de la hauteur"
+            "Cela dépend de la hauteur de la saillie"
           ],
           "correct": 1,
           "explanation": "En agglomération, le stationnement sur un accotement en saillie à gauche est interdit.",
@@ -2290,10 +2290,10 @@
           "id": "H3_Q5",
           "question": "Vous arrivez en zone bleue et un panneau additionnel indique \"8h–20h\". Devez-vous respecter ces horaires plutôt que ceux par défaut ?",
           "choices": [
-            "Non, c'est toujours 9h–18h",
-            "Oui, le panneau additionnel prime et vous devez respecter les horaires indiqués",
-            "Non, les horaires ne changent jamais",
-            "Cela dépend du jour"
+            "Non, c'est toujours 9h–18h qui s'applique",
+            "Oui, le panneau additionnel prime sur les horaires par défaut",
+            "Non, les horaires par défaut ne changent jamais",
+            "Cela dépend du jour de la semaine"
           ],
           "correct": 1,
           "explanation": "Un panneau additionnel précisant les horaires prime sur les horaires standards : il faut respecter les horaires indiqués.",
@@ -2828,10 +2828,10 @@
           "id": "H3_Q56",
           "question": "Vous envisagez de proposer un véhicule en location en le garant sur la voie publique. Est-ce autorisé ?",
           "choices": [
-            "Oui, c'est une simple location",
-            "Non, il est interdit de proposer un véhicule en location sur la voie publique",
-            "Oui, pour les particuliers",
-            "Cela dépend de la durée"
+            "Oui, c'est une simple location privée",
+            "Non, proposer un véhicule en location y est interdit",
+            "Oui, mais uniquement pour les particuliers",
+            "Cela dépend de la durée de la location"
           ],
           "correct": 1,
           "explanation": "Mettre en location un véhicule sur la voie publique est interdit.",
