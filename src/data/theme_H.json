@@ -360,9 +360,9 @@
           "question": "Vous révisez pour l'examen. Quelle est la différence entre un arrêt et une immobilisation ?",
           "choices": [
             "Il n'y a aucune différence",
-            "L'arrêt est volontaire (pour embarquer/décharger), tandis que l'immobilisation est imposée (feu rouge, embouteillage, cédez le passage)",
-            "L'immobilisation dure plus longtemps",
-            "L'arrêt est imposé par les circonstances"
+            "L'arrêt est volontaire, l'immobilisation est imposée par les circonstances",
+            "L'immobilisation dure plus de deux minutes",
+            "L'arrêt est imposé, l'immobilisation est volontaire"
           ],
           "correct": 1,
           "explanation": "L'arrêt = acte volontaire (embarquer/décharger). L'immobilisation = imposée par une contrainte extérieure.",
@@ -372,10 +372,10 @@
           "id": "H1_Q12",
           "question": "Vous roulez lorsque votre voiture tombe en panne sur la chaussée. S'agit-il d'un arrêt ou d'un stationnement ?",
           "choices": [
-            "C'est un arrêt",
-            "Ce n'est ni l'un ni l'autre : c'est un véhicule en panne, une catégorie à part",
-            "C'est du stationnement",
-            "C'est une immobilisation"
+            "C'est un arrêt, car il est involontaire",
+            "Ni l'un ni l'autre : un véhicule en panne est une catégorie à part",
+            "C'est du stationnement dès la première minute",
+            "C'est une immobilisation imposée"
           ],
           "correct": 1,
           "explanation": "Un véhicule en panne est une catégorie à part : ni arrêt, ni stationnement.",
@@ -632,10 +632,10 @@
           "id": "H1_Q37",
           "question": "Vous révisez pour l'examen. Quelle est la différence entre une piste cyclable et une bande cyclable suggérée pour l'arrêt et le stationnement ?",
           "choices": [
-            "Il n'y a aucune différence",
-            "Sur la piste cyclable, l'arrêt est interdit. Sur la bande cyclable suggérée, l'arrêt est autorisé",
-            "Les deux sont interdits",
-            "Les deux sont autorisés"
+            "Autorisé sur la piste cyclable, interdit sur la bande suggérée",
+            "Interdit sur la piste cyclable, autorisé sur la bande suggérée",
+            "L'arrêt est interdit sur les deux",
+            "L'arrêt est autorisé sur les deux"
           ],
           "correct": 1,
           "explanation": "Piste cyclable = interdit de s'arrêter. Bande cyclable suggérée = autorisé.",
@@ -712,10 +712,10 @@
           "id": "H1_Q44",
           "question": "Vous souhaitez vous garer sur un accès d'autoroute. Pouvez-vous le faire ?",
           "choices": [
-            "Oui, sur l'accotement",
-            "Non, l'arrêt et le stationnement sont interdits sur les accès et sorties d'autoroute",
-            "Oui, pour un bref instant",
-            "Oui, en cas de panne"
+            "Oui, sur l'accotement de la bretelle d'accès",
+            "Non, c'est interdit sur les accès et sorties d'autoroute",
+            "Oui, pour un arrêt de moins de deux minutes",
+            "Oui, uniquement en cas de panne mécanique"
           ],
           "correct": 1,
           "explanation": "Les accès et sorties d'autoroute font partie des zones où l'arrêt et le stationnement sont interdits.",
@@ -2499,10 +2499,10 @@
           "id": "H3_Q23",
           "question": "Vous souhaitez connaître les tarifs et horaires du parcomètre. Où trouvez-vous ces informations ?",
           "choices": [
-            "Sur Internet",
-            "Sur l'appareil lui-même (prix, heures, périodes gratuites)",
-            "À la mairie",
-            "Sur le signal routier"
+            "Sur le site internet de la commune",
+            "Sur le parcomètre lui-même",
+            "À l'administration communale",
+            "Sur le signal de stationnement"
           ],
           "correct": 1,
           "explanation": "Toutes les modalités (prix, heures, périodes gratuites) sont indiquées sur l'appareil lui-même.",
@@ -2581,10 +2581,10 @@
           "id": "H3_Q30",
           "question": "Vous révisez pour l'examen et vous rencontrez le terme \"voiture mixte\". De quoi s'agit-il ?",
           "choices": [
-            "D'une voiture électrique",
-            "D'un véhicule type pick-up avec une partie passagers et une partie cargaison",
-            "D'un minibus",
-            "D'une voiture hybride"
+            "D'une voiture 100 % électrique",
+            "D'un pick-up avec partie passagers et partie cargaison",
+            "D'un minibus de 9 places maximum",
+            "D'une voiture hybride rechargeable"
           ],
           "correct": 1,
           "explanation": "Une voiture mixte est un véhicule avec une partie passagers et une partie cargaison (type pick-up).",

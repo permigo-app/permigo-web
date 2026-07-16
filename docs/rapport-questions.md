@@ -5,7 +5,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 ## Résumé
 
 - **1770 questions** analysées
-- **47 groupes de doublons potentiels** impliquant **101 questions**
+- **48 groupes de doublons potentiels** impliquant **103 questions**
 - Économie estimée si on garde 1-2 par groupe : ~**7 questions supprimables**
 - **21 problèmes de couverture** (points sans question ou questions orphelines)
 - **39 cartes surchargées** (6+ questions)
@@ -14,7 +14,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 |---|---|---|---|
 | A — La voie publique | 410 | 15 | 34 |
 | B — Les usagers de la route | 96 | 2 | 6 |
-| C — La voiture | 181 | 3 | 6 |
+| C — La voiture | 181 | 4 | 8 |
 | D — La vitesse | 124 | 2 | 4 |
 | E — Croisement et dépassement | 160 | 5 | 10 |
 | F — La priorité | 304 | 3 | 6 |
@@ -261,7 +261,7 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
 - `C2_Q71` (carte théorie 8) : Vous avez un permis B definitif. Votre voiture MMA 2 500 kg, remorque MMA 700 kg. Pouvez-vous tracter ?
   - ✅ Oui, la remorque est ≤ 750 kg donc pas de condition supplementaire
 
-### C3 — Les feux d'une voiture et la corne : 1 groupe(s) de doublons potentiels
+### C3 — Les feux d'une voiture et la corne : 2 groupe(s) de doublons potentiels
 
 **Groupe (2 questions — à réduire à 1 ou 2)**
 
@@ -269,6 +269,13 @@ _Généré automatiquement. Aucune modification effectuée — ce rapport sert �
   - ✅ Non, il faut les feux de position
 - `C3_Q42` (carte théorie 3) : Vous etes stationne en agglomeration parallelement a la chaussee mais avec une remorque. Pouvez-vous utiliser le feu de stationnement ?
   - ✅ Non, pas quand une remorque est attelee, il faut les feux de position
+
+**Groupe (2 questions — à réduire à 1 ou 2)**
+
+- `C3_Q69` (carte théorie 6) : Vous circulez en agglomeration pendant la journee. Quand pouvez-vous klaxonner ?
+  - ✅ Uniquement pour eviter un accident
+- `C3_Q70` (carte théorie 6) : Vous circulez hors agglomeration pendant la journee. Quand pouvez-vous klaxonner ?
+  - ✅ Pour éviter un accident ou annoncer un dépassement
 
 ---
 

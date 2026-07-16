@@ -713,10 +713,10 @@
           "id": "C1_Q61",
           "question": "Vous voyez un signal rond rouge avec une fleche barree vers la gauche. Que signifie-t-il ?",
           "choices": [
-            "Sens unique",
+            "Interdiction de faire demi-tour au carrefour",
             "Au prochain carrefour, interdiction de tourner a gauche",
-            "Virage a gauche",
-            "Deviation a gauche"
+            "Annonce d'un virage dangereux a gauche",
+            "Deviation obligatoire vers la gauche"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit de tourner à gauche au prochain carrefour.",
@@ -740,10 +740,10 @@
           "id": "C1_Q64",
           "question": "Vous voyez un signal rond rouge avec un camion. Que signifie-t-il ?",
           "choices": [
-            "Zone de livraison",
+            "Zone de livraison reservee aux camions",
             "Acces interdit aux vehicules de transport de marchandises",
-            "Parking camions",
-            "Gare de fret"
+            "Itineraire conseille pour les camions",
+            "Fin d'interdiction pour les camions"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit l'accès aux véhicules de transport de marchandises.",
@@ -1271,10 +1271,10 @@
           "id": "C2_Q17",
           "question": "Vous transportez une charge indivisible qui depasse de 2,5 metres l'arriere. Est-ce autorise ?",
           "choices": [
-            "Non, maximum 1 metre",
-            "Oui, si la charge est indivisible et qu'un panneau d'avertissement est fixe",
-            "Non, maximum 2 metres",
-            "Oui, sans condition"
+            "Non, le depassement maximal est de 1 metre",
+            "Oui, si un panneau d'avertissement est fixe a l'arriere",
+            "Non, le depassement maximal est de 2 metres",
+            "Oui, sans aucune condition particuliere"
           ],
           "correct": 1,
           "explanation": "Une charge indivisible peut dépasser de maximum 3 mètres l'arrière, à condition d'y accrocher un panneau d'avertissement. 2,5 mètres est autorisé.",
@@ -1675,10 +1675,10 @@
           "id": "C2_Q55",
           "question": "Vous conduisez et changez de voie. Qu'est-ce qu'un angle mort ?",
           "choices": [
-            "Un virage dangereux",
-            "Une zone a cote ou derriere le vehicule que le conducteur ne peut pas voir dans les retroviseurs",
-            "Un endroit sombre sur la route",
-            "Un defaut du pare-brise"
+            "Un virage sans visibilite",
+            "Une zone autour du vehicule invisible dans les retroviseurs",
+            "Une zone d'ombre sur la chaussee",
+            "Un defaut de reglage des retroviseurs"
           ],
           "correct": 1,
           "explanation": "Les angles morts sont les zones à côté ou derrière le véhicule que le conducteur ne peut pas voir, même avec des rétroviseurs correctement réglés.",
@@ -1754,10 +1754,10 @@
           "id": "C2_Q61",
           "question": "Vous voyez un signal pour marchandises inflammables ou explosives. Que signifie-t-il ?",
           "choices": [
-            "Station-service a proximite",
+            "Annonce d'une station-service a proximite",
             "Interdit aux vehicules transportant des marchandises inflammables ou explosives",
-            "Zone d'incendie",
-            "Pompiers a proximite"
+            "Zone presentant un risque d'incendie ou d'explosion",
+            "Annonce d'une caserne de pompiers"
           ],
           "correct": 1,
           "explanation": "Ce signal interdit le passage aux véhicules transportant des marchandises inflammables ou explosives.",
@@ -2256,10 +2256,10 @@
           "id": "C3_Q6",
           "question": "Vous verifiez votre vehicule. Toutes les voitures ont-elles des feux de stationnement ?",
           "choices": [
-            "Oui, toujours",
-            "Non, toutes ont des feux de position mais pas toutes des feux de stationnement",
-            "Oui, c'est obligatoire",
-            "Non, aucune voiture n'en a"
+            "Oui, tous les vehicules en ont",
+            "Non, seuls certains vehicules en sont equipes",
+            "Oui, c'est une obligation legale",
+            "Non, aucune voiture n'en possede"
           ],
           "correct": 1,
           "explanation": "Toutes les voitures ont des feux de position, mais toutes n'ont pas des feux de stationnement.",
@@ -2360,9 +2360,9 @@
           "id": "C3_Q17",
           "question": "Vous suivez un vehicule a 40 metres sans vouloir le depasser. Pouvez-vous garder les feux de route ?",
           "choices": [
-            "Oui, pour mieux le voir",
-            "Non, les feux de route sont interdits quand vous suivez un vehicule a moins de 50 m sans intention de le depasser",
-            "Oui, s'il roule lentement",
+            "Oui, pour mieux voir la route",
+            "Non, interdits a moins de 50 m du vehicule qui precede",
+            "Oui, s'il roule a moins de 50 km/h",
             "Non, jamais derriere un autre vehicule"
           ],
           "correct": 1,
@@ -2920,9 +2920,9 @@
           "id": "C3_Q69",
           "question": "Vous circulez en agglomeration pendant la journee. Quand pouvez-vous klaxonner ?",
           "choices": [
-            "Quand vous voulez",
-            "Uniquement pour donner un avertissement necessaire en vue d'eviter un accident",
-            "Pour saluer quelqu'un",
+            "Quand vous voulez, sans restriction",
+            "Uniquement pour eviter un accident",
+            "Pour saluer une connaissance",
             "Jamais en agglomeration"
           ],
           "correct": 1,
