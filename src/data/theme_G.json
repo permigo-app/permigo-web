@@ -222,9 +222,9 @@
           "question": "Vous roulez sur une voie à sens unique et croisez des véhicules qui arrivent en face. D'où viennent-ils ?",
           "choices": [
             "Ils circulent dans le même sens que vous",
-            "Ils circulent en sens inverse et disposent d'un signal de sens unique de leur côté",
-            "Ils viennent d'un carrefour adjacent",
-            "Ils sortent d'un parking"
+            "Ils roulent en sens inverse avec leur propre signal de sens unique",
+            "Ils débouchent d'un carrefour adjacent",
+            "Ils sortent d'un parking voisin"
           ],
           "correct": 1,
           "explanation": "Dans une rue en sens unique, les autres conducteurs arrivent en face.",
@@ -425,7 +425,7 @@
           "question": "Vous voyez une voiture de police entrer dans une rue à accès interdit. Est-ce autorisé ?",
           "choices": [
             "Non, les règles s'appliquent à tous",
-            "Oui, les véhicules des forces de l'ordre et les véhicules prioritaires peuvent y entrer",
+            "Oui, les véhicules des forces de l'ordre peuvent y entrer",
             "Non, sauf avec un panneau additionnel",
             "Cela dépend de la mission en cours"
           ],
@@ -1370,10 +1370,10 @@
           "id": "G2_Q44",
           "question": "Vous voulez tourner à gauche à un carrefour où un îlot directionnel se trouve au centre. Comment procédez-vous ?",
           "choices": [
-            "Vous roulez sur l'îlot",
+            "Vous roulez sur l'îlot directionnel",
             "Vous contournez l'îlot par la droite, puis vous tournez à gauche",
             "Vous contournez l'îlot par la gauche",
-            "Vous faites demi-tour"
+            "Vous faites demi-tour avant l'îlot"
           ],
           "correct": 1,
           "explanation": "Vous contournez l'îlot par la droite avant de tourner à gauche.",

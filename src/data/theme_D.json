@@ -701,10 +701,10 @@
           "id": "D1_Q53",
           "question": "Vous roulez trop vite sur une route pour automobiles. Le retrait immédiat s'applique-t-il aussi sur ce type de route ?",
           "choices": [
-            "Non, uniquement les autoroutes",
+            "Non, uniquement sur les autoroutes",
             "Oui, le seuil de > 30 km/h s'applique aussi aux routes pour automobiles",
             "Non, seulement les routes ordinaires",
-            "Uniquement en Flandre"
+            "Uniquement en Flandre et à Bruxelles"
           ],
           "correct": 1,
           "explanation": "Le seuil de retrait immédiat de 30 km/h s'applique sur autoroute, route pour automobiles ET route ordinaire.",
@@ -871,9 +871,9 @@
           "question": "Vous dépassez de 25 km/h la limite en agglomération. Quelles sanctions risquez-vous ?",
           "choices": [
             "Retrait immédiat (> 20 km/h) mais pas déchéance (< 30 km/h)",
-            "Retrait immédiat et déchéance",
-            "Aucune sanction spéciale",
-            "Déchéance uniquement"
+            "Retrait immédiat et déchéance cumulés",
+            "Aucune sanction spéciale à ce niveau",
+            "Déchéance uniquement, sans retrait"
           ],
           "correct": 0,
           "explanation": "25 km/h > 20 km/h → retrait immédiat possible. 25 km/h < 30 km/h → pas de déchéance.",

@@ -1826,9 +1826,9 @@
           "question": "Vous êtes cycliste et un feu vert carré avec une silhouette entourée de flèches s'allume. Que pouvez-vous faire ?",
           "choices": [
             "Vous pouvez uniquement aller tout droit",
-            "Vous pouvez traverser l'intersection en tous sens, y compris en diagonale",
-            "Vous devez vous arrêter",
-            "Vous devez tourner à droite"
+            "Traverser l'intersection en tous sens, même en diagonale",
+            "Vous devez vous arrêter et attendre",
+            "Vous devez obligatoirement tourner à droite"
           ],
           "correct": 1,
           "explanation": "Feu vert carré = traversée en tous sens (y compris diagonale) pour les cyclistes.",
@@ -2165,8 +2165,8 @@
           "choices": [
             "Non, la voie prioritaire prime sur les feux",
             "Oui, vous devez toujours respecter les feux et les injonctions des agents",
-            "Non, sauf le feu rouge",
-            "Cela dépend du carrefour"
+            "Non, sauf le feu rouge qui reste valable",
+            "Cela dépend du type de carrefour"
           ],
           "correct": 1,
           "explanation": "Feux et agents priment toujours, même sur voie prioritaire.",
@@ -2728,9 +2728,9 @@
           "question": "Vous êtes dans un rond-point et vous voulez sortir à la deuxième sortie. Quand activez-vous votre clignotant droit ?",
           "choices": [
             "Dès votre entrée dans le rond-point",
-            "Après avoir passé la première sortie, pour annoncer que vous sortez à la suivante",
+            "Une fois la première sortie passée, pour annoncer la vôtre",
             "Jamais, le clignotant n'est pas nécessaire",
-            "Au milieu du rond-point"
+            "Au milieu du rond-point, par anticipation"
           ],
           "correct": 1,
           "explanation": "On met le clignotant droit juste avant la sortie choisie.",

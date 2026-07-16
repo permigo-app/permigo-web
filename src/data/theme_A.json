@@ -1251,9 +1251,9 @@
           "question": "Vous voyez un panneau triangulaire avec un feu tricolore dessiné à l'intérieur. Qu'annonce-t-il ?",
           "choices": [
             "Un passage pour piétons à proximité",
-            "Un passage à niveau non gardé",
-            "Des feux de circulation à venir auxquels vous devrez peut-être vous arrêter",
-            "L'entrée d'une zone scolaire"
+            "Un passage à niveau sans barrières",
+            "L'approche de feux de circulation où il faudra peut-être s'arrêter",
+            "L'entrée d'une zone scolaire à 30 km/h"
           ],
           "correct": 2,
           "explanation": "Le panneau A27 annonce la présence prochaine de feux tricolores. Il prévient les usagers en avance pour qu'ils puissent adapter leur vitesse.",
@@ -4144,9 +4144,9 @@
           "id": "A4_Q35",
           "question": "Sur une chaussée à 2 bandes, comment se forme le couloir de secours ?",
           "choices": [
-            "Tout le monde serre à droite",
+            "Tout le monde serre au maximum à droite",
             "La bande de gauche serre à gauche, la bande de droite serre à droite",
-            "Tout le monde s'arrête",
+            "Tout le monde s'arrête sur place",
             "La bande de droite serre à gauche"
           ],
           "correct": 1,
@@ -4721,9 +4721,9 @@
           "question": "Vous voyez un signal de limitation par bande indiquant 70 km/h sur la bande de droite et 90 km/h sur les autres. Vous voulez dépasser. Que faites-vous ?",
           "choices": [
             "Vous restez à 70 km/h sur la bande de droite",
-            "Vous changez de bande vers la gauche où la limite est 90 km/h pour dépasser",
-            "Vous dépassez par la droite",
-            "Vous roulez à 120 km/h"
+            "Vous passez à gauche où la limite est de 90 km/h",
+            "Vous dépassez par la droite à 70 km/h",
+            "Vous roulez à 120 km/h sur toutes les bandes"
           ],
           "correct": 1,
           "explanation": "Pour dépasser avec une limitation par bande de 90 km/h sur les bandes de gauche, vous changez de bande vers la gauche.",
@@ -6121,10 +6121,10 @@
           "id": "A6_Q43",
           "question": "Comment est délimitée une zone ?",
           "choices": [
-            "Par des feux clignotants",
+            "Par des feux orange clignotants",
             "Par un signal de début et un signal de fin de zone",
-            "Par des lignes au sol",
-            "Par des barrières"
+            "Par des lignes peintes au sol",
+            "Par des barrières amovibles"
           ],
           "correct": 1,
           "explanation": "Une zone est délimitée par un signal de début et un signal de fin.",
