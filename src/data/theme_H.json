@@ -1331,9 +1331,9 @@
           "question": "Vous souhaitez vous arrêter brièvement pour déposer un passager, mais il n'y a pas 1 mètre d'espace libre. Pouvez-vous quand même vous ARRÊTER ?",
           "choices": [
             "Non, l'arrêt est aussi interdit",
-            "Oui, l'arrêt est permis même si l'espace est insuffisant pour stationner",
+            "Oui, l'arrêt reste permis même sans le mètre d'espace",
             "Non, c'est interdit en toutes circonstances",
-            "Cela dépend de la rue"
+            "Cela dépend de la largeur de la rue"
           ],
           "correct": 1,
           "explanation": "La règle du 1 mètre concerne uniquement le stationnement : l'arrêt reste toujours permis.",
@@ -1845,7 +1845,7 @@
             "À la chaussée et à l'accotement",
             "Uniquement à la chaussée, sur une distance de 20 m",
             "Uniquement à l'accotement",
-            "Au trottoir"
+            "Au trottoir et à l'accotement"
           ],
           "correct": 1,
           "explanation": "Avec indication chiffrée, le signal s'applique uniquement à la chaussée, sur la distance indiquée.",
@@ -2238,7 +2238,7 @@
           "question": "Vous entrez dans une zone marquée par un signal de zone bleue. Que signifie-t-il ?",
           "choices": [
             "Vous entrez dans une zone piétonne",
-            "Vous entrez dans une zone de stationnement à durée limitée où le disque est obligatoire",
+            "Une zone de stationnement à durée limitée, disque obligatoire",
             "Le stationnement est payant dans cette zone",
             "Vous entrez dans une zone résidentielle"
           ],
@@ -2672,10 +2672,10 @@
           "id": "H3_Q37",
           "question": "Vous voyez un signal de stationnement alterné indiquant \"vélos 7h30–18h / voitures 18h–7h30\". Il est 10h. Pouvez-vous garer votre voiture ?",
           "choices": [
-            "Oui, c'est autorisé",
+            "Oui, c'est autorisé à toute heure",
             "Non, de 7h30 à 18h l'emplacement est réservé aux vélos",
-            "Oui, pour un bref instant",
-            "Cela dépend de l'emplacement"
+            "Oui, mais pour un bref instant",
+            "Cela dépend de l'emplacement exact"
           ],
           "correct": 1,
           "explanation": "À 10h, l'emplacement est réservé aux vélos : votre voiture ne peut pas y stationner.",

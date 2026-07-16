@@ -627,7 +627,7 @@
             "Uniquement les voitures roulant à faible vitesse",
             "Les cyclistes, speed pedelecs, cyclomoteurs classe A, conducteurs d'animaux et piétons sans trottoir",
             "Tous les véhicules motorisés sans exception",
-            "Uniquement les piétons et personne d'autre"
+            "Uniquement les piétons, à l'exclusion de tout autre usager"
           ],
           "correct": 1,
           "explanation": "Bande latérale réservée aux cyclistes, speed pedelecs, cyclomoteurs A, conducteurs d'animaux et piétons (sans trottoir).",
@@ -1692,7 +1692,7 @@
           "question": "Vous circulez sur une chaussée divisée en bandes. Comment ces bandes sont-elles délimitées ?",
           "choices": [
             "Par des poteaux de signalisation",
-            "Par un marquage routier composé de lignes blanches continues ou discontinues",
+            "Par des lignes blanches continues ou discontinues",
             "Par des lignes de couleur jaune",
             "Par des barrières métalliques amovibles"
           ],
@@ -3498,7 +3498,7 @@
             "Le panneau 30 km/h uniquement",
             "Les deux s'appliquent, la zone cyclable impose déjà 30 km/h",
             "Le panneau zone cyclable uniquement",
-            "Aucun des deux"
+            "Aucun des deux ne s'applique"
           ],
           "correct": 1,
           "explanation": "La zone cyclable impose déjà une vitesse de 30 km/h. Le panneau 30 km/h confirme cette limite. Les deux s'appliquent simultanément.",
@@ -3962,10 +3962,10 @@
           "id": "A4_Q18",
           "question": "Sur quel type de véhicule pouvez-vous monter des pneus cloutés ?",
           "choices": [
-            "Tous les véhicules",
+            "Tous les véhicules sans exception",
             "Véhicule d'une MMA n'excédant pas 3,5 tonnes",
-            "Uniquement les 4x4",
-            "Uniquement les camions"
+            "Uniquement les 4x4 et SUV",
+            "Uniquement les camions légers"
           ],
           "correct": 1,
           "explanation": "Les pneus cloutés ne sont autorisés que sur les véhicules dont la masse maximale autorisée ne dépasse pas 3,5 tonnes.",
@@ -4382,7 +4382,7 @@
           "question": "Vous roulez sur la bande de droite de l'autoroute et un véhicule veut s'insérer. Que pouvez-vous faire ?",
           "choices": [
             "Rien, il doit vous céder le passage",
-            "Vous écarter vers la gauche pour faciliter son insertion, si vous ne gênez personne",
+            "Vous écarter à gauche si vous ne gênez personne",
             "Vous devez obligatoirement changer de bande",
             "Accélérer pour passer avant lui"
           ],
@@ -5189,10 +5189,10 @@
           "id": "A5_Q40",
           "question": "Dans un embouteillage, la file de droite avance plus vite que celle de gauche. Est-ce un dépassement ?",
           "choices": [
-            "Oui, c'est interdit",
+            "Oui, et c'est strictement interdit",
             "Non, ce n'est pas considéré comme un dépassement",
-            "Oui, mais c'est toléré",
-            "Ça dépend de la vitesse"
+            "Oui, mais c'est toléré en pratique",
+            "Ça dépend de la vitesse des files"
           ],
           "correct": 1,
           "explanation": "En embouteillage dense, si la file de droite avance plus vite, ce n'est juridiquement pas un dépassement.",
@@ -5939,9 +5939,9 @@
           "id": "A6_Q23",
           "question": "Où pouvez-vous stationner dans une zone résidentielle ?",
           "choices": [
-            "N'importe où",
+            "N'importe où dans la zone",
             "Uniquement sur un emplacement prévu à cet effet",
-            "Sur le trottoir",
+            "Sur le trottoir uniquement",
             "Sur la chaussée si vous ne gênez pas"
           ],
           "correct": 1,
@@ -6292,10 +6292,10 @@
           "id": "A6_Q56",
           "question": "Un véhicule prioritaire peut-il entrer dans une rue scolaire ?",
           "choices": [
-            "Non, jamais",
+            "Non, jamais même en urgence",
             "Oui, lorsque la nature de sa mission le justifie",
             "Oui, toujours sans condition",
-            "Uniquement les ambulances"
+            "Uniquement les ambulances en intervention"
           ],
           "correct": 1,
           "explanation": "Les véhicules prioritaires peuvent entrer dans une rue scolaire lorsque leur mission le justifie.",

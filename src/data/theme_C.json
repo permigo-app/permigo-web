@@ -769,9 +769,9 @@
           "question": "Vous voyez un signal d'interdiction de tourner a gauche sans panneau additionnel. Votre voiture est legere. Pouvez-vous tourner ?",
           "choices": [
             "Oui, les voitures legeres ne sont pas concernees",
-            "Non, sans panneau additionnel l'interdiction s'applique a tous les vehicules",
+            "Non, sans panneau additionnel elle s'applique a tous",
             "Oui, si le carrefour est libre",
-            "Cela depend de l'heure"
+            "Cela depend de l'heure de la journee"
           ],
           "correct": 1,
           "explanation": "Sans panneau additionnel de masse, l'interdiction s'applique à TOUS les conducteurs.",
@@ -1980,10 +1980,10 @@
           "id": "C2_CHG_4",
           "question": "Vous transportez des planches qui masquent partiellement vos clignotants. Pouvez-vous rouler ainsi ?",
           "choices": [
-            "Oui, sur un trajet court",
+            "Oui, sur un trajet court seulement",
             "Non, la charge ne peut jamais masquer les feux ni la signalisation",
             "Oui, en klaxonnant avant chaque manœuvre",
-            "Oui, de jour uniquement"
+            "Oui, mais de jour uniquement"
           ],
           "correct": 1,
           "explanation": "La charge ne peut jamais masquer les feux ni les dispositifs de signalisation : les autres usagers doivent voir vos intentions.",
@@ -2373,10 +2373,10 @@
           "id": "C3_Q18",
           "question": "Vous roulez avec les feux de route et un vehicule arrive en face. Devez-vous basculer sur les feux de croisement ?",
           "choices": [
-            "Non, gardez les feux de route",
+            "Non, gardez les feux de route allumes",
             "Oui, pour ne pas eblouir l'usager venant en sens inverse",
-            "Non, il s'adaptera",
-            "Uniquement en agglomeration"
+            "Non, il s'adaptera de son cote",
+            "Uniquement en agglomeration la nuit"
           ],
           "correct": 1,
           "explanation": "Vous devez passer aux feux de croisement pour ne pas éblouir les usagers venant en sens inverse.",
@@ -2401,7 +2401,7 @@
           "choices": [
             "Non, jamais pendant un depassement",
             "Oui, les feux de route peuvent etre allumes lors d'un depassement",
-            "Uniquement sur autoroute",
+            "Uniquement sur autoroute la nuit",
             "Uniquement hors agglomeration"
           ],
           "correct": 1,
@@ -2516,10 +2516,10 @@
           "id": "C3_Q32",
           "question": "Vous revisez votre theorie. Quelle est la difference de condition pour les feux brouillard arriere entre brouillard/neige et forte pluie ?",
           "choices": [
-            "Aucune difference",
+            "Aucune difference entre les trois",
             "Brouillard et neige : visibilite < 100 m. Forte pluie : toujours",
             "Brouillard : toujours. Neige et pluie : < 100 m",
-            "Les trois : toujours"
+            "Les trois cas : toujours obligatoires"
           ],
           "correct": 1,
           "explanation": "Brouillard et neige : feux brouillard arrière obligatoires si visibilité < 100 m. Forte pluie : toujours obligatoires.",
@@ -2724,9 +2724,9 @@
           "id": "C3_Q52",
           "question": "Vous voyez un autobus scolaire arrete avec ses warnings allumes. Que signifie-t-il ?",
           "choices": [
-            "Le bus est en panne",
+            "Le bus est en panne sur place",
             "Des enfants sont en train de monter ou descendre",
-            "Le bus va repartir",
+            "Le bus va repartir bientot",
             "Le bus change de direction"
           ],
           "correct": 1,
