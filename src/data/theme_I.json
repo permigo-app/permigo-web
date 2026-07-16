@@ -1966,10 +1966,10 @@
           "id": "I2_Q66",
           "question": "Vous êtes dans un tunnel et un incendie se déclare. Comment les instructions d'évacuation vous sont-elles transmises ?",
           "choices": [
-            "Uniquement par des panneaux",
+            "Uniquement par des panneaux lumineux",
             "Souvent via des haut-parleurs présents dans le tunnel",
-            "Par la radio",
-            "Par SMS"
+            "Par la radio locale uniquement",
+            "Par SMS envoyé automatiquement"
           ],
           "correct": 1,
           "explanation": "Les instructions d'urgence sont souvent diffusées via les hauts-parleurs du tunnel.",
@@ -2309,10 +2309,10 @@
           "id": "I3_Q4",
           "question": "Vous démarrez votre voiture pour un trajet de 500 mètres. Pourquoi est-ce néfaste de rouler sur de courtes distances avec un moteur froid ?",
           "choices": [
-            "Le moteur chauffe trop vite",
+            "Le moteur risque de chauffer beaucoup trop vite",
             "C'est néfaste pour le moteur ET cela augmente la consommation de carburant",
-            "Cela n'a aucun impact",
-            "Cela use les pneus"
+            "Cela n'a aucun impact sur la mécanique",
+            "Cela use principalement les pneus"
           ],
           "correct": 1,
           "explanation": "Un moteur froid sollicité intensément s'use plus vite et consomme davantage.",
@@ -2400,10 +2400,10 @@
           "id": "I3_Q11",
           "question": "Vous êtes immobilisé dans un embouteillage depuis plusieurs minutes. Devez-vous couper le moteur ?",
           "choices": [
-            "Non, laissez-le tourner",
-            "Oui, le code le prévoit dans les files d'attente ou devant un passage à niveau",
-            "Non, c'est facultatif",
-            "Uniquement sur l'autoroute"
+            "Non, laissez-le tourner au ralenti",
+            "Oui, le code le prévoit dans les files et aux passages à niveau",
+            "Non, c'est facultatif et peu utile",
+            "Uniquement sur l'autoroute à l'arrêt"
           ],
           "correct": 1,
           "explanation": "Le code prévoit de couper le moteur lors d'une immobilisation prolongée.",
@@ -2504,10 +2504,10 @@
           "id": "I3_Q20",
           "question": "Vous avez vidé votre coffre de toit après les vacances mais il est toujours sur le toit. Pouvez-vous rouler ainsi ?",
           "choices": [
-            "Oui, cela ne change rien",
-            "Non, ne roulez pas avec un coffre vide ni avec des barres de toit inutiles",
-            "Oui, par prudence",
-            "Cela dépend de la vitesse"
+            "Oui, cela ne change rien à la conduite",
+            "Non, retirez le coffre vide et les barres inutiles",
+            "Oui, c'est même plus prudent de le laisser",
+            "Cela dépend de la vitesse pratiquée"
           ],
           "correct": 1,
           "explanation": "Même vide, un coffre de toit crée de la résistance à l'air. Il faut le retirer quand inutilisé.",
@@ -2712,10 +2712,10 @@
           "id": "I3_Q39",
           "question": "Vous voyez un panneau indiquant une zone de basses émissions (LEZ). De quoi s'agit-il ?",
           "choices": [
-            "D'une zone piétonne",
-            "D'une zone dans laquelle certains véhicules trop polluants ne sont pas autorisés",
-            "D'une zone sans voitures",
-            "D'une zone de stationnement"
+            "D'une zone entièrement piétonne",
+            "D'une zone interdite aux véhicules trop polluants",
+            "D'une zone sans aucune voiture",
+            "D'une zone de stationnement payant"
           ],
           "correct": 1,
           "explanation": "Une LEZ est une zone où certains véhicules polluants sont interdits.",
@@ -2856,10 +2856,10 @@
           "id": "I3_Q52",
           "question": "Vous adoptez une conduite défensive. En plus du carburant, qu'économisez-vous ?",
           "choices": [
-            "Uniquement les pneus",
+            "Uniquement les pneus, rien d'autre",
             "Les plaquettes de frein, car vous freinez moins brusquement",
-            "Rien d'autre",
-            "Le liquide lave-glace"
+            "Rien d'autre que le carburant lui-même",
+            "Le liquide de refroidissement du moteur"
           ],
           "correct": 1,
           "explanation": "En freinant moins brusquement, on use moins les plaquettes de frein.",
@@ -3775,10 +3775,10 @@
           "id": "I4_Q45",
           "question": "Vous souhaitez tourner à un carrefour. Quelle est la procédure correcte ?",
           "choices": [
-            "Clignotant puis tourner directement",
+            "Activer le clignotant puis tourner directement sans vérifier",
             "Vérifier les rétroviseurs (et l'angle mort si nécessaire), activer le clignotant, ralentir, puis tourner",
-            "Tourner puis activer le clignotant",
-            "Klaxonner puis tourner"
+            "Tourner d'abord, puis activer le clignotant ensuite",
+            "Klaxonner pour avertir, puis tourner sans ralentir"
           ],
           "correct": 1,
           "explanation": "La procédure : rétroviseurs > angle mort si nécessaire > clignotant > ralentir > tourner.",
@@ -3866,10 +3866,10 @@
           "id": "I4_Q52",
           "question": "Votre voiture est équipée de l'ESP. Que fait ce système ?",
           "choices": [
-            "Il bloque toutes les roues",
-            "Il freine une ou plusieurs roues séparément pour éviter que le véhicule ne dérape",
-            "Il accélère automatiquement",
-            "Il active le klaxon"
+            "Il bloque toutes les roues en même temps",
+            "Il freine certaines roues séparément pour éviter le dérapage",
+            "Il accélère automatiquement en côte",
+            "Il maintient la distance avec le véhicule devant"
           ],
           "correct": 1,
           "explanation": "L'ESP agit sélectivement sur une ou plusieurs roues pour corriger la trajectoire et éviter le dérapage.",
@@ -3983,10 +3983,10 @@
           "id": "I4_Q61",
           "question": "Vous dérapez et on vous conseille de regarder dans la direction où vous voulez aller. Pourquoi ?",
           "choices": [
-            "Par habitude",
+            "Par simple habitude apprise à l'auto-école",
             "Inconsciemment, vous vous dirigez dans la direction que vous regardez",
-            "Pour voir les autres voitures",
-            "Cela n'a aucun effet"
+            "Pour voir les autres voitures arriver",
+            "Cela n'a en réalité aucun effet"
           ],
           "correct": 1,
           "explanation": "Le regard conditionne la direction du volant : regarder où vous voulez aller aide à y aller.",

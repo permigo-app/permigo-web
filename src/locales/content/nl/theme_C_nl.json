@@ -212,9 +212,9 @@
           "id": "C1_Q6",
           "question": "Wat is de MTM?",
           "choices": [
-            "Het gewicht van de lege auto",
-            "Het maximale totaalgewicht dat een voertuig mag bereiken, inclusief brandstof, bestuurder, passagiers en lading",
-            "Enkel het gewicht van de lading",
+            "Het gewicht van de lege auto, zonder bestuurder",
+            "Het maximaal toegelaten gewicht, inclusief brandstof, bestuurder, passagiers en lading",
+            "Enkel het maximale gewicht van de lading",
             "Het gewicht van het voertuig zonder passagiers"
           ],
           "correct": 1,
@@ -395,10 +395,10 @@
           "id": "C1_Q25",
           "question": "Een bord vermeldt \"5t\" in een rode ronde vorm. Je rijdt met een lege vrachtwagen van 4 ton. Mag je doorrijden?",
           "choices": [
-            "Nee, het is een vrachtwagen",
-            "Ja, als het een MIB-bord is, is je werkelijk gewicht 4 ton en dus lager dan 5 ton",
-            "Nee, vrachtwagens zijn altijd verboden",
-            "Ja, zonder voorwaarden"
+            "Nee, het is een vrachtwagen dus verboden",
+            "Ja, als het een MIB-bord is: je werkelijke gewicht is 4 ton",
+            "Nee, vrachtwagens zijn hier altijd verboden",
+            "Ja, zonder enige voorwaarde te controleren"
           ],
           "correct": 1,
           "explanation": "Als het een MIB-bord is, is je werkelijk gewicht (4 t) lager dan de limiet (5 t): je mag doorrijden.",
@@ -1618,10 +1618,10 @@
           "id": "C2_Q51",
           "question": "Mag een kind van 2 jaar van deze uitzondering gebruikmaken?",
           "choices": [
-            "Ja, alle kinderen",
+            "Ja, alle kinderen mogen ervan gebruikmaken",
             "Nee, de uitzondering geldt alleen voor kinderen OUDER dan 3 jaar",
-            "Ja, met de gordel",
-            "Ja, achterin"
+            "Ja, als het de gordel draagt achterin",
+            "Ja, enkel achterin het voertuig"
           ],
           "correct": 1,
           "explanation": "De uitzondering geldt alleen voor kinderen OUDER dan 3 jaar. Een kind van 2 jaar moet altijd in een KBS zitten.",
@@ -1632,9 +1632,9 @@
           "question": "Je hebt 3 kinderen en maar 2 KBS passen achterin. Het derde kind is 5 jaar en 1,40 m groot. Wat doe je?",
           "choices": [
             "Het mag vooraan zitten zonder KBS",
-            "Het mag alleen de gordel gebruiken want het is groter dan 1,35 m, maar moet achterin zitten",
-            "Het mag niet meereizen",
-            "Het mag zonder gordel zitten"
+            "De gordel volstaat want het is groter dan 1,35 m, achterin",
+            "Het mag niet meereizen in deze auto",
+            "Het mag achterin zonder gordel zitten"
           ],
           "correct": 1,
           "explanation": "Dit kind is groter dan 1,35 m: het mag alleen de gordel gebruiken. Maar het moet achterin blijven zitten.",

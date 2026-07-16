@@ -212,10 +212,10 @@
           "id": "C1_Q6",
           "question": "Vous lisez votre certificat d'immatriculation. Qu'est-ce que la MMA ?",
           "choices": [
-            "Le poids de la voiture vide",
-            "Le poids total maximal qu'un vehicule peut atteindre, carburant, conducteur, passagers et chargement compris",
-            "Le poids du chargement uniquement",
-            "Le poids du vehicule sans passagers"
+            "Le poids de la voiture vide, sans conducteur",
+            "Le poids maximal autorise, carburant, conducteur, passagers et chargement compris",
+            "Le poids maximal du chargement uniquement",
+            "Le poids du vehicule sans les passagers"
           ],
           "correct": 1,
           "explanation": "La MMA (Masse Maximale Autorisée) inclut tout : le véhicule, le carburant, le conducteur, les passagers et le chargement.",
@@ -395,10 +395,10 @@
           "id": "C1_Q25",
           "question": "Vous conduisez un camion vide pesant 4 tonnes. Un signal rond rouge porte le chiffre '5t'. Pouvez-vous passer ?",
           "choices": [
-            "Non, c'est un camion",
-            "Oui, si c'est un signal de MEC, votre poids reel est de 4 tonnes donc inferieur a 5 tonnes",
-            "Non, les camions sont toujours interdits",
-            "Oui, sans condition"
+            "Non, c'est un camion donc interdit",
+            "Oui, si le signal vise la MEC : votre poids reel est de 4 tonnes",
+            "Non, les camions sont toujours interdits ici",
+            "Oui, sans aucune condition a verifier"
           ],
           "correct": 1,
           "explanation": "Si c'est un signal de MEC, votre poids réel (4 t) est inférieur à la limite (5 t) : vous pouvez passer.",
@@ -1623,10 +1623,10 @@
           "id": "C2_Q51",
           "question": "Vous transportez un enfant de 2 ans. Peut-il beneficier de l'exception au DRA ?",
           "choices": [
-            "Oui, tous les enfants",
+            "Oui, tous les enfants en beneficient",
             "Non, l'exception est uniquement pour les enfants de PLUS de 3 ans",
-            "Oui, avec la ceinture",
-            "Oui, a l'arriere"
+            "Oui, s'il porte la ceinture a l'arriere",
+            "Oui, uniquement a l'arriere du vehicule"
           ],
           "correct": 1,
           "explanation": "L'exception ne s'applique qu'aux enfants de PLUS de 3 ans. Un enfant de 2 ans doit toujours être dans un DRA.",
@@ -1637,9 +1637,9 @@
           "question": "Vous avez 3 enfants et seulement 2 DRA tiennent a l'arriere. Le troisieme a 5 ans et mesure 1,40 m. Que faire ?",
           "choices": [
             "Il peut etre a l'avant sans DRA",
-            "Il peut juste mettre la ceinture car il mesure plus de 1,35 m, mais doit etre a l'arriere",
-            "Il ne peut pas voyager",
-            "Il peut etre sans ceinture"
+            "La ceinture suffit car il mesure plus de 1,35 m, a l'arriere",
+            "Il ne peut pas voyager dans ce vehicule",
+            "Il peut voyager sans ceinture a l'arriere"
           ],
           "correct": 1,
           "explanation": "Cet enfant mesure plus de 1,35 m : il peut utiliser uniquement la ceinture. Mais il doit rester à l'arrière.",
