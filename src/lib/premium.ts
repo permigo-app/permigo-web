@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { getActiveLicense } from './license';
 
 const KEY_PREMIUM = 'isPremium';
 const TURBO_DAILY_LIMIT = 3;
@@ -39,8 +40,15 @@ export function useIsPremium(): boolean {
   return premium;
 }
 
-/** Theme A is always free. Themes B-I require premium. */
+/**
+ * Permis B : thème A gratuit, thèmes B-I premium.
+ * Permis AM : TOUT est gratuit (décision produit — l'AM est le produit
+ * d'appel vers le B ; l'adoption se mesure via license_events).
+ * Le catalogue des panneaux, contenu PARTAGÉ entre permis, ne passe pas par
+ * ici : il garde son gating premium propre dans les deux modes.
+ */
 export function isThemeFree(themeCode: string): boolean {
+  if (getActiveLicense() === 'AM') return true;
   return themeCode === 'A';
 }
 
@@ -64,12 +72,13 @@ export function incrementTurboDailyCount(): void {
 }
 
 export function canPlayTurbo(): boolean {
+  if (getActiveLicense() === 'AM') return true; // AM : illimité (gratuit)
   if (isPremium()) return true;
   return getTurboDailyCount() < TURBO_DAILY_LIMIT;
 }
 
 export function turboRemainingToday(): number {
-  if (isPremium()) return Infinity;
+  if (getActiveLicense() === 'AM' || isPremium()) return Infinity;
   return Math.max(0, TURBO_DAILY_LIMIT - getTurboDailyCount());
 }
 
@@ -90,6 +99,7 @@ export function recordExamPlayed(): void {
 }
 
 export function canPlayExam(): boolean {
+  if (getActiveLicense() === 'AM') return true; // AM : examens illimités (gratuit)
   if (isPremium()) return true;
   if (typeof window === 'undefined') return true;
   return !localStorage.getItem(`exam_usage_${todayDate()}`);
