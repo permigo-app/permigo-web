@@ -124,7 +124,19 @@ export default function QuizLayout({
               <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'var(--text-disabled)' }}>{subtitle}</p>
             )}
 
-            {/* Illustration de situation (prioritaire sur le panneau seul) */}
+            {/* Sign image */}
+            {!imageUrl && signCode && (
+              <div className="flex justify-center mb-5">
+                <div className="rounded-xl p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
+                  <SignImage code={signCode} size={120} />
+                </div>
+              </div>
+            )}
+
+            {/* Question */}
+            <p className="text-2xl font-bold text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
+
+            {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
             {imageUrl && (
               <div className="flex justify-center mb-5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -137,18 +149,6 @@ export default function QuizLayout({
                 />
               </div>
             )}
-
-            {/* Sign image */}
-            {!imageUrl && signCode && (
-              <div className="flex justify-center mb-5">
-                <div className="rounded-xl p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                  <SignImage code={signCode} size={120} />
-                </div>
-              </div>
-            )}
-
-            {/* Question */}
-            <p className="text-2xl font-bold text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
 
             {/* Image request — juste sous la question, masqué si un panneau est déjà affiché */}
             {questionId && !signCode && !imageUrl && <ImageRequestButton id={questionId} />}
