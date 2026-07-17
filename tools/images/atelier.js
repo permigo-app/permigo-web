@@ -121,11 +121,29 @@ async function take(explicitFile, noAdvanceDisplay) {
   }
 }
 
+// Saisie SYNCHRONE au clavier — fiable dans la console Windows (readline
+// asynchrone laissait parfois node se terminer avant la première question).
+let inputBuf = '';
+function askSync(label) {
+  process.stdout.write(label);
+  for (;;) {
+    const nl = inputBuf.indexOf('\n');
+    if (nl >= 0) {
+      const line = inputBuf.slice(0, nl);
+      inputBuf = inputBuf.slice(nl + 1);
+      return line.replace(/\r$/, '').trim().toLowerCase();
+    }
+    const buf = Buffer.alloc(4096);
+    let bytes = 0;
+    try { bytes = fs.readSync(0, buf, 0, 4096, null); } catch { return 'q'; }
+    if (bytes === 0) return 'q'; // fin d'entrée = quitter proprement
+    inputBuf += buf.toString('utf8', 0, bytes);
+  }
+}
+
 // Mode interactif : une seule fenêtre. Entrée = récolter, p = prompt suivant (lot).
 async function loop() {
-  const readline = require('readline');
-  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-  const ask = q => new Promise(res => rl.question(q, res));
+  const ask = q => Promise.resolve(askSync(q));
   console.log('🎨 ATELIER IMAGES — garde ChatGPT ouvert à côté.');
   console.log('   Simple  : Ctrl+V dans ChatGPT → Télécharger → Entrée ici.');
   console.log('   Par lot : p pour chaque prompt supplémentaire (2-3 discussions en');
@@ -184,7 +202,6 @@ async function loop() {
       pending = [];
     } catch (e) { console.log('❌ ' + e.message); }
   }
-  rl.close();
 }
 
 const cmd = process.argv[2] || 'next';
