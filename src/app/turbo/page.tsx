@@ -448,6 +448,7 @@ function TurboContent() {
       subtitle={mode === '3min' ? t('turbo_sprint_3') : mode === '5min' ? t('turbo_sprint_5') : t('turbo_survie')}
       question={q.question}
       signCode={q.sign}
+      imageUrl={q.image}
       choices={[...q.choices]}
       selected={selected}
       validated={validated}

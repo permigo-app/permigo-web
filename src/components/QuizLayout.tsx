@@ -25,6 +25,7 @@ interface QuizLayoutProps {
   subtitle?: string; // e.g. "Partie 1 — Quiz"
   question: string;
   signCode?: string;
+  imageUrl?: string; // illustration de situation (GOCA-style), affichée au-dessus de la question
 
   /* Choices */
   choices: string[];
@@ -59,6 +60,7 @@ export default function QuizLayout({
   subtitle,
   question,
   signCode,
+  imageUrl,
   choices,
   selected,
   validated,
@@ -122,8 +124,22 @@ export default function QuizLayout({
               <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'var(--text-disabled)' }}>{subtitle}</p>
             )}
 
+            {/* Illustration de situation (prioritaire sur le panneau seul) */}
+            {imageUrl && (
+              <div className="flex justify-center mb-5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={imageUrl}
+                  alt=""
+                  loading="lazy"
+                  className="rounded-xl w-full max-w-md"
+                  style={{ border: '1px solid var(--border-subtle)', aspectRatio: '4 / 3', objectFit: 'cover', background: 'var(--card-secondary)' }}
+                />
+              </div>
+            )}
+
             {/* Sign image */}
-            {signCode && (
+            {!imageUrl && signCode && (
               <div className="flex justify-center mb-5">
                 <div className="rounded-xl p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
                   <SignImage code={signCode} size={120} />
@@ -135,7 +151,7 @@ export default function QuizLayout({
             <p className="text-2xl font-bold text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
 
             {/* Image request — juste sous la question, masqué si un panneau est déjà affiché */}
-            {questionId && !signCode && <ImageRequestButton id={questionId} />}
+            {questionId && !signCode && !imageUrl && <ImageRequestButton id={questionId} />}
 
             {/* Answer grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">

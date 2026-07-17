@@ -19,6 +19,8 @@ export interface LocalQuestion {
   explanation: string;
   theoryCardIndex?: number;
   sign?: string;
+  /** Illustration de la situation (photo/rendu), chemin sous /public — ex. /images/questions/A1_Q3.webp */
+  image?: string;
   // Matière "éliminatoire" à l'examen GOCA (infraction 3e/4e degré, vitesse) :
   // à l'examen blanc, une erreur sur ces questions coûte 5 points au lieu de 1
   severe?: boolean;

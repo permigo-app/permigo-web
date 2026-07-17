@@ -185,6 +185,7 @@ function RevisionContent() {
       subtitle={`${t('erreurs_titre')} ${themeCode}`}
       question={q.question}
       signCode={q.sign}
+      imageUrl={q.image}
       choices={[...q.choices]}
       selected={selected}
       validated={validated}

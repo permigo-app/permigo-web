@@ -375,6 +375,7 @@ function ExamContent() {
       subtitle={`Examen ${themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}`}
       question={q.question}
       signCode={q.sign}
+      imageUrl={q.image}
       choices={[...q.choices]}
       selected={selected}
       validated={false}

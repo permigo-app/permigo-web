@@ -670,6 +670,7 @@ export default function LessonPage() {
         subtitle={currentPartieTitle ? `${currentPartieTitle} — Quiz` : `${lesson.title} — Quiz`}
         question={q.question}
         signCode={q.sign}
+      imageUrl={q.image}
         choices={[...q.choices]}
         selected={selected}
         validated={validated}
