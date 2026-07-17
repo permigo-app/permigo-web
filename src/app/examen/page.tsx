@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getExamQuestionsLocalized, getNextThemeCode, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
+import { getActiveLicense } from '@/lib/license';
 import { useLang } from '@/contexts/LanguageContext';
 import { setExamPassed, unlockTheme, updateQuizHistory, addStudyTime } from '@/lib/progressStorage';
 import { recordQuestionReview } from '@/lib/reviewApi';
@@ -17,7 +18,10 @@ function ExamContent() {
   const router = useRouter();
   const { t, lang } = useLang();
   const themeCode = params.get('theme') || 'FINAL';
-  const questionCount = 50;
+  // Format officiel par permis : B = 50 questions (erreur grave = -5),
+  // AM = 40 questions (chaque erreur coûte 1 point, pas de règle des -5)
+  const isAM = getActiveLicense() === 'AM';
+  const questionCount = isAM ? 40 : 50;
 
   const premiumActive = useIsPremium();
   const [started, setStarted] = useState(false);
@@ -267,7 +271,7 @@ function ExamContent() {
     const examTitle = themeCode === 'FINAL' ? t('examen_blanc_final') : `${t('examen_theme')} ${themeCode}`;
     const EXAM_STATS = [
       { label: 'Questions', value: `${questionCount}` },
-      { label: 'Durée', value: '~45 min' },
+      { label: 'Durée', value: isAM ? '~35 min' : '~45 min' },
       { label: 'Pour réussir', value: `${passCount}/${questionCount}` },
       { label: 'Format', value: 'Officiel' },
     ];
@@ -305,7 +309,11 @@ function ExamContent() {
           <div style={{ background: 'var(--bg-why)', border: '1.5px solid #fde68a', borderRadius: 14, padding: '13px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
             <span style={{ fontSize: 18, flexShrink: 0 }}>⚡</span>
             <p style={{ margin: 0, fontSize: 13, color: '#92400e', lineHeight: 1.5, fontWeight: 500 }}>
-              Il faut obtenir <strong>{passCount} points sur {questionCount}</strong> (82%) pour réussir. Comme à l'examen officiel, une erreur sur une <strong>infraction grave</strong> (feu rouge, priorité, vitesse, alcool…) coûte <strong>5 points</strong> au lieu de 1.
+              {isAM ? (
+                <>Il faut obtenir <strong>{passCount} points sur {questionCount}</strong> (82%) pour réussir. Comme à l'examen officiel AM, chaque erreur coûte <strong>1 point</strong> — il n'y a pas de règle des fautes graves.</>
+              ) : (
+                <>Il faut obtenir <strong>{passCount} points sur {questionCount}</strong> (82%) pour réussir. Comme à l'examen officiel, une erreur sur une <strong>infraction grave</strong> (feu rouge, priorité, vitesse, alcool…) coûte <strong>5 points</strong> au lieu de 1.</>
+              )}
             </p>
           </div>
 
