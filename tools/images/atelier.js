@@ -1,14 +1,18 @@
 // Atelier images — boucle de production avec ChatGPT Plus (zéro API, zéro coût).
 //
-//   node atelier.js            → affiche le prompt courant + le copie dans le presse-papiers
-//   node atelier.js take       → prend l'image la plus récente de Téléchargements,
-//                                la convertit en WebP, l'installe dans le site,
-//                                met à jour le JSON du thème, passe à la suivante
-//   node atelier.js take <fichier>  → pareil avec un fichier précis
-//   node atelier.js skip       → passe la question courante sans image
-//   node atelier.js status     → avancement global
+//   Double-clic sur ATELIER.bat (= node atelier.js loop) — mode interactif :
+//     Entrée = je viens de télécharger l'image  →  installée + prompt suivant
+//     p      = donne-moi le prompt SUIVANT sans attendre (mode lot : 2-3
+//              discussions ChatGPT en parallèle, on récolte tout à la fin)
+//     s      = passer la question courante
+//     q      = quitter (l'avancement est conservé)
 //
-// Boucle : node atelier.js → coller dans ChatGPT → télécharger l'image → node atelier.js take
+//   Autres commandes : node atelier.js | take [fichier] | skip | status
+//
+// Mode lot : tape p pour empiler 2-3 prompts (chacun est copié au moment du p),
+// colle-les dans des discussions ChatGPT séparées, télécharge les images
+// DANS L'ORDRE DES PROMPTS, puis Entrée : l'atelier associe la plus ancienne
+// image au premier prompt, etc., et te montre l'association avant d'écrire.
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
@@ -17,6 +21,8 @@ const { execFileSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '..', '..');
 const PLAN = path.join(__dirname, 'plan.json');
 const STATE = path.join(__dirname, 'state.json');
+const DL_DIR = process.env.ATELIER_DL || path.join(os.homedir(), 'Downloads');
+const RECENT_MS = 30 * 60 * 1000; // une image doit dater de moins de 30 min
 
 if (!fs.existsSync(PLAN)) {
   console.log('plan.json manquant — lance d\'abord : node build-plan.js');
@@ -40,8 +46,8 @@ function isDone(job) {
   return !card || !!card.image;
 }
 
-function currentJob() {
-  return plan.find(j => !state.skipped.includes(j.id) && !isDone(j));
+function nextJob(excludeIds = []) {
+  return plan.find(j => !excludeIds.includes(j.id) && !state.skipped.includes(j.id) && !isDone(j));
 }
 
 function copyToClipboard(text) {
@@ -54,50 +60,37 @@ function copyToClipboard(text) {
   } catch { return false; }
 }
 
-function showCurrent() {
-  const job = currentJob();
-  if (!job) { console.log('🎉 Plan terminé (ou tout le reste est skippé). Relance build-plan.js pour vérifier.'); return; }
+function showJob(job, tag) {
   const pos = plan.indexOf(job) + 1;
   console.log('────────────────────────────────────────────');
-  console.log(`[${pos}/${plan.length}]  ${job.lic} · thème ${job.theme} · ${job.kind === 'question' ? 'question' : 'carte'} ${job.id}`);
+  console.log(`${tag ? tag + '  ' : ''}[${pos}/${plan.length}]  ${job.lic} · thème ${job.theme} · ${job.kind === 'question' ? 'question' : 'carte'} ${job.id}`);
   console.log(`« ${job.label.slice(0, 110)} »`);
   console.log('────────────────────────────────────────────');
   console.log(job.prompt);
   console.log('────────────────────────────────────────────');
   const ok = copyToClipboard(job.prompt);
-  console.log(ok ? '📋 Prompt copié — colle-le dans ChatGPT, télécharge l\'image, puis :  node atelier.js take'
+  console.log(ok ? '📋 Prompt copié dans le presse-papiers.'
                  : '⚠ Copie presse-papiers impossible — copie le prompt ci-dessus à la main.');
 }
 
-function newestDownload() {
-  const dl = path.join(os.homedir(), 'Downloads');
+// Images récentes de Téléchargements, de la plus RÉCENTE à la plus ancienne
+function recentDownloads() {
   const exts = ['.png', '.jpg', '.jpeg', '.webp'];
-  const files = fs.readdirSync(dl)
+  if (!fs.existsSync(DL_DIR)) return [];
+  return fs.readdirSync(DL_DIR)
     .filter(f => exts.includes(path.extname(f).toLowerCase()))
-    .map(f => ({ f: path.join(dl, f), t: fs.statSync(path.join(dl, f)).mtimeMs }))
+    .map(f => ({ f: path.join(DL_DIR, f), t: fs.statSync(path.join(DL_DIR, f)).mtimeMs }))
+    .filter(x => Date.now() - x.t <= RECENT_MS)
     .sort((a, b) => b.t - a.t);
-  if (!files.length) return null;
-  // garde-fou : le fichier doit être récent (< 30 min) pour éviter de prendre autre chose
-  if (Date.now() - files[0].t > 30 * 60 * 1000) return null;
-  return files[0].f;
 }
 
-async function take(explicitFile, noAdvanceDisplay) {
-  const job = currentJob();
-  if (!job) { console.log('Rien à faire — plan terminé.'); return; }
-  const src = explicitFile || newestDownload();
-  if (!src || !fs.existsSync(src)) {
-    console.log('❌ Aucune image récente (<30 min) trouvée dans Téléchargements.');
-    console.log('   Télécharge l\'image depuis ChatGPT puis réessaie.');
-    return;
-  }
+async function takeFileForJob(job, src) {
   const sharp = require('sharp');
   const outAbs = path.join(ROOT, 'public', job.out.replace(/^\//, ''));
   fs.mkdirSync(path.dirname(outAbs), { recursive: true });
   await sharp(src).resize({ width: 1024, withoutEnlargement: true }).webp({ quality: 78 }).toFile(outAbs);
   const kb = Math.round(fs.statSync(outAbs).size / 1024);
 
-  // Mise à jour du JSON de données
   const dataPath = path.join(ROOT, job.file);
   const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
   const lesson = data.lessons.find(l => l.id === job.lessonId);
@@ -108,28 +101,88 @@ async function take(explicitFile, noAdvanceDisplay) {
     lesson.theory[job.partieIdx].cards[job.cardIdx].image = job.out;
   }
   fs.writeFileSync(dataPath, JSON.stringify(data, null, 2) + '\n');
-
   console.log(`✅ ${job.id}  ←  ${path.basename(src)}  (${kb} Ko WebP)  →  ${job.out}`);
-  console.log('');
-  if (!noAdvanceDisplay) showCurrent(); // enchaîne directement sur la suivante
 }
 
-// Mode interactif : une seule fenêtre, Entrée = prendre l'image téléchargée.
+async function take(explicitFile, noAdvanceDisplay) {
+  const job = nextJob();
+  if (!job) { console.log('Rien à faire — plan terminé.'); return; }
+  const src = explicitFile || (recentDownloads()[0] || {}).f;
+  if (!src || !fs.existsSync(src)) {
+    console.log('❌ Aucune image récente (<30 min) trouvée dans Téléchargements.');
+    console.log('   Télécharge l\'image depuis ChatGPT puis réessaie.');
+    return;
+  }
+  await takeFileForJob(job, src);
+  console.log('');
+  if (!noAdvanceDisplay) {
+    const nj = nextJob();
+    if (nj) showJob(nj); else console.log('🎉 Plan terminé !');
+  }
+}
+
+// Mode interactif : une seule fenêtre. Entrée = récolter, p = prompt suivant (lot).
 async function loop() {
   const readline = require('readline');
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
   const ask = q => new Promise(res => rl.question(q, res));
   console.log('🎨 ATELIER IMAGES — garde ChatGPT ouvert à côté.');
-  console.log('   À chaque image : Ctrl+V dans ChatGPT → Télécharger → reviens ici → Entrée.');
-  console.log('   Tape s + Entrée pour passer une question, q + Entrée pour quitter.\n');
+  console.log('   Simple  : Ctrl+V dans ChatGPT → Télécharger → Entrée ici.');
+  console.log('   Par lot : p pour chaque prompt supplémentaire (2-3 discussions en');
+  console.log('             parallèle), télécharge DANS L\'ORDRE, puis Entrée.');
+  console.log('   s = passer la question · q = quitter (avancement conservé)\n');
+
+  let pending = []; // prompts distribués, images pas encore récoltées
+
   for (;;) {
-    const job = currentJob();
-    if (!job) { console.log('🎉 Tout est fait !'); break; }
-    showCurrent();
-    const rep = (await ask('\n⏎ Entrée = je viens de télécharger l\'image | s = passer | q = quitter > ')).trim().toLowerCase();
-    if (rep === 'q') break;
-    if (rep === 's') { state.skipped.push(job.id); saveState(); console.log(`⏭ ${job.id} passée.\n`); continue; }
-    try { await take(undefined, true); } catch (e) { console.log('❌ ' + e.message); }
+    if (pending.length === 0) {
+      const job = nextJob();
+      if (!job) { console.log('🎉 Tout est fait !'); break; }
+      pending = [job];
+      showJob(job, '🅰');
+    }
+    const label = pending.length > 1
+      ? `\n⏎ Entrée = les ${pending.length} images sont téléchargées | p = prompt suivant | q = quitter > `
+      : '\n⏎ Entrée = image téléchargée | p = prompt suivant (lot) | s = passer | q = quitter > ';
+    const rep = (await ask(label)).trim().toLowerCase();
+
+    if (rep === 'q') { if (pending.length > 1) console.log('(lot abandonné — rien n\'a été écrit)'); break; }
+
+    if (rep === 'p') {
+      const j = nextJob(pending.map(p => p.id));
+      if (!j) { console.log('Plus rien à empiler — termine ce lot.'); continue; }
+      pending.push(j);
+      showJob(j, ['🅰', '🅱', '🅲', '🅳', '🅴'][pending.length - 1] || '•');
+      continue;
+    }
+
+    if (rep === 's') {
+      if (pending.length > 1) { console.log('⚠ Termine d\'abord le lot en cours (Entrée), puis tu pourras passer.'); continue; }
+      state.skipped.push(pending[0].id); saveState();
+      console.log(`⏭ ${pending[0].id} passée.\n`);
+      pending = [];
+      continue;
+    }
+
+    // Entrée : récolte
+    const dls = recentDownloads();
+    if (dls.length < pending.length) {
+      console.log(`❌ Je ne trouve que ${dls.length} image(s) récente(s) dans Téléchargements — il en faut ${pending.length}. Télécharge-les puis refais Entrée.`);
+      continue;
+    }
+    // les N plus récentes, remises dans l'ordre de téléchargement (ancienne → récente)
+    const picked = dls.slice(0, pending.length).sort((a, b) => a.t - b.t);
+    if (pending.length > 1) {
+      console.log('\nAssociation proposée (ordre de téléchargement = ordre des prompts) :');
+      pending.forEach((j, i) => console.log(`  ${['🅰', '🅱', '🅲', '🅳', '🅴'][i] || '•'} ${j.id}  ←  ${path.basename(picked[i].f)}`));
+      const conf = (await ask('C\'est bon ? (Entrée/o = oui, n = annuler) > ')).trim().toLowerCase();
+      if (conf === 'n') { console.log('Annulé — rien n\'a été écrit. Re-télécharge dans le bon ordre puis Entrée.'); continue; }
+    }
+    try {
+      for (let i = 0; i < pending.length; i++) await takeFileForJob(pending[i], picked[i].f);
+      console.log('');
+      pending = [];
+    } catch (e) { console.log('❌ ' + e.message); }
   }
   rl.close();
 }
@@ -140,9 +193,10 @@ if (cmd === 'loop') {
 } else if (cmd === 'take') {
   take(process.argv[3]).catch(e => { console.error('❌', e.message); process.exit(1); });
 } else if (cmd === 'skip') {
-  const job = currentJob();
+  const job = nextJob();
   if (job) { state.skipped.push(job.id); saveState(); console.log(`⏭ ${job.id} skippée.`); }
-  showCurrent();
+  const nj = nextJob();
+  if (nj) showJob(nj);
 } else if (cmd === 'status') {
   let done = 0, todo = 0, skip = 0;
   const perTheme = {};
@@ -156,5 +210,6 @@ if (cmd === 'loop') {
   console.log(`✅ faites : ${done}   ⏭ skippées : ${skip}   ⬜ restantes : ${todo}   (total plan : ${plan.length})`);
   for (const [k, v] of Object.entries(perTheme)) if (v.done > 0 || v.todo > 0) console.log(`  ${k}: ${v.done} faites / ${v.todo} restantes`);
 } else {
-  showCurrent();
+  const job = nextJob();
+  if (job) showJob(job); else console.log('🎉 Plan terminé !');
 }
