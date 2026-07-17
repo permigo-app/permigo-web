@@ -82,13 +82,13 @@ function newestDownload() {
   return files[0].f;
 }
 
-async function take(explicitFile) {
+async function take(explicitFile, noAdvanceDisplay) {
   const job = currentJob();
   if (!job) { console.log('Rien à faire — plan terminé.'); return; }
   const src = explicitFile || newestDownload();
   if (!src || !fs.existsSync(src)) {
     console.log('❌ Aucune image récente (<30 min) trouvée dans Téléchargements.');
-    console.log('   Télécharge l\'image depuis ChatGPT puis relance, ou : node atelier.js take <chemin>');
+    console.log('   Télécharge l\'image depuis ChatGPT puis réessaie.');
     return;
   }
   const sharp = require('sharp');
@@ -111,11 +111,33 @@ async function take(explicitFile) {
 
   console.log(`✅ ${job.id}  ←  ${path.basename(src)}  (${kb} Ko WebP)  →  ${job.out}`);
   console.log('');
-  showCurrent(); // enchaîne directement sur la suivante
+  if (!noAdvanceDisplay) showCurrent(); // enchaîne directement sur la suivante
+}
+
+// Mode interactif : une seule fenêtre, Entrée = prendre l'image téléchargée.
+async function loop() {
+  const readline = require('readline');
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+  const ask = q => new Promise(res => rl.question(q, res));
+  console.log('🎨 ATELIER IMAGES — garde ChatGPT ouvert à côté.');
+  console.log('   À chaque image : Ctrl+V dans ChatGPT → Télécharger → reviens ici → Entrée.');
+  console.log('   Tape s + Entrée pour passer une question, q + Entrée pour quitter.\n');
+  for (;;) {
+    const job = currentJob();
+    if (!job) { console.log('🎉 Tout est fait !'); break; }
+    showCurrent();
+    const rep = (await ask('\n⏎ Entrée = je viens de télécharger l\'image | s = passer | q = quitter > ')).trim().toLowerCase();
+    if (rep === 'q') break;
+    if (rep === 's') { state.skipped.push(job.id); saveState(); console.log(`⏭ ${job.id} passée.\n`); continue; }
+    try { await take(undefined, true); } catch (e) { console.log('❌ ' + e.message); }
+  }
+  rl.close();
 }
 
 const cmd = process.argv[2] || 'next';
-if (cmd === 'take') {
+if (cmd === 'loop') {
+  loop();
+} else if (cmd === 'take') {
   take(process.argv[3]).catch(e => { console.error('❌', e.message); process.exit(1); });
 } else if (cmd === 'skip') {
   const job = currentJob();
