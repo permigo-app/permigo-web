@@ -50,7 +50,12 @@
         {
           "id": "AM_E1_Q1",
           "question": "Ton scooter classe B (45 km/h) entre dans une zone 30. Ta vitesse maximale ?",
-          "choices": ["45 km/h, ta limite de construction", "30 km/h, la limite de la zone", "35 km/h par tolérance", "40 km/h en journée"],
+          "choices": [
+            "45 km/h, ta limite de construction",
+            "30 km/h, la limite de la zone",
+            "35 km/h par tolérance",
+            "40 km/h en journée"
+          ],
           "correct": 1,
           "explanation": "La limite la plus basse s'applique toujours : en zone 30, tu roules à 30 km/h maximum.",
           "theoryCardIndex": 0
@@ -58,7 +63,12 @@
         {
           "id": "AM_E1_Q2",
           "question": "Hors agglomération, la route est limitée à 90 km/h. Ta classe B peut rouler à :",
-          "choices": ["90 km/h comme les voitures", "70 km/h maximum", "45 km/h, sa limite de construction", "60 km/h maximum"],
+          "choices": [
+            "90 km/h comme les voitures",
+            "70 km/h maximum",
+            "45 km/h, sa limite de construction",
+            "60 km/h maximum"
+          ],
           "correct": 2,
           "explanation": "Ta bride de construction (45 km/h) reste ton plafond absolu, même quand la route autorise plus.",
           "theoryCardIndex": 0
@@ -66,7 +76,12 @@
         {
           "id": "AM_E1_Q3",
           "question": "Pluie battante, piétons nombreux, rue limitée à 50. Quelle est la bonne vitesse ?",
-          "choices": ["45 km/h, ta limite l'autorise", "50 km/h, la limite du lieu", "Une allure nettement réduite, adaptée aux circonstances", "La même que les voitures autour"],
+          "choices": [
+            "45 km/h, ta limite l'autorise",
+            "50 km/h, la limite du lieu",
+            "Une allure nettement réduite, adaptée aux circonstances",
+            "La même que les voitures autour"
+          ],
           "correct": 2,
           "explanation": "La limite est un maximum : le Code impose d'adapter ta vitesse à la météo, à la visibilité et aux usagers présents.",
           "theoryCardIndex": 0
@@ -74,7 +89,12 @@
         {
           "id": "AM_E1_Q4",
           "question": "De quoi se compose la distance d'arrêt ?",
-          "choices": ["Du freinage uniquement", "De la distance de réaction + la distance de freinage", "De la distance de sécurité", "Du temps de réaction uniquement"],
+          "choices": [
+            "Du freinage uniquement",
+            "De la distance de réaction + la distance de freinage",
+            "De la distance de sécurité",
+            "Du temps de réaction uniquement"
+          ],
           "correct": 1,
           "explanation": "Distance d'arrêt = réaction (≈1 seconde, le temps de décider) + freinage (le temps que les freins agissent).",
           "theoryCardIndex": 1
@@ -82,7 +102,12 @@
         {
           "id": "AM_E1_Q5",
           "question": "Environ quelle distance parcours-tu pendant 1 seconde de réaction à 45 km/h ?",
-          "choices": ["4 à 5 mètres", "12 à 13 mètres", "20 à 25 mètres", "30 mètres"],
+          "choices": [
+            "4 à 5 mètres",
+            "12 à 13 mètres",
+            "20 à 25 mètres",
+            "30 mètres"
+          ],
           "correct": 1,
           "explanation": "45 km/h ≈ 12,5 m/s : une seconde de réaction consomme déjà plus de 12 mètres avant tout freinage.",
           "theoryCardIndex": 1
@@ -90,10 +115,51 @@
         {
           "id": "AM_E1_Q6",
           "question": "Quel écart garder avec le véhicule qui te précède sur route mouillée ?",
-          "choices": ["1 seconde suffit", "2 secondes comme sur le sec", "4 secondes, le double du sec", "10 mètres fixes"],
+          "choices": [
+            "1 seconde suffit",
+            "2 secondes comme sur le sec",
+            "4 secondes, le double du sec",
+            "10 mètres fixes"
+          ],
           "correct": 2,
           "explanation": "La règle des 2 secondes se double sur le mouillé : 4 secondes, car ton freinage s'allonge fortement.",
           "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_E1_B1",
+          "question": "En classe B, tu roules à 40 km/h dans une zone 30. C'est :",
+          "choices": [
+            "Légal, tu es sous tes 45 km/h",
+            "Toléré à 10 km/h près",
+            "Une infraction : la limite du lieu prime",
+            "Légal hors heures scolaires"
+          ],
+          "correct": 2,
+          "explanation": "La limite la plus basse s'applique : zone 30 = 30 km/h maximum, ta bride de 45 ne t'autorise rien de plus."
+        },
+        {
+          "id": "AM_E1_B2",
+          "question": "À 25 km/h, quelle distance parcourt-on environ chaque seconde ?",
+          "choices": [
+            "Environ 7 mètres",
+            "Environ 15 mètres",
+            "Environ 2 mètres",
+            "Environ 25 mètres"
+          ],
+          "correct": 0,
+          "explanation": "25 km/h ≈ 7 m/s : même « lentement », une seconde d'inattention consomme déjà 7 mètres."
+        },
+        {
+          "id": "AM_E1_B3",
+          "question": "Brouillard épais sur ton trajet. Tes deux priorités :",
+          "choices": [
+            "Garder 45 km/h et suivre les feux arrière",
+            "Réduire fortement l'allure et être vu (feux, gilet)",
+            "Rouler au centre de la chaussée",
+            "Coller le véhicule devant pour te guider"
+          ],
+          "correct": 1,
+          "explanation": "Par brouillard : vitesse adaptée à la visibilité réelle, et tout pour être vu — feux en ordre, vêtements clairs ou réfléchissants."
         }
       ]
     },
@@ -163,7 +229,12 @@
         {
           "id": "AM_E2_Q1",
           "question": "Où se gère le freinage d'un virage à deux roues ?",
-          "choices": ["Dans le virage, progressivement", "Avant le virage, en ligne droite", "À la sortie du virage", "Au point de corde"],
+          "choices": [
+            "Dans le virage, progressivement",
+            "Avant le virage, en ligne droite",
+            "À la sortie du virage",
+            "Au point de corde"
+          ],
           "correct": 1,
           "explanation": "On freine AVANT, en ligne droite : en courbe, les pneus ne peuvent pas tourner et freiner à la fois.",
           "theoryCardIndex": 0
@@ -171,7 +242,12 @@
         {
           "id": "AM_E2_Q2",
           "question": "Où porter ton regard dans un virage ?",
-          "choices": ["Sur ta roue avant", "Sur le bord extérieur du virage", "Loin, vers la sortie du virage", "Sur le compteur de vitesse"],
+          "choices": [
+            "Sur ta roue avant",
+            "Sur le bord extérieur du virage",
+            "Loin, vers la sortie du virage",
+            "Sur le compteur de vitesse"
+          ],
           "correct": 2,
           "explanation": "Le deux-roues va où tes yeux se posent : regarde la sortie, jamais l'obstacle ni le fossé.",
           "theoryCardIndex": 0
@@ -179,7 +255,12 @@
         {
           "id": "AM_E2_Q3",
           "question": "Quelle trajectoire recommandée dans une courbe ?",
-          "choices": ["Intérieur - extérieur - intérieur", "Extérieur - intérieur - extérieur", "Toujours au centre de la bande", "Le plus près possible du bord"],
+          "choices": [
+            "Intérieur - extérieur - intérieur",
+            "Extérieur - intérieur - extérieur",
+            "Toujours au centre de la bande",
+            "Le plus près possible du bord"
+          ],
           "correct": 1,
           "explanation": "Ext-int-ext « ouvre » le virage : meilleure visibilité à l'entrée, courbe plus douce, sortie plus sûre.",
           "theoryCardIndex": 0
@@ -187,7 +268,12 @@
         {
           "id": "AM_E2_Q4",
           "question": "Comment franchir un marquage peint mouillé en deux-roues ?",
-          "choices": ["En freinant dessus par précaution", "Droit, à vitesse constante, sans freiner dessus", "En accélérant pour le passer vite", "En tournant dessus pour raccourcir"],
+          "choices": [
+            "En freinant dessus par précaution",
+            "Droit, à vitesse constante, sans freiner dessus",
+            "En accélérant pour le passer vite",
+            "En tournant dessus pour raccourcir"
+          ],
           "correct": 1,
           "explanation": "La peinture mouillée glisse : on la traverse bien droit, sans freiner, accélérer ni tourner dessus.",
           "theoryCardIndex": 1
@@ -195,7 +281,12 @@
         {
           "id": "AM_E2_Q5",
           "question": "Pourquoi les premières pluies après une période sèche sont-elles si dangereuses ?",
-          "choices": ["L'eau est plus froide qu'en hiver", "Les hydrocarbures accumulés remontent et forment un film glissant", "Les conducteurs roulent plus vite", "Les pneus sont encore chauds"],
+          "choices": [
+            "L'eau est plus froide qu'en hiver",
+            "Les hydrocarbures accumulés remontent et forment un film glissant",
+            "Les conducteurs roulent plus vite",
+            "Les pneus sont encore chauds"
+          ],
           "correct": 1,
           "explanation": "Eau + résidus d'huile accumulés = film savonneux invisible : la première averse après le sec est la pire.",
           "theoryCardIndex": 1
@@ -203,7 +294,12 @@
         {
           "id": "AM_E2_Q6",
           "question": "Que signifie « conduire défensivement » à cyclomoteur ?",
-          "choices": ["Rouler le plus lentement possible", "Anticiper les erreurs des autres et garder une échappatoire", "Freiner dès qu'un véhicule approche", "Rester en permanence sur la piste cyclable"],
+          "choices": [
+            "Rouler le plus lentement possible",
+            "Anticiper les erreurs des autres et garder une échappatoire",
+            "Freiner dès qu'un véhicule approche",
+            "Rester en permanence sur la piste cyclable"
+          ],
           "correct": 1,
           "explanation": "Regarder loin, supposer l'erreur des autres, se ménager une porte de sortie : ta sécurité, c'est l'accident qui n'a pas lieu.",
           "theoryCardIndex": 2
@@ -211,10 +307,51 @@
         {
           "id": "AM_E2_Q7",
           "question": "Ton cyclo tombe en panne. Quel est ton statut quand tu le pousses ?",
-          "choices": ["Conducteur, comme au guidon", "Piéton : tu utilises le trottoir", "Cycliste assimilé", "Usager prioritaire"],
+          "choices": [
+            "Conducteur, comme au guidon",
+            "Piéton : tu utilises le trottoir",
+            "Cycliste assimilé",
+            "Usager prioritaire"
+          ],
           "correct": 1,
           "explanation": "Pousser son cyclomoteur fait de toi un piéton : trottoir ou accotement, moteur coupé.",
           "theoryCardIndex": 2
+        },
+        {
+          "id": "AM_E2_B1",
+          "question": "Des gravillons tapissent le virage que tu abordes. Tu :",
+          "choices": [
+            "Freines fort dans le virage",
+            "Penches davantage pour compenser",
+            "Fermes les yeux sur la trajectoire",
+            "Ralentis avant, redresses au maximum en le traversant"
+          ],
+          "correct": 3,
+          "explanation": "Sur gravillons : toute la vitesse se perd AVANT, et on traverse le plus droit possible, sans freiner ni pencher."
+        },
+        {
+          "id": "AM_E2_B2",
+          "question": "Une plaque d'égout mouillée se trouve sur ta trajectoire en courbe. Tu :",
+          "choices": [
+            "Adaptes ta trajectoire pour la passer redressé ou l'éviter",
+            "Freines dessus pour plus de contrôle",
+            "Accélères pour la survoler",
+            "T'arrêtes juste devant"
+          ],
+          "correct": 0,
+          "explanation": "Le métal mouillé glisse : on l'évite ou on le franchit machine droite, à vitesse constante."
+        },
+        {
+          "id": "AM_E2_B3",
+          "question": "Freinage d'urgence en ligne droite : la bonne technique ?",
+          "choices": [
+            "Uniquement le frein arrière",
+            "Les deux freins, progressivement mais fermement",
+            "Uniquement le frein avant, à fond d'un coup",
+            "Couper le moteur d'abord"
+          ],
+          "correct": 1,
+          "explanation": "Les deux freins ensemble, en charge progressive : l'avant fournit la puissance, l'arrière stabilise."
         }
       ]
     },
@@ -272,7 +409,12 @@
         {
           "id": "AM_E3_Q1",
           "question": "À quel âge un conducteur peut-il transporter un passager en cyclomoteur ?",
-          "choices": ["Dès 16 ans, avec le permis AM", "À partir de 18 ans", "Dès 17 ans avec autorisation parentale", "Aucune condition d'âge"],
+          "choices": [
+            "Dès 16 ans, avec le permis AM",
+            "À partir de 18 ans",
+            "Dès 17 ans avec autorisation parentale",
+            "Aucune condition d'âge"
+          ],
           "correct": 1,
           "explanation": "Le conducteur doit avoir au moins 18 ans pour transporter un passager — le permis AM à 16 ans ne suffit pas.",
           "theoryCardIndex": 0
@@ -280,7 +422,12 @@
         {
           "id": "AM_E3_Q2",
           "question": "Quel équipement le cyclo doit-il avoir pour transporter un passager ?",
-          "choices": ["Un top-case homologué", "Double selle, repose-pieds et poignée", "Un pare-brise renforcé", "Des clignotants supplémentaires"],
+          "choices": [
+            "Un top-case homologué",
+            "Double selle, repose-pieds et poignée",
+            "Un pare-brise renforcé",
+            "Des clignotants supplémentaires"
+          ],
           "correct": 1,
           "explanation": "Le véhicule doit être prévu pour deux : double selle, repose-pieds pour le passager et poignée de maintien.",
           "theoryCardIndex": 0
@@ -288,7 +435,12 @@
         {
           "id": "AM_E3_Q3",
           "question": "Peux-tu transporter un enfant de 2 ans sur ton cyclomoteur ?",
-          "choices": ["Oui, dans un siège adapté", "Oui, tenu par un adulte", "Non, le passager doit avoir au moins 3 ans", "Oui, sur de courts trajets"],
+          "choices": [
+            "Oui, dans un siège adapté",
+            "Oui, tenu par un adulte",
+            "Non, le passager doit avoir au moins 3 ans",
+            "Oui, sur de courts trajets"
+          ],
           "correct": 2,
           "explanation": "Moins de 3 ans : transport interdit. De 3 à 8 ans, un dispositif de retenue adapté est obligatoire.",
           "theoryCardIndex": 0
@@ -296,7 +448,12 @@
         {
           "id": "AM_E3_Q4",
           "question": "La position « en amazone » (deux jambes du même côté) est :",
-          "choices": ["Autorisée en agglomération", "Interdite pour le passager", "Réservée aux adultes", "Autorisée sous 25 km/h"],
+          "choices": [
+            "Autorisée en agglomération",
+            "Interdite pour le passager",
+            "Réservée aux adultes",
+            "Autorisée sous 25 km/h"
+          ],
           "correct": 1,
           "explanation": "Le passager s'assied à califourchon : l'amazone déséquilibre le deux-roues et est formellement interdite.",
           "theoryCardIndex": 0
@@ -304,7 +461,12 @@
         {
           "id": "AM_E3_Q5",
           "question": "Avec un passager, tes distances de freinage :",
-          "choices": ["Restent identiques", "S'allongent : tu anticipes davantage", "Raccourcissent grâce au poids", "Ne changent que sous la pluie"],
+          "choices": [
+            "Restent identiques",
+            "S'allongent : tu anticipes davantage",
+            "Raccourcissent grâce au poids",
+            "Ne changent que sous la pluie"
+          ],
           "correct": 1,
           "explanation": "Le poids supplémentaire allonge le freinage et modifie l'équilibre : plus d'anticipation et de distance.",
           "theoryCardIndex": 0
@@ -312,7 +474,12 @@
         {
           "id": "AM_E3_Q6",
           "question": "De combien ton chargement peut-il dépasser à l'ARRIÈRE d'un cyclo à 2 roues ?",
-          "choices": ["Pas du tout", "0,5 mètre maximum", "1 mètre maximum", "1,5 mètre avec un chiffon rouge"],
+          "choices": [
+            "Pas du tout",
+            "0,5 mètre maximum",
+            "1 mètre maximum",
+            "1,5 mètre avec un chiffon rouge"
+          ],
           "correct": 1,
           "explanation": "Limites du chargement : rien à l'avant, 0,5 m maximum à l'arrière, 1 m de largeur, 4 m de hauteur.",
           "theoryCardIndex": 1
@@ -320,10 +487,63 @@
         {
           "id": "AM_E3_Q7",
           "question": "Ton colis masque partiellement ton feu arrière. Tu :",
-          "choices": ["Peux rouler de jour uniquement", "Dois réarrimer : feux et plaque doivent rester visibles", "Peux rouler en klaxonnant régulièrement", "Ajoutes un catadioptre sur le colis"],
+          "choices": [
+            "Peux rouler de jour uniquement",
+            "Dois réarrimer : feux et plaque doivent rester visibles",
+            "Peux rouler en klaxonnant régulièrement",
+            "Ajoutes un catadioptre sur le colis"
+          ],
           "correct": 1,
           "explanation": "Le chargement ne doit jamais masquer feux, catadioptres ou plaque : réarrime avant de partir.",
           "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_E3_B1",
+          "question": "Tu as 18 ans. Ton passager de 10 ans doit :",
+          "choices": [
+            "Être tenu par un adulte",
+            "S'asseoir devant toi",
+            "Porter un casque et s'asseoir à califourchon",
+            "Avoir un dispositif de retenue obligatoire"
+          ],
+          "correct": 2,
+          "explanation": "À 10 ans (plus de 8 ans), plus de dispositif obligatoire : casque homologué et position à califourchon suffisent — sur un cyclo équipé."
+        },
+        {
+          "id": "AM_E3_B2",
+          "question": "Que dire à ton passager avant de partir ?",
+          "choices": [
+            "Suivre mes inclinaisons sans gestes brusques, pieds sur les repose-pieds",
+            "Se pencher à l'opposé des virages pour équilibrer",
+            "Descendre du véhicule à chaque feu rouge",
+            "Garder les pieds au sol en roulant à basse vitesse"
+          ],
+          "correct": 0,
+          "explanation": "Un passager stable qui accompagne le véhicule est la condition de ton équilibre."
+        },
+        {
+          "id": "AM_E3_B3",
+          "question": "Accrocher un sac de courses au guidon, c'est :",
+          "choices": [
+            "Pratique et sans conséquence",
+            "Permis jusqu'à 5 kg",
+            "Obligatoirement du côté droit",
+            "À proscrire : il balance et braque ta direction"
+          ],
+          "correct": 3,
+          "explanation": "Un poids au guidon déstabilise la direction à chaque virage : top-case ou porte-bagages, jamais le guidon."
+        },
+        {
+          "id": "AM_E3_B4",
+          "question": "Hauteur maximale d'un cyclomoteur chargé :",
+          "choices": [
+            "2,5 mètres",
+            "4 mètres",
+            "3 mètres",
+            "Aucune limite de hauteur"
+          ],
+          "correct": 1,
+          "explanation": "Chargement compris, l'ensemble ne peut dépasser 4 mètres de hauteur (et 1 m de largeur sur 2 roues)."
         }
       ]
     }

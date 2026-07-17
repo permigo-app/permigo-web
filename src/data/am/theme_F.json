@@ -50,7 +50,12 @@
         {
           "id": "AM_F1_Q1",
           "question": "Quelle est la limite d'alcool pour un cyclomotoriste de 16 ans ?",
-          "choices": ["1,0 pour mille, il ne conduit pas de voiture", "0,5 pour mille, comme tout conducteur", "0,8 pour mille en agglomération", "Aucune limite avant 18 ans"],
+          "choices": [
+            "1,0 pour mille, il ne conduit pas de voiture",
+            "0,5 pour mille, comme tout conducteur",
+            "0,8 pour mille en agglomération",
+            "Aucune limite avant 18 ans"
+          ],
           "correct": 1,
           "explanation": "Les limites sont identiques pour tous les conducteurs : 0,5 pour mille (0,22 mg/l d'air expiré), dès le premier jour de permis.",
           "theoryCardIndex": 0
@@ -58,7 +63,12 @@
         {
           "id": "AM_F1_Q2",
           "question": "Que se passe-t-il si tu refuses de souffler dans l'éthylotest ?",
-          "choices": ["Rien, c'est ton droit", "Tu es traité comme un conducteur positif", "Tu reçois un simple avertissement", "Le test est reporté au lendemain"],
+          "choices": [
+            "Rien, c'est ton droit",
+            "Tu es traité comme un conducteur positif",
+            "Tu reçois un simple avertissement",
+            "Le test est reporté au lendemain"
+          ],
           "correct": 1,
           "explanation": "Le refus de souffler équivaut à un test positif : interdiction de conduire et sanctions à la clé.",
           "theoryCardIndex": 0
@@ -66,7 +76,12 @@
         {
           "id": "AM_F1_Q3",
           "question": "Contrôle entre 0,5 et 0,8 pour mille : que risques-tu immédiatement ?",
-          "choices": ["Une amende et 3 heures d'interdiction de conduire", "Uniquement un avertissement oral", "Le retrait définitif du permis AM", "La saisie du cyclomoteur"],
+          "choices": [
+            "Une amende et 3 heures d'interdiction de conduire",
+            "Uniquement un avertissement oral",
+            "Le retrait définitif du permis AM",
+            "La saisie du cyclomoteur"
+          ],
           "correct": 0,
           "explanation": "Entre 0,5 et 0,8 : amende et interdiction immédiate de conduire de 3 heures. À partir de 0,8, tout s'aggrave (6h, tribunal possible).",
           "theoryCardIndex": 0
@@ -74,7 +89,12 @@
         {
           "id": "AM_F1_Q4",
           "question": "Pourquoi l'alcool est-il particulièrement dangereux à deux roues ?",
-          "choices": ["Le réservoir est plus petit", "Il altère l'équilibre, vital sur un deux-roues", "Les contrôles y sont plus rares", "Il refroidit le moteur"],
+          "choices": [
+            "Le réservoir est plus petit",
+            "Il altère l'équilibre, vital sur un deux-roues",
+            "Les contrôles y sont plus rares",
+            "Il refroidit le moteur"
+          ],
           "correct": 1,
           "explanation": "Le deux-roues ne tient que par tes corrections permanentes : l'alcool attaque l'équilibre, les réflexes et l'évaluation des distances.",
           "theoryCardIndex": 1
@@ -82,7 +102,12 @@
         {
           "id": "AM_F1_Q5",
           "question": "Quelle est la règle pour les drogues au guidon ?",
-          "choices": ["Tolérance zéro, test salivaire à l'appui", "Une petite quantité est tolérée", "Seul le cannabis est interdit", "Les contrôles n'existent qu'en voiture"],
+          "choices": [
+            "Tolérance zéro, test salivaire à l'appui",
+            "Une petite quantité est tolérée",
+            "Seul le cannabis est interdit",
+            "Les contrôles n'existent qu'en voiture"
+          ],
           "correct": 0,
           "explanation": "Tolérance zéro : le test salivaire détecte les substances, et toute trace constitue une infraction grave — aussi à cyclomoteur.",
           "theoryCardIndex": 1
@@ -90,10 +115,51 @@
         {
           "id": "AM_F1_Q6",
           "question": "Un médicament porte un pictogramme déconseillant la conduite. Tu :",
-          "choices": ["Peux rouler, il vise les automobilistes", "Ne prends pas le guidon, il te concerne aussi", "Roules uniquement de jour", "Réduis simplement ta vitesse"],
+          "choices": [
+            "Peux rouler, il vise les automobilistes",
+            "Ne prends pas le guidon, il te concerne aussi",
+            "Roules uniquement de jour",
+            "Réduis simplement ta vitesse"
+          ],
           "correct": 1,
           "explanation": "Somnifères, calmants et certains antihistaminiques altèrent la conduite : la mise en garde vaut pour tout conducteur, cyclo compris.",
           "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_F1_B1",
+          "question": "À quoi correspond 0,22 mg/l d'air alvéolaire expiré ?",
+          "choices": [
+            "À la limite « jeunes conducteurs » uniquement",
+            "À la limite légale de 0,5 pour mille dans le sang",
+            "Au seuil de tolérance zéro",
+            "À une valeur sans signification légale"
+          ],
+          "correct": 1,
+          "explanation": "0,22 mg/l d'air expiré équivaut à 0,5 pour mille dans le sang : c'est la limite légale au test d'haleine."
+        },
+        {
+          "id": "AM_F1_B2",
+          "question": "Sous interdiction temporaire de conduire (3 h), tu reprends quand même ton scooter. C'est :",
+          "choices": [
+            "Permis si tu te sens bien",
+            "Toléré pour rentrer chez toi",
+            "Une nouvelle infraction qui aggrave ton dossier",
+            "Sans conséquence après 1 heure"
+          ],
+          "correct": 2,
+          "explanation": "Conduire pendant l'interdiction est une infraction supplémentaire, jugée sévèrement."
+        },
+        {
+          "id": "AM_F1_B3",
+          "question": "Griller un feu rouge à cyclomoteur est :",
+          "choices": [
+            "Moins grave qu'en voiture",
+            "Toléré si le carrefour est vide",
+            "Sanctionné seulement en agglomération",
+            "Une infraction du même niveau de gravité qu'en voiture"
+          ],
+          "correct": 3,
+          "explanation": "La gravité de l'infraction ne dépend pas de la taille du véhicule : feu rouge = infraction grave, cyclo compris."
         }
       ]
     },
@@ -151,7 +217,12 @@
         {
           "id": "AM_F2_Q1",
           "question": "Quel est l'ordre des actions en cas d'accident avec blessé ?",
-          "choices": ["Secourir, protéger, alerter", "Protéger, alerter (112), secourir", "Alerter, partir chercher de l'aide, revenir", "Déplacer le blessé, puis appeler"],
+          "choices": [
+            "Secourir, protéger, alerter",
+            "Protéger, alerter (112), secourir",
+            "Alerter, partir chercher de l'aide, revenir",
+            "Déplacer le blessé, puis appeler"
+          ],
           "correct": 1,
           "explanation": "Protéger les lieux, alerter le 112, secourir sans déplacer le blessé (sauf danger immédiat comme un incendie).",
           "theoryCardIndex": 0
@@ -159,7 +230,12 @@
         {
           "id": "AM_F2_Q2",
           "question": "Un motard blessé est au sol, casqué, et respire. Son casque :",
-          "choices": ["Doit être retiré doucement", "Reste en place jusqu'aux secours", "Doit être desserré et retiré", "Sert d'appui pour le relever"],
+          "choices": [
+            "Doit être retiré doucement",
+            "Reste en place jusqu'aux secours",
+            "Doit être desserré et retiré",
+            "Sert d'appui pour le relever"
+          ],
           "correct": 1,
           "explanation": "On ne retire jamais le casque d'un blessé qui respire : seul un danger vital (arrêt respiratoire, incendie) le justifie.",
           "theoryCardIndex": 0
@@ -167,7 +243,12 @@
         {
           "id": "AM_F2_Q3",
           "question": "Tu érafles une voiture en stationnement, propriétaire absent. Tu :",
-          "choices": ["Repars, ce n'est qu'une éraflure", "Laisses tes coordonnées ou préviens la police", "Attends une heure puis repars", "Déplaces ton scooter et observes"],
+          "choices": [
+            "Repars, ce n'est qu'une éraflure",
+            "Laisses tes coordonnées ou préviens la police",
+            "Attends une heure puis repars",
+            "Déplaces ton scooter et observes"
+          ],
           "correct": 1,
           "explanation": "Coordonnées sur place ou appel à la police : partir sans rien constitue un délit de fuite, même pour une éraflure.",
           "theoryCardIndex": 0
@@ -175,7 +256,12 @@
         {
           "id": "AM_F2_Q4",
           "question": "Le délit de fuite est :",
-          "choices": ["Une infraction pénale grave, même sans blessé", "Une simple amende administrative", "Toléré pour les dégâts légers", "Impossible à prouver pour un cyclo"],
+          "choices": [
+            "Une infraction pénale grave, même sans blessé",
+            "Une simple amende administrative",
+            "Toléré pour les dégâts légers",
+            "Impossible à prouver pour un cyclo"
+          ],
           "correct": 0,
           "explanation": "Quitter les lieux pour échapper aux constatations est une infraction pénale jugée au tribunal — quelle que soit la gravité de l'accident.",
           "theoryCardIndex": 0
@@ -183,7 +269,12 @@
         {
           "id": "AM_F2_Q5",
           "question": "À partir de quel âge ta responsabilité de conducteur est-elle engagée ?",
-          "choices": ["18 ans, à la majorité", "Dès 16 ans, avec ton permis AM", "21 ans pour les amendes lourdes", "Jamais tant que tu es étudiant"],
+          "choices": [
+            "18 ans, à la majorité",
+            "Dès 16 ans, avec ton permis AM",
+            "21 ans pour les amendes lourdes",
+            "Jamais tant que tu es étudiant"
+          ],
           "correct": 1,
           "explanation": "Le permis AM fait de toi un conducteur à part entière : amendes, interdictions et déchéance te concernent dès 16 ans.",
           "theoryCardIndex": 1
@@ -191,7 +282,12 @@
         {
           "id": "AM_F2_Q6",
           "question": "Dans quel cas ton assurance peut-elle se retourner contre toi après avoir indemnisé ?",
-          "choices": ["Après tout accident, systématiquement", "En cas de faute lourde : alcool, débridage, prêt illégal", "Uniquement si tu changes d'assureur", "Jamais, la RC est définitive"],
+          "choices": [
+            "Après tout accident, systématiquement",
+            "En cas de faute lourde : alcool, débridage, prêt illégal",
+            "Uniquement si tu changes d'assureur",
+            "Jamais, la RC est définitive"
+          ],
           "correct": 1,
           "explanation": "La RC indemnise les victimes, mais les fautes lourdes (alcool, véhicule débridé, conducteur non autorisé) ouvrent un recours contre toi.",
           "theoryCardIndex": 1
@@ -199,10 +295,75 @@
         {
           "id": "AM_F2_Q7",
           "question": "Tu prêtes ton scooter à un ami qui n'a pas le permis AM. Qui prend un risque ?",
-          "choices": ["Lui seul, c'est lui qui conduit", "Vous deux : conducteur et propriétaire", "Personne si le trajet est court", "Uniquement l'assureur"],
+          "choices": [
+            "Lui seul, c'est lui qui conduit",
+            "Vous deux : conducteur et propriétaire",
+            "Personne si le trajet est court",
+            "Uniquement l'assureur"
+          ],
           "correct": 1,
           "explanation": "Le conducteur est en infraction, et toi, propriétaire, tu restes responsable de qui conduit ton véhicule — l'assurance peut vous poursuivre tous les deux.",
           "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_F2_B1",
+          "question": "Au 112, quelles informations donner en priorité ?",
+          "choices": [
+            "Lieu exact, nombre et état des blessés, dangers présents",
+            "Ton numéro de plaque et ton assurance",
+            "La marque des véhicules impliqués",
+            "Ton itinéraire du jour"
+          ],
+          "correct": 0,
+          "explanation": "Les secours ont besoin du lieu précis, du bilan humain et des dangers (feu, trafic) — le reste attendra."
+        },
+        {
+          "id": "AM_F2_B2",
+          "question": "Le blessé conscient veut se relever pour « rentrer chez lui ». Tu :",
+          "choices": [
+            "L'aides à remonter sur son vélo",
+            "L'encourages à rester immobile en attendant les secours",
+            "Le portes jusqu'au trottoir",
+            "Le laisses partir, il est conscient"
+          ],
+          "correct": 1,
+          "explanation": "Même conscient, un blessé peut avoir des lésions invisibles : on le garde calme et immobile jusqu'aux secours."
+        },
+        {
+          "id": "AM_F2_B3",
+          "question": "Avant de dégager les véhicules après un accrochage matériel :",
+          "choices": [
+            "On attend la police 2 heures",
+            "On efface les traces de freinage",
+            "On repart chacun de son côté",
+            "On photographie positions et dégâts"
+          ],
+          "correct": 3,
+          "explanation": "Photos des positions et des dégâts d'abord : elles documentent le constat une fois la chaussée dégagée."
+        },
+        {
+          "id": "AM_F2_B4",
+          "question": "Le cyclo accidenté prend feu, le conducteur est inconscient à côté. Exception au « ne pas déplacer » ?",
+          "choices": [
+            "Oui : danger immédiat, on éloigne la victime",
+            "Non, on ne touche jamais un blessé",
+            "Oui, mais seulement les pompiers",
+            "Non, on éteint d'abord le feu"
+          ],
+          "correct": 0,
+          "explanation": "Le danger immédiat (incendie, sur-accident) est LA seule raison de déplacer une victime avant les secours."
+        },
+        {
+          "id": "AM_F2_B5",
+          "question": "Après un accident, l'assureur découvre que ton cyclo était débridé. Il peut :",
+          "choices": [
+            "Simplement augmenter ta prime",
+            "Annuler l'amende de police",
+            "Refuser d'intervenir davantage à l'avenir",
+            "Indemniser les victimes puis te réclamer les montants"
+          ],
+          "correct": 3,
+          "explanation": "Le véhicule débridé ne correspond plus au contrat : l'assureur indemnise les tiers puis exerce un recours contre toi."
         }
       ]
     }

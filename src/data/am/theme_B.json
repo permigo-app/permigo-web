@@ -221,6 +221,66 @@
           "correct": 0,
           "explanation": "La classe A peut utiliser accotements et zones de stationnement à condition de ne gêner personne.",
           "theoryCardIndex": 3
+        },
+        {
+          "id": "AM_B1_B1",
+          "question": "Classe A sur une route sans piste cyclable. Où roules-tu ?",
+          "choices": [
+            "Sur la chaussée, près du bord droit",
+            "Sur le trottoir, à allure réduite",
+            "Au centre de la bande",
+            "Sur la ligne blanche de rive"
+          ],
+          "correct": 0,
+          "explanation": "Sans piste, la classe A roule sur la chaussée, le plus près possible du bord droit."
+        },
+        {
+          "id": "AM_B1_B2",
+          "question": "Route à 90 km/h SANS piste cyclable. Ta classe B roule :",
+          "choices": [
+            "Sur l'accotement obligatoirement",
+            "Interdite sur cette route",
+            "Sur la chaussée, bien à droite",
+            "Au milieu de la bande de droite"
+          ],
+          "correct": 2,
+          "explanation": "Sans piste signalée, la classe B circule sur la chaussée, près du bord droit — la route > 50 km/h ne lui est pas interdite."
+        },
+        {
+          "id": "AM_B1_B3",
+          "question": "En speed pedelec sur une route limitée à 70 km/h avec piste D7 :",
+          "choices": [
+            "Tu choisis librement chaussée ou piste",
+            "La piste est obligatoire pour toi",
+            "La chaussée est obligatoire",
+            "Tu dois pousser sur le trottoir"
+          ],
+          "correct": 1,
+          "explanation": "Le speed pedelec suit les règles de la classe B : au-delà de 50 km/h, la piste signalée devient obligatoire."
+        },
+        {
+          "id": "AM_B1_B4",
+          "question": "Une piste est marquée uniquement par deux lignes discontinues (sans panneau D7). Pour ta classe A :",
+          "choices": [
+            "Ce n'est pas une vraie piste",
+            "Elle est réservée aux vélos",
+            "Elle est interdite aux cyclos",
+            "C'est une piste cyclable : obligatoire pour toi"
+          ],
+          "correct": 3,
+          "explanation": "Le marquage par deux lignes discontinues parallèles crée une piste cyclable au même titre que le panneau D7."
+        },
+        {
+          "id": "AM_B1_B5",
+          "question": "Quelle différence entre trottoir et piste cyclable pour ton cyclo ?",
+          "choices": [
+            "Aucune différence, les deux te sont interdits",
+            "Le trottoir est toujours interdit à la circulation, la piste dépend de ta classe",
+            "Les deux te sont autorisés à allure réduite",
+            "Le trottoir t'est permis la nuit uniquement"
+          ],
+          "correct": 1,
+          "explanation": "Circuler sur le trottoir est interdit à tout cyclomoteur ; l'accès à la piste dépend de ta classe et de la vitesse du lieu."
         }
       ]
     },
@@ -390,6 +450,54 @@
           "correct": 1,
           "explanation": "La vitesse est limitée à 30 km/h dans les rues et zones cyclables, pour tous les conducteurs.",
           "theoryCardIndex": 2
+        },
+        {
+          "id": "AM_B2_B1",
+          "question": "La file de voitures est à l'ARRÊT complet. Tu la remontes à maximum :",
+          "choices": [
+            "45 km/h, ta limite",
+            "30 km/h",
+            "20 km/h (0 + 20)",
+            "10 km/h"
+          ],
+          "correct": 2,
+          "explanation": "+20 km/h maximum par rapport aux véhicules remontés : file arrêtée = 20 km/h maximum pour toi."
+        },
+        {
+          "id": "AM_B2_B2",
+          "question": "Pourquoi ne jamais remonter une file par la droite, le long du trottoir ?",
+          "choices": [
+            "Tu es dans l'angle mort des véhicules qui tournent à droite",
+            "C'est plus lent que par la gauche",
+            "Le revêtement y est plus abîmé",
+            "Les piétons pourraient te voir"
+          ],
+          "correct": 0,
+          "explanation": "À droite des files, tu disparais dans l'angle mort exact des conducteurs qui tournent à droite — l'accident type."
+        },
+        {
+          "id": "AM_B2_B3",
+          "question": "Un site spécial franchissable (F18) porte le pictogramme du cyclomoteur. Tu peux :",
+          "choices": [
+            "Y stationner librement",
+            "L'emprunter uniquement de nuit",
+            "Le traverser mais pas y rouler",
+            "Y circuler : ton pictogramme t'y autorise"
+          ],
+          "correct": 3,
+          "explanation": "Bandes bus et sites spéciaux ne s'ouvrent qu'aux usagers affichés : ton pictogramme présent = accès autorisé."
+        },
+        {
+          "id": "AM_B2_B4",
+          "question": "Dans une rue cyclable, un vélo roule à 15 km/h devant toi. Tu :",
+          "choices": [
+            "Le dépasses largement par la gauche",
+            "Restes derrière lui jusqu'à la fin de la zone",
+            "Le dépasses par la droite",
+            "Klaxonnes pour qu'il s'écarte"
+          ],
+          "correct": 1,
+          "explanation": "Interdiction de dépasser les cyclistes dans une rue cyclable : tu patientes derrière, sous 30 km/h."
         }
       ]
     },
@@ -553,6 +661,42 @@
           "correct": 1,
           "explanation": "Les interdictions générales valent pour le cyclo : passages piétons, pistes cyclables, arrêts de bus, accès carrossables…",
           "theoryCardIndex": 2
+        },
+        {
+          "id": "AM_B3_B1",
+          "question": "Quel écart latéral laisser en dépassant un cycliste hors agglomération ?",
+          "choices": [
+            "50 centimètres",
+            "Aucun minimum précis",
+            "1,5 mètre minimum",
+            "3 mètres minimum"
+          ],
+          "correct": 2,
+          "explanation": "Dépassement d'un cycliste : 1 mètre minimum en agglomération, 1,5 mètre hors agglomération."
+        },
+        {
+          "id": "AM_B3_B2",
+          "question": "Stationner ton cyclo devant la porte de garage du voisin :",
+          "choices": [
+            "Interdit : tu bloques un accès carrossable",
+            "Permis moins de 30 minutes",
+            "Permis si tu laisses ton numéro",
+            "Permis la nuit uniquement"
+          ],
+          "correct": 0,
+          "explanation": "Le stationnement devant un accès carrossable est interdit — pour un cyclo comme pour une voiture."
+        },
+        {
+          "id": "AM_B3_B3",
+          "question": "Sur un trottoir étroit, ton scooter garé laisserait 80 cm aux piétons. Tu :",
+          "choices": [
+            "Le gares quand même, c'est court",
+            "Cherches un autre endroit : le passage est insuffisant",
+            "Le gares en biais pour gagner 10 cm",
+            "Le gares sur le passage piéton voisin"
+          ],
+          "correct": 1,
+          "explanation": "Il faut laisser un passage suffisant (environ 1,50 m) pour piétons, poussettes et chaises roulantes : 80 cm ne suffisent pas."
         }
       ]
     }

@@ -69,7 +69,12 @@
         {
           "id": "AM_D1_Q1",
           "question": "Carrefour sans aucune signalisation : qui passe en premier ?",
-          "choices": ["Le véhicule le plus rapide", "Celui qui vient de droite", "Celui qui est arrivé le premier", "Le véhicule le plus gros"],
+          "choices": [
+            "Le véhicule le plus rapide",
+            "Celui qui vient de droite",
+            "Celui qui est arrivé le premier",
+            "Le véhicule le plus gros"
+          ],
           "correct": 1,
           "explanation": "Sans signalisation, la priorité de droite s'applique : tu cèdes à tout conducteur arrivant régulièrement à ta droite.",
           "theoryCardIndex": 0
@@ -77,7 +82,12 @@
         {
           "id": "AM_D1_Q2",
           "question": "Tu es prioritaire mais une voiture à gauche ne ralentit pas. Que fais-tu ?",
-          "choices": ["Tu passes, tu as la priorité", "Tu renonces à ta priorité et la laisses passer", "Tu klaxonnes et accélères", "Tu t'arrêtes au milieu du carrefour"],
+          "choices": [
+            "Tu passes, tu as la priorité",
+            "Tu renonces à ta priorité et la laisses passer",
+            "Tu klaxonnes et accélères",
+            "Tu t'arrêtes au milieu du carrefour"
+          ],
           "correct": 1,
           "explanation": "La priorité ne se force jamais : si l'autre ne la respecte pas, tu y renonces — à deux roues, c'est toi qui paies la collision.",
           "theoryCardIndex": 0
@@ -85,7 +95,12 @@
         {
           "id": "AM_D1_Q3",
           "question": "À un carrefour, la rue d'en face a un STOP et toi rien. Qu'en déduis-tu ?",
-          "choices": ["Tu dois t'arrêter aussi", "Tu es sur la voie prioritaire à ce carrefour", "La priorité de droite s'applique", "Les feux vont passer au rouge"],
+          "choices": [
+            "Tu dois t'arrêter aussi",
+            "Tu es sur la voie prioritaire à ce carrefour",
+            "La priorité de droite s'applique",
+            "Les feux vont passer au rouge"
+          ],
           "correct": 1,
           "explanation": "Lire les panneaux des autres t'informe : leur STOP signifie qu'ils te cèdent le passage — reste néanmoins attentif.",
           "theoryCardIndex": 1
@@ -93,7 +108,12 @@
         {
           "id": "AM_D1_Q4",
           "question": "Tu tournes à gauche à un carrefour. À qui cèdes-tu le passage ?",
-          "choices": ["À personne si tu as le feu vert", "Aux véhicules d'en face et aux piétons de la rue visée", "Uniquement aux camions et aux bus", "Uniquement aux véhicules venant de droite"],
+          "choices": [
+            "À personne si tu as le feu vert",
+            "Aux véhicules d'en face et aux piétons de la rue visée",
+            "Uniquement aux camions et aux bus",
+            "Uniquement aux véhicules venant de droite"
+          ],
           "correct": 1,
           "explanation": "Tourner à gauche impose de céder au trafic venant en face, puis aux piétons et cyclistes qui traversent la voie où tu t'engages.",
           "theoryCardIndex": 1
@@ -101,7 +121,12 @@
         {
           "id": "AM_D1_Q5",
           "question": "Tu sors du parking d'un magasin vers la chaussée. Qui a priorité ?",
-          "choices": ["Toi, car tu viens de droite", "Tous les autres usagers : c'est une manœuvre", "Les voitures seulement, pas les vélos", "Le premier arrivé au débouché"],
+          "choices": [
+            "Toi, car tu viens de droite",
+            "Tous les autres usagers : c'est une manœuvre",
+            "Les voitures seulement, pas les vélos",
+            "Le premier arrivé au débouché"
+          ],
           "correct": 1,
           "explanation": "Sortir d'une propriété est une manœuvre : tu cèdes le passage à TOUS — piétons, cyclistes et véhicules.",
           "theoryCardIndex": 2
@@ -109,10 +134,51 @@
         {
           "id": "AM_D1_Q6",
           "question": "La piste cyclable se termine et tu dois t'insérer sur la chaussée. Tu :",
-          "choices": ["Continues tout droit, tu étais là avant", "Cèdes aux véhicules de la chaussée avant de t'insérer", "As priorité car tu viens de la piste", "T'arrêtes obligatoirement 3 secondes"],
+          "choices": [
+            "Continues tout droit, tu étais là avant",
+            "Cèdes aux véhicules de la chaussée avant de t'insérer",
+            "As priorité car tu viens de la piste",
+            "T'arrêtes obligatoirement 3 secondes"
+          ],
           "correct": 1,
           "explanation": "Quitter la piste pour la chaussée est une insertion, donc une manœuvre : les véhicules de la chaussée passent d'abord.",
           "theoryCardIndex": 2
+        },
+        {
+          "id": "AM_D1_B1",
+          "question": "Carrefour sans signalisation : un VÉLO arrive à ta droite. Qui passe ?",
+          "choices": [
+            "Toi, ton véhicule est motorisé",
+            "Le vélo : la priorité de droite vaut pour tout conducteur",
+            "Le plus rapide des deux",
+            "Celui qui klaxonne le premier"
+          ],
+          "correct": 1,
+          "explanation": "Le cycliste est un conducteur : venant de droite, il a priorité — la motorisation ne joue aucun rôle."
+        },
+        {
+          "id": "AM_D1_B2",
+          "question": "Tu veux faire demi-tour sur la chaussée. C'est :",
+          "choices": [
+            "Une manœuvre : tu cèdes le passage à tous",
+            "Un droit prioritaire",
+            "Interdit à tout cyclomoteur",
+            "Permis uniquement aux carrefours"
+          ],
+          "correct": 0,
+          "explanation": "Le demi-tour est une manœuvre : tu ne t'engages qu'après avoir laissé passer tous les autres usagers."
+        },
+        {
+          "id": "AM_D1_B3",
+          "question": "En sortant d'un garage, tu traverses d'abord le trottoir. Qui passe en premier ?",
+          "choices": [
+            "Toi, tu es motorisé",
+            "Personne, chacun s'arrange",
+            "Les piétons du trottoir",
+            "Les véhicules de la chaussée seulement"
+          ],
+          "correct": 2,
+          "explanation": "Sortir d'une propriété = manœuvre : les piétons du trottoir passent d'abord, puis les usagers de la chaussée."
         }
       ]
     },
@@ -182,7 +248,12 @@
         {
           "id": "AM_D2_Q1",
           "question": "À l'entrée d'un rond-point signalé, tu cèdes le passage :",
-          "choices": ["Aux véhicules qui arrivent en face", "Aux conducteurs déjà engagés dans l'anneau", "À personne, l'entrant est prioritaire", "Uniquement aux camions et bus"],
+          "choices": [
+            "Aux véhicules qui arrivent en face",
+            "Aux conducteurs déjà engagés dans l'anneau",
+            "À personne, l'entrant est prioritaire",
+            "Uniquement aux camions et bus"
+          ],
           "correct": 1,
           "explanation": "Les panneaux B1 aux entrées donnent priorité à ceux qui circulent déjà dans le rond-point.",
           "theoryCardIndex": 0
@@ -190,7 +261,12 @@
         {
           "id": "AM_D2_Q2",
           "question": "Quand actives-tu ton clignotant dans un rond-point ?",
-          "choices": ["À l'entrée uniquement", "En sortie, après la sortie qui précède la tienne", "Pendant tout le trajet dans l'anneau", "Jamais à cyclomoteur"],
+          "choices": [
+            "À l'entrée uniquement",
+            "En sortie, après la sortie qui précède la tienne",
+            "Pendant tout le trajet dans l'anneau",
+            "Jamais à cyclomoteur"
+          ],
           "correct": 1,
           "explanation": "Pas de clignotant à l'entrée ; en sortie, tu indiques à droite après avoir dépassé la sortie précédant la tienne.",
           "theoryCardIndex": 0
@@ -198,7 +274,12 @@
         {
           "id": "AM_D2_Q3",
           "question": "Quelle position adopter en cyclo dans l'anneau d'un rond-point ?",
-          "choices": ["Collé au bord extérieur", "Au milieu de ta bande, bien visible", "Sur le marquage entre les bandes", "Le plus près possible de l'îlot central"],
+          "choices": [
+            "Collé au bord extérieur",
+            "Au milieu de ta bande, bien visible",
+            "Sur le marquage entre les bandes",
+            "Le plus près possible de l'îlot central"
+          ],
           "correct": 1,
           "explanation": "Au milieu de la bande : coller le bord extérieur invite les voitures à te dépasser et à te couper en sortant.",
           "theoryCardIndex": 0
@@ -206,7 +287,12 @@
         {
           "id": "AM_D2_Q4",
           "question": "Un tram approche de ta position en site partagé. Que fais-tu ?",
-          "choices": ["Tu gardes ta trajectoire, il te voit", "Tu t'écartes des rails et le laisses passer", "Tu accélères pour rester devant", "Tu klaxonnes pour signaler ta présence"],
+          "choices": [
+            "Tu gardes ta trajectoire, il te voit",
+            "Tu t'écartes des rails et le laisses passer",
+            "Tu accélères pour rester devant",
+            "Tu klaxonnes pour signaler ta présence"
+          ],
           "correct": 1,
           "explanation": "Le tram est prioritaire : tu t'écartes de la voie ferrée dès son approche — et attention aux rails glissants.",
           "theoryCardIndex": 1
@@ -214,7 +300,12 @@
         {
           "id": "AM_D2_Q5",
           "question": "Comment traverser des rails de tram sous la pluie ?",
-          "choices": ["En biais, pour rester dans le flux", "Le plus perpendiculairement possible", "En freinant dessus pour plus de contrôle", "En accélérant fortement"],
+          "choices": [
+            "En biais, pour rester dans le flux",
+            "Le plus perpendiculairement possible",
+            "En freinant dessus pour plus de contrôle",
+            "En accélérant fortement"
+          ],
           "correct": 1,
           "explanation": "Les rails mouillés sont des pièges pour les roues d'un deux-roues : traverse-les bien droit, sans freiner dessus.",
           "theoryCardIndex": 1
@@ -222,7 +313,12 @@
         {
           "id": "AM_D2_Q6",
           "question": "En agglomération, un bus clignote à gauche pour quitter son arrêt. Tu :",
-          "choices": ["Accélères pour le dépasser avant", "Ralentis et le laisses se réinsérer", "Klaxonnes pour l'avertir de ta présence", "Le dépasses par la droite"],
+          "choices": [
+            "Accélères pour le dépasser avant",
+            "Ralentis et le laisses se réinsérer",
+            "Klaxonnes pour l'avertir de ta présence",
+            "Le dépasses par la droite"
+          ],
           "correct": 1,
           "explanation": "En agglomération, tu dois céder le passage au bus qui indique son intention de quitter l'arrêt.",
           "theoryCardIndex": 1
@@ -230,7 +326,12 @@
         {
           "id": "AM_D2_Q7",
           "question": "La voiture devant toi s'arrête à hauteur d'un passage piéton. Tu :",
-          "choices": ["La dépasses lentement par la gauche", "T'arrêtes derrière elle sans la dépasser", "La contournes par la droite", "Klaxonnes pour comprendre"],
+          "choices": [
+            "La dépasses lentement par la gauche",
+            "T'arrêtes derrière elle sans la dépasser",
+            "La contournes par la droite",
+            "Klaxonnes pour comprendre"
+          ],
           "correct": 1,
           "explanation": "Dépasser un véhicule arrêté devant un passage piéton est interdit : un piéton masqué est probablement en train de traverser.",
           "theoryCardIndex": 2
@@ -238,10 +339,75 @@
         {
           "id": "AM_D2_Q8",
           "question": "Une ambulance arrive derrière toi, sirène et feux bleus allumés. Tu :",
-          "choices": ["Maintiens ta vitesse au centre", "Serres à droite calmement et la laisses passer", "Freines brusquement sur place", "Montes sur le trottoir en roulant"],
+          "choices": [
+            "Maintiens ta vitesse au centre",
+            "Serres à droite calmement et la laisses passer",
+            "Freines brusquement sur place",
+            "Montes sur le trottoir en roulant"
+          ],
           "correct": 1,
           "explanation": "Véhicule prioritaire en action : tu dégages le passage à droite, de façon calme et prévisible.",
           "theoryCardIndex": 2
+        },
+        {
+          "id": "AM_D2_B1",
+          "question": "À l'ENTRÉE d'un rond-point, ton clignotant :",
+          "choices": [
+            "Gauche obligatoire",
+            "Droit obligatoire",
+            "N'est pas utilisé",
+            "Détresse recommandé"
+          ],
+          "correct": 2,
+          "explanation": "Pas de clignotant à l'entrée d'un rond-point ; tu n'indiques qu'à la sortie, vers la droite."
+        },
+        {
+          "id": "AM_D2_B2",
+          "question": "HORS agglomération, un bus clignote pour quitter son arrêt. Dois-tu le laisser partir ?",
+          "choices": [
+            "Oui, comme en agglomération",
+            "Oui, mais uniquement les bus scolaires",
+            "Non, et tu peux le klaxonner",
+            "L'obligation vaut en agglomération ; ici prudence, sans obligation"
+          ],
+          "correct": 3,
+          "explanation": "Céder au bus quittant son arrêt est une obligation EN agglomération. Hors agglomération : pas d'obligation, mais la prudence reste de mise."
+        },
+        {
+          "id": "AM_D2_B3",
+          "question": "Un piéton attend visiblement au bord d'un passage non réglé par des feux. Tu :",
+          "choices": [
+            "Ralentis et le laisses traverser",
+            "Passes vite avant qu'il ne s'engage",
+            "Klaxonnes pour signaler ton passage",
+            "Continues, il n'est pas encore engagé"
+          ],
+          "correct": 0,
+          "explanation": "Tu dois céder au piéton engagé OU qui s'apprête manifestement à s'engager sur le passage."
+        },
+        {
+          "id": "AM_D2_B4",
+          "question": "Pourquoi les rails de tram sont-ils doublement dangereux à cyclo ?",
+          "choices": [
+            "Ils sont électrifiés en surface",
+            "Glissants ET piège pour la roue (gorge du rail)",
+            "Ils déclenchent les feux rouges",
+            "Ils démagnétisent les freins"
+          ],
+          "correct": 1,
+          "explanation": "Rails mouillés = zéro adhérence, et la gorge du rail peut happer une roue fine : traverse bien droit."
+        },
+        {
+          "id": "AM_D2_B5",
+          "question": "Tu entends une sirène sans voir le véhicule prioritaire. Tu :",
+          "choices": [
+            "Freines brutalement sur place",
+            "T'arrêtes au milieu du carrefour",
+            "Localises le véhicule et te ranges sans geste brusque",
+            "Accélères pour libérer la rue"
+          ],
+          "correct": 2,
+          "explanation": "D'abord localiser, ensuite dégager calmement : une manœuvre paniquée crée le danger qu'elle veut éviter."
         }
       ]
     }

@@ -151,6 +151,42 @@
           "correct": 2,
           "explanation": "Le passage rend ta traversée visible mais ne te donne pas priorité : tu cèdes le passage, sauf signalisation contraire.",
           "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_C1_B1",
+          "question": "Ton feu vélo passe au vert mais le carrefour est encombré. Tu :",
+          "choices": [
+            "T'engages, le vert te protège",
+            "Klaxonnes pour dégager le passage",
+            "T'engages lentement en slalomant",
+            "Attends que le carrefour soit dégagé"
+          ],
+          "correct": 3,
+          "explanation": "Le vert autorise le passage seulement si tu peux dégager le carrefour sans bloquer ni t'exposer."
+        },
+        {
+          "id": "AM_C1_B2",
+          "question": "Le panneau C11 (rond rouge avec un vélo) interdit l'accès aux cyclistes. Ton cyclomoteur est-il visé ?",
+          "choices": [
+            "Non, sauf mention cyclomoteur sur un panneau additionnel",
+            "Oui, tout deux-roues est visé",
+            "Oui, mais uniquement la classe A",
+            "Non, sauf le week-end"
+          ],
+          "correct": 0,
+          "explanation": "Chaque pictogramme désigne son usager : le C11 vise les cycles ; ton cyclo n'est concerné que si un additionnel le mentionne."
+        },
+        {
+          "id": "AM_C1_B3",
+          "question": "Sens interdit avec panneau additionnel M3 « excepté cyclomoteurs classe A et B ». Tu :",
+          "choices": [
+            "Ne peux pas passer",
+            "Passes uniquement en poussant",
+            "Peux emprunter la rue : l'exception te couvre",
+            "Peux passer de nuit seulement"
+          ],
+          "correct": 2,
+          "explanation": "Le M3 mentionne expressément les cyclomoteurs : contrairement au M2 (vélos seuls), il t'ouvre le passage."
         }
       ]
     },
@@ -315,6 +351,54 @@
           "correct": 1,
           "explanation": "L'agglomération est limitée à 50 km/h par défaut — mais ta classe B reste bridée à 45 et une zone 30 t'abaisse à 30.",
           "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_C2_B1",
+          "question": "Triangle annonçant un passage à niveau sans barrières. À cyclo, ta priorité est :",
+          "choices": [
+            "Accélérer pour traverser vite",
+            "Ralentir et te méfier des rails glissants",
+            "Klaxonner en traversant",
+            "T'arrêter systématiquement"
+          ],
+          "correct": 1,
+          "explanation": "Outre le train, les rails eux-mêmes sont un piège pour un deux-roues : on ralentit et on traverse bien droit."
+        },
+        {
+          "id": "AM_C2_B2",
+          "question": "Dans une zone résidentielle, la vitesse maximale est de :",
+          "choices": [
+            "30 km/h",
+            "45 km/h",
+            "20 km/h",
+            "25 km/h"
+          ],
+          "correct": 2,
+          "explanation": "Zone résidentielle : 20 km/h pour tous — les piétons peuvent y utiliser toute la largeur de la voirie."
+        },
+        {
+          "id": "AM_C2_B3",
+          "question": "Tu passes le panneau de FIN de zone 30, toujours en agglomération. Ta limite redevient :",
+          "choices": [
+            "30 km/h par prudence",
+            "70 km/h",
+            "50 km/h… mais 45 pour ta classe B",
+            "Libre, plus aucune limite"
+          ],
+          "correct": 2,
+          "explanation": "Après la zone 30, le régime d'agglomération (50) reprend — plafonné par ta bride de construction (45)."
+        },
+        {
+          "id": "AM_C2_B4",
+          "question": "Tu circules sous le losange B9 (voie prioritaire). Aux carrefours suivants :",
+          "choices": [
+            "Les voies transversales te cèdent le passage",
+            "La priorité de droite s'applique",
+            "Tu dois marquer un arrêt",
+            "Les feux sont désactivés"
+          ],
+          "correct": 0,
+          "explanation": "Le B9 te place sur une voie prioritaire : les transversales cèdent — mais reste attentif aux distraits."
         }
       ]
     },
@@ -446,6 +530,42 @@
           "correct": 1,
           "explanation": "La peinture routière mouillée offre très peu d'adhérence : freiner ou tourner dessus fait glisser un deux-roues.",
           "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_C3_B1",
+          "question": "Franchir des dents de requin sans céder le passage, c'est :",
+          "choices": [
+            "Permis si tu es un deux-roues",
+            "Une infraction et un vrai risque de collision",
+            "Toléré aux heures creuses",
+            "Permis sous 25 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Les dents de requin matérialisent l'obligation de céder : les ignorer expose à la collision latérale."
+        },
+        {
+          "id": "AM_C3_B2",
+          "question": "Feux en orange clignotant + panneau B1 en dessous. Tu :",
+          "choices": [
+            "Passes sans regarder, le feu est « éteint »",
+            "T'arrêtes 3 secondes",
+            "Cèdes le passage selon le B1",
+            "Attends le retour du vert"
+          ],
+          "correct": 2,
+          "explanation": "Orange clignotant = les panneaux reprennent le pouvoir : ici le B1 t'impose de céder le passage."
+        },
+        {
+          "id": "AM_C3_B3",
+          "question": "Quand peux-tu franchir une ligne blanche discontinue ?",
+          "choices": [
+            "Jamais à cyclomoteur",
+            "Uniquement aux carrefours",
+            "Uniquement hors agglomération",
+            "Pour dépasser ou tourner, si la manœuvre est sûre"
+          ],
+          "correct": 3,
+          "explanation": "La discontinue se franchit pour une manœuvre sûre (dépassement, changement de direction) — contrairement à la continue."
         }
       ]
     }
