@@ -456,3 +456,71 @@ export async function syncAllToSupabase(uid: string): Promise<void> {
     panneauxMastered: getPanneauxMastered(),
   });
 }
+
+// ── Progression AM (clés AM::…) — synchro vers la colonne `progress_am` ──
+// Lecture/écriture par clés brutes préfixées : fonctionne quel que soit le
+// permis actif (ex. synchro au login alors que l'utilisateur est en mode B).
+
+const AM = 'AM::';
+
+function amJson<T>(key: string, fallback: T): T {
+  const raw = getItemGlobal(AM + key);
+  if (!raw) return fallback;
+  try { return JSON.parse(raw) as T; } catch { return fallback; }
+}
+
+export function getAmProgressSnapshot(): import('./supabaseUser').AmProgress {
+  const parties: Record<string, number[]> = {};
+  if (typeof window !== 'undefined') {
+    const prefix = AM + 'lessonPartiesDone_';
+    for (const key of Object.keys(localStorage)) {
+      if (!key.startsWith(prefix)) continue;
+      try {
+        const arr = JSON.parse(localStorage.getItem(key) ?? '[]');
+        if (Array.isArray(arr) && arr.length > 0) parties[key.slice(prefix.length)] = arr;
+      } catch { /* entrée corrompue ignorée */ }
+    }
+  }
+  return {
+    stars: amJson<Record<string, number>>(KEY_STARS, {}),
+    exams: amJson<Record<string, boolean>>(KEY_EXAMS, {}),
+    lessonPartiesDone: parties,
+    quizHistory: amJson<QuizHistory>(KEY_QUIZ, { totalCorrect: 0, totalAnswers: 0 }),
+    survivalBest: Number(getItemGlobal(AM + 'survie_best_score') ?? 0),
+  };
+}
+
+/** Fusionne la progression AM distante dans le localStorage (le meilleur des deux gagne). */
+export function applyAmProgressFromRemote(remote: Partial<import('./supabaseUser').AmProgress> | null): void {
+  if (typeof window === 'undefined' || !remote) return;
+  const local = getAmProgressSnapshot();
+
+  const stars = { ...local.stars };
+  for (const [k, v] of Object.entries(remote.stars ?? {})) stars[k] = Math.max(stars[k] ?? 0, v);
+  setItemGlobal(AM + KEY_STARS, JSON.stringify(stars));
+
+  const exams = { ...local.exams };
+  for (const [k, v] of Object.entries(remote.exams ?? {})) if (v) exams[k] = true;
+  setItemGlobal(AM + KEY_EXAMS, JSON.stringify(exams));
+
+  for (const [lessonId, indices] of Object.entries(remote.lessonPartiesDone ?? {})) {
+    if (!Array.isArray(indices) || indices.length === 0) continue;
+    const merged = Array.from(new Set([...(local.lessonPartiesDone[lessonId] ?? []), ...indices]));
+    setItemGlobal(AM + 'lessonPartiesDone_' + lessonId, JSON.stringify(merged));
+  }
+
+  const rq = remote.quizHistory;
+  if (rq && rq.totalAnswers > local.quizHistory.totalAnswers) {
+    setItemGlobal(AM + KEY_QUIZ, JSON.stringify(rq));
+  }
+
+  if ((remote.survivalBest ?? 0) > local.survivalBest) {
+    setItemGlobal(AM + 'survie_best_score', String(remote.survivalBest));
+  }
+}
+
+/** Pousse la progression AM locale vers Supabase (update isolé, jamais bloquant). */
+export async function syncAmToSupabase(uid: string): Promise<void> {
+  const { syncAmProgressToSupabase } = await import('./supabaseUser');
+  await syncAmProgressToSupabase(uid, getAmProgressSnapshot());
+}

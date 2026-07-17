@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 import { supabase, hasSupabase } from '@/lib/supabase';
 import { getUserProfile, createUserProfile, mapProfileToUser, type AppUser } from '@/lib/supabaseUser';
-import { syncAllToSupabase, getXPData, getStreakData, applyCompletedPartiesFromRemote, applyPanneauxMasteredFromRemote } from '@/lib/progressStorage';
+import { syncAllToSupabase, getXPData, getStreakData, applyCompletedPartiesFromRemote, applyPanneauxMasteredFromRemote, applyAmProgressFromRemote, getAmProgressSnapshot, syncAmToSupabase } from '@/lib/progressStorage';
 import { useLang } from '@/contexts/LanguageContext';
 
 type Lang = 'fr' | 'nl';
@@ -136,6 +136,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         // localStorage wins → auto-migrate to Supabase
         syncAllToSupabase(sbUser.id).catch(console.error);
       }
+
+      // Progression AM : fusion distant ↔ local (le meilleur des deux gagne),
+      // puis renvoi vers la colonne isolée progress_am si le local a des données.
+      // Indépendant de la synchro B : un échec de l'un ne touche pas l'autre.
+      applyAmProgressFromRemote(profile.progress_am);
+      const amSnap = getAmProgressSnapshot();
+      const hasAmProgress =
+        Object.keys(amSnap.stars).length > 0 ||
+        Object.keys(amSnap.exams).length > 0 ||
+        Object.keys(amSnap.lessonPartiesDone).length > 0 ||
+        amSnap.quizHistory.totalAnswers > 0 ||
+        amSnap.survivalBest > 0;
+      if (hasAmProgress) syncAmToSupabase(sbUser.id).catch(console.error);
 
       // Permis choisi : restauré depuis le profil (nouvel appareil) — évite
       // de représenter l'écran de choix à un utilisateur qui a déjà choisi

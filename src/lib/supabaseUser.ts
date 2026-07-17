@@ -2,6 +2,15 @@
 
 import { supabase } from './supabase';
 
+/** Progression du permis AM — colonne jsonb unique `progress_am` (migration du 2026-07-17). */
+export interface AmProgress {
+  stars: Record<string, number>;
+  exams: Record<string, boolean>;
+  lessonPartiesDone: Record<string, number[]>;
+  quizHistory: { totalCorrect: number; totalAnswers: number };
+  survivalBest: number;
+}
+
 export interface SupabaseProfile {
   id: string;
   username: string;
@@ -27,6 +36,7 @@ export interface SupabaseProfile {
   lesson_parties_done: Record<string, number[]>;
   panneaux_mastered: Record<string, boolean>;
   license_type: string | null;
+  progress_am: AmProgress | null;
   is_premium: boolean;
   created_at: string | null;
   updated_at: string | null;
@@ -83,6 +93,7 @@ function mergeProfile(
     lesson_parties_done: row.lesson_parties_done ?? meta.lesson_parties_done ?? {},
     panneaux_mastered: row.panneaux_mastered ?? meta.panneaux_mastered ?? {},
     license_type: row.license_type ?? meta.license_type ?? null,
+    progress_am: row.progress_am ?? null,
     is_premium: row.is_premium === true,
     created_at: row.created_at ?? new Date().toISOString(),
     updated_at: row.updated_at ?? new Date().toISOString(),
@@ -235,5 +246,21 @@ export async function syncProgressToSupabase(uid: string, progress: {
   } catch (e) {
     console.error('[PermiGo] syncProgressToSupabase failed:', e);
     // localStorage reste la source de vérité
+  }
+}
+
+/**
+ * Synchro de la progression AM — update volontairement ISOLÉ (colonne
+ * `progress_am` seule) : un échec ici ne touche jamais les colonnes du
+ * permis B, et inversement.
+ */
+export async function syncAmProgressToSupabase(uid: string, progress: AmProgress): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.from('profiles')
+      .update({ progress_am: progress, updated_at: new Date().toISOString() })
+      .eq('id', uid);
+  } catch (e) {
+    console.error('[PermiGo] syncAmProgressToSupabase failed:', e);
   }
 }
