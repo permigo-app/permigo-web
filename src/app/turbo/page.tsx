@@ -14,6 +14,7 @@ import {
 } from '@/lib/progressStorage';
 import { useIsPremium, isThemeFree, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
+import { scopedKey } from '@/lib/license';
 import SignImage from '@/components/SignImage';
 import Image from 'next/image';
 import QuizLayout from '@/components/QuizLayout';
@@ -100,7 +101,7 @@ function TurboContent() {
     hasRestoredRef.current = true;
     const restore = async () => {
       try {
-        const saved = localStorage.getItem('turbo_active');
+        const saved = localStorage.getItem(scopedKey('turbo_active'));
         if (!saved) return;
         const data = JSON.parse(saved);
         const elapsed = Date.now() - data.startTime;
@@ -118,10 +119,10 @@ function TurboContent() {
           setCurrentQ(data.questionsAnswered || 0);
           startTimeRef.current = data.startTime;
         } else {
-          localStorage.removeItem('turbo_active');
+          localStorage.removeItem(scopedKey('turbo_active'));
         }
       } catch {
-        localStorage.removeItem('turbo_active');
+        localStorage.removeItem(scopedKey('turbo_active'));
       }
     };
     restore();
@@ -136,7 +137,7 @@ function TurboContent() {
 
   const endGame = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
-    localStorage.removeItem('turbo_active');
+    localStorage.removeItem(scopedKey('turbo_active'));
     setGameOver(true);
     updateQuizHistory(correctCount, currentQ + 1);
     if (mode === 'survie') setSurvivalBest(correctCount);
@@ -158,12 +159,12 @@ function TurboContent() {
 
   const startGame = async (m: '3min' | '5min' | 'survie') => {
     // N'incrémente que si pas de session déjà active (évite double-comptage)
-    if (!localStorage.getItem('turbo_active')) {
+    if (!localStorage.getItem(scopedKey('turbo_active'))) {
       incrementTurboDailyCount();
       setTurboCount(getTurboDailyCount());
     }
     const duration = m === '3min' ? 180000 : m === '5min' ? 300000 : null;
-    localStorage.setItem('turbo_active', JSON.stringify({
+    localStorage.setItem(scopedKey('turbo_active'), JSON.stringify({
       startTime: Date.now(),
       duration,
       mode: m,
@@ -201,10 +202,10 @@ function TurboContent() {
     const isCorrect = selected === questions[currentQ].correct;
     const newScore = isCorrect ? correctCount + 1 : correctCount;
     try {
-      const saved = localStorage.getItem('turbo_active');
+      const saved = localStorage.getItem(scopedKey('turbo_active'));
       if (saved) {
         const data = JSON.parse(saved);
-        localStorage.setItem('turbo_active', JSON.stringify({ ...data, score: newScore, questionsAnswered: currentQ }));
+        localStorage.setItem(scopedKey('turbo_active'), JSON.stringify({ ...data, score: newScore, questionsAnswered: currentQ }));
       }
     } catch { /* ignore */ }
     if (isCorrect) {
@@ -219,10 +220,10 @@ function TurboContent() {
     setSelected(null);
     setValidated(false);
     try {
-      const saved = localStorage.getItem('turbo_active');
+      const saved = localStorage.getItem(scopedKey('turbo_active'));
       if (saved) {
         const data = JSON.parse(saved);
-        localStorage.setItem('turbo_active', JSON.stringify({ ...data, questionsAnswered: currentQ + 1, score: correctCount }));
+        localStorage.setItem(scopedKey('turbo_active'), JSON.stringify({ ...data, questionsAnswered: currentQ + 1, score: correctCount }));
       }
     } catch { /* ignore */ }
     if (currentQ + 1 < questions.length) { setCurrentQ(q => q + 1); }

@@ -43,8 +43,13 @@ async function buildStats(lang: Lang): Promise<Stats> {
   let globalPartsDone = 0;
   const themes: ThemeStats[] = [];
 
-  for (const code of getThemeOrder()) {
-    const theme = await getThemeDataLocalized(code, lang);
+  // Chargement PARALLÈLE des thèmes (en séquentiel, 6-9 allers-retours en
+  // cascade faisaient ramer l'accueil sur mobile)
+  const order = getThemeOrder();
+  const loaded = await Promise.all(order.map(code => getThemeDataLocalized(code, lang)));
+  for (let i = 0; i < order.length; i++) {
+    const code = order[i];
+    const theme = loaded[i];
     if (!theme) continue;
     let lessonsCompleted = 0;
     let partsCompleted = 0;

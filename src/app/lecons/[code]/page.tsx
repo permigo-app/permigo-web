@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { getThemeData, type LocalTheme } from '@/lib/lessonData';
+import { getThemeDataLocalized, type LocalTheme } from '@/lib/lessonData';
 import { THEME_EMOJIS, THEME_CITIES } from '@/lib/constants';
 import { isLessonCompleted, getLessonProgress, getCompletedParties } from '@/lib/progressStorage';
 import { lessonEffectivelyCompleted } from '@/lib/medals';
@@ -21,7 +21,7 @@ interface LessonRow {
 
 export default function ThemeDetailPage() {
   const params = useParams();
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const code = (params.code as string).toUpperCase();
 
   const [theme, setTheme] = useState<LocalTheme | null>(null);
@@ -31,11 +31,11 @@ export default function ThemeDetailPage() {
 
   useEffect(() => {
     setLoading(true);
-    getThemeData(code).then(t => {
+    getThemeDataLocalized(code, lang).then(t => {
       setTheme(t);
       setLoading(false);
     });
-  }, [code]);
+  }, [code, lang]);
 
   useEffect(() => {
     if (!theme) return;
@@ -72,7 +72,8 @@ export default function ThemeDetailPage() {
 
   if (!theme) return null;
 
-  const city = THEME_CITIES[code] || '';
+  // La ville vient du contenu du permis actif (les villes AM ≠ villes B)
+  const city = theme.city || THEME_CITIES[code] || '';
   const emoji = THEME_EMOJIS[code] || '📖';
   const nextLesson = lessons.find(l => l.status !== 'done');
   const doneCount = lessons.filter(l => l.status === 'done').length;

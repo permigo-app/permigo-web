@@ -127,8 +127,8 @@ export async function getThemeForLesson(lessonId: string): Promise<LocalTheme | 
 export async function getExamQuestions(themeCode: string, count: number = 20): Promise<LocalQuestion[]> {
   const allQuestions: LocalQuestion[] = [];
   if (themeCode === 'FINAL') {
-    for (const code of getThemeOrder()) {
-      const theme = await loadTheme(code);
+    const themes = await Promise.all(getThemeOrder().map(code => loadTheme(code)));
+    for (const theme of themes) {
       if (!theme) continue;
       for (const lesson of theme.lessons) allQuestions.push(...lesson.questions);
     }
@@ -146,8 +146,8 @@ export async function getExamQuestions(themeCode: string, count: number = 20): P
 
 export async function getAllQuestions(): Promise<LocalQuestion[]> {
   const all: LocalQuestion[] = [];
-  for (const code of getThemeOrder()) {
-    const theme = await loadTheme(code);
+  const themes = await Promise.all(getThemeOrder().map(code => loadTheme(code)));
+  for (const theme of themes) {
     if (!theme) continue;
     for (const lesson of theme.lessons) all.push(...lesson.questions);
   }
@@ -215,10 +215,9 @@ export async function getThemeForLessonLocalized(lessonId: string, lang: Lang): 
 export async function getExamQuestionsLocalized(themeCode: string, lang: Lang, count: number = 20): Promise<LocalQuestion[]> {
   const allQuestions: LocalQuestion[] = [];
   if (themeCode === 'FINAL') {
-    for (const code of getThemeOrder()) {
-      const theme = await loadTheme(code);
-      if (!theme) continue;
-      const loc = await localizeTheme(theme, lang);
+    const locs = await Promise.all(getThemeOrder().map(code => getThemeDataLocalized(code, lang)));
+    for (const loc of locs) {
+      if (!loc) continue;
       for (const lesson of loc.lessons) allQuestions.push(...lesson.questions);
     }
   } else {
@@ -236,10 +235,9 @@ export async function getExamQuestionsLocalized(themeCode: string, lang: Lang, c
 
 export async function getAllQuestionsLocalized(lang: Lang): Promise<LocalQuestion[]> {
   const all: LocalQuestion[] = [];
-  for (const code of getThemeOrder()) {
-    const theme = await loadTheme(code);
-    if (!theme) continue;
-    const loc = await localizeTheme(theme, lang);
+  const locs = await Promise.all(getThemeOrder().map(code => getThemeDataLocalized(code, lang)));
+  for (const loc of locs) {
+    if (!loc) continue;
     for (const lesson of loc.lessons) all.push(...lesson.questions);
   }
   return all;

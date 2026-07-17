@@ -66,6 +66,8 @@ export function getTurboDailyCount(): number {
 
 export function incrementTurboDailyCount(): void {
   if (typeof window === 'undefined') return;
+  // AM = illimité : ne consomme jamais le quota quotidien du permis B
+  if (getActiveLicense() === 'AM') return;
   const key = `turbo_count_${todayKey()}`;
   const current = getTurboDailyCount();
   localStorage.setItem(key, String(current + 1));
@@ -95,6 +97,8 @@ export function getLastExamWeek(): string | null {
 
 export function recordExamPlayed(): void {
   if (typeof window === 'undefined') return;
+  // AM = illimité : un examen AM ne consomme pas l'examen quotidien du permis B
+  if (getActiveLicense() === 'AM') return;
   localStorage.setItem(`exam_usage_${todayDate()}`, '1');
 }
 

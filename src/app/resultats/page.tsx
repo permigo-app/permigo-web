@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { THEME_COLORS } from '@/lib/constants';
 import { useLang } from '@/contexts/LanguageContext';
 import { TIER_COLORS, type Tier } from '@/lib/medals';
+import { scopedKey } from '@/lib/license';
 import { MedalIcon } from '@/components/ExamRoute';
 import SignImage from '@/components/SignImage';
 
@@ -53,7 +54,7 @@ function ResultsContent() {
   useEffect(() => {
     if (!isExam) return;
     try {
-      const raw = localStorage.getItem('exam_last_review');
+      const raw = localStorage.getItem(scopedKey('exam_last_review'));
       if (!raw) return;
       const review = JSON.parse(raw);
       // On n'affiche que si le dépôt correspond bien à CET examen (frais + même config)

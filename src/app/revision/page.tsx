@@ -6,6 +6,7 @@ import { getQuestionById, shuffleChoices, type LocalQuestion } from '@/lib/lesso
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { fetchMistakes } from '@/lib/reviewApi';
+import { getActiveLicense } from '@/lib/license';
 import QuizLayout from '@/components/QuizLayout';
 import { isPremium, isThemeFree } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
@@ -20,7 +21,12 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 async function buildMistakeQuestions(themeCode: string, lang: 'fr' | 'nl'): Promise<LocalQuestion[]> {
-  const mistakeIds = (await fetchMistakes()).filter(id => id.startsWith(themeCode));
+  // La banque d'erreurs est commune au compte : les ids AM sont préfixés "AM_"
+  // (donc "AM_B2_Q1" ne doit pas matcher le thème A du permis B, ni l'inverse).
+  const isAM = getActiveLicense() === 'AM';
+  const mistakeIds = (await fetchMistakes()).filter(id =>
+    isAM ? id.startsWith(`AM_${themeCode}`) : (!id.startsWith('AM_') && id.startsWith(themeCode))
+  );
   const resolved: LocalQuestion[] = [];
   for (const id of mistakeIds) {
     const q = await getQuestionById(id, lang);

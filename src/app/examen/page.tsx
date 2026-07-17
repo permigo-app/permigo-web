@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getExamQuestionsLocalized, getNextThemeCode, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
-import { getActiveLicense } from '@/lib/license';
+import { getActiveLicense, scopedKey } from '@/lib/license';
 import { useLang } from '@/contexts/LanguageContext';
 import { setExamPassed, unlockTheme, updateQuizHistory, addStudyTime } from '@/lib/progressStorage';
 import { recordQuestionReview } from '@/lib/reviewApi';
@@ -43,7 +43,7 @@ function ExamContent() {
   // Check if there's an active (non-completed) exam for this theme
   const hasActiveExam = typeof window !== 'undefined' && (() => {
     try {
-      const saved = localStorage.getItem('exam_active');
+      const saved = localStorage.getItem(scopedKey('exam_active'));
       if (!saved) return false;
       const data = JSON.parse(saved);
       return !data.completed && data.themeCode === themeCode;
@@ -56,7 +56,7 @@ function ExamContent() {
     hasRestoredRef.current = true;
     const restore = async () => {
       try {
-        const saved = localStorage.getItem('exam_active');
+        const saved = localStorage.getItem(scopedKey('exam_active'));
         if (!saved) return;
         const data = JSON.parse(saved);
         if (data.completed || data.themeCode !== themeCode) return;
@@ -82,7 +82,7 @@ function ExamContent() {
         setIsResuming(true);
         startTimeRef.current = data.startTime || Date.now();
       } catch {
-        localStorage.removeItem('exam_active');
+        localStorage.removeItem(scopedKey('exam_active'));
       }
     };
     restore();
@@ -142,7 +142,7 @@ function ExamContent() {
     });
 
     // Save session — exam is NOT counted as used yet
-    localStorage.setItem('exam_active', JSON.stringify({
+    localStorage.setItem(scopedKey('exam_active'), JSON.stringify({
       startTime: Date.now(),
       themeCode,
       currentQ: 0,
@@ -180,10 +180,10 @@ function ExamContent() {
 
     // Sync to localStorage
     try {
-      const saved = localStorage.getItem('exam_active');
+      const saved = localStorage.getItem(scopedKey('exam_active'));
       if (saved) {
         const data = JSON.parse(saved);
-        localStorage.setItem('exam_active', JSON.stringify({
+        localStorage.setItem(scopedKey('exam_active'), JSON.stringify({
           ...data,
           correctCount: newScore,
           severeErrors: newSevere,
@@ -204,10 +204,10 @@ function ExamContent() {
   const finishExam = (finalCorrect: number = correctCount, finalSevere: number = severeErrors) => {
     // Mark completed in localStorage — exam now counts as used
     try {
-      const saved = localStorage.getItem('exam_active');
+      const saved = localStorage.getItem(scopedKey('exam_active'));
       if (saved) {
         const data = JSON.parse(saved);
-        localStorage.setItem('exam_active', JSON.stringify({ ...data, completed: true }));
+        localStorage.setItem(scopedKey('exam_active'), JSON.stringify({ ...data, completed: true }));
       }
     } catch { /* ignore */ }
 
@@ -224,7 +224,7 @@ function ExamContent() {
 
     // Récapitulatif des fautes pour la page résultats (trop gros pour l'URL)
     try {
-      localStorage.setItem('exam_last_review', JSON.stringify({
+      localStorage.setItem(scopedKey('exam_last_review'), JSON.stringify({
         theme: themeCode,
         ts: Date.now(),
         total,
@@ -255,10 +255,10 @@ function ExamContent() {
   // Explicit abandon — counts as used
   const handleAbandon = () => {
     try {
-      const saved = localStorage.getItem('exam_active');
+      const saved = localStorage.getItem(scopedKey('exam_active'));
       if (saved) {
         const data = JSON.parse(saved);
-        localStorage.setItem('exam_active', JSON.stringify({ ...data, completed: true }));
+        localStorage.setItem(scopedKey('exam_active'), JSON.stringify({ ...data, completed: true }));
       }
     } catch { /* ignore */ }
     if (!premiumActive) recordExamPlayed();

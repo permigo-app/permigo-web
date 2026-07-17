@@ -7,6 +7,7 @@ import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { addStudyTime } from '@/lib/progressStorage';
 import { isPremium, isThemeFree } from '@/lib/premium';
+import { scopedKey } from '@/lib/license';
 import PremiumGate from '@/components/PremiumGate';
 
 interface FlashCard extends LocalTheoryCard {
@@ -15,7 +16,9 @@ interface FlashCard extends LocalTheoryCard {
 }
 
 function storageKey(themeCode: string) {
-  return `flashcards_${themeCode}`;
+  // Clé scopée par permis : les flashcards AM (thème A…) ne doivent pas
+  // partager leur progression avec celles du permis B
+  return scopedKey(`flashcards_${themeCode}`);
 }
 
 function loadMastered(themeCode: string): string[] {
