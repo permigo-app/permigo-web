@@ -14,10 +14,17 @@ async function loadNl(code: string): Promise<NlThemeContent | null> {
   try {
     let mod: { default: NlThemeContent };
     if (lic === 'AM') {
-      // Traductions NL du permis AM — ajoutées en mission AM-4.
-      // En attendant, null → localizeTheme retombe proprement sur le FR.
-      nlCache[cacheKey] = null;
-      return null;
+      switch (code) {
+        case 'A': mod = await import('../locales/content/nl/am/theme_A_nl.json'); break;
+        case 'B': mod = await import('../locales/content/nl/am/theme_B_nl.json'); break;
+        case 'C': mod = await import('../locales/content/nl/am/theme_C_nl.json'); break;
+        case 'D': mod = await import('../locales/content/nl/am/theme_D_nl.json'); break;
+        case 'E': mod = await import('../locales/content/nl/am/theme_E_nl.json'); break;
+        case 'F': mod = await import('../locales/content/nl/am/theme_F_nl.json'); break;
+        default: nlCache[cacheKey] = null; return null;
+      }
+      nlCache[cacheKey] = mod.default;
+      return nlCache[cacheKey];
     }
     switch (code) {
       case 'A': mod = await import('../locales/content/nl/theme_A_nl.json'); break;

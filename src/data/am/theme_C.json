@@ -178,15 +178,15 @@
         },
         {
           "id": "AM_C1_B3",
-          "question": "Sens interdit avec panneau additionnel M3 « excepté cyclomoteurs classe A et B ». Tu :",
+          "question": "Tu es en cyclomoteur CLASSE A. Sens interdit avec panneau additionnel M3 « excepté cyclistes et cyclomoteurs classe A ». Tu :",
           "choices": [
             "Ne peux pas passer",
             "Passes uniquement en poussant",
-            "Peux emprunter la rue : l'exception te couvre",
+            "Peux emprunter la rue : le M3 couvre ta classe A",
             "Peux passer de nuit seulement"
           ],
           "correct": 2,
-          "explanation": "Le M3 mentionne expressément les cyclomoteurs : contrairement au M2 (vélos seuls), il t'ouvre le passage."
+          "explanation": "Le M3 excepte les cyclistes ET les cyclomoteurs à deux roues classe A. Attention : la classe B, elle, reste interdite — le M3 ne la couvre pas."
         }
       ]
     },
@@ -226,9 +226,9 @@
             {
               "type": "card",
               "title": "Les ronds rouges : interdictions",
-              "content": "📋 La règle\nLes panneaux ronds à bord rouge interdisent : sens interdit (C1), accès interdit à certains usagers (C5 voitures, C9 cyclomoteurs, C11 vélos…), dépassement (C35), ou vitesse (C43).\n\n💡 Pourquoi\nChaque pictogramme désigne précisément qui ou quoi est interdit : ta lecture doit être chirurgicale.\n\n🛵 En pratique\nUn C43 « 30 » te concerne pleinement : ta limite devient 30 km/h, même si ton scooter peut rouler 45. La plus basse des limites gagne toujours.\n\n📍 Exemple\nC1 (sens interdit) à l'entrée d'une rue : interdit aussi pour toi — sauf panneau additionnel M2 « excepté vélos » qui, lui, ne te couvre PAS.\n\n⚠️ Erreur fréquente\nCroire que les exceptions « vélos » des sens interdits valent pour les cyclos : le M2 vise les cyclistes ; toi, il te faut la mention cyclomoteur (M3).",
+              "content": "📋 La règle\nLes panneaux ronds à bord rouge interdisent : sens interdit (C1), accès interdit à certains usagers (C5 voitures, C9 cyclomoteurs, C11 vélos…), dépassement (C35), ou vitesse (C43).\n\n💡 Pourquoi\nChaque pictogramme désigne précisément qui ou quoi est interdit : ta lecture doit être chirurgicale.\n\n🛵 En pratique\nUn C43 « 30 » te concerne pleinement : ta limite devient 30 km/h, même si ton scooter peut rouler 45. La plus basse des limites gagne toujours.\n\n📍 Exemple\nC1 (sens interdit) à l'entrée d'une rue : interdit aussi pour toi — sauf panneau additionnel M2 « excepté vélos » qui, lui, ne te couvre PAS.\n\n⚠️ Erreur fréquente\nCroire que les exceptions « vélos » des sens interdits valent pour les cyclos : le M2 vise les cyclistes, et le M3 n'y ajoute que la classe A. En classe B, ces exceptions ne te couvrent jamais.",
               "emoji": "🚫",
-              "explanation_simple": "Rond rouge = interdiction. Lis le pictogramme ET le panneau additionnel : « excepté vélos » ne veut pas dire « excepté cyclos »."
+              "explanation_simple": "Rond rouge = interdiction. « Excepté vélos » (M2) ne vaut pas pour toi ; le M3 n'ajoute que la classe A — la classe B reste dehors."
             },
             {
               "type": "card",
@@ -297,7 +297,7 @@
             "Peut passer à moins de 25 km/h"
           ],
           "correct": 1,
-          "explanation": "« Excepté vélos » ne couvre pas les cyclomoteurs : il faudrait la mention cyclomoteur (M3) pour que tu passes.",
+          "explanation": "« Excepté vélos » (M2) ne couvre pas les cyclomoteurs, et même le M3 n'y ajoute que la classe A : un scooter classe B reste interdit.",
           "theoryCardIndex": 1
         },
         {
