@@ -160,6 +160,42 @@
           ],
           "correct": 1,
           "explanation": "Par brouillard : vitesse adaptée à la visibilité réelle, et tout pour être vu — feux en ordre, vêtements clairs ou réfléchissants."
+        },
+        {
+          "id": "AM_E1_C1",
+          "question": "À 45 km/h, quelle distance parcourue pendant les 2 secondes de sécurité ?",
+          "choices": [
+            "Environ 10 mètres",
+            "Environ 15 mètres",
+            "Environ 25 mètres",
+            "Environ 40 mètres"
+          ],
+          "correct": 2,
+          "explanation": "45 km/h ≈ 12,5 m/s : deux secondes ≈ 25 mètres — c'est l'écart à garder avec le véhicule qui précède."
+        },
+        {
+          "id": "AM_E1_C2",
+          "question": "Zone résidentielle : des enfants jouent sur la chaussée. C'est :",
+          "choices": [
+            "Interdit : tu peux les faire s'écarter",
+            "Normal — ils en ont le droit ; tu roules à 20 km/h, prêt à t'arrêter",
+            "Toléré uniquement le week-end et fériés",
+            "Réservé aux aires de jeux signalées"
+          ],
+          "correct": 1,
+          "explanation": "En zone résidentielle, jouer sur la chaussée est un droit : 20 km/h maximum et vigilance totale pour toi."
+        },
+        {
+          "id": "AM_E1_C3",
+          "question": "Pluie battante dans une zone 30. Ta bonne vitesse peut être :",
+          "choices": [
+            "En dessous de 30 si les conditions l'exigent",
+            "30 km/h pile, c'est la limite affichée",
+            "35 km/h, la tolérance par temps de pluie",
+            "45 km/h, ta limite de construction"
+          ],
+          "correct": 0,
+          "explanation": "La limite est un plafond : par forte pluie, la vitesse adaptée peut être bien inférieure à la limite affichée."
         }
       ]
     },
@@ -352,6 +388,42 @@
           ],
           "correct": 1,
           "explanation": "Les deux freins ensemble, en charge progressive : l'avant fournit la puissance, l'arrière stabilise."
+        },
+        {
+          "id": "AM_E2_C1",
+          "question": "Tu fixes le fossé en sortie de virage. Le risque ?",
+          "choices": [
+            "Aucun : regarder n'influence pas la trajectoire",
+            "Tu perds ta priorité dans le virage",
+            "La roue arrière décroche automatiquement",
+            "Ton deux-roues s'y dirige : le regard guide la machine"
+          ],
+          "correct": 3,
+          "explanation": "La fixation du regard emmène le véhicule vers ce qu'on fixe : regarde la sortie du virage, jamais l'obstacle."
+        },
+        {
+          "id": "AM_E2_C2",
+          "question": "Freinage d'urgence sous la pluie :",
+          "choices": [
+            "Identique au freinage sur sol sec",
+            "Encore plus progressif : l'adhérence est réduite",
+            "Frein arrière uniquement, plus sûr",
+            "Impossible : il faut toujours éviter"
+          ],
+          "correct": 1,
+          "explanation": "Sur le mouillé, la charge des freins se fait encore plus progressivement — bloquer une roue est bien plus facile."
+        },
+        {
+          "id": "AM_E2_C3",
+          "question": "Une grande flaque traverse la route devant toi. Tu :",
+          "choices": [
+            "Freines dedans pour garder le contrôle",
+            "La traverses à pleine vitesse",
+            "Ralentis avant, puis la traverses droit sans freiner dedans",
+            "Fermes les gaz brusquement au milieu"
+          ],
+          "correct": 2,
+          "explanation": "L'eau profonde peut faire flotter tes pneus (aquaplanage) : vitesse réduite AVANT, trajectoire droite, pas de freinage dedans."
         }
       ]
     },
@@ -544,6 +616,30 @@
           ],
           "correct": 1,
           "explanation": "Chargement compris, l'ensemble ne peut dépasser 4 mètres de hauteur (et 1 m de largeur sur 2 roues)."
+        },
+        {
+          "id": "AM_E3_C1",
+          "question": "Tu as 17 ans et demi ; ton petit frère insiste pour monter derrière. Tu :",
+          "choices": [
+            "Acceptes, c'est de la famille proche",
+            "Refuses : passager autorisé seulement à partir de tes 18 ans",
+            "Acceptes pour un très court trajet",
+            "Acceptes s'il porte un casque homologué"
+          ],
+          "correct": 1,
+          "explanation": "La condition des 18 ans du conducteur ne connaît ni la famille ni la distance : avant 18 ans, tu roules seul."
+        },
+        {
+          "id": "AM_E3_C2",
+          "question": "Ton chargement dépasse de 40 cm à l'arrière du porte-bagages. C'est :",
+          "choices": [
+            "Autorisé : la limite arrière est de 0,5 m",
+            "Interdit : rien ne peut dépasser du véhicule",
+            "Autorisé jusqu'à 1 m à l'arrière",
+            "Interdit sans chiffon rouge accroché"
+          ],
+          "correct": 0,
+          "explanation": "À l'arrière, le dépassement est permis jusqu'à 0,5 mètre : 40 cm est dans la limite."
         }
       ]
     }

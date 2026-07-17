@@ -281,6 +281,42 @@
           ],
           "correct": 1,
           "explanation": "Circuler sur le trottoir est interdit à tout cyclomoteur ; l'accès à la piste dépend de ta classe et de la vitesse du lieu."
+        },
+        {
+          "id": "AM_B1_C1",
+          "question": "Route à 70 km/h, piste marquée seulement de deux lignes discontinues (sans panneau D7). Ta classe B :",
+          "choices": [
+            "Reste sur la chaussée, il n'y a pas de panneau",
+            "Choisit librement sa position",
+            "Roule sur l'accotement",
+            "Doit l'emprunter : le marquage vaut autant que le panneau"
+          ],
+          "correct": 3,
+          "explanation": "Les deux lignes discontinues créent une vraie piste cyclable : au-delà de 50 km/h, elle s'impose à ta classe B comme un D7."
+        },
+        {
+          "id": "AM_B1_C2",
+          "question": "En speed pedelec dans une zone 30 avec piste cyclable :",
+          "choices": [
+            "Tu choisis : chaussée ou piste (route ≤ 50)",
+            "La piste est obligatoire pour toi",
+            "La chaussée est obligatoire pour toi",
+            "Tu dois rouler à l'allure du pas"
+          ],
+          "correct": 0,
+          "explanation": "Le speed pedelec suit les règles de la classe B : à 50 km/h ou moins, chaussée ou piste au choix."
+        },
+        {
+          "id": "AM_B1_C3",
+          "question": "La piste cyclable est bloquée par des travaux. Ta classe A :",
+          "choices": [
+            "S'arrête jusqu'à la fin des travaux",
+            "Passe par le trottoir en roulant",
+            "Contourne par la chaussée, avec prudence, le temps de l'obstacle",
+            "Fait obligatoirement demi-tour"
+          ],
+          "correct": 2,
+          "explanation": "Piste impraticable = tu rejoins la chaussée le temps de l'obstacle, prudemment — jamais le trottoir en roulant."
         }
       ]
     },
@@ -498,6 +534,54 @@
           ],
           "correct": 1,
           "explanation": "Interdiction de dépasser les cyclistes dans une rue cyclable : tu patientes derrière, sous 30 km/h."
+        },
+        {
+          "id": "AM_B2_C1",
+          "question": "Les voitures de la file roulent à 10 km/h. Ta vitesse maximale pour les remonter :",
+          "choices": [
+            "20 km/h",
+            "30 km/h (10 + 20)",
+            "45 km/h",
+            "25 km/h"
+          ],
+          "correct": 1,
+          "explanation": "Maximum +20 km/h par rapport aux véhicules remontés : 10 + 20 = 30 km/h."
+        },
+        {
+          "id": "AM_B2_C2",
+          "question": "En remontant une file à l'arrêt, le danger typique est :",
+          "choices": [
+            "Le radar de vitesse en bord de route",
+            "La consommation de carburant accrue",
+            "Un piéton qui traverse entre les voitures arrêtées",
+            "Le klaxon répété des automobilistes"
+          ],
+          "correct": 2,
+          "explanation": "Les piétons profitent des files arrêtées pour traverser entre les voitures — invisibles jusqu'au dernier mètre."
+        },
+        {
+          "id": "AM_B2_C3",
+          "question": "Tu roules sur une bande bus autorisée (picto cyclo) et un bus arrive derrière toi. Tu :",
+          "choices": [
+            "Gardes ta place, tu es en règle",
+            "Accélères au-dessus de 45 km/h",
+            "T'arrêtes au milieu de la bande",
+            "Ne le gênes pas : tu facilites son passage dès que possible"
+          ],
+          "correct": 3,
+          "explanation": "La bande reste conçue pour les bus : autorisé ne veut pas dire gênant — tu laisses la priorité de fait au transport en commun."
+        },
+        {
+          "id": "AM_B2_C4",
+          "question": "Dans une rue cyclable, qui peut utiliser toute la largeur du sens de circulation ?",
+          "choices": [
+            "Tous les conducteurs",
+            "Les cyclistes",
+            "Les cyclomoteurs classe B",
+            "Les piétons"
+          ],
+          "correct": 1,
+          "explanation": "La rue cyclable donne toute la largeur aux cyclistes ; toi, tu restes derrière eux, sous 30 km/h."
         }
       ]
     },
@@ -697,6 +781,42 @@
           ],
           "correct": 1,
           "explanation": "Il faut laisser un passage suffisant (environ 1,50 m) pour piétons, poussettes et chaises roulantes : 80 cm ne suffisent pas."
+        },
+        {
+          "id": "AM_B3_C1",
+          "question": "Quel écart latéral minimal en dépassant un cycliste EN agglomération ?",
+          "choices": [
+            "50 centimètres",
+            "2 mètres",
+            "1 mètre",
+            "1,5 mètre"
+          ],
+          "correct": 2,
+          "explanation": "1 mètre minimum en agglomération, 1,5 mètre hors agglomération."
+        },
+        {
+          "id": "AM_B3_C2",
+          "question": "Le véhicule devant toi ralentit et clignote à droite. Tu :",
+          "choices": [
+            "Ne le dépasses pas par la droite : tu attends sa manœuvre",
+            "Le dépasses rapidement par la droite",
+            "Klaxonnes pour qu'il accélère sa manœuvre",
+            "Le serres de près pour le presser"
+          ],
+          "correct": 0,
+          "explanation": "Il va couper ta trajectoire côté droit : tu restes derrière, à distance, le temps de sa manœuvre."
+        },
+        {
+          "id": "AM_B3_C3",
+          "question": "Tu dois t'arrêter pour téléphoner. Où NE PAS t'arrêter, même « une minute » ?",
+          "choices": [
+            "Sur un emplacement E9 deux-roues",
+            "Contre la façade d'un large trottoir",
+            "Sur une bande de stationnement",
+            "Sur une piste cyclable ou un passage piéton"
+          ],
+          "correct": 3,
+          "explanation": "Piste cyclable et passage piéton sont interdits à l'arrêt comme au stationnement — même une minute crée le danger."
         }
       ]
     }

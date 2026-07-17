@@ -48,16 +48,149 @@
         }
       ],
       "questions": [
-        { "id": "AM_C1_Q1", "question": "Een licht toont een fietssilhouet. Wie moet het respecteren?", "choices": ["Enkel de fietsers", "De fietsers en de tweewielige bromfietsen", "Alle voertuigen op het kruispunt", "De voetgangers en de fietsers"], "explanation": "Het licht met fietssilhouet richt zich tot de fietsers ÉN de tweewielige bromfietsen: het is jouw licht op het fietspad." },
-        { "id": "AM_C1_Q2", "question": "Rood licht met bord B22 (fiets + pijl naar rechts). Met je scooter klasse B:", "choices": ["Sla je rechtsaf mits voorrang te verlenen", "Wacht je op het groene licht zoals de auto's", "Rijd je voorzichtig rechtdoor", "Claxonneer je om je doortocht te melden"], "explanation": "De B22/B23 laten enkel fietsen en speed pedelecs toe door het rood te rijden: bromfietsen wachten op groen." },
-        { "id": "AM_C1_Q3", "question": "Wie mag het rode licht voorbijrijden onder een bord B22/B23?", "choices": ["De fietsen en de speed pedelecs", "Alle tweewielers zonder uitzondering", "Enkel de bromfietsen klasse A", "De fietsen en de bromfietsen klasse B"], "explanation": "Enkel fietsers en speed pedelecs genieten van de B22/B23, mits voorrang te verlenen. Bromfietsen klasse A en B zijn uitgesloten." },
-        { "id": "AM_C1_Q4", "question": "Het vierkante groene licht met een fiets omringd door pijlen gaat aan. Met de bromfiets:", "choices": ["Steek je diagonaal over zoals de fietsen", "Houd je er geen rekening mee en volg je de gewone lichten", "Stop je verplicht", "Sla je enkel rechtsaf"], "explanation": "Dit oversteeklicht in alle richtingen is voorbehouden aan fietsers: bromfietsen negeren het en volgen de klassieke lichten." },
-        { "id": "AM_C1_Q5", "question": "Wat betekent het ronde rode bord C9 (bromfietspictogram)?", "choices": ["Parking voorbehouden voor bromfietsen", "Verboden toegang voor bromfietsen", "Fietspad verplicht voor bromfietsen", "Einde van de bromfietszone"], "explanation": "Het C9 verbiedt de toegang aan bestuurders van bromfietsen. Duwend met afgezette motor ben je voetganger en mag je passeren (behoudens verbod voor voetgangers)." },
-        { "id": "AM_C1_Q6", "question": "Fietspad D7 met onderbord M7. Jouw klasse B:", "choices": ["Moet het fietspad gebruiken", "Mag het fietspad niet gebruiken", "Kiest vrij", "Moet de bromfiets duwen"], "explanation": "Het M7 verbiedt het fietspad aan bromfietsen klasse B: dit onderbord primeert op de algemene regel van 50 km/u." },
-        { "id": "AM_C1_Q7", "question": "Heb je op een fietsoversteekplaats (witte vierkanten) voorrang op de auto's?", "choices": ["Ja, zoals een voetganger op de zebrastrepen", "Ja, als je trager dan 25 km/u rijdt", "Nee, je verleent voorrang aan de voertuigen op de rijbaan", "Ja, maar enkel overdag"], "explanation": "De oversteekplaats maakt je oversteek zichtbaar maar geeft geen voorrang: jij verleent voorrang, behoudens andere signalisatie." },
-        { "id": "AM_C1_B1", "question": "Je fietslicht springt op groen maar het kruispunt staat vol. Je:", "choices": ["Rijdt door, het groen beschermt je", "Claxonneert om de doorgang vrij te maken", "Rijdt traag slalommend door", "Wacht tot het kruispunt vrij is"], "explanation": "Het groen laat je enkel door als je het kruispunt kunt vrijmaken zonder te blokkeren of je bloot te stellen." },
-        { "id": "AM_C1_B2", "question": "Het bord C11 (rond rood met een fiets) verbiedt de toegang aan fietsers. Is jouw bromfiets bedoeld?", "choices": ["Nee, tenzij een onderbord de bromfiets vermeldt", "Ja, elke tweewieler is bedoeld", "Ja, maar enkel klasse A", "Nee, behalve in het weekend"], "explanation": "Elk pictogram duidt zijn gebruiker aan: het C11 geldt voor fietsen; jouw bromfiets is enkel bedoeld als een onderbord hem vermeldt." },
-        { "id": "AM_C1_B3", "question": "Je rijdt met een bromfiets KLASSE A. Verboden richting met onderbord M3 « uitgezonderd fietsers en bromfietsen klasse A ». Je:", "choices": ["Mag niet passeren", "Passeert enkel duwend", "Mag de straat in: het M3 dekt jouw klasse A", "Mag enkel 's nachts passeren"], "explanation": "Het M3 zondert fietsers ÉN tweewielige bromfietsen klasse A uit. Let op: klasse B blijft verboden — het M3 dekt haar niet." }
+        {
+          "id": "AM_C1_Q1",
+          "question": "Een licht toont een fietssilhouet. Wie moet het respecteren?",
+          "choices": [
+            "Enkel de fietsers",
+            "De fietsers en de tweewielige bromfietsen",
+            "Alle voertuigen op het kruispunt",
+            "De voetgangers en de fietsers"
+          ],
+          "explanation": "Het licht met fietssilhouet richt zich tot de fietsers ÉN de tweewielige bromfietsen: het is jouw licht op het fietspad."
+        },
+        {
+          "id": "AM_C1_Q2",
+          "question": "Rood licht met bord B22 (fiets + pijl naar rechts). Met je scooter klasse B:",
+          "choices": [
+            "Sla je rechtsaf mits voorrang te verlenen",
+            "Wacht je op het groene licht zoals de auto's",
+            "Rijd je voorzichtig rechtdoor",
+            "Claxonneer je om je doortocht te melden"
+          ],
+          "explanation": "De B22/B23 laten enkel fietsen en speed pedelecs toe door het rood te rijden: bromfietsen wachten op groen."
+        },
+        {
+          "id": "AM_C1_Q3",
+          "question": "Wie mag het rode licht voorbijrijden onder een bord B22/B23?",
+          "choices": [
+            "De fietsen en de speed pedelecs",
+            "Alle tweewielers zonder uitzondering",
+            "Enkel de bromfietsen klasse A",
+            "De fietsen en de bromfietsen klasse B"
+          ],
+          "explanation": "Enkel fietsers en speed pedelecs genieten van de B22/B23, mits voorrang te verlenen. Bromfietsen klasse A en B zijn uitgesloten."
+        },
+        {
+          "id": "AM_C1_Q4",
+          "question": "Het vierkante groene licht met een fiets omringd door pijlen gaat aan. Met de bromfiets:",
+          "choices": [
+            "Steek je diagonaal over zoals de fietsen",
+            "Houd je er geen rekening mee en volg je de gewone lichten",
+            "Stop je verplicht",
+            "Sla je enkel rechtsaf"
+          ],
+          "explanation": "Dit oversteeklicht in alle richtingen is voorbehouden aan fietsers: bromfietsen negeren het en volgen de klassieke lichten."
+        },
+        {
+          "id": "AM_C1_Q5",
+          "question": "Wat betekent het ronde rode bord C9 (bromfietspictogram)?",
+          "choices": [
+            "Parking voorbehouden voor bromfietsen",
+            "Verboden toegang voor bromfietsen",
+            "Fietspad verplicht voor bromfietsen",
+            "Einde van de bromfietszone"
+          ],
+          "explanation": "Het C9 verbiedt de toegang aan bestuurders van bromfietsen. Duwend met afgezette motor ben je voetganger en mag je passeren (behoudens verbod voor voetgangers)."
+        },
+        {
+          "id": "AM_C1_Q6",
+          "question": "Fietspad D7 met onderbord M7. Jouw klasse B:",
+          "choices": [
+            "Moet het fietspad gebruiken",
+            "Mag het fietspad niet gebruiken",
+            "Kiest vrij",
+            "Moet de bromfiets duwen"
+          ],
+          "explanation": "Het M7 verbiedt het fietspad aan bromfietsen klasse B: dit onderbord primeert op de algemene regel van 50 km/u."
+        },
+        {
+          "id": "AM_C1_Q7",
+          "question": "Heb je op een fietsoversteekplaats (witte vierkanten) voorrang op de auto's?",
+          "choices": [
+            "Ja, zoals een voetganger op de zebrastrepen",
+            "Ja, als je trager dan 25 km/u rijdt",
+            "Nee, je verleent voorrang aan de voertuigen op de rijbaan",
+            "Ja, maar enkel overdag"
+          ],
+          "explanation": "De oversteekplaats maakt je oversteek zichtbaar maar geeft geen voorrang: jij verleent voorrang, behoudens andere signalisatie."
+        },
+        {
+          "id": "AM_C1_B1",
+          "question": "Je fietslicht springt op groen maar het kruispunt staat vol. Je:",
+          "choices": [
+            "Rijdt door, het groen beschermt je",
+            "Claxonneert om de doorgang vrij te maken",
+            "Rijdt traag slalommend door",
+            "Wacht tot het kruispunt vrij is"
+          ],
+          "explanation": "Het groen laat je enkel door als je het kruispunt kunt vrijmaken zonder te blokkeren of je bloot te stellen."
+        },
+        {
+          "id": "AM_C1_B2",
+          "question": "Het bord C11 (rond rood met een fiets) verbiedt de toegang aan fietsers. Is jouw bromfiets bedoeld?",
+          "choices": [
+            "Nee, tenzij een onderbord de bromfiets vermeldt",
+            "Ja, elke tweewieler is bedoeld",
+            "Ja, maar enkel klasse A",
+            "Nee, behalve in het weekend"
+          ],
+          "explanation": "Elk pictogram duidt zijn gebruiker aan: het C11 geldt voor fietsen; jouw bromfiets is enkel bedoeld als een onderbord hem vermeldt."
+        },
+        {
+          "id": "AM_C1_B3",
+          "question": "Je rijdt met een bromfiets KLASSE A. Verboden richting met onderbord M3 « uitgezonderd fietsers en bromfietsen klasse A ». Je:",
+          "choices": [
+            "Mag niet passeren",
+            "Passeert enkel duwend",
+            "Mag de straat in: het M3 dekt jouw klasse A",
+            "Mag enkel 's nachts passeren"
+          ],
+          "explanation": "Het M3 zondert fietsers ÉN tweewielige bromfietsen klasse A uit. Let op: klasse B blijft verboden — het M3 dekt haar niet."
+        },
+        {
+          "id": "AM_C1_C1",
+          "question": "Licht met groene pijl naar rechts; jij wil rechtdoor. Jij:",
+          "choices": [
+            "Rijdt rechtdoor, groen blijft groen",
+            "Wacht: de pijl geldt enkel voor de aangegeven richting",
+            "Slaat verplicht rechtsaf",
+            "Rijdt achteruit om van rijstrook te wisselen"
+          ],
+          "explanation": "Een pijllicht laat enkel de richting van de pijl toe: om rechtdoor te gaan wacht je op jouw licht."
+        },
+        {
+          "id": "AM_C1_C2",
+          "question": "Met een speed pedelec aan het rode licht onder een bord B22 (fiets + pijl rechts), jij:",
+          "choices": [
+            "Wacht op groen zoals de bromfietsen",
+            "Moet eerst voet aan de grond zetten",
+            "Mag rechts afslaan mits voorrang verlenen: het B22 geldt ook voor jou",
+            "Rijdt vrij rechtdoor"
+          ],
+          "explanation": "Het B22 dekt fietsen ÉN speed pedelecs — in tegenstelling tot de bromfietsen klasse A en B die aan het licht blijven."
+        },
+        {
+          "id": "AM_C1_C3",
+          "question": "Jouw fietslicht is groen maar een agent gebaart je te wachten. Jij:",
+          "choices": [
+            "Wacht: de agent primeert op jouw licht",
+            "Rijdt door, jouw licht is groen",
+            "Claxonneert om je recht te melden",
+            "Rijdt traag om de agent heen"
+          ],
+          "explanation": "De agent primeert op de lichten en de borden — fietslicht inbegrepen."
+        }
       ]
     },
     {
@@ -106,18 +239,160 @@
         }
       ],
       "questions": [
-        { "id": "AM_C2_Q1", "question": "Wat kondigt een driehoekig bord met rode rand aan?", "choices": ["Een verbod", "Een gevaar in aantocht", "Een verplichting", "Een richtingsaanduiding"], "explanation": "De driehoeken kondigen een gevaar aan: op twee wielen tellen steenslag, sporen en vervormde wegdekken dubbel." },
-        { "id": "AM_C2_Q2", "question": "Aan het STOP-bord (B5) moet je:", "choices": ["Sterk vertragen en doorrijden als het vrij is", "Volledig stoppen, en pas verder rijden als het vrij is", "Enkel voorrang verlenen aan voertuigen van rechts", "Enkel stoppen als er een voertuig aankomt"], "explanation": "De STOP verplicht een volledige stilstand in alle gevallen — de « rollende stop » is een overtreding." },
-        { "id": "AM_C2_Q3", "question": "Wat betekent de doorstreepte gele-witte ruit (B11)?", "choices": ["Begin van een voorrangsweg", "Einde van de voorrangsweg", "Parkeerverbod", "Aankondiging van een STOP"], "explanation": "Het B11 kondigt het einde van je voorrang aan: aan de volgende kruispunten herneemt de voorrang van rechts." },
-        { "id": "AM_C2_Q4", "question": "Verboden richting (C1) met onderbord « uitgezonderd fietsers » (M2). Jouw scooter:", "choices": ["Mag passeren zoals de fietsen", "Mag niet passeren: de uitzondering geldt enkel voor fietsers", "Mag passeren duwend op het voetpad met draaiende motor", "Mag passeren onder 25 km/u"], "explanation": "« Uitgezonderd fietsers » (M2) dekt de bromfietsen niet, en zelfs het M3 voegt er enkel klasse A aan toe: een scooter klasse B blijft verboden." },
-        { "id": "AM_C2_Q5", "question": "Een bord C43 geeft 30 km/u aan. Jouw scooter klasse B haalt 45. Jouw limiet?", "choices": ["45 km/u, je constructielimiet", "30 km/u, de limiet van het bord", "35 km/u, een compromis", "40 km/u binnen de bebouwde kom"], "explanation": "De laagste limiet geldt altijd: hier 30 km/u, ook al kan je voertuig sneller." },
-        { "id": "AM_C2_Q6", "question": "Een blauwe cirkel D2 met pijl naar rechts op een eilandje betekent:", "choices": ["Het eilandje rechts voorbijrijden", "Rechts afslaan aan het kruispunt", "Parkeren rechts toegelaten", "Strook voorbehouden voor bromfietsen rechts"], "explanation": "Het D2 legt de kant op waarlangs je de hindernis voorbijrijdt: langs de kant van de pijl, nooit langs de andere." },
-        { "id": "AM_C2_Q7", "question": "In een zone 30 geldt de limiet:", "choices": ["Tot aan het volgende kruispunt", "Over 500 meter na het bord", "In de hele zone, tot aan het bord einde zone", "Enkel tijdens de schooluren"], "explanation": "Een zonebord geldt in de hele zone, zonder herhaling, tot aan het bord einde zone." },
-        { "id": "AM_C2_Q8", "question": "Wat is de standaardsnelheid binnen de bebouwde kom (bord F1)?", "choices": ["30 km/u", "50 km/u", "45 km/u", "70 km/u"], "explanation": "De bebouwde kom is standaard beperkt tot 50 km/u — maar jouw klasse B blijft begrensd op 45 en een zone 30 verlaagt je tot 30." },
-        { "id": "AM_C2_B1", "question": "Driehoek die een overweg zonder slagbomen aankondigt. Met de bromfiets is jouw prioriteit:", "choices": ["Versnellen om snel over te steken", "Vertragen en oppassen voor de gladde sporen", "Claxonneren tijdens het oversteken", "Systematisch stoppen"], "explanation": "Naast de trein zijn ook de sporen zelf een valstrik voor een tweewieler: vertragen en goed recht oversteken." },
-        { "id": "AM_C2_B2", "question": "In een woonerf is de maximumsnelheid:", "choices": ["30 km/u", "45 km/u", "20 km/u", "25 km/u"], "explanation": "Woonerf: 20 km/u voor iedereen — voetgangers mogen er de hele breedte van de weg gebruiken." },
-        { "id": "AM_C2_B3", "question": "Je passeert het bord EINDE zone 30, nog steeds binnen de bebouwde kom. Jouw limiet wordt weer:", "choices": ["30 km/u uit voorzichtigheid", "70 km/u", "50 km/u… maar 45 voor jouw klasse B", "Vrij, geen enkele limiet meer"], "explanation": "Na de zone 30 herneemt het regime van de bebouwde kom (50) — geplafonneerd door je constructielimiet (45)." },
-        { "id": "AM_C2_B4", "question": "Je rijdt onder de ruit B9 (voorrangsweg). Aan de volgende kruispunten:", "choices": ["Verlenen de dwarswegen jou voorrang", "Geldt de voorrang van rechts", "Moet je een stop maken", "Zijn de lichten uitgeschakeld"], "explanation": "Het B9 plaatst je op een voorrangsweg: de dwarswegen verlenen voorrang — maar blijf alert voor verstrooide bestuurders." }
+        {
+          "id": "AM_C2_Q1",
+          "question": "Wat kondigt een driehoekig bord met rode rand aan?",
+          "choices": [
+            "Een verbod",
+            "Een gevaar in aantocht",
+            "Een verplichting",
+            "Een richtingsaanduiding"
+          ],
+          "explanation": "De driehoeken kondigen een gevaar aan: op twee wielen tellen steenslag, sporen en vervormde wegdekken dubbel."
+        },
+        {
+          "id": "AM_C2_Q2",
+          "question": "Aan het STOP-bord (B5) moet je:",
+          "choices": [
+            "Sterk vertragen en doorrijden als het vrij is",
+            "Volledig stoppen, en pas verder rijden als het vrij is",
+            "Enkel voorrang verlenen aan voertuigen van rechts",
+            "Enkel stoppen als er een voertuig aankomt"
+          ],
+          "explanation": "De STOP verplicht een volledige stilstand in alle gevallen — de « rollende stop » is een overtreding."
+        },
+        {
+          "id": "AM_C2_Q3",
+          "question": "Wat betekent de doorstreepte gele-witte ruit (B11)?",
+          "choices": [
+            "Begin van een voorrangsweg",
+            "Einde van de voorrangsweg",
+            "Parkeerverbod",
+            "Aankondiging van een STOP"
+          ],
+          "explanation": "Het B11 kondigt het einde van je voorrang aan: aan de volgende kruispunten herneemt de voorrang van rechts."
+        },
+        {
+          "id": "AM_C2_Q4",
+          "question": "Verboden richting (C1) met onderbord « uitgezonderd fietsers » (M2). Jouw scooter:",
+          "choices": [
+            "Mag passeren zoals de fietsen",
+            "Mag niet passeren: de uitzondering geldt enkel voor fietsers",
+            "Mag passeren duwend op het voetpad met draaiende motor",
+            "Mag passeren onder 25 km/u"
+          ],
+          "explanation": "« Uitgezonderd fietsers » (M2) dekt de bromfietsen niet, en zelfs het M3 voegt er enkel klasse A aan toe: een scooter klasse B blijft verboden."
+        },
+        {
+          "id": "AM_C2_Q5",
+          "question": "Een bord C43 geeft 30 km/u aan. Jouw scooter klasse B haalt 45. Jouw limiet?",
+          "choices": [
+            "45 km/u, je constructielimiet",
+            "30 km/u, de limiet van het bord",
+            "35 km/u, een compromis",
+            "40 km/u binnen de bebouwde kom"
+          ],
+          "explanation": "De laagste limiet geldt altijd: hier 30 km/u, ook al kan je voertuig sneller."
+        },
+        {
+          "id": "AM_C2_Q6",
+          "question": "Een blauwe cirkel D2 met pijl naar rechts op een eilandje betekent:",
+          "choices": [
+            "Het eilandje rechts voorbijrijden",
+            "Rechts afslaan aan het kruispunt",
+            "Parkeren rechts toegelaten",
+            "Strook voorbehouden voor bromfietsen rechts"
+          ],
+          "explanation": "Het D2 legt de kant op waarlangs je de hindernis voorbijrijdt: langs de kant van de pijl, nooit langs de andere."
+        },
+        {
+          "id": "AM_C2_Q7",
+          "question": "In een zone 30 geldt de limiet:",
+          "choices": [
+            "Tot aan het volgende kruispunt",
+            "Over 500 meter na het bord",
+            "In de hele zone, tot aan het bord einde zone",
+            "Enkel tijdens de schooluren"
+          ],
+          "explanation": "Een zonebord geldt in de hele zone, zonder herhaling, tot aan het bord einde zone."
+        },
+        {
+          "id": "AM_C2_Q8",
+          "question": "Wat is de standaardsnelheid binnen de bebouwde kom (bord F1)?",
+          "choices": [
+            "30 km/u",
+            "50 km/u",
+            "45 km/u",
+            "70 km/u"
+          ],
+          "explanation": "De bebouwde kom is standaard beperkt tot 50 km/u — maar jouw klasse B blijft begrensd op 45 en een zone 30 verlaagt je tot 30."
+        },
+        {
+          "id": "AM_C2_B1",
+          "question": "Driehoek die een overweg zonder slagbomen aankondigt. Met de bromfiets is jouw prioriteit:",
+          "choices": [
+            "Versnellen om snel over te steken",
+            "Vertragen en oppassen voor de gladde sporen",
+            "Claxonneren tijdens het oversteken",
+            "Systematisch stoppen"
+          ],
+          "explanation": "Naast de trein zijn ook de sporen zelf een valstrik voor een tweewieler: vertragen en goed recht oversteken."
+        },
+        {
+          "id": "AM_C2_B2",
+          "question": "In een woonerf is de maximumsnelheid:",
+          "choices": [
+            "30 km/u",
+            "45 km/u",
+            "20 km/u",
+            "25 km/u"
+          ],
+          "explanation": "Woonerf: 20 km/u voor iedereen — voetgangers mogen er de hele breedte van de weg gebruiken."
+        },
+        {
+          "id": "AM_C2_B3",
+          "question": "Je passeert het bord EINDE zone 30, nog steeds binnen de bebouwde kom. Jouw limiet wordt weer:",
+          "choices": [
+            "30 km/u uit voorzichtigheid",
+            "70 km/u",
+            "50 km/u… maar 45 voor jouw klasse B",
+            "Vrij, geen enkele limiet meer"
+          ],
+          "explanation": "Na de zone 30 herneemt het regime van de bebouwde kom (50) — geplafonneerd door je constructielimiet (45)."
+        },
+        {
+          "id": "AM_C2_B4",
+          "question": "Je rijdt onder de ruit B9 (voorrangsweg). Aan de volgende kruispunten:",
+          "choices": [
+            "Verlenen de dwarswegen jou voorrang",
+            "Geldt de voorrang van rechts",
+            "Moet je een stop maken",
+            "Zijn de lichten uitgeschakeld"
+          ],
+          "explanation": "Het B9 plaatst je op een voorrangsweg: de dwarswegen verlenen voorrang — maar blijf alert voor verstrooide bestuurders."
+        },
+        {
+          "id": "AM_C2_C1",
+          "question": "Op welke afstand van het gevaar staat een gevaarsbord doorgaans buiten de bebouwde kom?",
+          "choices": [
+            "Ongeveer 20 meter",
+            "Ongeveer 500 meter",
+            "Net ter hoogte van het gevaar",
+            "Ongeveer 150 meter"
+          ],
+          "explanation": "Gevaarsborden staan buiten de bebouwde kom doorgaans op ±150 m van het gevaar — tijd om te vertragen."
+        },
+        {
+          "id": "AM_C2_C2",
+          "question": "Het bord einde bebouwde kom betekent:",
+          "choices": [
+            "Je mag 90 km/u rijden",
+            "De volgende bebouwde kom begint meteen",
+            "De regels van de bebouwde kom stoppen; jouw limiet blijft 45 (begrenzing)",
+            "Parkeren wordt verboden"
+          ],
+          "explanation": "Het regime buiten de bebouwde kom herneemt — maar je constructielimiet (45 km/u) blijft je plafond."
+        }
       ]
     },
     {
@@ -161,15 +436,138 @@
         }
       ],
       "questions": [
-        { "id": "AM_C3_Q1", "question": "Het licht springt op vast oranje terwijl je nog veilig kunt remmen. Je:", "choices": ["Versnelt om vóór het rood te passeren", "Stopt vóór de lijn", "Rijdt door aan dezelfde snelheid", "Claxonneert en rijdt door"], "explanation": "Vast oranje verplicht te stoppen, tenzij remmen gevaarlijk wordt omdat je te dichtbij bent. Hier kan het: je stopt." },
-        { "id": "AM_C3_Q2", "question": "Wat betekent een knipperend oranje licht aan een kruispunt?", "choices": ["De doorgang is verboden tot het groen wordt", "Doorgang toegelaten met voorzichtigheid, voorrang en borden hernemen", "Jij hebt absolute voorrang op het kruispunt", "Het licht springt zo dadelijk weer op groen"], "explanation": "Knipperend oranje verbiedt de doorgang niet: het verwijst je naar de borden en de voorrang van rechts, met verdubbelde voorzichtigheid." },
-        { "id": "AM_C3_Q3", "question": "Jouw licht staat op groen maar een agent gebaart je te stoppen. Je:", "choices": ["Rijdt door, het licht primeert", "Stopt: de agent primeert op de lichten", "Rijdt traag om hem heen", "Wacht tot de agent weggaat"], "explanation": "Hiërarchie: agent > lichten > borden. De bevelen van de agent vervangen de signalisatie." },
-        { "id": "AM_C3_Q4", "question": "Mag je op een doorlopende witte lijn rijden om een fietser in te halen?", "choices": ["Ja, voor een fietser mag dat", "Nee, niet overschrijden en er niet op rijden", "Ja, over maximaal 20 meter", "Ja, na eerst te claxonneren"], "explanation": "De doorlopende lijn wordt niet overschreden en er wordt niet op gereden. Je haalt enkel in als de afstand mogelijk is zonder ze te raken, anders wacht je." },
-        { "id": "AM_C3_Q5", "question": "Witte driehoeken met de punt naar jou zijn op de grond geschilderd. Ze betekenen:", "choices": ["Een verkeersdrempel om traag te nemen", "Hier voorrang verlenen", "Een oversteekplaats voor voetgangers", "Een zone verboden voor bromfietsen"], "explanation": "De « haaientanden » markeren de exacte plaats waar je voorrang moet verlenen." },
-        { "id": "AM_C3_Q6", "question": "Waarom vragen geschilderde markeringen bijzondere voorzichtigheid op twee wielen?", "choices": ["Ze liggen hoger dan het wegdek", "Nat worden ze zeer glad", "Ze trekken de banden aan", "Ze zijn voorbehouden aan auto's"], "explanation": "Natte wegverf biedt zeer weinig grip: erop remmen of sturen doet een tweewieler wegglijden." },
-        { "id": "AM_C3_B1", "question": "Haaientanden voorbijrijden zonder voorrang te verlenen is:", "choices": ["Toegelaten voor tweewielers", "Een overtreding en een reëel risico op een aanrijding", "Gedoogd tijdens de daluren", "Toegelaten onder 25 km/u"], "explanation": "De haaientanden materialiseren de plicht om voorrang te verlenen: ze negeren stelt je bloot aan een zijdelingse aanrijding." },
-        { "id": "AM_C3_B2", "question": "Lichten op knipperend oranje + bord B1 eronder. Je:", "choices": ["Rijdt door zonder te kijken, het licht staat « uit »", "Stopt 3 seconden", "Verleent voorrang volgens het B1", "Wacht tot het groen terugkomt"], "explanation": "Knipperend oranje = de borden nemen het weer over: hier verplicht het B1 je voorrang te verlenen." },
-        { "id": "AM_C3_B3", "question": "Wanneer mag je een onderbroken witte lijn overschrijden?", "choices": ["Nooit met een bromfiets", "Enkel aan kruispunten", "Enkel buiten de bebouwde kom", "Om in te halen of af te slaan, als het manoeuvre veilig is"], "explanation": "De onderbroken lijn mag overschreden worden voor een veilig manoeuvre (inhalen, van richting veranderen) — in tegenstelling tot de doorlopende." }
+        {
+          "id": "AM_C3_Q1",
+          "question": "Het licht springt op vast oranje terwijl je nog veilig kunt remmen. Je:",
+          "choices": [
+            "Versnelt om vóór het rood te passeren",
+            "Stopt vóór de lijn",
+            "Rijdt door aan dezelfde snelheid",
+            "Claxonneert en rijdt door"
+          ],
+          "explanation": "Vast oranje verplicht te stoppen, tenzij remmen gevaarlijk wordt omdat je te dichtbij bent. Hier kan het: je stopt."
+        },
+        {
+          "id": "AM_C3_Q2",
+          "question": "Wat betekent een knipperend oranje licht aan een kruispunt?",
+          "choices": [
+            "De doorgang is verboden tot het groen wordt",
+            "Doorgang toegelaten met voorzichtigheid, voorrang en borden hernemen",
+            "Jij hebt absolute voorrang op het kruispunt",
+            "Het licht springt zo dadelijk weer op groen"
+          ],
+          "explanation": "Knipperend oranje verbiedt de doorgang niet: het verwijst je naar de borden en de voorrang van rechts, met verdubbelde voorzichtigheid."
+        },
+        {
+          "id": "AM_C3_Q3",
+          "question": "Jouw licht staat op groen maar een agent gebaart je te stoppen. Je:",
+          "choices": [
+            "Rijdt door, het licht primeert",
+            "Stopt: de agent primeert op de lichten",
+            "Rijdt traag om hem heen",
+            "Wacht tot de agent weggaat"
+          ],
+          "explanation": "Hiërarchie: agent > lichten > borden. De bevelen van de agent vervangen de signalisatie."
+        },
+        {
+          "id": "AM_C3_Q4",
+          "question": "Mag je op een doorlopende witte lijn rijden om een fietser in te halen?",
+          "choices": [
+            "Ja, voor een fietser mag dat",
+            "Nee, niet overschrijden en er niet op rijden",
+            "Ja, over maximaal 20 meter",
+            "Ja, na eerst te claxonneren"
+          ],
+          "explanation": "De doorlopende lijn wordt niet overschreden en er wordt niet op gereden. Je haalt enkel in als de afstand mogelijk is zonder ze te raken, anders wacht je."
+        },
+        {
+          "id": "AM_C3_Q5",
+          "question": "Witte driehoeken met de punt naar jou zijn op de grond geschilderd. Ze betekenen:",
+          "choices": [
+            "Een verkeersdrempel om traag te nemen",
+            "Hier voorrang verlenen",
+            "Een oversteekplaats voor voetgangers",
+            "Een zone verboden voor bromfietsen"
+          ],
+          "explanation": "De « haaientanden » markeren de exacte plaats waar je voorrang moet verlenen."
+        },
+        {
+          "id": "AM_C3_Q6",
+          "question": "Waarom vragen geschilderde markeringen bijzondere voorzichtigheid op twee wielen?",
+          "choices": [
+            "Ze liggen hoger dan het wegdek",
+            "Nat worden ze zeer glad",
+            "Ze trekken de banden aan",
+            "Ze zijn voorbehouden aan auto's"
+          ],
+          "explanation": "Natte wegverf biedt zeer weinig grip: erop remmen of sturen doet een tweewieler wegglijden."
+        },
+        {
+          "id": "AM_C3_B1",
+          "question": "Haaientanden voorbijrijden zonder voorrang te verlenen is:",
+          "choices": [
+            "Toegelaten voor tweewielers",
+            "Een overtreding en een reëel risico op een aanrijding",
+            "Gedoogd tijdens de daluren",
+            "Toegelaten onder 25 km/u"
+          ],
+          "explanation": "De haaientanden materialiseren de plicht om voorrang te verlenen: ze negeren stelt je bloot aan een zijdelingse aanrijding."
+        },
+        {
+          "id": "AM_C3_B2",
+          "question": "Lichten op knipperend oranje + bord B1 eronder. Je:",
+          "choices": [
+            "Rijdt door zonder te kijken, het licht staat « uit »",
+            "Stopt 3 seconden",
+            "Verleent voorrang volgens het B1",
+            "Wacht tot het groen terugkomt"
+          ],
+          "explanation": "Knipperend oranje = de borden nemen het weer over: hier verplicht het B1 je voorrang te verlenen."
+        },
+        {
+          "id": "AM_C3_B3",
+          "question": "Wanneer mag je een onderbroken witte lijn overschrijden?",
+          "choices": [
+            "Nooit met een bromfiets",
+            "Enkel aan kruispunten",
+            "Enkel buiten de bebouwde kom",
+            "Om in te halen of af te slaan, als het manoeuvre veilig is"
+          ],
+          "explanation": "De onderbroken lijn mag overschreden worden voor een veilig manoeuvre (inhalen, van richting veranderen) — in tegenstelling tot de doorlopende."
+        },
+        {
+          "id": "AM_C3_C1",
+          "question": "Aan de haaientanden is het kruispunt volledig vrij. Jij:",
+          "choices": [
+            "Stopt 3 seconden zoals aan de STOP",
+            "Rijdt door zonder volledige stilstand, na vertragen en kijken",
+            "Claxonneert vóór je doorrijdt",
+            "Wacht tot er een voertuig aankomt"
+          ],
+          "explanation": "Voorrang verlenen verplicht geen stilstand als de weg vrij is — in tegenstelling tot de STOP die altijd een volledige stilstand eist."
+        },
+        {
+          "id": "AM_C3_C2",
+          "question": "Waar stop je voor een brede doorlopende witte lijn dwars over je rijstrook?",
+          "choices": [
+            "Vóór de lijn, zonder erop te staan",
+            "Op de lijn, om goed te zien",
+            "Voorbij de lijn, aan de rand van het kruispunt",
+            "Om het even waar, volgens het verkeer"
+          ],
+          "explanation": "De stopstreep markeert de exacte plaats: je voorwiel staat stil vóór de lijn, nooit erop."
+        },
+        {
+          "id": "AM_C3_C3",
+          "question": "De lichten van een kruispunt zijn defect (gedoofd), geen borden. Wie heeft voorrang?",
+          "choices": [
+            "Het grootste voertuig",
+            "Wie het eerst aankomt",
+            "De voertuigen van de breedste weg",
+            "Wie van rechts komt"
+          ],
+          "explanation": "Lichten buiten dienst en geen borden: je valt terug op de basisregel, de voorrang van rechts."
+        }
       ]
     }
   ]

@@ -160,6 +160,42 @@
           ],
           "correct": 3,
           "explanation": "La gravité de l'infraction ne dépend pas de la taille du véhicule : feu rouge = infraction grave, cyclo compris."
+        },
+        {
+          "id": "AM_F1_C1",
+          "question": "« Deux verres, ça passe toujours » : que vaut ce calcul ?",
+          "choices": [
+            "Il est exact pour un adulte moyen",
+            "Rien : le taux dépend du corps, seul un test est fiable",
+            "Il vaut seulement après un repas copieux",
+            "Il ne vaut que pour la bière légère"
+          ],
+          "correct": 1,
+          "explanation": "Poids, sexe, fatigue, estomac vide : le taux varie énormément d'une personne à l'autre — aucun calcul de comptoir n'est fiable."
+        },
+        {
+          "id": "AM_F1_C2",
+          "question": "Café serré, douche froide : quel effet sur ton taux d'alcool ?",
+          "choices": [
+            "Ils divisent le taux par deux",
+            "Ils accélèrent nettement l'élimination",
+            "Aucun — seul le temps élimine l'alcool",
+            "Ils annulent l'effet d'un verre"
+          ],
+          "correct": 2,
+          "explanation": "Rien n'accélère l'élimination de l'alcool : ni café, ni douche, ni air frais. Seul le temps travaille."
+        },
+        {
+          "id": "AM_F1_C3",
+          "question": "Soirée arrosée, il est tard, ton scooter t'attend dehors. La bonne option :",
+          "choices": [
+            "Rouler doucement par les petites rues",
+            "Attendre une heure puis partir",
+            "Rouler en suivant un ami resté sobre",
+            "Rentrer autrement et récupérer le scooter demain"
+          ],
+          "correct": 3,
+          "explanation": "Sous influence, la seule bonne décision est de ne pas prendre le guidon : le scooter t'attendra très bien jusqu'à demain."
         }
       ]
     },
@@ -364,6 +400,42 @@
           ],
           "correct": 3,
           "explanation": "Le véhicule débridé ne correspond plus au contrat : l'assureur indemnise les tiers puis exerce un recours contre toi."
+        },
+        {
+          "id": "AM_F2_C1",
+          "question": "Avant de porter secours, où places-tu ton scooter ?",
+          "choices": [
+            "À l'écart du trafic, sans créer de nouveau danger",
+            "Au milieu de la chaussée pour bloquer la route",
+            "Sur le lieu exact de l'accident",
+            "Peu importe, chaque seconde compte"
+          ],
+          "correct": 0,
+          "explanation": "Se garer en sécurité, hors trafic, évite le sur-accident — la première victime suivante, c'est souvent le secouriste."
+        },
+        {
+          "id": "AM_F2_C2",
+          "question": "Sur le constat amiable, tu ne dois jamais :",
+          "choices": [
+            "Faire un croquis précis de la situation",
+            "Prendre des photos des dégâts",
+            "Reconnaître ta responsabilité sur place",
+            "Noter les coordonnées d'un témoin"
+          ],
+          "correct": 2,
+          "explanation": "Décris les faits, jamais les torts : la responsabilité se détermine ensuite par les assureurs, pas sous le coup de l'émotion."
+        },
+        {
+          "id": "AM_F2_C3",
+          "question": "Le 112, c'est :",
+          "choices": [
+            "Le numéro de la police locale uniquement",
+            "Le numéro d'urgence unique, valable dans toute l'Europe",
+            "Un numéro payant hors abonnement",
+            "Le numéro des services de dépannage"
+          ],
+          "correct": 1,
+          "explanation": "Le 112 est le numéro d'urgence européen, gratuit, joignable même sans crédit ni carte SIM active."
         }
       ]
     }

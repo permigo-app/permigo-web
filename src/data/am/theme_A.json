@@ -454,6 +454,102 @@
           ],
           "correct": 0,
           "explanation": "Au-delà des limites de construction, le véhicule n'est plus un cyclomoteur : conduite d'une moto sans permis ni assurance adaptés, avec toutes les sanctions."
+        },
+        {
+          "id": "AM_A1_C1",
+          "question": "Combien de roues un cyclomoteur classe A peut-il avoir ?",
+          "choices": [
+            "2 ou 3 roues",
+            "4 roues uniquement",
+            "2 roues uniquement",
+            "2, 3 ou 4 roues"
+          ],
+          "correct": 0,
+          "explanation": "La classe A compte 2 ou 3 roues. Les 4 roues (voiturettes) relèvent de la classe B."
+        },
+        {
+          "id": "AM_A1_C2",
+          "question": "Avec ton permis AM en poche, peux-tu conduire une moto 125cc ?",
+          "choices": [
+            "Oui, jusqu'à 125 cm³ précisément",
+            "Oui, dès 18 ans automatiquement",
+            "Non, le permis AM ne couvre aucune motocyclette",
+            "Oui, avec l'accord de tes parents"
+          ],
+          "correct": 2,
+          "explanation": "Le permis AM ne couvre que les cyclomoteurs (≤ 50 cm³, vitesse bridée). Une 125cc demande le permis A1."
+        },
+        {
+          "id": "AM_A1_C3",
+          "question": "Quel casque peut suffire sur un speed pedelec ?",
+          "choices": [
+            "N'importe quelle casquette renforcée du commerce",
+            "Un casque vélo homologué protégeant les tempes et l'arrière de la tête",
+            "Aucun casque n'est requis sur ce vélo",
+            "Uniquement un casque intégral de motocycliste"
+          ],
+          "correct": 1,
+          "explanation": "Sur un speed pedelec, un casque vélo homologué peut suffire s'il protège les tempes et l'arrière de la tête."
+        },
+        {
+          "id": "AM_A1_C4",
+          "question": "Ton amie a 15 ans et 11 mois et vient de réussir sa théorie AM. Peut-elle déjà conduire un scooter ?",
+          "choices": [
+            "Oui, la théorie réussie suffit",
+            "Oui, accompagnée d'un adulte titulaire",
+            "Oui, mais uniquement de jour",
+            "Non, il faut attendre ses 16 ans pour le permis"
+          ],
+          "correct": 3,
+          "explanation": "La théorie se passe dès 15 ans et 9 mois, mais le permis AM — et donc la conduite — n'est possible qu'à 16 ans."
+        },
+        {
+          "id": "AM_A1_C5",
+          "question": "Ton frère de 15 ans te demande ton scooter « juste pour la rue ». Tu :",
+          "choices": [
+            "Acceptes s'il reste sous les 25 km/h",
+            "Refuses : sans permis, c'est interdit et tu partages la responsabilité",
+            "Acceptes uniquement dans les rues calmes",
+            "Acceptes s'il porte ton casque homologué"
+          ],
+          "correct": 1,
+          "explanation": "Conduire sans permis est interdit, et en tant que propriétaire tu partages la responsabilité — l'assurance peut se retourner contre vous deux."
+        },
+        {
+          "id": "AM_A1_C6",
+          "question": "Un speed pedelec doit-il porter une plaque d'immatriculation ?",
+          "choices": [
+            "Non, c'est un vélo",
+            "Uniquement en Flandre",
+            "Oui, comme tous les cyclomoteurs",
+            "Seulement pour un usage professionnel"
+          ],
+          "correct": 2,
+          "explanation": "Le speed pedelec est un cyclomoteur (classe P) : immatriculation et plaque obligatoires, comme les classes A et B."
+        },
+        {
+          "id": "AM_A1_C7",
+          "question": "On te propose une occasion « débridée, elle monte à 70 » moins chère. Si tu l'achètes :",
+          "choices": [
+            "Tu devras la remettre conforme avant de rouler avec",
+            "Tu profites de l'aubaine en toute légalité",
+            "La bride se remettra seule au premier contrôle",
+            "Le vendeur reste responsable à ta place"
+          ],
+          "correct": 0,
+          "explanation": "C'est toi qui roules : le véhicule doit être remis conforme avant la route — sinon tu conduis une moto sans permis ni assurance adaptés."
+        },
+        {
+          "id": "AM_A1_C8",
+          "question": "Lors d'un contrôle, refuser de présenter tes documents est :",
+          "choices": [
+            "Ton droit le plus strict",
+            "Toléré pour les mineurs",
+            "Sans conséquence la première fois",
+            "Une infraction, même si tout est en règle"
+          ],
+          "correct": 3,
+          "explanation": "Tu es tenu de présenter permis, identité, immatriculation et assurance : le refus est sanctionnable en soi."
         }
       ]
     },
@@ -818,6 +914,78 @@
           ],
           "correct": 2,
           "explanation": "Un avertisseur sonore en état de marche fait partie de l'équipement obligatoire du cyclomoteur."
+        },
+        {
+          "id": "AM_A2_C1",
+          "question": "Comment vérifier qu'un casque est à ta taille ?",
+          "choices": [
+            "Il serre au point de faire mal",
+            "Il ne bouge pas quand tu secoues la tête",
+            "Il tourne librement autour du crâne",
+            "Il se choisit une taille au-dessus"
+          ],
+          "correct": 1,
+          "explanation": "Un casque à ta taille reste en place quand tu secoues la tête — sans serrer au point de faire mal."
+        },
+        {
+          "id": "AM_A2_C2",
+          "question": "Ta visière est rayée et t'éblouit la nuit. Tu :",
+          "choices": [
+            "La frottes avec du papier de verre fin",
+            "Roules en plissant les yeux la nuit",
+            "La remplaces : une visière abîmée dégrade ta vision nocturne",
+            "La retires définitivement du casque"
+          ],
+          "correct": 2,
+          "explanation": "Les rayures diffusent la lumière des phares et éblouissent : une visière abîmée se remplace."
+        },
+        {
+          "id": "AM_A2_C3",
+          "question": "Écouter de la musique au casque en roulant :",
+          "choices": [
+            "Te coupe des bruits du trafic : fortement déconseillé",
+            "Améliore ta concentration au guidon",
+            "Est obligatoire avec un intercom homologué",
+            "N'a aucun effet sur ta sécurité routière"
+          ],
+          "correct": 0,
+          "explanation": "Sirènes, klaxons, moteurs qui approchent : ton audition fait partie de ta sécurité à deux roues."
+        },
+        {
+          "id": "AM_A2_C4",
+          "question": "Utiliser ton GSM en main au guidon est :",
+          "choices": [
+            "Toléré sous 25 km/h",
+            "Permis à l'arrêt aux feux rouges",
+            "Permis avec des gants tactiles",
+            "Interdit, comme pour tout conducteur"
+          ],
+          "correct": 3,
+          "explanation": "Le GSM en main est interdit à tout conducteur — y compris à l'arrêt au feu. Seul un support fixé au véhicule est permis."
+        },
+        {
+          "id": "AM_A2_C5",
+          "question": "Tes pneus sont neufs. Quelle précaution les premiers kilomètres ?",
+          "choices": [
+            "Aucune, ils sont au maximum de leur adhérence",
+            "Rouler en douceur : la gomme neuve adhère moins au début",
+            "Les dégonfler légèrement pour les assouplir",
+            "Freiner fort plusieurs fois pour les chauffer"
+          ],
+          "correct": 1,
+          "explanation": "Un pneu neuf est recouvert d'un film de démoulage : adhérence réduite les premiers kilomètres, surtout en virage et sous la pluie."
+        },
+        {
+          "id": "AM_A2_C6",
+          "question": "Ton feu avant tombe en panne juste avant un trajet de nuit. Tu :",
+          "choices": [
+            "Roules en suivant les feux des voitures",
+            "Utilises la lampe de ton GSM fixée au guidon",
+            "Reportes le trajet ou répares avant de partir",
+            "Roules uniquement sur les pistes cyclables"
+          ],
+          "correct": 2,
+          "explanation": "Sans feu avant, tu ne vois pas et tu n'es pas vu : le véhicule n'est plus conforme, on répare avant de rouler de nuit."
         }
       ]
     }

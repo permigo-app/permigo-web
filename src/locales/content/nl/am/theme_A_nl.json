@@ -98,32 +98,380 @@
         }
       ],
       "questions": [
-        { "id": "AM_A1_Q1", "question": "Wat is de maximale constructiesnelheid van een bromfiets klasse B?", "choices": ["25 km/u", "45 km/u", "50 km/u", "60 km/u"], "explanation": "De bromfiets klasse B is door de constructie begrensd op 45 km/u. Klasse A is begrensd op 25 km/u." },
-        { "id": "AM_A1_Q2", "question": "Wat is de maximale constructiesnelheid van een bromfiets klasse A?", "choices": ["45 km/u", "30 km/u", "25 km/u", "20 km/u"], "explanation": "Klasse A is door de constructie begrensd op 25 km/u — daarom behandelt de wegcode hem vaak als een fiets." },
-        { "id": "AM_A1_Q3", "question": "Tot welke categorie behoort een lichte vierwieler (brommobiel)?", "choices": ["Bromfiets klasse B", "Bromfiets klasse A", "Vrije auto zonder rijbewijs", "Lichte motorfiets"], "explanation": "Lichte vierwielers (brommobielen) horen bij de bromfietsen klasse B: ze vereisen dus het rijbewijs AM." },
-        { "id": "AM_A1_Q4", "question": "Tot welke snelheid werkt de ondersteuning van een speed pedelec?", "choices": ["25 km/u", "32 km/u", "45 km/u", "50 km/u"], "explanation": "De speed pedelec ondersteunt tot 45 km/u: hij vormt de klasse P van de bromfietsen en vereist het rijbewijs AM of B." },
-        { "id": "AM_A1_Q5", "question": "De maximale cilinderinhoud van een thermische bromfiets is:", "choices": ["25 cm³", "50 cm³", "125 cm³", "100 cm³"], "explanation": "Een bromfiets heeft een motor van maximaal 50 cm³ (of een gelijkwaardige elektrische motor), met een begrensde constructiesnelheid." },
-        { "id": "AM_A1_Q6", "question": "Is het rijbewijs AM nodig om met een bromfiets klasse A (25 km/u) te rijden?", "choices": ["Nee, klasse A is vrijgesteld", "Ja, net als voor klasse B", "Nee, een eenvoudig attest volstaat", "Enkel binnen de bebouwde kom"], "explanation": "Het rijbewijs AM is verplicht voor beide klassen van bromfietsen, A én B, en voor de speed pedelec." },
-        { "id": "AM_A1_Q7", "question": "Vanaf welke leeftijd kun je het rijbewijs AM behalen?", "choices": ["15 jaar", "15 jaar en 9 maanden", "16 jaar", "18 jaar"], "explanation": "Het rijbewijs AM behaal je op 16 jaar. De theorie mag je al afleggen vanaf 15 jaar en 9 maanden." },
-        { "id": "AM_A1_Q8", "question": "Wie is vrijgesteld van het rijbewijs AM?", "choices": ["Personen geboren vóór 15/02/1961", "Iedereen ouder dan 30 jaar", "Bewoners buiten de bebouwde kom", "Niemand, er bestaat geen vrijstelling"], "explanation": "Vrijgesteld: personen geboren vóór 15 februari 1961 en houders van een rijbewijs B, A1, A2 of A." },
-        { "id": "AM_A1_Q9", "question": "Hoeveel juiste antwoorden heb je nodig om te slagen voor het theorie-examen AM?", "choices": ["41 op 50", "33 op 40", "20 op 40", "35 op 50"], "explanation": "Het AM-examen telt 40 vragen en je hebt er 33 juist nodig (maximaal 7 fouten). De 41/50 geldt voor het rijbewijs B." },
-        { "id": "AM_A1_Q10", "question": "Je vriend heeft een rijbewijs B (auto). Moet hij het AM-examen afleggen om jouw scooter te besturen?", "choices": ["Ja, het AM-examen blijft verplicht", "Nee, het rijbewijs B stelt hem vrij", "Ja, maar enkel de praktijk", "Nee, als de scooter een klasse B is"], "explanation": "Houders van een rijbewijs B (of A1, A2, A) zijn vrijgesteld van het rijbewijs AM." },
-        { "id": "AM_A1_Q11", "question": "Hoelang blijft het slagen voor de AM-theorie geldig?", "choices": ["1 jaar", "2 jaar", "3 jaar", "Onbeperkt"], "explanation": "Het slaagattest van de theorie is 3 jaar geldig om de praktische opleiding te volgen en het rijbewijs te behalen." },
-        { "id": "AM_A1_Q12", "question": "Moet een bromfiets klasse A (25 km/u) een nummerplaat dragen?", "choices": ["Nee, alleen klasse B", "Ja, zoals elke bromfiets", "Enkel als hij in de stad rijdt", "Enkel als hij nieuw gekocht is"], "explanation": "Alle bromfietsen moeten ingeschreven zijn en een plaat dragen, ongeacht hun klasse." },
-        { "id": "AM_A1_Q13", "question": "Welke verzekering is verplicht om met een bromfiets te rijden?", "choices": ["De volledige omniumverzekering", "De verzekering burgerlijke aansprakelijkheid (BA)", "De diefstal- en brandverzekering", "Geen enkele vóór 18 jaar"], "explanation": "De burgerlijke aansprakelijkheid (BA) is verplicht: zij vergoedt de schade die je aan anderen veroorzaakt." },
-        { "id": "AM_A1_Q14", "question": "Ondergaan bromfietsen een periodieke technische keuring in België?", "choices": ["Ja, elk jaar", "Ja, om de twee jaar", "Nee, maar het voertuig moet conform blijven", "Nee, behalve de vierwielers"], "explanation": "Geen periodieke technische keuring voor bromfietsen: de bestuurder blijft verantwoordelijk voor de conformiteit van het voertuig." },
-        { "id": "AM_A1_Q15", "question": "Je opgevoerde scooter haalt 70 km/u. In de ogen van de wet bestuur je:", "choices": ["Een aangepaste bromfiets klasse B", "Een motorfiets, zonder passend rijbewijs", "Een bromfiets klasse A", "Een gedoogd experimenteel voertuig"], "explanation": "Boven de constructielimieten is het voertuig geen bromfiets meer: het is een moto — die je rijbewijs AM niet dekt." },
-        { "id": "AM_A1_Q16", "question": "Wat kan de verzekeraar doen na een ongeval met een opgevoerde bromfiets?", "choices": ["Niets, het contract dekt het", "Vergoeden en daarna alles van jou terugeisen", "De premie met 10% verhogen", "De politieboete annuleren"], "explanation": "De verzekeraar kan de slachtoffers vergoeden en daarna verhaal op jou uitoefenen: het opgevoerde voertuig komt niet meer overeen met het contract." },
-        { "id": "AM_A1_B1", "question": "Een scooter 50cc, af fabriek begrensd op 45 km/u, behoort tot de categorie:", "choices": ["Lichte motorfiets", "Bromfiets klasse A", "Bromfiets klasse B", "Lichte vierwieler"], "explanation": "Maximaal 50 cm³ en 45 km/u door constructie: dat is de definitie van de bromfiets klasse B." },
-        { "id": "AM_A1_B2", "question": "Welk rijbewijs heb je nodig voor een speed pedelec?", "choices": ["Het rijbewijs AM of het rijbewijs B", "Geen enkel, het is een fiets", "Enkel het rijbewijs A1", "Een eenvoudig gemeentelijk attest"], "explanation": "De speed pedelec (klasse P, ondersteuning tot 45 km/u) vereist het rijbewijs AM of een rijbewijs B." },
-        { "id": "AM_A1_B3", "question": "Je bent 15 jaar en 10 maanden. Mag je het theorie-examen AM afleggen?", "choices": ["Nee, je moet 16 jaar zijn", "Nee, je moet 17 jaar zijn", "Enkel via een rijschool", "Ja, de theorie kan vanaf 15 jaar en 9 maanden"], "explanation": "De AM-theorie mag je afleggen vanaf 15 jaar en 9 maanden; het rijbewijs zelf behaal je op 16 jaar." },
-        { "id": "AM_A1_B4", "question": "Je slaagattest van de AM-theorie is meer dan 3 jaar oud. Wat moet je doen?", "choices": ["Niets, het blijft levenslang geldig", "Het theorie-examen opnieuw afleggen", "Een verlengingstaks betalen", "Een duplicaat vragen bij de gemeente"], "explanation": "Het slagen voor de theorie is 3 jaar geldig: daarna moet je het examen opnieuw afleggen." },
-        { "id": "AM_A1_B5", "question": "Wat riskeer je als je met een bromfiets rijdt zonder rijbewijs AM?", "choices": ["Niets vóór je 18e", "Een eenvoudige waarschuwing zonder gevolg", "Boete, mogelijke immobilisering en grote verzekeringsproblemen", "Enkel een mondelinge opmerking van de politie"], "explanation": "Rijden zonder geldig rijbewijs betekent een boete, mogelijke immobilisering van het voertuig en verhaal van de verzekering bij een ongeval." },
-        { "id": "AM_A1_B6", "question": "Welk rijbewijs is nodig voor een brommobiel (lichte vierwieler)?", "choices": ["Het rijbewijs AM", "Geen enkel rijbewijs", "Verplicht het rijbewijs B", "Het rijbewijs A1"], "explanation": "De brommobiel is een bromfiets klasse B: je bestuurt hem met het rijbewijs AM (of een rijbewijs dat ervan vrijstelt)." },
-        { "id": "AM_A1_B7", "question": "Politiecontrole: je documenten liggen thuis maar alles is in orde. Wat gebeurt er?", "choices": ["Niets, de politie checkt online", "Je wordt naar huis begeleid", "Je scooter wordt definitief in beslag genomen", "Een proces-verbaal blijft mogelijk"], "explanation": "De vereiste documenten niet kunnen tonen is strafbaar, ook al is verder alles in orde." },
-        { "id": "AM_A1_B8", "question": "Waar wordt de nummerplaat van een bromfiets geplaatst?", "choices": ["Vooraan op het voertuig", "Achteraan op het voertuig", "Onder het zadel, beschut", "Op de helm van de bestuurder"], "explanation": "Zoals bij andere voertuigen wordt de plaat achteraan bevestigd, goed zichtbaar." },
-        { "id": "AM_A1_B9", "question": "Je koopt een tweedehands scooter. Vóór je ermee rijdt, moet je:", "choices": ["Eerst rijden, daarna regulariseren", "Enkel de vorige eigenaar verwittigen", "Hem op jouw naam inschrijven en verzekeren", "Je fietsplaatje erop kleven"], "explanation": "Inschrijving op jouw naam en BA-verzekering zijn voorwaarden: zonder rijd je geen meter op de openbare weg." },
-        { "id": "AM_A1_B10", "question": "Op de rollenbank van de politie haalt je bromfiets « 45 km/u » 55 km/u. Gevolg?", "choices": ["Hij wordt behandeld als een moto: rijbewijs en verzekering ongeschikt", "Een waarschuwing en naar huis", "Niets als je de begrenzer binnen 24 u terugplaatst", "Een eenvoudige update van het inschrijvingsbewijs"], "explanation": "Boven de constructielimieten is het voertuig geen bromfiets meer: je rijdt met een moto zonder passend rijbewijs of verzekering, met alle sancties." }
+        {
+          "id": "AM_A1_Q1",
+          "question": "Wat is de maximale constructiesnelheid van een bromfiets klasse B?",
+          "choices": [
+            "25 km/u",
+            "45 km/u",
+            "50 km/u",
+            "60 km/u"
+          ],
+          "explanation": "De bromfiets klasse B is door de constructie begrensd op 45 km/u. Klasse A is begrensd op 25 km/u."
+        },
+        {
+          "id": "AM_A1_Q2",
+          "question": "Wat is de maximale constructiesnelheid van een bromfiets klasse A?",
+          "choices": [
+            "45 km/u",
+            "30 km/u",
+            "25 km/u",
+            "20 km/u"
+          ],
+          "explanation": "Klasse A is door de constructie begrensd op 25 km/u — daarom behandelt de wegcode hem vaak als een fiets."
+        },
+        {
+          "id": "AM_A1_Q3",
+          "question": "Tot welke categorie behoort een lichte vierwieler (brommobiel)?",
+          "choices": [
+            "Bromfiets klasse B",
+            "Bromfiets klasse A",
+            "Vrije auto zonder rijbewijs",
+            "Lichte motorfiets"
+          ],
+          "explanation": "Lichte vierwielers (brommobielen) horen bij de bromfietsen klasse B: ze vereisen dus het rijbewijs AM."
+        },
+        {
+          "id": "AM_A1_Q4",
+          "question": "Tot welke snelheid werkt de ondersteuning van een speed pedelec?",
+          "choices": [
+            "25 km/u",
+            "32 km/u",
+            "45 km/u",
+            "50 km/u"
+          ],
+          "explanation": "De speed pedelec ondersteunt tot 45 km/u: hij vormt de klasse P van de bromfietsen en vereist het rijbewijs AM of B."
+        },
+        {
+          "id": "AM_A1_Q5",
+          "question": "De maximale cilinderinhoud van een thermische bromfiets is:",
+          "choices": [
+            "25 cm³",
+            "50 cm³",
+            "125 cm³",
+            "100 cm³"
+          ],
+          "explanation": "Een bromfiets heeft een motor van maximaal 50 cm³ (of een gelijkwaardige elektrische motor), met een begrensde constructiesnelheid."
+        },
+        {
+          "id": "AM_A1_Q6",
+          "question": "Is het rijbewijs AM nodig om met een bromfiets klasse A (25 km/u) te rijden?",
+          "choices": [
+            "Nee, klasse A is vrijgesteld",
+            "Ja, net als voor klasse B",
+            "Nee, een eenvoudig attest volstaat",
+            "Enkel binnen de bebouwde kom"
+          ],
+          "explanation": "Het rijbewijs AM is verplicht voor beide klassen van bromfietsen, A én B, en voor de speed pedelec."
+        },
+        {
+          "id": "AM_A1_Q7",
+          "question": "Vanaf welke leeftijd kun je het rijbewijs AM behalen?",
+          "choices": [
+            "15 jaar",
+            "15 jaar en 9 maanden",
+            "16 jaar",
+            "18 jaar"
+          ],
+          "explanation": "Het rijbewijs AM behaal je op 16 jaar. De theorie mag je al afleggen vanaf 15 jaar en 9 maanden."
+        },
+        {
+          "id": "AM_A1_Q8",
+          "question": "Wie is vrijgesteld van het rijbewijs AM?",
+          "choices": [
+            "Personen geboren vóór 15/02/1961",
+            "Iedereen ouder dan 30 jaar",
+            "Bewoners buiten de bebouwde kom",
+            "Niemand, er bestaat geen vrijstelling"
+          ],
+          "explanation": "Vrijgesteld: personen geboren vóór 15 februari 1961 en houders van een rijbewijs B, A1, A2 of A."
+        },
+        {
+          "id": "AM_A1_Q9",
+          "question": "Hoeveel juiste antwoorden heb je nodig om te slagen voor het theorie-examen AM?",
+          "choices": [
+            "41 op 50",
+            "33 op 40",
+            "20 op 40",
+            "35 op 50"
+          ],
+          "explanation": "Het AM-examen telt 40 vragen en je hebt er 33 juist nodig (maximaal 7 fouten). De 41/50 geldt voor het rijbewijs B."
+        },
+        {
+          "id": "AM_A1_Q10",
+          "question": "Je vriend heeft een rijbewijs B (auto). Moet hij het AM-examen afleggen om jouw scooter te besturen?",
+          "choices": [
+            "Ja, het AM-examen blijft verplicht",
+            "Nee, het rijbewijs B stelt hem vrij",
+            "Ja, maar enkel de praktijk",
+            "Nee, als de scooter een klasse B is"
+          ],
+          "explanation": "Houders van een rijbewijs B (of A1, A2, A) zijn vrijgesteld van het rijbewijs AM."
+        },
+        {
+          "id": "AM_A1_Q11",
+          "question": "Hoelang blijft het slagen voor de AM-theorie geldig?",
+          "choices": [
+            "1 jaar",
+            "2 jaar",
+            "3 jaar",
+            "Onbeperkt"
+          ],
+          "explanation": "Het slaagattest van de theorie is 3 jaar geldig om de praktische opleiding te volgen en het rijbewijs te behalen."
+        },
+        {
+          "id": "AM_A1_Q12",
+          "question": "Moet een bromfiets klasse A (25 km/u) een nummerplaat dragen?",
+          "choices": [
+            "Nee, alleen klasse B",
+            "Ja, zoals elke bromfiets",
+            "Enkel als hij in de stad rijdt",
+            "Enkel als hij nieuw gekocht is"
+          ],
+          "explanation": "Alle bromfietsen moeten ingeschreven zijn en een plaat dragen, ongeacht hun klasse."
+        },
+        {
+          "id": "AM_A1_Q13",
+          "question": "Welke verzekering is verplicht om met een bromfiets te rijden?",
+          "choices": [
+            "De volledige omniumverzekering",
+            "De verzekering burgerlijke aansprakelijkheid (BA)",
+            "De diefstal- en brandverzekering",
+            "Geen enkele vóór 18 jaar"
+          ],
+          "explanation": "De burgerlijke aansprakelijkheid (BA) is verplicht: zij vergoedt de schade die je aan anderen veroorzaakt."
+        },
+        {
+          "id": "AM_A1_Q14",
+          "question": "Ondergaan bromfietsen een periodieke technische keuring in België?",
+          "choices": [
+            "Ja, elk jaar",
+            "Ja, om de twee jaar",
+            "Nee, maar het voertuig moet conform blijven",
+            "Nee, behalve de vierwielers"
+          ],
+          "explanation": "Geen periodieke technische keuring voor bromfietsen: de bestuurder blijft verantwoordelijk voor de conformiteit van het voertuig."
+        },
+        {
+          "id": "AM_A1_Q15",
+          "question": "Je opgevoerde scooter haalt 70 km/u. In de ogen van de wet bestuur je:",
+          "choices": [
+            "Een aangepaste bromfiets klasse B",
+            "Een motorfiets, zonder passend rijbewijs",
+            "Een bromfiets klasse A",
+            "Een gedoogd experimenteel voertuig"
+          ],
+          "explanation": "Boven de constructielimieten is het voertuig geen bromfiets meer: het is een moto — die je rijbewijs AM niet dekt."
+        },
+        {
+          "id": "AM_A1_Q16",
+          "question": "Wat kan de verzekeraar doen na een ongeval met een opgevoerde bromfiets?",
+          "choices": [
+            "Niets, het contract dekt het",
+            "Vergoeden en daarna alles van jou terugeisen",
+            "De premie met 10% verhogen",
+            "De politieboete annuleren"
+          ],
+          "explanation": "De verzekeraar kan de slachtoffers vergoeden en daarna verhaal op jou uitoefenen: het opgevoerde voertuig komt niet meer overeen met het contract."
+        },
+        {
+          "id": "AM_A1_B1",
+          "question": "Een scooter 50cc, af fabriek begrensd op 45 km/u, behoort tot de categorie:",
+          "choices": [
+            "Lichte motorfiets",
+            "Bromfiets klasse A",
+            "Bromfiets klasse B",
+            "Lichte vierwieler"
+          ],
+          "explanation": "Maximaal 50 cm³ en 45 km/u door constructie: dat is de definitie van de bromfiets klasse B."
+        },
+        {
+          "id": "AM_A1_B2",
+          "question": "Welk rijbewijs heb je nodig voor een speed pedelec?",
+          "choices": [
+            "Het rijbewijs AM of het rijbewijs B",
+            "Geen enkel, het is een fiets",
+            "Enkel het rijbewijs A1",
+            "Een eenvoudig gemeentelijk attest"
+          ],
+          "explanation": "De speed pedelec (klasse P, ondersteuning tot 45 km/u) vereist het rijbewijs AM of een rijbewijs B."
+        },
+        {
+          "id": "AM_A1_B3",
+          "question": "Je bent 15 jaar en 10 maanden. Mag je het theorie-examen AM afleggen?",
+          "choices": [
+            "Nee, je moet 16 jaar zijn",
+            "Nee, je moet 17 jaar zijn",
+            "Enkel via een rijschool",
+            "Ja, de theorie kan vanaf 15 jaar en 9 maanden"
+          ],
+          "explanation": "De AM-theorie mag je afleggen vanaf 15 jaar en 9 maanden; het rijbewijs zelf behaal je op 16 jaar."
+        },
+        {
+          "id": "AM_A1_B4",
+          "question": "Je slaagattest van de AM-theorie is meer dan 3 jaar oud. Wat moet je doen?",
+          "choices": [
+            "Niets, het blijft levenslang geldig",
+            "Het theorie-examen opnieuw afleggen",
+            "Een verlengingstaks betalen",
+            "Een duplicaat vragen bij de gemeente"
+          ],
+          "explanation": "Het slagen voor de theorie is 3 jaar geldig: daarna moet je het examen opnieuw afleggen."
+        },
+        {
+          "id": "AM_A1_B5",
+          "question": "Wat riskeer je als je met een bromfiets rijdt zonder rijbewijs AM?",
+          "choices": [
+            "Niets vóór je 18e",
+            "Een eenvoudige waarschuwing zonder gevolg",
+            "Boete, mogelijke immobilisering en grote verzekeringsproblemen",
+            "Enkel een mondelinge opmerking van de politie"
+          ],
+          "explanation": "Rijden zonder geldig rijbewijs betekent een boete, mogelijke immobilisering van het voertuig en verhaal van de verzekering bij een ongeval."
+        },
+        {
+          "id": "AM_A1_B6",
+          "question": "Welk rijbewijs is nodig voor een brommobiel (lichte vierwieler)?",
+          "choices": [
+            "Het rijbewijs AM",
+            "Geen enkel rijbewijs",
+            "Verplicht het rijbewijs B",
+            "Het rijbewijs A1"
+          ],
+          "explanation": "De brommobiel is een bromfiets klasse B: je bestuurt hem met het rijbewijs AM (of een rijbewijs dat ervan vrijstelt)."
+        },
+        {
+          "id": "AM_A1_B7",
+          "question": "Politiecontrole: je documenten liggen thuis maar alles is in orde. Wat gebeurt er?",
+          "choices": [
+            "Niets, de politie checkt online",
+            "Je wordt naar huis begeleid",
+            "Je scooter wordt definitief in beslag genomen",
+            "Een proces-verbaal blijft mogelijk"
+          ],
+          "explanation": "De vereiste documenten niet kunnen tonen is strafbaar, ook al is verder alles in orde."
+        },
+        {
+          "id": "AM_A1_B8",
+          "question": "Waar wordt de nummerplaat van een bromfiets geplaatst?",
+          "choices": [
+            "Vooraan op het voertuig",
+            "Achteraan op het voertuig",
+            "Onder het zadel, beschut",
+            "Op de helm van de bestuurder"
+          ],
+          "explanation": "Zoals bij andere voertuigen wordt de plaat achteraan bevestigd, goed zichtbaar."
+        },
+        {
+          "id": "AM_A1_B9",
+          "question": "Je koopt een tweedehands scooter. Vóór je ermee rijdt, moet je:",
+          "choices": [
+            "Eerst rijden, daarna regulariseren",
+            "Enkel de vorige eigenaar verwittigen",
+            "Hem op jouw naam inschrijven en verzekeren",
+            "Je fietsplaatje erop kleven"
+          ],
+          "explanation": "Inschrijving op jouw naam en BA-verzekering zijn voorwaarden: zonder rijd je geen meter op de openbare weg."
+        },
+        {
+          "id": "AM_A1_B10",
+          "question": "Op de rollenbank van de politie haalt je bromfiets « 45 km/u » 55 km/u. Gevolg?",
+          "choices": [
+            "Hij wordt behandeld als een moto: rijbewijs en verzekering ongeschikt",
+            "Een waarschuwing en naar huis",
+            "Niets als je de begrenzer binnen 24 u terugplaatst",
+            "Een eenvoudige update van het inschrijvingsbewijs"
+          ],
+          "explanation": "Boven de constructielimieten is het voertuig geen bromfiets meer: je rijdt met een moto zonder passend rijbewijs of verzekering, met alle sancties."
+        },
+        {
+          "id": "AM_A1_C1",
+          "question": "Hoeveel wielen kan een bromfiets klasse A hebben?",
+          "choices": [
+            "2 of 3 wielen",
+            "Enkel 4 wielen",
+            "Enkel 2 wielen",
+            "2, 3 of 4 wielen"
+          ],
+          "explanation": "Klasse A telt 2 of 3 wielen. De vierwielers (brommobielen) horen bij klasse B."
+        },
+        {
+          "id": "AM_A1_C2",
+          "question": "Mag je met je rijbewijs AM een moto 125cc besturen?",
+          "choices": [
+            "Ja, tot precies 125 cm³",
+            "Ja, automatisch vanaf 18 jaar",
+            "Nee, het rijbewijs AM dekt geen enkele motorfiets",
+            "Ja, met toestemming van je ouders"
+          ],
+          "explanation": "Het rijbewijs AM dekt enkel bromfietsen (≤ 50 cm³, begrensde snelheid). Een 125cc vraagt het rijbewijs A1."
+        },
+        {
+          "id": "AM_A1_C3",
+          "question": "Welke helm kan volstaan op een speed pedelec?",
+          "choices": [
+            "Eender welke verstevigde pet uit de handel",
+            "Een gehomologeerde fietshelm die slapen en achterhoofd beschermt",
+            "Geen enkele helm is vereist op deze fiets",
+            "Enkel een integraalhelm voor motorrijders"
+          ],
+          "explanation": "Op een speed pedelec kan een gehomologeerde fietshelm volstaan als hij de slapen en het achterhoofd beschermt."
+        },
+        {
+          "id": "AM_A1_C4",
+          "question": "Je vriendin is 15 jaar en 11 maanden en is net geslaagd voor haar AM-theorie. Mag ze al met een scooter rijden?",
+          "choices": [
+            "Ja, de geslaagde theorie volstaat",
+            "Ja, vergezeld van een volwassen houder",
+            "Ja, maar enkel overdag",
+            "Nee, ze moet wachten tot haar 16e voor het rijbewijs"
+          ],
+          "explanation": "De theorie kan vanaf 15 jaar en 9 maanden, maar het rijbewijs AM — en dus het rijden — kan pas op 16 jaar."
+        },
+        {
+          "id": "AM_A1_C5",
+          "question": "Je broer van 15 vraagt je scooter « gewoon voor in de straat ». Jij:",
+          "choices": [
+            "Aanvaardt als hij onder de 25 km/u blijft",
+            "Weigert: zonder rijbewijs is het verboden en deel jij de verantwoordelijkheid",
+            "Aanvaardt enkel in rustige straten",
+            "Aanvaardt als hij jouw gehomologeerde helm draagt"
+          ],
+          "explanation": "Rijden zonder rijbewijs is verboden, en als eigenaar deel jij de verantwoordelijkheid — de verzekering kan zich tegen jullie beiden keren."
+        },
+        {
+          "id": "AM_A1_C6",
+          "question": "Moet een speed pedelec een nummerplaat dragen?",
+          "choices": [
+            "Nee, het is een fiets",
+            "Enkel in Vlaanderen",
+            "Ja, zoals alle bromfietsen",
+            "Enkel voor professioneel gebruik"
+          ],
+          "explanation": "De speed pedelec is een bromfiets (klasse P): inschrijving en plaat verplicht, zoals klasse A en B."
+        },
+        {
+          "id": "AM_A1_C7",
+          "question": "Men biedt je een goedkopere occasie aan, « opgevoerd, hij haalt 70 ». Als je hem koopt:",
+          "choices": [
+            "Moet je hem conform maken vóór je ermee rijdt",
+            "Profiteer je volkomen legaal van het koopje",
+            "Herstelt de begrenzer zichzelf bij de eerste controle",
+            "Blijft de verkoper in jouw plaats verantwoordelijk"
+          ],
+          "explanation": "Jij rijdt ermee: het voertuig moet conform gemaakt worden vóór de weg — anders bestuur je een moto zonder passend rijbewijs of verzekering."
+        },
+        {
+          "id": "AM_A1_C8",
+          "question": "Bij een controle weigeren je documenten te tonen is:",
+          "choices": [
+            "Je volste recht",
+            "Gedoogd voor minderjarigen",
+            "Zonder gevolg de eerste keer",
+            "Een overtreding, ook al is alles in orde"
+          ],
+          "explanation": "Je moet rijbewijs, identiteit, inschrijving en verzekering kunnen tonen: de weigering is op zich strafbaar."
+        }
       ]
     },
     {
@@ -212,26 +560,292 @@
         }
       ],
       "questions": [
-        { "id": "AM_A2_Q1", "question": "Wie moet op een tweewielige bromfiets een helm dragen?", "choices": ["Alleen de bestuurder", "Alleen de passagier", "De bestuurder en de passagier", "Niemand onder 45 km/u"], "explanation": "De gehomologeerde, correct vastgemaakte helm is verplicht voor de bestuurder ÉN de passagier van een bromfiets met 2 of 3 wielen." },
-        { "id": "AM_A2_Q2", "question": "Welke eigenschap moet een bromfietshelm verplicht hebben?", "choices": ["Een fluokleur", "Gehomologeerd zijn (ECE-norm)", "Van het integraaltype zijn", "Een getint vizier hebben"], "explanation": "De helm moet ECE-gehomologeerd en vastgemaakt zijn. Integraal, modulair of jet: ze voldoen allemaal als ze gehomologeerd zijn." },
-        { "id": "AM_A2_Q3", "question": "Wat moet de bestuurder doen in een brommobiel (lichte vierwieler met cabine)?", "choices": ["Een gehomologeerde helm dragen", "Zijn veiligheidsgordel vastmaken", "Helm én gordel dragen", "Niets bijzonders"], "explanation": "In een vierwieler met cabine vervangt de gordel de helm: de gordel is er verplicht." },
-        { "id": "AM_A2_Q4", "question": "Je helm is hard gevallen maar lijkt intact. Wat doe je?", "choices": ["Houden, er is niets aan", "Vervangen: de interne bescherming kan vernietigd zijn", "Vernissen om hem te verstevigen", "Houden als het vizier heel is"], "explanation": "Na een klap kan de binnenschaal onzichtbaar geplet zijn: de helm moet vervangen worden." },
-        { "id": "AM_A2_Q5", "question": "Op een bromfiets zijn handschoenen en een beschermende jas:", "choices": ["Verplicht zoals op de moto", "Sterk aanbevolen, maar niet verplicht", "Enkel 's nachts verplicht", "Verboden in de zomer"], "explanation": "Op een bromfiets is enkel de helm wettelijk verplicht. De volledige uitrusting (handschoenen, jas, broek, hoge schoenen) is alleen op de motorfiets verplicht." },
-        { "id": "AM_A2_Q6", "question": "Wat verbetert je zichtbaarheid 's nachts op een bromfiets het meest?", "choices": ["Een matzwarte helm", "Discrete donkere kleding", "Een hesje of reflecterende elementen", "Dichter bij de auto's rijden"], "explanation": "Reflecterende elementen maken je op grote afstand zichtbaar in de koplampen — meerdere seconden extra reactietijd voor de anderen." },
-        { "id": "AM_A2_Q7", "question": "Hoe controleer je de bandenspanning correct?", "choices": ["Op het zicht, vóór elk vertrek", "Regelmatig, met koude banden, op de waarde van de fabrikant", "Eén keer per jaar in de garage", "Door met je duim op de band te duwen"], "explanation": "De druk controleer je regelmatig, koud, op de waarde van de fabrikant: een band kan veel druk verliezen zonder plat te lijken." },
-        { "id": "AM_A2_Q8", "question": "Je remhendel komt « tot op de bodem » en je hoort metaalgeluid. Wat doe je?", "choices": ["Trager rijden in afwachting", "De remmen laten controleren vóór je weer de weg op gaat", "Enkel met de achterrem remmen", "Vloeistof bijvullen en doorrijden"], "explanation": "Een slappe hendel en metaalgeluid wijzen op versleten remmen: laten controleren vóór je weer vertrekt." },
-        { "id": "AM_A2_Q9", "question": "Waarom is regelmatig onderhoud van je bromfiets zo belangrijk?", "choices": ["Om de garantie van de verkoper te behouden", "Omdat geen enkele keuring het in jouw plaats controleert", "Om de topsnelheid te verbeteren", "Enkel voor de doorverkoop"], "explanation": "Zonder periodieke keuring controleert niemand anders remmen, banden en lichten: die verantwoordelijkheid is blijvend de jouwe." },
-        { "id": "AM_A2_Q10", "question": "Welke lichten moet je bromfiets in werkende staat hebben?", "choices": ["Enkel het voorlicht", "Voorlicht, rood achterlicht en remlicht", "Enkel de waarschuwingslichten", "Gehomologeerde xenonlichten"], "explanation": "Voorlicht, rood achterlicht en remlicht moeten werken: ze dienen vooral om gezien te worden." },
-        { "id": "AM_A2_Q11", "question": "Welke spiegel is verplicht op een bromfiets?", "choices": ["Minstens één gehomologeerde spiegel links", "Twee verwarmde spiegels", "Enkel een spiegel rechts", "Geen enkele spiegel is vereist"], "explanation": "Minstens één gehomologeerde spiegel aan de linkerkant is verplicht: hij bewaakt het verkeer dat je inhaalt." },
-        { "id": "AM_A2_Q12", "question": "Je bromfiets heeft geen richtingaanwijzers. Hoe geef je aan dat je linksaf slaat?", "choices": ["Met een lichtsignaal", "Door de linkerarm te strekken", "Door twee keer te claxonneren", "Door sterk te vertragen"], "explanation": "Zonder richtingaanwijzers geef je de richtingsverandering aan met gestrekte arm aan de kant waar je afslaat — vroeg en duidelijk." },
-        { "id": "AM_A2_B1", "question": "Volstaat een gehomologeerde « jet »-helm (open) voor je scooter?", "choices": ["Nee, enkel de integraalhelm is toegelaten", "Ja, als hij gehomologeerd is en jouw maat heeft", "Nee, die is voor fietsers", "Ja, zelfs zonder homologatie"], "explanation": "Jet, modulair of integraal: ze voldoen allemaal als ze ECE-gehomologeerd, passend en vastgemaakt zijn." },
-        { "id": "AM_A2_B2", "question": "Hoe controleer je de afstelling van de kinriem van je helm?", "choices": ["Hij moet los hangen", "Er moeten twee handen onder kunnen", "Hij moet knellen tot in de huid", "Ongeveer één vinger speling tussen riem en kin"], "explanation": "De gesloten riem laat ongeveer één vingerdikte onder de kin: niet los, niet knellend." },
-        { "id": "AM_A2_B3", "question": "Waarom vermijd je beter een tweedehands helm?", "choices": ["Hij kan een onzichtbare klap hebben gehad die zijn bescherming vernietigde", "Hij is per definitie ouderwets en minder comfortabel", "De wet verbiedt formeel de doorverkoop", "Hij is onmogelijk op maat af te stellen"], "explanation": "De binnenschaal absorbeert schokken door te pletten: een vroegere impact, zelfs onzichtbaar, heft de bescherming op." },
-        { "id": "AM_A2_B4", "question": "Je passagier weigert de helm « voor 500 meter ». Wat zegt de regel?", "choices": ["Toegelaten onder 25 km/u", "Toegestaan binnen de bebouwde kom", "Gehomologeerde helm vastgemaakt verplicht, ongeacht de afstand", "Enkel de bestuurder moet een helm dragen"], "explanation": "Bestuurder ÉN passagier dragen een vastgemaakte gehomologeerde helm — de lengte van de rit verandert daar niets aan." },
-        { "id": "AM_A2_B5", "question": "Je ontdekt een bult op de zijkant van je band. Je:", "choices": ["Rijdt voorzichtig verder en houdt het in de gaten", "Vervangt de band vóór je weer de weg op gaat", "Verlaagt de druk om te compenseren", "Wacht tot ze verdwijnt"], "explanation": "Een bult kondigt een klapband aan: de band moet vervangen worden vóór je rijdt." },
-        { "id": "AM_A2_B6", "question": "Je linkerspiegel is gisteravond gebroken. Vanmorgen:", "choices": ["Vervang je hem vóór je rijdt: hij is verplicht", "Rijd je en draai je je vaker om", "Gebruik je die van rechts in afwachting", "Rijd je enkel binnen de bebouwde kom"], "explanation": "Minstens één gehomologeerde spiegel links is verplicht: hij wordt hersteld vóór je weer de weg op gaat." },
-        { "id": "AM_A2_B7", "question": "Rijden met een kapot remlicht stelt je vooral bloot aan:", "choices": ["Snellere slijtage van de remmen", "Een hoger verbruik", "Niets bijzonders overdag", "Een kop-staartaanrijding en een proces-verbaal"], "explanation": "Zonder remlicht ziet het voertuig achter je je remmingen niet: reëel gevaar en overtreding." },
-        { "id": "AM_A2_B8", "question": "De claxon van je bromfiets:", "choices": ["Is een facultatief accessoire", "Kan vervangen worden door je stem", "Moet aanwezig zijn en werken", "Is verboden binnen de bebouwde kom"], "explanation": "Een werkende claxon hoort bij de verplichte uitrusting van de bromfiets." }
+        {
+          "id": "AM_A2_Q1",
+          "question": "Wie moet op een tweewielige bromfiets een helm dragen?",
+          "choices": [
+            "Alleen de bestuurder",
+            "Alleen de passagier",
+            "De bestuurder en de passagier",
+            "Niemand onder 45 km/u"
+          ],
+          "explanation": "De gehomologeerde, correct vastgemaakte helm is verplicht voor de bestuurder ÉN de passagier van een bromfiets met 2 of 3 wielen."
+        },
+        {
+          "id": "AM_A2_Q2",
+          "question": "Welke eigenschap moet een bromfietshelm verplicht hebben?",
+          "choices": [
+            "Een fluokleur",
+            "Gehomologeerd zijn (ECE-norm)",
+            "Van het integraaltype zijn",
+            "Een getint vizier hebben"
+          ],
+          "explanation": "De helm moet ECE-gehomologeerd en vastgemaakt zijn. Integraal, modulair of jet: ze voldoen allemaal als ze gehomologeerd zijn."
+        },
+        {
+          "id": "AM_A2_Q3",
+          "question": "Wat moet de bestuurder doen in een brommobiel (lichte vierwieler met cabine)?",
+          "choices": [
+            "Een gehomologeerde helm dragen",
+            "Zijn veiligheidsgordel vastmaken",
+            "Helm én gordel dragen",
+            "Niets bijzonders"
+          ],
+          "explanation": "In een vierwieler met cabine vervangt de gordel de helm: de gordel is er verplicht."
+        },
+        {
+          "id": "AM_A2_Q4",
+          "question": "Je helm is hard gevallen maar lijkt intact. Wat doe je?",
+          "choices": [
+            "Houden, er is niets aan",
+            "Vervangen: de interne bescherming kan vernietigd zijn",
+            "Vernissen om hem te verstevigen",
+            "Houden als het vizier heel is"
+          ],
+          "explanation": "Na een klap kan de binnenschaal onzichtbaar geplet zijn: de helm moet vervangen worden."
+        },
+        {
+          "id": "AM_A2_Q5",
+          "question": "Op een bromfiets zijn handschoenen en een beschermende jas:",
+          "choices": [
+            "Verplicht zoals op de moto",
+            "Sterk aanbevolen, maar niet verplicht",
+            "Enkel 's nachts verplicht",
+            "Verboden in de zomer"
+          ],
+          "explanation": "Op een bromfiets is enkel de helm wettelijk verplicht. De volledige uitrusting (handschoenen, jas, broek, hoge schoenen) is alleen op de motorfiets verplicht."
+        },
+        {
+          "id": "AM_A2_Q6",
+          "question": "Wat verbetert je zichtbaarheid 's nachts op een bromfiets het meest?",
+          "choices": [
+            "Een matzwarte helm",
+            "Discrete donkere kleding",
+            "Een hesje of reflecterende elementen",
+            "Dichter bij de auto's rijden"
+          ],
+          "explanation": "Reflecterende elementen maken je op grote afstand zichtbaar in de koplampen — meerdere seconden extra reactietijd voor de anderen."
+        },
+        {
+          "id": "AM_A2_Q7",
+          "question": "Hoe controleer je de bandenspanning correct?",
+          "choices": [
+            "Op het zicht, vóór elk vertrek",
+            "Regelmatig, met koude banden, op de waarde van de fabrikant",
+            "Eén keer per jaar in de garage",
+            "Door met je duim op de band te duwen"
+          ],
+          "explanation": "De druk controleer je regelmatig, koud, op de waarde van de fabrikant: een band kan veel druk verliezen zonder plat te lijken."
+        },
+        {
+          "id": "AM_A2_Q8",
+          "question": "Je remhendel komt « tot op de bodem » en je hoort metaalgeluid. Wat doe je?",
+          "choices": [
+            "Trager rijden in afwachting",
+            "De remmen laten controleren vóór je weer de weg op gaat",
+            "Enkel met de achterrem remmen",
+            "Vloeistof bijvullen en doorrijden"
+          ],
+          "explanation": "Een slappe hendel en metaalgeluid wijzen op versleten remmen: laten controleren vóór je weer vertrekt."
+        },
+        {
+          "id": "AM_A2_Q9",
+          "question": "Waarom is regelmatig onderhoud van je bromfiets zo belangrijk?",
+          "choices": [
+            "Om de garantie van de verkoper te behouden",
+            "Omdat geen enkele keuring het in jouw plaats controleert",
+            "Om de topsnelheid te verbeteren",
+            "Enkel voor de doorverkoop"
+          ],
+          "explanation": "Zonder periodieke keuring controleert niemand anders remmen, banden en lichten: die verantwoordelijkheid is blijvend de jouwe."
+        },
+        {
+          "id": "AM_A2_Q10",
+          "question": "Welke lichten moet je bromfiets in werkende staat hebben?",
+          "choices": [
+            "Enkel het voorlicht",
+            "Voorlicht, rood achterlicht en remlicht",
+            "Enkel de waarschuwingslichten",
+            "Gehomologeerde xenonlichten"
+          ],
+          "explanation": "Voorlicht, rood achterlicht en remlicht moeten werken: ze dienen vooral om gezien te worden."
+        },
+        {
+          "id": "AM_A2_Q11",
+          "question": "Welke spiegel is verplicht op een bromfiets?",
+          "choices": [
+            "Minstens één gehomologeerde spiegel links",
+            "Twee verwarmde spiegels",
+            "Enkel een spiegel rechts",
+            "Geen enkele spiegel is vereist"
+          ],
+          "explanation": "Minstens één gehomologeerde spiegel aan de linkerkant is verplicht: hij bewaakt het verkeer dat je inhaalt."
+        },
+        {
+          "id": "AM_A2_Q12",
+          "question": "Je bromfiets heeft geen richtingaanwijzers. Hoe geef je aan dat je linksaf slaat?",
+          "choices": [
+            "Met een lichtsignaal",
+            "Door de linkerarm te strekken",
+            "Door twee keer te claxonneren",
+            "Door sterk te vertragen"
+          ],
+          "explanation": "Zonder richtingaanwijzers geef je de richtingsverandering aan met gestrekte arm aan de kant waar je afslaat — vroeg en duidelijk."
+        },
+        {
+          "id": "AM_A2_B1",
+          "question": "Volstaat een gehomologeerde « jet »-helm (open) voor je scooter?",
+          "choices": [
+            "Nee, enkel de integraalhelm is toegelaten",
+            "Ja, als hij gehomologeerd is en jouw maat heeft",
+            "Nee, die is voor fietsers",
+            "Ja, zelfs zonder homologatie"
+          ],
+          "explanation": "Jet, modulair of integraal: ze voldoen allemaal als ze ECE-gehomologeerd, passend en vastgemaakt zijn."
+        },
+        {
+          "id": "AM_A2_B2",
+          "question": "Hoe controleer je de afstelling van de kinriem van je helm?",
+          "choices": [
+            "Hij moet los hangen",
+            "Er moeten twee handen onder kunnen",
+            "Hij moet knellen tot in de huid",
+            "Ongeveer één vinger speling tussen riem en kin"
+          ],
+          "explanation": "De gesloten riem laat ongeveer één vingerdikte onder de kin: niet los, niet knellend."
+        },
+        {
+          "id": "AM_A2_B3",
+          "question": "Waarom vermijd je beter een tweedehands helm?",
+          "choices": [
+            "Hij kan een onzichtbare klap hebben gehad die zijn bescherming vernietigde",
+            "Hij is per definitie ouderwets en minder comfortabel",
+            "De wet verbiedt formeel de doorverkoop",
+            "Hij is onmogelijk op maat af te stellen"
+          ],
+          "explanation": "De binnenschaal absorbeert schokken door te pletten: een vroegere impact, zelfs onzichtbaar, heft de bescherming op."
+        },
+        {
+          "id": "AM_A2_B4",
+          "question": "Je passagier weigert de helm « voor 500 meter ». Wat zegt de regel?",
+          "choices": [
+            "Toegelaten onder 25 km/u",
+            "Toegestaan binnen de bebouwde kom",
+            "Gehomologeerde helm vastgemaakt verplicht, ongeacht de afstand",
+            "Enkel de bestuurder moet een helm dragen"
+          ],
+          "explanation": "Bestuurder ÉN passagier dragen een vastgemaakte gehomologeerde helm — de lengte van de rit verandert daar niets aan."
+        },
+        {
+          "id": "AM_A2_B5",
+          "question": "Je ontdekt een bult op de zijkant van je band. Je:",
+          "choices": [
+            "Rijdt voorzichtig verder en houdt het in de gaten",
+            "Vervangt de band vóór je weer de weg op gaat",
+            "Verlaagt de druk om te compenseren",
+            "Wacht tot ze verdwijnt"
+          ],
+          "explanation": "Een bult kondigt een klapband aan: de band moet vervangen worden vóór je rijdt."
+        },
+        {
+          "id": "AM_A2_B6",
+          "question": "Je linkerspiegel is gisteravond gebroken. Vanmorgen:",
+          "choices": [
+            "Vervang je hem vóór je rijdt: hij is verplicht",
+            "Rijd je en draai je je vaker om",
+            "Gebruik je die van rechts in afwachting",
+            "Rijd je enkel binnen de bebouwde kom"
+          ],
+          "explanation": "Minstens één gehomologeerde spiegel links is verplicht: hij wordt hersteld vóór je weer de weg op gaat."
+        },
+        {
+          "id": "AM_A2_B7",
+          "question": "Rijden met een kapot remlicht stelt je vooral bloot aan:",
+          "choices": [
+            "Snellere slijtage van de remmen",
+            "Een hoger verbruik",
+            "Niets bijzonders overdag",
+            "Een kop-staartaanrijding en een proces-verbaal"
+          ],
+          "explanation": "Zonder remlicht ziet het voertuig achter je je remmingen niet: reëel gevaar en overtreding."
+        },
+        {
+          "id": "AM_A2_B8",
+          "question": "De claxon van je bromfiets:",
+          "choices": [
+            "Is een facultatief accessoire",
+            "Kan vervangen worden door je stem",
+            "Moet aanwezig zijn en werken",
+            "Is verboden binnen de bebouwde kom"
+          ],
+          "explanation": "Een werkende claxon hoort bij de verplichte uitrusting van de bromfiets."
+        },
+        {
+          "id": "AM_A2_C1",
+          "question": "Hoe controleer je of een helm jouw maat heeft?",
+          "choices": [
+            "Hij knelt tot het pijn doet",
+            "Hij beweegt niet wanneer je je hoofd schudt",
+            "Hij draait vrij rond je schedel",
+            "Je kiest hem een maat groter"
+          ],
+          "explanation": "Een helm op maat blijft op zijn plaats als je je hoofd schudt — zonder pijnlijk te knellen."
+        },
+        {
+          "id": "AM_A2_C2",
+          "question": "Je vizier is bekrast en verblindt je 's nachts. Jij:",
+          "choices": [
+            "Wrijft het op met fijn schuurpapier",
+            "Rijdt 's nachts met dichtgeknepen ogen",
+            "Vervangt het: een beschadigd vizier verslechtert je nachtzicht",
+            "Verwijdert het definitief van de helm"
+          ],
+          "explanation": "Krassen verstrooien het licht van de koplampen en verblinden: een beschadigd vizier vervang je."
+        },
+        {
+          "id": "AM_A2_C3",
+          "question": "Muziek beluisteren in je helm tijdens het rijden:",
+          "choices": [
+            "Snijdt je af van het verkeersgeluid: sterk afgeraden",
+            "Verbetert je concentratie aan het stuur",
+            "Is verplicht met een gehomologeerde intercom",
+            "Heeft geen enkel effect op je verkeersveiligheid"
+          ],
+          "explanation": "Sirenes, claxons, naderende motoren: je gehoor maakt deel uit van je veiligheid op twee wielen."
+        },
+        {
+          "id": "AM_A2_C4",
+          "question": "Je gsm in de hand gebruiken aan het stuur is:",
+          "choices": [
+            "Gedoogd onder 25 km/u",
+            "Toegelaten stilstaand aan het rode licht",
+            "Toegelaten met tactiele handschoenen",
+            "Verboden, zoals voor elke bestuurder"
+          ],
+          "explanation": "De gsm in de hand is verboden voor elke bestuurder — ook stilstaand aan het licht. Enkel een houder op het voertuig is toegelaten."
+        },
+        {
+          "id": "AM_A2_C5",
+          "question": "Je banden zijn nieuw. Welke voorzorg de eerste kilometers?",
+          "choices": [
+            "Geen enkele, ze hebben maximale grip",
+            "Rustig rijden: nieuw rubber grijpt in het begin minder",
+            "Ze licht aflaten om ze soepeler te maken",
+            "Meermaals hard remmen om ze op te warmen"
+          ],
+          "explanation": "Een nieuwe band draagt een lossingsfilm: minder grip de eerste kilometers, vooral in bochten en bij regen."
+        },
+        {
+          "id": "AM_A2_C6",
+          "question": "Je voorlicht valt uit vlak vóór een nachtelijke rit. Jij:",
+          "choices": [
+            "Rijdt mee in het licht van de auto's",
+            "Gebruikt je gsm-lampje bevestigd aan het stuur",
+            "Stelt de rit uit of herstelt vóór vertrek",
+            "Rijdt uitsluitend op de fietspaden"
+          ],
+          "explanation": "Zonder voorlicht zie je niets en word je niet gezien: het voertuig is niet meer conform — herstellen vóór je 's nachts rijdt."
+        }
       ]
     }
   ]

@@ -187,6 +187,42 @@
           ],
           "correct": 2,
           "explanation": "Le M3 excepte les cyclistes ET les cyclomoteurs à deux roues classe A. Attention : la classe B, elle, reste interdite — le M3 ne la couvre pas."
+        },
+        {
+          "id": "AM_C1_C1",
+          "question": "Feu à flèche verte vers la droite ; tu veux aller tout droit. Tu :",
+          "choices": [
+            "Passes tout droit, le vert reste le vert",
+            "Attends : la flèche ne vaut que pour la direction indiquée",
+            "Tournes obligatoirement à droite",
+            "Recules pour changer de bande"
+          ],
+          "correct": 1,
+          "explanation": "Un feu à flèche n'autorise que la direction de la flèche : pour aller tout droit, tu attends ton feu."
+        },
+        {
+          "id": "AM_C1_C2",
+          "question": "En speed pedelec au feu rouge sous un panneau B22 (vélo + flèche à droite), tu :",
+          "choices": [
+            "Attends le vert comme les cyclomoteurs",
+            "Dois d'abord mettre pied à terre",
+            "Peux tourner à droite en cédant le passage : le B22 t'inclut",
+            "Passes tout droit librement"
+          ],
+          "correct": 2,
+          "explanation": "Le B22 couvre les bicyclettes ET les speed pedelecs — contrairement aux cyclomoteurs classe A et B qui restent au feu."
+        },
+        {
+          "id": "AM_C1_C3",
+          "question": "Ton feu vélo est vert mais un agent te fait signe d'attendre. Tu :",
+          "choices": [
+            "Attends : l'agent prime sur ton feu",
+            "Passes, ton feu est vert",
+            "Klaxonnes pour signaler ton droit",
+            "Contournes l'agent lentement"
+          ],
+          "correct": 0,
+          "explanation": "L'agent prime sur les feux et les panneaux — feu vélo compris."
         }
       ]
     },
@@ -399,6 +435,30 @@
           ],
           "correct": 0,
           "explanation": "Le B9 te place sur une voie prioritaire : les transversales cèdent — mais reste attentif aux distraits."
+        },
+        {
+          "id": "AM_C2_C1",
+          "question": "Hors agglomération, à quelle distance du danger un triangle est-il généralement placé ?",
+          "choices": [
+            "Environ 20 mètres",
+            "Environ 500 mètres",
+            "Juste au niveau du danger",
+            "Environ 150 mètres"
+          ],
+          "correct": 3,
+          "explanation": "Les signaux de danger se placent en général à ±150 m du danger hors agglomération — le temps de ralentir."
+        },
+        {
+          "id": "AM_C2_C2",
+          "question": "Le panneau de fin d'agglomération signifie :",
+          "choices": [
+            "Tu peux rouler à 90 km/h",
+            "L'agglomération suivante commence aussitôt",
+            "Les règles d'agglomération cessent ; ta limite reste 45 (bride)",
+            "Le stationnement devient interdit"
+          ],
+          "correct": 2,
+          "explanation": "Le régime hors agglomération reprend — mais ta limite de construction (45 km/h) reste ton plafond."
         }
       ]
     },
@@ -566,6 +626,42 @@
           ],
           "correct": 3,
           "explanation": "La discontinue se franchit pour une manœuvre sûre (dépassement, changement de direction) — contrairement à la continue."
+        },
+        {
+          "id": "AM_C3_C1",
+          "question": "Aux dents de requin, le carrefour est totalement dégagé. Tu :",
+          "choices": [
+            "T'arrêtes 3 secondes comme au STOP",
+            "T'engages sans arrêt complet, après avoir ralenti et vérifié",
+            "Klaxonnes avant de passer",
+            "Attends qu'un véhicule arrive"
+          ],
+          "correct": 1,
+          "explanation": "Céder le passage n'impose pas d'arrêt si la voie est libre — contrairement au STOP qui impose l'arrêt complet dans tous les cas."
+        },
+        {
+          "id": "AM_C3_C2",
+          "question": "Où t'arrêtes-tu face à une large ligne blanche continue en travers de ta bande ?",
+          "choices": [
+            "Avant la ligne, sans la chevaucher",
+            "Sur la ligne, pour bien voir",
+            "Après la ligne, au bord du carrefour",
+            "N'importe où selon le trafic"
+          ],
+          "correct": 0,
+          "explanation": "La ligne d'arrêt marque l'endroit exact : ta roue avant s'immobilise avant elle, jamais dessus."
+        },
+        {
+          "id": "AM_C3_C3",
+          "question": "Les feux d'un carrefour sont en panne (éteints), aucun panneau. Qui a priorité ?",
+          "choices": [
+            "Le plus gros véhicule",
+            "Celui qui arrive le premier",
+            "Les véhicules de la route la plus large",
+            "Celui qui vient de droite"
+          ],
+          "correct": 3,
+          "explanation": "Feux hors service et pas de panneaux : on retombe sur la règle de base, la priorité de droite."
         }
       ]
     }

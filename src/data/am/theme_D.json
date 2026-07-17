@@ -179,6 +179,30 @@
           ],
           "correct": 2,
           "explanation": "Sortir d'une propriété = manœuvre : les piétons du trottoir passent d'abord, puis les usagers de la chaussée."
+        },
+        {
+          "id": "AM_D1_C1",
+          "question": "Carrefour sans signalisation : une voiture arrive à ta gauche, un vélo à ta droite. L'ordre de passage ?",
+          "choices": [
+            "La voiture d'abord, elle est plus rapide",
+            "Le vélo passe, puis toi, puis la voiture",
+            "Toi d'abord, tu es arrivé au centre",
+            "Chacun s'engage quand il le sent"
+          ],
+          "correct": 1,
+          "explanation": "Chacun cède à sa droite : tu cèdes au vélo, la voiture te cède — l'ordre est vélo, toi, voiture."
+        },
+        {
+          "id": "AM_D1_C2",
+          "question": "Tu tournes à droite ; un piéton traverse la rue où tu t'engages. Tu :",
+          "choices": [
+            "Passes derrière lui en accélérant",
+            "Klaxonnes pour presser le pas",
+            "Le laisses finir de traverser avant de t'engager",
+            "Passes devant lui, tu es motorisé"
+          ],
+          "correct": 2,
+          "explanation": "En tournant, tu cèdes le passage aux piétons qui traversent la voie où tu t'engages — à droite comme à gauche."
         }
       ]
     },
@@ -408,6 +432,54 @@
           ],
           "correct": 2,
           "explanation": "D'abord localiser, ensuite dégager calmement : une manœuvre paniquée crée le danger qu'elle veut éviter."
+        },
+        {
+          "id": "AM_D2_C1",
+          "question": "Dans l'anneau, la voiture à ta gauche ralentit à l'approche d'une sortie sans clignoter. Tu :",
+          "choices": [
+            "Couvres tes freins : elle va probablement sortir devant toi",
+            "La dépasses rapidement par la droite",
+            "Accélères pour passer avant sa sortie",
+            "Klaxonnes en continu pour l'avertir"
+          ],
+          "correct": 0,
+          "explanation": "Le ralentissement à hauteur d'une sortie annonce la sortie mieux qu'un clignotant absent : anticipe, freins couverts."
+        },
+        {
+          "id": "AM_D2_C2",
+          "question": "À un carrefour non signalé, un tram arrive. Qui passe en premier ?",
+          "choices": [
+            "Toi, si tu viens de sa droite",
+            "Le premier arrivé au carrefour",
+            "Le plus lent des deux véhicules",
+            "Le tram : il est prioritaire sauf signalisation contraire"
+          ],
+          "correct": 3,
+          "explanation": "Le tram a priorité sur les autres conducteurs, même venant de gauche — seuls feux et agents le règlent autrement."
+        },
+        {
+          "id": "AM_D2_C3",
+          "question": "Une ambulance en mission arrive EN FACE de toi sur une route étroite. Tu :",
+          "choices": [
+            "Continues normalement, elle vient en sens inverse",
+            "Serres à droite et ralentis : tu facilites aussi le passage en sens inverse",
+            "Fais immédiatement demi-tour",
+            "T'arrêtes au milieu de la chaussée"
+          ],
+          "correct": 1,
+          "explanation": "L'obligation de faciliter le passage vaut dans les deux sens : sur route étroite, l'ambulance a besoin de TA moitié de chaussée."
+        },
+        {
+          "id": "AM_D2_C4",
+          "question": "En sortant du rond-point, un passage piéton coupe ta sortie et un piéton s'y engage. Tu :",
+          "choices": [
+            "Termines ta sortie rapidement",
+            "Klaxonnes depuis l'anneau",
+            "Le laisses traverser avant d'achever ta sortie",
+            "Restes dans l'anneau un tour de plus"
+          ],
+          "correct": 2,
+          "explanation": "Le piéton engagé sur le passage a priorité : tu achèves ta sortie une fois sa traversée terminée."
         }
       ]
     }
