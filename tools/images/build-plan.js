@@ -26,6 +26,7 @@ function buildPrompt(lic, themeTitle, scene) {
     `Belgique, circulation à droite, lumière naturelle. ` +
     `Composition SIMPLE, lisible en 2 secondes, avec UN sujet principal clair. ` +
     `Aucun texte lisible et aucune enseigne (sauf si la scène l'exige explicitement), aucune flèche ajoutée, aucun filigrane. ` +
+    `MARQUAGES ROUTIERS BELGES UNIQUEMENT : lignes BLANCHES (orange seulement pour les chantiers) — JAMAIS de ligne jaune au sol. ` +
     `N'ajoute AUCUN panneau de signalisation — uniquement ceux décrits dans la scène. Format paysage.\n\n` +
     `SCÈNE PRÉCISE À REPRÉSENTER :\n${scene}\n\n` +
     `Contexte : question d'examen du permis ${lic === 'AM' ? 'AM (cyclomoteur)' : 'B (voiture)'} belge, thème « ${themeTitle} ».`;
