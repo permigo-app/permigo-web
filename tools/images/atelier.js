@@ -84,8 +84,29 @@ function recentDownloads() {
     .sort((a, b) => b.t - a.t);
 }
 
+// Empreinte du contenu SOURCE (avant compression) — détecte les téléchargements
+// en double même si sharp les recompresse différemment ensuite.
+function fileHash(p) {
+  const crypto = require('crypto');
+  return crypto.createHash('md5').update(fs.readFileSync(p)).digest('hex');
+}
+
 async function takeFileForJob(job, src) {
   const sharp = require('sharp');
+
+  // Garde-fou anti-doublon : la même image source déjà utilisée pour une AUTRE question ?
+  const hash = fileHash(src);
+  state.hashes = state.hashes || {};
+  const prevId = state.hashes[hash];
+  if (prevId && prevId !== job.id) {
+    console.log(`\n🚨 STOP — cette image est IDENTIQUE à celle déjà utilisée pour ${prevId} !`);
+    console.log(`   Tu as sûrement retéléchargé la même image, ou pris le mauvais fichier.`);
+    console.log(`   Vérifie dans Téléchargements et relance la récolte avec la bonne image.\n`);
+    throw new Error('doublon détecté — rien n\'a été écrit');
+  }
+  state.hashes[hash] = job.id;
+  saveState();
+
   const outAbs = path.join(ROOT, 'public', job.out.replace(/^\//, ''));
   fs.mkdirSync(path.dirname(outAbs), { recursive: true });
   await sharp(src).resize({ width: 1024, withoutEnlargement: true }).webp({ quality: 78 }).toFile(outAbs);
