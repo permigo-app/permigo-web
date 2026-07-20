@@ -61,9 +61,12 @@ function copyToClipboard(text) {
 }
 
 function showJob(job, tag) {
-  const pos = plan.indexOf(job) + 1;
+  // Compteur de PROGRESSION (combien de faites + celle-ci), pas la position brute
+  // dans le tableau — sinon une question tôt dans la liste ré-ouverte affiche un
+  // chiffre trompeusement bas alors que le vrai reste-à-faire est ailleurs.
+  const doneCount = plan.filter(isDone).length;
   console.log('────────────────────────────────────────────');
-  console.log(`${tag ? tag + '  ' : ''}[${pos}/${plan.length}]  ${job.lic} · thème ${job.theme} · ${job.kind === 'question' ? 'question' : 'carte'} ${job.id}`);
+  console.log(`${tag ? tag + '  ' : ''}[${doneCount + 1}/${plan.length}]  ${job.lic} · thème ${job.theme} · ${job.kind === 'question' ? 'question' : 'carte'} ${job.id}`);
   console.log(`« ${job.label.slice(0, 110)} »`);
   console.log('────────────────────────────────────────────');
   console.log(job.prompt);
