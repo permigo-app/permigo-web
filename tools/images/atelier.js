@@ -217,11 +217,26 @@ async function loop() {
       const conf = (await ask('C\'est bon ? (Entrée/o = oui, n = annuler) > ')).trim().toLowerCase();
       if (conf === 'n') { console.log('Annulé — rien n\'a été écrit. Re-télécharge dans le bon ordre puis Entrée.'); continue; }
     }
-    try {
-      for (let i = 0; i < pending.length; i++) await takeFileForJob(pending[i], picked[i].f);
-      console.log('');
+    let failedJob = null;
+    for (let i = 0; i < pending.length; i++) {
+      try {
+        await takeFileForJob(pending[i], picked[i].f);
+      } catch (e) {
+        console.log('❌ ' + e.message);
+        failedJob = pending[i];
+        break;
+      }
+    }
+    console.log('');
+    if (failedJob) {
+      // On ne rejoue PAS le lot entier (l'ordre chrono ne s'y prêterait plus) :
+      // on isole juste la question en échec, en mode simple, pour une reprise propre.
+      console.log(`👉 ${failedJob.id} : retourne dans SON onglet ChatGPT, télécharge une image FRAÎCHE pour CETTE question, puis Entrée.\n`);
+      pending = [failedJob];
+      showJob(failedJob, '🅰');
+    } else {
       pending = [];
-    } catch (e) { console.log('❌ ' + e.message); }
+    }
   }
 }
 
