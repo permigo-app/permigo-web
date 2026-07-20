@@ -9,6 +9,7 @@ import { setExamPassed, unlockTheme, updateQuizHistory, addStudyTime } from '@/l
 import { recordQuestionReview } from '@/lib/reviewApi';
 import { THEME_COLORS } from '@/lib/constants';
 import { useIsPremium, isThemeFree, canPlayExam, recordExamPlayed, daysUntilNextExam } from '@/lib/premium';
+import { prefetchImage } from '@/lib/prefetchImage';
 import PremiumGate from '@/components/PremiumGate';
 import Link from 'next/link';
 import QuizLayout from '@/components/QuizLayout';
@@ -51,6 +52,11 @@ function ExamContent() {
   })();
 
   // Restore exam session on mount
+  // Précharge l'image de la question suivante pendant qu'on lit la courante
+  useEffect(() => {
+    prefetchImage(questions[currentQ + 1]?.image);
+  }, [currentQ, questions]);
+
   useEffect(() => {
     if (hasRestoredRef.current) return;
     hasRestoredRef.current = true;

@@ -9,6 +9,7 @@ import { fetchMistakes } from '@/lib/reviewApi';
 import { getActiveLicense } from '@/lib/license';
 import QuizLayout from '@/components/QuizLayout';
 import { isPremium, isThemeFree } from '@/lib/premium';
+import { prefetchImage } from '@/lib/prefetchImage';
 import PremiumGate from '@/components/PremiumGate';
 
 function shuffle<T>(arr: T[]): T[] {
@@ -63,6 +64,11 @@ function RevisionContent() {
   const [correctCount, setCorrectCount] = useState(0);
   const [done, setDone] = useState(false);
   const [shakeWrong, setShakeWrong] = useState(false);
+
+  // Précharge l'image de la question suivante pendant qu'on lit la courante
+  useEffect(() => {
+    prefetchImage(questions[index + 1]?.image);
+  }, [index, questions]);
 
   const validateSelected = useCallback(() => {
     if (selected === null || validated) return;

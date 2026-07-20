@@ -13,6 +13,7 @@ import {
   type TurboSession, type TurboAllTimeStats,
 } from '@/lib/progressStorage';
 import { useIsPremium, isThemeFree, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
+import { prefetchImage } from '@/lib/prefetchImage';
 import PremiumGate from '@/components/PremiumGate';
 import { scopedKey } from '@/lib/license';
 import SignImage from '@/components/SignImage';
@@ -76,6 +77,11 @@ function TurboContent() {
   const [correctCount, setCorrectCount] = useState(0);
   const [timeLeft, setTimeLeft] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+
+  // Précharge l'image de la question suivante pendant qu'on lit la courante
+  useEffect(() => {
+    prefetchImage(questions[currentQ + 1]?.image);
+  }, [currentQ, questions]);
   const timerRef = useRef<ReturnType<typeof setInterval>>(null);
   const startTimeRef = useRef(0);
   const hasRestoredRef = useRef(false);

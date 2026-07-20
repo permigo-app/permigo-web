@@ -9,6 +9,7 @@ import { computeTier, countThemeParts, TIER_ORDER, type Tier } from '@/lib/medal
 import { recordQuestionReview } from '@/lib/reviewApi';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { isPremium, isThemeFree } from '@/lib/premium';
+import { prefetchImage } from '@/lib/prefetchImage';
 import PremiumGate from '@/components/PremiumGate';
 import SignImage from '@/components/SignImage';
 import QuizLayout from '@/components/QuizLayout';
@@ -117,6 +118,12 @@ export default function LessonPage() {
   const displayQuestions: LocalQuestion[] = isPartieMode && partieIndex !== undefined
     ? getQuestionsForPartie(allQuestions, partieIndex, theories.length)
     : allQuestions;
+
+  // Précharge l'image de la carte / question suivante pendant qu'on lit la courante
+  useEffect(() => {
+    if (phase === 'theory') prefetchImage(displayTheories[currentCard + 1]?.image);
+    else prefetchImage(questions[currentQ + 1]?.image);
+  }, [phase, currentCard, currentQ, displayTheories, questions]);
 
   const currentPartieTitle = isPartieMode && partieIndex !== undefined && partieIndex < theories.length
     ? theories[partieIndex]?.title
