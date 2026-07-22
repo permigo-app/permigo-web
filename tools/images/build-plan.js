@@ -37,7 +37,7 @@ const STYLE_BLOCKS = {
   2: `STYLE : SCHÉMA PÉDAGOGIQUE vu du dessus (vue aérienne stylisée et épurée, PAS une photographie), ` +
      `façon diagramme de code de la route. Utilise des FLÈCHES colorées pour montrer les trajectoires ` +
      `(vert = passe / autorisé, rouge = doit céder / interdit) et de simples CHIFFRES isolés (1, 2, 3…) ` +
-     `pour indiquer un ordre de passage si nécessaire. INTERDIT ABSOLU : aucun mot écrit, aucune lettre, ` +
+     `pour indiquer un ordre de passage si nécessaire. N'ajoute AUCUN panneau de signalisation, AUCUN triangle, AUCUNE ligne au sol qui ne soit pas explicitement décrit dans la scène — n'invente aucun élément. INTERDIT ABSOLU : aucun mot écrit, aucune lettre, ` +
      `aucun panneau texté — le site est bilingue FR/NL, un mot gravé dans l'image ne peut pas être traduit. ` +
      `Fond clair et minimaliste, marquages routiers belges simplifiés, silhouettes de véhicules stylisées. Format paysage.`,
   3: `STYLE : photographie réaliste (même exigence qu'une photo d'examen GOCA belge, lumière naturelle, ` +
