@@ -145,7 +145,7 @@ export default function QuizLayout({
                   alt=""
                   loading="lazy"
                   className="rounded-xl w-full max-w-md"
-                  style={{ border: '1px solid var(--border-subtle)', aspectRatio: '4 / 3', objectFit: 'cover', background: 'var(--card-secondary)' }}
+                  style={{ border: '1px solid var(--border-subtle)', aspectRatio: '4 / 3', objectFit: 'contain', background: 'var(--card-secondary)' }}
                 />
               </div>
             )}

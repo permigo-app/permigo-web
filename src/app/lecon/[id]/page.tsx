@@ -508,7 +508,7 @@ export default function LessonPage() {
                 <img
                   src={card.image}
                   alt={card.title}
-                  style={{ width: '100%', height: 'auto', maxHeight: 200, objectFit: 'cover', display: 'block' }}
+                  style={{ width: '100%', height: 220, objectFit: 'contain', display: 'block', background: 'var(--card-secondary)' }}
                   loading="lazy"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
