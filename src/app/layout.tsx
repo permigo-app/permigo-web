@@ -50,6 +50,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" suppressHydrationWarning className={sora.variable}>
       <head>
         <meta name="google-site-verification" content="XRHdIgFO0_O_ZQ4RDynByQDcXc0x4mdUtx3RlTgx4C4" />
+        {/* Ouvre la connexion vers Supabase pendant que la page se charge,
+            au lieu d'attendre le premier appel d'authentification pour le faire */}
+        <link rel="preconnect" href={process.env.NEXT_PUBLIC_SUPABASE_URL} />
+        <link rel="dns-prefetch" href={process.env.NEXT_PUBLIC_SUPABASE_URL} />
         {/* Anti-flash: applique le thème avant tout rendu CSS */}
         <script dangerouslySetInnerHTML={{ __html: `
 (function(){try{var t=localStorage.getItem('permigo_theme');if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'night':'day';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();

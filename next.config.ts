@@ -6,11 +6,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/src/data/:path*.json',
+        // Photos de questions et cartes de théorie : fichiers WebP figés une
+        // fois générés (un nom = un contenu, jamais réécrit en place) — cache
+        // longue durée, immutable. Sans ça le navigateur revalide à chaque
+        // fois qu'une même image revient (examen, turbo, révision, leçon).
+        source: '/images/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, stale-while-revalidate=604800',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
