@@ -126,8 +126,14 @@
   "scene": "Vue arrière d'une voiture dont le chargement dépasse légèrement de chaque côté de la carrosserie, silhouette large mais raisonnable, sans chiffre affiché."
  },
  "C2_Q10": "Un chargement nettement plus large que la voiture elle-même, avec un fanion orange de transport exceptionnel des deux côtés.",
- "C2_Q11": "Vue conducteur : un panneau réel rond de limitation de largeur maximale, une voiture particulière de gabarit clairement inférieur roulant en dessous.",
- "C2_Q12": "Un panneau réel rond de limitation de largeur maximale, un grand autocar s'en approchant.",
+ "C2_Q11": {
+  "model": 1,
+  "scene": "Vue conducteur sur une route de campagne bordée de haies, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture particulière de gabarit clairement inférieur roulant en dessous."
+ },
+ "C2_Q12": {
+  "model": 1,
+  "scene": "Sur une route de campagne à ciel ouvert, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), un grand autocar s'en approchant."
+ },
  "C2_Q13": "Vue de côté d'une échelle fixée sur les barres de toit, dépassant clairement par l'arrière du véhicule, rien ne dépasse à l'avant.",
  "C2_Q15": "Vue arrière d'une voiture avec un chargement qui dépasse modérément à l'arrière, sans aucun panneau d'avertissement visible.",
  "C2_Q16": "Vue arrière d'une voiture avec de longues planches dépassant nettement à l'arrière, un panneau carré d'avertissement rouge et blanc fixé au bout.",
@@ -211,13 +217,16 @@
  },
  "C2_Q71": "Une voiture particulière de taille moyenne tractant une remorque de taille raisonnable, ensemble équilibré sur une route belge.",
  "C2_Q72": "Vue conducteur approchant d'un tunnel avec un panneau rond réel de limitation de hauteur, une voiture avec coffre de toit chargé roulant devant.",
- "C2_Q73": "Un panneau rond réel de limitation de largeur, une route étroite en campagne, une voiture de gabarit normal s'en approchant.",
+ "C2_Q73": {
+  "model": 1,
+  "scene": "Sur une route étroite en campagne à ciel ouvert, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture de gabarit normal s'en approchant."
+ },
  "C2_Q74": "Un panneau rond réel de limitation de longueur, une voiture tractant une caravane s'en approchant.",
  "C2_Q79": "Vue conducteur approchant d'un tunnel avec panneau réel de hauteur maximale, une voiture avec un coffre de toit fin et compact roulant devant.",
  "C2_Q83": "Vue arrière d'une voiture avec un léger dépassement de chargement à l'arrière, sans aucun panneau d'avertissement visible.",
  "C2_CHG_1": {
   "model": 3,
-  "scene": "Un coffre de voiture chargé, fermé, vu de l'extérieur sans détail sur l'arrimage. Ajoute un unique badge « ? » discret, sans autre mot."
+  "scene": "Le coffre arrière fermé d'une voiture familiale garée dans une allée, visiblement chargé de bagages sans qu'on en voie le détail. Ajoute un unique badge « ? » discret dans un coin, sans autre mot."
  },
  "C2_CHG_2": "Un conducteur vérifie manuellement l'arrimage de son chargement (sangles) avant de prendre la route.",
  "C2_CHG_3": "Un carton tombé au milieu de la chaussée depuis une voiture en train de s'éloigner, un véhicule qui suit doit freiner brusquement.",
@@ -229,7 +238,10 @@
  },
  "CARD_C2_p1_c1": "Vue de profil d'une voiture avec un grand coffre de toit chargé roulant sur autoroute à bonne vitesse.",
  "CARD_C2_p1_c2": "Des vélos fixés sur un porte-vélos à l'arrière d'une voiture, le toit du véhicule resté libre.",
- "CARD_C2_p2_c0": "Un panneau réel rond de limitation de largeur maximale, une voiture particulière de gabarit normal s'en approchant.",
+ "CARD_C2_p2_c0": {
+  "model": 1,
+  "scene": "Sur une route à ciel ouvert, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture particulière de gabarit normal s'en approchant."
+ },
  "CARD_C2_p3_c0": "Vue avant d'une voiture chargée dont rien ne dépasse à l'avant de la carrosserie.",
  "CARD_C2_p3_c1": {
   "model": 3,
@@ -237,7 +249,7 @@
  },
  "CARD_C2_p3_c2": {
   "model": 3,
-  "scene": "Vue arrière d'une voiture avec une longue poutre indivisible dépassant nettement à l'arrière, un panneau carré d'avertissement rouge et blanc fixé au bout. Ajoute un unique badge « 3m » discret, sans autre mot."
+  "scene": "Vue arrière d'une voiture avec de longues planches en bois attachées, dépassant nettement à l'arrière du véhicule, un panneau carré d'avertissement rouge et blanc fixé à l'extrémité. Ajoute un unique badge « 3m » discret, sans autre mot."
  },
  "CARD_C2_p3_c3": "Vue arrière de nuit d'un chargement dépassant, panneau d'avertissement carré éclairé par un feu rouge, catadioptres orange visibles sur les côtés.",
  "CARD_C2_p4_c0": "Vue intérieure du côté conducteur, aucun bagage entre le siège et la portière, le conducteur ayant les coudes libres pour manier le volant.",
@@ -314,8 +326,8 @@
  },
  "C3_Q19": "Une route longeant un canal la nuit, un bateau naviguant sur l'eau à proximité, une voiture roulant sur la route en feux de croisement.",
  "C3_Q21": {
-  "model": 2,
-  "scene": "Vue de dessus nocturne : une voiture est en train de dépasser une autre voiture sur une route à deux voies. Aucun mot."
+  "model": 1,
+  "scene": "Vue arrière nocturne d'une voiture doublant une autre voiture sur une route à deux voies, ses phares avant projetant un faisceau lumineux intense et large caractéristique des feux de route allumés."
  },
  "C3_Q22": {
   "model": 3,
@@ -386,8 +398,8 @@
   "scene": "Intérieur d'une voiture générique, portière conducteur ouverte. Ajoute un unique badge « ? » discret, sans autre mot."
  },
  "C3_Q64": {
-  "model": 2,
-  "scene": "Vue de dessus d'un tunnel enfumé avec des silhouettes évacuant à contresens du flux de circulation habituel, vers une sortie de secours. Aucun mot."
+  "model": 1,
+  "scene": "À l'intérieur d'un tunnel routier envahi par une épaisse fumée noire, des silhouettes de personnes courant vers une sortie de secours éclairée, sans indication de la circulation des véhicules."
  },
  "C3_Q66": "Une épaisse fumée noire envahissant rapidement un tunnel, des silhouettes courant vers une sortie de secours en laissant leurs véhicules.",
  "C3_Q67": {
@@ -422,8 +434,8 @@
   "scene": "Vue de dessus nocturne : deux voitures se croisant en sens inverse sur une route à deux voies. Ajoute une unique icône ampoule barrée d'un trait rouge au-dessus de la voiture de premier plan, sans aucun mot."
  },
  "CARD_C3_p1_c3": {
-  "model": 2,
-  "scene": "Vue de dessus nocturne : une voiture est en train de dépasser une autre voiture sur une route à deux voies. Aucun mot."
+  "model": 1,
+  "scene": "Vue arrière nocturne d'une voiture doublant une autre voiture sur une route à deux voies, ses phares avant projetant un faisceau lumineux intense et large caractéristique des feux de route allumés."
  },
  "CARD_C3_p2_c0": "Une voiture roulant dans un épais brouillard, feux de brouillard avant allumés (lumière blanche basse et large).",
  "CARD_C3_p2_c1": "Vue arrière d'une voiture dans le brouillard dense, feu de brouillard arrière rouge intense bien visible.",
