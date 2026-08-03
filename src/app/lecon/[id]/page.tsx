@@ -509,7 +509,9 @@ export default function LessonPage() {
                   src={card.image}
                   alt={card.title}
                   style={{ width: '100%', height: 220, objectFit: 'contain', display: 'block', background: 'var(--card-secondary)' }}
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
               </div>

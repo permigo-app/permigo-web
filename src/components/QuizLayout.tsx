@@ -143,7 +143,9 @@ export default function QuizLayout({
                 <img
                   src={imageUrl}
                   alt=""
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="rounded-xl w-full max-w-md"
                   style={{ border: '1px solid var(--border-subtle)', aspectRatio: '4 / 3', objectFit: 'contain', background: 'var(--card-secondary)' }}
                 />
