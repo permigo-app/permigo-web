@@ -1,0 +1,407 @@
+{
+ "_comment": "Scènes thème D (La vitesse). D1 = vitesses maximales par type de route/zone (beaucoup de questions à seuils numériques proches -> ambiance + badge ? pour ne jamais trahir un chiffre parmi 4 choix proches). D2 = distances de sécurité/réaction/freinage/arrêt (essentiellement des formules et calculs -> ambiance + ? ; les scènes concrètes sont réservées aux notions qui ne dépendent pas d'un chiffre précis). Aucune scène ne représente la consommation d'alcool/drogues au volant.",
+ "D1_Q1": "Vue conducteur sur une autoroute belge à plusieurs bandes par sens, circulation fluide, paysage dégagé, aucun panneau de vitesse visible.",
+ "D1_Q2": "Une voiture roulant nettement plus lentement que le reste du trafic sur la bande de gauche d'une autoroute, plusieurs véhicules obligés de ralentir derrière elle.",
+ "D1_Q3": "Route hors agglomération à deux bandes par sens séparées par une large berme centrale herbeuse, paysage de campagne dégagé.",
+ "D1_Q4": "Vue aérienne stylisée d'une route à deux bandes par sens de chaque côté d'une berme centrale physique, hors agglomération.",
+ "D1_Q5": "Route hors agglomération à deux bandes par sens (quatre bandes au total) séparées uniquement par un marquage peint au sol, sans aucune berme centrale physique, paysage plat flamand bordé de peupliers.",
+ "D1_Q6": "Route hors agglomération à deux bandes par sens (quatre bandes au total) séparées uniquement par un marquage peint au sol, sans aucune berme centrale physique, paysage vallonné ardennais en arrière-plan.",
+ "D1_Q7": "Route hors agglomération à deux bandes par sens (quatre bandes au total) séparées uniquement par un marquage peint au sol, sans aucune berme centrale physique, route boisée calme en périphérie bruxelloise.",
+ "D1_Q8": "Route à trois bandes avec une voie centrale partagée réservée aux dépassements dans les deux sens, campagne belge.",
+ "D1_Q9": "Route à trois bandes avec voie centrale partagée, vue large, paysage rural belge générique.",
+ "D1_Q10": "Entrée d'un petit village flamand : la route se resserre, des maisons et un trottoir apparaissent progressivement après la campagne.",
+ "D1_Q11": "Entrée d'un village wallon : maisons en pierre au toit pentu apparaissant après une route de campagne, trottoirs commençant.",
+ "D1_Q12": "Entrée dans une rue urbaine dense de Bruxelles, maisons de ville mitoyennes typiques, circulation ralentie.",
+ "D1_Q13": "Rue résidentielle de type zone de rencontre : chaussée surélevée au niveau du trottoir, bacs à fleurs, un piéton et un cycliste évoluant librement à côté d'une voiture roulant lentement.",
+ "D1_Q14": "Chemin de campagne réservé, revêtement étroit entre des champs, un cycliste et un piéton l'empruntant, barrière limitant l'accès aux voitures ordinaires.",
+ "D1_Q15": "Rue résidentielle calme où des enfants jouent au ballon sur la chaussée, marquages de jeu à la craie au sol, barrières mobiles aux extrémités de la rue.",
+ "D1_Q16": "Rue devant une école au moment de la sortie des classes, barrières mobiles fermant la rue aux voitures, enfants avec cartables traversant.",
+ "D1_Q17": "Abords d'une école : un adulte accompagnateur aide des enfants à traverser sur un passage piéton, voitures arrêtées et attentives.",
+ "D1_Q18": "Rue commerçante entièrement piétonne d'un centre-ville belge, pavés, terrasses de café, aucune voiture, uniquement des piétons.",
+ "D1_Q19": "Rue cyclable où plusieurs cyclistes roulent groupés au centre de la chaussée, une voiture suivant derrière eux à distance respectueuse.",
+ "D1_Q20": "Un dispositif surélevé (plateau ralentisseur) traversant une rue résidentielle, une voiture ralentissant nettement pour le franchir.",
+ "D1_Q21": "Une personne casquée circulant sur une trottinette électrique sur une piste cyclable urbaine belge.",
+ "D1_Q26": {
+  "model": 3,
+  "scene": "Une rue résidentielle calme de type zone de rencontre, avec au loin la silhouette d'un autre panneau flou non identifiable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q27": "Une bretelle de sortie d'autoroute incurvée, un panneau rond réel de limitation de vitesse « 90 » visible, une voiture s'engageant sur la sortie.",
+ "D1_Q29": {
+  "model": 3,
+  "scene": "Un collage neutre de quatre ambiances routières belges (autoroute, rue de ville, rue résidentielle, rue piétonne) sans hiérarchie visuelle entre elles. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q31": "Une voiture roulant visiblement très lentement sur une route ordinaire dégagée, plusieurs véhicules formant une file contrainte de ralentir derrière elle.",
+ "D1_Q33": "Gros plan sur les feux de stop allumés d'une voiture freinant fort sur une route dégagée sans obstacle visible devant elle, une voiture suivant devant réagir brusquement.",
+ "D1_Q35": {
+  "model": 3,
+  "scene": "Un instructeur d'auto-école et un élève conducteur dans une voiture-école roulant en agglomération, ambiance neutre d'examen pratique. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q36": "Plusieurs voitures de sport alignées côte à côte sur une route publique ouverte, moteurs visiblement prêts à démarrer en même temps, aucune barrière ni signaleur officiel.",
+ "D1_Q37": "Un convoi de voitures anciennes avec des plaques numérotées génériques roulant en file rapprochée sur une route publique, ambiance de rallye.",
+ "D1_Q38": {
+  "model": 3,
+  "scene": "Plusieurs voitures de sport alignées sur une route publique ouverte, prêtes à démarrer. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q40": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q41": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q43": {
+  "model": 3,
+  "scene": "Vue conducteur en agglomération, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q44": {
+  "model": 3,
+  "scene": "Vue conducteur dans une zone 30 résidentielle, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q46": {
+  "model": 3,
+  "scene": "Un agent de police faisant signe à une voiture de se ranger sur le bas-côté d'une route belge. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q47": {
+  "model": 3,
+  "scene": "Un agent de police faisant signe à une voiture de se ranger sur le bas-côté d'une route belge. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q50": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q51": {
+  "model": 3,
+  "scene": "Route de campagne flamande à une bande par sens, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q53": {
+  "model": 3,
+  "scene": "Vue conducteur sur une route pour automobiles, panneau bleu rectangulaire générique flouté en arrière-plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q54": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q55": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q56": {
+  "model": 3,
+  "scene": "Vue conducteur en agglomération, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q57": {
+  "model": 3,
+  "scene": "Vue conducteur en agglomération, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q59": {
+  "model": 3,
+  "scene": "Le marteau et la balance stylisés d'une salle de tribunal belge générique, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q60": {
+  "model": 3,
+  "scene": "Le marteau et la balance stylisés d'une salle de tribunal belge générique, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q61": {
+  "model": 3,
+  "scene": "Un cyclomoteur générique garé devant une maison, sans conducteur, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q62": {
+  "model": 3,
+  "scene": "Le marteau et la balance stylisés d'une salle de tribunal belge générique, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q63": {
+  "model": 3,
+  "scene": "Un agent de police d'un côté et le marteau stylisé d'un tribunal de l'autre, sur un fond neutre partagé. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q64": {
+  "model": 3,
+  "scene": "Un agent de police d'un côté et le marteau stylisé d'un tribunal de l'autre, sur un fond neutre partagé. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q65": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q66": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q67": {
+  "model": 3,
+  "scene": "Vue conducteur en agglomération, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_Q82": "Un panneau rond réel d'interdiction de dépasser directement au-dessus d'un panonceau rectangulaire annonçant une limitation de vitesse à 200 mètres, une voiture approchant sur une route à deux voies.",
+ "D1_DEG_1": "Une voiture effectuant un demi-tour illégal en traversant la berme centrale d'une autoroute, manœuvre dangereuse à contresens.",
+ "D1_DEG_2": "Une voiture franchissant un feu de signalisation manifestement rouge à un carrefour urbain.",
+ "D1_DEG_3": {
+  "model": 3,
+  "scene": "Le marteau et la balance stylisés d'une salle de tribunal belge générique, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D1_DEG_4": "Une voiture garée sur un emplacement de stationnement réel marqué du symbole international du fauteuil roulant, sans carte de stationnement visible sur le pare-brise.",
+ "CARD_D1_p0_c0": "Vue conducteur sur une autoroute belge à plusieurs bandes par sens, circulation fluide, paysage dégagé.",
+ "CARD_D1_p0_c1": "Vue aérienne d'une route à deux bandes par sens de chaque côté d'une large berme centrale herbeuse et verte, hors agglomération, champs de chaque côté.",
+ "CARD_D1_p0_c2": "Route hors agglomération à deux bandes par sens (quatre bandes au total) séparées uniquement par un marquage peint au sol, sans aucune berme centrale physique, paysage rural belge générique.",
+ "CARD_D1_p0_c3": "Route à trois bandes avec une voie centrale partagée réservée aux dépassements dans les deux sens, campagne belge.",
+ "CARD_D1_p1_c0": "Rue d'un petit village belge, maisons basses, trottoirs, circulation calme en agglomération.",
+ "CARD_D1_p1_c1": "Rue résidentielle de type zone de rencontre : chaussée surélevée au niveau du trottoir, bacs à fleurs, piétons et cyclistes évoluant librement.",
+ "CARD_D1_p1_c2": "Un dispositif surélevé (plateau ralentisseur) traversant une rue résidentielle, une voiture ralentissant nettement pour le franchir.",
+ "CARD_D1_p1_c3": "Une personne casquée circulant sur une trottinette électrique sur une piste cyclable urbaine belge.",
+ "CARD_D1_p2_c0": "Une voiture roulant visiblement très lentement sur une route ordinaire dégagée, plusieurs véhicules formant une file contrainte de ralentir derrière elle.",
+ "CARD_D1_p2_c1": "Gros plan sur les feux de stop allumés d'une voiture freinant fort sur une route dégagée sans obstacle visible devant elle.",
+ "CARD_D1_p2_c2": "Plusieurs voitures de sport alignées côte à côte sur une route publique ouverte, moteurs visiblement prêts à démarrer en même temps, aucune barrière ni signaleur officiel.",
+ "CARD_D1_p2_c3": {
+  "model": 3,
+  "scene": "Plusieurs voitures de sport alignées sur une route publique ouverte, prêtes à démarrer. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p3_c0": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p3_c1": {
+  "model": 3,
+  "scene": "Vue conducteur en agglomération, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p3_c2": {
+  "model": 3,
+  "scene": "Un agent de police faisant signe à une voiture de se ranger sur le bas-côté d'une route belge. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p4_c0": {
+  "model": 3,
+  "scene": "Vue conducteur sur une autoroute belge dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p4_c1": {
+  "model": 3,
+  "scene": "Vue conducteur en agglomération, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p4_c2": {
+  "model": 3,
+  "scene": "Le marteau et la balance stylisés d'une salle de tribunal belge générique, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p4_c3": {
+  "model": 3,
+  "scene": "Un agent de police d'un côté et le marteau stylisé d'un tribunal de l'autre, sur un fond neutre partagé. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p4_c4": {
+  "model": 3,
+  "scene": "Le marteau et la balance stylisés d'une salle de tribunal belge générique, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D1_p4_c5": {
+  "model": 3,
+  "scene": "Le marteau et la balance stylisés d'une salle de tribunal belge générique, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q1": {
+  "model": 3,
+  "scene": "Vue arrière d'une voiture roulant sur autoroute derrière un autre véhicule, à bonne distance. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q2": {
+  "model": 3,
+  "scene": "Vue arrière d'une voiture roulant sur autoroute derrière un autre véhicule, à bonne distance, temps sec. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q4": "Vue conducteur sur autoroute : le véhicule qui précède passe devant un panneau kilométrique fixe au bord de la route, distance nette entre les deux véhicules.",
+ "D2_Q5": "Vue conducteur sur autoroute : le véhicule qui précède passe devant un arbre isolé au bord de la route, distance nette entre les deux véhicules.",
+ "D2_Q7": {
+  "model": 3,
+  "scene": "Vue arrière d'une voiture roulant sous la pluie derrière un autre véhicule sur autoroute, chaussée mouillée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q8": {
+  "model": 3,
+  "scene": "Vue arrière d'une voiture roulant sous la pluie derrière un autre véhicule sur autoroute, chaussée mouillée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q11": "Vue conducteur sur une route enneigée et verglacée, le véhicule qui précède très loin devant sur la chaussée blanche.",
+ "D2_Q13": {
+  "model": 3,
+  "scene": "Trois portions de route juxtaposées : chaussée sèche, chaussée mouillée, chaussée enneigée, sans indication de longueur. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q15": "Gros plan sur le visage d'un conducteur surpris, les yeux écarquillés, réagissant à un danger soudain surgissant devant la voiture, pied pas encore sur le frein.",
+ "D2_Q16": {
+  "model": 3,
+  "scene": "Gros plan sur le visage attentif et reposé d'un conducteur au volant, en pleine journée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q17": {
+  "model": 3,
+  "scene": "Deux images juxtaposées d'une même voiture, une roulant lentement en ville et une roulant vite sur autoroute, sans indication de distance. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q18": {
+  "model": 3,
+  "scene": "Vue conducteur, compteur de vitesse flouté au premier plan, route dégagée devant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q19": {
+  "model": 3,
+  "scene": "Vue conducteur en agglomération, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q20": {
+  "model": 3,
+  "scene": "Vue conducteur hors agglomération, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q21": {
+  "model": 3,
+  "scene": "Vue conducteur sur autoroute, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q22": {
+  "model": 3,
+  "scene": "Vue conducteur dans une zone 30 résidentielle, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q23": {
+  "model": 3,
+  "scene": "Vue conducteur sur une chaussée à voie centrale, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q24": {
+  "model": 3,
+  "scene": "Gros plan sur le visage flou et fatigué d'un conducteur au volant de nuit, ambiance neutre sans objet identifiable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q25": {
+  "model": 3,
+  "scene": "Gros plan sur le visage flou et fatigué d'un conducteur au volant de nuit, ambiance neutre sans objet identifiable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q26": {
+  "model": 3,
+  "scene": "Vue conducteur sur autoroute de nuit, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q27": {
+  "model": 3,
+  "scene": "Gros plan sur le visage d'un conducteur au volant, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q29": "Gros plan sur un conducteur bâillant longuement au volant, yeux fatigués, conduisant de nuit sur autoroute.",
+ "D2_Q31": "Gros plan sur les roues avant d'une voiture freinant fort, légère plongée de la caisse, début de trace de gomme sur la chaussée.",
+ "D2_Q33": {
+  "model": 3,
+  "scene": "Une voiture à l'arrêt sur une route de campagne par temps neutre, capot ouvert, ambiance générique d'inspection. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q36": {
+  "model": 3,
+  "scene": "Une voiture freinant fort, chaussée dont l'état météo n'est pas déterminable (ombre portée neutre). Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q38": {
+  "model": 3,
+  "scene": "Vue conducteur sur autoroute, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q39": {
+  "model": 2,
+  "scene": "Vue de dessus d'une voiture roulant vers un obstacle fixe. Sur la route derrière l'obstacle, deux segments colorés consécutifs bout à bout : un court segment orange puis un segment rouge plus long menant à la voiture à l'arrêt. Aucun mot."
+ },
+ "D2_Q40": {
+  "model": 3,
+  "scene": "Vue de dessus neutre d'une voiture sur une route dégagée menant à un point fixe, sans aucune mesure visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q42": {
+  "model": 3,
+  "scene": "Vue conducteur, compteur de vitesse flouté au premier plan, route dégagée devant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q43": {
+  "model": 3,
+  "scene": "Deux portions de route juxtaposées, l'une avec une chaussée dont l'humidité n'est pas déterminable, l'autre similaire, sans indication. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q44": {
+  "model": 3,
+  "scene": "Vue conducteur à haute vitesse sur autoroute, compteur flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q45": {
+  "model": 3,
+  "scene": "Gros plan sur le visage flou d'un conducteur au volant, ambiance neutre sans objet identifiable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q47": "Gros plan sur le tableau de bord d'une voiture avec le témoin ABS allumé en orange.",
+ "D2_Q48": "Une voiture freinant fort pour éviter un obstacle, traces de pneus visibles mais discontinues sur la chaussée, témoin ABS allumé au tableau de bord.",
+ "D2_Q49": "Un conducteur les mains fermement sur le volant, braquant pour contourner un obstacle tout en freinant fort, témoin ABS visible au tableau de bord.",
+ "D2_Q50": {
+  "model": 3,
+  "scene": "Une voiture freinant fort sur une route dégagée, chaussée dont l'état n'est pas déterminable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q51": {
+  "model": 3,
+  "scene": "Une voiture freinant fort sur une chaussée mouillée, témoin ABS allumé au tableau de bord. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q52": "Un conducteur attentif, mains sur le volant à dix heures dix, regard fixé sur la route, tableau de bord moderne avec plusieurs assistances actives.",
+ "D2_Q53": "Gros plan au ras du sol sur un pneu de voiture touchant l'asphalte, seul point de contact visible entre le véhicule et la route.",
+ "D2_Q55": {
+  "model": 3,
+  "scene": "Gros plan sur les rainures d'une bande de roulement de pneu, profondeur non déterminable précisément. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q56": {
+  "model": 3,
+  "scene": "Gros plan sur un pneu visiblement usé, bande de roulement basse. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q57": "Gros plan sur la bande de roulement d'un pneu montrant de petites barres de gomme surélevées au fond des rainures principales.",
+ "D2_Q58": "Gros plan sur un pneu dont la bande de roulement est arrivée au même niveau que les petites barres d'usure au fond des rainures, pneu visiblement lisse.",
+ "D2_Q59": "Gros plan sur une étiquette collée à l'intérieur du montant de portière conducteur d'une voiture, mentions floutées et illisibles.",
+ "D2_Q60": "Une personne vérifiant la pression d'un pneu avec un manomètre à une station-service, coffre de la voiture visiblement chargé de bagages.",
+ "D2_Q61": "Gros plan sur un pneu de voiture visiblement sous-gonflé, flanc légèrement affaissé, garée à l'arrêt.",
+ "D2_Q63": {
+  "model": 3,
+  "scene": "Une voiture moderne roulant en ville avec des icônes d'assistance à la conduite discrètes sur le tableau de bord. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q64": "Un conducteur attentif, mains sur le volant, regard fixé sur la route, icônes d'assistance à la conduite actives sur le tableau de bord.",
+ "D2_Q66": {
+  "model": 3,
+  "scene": "Vue conducteur sur autoroute, horloge de bord générique floutée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q67": {
+  "model": 3,
+  "scene": "Une aire de repos d'autoroute belge, quelques voitures stationnées, horloge murale générique floutée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "D2_Q68": "Un conducteur descendu de sa voiture sur une aire de repos d'autoroute, s'étirant, bouteille d'eau à la main.",
+ "D2_Q69": "Un conducteur souriant et reposé s'étirant à côté de sa voiture sur une aire de repos ensoleillée.",
+ "CARD_D2_p0_c0": {
+  "model": 3,
+  "scene": "Vue arrière d'une voiture roulant sur autoroute derrière un autre véhicule, à bonne distance. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p0_c1": "Vue conducteur sur autoroute : le véhicule qui précède passe devant un panneau kilométrique fixe au bord de la route, distance nette entre les deux véhicules.",
+ "CARD_D2_p0_c2": "Vue arrière d'une voiture roulant sous la pluie derrière un autre véhicule sur autoroute, chaussée mouillée, distance nettement plus grande.",
+ "CARD_D2_p0_c3": "Vue conducteur sur une route enneigée et verglacée, le véhicule qui précède très loin devant sur la chaussée blanche.",
+ "CARD_D2_p1_c0": "Gros plan sur le visage d'un conducteur surpris, les yeux écarquillés, réagissant à un danger soudain surgissant devant la voiture, pied pas encore sur le frein.",
+ "CARD_D2_p1_c1": {
+  "model": 3,
+  "scene": "Gros plan sur le visage attentif et reposé d'un conducteur au volant, en pleine journée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p1_c2": {
+  "model": 3,
+  "scene": "Vue conducteur, compteur de vitesse flouté au premier plan, route dégagée devant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p1_c3": {
+  "model": 3,
+  "scene": "Cinq images juxtaposées de voitures à des vitesses croissantes sur des routes différentes, sans indication de distance. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p1_c4": {
+  "model": 3,
+  "scene": "Gros plan sur le visage flou et fatigué d'un conducteur au volant de nuit, ambiance neutre sans objet identifiable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p1_c5": {
+  "model": 3,
+  "scene": "Gros plan sur le visage d'un conducteur au volant, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p2_c0": "Gros plan sur les roues avant d'une voiture freinant fort, légère plongée de la caisse, début de trace de gomme sur la chaussée.",
+ "CARD_D2_p2_c1": {
+  "model": 3,
+  "scene": "Une voiture à l'arrêt sur une route de campagne, capot ouvert, ambiance générique d'inspection. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p2_c2": {
+  "model": 3,
+  "scene": "Une voiture freinant fort, chaussée dont l'état météo n'est pas déterminable (ombre portée neutre). Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p3_c0": {
+  "model": 2,
+  "scene": "Vue de dessus d'une voiture roulant vers un obstacle fixe. Sur la route derrière l'obstacle, deux segments colorés consécutifs bout à bout : un court segment orange puis un segment rouge plus long menant à la voiture à l'arrêt. Aucun mot."
+ },
+ "CARD_D2_p3_c1": {
+  "model": 3,
+  "scene": "Vue conducteur à haute vitesse sur autoroute, compteur flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p3_c2": {
+  "model": 3,
+  "scene": "Deux portions de route juxtaposées, l'humidité de chacune n'étant pas clairement déterminable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p4_c0": "Gros plan sur le tableau de bord d'une voiture avec le témoin ABS allumé en orange, freinage en cours.",
+ "CARD_D2_p4_c1": "Un conducteur les mains fermement sur le volant, braquant pour contourner un obstacle tout en freinant fort, témoin ABS visible au tableau de bord.",
+ "CARD_D2_p4_c2": {
+  "model": 3,
+  "scene": "Une voiture freinant fort sur une chaussée mouillée, témoin ABS allumé au tableau de bord. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p5_c0": "Gros plan au ras du sol sur un pneu de voiture touchant l'asphalte, seul point de contact visible entre le véhicule et la route.",
+ "CARD_D2_p5_c1": "Gros plan sur une pièce d'un euro insérée dans une rainure de bande de roulement d'un pneu pour vérifier sa profondeur.",
+ "CARD_D2_p5_c2": "Gros plan sur la bande de roulement d'un pneu montrant de petites barres de gomme surélevées au fond des rainures principales.",
+ "CARD_D2_p5_c3": "Gros plan sur une étiquette collée à l'intérieur du montant de portière conducteur d'une voiture, mentions floutées et illisibles.",
+ "CARD_D2_p6_c0": {
+  "model": 3,
+  "scene": "Une voiture moderne roulant en ville avec des icônes d'assistance à la conduite discrètes sur le tableau de bord. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_D2_p6_c1": "Un conducteur descendu de sa voiture sur une aire de repos d'autoroute, s'étirant, bouteille d'eau à la main."
+}
