@@ -6,6 +6,7 @@ import { getThemeOrder, getThemeDataLocalized, type Lang } from '@/lib/lessonDat
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import DesignUpdateModal from '@/components/DesignUpdateModal';
+import FeedbackPromptModal from '@/components/FeedbackPromptModal';
 import { THEME_COLORS } from '@/lib/constants';
 import { isLessonCompleted, getCompletedParties, getAllExams } from '@/lib/progressStorage';
 import { countThemeParts, lessonEffectivelyCompleted } from '@/lib/medals';
@@ -369,6 +370,7 @@ export default function HomePage() {
       </div>
     </div>
     <DesignUpdateModal userId={user?.id} />
+    <FeedbackPromptModal userId={user?.id} />
     <OnboardingTour />
     </>
   );
