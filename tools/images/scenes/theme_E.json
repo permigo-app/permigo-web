@@ -1,42 +1,85 @@
 {
  "_comment": "Scènes thème E (Croisement et dépassement). Beaucoup de questions testent un ordre procédural (6 vérifications du dépassement), une distance latérale numérique (1m/1,5m) ou une règle de priorité fine (rétrécissement, tripler) -> ambiance + badge ? pour ne jamais trahir. Modèle 2 (schéma priorité) volontairement évité au maximum ce thème (leçon tirée du bug C3_Q21/Q64 : le modèle ajoute une flèche colorée par défaut) — préférence pour la photo réelle Modèle 1 qui dépeint la situation sans coder une réponse.",
-
- "E1_Q1": { "model": 3, "scene": "Deux voitures se rencontrant sur une route à double sens, chacune sur sa bande, vue neutre de la scène. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E1_Q1": {
+  "model": 3,
+  "scene": "Deux voitures se rencontrant sur une route à double sens, chacune sur sa bande, vue neutre de la scène. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E1_Q2": "Une voiture serrée à droite sur sa bande de circulation, un véhicule venant en sens inverse passant de l'autre côté de la chaussée, chacun bien dans sa bande.",
  "E1_Q4": "Gros plan sur une large ligne blanche continue peinte le long du bord d'une chaussée, une voiture stationnée juste au-delà de cette ligne sur l'accotement.",
  "E1_Q5": "Une route étroite où deux voitures se croisent, chacune restant en deçà de la large ligne blanche de bord de chaussée, rien ne débordant au-delà.",
  "E1_Q6": "Une route étroite bordée d'une piste cyclable physiquement séparée, un camion arrivant en sens inverse, la voiture restant strictement sur la chaussée sans empiéter sur la piste.",
  "E1_Q7": "Une route étroite bordée d'une bande cyclable suggérée (marquage discontinu, sans séparation physique), une voiture roulant légèrement dessus pour croiser un véhicule en face.",
- "E1_Q8": { "model": 3, "scene": "Une route étroite avec d'un côté une piste cyclable séparée par une bordure et de l'autre une bande cyclable en marquage discontinu, sans voiture engagée sur l'une ou l'autre. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E1_Q11": { "model": 3, "scene": "Une voiture croisant un véhicule utilitaire sur une route de campagne, écart latéral raisonnable entre les deux. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E1_Q12": { "model": 3, "scene": "Une voiture croisant un cycliste en agglomération, écart latéral visible entre eux. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E1_Q13": { "model": 3, "scene": "Une voiture croisant un cycliste hors agglomération, écart latéral visible entre eux. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E1_Q8": {
+  "model": 3,
+  "scene": "Une route étroite avec d'un côté une piste cyclable séparée par une bordure et de l'autre une bande cyclable en marquage discontinu, sans voiture engagée sur l'une ou l'autre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E1_Q11": {
+  "model": 3,
+  "scene": "Une voiture croisant un véhicule utilitaire sur une route de campagne, écart latéral raisonnable entre les deux. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E1_Q12": {
+  "model": 3,
+  "scene": "Une voiture croisant un cycliste en agglomération, écart latéral visible entre eux. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E1_Q13": {
+  "model": 3,
+  "scene": "Une voiture croisant un cycliste hors agglomération, écart latéral visible entre eux. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E1_Q15": "Une route étroite avec un accotement de plain-pied vide à droite, une voiture roulant partiellement dessus pour croiser un véhicule en face.",
  "E1_Q16": "Une route étroite avec un piéton marchant sur l'accotement de plain-pied à droite, la voiture restant strictement sur la chaussée sans y empiéter malgré un véhicule en face.",
  "E1_Q17": "Un tram et une voiture se croisant sur une avenue urbaine, la voiture passant du côté droit du tram.",
- "E1_Q18": { "model": 3, "scene": "Un tram sur une avenue urbaine, une voiture stationnée bloquant partiellement le passage à droite du tram. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E1_Q20": { "model": 3, "scene": "Une voiture passant du côté gauche d'un tram sur une avenue urbaine, chaussée dégagée devant. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E1_Q22": { "model": 3, "scene": "Une voiture passant du côté gauche d'un tram sur une avenue urbaine animée. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E1_Q18": {
+  "model": 3,
+  "scene": "Un tram sur une avenue urbaine, une voiture stationnée bloquant partiellement le passage à droite du tram. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E1_Q20": {
+  "model": 3,
+  "scene": "Une voiture passant du côté gauche d'un tram sur une avenue urbaine, chaussée dégagée devant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E1_Q22": {
+  "model": 3,
+  "scene": "Une voiture passant du côté gauche d'un tram sur une avenue urbaine animée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E1_Q23": "Un carrefour sans aucune flèche peinte au sol, deux voitures arrivant en sens opposés, chacune restant naturellement sur sa droite.",
  "E1_Q25": "Un carrefour avec des flèches directionnelles peintes au sol, deux voitures arrivant en sens opposés suivant les flèches.",
- "E1_Q29": { "model": 3, "scene": "Un panneau triangulaire de signalisation générique flouté au bord d'une route de campagne, sans détail lisible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E1_Q30": "Un rétrécissement de chaussée dû à des travaux ou un obstacle du côté proche de la voiture, un véhicule arrivant en sens inverse de l'autre côté, sans aucun panneau de priorité visible.",
+ "E1_Q29": {
+  "model": 3,
+  "scene": "Un panneau triangulaire de signalisation générique flouté au bord d'une route de campagne, sans détail lisible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E1_Q30": "Un tas de matériaux de chantier entouré de barrières rouge et blanc rétrécissant la chaussée du côté proche (à droite, côté de la voiture qui prend la photo), et un véhicule clairement visible arrivant en sens inverse un peu plus loin sur la route, sans aucun panneau de priorité visible.",
  "E1_Q31": "Un rétrécissement de chaussée dû à un obstacle du côté opposé (loin de la voiture), un véhicule arrivant en sens inverse près de cet obstacle, sans aucun panneau de priorité visible.",
- "E1_Q43": { "model": 3, "scene": "Une voiture roulant seule sur une rue à sens unique calme, aucun autre véhicule visible. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E1_Q43": {
+  "model": 3,
+  "scene": "Une voiture roulant seule sur une rue à sens unique calme, aucun autre véhicule visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E1_Q45": "Une rue à sens unique où un cycliste circule à contresens, une voiture lui laissant un espace latéral confortable.",
  "E1_Q46": "Une voiture roulant du côté droit d'une rue à sens unique large, alors qu'aucun trafic ne vient en face.",
  "E1_Q47": "Une rue à sens unique avec des voitures stationnées des deux côtés de la chaussée.",
- "E1_Q48": { "model": 3, "scene": "Une rue à sens unique avec une voiture stationnée, un espace libre à côté pour le passage des autres véhicules. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E1_Q52": "Une voiture positionnée dans la bande la plus à gauche d'une rue à sens unique à plusieurs bandes, clignotant gauche allumé, prête à tourner à gauche.",
- "E1_Q54": "Une voiture positionnée à gauche d'une rue à sens unique pour tourner, un cycliste circulant à contresens droit devant elle, un espace latéral confortable laissé entre eux.",
- "E1_Q68": { "model": 3, "scene": "Deux scènes juxtaposées : une voiture croisant un cycliste en agglomération, et la même situation hors agglomération, écart latéral similaire dans les deux cas. Ajoute un unique badge « ? » discret, sans autre mot." },
-
- "CARD_E1_p0_c0": { "model": 3, "scene": "Deux voitures se rencontrant sur une route à double sens, chacune sur sa bande. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E1_Q48": {
+  "model": 3,
+  "scene": "Une rue à sens unique avec une voiture stationnée, un espace libre à côté pour le passage des autres véhicules. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E1_Q52": "Une voiture positionnée dans la bande la plus à gauche d'une rue à sens unique à plusieurs bandes, clignotant gauche allumé, prête à tourner à gauche. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner.",
+ "E1_Q54": "Une voiture positionnée à gauche d'une rue à sens unique pour tourner, clignotant gauche allumé. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Un cycliste circulant à contresens droit devant elle, un espace latéral confortable laissé entre eux.",
+ "E1_Q68": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : une voiture croisant un cycliste en agglomération, et la même situation hors agglomération, écart latéral similaire dans les deux cas. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E1_p0_c0": {
+  "model": 3,
+  "scene": "Deux voitures se rencontrant sur une route à double sens, chacune sur sa bande. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E1_p0_c1": "Une voiture serrée à droite sur sa bande de circulation, un véhicule venant en sens inverse passant de l'autre côté de la chaussée.",
  "CARD_E1_p0_c2": "Une route étroite où deux voitures se croisent, chacune restant en deçà de la large ligne blanche de bord de chaussée.",
  "CARD_E1_p0_c3": "Une route étroite bordée d'une bande cyclable suggérée (marquage discontinu), une voiture roulant légèrement dessus pour croiser un véhicule en face.",
- "CARD_E1_p1_c0": { "model": 3, "scene": "Une voiture croisant un autre véhicule sur une route de campagne, écart latéral raisonnable. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E1_p1_c1": { "model": 3, "scene": "Deux scènes juxtaposées : une voiture croisant un cycliste en agglomération, et la même situation hors agglomération. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "CARD_E1_p1_c0": {
+  "model": 3,
+  "scene": "Une voiture croisant un autre véhicule sur une route de campagne, écart latéral raisonnable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E1_p1_c1": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : une voiture croisant un cycliste en agglomération, et la même situation hors agglomération. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E1_p1_c2": "Une route étroite avec un accotement de plain-pied vide à droite, une voiture roulant partiellement dessus pour croiser un véhicule en face.",
  "CARD_E1_p1_c3": "Un tram et une voiture se croisant sur une avenue urbaine, la voiture passant du côté droit du tram.",
  "CARD_E1_p1_c4": "Un carrefour sans aucune flèche peinte au sol, deux voitures arrivant en sens opposés, chacune restant naturellement sur sa droite.",
@@ -44,77 +87,195 @@
  "CARD_E1_p2_c0": "Un panneau triangulaire réel de danger annonçant un rétrécissement de chaussée, au bord d'une route de campagne.",
  "CARD_E1_p2_c1": "Un rétrécissement de chaussée dû à un obstacle sur la route, un véhicule arrivant en sens inverse, sans aucun panneau de priorité visible.",
  "CARD_E1_p2_c2": "Un passage étroit avec un panneau rond réel rouge et blanc d'un côté et un panneau rectangulaire bleu réel avec flèches de l'autre côté, vue d'ensemble du passage.",
- "CARD_E1_p2_c3": { "model": 3, "scene": "Un rétrécissement de chaussée générique, sans panneau visible. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "CARD_E1_p2_c3": {
+  "model": 3,
+  "scene": "Un rétrécissement de chaussée générique, sans panneau visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E1_p3_c0": "Une rue à sens unique avec un panneau rectangulaire bleu réel à flèche blanche bien visible au début de la rue.",
  "CARD_E1_p3_c1": "Une rue à sens unique avec un panonceau additionnel blanc représentant un vélo sous le panneau de sens unique, un cycliste circulant à contresens.",
  "CARD_E1_p3_c2": "Une voiture roulant du côté droit d'une rue à sens unique large, alors qu'aucun trafic ne vient en face.",
  "CARD_E1_p3_c3": "Une rue à sens unique avec des voitures stationnées des deux côtés de la chaussée.",
- "CARD_E1_p3_c4": { "model": 3, "scene": "Une voiture positionnée dans la bande la plus à gauche d'une rue à sens unique à plusieurs bandes, clignotant gauche allumé. Ajoute une unique flèche verte pointant sa position à gauche, sans aucun mot." },
- "CARD_E1_p3_c5": "Une voiture positionnée à gauche d'une rue à sens unique pour tourner, un cycliste circulant à contresens droit devant elle, un espace latéral confortable laissé entre eux.",
-
- "E2_Q1": { "model": 3, "scene": "Une voiture roulant derrière un véhicule qui avance lentement sur une route dégagée. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "CARD_E1_p3_c4": {
+  "model": 3,
+  "scene": "Une voiture positionnée dans la bande la plus à gauche d'une rue à sens unique à plusieurs bandes, clignotant gauche allumé. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Ajoute une unique flèche verte pointant sa position à gauche, sans aucun mot."
+ },
+ "CARD_E1_p3_c5": "Une voiture positionnée à gauche d'une rue à sens unique pour tourner, clignotant gauche allumé. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Un cycliste circulant à contresens droit devant elle, un espace latéral confortable laissé entre eux.",
+ "E2_Q1": {
+  "model": 3,
+  "scene": "Une voiture roulant derrière un véhicule qui avance lentement sur une route dégagée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E2_Q2": "Une voiture se déportant vers la gauche pour dépasser un véhicule plus lent devant elle, sur une route à double sens.",
  "E2_Q3": "Une voiture passant devant un véhicule stationné le long du trottoir, aucun autre trafic autour.",
- "E2_Q5": { "model": 3, "scene": "Deux scènes juxtaposées : une voiture dépassant un véhicule en mouvement, et une voiture passant devant un véhicule à l'arrêt. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q7": { "model": 3, "scene": "Vue conducteur d'une voiture roulant derrière un véhicule plus lent sur une route dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q8": { "model": 3, "scene": "Vue conducteur d'une voiture roulant derrière un véhicule plus lent, route dégagée devant à perte de vue. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q9": { "model": 3, "scene": "Vue conducteur regardant loin devant sur une route à double sens dégagée, avant un dépassement. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q10": { "model": 3, "scene": "Gros plan sur un rétroviseur extérieur gauche de voiture montrant la route derrière. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q11": { "model": 3, "scene": "Vue conducteur d'une voiture derrière un véhicule plus lent, longue portion de route dégagée visible après lui. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q12": { "model": 3, "scene": "Vue conducteur d'une route à double sens dégagée, sans aucun panneau visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q13": { "model": 3, "scene": "Vue conducteur d'une voiture roulant derrière un véhicule, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E2_Q5": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : une voiture dépassant un véhicule en mouvement, et une voiture passant devant un véhicule à l'arrêt. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q7": {
+  "model": 3,
+  "scene": "Vue conducteur d'une voiture roulant derrière un véhicule plus lent sur une route dégagée, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q8": {
+  "model": 3,
+  "scene": "Vue conducteur d'une voiture roulant derrière un véhicule plus lent, route dégagée devant à perte de vue. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q9": {
+  "model": 3,
+  "scene": "Vue conducteur regardant loin devant sur une route à double sens dégagée, avant un dépassement. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q10": {
+  "model": 3,
+  "scene": "Gros plan sur un rétroviseur extérieur gauche de voiture montrant la route derrière. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q11": {
+  "model": 3,
+  "scene": "Vue conducteur d'une voiture derrière un véhicule plus lent, longue portion de route dégagée visible après lui. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q12": {
+  "model": 3,
+  "scene": "Vue conducteur d'une route à double sens dégagée, sans aucun panneau visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q13": {
+  "model": 3,
+  "scene": "Vue conducteur d'une voiture roulant derrière un véhicule, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E2_Q14": "Gros plan sur un rétroviseur extérieur gauche montrant un véhicule en train de dépasser par la gauche, la voiture restant sur sa bande.",
- "E2_Q15": { "model": 3, "scene": "Une file de plusieurs véhicules lents sur une route à double sens, une voiture derrière eux se préparant à dépasser. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q16": { "model": 3, "scene": "Deux scènes juxtaposées : une route à sens unique à plusieurs bandes, et une route à trois bandes dans le même sens. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q17": { "model": 3, "scene": "Un élève conducteur révisant dans une voiture-école à l'arrêt, ambiance neutre d'étude. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E2_Q15": {
+  "model": 3,
+  "scene": "Une file de plusieurs véhicules lents sur une route à double sens, une voiture derrière eux se préparant à dépasser. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q16": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : une route à sens unique à plusieurs bandes, et une route à trois bandes dans le même sens. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q17": {
+  "model": 3,
+  "scene": "Un élève conducteur révisant dans une voiture-école à l'arrêt, ambiance neutre d'étude. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E2_Q19": "Gros plan sur le clignotant gauche allumé à l'extérieur d'une voiture, prête à se déporter pour dépasser.",
  "E2_Q20": "Une voiture positionnée dans la bande de gauche en plein dépassement, clignotants éteints.",
  "E2_Q22": "Gros plan sur le clignotant droit allumé à l'extérieur d'une voiture venant de terminer un dépassement.",
  "E2_Q23": "Un conducteur jetant un regard par-dessus son épaule droite avant de se rabattre après un dépassement.",
- "E2_Q24": { "model": 3, "scene": "Une voiture dépassant un autre véhicule sur une route à double sens, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q25": { "model": 3, "scene": "Un élève conducteur révisant dans une voiture-école à l'arrêt, ambiance neutre d'étude. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q29": { "model": 3, "scene": "Une voiture dépassant un cycliste hors agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q30": { "model": 3, "scene": "Une voiture dépassant un cycliste circulant sur une piste cyclable à droite de la chaussée, hors agglomération. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q31": { "model": 3, "scene": "Une voiture dépassant un piéton marchant sur la chaussée hors agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q32": { "model": 3, "scene": "Une voiture croisant un cycliste venant en sens inverse hors agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q33": { "model": 3, "scene": "Une voiture dépassant un cycliste en agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q35": { "model": 3, "scene": "Deux scènes juxtaposées : une voiture dépassant un cycliste en agglomération, et la même situation hors agglomération. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q37": "Un véhicule devant avec son clignotant gauche allumé, déporté vers la gauche pour tourner, une voiture le dépassant par la droite.",
- "E2_Q38": "Une voiture dépassant par la droite un véhicule qui tourne à gauche, restant en deçà de la large ligne blanche de bord de chaussée.",
- "E2_Q39": "Une voiture dépassant par la droite un véhicule qui tourne à gauche, restant strictement sur la chaussée sans empiéter sur la piste cyclable adjacente.",
- "E2_Q40": "Une voiture dépassant par la droite un véhicule qui tourne à gauche, roulant partiellement sur un accotement de plain-pied vide.",
+ "E2_Q24": {
+  "model": 3,
+  "scene": "Une voiture dépassant un autre véhicule sur une route à double sens, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q25": {
+  "model": 3,
+  "scene": "Un élève conducteur révisant dans une voiture-école à l'arrêt, ambiance neutre d'étude. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q29": {
+  "model": 3,
+  "scene": "Une voiture dépassant un cycliste hors agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q30": {
+  "model": 3,
+  "scene": "Une voiture dépassant un cycliste circulant sur une piste cyclable à droite de la chaussée, hors agglomération. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q31": {
+  "model": 3,
+  "scene": "Une voiture dépassant un piéton marchant sur la chaussée hors agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q32": {
+  "model": 3,
+  "scene": "Une voiture croisant un cycliste venant en sens inverse hors agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q33": {
+  "model": 3,
+  "scene": "Une voiture dépassant un cycliste en agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q35": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : une voiture dépassant un cycliste en agglomération, et la même situation hors agglomération. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q37": "Vue rapprochée depuis l'arrière : un véhicule roulant devant, nettement déporté vers la GAUCHE dans sa bande (à cheval sur ou franchissant la ligne axiale), avec son clignotant GAUCHE clairement allumé (lumière orange vive bien visible), en train de préparer un virage à gauche. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Une seconde voiture le dépasse par la DROITE, restant nettement à droite sur la chaussée, en train de le doubler par ce côté.",
+ "E2_Q38": "Vue rapprochée depuis l'arrière : un véhicule roulant devant, nettement déporté vers la GAUCHE dans sa bande (à cheval sur ou franchissant la ligne axiale), avec son clignotant GAUCHE clairement allumé (lumière orange vive bien visible), en train de préparer un virage à gauche. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Une seconde voiture le dépasse par la DROITE en restant strictement en deçà de la large ligne blanche continue de bord de chaussée, sans jamais la franchir.",
+ "E2_Q39": "Vue rapprochée depuis l'arrière : un véhicule roulant devant, nettement déporté vers la GAUCHE dans sa bande (à cheval sur ou franchissant la ligne axiale), avec son clignotant GAUCHE clairement allumé (lumière orange vive bien visible), en train de préparer un virage à gauche. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Une seconde voiture le dépasse par la DROITE, une piste cyclable séparée par une bordure est visible plus à droite mais la voiture qui dépasse n'empiète pas dessus.",
+ "E2_Q40": "Vue rapprochée depuis l'arrière : un véhicule roulant devant, nettement déporté vers la GAUCHE dans sa bande (à cheval sur ou franchissant la ligne axiale), avec son clignotant GAUCHE clairement allumé (lumière orange vive bien visible), en train de préparer un virage à gauche. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Une seconde voiture le dépasse par la DROITE en roulant partiellement sur un accotement de plain-pied (bande stabilisée non goudronnée) à droite de la chaussée.",
  "E2_Q41": "Une voiture dépassant un tram par la droite sur une avenue urbaine.",
- "E2_Q42": { "model": 3, "scene": "Un tram sur une avenue urbaine, le passage à droite bloqué par un véhicule stationné ou des travaux. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E2_Q42": {
+  "model": 3,
+  "scene": "Un tram sur une avenue urbaine, le passage à droite bloqué par un véhicule stationné ou des travaux. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E2_Q43": "Un tram dont les rails se trouvent sur la partie droite de la chaussée, une voiture le dépassant par la gauche.",
  "E2_Q44": "Un tram arrêté au milieu de la chaussée, un passager descendant directement sur la route sans bordure surélevée, une voiture freinant.",
  "E2_Q45": "Un tram arrêté au milieu de la chaussée avec une bordure surélevée où des passagers attendent en sécurité, une voiture continuant sans s'arrêter.",
- "E2_Q48": { "model": 3, "scene": "Deux scènes juxtaposées : un dépassement par la droite d'un véhicule tournant à gauche, et un dépassement par la droite d'un tram. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E2_Q48": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : un dépassement par la droite d'un véhicule tournant à gauche, et un dépassement par la droite d'un tram. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E2_Q49": "Un embouteillage à plusieurs files, une file avançant légèrement plus vite que celle d'à côté.",
- "E2_Q50": { "model": 3, "scene": "Une chaussée urbaine à plusieurs bandes avec une circulation dense sur toutes les bandes. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E2_Q50": {
+  "model": 3,
+  "scene": "Une chaussée urbaine à plusieurs bandes avec une circulation dense sur toutes les bandes. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E2_Q51": "Une route à deux sens séparés par un terre-plein avec plusieurs bandes de chaque côté, des voitures circulant en files uniquement dans leur sens.",
  "E2_Q52": "Une rue à sens unique à plusieurs bandes, des voitures circulant en files parallèles.",
- "E2_Q53": { "model": 3, "scene": "Une chaussée urbaine à plusieurs bandes avec des portiques de signalisation lumineuse au-dessus, panneaux flous et non identifiables. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q54": { "model": 3, "scene": "Une chaussée urbaine avec des flèches au sol annonçant un choix de bande à venir, panneau générique flouté au-dessus. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q56": { "model": 3, "scene": "Une rue urbaine à plusieurs bandes avec des voitures réparties sur les différentes bandes. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E2_Q53": {
+  "model": 3,
+  "scene": "Une chaussée urbaine à plusieurs bandes avec des portiques de signalisation lumineuse au-dessus, panneaux flous et non identifiables. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q54": {
+  "model": 3,
+  "scene": "Une chaussée urbaine avec des flèches au sol annonçant un choix de bande à venir, panneau générique flouté au-dessus. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q56": {
+  "model": 3,
+  "scene": "Une rue urbaine à plusieurs bandes avec des voitures réparties sur les différentes bandes. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E2_Q57": "Une rue à sens unique en agglomération à plusieurs bandes, une voiture choisissant la bande correspondant à sa destination.",
  "E2_Q58": "Une chaussée urbaine à deux sens avec quatre bandes (deux par sens), une voiture choisissant sa bande selon sa destination.",
  "E2_Q59": "Une route de campagne à plusieurs bandes avec une circulation modérée, les voitures restant disciplinées sur la bande de droite.",
  "E2_Q60": "Une route urbaine à plusieurs bandes qui tourne en courbe, une voiture maintenant sa bande choisie dans le virage.",
- "E2_Q61": { "model": 3, "scene": "Une chaussée urbaine à deux sens avec seulement une bande par sens (deux bandes au total). Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q62": { "model": 3, "scene": "Deux scènes juxtaposées : une chaussée dense à plusieurs bandes, et une rue urbaine calme à plusieurs bandes. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E2_Q61": {
+  "model": 3,
+  "scene": "Une chaussée urbaine à deux sens avec seulement une bande par sens (deux bandes au total). Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q62": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : une chaussée dense à plusieurs bandes, et une rue urbaine calme à plusieurs bandes. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E2_Q63": "Une motocyclette circulant entre deux files de voitures à l'arrêt dans un embouteillage.",
- "E2_Q64": { "model": 3, "scene": "Une autoroute à trois bandes en embouteillage, une motocyclette circulant entre des files de voitures. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q65": { "model": 3, "scene": "Une motocyclette circulant entre deux files de voitures dans un embouteillage, compteur de vitesse flouté. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q66": { "model": 3, "scene": "Une motocyclette circulant entre deux files de voitures dans un embouteillage. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q67": { "model": 3, "scene": "Une motocyclette circulant entre deux files de voitures roulant lentement dans un embouteillage, compteurs de vitesse floutés. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E2_Q68": { "model": 3, "scene": "Une motocyclette circulant entre deux files de voitures totalement à l'arrêt dans un embouteillage. Ajoute un unique badge « ? » discret, sans autre mot." },
-
- "CARD_E2_p0_c0": { "model": 3, "scene": "Une voiture se déportant vers la gauche pour dépasser un véhicule plus lent devant elle. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E2_Q64": {
+  "model": 3,
+  "scene": "Une autoroute à trois bandes en embouteillage, une motocyclette circulant entre des files de voitures. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q65": {
+  "model": 3,
+  "scene": "Une motocyclette circulant entre deux files de voitures dans un embouteillage, compteur de vitesse flouté. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q66": {
+  "model": 3,
+  "scene": "Une motocyclette circulant entre deux files de voitures dans un embouteillage. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q67": {
+  "model": 3,
+  "scene": "Une motocyclette circulant entre deux files de voitures roulant lentement dans un embouteillage, compteurs de vitesse floutés. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E2_Q68": {
+  "model": 3,
+  "scene": "Une motocyclette circulant entre deux files de voitures totalement à l'arrêt dans un embouteillage. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E2_p0_c0": {
+  "model": 3,
+  "scene": "Une voiture se déportant vers la gauche pour dépasser un véhicule plus lent devant elle. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E2_p0_c1": "Une voiture passant devant un véhicule stationné le long du trottoir, aucun autre trafic autour.",
- "CARD_E2_p0_c2": { "model": 3, "scene": "Une voiture dépassant un cycliste hors agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E2_p0_c3": { "model": 3, "scene": "Une voiture dépassant un cycliste en agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E2_p1_c0": { "model": 3, "scene": "Vue conducteur d'une voiture roulant derrière un véhicule plus lent sur une route dégagée. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E2_p1_c1": { "model": 3, "scene": "Vue conducteur regardant loin devant sur une route à double sens dégagée. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "CARD_E2_p0_c2": {
+  "model": 3,
+  "scene": "Une voiture dépassant un cycliste hors agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E2_p0_c3": {
+  "model": 3,
+  "scene": "Une voiture dépassant un cycliste en agglomération, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E2_p1_c0": {
+  "model": 3,
+  "scene": "Vue conducteur d'une voiture roulant derrière un véhicule plus lent sur une route dégagée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E2_p1_c1": {
+  "model": 3,
+  "scene": "Vue conducteur regardant loin devant sur une route à double sens dégagée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E2_p1_c2": "Vue conducteur d'une route à double sens dégagée à perte de vue, aucun véhicule en sens inverse visible.",
  "CARD_E2_p1_c3": "Gros plan sur un rétroviseur extérieur gauche de voiture montrant la route derrière, dégagée.",
  "CARD_E2_p1_c4": "Vue conducteur d'une voiture derrière un véhicule plus lent, longue portion de route dégagée visible après lui.",
@@ -124,20 +285,34 @@
  "CARD_E2_p2_c2": "Une voiture en plein dépassement sur une route à double sens, légère impression de vitesse.",
  "CARD_E2_p2_c3": "Gros plan sur le clignotant droit allumé à l'extérieur d'une voiture venant de terminer un dépassement.",
  "CARD_E2_p2_c4": "Un conducteur jetant un regard par-dessus son épaule droite avant de se rabattre après un dépassement.",
- "CARD_E2_p2_c5": { "model": 3, "scene": "Une voiture dépassant un autre véhicule sur une route à double sens, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E2_p3_c0": "Un véhicule devant avec son clignotant gauche allumé, déporté vers la gauche pour tourner, une voiture le dépassant par la droite.",
+ "CARD_E2_p2_c5": {
+  "model": 3,
+  "scene": "Une voiture dépassant un autre véhicule sur une route à double sens, écart latéral visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E2_p3_c0": "Vue rapprochée depuis l'arrière : un véhicule roulant devant, nettement déporté vers la GAUCHE dans sa bande (à cheval sur ou franchissant la ligne axiale), avec son clignotant GAUCHE clairement allumé (lumière orange vive bien visible), en train de préparer un virage à gauche. Une petite rue transversale ou une entrée de propriété est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Une seconde voiture le dépasse par la DROITE, restant nettement à droite sur la chaussée.",
  "CARD_E2_p3_c1": "Une voiture dépassant un tram par la droite sur une avenue urbaine.",
  "CARD_E2_p3_c2": "Un tram arrêté au milieu de la chaussée, un passager descendant directement sur la route sans bordure surélevée, une voiture freinant.",
  "CARD_E2_p4_c0": "Un embouteillage à plusieurs files, une file avançant légèrement plus vite que celle d'à côté.",
  "CARD_E2_p4_c1": "Une route à plusieurs bandes avec une circulation dense en files parallèles sur toutes les bandes.",
- "CARD_E2_p4_c2": { "model": 3, "scene": "Une chaussée urbaine avec des flèches au sol annonçant un choix de bande à venir. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "CARD_E2_p4_c2": {
+  "model": 3,
+  "scene": "Une chaussée urbaine avec des flèches au sol annonçant un choix de bande à venir. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E2_p4_c3": "Une chaussée urbaine à plusieurs bandes en agglomération, une voiture choisissant la bande correspondant à sa destination.",
  "CARD_E2_p5_c0": "Une motocyclette circulant entre deux files de voitures à l'arrêt dans un embouteillage.",
- "CARD_E2_p5_c1": { "model": 3, "scene": "Une motocyclette circulant entre deux files de voitures dans un embouteillage, compteur de vitesse flouté. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E2_p5_c2": { "model": 3, "scene": "Une motocyclette circulant entre deux files de voitures roulant lentement dans un embouteillage. Ajoute un unique badge « ? » discret, sans autre mot." },
-
+ "CARD_E2_p5_c1": {
+  "model": 3,
+  "scene": "Une motocyclette circulant entre deux files de voitures dans un embouteillage, compteur de vitesse flouté. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E2_p5_c2": {
+  "model": 3,
+  "scene": "Une motocyclette circulant entre deux files de voitures roulant lentement dans un embouteillage. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E3_Q1": "Gros plan sur une ligne blanche discontinue au centre d'une chaussée, une voiture la franchissant pour dépasser.",
- "E3_Q2": { "model": 3, "scene": "Une voiture juste après un dépassement, hésitant entre rester dans la bande de gauche ou revenir à droite, ligne discontinue visible au sol. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E3_Q2": {
+  "model": 3,
+  "scene": "Une voiture juste après un dépassement, hésitant entre rester dans la bande de gauche ou revenir à droite, ligne discontinue visible au sol. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E3_Q3": "Gros plan sur une ligne blanche continue au centre d'une chaussée, une voiture restant derrière un véhicule plus lent sans la franchir.",
  "E3_Q4": "Une ligne blanche continue au centre d'une chaussée juste à côté d'une entrée de propriété privée à gauche, une voiture restant sur sa bande.",
  "E3_Q6": "Un marquage au sol avec une ligne continue et une ligne discontinue côte à côte, la discontinue du côté de la voiture, celle-ci la franchissant pour dépasser.",
@@ -145,20 +320,38 @@
  "E3_Q8": "Un marquage au sol avec une ligne continue et une ligne discontinue côte à côte, la continue du côté de la voiture, celle-ci restant derrière un véhicule plus lent.",
  "E3_Q9": "Gros plan sur une ligne jaune discontinue au centre d'une chaussée, une voiture la franchissant pour dépasser.",
  "E3_Q10": "Gros plan sur une ligne jaune continue au centre d'une chaussée, une voiture restant derrière un véhicule plus lent sans la franchir.",
- "E3_Q11": { "model": 3, "scene": "Un dispositif surélevé (plateau ralentisseur) traversant une rue, panneau générique flouté à proximité. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E3_Q11": {
+  "model": 3,
+  "scene": "Un dispositif surélevé (plateau ralentisseur) traversant une rue, panneau générique flouté à proximité. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E3_Q12": "Une voiture ralentissant nettement à l'approche d'un dispositif surélevé annoncé, allure modérée.",
  "E3_Q13": "Une voiture dépassant un cycliste par la gauche sur une route à double sens.",
- "E3_Q15": "Un cycliste le bras gauche tendu signalant un virage à gauche, une voiture le dépassant par la droite.",
- "E3_Q18": { "model": 3, "scene": "Une route à double sens dégagée avec un carrefour visible au loin. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E3_Q15": "Un cycliste le bras gauche tendu signalant un virage à gauche. Une petite rue transversale est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Une voiture le dépassant par la droite.",
+ "E3_Q18": {
+  "model": 3,
+  "scene": "Une route à double sens dégagée avec un carrefour visible au loin. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E3_Q19": "Une voiture dépassant une motocyclette roulant lentement sur une route à double sens dégagée.",
  "E3_Q20": "Une motocyclette restant derrière une voiture plus lente sur une route à double sens, sans la dépasser.",
  "E3_Q22": "Une voiture dépassant un camion sur une route à double sens dégagée.",
  "E3_Q23": "Un autobus dépassant un véhicule plus lent sur une route à double sens dégagée.",
  "E3_Q24": "Un camion restant derrière un autobus plus lent sur une route à double sens, sans le dépasser.",
- "E3_Q25": { "model": 3, "scene": "Une route à double sens avec un carrefour visible au loin. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E3_Q28": { "model": 3, "scene": "Une voiture roulant derrière plusieurs usagers différents sur une route à double sens (silhouettes floutées). Ajoute un unique badge « ? » discret, sans autre mot." },
- "E3_Q30": { "model": 3, "scene": "Une route à double sens approchant un carrefour, sans aucun panneau visible après le carrefour. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E3_Q31": { "model": 3, "scene": "Un passage à niveau sans barrières, plusieurs véhicules à l'arrêt attendant. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E3_Q25": {
+  "model": 3,
+  "scene": "Une route à double sens avec un carrefour visible au loin. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E3_Q28": {
+  "model": 3,
+  "scene": "Une voiture roulant derrière plusieurs usagers différents sur une route à double sens (silhouettes floutées). Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E3_Q30": {
+  "model": 3,
+  "scene": "Une route à double sens approchant un carrefour, sans aucun panneau visible après le carrefour. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E3_Q31": {
+  "model": 3,
+  "scene": "Un passage à niveau sans barrières, plusieurs véhicules à l'arrêt attendant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E3_Q32": "Un passage à niveau équipé de barrières relevées, une voiture dépassant un véhicule plus lent à proximité.",
  "E3_Q33": "Un passage à niveau avec un feu blanc clignotant, une voiture dépassant un véhicule plus lent à proximité.",
  "E3_Q34": "Un passage à niveau sans barrières, une voiture dépassant un cycliste roulant lentement à proximité.",
@@ -169,39 +362,80 @@
  "E3_Q41": "Une route montant vers le sommet d'une côte sans visibilité au-delà, une voiture dépassant un cycliste.",
  "E3_Q42": "Un virage dangereux sans visibilité au-delà, une voiture restant derrière un véhicule plus lent sans le dépasser.",
  "E3_Q43": "Un virage avec une visibilité réduite mais correcte, une voiture dépassant un cycliste.",
- "E3_Q45": { "model": 3, "scene": "Deux scènes juxtaposées : un sommet de côte sans visibilité, et un virage dangereux sans visibilité, chacun avec un cycliste. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E3_Q45": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : un sommet de côte sans visibilité, et un virage dangereux sans visibilité, chacun avec un cycliste. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E3_Q47": "Une voiture approchant d'un passage pour piétons, le véhicule devant elle ralentissant nettement, aucun dépassement engagé.",
  "E3_Q49": "Une voiture stationnée illégalement empiétant sur un passage pour piétons peint au sol.",
- "E3_Q50": { "model": 3, "scene": "Une voiture stationnée sur la chaussée à quelques mètres avant un passage pour piétons peint au sol. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E3_Q50": {
+  "model": 3,
+  "scene": "Une voiture stationnée sur la chaussée à quelques mètres avant un passage pour piétons peint au sol. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E3_Q51": "Une voiture stationnée légalement sur la chaussée juste après un passage pour piétons peint au sol.",
- "E3_Q52": { "model": 3, "scene": "Trois voitures alignées en diagonale sur une route à double sens, chacune légèrement décalée vers la gauche par rapport à la précédente. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E3_Q53": { "model": 3, "scene": "Une voiture, un cyclomoteur et une autre voiture alignés en diagonale sur une route à double sens. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E3_Q55": { "model": 3, "scene": "Trois voitures alignées en diagonale sur une route à double sens. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E3_Q57": { "model": 3, "scene": "Une autoroute à trois bandes avec des voitures réparties sur les différentes bandes. Ajoute un unique badge « ? » discret, sans autre mot." },
- "E3_Q60": { "model": 3, "scene": "Un virage de route avec un cycliste roulant devant une voiture. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "E3_Q52": {
+  "model": 3,
+  "scene": "Trois voitures alignées en diagonale sur une route à double sens, chacune légèrement décalée vers la gauche par rapport à la précédente. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E3_Q53": {
+  "model": 3,
+  "scene": "Une voiture, un cyclomoteur et une autre voiture alignés en diagonale sur une route à double sens. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E3_Q55": {
+  "model": 3,
+  "scene": "Trois voitures alignées en diagonale sur une route à double sens. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E3_Q57": {
+  "model": 3,
+  "scene": "Une autoroute à trois bandes avec des voitures réparties sur les différentes bandes. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "E3_Q60": {
+  "model": 3,
+  "scene": "Un virage de route avec un cycliste roulant devant une voiture. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "E3_Q61": "Une voiture dépassant une trottinette électrique sur une route à double sens.",
- "E3_Q62": { "model": 3, "scene": "Un virage très serré avec une visibilité quasi nulle au-delà, un cycliste roulant devant une voiture. Ajoute un unique badge « ? » discret, sans autre mot." },
-
+ "E3_Q62": {
+  "model": 3,
+  "scene": "Un virage très serré avec une visibilité quasi nulle au-delà, un cycliste roulant devant une voiture. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E3_p0_c0": "Gros plan sur une ligne blanche discontinue au centre d'une chaussée, une voiture la franchissant pour dépasser.",
  "CARD_E3_p0_c1": "Gros plan sur une ligne blanche continue au centre d'une chaussée, une voiture restant derrière un véhicule plus lent sans la franchir.",
  "CARD_E3_p0_c2": "Un marquage au sol avec une ligne continue et une ligne discontinue côte à côte, vue d'ensemble neutre.",
- "CARD_E3_p1_c0": { "model": 3, "scene": "Un dispositif surélevé (plateau ralentisseur) traversant une rue résidentielle. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "CARD_E3_p1_c0": {
+  "model": 3,
+  "scene": "Un dispositif surélevé (plateau ralentisseur) traversant une rue résidentielle. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E3_p1_c1": "Une voiture dépassant un cycliste par la gauche sur une route à double sens.",
- "CARD_E3_p1_c2": "Un cycliste le bras gauche tendu signalant un virage à gauche, une voiture le dépassant par la droite.",
+ "CARD_E3_p1_c2": "Un cycliste le bras gauche tendu signalant un virage à gauche. Une petite rue transversale est clairement visible sur la gauche, juste devant lui, vers laquelle il s'apprête logiquement à tourner. Une voiture le dépassant par la droite.",
  "CARD_E3_p2_c0": "Un panneau rond réel d'interdiction de dépasser avec deux silhouettes de voitures, au bord d'une route.",
  "CARD_E3_p2_c1": "Un panneau rond réel d'interdiction de dépasser avec silhouettes de camion et de voiture, au bord d'une route.",
  "CARD_E3_p2_c2": "Un panneau rond réel barré signalant la fin d'une interdiction de dépasser, au bord d'une route.",
- "CARD_E3_p2_c3": { "model": 3, "scene": "Une voiture, une moto et un camion alignés sur une route à double sens, aucun en train de dépasser. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E3_p3_c0": { "model": 3, "scene": "Une voiture roulant derrière plusieurs usagers différents sur une route à double sens (silhouettes floutées). Ajoute un unique badge « ? » discret, sans autre mot." },
+ "CARD_E3_p2_c3": {
+  "model": 3,
+  "scene": "Une voiture, une moto et un camion alignés sur une route à double sens, aucun en train de dépasser. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E3_p3_c0": {
+  "model": 3,
+  "scene": "Une voiture roulant derrière plusieurs usagers différents sur une route à double sens (silhouettes floutées). Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E3_p3_c1": "Un passage à niveau équipé de barrières relevées, une voiture dépassant un véhicule plus lent à proximité.",
  "CARD_E3_p3_c2": "Un carrefour avec un signal triangulaire réel de cédez-le-passage, une voiture restant derrière une motocyclette sans la dépasser.",
  "CARD_E3_p3_c3": "Une route montant vers le sommet d'une côte sans visibilité au-delà, une voiture restant derrière un véhicule plus lent sans le dépasser.",
  "CARD_E3_p3_c4": "Un virage dangereux sans visibilité au-delà, une voiture restant derrière un véhicule plus lent sans le dépasser.",
  "CARD_E3_p4_c0": "Une voiture approchant d'un passage pour piétons, le véhicule devant elle ralentissant nettement, aucun dépassement engagé.",
  "CARD_E3_p4_c1": "Une voiture stationnée illégalement empiétant sur un passage pour piétons peint au sol.",
- "CARD_E3_p4_c2": { "model": 3, "scene": "Trois voitures alignées en diagonale sur une route à double sens. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E3_p4_c3": { "model": 3, "scene": "Une voiture, un cyclomoteur et une autre voiture alignés en diagonale sur une route à double sens. Ajoute un unique badge « ? » discret, sans autre mot." },
- "CARD_E3_p4_c4": { "model": 3, "scene": "Une autoroute à trois bandes avec des voitures réparties sur les différentes bandes. Ajoute un unique badge « ? » discret, sans autre mot." },
+ "CARD_E3_p4_c2": {
+  "model": 3,
+  "scene": "Trois voitures alignées en diagonale sur une route à double sens. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E3_p4_c3": {
+  "model": 3,
+  "scene": "Une voiture, un cyclomoteur et une autre voiture alignés en diagonale sur une route à double sens. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_E3_p4_c4": {
+  "model": 3,
+  "scene": "Une autoroute à trois bandes avec des voitures réparties sur les différentes bandes. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
  "CARD_E3_p5_c0": "Une voiture dépassant un cycliste à un carrefour muni d'un signal de cédez-le-passage.",
  "CARD_E3_p5_c1": "Une voiture dépassant une trottinette électrique sur une route à double sens.",
  "CARD_E3_p5_c2": "Un virage très serré avec une visibilité quasi nulle au-delà, une voiture restant derrière un cycliste sans le dépasser."
