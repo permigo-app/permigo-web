@@ -7,8 +7,11 @@ interface Props {
   userId: string | undefined;
 }
 
+const FEEDBACK_EMAIL = 'ycroitor8096@gmail.com';
+
 export default function FeedbackPromptModal({ userId }: Props) {
   const [visible, setVisible] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!userId || !hasSupabase || !supabase) return;
@@ -24,13 +27,28 @@ export default function FeedbackPromptModal({ userId }: Props) {
       });
   }, [userId]);
 
-  async function handleClose() {
+  async function markSeen() {
     if (!supabase || !userId) return;
     await supabase
       .from('profiles')
       .update({ feedback_prompt_seen: true })
       .eq('id', userId);
+  }
+
+  function handleClose() {
+    markSeen();
     setVisible(false);
+  }
+
+  async function handleCopy() {
+    try {
+      await navigator.clipboard.writeText(FEEDBACK_EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // clipboard indisponible — l'adresse reste affichée à l'écran
+    }
+    markSeen();
   }
 
   if (!visible) return null;
@@ -48,12 +66,22 @@ export default function FeedbackPromptModal({ userId }: Props) {
         <p className="modal-sub">Merci pour ton aide !</p>
         <a
           className="modal-btn"
-          href="mailto:ycroitor8096@gmail.com?subject=Avis%20sur%20MyPermiGo"
+          href={`mailto:${FEEDBACK_EMAIL}?subject=Avis%20sur%20MyPermiGo`}
           onClick={handleClose}
           style={{ display: 'block', boxSizing: 'border-box', textDecoration: 'none', textAlign: 'center' }}
         >
           Envoyer un avis par email →
         </a>
+        <p className="modal-sub" style={{ marginTop: 12, marginBottom: 6 }}>
+          Pas de messagerie configurée sur cet appareil ?
+        </p>
+        <button
+          className="modal-btn"
+          style={{ background: 'transparent', border: '1px solid var(--border)', color: 'var(--text-sub)' }}
+          onClick={handleCopy}
+        >
+          {copied ? `Copié : ${FEEDBACK_EMAIL} ✓` : `Copier l'adresse (${FEEDBACK_EMAIL})`}
+        </button>
         <button
           className="modal-btn"
           style={{ background: 'transparent', color: 'var(--text-sub)', marginTop: 8 }}

@@ -1,0 +1,743 @@
+{
+ "_comment": "Scènes thème F (La priorité) — 6 leçons (F1-F6), le plus gros thème du site. F1 personnes qualifiées, F2 signaux lumineux, F3 panneaux, F4 priorité de droite, F5 tourner, F6 train/tram/bus. Beaucoup de gestes d'agents sont basés sur un MOUVEMENT (vertical/rotatif) impossible à figer sans ambiguïté sur une question -> ambiance+? sur les questions, Modèle 3 avec flèche de mouvement autorisé sur les cartes correspondantes. Priorité/hiérarchie/exceptions abstraites -> ambiance+?. Aucun Modèle 2 (schéma priorité) sauf cas déjà validés ailleurs — préférence photo réelle.",
+ "F1_Q1": "Un agent de police en tenue au milieu d'un carrefour, un bras levé verticalement bien droit au-dessus de la tête, plusieurs voitures immobilisées autour de lui.",
+ "F1_Q2": "Un agent de police au milieu d'un carrefour, bras levé verticalement, une voiture déjà engagée dans le carrefour en train de rouler pour le dégager rapidement.",
+ "F1_Q3": "Un agent de police bras levé verticalement à un carrefour, un piéton immobile sur le trottoir au bord d'un passage piéton, n'entamant pas la traversée.",
+ "F1_Q4": "Un agent de police tendant un bras horizontalement sur le côté, une voiture arrêtée face à lui, le conducteur regardant droit vers le torse de l'agent.",
+ "F1_Q6": "Un agent de police tendant un bras horizontalement sur le côté, une voiture roulant librement dans l'axe du bras tendu, passant sans s'arrêter.",
+ "F1_Q7": {
+  "model": 3,
+  "scene": "Un agent de police au centre d'un carrefour, les deux bras tendus horizontalement de chaque côté, ambiance neutre de régulation du trafic. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q8": "Un agent de police au centre d'un carrefour, les deux bras tendus horizontalement de chaque côté, une voiture arrêtée face à lui et une autre voiture roulant librement sur le côté perpendiculaire.",
+ "F1_Q9": "De nuit, un agent de police balançant une torche à lumière rouge latéralement en direction d'une voiture qui s'arrête, phares allumés.",
+ "F1_Q10": {
+  "model": 3,
+  "scene": "Un agent de police en action à un carrefour, bras partiellement plié devant lui, ambiance neutre de régulation du trafic. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q11": {
+  "model": 3,
+  "scene": "Un agent de police en action à un carrefour, bras partiellement plié devant lui, ambiance neutre de régulation du trafic. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q12": {
+  "model": 3,
+  "scene": "Un agent de police en action à un carrefour, ambiance neutre de régulation du trafic. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q13": {
+  "model": 3,
+  "scene": "Un agent de police portant un sifflet à la bouche à un carrefour, une voiture approchant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q14": "Un conducteur au volant regardant attentivement vers un agent de police qui vient de siffler, dans l'attente de son geste.",
+ "F1_Q15": "Un agent de police penché vers la vitre ouverte d'une voiture, en train de lui parler directement et de désigner du doigt un endroit où se ranger.",
+ "F1_Q16": "Un agent de police, sifflet à la bouche, bras déjà levé verticalement, une voiture s'immobilisant devant lui.",
+ "F1_Q18": "Un agent de police au centre d'un carrefour bras tendus horizontalement, une voiture roulant librement sur son côté, et un piéton immobile face à son torse n'entamant pas la traversée.",
+ "F1_Q19": {
+  "model": 3,
+  "scene": "Un agent de police faisant signe d'arrêt à une voiture en train de doubler un autre véhicule sur une route. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q20": "Un agent de police bras levé verticalement à un passage piéton, un piéton s'arrêtant net au bord du trottoir sans traverser.",
+ "F1_Q21": "Un agent de police gesticulant vers le conducteur d'une voiture correctement stationnée le long du trottoir, lui indiquant de la déplacer.",
+ "F1_Q22": {
+  "model": 3,
+  "scene": "Un agent de police gesticulant vers le conducteur d'une voiture stationnée, expression neutre sans explication verbale visible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q23": {
+  "model": 3,
+  "scene": "Un conducteur au volant, mine hésitante, face à un agent de police qui vient de lui donner une injonction à un carrefour. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q25": "Une personne portant un brassard réfléchissant (pas un uniforme de police) faisant signe de ralentir à un carrefour, devant une école ou lors d'un événement.",
+ "F1_Q26": "Un conducteur ralentissant en obéissant à une personne portant un brassard réfléchissant qui lui fait signe à un carrefour.",
+ "F1_Q27": "Un signaleur bénévole avec brassard et petit drapeau lors d'une course cycliste, faisant signe à une voiture de s'arrêter au bord de la route.",
+ "F1_Q29": {
+  "model": 3,
+  "scene": "Une personne avec un brassard réfléchissant observant une voiture commettant une infraction à un carrefour, sans carnet ni document officiel en main. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q30": {
+  "model": 3,
+  "scene": "Deux silhouettes côte à côte : un agent de police en uniforme complet, et une personne avec un simple brassard réfléchissant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q31": "Une personne portant un brassard aux couleurs du drapeau belge, brandissant à bout de bras un panneau triangulaire rouge et blanc, au milieu d'un carrefour sans feux.",
+ "F1_Q32": {
+  "model": 3,
+  "scene": "Une personne autorisée de dos, brassard visible mais flouté, brandissant un signal à bout de bras à un carrefour. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q33": "Une personne autorisée brandissant à bout de bras un panneau triangulaire rouge et blanc de cédez-le-passage, au milieu d'un carrefour sans feux.",
+ "F1_Q34": "Après un accident, le conducteur impliqué debout au milieu de la chaussée essayant maladroitement de faire signe aux voitures, sans succès visible, circulation hésitante autour de lui.",
+ "F1_Q37": "Une voiture de police avec gyrophare bleu clignotant allumé, roulant en intervention sur une route.",
+ "F1_Q38": "Une ambulance avec gyrophare bleu clignotant allumé, roulant en intervention sur une route belge.",
+ "F1_Q39": "Une voiture de police avec gyrophare bleu clignotant allumé, circulant calmement au milieu d'une circulation normale, aucun autre véhicule ne s'écartant.",
+ "F1_Q41": "Vue depuis le rétroviseur intérieur d'une voiture : une ambulance avec gyrophare bleu clignotant approchant rapidement par l'arrière, les véhicules devant s'écartant sur les côtés.",
+ "F1_Q42": "Une route étroite de campagne, une voiture serrant au maximum à droite pour laisser passer une ambulance gyrophare bleu allumé approchant par l'arrière.",
+ "F1_Q44": "Un carrefour avec un feu vert allumé, une voiture restant à l'arrêt malgré le vert, une ambulance gyrophare bleu traversant le carrefour venant de la droite.",
+ "F1_Q45": {
+  "model": 3,
+  "scene": "Un carrefour belge avec un agent de police, un feu de signalisation et un panneau visibles simultanément, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q46": {
+  "model": 3,
+  "scene": "Un carrefour avec un feu de signalisation allumé et un panneau de priorité tous deux visibles au même endroit. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q47": "Un agent de police faisant signe d'avancer de la main à un conducteur, un feu rouge clairement visible et allumé juste au-dessus de lui.",
+ "F1_Q48": {
+  "model": 3,
+  "scene": "Une route hors agglomération avec un panneau de vitesse générique flouté, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q49": "Une ambulance gyrophare bleu allumé, immobilisée à un carrefour, un agent de police devant elle avec le bras levé lui faisant signe de s'arrêter.",
+ "F1_Q52": {
+  "model": 3,
+  "scene": "Un carrefour avec un feu jaune-orange clignotant et un panneau de priorité générique flouté visibles ensemble. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q53": {
+  "model": 3,
+  "scene": "Une chaussée à plusieurs bandes avec des portiques de signalisation lumineuse floutés au-dessus. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q54": {
+  "model": 3,
+  "scene": "Un carrefour avec un feu vert allumé et un panneau générique flouté visibles ensemble près d'une piste cyclable. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q56": {
+  "model": 3,
+  "scene": "Un agent de police en action près d'un panneau réel de limitation de vitesse, ambiance neutre de régulation du trafic. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q59": {
+  "model": 3,
+  "scene": "Une personne composant un numéro sur son téléphone après un accident de la route, écran flouté et illisible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q60": "Une borne d'appel d'urgence orange sur le bord d'une autoroute, un conducteur marchant vers elle depuis sa voiture arrêtée sur la bande d'arrêt d'urgence.",
+ "F1_Q61": "Un pompier en tenue d'intervention dirigeant la circulation près d'un camion de pompiers et d'une scène d'incendie, faisant signe à une voiture de dévier.",
+ "F1_Q62": {
+  "model": 3,
+  "scene": "Un pompier en tenue d'intervention observant une voiture près du lieu de son intervention, sans carnet ni document officiel en main. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F1_Q63": {
+  "model": 3,
+  "scene": "Deux silhouettes côte à côte : un pompier en tenue d'intervention, et un agent de police en uniforme. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F1_p0_c0": "Un agent de police en tenue au milieu d'un carrefour, un bras levé verticalement bien droit au-dessus de la tête, plusieurs voitures immobilisées autour de lui.",
+ "CARD_F1_p0_c1": "Un agent de police au centre d'un carrefour, les deux bras tendus horizontalement de chaque côté, une voiture arrêtée face à lui et une autre voiture roulant librement sur le côté perpendiculaire.",
+ "CARD_F1_p0_c2": "De nuit, un agent de police balançant une torche à lumière rouge latéralement en direction d'une voiture qui s'arrête, phares allumés.",
+ "CARD_F1_p0_c3": {
+  "model": 3,
+  "scene": "Un agent de police à un carrefour, bras tendu à mi-hauteur devant lui, une voiture face à lui roulant lentement. Ajoute une unique flèche pointant vers le bas près de la main de l'agent, sans aucun mot."
+ },
+ "CARD_F1_p1_c0": {
+  "model": 3,
+  "scene": "Un agent de police à un carrefour, bras tendu sur le côté, une voiture face à lui accélérant légèrement. Ajoute une unique flèche courbe (mouvement circulaire) près de la main de l'agent, sans aucun mot."
+ },
+ "CARD_F1_p1_c1": "Un agent de police portant un sifflet à la bouche à un carrefour, une voiture approchant.",
+ "CARD_F1_p1_c2": "Un agent de police penché vers la vitre ouverte d'une voiture, en train de lui parler directement.",
+ "CARD_F1_p2_c0": "Un agent de police faisant un geste d'arrêt, une voiture s'immobilisant instantanément juste devant lui.",
+ "CARD_F1_p2_c1": "Un agent de police bras levé verticalement à un carrefour, un piéton immobile sur le trottoir et une voiture arrêtée, tous deux obéissant.",
+ "CARD_F1_p2_c2": "Un agent de police gesticulant vers le conducteur d'une voiture correctement stationnée le long du trottoir, lui indiquant de la déplacer.",
+ "CARD_F1_p3_c0": "Une personne portant un brassard réfléchissant (pas un uniforme de police) faisant signe de ralentir devant une école, des enfants traversant derrière elle.",
+ "CARD_F1_p3_c1": "Une personne portant un brassard réfléchissant faisant signe à un conducteur de ralentir à l'approche d'un carrefour.",
+ "CARD_F1_p3_c2": {
+  "model": 3,
+  "scene": "Une personne avec un brassard réfléchissant faisant un simple geste de la main à une voiture, ambiance neutre sans document ni carnet. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F1_p3_c3": "Une personne portant un brassard aux couleurs du drapeau belge, brandissant à bout de bras un panneau triangulaire rouge et blanc, au milieu d'un carrefour sans feux.",
+ "CARD_F1_p3_c4": "Après un accident, le conducteur impliqué debout au milieu de la chaussée essayant maladroitement de faire signe aux voitures, circulation hésitante autour de lui.",
+ "CARD_F1_p4_c0": "Une voiture de police avec gyrophare bleu clignotant allumé, roulant en intervention sur une route.",
+ "CARD_F1_p4_c1": "Une voiture de police avec gyrophare bleu clignotant allumé, circulant calmement au milieu d'une circulation normale, aucun autre véhicule ne s'écartant.",
+ "CARD_F1_p4_c2": "Vue depuis le rétroviseur intérieur d'une voiture : une ambulance avec gyrophare bleu clignotant approchant rapidement par l'arrière, les véhicules devant s'écartant sur les côtés.",
+ "CARD_F1_p5_c0": {
+  "model": 3,
+  "scene": "Un carrefour belge avec un agent de police, un feu de signalisation et un panneau visibles simultanément, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F1_p5_c1": "Une ambulance gyrophare bleu allumé, immobilisée à un carrefour, un agent de police devant elle avec le bras levé lui faisant signe de s'arrêter.",
+ "CARD_F1_p5_c2": {
+  "model": 3,
+  "scene": "Un carrefour avec un feu jaune-orange clignotant et un panneau de priorité générique flouté visibles ensemble. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F1_p6_c0": {
+  "model": 3,
+  "scene": "Une personne composant un numéro sur son téléphone après un accident de la route, écran flouté et illisible. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F1_p6_c1": "Une borne d'appel d'urgence orange sur le bord d'une autoroute, un conducteur marchant vers elle depuis sa voiture arrêtée sur la bande d'arrêt d'urgence.",
+ "CARD_F1_p6_c2": "Un pompier en tenue d'intervention dirigeant la circulation près d'un camion de pompiers et d'une scène d'incendie, faisant signe à une voiture de dévier.",
+ "F2_Q1": "Une voiture immobilisée précisément derrière une ligne d'arrêt blanche peinte au sol, feu rouge allumé au-dessus.",
+ "F2_Q3": "Un feu de signalisation circulaire classique positionné sur un poteau à droite de la chaussée, une voiture approchant.",
+ "F2_Q4": "Un carrefour où le feu de signalisation est reproduit à la fois au-dessus de la chaussée sur un portique et sur un poteau à gauche.",
+ "F2_Q5": {
+  "model": 3,
+  "scene": "Un carrefour où un feu de signalisation se trouve exclusivement sur un poteau à gauche de la chaussée, aucun feu à droite. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q6": {
+  "model": 3,
+  "scene": "Un carrefour avec un feu de signalisation exclusivement à gauche et un panneau triangulaire réel de cédez-le-passage à droite. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q7": "Un carrefour avec zone avancée pour cyclistes : une voiture arrêtée à la première ligne d'arrêt, la plus éloignée du carrefour, zone cyclable vide devant elle.",
+ "F2_Q8": "Un carrefour avec zone avancée pour cyclistes : un cycliste positionné devant la seconde ligne d'arrêt, la plus proche du carrefour, des voitures arrêtées derrière lui à la première ligne.",
+ "F2_Q9": "Un carrefour avec zone avancée pour cyclistes et feu orange allumé, une voiture arrêtée à la première ligne d'arrêt, la plus éloignée du carrefour.",
+ "F2_Q11": "Un feu vert allumé mais le carrefour juste derrière est complètement encombré de véhicules à l'arrêt, une voiture attendant avant de s'engager.",
+ "F2_Q15": "Un feu de signalisation où un feu jaune-orange clignotant est allumé à l'emplacement du feu vert habituel, en dessous des autres feux, une voiture s'engageant prudemment.",
+ "F2_Q16": "Un carrefour avec un feu jaune-orange clignotant et un panneau STOP réel octogonal juste à côté, une voiture marquant l'arrêt complet.",
+ "F2_Q17": {
+  "model": 3,
+  "scene": "Un feu de signalisation avec un feu jaune-orange clignotant allumé en dessous de l'emplacement habituel du vert. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q18": {
+  "model": 3,
+  "scene": "Deux feux de signalisation juxtaposés montrant chacun un jaune-orange clignotant, l'un en position basse et l'autre en position centrale. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q19": "Une voiture freinant pour s'arrêter devant un feu jaune-orange fixe allumé.",
+ "F2_Q20": {
+  "model": 3,
+  "scene": "Une voiture très proche d'un feu qui vient de passer au jaune-orange fixe, freins visiblement sollicités. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q21": {
+  "model": 3,
+  "scene": "Un feu jaune-orange fixe allumé depuis quelques secondes à un carrefour, aucune voiture en mouvement. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q22": "Un feu de signalisation avec un jaune-orange clignotant allumé à l'emplacement central habituel du feu orange, les autres feux éteints.",
+ "F2_Q23": "Un carrefour dont les feux clignotent en jaune-orange (panne), deux voitures se rencontrant, celle de gauche cédant naturellement le passage à celle de droite.",
+ "F2_Q24": "Un carrefour aux feux clignotants en jaune-orange (panne), un panneau triangulaire réel de cédez-le-passage visible juste en dessous du feu éteint.",
+ "F2_Q26": {
+  "model": 3,
+  "scene": "Deux feux de signalisation juxtaposés montrant chacun un jaune-orange, l'un fixe et l'autre clignotant en position centrale. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q27": "Un cycliste franchissant un feu rouge en tournant à droite, un panneau additionnel réel avec pictogramme vélo visible sous le feu.",
+ "F2_Q28": "Un cycliste franchissant un feu rouge en continuant tout droit, un panneau additionnel réel avec pictogramme vélo visible sous le feu.",
+ "F2_Q30": "Un cycliste tournant à droite au feu rouge grâce à un panneau additionnel, cédant le passage à une voiture qui traverse sur la voie transversale.",
+ "F2_Q31": "Une voiture arrêtée à un feu rouge avec un panneau additionnel vélo visible sous le feu, un cycliste à côté tournant à droite librement malgré le rouge.",
+ "F2_Q33": "Un feu de signalisation affichant une flèche rouge pointant vers la gauche (et non un rond rouge classique), une voiture continuant tout droit sans s'arrêter.",
+ "F2_Q34": "Un feu de signalisation affichant une flèche verte pointant vers la droite, une voiture tournant à droite en suivant la flèche.",
+ "F2_Q36": "Un feu de signalisation affichant simultanément un rond rouge et une flèche verte vers la droite, une voiture tournant prudemment à droite.",
+ "F2_Q37": {
+  "model": 3,
+  "scene": "Une voiture tournant à droite sous un feu rouge avec flèche verte, plusieurs usagers visibles autour du carrefour de façon neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q38": "Une voiture tournant à droite sous un feu rouge avec flèche verte, s'arrêtant pour un piéton qui traverse depuis la droite.",
+ "F2_Q39": {
+  "model": 3,
+  "scene": "Deux carrefours juxtaposés : l'un avec un feu vert circulaire classique, l'autre avec un feu rouge et une flèche verte. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q41": "Dans un grand carrefour, une flèche verte isolée allumée sur un petit feu séparé, positionnée à gauche au-delà du carrefour principal.",
+ "F2_Q43": {
+  "model": 3,
+  "scene": "Un grand carrefour avec un feu rouge visible au premier plan et une flèche verte isolée allumée de l'autre côté, au loin. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q45": {
+  "model": 3,
+  "scene": "Une voiture positionnée au centre d'un grand carrefour, prête à tourner à gauche, chaussée en face totalement dégagée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q47": "Une chaussée urbaine à plusieurs bandes avec une flèche verte allumée sur un petit feu au-dessus d'une des bandes.",
+ "F2_Q48": {
+  "model": 3,
+  "scene": "Une chaussée urbaine à plusieurs bandes avec une flèche verte allumée au-dessus de la bande de gauche, une voiture restant sur la bande de droite. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q49": "Une chaussée à plusieurs bandes avec une flèche jaune-orange clignotante allumée au-dessus d'une bande, une voiture change de bande pour la quitter.",
+ "F2_Q50": {
+  "model": 3,
+  "scene": "Une chaussée dense à plusieurs bandes avec une flèche jaune-orange clignotante au-dessus d'une bande complètement embouteillée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q54": {
+  "model": 3,
+  "scene": "Trois portiques de signalisation juxtaposés au-dessus d'une chaussée, chacun avec un petit feu éteint générique. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q55": "Un passage à niveau avec un feu blanc lunaire clignotant allumé, une voiture franchissant normalement le passage.",
+ "F2_Q56": "Un passage à niveau avec un feu blanc lunaire clignotant allumé, une voiture dépassant un véhicule plus lent par la gauche à proximité.",
+ "F2_Q57": "Un passage à niveau avec deux feux rouges clignotant alternativement, une voiture immobilisée loin avant la ligne d'arrêt.",
+ "F2_Q58": "Un passage à niveau avec deux feux rouges clignotant alternativement, un piéton immobile sur le trottoir, n'entamant pas la traversée.",
+ "F2_Q59": {
+  "model": 3,
+  "scene": "Un passage à niveau avec deux feux rouges clignotants, ambiance neutre de gravité. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q62": "Un feu de signalisation affichant simultanément une silhouette de vélo et une silhouette de piéton allumées en vert, un cycliste et un piéton traversant ensemble.",
+ "F2_Q64": "Un cycliste traversant un carrefour en diagonale, un feu vert carré avec silhouette de vélo entourée de flèches clairement visible sur un poteau.",
+ "F2_Q65": {
+  "model": 3,
+  "scene": "Un carrefour avec un feu vert carré pour cycliste d'un côté et des feux classiques pour voitures de l'autre, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q66": {
+  "model": 3,
+  "scene": "Deux cyclistes arrivant de directions perpendiculaires à un carrefour sous un feu vert carré pour cyclistes. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q67": "Un tram passant sous un signal lumineux spécial composé de barres lumineuses verticales et obliques, différent des feux classiques, à un carrefour urbain.",
+ "F2_Q68": {
+  "model": 3,
+  "scene": "Un signal lumineux de transport en commun affichant un triangle lumineux pointe en bas, sur un poteau à un carrefour urbain. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q69": {
+  "model": 3,
+  "scene": "Un signal lumineux de transport en commun affichant une barre lumineuse horizontale, sur un poteau à un carrefour urbain. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F2_Q70": "Une voiture circulant exceptionnellement sur un site spécial franchissable pour contourner un obstacle, respectant un signal lumineux de transport en commun visible devant elle.",
+ "CARD_F2_p0_c0": "Une voiture immobilisée précisément derrière une ligne d'arrêt blanche peinte au sol, feu rouge allumé au-dessus.",
+ "CARD_F2_p0_c1": "Un carrefour où le feu de signalisation est reproduit à la fois au-dessus de la chaussée sur un portique et sur un poteau à droite.",
+ "CARD_F2_p0_c2": {
+  "model": 3,
+  "scene": "Un carrefour où un feu de signalisation se trouve exclusivement sur un poteau à gauche de la chaussée. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F2_p0_c3": "Un carrefour avec zone avancée pour cyclistes : une voiture arrêtée à la première ligne d'arrêt, la plus éloignée, et un cycliste positionné devant à la seconde ligne, la plus proche du carrefour.",
+ "CARD_F2_p1_c0": "Un feu vert allumé à un carrefour totalement dégagé, une voiture s'y engageant normalement.",
+ "CARD_F2_p1_c1": "Un feu vert allumé mais le carrefour juste derrière est complètement encombré de véhicules à l'arrêt, une voiture attendant avant de s'engager.",
+ "CARD_F2_p1_c2": {
+  "model": 3,
+  "scene": "Un feu vert allumé à un carrefour, un panneau de priorité générique flouté visible juste en dessous du feu. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F2_p1_c3": "Un feu de signalisation où un feu jaune-orange clignotant est allumé à l'emplacement du feu vert habituel, en dessous des autres feux, une voiture s'engageant prudemment.",
+ "CARD_F2_p2_c0": "Une voiture freinant pour s'arrêter devant un feu jaune-orange fixe allumé.",
+ "CARD_F2_p2_c1": "Un feu de signalisation avec un jaune-orange clignotant allumé à l'emplacement central habituel du feu orange, les autres feux éteints.",
+ "CARD_F2_p2_c2": "Un carrefour dont les feux clignotent en jaune-orange (panne), deux voitures se rencontrant, celle de gauche cédant naturellement le passage à celle de droite.",
+ "CARD_F2_p3_c0": "Un cycliste franchissant un feu rouge en tournant à droite, un panneau additionnel réel avec pictogramme vélo visible sous le feu.",
+ "CARD_F2_p3_c1": "Un cycliste franchissant un feu rouge en continuant tout droit, un panneau additionnel réel avec pictogramme vélo visible sous le feu.",
+ "CARD_F2_p3_c2": "Un cycliste tournant à droite au feu rouge grâce à un panneau additionnel, cédant le passage à une voiture qui traverse sur la voie transversale.",
+ "CARD_F2_p3_c3": "Un feu de signalisation composé de flèches directionnelles colorées au lieu de ronds classiques, à un carrefour urbain.",
+ "CARD_F2_p3_c4": "Un feu de signalisation affichant simultanément un rond rouge et une flèche verte vers la droite, une voiture tournant prudemment à droite.",
+ "CARD_F2_p4_c0": "Dans un grand carrefour, une flèche verte isolée allumée sur un petit feu séparé, positionnée à gauche au-delà du carrefour principal.",
+ "CARD_F2_p4_c1": {
+  "model": 3,
+  "scene": "Un grand carrefour vu depuis une voiture positionnée au centre pour tourner à gauche, feu rouge visible pour le sens inverse. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F2_p4_c2": {
+  "model": 3,
+  "scene": "Un grand carrefour avec un feu rouge visible au premier plan et une flèche verte isolée allumée de l'autre côté, au loin. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F2_p5_c0": "Une chaussée urbaine à plusieurs bandes avec une flèche verte allumée sur un petit feu au-dessus d'une des bandes.",
+ "CARD_F2_p5_c1": "Une chaussée à plusieurs bandes avec une flèche jaune-orange clignotante allumée au-dessus d'une bande, une voiture changeant de bande pour la quitter.",
+ "CARD_F2_p5_c2": "Une chaussée à plusieurs bandes avec une croix rouge lumineuse allumée au-dessus d'une bande, cette bande visiblement vide de tout véhicule.",
+ "CARD_F2_p6_c0": "Un passage à niveau avec deux feux rouges clignotant alternativement, une voiture immobilisée loin avant la ligne d'arrêt.",
+ "CARD_F2_p6_c1": "Un feu de signalisation affichant simultanément une silhouette de vélo et une silhouette de piéton allumées en vert, un cycliste et un piéton traversant ensemble.",
+ "CARD_F2_p6_c2": "Un tram passant sous un signal lumineux spécial composé de barres lumineuses verticales et obliques, différent des feux classiques, à un carrefour urbain.",
+ "F3_Q3": "Une route prioritaire avec un panneau réel losange jaune visible, une voiture roulant avec assurance à travers un carrefour sans ralentir.",
+ "F3_Q4": "Une route prioritaire avec un panneau réel losange jaune, un feu de signalisation également présent au carrefour, une voiture s'arrêtant au rouge malgré la priorité.",
+ "F3_Q5": "Une voiture dépassant par la gauche un véhicule plus lent en plein milieu d'un carrefour, sur une route prioritaire signalée par un panneau réel losange jaune.",
+ "F3_Q9": {
+  "model": 3,
+  "scene": "Un carrefour de campagne sans aucun panneau ni feu visible, deux routes se rencontrant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F3_Q13": "Un panneau réel rectangulaire annonçant une priorité au prochain carrefour, avec de petites lignes perpendiculaires sur ses côtés, fixé au bord d'une route.",
+ "F3_Q14": "Un panneau réel rectangulaire annonçant une priorité au prochain carrefour, avec de petites lignes uniquement du côté droit, fixé au bord d'une route.",
+ "F3_Q15": "Une voiture dépassant par la gauche un véhicule plus lent en plein milieu d'un carrefour, un panneau réel de priorité au prochain carrefour visible.",
+ "F3_Q17": "Un panneau additionnel bleu rectangulaire sous un signal de priorité, montrant une large ligne blanche représentant le tracé de la route prioritaire.",
+ "F3_Q18": "Une route prioritaire qui tourne nettement à droite à un carrefour, une voiture suivant la courbe avec un panneau additionnel bleu directionnel visible.",
+ "F3_Q19": "Une route prioritaire qui tourne nettement à gauche à un carrefour, une voiture suivant la courbe avec un panneau additionnel bleu directionnel visible.",
+ "F3_Q22": "Un panneau triangulaire réel de cédez-le-passage à un carrefour, un piéton immobile sur le trottoir de la voie transversale, sans traverser.",
+ "F3_Q23": "Un panneau triangulaire réel de cédez-le-passage à un carrefour totalement dégagé, une voiture s'engageant sans marquer d'arrêt complet.",
+ "F3_Q24": {
+  "model": 3,
+  "scene": "Deux carrefours juxtaposés : l'un avec un panneau réel de cédez-le-passage, l'autre avec un panneau réel STOP. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F3_Q25": "Gros plan sur un marquage au sol en dents de requin (petits triangles blancs pointe en bas) peint en travers d'une voie, à l'approche d'un carrefour.",
+ "F3_Q31": "Un panneau triangulaire réel de cédez-le-passage, une voiture attendant qu'un seul véhicule passe sur la voie transversale venant de la gauche.",
+ "F3_Q33": "Un panneau triangulaire réel de cédez-le-passage avec un panonceau additionnel cyclistes, un cycliste traversant sur une piste cyclable venant de la gauche.",
+ "F3_Q34": "Gros plan sur un marquage au sol en dents de requin, une voiture immobilisée précisément à cet endroit.",
+ "F3_Q35": "Un panneau réel STOP octogonal rouge, une voiture marquant un arrêt complet à la ligne d'arrêt juste en dessous.",
+ "F3_Q36": "De nuit, un panneau réel STOP octogonal éclairé par les phares, une voiture s'arrêtant complètement sur une route de campagne totalement déserte.",
+ "F3_Q38": "Gros plan sur une ligne d'arrêt blanche peinte au sol juste sous un panneau réel STOP octogonal, une voiture immobilisée exactement dessus.",
+ "F3_Q40": "Une voiture qui vient de marquer l'arrêt à un panneau STOP réel et s'engage maintenant dans un carrefour totalement dégagé.",
+ "F3_Q43": "Un rond-point avec un dispositif central bien visible, un panneau réel B1 ou B5 à l'entrée, et un panneau bleu rond à trois flèches en cercle.",
+ "F3_Q44": "Un rond-point dont le dispositif central a une forme ovale plutôt que parfaitement circulaire, entouré par la chaussée giratoire.",
+ "F3_Q45": "Plusieurs voitures circulant toutes dans le même sens giratoire autour du dispositif central d'un rond-point.",
+ "F3_Q46": "Une voiture entrant dans un rond-point, aucun clignotant allumé, virage naturel vers la droite en suivant la chaussée giratoire.",
+ "F3_Q47": "Une voiture circulant à l'intérieur d'un rond-point, clignotant droit allumé, approchant de la sortie qu'elle va emprunter.",
+ "F3_Q48": "Une voiture attendant à l'entrée d'un rond-point pendant qu'un autre véhicule déjà engagé dans le giratoire passe devant elle en venant de la gauche.",
+ "F3_Q51": "Une voiture sortant d'un rond-point, cédant le passage à un cycliste circulant sur la piste cyclable qui longe le rond-point.",
+ "F3_Q52": "Une voiture sortant d'un rond-point, cédant le passage à un piéton qui traverse la chaussée de sortie.",
+ "F3_Q54": {
+  "model": 3,
+  "scene": "Un rond-point avec une piste cyclable et un petit triangle inversé à l'écart de l'anneau principal, un cycliste approchant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F3_Q56": "Une place ronde en ville sans dispositif central marqué ni panneaux d'entrée giratoires, deux voitures se croisant normalement selon la priorité de droite.",
+ "F3_Q59": {
+  "model": 3,
+  "scene": "Une voiture circulant à l'intérieur d'un rond-point, ayant déjà dépassé une première sortie, une seconde sortie approchant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F3_p0_c0": "Un panneau réel losange jaune de voie prioritaire, fixé au bord d'une route belge.",
+ "CARD_F3_p0_c1": "Une route prioritaire avec un panneau réel losange jaune visible, une voiture roulant avec assurance à travers un carrefour sans ralentir.",
+ "CARD_F3_p0_c2": "Une voiture dépassant par la gauche un véhicule plus lent en plein milieu d'un carrefour, sur une route prioritaire signalée par un panneau réel losange jaune.",
+ "CARD_F3_p0_c3": "Un panneau réel losange jaune barré d'une diagonale, signalant la fin d'une voie prioritaire, fixé au bord d'une route.",
+ "CARD_F3_p1_c0": "Un panneau réel rectangulaire annonçant une priorité au prochain carrefour uniquement, fixé au bord d'une route.",
+ "CARD_F3_p1_c1": "Un panneau réel rectangulaire de priorité au prochain carrefour, avec de petites lignes perpendiculaires sur ses côtés, fixé au bord d'une route.",
+ "CARD_F3_p1_c2": "Une voiture dépassant par la gauche un véhicule plus lent en plein milieu d'un carrefour, un panneau réel de priorité au prochain carrefour visible.",
+ "CARD_F3_p1_c3": "Un panneau additionnel bleu rectangulaire sous un signal de priorité, montrant une large ligne blanche représentant le tracé de la route prioritaire.",
+ "CARD_F3_p2_c0": "Un panneau triangulaire réel de cédez-le-passage, pointe vers le bas, fixé au bord d'une route à un carrefour.",
+ "CARD_F3_p2_c1": "Un panneau triangulaire réel de cédez-le-passage à un carrefour totalement dégagé, une voiture s'engageant sans marquer d'arrêt complet.",
+ "CARD_F3_p2_c2": "Gros plan sur un marquage au sol en dents de requin (petits triangles blancs pointe en bas) peint en travers d'une voie, à l'approche d'un carrefour.",
+ "CARD_F3_p2_c3": "Un panneau triangulaire réel de cédez-le-passage avec un panonceau additionnel cyclistes, un cycliste traversant sur une piste cyclable venant de la gauche.",
+ "CARD_F3_p2_c4": "Un panneau triangulaire réel de danger annonçant un cédez-le-passage à venir, avec un panonceau de distance, au bord d'une route de campagne.",
+ "CARD_F3_p3_c0": "Un panneau réel STOP octogonal rouge, une voiture marquant un arrêt complet à la ligne d'arrêt juste en dessous.",
+ "CARD_F3_p3_c1": "De nuit, un panneau réel STOP octogonal éclairé par les phares, une voiture s'arrêtant complètement sur une route de campagne totalement déserte.",
+ "CARD_F3_p3_c2": "Un panneau réel STOP octogonal avec un panonceau additionnel cyclistes en dessous, fixé au bord d'une route.",
+ "CARD_F3_p4_c0": "Un rond-point avec un dispositif central bien visible, un panneau réel B1 ou B5 à l'entrée, et un panneau bleu rond à trois flèches en cercle.",
+ "CARD_F3_p4_c1": "Une voiture circulant à l'intérieur d'un rond-point, clignotant droit allumé, approchant de la sortie qu'elle va emprunter.",
+ "CARD_F3_p4_c2": "Une voiture attendant à l'entrée d'un rond-point pendant qu'un autre véhicule déjà engagé dans le giratoire passe devant elle en venant de la gauche.",
+ "CARD_F3_p4_c3": "Une voiture sortant d'un rond-point, cédant le passage à un cycliste circulant sur la piste cyclable qui longe le rond-point.",
+ "CARD_F3_p4_c4": {
+  "model": 3,
+  "scene": "Un rond-point avec une piste cyclable et un petit triangle inversé à l'écart de l'anneau principal, un cycliste approchant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F3_p4_c5": "Une place ronde en ville sans dispositif central marqué ni panneaux d'entrée giratoires, deux voitures se croisant normalement selon la priorité de droite.",
+ "F4_Q1": "Un carrefour sans aucun panneau, feu ou marquage de priorité, deux routes de gabarit similaire se croisant, aucune signalisation visible.",
+ "F4_Q2": "Un agent de police réglant la circulation au centre d'un carrefour sans aucun panneau ni feu, bras levé donnant des injonctions.",
+ "F4_Q4": {
+  "model": 3,
+  "scene": "Un carrefour sans aucune signalisation, une voiture amorçant un virage à un croisement. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q6": {
+  "model": 3,
+  "scene": "Un rond-point vu de l'extérieur, ambiance neutre de carrefour giratoire. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q7": "Un carrefour sans signalisation, une voiture immobile marquant une courte pause du côté droit, une autre voiture attendant qu'elle reparte.",
+ "F4_Q9": "Un carrefour à priorité de droite sans aucun panneau, une voiture restant derrière une autre voiture sans la dépasser à l'intérieur du carrefour.",
+ "F4_Q10": "Un carrefour à priorité de droite sans aucun panneau, une voiture restant derrière une motocyclette sans la dépasser à l'intérieur du carrefour.",
+ "F4_Q11": "Un carrefour à priorité de droite sans aucun panneau, une voiture dépassant par la gauche un cycliste à l'intérieur même du carrefour.",
+ "F4_Q12": "Un carrefour sans signalisation, une file de voitures totalement à l'arrêt sur la voie de droite en raison d'un embouteillage, un autre véhicule attendant patiemment.",
+ "F4_Q13": "Deux conducteurs à un carrefour sans signalisation se regardant à travers leurs pare-brises, l'un d'eux faisant un signe de la main.",
+ "F4_Q14": "Un conducteur bloqué dans un embouteillage à un carrefour faisant un geste de la main pour inviter un autre véhicule à passer.",
+ "F4_Q15": "Un carrefour sans signalisation, la route à droite totalement dégagée à perte de vue, une voiture s'engageant normalement.",
+ "F4_Q16": {
+  "model": 3,
+  "scene": "Un carrefour sans signalisation avec deux voitures arrivant simultanément de deux directions perpendiculaires. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q18": {
+  "model": 3,
+  "scene": "Une route de campagne sinueuse avec une visibilité réduite approchant un carrefour caché par des haies. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q20": {
+  "model": 3,
+  "scene": "Une rue à sens unique avec un panonceau additionnel cyclistes, débouchant sur un carrefour sans signalisation. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q22": "Un carrefour à priorité de droite, une voiture venant de droite traversant une bande cyclable suggérée en pointillés sans marquer d'arrêt spécial.",
+ "F4_Q23": "Une voiture sortant d'une propriété privée et traversant une piste cyclable séparée, cédant le passage à un cycliste qui y circule.",
+ "F4_Q24": "Une voiture sortant d'une propriété privée et traversant un trottoir, cédant le passage à un piéton qui y marche.",
+ "F4_Q25": {
+  "model": 3,
+  "scene": "Un carrefour où une piste cyclable, une voiture venant de droite et une voiture entrant depuis une propriété se rencontrent au même endroit. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q26": {
+  "model": 3,
+  "scene": "Un carrefour à priorité de droite avec une bande cyclable suggérée en pointillés traversant la voie de droite. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q30": "Un carrefour sans signalisation, un panneau réel de sens interdit visible sur une petite rue à droite, une voiture principale ne cédant pas le passage à un véhicule qui en sortirait en infraction.",
+ "F4_Q31": "Une rue à sens unique avec un panonceau additionnel autorisant les cyclistes à contresens, un cycliste débouchant de cette rue sur un carrefour sans signalisation, une voiture lui cédant le passage.",
+ "F4_Q33": {
+  "model": 3,
+  "scene": "Un carrefour de campagne sans signalisation, un TRAM VISIBLE ET RECONNAISSABLE (véhicule complet, pas seulement des rails) approchant sur sa voie intégrée dans la chaussée, arrivant de la droite. Le tram doit être clairement identifiable comme véhicule, pas juste suggéré par des rails ou caténaires. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q34": {
+  "model": 3,
+  "scene": "Un carrefour de campagne sans signalisation, un TRAM VISIBLE ET RECONNAISSABLE (véhicule complet, pas seulement des rails) approchant de face sur sa voie intégrée dans la chaussée, une voiture venant de la droite. Le tram doit être clairement identifiable comme véhicule, pas juste suggéré par des rails ou caténaires. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q35": {
+  "model": 3,
+  "scene": "Un carrefour de campagne sans aucun panneau ni marquage, deux routes de gabarit similaire se croisant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q36": "Une voie ferrée de tram intégrée dans la chaussée à un carrefour sans signalisation, un tram approchant de la gauche, une voiture s'arrêtant pour le laisser passer.",
+ "F4_Q38": "Un carrefour sans signalisation où une voiture venant de droite vient de s'engager après avoir laissé passer un piéton et un cycliste, une autre voiture attendant son tour derrière.",
+ "F4_Q39": "Un carrefour sans signalisation, une voiture arrivant de droite et un cycliste sur une bande cyclable suggérée arrivant également de droite au même moment.",
+ "F4_Q41": "Une voiture roulant sur une chaussée asphaltée normale, un véhicule arrivant de la droite depuis un chemin de terre non asphalté à un croisement.",
+ "F4_Q42": "Un chemin de terre non asphalté dont les tout derniers mètres avant la route sont pavés, débouchant sur une chaussée asphaltée normale.",
+ "F4_Q44": "Une voiture roulant sur un chemin de terre non asphalté, un autre véhicule arrivant de la droite depuis un second chemin de terre similaire.",
+ "F4_Q46": {
+  "model": 3,
+  "scene": "Une voiture sortant d'une allée privée carrossable, s'apprêtant à déboucher sur la chaussée, un piéton marchant sur le trottoir juste devant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q49": {
+  "model": 3,
+  "scene": "Une voiture quittant une place de stationnement en bord de chaussée, s'apprêtant à rejoindre la circulation. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q51": {
+  "model": 3,
+  "scene": "Une voiture entrant dans un rond-point, un autre véhicule circulant déjà à l'intérieur du giratoire venant de la gauche. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q55": {
+  "model": 3,
+  "scene": "Un carrefour de campagne sans aucune signalisation, un TRAM VISIBLE ET RECONNAISSABLE (véhicule complet, pas seulement des rails) approchant sur sa voie intégrée dans la chaussée, une voiture arrivant de face, une autre venant de droite. Le tram doit être clairement identifiable comme véhicule, pas juste suggéré par des rails ou caténaires. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q56": {
+  "model": 3,
+  "scene": "Un carrefour de campagne sans aucune signalisation, une voiture venant de droite approchant. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q59": "Un carrefour avec un feu vert allumé, une voie ferrée de tram intégrée dans la chaussée, un tram approchant avec ses propres feux visibles à côté.",
+ "CARD_F4_p0_c0": "Un carrefour sans aucun panneau, feu ou marquage de priorité, deux routes de gabarit similaire se croisant, aucune signalisation visible.",
+ "CARD_F4_p0_c1": {
+  "model": 3,
+  "scene": "Un carrefour sans signalisation, une voiture amorçant un virage à un croisement. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F4_p0_c2": "Un carrefour sans signalisation, une voiture immobile marquant une courte pause du côté droit, une autre voiture attendant qu'elle reparte.",
+ "CARD_F4_p0_c3": "Un carrefour à priorité de droite sans aucun panneau, une voiture restant derrière une motocyclette sans la dépasser à l'intérieur du carrefour.",
+ "CARD_F4_p0_c4": "Un carrefour sans signalisation, une file de voitures totalement à l'arrêt sur la voie de droite en raison d'un embouteillage, un autre véhicule attendant patiemment avec un contact visuel.",
+ "CARD_F4_p1_c0": "Un panneau réel triangulaire sur pointe avec une croix à l'intérieur, signal de priorité de droite, fixé au bord d'une route.",
+ "CARD_F4_p1_c1": {
+  "model": 3,
+  "scene": "Une route de campagne sinueuse avec une visibilité réduite approchant un carrefour caché par des haies. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F4_p2_c0": "Une voiture venant de droite traversant une piste cyclable séparée puis un trottoir avant un carrefour, cédant le passage à un cycliste puis à un piéton.",
+ "CARD_F4_p2_c1": {
+  "model": 3,
+  "scene": "Un carrefour à priorité de droite avec une bande cyclable suggérée en pointillés traversant la voie de droite. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F4_p2_c2": "Une voiture venant de droite s'arrêtant d'abord pour un piéton sur un passage clouté avant de continuer dans le carrefour.",
+ "CARD_F4_p2_c3": "Un carrefour sans signalisation, un panneau réel de sens interdit visible sur une petite rue à droite, une voiture principale ne cédant pas le passage.",
+ "CARD_F4_p2_c4": "Une voie ferrée de tram intégrée dans la chaussée à un carrefour sans signalisation, un tram approchant de la droite, une voiture s'arrêtant pour le laisser passer.",
+ "CARD_F4_p3_c0": "Un chemin de terre non asphalté débouchant sur une route asphaltée normale, une voiture venant du chemin de terre cédant le passage à la circulation de la route principale.",
+ "CARD_F4_p3_c1": "Une voiture roulant sur un chemin de terre non asphalté, un autre véhicule arrivant de la droite depuis un second chemin de terre similaire.",
+ "CARD_F4_p3_c2": "Une voiture sortant d'une allée privée carrossable pour déboucher sur la chaussée, cédant le passage à tous les usagers y compris un piéton sur le trottoir.",
+ "CARD_F4_p3_c3": "Une voiture quittant une place de stationnement en bord de chaussée, cédant le passage à la circulation qui arrive.",
+ "CARD_F4_p3_c4": {
+  "model": 3,
+  "scene": "Une voiture entrant dans un rond-point, un autre véhicule circulant déjà à l'intérieur du giratoire venant de la gauche. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F4_p3_c5": {
+  "model": 3,
+  "scene": "Un carrefour de campagne sans aucune signalisation, une voie ferrée de tram intégrée dans la chaussée, une voiture venant de droite. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F4_Q3": {
+  "model": 3,
+  "scene": "Un carrefour avec un feu de signalisation fonctionnel allumé, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q1": {
+  "model": 3,
+  "scene": "Un carrefour où deux voitures se font face, l'une allant tout droit, l'autre positionnée pour tourner. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q3": {
+  "model": 3,
+  "scene": "Une voiture amorçant un virage à gauche à un carrefour, un véhicule arrivant en sens inverse. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q4": {
+  "model": 3,
+  "scene": "Un carrefour où deux voitures se font face, chacune amorçant un virage dans une direction différente. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q6": "Deux voitures se faisant face à un carrefour sans flèches au sol, toutes deux tournant à gauche, se croisant chacune par la droite de l'autre.",
+ "F5_Q7": "Un carrefour avec des flèches directionnelles peintes au sol indiquant un croisement par la gauche, deux voitures tournant à gauche suivant ce tracé.",
+ "F5_Q8": "Une voiture tournant à droite dans une rue latérale, un piéton traversant cette rue sans passage pour piétons aménagé, la voiture s'arrêtant pour le laisser passer.",
+ "F5_Q9": "Une voiture tournant à gauche, un cycliste traversant la chaussée dans laquelle elle s'engage, la voiture cédant le passage.",
+ "F5_Q10": {
+  "model": 3,
+  "scene": "Un carrefour vu de façon neutre avec une voiture tournant à droite et une autre à gauche à des moments différents. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q11": {
+  "model": 3,
+  "scene": "Un carrefour avec un piéton traversant, une voiture allant tout droit, et un véhicule tournant, tous présents en même temps. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q12": {
+  "model": 3,
+  "scene": "Un carrefour avec un cycliste traversant, une voiture tournant à droite et une autre à gauche, tous présents en même temps. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q15": "Une voiture positionnée le plus près possible du bord gauche d'une rue à sens unique, clignotant gauche allumé, prête à tourner à gauche.",
+ "F5_Q16": "Une voiture positionnée le plus près possible de l'axe médian d'une chaussée à double sens, clignotant gauche allumé, prête à tourner à gauche.",
+ "F5_Q18": "Une voiture positionnée le plus à droite possible d'une chaussée à double sens, clignotant droit allumé, prête à tourner à droite.",
+ "F5_Q19": "Une voiture positionnée à droite prête à tourner à droite, un cycliste circulant juste à côté d'elle sur sa droite.",
+ "F5_Q20": {
+  "model": 3,
+  "scene": "Une voiture sur une chaussée à double sens, clignotant gauche allumé, position sur la chaussée à déterminer. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q21": {
+  "model": 3,
+  "scene": "Une voiture sur une chaussée à double sens, clignotant gauche allumé, un véhicule arrivant en sens inverse au loin. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q23": "Gros plan sur les yeux d'un conducteur regardant dans son rétroviseur intérieur avant d'entamer un virage à gauche.",
+ "F5_Q24": "Un conducteur tournant la tête par-dessus son épaule gauche pour vérifier son angle mort avant de tourner.",
+ "F5_Q25": "Gros plan sur le clignotant gauche qui s'allume à l'extérieur d'une voiture se préparant à tourner.",
+ "F5_Q26": {
+  "model": 3,
+  "scene": "Un conducteur au volant, main proche du levier de clignotant, s'apprêtant à amorcer un virage à gauche. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q28": {
+  "model": 3,
+  "scene": "Un conducteur tournant à gauche après un rapide coup d'œil au rétroviseur, tête non tournée vers l'épaule. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q29": "Une voiture changeant de direction à un carrefour, un piéton traversant la chaussée sur laquelle elle s'engage, la voiture cédant le passage.",
+ "F5_Q30": "Une voiture tournant à un carrefour, un cycliste circulant sur une piste cyclable adjacente à la chaussée dans laquelle elle s'engage, la voiture cédant le passage.",
+ "F5_Q33": {
+  "model": 3,
+  "scene": "Une voiture effectuant une manœuvre inhabituelle sur une route calme, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q34": "Un conducteur regardant attentivement autour de lui dans toutes les directions avant d'entamer une marche arrière.",
+ "F5_Q35": {
+  "model": 3,
+  "scene": "Une voiture changeant de bande de circulation, un piéton et un autre véhicule visibles à proximité. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q36": "Une voiture avec son clignotant gauche allumé, immobile, attendant que la voie soit libre avant de changer de bande.",
+ "F5_Q38": {
+  "model": 3,
+  "scene": "Une voiture effectuant une manœuvre sur une route calme avec d'autres usagers à proximité, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q39": "Une voiture changeant de bande de circulation sur une route urbaine à plusieurs bandes, clignotant activé.",
+ "F5_Q40": "Une voiture avec son clignotant activé essayant de s'insérer sur la bande de gauche déjà occupée par un autre véhicule qui poursuit sa route.",
+ "F5_Q41": "Une voiture effectuant un demi-tour complet au milieu d'une chaussée déserte.",
+ "F5_Q46": "Une voiture en train de reculer sur une petite route, le conducteur tourné vers l'arrière pour observer.",
+ "F5_Q47": "Une voiture reculant prudemment dans une rue résidentielle calme, le conducteur très attentif, aucun enfant visible à proximité.",
+ "F5_Q48": "Une voiture traversant perpendiculairement une chaussée en dehors de tout carrefour pour entrer dans une propriété privée.",
+ "F5_Q49": {
+  "model": 3,
+  "scene": "Une voiture traversant une chaussée en dehors d'un carrefour, plusieurs usagers visibles sur la route. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q50": "Une bande de circulation qui se termine, annoncée par un panneau réel et un marquage au sol en biais, une voiture s'insérant sur la bande adjacente.",
+ "F5_Q52": "Deux files de voitures denses fusionnant en alternance à l'endroit où une bande de circulation se termine, façon fermeture éclair.",
+ "F5_Q53": "Une chaussée qui se rétrécit simplement sur la droite sans aucun marquage de bandes au sol, une voiture restant à droite ayant la priorité.",
+ "F5_Q54": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : une chaussée avec des bandes tracées qui se terminent, et une chaussée qui se rétrécit simplement sans bandes. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F5_Q55": "Une chaussée avec des bandes de circulation clairement tracées au sol, la bande de droite se terminant, un véhicule dessus devant s'insérer sur la bande de gauche.",
+ "F5_Q57": "Une voiture effectuant une manœuvre de stationnement en créneau entre deux véhicules déjà garés le long d'un trottoir.",
+ "F5_Q58": "Une voiture quittant un parking privé et débouchant prudemment sur la chaussée, cédant le passage à la circulation.",
+ "CARD_F5_p0_c0": {
+  "model": 3,
+  "scene": "Un carrefour où deux voitures se font face, l'une allant tout droit, l'autre positionnée pour tourner à gauche. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F5_p0_c1": {
+  "model": 3,
+  "scene": "Un carrefour où deux voitures se font face, chacune amorçant un virage dans une direction différente. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F5_p0_c2": "Deux voitures se faisant face à un carrefour sans flèches au sol, toutes deux tournant à gauche, se croisant chacune par la droite de l'autre.",
+ "CARD_F5_p0_c3": "Une voiture tournant à droite dans une rue latérale, un piéton traversant cette rue sans passage pour piétons aménagé, la voiture s'arrêtant pour le laisser passer.",
+ "CARD_F5_p0_c4": {
+  "model": 3,
+  "scene": "Une voiture amorçant un virage à gauche à un carrefour, un véhicule arrivant en sens inverse. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F5_p1_c0": "Une voiture positionnée le plus près possible du bord gauche d'une rue à sens unique, clignotant gauche allumé, prête à tourner à gauche.",
+ "CARD_F5_p1_c1": "Une voiture positionnée le plus près possible de l'axe médian d'une chaussée à double sens, clignotant gauche allumé, prête à tourner à gauche.",
+ "CARD_F5_p1_c2": "Une voiture positionnée le plus à droite possible d'une chaussée à double sens, clignotant droit allumé, un cycliste circulant juste à côté d'elle sur sa droite.",
+ "CARD_F5_p1_c3": {
+  "model": 3,
+  "scene": "Une voiture sur une chaussée à double sens, clignotant gauche allumé, position sur la chaussée à déterminer. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F5_p1_c4": {
+  "model": 3,
+  "scene": "Un conducteur au volant, main proche du levier de clignotant, s'apprêtant à amorcer un virage à gauche. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F5_p2_c0": "Une voiture changeant de direction à un carrefour, un piéton traversant la chaussée sur laquelle elle s'engage, la voiture cédant le passage.",
+ "CARD_F5_p2_c1": "Une voiture tournant à un carrefour, un cycliste circulant sur une piste cyclable adjacente à la chaussée dans laquelle elle s'engage, la voiture cédant le passage.",
+ "CARD_F5_p2_c2": {
+  "model": 3,
+  "scene": "Une voiture effectuant une manœuvre inhabituelle sur une route calme, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F5_p2_c3": "Un conducteur regardant attentivement autour de lui dans toutes les directions avant d'entamer une marche arrière.",
+ "CARD_F5_p3_c0": "Une voiture avec son clignotant activé essayant de s'insérer sur la bande de gauche déjà occupée par un autre véhicule qui poursuit sa route.",
+ "CARD_F5_p3_c1": "Une voiture effectuant un demi-tour complet au milieu d'une chaussée déserte.",
+ "CARD_F5_p3_c2": "Une voiture en train de reculer sur une petite route, le conducteur tourné vers l'arrière pour observer.",
+ "CARD_F5_p3_c3": "Une voiture traversant perpendiculairement une chaussée en dehors de tout carrefour pour entrer dans une propriété privée.",
+ "CARD_F5_p3_c4": "Deux files de voitures denses fusionnant en alternance à l'endroit où une bande de circulation se termine, façon fermeture éclair.",
+ "CARD_F5_p3_c5": {
+  "model": 3,
+  "scene": "Deux scènes juxtaposées : une chaussée avec des bandes tracées qui se terminent, et une chaussée qui se rétrécit simplement sans bandes. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q1": "Un long train de marchandises approchant au loin d'un passage à niveau, une voiture attendant prudemment derrière la ligne d'arrêt.",
+ "F6_Q2": {
+  "model": 3,
+  "scene": "Un train roulant sur des rails rectilignes approchant un passage à niveau. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q8": "Un passage à niveau sans aucune barrière, seulement des panneaux d'avertissement, une voiture ralentissant avec une extrême prudence.",
+ "F6_Q9": "Un passage à niveau avec un feu blanc lunaire clignotant allumé, une voiture franchissant normalement le passage.",
+ "F6_Q10": "Un passage à niveau avec deux feux rouges clignotant alternativement et un signal sonore, une voiture immobilisée loin avant la ligne d'arrêt.",
+ "F6_Q11": "Un passage à niveau avec deux feux rouges clignotant alternativement, un piéton immobile sur le trottoir, n'entamant pas la traversée.",
+ "F6_Q12": "Les barrières d'un passage à niveau en train de s'abaisser, encore à mi-hauteur, une voiture prudemment arrêtée loin en amont.",
+ "F6_Q13": {
+  "model": 3,
+  "scene": "Un passage à niveau avec deux feux rouges clignotants, ambiance neutre de gravité. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q14": "Un passage à niveau avec un feu blanc lunaire clignotant allumé, une voiture dépassant un véhicule plus lent par la gauche à proximité.",
+ "F6_Q17": "Un site spécial franchissable délimité par une ligne blanche continue bien nette, un bus circulant dessus, une voiture restant sur la chaussée ordinaire à côté.",
+ "F6_Q18": "Une chaussée encombrée par le trafic, un site spécial franchissable vide juste à côté délimité par une ligne continue, aucune voiture ne l'empruntant.",
+ "F6_Q19": "Un site spécial franchissable dégagé de toute voiture stationnée, contrastant avec des véhicules garés le long du trottoir ordinaire à côté.",
+ "F6_Q20": {
+  "model": 3,
+  "scene": "Une voiture approchant d'un carrefour à côté d'un site spécial franchissable délimité par une ligne continue. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q21": "Une voiture empruntant brièvement un site spécial franchissable pour contourner un camion de livraison à l'arrêt qui bloque sa voie normale.",
+ "F6_Q22": "Une voiture traversant perpendiculairement un site spécial franchissable au niveau d'un carrefour pour poursuivre sa route.",
+ "F6_Q23": "Une voiture traversant un site spécial franchissable pour accéder à l'entrée d'une propriété privée située juste de l'autre côté.",
+ "F6_Q24": "Gros plan sur un marquage au sol en damier (carrés blancs et noirs alternés) délimitant une zone de la chaussée.",
+ "F6_Q25": "Une voiture traversant un marquage au sol en damier pour rejoindre l'autre côté de la chaussée, sans s'y arrêter.",
+ "F6_Q27": "Un site spécial franchissable sans aucun panneau additionnel visible, un tram et un bus y circulant, aucun autre véhicule.",
+ "F6_Q29": {
+  "model": 3,
+  "scene": "Deux lignes blanches continues juxtaposées : l'une délimitant un site spécial franchissable, l'autre séparant deux bandes de circulation ordinaires. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q30": "Sur une autoroute belge, l'ancienne bande d'arrêt d'urgence convertie en site spécial franchissable pour bus, marquage au sol distinct.",
+ "F6_Q31": "Une autoroute avec une ligne continue blanche, le mot BUS peint régulièrement au sol, et un panneau réel F18, un bus y circulant.",
+ "F6_Q32": {
+  "model": 3,
+  "scene": "Une autoroute avec un site spécial franchissable pour bus sur la droite et des bandes normales à gauche, circulation fluide. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q33": "Un bus circulant normalement sur la bande de droite d'une autoroute fluide, sans bouchon, le site spécial franchissable visible mais inutilisé à côté.",
+ "F6_Q35": "Des rails de tram intégrés directement dans le revêtement d'une chaussée ordinaire, une voiture roulant à côté des rails.",
+ "F6_Q36": "Un tram arrivant de la droite à un carrefour sans aucune signalisation, une voiture s'arrêtant pour le laisser passer.",
+ "F6_Q37": "Un tram immobilisé à un feu rouge spécifique aux transports en commun, à un carrefour urbain.",
+ "F6_Q39": "Un agent de police bras levé verticalement à un carrefour, un tram immobilisé juste derrière la ligne d'arrêt à côté des voitures.",
+ "F6_Q40": "Un tram immobilisé à un feu rouge spécifique aux transports en commun, à un carrefour urbain.",
+ "F6_Q41": {
+  "model": 3,
+  "scene": "Un tram à un carrefour urbain, un agent de police et un feu de signalisation visibles, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q43": "Gros plan sur une ligne blanche discontinue délimitant une bande de circulation réservée aux bus, un panneau réel F17 visible.",
+ "F6_Q44": "Une bande de circulation réservée aux bus totalement vide à côté d'une chaussée ordinaire encombrée, aucune voiture ne l'empruntant.",
+ "F6_Q45": "Une bande de circulation réservée aux bus dégagée de tout véhicule stationné, ligne discontinue bien visible au sol.",
+ "F6_Q46": "Une voiture empruntant brièvement une bande de circulation réservée aux bus juste avant un carrefour pour tourner à droite.",
+ "F6_Q47": "Une voiture empruntant brièvement une bande de circulation réservée aux bus pour contourner un obstacle bloquant sa voie normale.",
+ "F6_Q49": {
+  "model": 3,
+  "scene": "Deux lignes blanches juxtaposées : l'une continue, l'autre discontinue, chacune délimitant une bande réservée aux transports en commun. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q52": "Une voiture circulant normalement à travers une zone d'arrêt de bus vide, aucun bus présent, poursuivant sa route.",
+ "F6_Q53": "Une voiture arrêtée brièvement dans une zone d'arrêt de bus, un passager en train d'en descendre.",
+ "F6_Q54": "Une voiture stationnée depuis un moment dans une zone d'arrêt de bus, conducteur au volant attendant, aucun passager n'entrant ni ne sortant.",
+ "F6_Q56": {
+  "model": 3,
+  "scene": "Un poteau d'arrêt de bus au bord d'une chaussée, sans aucun marquage au sol particulier autour. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q58": {
+  "model": 3,
+  "scene": "Un poteau d'arrêt de bus au bord d'une chaussée, avec de l'espace libre visible avant et après le poteau. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q59": "Un autobus de ligne régulière avec clignotant gauche allumé quittant son arrêt en agglomération, une voiture derrière ralentissant pour le laisser passer.",
+ "F6_Q61": {
+  "model": 3,
+  "scene": "Un autocar de tourisme avec clignotant gauche allumé quittant un arrêt en agglomération, une voiture derrière. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q63": {
+  "model": 3,
+  "scene": "Plusieurs types de bus différents à l'arrêt côte à côte : un bus de ligne régulière et un autocar de tourisme. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q64": {
+  "model": 3,
+  "scene": "Un autobus de ligne avec clignotant gauche allumé quittant son arrêt sur une route de campagne hors agglomération. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q65": {
+  "model": 3,
+  "scene": "Un autobus de ligne régulière avec clignotant gauche allumé quittant son arrêt en agglomération. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F6_p0_c0": "Un long train de marchandises approchant au loin d'un passage à niveau, une voiture attendant prudemment derrière la ligne d'arrêt.",
+ "CARD_F6_p0_c1": "Gros plan sur un panneau réel de passage à niveau avec une barre en croix, fixé juste au bord de la voie ferrée.",
+ "CARD_F6_p0_c2": "Un panneau triangulaire réel de danger annonçant un passage à niveau avec barrières, accompagné d'un panonceau de distance, au bord d'une route.",
+ "CARD_F6_p0_c3": "Un passage à niveau avec deux feux rouges clignotant alternativement, une voiture immobilisée loin avant la ligne d'arrêt.",
+ "CARD_F6_p0_c4": "Les barrières d'un passage à niveau en train de s'abaisser, encore à mi-hauteur, une voiture prudemment arrêtée loin en amont.",
+ "CARD_F6_p1_c0": "Un panneau réel d'indication signalant un site spécial franchissable pour tram et bus, fixé au bord d'une chaussée.",
+ "CARD_F6_p1_c1": "Un site spécial franchissable délimité par une ligne blanche continue bien nette, un tram circulant dessus, une voiture restant sur la chaussée ordinaire à côté.",
+ "CARD_F6_p1_c2": "Une chaussée encombrée par le trafic, un site spécial franchissable vide juste à côté délimité par une ligne continue, aucune voiture ne l'empruntant.",
+ "CARD_F6_p1_c3": "Une voiture empruntant brièvement un site spécial franchissable pour contourner un camion de livraison à l'arrêt qui bloque sa voie normale.",
+ "CARD_F6_p1_c4": "Gros plan sur un marquage au sol en damier (carrés blancs et noirs alternés) délimitant une zone de la chaussée.",
+ "CARD_F6_p1_c5": "Un site spécial franchissable avec un panneau additionnel montrant un pictogramme vélo, un cycliste y circulant.",
+ "CARD_F6_p2_c0": "Sur une autoroute belge, l'ancienne bande d'arrêt d'urgence convertie en site spécial franchissable pour bus, marquage au sol distinct.",
+ "CARD_F6_p2_c1": "Une autoroute avec une ligne continue blanche, le mot BUS peint régulièrement au sol, et un panneau réel F18, un bus y circulant.",
+ "CARD_F6_p2_c2": {
+  "model": 3,
+  "scene": "Une autoroute avec un site spécial franchissable pour bus sur la droite et des bandes normales à gauche, circulation fluide. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F6_p3_c0": "Des rails de tram intégrés directement dans le revêtement d'une chaussée ordinaire, une voiture roulant à côté des rails.",
+ "CARD_F6_p3_c1": "Un tram arrivant de la droite à un carrefour sans aucune signalisation, une voiture s'arrêtant pour le laisser passer.",
+ "CARD_F6_p3_c2": "Un tram immobilisé à un feu rouge spécifique aux transports en commun, à un carrefour urbain.",
+ "CARD_F6_p4_c0": "Gros plan sur une ligne blanche discontinue délimitant une bande de circulation réservée aux bus, un panneau réel F17 visible.",
+ "CARD_F6_p4_c1": "Une bande de circulation réservée aux bus totalement vide à côté d'une chaussée ordinaire encombrée, aucune voiture ne l'empruntant.",
+ "CARD_F6_p4_c2": "Une voiture empruntant brièvement une bande de circulation réservée aux bus pour contourner un obstacle bloquant sa voie normale.",
+ "CARD_F6_p4_c3": "Une bande de circulation réservée aux bus avec un panneau additionnel montrant un pictogramme vélo, un cycliste y circulant.",
+ "CARD_F6_p4_c4": {
+  "model": 3,
+  "scene": "Deux lignes blanches juxtaposées : l'une continue, l'autre discontinue, chacune délimitant une bande réservée aux transports en commun. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F6_p5_c0": "Une voiture arrêtée brièvement dans une zone d'arrêt de bus, un passager en train d'en descendre.",
+ "CARD_F6_p5_c1": {
+  "model": 3,
+  "scene": "Un poteau d'arrêt de bus au bord d'une chaussée, sans aucun marquage au sol particulier autour. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "CARD_F6_p5_c2": "Un autobus de ligne régulière avec clignotant gauche allumé quittant son arrêt en agglomération, une voiture derrière ralentissant pour le laisser passer.",
+ "CARD_F6_p5_c3": {
+  "model": 3,
+  "scene": "Un autobus de ligne avec clignotant gauche allumé quittant son arrêt sur une route de campagne hors agglomération. Ajoute un unique badge « ? » discret, sans autre mot."
+ },
+ "F6_Q42": "Un panneau réel rectangulaire bleu signalant une bande bus, fixé au bord d'une chaussée urbaine, un bus circulant dessus."
+}
