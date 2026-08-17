@@ -504,15 +504,36 @@ export default function LessonPage() {
 
             {/* Theory image */}
             {card.image && (
-              <div style={{ width: '100%', marginBottom: 16, borderRadius: 12, overflow: 'hidden' }}>
+              <div style={{
+                position: 'relative', width: '100%', height: 240, marginBottom: 16,
+                borderRadius: 16, overflow: 'hidden',
+                border: '1px solid var(--border-card)',
+                boxShadow: '0 10px 28px rgba(0,0,0,0.14)',
+              }}>
+                {/* Blurred echo of the photo fills the frame — no more empty grey bars */}
+                <img
+                  src={card.image}
+                  alt=""
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute', inset: 0, width: '100%', height: '100%',
+                    objectFit: 'cover', filter: 'blur(26px) saturate(1.3) brightness(0.82)',
+                    transform: 'scale(1.15)',
+                  }}
+                />
+                {/* Sharp photo, fully visible, floating above the backdrop */}
                 <img
                   src={card.image}
                   alt={card.title}
-                  style={{ width: '100%', height: 220, objectFit: 'contain', display: 'block', background: 'var(--card-secondary)' }}
+                  style={{
+                    position: 'relative', width: '100%', height: '100%',
+                    objectFit: 'contain', display: 'block',
+                    filter: 'drop-shadow(0 8px 18px rgba(0,0,0,0.28))',
+                  }}
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  onError={(e) => { const box = e.currentTarget.parentElement; if (box) box.style.display = 'none'; }}
                 />
               </div>
             )}
