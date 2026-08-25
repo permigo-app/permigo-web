@@ -125,6 +125,12 @@ export default function LessonPage() {
     else prefetchImage(questions[currentQ + 1]?.image);
   }, [phase, currentCard, currentQ, displayTheories, questions]);
 
+  // Remonte en haut de page à chaque changement de carte — sinon on reste
+  // scrollé en bas après "Continuer" et il faut remonter à la main.
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+  }, [currentCard]);
+
   const currentPartieTitle = isPartieMode && partieIndex !== undefined && partieIndex < theories.length
     ? theories[partieIndex]?.title
     : null;
