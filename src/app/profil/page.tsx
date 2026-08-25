@@ -15,6 +15,16 @@ import { supabase } from '@/lib/supabase';
 import RenewalNotice from '@/components/RenewalNotice';
 import MedalCollection from '@/components/MedalCollection';
 
+// Formate le montant + la période réels de l'abonnement Stripe (plusieurs
+// formules possibles désormais — jamais de prix en dur ici).
+function formatSubLine(sub: { amount: number | null; interval: string | null; intervalCount: number | null } | null): string {
+  if (!sub?.amount) return 'Abonnement actif';
+  const price = (sub.amount / 100).toFixed(2).replace('.', ',') + '€';
+  const n = sub.intervalCount ?? 1;
+  const unit = sub.interval === 'week' ? (n > 1 ? 'semaines' : 'semaine') : (n > 1 ? 'mois' : 'mois');
+  return n > 1 ? `${price} / ${n} ${unit}` : `${price} / ${unit}`;
+}
+
 export default function ProfilePage() {
   const router = useRouter();
   const { user, signOut, loading: authLoading } = useAuth();
@@ -32,6 +42,24 @@ export default function ProfilePage() {
   const [cancelled, setCancelled] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [cancelError, setCancelError] = useState('');
+  const [subInfo, setSubInfo] = useState<{ amount: number | null; interval: string | null; intervalCount: number | null } | null>(null);
+
+  useEffect(() => {
+    if (!premium || !supabase) return;
+    let cancelledFetch = false;
+    (async () => {
+      try {
+        const { data: { session } } = await supabase!.auth.getSession();
+        const token = session?.access_token;
+        if (!token) return;
+        const res = await fetch('/api/stripe/subscription', { headers: { Authorization: `Bearer ${token}` } });
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!cancelledFetch && data.active) setSubInfo(data);
+      } catch { /* silencieux — texte générique en repli */ }
+    })();
+    return () => { cancelledFetch = true; };
+  }, [premium]);
 
   useEffect(() => {
     setMounted(true);
@@ -146,7 +174,7 @@ export default function ProfilePage() {
     return (
       <div style={{ background: 'var(--bg-card)', borderRadius: 16, padding: 20, border: '1.5px solid var(--border-card)', marginTop: 16 }}>
         <p style={{ fontWeight: 700, fontSize: 15, color: 'var(--text-title)', marginBottom: 4 }}>Abonnement Premium actif</p>
-        <p style={{ fontSize: 13, color: 'var(--text-sub)', marginBottom: 16 }}>14,99€/mois · Renouvellement automatique</p>
+        <p style={{ fontSize: 13, color: 'var(--text-sub)', marginBottom: 16 }}>{formatSubLine(subInfo)} · Renouvellement automatique</p>
         <button onClick={() => setShowConfirm(true)}
           style={{ background: 'none', border: '1.5px solid #ef4444', color: '#ef4444', borderRadius: 10, padding: '10px 20px', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>
           Résilier mon abonnement

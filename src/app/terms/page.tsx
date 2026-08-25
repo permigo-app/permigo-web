@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { PRICING_PLANS } from '@/lib/pricing';
 
 export const metadata = {
   title: "Conditions Générales d'Utilisation — MyPermiGo",
@@ -12,7 +13,7 @@ export default function TermsPage() {
       </Link>
 
       <h1 className="text-3xl font-black text-white mb-2">Conditions Générales d&apos;Utilisation</h1>
-      <p className="text-sm mb-10" style={{ color: '#5A6B8A' }}>Dernière mise à jour : janvier 2025</p>
+      <p className="text-sm mb-10" style={{ color: '#5A6B8A' }}>Dernière mise à jour : août 2026</p>
 
       <div className="flex flex-col gap-8" style={{ color: '#d1d5db', lineHeight: 1.75 }}>
 
@@ -29,29 +30,44 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-lg font-black text-white mb-3">2. Accès au service</h2>
-          <p className="mb-2">MyPermiGo propose deux niveaux d&apos;accès :</p>
+          <p className="mb-2">MyPermiGo propose deux niveaux d&apos;accès (permis B) :</p>
           <ul className="flex flex-col gap-2 pl-4" style={{ listStyleType: 'disc' }}>
             <li>
-              <strong>Gratuit</strong> — accès au Thème A complet, 1 examen blanc par semaine, 5 sessions Turbo par jour, flashcards.
+              <strong>Gratuit</strong> — accès à la 1ère leçon du Thème A (aperçu), 1 examen blanc offert, 1 session
+              Turbo offerte. Au-delà, un abonnement Premium est nécessaire.
             </li>
             <li>
-              <strong>Premium</strong> — accès à l&apos;intégralité des 9 thèmes (A à I), examens blancs illimités, sessions Turbo illimitées.
+              <strong>Premium</strong> — accès à l&apos;intégralité des 9 thèmes (A à I), examens blancs illimités,
+              sessions Turbo illimitées, cartes flash et banque d&apos;erreurs.
             </li>
           </ul>
+          <p className="mt-2">
+            Le permis AM (cyclomoteur) reste intégralement accessible gratuitement, sans limitation.
+          </p>
         </section>
 
         <section>
           <h2 className="text-lg font-black text-white mb-3">3. Abonnement Premium</h2>
 
-          <h3 className="font-bold text-white mb-2">3.1 Prix</h3>
+          <h3 className="font-bold text-white mb-2">3.1 Formules et prix</h3>
           <p className="mb-3">
-            L&apos;abonnement Premium est proposé au tarif de <strong>14,99 € / mois</strong> (TTC). Le paiement est
-            dû dès la souscription. Ce prix peut être modifié sur notification préalable de 30 jours.
+            L&apos;abonnement Premium est proposé sous plusieurs formules, au choix lors de la souscription :
+          </p>
+          <ul className="flex flex-col gap-2 pl-4 mb-3" style={{ listStyleType: 'disc' }}>
+            {PRICING_PLANS.map(plan => (
+              <li key={plan.id}>
+                <strong>{plan.labelFr}</strong> — {plan.priceDisplay} (TTC)
+              </li>
+            ))}
+          </ul>
+          <p className="mb-3">
+            Le paiement est dû dès la souscription. Ces prix peuvent être modifiés sur notification préalable de 30 jours.
           </p>
 
           <h3 className="font-bold text-white mb-2">3.2 Renouvellement et résiliation</h3>
           <p className="mb-3">
-            L&apos;abonnement est renouvelé automatiquement chaque mois. Vous pouvez résilier à tout moment depuis
+            L&apos;abonnement est renouvelé automatiquement à la fin de chaque période, selon la formule choisie
+            (semaine, 2 semaines ou mois). Vous pouvez résilier à tout moment depuis
             votre espace client ou en nous contactant à{' '}
             <a href="mailto:ycroitor8096@gmail.com" style={{ color: '#4ecdc4' }}>ycroitor8096@gmail.com</a>.
             La résiliation prend effet à la fin de la période de facturation en cours.

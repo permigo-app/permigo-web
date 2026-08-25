@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLang } from '@/contexts/LanguageContext';
+import { cheapestPlan } from '@/lib/pricing';
 
 interface PremiumGateProps {
   children?: React.ReactNode;
@@ -41,9 +42,10 @@ export default function PremiumGate({ children }: PremiumGateProps) {
   const eyebrow  = 'PREMIUM';
   const headline = isNL ? 'Deze inhoud is voor Premium-leden' : 'Ce contenu est réservé aux membres Premium';
   const features = isNL
-    ? ["Alle thema's B → I", 'Onbeperkte proefexamens', 'Onbeperkte reflextraining', 'Flashcards & foutenbank per thema']
-    : ['Tous les thèmes B → I', 'Examens blancs illimités', 'Entraînement réflexe illimité', 'Cartes flash & banque d\'erreurs par thème'];
-  const ctaLabel = isNL ? 'Premium worden — 14,99€/maand →' : 'Passer Premium — 14,99€/mois →';
+    ? ["Alle thema's A → I", 'Onbeperkte proefexamens', 'Onbeperkte reflextraining', 'Flashcards & foutenbank per thema']
+    : ['Tous les thèmes A → I', 'Examens blancs illimités', 'Entraînement réflexe illimité', 'Cartes flash & banque d\'erreurs par thème'];
+  const startingPrice = cheapestPlan().priceDisplay;
+  const ctaLabel = isNL ? `Premium worden — vanaf ${startingPrice} →` : `Passer Premium — dès ${startingPrice} →`;
   const noCommit = isNL ? 'Zonder verbintenis · Op elk moment opzegbaar' : 'Sans engagement · Annulable à tout moment';
   const back     = isNL ? '← Terug naar startpagina' : "← Revenir à l'accueil";
 

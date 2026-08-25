@@ -4,7 +4,13 @@ import { useState, useEffect } from 'react';
 import { getActiveLicense } from './license';
 
 const KEY_PREMIUM = 'isPremium';
-const TURBO_DAILY_LIMIT = 3;
+
+// Formule d'essai "tout payant" : un seul contenu gratuit (la 1ère leçon du
+// thème A, permis B) + un aperçu à usage unique (pas par jour) pour Turbo et
+// l'examen blanc. Au-delà, Premium requis. Le permis AM reste entièrement
+// gratuit (produit d'appel, décision produit distincte — voir isThemeFree).
+export const FREE_LESSON_ID = 'A1';
+const TURBO_FREE_LIFETIME_LIMIT = 1;
 
 export function isPremium(): boolean {
   if (typeof window === 'undefined') return false;
@@ -41,74 +47,62 @@ export function useIsPremium(): boolean {
 }
 
 /**
- * Permis B : thème A gratuit, thèmes B-I premium.
+ * Permis B : plus aucun thème entier n'est gratuit — seule la 1ère leçon du
+ * thème A l'est (voir isLessonFree). Cette fonction ne sert plus qu'à
+ * l'exception permis AM.
  * Permis AM : TOUT est gratuit (décision produit — l'AM est le produit
  * d'appel vers le B ; l'adoption se mesure via license_events).
  * Le catalogue des panneaux, contenu PARTAGÉ entre permis, ne passe pas par
  * ici : il garde son gating premium propre dans les deux modes.
  */
 export function isThemeFree(themeCode: string): boolean {
+  return getActiveLicense() === 'AM';
+}
+
+/** Seule la toute première leçon (A1) reste consultable sans Premium — un aperçu, pas un thème entier. */
+export function isLessonFree(lessonId: string): boolean {
   if (getActiveLicense() === 'AM') return true;
-  return themeCode === 'A';
+  return lessonId === FREE_LESSON_ID;
 }
 
-// ── Turbo daily limit ──
+// ── Turbo : aperçu à usage unique (plus un quota quotidien) ──
 
-function todayKey(): string {
-  return new Date().toISOString().slice(0, 10);
-}
-
-export function getTurboDailyCount(): number {
+export function getTurboLifetimeCount(): number {
   if (typeof window === 'undefined') return 0;
-  const raw = localStorage.getItem(`turbo_count_${todayKey()}`);
+  const raw = localStorage.getItem('turbo_count_lifetime');
   return raw ? parseInt(raw, 10) : 0;
 }
 
 export function incrementTurboDailyCount(): void {
   if (typeof window === 'undefined') return;
-  // AM = illimité : ne consomme jamais le quota quotidien du permis B
+  // AM = illimité : ne consomme jamais l'aperçu gratuit du permis B
   if (getActiveLicense() === 'AM') return;
-  const key = `turbo_count_${todayKey()}`;
-  const current = getTurboDailyCount();
-  localStorage.setItem(key, String(current + 1));
+  localStorage.setItem('turbo_count_lifetime', String(getTurboLifetimeCount() + 1));
 }
 
 export function canPlayTurbo(): boolean {
   if (getActiveLicense() === 'AM') return true; // AM : illimité (gratuit)
   if (isPremium()) return true;
-  return getTurboDailyCount() < TURBO_DAILY_LIMIT;
+  return getTurboLifetimeCount() < TURBO_FREE_LIFETIME_LIMIT;
 }
 
 export function turboRemainingToday(): number {
   if (getActiveLicense() === 'AM' || isPremium()) return Infinity;
-  return Math.max(0, TURBO_DAILY_LIMIT - getTurboDailyCount());
+  return Math.max(0, TURBO_FREE_LIFETIME_LIMIT - getTurboLifetimeCount());
 }
 
-// ── Exam daily limit (1/jour) ──
-
-function todayDate(): string {
-  return new Date().toISOString().slice(0, 10);
-}
-
-export function getLastExamWeek(): string | null {
-  if (typeof window === 'undefined') return null;
-  return localStorage.getItem(`exam_usage_${todayDate()}`);
-}
+// ── Examen blanc : 1 essai gratuit à vie (plus un quota quotidien) ──
 
 export function recordExamPlayed(): void {
   if (typeof window === 'undefined') return;
-  // AM = illimité : un examen AM ne consomme pas l'examen quotidien du permis B
+  // AM = illimité : un examen AM ne consomme pas l'essai gratuit du permis B
   if (getActiveLicense() === 'AM') return;
-  localStorage.setItem(`exam_usage_${todayDate()}`, '1');
+  localStorage.setItem('exam_usage_lifetime', '1');
 }
 
 export function canPlayExam(): boolean {
   if (getActiveLicense() === 'AM') return true; // AM : examens illimités (gratuit)
   if (isPremium()) return true;
   if (typeof window === 'undefined') return true;
-  return !localStorage.getItem(`exam_usage_${todayDate()}`);
-}
-
-export function daysUntilNextExam(): number {
-  return canPlayExam() ? 0 : 1;
+  return !localStorage.getItem('exam_usage_lifetime');
 }

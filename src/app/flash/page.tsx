@@ -60,8 +60,10 @@ function FlashContent() {
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🃏';
 
-  // Même règle que les leçons : thème A gratuit, B-I premium — sans ce
-  // verrou, /flash?theme=B expose tout le contenu premium en flashcards
+  // Flash n'a plus de porte gratuite propre (contrairement à la leçon 1 du
+  // thème A) : Premium requis pour tout thème, permis AM excepté (gratuit
+  // partout — voir isThemeFree). Sans ce verrou, /flash?theme=B exposerait
+  // tout le contenu premium en flashcards.
   const locked = !isThemeFree(themeCode) && !isPremium();
 
   const [themeData, setThemeData] = useState<LocalTheme | null>(null);

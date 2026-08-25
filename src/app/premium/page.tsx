@@ -5,24 +5,25 @@ import { useRouter } from 'next/navigation';
 import { useLang } from '@/contexts/LanguageContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { PRICING_PLANS, DEFAULT_PLAN, type PlanId } from '@/lib/pricing';
 import Link from 'next/link';
 
 export default function PremiumPage() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const { supabaseUser } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [selectedPlan, setSelectedPlan] = useState<PlanId>(DEFAULT_PLAN);
 
   type TableVal = string | boolean;
   const TABLE_ROWS: { label: string; free: TableVal; prem: TableVal }[] = [
-    { label: t('premium_f1'),  free: true,              prem: true },
+    { label: t('premium_f1'),  free: '1 leçon',         prem: true },
     { label: t('premium_f4'),  free: false,             prem: true },
-    { label: t('premium_f8'),  free: '1 / jour',        prem: '✅ Illimité' },
-    { label: t('premium_f9'),  free: '3 / jour',        prem: '✅ Illimité' },
+    { label: t('premium_f8'),  free: '1 essai',         prem: '✅ Illimité' },
+    { label: t('premium_f9'),  free: '1 essai',         prem: '✅ Illimité' },
+    { label: t('premium_f7'),  free: false,             prem: true },
     { label: t('premium_f10'), free: '3 catégories',    prem: '✅ 10 catégories' },
-    { label: t('premium_f7'),  free: 'Thème A',         prem: '✅ Tous les thèmes' },
-    { label: t('premium_f5'),  free: false,             prem: true },
   ];
 
   const PREMIUM_FEATURES = [
@@ -52,7 +53,7 @@ export default function PremiumPage() {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
         },
-        body: JSON.stringify({}),
+        body: JSON.stringify({ plan: selectedPlan }),
       });
       const data = await res.json();
       if (data.url) {
@@ -130,15 +131,39 @@ export default function PremiumPage() {
 
         {/* Premium card */}
         <div className="rounded-2xl p-8 mb-8" style={{ background: 'var(--card-primary)', border: '2px solid var(--premium)', boxShadow: '0 8px 40px rgba(0,0,0,0.08)' }}>
-          <div className="flex items-start justify-between mb-6">
-            <div>
-              <h2 className="text-2xl font-black mb-1" style={{ color: 'var(--text-primary)' }}>{t('premium_card_titre')}</h2>
-              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('premium_card_acces')}</p>
-            </div>
-            <div className="text-right">
-              <p className="text-3xl font-black" style={{ color: 'var(--text-primary)' }}>14,99€</p>
-              <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>{t('premium_card_mois')}</p>
-            </div>
+          <div className="mb-6">
+            <h2 className="text-2xl font-black mb-1" style={{ color: 'var(--text-primary)' }}>{t('premium_card_titre')}</h2>
+            <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{t('premium_card_acces')}</p>
+          </div>
+
+          {/* Plan picker */}
+          <div className="grid grid-cols-3 gap-2.5 mb-6">
+            {PRICING_PLANS.map(plan => {
+              const active = plan.id === selectedPlan;
+              const badge = lang === 'nl' ? plan.badgeNl : plan.badgeFr;
+              const label = lang === 'nl' ? plan.labelNl : plan.labelFr;
+              return (
+                <button
+                  key={plan.id}
+                  onClick={() => setSelectedPlan(plan.id)}
+                  className="press-scale rounded-2xl p-3.5 text-center relative"
+                  style={{
+                    background: active ? 'rgba(78,205,196,0.10)' : 'var(--card-secondary)',
+                    border: active ? '2px solid var(--brand)' : '1.5px solid var(--border-subtle)',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {badge && (
+                    <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wide whitespace-nowrap"
+                      style={{ background: 'var(--brand)', color: 'var(--bg-primary)' }}>
+                      {badge}
+                    </span>
+                  )}
+                  <p className="text-lg font-black" style={{ color: active ? 'var(--brand)' : 'var(--text-primary)' }}>{plan.priceDisplay}</p>
+                  <p className="text-[11px] font-medium mt-0.5" style={{ color: 'var(--text-secondary)' }}>{label}</p>
+                </button>
+              );
+            })}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
@@ -161,14 +186,11 @@ export default function PremiumPage() {
               color: 'var(--bg-primary)',
             }}
           >
-            {loading ? t('premium_chargement') : t('premium_essai_btn')}
+            {loading ? t('premium_chargement') : `${t('premium_essai_btn')} — ${PRICING_PLANS.find(p => p.id === selectedPlan)?.priceDisplay} →`}
           </button>
 
           <p className="text-center text-xs" style={{ color: 'var(--text-disabled)' }}>
             {t('premium_sans_paiement')}
-          </p>
-          <p className="text-center text-xs mt-1" style={{ color: 'var(--text-disabled)' }}>
-            Sans engagement · Annulez quand vous voulez
           </p>
         </div>
 

@@ -27,24 +27,35 @@ const SECTIONS = [
 //       traduit pas) — pour les règles à plusieurs acteurs / priorité / ordre
 //   3 = hybride : photo réaliste + UN SEUL repère graphique (chiffre en badge
 //       ou flèche unique, jamais de mot) — pour un repère chiffré isolé
+const PRECISION_PHOTO =
+  `NETTETÉ ET PRÉCISION OBLIGATOIRES : image nette et bien focalisée, haute clarté, aucun flou artistique, aucun grain. ` +
+  `Place chaque véhicule et chaque personnage EXACTEMENT à la position et dans la direction décrites dans la scène — ` +
+  `sans ambiguïté possible sur qui est où et qui va où. Avant de générer, vérifie que la scène entière est cohérente et ` +
+  `logique (distances réalistes, directions compatibles entre elles, aucun élément contradictoire ou physiquement impossible). ` +
+  `Inclus TOUS les éléments explicitement mentionnés dans la scène, sans en omettre aucun.`;
+
 const STYLE_BLOCKS = {
   1: `STYLE : photographie réaliste, type photo d'examen du permis de conduire belge (GOCA). ` +
      `Belgique, circulation à droite, lumière naturelle. ` +
      `Composition SIMPLE, lisible en 2 secondes, avec UN sujet principal clair. ` +
      `Aucun texte lisible et aucune enseigne (sauf si la scène l'exige explicitement), aucune flèche ajoutée, aucun filigrane. ` +
      `MARQUAGES ROUTIERS BELGES UNIQUEMENT : lignes BLANCHES (orange seulement pour les chantiers) — JAMAIS de ligne jaune au sol. ` +
-     `N'ajoute AUCUN panneau de signalisation — uniquement ceux décrits dans la scène. Format paysage.`,
+     `N'ajoute AUCUN panneau de signalisation — uniquement ceux décrits dans la scène. Format paysage.\n\n${PRECISION_PHOTO}`,
   2: `STYLE : SCHÉMA PÉDAGOGIQUE vu du dessus (vue aérienne stylisée et épurée, PAS une photographie), ` +
      `façon diagramme de code de la route. Utilise des FLÈCHES colorées pour montrer les trajectoires ` +
      `(vert = passe / autorisé, rouge = doit céder / interdit) et de simples CHIFFRES isolés (1, 2, 3…) ` +
      `pour indiquer un ordre de passage si nécessaire. N'ajoute AUCUN panneau de signalisation, AUCUN triangle, AUCUNE ligne au sol qui ne soit pas explicitement décrit dans la scène — n'invente aucun élément. INTERDIT ABSOLU : aucun mot écrit, aucune lettre, ` +
      `aucun panneau texté — le site est bilingue FR/NL, un mot gravé dans l'image ne peut pas être traduit. ` +
-     `Fond clair et minimaliste, marquages routiers belges simplifiés, silhouettes de véhicules stylisées. Format paysage.`,
+     `Fond clair et minimaliste, marquages routiers belges simplifiés, silhouettes de véhicules stylisées. Format paysage.\n\n` +
+     `NETTETÉ ET PRÉCISION OBLIGATOIRES : lignes et contours nets et propres, aucun flou. Place chaque véhicule et chaque ` +
+     `flèche EXACTEMENT selon les positions et trajectoires décrites dans la scène — sans ambiguïté. Vérifie la cohérence ` +
+     `géométrique et logique de l'ensemble (trajectoires plausibles, numérotation d'ordre cohérente) avant de générer. ` +
+     `Inclus TOUS les éléments explicitement mentionnés dans la scène, sans en omettre aucun.`,
   3: `STYLE : photographie réaliste (même exigence qu'une photo d'examen GOCA belge, lumière naturelle, ` +
      `circulation à droite), à laquelle est ajouté UN SEUL repère graphique simple et discret : soit un ` +
      `chiffre isolé dans un petit badge circulaire, soit une flèche unique — jamais les deux ensemble, ` +
      `et JAMAIS de mot écrit (site bilingue FR/NL). Le repère ne doit pas transformer la photo en schéma : ` +
-     `la scène doit rester lisible comme une vraie photo. Format paysage.`,
+     `la scène doit rester lisible comme une vraie photo. Format paysage.\n\n${PRECISION_PHOTO}`,
 };
 
 function buildPrompt(lic, themeTitle, sceneEntry, kind) {

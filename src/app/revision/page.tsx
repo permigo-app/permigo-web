@@ -102,7 +102,7 @@ function RevisionContent() {
     setShakeWrong(false);
   }, [themeCode, lang]);
 
-  // Banque d'erreurs par thème : même règle que les leçons (A gratuit, B-I premium)
+  // Banque d'erreurs par thème : Premium requis pour tout thème (permis AM excepté, gratuit partout)
   if (!isThemeFree(themeCode) && !isPremium()) {
     return <PremiumGate><></></PremiumGate>;
   }

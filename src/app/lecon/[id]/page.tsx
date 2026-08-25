@@ -8,7 +8,7 @@ import { setStars, updateQuizHistory, saveLessonQuizDone, saveLessonCardProgress
 import { computeTier, countThemeParts, TIER_ORDER, type Tier } from '@/lib/medals';
 import { recordQuestionReview } from '@/lib/reviewApi';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
-import { isPremium, isThemeFree } from '@/lib/premium';
+import { isPremium, isLessonFree } from '@/lib/premium';
 import { prefetchImage } from '@/lib/prefetchImage';
 import PremiumGate from '@/components/PremiumGate';
 import SignImage from '@/components/SignImage';
@@ -244,8 +244,9 @@ export default function LessonPage() {
     setQuestions(src.map(q => shuffleQuestion(q)));
   };
 
-  // Premium gate: themes B-I require premium
-  if (!isThemeFree(themeCode) && !isPremium()) {
+  // Premium gate: seule la 1ère leçon (A1) reste consultable gratuitement — un
+  // aperçu, pas un thème entier. Permis AM excepté (gratuit partout).
+  if (!isLessonFree(lessonId) && !isPremium()) {
     return <PremiumGate><></></PremiumGate>;
   }
 

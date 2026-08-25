@@ -12,7 +12,7 @@ import {
   getTurboAllTime, addTurboAllTime,
   type TurboSession, type TurboAllTimeStats,
 } from '@/lib/progressStorage';
-import { useIsPremium, isThemeFree, canPlayTurbo, getTurboDailyCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
+import { useIsPremium, isThemeFree, canPlayTurbo, getTurboLifetimeCount, incrementTurboDailyCount, turboRemainingToday } from '@/lib/premium';
 import { prefetchImage } from '@/lib/prefetchImage';
 import PremiumGate from '@/components/PremiumGate';
 import { scopedKey } from '@/lib/license';
@@ -138,7 +138,7 @@ function TurboContent() {
   const [mobileSelectedMode, setMobileSelectedMode] = useState<'3min' | '5min' | 'survie'>('3min');
 
   useEffect(() => {
-    setTurboCount(getTurboDailyCount());
+    setTurboCount(getTurboLifetimeCount());
   }, []);
 
   const endGame = useCallback(() => {
@@ -167,7 +167,7 @@ function TurboContent() {
     // N'incrémente que si pas de session déjà active (évite double-comptage)
     if (!localStorage.getItem(scopedKey('turbo_active'))) {
       incrementTurboDailyCount();
-      setTurboCount(getTurboDailyCount());
+      setTurboCount(getTurboLifetimeCount());
     }
     const duration = m === '3min' ? 180000 : m === '5min' ? 300000 : null;
     localStorage.setItem(scopedKey('turbo_active'), JSON.stringify({
@@ -242,8 +242,9 @@ function TurboContent() {
     return t('turbo_survie_label');
   }
 
-  // Accès ciblé à un thème premium (?theme=B-I) : même verrou que les leçons.
-  // Le turbo mixte sans thème reste le teaser gratuit, limité par jour.
+  // Accès ciblé à un thème premium (?theme=B-I) : même verrou que les leçons
+  // (plus aucun thème n'étant gratuit pour le permis B, ?theme=A est aussi verrouillé).
+  // Le turbo mixte sans thème reste le teaser gratuit, mais à usage unique désormais.
   if (themeCode && getThemeOrder().includes(themeCode) && !isThemeFree(themeCode) && !premiumActive) {
     return <PremiumGate><></></PremiumGate>;
   }
@@ -255,8 +256,8 @@ function TurboContent() {
     const todayBest = history
       .filter(s => s.mode === mobileSelectedMode && new Date(s.date).toLocaleDateString('fr-BE') === todayStr)
       .reduce((acc, s) => Math.max(acc, s.score), 0);
-    const blocked = !premiumActive && turboCount >= 5;
-    const remaining = Math.max(0, 5 - turboCount);
+    const blocked = !premiumActive && !canPlayTurbo();
+    const remaining = turboRemainingToday();
 
     const MODES = [
       { key: '3min' as const, label: t('turbo_sprint_3'), desc: t('turbo_sprint_3_desc'), icon: '⏱️', best: best3 },

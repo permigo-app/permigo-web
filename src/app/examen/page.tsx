@@ -8,9 +8,8 @@ import { useLang } from '@/contexts/LanguageContext';
 import { setExamPassed, unlockTheme, updateQuizHistory, addStudyTime } from '@/lib/progressStorage';
 import { recordQuestionReview } from '@/lib/reviewApi';
 import { THEME_COLORS } from '@/lib/constants';
-import { useIsPremium, isThemeFree, canPlayExam, recordExamPlayed, daysUntilNextExam } from '@/lib/premium';
+import { useIsPremium, canPlayExam, recordExamPlayed } from '@/lib/premium';
 import { prefetchImage } from '@/lib/prefetchImage';
-import PremiumGate from '@/components/PremiumGate';
 import Link from 'next/link';
 import QuizLayout from '@/components/QuizLayout';
 
@@ -94,22 +93,19 @@ function ExamContent() {
     restore();
   }, [themeCode, lang]);
 
-  // Premium gate: exams for themes B-I require premium (FINAL always requires premium)
-  const examThemeFree = themeCode === 'A';
-  if (!examThemeFree && !premiumActive) {
-    return <PremiumGate><></></PremiumGate>;
-  }
-
-  // Weekly limit — bypass if there's already an active (resumed) exam
-  if (!premiumActive && !canPlayExam() && !hasActiveExam) {
-    const days = daysUntilNextExam();
+  // Premium gate : un seul examen blanc gratuit à vie (thème A uniquement, en aperçu) —
+  // au-delà, ou pour tout autre thème, Premium requis. Bypass si un examen est déjà en cours.
+  const freeExamAvailable = themeCode === 'A' && canPlayExam();
+  if (!premiumActive && !freeExamAvailable && !hasActiveExam) {
     return (
       <div className="max-w-lg mx-auto px-4 py-12">
         {/* Hero card */}
         <div className="rounded-3xl p-8 mb-4 text-center" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
-          <h1 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>Examen déjà passé aujourd&apos;hui</h1>
+          <h1 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>
+            {themeCode === 'A' ? 'Ton examen gratuit est déjà utilisé' : 'Examen réservé aux membres Premium'}
+          </h1>
           <p className="text-base mb-5" style={{ color: 'var(--text-secondary)' }}>
-            Reviens demain pour repasser l&apos;examen, ou passe à Premium pour des examens illimités.
+            Passe à Premium pour des examens illimités, sur tous les thèmes.
           </p>
 
           {/* Stats pills — premium benefits */}

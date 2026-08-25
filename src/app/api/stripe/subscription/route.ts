@@ -52,6 +52,8 @@ export async function GET(req: Request) {
           renewalAt: periodEnd,
           amount: item?.price?.unit_amount ?? null,
           currency: item?.price?.currency ?? 'eur',
+          interval: item?.price?.recurring?.interval ?? null,
+          intervalCount: item?.price?.recurring?.interval_count ?? null,
           cancelAtPeriodEnd: sub.cancel_at_period_end,
         });
       }

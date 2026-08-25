@@ -9,18 +9,34 @@ function getServiceClient() {
   return createClient(url, key);
 }
 
+// Un Price ID Stripe par formule — jamais exposé au client, résolu ici à
+// partir du `plan` reçu dans le body (validé contre cette liste, jamais
+// utilisé pour construire une clé d'env dynamiquement).
+const PLAN_ENV_VARS: Record<string, string | undefined> = {
+  weekly: process.env.STRIPE_PRICE_ID_WEEKLY,
+  biweekly: process.env.STRIPE_PRICE_ID_BIWEEKLY,
+  monthly: process.env.STRIPE_PRICE_ID_MONTHLY,
+};
+
 export async function POST(req: Request) {
   const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
-  const STRIPE_PRICE_ID = process.env.STRIPE_PRICE_ID;
   const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL;
 
   if (!STRIPE_SECRET_KEY) {
     console.error('[Stripe] STRIPE_SECRET_KEY is not set');
     return NextResponse.json({ error: 'STRIPE_SECRET_KEY manquante' }, { status: 500 });
   }
+
+  let requestedPlan = 'monthly';
+  try {
+    const body = await req.json().catch(() => ({}));
+    if (body?.plan && typeof body.plan === 'string') requestedPlan = body.plan;
+  } catch { /* body absent ou invalide → formule par défaut */ }
+
+  const STRIPE_PRICE_ID = PLAN_ENV_VARS[requestedPlan];
   if (!STRIPE_PRICE_ID) {
-    console.error('[Stripe] STRIPE_PRICE_ID is not set');
-    return NextResponse.json({ error: 'STRIPE_PRICE_ID manquante' }, { status: 500 });
+    console.error('[Stripe] Aucun Price ID pour la formule:', requestedPlan);
+    return NextResponse.json({ error: 'plan_invalide' }, { status: 400 });
   }
 
   // Récupère userId depuis le token Supabase côté serveur (pas depuis le body client)
