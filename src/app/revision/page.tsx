@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { getQuestionById, shuffleChoices, type LocalQuestion } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
-import { fetchMistakes } from '@/lib/reviewApi';
+import { fetchMistakes, recordQuestionReview } from '@/lib/reviewApi';
 import { getActiveLicense } from '@/lib/license';
 import QuizLayout from '@/components/QuizLayout';
 import { isPremium, isThemeFree } from '@/lib/premium';
@@ -73,7 +73,11 @@ function RevisionContent() {
   const validateSelected = useCallback(() => {
     if (selected === null || validated) return;
     setValidated(true);
-    if (selected === questions[index].correct) {
+    const isCorrect = selected === questions[index].correct;
+    // Persiste tout de suite : une bonne réponse sort la question de la banque
+    // d'erreurs même si l'utilisateur quitte avant la fin de la session.
+    recordQuestionReview(questions[index].id, isCorrect, 0).catch(() => {});
+    if (isCorrect) {
       setCorrectCount(c => c + 1);
     } else {
       setShakeWrong(true);
