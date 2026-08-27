@@ -30,9 +30,16 @@ const SECTIONS = [
 const PRECISION_PHOTO =
   `NETTETÉ ET PRÉCISION OBLIGATOIRES : image nette et bien focalisée, haute clarté, aucun flou artistique, aucun grain. ` +
   `Place chaque véhicule et chaque personnage EXACTEMENT à la position et dans la direction décrites dans la scène — ` +
-  `sans ambiguïté possible sur qui est où et qui va où. Avant de générer, vérifie que la scène entière est cohérente et ` +
+  `sans ambiguïté possible sur qui est où et qui va où. Respecte EXACTEMENT le point de vue indiqué dans la scène ` +
+  `(vue conducteur derrière le pare-brise, vue piétonne, vue aérienne…) — ne le change pas. ` +
+  `Avant de générer, vérifie que la scène entière est cohérente et ` +
   `logique (distances réalistes, directions compatibles entre elles, aucun élément contradictoire ou physiquement impossible). ` +
-  `Inclus TOUS les éléments explicitement mentionnés dans la scène, sans en omettre aucun.`;
+  `Inclus TOUS les éléments explicitement mentionnés dans la scène, sans en omettre aucun. ` +
+  `CONTEXTE EUROPÉEN STRICT : véhicules européens courants, plaques d'immatriculation illisibles, architecture belge ` +
+  `(briques, maisons mitoyennes, pavés), AUCUN élément nord-américain (pas de school bus jaune, pas de panneau jaune en ` +
+  `losange, pas de feu suspendu au câble, pas de ligne jaune au sol). ` +
+  `Si la scène mentionne un badge « ? » : petit badge circulaire blanc à fin liseré gris avec un « ? » noir, placé dans un ` +
+  `coin de l'image, discret, sans masquer la scène — c'est le SEUL élément graphique ajouté.`;
 
 const STYLE_BLOCKS = {
   1: `STYLE : photographie réaliste, type photo d'examen du permis de conduire belge (GOCA). ` +
