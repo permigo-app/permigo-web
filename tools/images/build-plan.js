@@ -39,7 +39,13 @@ const PRECISION_PHOTO =
   `(briques, maisons mitoyennes, pavés), AUCUN élément nord-américain (pas de school bus jaune, pas de panneau jaune en ` +
   `losange, pas de feu suspendu au câble, pas de ligne jaune au sol). ` +
   `Si la scène mentionne un badge « ? » : petit badge circulaire blanc à fin liseré gris avec un « ? » noir, placé dans un ` +
-  `coin de l'image, discret, sans masquer la scène — c'est le SEUL élément graphique ajouté.`;
+  `coin de l'image, discret, sans masquer la scène — c'est le SEUL élément graphique ajouté.\n\n` +
+  `FIDÉLITÉ DES PANNEAUX (CRITIQUE) : un panneau de signalisation doit être dessiné EXACTEMENT comme la scène le décrit — ` +
+  `forme, couleur de fond, et pictogramme intérieur au mot près. N'invente JAMAIS un pictogramme, n'ajoute JAMAIS une barre, ` +
+  `un trait, un chiffre ou un symbole qui n'est pas décrit, et n'en retire aucun. Un panneau au centre laissé vide est lui-même ` +
+  `un panneau réglementaire distinct : ne laisse un centre vide que si la scène le demande explicitement. ` +
+  `Si la scène dit qu'un panneau est vu DE DOS, ne montre que sa plaque arrière grise et ses fixations — sa face avant ne doit ` +
+  `apparaître nulle part.`;
 
 const STYLE_BLOCKS = {
   1: `STYLE : photographie réaliste, type photo d'examen du permis de conduire belge (GOCA). ` +

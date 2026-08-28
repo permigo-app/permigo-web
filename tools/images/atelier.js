@@ -253,6 +253,41 @@ if (cmd === 'loop') {
   if (job) { state.skipped.push(job.id); saveState(); console.log(`⏭ ${job.id} skippée.`); }
   const nj = nextJob();
   if (nj) showJob(nj);
+} else if (cmd === 'redo') {
+  // Remet une ou plusieurs images "à faire" : efface le champ image dans les
+  // données + le fichier WebP, pour corriger une image ratée ou un mauvais panneau.
+  const ids = process.argv.slice(3);
+  if (ids.length === 0) {
+    console.log('Usage : node atelier.js redo <id> [<id>…]   (ex. node atelier.js redo G1_Q25 G1_Q30)');
+  } else {
+    let n = 0;
+    for (const id of ids) {
+      const job = plan.find(j => j.id === id);
+      if (!job) { console.log(`⚠ ${id} : absent du plan — ignoré.`); continue; }
+      const dataPath = path.join(ROOT, job.file);
+      const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+      const lesson = data.lessons.find(l => l.id === job.lessonId);
+      if (job.kind === 'question') {
+        const q = lesson.questions.find(q => q.id === job.id);
+        if (q) delete q.image;
+      } else {
+        delete lesson.theory[job.partieIdx].cards[job.cardIdx].image;
+      }
+      fs.writeFileSync(dataPath, JSON.stringify(data, null, 2) + '\n');
+
+      const outAbs = path.join(ROOT, 'public', job.out.replace(/^\//, ''));
+      if (fs.existsSync(outAbs)) fs.unlinkSync(outAbs);
+
+      // Libère le hash pour que la nouvelle image ne soit pas prise pour un doublon
+      state.hashes = state.hashes || {};
+      for (const [h, owner] of Object.entries(state.hashes)) if (owner === id) delete state.hashes[h];
+      state.skipped = (state.skipped || []).filter(s => s !== id);
+      n++;
+      console.log(`♻ ${id} remise à faire.`);
+    }
+    saveState();
+    if (n) console.log(`\n${n} image(s) à refaire — relance node atelier.js pour reprendre.`);
+  }
 } else if (cmd === 'status') {
   let done = 0, todo = 0, skip = 0;
   const perTheme = {};
