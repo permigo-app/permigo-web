@@ -6,7 +6,7 @@ import { getThemeDataLocalized, type LocalTheoryCard, type LocalTheme } from '@/
 import { useLang } from '@/contexts/LanguageContext';
 import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { addStudyTime } from '@/lib/progressStorage';
-import { isPremium, isThemeFree } from '@/lib/premium';
+import { isPremium, isThemeFree, flashcardsLimitForLesson, FREE_FLASHCARDS_PER_LESSON } from '@/lib/premium';
 import { scopedKey } from '@/lib/license';
 import PremiumGate from '@/components/PremiumGate';
 
@@ -60,25 +60,28 @@ function FlashContent() {
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🃏';
 
-  // Flash n'a plus de porte gratuite propre (contrairement à la leçon 1 du
-  // thème A) : Premium requis pour tout thème, permis AM excepté (gratuit
-  // partout — voir isThemeFree). Sans ce verrou, /flash?theme=B exposerait
-  // tout le contenu premium en flashcards.
-  const locked = !isThemeFree(themeCode) && !isPremium();
+  // Le mode flash n'est plus verrouillé en bloc : sans Premium, l'utilisateur
+  // parcourt les 5 premières fiches de chaque leçon (voir flashcardsLimitForLesson)
+  // puis tombe sur la porte Premium — il sait ainsi à quoi ressemble une fiche.
+  const preview = !isThemeFree(themeCode) && !isPremium();
 
   const [themeData, setThemeData] = useState<LocalTheme | null>(null);
   useEffect(() => {
-    if (locked) return;
     getThemeDataLocalized(themeCode, lang).then(setThemeData);
-  }, [themeCode, lang, locked]);
+  }, [themeCode, lang]);
   const themeTitle = themeData?.title || '';
 
   const allCards = useMemo<FlashCard[]>(() => {
     if (!themeData) return [];
     const cards: FlashCard[] = [];
     for (const lesson of themeData.lessons) {
+      // Le quota s'applique par leçon, toutes parties confondues
+      const limit = flashcardsLimitForLesson(lesson.id);
+      let takenForLesson = 0;
       for (const partie of lesson.theory) {
         for (const card of partie.cards) {
+          if (takenForLesson >= limit) break;
+          takenForLesson++;
           cards.push({
             ...card,
             lessonTitle: lesson.title,
@@ -184,8 +187,6 @@ function FlashContent() {
     setAnimating(false);
   }, [themeCode, allCards]);
 
-  if (locked) return <PremiumGate><></></PremiumGate>;
-
   if (!loaded) return <div className="min-h-screen" />;
 
   if (!themeData || totalCards === 0) {
@@ -198,6 +199,10 @@ function FlashContent() {
       </div>
     );
   }
+
+  // Aperçu terminé : l'utilisateur gratuit a vu ses fiches offertes — c'est ici
+  // qu'on lui propose Premium, pas à l'entrée.
+  if (done && preview) return <PremiumGate><></></PremiumGate>;
 
   // Done screen
   if (done) {
@@ -263,8 +268,18 @@ function FlashContent() {
             <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
               ✕
             </button>
-            <div className="flex-1 flex items-center justify-center gap-2">
+            <div className="flex-1 flex items-center justify-center gap-2 flex-wrap">
               <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('flash_titre')} {themeCode}</span>
+              {preview && (
+                <span
+                  className="px-2 py-0.5 rounded-full text-[10px] font-bold whitespace-nowrap"
+                  style={{ background: 'rgba(34,214,199,0.14)', color: 'var(--brand)', border: '1px solid rgba(34,214,199,0.3)' }}
+                >
+                  {lang === 'nl'
+                    ? `Gratis voorproefje · ${FREE_FLASHCARDS_PER_LESSON} per les`
+                    : `Aperçu gratuit · ${FREE_FLASHCARDS_PER_LESSON} par leçon`}
+                </span>
+              )}
             </div>
             <span className="text-sm font-extrabold" style={{ color: themeColor }}>
               {masteredCount + 1}/{totalCards}

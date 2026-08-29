@@ -65,6 +65,23 @@ export function isLessonFree(lessonId: string): boolean {
   return lessonId === FREE_LESSON_ID;
 }
 
+// ── Flashcards : aperçu de 5 fiches par leçon ──
+
+/**
+ * Le mode flash n'est plus verrouillé en bloc : un utilisateur gratuit voit les
+ * 5 premières fiches de CHAQUE leçon, puis la porte Premium. Objectif produit :
+ * qu'il sache à quoi ressemble une fiche avant de payer.
+ */
+export const FREE_FLASHCARDS_PER_LESSON = 5;
+
+/** Nombre de fiches consultables sans Premium pour une leçon donnée. */
+export function flashcardsLimitForLesson(lessonId: string): number {
+  if (getActiveLicense() === 'AM') return Infinity; // AM entièrement gratuit
+  if (isPremium()) return Infinity;
+  if (isLessonFree(lessonId)) return Infinity; // la leçon A1 reste gratuite en entier
+  return FREE_FLASHCARDS_PER_LESSON;
+}
+
 // ── Turbo : aperçu à usage unique (plus un quota quotidien) ──
 
 export function getTurboLifetimeCount(): number {
