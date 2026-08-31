@@ -315,6 +315,7 @@ const fr: Record<string, string> = {
   pquiz_bonne_reponse: 'Bonne réponse',
   pquiz_suivante: 'Question suivante →',
   pquiz_voir_score: 'Voir le score →',
+  pquiz_que_signifie: 'Que signifie ce panneau ?',
 
   // ── Choix du permis ──
   choix_titre: 'Choisis ton permis théorique',

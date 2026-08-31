@@ -1,109 +1,88 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import SignImage from '@/components/SignImage';
-import rawQuizData from '@/data/panneaux_quiz.json';
+import { PANNEAU_CATEGORIES } from '@/lib/constants';
+import { buildSignQuiz, LEGACY_QUIZ_CAT, type SignQuizQuestion } from '@/lib/panneauxQuiz';
 import { isPremium } from '@/lib/premium';
 import PremiumGate from '@/components/PremiumGate';
 import { useLang } from '@/contexts/LanguageContext';
 
-// Catégories de quiz atteignables depuis une carte gratuite du hub (A, C, D
-// → quiz A, BC, D). Les autres exigent premium, même par URL directe.
-const FREE_QUIZ_CATS = ['A', 'BC', 'D'];
-
-interface QuizQuestion {
-  id: string;
-  sign: string;
-  question: string;
-  answers: string[];
-  correct: number;
-  explanation: string;
-  // Traductions NL (repli sur le FR si absentes)
-  question_nl?: string;
-  answers_nl?: string[];
-  explanation_nl?: string;
-}
-
-interface QuizCategory {
-  id: string;
-  title: string;
-  title_nl?: string;
-  color: string;
-  icon: string;
-  questions: QuizQuestion[];
-}
-
-interface ShuffledAnswer {
-  text: string;
-  originalIdx: number;
-}
-
-const quizData = rawQuizData as { categories: QuizCategory[] };
-
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+// Mêmes catégories gratuites que le hub et les listes de panneaux — sans ce
+// verrou, l'URL directe /panneaux/quiz?cat=E contournerait Premium.
+const FREE_PANNEAU_IDS = ['A', 'C', 'D'];
 
 function QuizContent() {
   const params = useSearchParams();
   const router = useRouter();
   const { t, lang } = useLang();
-  const catId = params.get('cat') ?? 'F';
 
-  const cat = quizData.categories.find(c => c.id === catId);
-  const isNL = lang === 'nl';
-  const catTitle = (isNL && cat?.title_nl) || cat?.title || '';
+  // Le quiz utilise désormais les identifiants du catalogue (A, B, C…) ;
+  // les anciens liens (?cat=BC, ?cat=SOL) sont convertis au lieu de casser.
+  const rawCat = params.get('cat') ?? 'A';
+  const catId = LEGACY_QUIZ_CAT[rawCat] ?? rawCat;
+  const category = PANNEAU_CATEGORIES.find(c => c.id === catId);
+  const catColor = category?.color ?? '#f59e0b';
 
-  const [questions, setQuestions] = useState<QuizQuestion[]>([]);
+  const [questions, setQuestions] = useState<SignQuizQuestion[]>([]);
   const [current, setCurrent] = useState(0);
-  const [shuffledAnswers, setShuffledAnswers] = useState<ShuffledAnswer[]>([]);
-  const [selected, setSelected] = useState<number | null>(null); // index into shuffledAnswers
+  const [selected, setSelected] = useState<number | null>(null);
+  const [validated, setValidated] = useState(false);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
 
-  // Init questions
+  // Une question par panneau de la catégorie, régénérée si la langue change
   useEffect(() => {
-    if (cat) {
-      setQuestions(shuffle(cat.questions));
-      setCurrent(0);
-      setSelected(null);
-      setScore(0);
-      setDone(false);
-    }
-  }, [catId]); // eslint-disable-line
+    setQuestions(buildSignQuiz(catId, lang));
+    setCurrent(0);
+    setSelected(null);
+    setValidated(false);
+    setScore(0);
+    setDone(false);
+  }, [catId, lang]);
 
-  // Shuffle answers when question changes (localized, FR fallback)
-  useEffect(() => {
-    const q = questions[current];
-    if (!q) return;
-    const answersLoc = isNL && q.answers_nl && q.answers_nl.length === q.answers.length
-      ? q.answers_nl
-      : q.answers;
-    setShuffledAnswers(
-      shuffle(answersLoc.map((text, i) => ({ text, originalIdx: i })))
-    );
-  }, [current, questions, isNL]);
-
-  // Remonte en haut à chaque nouvelle question : le bouton « Suivante »
-  // n'apparaît qu'une fois la réponse donnée, tout en bas du panneau
-  // d'explication — sans ça on démarre la question suivante scrollé en bas.
+  // Remonte en haut à chaque nouvelle question : le bouton de fin de question
+  // est tout en bas, on cliquerait sinon la suivante déjà scrollé.
   // `instant` obligatoire (globals.css impose scroll-behavior:smooth).
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
   }, [current]);
 
-  if (cat && !FREE_QUIZ_CATS.includes(catId) && !isPremium()) {
+  const q = questions[current];
+  const total = questions.length;
+
+  const handleValidate = useCallback(() => {
+    if (selected === null || validated) return;
+    setValidated(true);
+    if (selected === q.correct) setScore(s => s + 1);
+  }, [selected, validated, q]);
+
+  const handleNext = useCallback(() => {
+    if (current + 1 >= total) {
+      setDone(true);
+      return;
+    }
+    setCurrent(c => c + 1);
+    setSelected(null);
+    setValidated(false);
+  }, [current, total]);
+
+  const handleRestart = useCallback(() => {
+    setQuestions(buildSignQuiz(catId, lang));
+    setCurrent(0);
+    setSelected(null);
+    setValidated(false);
+    setScore(0);
+    setDone(false);
+  }, [catId, lang]);
+
+  if (category && !FREE_PANNEAU_IDS.includes(catId) && !isPremium()) {
     return <PremiumGate><></></PremiumGate>;
   }
 
-  if (!cat) {
+  if (!category) {
     return (
       <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--bg-page)' }}>
         <div className="text-center">
@@ -114,37 +93,11 @@ function QuizContent() {
     );
   }
 
-  const q = questions[current];
-  const total = questions.length;
+  const catTitle = t(`panneau_cat_${catId}`);
 
-  const handleAnswer = (displayIdx: number) => {
-    if (selected !== null) return;
-    setSelected(displayIdx);
-    if (shuffledAnswers[displayIdx].originalIdx === q.correct) {
-      setScore(s => s + 1);
-    }
-  };
-
-  const handleNext = () => {
-    if (current + 1 >= total) {
-      setDone(true);
-    } else {
-      setCurrent(c => c + 1);
-      setSelected(null);
-    }
-  };
-
-  const handleRestart = () => {
-    setQuestions(shuffle(cat.questions));
-    setCurrent(0);
-    setSelected(null);
-    setScore(0);
-    setDone(false);
-  };
-
-  // ── Final screen ──────────────────────────────────────────────
+  // ── Écran de score ────────────────────────────────────────────
   if (done) {
-    const pct = Math.round((score / total) * 100);
+    const pct = total > 0 ? Math.round((score / total) * 100) : 0;
     const passed = pct >= 70;
     return (
       <div className="min-h-screen flex flex-col" style={{ background: 'var(--bg-page)' }}>
@@ -154,7 +107,6 @@ function QuizContent() {
             {passed ? t('resultats_bravo') : t('pquiz_continue')}
           </h1>
 
-          {/* Score circle */}
           <div
             className="w-36 h-36 rounded-full flex flex-col items-center justify-center"
             style={{ border: `5px solid ${passed ? '#22c55e' : '#f59e0b'}`, background: (passed ? '#22c55e' : '#f59e0b') + '15' }}
@@ -165,7 +117,7 @@ function QuizContent() {
 
           <div className="rounded-2xl px-6 py-3" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
             <p className="text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>
-              {t('pquiz_categorie')} <span className="font-black" style={{ color: cat.color }}>{catTitle}</span>
+              {t('pquiz_categorie')} <span className="font-black" style={{ color: catColor }}>{catTitle}</span>
             </p>
           </div>
 
@@ -173,7 +125,7 @@ function QuizContent() {
             <button
               onClick={handleRestart}
               className="w-full py-4 rounded-2xl font-black text-sm press-scale"
-              style={{ background: cat.color, color: '#fff' }}
+              style={{ background: catColor, color: '#fff' }}
             >
               {t('pquiz_recommencer')}
             </button>
@@ -190,12 +142,11 @@ function QuizContent() {
     );
   }
 
-  if (!q || shuffledAnswers.length === 0) return null;
+  if (!q) return null;
 
-  const answered = selected !== null;
-  const selectedIsCorrect = answered && shuffledAnswers[selected].originalIdx === q.correct;
+  const isCorrect = validated && selected === q.correct;
 
-  // ── Quiz screen ───────────────────────────────────────────────
+  // ── Écran de question ─────────────────────────────────────────
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--bg-page)' }}>
       {/* Header */}
@@ -212,12 +163,11 @@ function QuizContent() {
         </button>
 
         <div className="flex-1 min-w-0">
-          <p className="text-xs font-bold truncate" style={{ color: cat.color }}>{catTitle}</p>
-          {/* Progress bar */}
+          <p className="text-xs font-bold truncate" style={{ color: catColor }}>{catTitle}</p>
           <div className="mt-1 h-1.5 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
             <div
               className="h-full rounded-full transition-all duration-500"
-              style={{ width: `${((current + (answered ? 1 : 0)) / total) * 100}%`, background: cat.color }}
+              style={{ width: `${((current + (validated ? 1 : 0)) / total) * 100}%`, background: catColor }}
             />
           </div>
         </div>
@@ -227,82 +177,92 @@ function QuizContent() {
         </span>
       </div>
 
-      {/* Body */}
+      {/* Corps */}
       <div className="flex-1 max-w-md mx-auto w-full px-4 py-6 flex flex-col gap-5">
-        {/* Sign image */}
+        {/* Le panneau */}
         <div
           className="rounded-3xl flex items-center justify-center py-8"
-          style={{ background: cat.color + '10', border: `1.5px solid ${cat.color}30`, minHeight: 180 }}
+          style={{ background: catColor + '10', border: `1.5px solid ${catColor}30`, minHeight: 180 }}
         >
-          <SignImage code={q.sign} size={140} />
+          <SignImage code={q.code} size={140} />
         </div>
 
         {/* Question */}
         <p className="text-[18px] font-bold leading-snug" style={{ color: 'var(--text-primary)' }}>
-          {(isNL && q.question_nl) || q.question}
+          {t('pquiz_que_signifie')}
         </p>
 
-        {/* Answer choices */}
+        {/* Réponses */}
         <div className="flex flex-col gap-2.5">
-          {shuffledAnswers.map((ans, displayIdx) => {
-            const isCorrectAnswer = ans.originalIdx === q.correct;
+          {q.choices.map((choice, i) => {
             let bg = 'var(--card-primary)';
             let border = '2px solid var(--border-subtle)';
             let textColor = 'var(--text-primary)';
             let icon = '';
 
-            if (answered) {
-              if (displayIdx === selected) {
-                if (selectedIsCorrect) {
-                  bg = '#22c55e18'; border = '2px solid #22c55e'; textColor = '#16a34a'; icon = '✓';
-                } else {
-                  bg = '#ef444418'; border = '2px solid #ef4444'; textColor = '#dc2626'; icon = '✗';
-                }
-              } else if (isCorrectAnswer) {
-                bg = '#22c55e10'; border = '2px solid #22c55e80'; textColor = '#16a34a'; icon = '✓';
+            if (validated) {
+              if (i === q.correct) {
+                bg = '#22c55e18'; border = '2px solid #22c55e'; textColor = '#16a34a'; icon = '✓';
+              } else if (i === selected) {
+                bg = '#ef444418'; border = '2px solid #ef4444'; textColor = '#dc2626'; icon = '✗';
               }
-            } else if (displayIdx === selected) {
-              bg = cat.color + '15'; border = `2px solid ${cat.color}`;
+            } else if (i === selected) {
+              bg = catColor + '15'; border = `2px solid ${catColor}`;
             }
 
             return (
               <button
-                key={displayIdx}
-                onClick={() => handleAnswer(displayIdx)}
-                disabled={answered}
+                key={i}
+                onClick={() => { if (!validated) setSelected(i); }}
+                disabled={validated}
                 className="w-full text-left px-4 py-3.5 rounded-2xl font-semibold text-sm press-scale transition-colors duration-200 flex items-center justify-between gap-3"
-                style={{ background: bg, border, color: textColor, cursor: answered ? 'default' : 'pointer' }}
+                style={{ background: bg, border, color: textColor, cursor: validated ? 'default' : 'pointer' }}
               >
-                <span>{ans.text}</span>
+                <span>{choice}</span>
                 {icon && <span className="font-black text-base flex-shrink-0">{icon}</span>}
               </button>
             );
           })}
         </div>
 
-        {/* Explanation */}
-        {answered && q.explanation && (
+        {/* Explication — après validation seulement */}
+        {validated && q.detail && (
           <div
             className="rounded-2xl px-4 py-3 text-sm leading-relaxed"
             style={{
-              background: selectedIsCorrect ? '#22c55e10' : '#f59e0b10',
-              border: `1px solid ${selectedIsCorrect ? '#22c55e40' : '#f59e0b40'}`,
+              background: isCorrect ? '#22c55e10' : '#f59e0b10',
+              border: `1px solid ${isCorrect ? '#22c55e40' : '#f59e0b40'}`,
               color: 'var(--text-secondary)',
             }}
           >
-            <span className="font-bold" style={{ color: selectedIsCorrect ? '#16a34a' : '#d97706' }}>
-              {selectedIsCorrect ? `✓ ${t('pquiz_bonne_reponse')} · ` : 'ⓘ  '}
+            <span className="font-bold" style={{ color: isCorrect ? '#16a34a' : '#d97706' }}>
+              {isCorrect ? `✓ ${t('pquiz_bonne_reponse')} · ` : 'ⓘ  '}
             </span>
-            {(isNL && q.explanation_nl) || q.explanation}
+            {q.detail}
           </div>
         )}
 
-        {/* Next button */}
-        {answered && (
+        {/* Valider, puis Suivante — on ne corrige plus au simple clic sur une
+            réponse : l'utilisateur choisit, relit, puis confirme. */}
+        {!validated ? (
+          <button
+            onClick={handleValidate}
+            disabled={selected === null}
+            className="w-full py-4 rounded-2xl font-black text-sm press-scale transition-opacity duration-200"
+            style={{
+              background: selected === null ? 'var(--card-secondary)' : catColor,
+              color: selected === null ? 'var(--text-disabled)' : '#fff',
+              cursor: selected === null ? 'default' : 'pointer',
+              border: selected === null ? '1px solid var(--border-subtle)' : 'none',
+            }}
+          >
+            {t('valider')}
+          </button>
+        ) : (
           <button
             onClick={handleNext}
             className="w-full py-4 rounded-2xl font-black text-sm press-scale"
-            style={{ background: cat.color, color: cat.id === 'F' ? '#fff' : '#fff' }}
+            style={{ background: catColor, color: '#fff' }}
           >
             {current + 1 < total ? t('pquiz_suivante') : t('pquiz_voir_score')}
           </button>

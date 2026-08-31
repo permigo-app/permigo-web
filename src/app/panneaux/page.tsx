@@ -9,23 +9,10 @@ import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
 import { useIsPremium } from '@/lib/premium';
-import rawQuizData from '@/data/panneaux_quiz.json';
 
-// PANNEAU_CATEGORIES id → quiz category id
-const PANNEAU_TO_QUIZ: Record<string, string> = {
-  A: 'A', B: 'BC', C: 'BC', D: 'D', E: 'E', F: 'F', M: 'M', FEU: 'FEU', LIGNE: 'SOL', LT: 'LT',
-};
-
-// Derive quiz button data from panneaux_quiz.json — button only shown when count ≥ 1
-const quizCounts: Record<string, number> = {};
-for (const cat of (rawQuizData as { categories: { id: string; questions: unknown[] }[] }).categories) {
-  quizCounts[cat.id] = cat.questions.length;
-}
-const QUIZ_MAP: Record<string, { cat: string; count: number }> = {};
-for (const [pannId, quizCat] of Object.entries(PANNEAU_TO_QUIZ)) {
-  const count = quizCounts[quizCat] ?? 0;
-  if (count > 0) QUIZ_MAP[pannId] = { cat: quizCat, count };
-}
+// Le quiz pose désormais UNE question par panneau de la catégorie : son nombre
+// de questions est donc simplement le nombre de panneaux, plus besoin de table
+// de correspondance ni de compteur séparé.
 
 const FREE_PANNEAU_IDS = ['A', 'C', 'D'];
 
@@ -162,9 +149,9 @@ export default function PanneauxPage() {
                             {t('panneaux_voir_tous')}
                           </Link>
 
-                          {QUIZ_MAP[cat.id] && (
+                          {total > 0 && (
                             <Link
-                              href={`/panneaux/quiz?cat=${QUIZ_MAP[cat.id].cat}`}
+                              href={`/panneaux/quiz?cat=${cat.id}`}
                               className="text-xs rounded-xl press-scale"
                               style={{
                                 background: '#f59e0b',
@@ -175,7 +162,7 @@ export default function PanneauxPage() {
                               }}
                               onClick={e => e.stopPropagation()}
                             >
-                              Quiz situations ({QUIZ_MAP[cat.id].count}q)
+                              Quiz ({total}q)
                             </Link>
                           )}
 

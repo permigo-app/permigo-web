@@ -9,6 +9,20 @@ export interface SignDef {
 
 type Lang = 'fr' | 'nl';
 
+/**
+ * Les noms sont écrits « Titre court (explication en clair) ». Cette fonction
+ * sépare les deux pour pouvoir les afficher différemment, sans jamais tronquer :
+ * le titre reste la réponse courte, l'explication vient en complément.
+ */
+export function splitSignName(name: string): { main: string; detail: string } {
+  const i = name.indexOf('(');
+  if (i === -1) return { main: name.trim(), detail: '' };
+  return {
+    main: name.slice(0, i).trim(),
+    detail: name.slice(i + 1).replace(/\)\s*$/, '').trim(),
+  };
+}
+
 /** Returns signs for a category, localized by language */
 export function getSignsByCategory(catId: string, lang: Lang): SignDef[] {
   const signs = SIGNS_BY_CATEGORY[catId] || [];

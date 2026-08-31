@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { PANNEAU_CATEGORIES } from '@/lib/constants';
-import { getSignsByCategory } from '@/lib/signsData';
+import { getSignsByCategory, splitSignName } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
@@ -143,9 +143,16 @@ export default function PanneauCategoriePage() {
                         <SignImage code={sign.code} size={120} />
                       </div>
                       <p className="text-sm font-black mb-1" style={{ color: 'var(--text-primary)' }}>{sign.code}</p>
-                      <p className="text-[11px] leading-snug line-clamp-2" style={{ color: 'var(--text-secondary)' }}>
-                        {sign.name.split('(')[0].trim()}
+                      {/* Signification affichée EN ENTIER : pas de line-clamp ici,
+                          sinon les noms longs sont coupés en plein milieu. */}
+                      <p className="text-[12px] font-bold leading-snug" style={{ color: 'var(--text-primary)' }}>
+                        {splitSignName(sign.name).main}
                       </p>
+                      {splitSignName(sign.name).detail && (
+                        <p className="text-[11px] leading-snug mt-1" style={{ color: 'var(--text-secondary)' }}>
+                          {splitSignName(sign.name).detail}
+                        </p>
+                      )}
                     </div>
                   );
                 })}
