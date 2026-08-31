@@ -184,6 +184,7 @@ function RevisionContent() {
     <QuizLayout
       progress={progress}
       progressLabel={`${index + 1}/${questions.length}`}
+      questionKey={index}
       headerLeft={
         <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--text-sub)' }}>
           {'←'}

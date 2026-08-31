@@ -125,11 +125,12 @@ export default function LessonPage() {
     else prefetchImage(questions[currentQ + 1]?.image);
   }, [phase, currentCard, currentQ, displayTheories, questions]);
 
-  // Remonte en haut de page à chaque changement de carte — sinon on reste
-  // scrollé en bas après "Continuer" et il faut remonter à la main.
+  // Remonte en haut de page à chaque changement de carte ET au passage
+  // théorie → quiz — sinon on reste scrollé en bas après "Continuer" et il faut
+  // remonter à la main. Le changement de question, lui, est géré par QuizLayout.
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
-  }, [currentCard]);
+  }, [currentCard, phase]);
 
   const currentPartieTitle = isPartieMode && partieIndex !== undefined && partieIndex < theories.length
     ? theories[partieIndex]?.title
@@ -719,6 +720,7 @@ export default function LessonPage() {
         explanation={q.explanation}
         shakeWrong={shakeWrong}
         questionId={q.id || `${lessonId}_q${currentQ}`}
+        questionKey={currentQ}
         sidebar={
           <>
             {/* Progress card */}

@@ -388,6 +388,7 @@ function ExamContent() {
       isLastQuestion={currentQ + 1 >= questions.length}
       shakeWrong={false}
       questionId={q.id || `exam_${themeCode}_q${currentQ}`}
+      questionKey={currentQ}
       sidebar={
         <>
           {/* Reprise banner */}

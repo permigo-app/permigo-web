@@ -91,6 +91,14 @@ function QuizContent() {
     );
   }, [current, questions, isNL]);
 
+  // Remonte en haut à chaque nouvelle question : le bouton « Suivante »
+  // n'apparaît qu'une fois la réponse donnée, tout en bas du panneau
+  // d'explication — sans ça on démarre la question suivante scrollé en bas.
+  // `instant` obligatoire (globals.css impose scroll-behavior:smooth).
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+  }, [current]);
+
   if (cat && !FREE_QUIZ_CATS.includes(catId) && !isPremium()) {
     return <PremiumGate><></></PremiumGate>;
   }

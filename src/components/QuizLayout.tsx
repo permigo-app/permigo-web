@@ -49,6 +49,13 @@ interface QuizLayoutProps {
 
   /* Image request */
   questionId?: string;
+
+  /**
+   * Identifiant de la question courante (id ou index). Sert UNIQUEMENT à
+   * remettre la page en haut quand on passe à la question suivante. À défaut,
+   * on retombe sur le texte de la question.
+   */
+  questionKey?: string | number;
 }
 
 export default function QuizLayout({
@@ -74,6 +81,7 @@ export default function QuizLayout({
   explanation,
   shakeWrong,
   questionId,
+  questionKey,
 }: QuizLayoutProps) {
   const { t } = useLang();
   const isCorrect = selected === correctIndex;
@@ -83,6 +91,16 @@ export default function QuizLayout({
       playSound(isCorrect ? 'correct' : 'wrong');
     }
   }, [validated, isCorrect]);
+
+  // Remonte en haut à chaque NOUVELLE question (et au démarrage du quiz, ce
+  // composant étant monté à ce moment-là) : sans ça, on reste scrollé en bas
+  // après « Suivante » et on découvre les réponses avant même l'énoncé.
+  // Volontairement PAS déclenché par `validated` : l'explication s'affiche sous
+  // les choix, remonter la ferait manquer.
+  // `instant` est obligatoire : globals.css impose scroll-behavior:smooth.
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+  }, [questionKey ?? question]);
 
   return (
     <div style={{ minHeight: '100vh' }}>

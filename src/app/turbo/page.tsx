@@ -465,6 +465,7 @@ function TurboContent() {
       onNext={nextQuestion}
       isLastQuestion={false}
       lastLabel="SUIVANTE →"
+      questionKey={currentQ}
       sidebar={
         <>
           {/* Timer / Streak */}

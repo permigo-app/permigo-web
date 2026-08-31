@@ -136,11 +136,21 @@ function FlashContent() {
     setLoaded(true);
   }, [themeCode, allCards, totalCards, themeData]);
 
+  // Le verso de la fiche défile dans SON propre conteneur (overflow-y-auto) et
+  // le même nœud DOM est réutilisé d'une fiche à l'autre : sans remise à zéro,
+  // la fiche suivante s'ouvre déjà défilée, texte coupé en haut.
+  // Ici window.scrollTo ne servirait à rien — la carte tient dans l'écran.
+  const backFaceRef = useRef<HTMLDivElement>(null);
+  const resetBackScroll = useCallback(() => {
+    if (backFaceRef.current) backFaceRef.current.scrollTop = 0;
+  }, []);
+
   const flipCard = useCallback(() => {
     if (animating) return;
     setFlipped(f => !f);
     setShowDetail(false);
-  }, [animating]);
+    resetBackScroll();
+  }, [animating, resetBackScroll]);
 
   const advanceCard = useCallback((updateFn: () => void) => {
     if (animating) return;
@@ -148,11 +158,12 @@ function FlashContent() {
     setTimeout(() => {
       setFlipped(false);
       setShowDetail(false);
+      resetBackScroll();
       updateFn();
       setAnimating(false);
       setSessionViewed(v => v + 1);
     }, 150);
-  }, [animating, sessionViewed]);
+  }, [animating, sessionViewed, resetBackScroll]);
 
   const handleMastered = useCallback(() => {
     const current = queue[0];
@@ -429,6 +440,7 @@ function FlashContent() {
 
                 {/* Back face */}
                 <div
+                  ref={backFaceRef}
                   className="absolute inset-0 rounded-2xl p-8 overflow-y-auto cursor-pointer"
                   onClick={flipCard}
                   style={{
