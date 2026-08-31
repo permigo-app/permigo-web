@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLang } from '@/contexts/LanguageContext';
+import { cheapestPlan } from '@/lib/pricing';
 
 interface LandingCopy {
   navLogin: string;
@@ -26,6 +27,17 @@ interface LandingCopy {
   themesTitle: string;
   themeWord: string;
   themes: { code: string; emoji: string; label: string }[];
+  planKicker: string;
+  planTitle: string;
+  planSubtitle: string;
+  freeTitle: string;
+  freeBadge: string;
+  freeItems: string[];
+  premiumTitle: string;
+  premiumBadge: string;
+  premiumItems: string[];
+  premiumPeriod: string;
+  premiumNote: string;
   finalTitle: string;
   finalDesc: string;
   finalCta: string;
@@ -39,14 +51,14 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     badge: 'Préparation au permis théorique officiel belge',
     h1Line1: 'Réussis ton permis belge.',
     h1Line2: 'La méthode qui marche.',
-    subtitle: '2286 questions officielles, 100% gratuites. Apprends thème par thème, à ton rythme, jusqu\'à l\'examen blanc.',
+    subtitle: '2 286 questions officielles réparties sur 9 thèmes. Commence gratuitement, puis débloque tout avec Premium quand tu te sens prêt.',
     ctaStart: '🚀 Commencer gratuitement',
     ctaLogin: 'Déjà un compte →',
     stats: [
       { v: '2 286', l: 'questions' },
       { v: '9', l: 'thèmes officiels' },
       { v: '+100', l: 'déjà inscrits' },
-      { v: '100%', l: 'gratuit' },
+      { v: cheapestPlan().priceDisplay, l: 'par semaine en Premium' },
     ],
     mockTheme: 'Thème A · Leçon 3',
     mockThemeTitle: 'Comportement général',
@@ -64,7 +76,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     stepsKicker: 'Comment ça marche',
     stepsTitle: '3 étapes vers le succès',
     steps: [
-      { num: '01', title: 'Crée ton compte', desc: 'Inscription gratuite en 30 secondes. Aucune carte bancaire requise, jamais.' },
+      { num: '01', title: 'Crée ton compte', desc: 'Inscription gratuite en 30 secondes. Aucune carte bancaire pour commencer.' },
       { num: '02', title: 'Apprends par thème', desc: 'Suis les 9 thèmes officiels avec leçons, flashcards et quiz adaptatifs.' },
       { num: '03', title: 'Réussis l\'examen', desc: 'Mode Turbo, examens blancs, banque d\'erreurs — tu arrives plus que préparé.' },
     ],
@@ -82,10 +94,35 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { code: 'H', emoji: '🌧️', label: 'Conditions difficiles' },
       { code: 'I', emoji: '⚠️', label: 'Accidents & secours' },
     ],
+    planKicker: 'Gratuit & Premium',
+    planTitle: 'Essaie d\'abord, décide ensuite',
+    planSubtitle: 'Tu peux te faire une vraie idée de la plateforme sans sortir ta carte. Premium débloque le reste quand tu veux passer à la vitesse supérieure.',
+    freeTitle: 'Gratuit',
+    freeBadge: 'Sans carte bancaire',
+    freeItems: [
+      'La première leçon complète : théorie + quiz',
+      '5 cartes flash par leçon, dans tous les thèmes',
+      'Un examen blanc en conditions réelles',
+      'Une session d\'entraînement Turbo',
+      '3 catégories de panneaux de signalisation',
+      'Tout le permis AM (cyclomoteur) sans limite',
+    ],
+    premiumTitle: 'Premium',
+    premiumBadge: 'Tout débloqué',
+    premiumItems: [
+      'Les 9 thèmes et les 2 286 questions',
+      'Examens blancs illimités',
+      'Entraînement Turbo illimité',
+      'Toutes les cartes flash de chaque leçon',
+      'Ta banque d\'erreurs personnelle par thème',
+      'Tous les panneaux de signalisation belges',
+    ],
+    premiumPeriod: 'par semaine',
+    premiumNote: 'Aussi en formules 2 semaines et 1 mois · Sans engagement, résiliable à tout moment',
     finalTitle: 'Prêt à décrocher ton permis ?',
-    finalDesc: 'Déjà plus de 100 inscrits en à peine quelques semaines. Rejoins les apprenants belges qui préparent leur permis avec MyPermiGo. Gratuit, sans engagement, en français et en néerlandais.',
+    finalDesc: 'Déjà plus de 100 inscrits en à peine quelques semaines. Commence gratuitement, en français ou en néerlandais — tu ne passes à Premium que si la plateforme te convient.',
     finalCta: 'Créer mon compte gratuit →',
-    finalNote: 'Inscription en 30 secondes · Aucune carte requise',
+    finalNote: 'Inscription en 30 secondes · Aucune carte bancaire pour commencer',
   },
   nl: {
     navLogin: 'Inloggen',
@@ -93,14 +130,14 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     badge: 'Voorbereiding op het officiële Belgische theorie-examen',
     h1Line1: 'Haal je Belgisch rijbewijs.',
     h1Line2: 'De methode die werkt.',
-    subtitle: '2286 officiële vragen, 100% gratis. Leer thema per thema, op je eigen tempo, tot aan het proefexamen.',
+    subtitle: '2 286 officiële vragen verdeeld over 9 thema\'s. Begin gratis en ontgrendel daarna alles met Premium wanneer je er klaar voor bent.',
     ctaStart: '🚀 Gratis beginnen',
     ctaLogin: 'Al een account →',
     stats: [
       { v: '2 286', l: 'vragen' },
       { v: '9', l: 'officiële thema\'s' },
       { v: '+100', l: 'al ingeschreven' },
-      { v: '100%', l: 'gratis' },
+      { v: cheapestPlan().priceDisplay, l: 'per week met Premium' },
     ],
     mockTheme: 'Thema A · Les 3',
     mockThemeTitle: 'Algemeen gedrag',
@@ -118,7 +155,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     stepsKicker: 'Hoe het werkt',
     stepsTitle: '3 stappen naar succes',
     steps: [
-      { num: '01', title: 'Maak je account', desc: 'Gratis inschrijven in 30 seconden. Nooit een bankkaart nodig.' },
+      { num: '01', title: 'Maak je account', desc: 'Gratis inschrijven in 30 seconden. Geen bankkaart nodig om te starten.' },
       { num: '02', title: 'Leer per thema', desc: 'Volg de 9 officiële thema\'s met lessen, flashcards en adaptieve quizzen.' },
       { num: '03', title: 'Slaag voor je examen', desc: 'Turbo-modus, proefexamens, foutenbank — je bent meer dan klaar.' },
     ],
@@ -136,10 +173,35 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { code: 'H', emoji: '🌧️', label: 'Moeilijke omstandigheden' },
       { code: 'I', emoji: '⚠️', label: 'Ongevallen & hulpverlening' },
     ],
+    planKicker: 'Gratis & Premium',
+    planTitle: 'Eerst proberen, dan beslissen',
+    planSubtitle: 'Je krijgt een echt beeld van het platform zonder je bankkaart boven te halen. Premium ontgrendelt de rest wanneer jij een versnelling hoger wil schakelen.',
+    freeTitle: 'Gratis',
+    freeBadge: 'Zonder bankkaart',
+    freeItems: [
+      'De volledige eerste les: theorie + quiz',
+      '5 flashcards per les, in alle thema\'s',
+      'Eén proefexamen in echte examenomstandigheden',
+      'Eén Turbo-oefensessie',
+      '3 categorieën verkeersborden',
+      'Het volledige AM-rijbewijs (bromfiets), onbeperkt',
+    ],
+    premiumTitle: 'Premium',
+    premiumBadge: 'Alles ontgrendeld',
+    premiumItems: [
+      'De 9 thema\'s en alle 2 286 vragen',
+      'Onbeperkt proefexamens',
+      'Onbeperkt Turbo-training',
+      'Alle flashcards van elke les',
+      'Je persoonlijke foutenbank per thema',
+      'Alle Belgische verkeersborden',
+    ],
+    premiumPeriod: 'per week',
+    premiumNote: 'Ook in formules van 2 weken en 1 maand · Zonder verplichtingen, elk moment opzegbaar',
     finalTitle: 'Klaar om je rijbewijs te halen?',
-    finalDesc: 'Al meer dan 100 inschrijvingen in amper enkele weken. Sluit je aan bij de Belgische leerlingen die hun rijbewijs voorbereiden met MyPermiGo. Gratis, zonder verplichtingen, in het Frans en het Nederlands.',
+    finalDesc: 'Al meer dan 100 inschrijvingen in amper enkele weken. Begin gratis, in het Frans of het Nederlands — je gaat pas naar Premium als het platform je bevalt.',
     finalCta: 'Maak mijn gratis account →',
-    finalNote: 'Inschrijven in 30 seconden · Geen kaart nodig',
+    finalNote: 'Inschrijven in 30 seconden · Geen bankkaart om te starten',
   },
 };
 
@@ -152,6 +214,14 @@ const MOCK_ANSWERS = [
 export default function LandingContent() {
   const { lang, setLang } = useLang();
   const c = COPY[lang];
+  const plan = cheapestPlan();
+
+  const check = (color: string) => (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="3"
+         strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 3 }}>
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  );
 
   return (
     <main style={{ background: '#FFFFFF', minHeight: '100vh', fontFamily: 'Sora, sans-serif', color: '#0B1220' }}>
@@ -385,8 +455,84 @@ export default function LandingContent() {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ───────────────────────────────────────── */}
+      {/* ── FREE vs PREMIUM ────────────────────────────────────── */}
       <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#FFFFFF' }}>
+        <div style={{ maxWidth:900, margin:'0 auto' }}>
+          <div style={{ textAlign:'center', marginBottom:44 }}>
+            <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>{c.planKicker}</p>
+            <h2 style={{ margin:'0 0 14px', fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
+              {c.planTitle}
+            </h2>
+            <p style={{ margin:'0 auto', maxWidth:520, fontSize:15, color:'rgba(11,18,32,0.6)', lineHeight:1.7 }}>
+              {c.planSubtitle}
+            </p>
+          </div>
+
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:20, alignItems:'start' }}>
+
+            {/* Gratuit */}
+            <div style={{
+              background:'#F5F8FA', borderRadius:22, padding:'28px 26px',
+              border:'1px solid rgba(11,18,32,0.08)',
+            }}>
+              <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:6, flexWrap:'wrap' }}>
+                <span style={{ fontSize:20, fontWeight:900, color:'#0B1220' }}>{c.freeTitle}</span>
+                <span style={{
+                  fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:99,
+                  background:'rgba(11,18,32,0.06)', color:'rgba(11,18,32,0.55)',
+                }}>
+                  {c.freeBadge}
+                </span>
+              </div>
+              <p style={{ margin:'0 0 20px', fontSize:30, fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>0€</p>
+              <div style={{ display:'flex', flexDirection:'column', gap:11 }}>
+                {c.freeItems.map(item => (
+                  <div key={item} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
+                    {check('#1AB8AB')}
+                    <span style={{ fontSize:13.5, color:'rgba(11,18,32,0.7)', lineHeight:1.6 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Premium */}
+            <div style={{
+              background:'linear-gradient(145deg,#0E1828,#132240)', borderRadius:22, padding:'28px 26px',
+              border:'1px solid rgba(34,214,199,0.25)',
+              boxShadow:'0 16px 50px rgba(11,18,32,0.18)',
+            }}>
+              <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:6, flexWrap:'wrap' }}>
+                <span style={{ fontSize:20, fontWeight:900, color:'#F1F5F9' }}>{c.premiumTitle}</span>
+                <span style={{
+                  fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:99,
+                  background:'rgba(34,214,199,0.15)', color:'#22D6C7',
+                }}>
+                  {c.premiumBadge}
+                </span>
+              </div>
+              <p style={{ margin:'0 0 20px', display:'flex', alignItems:'baseline', gap:7, flexWrap:'wrap' }}>
+                <span style={{ fontSize:30, fontWeight:900, color:'#22D6C7', letterSpacing:'-1px' }}>{plan.priceDisplay}</span>
+                <span style={{ fontSize:13, color:'rgba(241,245,249,0.5)', fontWeight:600 }}>{c.premiumPeriod}</span>
+              </p>
+              <div style={{ display:'flex', flexDirection:'column', gap:11, marginBottom:22 }}>
+                {c.premiumItems.map(item => (
+                  <div key={item} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
+                    {check('#22D6C7')}
+                    <span style={{ fontSize:13.5, color:'rgba(241,245,249,0.78)', lineHeight:1.6 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p style={{ margin:0, fontSize:11.5, color:'rgba(241,245,249,0.4)', lineHeight:1.6 }}>
+                {c.premiumNote}
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── HOW IT WORKS ───────────────────────────────────────── */}
+      <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#F5F8FA' }}>
         <div style={{ maxWidth:960, margin:'0 auto' }}>
           <div style={{ textAlign:'center', marginBottom:44 }}>
             <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>{c.stepsKicker}</p>
@@ -415,7 +561,7 @@ export default function LandingContent() {
       </section>
 
       {/* ── THEMES ─────────────────────────────────────────────── */}
-      <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#F5F8FA' }}>
+      <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#FFFFFF' }}>
         <div style={{ maxWidth:760, margin:'0 auto', textAlign:'center' }}>
           <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>{c.themesKicker}</p>
           <h2 style={{ margin:'0 0 36px', fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
@@ -438,7 +584,7 @@ export default function LandingContent() {
       </section>
 
       {/* ── CTA FINAL ──────────────────────────────────────────── */}
-      <section style={{ padding:'clamp(48px,8vw,80px) 24px clamp(60px,10vw,100px)', background:'#FFFFFF', textAlign:'center' }}>
+      <section style={{ padding:'clamp(48px,8vw,80px) 24px clamp(60px,10vw,100px)', background:'#F5F8FA', textAlign:'center' }}>
         <div style={{
           maxWidth:580, margin:'0 auto',
           background:'linear-gradient(145deg,#F0FDFC,#E6FBF8)',
