@@ -316,6 +316,7 @@ const nl: Record<string, string> = {
   pquiz_suivante: 'Volgende vraag →',
   pquiz_voir_score: 'Score bekijken →',
   pquiz_que_signifie: 'Wat betekent dit verkeersbord?',
+  pquiz_panneau: 'Bord',
 
   // ── Choix du permis ──
   choix_titre: 'Kies je theorie-rijbewijs',

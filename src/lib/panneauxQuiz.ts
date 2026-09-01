@@ -6,7 +6,7 @@
 // vérité, déjà traduite FR/NL) au lieu d'être écrites à la main : impossible
 // qu'un panneau ajouté au catalogue reste sans question.
 
-import { getSignsByCategory, getAllSignsLocalized, splitSignName, type SignDef } from './signsData';
+import { getSignsByCategory, getAllSignsLocalized, type SignDef } from './signsData';
 
 export interface SignQuizQuestion {
   /** Code du panneau (sert aussi de clé React et d'identifiant de progression) */
@@ -15,8 +15,6 @@ export interface SignQuizQuestion {
   choices: string[];
   /** Index de la bonne réponse dans `choices` */
   correct: number;
-  /** Explication en clair, affichée après validation (peut être vide) */
-  detail: string;
 }
 
 type Lang = 'fr' | 'nl';
@@ -32,9 +30,16 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-/** Libellé court d'un panneau — c'est lui qui sert de réponse. */
+/**
+ * Réponse = le nom COMPLET du panneau, exactement tel qu'il est écrit dans le
+ * catalogue. Ne surtout pas couper la parenthèse : chez plusieurs panneaux
+ * belges c'est elle qui distingue une variante d'une autre — « Interdit aux
+ * marchandises dangereuses (variante) » (C24a) devient sinon impossible à
+ * différencier de C24, et « Chemin séparé piétons / cyclistes (côtés inversés) »
+ * (D9b) de D9a. Le quiz doit poser le panneau tel qu'il est appris.
+ */
 function label(sign: SignDef): string {
-  return splitSignName(sign.name).main;
+  return sign.name.trim();
 }
 
 /**
@@ -79,7 +84,6 @@ export function buildSignQuiz(catId: string, lang: Lang): SignQuizQuestion[] {
       code: sign.code,
       choices,
       correct: choices.indexOf(answer),
-      detail: splitSignName(sign.name).detail,
     };
   });
 

@@ -225,8 +225,9 @@ function QuizContent() {
           })}
         </div>
 
-        {/* Explication — après validation seulement */}
-        {validated && q.detail && (
+        {/* Après validation : la réponse porte déjà le libellé complet du
+            panneau, on ajoute donc son code officiel plutôt que de répéter. */}
+        {validated && (
           <div
             className="rounded-2xl px-4 py-3 text-sm leading-relaxed"
             style={{
@@ -238,7 +239,7 @@ function QuizContent() {
             <span className="font-bold" style={{ color: isCorrect ? '#16a34a' : '#d97706' }}>
               {isCorrect ? `✓ ${t('pquiz_bonne_reponse')} · ` : 'ⓘ  '}
             </span>
-            {q.detail}
+            {t('pquiz_panneau')} <span className="font-black">{q.code}</span>
           </div>
         )}
 
