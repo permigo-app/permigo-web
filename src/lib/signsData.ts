@@ -111,8 +111,9 @@ export const SIGNS_BY_CATEGORY: Record<string, SignDef[]> = {
     { code: 'C21', name: 'Poids maximum autorisé (interdit si votre véhicule dépasse le poids indiqué)' },
     { code: 'C22', name: 'Interdit aux autocars (bus de tourisme)' },
     { code: 'C23', name: 'Interdit aux camions (véhicules de transport de marchandises)' },
-    { code: 'C24', name: 'Interdit aux véhicules transportant des marchandises dangereuses' },
-    { code: 'C24a', name: 'Interdit aux marchandises dangereuses (variante)' },
+    // C24 (ancienne version : camion + plaque jaune) retiré du catalogue —
+    // C24a, la version à la plaque orange, le remplace. Le SVG reste sur disque.
+    { code: 'C24a', name: 'Interdit aux véhicules transportant des marchandises dangereuses (explosifs, carburants, gaz, produits toxiques)' },
     { code: 'C24b', name: 'Interdit si transport de matières inflammables ou explosives' },
     { code: 'C24c', name: 'Interdit si transport de matières polluant les eaux' },
     { code: 'C25', name: 'Longueur maximale autorisée (interdit si véhicule trop long)' },
