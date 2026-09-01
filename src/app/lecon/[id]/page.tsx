@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import { getLessonDataLocalized, getThemeForLessonLocalized, type LocalTheoryCard, type LocalQuestion, type LocalPartie, type LocalLesson } from '@/lib/lessonData';
+import { getLessonDataLocalized, getThemeForLessonLocalized, shuffleChoices, type LocalTheoryCard, type LocalQuestion, type LocalPartie, type LocalLesson } from '@/lib/lessonData';
 import { useLang } from '@/contexts/LanguageContext';
 import { setStars, updateQuizHistory, saveLessonQuizDone, saveLessonCardProgress, markPartieDone, markLessonCompleted, isPartieCompleted, isLessonCompleted, getCompletedParties, getAllExams, addStudyTime } from '@/lib/progressStorage';
 import { computeTier, countThemeParts, TIER_ORDER, type Tier } from '@/lib/medals';
@@ -49,12 +49,18 @@ function themeTierNow(lessons: LocalLesson[], themeCode: string): Tier {
   return computeTier(done, total, exams[themeCode] === true);
 }
 
-function shuffleQuestion(q: LocalQuestion) {
-  const order = [0, 1, 2, 3].sort(() => Math.random() - 0.5);
+// Mélange des propositions. On passe par shuffleChoices (Fisher-Yates, déjà
+// utilisé par l'examen blanc, le Turbo et la banque d'erreurs) : l'ancien
+// `[0,1,2,3].sort(() => Math.random() - 0.5)` n'est PAS uniforme — mesuré sur
+// 200 000 tirages, il plaçait la bonne réponse en B ou C 77% du temps et en D
+// seulement 9%. Comme la bonne réponse est en position 2 dans 89% des données
+// brutes, les leçons donnaient un biais perceptible.
+function shuffleQuestion(q: LocalQuestion): LocalQuestion {
+  const s = shuffleChoices(q);
   return {
     ...q,
-    choices: order.map(i => q.choices[i]) as [string, string, string, string],
-    correct: order.indexOf(q.correct),
+    choices: s.choices as [string, string, string, string],
+    correct: s.correct,
   };
 }
 

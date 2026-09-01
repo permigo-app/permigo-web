@@ -51,11 +51,11 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     badge: 'Préparation au permis théorique officiel belge',
     h1Line1: 'Réussis ton permis belge.',
     h1Line2: 'La méthode qui marche.',
-    subtitle: '2 286 questions officielles réparties sur 9 thèmes. Commence gratuitement, puis débloque tout avec Premium quand tu te sens prêt.',
+    subtitle: '1 770 questions officielles réparties sur 9 thèmes. Commence gratuitement, puis débloque tout avec Premium quand tu te sens prêt.',
     ctaStart: '🚀 Commencer gratuitement',
     ctaLogin: 'Déjà un compte →',
     stats: [
-      { v: '2 286', l: 'questions' },
+      { v: '1 770', l: 'questions' },
       { v: '9', l: 'thèmes officiels' },
       { v: '+100', l: 'déjà inscrits' },
       { v: cheapestPlan().priceDisplay, l: 'par semaine en Premium' },
@@ -66,7 +66,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     featuresKicker: 'Fonctionnalités',
     featuresTitle: 'Tout ce qu\'il te faut pour réussir',
     features: [
-      { icon: '📚', bg: 'rgba(59,130,246,0.14)',  title: '2 286 questions officielles', desc: 'Toutes les questions de l\'examen théorique belge, triées par thème et niveau de difficulté.' },
+      { icon: '📚', bg: 'rgba(59,130,246,0.14)',  title: '1 770 questions officielles', desc: 'Toutes les questions de l\'examen théorique belge, triées par thème et niveau de difficulté.' },
       { icon: '⚡', bg: 'rgba(245,158,11,0.14)',  title: 'Mode Turbo', desc: 'Sessions express de 3 à 5 minutes pour t\'entraîner à la vitesse de l\'examen réel.' },
       { icon: '📝', bg: 'rgba(34,197,94,0.14)',   title: 'Examen blanc', desc: 'Simule les conditions exactes de l\'examen officiel belge avec feedback immédiat.' },
       { icon: '🚦', bg: 'rgba(239,68,68,0.14)',   title: 'Panneaux de signalisation', desc: 'Apprends et mémorise tous les panneaux belges grâce au mode flash et aux cartes.' },
@@ -81,7 +81,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { num: '03', title: 'Réussis l\'examen', desc: 'Mode Turbo, examens blancs, banque d\'erreurs — tu arrives plus que préparé.' },
     ],
     themesKicker: 'Programme officiel',
-    themesTitle: '9 thèmes, 2 286 questions',
+    themesTitle: '9 thèmes, 1 770 questions',
     themeWord: 'Thème',
     themes: [
       { code: 'A', emoji: '🚗', label: 'Comportement général' },
@@ -110,7 +110,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     premiumTitle: 'Premium',
     premiumBadge: 'Tout débloqué',
     premiumItems: [
-      'Les 9 thèmes et les 2 286 questions',
+      'Les 9 thèmes et les 1 770 questions',
       'Examens blancs illimités',
       'Entraînement Turbo illimité',
       'Toutes les cartes flash de chaque leçon',
@@ -130,11 +130,11 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     badge: 'Voorbereiding op het officiële Belgische theorie-examen',
     h1Line1: 'Haal je Belgisch rijbewijs.',
     h1Line2: 'De methode die werkt.',
-    subtitle: '2 286 officiële vragen verdeeld over 9 thema\'s. Begin gratis en ontgrendel daarna alles met Premium wanneer je er klaar voor bent.',
+    subtitle: '1 770 officiële vragen verdeeld over 9 thema\'s. Begin gratis en ontgrendel daarna alles met Premium wanneer je er klaar voor bent.',
     ctaStart: '🚀 Gratis beginnen',
     ctaLogin: 'Al een account →',
     stats: [
-      { v: '2 286', l: 'vragen' },
+      { v: '1 770', l: 'vragen' },
       { v: '9', l: 'officiële thema\'s' },
       { v: '+100', l: 'al ingeschreven' },
       { v: cheapestPlan().priceDisplay, l: 'per week met Premium' },
@@ -145,7 +145,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     featuresKicker: 'Functies',
     featuresTitle: 'Alles wat je nodig hebt om te slagen',
     features: [
-      { icon: '📚', bg: 'rgba(59,130,246,0.14)',  title: '2 286 officiële vragen', desc: 'Alle vragen van het Belgische theorie-examen, gesorteerd per thema en moeilijkheidsgraad.' },
+      { icon: '📚', bg: 'rgba(59,130,246,0.14)',  title: '1 770 officiële vragen', desc: 'Alle vragen van het Belgische theorie-examen, gesorteerd per thema en moeilijkheidsgraad.' },
       { icon: '⚡', bg: 'rgba(245,158,11,0.14)',  title: 'Turbo-modus', desc: 'Snelle sessies van 3 tot 5 minuten om te oefenen op het tempo van het echte examen.' },
       { icon: '📝', bg: 'rgba(34,197,94,0.14)',   title: 'Proefexamen', desc: 'Simuleert de exacte omstandigheden van het officiële Belgische examen met directe feedback.' },
       { icon: '🚦', bg: 'rgba(239,68,68,0.14)',   title: 'Verkeersborden', desc: 'Leer en onthoud alle Belgische verkeersborden met de flashmodus en de kaarten.' },
@@ -160,7 +160,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { num: '03', title: 'Slaag voor je examen', desc: 'Turbo-modus, proefexamens, foutenbank — je bent meer dan klaar.' },
     ],
     themesKicker: 'Officieel programma',
-    themesTitle: '9 thema\'s, 2 286 vragen',
+    themesTitle: '9 thema\'s, 1 770 vragen',
     themeWord: 'Thema',
     themes: [
       { code: 'A', emoji: '🚗', label: 'Algemeen gedrag' },
@@ -189,7 +189,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     premiumTitle: 'Premium',
     premiumBadge: 'Alles ontgrendeld',
     premiumItems: [
-      'De 9 thema\'s en alle 2 286 vragen',
+      'De 9 thema\'s en alle 1 770 vragen',
       'Onbeperkt proefexamens',
       'Onbeperkt Turbo-training',
       'Alle flashcards van elke les',

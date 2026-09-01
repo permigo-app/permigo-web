@@ -4,7 +4,7 @@ import LandingContent from '@/components/LandingContent';
 export const metadata: Metadata = {
   title: 'MyPermiGo — Permis Théorique Belge, essai gratuit',
   description:
-    'Prépare ton permis de conduire théorique belge avec MyPermiGo. 2286 questions officielles, 9 thèmes, mode Turbo, examen blanc et panneaux. Commence gratuitement, Premium dès 4,99€/semaine. FR et NL.',
+    'Prépare ton permis de conduire théorique belge avec MyPermiGo. 1770 questions officielles, 9 thèmes, mode Turbo, examen blanc et panneaux. Commence gratuitement, Premium dès 4,99€/semaine. FR et NL.',
   keywords: [
     'mypermigo', 'permis théorique belge', 'code de la route belgique',
     'examen théorique permis belgique', 'préparation permis belge',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   ].join(', '),
   openGraph: {
     title: 'MyPermiGo — Permis Théorique Belge',
-    description: 'Prépare ton permis belge à ton rythme. 2286 questions officielles, essai gratuit puis Premium dès 4,99€/semaine.',
+    description: 'Prépare ton permis belge à ton rythme. 1770 questions officielles, essai gratuit puis Premium dès 4,99€/semaine.',
     url: 'https://mypermigo.be',
     siteName: 'MyPermiGo',
     locale: 'fr_BE',
@@ -34,7 +34,7 @@ const jsonLd = {
   name: 'MyPermiGo',
   url: 'https://mypermigo.be',
   description:
-    'Application web pour préparer le permis théorique belge : 2286 questions officielles, mode Turbo, examen blanc, panneaux de signalisation. Contenu gratuit à l\'essai, abonnement Premium pour tout débloquer.',
+    'Application web pour préparer le permis théorique belge : 1770 questions officielles, mode Turbo, examen blanc, panneaux de signalisation. Contenu gratuit à l\'essai, abonnement Premium pour tout débloquer.',
   applicationCategory: 'EducationalApplication',
   operatingSystem: 'Web',
   // Freemium : une partie du contenu est gratuite, le reste est sur abonnement.

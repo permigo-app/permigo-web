@@ -8,7 +8,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 
 const BENEFITS = [
-  { icon: '📚', text: '2 286 questions officielles' },
+  { icon: '📚', text: '1 770 questions officielles' },
   { icon: '🎯', text: '9 thèmes, leçon par leçon' },
   { icon: '📝', text: 'Examens blancs & entraînement chronométré' },
   { icon: '🇧🇪', text: 'FR + NL · gratuit pour commencer' },
