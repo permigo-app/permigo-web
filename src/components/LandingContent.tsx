@@ -23,7 +23,6 @@ interface FaqItem { q: string; a: string }
 interface Pillar { title: string; price: string; cta: string; href: string; bg: string; fg: string; btnBg: string; btnFg: string }
 
 interface LandingCopy {
-  announce: string;
   navLogin: string;
   navStart: string;
   badge: string;
@@ -76,7 +75,6 @@ interface LandingCopy {
 
 const COPY: Record<'fr' | 'nl', LandingCopy> = {
   fr: {
-    announce: 'Nouveau · Le quiz des 214 panneaux belges est en ligne',
     navLogin: 'Se connecter',
     navStart: 'Commencer',
     badge: 'Conforme au programme officiel belge',
@@ -113,7 +111,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { icon: '📝', color: '#22C55E', title: 'Examen blanc', desc: 'Les conditions réelles de l\'examen belge : même format, même pression, sans la correction en direct.' },
       { icon: '🚦', color: '#EF4444', title: '214 panneaux', desc: 'Tout le catalogue belge en cartes flash, plus un quiz qui interroge chaque panneau un par un.' },
       { icon: '🔁', color: '#FF6348', title: 'Banque d\'erreurs', desc: 'Chaque question ratée revient jusqu\'à ce que tu la maîtrises. Réussie une fois, elle sort du tas.' },
-      { icon: '🇧🇪', color: '#A78BFA', title: 'Français & Néerlandais', desc: 'Toute la plateforme bascule d\'une langue à l\'autre, questions et explications comprises.' },
+      { icon: 'FR/NL', color: '#A78BFA', title: 'Français & Néerlandais', desc: 'Toute la plateforme bascule d\'une langue à l\'autre, questions et explications comprises.' },
     ],
     stepsKicker: 'Comment ça marche',
     stepsTitle: 'Trois étapes, pas une de plus',
@@ -124,7 +122,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     ],
     themesKicker: 'Le programme',
     themesTitle: 'Les 9 thèmes officiels, en entier',
-    themesSub: 'Exactement le découpage du programme belge — rien en plus, rien en moins.',
+    themesSub: 'Exactement le découpage du programme belge : rien en plus, rien en moins.',
     themeWord: 'Thème',
     themes: [
       { code: 'A', emoji: '🛣️', label: 'La voie publique' },
@@ -171,7 +169,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       },
       {
         q: 'Pourquoi une partie est-elle payante ?',
-        a: 'Écrire, traduire et illustrer 1 770 questions prend un temps considérable, et la plateforme doit rester en ligne et à jour. La partie gratuite est volontairement assez large pour que tu juges par toi-même avant de payer quoi que ce soit — une leçon entière, un examen blanc, des cartes flash dans chaque thème.',
+        a: 'Écrire, traduire et illustrer 1 770 questions prend un temps considérable, et la plateforme doit rester en ligne et à jour. La partie gratuite est volontairement assez large pour que tu juges par toi-même avant de payer quoi que ce soit : une leçon entière, un examen blanc, des cartes flash dans chaque thème.',
       },
       {
         q: 'En combien de temps peut-on être prêt ?',
@@ -179,7 +177,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       },
       {
         q: 'Ça marche sur téléphone ?',
-        a: 'Oui, directement dans ton navigateur, rien à installer. La plateforme est pensée pour le téléphone d\'abord — c\'est là qu\'on révise vraiment, dans les transports ou entre deux cours — et fonctionne aussi bien sur ordinateur.',
+        a: 'Oui, directement dans ton navigateur, rien à installer. La plateforme est pensée pour le téléphone d\'abord, c\'est là qu\'on révise vraiment (dans les transports, entre deux cours), et elle fonctionne aussi bien sur ordinateur.',
       },
       {
         q: 'Et si je passe l\'examen en néerlandais ?',
@@ -196,7 +194,6 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     finalNote: 'Gratuit · Aucune carte bancaire pour commencer',
   },
   nl: {
-    announce: 'Nieuw · De quiz met de 214 Belgische verkeersborden staat online',
     navLogin: 'Inloggen',
     navStart: 'Beginnen',
     badge: 'Conform het officiële Belgische programma',
@@ -233,7 +230,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { icon: '📝', color: '#22C55E', title: 'Proefexamen', desc: 'De echte examenomstandigheden: zelfde formaat, zelfde druk, zonder verbetering tussendoor.' },
       { icon: '🚦', color: '#EF4444', title: '214 verkeersborden', desc: 'De volledige Belgische catalogus als flashcards, plus een quiz die elk bord één voor één overhoort.' },
       { icon: '🔁', color: '#FF6348', title: 'Foutenbank', desc: 'Elke gemiste vraag komt terug tot je ze beheerst. Eén keer juist, en ze verdwijnt uit de stapel.' },
-      { icon: '🇧🇪', color: '#A78BFA', title: 'Frans & Nederlands', desc: 'Het hele platform schakelt van taal, vragen en uitleg inbegrepen.' },
+      { icon: 'FR/NL', color: '#A78BFA', title: 'Frans & Nederlands', desc: 'Het hele platform schakelt van taal, vragen en uitleg inbegrepen.' },
     ],
     stepsKicker: 'Hoe het werkt',
     stepsTitle: 'Drie stappen, niet meer',
@@ -244,7 +241,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     ],
     themesKicker: 'Het programma',
     themesTitle: 'De 9 officiële thema\'s, volledig',
-    themesSub: 'Exact de indeling van het Belgische programma — niets meer, niets minder.',
+    themesSub: 'Exact de indeling van het Belgische programma: niets meer, niets minder.',
     themeWord: 'Thema',
     themes: [
       { code: 'A', emoji: '🛣️', label: 'De openbare weg' },
@@ -291,7 +288,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       },
       {
         q: 'Waarom is een deel betalend?',
-        a: '1 770 vragen schrijven, vertalen en illustreren kost enorm veel tijd, en het platform moet online en up-to-date blijven. Het gratis gedeelte is bewust ruim genoeg om zelf te oordelen vóór je iets betaalt — een volledige les, een proefexamen, flashcards in elk thema.',
+        a: '1 770 vragen schrijven, vertalen en illustreren kost enorm veel tijd, en het platform moet online en up-to-date blijven. Het gratis gedeelte is bewust ruim genoeg om zelf te oordelen vóór je iets betaalt: een volledige les, een proefexamen, flashcards in elk thema.',
       },
       {
         q: 'Hoe lang duurt het voor je klaar bent?',
@@ -299,7 +296,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       },
       {
         q: 'Werkt het op een gsm?',
-        a: 'Ja, gewoon in je browser, niets te installeren. Het platform is in de eerste plaats voor de gsm gemaakt — daar wordt echt geoefend, onderweg of tussen twee lessen — en werkt even goed op de computer.',
+        a: 'Ja, gewoon in je browser, niets te installeren. Het platform is in de eerste plaats voor de gsm gemaakt, daar wordt echt geoefend (onderweg, tussen twee lessen), en het werkt even goed op de computer.',
       },
       {
         q: 'En als ik het examen in het Frans afleg?',
@@ -344,27 +341,6 @@ export default function LandingContent() {
 
   return (
     <main style={{ background: '#FFFFFF', fontFamily: 'Sora, sans-serif', color: INK, overflowX: 'hidden' }}>
-
-      {/* ── BANDEAU D'ANNONCE ──────────────────────────────────── */}
-      <div style={{
-        background: `linear-gradient(90deg, ${BRAND} 0%, #7DE8DD 100%)`,
-        padding: '9px 20px', textAlign: 'center',
-      }}>
-        <Link href="/panneaux" style={{
-          display: 'inline-flex', alignItems: 'center', gap: 9, textDecoration: 'none', flexWrap: 'wrap',
-          justifyContent: 'center',
-        }}>
-          <span style={{
-            background: INK, color: BRAND, fontSize: 10.5, fontWeight: 900,
-            padding: '3px 9px', borderRadius: 6, letterSpacing: '0.4px', whiteSpace: 'nowrap',
-          }}>
-            {lang === 'nl' ? 'NIEUW' : 'NOUVEAU'}
-          </span>
-          <span style={{ fontSize: 12.5, fontWeight: 700, color: '#06342F', textDecoration: 'underline' }}>
-            {c.announce}
-          </span>
-        </Link>
-      </div>
 
       {/* ── NAV ────────────────────────────────────────────────── */}
       <nav
@@ -446,7 +422,13 @@ export default function LandingContent() {
               display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 14px', borderRadius: 99,
               background: 'rgba(34,214,199,0.12)', border: `1px solid ${BRAND}4D`, marginBottom: 16,
             }}>
-              <span style={{ fontSize: 13 }}>🇧🇪</span>
+              {/* Drapeau dessiné et non emoji : Windows n'affiche pas les
+                  emojis drapeaux, 🇧🇪 y apparaissait comme les lettres « BE ». */}
+              <svg width="17" height="12" viewBox="0 0 3 2" style={{ borderRadius: 2, flexShrink: 0 }} aria-hidden="true">
+                <rect width="1" height="2" x="0" fill="#000000" />
+                <rect width="1" height="2" x="1" fill="#FAE042" />
+                <rect width="1" height="2" x="2" fill="#ED2939" />
+              </svg>
               <span style={{ fontSize: 11.5, fontWeight: 800, color: BRAND_DEEP, letterSpacing: '0.3px' }}>{c.badge}</span>
             </div>
 
@@ -479,7 +461,7 @@ export default function LandingContent() {
                 borderRadius: 13, fontWeight: 800, fontSize: 15, textDecoration: 'none',
                 boxShadow: `0 10px 28px ${BRAND}44`, letterSpacing: '-0.2px',
               }}>
-                🚀 {c.ctaStart}
+                {c.ctaStart}
               </Link>
               <Link href="/login" style={{
                 display: 'inline-flex', alignItems: 'center', padding: '14px 22px',
@@ -496,6 +478,32 @@ export default function LandingContent() {
                 <span key={t} style={{ display: 'inline-flex', alignItems: 'flex-start', gap: 6, fontSize: 11.5, color: 'rgba(11,18,32,0.48)' }}>
                   {check(BRAND_DEEP, 13)}{t}
                 </span>
+              ))}
+            </div>
+
+            {/* Les trois offres, en petit, sous les boutons : elles comblent le
+                vide à gauche laissé par la carte de droite, plus haute, et
+                mettent le tarif dans le premier écran. */}
+            <div
+              className="grid"
+              style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(148px,1fr))', gap: 10, marginTop: 26 }}
+            >
+              {c.pillars.map(p => (
+                <div key={p.title} style={{
+                  background: p.bg, borderRadius: 14, padding: '13px 12px 12px', textAlign: 'center',
+                  boxShadow: '0 6px 18px rgba(11,18,32,0.10)',
+                }}>
+                  <p style={{ margin: '0 0 4px', fontSize: 11.5, fontWeight: 800, color: p.fg, opacity: 0.85 }}>{p.title}</p>
+                  <p style={{ margin: '0 0 10px', fontSize: 15, fontWeight: 900, color: p.fg, letterSpacing: '-0.3px', lineHeight: 1.25 }}>
+                    {p.price}
+                  </p>
+                  <Link href={p.href} style={{
+                    display: 'inline-block', background: p.btnBg, color: p.btnFg,
+                    padding: '7px 15px', borderRadius: 8, fontWeight: 800, fontSize: 11.5, textDecoration: 'none',
+                  }}>
+                    {p.cta}
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
@@ -545,34 +553,6 @@ export default function LandingContent() {
           </div>
         </div>
 
-        {/* Les trois cartes de prix vivent DANS le hero, comme chez les
-            références du marché : le tarif est lisible sans avoir à faire
-            défiler la page une seule fois. */}
-        <div
-          className="grid"
-          style={{
-            maxWidth: 1200, margin: 'clamp(26px,3.4vw,40px) auto 0', position: 'relative', zIndex: 1,
-            gridTemplateColumns: 'repeat(auto-fit,minmax(250px,1fr))', gap: 15,
-          }}
-        >
-          {c.pillars.map(p => (
-            <div key={p.title} style={{
-              background: p.bg, borderRadius: 18, padding: '20px 20px 19px', textAlign: 'center',
-              boxShadow: '0 10px 28px rgba(11,18,32,0.12)',
-            }}>
-              <p style={{ margin: '0 0 7px', fontSize: 15, fontWeight: 800, color: p.fg }}>{p.title}</p>
-              <p style={{ margin: '0 0 15px', fontSize: 'clamp(19px,2.4vw,24px)', fontWeight: 900, color: p.fg, letterSpacing: '-0.6px', lineHeight: 1.2 }}>
-                {p.price}
-              </p>
-              <Link href={p.href} style={{
-                display: 'inline-block', background: p.btnBg, color: p.btnFg,
-                padding: '10px 22px', borderRadius: 10, fontWeight: 800, fontSize: 13.5, textDecoration: 'none',
-              }}>
-                {p.cta}
-              </Link>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* ── CHIFFRES ───────────────────────────────────────────── */}
@@ -608,7 +588,13 @@ export default function LandingContent() {
               }}>
                 <div style={{
                   width: 46, height: 46, borderRadius: 13, background: `${f.color}1A`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, marginBottom: 15,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 15,
+                  // Les icônes texte (« FR/NL ») ne peuvent pas s'afficher
+                  // à la taille d'un emoji, sinon elles débordent du carré.
+                  fontSize: f.icon.length > 2 ? 12.5 : 22,
+                  fontWeight: f.icon.length > 2 ? 900 : 400,
+                  color: f.icon.length > 2 ? f.color : undefined,
+                  letterSpacing: f.icon.length > 2 ? '-0.3px' : undefined,
                 }}>
                   {f.icon}
                 </div>
@@ -764,7 +750,7 @@ export default function LandingContent() {
         <div style={{ position: 'absolute', top: -180, left: '50%', width: 760, height: 520, transform: 'translateX(-50%)', background: `radial-gradient(ellipse, ${BRAND}24 0%, transparent 64%)`, pointerEvents: 'none' }} />
 
         <div style={{ maxWidth: 580, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div style={{ fontSize: 42, marginBottom: 16 }}>🏁</div>
+          
           <h2 style={{ margin: '0 0 14px', fontSize: 'clamp(26px,4.8vw,40px)', fontWeight: 900, letterSpacing: '-1.2px' }}>{c.finalTitle}</h2>
           <p style={{ margin: '0 0 30px', fontSize: 15, color: 'rgba(11,18,32,0.58)', lineHeight: 1.72 }}>{c.finalDesc}</p>
           <Link href="/register" style={{

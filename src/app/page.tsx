@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import LandingContent from '@/components/LandingContent';
 
 export const metadata: Metadata = {
-  title: 'MyPermiGo — Permis Théorique Belge, essai gratuit',
+  title: 'MyPermiGo · Permis Théorique Belge, essai gratuit',
   description:
     'Prépare ton permis de conduire théorique belge avec MyPermiGo. 1770 questions officielles, 9 thèmes, mode Turbo, examen blanc et panneaux. Commence gratuitement, Premium dès 4,99€/semaine. FR et NL.',
   keywords: [
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'questions permis belge', 'permis théorique gratuit', 'rijbewijs theorie belgie',
   ].join(', '),
   openGraph: {
-    title: 'MyPermiGo — Permis Théorique Belge',
+    title: 'MyPermiGo · Permis Théorique Belge',
     description: 'Prépare ton permis belge à ton rythme. 1770 questions officielles, essai gratuit puis Premium dès 4,99€/semaine.',
     url: 'https://mypermigo.be',
     siteName: 'MyPermiGo',

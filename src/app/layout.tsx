@@ -18,14 +18,14 @@ const sora = Sora({
 
 export const metadata: Metadata = {
   title: {
-    default: 'MyPermiGo — Permis Théorique Belge Gratuit',
+    default: 'MyPermiGo · Permis Théorique Belge Gratuit',
     template: '%s | MyPermiGo',
   },
   description: 'MyPermiGo : prépare ton permis théorique belge gratuitement. 1770 questions officielles, mode Turbo, examen blanc, panneaux. FR et NL.',
   keywords: 'mypermigo, permis théorique belge, code de la route belgique, examen théorique permis, questions permis belge, rijbewijs theorie belgie',
   metadataBase: new URL('https://mypermigo.be'),
   openGraph: {
-    title: 'MyPermiGo — Permis Théorique Belge',
+    title: 'MyPermiGo · Permis Théorique Belge',
     description: 'Prépare ton permis belge gratuitement. 1770 questions officielles, FR + NL.',
     url: 'https://mypermigo.be',
     siteName: 'MyPermiGo',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'MyPermiGo — Permis Théorique Belge',
+    title: 'MyPermiGo · Permis Théorique Belge',
     description: 'Prépare ton permis belge gratuitement. 1770 questions officielles.',
   },
   alternates: {
