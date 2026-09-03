@@ -430,11 +430,14 @@ export default function LandingContent() {
         <div style={{ position: 'absolute', top: -220, left: -160, width: 620, height: 620, borderRadius: '50%', background: `radial-gradient(circle, ${BRAND}26 0%, transparent 62%)`, pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', bottom: -240, right: -140, width: 640, height: 640, borderRadius: '50%', background: `radial-gradient(circle, ${AMBER}22 0%, transparent 62%)`, pointerEvents: 'none' }} />
 
+        {/* items-start et NON items-center : la carte de droite est plus haute
+            que le texte, un centrage vertical repoussait tout le titre vers le
+            bas et creusait un grand vide en haut à gauche. */}
         <div
-          className="grid items-center"
+          className="grid items-start"
           style={{
             maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1,
-            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 'clamp(32px,5vw,64px)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 'clamp(28px,4vw,56px)',
           }}
         >
           {/* colonne texte */}
@@ -521,7 +524,7 @@ export default function LandingContent() {
                 alt=""
                 width={440}
                 height={330}
-                style={{ width: '100%', borderRadius: 14, display: 'block', marginBottom: 13, aspectRatio: '4 / 3', objectFit: 'cover' }}
+                style={{ width: '100%', borderRadius: 14, display: 'block', marginBottom: 12, aspectRatio: '16 / 9', objectFit: 'cover' }}
               />
 
               <p style={{ margin: '0 0 12px', fontSize: 13.5, fontWeight: 700, lineHeight: 1.5 }}>{c.mockQuestion}</p>
