@@ -16,7 +16,7 @@ const INK = '#0B1220';
 const BRAND = '#22D6C7';
 const BRAND_DEEP = '#12A093';
 const AMBER = '#F5A524';
-const HERO_PHOTO = '/images/questions/G1_Q3.webp';
+const HERO_PHOTO = '/images/questions/D1_Q1.webp';
 
 interface FaqItem { q: string; a: string }
 /** Carte d'offre du hero : fond plein coloré, prix en gros, bouton dédié. */
@@ -90,9 +90,9 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     ctaStart: 'Commencer gratuitement',
     ctaLogin: 'J\'ai déjà un compte',
     trust: ['Sans carte bancaire', 'Français & Néerlandais', 'Sur mobile et ordinateur'],
-    mockTheme: 'Thème A · Leçon 3',
-    mockThemeTitle: 'La voie publique',
-    mockQuestion: 'Vous roulez sur une voie à sens unique et croisez des véhicules qui arrivent en face. D\'où viennent-ils ?',
+    mockTheme: 'Thème D · Leçon 1',
+    mockThemeTitle: 'La vitesse',
+    mockQuestion: 'Vous roulez sur l\'autoroute belge. À quelle vitesse maximale pouvez-vous circuler ?',
     pillars: [
       { title: 'Théorie & quiz', price: 'Première leçon gratuite', cta: 'Commencer !', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
       { title: 'Examens blancs', price: 'Un examen offert', cta: 'Tester !', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
@@ -210,9 +210,9 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     ctaStart: 'Gratis beginnen',
     ctaLogin: 'Ik heb al een account',
     trust: ['Zonder bankkaart', 'Frans & Nederlands', 'Op gsm en computer'],
-    mockTheme: 'Thema A · Les 3',
-    mockThemeTitle: 'De openbare weg',
-    mockQuestion: 'U rijdt in een eenrichtingsstraat en kruist voertuigen die u tegemoet komen. Waar komen ze vandaan?',
+    mockTheme: 'Thema D · Les 1',
+    mockThemeTitle: 'De snelheid',
+    mockQuestion: 'Wat is de maximumsnelheid op de autosnelweg?',
     pillars: [
       { title: 'Theorie & quiz', price: 'Eerste les gratis', cta: 'Beginnen!', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
       { title: 'Proefexamens', price: 'Eén examen gratis', cta: 'Testen!', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
@@ -318,15 +318,15 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
 };
 
 const MOCK_ANSWERS = [
-  { text: 'A. Ils circulent dans le même sens que vous', correct: false },
-  { text: 'B. Ils roulent en sens inverse avec leur propre signal', correct: true },
-  { text: 'C. Ils sortent d\'un parking voisin', correct: false },
+  { text: 'A. 100 km/h', correct: false },
+  { text: 'B. 120 km/h', correct: true },
+  { text: 'C. 130 km/h', correct: false },
 ];
 
 const MOCK_ANSWERS_NL = [
-  { text: 'A. Ze rijden in dezelfde richting als u', correct: false },
-  { text: 'B. Ze rijden tegengesteld met hun eigen bord', correct: true },
-  { text: 'C. Ze komen uit een nabije parking', correct: false },
+  { text: 'A. 100 km/u', correct: false },
+  { text: 'B. 120 km/u', correct: true },
+  { text: 'C. 130 km/u', correct: false },
 ];
 
 export default function LandingContent() {
@@ -424,7 +424,7 @@ export default function LandingContent() {
       <section style={{
         position: 'relative', overflow: 'hidden',
         background: 'linear-gradient(165deg, #F2FCFB 0%, #FFFFFF 45%, #FFF8EC 100%)',
-        padding: 'clamp(40px,6vw,72px) 20px clamp(48px,7vw,80px)',
+        padding: 'clamp(26px,3.5vw,42px) 20px clamp(30px,4vw,46px)',
         borderBottom: '1px solid rgba(11,18,32,0.06)',
       }}>
         <div style={{ position: 'absolute', top: -220, left: -160, width: 620, height: 620, borderRadius: '50%', background: `radial-gradient(circle, ${BRAND}26 0%, transparent 62%)`, pointerEvents: 'none' }} />
@@ -440,16 +440,16 @@ export default function LandingContent() {
           {/* colonne texte */}
           <div>
             <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8, padding: '7px 15px', borderRadius: 99,
-              background: 'rgba(34,214,199,0.12)', border: `1px solid ${BRAND}4D`, marginBottom: 22,
+              display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 14px', borderRadius: 99,
+              background: 'rgba(34,214,199,0.12)', border: `1px solid ${BRAND}4D`, marginBottom: 16,
             }}>
               <span style={{ fontSize: 13 }}>🇧🇪</span>
               <span style={{ fontSize: 11.5, fontWeight: 800, color: BRAND_DEEP, letterSpacing: '0.3px' }}>{c.badge}</span>
             </div>
 
             <h1 style={{
-              margin: 0, fontSize: 'clamp(32px,5.4vw,56px)', fontWeight: 900,
-              letterSpacing: '-1.7px', lineHeight: 1.07,
+              margin: 0, fontSize: 'clamp(29px,4.2vw,45px)', fontWeight: 900,
+              letterSpacing: '-1.4px', lineHeight: 1.08,
             }}>
               {c.h1Line1}
               <br />
@@ -465,42 +465,32 @@ export default function LandingContent() {
               {c.h1Line2Post === '.' ? '.' : ` ${c.h1Line2Post}`}
             </h1>
 
-            <p style={{ margin: '20px 0 0', maxWidth: 480, fontSize: 'clamp(14.5px,2vw,16.5px)', color: 'rgba(11,18,32,0.62)', lineHeight: 1.72 }}>
+            <p style={{ margin: '16px 0 0', maxWidth: 470, fontSize: 'clamp(14px,1.7vw,15.5px)', color: 'rgba(11,18,32,0.62)', lineHeight: 1.68 }}>
               {c.subtitle}
             </p>
 
-            {/* PRIX, dès le premier écran */}
-            <div className="inline-flex flex-wrap items-baseline" style={{
-              gap: 7, marginTop: 22, padding: '11px 18px', borderRadius: 13,
-              background: '#FFFFFF', border: `1.5px solid ${AMBER}59`, boxShadow: '0 4px 16px rgba(11,18,32,0.05)',
-            }}>
-              <span style={{ fontSize: 13.5, fontWeight: 600, color: 'rgba(11,18,32,0.62)' }}>{c.priceLine}</span>
-              <span style={{ fontSize: 22, fontWeight: 900, color: AMBER, letterSpacing: '-0.5px' }}>{plan.priceDisplay}</span>
-              <span style={{ fontSize: 13, fontWeight: 600, color: 'rgba(11,18,32,0.45)' }}>{c.priceLineStrong}</span>
-            </div>
-
-            <div className="flex flex-wrap items-center" style={{ gap: 12, marginTop: 26 }}>
+            <div className="flex flex-wrap items-center" style={{ gap: 11, marginTop: 20 }}>
               <Link href="/register" style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8, padding: '16px 30px',
+                display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 26px',
                 background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DEEP})`, color: INK,
-                borderRadius: 14, fontWeight: 800, fontSize: 15.5, textDecoration: 'none',
-                boxShadow: `0 10px 30px ${BRAND}44`, letterSpacing: '-0.2px',
+                borderRadius: 13, fontWeight: 800, fontSize: 15, textDecoration: 'none',
+                boxShadow: `0 10px 28px ${BRAND}44`, letterSpacing: '-0.2px',
               }}>
                 🚀 {c.ctaStart}
               </Link>
               <Link href="/login" style={{
-                display: 'inline-flex', alignItems: 'center', padding: '16px 24px',
+                display: 'inline-flex', alignItems: 'center', padding: '14px 22px',
                 background: '#FFFFFF', color: 'rgba(11,18,32,0.68)',
-                border: '1px solid rgba(11,18,32,0.14)', borderRadius: 14,
-                fontWeight: 600, fontSize: 15, textDecoration: 'none',
+                border: '1px solid rgba(11,18,32,0.14)', borderRadius: 13,
+                fontWeight: 600, fontSize: 14.5, textDecoration: 'none',
               }}>
                 {c.ctaLogin}
               </Link>
             </div>
 
-            <div className="flex flex-wrap items-center" style={{ gap: 16, marginTop: 22 }}>
+            <div className="flex flex-wrap items-center" style={{ gap: 15, marginTop: 16 }}>
               {c.trust.map(t => (
-                <span key={t} style={{ display: 'inline-flex', alignItems: 'flex-start', gap: 6, fontSize: 12, color: 'rgba(11,18,32,0.48)' }}>
+                <span key={t} style={{ display: 'inline-flex', alignItems: 'flex-start', gap: 6, fontSize: 11.5, color: 'rgba(11,18,32,0.48)' }}>
                   {check(BRAND_DEEP, 13)}{t}
                 </span>
               ))}
@@ -551,23 +541,29 @@ export default function LandingContent() {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* ── TROIS CARTES D'OFFRE, prix en évidence ─────────────── */}
-      <section style={{ padding: 'clamp(32px,5vw,52px) 20px clamp(40px,6vw,64px)', background: '#FFFFFF' }}>
-        <div className="grid" style={{ maxWidth: 1200, margin: '0 auto', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 18 }}>
+        {/* Les trois cartes de prix vivent DANS le hero, comme chez les
+            références du marché : le tarif est lisible sans avoir à faire
+            défiler la page une seule fois. */}
+        <div
+          className="grid"
+          style={{
+            maxWidth: 1200, margin: 'clamp(26px,3.4vw,40px) auto 0', position: 'relative', zIndex: 1,
+            gridTemplateColumns: 'repeat(auto-fit,minmax(250px,1fr))', gap: 15,
+          }}
+        >
           {c.pillars.map(p => (
             <div key={p.title} style={{
-              background: p.bg, borderRadius: 20, padding: '28px 24px 26px', textAlign: 'center',
-              boxShadow: '0 10px 30px rgba(11,18,32,0.10)',
+              background: p.bg, borderRadius: 18, padding: '20px 20px 19px', textAlign: 'center',
+              boxShadow: '0 10px 28px rgba(11,18,32,0.12)',
             }}>
-              <p style={{ margin: '0 0 10px', fontSize: 17, fontWeight: 800, color: p.fg }}>{p.title}</p>
-              <p style={{ margin: '0 0 20px', fontSize: 'clamp(21px,3.2vw,27px)', fontWeight: 900, color: p.fg, letterSpacing: '-0.7px', lineHeight: 1.2 }}>
+              <p style={{ margin: '0 0 7px', fontSize: 15, fontWeight: 800, color: p.fg }}>{p.title}</p>
+              <p style={{ margin: '0 0 15px', fontSize: 'clamp(19px,2.4vw,24px)', fontWeight: 900, color: p.fg, letterSpacing: '-0.6px', lineHeight: 1.2 }}>
                 {p.price}
               </p>
               <Link href={p.href} style={{
                 display: 'inline-block', background: p.btnBg, color: p.btnFg,
-                padding: '12px 26px', borderRadius: 11, fontWeight: 800, fontSize: 14, textDecoration: 'none',
+                padding: '10px 22px', borderRadius: 10, fontWeight: 800, fontSize: 13.5, textDecoration: 'none',
               }}>
                 {p.cta}
               </Link>
@@ -577,7 +573,7 @@ export default function LandingContent() {
       </section>
 
       {/* ── CHIFFRES ───────────────────────────────────────────── */}
-      <section style={{ padding: '0 20px clamp(48px,7vw,72px)', background: '#FFFFFF' }}>
+      <section style={{ padding: 'clamp(40px,6vw,64px) 20px clamp(48px,7vw,72px)', background: '#FFFFFF' }}>
         <div className="grid" style={{
           maxWidth: 1200, margin: '0 auto', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))',
           gap: 1, background: 'rgba(11,18,32,0.09)', borderRadius: 20, overflow: 'hidden',
