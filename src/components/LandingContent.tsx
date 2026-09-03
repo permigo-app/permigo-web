@@ -30,7 +30,6 @@ interface LandingCopy {
   h1Line2Pre: string;
   h1Mark: string;
   h1Line2Post: string;
-  subtitle: string;
   priceLine: string;
   priceLineStrong: string;
   ctaStart: string;
@@ -82,7 +81,6 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     h1Line2Pre: 'sans y passer',
     h1Mark: 'six mois',
     h1Line2Post: '.',
-    subtitle: '1 770 questions sur les 9 thèmes officiels, des leçons courtes et des examens blancs en conditions réelles. Tu commences aujourd\'hui, gratuitement.',
     priceLine: 'Premium dès',
     priceLineStrong: 'par semaine',
     ctaStart: 'Commencer gratuitement',
@@ -201,7 +199,6 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     h1Line2Pre: 'zonder er',
     h1Mark: 'maanden',
     h1Line2Post: 'aan te verliezen.',
-    subtitle: '1 770 vragen over de 9 officiële thema\'s, korte lessen en proefexamens in echte omstandigheden. Je begint vandaag, gratis.',
     priceLine: 'Premium vanaf',
     priceLineStrong: 'per week',
     ctaStart: 'Gratis beginnen',
@@ -450,11 +447,11 @@ export default function LandingContent() {
               {c.h1Line2Post === '.' ? '.' : ` ${c.h1Line2Post}`}
             </h1>
 
-            <p style={{ margin: '16px 0 0', maxWidth: 470, fontSize: 'clamp(14px,1.7vw,15.5px)', color: 'rgba(11,18,32,0.62)', lineHeight: 1.68 }}>
-              {c.subtitle}
-            </p>
+            {/* Le paragraphe d'introduction a été retiré : il mangeait trop de
+                hauteur dans le premier écran. Ses chiffres (1 770 questions,
+                9 thèmes) sont repris juste en dessous dans le bandeau. */}
 
-            <div className="flex flex-wrap items-center" style={{ gap: 11, marginTop: 20 }}>
+            <div className="flex flex-wrap items-center" style={{ gap: 11, marginTop: 22 }}>
               {/* Le bouton et la pastille restent SOLIDAIRES : sur mobile la
                   pastille occupe le vide à droite du bouton, ce qui met le
                   tarif dans le premier écran sans descendre. */}
@@ -468,23 +465,24 @@ export default function LandingContent() {
                   {c.ctaStart}
                 </Link>
 
-                {/* Pastille tarif, légèrement inclinée comme une étiquette
-                    de prix. Elle annonce le Premium, jamais le bouton gratuit
-                    à côté : les deux chemins restent distincts et honnêtes. */}
-                <Link href="/premium" style={{
-                  display: 'inline-block', textAlign: 'center', textDecoration: 'none',
-                  background: AMBER, color: '#3A2200', borderRadius: 12,
-                  padding: '8px 13px', transform: 'rotate(-5deg)',
-                  boxShadow: '0 6px 16px rgba(245,165,36,0.42)', lineHeight: 1.15,
-                  flexShrink: 0,
+                {/* Tarif MOBILE UNIQUEMENT (sm:hidden) : sur ordinateur, la
+                    troisième carte d'offre porte déjà le prix, ce serait un
+                    doublon. Pas d'encadré ici — un simple bloc de texte posé
+                    dans la page, le prix souligné d'un trait ambre. */}
+                <Link href="/premium" className="sm:hidden" style={{
+                  display: 'inline-block', textDecoration: 'none', color: INK,
+                  lineHeight: 1.1, flexShrink: 0,
                 }}>
-                  <span style={{ display: 'block', fontSize: 9.5, fontWeight: 800, letterSpacing: '0.3px', opacity: 0.75 }}>
+                  <span style={{ display: 'block', fontSize: 11.5, fontWeight: 700, color: 'rgba(11,18,32,0.55)' }}>
                     {c.priceLine}
                   </span>
-                  <span style={{ display: 'block', fontSize: 17, fontWeight: 900, letterSpacing: '-0.5px' }}>
+                  <span style={{
+                    display: 'inline-block', fontSize: 27, fontWeight: 900, letterSpacing: '-1px',
+                    borderBottom: `3px solid ${AMBER}`, paddingBottom: 1, margin: '1px 0 2px',
+                  }}>
                     {plan.priceDisplay}
                   </span>
-                  <span style={{ display: 'block', fontSize: 9, fontWeight: 700, opacity: 0.7 }}>
+                  <span style={{ display: 'block', fontSize: 11, fontWeight: 600, color: 'rgba(11,18,32,0.5)' }}>
                     {c.priceLineStrong}
                   </span>
                 </Link>
@@ -515,11 +513,18 @@ export default function LandingContent() {
               className="grid"
               style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(148px,1fr))', gap: 10, marginTop: 26 }}
             >
-              {c.pillars.map(p => (
-                <div key={p.title} style={{
-                  background: p.bg, borderRadius: 14, padding: '13px 12px 12px', textAlign: 'center',
-                  boxShadow: '0 6px 18px rgba(11,18,32,0.10)',
-                }}>
+              {c.pillars.map((p, i) => (
+                <div
+                  key={p.title}
+                  /* La carte Premium (la 3e) est masquée sur mobile : le tarif
+                     y est déjà donné par le bloc collé au bouton, et elle
+                     tombait de toute façon sous la ligne de flottaison. */
+                  className={i === 2 ? 'hidden sm:block' : undefined}
+                  style={{
+                    background: p.bg, borderRadius: 14, padding: '13px 12px 12px', textAlign: 'center',
+                    boxShadow: '0 6px 18px rgba(11,18,32,0.10)',
+                  }}
+                >
                   <p style={{ margin: '0 0 4px', fontSize: 11.5, fontWeight: 800, color: p.fg, opacity: 0.85 }}>{p.title}</p>
                   <p style={{ margin: '0 0 10px', fontSize: 15, fontWeight: 900, color: p.fg, letterSpacing: '-0.3px', lineHeight: 1.25 }}>
                     {p.price}
