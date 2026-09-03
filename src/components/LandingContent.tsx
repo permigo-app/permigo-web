@@ -3,6 +3,22 @@
 import Link from 'next/link';
 import { useLang } from '@/contexts/LanguageContext';
 import { cheapestPlan } from '@/lib/pricing';
+import { THEME_COLORS } from '@/lib/constants';
+
+/* ──────────────────────────────────────────────────────────────
+   Palette de la landing.
+   Le hero et le bloc final sont SOMBRES : d'une part c'est ce qui
+   se fait de mieux aujourd'hui, d'autre part ça raccorde enfin la
+   page aux écrans /login et /register, qui sont sombres eux aussi —
+   avant, le visiteur passait du blanc au noir en un clic.
+   ────────────────────────────────────────────────────────────── */
+const INK = '#070C1A';
+const INK_2 = '#0E1828';
+const BRAND = '#22D6C7';
+const BRAND_DEEP = '#1AB8AB';
+const AMBER = '#FFB443';
+
+interface FaqItem { q: string; a: string }
 
 interface LandingCopy {
   navLogin: string;
@@ -13,18 +29,21 @@ interface LandingCopy {
   subtitle: string;
   ctaStart: string;
   ctaLogin: string;
+  trust: string[];
   stats: { v: string; l: string }[];
   mockTheme: string;
   mockThemeTitle: string;
   mockQuestion: string;
   featuresKicker: string;
   featuresTitle: string;
-  features: { icon: string; bg: string; title: string; desc: string }[];
+  featuresSub: string;
+  features: { icon: string; color: string; title: string; desc: string }[];
   stepsKicker: string;
   stepsTitle: string;
   steps: { num: string; title: string; desc: string }[];
   themesKicker: string;
   themesTitle: string;
+  themesSub: string;
   themeWord: string;
   themes: { code: string; emoji: string; label: string }[];
   planKicker: string;
@@ -38,6 +57,9 @@ interface LandingCopy {
   premiumItems: string[];
   premiumPeriod: string;
   premiumNote: string;
+  faqKicker: string;
+  faqTitle: string;
+  faq: FaqItem[];
   finalTitle: string;
   finalDesc: string;
   finalCta: string;
@@ -47,44 +69,45 @@ interface LandingCopy {
 const COPY: Record<'fr' | 'nl', LandingCopy> = {
   fr: {
     navLogin: 'Se connecter',
-    navStart: 'Commencer →',
-    badge: 'Préparation au permis théorique officiel belge',
-    h1Line1: 'Réussis ton permis belge.',
-    h1Line2: 'La méthode qui marche.',
-    subtitle: '1 770 questions officielles réparties sur 9 thèmes. Commence gratuitement, puis débloque tout avec Premium quand tu te sens prêt.',
-    ctaStart: '🚀 Commencer gratuitement',
-    ctaLogin: 'Déjà un compte →',
+    navStart: 'Commencer',
+    badge: 'Conforme au programme officiel belge',
+    h1Line1: 'Ton permis théorique,',
+    h1Line2: 'sans y passer six mois.',
+    subtitle: '1 770 questions sur les 9 thèmes officiels, des leçons courtes et des examens blancs en conditions réelles. Commence gratuitement, aujourd\'hui.',
+    ctaStart: 'Commencer gratuitement',
+    ctaLogin: 'J\'ai déjà un compte',
+    trust: ['Sans carte bancaire', 'Français & Néerlandais', 'Sur mobile et ordinateur'],
     stats: [
       { v: '1 770', l: 'questions' },
       { v: '9', l: 'thèmes officiels' },
-      { v: '+100', l: 'déjà inscrits' },
-      { v: cheapestPlan().priceDisplay, l: 'par semaine en Premium' },
+      { v: '+100', l: 'inscrits en quelques semaines' },
+      { v: '15 min', l: 'par jour suffisent' },
     ],
     mockTheme: 'Thème A · Leçon 3',
-    mockThemeTitle: 'Comportement général',
+    mockThemeTitle: 'La voie publique',
     mockQuestion: 'Quelle est la vitesse maximale autorisée en agglomération belge ?',
-    featuresKicker: 'Fonctionnalités',
-    featuresTitle: 'Tout ce qu\'il te faut pour réussir',
+    featuresKicker: 'Ce que tu obtiens',
+    featuresTitle: 'Six façons d\'arriver prêt le jour J',
+    featuresSub: 'Pas juste une liste de questions : une méthode qui te fait revenir chaque jour.',
     features: [
-      { icon: '📚', bg: 'rgba(59,130,246,0.14)',  title: '1 770 questions officielles', desc: 'Toutes les questions de l\'examen théorique belge, triées par thème et niveau de difficulté.' },
-      { icon: '⚡', bg: 'rgba(245,158,11,0.14)',  title: 'Mode Turbo', desc: 'Sessions express de 3 à 5 minutes pour t\'entraîner à la vitesse de l\'examen réel.' },
-      { icon: '📝', bg: 'rgba(34,197,94,0.14)',   title: 'Examen blanc', desc: 'Simule les conditions exactes de l\'examen officiel belge avec feedback immédiat.' },
-      { icon: '🚦', bg: 'rgba(239,68,68,0.14)',   title: 'Panneaux de signalisation', desc: 'Apprends et mémorise tous les panneaux belges grâce au mode flash et aux cartes.' },
-      { icon: '🔁', bg: 'rgba(255,99,72,0.14)',   title: 'Banque d\'erreurs personnelle', desc: 'Chaque question ratée revient s\'entraîner, classée par thème, jusqu\'à ce qu\'elle soit acquise.' },
-      { icon: '🇧🇪', bg: 'rgba(167,139,250,0.14)', title: 'Français & Néerlandais', desc: 'Interface entièrement disponible en français et en néerlandais pour tous les Belges.' },
+      { icon: '📚', color: '#3B82F6', title: '1 770 questions', desc: 'Les 9 thèmes du programme officiel belge, triés par difficulté, avec l\'explication après chaque réponse.' },
+      { icon: '⚡', color: AMBER, title: 'Mode Turbo', desc: 'Trois à cinq minutes chrono en main. Parfait dans le bus, entre deux cours, quand tu n\'as pas le temps.' },
+      { icon: '📝', color: '#22C55E', title: 'Examen blanc', desc: 'Les conditions réelles de l\'examen belge : même format, même pression, sans la correction en direct.' },
+      { icon: '🚦', color: '#EF4444', title: '214 panneaux', desc: 'Tout le catalogue belge en cartes flash, plus un quiz qui interroge chaque panneau un par un.' },
+      { icon: '🔁', color: '#FF6348', title: 'Banque d\'erreurs', desc: 'Chaque question ratée revient jusqu\'à ce que tu la maîtrises. Réussie une fois, elle sort du tas.' },
+      { icon: '🇧🇪', color: '#A78BFA', title: 'Français & Néerlandais', desc: 'Toute la plateforme bascule d\'une langue à l\'autre, questions et explications comprises.' },
     ],
     stepsKicker: 'Comment ça marche',
-    stepsTitle: '3 étapes vers le succès',
+    stepsTitle: 'Trois étapes, pas une de plus',
     steps: [
-      { num: '01', title: 'Crée ton compte', desc: 'Inscription gratuite en 30 secondes. Aucune carte bancaire pour commencer.' },
-      { num: '02', title: 'Apprends par thème', desc: 'Suis les 9 thèmes officiels avec leçons, flashcards et quiz adaptatifs.' },
-      { num: '03', title: 'Réussis l\'examen', desc: 'Mode Turbo, examens blancs, banque d\'erreurs — tu arrives plus que préparé.' },
+      { num: '01', title: 'Crée ton compte', desc: 'Trente secondes, une adresse mail. Aucune carte bancaire pour commencer.' },
+      { num: '02', title: 'Avance thème par thème', desc: 'Un peu de théorie, puis le quiz. Tes erreurs sont mises de côté pour plus tard.' },
+      { num: '03', title: 'Passe l\'examen blanc', desc: 'Quand tu le réussis régulièrement, tu es prêt à réserver la vraie date.' },
     ],
-    themesKicker: 'Programme officiel',
-    themesTitle: '9 thèmes, 1 770 questions',
+    themesKicker: 'Le programme',
+    themesTitle: 'Les 9 thèmes officiels, en entier',
+    themesSub: 'Exactement le découpage du programme belge — rien en plus, rien en moins.',
     themeWord: 'Thème',
-    // Libellés repris des titres réels de src/data/theme_*.json — la landing
-    // annonçait un programme qui ne correspondait pas au contenu du site.
     themes: [
       { code: 'A', emoji: '🛣️', label: 'La voie publique' },
       { code: 'B', emoji: '🚶', label: 'Les usagers de la route' },
@@ -98,7 +121,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     ],
     planKicker: 'Gratuit & Premium',
     planTitle: 'Essaie d\'abord, décide ensuite',
-    planSubtitle: 'Tu peux te faire une vraie idée de la plateforme sans sortir ta carte. Premium débloque le reste quand tu veux passer à la vitesse supérieure.',
+    planSubtitle: 'De quoi te faire une vraie idée sans sortir ta carte. Premium débloque le reste le jour où tu veux accélérer.',
     freeTitle: 'Gratuit',
     freeBadge: 'Sans carte bancaire',
     freeItems: [
@@ -107,7 +130,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       'Un examen blanc en conditions réelles',
       'Une session d\'entraînement Turbo',
       '3 catégories de panneaux de signalisation',
-      'Tout le permis AM (cyclomoteur) sans limite',
+      'Tout le permis AM (cyclomoteur), sans limite',
     ],
     premiumTitle: 'Premium',
     premiumBadge: 'Tout débloqué',
@@ -117,52 +140,83 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       'Entraînement Turbo illimité',
       'Toutes les cartes flash de chaque leçon',
       'Ta banque d\'erreurs personnelle par thème',
-      'Tous les panneaux de signalisation belges',
+      'Les 214 panneaux de signalisation belges',
     ],
     premiumPeriod: 'par semaine',
-    premiumNote: 'Aussi en formules 2 semaines et 1 mois · Sans engagement, résiliable à tout moment',
-    finalTitle: 'Prêt à décrocher ton permis ?',
-    finalDesc: 'Déjà plus de 100 inscrits en à peine quelques semaines. Commence gratuitement, en français ou en néerlandais — tu ne passes à Premium que si la plateforme te convient.',
-    finalCta: 'Créer mon compte gratuit →',
-    finalNote: 'Inscription en 30 secondes · Aucune carte bancaire pour commencer',
+    premiumNote: 'Aussi en 2 semaines et 1 mois · Sans engagement, résiliable à tout moment',
+    faqKicker: 'Questions fréquentes',
+    faqTitle: 'Ce qu\'on nous demande le plus',
+    faq: [
+      {
+        q: 'Vos questions correspondent-elles vraiment à l\'examen ?',
+        a: 'Elles couvrent les 9 thèmes du programme officiel belge et reprennent le format de l\'examen : un énoncé, quatre propositions, une seule bonne réponse. L\'examen blanc reproduit les conditions réelles, sans correction en direct. Nous ne sommes pas l\'organisme officiel : pour passer l\'examen, tu réserves auprès d\'un centre agréé.',
+      },
+      {
+        q: 'Pourquoi une partie est-elle payante ?',
+        a: 'Écrire, traduire et illustrer 1 770 questions prend un temps considérable, et la plateforme doit rester en ligne et à jour. La partie gratuite est volontairement assez large pour que tu juges par toi-même avant de payer quoi que ce soit — une leçon entière, un examen blanc, des cartes flash dans chaque thème.',
+      },
+      {
+        q: 'En combien de temps peut-on être prêt ?',
+        a: 'Cela dépend surtout de ta régularité. Quinze à vingt minutes par jour pendant deux à trois semaines suffisent à la plupart des gens pour boucler les 9 thèmes et enchaîner les examens blancs. Le mode Turbo existe précisément pour les jours où tu n\'as que trois minutes.',
+      },
+      {
+        q: 'Ça marche sur téléphone ?',
+        a: 'Oui, directement dans ton navigateur, rien à installer. La plateforme est pensée pour le téléphone d\'abord — c\'est là qu\'on révise vraiment, dans les transports ou entre deux cours — et fonctionne aussi bien sur ordinateur.',
+      },
+      {
+        q: 'Et si je passe l\'examen en néerlandais ?',
+        a: 'Tout bascule : l\'interface, les questions, les propositions et les explications. Tu changes de langue quand tu veux, en haut de la page, et ta progression te suit.',
+      },
+      {
+        q: 'Je peux arrêter quand je veux ?',
+        a: 'Oui. Premium est sans engagement et se résilie à tout moment depuis ton profil, en deux clics. Tu gardes l\'accès jusqu\'à la fin de la période déjà payée.',
+      },
+    ],
+    finalTitle: 'On commence maintenant ?',
+    finalDesc: 'Plus de 100 inscrits en quelques semaines. Trente secondes pour créer ton compte, et tu attaques la première leçon dans la foulée.',
+    finalCta: 'Créer mon compte gratuit',
+    finalNote: 'Gratuit · Aucune carte bancaire pour commencer',
   },
   nl: {
     navLogin: 'Inloggen',
-    navStart: 'Beginnen →',
-    badge: 'Voorbereiding op het officiële Belgische theorie-examen',
-    h1Line1: 'Haal je Belgisch rijbewijs.',
-    h1Line2: 'De methode die werkt.',
-    subtitle: '1 770 officiële vragen verdeeld over 9 thema\'s. Begin gratis en ontgrendel daarna alles met Premium wanneer je er klaar voor bent.',
-    ctaStart: '🚀 Gratis beginnen',
-    ctaLogin: 'Al een account →',
+    navStart: 'Beginnen',
+    badge: 'Conform het officiële Belgische programma',
+    h1Line1: 'Je theorie-examen,',
+    h1Line2: 'zonder er maanden aan te verliezen.',
+    subtitle: '1 770 vragen over de 9 officiële thema\'s, korte lessen en proefexamens in echte omstandigheden. Begin vandaag, gratis.',
+    ctaStart: 'Gratis beginnen',
+    ctaLogin: 'Ik heb al een account',
+    trust: ['Zonder bankkaart', 'Frans & Nederlands', 'Op gsm en computer'],
     stats: [
       { v: '1 770', l: 'vragen' },
       { v: '9', l: 'officiële thema\'s' },
-      { v: '+100', l: 'al ingeschreven' },
-      { v: cheapestPlan().priceDisplay, l: 'per week met Premium' },
+      { v: '+100', l: 'ingeschreven in enkele weken' },
+      { v: '15 min', l: 'per dag volstaat' },
     ],
     mockTheme: 'Thema A · Les 3',
-    mockThemeTitle: 'Algemeen gedrag',
+    mockThemeTitle: 'De openbare weg',
     mockQuestion: 'Wat is de maximumsnelheid binnen de bebouwde kom in België?',
-    featuresKicker: 'Functies',
-    featuresTitle: 'Alles wat je nodig hebt om te slagen',
+    featuresKicker: 'Wat je krijgt',
+    featuresTitle: 'Zes manieren om klaar te zijn op de grote dag',
+    featuresSub: 'Niet zomaar een lijst vragen: een methode die je elke dag doet terugkomen.',
     features: [
-      { icon: '📚', bg: 'rgba(59,130,246,0.14)',  title: '1 770 officiële vragen', desc: 'Alle vragen van het Belgische theorie-examen, gesorteerd per thema en moeilijkheidsgraad.' },
-      { icon: '⚡', bg: 'rgba(245,158,11,0.14)',  title: 'Turbo-modus', desc: 'Snelle sessies van 3 tot 5 minuten om te oefenen op het tempo van het echte examen.' },
-      { icon: '📝', bg: 'rgba(34,197,94,0.14)',   title: 'Proefexamen', desc: 'Simuleert de exacte omstandigheden van het officiële Belgische examen met directe feedback.' },
-      { icon: '🚦', bg: 'rgba(239,68,68,0.14)',   title: 'Verkeersborden', desc: 'Leer en onthoud alle Belgische verkeersborden met de flashmodus en de kaarten.' },
-      { icon: '🔁', bg: 'rgba(255,99,72,0.14)',   title: 'Persoonlijke foutenbank', desc: 'Elke gemiste vraag komt terug om te oefenen, gesorteerd per thema, tot je ze beheerst.' },
-      { icon: '🇧🇪', bg: 'rgba(167,139,250,0.14)', title: 'Frans & Nederlands', desc: 'Interface volledig beschikbaar in het Frans en het Nederlands voor alle Belgen.' },
+      { icon: '📚', color: '#3B82F6', title: '1 770 vragen', desc: 'De 9 thema\'s van het officiële Belgische programma, gesorteerd op moeilijkheid, met uitleg na elk antwoord.' },
+      { icon: '⚡', color: AMBER, title: 'Turbo-modus', desc: 'Drie tot vijf minuten, klok mee. Ideaal op de bus, tussen twee lessen, wanneer je weinig tijd hebt.' },
+      { icon: '📝', color: '#22C55E', title: 'Proefexamen', desc: 'De echte examenomstandigheden: zelfde formaat, zelfde druk, zonder verbetering tussendoor.' },
+      { icon: '🚦', color: '#EF4444', title: '214 verkeersborden', desc: 'De volledige Belgische catalogus als flashcards, plus een quiz die elk bord één voor één overhoort.' },
+      { icon: '🔁', color: '#FF6348', title: 'Foutenbank', desc: 'Elke gemiste vraag komt terug tot je ze beheerst. Eén keer juist, en ze verdwijnt uit de stapel.' },
+      { icon: '🇧🇪', color: '#A78BFA', title: 'Frans & Nederlands', desc: 'Het hele platform schakelt van taal, vragen en uitleg inbegrepen.' },
     ],
     stepsKicker: 'Hoe het werkt',
-    stepsTitle: '3 stappen naar succes',
+    stepsTitle: 'Drie stappen, niet meer',
     steps: [
-      { num: '01', title: 'Maak je account', desc: 'Gratis inschrijven in 30 seconden. Geen bankkaart nodig om te starten.' },
-      { num: '02', title: 'Leer per thema', desc: 'Volg de 9 officiële thema\'s met lessen, flashcards en adaptieve quizzen.' },
-      { num: '03', title: 'Slaag voor je examen', desc: 'Turbo-modus, proefexamens, foutenbank — je bent meer dan klaar.' },
+      { num: '01', title: 'Maak je account', desc: 'Dertig seconden, één e-mailadres. Geen bankkaart om te starten.' },
+      { num: '02', title: 'Werk thema per thema', desc: 'Wat theorie, dan de quiz. Je fouten worden apart gezet voor later.' },
+      { num: '03', title: 'Doe het proefexamen', desc: 'Slaag je er geregeld voor, dan ben je klaar om je echte datum te boeken.' },
     ],
-    themesKicker: 'Officieel programma',
-    themesTitle: '9 thema\'s, 1 770 vragen',
+    themesKicker: 'Het programma',
+    themesTitle: 'De 9 officiële thema\'s, volledig',
+    themesSub: 'Exact de indeling van het Belgische programma — niets meer, niets minder.',
     themeWord: 'Thema',
     themes: [
       { code: 'A', emoji: '🛣️', label: 'De openbare weg' },
@@ -177,13 +231,13 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     ],
     planKicker: 'Gratis & Premium',
     planTitle: 'Eerst proberen, dan beslissen',
-    planSubtitle: 'Je krijgt een echt beeld van het platform zonder je bankkaart boven te halen. Premium ontgrendelt de rest wanneer jij een versnelling hoger wil schakelen.',
+    planSubtitle: 'Genoeg om je een echt beeld te vormen zonder je bankkaart. Premium ontgrendelt de rest op de dag dat je wil versnellen.',
     freeTitle: 'Gratis',
     freeBadge: 'Zonder bankkaart',
     freeItems: [
       'De volledige eerste les: theorie + quiz',
       '5 flashcards per les, in alle thema\'s',
-      'Eén proefexamen in echte examenomstandigheden',
+      'Eén proefexamen in echte omstandigheden',
       'Eén Turbo-oefensessie',
       '3 categorieën verkeersborden',
       'Het volledige AM-rijbewijs (bromfiets), onbeperkt',
@@ -196,14 +250,42 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       'Onbeperkt Turbo-training',
       'Alle flashcards van elke les',
       'Je persoonlijke foutenbank per thema',
-      'Alle Belgische verkeersborden',
+      'De 214 Belgische verkeersborden',
     ],
     premiumPeriod: 'per week',
-    premiumNote: 'Ook in formules van 2 weken en 1 maand · Zonder verplichtingen, elk moment opzegbaar',
-    finalTitle: 'Klaar om je rijbewijs te halen?',
-    finalDesc: 'Al meer dan 100 inschrijvingen in amper enkele weken. Begin gratis, in het Frans of het Nederlands — je gaat pas naar Premium als het platform je bevalt.',
-    finalCta: 'Maak mijn gratis account →',
-    finalNote: 'Inschrijven in 30 seconden · Geen bankkaart om te starten',
+    premiumNote: 'Ook in 2 weken en 1 maand · Zonder verplichtingen, elk moment opzegbaar',
+    faqKicker: 'Veelgestelde vragen',
+    faqTitle: 'Wat men ons het vaakst vraagt',
+    faq: [
+      {
+        q: 'Komen jullie vragen echt overeen met het examen?',
+        a: 'Ze dekken de 9 thema\'s van het officiële Belgische programma en volgen het examenformaat: een vraag, vier voorstellen, één juist antwoord. Het proefexamen bootst de echte omstandigheden na, zonder verbetering tussendoor. Wij zijn niet de officiële instantie: voor het examen zelf boek je bij een erkend centrum.',
+      },
+      {
+        q: 'Waarom is een deel betalend?',
+        a: '1 770 vragen schrijven, vertalen en illustreren kost enorm veel tijd, en het platform moet online en up-to-date blijven. Het gratis gedeelte is bewust ruim genoeg om zelf te oordelen vóór je iets betaalt — een volledige les, een proefexamen, flashcards in elk thema.',
+      },
+      {
+        q: 'Hoe lang duurt het voor je klaar bent?',
+        a: 'Dat hangt vooral af van je regelmaat. Vijftien tot twintig minuten per dag gedurende twee à drie weken volstaat voor de meeste mensen om de 9 thema\'s af te werken en proefexamens te doen. De Turbo-modus bestaat net voor de dagen waarop je maar drie minuten hebt.',
+      },
+      {
+        q: 'Werkt het op een gsm?',
+        a: 'Ja, gewoon in je browser, niets te installeren. Het platform is in de eerste plaats voor de gsm gemaakt — daar wordt echt geoefend, onderweg of tussen twee lessen — en werkt even goed op de computer.',
+      },
+      {
+        q: 'En als ik het examen in het Frans aflegt?',
+        a: 'Alles schakelt mee: de interface, de vragen, de voorstellen en de uitleg. Je wisselt van taal wanneer je wil, bovenaan de pagina, en je voortgang volgt mee.',
+      },
+      {
+        q: 'Kan ik stoppen wanneer ik wil?',
+        a: 'Ja. Premium is zonder verplichtingen en je zegt het op elk moment op vanuit je profiel, in twee klikken. Je behoudt toegang tot het einde van de reeds betaalde periode.',
+      },
+    ],
+    finalTitle: 'Zullen we beginnen?',
+    finalDesc: 'Meer dan 100 inschrijvingen in enkele weken. Dertig seconden om je account te maken, en je start meteen met de eerste les.',
+    finalCta: 'Maak mijn gratis account',
+    finalNote: 'Gratis · Geen bankkaart om te starten',
   },
 };
 
@@ -226,38 +308,34 @@ export default function LandingContent() {
   );
 
   return (
-    <main style={{ background: '#FFFFFF', minHeight: '100vh', fontFamily: 'Sora, sans-serif', color: '#0B1220' }}>
+    <main style={{ background: '#FFFFFF', fontFamily: 'Sora, sans-serif', color: '#0B1220', overflowX: 'hidden' }}>
 
-      {/* ── STICKY NAV ─────────────────────────────────────────── */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(16px)',
-        WebkitBackdropFilter: 'blur(16px)',
-        borderBottom: '1px solid rgba(11,18,32,0.07)',
-        padding: '0 max(20px, calc((100% - 1100px) / 2))',
-        height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <span style={{ fontSize: 18, fontWeight: 900, letterSpacing: -0.5 }}>
-          <span style={{ color: '#0B1220' }}>My</span>
-          <span style={{ color: '#1AB8AB' }}>Permi</span>
-          <span style={{ color: '#22D6C7' }}>Go</span>
+      {/* ── NAV ────────────────────────────────────────────────── */}
+      <nav
+        className="sticky top-0 z-50 flex items-center justify-between"
+        style={{
+          background: 'rgba(7,12,26,0.72)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)',
+          borderBottom: '1px solid rgba(255,255,255,0.08)',
+          padding: '0 max(16px, calc((100% - 1140px) / 2))', height: 62,
+        }}
+      >
+        <span style={{ fontSize: 19, fontWeight: 900, letterSpacing: -0.6, whiteSpace: 'nowrap' }}>
+          <span style={{ color: '#FFFFFF' }}>My</span>
+          <span style={{ color: BRAND }}>Permi</span>
+          <span style={{ color: AMBER }}>Go</span>
         </span>
-        <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
-          {/* FR / NL toggle */}
-          <div style={{
-            display: 'flex', borderRadius: 99, overflow: 'hidden',
-            border: '1px solid rgba(11,18,32,0.12)', marginRight: 6,
-          }}>
-            {(['fr', 'nl'] as const).map((l) => (
+
+        <div className="flex items-center" style={{ gap: 6 }}>
+          <div style={{ display: 'flex', borderRadius: 99, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.16)' }}>
+            {(['fr', 'nl'] as const).map(l => (
               <button
                 key={l}
                 onClick={() => setLang(l)}
                 style={{
-                  padding: '4px 10px', fontSize: 11, fontWeight: 800,
-                  border: 'none', cursor: 'pointer', letterSpacing: '0.3px',
-                  fontFamily: 'inherit',
-                  background: lang === l ? '#22D6C7' : 'transparent',
-                  color: lang === l ? '#07080F' : 'rgba(11,18,32,0.45)',
+                  padding: '4px 9px', fontSize: 11, fontWeight: 800, border: 'none', cursor: 'pointer',
+                  fontFamily: 'inherit', letterSpacing: '0.3px',
+                  background: lang === l ? BRAND : 'transparent',
+                  color: lang === l ? INK : 'rgba(255,255,255,0.55)',
                   transition: 'background 150ms, color 150ms',
                 }}
               >
@@ -265,233 +343,259 @@ export default function LandingContent() {
               </button>
             ))}
           </div>
-          <Link href="/login" style={{
-            fontSize: 12, fontWeight: 600, color: 'rgba(11,18,32,0.55)',
-            textDecoration: 'none', padding: '5px 10px', borderRadius: 8,
-          }}>
+
+          {/* Masqué sur très petit écran : le lien fait doublon avec le
+              « J'ai déjà un compte » du hero, et la barre débordait. */}
+          <Link
+            href="/login"
+            className="hidden sm:inline-flex"
+            style={{
+              fontSize: 12.5, fontWeight: 600, color: 'rgba(255,255,255,0.62)',
+              textDecoration: 'none', padding: '6px 10px', whiteSpace: 'nowrap',
+            }}
+          >
             {c.navLogin}
           </Link>
-          <Link href="/register" style={{
-            fontSize: 12, fontWeight: 700, color: '#07080F',
-            background: '#22D6C7', textDecoration: 'none',
-            padding: '6px 13px', borderRadius: 8, letterSpacing: '-0.1px',
-          }}>
+
+          <Link
+            href="/register"
+            style={{
+              fontSize: 12.5, fontWeight: 800, color: INK, whiteSpace: 'nowrap',
+              background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DEEP})`,
+              textDecoration: 'none', padding: '8px 15px', borderRadius: 10,
+            }}
+          >
             {c.navStart}
           </Link>
         </div>
       </nav>
 
-      {/* ── HERO ───────────────────────────────────────────────── */}
-      <section style={{
-        padding: 'clamp(64px,12vw,120px) 24px clamp(48px,8vw,80px)',
-        position: 'relative', overflow: 'hidden',
-        background: 'linear-gradient(170deg,#FFFFFF 0%,#F0FDFC 55%,#FFFFFF 100%)',
-      }}>
-        {/* Decorative glow orbs */}
-        <div style={{ position:'absolute', top:-120, right:-80, width:560, height:560, borderRadius:'50%', background:'radial-gradient(circle,rgba(34,214,199,0.07) 0%,transparent 60%)', pointerEvents:'none' }} />
-        <div style={{ position:'absolute', bottom:-80, left:-60, width:420, height:420, borderRadius:'50%', background:'radial-gradient(circle,rgba(245,158,11,0.05) 0%,transparent 60%)', pointerEvents:'none' }} />
+      {/* ── HERO (sombre) ──────────────────────────────────────── */}
+      <section
+        style={{
+          position: 'relative', overflow: 'hidden',
+          background: `linear-gradient(175deg, ${INK} 0%, ${INK_2} 55%, ${INK} 100%)`,
+          padding: 'clamp(56px,10vw,104px) 20px clamp(48px,8vw,88px)',
+        }}
+      >
+        {/* halos colorés */}
+        <div style={{ position: 'absolute', top: -180, left: '50%', width: 900, height: 620, transform: 'translateX(-50%)', background: `radial-gradient(ellipse, ${BRAND}22 0%, transparent 65%)`, pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: -140, right: -120, width: 520, height: 520, borderRadius: '50%', background: `radial-gradient(circle, ${AMBER}18 0%, transparent 65%)`, pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: 120, left: -140, width: 460, height: 460, borderRadius: '50%', background: 'radial-gradient(circle, rgba(167,139,250,0.14) 0%, transparent 65%)', pointerEvents: 'none' }} />
 
-        <div style={{ maxWidth:680, margin:'0 auto', textAlign:'center', position:'relative', zIndex:1 }}>
-
-          {/* Badge */}
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <div style={{
-            display:'inline-flex', alignItems:'center', gap:7,
-            padding:'7px 16px', borderRadius:99,
-            background:'rgba(34,214,199,0.08)',
-            border:'1px solid rgba(34,214,199,0.2)',
-            marginBottom:30,
+            display: 'inline-flex', alignItems: 'center', gap: 8, padding: '7px 15px', borderRadius: 99,
+            background: 'rgba(34,214,199,0.10)', border: `1px solid ${BRAND}35`, marginBottom: 26,
           }}>
-            <span style={{ fontSize:13 }}>🇧🇪</span>
-            <span style={{ fontSize:12, fontWeight:700, color:'#22D6C7', letterSpacing:'0.3px' }}>
-              {c.badge}
-            </span>
+            <span style={{ fontSize: 13 }}>🇧🇪</span>
+            <span style={{ fontSize: 11.5, fontWeight: 700, color: BRAND, letterSpacing: '0.3px' }}>{c.badge}</span>
           </div>
 
-          {/* H1 */}
           <h1 style={{
-            margin:0,
-            fontSize:'clamp(38px,8.5vw,66px)',
-            fontWeight:900,
-            color:'#0B1220',
-            letterSpacing:'-2px',
-            lineHeight:1.04,
+            margin: 0, fontSize: 'clamp(34px,7.5vw,62px)', fontWeight: 900, letterSpacing: '-1.8px',
+            lineHeight: 1.06, color: '#FFFFFF',
           }}>
             {c.h1Line1}
             <br />
             <span style={{
-              background:'linear-gradient(135deg,#1AB8AB 0%,#22D6C7 100%)',
-              WebkitBackgroundClip:'text',
-              WebkitTextFillColor:'transparent',
-              backgroundClip:'text',
+              background: `linear-gradient(110deg, ${BRAND} 0%, #7DE8DD 45%, ${AMBER} 100%)`,
+              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
             }}>
               {c.h1Line2}
             </span>
           </h1>
 
-          {/* Subtitle */}
           <p style={{
-            margin:'22px auto 0', maxWidth:500,
-            fontSize:'clamp(15px,2.8vw,17px)',
-            color:'rgba(11,18,32,0.6)', lineHeight:1.7,
+            margin: '22px auto 0', maxWidth: 540, fontSize: 'clamp(14.5px,2.6vw,17px)',
+            color: 'rgba(241,245,249,0.62)', lineHeight: 1.72,
           }}>
             {c.subtitle}
           </p>
 
-          {/* CTAs */}
-          <div style={{ display:'flex', gap:12, justifyContent:'center', marginTop:36, flexWrap:'wrap' }}>
+          <div className="flex flex-wrap items-center justify-center" style={{ gap: 12, marginTop: 34 }}>
             <Link href="/register" style={{
-              display:'inline-flex', alignItems:'center', gap:8,
-              padding:'15px 28px',
-              background:'linear-gradient(135deg,#22D6C7,#1AB8AB)',
-              color:'#07080F',
-              borderRadius:13, fontWeight:800, fontSize:15,
-              textDecoration:'none',
-              boxShadow:'0 8px 30px rgba(34,214,199,0.22)',
-              letterSpacing:'-0.2px',
+              display: 'inline-flex', alignItems: 'center', gap: 8, padding: '16px 30px',
+              background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DEEP})`, color: INK,
+              borderRadius: 14, fontWeight: 800, fontSize: 15.5, textDecoration: 'none',
+              boxShadow: `0 10px 34px ${BRAND}33`, letterSpacing: '-0.2px',
             }}>
-              {c.ctaStart}
+              🚀 {c.ctaStart}
             </Link>
             <Link href="/login" style={{
-              display:'inline-flex', alignItems:'center',
-              padding:'15px 26px',
-              background:'rgba(11,18,32,0.04)',
-              color:'rgba(11,18,32,0.7)',
-              border:'1px solid rgba(11,18,32,0.1)',
-              borderRadius:13, fontWeight:600, fontSize:15,
-              textDecoration:'none',
+              display: 'inline-flex', alignItems: 'center', padding: '16px 26px',
+              background: 'rgba(255,255,255,0.05)', color: 'rgba(241,245,249,0.8)',
+              border: '1px solid rgba(255,255,255,0.14)', borderRadius: 14,
+              fontWeight: 600, fontSize: 15, textDecoration: 'none',
             }}>
               {c.ctaLogin}
             </Link>
           </div>
 
-          {/* Stats */}
-          <div style={{ display:'flex', gap:28, justifyContent:'center', marginTop:36, flexWrap:'wrap', alignItems:'center' }}>
-            {c.stats.map((s, i) => (
-              <div key={i} style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:3 }}>
-                <span style={{ fontSize:'clamp(20px,4vw,26px)', fontWeight:900, color:'#D97706', lineHeight:1 }}>{s.v}</span>
-                <span style={{ fontSize:11, color:'rgba(11,18,32,0.45)', fontWeight:500 }}>{s.l}</span>
+          <div className="flex flex-wrap items-center justify-center" style={{ gap: 18, marginTop: 24 }}>
+            {c.trust.map(t => (
+              <span key={t} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'rgba(241,245,249,0.42)' }}>
+                {check(BRAND)}{t}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* aperçu de l'app */}
+        <div style={{ maxWidth: 392, margin: '54px auto 0', position: 'relative', zIndex: 1 }}>
+          <div style={{
+            background: 'linear-gradient(160deg, #101B2F, #16233D)', borderRadius: 24,
+            border: '1px solid rgba(255,255,255,0.09)', padding: 21,
+            boxShadow: '0 40px 90px rgba(0,0,0,0.55)',
+          }}>
+            <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.2px', textTransform: 'uppercase', color: BRAND }}>{c.mockTheme}</p>
+            <p style={{ margin: '3px 0 15px', fontSize: 14.5, fontWeight: 700, color: '#F1F5F9' }}>{c.mockThemeTitle}</p>
+
+            <div className="flex items-center" style={{ gap: 10, marginBottom: 18 }}>
+              <div style={{ flex: 1, height: 5, borderRadius: 99, background: 'rgba(255,255,255,0.08)', overflow: 'hidden' }}>
+                <div style={{ height: '100%', width: '65%', borderRadius: 99, background: `linear-gradient(90deg, ${BRAND}, #7DE8DD)` }} />
+              </div>
+              <span style={{ fontSize: 12, fontWeight: 700, color: BRAND }}>65%</span>
+            </div>
+
+            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 13, padding: 14, marginBottom: 12 }}>
+              <p style={{ margin: 0, fontSize: 13, fontWeight: 600, color: '#F1F5F9', lineHeight: 1.55 }}>{c.mockQuestion}</p>
+            </div>
+
+            {MOCK_ANSWERS.map(a => (
+              <div key={a.text} className="flex items-center justify-between" style={{
+                padding: '11px 13px', borderRadius: 11, marginBottom: 8,
+                border: `1.5px solid ${a.correct ? 'rgba(34,197,94,0.42)' : 'rgba(255,255,255,0.07)'}`,
+                background: a.correct ? 'rgba(34,197,94,0.11)' : 'rgba(255,255,255,0.02)',
+                fontSize: 13, fontWeight: a.correct ? 700 : 500,
+                color: a.correct ? '#4ADE80' : 'rgba(241,245,249,0.5)',
+              }}>
+                <span>{a.text}</span>
+                {a.correct && <span style={{ fontSize: 14 }}>✓</span>}
               </div>
             ))}
           </div>
         </div>
 
-        {/* ── App preview mockup ── */}
-        <div style={{ maxWidth:380, margin:'52px auto 0', position:'relative', zIndex:1 }}>
-          <div style={{
-            background:'linear-gradient(145deg,#0E1525,#121E35)',
-            borderRadius:22,
-            border:'1px solid rgba(34,214,199,0.1)',
-            padding:20,
-            boxShadow:'0 30px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.04)',
-          }}>
-            {/* Mock header */}
-            <div style={{ marginBottom:14 }}>
-              <p style={{ margin:0, fontSize:10, fontWeight:700, letterSpacing:'1.2px', textTransform:'uppercase', color:'#22D6C7' }}>{c.mockTheme}</p>
-              <p style={{ margin:'2px 0 0', fontSize:14, fontWeight:700, color:'#F1F5F9' }}>{c.mockThemeTitle}</p>
-            </div>
-
-            {/* Progress */}
-            <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:18 }}>
-              <div style={{ flex:1, height:5, borderRadius:99, background:'rgba(255,255,255,0.07)', overflow:'hidden' }}>
-                <div style={{ height:'100%', width:'65%', borderRadius:99, background:'linear-gradient(90deg,#22D6C7,#55E6DA)' }} />
-              </div>
-              <span style={{ fontSize:12, fontWeight:700, color:'#22D6C7' }}>65%</span>
-            </div>
-
-            {/* Question */}
-            <div style={{
-              background:'rgba(255,255,255,0.03)',
-              border:'1px solid rgba(255,255,255,0.06)',
-              borderRadius:13, padding:14, marginBottom:12,
-            }}>
-              <p style={{ margin:0, fontSize:13, fontWeight:600, color:'#F1F5F9', lineHeight:1.55 }}>
-                {c.mockQuestion}
-              </p>
-            </div>
-
-            {/* Answers */}
-            {MOCK_ANSWERS.map((a) => (
-              <div key={a.text} style={{
-                padding:'10px 13px', borderRadius:10, marginBottom:8,
-                border:`1.5px solid ${a.correct ? 'rgba(34,197,94,0.4)' : 'rgba(255,255,255,0.07)'}`,
-                background: a.correct ? 'rgba(34,197,94,0.1)' : 'rgba(255,255,255,0.02)',
-                fontSize:13, fontWeight: a.correct ? 700 : 500,
-                color: a.correct ? '#4ADE80' : 'rgba(241,245,249,0.5)',
-                display:'flex', alignItems:'center', justifyContent:'space-between',
-              }}>
-                <span>{a.text}</span>
-                {a.correct && <span style={{ fontSize:14 }}>✓</span>}
+        {/* bandeau de chiffres */}
+        <div style={{ maxWidth: 940, margin: '52px auto 0', position: 'relative', zIndex: 1 }}>
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))', gap: 1, background: 'rgba(255,255,255,0.08)', borderRadius: 18, overflow: 'hidden' }}>
+            {c.stats.map((s, i) => (
+              <div key={i} style={{ background: INK_2, padding: '20px 14px', textAlign: 'center' }}>
+                <p style={{ margin: 0, fontSize: 'clamp(21px,4vw,28px)', fontWeight: 900, color: i % 2 ? AMBER : BRAND, lineHeight: 1.1 }}>{s.v}</p>
+                <p style={{ margin: '5px 0 0', fontSize: 11.5, color: 'rgba(241,245,249,0.45)', fontWeight: 500, lineHeight: 1.4 }}>{s.l}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── FEATURES ───────────────────────────────────────────── */}
-      <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#F5F8FA' }}>
-        <div style={{ maxWidth:960, margin:'0 auto' }}>
-          <div style={{ textAlign:'center', marginBottom:44 }}>
-            <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>{c.featuresKicker}</p>
-            <h2 style={{ margin:0, fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
-              {c.featuresTitle}
-            </h2>
+      {/* ── FONCTIONNALITÉS ────────────────────────────────────── */}
+      <section style={{ padding: 'clamp(56px,9vw,92px) 20px', background: '#FFFFFF' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 46 }}>
+            <p style={{ margin: '0 0 10px', fontSize: 11, fontWeight: 800, letterSpacing: '2.4px', textTransform: 'uppercase', color: BRAND_DEEP }}>{c.featuresKicker}</p>
+            <h2 style={{ margin: '0 0 14px', fontSize: 'clamp(25px,4.8vw,38px)', fontWeight: 900, letterSpacing: '-1px' }}>{c.featuresTitle}</h2>
+            <p style={{ margin: '0 auto', maxWidth: 480, fontSize: 15, color: 'rgba(11,18,32,0.55)', lineHeight: 1.7 }}>{c.featuresSub}</p>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(272px,1fr))', gap:16 }}>
+
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(276px,1fr))', gap: 16 }}>
             {c.features.map(f => (
               <div key={f.title} style={{
-                background:'#FFFFFF', borderRadius:20, padding:'24px 22px',
-                border:'1px solid rgba(11,18,32,0.07)',
+                background: '#FFFFFF', borderRadius: 20, padding: '26px 24px',
+                border: '1px solid rgba(11,18,32,0.08)',
+                borderTop: `3px solid ${f.color}`,
+                boxShadow: '0 2px 14px rgba(11,18,32,0.04)',
               }}>
                 <div style={{
-                  width:50, height:50, borderRadius:14, background:f.bg,
-                  display:'flex', alignItems:'center', justifyContent:'center',
-                  fontSize:24, marginBottom:16,
+                  width: 46, height: 46, borderRadius: 13, background: `${f.color}1A`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, marginBottom: 15,
                 }}>
                   {f.icon}
                 </div>
-                <p style={{ margin:'0 0 7px', fontSize:15, fontWeight:700, color:'#0B1220' }}>{f.title}</p>
-                <p style={{ margin:0, fontSize:13, color:'rgba(11,18,32,0.55)', lineHeight:1.65 }}>{f.desc}</p>
+                <p style={{ margin: '0 0 7px', fontSize: 15.5, fontWeight: 800 }}>{f.title}</p>
+                <p style={{ margin: 0, fontSize: 13.5, color: 'rgba(11,18,32,0.56)', lineHeight: 1.68 }}>{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── FREE vs PREMIUM ────────────────────────────────────── */}
-      <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#FFFFFF' }}>
-        <div style={{ maxWidth:900, margin:'0 auto' }}>
-          <div style={{ textAlign:'center', marginBottom:44 }}>
-            <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>{c.planKicker}</p>
-            <h2 style={{ margin:'0 0 14px', fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
-              {c.planTitle}
-            </h2>
-            <p style={{ margin:'0 auto', maxWidth:520, fontSize:15, color:'rgba(11,18,32,0.6)', lineHeight:1.7 }}>
-              {c.planSubtitle}
-            </p>
+      {/* ── COMMENT ÇA MARCHE ──────────────────────────────────── */}
+      <section style={{ padding: 'clamp(56px,9vw,92px) 20px', background: '#F5F8FB' }}>
+        <div style={{ maxWidth: 980, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 46 }}>
+            <p style={{ margin: '0 0 10px', fontSize: 11, fontWeight: 800, letterSpacing: '2.4px', textTransform: 'uppercase', color: BRAND_DEEP }}>{c.stepsKicker}</p>
+            <h2 style={{ margin: 0, fontSize: 'clamp(25px,4.8vw,38px)', fontWeight: 900, letterSpacing: '-1px' }}>{c.stepsTitle}</h2>
           </div>
 
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:20, alignItems:'start' }}>
-
-            {/* Gratuit */}
-            <div style={{
-              background:'#F5F8FA', borderRadius:22, padding:'28px 26px',
-              border:'1px solid rgba(11,18,32,0.08)',
-            }}>
-              <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:6, flexWrap:'wrap' }}>
-                <span style={{ fontSize:20, fontWeight:900, color:'#0B1220' }}>{c.freeTitle}</span>
-                <span style={{
-                  fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:99,
-                  background:'rgba(11,18,32,0.06)', color:'rgba(11,18,32,0.55)',
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(250px,1fr))', gap: 30 }}>
+            {c.steps.map((s, i) => (
+              <div key={s.num} style={{ position: 'relative' }}>
+                <div style={{
+                  width: 54, height: 54, borderRadius: 16,
+                  background: i === 2 ? `linear-gradient(135deg, ${AMBER}, #F59E0B)` : `linear-gradient(135deg, ${BRAND}, ${BRAND_DEEP})`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 17, fontWeight: 900, color: INK, marginBottom: 17,
+                  boxShadow: `0 8px 22px ${i === 2 ? AMBER : BRAND}30`,
                 }}>
-                  {c.freeBadge}
-                </span>
+                  {s.num}
+                </div>
+                <h3 style={{ margin: '0 0 9px', fontSize: 18, fontWeight: 800, letterSpacing: '-0.3px' }}>{s.title}</h3>
+                <p style={{ margin: 0, fontSize: 14, color: 'rgba(11,18,32,0.56)', lineHeight: 1.72 }}>{s.desc}</p>
               </div>
-              <p style={{ margin:'0 0 20px', fontSize:30, fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>0€</p>
-              <div style={{ display:'flex', flexDirection:'column', gap:11 }}>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PROGRAMME ──────────────────────────────────────────── */}
+      <section style={{ padding: 'clamp(56px,9vw,92px) 20px', background: '#FFFFFF' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ margin: '0 0 10px', fontSize: 11, fontWeight: 800, letterSpacing: '2.4px', textTransform: 'uppercase', color: BRAND_DEEP }}>{c.themesKicker}</p>
+          <h2 style={{ margin: '0 0 14px', fontSize: 'clamp(25px,4.8vw,38px)', fontWeight: 900, letterSpacing: '-1px' }}>{c.themesTitle}</h2>
+          <p style={{ margin: '0 auto 36px', maxWidth: 460, fontSize: 15, color: 'rgba(11,18,32,0.55)', lineHeight: 1.7 }}>{c.themesSub}</p>
+
+          <div className="flex flex-wrap justify-center" style={{ gap: 11 }}>
+            {c.themes.map(row => {
+              const col = THEME_COLORS[row.code] || BRAND;
+              return (
+                <div key={row.code} className="flex items-center" style={{
+                  background: `${col}12`, borderRadius: 13, padding: '11px 16px',
+                  border: `1px solid ${col}38`, gap: 9,
+                }}>
+                  <span style={{ fontSize: 16 }}>{row.emoji}</span>
+                  <span style={{ fontSize: 12.5, fontWeight: 900, color: col }}>{c.themeWord} {row.code}</span>
+                  <span style={{ fontSize: 12.5, color: 'rgba(11,18,32,0.6)', fontWeight: 500 }}>{row.label}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── GRATUIT / PREMIUM ──────────────────────────────────── */}
+      <section style={{ padding: 'clamp(56px,9vw,92px) 20px', background: '#F5F8FB' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 42 }}>
+            <p style={{ margin: '0 0 10px', fontSize: 11, fontWeight: 800, letterSpacing: '2.4px', textTransform: 'uppercase', color: BRAND_DEEP }}>{c.planKicker}</p>
+            <h2 style={{ margin: '0 0 14px', fontSize: 'clamp(25px,4.8vw,38px)', fontWeight: 900, letterSpacing: '-1px' }}>{c.planTitle}</h2>
+            <p style={{ margin: '0 auto', maxWidth: 500, fontSize: 15, color: 'rgba(11,18,32,0.55)', lineHeight: 1.7 }}>{c.planSubtitle}</p>
+          </div>
+
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(298px,1fr))', gap: 20, alignItems: 'start' }}>
+            {/* Gratuit */}
+            <div style={{ background: '#FFFFFF', borderRadius: 22, padding: '28px 26px', border: '1px solid rgba(11,18,32,0.09)' }}>
+              <div className="flex flex-wrap items-center" style={{ gap: 10, marginBottom: 6 }}>
+                <span style={{ fontSize: 20, fontWeight: 900 }}>{c.freeTitle}</span>
+                <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 99, background: 'rgba(11,18,32,0.06)', color: 'rgba(11,18,32,0.55)' }}>{c.freeBadge}</span>
+              </div>
+              <p style={{ margin: '0 0 20px', fontSize: 32, fontWeight: 900, letterSpacing: '-1px' }}>0€</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
                 {c.freeItems.map(item => (
-                  <div key={item} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
-                    {check('#1AB8AB')}
-                    <span style={{ fontSize:13.5, color:'rgba(11,18,32,0.7)', lineHeight:1.6 }}>{item}</span>
+                  <div key={item} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                    {check(BRAND_DEEP)}
+                    <span style={{ fontSize: 13.5, color: 'rgba(11,18,32,0.7)', lineHeight: 1.6 }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -499,126 +603,86 @@ export default function LandingContent() {
 
             {/* Premium */}
             <div style={{
-              background:'linear-gradient(145deg,#0E1828,#132240)', borderRadius:22, padding:'28px 26px',
-              border:'1px solid rgba(34,214,199,0.25)',
-              boxShadow:'0 16px 50px rgba(11,18,32,0.18)',
+              background: `linear-gradient(155deg, ${INK_2}, #16264A)`, borderRadius: 22, padding: '28px 26px',
+              border: `1px solid ${BRAND}3D`, boxShadow: '0 20px 55px rgba(11,18,32,0.22)',
             }}>
-              <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:6, flexWrap:'wrap' }}>
-                <span style={{ fontSize:20, fontWeight:900, color:'#F1F5F9' }}>{c.premiumTitle}</span>
-                <span style={{
-                  fontSize:11, fontWeight:700, padding:'3px 10px', borderRadius:99,
-                  background:'rgba(34,214,199,0.15)', color:'#22D6C7',
-                }}>
-                  {c.premiumBadge}
-                </span>
+              <div className="flex flex-wrap items-center" style={{ gap: 10, marginBottom: 6 }}>
+                <span style={{ fontSize: 20, fontWeight: 900, color: '#F1F5F9' }}>{c.premiumTitle}</span>
+                <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 99, background: `${BRAND}26`, color: BRAND }}>{c.premiumBadge}</span>
               </div>
-              <p style={{ margin:'0 0 20px', display:'flex', alignItems:'baseline', gap:7, flexWrap:'wrap' }}>
-                <span style={{ fontSize:30, fontWeight:900, color:'#22D6C7', letterSpacing:'-1px' }}>{plan.priceDisplay}</span>
-                <span style={{ fontSize:13, color:'rgba(241,245,249,0.5)', fontWeight:600 }}>{c.premiumPeriod}</span>
+              <p className="flex flex-wrap items-baseline" style={{ margin: '0 0 20px', gap: 7 }}>
+                <span style={{ fontSize: 32, fontWeight: 900, color: BRAND, letterSpacing: '-1px' }}>{plan.priceDisplay}</span>
+                <span style={{ fontSize: 13, color: 'rgba(241,245,249,0.5)', fontWeight: 600 }}>{c.premiumPeriod}</span>
               </p>
-              <div style={{ display:'flex', flexDirection:'column', gap:11, marginBottom:22 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 11, marginBottom: 22 }}>
                 {c.premiumItems.map(item => (
-                  <div key={item} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
-                    {check('#22D6C7')}
-                    <span style={{ fontSize:13.5, color:'rgba(241,245,249,0.78)', lineHeight:1.6 }}>{item}</span>
+                  <div key={item} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                    {check(BRAND)}
+                    <span style={{ fontSize: 13.5, color: 'rgba(241,245,249,0.8)', lineHeight: 1.6 }}>{item}</span>
                   </div>
                 ))}
               </div>
-              <p style={{ margin:0, fontSize:11.5, color:'rgba(241,245,249,0.4)', lineHeight:1.6 }}>
-                {c.premiumNote}
-              </p>
+              <p style={{ margin: 0, fontSize: 11.5, color: 'rgba(241,245,249,0.4)', lineHeight: 1.6 }}>{c.premiumNote}</p>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ───────────────────────────────────────── */}
-      <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#F5F8FA' }}>
-        <div style={{ maxWidth:960, margin:'0 auto' }}>
-          <div style={{ textAlign:'center', marginBottom:44 }}>
-            <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>{c.stepsKicker}</p>
-            <h2 style={{ margin:0, fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
-              {c.stepsTitle}
-            </h2>
+      {/* ── FAQ ────────────────────────────────────────────────── */}
+      <section style={{ padding: 'clamp(56px,9vw,92px) 20px', background: '#FFFFFF' }}>
+        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <p style={{ margin: '0 0 10px', fontSize: 11, fontWeight: 800, letterSpacing: '2.4px', textTransform: 'uppercase', color: BRAND_DEEP }}>{c.faqKicker}</p>
+            <h2 style={{ margin: 0, fontSize: 'clamp(25px,4.8vw,38px)', fontWeight: 900, letterSpacing: '-1px' }}>{c.faqTitle}</h2>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:36 }}>
-            {c.steps.map((step) => (
-              <div key={step.num}>
-                <div style={{
-                  width:52, height:52, borderRadius:'50%',
-                  background:'linear-gradient(135deg,#22D6C7,#1AB8AB)',
-                  display:'flex', alignItems:'center', justifyContent:'center',
-                  fontSize:17, fontWeight:900, color:'#07080F',
-                  marginBottom:18, boxShadow:'0 6px 20px rgba(34,214,199,0.2)',
-                }}>
-                  {step.num}
-                </div>
-                <h3 style={{ margin:'0 0 9px', fontSize:18, fontWeight:800, color:'#0B1220', letterSpacing:'-0.3px' }}>{step.title}</h3>
-                <p style={{ margin:0, fontSize:14, color:'rgba(11,18,32,0.55)', lineHeight:1.7 }}>{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── THEMES ─────────────────────────────────────────────── */}
-      <section style={{ padding:'clamp(48px,8vw,80px) 24px', background:'#FFFFFF' }}>
-        <div style={{ maxWidth:760, margin:'0 auto', textAlign:'center' }}>
-          <p style={{ margin:'0 0 10px', fontSize:11, fontWeight:700, letterSpacing:'2.5px', textTransform:'uppercase', color:'#1AB8AB' }}>{c.themesKicker}</p>
-          <h2 style={{ margin:'0 0 36px', fontSize:'clamp(26px,5vw,38px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px' }}>
-            {c.themesTitle}
-          </h2>
-          <div style={{ display:'flex', flexWrap:'wrap', gap:10, justifyContent:'center' }}>
-            {c.themes.map(row => (
-              <div key={row.code} style={{
-                background:'#FFFFFF', borderRadius:12, padding:'10px 16px',
-                border:'1px solid rgba(11,18,32,0.08)',
-                display:'flex', alignItems:'center', gap:8,
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
+            {c.faq.map((item, i) => (
+              <details key={i} className="faq-item" style={{
+                background: '#F5F8FB', borderRadius: 15, border: '1px solid rgba(11,18,32,0.07)',
+                padding: '16px 19px',
               }}>
-                <span style={{ fontSize:16 }}>{row.emoji}</span>
-                <span style={{ fontSize:13, fontWeight:800, color:'#D97706' }}>{c.themeWord} {row.code}</span>
-                <span style={{ fontSize:12, color:'rgba(11,18,32,0.5)', fontWeight:500 }}>{row.label}</span>
-              </div>
+                <summary style={{
+                  cursor: 'pointer', listStyle: 'none', fontSize: 15, fontWeight: 700,
+                  color: '#0B1220', display: 'flex', alignItems: 'flex-start', gap: 12, lineHeight: 1.5,
+                }}>
+                  <span style={{ color: BRAND_DEEP, fontWeight: 900, flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
+                  <span>{item.q}</span>
+                </summary>
+                <p style={{ margin: '13px 0 0 32px', fontSize: 14, color: 'rgba(11,18,32,0.62)', lineHeight: 1.75 }}>
+                  {item.a}
+                </p>
+              </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA FINAL ──────────────────────────────────────────── */}
-      <section style={{ padding:'clamp(48px,8vw,80px) 24px clamp(60px,10vw,100px)', background:'#F5F8FA', textAlign:'center' }}>
-        <div style={{
-          maxWidth:580, margin:'0 auto',
-          background:'linear-gradient(145deg,#F0FDFC,#E6FBF8)',
-          borderRadius:28, padding:'clamp(32px,6vw,56px) clamp(24px,5vw,52px)',
-          border:'1px solid rgba(34,214,199,0.18)',
-          boxShadow:'0 0 60px rgba(34,214,199,0.08)',
-          position:'relative', overflow:'hidden',
-        }}>
-          {/* Inner glow */}
-          <div style={{ position:'absolute', top:-60, right:-60, width:200, height:200, borderRadius:'50%', background:'radial-gradient(circle,rgba(34,214,199,0.12) 0%,transparent 70%)', pointerEvents:'none' }} />
+      {/* ── CTA FINAL (sombre, raccorde au pied de page) ───────── */}
+      <section style={{
+        position: 'relative', overflow: 'hidden', textAlign: 'center',
+        background: `linear-gradient(185deg, ${INK_2} 0%, ${INK} 100%)`,
+        padding: 'clamp(64px,10vw,104px) 20px clamp(72px,11vw,112px)',
+      }}>
+        <div style={{ position: 'absolute', top: -160, left: '50%', width: 760, height: 520, transform: 'translateX(-50%)', background: `radial-gradient(ellipse, ${BRAND}1F 0%, transparent 65%)`, pointerEvents: 'none' }} />
 
-          <div style={{ fontSize:40, marginBottom:14, position:'relative' }}>🏁</div>
-          <h2 style={{ margin:'0 0 12px', fontSize:'clamp(24px,5vw,34px)', fontWeight:900, color:'#0B1220', letterSpacing:'-1px', position:'relative' }}>
+        <div style={{ maxWidth: 560, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div style={{ fontSize: 42, marginBottom: 16 }}>🏁</div>
+          <h2 style={{ margin: '0 0 14px', fontSize: 'clamp(26px,5vw,40px)', fontWeight: 900, color: '#FFFFFF', letterSpacing: '-1.2px' }}>
             {c.finalTitle}
           </h2>
-          <p style={{ margin:'0 0 30px', fontSize:14, color:'rgba(11,18,32,0.55)', lineHeight:1.7, position:'relative' }}>
+          <p style={{ margin: '0 0 30px', fontSize: 15, color: 'rgba(241,245,249,0.58)', lineHeight: 1.72 }}>
             {c.finalDesc}
           </p>
           <Link href="/register" style={{
-            display:'inline-flex', alignItems:'center', gap:8,
-            padding:'16px 36px',
-            background:'linear-gradient(135deg,#22D6C7,#1AB8AB)',
-            color:'#07080F', borderRadius:13, fontWeight:800, fontSize:16,
-            textDecoration:'none',
-            boxShadow:'0 8px 32px rgba(34,214,199,0.2)',
-            position:'relative',
+            display: 'inline-flex', alignItems: 'center', gap: 8, padding: '17px 38px',
+            background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DEEP})`, color: INK,
+            borderRadius: 14, fontWeight: 800, fontSize: 16, textDecoration: 'none',
+            boxShadow: `0 12px 38px ${BRAND}30`,
           }}>
-            {c.finalCta}
+            {c.finalCta} →
           </Link>
-          <p style={{ margin:'16px 0 0', fontSize:12, color:'rgba(11,18,32,0.4)', position:'relative' }}>
-            {c.finalNote}
-          </p>
+          <p style={{ margin: '15px 0 0', fontSize: 12, color: 'rgba(241,245,249,0.34)' }}>{c.finalNote}</p>
         </div>
       </section>
 

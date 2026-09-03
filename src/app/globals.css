@@ -986,3 +986,10 @@ main, .page-content {
     align-items: start;
   }
 }
+
+/* Landing — FAQ dépliable : on masque le marqueur natif du <summary>
+   (triangle Chrome / Safari), la numérotation fait office de repère. */
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary::marker { content: ''; }
+.faq-item > summary { list-style: none; }
+.faq-item[open] > summary { color: var(--brand, #1AB8AB); }
