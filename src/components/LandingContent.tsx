@@ -83,7 +83,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     h1Mark: 'six mois',
     h1Line2Post: '.',
     subtitle: '1 770 questions sur les 9 thèmes officiels, des leçons courtes et des examens blancs en conditions réelles. Tu commences aujourd\'hui, gratuitement.',
-    priceLine: 'Gratuit pour commencer · Premium dès',
+    priceLine: 'Premium dès',
     priceLineStrong: 'par semaine',
     ctaStart: 'Commencer gratuitement',
     ctaLogin: 'J\'ai déjà un compte',
@@ -202,7 +202,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     h1Mark: 'maanden',
     h1Line2Post: 'aan te verliezen.',
     subtitle: '1 770 vragen over de 9 officiële thema\'s, korte lessen en proefexamens in echte omstandigheden. Je begint vandaag, gratis.',
-    priceLine: 'Gratis om te starten · Premium vanaf',
+    priceLine: 'Premium vanaf',
     priceLineStrong: 'per week',
     ctaStart: 'Gratis beginnen',
     ctaLogin: 'Ik heb al een account',
@@ -455,14 +455,41 @@ export default function LandingContent() {
             </p>
 
             <div className="flex flex-wrap items-center" style={{ gap: 11, marginTop: 20 }}>
-              <Link href="/register" style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 26px',
-                background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DEEP})`, color: INK,
-                borderRadius: 13, fontWeight: 800, fontSize: 15, textDecoration: 'none',
-                boxShadow: `0 10px 28px ${BRAND}44`, letterSpacing: '-0.2px',
-              }}>
-                {c.ctaStart}
-              </Link>
+              {/* Le bouton et la pastille restent SOLIDAIRES : sur mobile la
+                  pastille occupe le vide à droite du bouton, ce qui met le
+                  tarif dans le premier écran sans descendre. */}
+              <div className="flex items-center" style={{ gap: 13 }}>
+                <Link href="/register" style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 26px',
+                  background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DEEP})`, color: INK,
+                  borderRadius: 13, fontWeight: 800, fontSize: 15, textDecoration: 'none',
+                  boxShadow: `0 10px 28px ${BRAND}44`, letterSpacing: '-0.2px',
+                }}>
+                  {c.ctaStart}
+                </Link>
+
+                {/* Pastille tarif, légèrement inclinée comme une étiquette
+                    de prix. Elle annonce le Premium, jamais le bouton gratuit
+                    à côté : les deux chemins restent distincts et honnêtes. */}
+                <Link href="/premium" style={{
+                  display: 'inline-block', textAlign: 'center', textDecoration: 'none',
+                  background: AMBER, color: '#3A2200', borderRadius: 12,
+                  padding: '8px 13px', transform: 'rotate(-5deg)',
+                  boxShadow: '0 6px 16px rgba(245,165,36,0.42)', lineHeight: 1.15,
+                  flexShrink: 0,
+                }}>
+                  <span style={{ display: 'block', fontSize: 9.5, fontWeight: 800, letterSpacing: '0.3px', opacity: 0.75 }}>
+                    {c.priceLine}
+                  </span>
+                  <span style={{ display: 'block', fontSize: 17, fontWeight: 900, letterSpacing: '-0.5px' }}>
+                    {plan.priceDisplay}
+                  </span>
+                  <span style={{ display: 'block', fontSize: 9, fontWeight: 700, opacity: 0.7 }}>
+                    {c.priceLineStrong}
+                  </span>
+                </Link>
+              </div>
+
               <Link href="/login" style={{
                 display: 'inline-flex', alignItems: 'center', padding: '14px 22px',
                 background: '#FFFFFF', color: 'rgba(11,18,32,0.68)',
