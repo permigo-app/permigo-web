@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { getThemeOrder, getThemeDataLocalized, type Lang } from '@/lib/lessonData';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
-import DesignUpdateModal from '@/components/DesignUpdateModal';
-import FeedbackPromptModal from '@/components/FeedbackPromptModal';
 import { THEME_COLORS } from '@/lib/constants';
 import { isLessonCompleted, getCompletedParties, getAllExams } from '@/lib/progressStorage';
 import { countThemeParts, lessonEffectivelyCompleted } from '@/lib/medals';
@@ -369,8 +367,11 @@ export default function HomePage() {
 
       </div>
     </div>
-    <DesignUpdateModal userId={user?.id} />
-    <FeedbackPromptModal userId={user?.id} />
+    {/* Les deux fenêtres qui s'ouvraient d'elles-mêmes à la connexion sont
+        retirées : celle qui réclamait un avis par e-mail, et l'annonce
+        « Nouveau design ». Les composants restent sur disque et les colonnes
+        Supabase (feedback_prompt_seen, design_update_seen) sont intactes :
+        il suffit de remettre les deux lignes pour les réactiver. */}
     <OnboardingTour />
     </>
   );
