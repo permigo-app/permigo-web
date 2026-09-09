@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useLang } from '@/contexts/LanguageContext';
 import { cheapestPlan } from '@/lib/pricing';
 import { THEME_COLORS } from '@/lib/constants';
+import LandingTestimonials from '@/components/LandingTestimonials';
 
 /* ──────────────────────────────────────────────────────────────
    Landing CLAIRE, pleine largeur.
@@ -744,6 +745,12 @@ export default function LandingContent() {
           </div>
         </div>
       </section>
+
+      {/* ── TÉMOIGNAGES ────────────────────────────────────────────
+          Juste avant la FAQ : le visiteur a vu l'offre et le prix, c'est là
+          que la parole d'un autre élève pèse le plus. La section n'apparaît
+          que s'il existe de vrais avis validés — sinon elle n'existe pas. */}
+      <LandingTestimonials />
 
       {/* ── FAQ ────────────────────────────────────────────────── */}
       <section style={{ padding: 'clamp(56px,8vw,88px) 20px', background: '#F5F8FB' }}>

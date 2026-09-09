@@ -14,6 +14,7 @@ import { useIsPremium } from '@/lib/premium';
 import { supabase } from '@/lib/supabase';
 import RenewalNotice from '@/components/RenewalNotice';
 import MedalCollection from '@/components/MedalCollection';
+import TestimonialForm from '@/components/TestimonialForm';
 
 // Formate le montant + la période réels de l'abonnement Stripe (plusieurs
 // formules possibles désormais — jamais de prix en dur ici).
@@ -368,6 +369,10 @@ export default function ProfilePage() {
 
           {/* 8. Abonnement */}
           <SubscriptionSection />
+
+          {/* 8bis. Avis — réservé aux comptes connectés : un avis anonyme
+              n'a aucune valeur de preuve et attire le spam. */}
+          {user && <TestimonialForm />}
 
           {/* 9. Déconnexion */}
           {user && (
