@@ -1,4 +1,4 @@
-const fr: Record<string, string> = {
+﻿const fr: Record<string, string> = {
   // ── Navigation ──
   nav_accueil: 'Accueil',
   nav_lecons: 'Leçons',
@@ -94,6 +94,8 @@ const fr: Record<string, string> = {
   examen_score_direct: 'Score en direct',
   examen_correctes: 'Correctes',
   examen_seuil_reussite: 'Seuil réussite',
+  examen_grille: 'Progression',
+  examen_grille_note: 'Vert = question déjà répondue. Les corrections arrivent à la fin, comme à l\'examen officiel.',
 
   // ── Résultats ──
   resultats_courage: 'Courage !',
@@ -112,6 +114,8 @@ const fr: Record<string, string> = {
   resultats_erreurs_graves: 'erreurs graves',
   resultats_erreur_grave_regle: "comme à l'examen officiel, chaque erreur grave (feu rouge, priorité, vitesse, alcool…) coûte 5 points au lieu de 1.",
   resultats_tes_fautes: 'Tes fautes',
+  resultats_par_theme: 'Où tu perds des points',
+  resultats_par_theme_note: 'Touche un thème pour aller le réviser. Il te faut 82 % partout pour être tranquille le jour J.',
   resultats_sans_faute: 'Sans faute — parfait ! 🎯',
   resultats_ta_reponse: 'Ta réponse',
   resultats_bonne_reponse: 'Bonne réponse',

@@ -1,4 +1,4 @@
-const nl: Record<string, string> = {
+﻿const nl: Record<string, string> = {
   // ── Navigation ──
   nav_accueil: 'Startpagina',
   nav_lecons: 'Lessen',
@@ -94,6 +94,8 @@ const nl: Record<string, string> = {
   examen_score_direct: 'Live score',
   examen_correctes: 'Correct',
   examen_seuil_reussite: 'Slaagdrempel',
+  examen_grille: 'Voortgang',
+  examen_grille_note: 'Groen = vraag al beantwoord. De verbetering komt op het einde, zoals op het officiële examen.',
 
   // ── Résultats ──
   resultats_courage: 'Moed!',
@@ -112,6 +114,8 @@ const nl: Record<string, string> = {
   resultats_erreurs_graves: 'zware fouten',
   resultats_erreur_grave_regle: 'zoals op het officiële examen kost elke zware fout (rood licht, voorrang, snelheid, alcohol…) 5 punten in plaats van 1.',
   resultats_tes_fautes: 'Jouw fouten',
+  resultats_par_theme: 'Waar je punten verliest',
+  resultats_par_theme_note: 'Tik op een thema om het te herhalen. Je hebt overal 82 % nodig om gerust te zijn op de grote dag.',
   resultats_sans_faute: 'Foutloos — perfect! 🎯',
   resultats_ta_reponse: 'Jouw antwoord',
   resultats_bonne_reponse: 'Juist antwoord',

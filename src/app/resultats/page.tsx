@@ -51,6 +51,7 @@ function ResultsContent() {
 
   // Récapitulatif des fautes (déposé par la page examen dans localStorage)
   const [faults, setFaults] = useState<ExamReviewItem[] | null>(null);
+  const [byTheme, setByTheme] = useState<{ code: string; correct: number; total: number; pct: number }[] | null>(null);
   useEffect(() => {
     if (!isExam) return;
     try {
@@ -60,8 +61,24 @@ function ResultsContent() {
       // On n'affiche que si le dépôt correspond bien à CET examen (frais + même config)
       if (review.theme !== themeCode || review.total !== total) return;
       if (Date.now() - (review.ts ?? 0) > 30 * 60 * 1000) return;
-      const items = (review.items as ExamReviewItem[]).filter(it => it.selected !== it.correct);
-      setFaults(items);
+      const all = review.items as ExamReviewItem[];
+      setFaults(all.filter(it => it.selected !== it.correct));
+
+      // Répartition par thème : le code du thème est la 1re lettre de l'id
+      // ("F1_Q12" → F). N'a de sens que pour l'examen final, qui pioche
+      // dans les 9 thèmes ; un examen de thème n'en contient qu'un seul.
+      const acc: Record<string, { correct: number; total: number }> = {};
+      for (const it of all) {
+        const code = (it.id || '').charAt(0).toUpperCase();
+        if (!/[A-I]/.test(code)) continue;
+        acc[code] = acc[code] || { correct: 0, total: 0 };
+        acc[code].total++;
+        if (it.selected === it.correct) acc[code].correct++;
+      }
+      const rows = Object.entries(acc)
+        .map(([code, v]) => ({ code, ...v, pct: v.total ? Math.round((v.correct / v.total) * 100) : 0 }))
+        .sort((a, b) => a.pct - b.pct); // le plus faible en premier
+      setByTheme(rows.length > 1 ? rows : null);
     } catch { /* ignore */ }
   }, [isExam, themeCode, total]);
   const color = THEME_COLORS[themeCode] || '#74B9FF';
@@ -140,6 +157,43 @@ function ResultsContent() {
           <span className="text-xs" style={{ color: 'var(--text-hint)' }}>{t('resultats_score')}</span>
         </div>
       </div>
+
+      {/* Où tu perds des points, thème par thème. C'est l'écran le plus utile
+          de l'examen : il transforme un score global en plan de révision. */}
+      {isExam && byTheme && (
+        <div className="mb-8">
+          <h2 className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: 'var(--brand)' }}>
+            {t('resultats_par_theme')}
+          </h2>
+          <div className="flex flex-col gap-2">
+            {byTheme.map(row => {
+              const c = THEME_COLORS[row.code] || '#74B9FF';
+              const weak = row.pct < 82;
+              return (
+                <Link
+                  key={row.code}
+                  href={`/lecons/${row.code}`}
+                  className="flex items-center gap-3 rounded-2xl px-4 py-3 press-scale"
+                  style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)', textDecoration: 'none' }}
+                >
+                  <span className="text-xs font-black flex-shrink-0" style={{ color: c, width: 54 }}>
+                    {t('resultats_medaille_theme_prefix')} {row.code}
+                  </span>
+                  <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--bg-input)' }}>
+                    <div style={{ height: '100%', width: `${row.pct}%`, background: weak ? '#e74c3c' : '#2ecc71', borderRadius: 99 }} />
+                  </div>
+                  <span className="text-xs font-bold flex-shrink-0" style={{ color: weak ? '#e74c3c' : '#2ecc71', width: 44, textAlign: 'right' }}>
+                    {row.correct}/{row.total}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--text-hint)' }}>
+            {t('resultats_par_theme_note')}
+          </p>
+        </div>
+      )}
 
       {/* Récapitulatif des fautes (examen, conditions réelles) */}
       {isExam && faults !== null && (

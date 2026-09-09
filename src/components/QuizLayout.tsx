@@ -42,6 +42,8 @@ interface QuizLayoutProps {
 
   /* Sidebar */
   sidebar?: ReactNode;
+  /** Colonne de gauche, desktop uniquement — grille des questions de l'examen blanc. */
+  leftPanel?: ReactNode;
 
   /* Feedback */
   explanation?: string;
@@ -78,6 +80,7 @@ export default function QuizLayout({
   isLastQuestion,
   lastLabel = 'VOIR RÉSULTATS →',
   sidebar,
+  leftPanel,
   explanation,
   shakeWrong,
   questionId,
@@ -134,6 +137,15 @@ export default function QuizLayout({
       {/* ── 2-column layout ── */}
       <div className="px-4 lg:px-6 pt-5 lg:pt-6 pb-6">
         <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6">
+
+          {/* ── Colonne de gauche optionnelle (grille de l'examen blanc) ──
+              Desktop uniquement : sur mobile, 50 cases au-dessus de chaque
+              question repousseraient l'énoncé hors de l'écran. */}
+          {leftPanel && (
+            <div className="hidden lg:block lg:w-40 xl:w-48 lg:flex-shrink-0 lg:order-first">
+              <div className="sticky top-24">{leftPanel}</div>
+            </div>
+          )}
 
           {/* ── Left: Question + Answers (60%) ── */}
           <div className="flex-1 min-w-0 lg:flex-[3]">

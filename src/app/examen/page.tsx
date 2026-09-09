@@ -389,6 +389,40 @@ function ExamContent() {
       shakeWrong={false}
       questionId={q.id || `exam_${themeCode}_q${currentQ}`}
       questionKey={currentQ}
+      leftPanel={
+        // Grille façon examen officiel : une case par question. Vert = déjà
+        // répondue (PAS forcément juste — aucune correction n'est donnée
+        // pendant l'épreuve), contour coloré = question en cours.
+        <div className="rounded-2xl p-4" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
+          <h4 className="text-[10px] font-bold uppercase tracking-widest mb-3" style={{ color: 'var(--text-secondary)' }}>
+            {t('examen_grille')}
+          </h4>
+          <div className="grid grid-cols-5 gap-1.5">
+            {questions.map((qq, i) => {
+              const answered = answersRef.current[qq.id] !== undefined;
+              const isCurrent = i === currentQ;
+              return (
+                <div
+                  key={qq.id || i}
+                  className="flex items-center justify-center rounded-md"
+                  style={{
+                    aspectRatio: '1 / 1', fontSize: 10.5,
+                    fontWeight: isCurrent ? 900 : 700,
+                    background: answered ? 'rgba(46,204,113,0.16)' : 'var(--bg-input)',
+                    color: answered ? '#2ecc71' : 'var(--text-disabled)',
+                    border: isCurrent ? `2px solid ${color}` : '1px solid var(--border-subtle)',
+                  }}
+                >
+                  {i + 1}
+                </div>
+              );
+            })}
+          </div>
+          <p className="text-[10px] mt-3 leading-relaxed" style={{ color: 'var(--text-hint)', margin: '12px 0 0' }}>
+            {t('examen_grille_note')}
+          </p>
+        </div>
+      }
       sidebar={
         <>
           {/* Reprise banner */}
