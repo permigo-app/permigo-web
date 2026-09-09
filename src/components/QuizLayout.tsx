@@ -158,13 +158,16 @@ export default function QuizLayout({
             {!imageUrl && signCode && (
               <div className="flex justify-center mb-5">
                 <div className="rounded-xl p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                  <SignImage code={signCode} size={120} />
+                  <SignImage code={signCode} size={148} />
                 </div>
               </div>
             )}
 
             {/* Question */}
-            <p className="text-2xl font-bold text-center mb-3 leading-relaxed max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
+            {/* L'énoncé était en 24px face à des réponses en 14px. On resserre
+                l'écart : c'est la comparaison des 4 propositions qui demande le
+                plus d'attention, pas la relecture de la question. */}
+            <p className="text-[20px] md:text-[22px] font-bold text-center mb-3 leading-snug max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
 
             {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
             {imageUrl && (
@@ -176,7 +179,7 @@ export default function QuizLayout({
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  className="rounded-xl w-full max-w-md"
+                  className="rounded-xl w-full max-w-md lg:max-w-lg"
                   style={{ border: '1px solid var(--border-subtle)', aspectRatio: '4 / 3', objectFit: 'contain', background: 'var(--card-secondary)' }}
                 />
               </div>
@@ -228,7 +231,10 @@ export default function QuizLayout({
                       shakeWrong && validated && i === selected && i !== correctIndex ? 'shake' : ''
                     } ${validated && i === correctIndex ? 'correct-pulse' : ''
                     } ${validated && i === selected && i !== correctIndex ? 'wrong-flash' : ''}`}
-                    style={{ background: bg, border, minHeight: 80, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
+                    // 80px de haut pour du texte de 14px laissait beaucoup de
+                    // vide ; 64px avec un texte plus grand se lit mieux et rend
+                    // ~64px d'écran sur les 4 réponses.
+                    style={{ background: bg, border, minHeight: 64, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
                     onMouseEnter={e => {
                       if (!validated && i !== selected) {
                         (e.currentTarget as HTMLButtonElement).style.background = 'rgba(78,205,196,0.12)';
@@ -248,7 +254,7 @@ export default function QuizLayout({
                     >
                       {icon || CHOICE_LABELS[i]}
                     </div>
-                    <span className="flex-1 text-sm font-semibold leading-relaxed" style={{ color: textCol }}>
+                    <span className="flex-1 text-[15px] md:text-base font-semibold leading-snug" style={{ color: textCol }}>
                       {choice}
                     </span>
                   </button>
