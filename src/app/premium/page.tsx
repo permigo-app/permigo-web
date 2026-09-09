@@ -16,14 +16,20 @@ export default function PremiumPage() {
   const [error, setError] = useState('');
   const [selectedPlan, setSelectedPlan] = useState<PlanId>(DEFAULT_PLAN);
 
+  // Tableau aligné sur le modèle « gratuit pour apprendre, payant pour
+  // s'entraîner » : la théorie, les fiches, le catalogue des panneaux et la
+  // banque d'erreurs sont ouverts ; les questions et les entraînements illimités
+  // sont la part payante.
   type TableVal = string | boolean;
   const TABLE_ROWS: { label: string; free: TableVal; prem: TableVal }[] = [
-    { label: t('premium_f1'),  free: '1 leçon',         prem: true },
-    { label: t('premium_f4'),  free: false,             prem: true },
-    { label: t('premium_f8'),  free: '1 essai',         prem: '✅ Illimité' },
-    { label: t('premium_f9'),  free: '1 essai',         prem: '✅ Illimité' },
-    { label: t('premium_f7'),  free: false,             prem: true },
-    { label: t('premium_f10'), free: '3 catégories',    prem: '✅ 10 catégories' },
+    { label: t('premium_f_theorie'),  free: '✅ 9 thèmes',    prem: '✅ 9 thèmes' },
+    { label: t('premium_f_flash'),    free: '✅ Toutes',      prem: '✅ Toutes' },
+    { label: t('premium_f_catalogue'),free: '✅ 214 panneaux',prem: '✅ 214 panneaux' },
+    { label: t('premium_f_erreurs'),  free: true,             prem: true },
+    { label: t('premium_f_questions'),free: '1 leçon',        prem: '✅ 1 770 questions' },
+    { label: t('premium_f9'),         free: '1 par jour',     prem: '✅ Illimité' },
+    { label: t('premium_f8'),         free: '1 essai',        prem: '✅ Illimité' },
+    { label: t('premium_f10'),        free: '3 catégories',   prem: '✅ 10 catégories' },
   ];
 
   const PREMIUM_FEATURES = [

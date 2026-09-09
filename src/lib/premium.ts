@@ -5,12 +5,23 @@ import { getActiveLicense } from './license';
 
 const KEY_PREMIUM = 'isPremium';
 
-// Formule d'essai "tout payant" : un seul contenu gratuit (la 1ère leçon du
-// thème A, permis B) + un aperçu à usage unique (pas par jour) pour Turbo et
-// l'examen blanc. Au-delà, Premium requis. Le permis AM reste entièrement
-// gratuit (produit d'appel, décision produit distincte — voir isThemeFree).
+// MODÈLE : « gratuit pour apprendre, payant pour s'entraîner ».
+//
+//   Gratuit  — toute la théorie des 9 thèmes (cartes + fiches flash), tout le
+//              catalogue des panneaux, la banque d'erreurs, le quiz de la
+//              leçon A1, une session Turbo PAR JOUR, un examen blanc à vie.
+//   Premium  — les 1 770 questions des leçons, les examens illimités, le Turbo
+//              illimité, le quiz des 10 catégories de panneaux.
+//
+// C'est le découpage des concurrents belges, qui offrent tous leur cours et
+// facturent l'entraînement. Le permis AM, lui, reste entièrement gratuit
+// (produit d'appel — voir isThemeFree).
 export const FREE_LESSON_ID = 'A1';
-const TURBO_FREE_LIFETIME_LIMIT = 1;
+
+// Turbo : un essai PAR JOUR et non un seul à vie. Un essai à vie se consomme
+// et ne donne plus jamais de raison de revenir ; un quota quotidien installe
+// l'habitude, et c'est l'habitude qui finit par convertir.
+const TURBO_FREE_PER_DAY = 1;
 
 export function isPremium(): boolean {
   if (typeof window === 'undefined') return false;
@@ -72,7 +83,10 @@ export function isLessonFree(lessonId: string): boolean {
  * 5 premières fiches de CHAQUE leçon, puis la porte Premium. Objectif produit :
  * qu'il sache à quoi ressemble une fiche avant de payer.
  */
-export const FREE_FLASHCARDS_PER_LESSON = 5;
+// Les fiches flash SONT la théorie, sous une autre forme. Depuis que le cours
+// est gratuit dans les 9 thèmes, les limiter serait incohérent : on garde la
+// constante pour l'affichage éventuel, mais la limite ne s'applique plus.
+export const FREE_FLASHCARDS_PER_LESSON = Infinity;
 
 /** Nombre de fiches consultables sans Premium pour une leçon donnée. */
 export function flashcardsLimitForLesson(lessonId: string): number {
@@ -84,28 +98,39 @@ export function flashcardsLimitForLesson(lessonId: string): number {
 
 // ── Turbo : aperçu à usage unique (plus un quota quotidien) ──
 
+function todayKey(): string {
+  return new Date().toISOString().slice(0, 10); // AAAA-MM-JJ, remis à zéro chaque nuit
+}
+
+/** Nombre de parties Turbo jouées aujourd'hui (0 si on a changé de jour). */
 export function getTurboLifetimeCount(): number {
   if (typeof window === 'undefined') return 0;
-  const raw = localStorage.getItem('turbo_count_lifetime');
-  return raw ? parseInt(raw, 10) : 0;
+  try {
+    const raw = localStorage.getItem('turbo_count_day');
+    if (!raw) return 0;
+    const { day, n } = JSON.parse(raw);
+    return day === todayKey() ? (n || 0) : 0;
+  } catch {
+    return 0;
+  }
 }
 
 export function incrementTurboDailyCount(): void {
   if (typeof window === 'undefined') return;
-  // AM = illimité : ne consomme jamais l'aperçu gratuit du permis B
+  // AM = illimité : ne consomme jamais le quota du permis B
   if (getActiveLicense() === 'AM') return;
-  localStorage.setItem('turbo_count_lifetime', String(getTurboLifetimeCount() + 1));
+  localStorage.setItem('turbo_count_day', JSON.stringify({ day: todayKey(), n: getTurboLifetimeCount() + 1 }));
 }
 
 export function canPlayTurbo(): boolean {
   if (getActiveLicense() === 'AM') return true; // AM : illimité (gratuit)
   if (isPremium()) return true;
-  return getTurboLifetimeCount() < TURBO_FREE_LIFETIME_LIMIT;
+  return getTurboLifetimeCount() < TURBO_FREE_PER_DAY;
 }
 
 export function turboRemainingToday(): number {
   if (getActiveLicense() === 'AM' || isPremium()) return Infinity;
-  return Math.max(0, TURBO_FREE_LIFETIME_LIMIT - getTurboLifetimeCount());
+  return Math.max(0, TURBO_FREE_PER_DAY - getTurboLifetimeCount());
 }
 
 // ── Examen blanc : 1 essai gratuit à vie (plus un quota quotidien) ──

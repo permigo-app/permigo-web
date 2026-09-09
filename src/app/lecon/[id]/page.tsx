@@ -257,11 +257,12 @@ export default function LessonPage() {
     setQuestions(src.map(q => shuffleQuestion(q)));
   };
 
-  // Premium gate: seule la 1ère leçon (A1) reste consultable gratuitement — un
-  // aperçu, pas un thème entier. Permis AM excepté (gratuit partout).
-  if (!isLessonFree(lessonId) && !isPremium()) {
-    return <PremiumGate><></></PremiumGate>;
-  }
+  // Nouveau découpage : la THÉORIE est gratuite dans les 9 thèmes — c'est le
+  // cours, et c'est ce que les concurrents belges offrent. Seul le QUIZ, qui
+  // est l'entraînement, demande Premium (hors leçon A1 et permis AM).
+  // La porte s'affiche donc au clic sur « Commencer le quiz », après lecture :
+  // le moment où l'envie de s'entraîner existe déjà.
+  const quizLocked = !isLessonFree(lessonId) && !isPremium();
 
   if (!lesson) {
     return (
@@ -695,6 +696,9 @@ export default function LessonPage() {
   }
 
   // ── QUIZ PHASE ──
+  if (phase === 'quiz' && quizLocked) {
+    return <PremiumGate><></></PremiumGate>;
+  }
   if (phase === 'quiz' && questions.length > 0) {
     const q = questions[currentQ];
     const pctDone = ((currentQ + 1) / questions.length) * 100;

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useCallback, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -8,9 +8,7 @@ import { THEME_COLORS, THEME_EMOJIS } from '@/lib/constants';
 import { fetchMistakes, recordQuestionReview } from '@/lib/reviewApi';
 import { getActiveLicense } from '@/lib/license';
 import QuizLayout from '@/components/QuizLayout';
-import { isPremium, isThemeFree } from '@/lib/premium';
 import { prefetchImage } from '@/lib/prefetchImage';
-import PremiumGate from '@/components/PremiumGate';
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -106,10 +104,9 @@ function RevisionContent() {
     setShakeWrong(false);
   }, [themeCode, lang]);
 
-  // Banque d'erreurs par thème : Premium requis pour tout thème (permis AM excepté, gratuit partout)
-  if (!isThemeFree(themeCode) && !isPremium()) {
-    return <PremiumGate><></></PremiumGate>;
-  }
+  // La banque d'erreurs est ouverte à tous. Elle se limite d'elle-même : on ne
+  // peut avoir des erreurs que sur des questions qu'on a pu voir. Aucun verrou
+  // artificiel n'est nécessaire, et c'est ce qui donne une raison de revenir.
 
   if (loading) {
     return (

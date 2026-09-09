@@ -7,12 +7,10 @@ import { getSignsByCategory, splitSignName } from '@/lib/signsData';
 import SignImage from '@/components/SignImage';
 import PanneauxFlashPanel, { loadAllMastered } from '@/components/PanneauxFlashPanel';
 import { useLang } from '@/contexts/LanguageContext';
-import { isPremium } from '@/lib/premium';
-import PremiumGate from '@/components/PremiumGate';
 
-// Mêmes catégories gratuites que sur le hub /panneaux — le verrou doit exister
-// ici aussi, sinon l'URL directe /panneaux/B contourne le premium.
-const FREE_PANNEAU_IDS = ['A', 'C', 'D'];
+// Le CATALOGUE des panneaux est ouvert à tous : c'est un référentiel, comme un
+// dictionnaire, pas de l'entraînement. C'est le QUIZ des panneaux qui reste
+// réservé (3 catégories sur 10 en accès libre — voir panneaux/quiz/page.tsx).
 
 export default function PanneauCategoriePage() {
   const params = useParams();
@@ -33,10 +31,6 @@ export default function PanneauCategoriePage() {
   const refreshMastered = useCallback(() => {
     setMasteredMap(loadAllMastered());
   }, []);
-
-  if (category && !FREE_PANNEAU_IDS.includes(catId) && !isPremium()) {
-    return <PremiumGate><></></PremiumGate>;
-  }
 
   if (!category) {
     return (

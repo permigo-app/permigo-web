@@ -49,8 +49,10 @@ export default function PanneauxPage() {
           <div className="flex-1 min-w-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {PANNEAU_CATEGORIES.map(cat => {
-                const isFree = FREE_PANNEAU_IDS.includes(cat.id);
-                const locked = !userIsPremium && !isFree;
+                // Le catalogue est ouvert à tous ; seul le QUIZ de la catégorie
+                // reste réservé (3 catégories sur 10 en accès libre).
+                const quizLocked = !userIsPremium && !FREE_PANNEAU_IDS.includes(cat.id);
+                const locked = false;
                 const signs = getSignsByCategory(cat.id, lang);
                 const masteredCount = signs.filter(s => masteredMap[s.code]).length;
                 const total = signs.length;
@@ -152,7 +154,7 @@ export default function PanneauxPage() {
                           {total > 0 && (
                             <Link
                               href={`/panneaux/quiz?cat=${cat.id}`}
-                              className="text-xs rounded-xl press-scale"
+                              className="text-xs rounded-xl press-scale inline-flex items-center gap-1.5"
                               style={{
                                 background: '#f59e0b',
                                 color: '#0b2659',
@@ -162,6 +164,8 @@ export default function PanneauxPage() {
                               }}
                               onClick={e => e.stopPropagation()}
                             >
+                              {/* Étoile : le catalogue est libre, le quiz non */}
+                              {quizLocked && <span style={{ fontSize: 12 }}>★</span>}
                               Quiz ({total}q)
                             </Link>
                           )}
