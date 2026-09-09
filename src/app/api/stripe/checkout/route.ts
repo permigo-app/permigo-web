@@ -1,5 +1,6 @@
-import { NextResponse } from 'next/server';
+﻿import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { SITE_URL } from '@/lib/site';
 
 function getServiceClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -136,8 +137,10 @@ export async function POST(req: Request) {
       mode: 'subscription',
       payment_method_types: ['card'],
       line_items: [{ price: STRIPE_PRICE_ID, quantity: 1 }],
-      success_url: `${NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${NEXT_PUBLIC_URL || 'https://mypermigo.be'}/premium`,
+      // Repli sur l'adresse www : l'apex redirige, ce qui ajoutait un saut
+      // inutile juste après le paiement.
+      success_url: `${NEXT_PUBLIC_URL || SITE_URL}/premium/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${NEXT_PUBLIC_URL || SITE_URL}/premium`,
       customer: customerId,
       metadata: { userId },
     });

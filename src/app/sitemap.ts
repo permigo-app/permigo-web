@@ -1,11 +1,16 @@
+import { absoluteUrl } from '@/lib/site';
+
+// Le sitemap ne doit lister que des pages PUBLIQUES et indexables. Les écrans
+// de l'application (accueil connecté, leçons, examen…) exigent un compte :
+// les y mettre ferait crawler Google dans le vide.
 export default function sitemap() {
-  const base = 'https://mypermigo.be';
+  const now = new Date();
   return [
-    { url: base, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 1.0 },
-    { url: `${base}/register`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${base}/login`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${base}/premium`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-    { url: `${base}/privacy`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${base}/terms`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: absoluteUrl('/'),        lastModified: now, changeFrequency: 'weekly' as const,  priority: 1.0 },
+    { url: absoluteUrl('/register'), lastModified: now, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: absoluteUrl('/premium'),  lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: absoluteUrl('/login'),    lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: absoluteUrl('/privacy'),  lastModified: now, changeFrequency: 'yearly' as const,  priority: 0.3 },
+    { url: absoluteUrl('/terms'),    lastModified: now, changeFrequency: 'yearly' as const,  priority: 0.3 },
   ];
 }

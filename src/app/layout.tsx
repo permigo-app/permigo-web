@@ -8,6 +8,7 @@ import AppShell from '@/components/AppShell';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
+import { SITE_URL } from '@/lib/site';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -23,11 +24,11 @@ export const metadata: Metadata = {
   },
   description: 'MyPermiGo : prépare ton permis théorique belge gratuitement. 1770 questions officielles, mode Turbo, examen blanc, panneaux. FR et NL.',
   keywords: 'mypermigo, permis théorique belge, code de la route belgique, examen théorique permis, questions permis belge, rijbewijs theorie belgie',
-  metadataBase: new URL('https://mypermigo.be'),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     title: 'MyPermiGo · Permis Théorique Belge',
     description: 'Prépare ton permis belge gratuitement. 1770 questions officielles, FR + NL.',
-    url: 'https://mypermigo.be',
+    url: SITE_URL,
     siteName: 'MyPermiGo',
     locale: 'fr_BE',
     type: 'website',
@@ -37,9 +38,10 @@ export const metadata: Metadata = {
     title: 'MyPermiGo · Permis Théorique Belge',
     description: 'Prépare ton permis belge gratuitement. 1770 questions officielles.',
   },
-  alternates: {
-    canonical: 'https://mypermigo.be',
-  },
+  // PAS de canonical global ici : il s'appliquerait à TOUTES les pages, qui
+  // déclareraient alors la page d'accueil comme leur version de référence.
+  // Google les traiterait comme des doublons et n'en indexerait aucune.
+  // Chaque page publique déclare sa propre canonical.
   verification: {
     google: 'XRHdIgFO0_O_ZQ4RDynByQDcXc0x4mdUtx3RlTgx4C4',
   },

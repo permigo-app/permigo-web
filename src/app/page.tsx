@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import LandingContent from '@/components/LandingContent';
+import { SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'MyPermiGo · Permis Théorique Belge, essai gratuit',
@@ -13,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MyPermiGo · Permis Théorique Belge',
     description: 'Prépare ton permis belge à ton rythme. 1770 questions officielles, essai gratuit puis Premium dès 4,99€/semaine.',
-    url: 'https://mypermigo.be',
+    url: SITE_URL,
     siteName: 'MyPermiGo',
     locale: 'fr_BE',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mypermigo.be',
+    canonical: SITE_URL,
   },
   robots: {
     index: true,
@@ -32,7 +33,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'MyPermiGo',
-  url: 'https://mypermigo.be',
+  url: SITE_URL,
   description:
     'Application web pour préparer le permis théorique belge : 1770 questions officielles, mode Turbo, examen blanc, panneaux de signalisation. Contenu gratuit à l\'essai, abonnement Premium pour tout débloquer.',
   applicationCategory: 'EducationalApplication',
