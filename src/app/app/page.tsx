@@ -12,6 +12,7 @@ import ExamRoute from '@/components/ExamRoute';
 import GlobalTrophies from '@/components/GlobalTrophies';
 import RenewalNotice from '@/components/RenewalNotice';
 import OnboardingTour from '@/components/OnboardingTour';
+import { useIsPremium, isThemeFree, canPlayTurbo, canPlayExam } from '@/lib/premium';
 
 function todayLabel() {
   return new Date().toLocaleDateString('fr-BE', { weekday: 'long', day: 'numeric', month: 'long' });
@@ -117,6 +118,8 @@ interface Tile {
   color: { icon: string; bg: string };
   badge?: number;
   done?: boolean;
+  /** Étoile Premium : ce que la tuile ouvre est verrouillé pour cet utilisateur. */
+  premium?: boolean;
 }
 
 export default function HomePage() {
@@ -127,6 +130,7 @@ export default function HomePage() {
     examsByTheme: {}, themes: [],
   });
   const [selectedTheme, setSelectedTheme] = useState('A');
+  const userIsPremium = useIsPremium();
 
   useEffect(() => {
     buildStats(lang).then(setStats);
@@ -143,6 +147,15 @@ export default function HomePage() {
   const themeColor = THEME_COLORS[selectedTheme] || '#22D6C7';
   const themeExamPassed = stats.examsByTheme[selectedTheme] === true;
 
+  // Étoile Premium : on ne la met que là où il ne reste RIEN de gratuit pour
+  // cet utilisateur sur ce thème. Une tuile qui garde un aperçu (les 5 fiches
+  // flash, le Turbo offert) n'est pas étoilée — sinon l'étoile mentirait.
+  const themeFree = isThemeFree(selectedTheme);
+  const lockLessons = !userIsPremium && !themeFree && selectedTheme !== 'A';
+  const lockErrors = !userIsPremium && !themeFree;
+  const lockTurbo = !userIsPremium && !themeFree && !canPlayTurbo();
+  const lockExam = !userIsPremium && !themeFree && !(selectedTheme === 'A' && canPlayExam());
+
   const SECTIONS: { title: string; tour?: string; tiles: Tile[] }[] = [
     {
       title: t('section_apprendre'),
@@ -154,6 +167,7 @@ export default function HomePage() {
           sub: themeStats ? `${themeStats.lessonsCompleted}/${themeStats.lessonsTotal} ${t('tile_lecons_theme_sub')}` : t('tile_lecons_sub'),
           icon: ICONS.lecons,
           color: { icon: '#22D6C7', bg: 'rgba(34,214,199,0.12)' },
+          premium: lockLessons,
         },
       ],
     },
@@ -174,6 +188,7 @@ export default function HomePage() {
           sub: t('tile_reflexe_sub'),
           icon: ICONS.turbo,
           color: { icon: '#F59E0B', bg: 'rgba(245,158,11,0.12)' },
+          premium: lockTurbo,
         },
       ],
     },
@@ -187,6 +202,7 @@ export default function HomePage() {
           sub: t('tile_erreurs_theme_sub'),
           icon: ICONS.erreurs,
           color: { icon: '#F472B6', bg: 'rgba(244,114,182,0.12)' },
+          premium: lockErrors,
         },
       ],
     },
@@ -200,6 +216,7 @@ export default function HomePage() {
           icon: ICONS.examen,
           color: { icon: themeColor, bg: 'rgba(34,214,199,0.12)' },
           done: themeExamPassed,
+          premium: lockExam,
         },
       ],
     },
@@ -345,6 +362,24 @@ export default function HomePage() {
                         display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                       }}>
                         {ICONS.check}
+                      </span>
+                    )}
+                    {/* Étoile Premium : le clic reste possible, la page de
+                        destination affiche la porte Premium — mais au moins
+                        l'utilisateur sait avant de cliquer. */}
+                    {tile.premium && !tile.done && (
+                      <span
+                        title="Réservé aux membres Premium"
+                        style={{
+                          position: 'absolute', top: 10, right: 10,
+                          width: 22, height: 22, borderRadius: 99,
+                          background: 'rgba(255,201,40,0.16)',
+                          border: '1px solid rgba(255,201,40,0.42)',
+                          color: 'var(--premium, #FFC928)', fontSize: 12, lineHeight: 1,
+                          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                        }}
+                      >
+                        ★
                       </span>
                     )}
                     <div style={{
