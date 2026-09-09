@@ -41,9 +41,15 @@ export default function PremiumGate({ children }: PremiumGateProps) {
 
   const eyebrow  = 'PREMIUM';
   const headline = isNL ? 'Deze inhoud is voor Premium-leden' : 'Ce contenu est réservé aux membres Premium';
+  // Doit refléter EXACTEMENT ce que Premium débloque depuis le nouveau modèle.
+  // Les cartes flash et la banque d'erreurs sont devenues gratuites : les
+  // laisser ici ferait payer pour quelque chose qu'on donne déjà.
   const features = isNL
-    ? ["Alle thema's A → I", 'Onbeperkte proefexamens', 'Onbeperkte reflextraining', 'Flashcards & foutenbank per thema']
-    : ['Tous les thèmes A → I', 'Examens blancs illimités', 'Entraînement réflexe illimité', 'Cartes flash & banque d\'erreurs par thème'];
+    ? ["De 1 770 vragen van de 9 thema's", 'Onbeperkte proefexamens', 'Onbeperkte reflextraining', 'De quiz met 214 verkeersborden']
+    : ['Les 1 770 questions des 9 thèmes', 'Examens blancs illimités', 'Entraînement réflexe illimité', 'Le quiz des 214 panneaux belges'];
+  const stillFree = isNL
+    ? 'De theorie, de flashcards, de catalogus met borden en je foutenbank blijven gratis.'
+    : 'La théorie, les cartes flash, le catalogue des panneaux et ta banque d\'erreurs restent gratuits.';
   const startingPrice = cheapestPlan().priceDisplay;
   const ctaLabel = isNL ? `Premium worden — vanaf ${startingPrice} →` : `Passer Premium — dès ${startingPrice} →`;
   const noCommit = isNL ? 'Zonder verbintenis · Op elk moment opzegbaar' : 'Sans engagement · Annulable à tout moment';
@@ -132,6 +138,12 @@ export default function PremiumGate({ children }: PremiumGateProps) {
 
           <p style={{ margin: '12px 0 0', fontSize: 11, color: 'rgba(241,245,249,0.35)' }}>
             {noCommit}
+          </p>
+
+          {/* Adoucit le mur : on rappelle tout ce qui reste accessible sans
+              payer, pour que la porte ne ressemble pas à une impasse. */}
+          <p style={{ margin: '14px 0 0', fontSize: 11.5, lineHeight: 1.55, color: 'rgba(241,245,249,0.5)' }}>
+            {stillFree}
           </p>
 
           <Link href="/app" style={{ display: 'inline-block', marginTop: 18, fontSize: 12, fontWeight: 600, color: 'rgba(241,245,249,0.45)', textDecoration: 'none' }}>
