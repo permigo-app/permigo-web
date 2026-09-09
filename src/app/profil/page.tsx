@@ -454,6 +454,10 @@ export default function ProfilePage() {
               {/* Abonnement */}
               <SubscriptionSection />
 
+              {/* Avis — la version mobile a le sien plus haut ; le profil a
+                  DEUX mises en page distinctes, il faut penser aux deux. */}
+              {user && <TestimonialForm />}
+
               {/* Sign out */}
               {user && (
                 <button onClick={handleSignOut}
