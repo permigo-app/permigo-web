@@ -188,12 +188,12 @@
       "questions": [
         {
           "id": "A1_Q1",
-          "question": "Vous circulez sur une route ouverte. Un ami vous demande ce qu'est une voie publique. Quelle est la bonne définition ?",
+          "question": "Vous circulez sur une route ouverte. Qu'est-ce que la voie publique ?",
           "choices": [
-            "Un lieu accessible uniquement aux véhicules motorisés",
-            "Un lieu public où vous pouvez vous rendre librement à pied ou en véhicule, sans justification",
-            "Un lieu accessible uniquement avec une autorisation spéciale",
-            "Un lieu réservé exclusivement aux transports en commun"
+            "Un lieu réservé aux véhicules motorisés",
+            "Un lieu accessible à tous, à pied ou en voiture",
+            "Un lieu accessible sur autorisation spéciale",
+            "Un lieu réservé aux transports en commun"
           ],
           "correct": 1,
           "explanation": "La voie publique est tout endroit accessible librement à tout le monde, à pied ou en véhicule, sans avoir à se justifier.",
@@ -220,8 +220,8 @@
           "choices": [
             "D'aucune condition particulière",
             "D'un motif légitime pour y accéder",
-            "D'un motif légitime et de l'autorisation du propriétaire",
-            "D'un permis spécial délivré par la commune"
+            "D'un motif et de l'accord du propriétaire",
+            "D'un permis délivré par la commune"
           ],
           "correct": 1,
           "explanation": "Un terrain public est accessible en véhicule à condition d'avoir une bonne raison.",
@@ -232,13 +232,13 @@
           "id": "A1Q7",
           "question": "Vous vous rendez en voiture sur le parking d'une station-service pour faire le plein. Est-ce autorisé ?",
           "choices": [
-            "Non, car c'est un terrain strictement privé",
-            "Oui, car faire le plein constitue un motif légitime pour accéder à ce terrain public",
-            "Oui, car c'est une voie publique ordinaire",
-            "Non, vous devez d'abord obtenir la permission du gérant"
+            "Non, il s'agit d'un terrain privé",
+            "Oui, vous avez un motif d'y accéder",
+            "Oui, c'est une voie publique ordinaire",
+            "Non, il faut l'accord du gérant"
           ],
           "correct": 1,
-          "explanation": "Faire le plein est une bonne raison d'accéder au parking d'une station-service (terrain public).",
+          "explanation": "Faire le plein est un motif légitime : le parking d'une station-service est un terrain public accessible dans ces conditions.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1Q7.webp"
         },
@@ -247,9 +247,9 @@
           "question": "Vous souhaitez entrer sur un terrain non-public. Quelles conditions devez-vous remplir ?",
           "choices": [
             "Aucune condition n'est requise",
-            "Avoir uniquement un motif légitime",
-            "Avoir un motif légitime et la permission du propriétaire",
-            "Avoir uniquement la permission du propriétaire"
+            "Avoir un motif légitime d'y entrer",
+            "Un motif et l'accord du propriétaire",
+            "Avoir l'accord du propriétaire seul"
           ],
           "correct": 2,
           "explanation": "Un terrain non-public requiert une bonne raison ET la permission du propriétaire.",
@@ -260,10 +260,10 @@
           "id": "A1Q11",
           "question": "Vous commettez une infraction au Code de la route. Où ce Code s'applique-t-il ?",
           "choices": [
-            "Partout en Belgique, y compris les terrains privés",
+            "Partout, y compris les terrains privés",
             "Exclusivement sur la voie publique",
-            "Sur la voie publique et sur les terrains publics",
-            "Uniquement sur les autoroutes et les routes nationales"
+            "Sur la voie publique et les terrains publics",
+            "Sur les autoroutes et routes nationales"
           ],
           "correct": 1,
           "explanation": "Le Code de la route s'applique exclusivement sur la voie publique.",
@@ -274,13 +274,13 @@
           "id": "A1Q12",
           "question": "Vous commettez une infraction grave sur le parking d'un supermarché. Pouvez-vous être sanctionné ?",
           "choices": [
-            "Non, car le Code de la route ne s'applique pas hors de la voie publique",
-            "Oui, vous pouvez être poursuivi en justice et condamné à une amende",
-            "Non, sauf si un agent de police est physiquement présent",
-            "Oui, mais uniquement sous forme d'un avertissement écrit"
+            "Non, on est hors de la voie publique",
+            "Oui, vous risquez une poursuite en justice",
+            "Non, sauf si un agent est présent",
+            "Oui, mais un simple avertissement écrit"
           ],
           "correct": 1,
-          "explanation": "Même hors voie publique, une infraction grave peut être poursuivie en justice.",
+          "explanation": "Même hors voie publique, une infraction grave peut être poursuivie en justice et sanctionnée par une amende.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1Q12.webp"
         },
@@ -288,10 +288,10 @@
           "id": "A1Q14",
           "question": "Vous êtes impliqué dans un accident sur le parking d'un restaurant. Quelles règles servent à déterminer votre responsabilité ?",
           "choices": [
-            "Aucune règle spécifique ne s'applique sur un terrain public",
-            "Les règles du Code de la route servent de référence",
-            "Uniquement les conditions générales de votre assurance",
-            "Les règles internes fixées par le propriétaire du terrain"
+            "Aucune règle ne s'applique sur ce terrain",
+            "Les règles du Code de la route font référence",
+            "Les conditions générales de votre assurance",
+            "Les règles fixées par le propriétaire"
           ],
           "correct": 1,
           "explanation": "Le Code de la route sert de référence pour déterminer les responsabilités.",
@@ -302,10 +302,10 @@
           "id": "A1Q15",
           "question": "Vous arrivez devant une route portant la mention « privée ». Fait-elle partie de la voie publique ?",
           "choices": [
-            "Oui, toute route fait partie de la voie publique",
-            "Non, sauf si elle est librement accessible à tous",
-            "Non, et aucun véhicule ne peut y circuler",
-            "Non, elle est réservée exclusivement aux piétons"
+            "Oui, toute route est voie publique",
+            "Non, sauf si elle est accessible à tous",
+            "Non, et aucun véhicule ne peut y rouler",
+            "Non, elle est réservée aux piétons"
           ],
           "correct": 1,
           "explanation": "Une voie privée n'est pas voie publique, sauf si elle est librement accessible à tous.",
@@ -316,10 +316,10 @@
           "id": "A1Q17",
           "question": "Vous roulez sur un chemin privé fermé par une barrière. Le Code de la route s'applique-t-il ?",
           "choices": [
-            "Oui, le Code s'applique sur tout chemin carrossable",
-            "Non, ce chemin privé fermé n'est pas la voie publique",
-            "Oui, à condition que vous ayez la permission d'y circuler",
-            "Uniquement les règles de priorité s'appliquent"
+            "Oui, sur tout chemin carrossable",
+            "Non, ce chemin fermé n'est pas public",
+            "Oui, si vous avez la permission d'y rouler",
+            "Seules les règles de priorité s'appliquent"
           ],
           "correct": 1,
           "explanation": "Un chemin privé fermé n'est pas accessible à tous : ce n'est pas une voie publique.",
@@ -330,28 +330,28 @@
           "id": "A1Q19",
           "question": "Vous voyez un tram s'engager dans une rue en sens interdit pour les véhicules. Est-ce normal ?",
           "choices": [
-            "Non, le tram doit respecter tous les panneaux de signalisation",
-            "Oui, car le tram n'obéit qu'aux agents qualifiés et aux feux de circulation",
-            "Non, sauf en cas de situation d'urgence",
-            "Oui, mais uniquement pendant les heures creuses de la nuit"
+            "Non, le tram respecte tous les panneaux",
+            "Oui, il n'obéit qu'aux agents et aux feux",
+            "Non, sauf en situation d'urgence",
+            "Oui, mais seulement la nuit"
           ],
           "correct": 1,
-          "explanation": "Le tram n'obéit qu'aux agents qualifiés et aux feux, pas aux panneaux.",
+          "explanation": "Le tram n'obéit qu'aux agents qualifiés et aux feux de circulation, pas aux panneaux de signalisation.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A1Q19.webp"
         },
         {
           "id": "A1Q21",
-          "question": "Vous pensez que la voie publique se limite à la chaussée. Avez-vous raison ?",
+          "question": "La voie publique se limite-t-elle à la chaussée ?",
           "choices": [
-            "Oui, la voie publique ne comprend que la chaussée",
-            "Non, elle comprend aussi les pistes cyclables, accotements, bandes de stationnement et trottoirs",
-            "Non, elle comprend la chaussée et les trottoirs uniquement",
-            "Oui, mais elle inclut également les parkings publics"
+            "Oui, seule la chaussée en fait partie",
+            "Non, trottoirs et accotements en font partie",
+            "Non, la chaussée et les trottoirs seuls",
+            "Oui, en y ajoutant les parkings publics"
           ],
           "correct": 1,
-          "explanation": "La voie publique inclut chaussée, pistes cyclables, accotements, bandes de stationnement et trottoirs.",
+          "explanation": "La voie publique inclut la chaussée, mais aussi les pistes cyclables, les accotements, les bandes de stationnement et les trottoirs.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q21.webp"
         },
@@ -359,9 +359,9 @@
           "id": "A1Q22",
           "question": "Vous vous demandez jusqu'où s'étend la voie publique. Quelle est sa limite ?",
           "choices": [
-            "Elle s'arrête au bord de la chaussée revêtue",
+            "Elle s'arrête au bord de la chaussée",
             "Elle s'arrête au bord du trottoir",
-            "Elle s'étend jusqu'au fossé, au talus ou à la limite d'une propriété privée",
+            "Elle va jusqu'au fossé ou au talus",
             "Elle s'arrête à la piste cyclable"
           ],
           "correct": 2,
@@ -373,7 +373,7 @@
           "id": "A1Q24",
           "question": "Vous circulez en voiture. Sur quelle partie de la voie publique roulez-vous ?",
           "choices": [
-            "Sur l'ensemble de la voie publique",
+            "Sur toute la voie publique",
             "Sur la chaussée",
             "Sur la partie réservée aux piétons",
             "Sur la partie réservée aux cyclistes"
@@ -401,10 +401,10 @@
           "id": "A1Q26",
           "question": "Vous êtes cycliste et il n'y a pas de piste cyclable. Pouvez-vous rouler sur la chaussée ?",
           "choices": [
-            "Non, un cycliste ne peut jamais rouler sur la chaussée",
-            "Oui, à tout moment et en toute circonstance",
-            "Oui, lorsqu'aucune piste cyclable n'est disponible",
-            "Uniquement les week-ends et jours fériés"
+            "Non, le cycliste reste hors de la chaussée",
+            "Oui, à tout moment et en toute situation",
+            "Oui, s'il n'y a pas de piste cyclable",
+            "Seulement les week-ends et jours fériés"
           ],
           "correct": 2,
           "explanation": "En l'absence de piste cyclable, le cycliste peut rouler sur la chaussée.",
@@ -415,13 +415,13 @@
           "id": "A1Q27",
           "question": "Vous êtes piéton et il n'y a ni trottoir ni accotement. Pouvez-vous marcher sur la chaussée ?",
           "choices": [
-            "Non, c'est strictement interdit en toute circonstance",
-            "Oui, à tout moment sans restriction",
-            "Oui, en l'absence de trottoir et d'accotement, en faisant preuve de prudence",
-            "Uniquement en agglomération et de jour"
+            "Non, c'est interdit en toute circonstance",
+            "Oui, à tout moment et sans restriction",
+            "Oui, avec prudence, s'il n'y a rien d'autre",
+            "Seulement en agglomération et de jour"
           ],
           "correct": 2,
-          "explanation": "Sans trottoir ni accotement, le piéton peut marcher avec prudence sur la chaussée.",
+          "explanation": "Sans trottoir ni accotement praticable, le piéton peut marcher sur la chaussée, en faisant preuve de prudence.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q27.webp"
         },
@@ -429,10 +429,10 @@
           "id": "A1Q29",
           "question": "Vous circulez sur une voie publique composée de deux chaussées nettement séparées. Pouvez-vous emprunter celle de gauche ?",
           "choices": [
-            "Oui, vous pouvez choisir librement votre chaussée",
-            "Non, sauf si une réglementation locale vous y autorise",
+            "Oui, vous choisissez librement",
+            "Non, sauf autorisation locale",
             "Oui, pour effectuer un dépassement",
-            "Oui, si la chaussée de droite est encombrée"
+            "Oui, si la droite est encombrée"
           ],
           "correct": 1,
           "explanation": "La chaussée de gauche est interdite sauf réglementation locale spécifique.",
@@ -443,13 +443,13 @@
           "id": "A1Q30",
           "question": "Vous observez deux chaussées séparées. Par quoi peuvent-elles être séparées ?",
           "choices": [
-            "Uniquement par un terre-plein en béton",
-            "Par des rails de protection, une berme, un accotement ou un marquage routier",
-            "Uniquement par un marquage au sol de couleur blanche",
-            "Uniquement par des barrières métalliques"
+            "Par un terre-plein en béton seul",
+            "Par des rails, une berme ou un marquage",
+            "Par un marquage au sol blanc seul",
+            "Par des barrières métalliques seules"
           ],
           "correct": 1,
-          "explanation": "Rails, berme, accotement ou marquage peuvent séparer deux chaussées.",
+          "explanation": "Deux chaussées peuvent être séparées par des rails de protection, une berme, un accotement ou un marquage routier.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A1Q30.webp"
         },
@@ -457,13 +457,13 @@
           "id": "A1Q31",
           "question": "Vous remarquez une ligne blanche tracée sur le bord de la chaussée. Que signifie-t-elle ?",
           "choices": [
-            "L'interdiction de stationner le long de cette ligne",
-            "Elle indique uniquement le bord fictif de la chaussée, sans autre signification",
-            "Un changement de limitation de vitesse à cet endroit",
-            "La présence d'une piste cyclable à proximité"
+            "L'interdiction de stationner le long",
+            "Le bord fictif de la chaussée",
+            "Un changement de limitation de vitesse",
+            "La présence d'une piste cyclable"
           ],
           "correct": 1,
-          "explanation": "La ligne blanche sur le bord indique uniquement le bord fictif de la chaussée.",
+          "explanation": "La ligne blanche tracée sur le bord indique uniquement le bord fictif de la chaussée, sans autre signification.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A1Q31.webp"
         },
@@ -471,10 +471,10 @@
           "id": "A1Q33",
           "question": "Vous circulez sur une chaussée à deux bandes. Où devez-vous vous positionner ?",
           "choices": [
-            "Au milieu de la chaussée pour avoir la meilleure visibilité",
+            "Au milieu, pour mieux voir la route",
             "Le plus à droite possible",
-            "Sur la bande de gauche pour faciliter les dépassements",
-            "Là où vous estimez que c'est le plus confortable"
+            "À gauche, pour faciliter les dépassements",
+            "Là où c'est le plus confortable"
           ],
           "correct": 1,
           "explanation": "La règle fondamentale : rouler le plus à droite possible.",
@@ -485,10 +485,10 @@
           "id": "A1Q35",
           "question": "Vous roulez à gauche de la chaussée sans raison valable. Que risquez-vous ?",
           "choices": [
-            "Rien, vous êtes libre de choisir votre bande",
+            "Rien, vous choisissez votre bande",
             "Une infraction au Code de la route",
             "Un simple avertissement verbal",
-            "Une infraction uniquement sur autoroute"
+            "Une infraction sur autoroute seulement"
           ],
           "correct": 1,
           "explanation": "Circuler à gauche sans raison est une infraction : vous devez serrer à droite.",
@@ -544,13 +544,13 @@
           "id": "A1Q41",
           "question": "Vous arrivez sur une route avec deux bandes blanches discontinues parallèles de chaque côté. De quel type de chaussée s'agit-il ?",
           "choices": [
-            "Une chaussée délimitée par des lignes jaunes continues",
-            "Une chaussée à voie centrale, reconnaissable à ses bandes blanches discontinues",
-            "Une chaussée séparée par un terre-plein central",
-            "Un carrefour signalé par des feux clignotants"
+            "Une chaussée à lignes jaunes continues",
+            "Une chaussée à voie centrale",
+            "Une chaussée à terre-plein central",
+            "Un carrefour à feux clignotants"
           ],
           "correct": 1,
-          "explanation": "Deux bandes blanches discontinues de chaque côté caractérisent la voie centrale.",
+          "explanation": "Deux bandes blanches discontinues de chaque côté caractérisent la chaussée à voie centrale.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q41.webp"
         },
@@ -558,7 +558,7 @@
           "id": "A1Q42",
           "question": "Vous circulez sur une voie centrale. À quel type de circulation est-elle destinée ?",
           "choices": [
-            "À la circulation des cyclistes exclusivement",
+            "À la circulation des cyclistes",
             "À la circulation motorisée",
             "Au stationnement des véhicules",
             "Aux piétons et aux usagers lents"
@@ -573,9 +573,9 @@
           "question": "Vous vous apprêtez à emprunter une chaussée à voie centrale. Quelle est la vitesse maximale autorisée ?",
           "choices": [
             "50 km/h dans les trois Régions",
-            "90 km/h en Région wallonne uniquement",
+            "90 km/h en Région wallonne",
             "70 km/h dans les trois Régions",
-            "30 km/h en agglomération uniquement"
+            "30 km/h en agglomération"
           ],
           "correct": 2,
           "explanation": "Sur chaussée à voie centrale, la limite est 70 km/h partout en Belgique.",
@@ -587,13 +587,13 @@
           "id": "A1Q44",
           "question": "Vous roulez à 80 km/h sur une voie centrale en Wallonie. Est-ce autorisé ?",
           "choices": [
-            "Oui, car la limite sur route ordinaire en Wallonie est de 90 km/h",
-            "Non, car la limite sur voie centrale est de 70 km/h, même en Wallonie",
-            "Oui, si vous circulez hors agglomération",
-            "Non, car la limite est de 50 km/h sur toute voie centrale"
+            "Oui, la limite wallonne est de 90 km/h",
+            "Non, la limite est de 70 km/h partout",
+            "Oui, si vous êtes hors agglomération",
+            "Non, la limite y est de 50 km/h"
           ],
           "correct": 1,
-          "explanation": "Sur voie centrale, 70 km/h est la limite partout, même en Wallonie.",
+          "explanation": "Sur une chaussée à voie centrale, la limite est de 70 km/h partout en Belgique, y compris en Wallonie.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q44.webp"
         },
@@ -601,10 +601,10 @@
           "id": "A1Q45",
           "question": "Vous observez la bande latérale d'une chaussée à voie centrale. Fait-elle partie de la chaussée ?",
           "choices": [
-            "Oui, elle en fait toujours partie intégrante",
-            "Non, la bande latérale ne fait pas partie de la chaussée",
-            "Oui, uniquement hors agglomération",
-            "Oui, uniquement en agglomération"
+            "Oui, elle en fait toujours partie",
+            "Non, elle est distincte de la chaussée",
+            "Oui, mais hors agglomération seulement",
+            "Oui, mais en agglomération seulement"
           ],
           "correct": 1,
           "explanation": "La bande latérale est distincte de la chaussée à voie centrale.",
@@ -616,9 +616,9 @@
           "question": "Vous circulez sur une voie centrale. Dans quelles circonstances pouvez-vous utiliser la bande latérale ?",
           "choices": [
             "À tout moment et sans restriction",
-            "Uniquement pour croiser un véhicule en sens inverse ou pour dépasser",
-            "Uniquement pour y stationner votre véhicule",
-            "En aucun cas, c'est strictement interdit"
+            "Pour croiser un véhicule ou dépasser",
+            "Pour y stationner votre véhicule",
+            "En aucun cas, c'est toujours interdit"
           ],
           "correct": 1,
           "explanation": "La bande latérale n'est utilisable que pour croiser ou dépasser.",
@@ -657,13 +657,13 @@
           "id": "A1Q52",
           "question": "Vous observez des usagers circuler sur la bande latérale. Lesquels y sont autorisés ?",
           "choices": [
-            "Uniquement les voitures roulant à faible vitesse",
-            "Les cyclistes, speed pedelecs, cyclomoteurs classe A, conducteurs d'animaux et piétons sans trottoir",
-            "Tous les véhicules motorisés sans exception",
-            "Uniquement les piétons, à l'exclusion de tout autre usager"
+            "Les voitures roulant lentement",
+            "Les cyclistes, cyclomoteurs A et piétons",
+            "Tous les véhicules motorisés",
+            "Les piétons, à l'exclusion des autres"
           ],
           "correct": 1,
-          "explanation": "Bande latérale réservée aux cyclistes, speed pedelecs, cyclomoteurs A, conducteurs d'animaux et piétons (sans trottoir).",
+          "explanation": "La bande latérale est réservée aux cyclistes, speed pedelecs, cyclomoteurs de classe A, conducteurs d'animaux et piétons en l'absence de trottoir.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q52.webp"
         },
@@ -671,9 +671,9 @@
           "id": "A1Q54",
           "question": "Vous voyez un cyclomoteur classe B circuler sur la bande latérale. Est-ce autorisé ?",
           "choices": [
-            "Oui, tous les cyclomoteurs y sont autorisés sans distinction",
-            "Non, seuls les cyclomoteurs de classe A peuvent y circuler",
-            "Oui, à condition que la voie centrale soit occupée",
+            "Oui, tous les cyclomoteurs y roulent",
+            "Non, la classe A seule y est admise",
+            "Oui, si la voie centrale est occupée",
             "Oui, s'il ne dépasse pas 25 km/h"
           ],
           "correct": 1,
@@ -685,10 +685,10 @@
           "id": "A1Q56",
           "question": "Vous approchez d'animaux de trait sur la voie publique. Que devez-vous faire ?",
           "choices": [
-            "Klaxonner pour les écarter de votre chemin",
-            "Accélérer pour les dépasser rapidement",
-            "Ralentir immédiatement et sans délai",
-            "Effectuer un appel de phares pour avertir le cavalier"
+            "Klaxonner pour les écarter",
+            "Accélérer pour les dépasser vite",
+            "Ralentir immédiatement",
+            "Faire un appel de phares"
           ],
           "correct": 2,
           "explanation": "À l'approche d'animaux (trait, charge, selle, bétail), ralentir immédiatement est obligatoire.",
@@ -699,13 +699,13 @@
           "id": "A1Q58",
           "question": "Vous devez ralentir à l'approche d'animaux sur la voie publique. Quels types d'animaux sont concernés ?",
           "choices": [
-            "Uniquement les vaches laitières",
-            "Les animaux de trait, de charge, de selle et le bétail",
-            "Uniquement les chevaux montés par un cavalier",
-            "Tous les animaux, y compris les chiens tenus en laisse"
+            "Les vaches laitières seulement",
+            "Les animaux de trait, de selle, le bétail",
+            "Les chevaux montés seulement",
+            "Tous, y compris les chiens en laisse"
           ],
           "correct": 1,
-          "explanation": "Animaux de trait, de charge, de selle et bétail imposent de ralentir.",
+          "explanation": "Les animaux de trait, de charge, de selle et le bétail imposent de ralentir immédiatement.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A1Q58.webp"
         },
@@ -713,10 +713,10 @@
           "id": "A1Q59",
           "question": "Vous circulez et un cheval se cabre devant votre véhicule. Que devez-vous faire ?",
           "choices": [
-            "Klaxonner vigoureusement pour avertir le cavalier du danger",
-            "Arrêter votre véhicule et éviter tout mouvement brusque",
-            "Contourner rapidement le cheval par la gauche",
-            "Reculer immédiatement pour vous éloigner"
+            "Klaxonner pour avertir le cavalier",
+            "Vous arrêter, sans geste brusque",
+            "Contourner le cheval par la gauche",
+            "Reculer pour vous éloigner"
           ],
           "correct": 1,
           "explanation": "Cheval cabré = arrêt complet + aucun mouvement brusque pour laisser le cavalier reprendre le contrôle.",
@@ -727,10 +727,10 @@
           "id": "A1Q60",
           "question": "Vous vous êtes arrêté face à un cheval effrayé. Pourquoi devez-vous éviter tout mouvement brusque ?",
           "choices": [
-            "Pour ne pas endommager votre véhicule",
-            "Pour permettre au cavalier de calmer l'animal et reprendre le contrôle",
-            "Parce que c'est une obligation légale sans raison pratique",
-            "Pour ne pas effrayer les autres conducteurs autour de vous"
+            "Pour ne pas abîmer votre véhicule",
+            "Pour que le cavalier reprenne le contrôle",
+            "Parce que la loi l'impose, sans plus",
+            "Pour ne pas effrayer les autres conducteurs"
           ],
           "correct": 1,
           "explanation": "Le calme permet au cavalier de reprendre le contrôle du cheval.",
@@ -741,10 +741,10 @@
           "id": "A1Q63",
           "question": "Vous approchez d'un panneau triangulaire à fond blanc et liseré rouge avec un virage vers la droite. Que signifie-t-il ?",
           "choices": [
-            "Direction obligatoire à droite au prochain carrefour",
+            "Direction obligatoire à droite",
             "Virage dangereux à droite",
             "Route barrée sur la droite",
-            "Déviation temporaire vers la droite"
+            "Déviation temporaire à droite"
           ],
           "correct": 1,
           "explanation": "Triangle rouge + virage à droite = 'Virage dangereux à droite'.",
@@ -768,9 +768,9 @@
           "question": "Vous apercevez un panneau triangulaire avec deux virages successifs, le premier allant vers la gauche. Que signifie-t-il ?",
           "choices": [
             "Slalom obligatoire sur la chaussée",
-            "Double virage ou succession de virages, le premier à gauche",
-            "Route sinueuse interdite aux poids lourds",
-            "Double virage, le premier allant vers la droite"
+            "Succession de virages, premier à gauche",
+            "Route sinueuse interdite aux camions",
+            "Succession de virages, premier à droite"
           ],
           "correct": 1,
           "explanation": "Deux virages, premier à gauche = 'Double virage ou succession de virages, premier à gauche'.",
@@ -780,8 +780,8 @@
           "id": "A1Q66",
           "question": "Vous voyez un panneau triangulaire avec deux virages, le premier allant vers la droite. Que signifie-t-il ?",
           "choices": [
-            "Double virage ou succession de virages, le premier à droite",
-            "Double virage, le premier allant vers la gauche",
+            "Succession de virages, premier à droite",
+            "Succession de virages, premier à gauche",
             "Carrefour dangereux à l'approche",
             "Chaussée rétrécie des deux côtés"
           ],
@@ -793,10 +793,10 @@
           "id": "A1Q67",
           "question": "Vous voyez un panneau triangulaire indiquant un pourcentage avec une pente descendante. Que signifie-t-il ?",
           "choices": [
-            "Montée à 10% d'inclinaison",
-            "Pente limitée à 10% maximum",
+            "Montée à forte inclinaison",
+            "Pente limitée à 10 % maximum",
             "Descente dangereuse à venir",
-            "Vitesse limitée à 10 km/h dans la descente"
+            "Vitesse limitée dans la descente"
           ],
           "correct": 2,
           "explanation": "Triangle + pourcentage + descente = 'Descente dangereuse'.",
@@ -923,10 +923,10 @@
           "id": "A1Q77",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Zone de pêche",
+            "Zone de pêche à proximité",
             "Débouché sur un quai ou une berge",
-            "Inondation possible",
-            "Port à proximité"
+            "Risque d'inondation de la chaussée",
+            "Port de plaisance à proximité"
           ],
           "correct": 1,
           "explanation": "Triangle rouge + quai/eau = 'Débouché sur un quai ou une berge'.",
@@ -950,12 +950,12 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Succession de virages dangereux",
-            "Chaussée glissante, le panneau additionnel précise les conditions",
-            "Zone de freinage d'urgence à proximité",
-            "Route verglacée en permanence l'hiver"
+            "Chaussée glissante selon les conditions",
+            "Zone de freinage d'urgence",
+            "Route verglacée tout l'hiver"
           ],
           "correct": 1,
-          "explanation": "Le panneau additionnel précise les conditions (pluie, gel...) dans lesquelles la chaussée peut être glissante.",
+          "explanation": "Le panneau additionnel précise les conditions (pluie, gel…) dans lesquelles la chaussée peut être glissante.",
           "sign": "A15"
         },
         {
@@ -975,10 +975,10 @@
           "id": "A1Q81",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Aéroport à proximité",
+            "Aéroport à proximité de la route",
             "Survol d'avions à basse altitude",
-            "Zone militaire",
-            "Piste d'atterrissage"
+            "Zone militaire interdite d'accès",
+            "Piste d'atterrissage à proximité"
           ],
           "correct": 1,
           "explanation": "Triangle rouge + avion = 'Survol d'avions à basse altitude'.",
@@ -988,9 +988,9 @@
           "id": "A1Q82",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Tempête annoncée",
-            "Zone de tornade",
-            "Vent latéral",
+            "Tempête annoncée sur la région",
+            "Zone exposée aux tornades",
+            "Vent latéral sur la chaussée",
             "Courant d'air dans un tunnel"
           ],
           "correct": 2,
@@ -1040,10 +1040,10 @@
           "id": "A1Q87",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Gare à proximité",
+            "Gare ferroviaire à proximité",
             "Passage à niveau avec barrières",
-            "Croisement par voies ferrées sur la chaussée",
-            "Arrêt de tram"
+            "Croisement de voies ferrées sur la route",
+            "Arrêt de tram à proximité"
           ],
           "correct": 2,
           "explanation": "Triangle rouge + voie ferrée sur chaussée = 'Croisement par voies ferrées sur la chaussée'.",
@@ -1066,10 +1066,10 @@
           "id": "A1Q89",
           "question": "Vous voyez un panneau de chaussée glissante. Comment adaptez-vous votre conduite ?",
           "choices": [
-            "Vous freinez brusquement pour ralentir immédiatement",
-            "Vous adaptez votre vitesse et évitez les manoeuvres brusques",
+            "Vous freinez pour ralentir d'un coup",
+            "Vous ralentissez, sans geste brusque",
             "Vous allumez vos feux de détresse",
-            "Vous vous arrêtez immédiatement sur le bas-côté"
+            "Vous vous arrêtez sur le bas-côté"
           ],
           "correct": 1,
           "explanation": "Adapter sa vitesse et éviter les manœuvres brusques sur chaussée glissante.",
@@ -1079,10 +1079,10 @@
           "id": "A1Q90",
           "question": "Vous approchez d'un panneau signalant une descente dangereuse. Que faites-vous ?",
           "choices": [
-            "Vous accélérez pour franchir la descente plus vite",
-            "Vous rétrogradez et adaptez votre vitesse avant la descente",
-            "Vous roulez au point mort pour économiser du carburant",
-            "Vous freinez en continu tout au long de la descente"
+            "Vous accélérez pour la franchir vite",
+            "Vous rétrogradez avant la descente",
+            "Vous roulez au point mort",
+            "Vous freinez tout au long de la pente"
           ],
           "correct": 1,
           "explanation": "Rétrograder et adapter la vitesse avant la descente.",
@@ -1093,22 +1093,22 @@
           "question": "Vous voyez un panneau de travaux. Que devez-vous anticiper ?",
           "choices": [
             "Rien de particulier, la route est normale",
-            "La présence d'ouvriers, d'engins, un rétrécissement possible et un revêtement dégradé",
-            "Uniquement un changement de limitation de vitesse",
+            "Des ouvriers, des engins, un rétrécissement",
+            "Un changement de limitation de vitesse",
             "La fermeture complète de la route"
           ],
           "correct": 1,
-          "explanation": "La zone de travaux peut comporter ouvriers, engins, rétrécissement et revêtement dégradé.",
+          "explanation": "Une zone de travaux peut comporter des ouvriers, des engins, un rétrécissement de la chaussée et un revêtement dégradé.",
           "sign": "A31"
         },
         {
           "id": "A1Q92",
           "question": "Vous apercevez un panneau signalant un pont mobile. Que devez-vous faire ?",
           "choices": [
-            "Accélérer pour passer avant l'ouverture éventuelle du pont",
-            "Ralentir et être prêt à vous arrêter si le pont s'ouvre",
+            "Accélérer pour passer avant l'ouverture",
+            "Ralentir et être prêt à vous arrêter",
             "Faire demi-tour pour éviter le pont",
-            "Klaxonner pour signaler votre présence au gardien du pont"
+            "Klaxonner pour signaler votre présence"
           ],
           "correct": 1,
           "explanation": "Ralentir et être prêt à s'arrêter est obligatoire face à un pont mobile.",
@@ -1118,10 +1118,10 @@
           "id": "A1Q93",
           "question": "Vous voyez un panneau signalant un vent latéral. Comment adaptez-vous votre conduite ?",
           "choices": [
-            "Vous accélérez pour stabiliser votre véhicule",
-            "Vous tenez fermement le volant et adaptez votre vitesse",
-            "Vous ouvrez les fenêtres pour réduire la prise au vent",
-            "Vous allumez vos phares de croisement"
+            "Vous accélérez pour vous stabiliser",
+            "Vous tenez le volant et ralentissez",
+            "Vous ouvrez les fenêtres",
+            "Vous allumez vos feux de croisement"
           ],
           "correct": 1,
           "explanation": "Tenir le volant et adapter la vitesse protège contre le vent latéral.",
@@ -1131,22 +1131,22 @@
           "id": "A1Q94",
           "question": "Vous voyez un panneau signalant un rétrécissement de la chaussée. Que devez-vous prévoir ?",
           "choices": [
-            "Rien de particulier, vous continuez normalement",
-            "La route sera plus étroite : vous ralentissez et cédez éventuellement le passage",
-            "La route est fermée, vous devez faire demi-tour",
-            "Un feu de signalisation est obligatoirement présent"
+            "Rien, vous continuez normalement",
+            "Une route plus étroite : vous ralentissez",
+            "La route est fermée, demi-tour obligatoire",
+            "Un feu de signalisation est présent"
           ],
           "correct": 1,
-          "explanation": "Un rétrécissement nécessite de ralentir et de céder éventuellement le passage.",
+          "explanation": "Un rétrécissement impose de ralentir et, si nécessaire, de céder le passage au véhicule venant en face.",
           "sign": "A7a"
         },
         {
           "id": "A1Q95",
           "question": "Vous voyez un panneau signalant une traversée de bétail. Que faites-vous ?",
           "choices": [
-            "Vous klaxonnez pour éloigner les animaux",
-            "Vous ralentissez et restez attentif à la présence d'animaux",
-            "Vous accélérez pour les dépasser rapidement",
+            "Vous klaxonnez pour les éloigner",
+            "Vous ralentissez et restez attentif",
+            "Vous accélérez pour les dépasser",
             "Vous allumez vos feux de détresse"
           ],
           "correct": 1,
@@ -1157,10 +1157,10 @@
           "id": "A1Q96",
           "question": "Vous circulez dans une zone signalée par un panneau de traversée de gros gibier. Quand le risque est-il le plus élevé ?",
           "choices": [
-            "En plein midi quand le soleil est au zénith",
+            "En plein midi, soleil au zénith",
             "À l'aube et au crépuscule",
-            "Uniquement pendant les mois d'hiver",
-            "Uniquement par temps de pluie"
+            "Pendant les mois d'hiver",
+            "Par temps de pluie"
           ],
           "correct": 1,
           "explanation": "Le gibier traverse surtout à l'aube et au crépuscule.",
@@ -1170,10 +1170,10 @@
           "id": "A1Q97",
           "question": "Vous voyez un panneau signalant un cassis ou un dos d'âne. Que faites-vous ?",
           "choices": [
-            "Vous accélérez pour franchir l'obstacle plus facilement",
-            "Vous ralentissez pour protéger votre véhicule et garder le contrôle",
-            "Vous changez de voie pour éviter le dos d'âne",
-            "Vous vous arrêtez complètement avant l'obstacle"
+            "Vous accélérez pour mieux franchir",
+            "Vous ralentissez pour garder le contrôle",
+            "Vous changez de voie pour l'éviter",
+            "Vous vous arrêtez avant l'obstacle"
           ],
           "correct": 1,
           "explanation": "Ralentir protège le véhicule et maintient le contrôle.",
@@ -1184,9 +1184,9 @@
           "question": "Vous voyez un panneau bleu rectangulaire montrant une voie qui se termine en cul-de-sac. Que signifie-t-il ?",
           "choices": [
             "Sens unique dans cette direction",
-            "Voie sans issue : vous ne pourrez pas traverser",
-            "Parking disponible au fond de la rue",
-            "Route temporairement barrée pour travaux"
+            "Voie sans issue, pas de passage",
+            "Parking au fond de la rue",
+            "Route barrée pour travaux"
           ],
           "correct": 1,
           "explanation": "Panneau bleu + voie sans sortie = 'Voie sans issue'.",
@@ -1196,9 +1196,9 @@
           "id": "A1Q99",
           "question": "Vous voyez un panneau de voie sans issue avec des pictogrammes de vélo et de piéton. Que signifie-t-il ?",
           "choices": [
-            "Piste cyclable obligatoire dans cette rue",
-            "Zone exclusivement piétonne",
-            "Voie sans issue, sauf pour les cyclistes et les piétons",
+            "Piste cyclable obligatoire dans la rue",
+            "Zone piétonne, véhicules interdits",
+            "Sans issue, sauf cyclistes et piétons",
             "Parking réservé aux vélos et piétons"
           ],
           "correct": 2,
@@ -1210,8 +1210,8 @@
           "question": "Vous voyez un panneau bleu avec la lettre « N » suivie d'un chiffre. Que signifie-t-il ?",
           "choices": [
             "Autoroute nationale à l'approche",
-            "Chaussée ordinaire (numéro de route nationale)",
-            "Route régionale réservée",
+            "Chaussée ordinaire, route nationale",
+            "Route régionale à accès réservé",
             "Voie rapide à accès limité"
           ],
           "correct": 1,
@@ -1223,9 +1223,9 @@
           "question": "Vous voyez un panneau de voie sans issue. Pouvez-vous y entrer avec votre voiture ?",
           "choices": [
             "Non, il est interdit d'y pénétrer",
-            "Oui, mais vous ne pourrez pas traverser et devrez faire demi-tour",
+            "Oui, mais vous devrez faire demi-tour",
             "Non, la route est en travaux",
-            "Oui, mais le stationnement y est interdit"
+            "Oui, mais sans pouvoir stationner"
           ],
           "correct": 1,
           "explanation": "Voie sans issue = vous pouvez entrer mais devrez faire demi-tour.",
@@ -1235,26 +1235,26 @@
           "id": "A1Q102",
           "question": "Vous êtes en voiture devant un panneau de voie sans issue sauf cyclistes et piétons. Que faites-vous ?",
           "choices": [
-            "Vous traversez normalement, le panneau ne vous concerne pas",
-            "Vous pouvez entrer mais devrez faire demi-tour, car la sortie n'est possible qu'à vélo ou à pied",
+            "Vous traversez, ça ne vous concerne pas",
+            "Vous entrez, puis faites demi-tour",
             "Vous n'êtes pas autorisé à entrer",
-            "Vous pouvez entrer si vous êtes accompagné d'un cycliste"
+            "Vous entrez si un cycliste vous accompagne"
           ],
           "correct": 1,
-          "explanation": "En voiture, ce panneau signifie impasse : entrée possible mais demi-tour obligatoire.",
+          "explanation": "En voiture, c'est une impasse : vous pouvez entrer, mais la sortie n'existe qu'à vélo ou à pied.",
           "sign": "F45b"
         },
         {
           "id": "A1Q103",
           "question": "Vous êtes à vélo devant un panneau de voie sans issue sauf cyclistes et piétons. Que signifie-t-il pour vous ?",
           "choices": [
-            "Vous ne pouvez pas emprunter cette rue",
-            "Vous pouvez entrer et il existe un passage réservé aux cyclistes et piétons pour continuer",
-            "Vous devez mettre pied à terre pour traverser",
+            "Vous ne pouvez pas prendre cette rue",
+            "Vous entrez, un passage vous est réservé",
+            "Vous devez mettre pied à terre",
             "Vous devez faire demi-tour comme les voitures"
           ],
           "correct": 1,
-          "explanation": "À vélo, il existe une sortie réservée aux cyclistes et piétons.",
+          "explanation": "À vélo, il existe une sortie réservée aux cyclistes et aux piétons au bout de la rue.",
           "sign": "F45b"
         },
         {
@@ -1275,13 +1275,13 @@
           "id": "A1_SIGN_A23_1",
           "question": "Vous voyez un panneau triangulaire avec des silhouettes d'animaux domestiques. Que devez-vous anticiper ?",
           "choices": [
-            "Des animaux sauvages pourraient traverser la route",
-            "Des animaux domestiques comme des vaches ou des chevaux pourraient traverser la chaussée",
-            "Un élevage est proche, mais vous pouvez maintenir votre vitesse",
-            "Une prairie privée avec une voie sans issue"
+            "Des animaux sauvages peuvent traverser",
+            "Du bétail peut traverser la chaussée",
+            "Un élevage proche, sans ralentir",
+            "Une prairie privée sans issue"
           ],
           "correct": 1,
-          "explanation": "Le panneau A23 avertit que des animaux domestiques (bétail, chevaux) peuvent traverser la chaussée. Adaptez votre vitesse.",
+          "explanation": "Ce panneau avertit que des animaux domestiques (bétail, chevaux) peuvent traverser la chaussée. Adaptez votre vitesse.",
           "destination": "panneaux",
           "sign": "A29"
         },
@@ -1291,11 +1291,11 @@
           "choices": [
             "Un passage pour piétons à proximité",
             "Un passage à niveau sans barrières",
-            "L'approche de feux de circulation où il faudra peut-être s'arrêter",
-            "L'entrée d'une zone scolaire à 30 km/h"
+            "Des feux de circulation plus loin",
+            "L'entrée d'une zone scolaire à 30"
           ],
           "correct": 2,
-          "explanation": "Le panneau A27 annonce la présence prochaine de feux tricolores. Il prévient les usagers en avance pour qu'ils puissent adapter leur vitesse.",
+          "explanation": "Ce panneau annonce la présence prochaine de feux tricolores, pour que vous puissiez adapter votre vitesse à l'avance.",
           "destination": "panneaux",
           "sign": "A33"
         },
