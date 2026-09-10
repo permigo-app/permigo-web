@@ -266,7 +266,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const resetPassword = async (email: string) => {
     if (!supabase) return { error: lang === 'nl' ? 'Authenticatie niet geconfigureerd' : 'Authentification non configurée' };
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email);
+      // Sans redirectTo, Supabase renvoie vers l'URL du site configurée dans
+      // le tableau de bord — qui ne traite pas la récupération. On envoie
+      // explicitement vers la page qui permet de choisir un nouveau mot de
+      // passe. `window.location.origin` marche aussi bien en local qu'en prod.
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/reset-password`,
+      });
       if (error) return { error: translateError(error.message, lang) };
       return { success: true };
     } catch (e: any) {
