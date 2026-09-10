@@ -14,7 +14,9 @@ export interface LocalTheoryCard {
 export interface LocalQuestion {
   id: string;
   question: string;
-  choices: [string, string, string, string];
+  /** 2 ou 3 propositions a l affichage (format examen belge). Les JSON en
+   *  contiennent encore 4 : la reduction se fait a la lecture. */
+  choices: string[];
   correct: number;
   explanation: string;
   theoryCardIndex?: number;
@@ -100,7 +102,8 @@ async function loadTheme(code: string): Promise<LocalTheme | null> {
 }
 
 export async function getThemeData(code: string): Promise<LocalTheme | null> {
-  return loadTheme(code);
+  const t = await loadTheme(code);
+  return t ? reduceTheme(t) : null;
 }
 
 export async function getLessonData(lessonId: string): Promise<LocalLesson | null> {
@@ -110,7 +113,7 @@ export async function getLessonData(lessonId: string): Promise<LocalLesson | nul
     const theme = await loadTheme(themeCode);
     if (theme) {
       const lesson = theme.lessons.find(l => l.id.toUpperCase() === needle);
-      if (lesson) return lesson;
+      if (lesson) return reduceLesson(lesson);
     }
   }
   return null;
@@ -121,7 +124,7 @@ export async function getThemeForLesson(lessonId: string): Promise<LocalTheme | 
   const themeCode = needle.charAt(0);
   if (getThemeOrder().includes(themeCode)) {
     const theme = await loadTheme(themeCode);
-    if (theme && theme.lessons.some(l => l.id.toUpperCase() === needle)) return theme;
+    if (theme && theme.lessons.some(l => l.id.toUpperCase() === needle)) return reduceTheme(theme);
   }
   return null;
 }
@@ -143,7 +146,7 @@ export async function getExamQuestions(themeCode: string, count: number = 20): P
     const j = Math.floor(Math.random() * (i + 1));
     [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
   }
-  return allQuestions.slice(0, Math.min(count, allQuestions.length));
+  return allQuestions.slice(0, Math.min(count, allQuestions.length)).map(reduceQuestion);
 }
 
 export async function getAllQuestions(): Promise<LocalQuestion[]> {
@@ -153,7 +156,7 @@ export async function getAllQuestions(): Promise<LocalQuestion[]> {
     if (!theme) continue;
     for (const lesson of theme.lessons) all.push(...lesson.questions);
   }
-  return all;
+  return all.map(reduceQuestion);
 }
 
 /**
@@ -164,21 +167,48 @@ export async function getAllQuestions(): Promise<LocalQuestion[]> {
  */
 export const CHOICES_SHOWN = 3;
 
+/**
+ * Tirage déterministe, semé par l'identifiant de la question.
+ *
+ * Le hasard pur serait un piège : la même question apparaît dans la leçon,
+ * en révision et dans la banque d'erreurs. Avec Math.random(), elle
+ * montrerait trois propositions différentes à chaque fois — l'utilisateur
+ * croirait avoir affaire à une autre question, et une réponse mémorisée
+ * comme « la deuxième » ne voudrait plus rien dire.
+ * Semé par l'id, un même énoncé garde toujours les mêmes propositions,
+ * dans le même ordre, en français comme en néerlandais.
+ */
+function seededRandom(seed: string): () => number {
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) {
+    h ^= seed.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return () => {
+    h += 0x6d2b79f5;
+    let t = h;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 /** Mélange les propositions, en garde CHOICES_SHOWN, et renvoie le nouvel index correct. */
 export function shuffleChoices(q: LocalQuestion): { choices: string[]; correct: number } {
+  const rnd = seededRandom(q.id);
   const wrong = q.choices
     .map((_, i) => i)
     .filter(i => i !== q.correct);
 
   // Fisher-Yates sur les mauvaises réponses (un sort() aléatoire n'est PAS uniforme)
   for (let i = wrong.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(rnd() * (i + 1));
     [wrong[i], wrong[j]] = [wrong[j], wrong[i]];
   }
 
   const kept = [q.correct, ...wrong.slice(0, Math.max(0, CHOICES_SHOWN - 1))];
   for (let i = kept.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(rnd() * (i + 1));
     [kept[i], kept[j]] = [kept[j], kept[i]];
   }
 
@@ -186,6 +216,25 @@ export function shuffleChoices(q: LocalQuestion): { choices: string[]; correct: 
     choices: kept.map(i => q.choices[i]),
     correct: kept.indexOf(q.correct),
   };
+}
+
+/**
+ * Ramène une question au format de l'examen belge : 3 propositions au maximum.
+ * Une question volontairement écrite en oui/non (2 propositions) est laissée
+ * telle quelle — on ne complète jamais pour atteindre un quota.
+ */
+export function reduceQuestion(q: LocalQuestion): LocalQuestion {
+  if (!Array.isArray(q.choices) || q.choices.length <= CHOICES_SHOWN) return q;
+  const { choices, correct } = shuffleChoices(q);
+  return { ...q, choices: choices, correct };
+}
+
+function reduceLesson(l: LocalLesson): LocalLesson {
+  return { ...l, questions: l.questions.map(reduceQuestion) };
+}
+
+function reduceTheme(t: LocalTheme): LocalTheme {
+  return { ...t, lessons: t.lessons.map(reduceLesson) };
 }
 
 export function getNextThemeCode(code: string): string | null {
@@ -203,7 +252,7 @@ export type Lang = 'fr' | 'nl';
 export async function getThemeDataLocalized(code: string, lang: Lang): Promise<LocalTheme | null> {
   const theme = await loadTheme(code);
   if (!theme) return null;
-  return localizeTheme(theme, lang);
+  return reduceTheme(await localizeTheme(theme, lang));
 }
 
 export async function getLessonDataLocalized(lessonId: string, lang: Lang): Promise<LocalLesson | null> {
@@ -215,7 +264,7 @@ export async function getLessonDataLocalized(lessonId: string, lang: Lang): Prom
       const idx = theme.lessons.findIndex(l => l.id.toUpperCase() === needle);
       if (idx >= 0) {
         const localized = await localizeTheme(theme, lang);
-        return localized.lessons[idx];
+        return reduceLesson(localized.lessons[idx]);
       }
     }
   }
@@ -228,7 +277,7 @@ export async function getThemeForLessonLocalized(lessonId: string, lang: Lang): 
   if (getThemeOrder().includes(themeCode)) {
     const theme = await loadTheme(themeCode);
     if (theme && theme.lessons.some(l => l.id.toUpperCase() === needle)) {
-      return localizeTheme(theme, lang);
+      return reduceTheme(await localizeTheme(theme, lang));
     }
   }
   return null;
@@ -252,7 +301,7 @@ export async function getExamQuestionsLocalized(themeCode: string, lang: Lang, c
     const j = Math.floor(Math.random() * (i + 1));
     [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
   }
-  return allQuestions.slice(0, Math.min(count, allQuestions.length));
+  return allQuestions.slice(0, Math.min(count, allQuestions.length)).map(reduceQuestion);
 }
 
 export async function getAllQuestionsLocalized(lang: Lang): Promise<LocalQuestion[]> {

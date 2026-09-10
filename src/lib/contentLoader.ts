@@ -88,7 +88,7 @@ export async function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): Pro
       return {
         ...q,
         question: nlQ['question'] as string,
-        choices: nlQ['choices'] as [string, string, string, string],
+        choices: nlQ['choices'] as string[],
         ...(nlQ['explanation'] ? { explanation: nlQ['explanation'] as string } : {}),
       };
     });
