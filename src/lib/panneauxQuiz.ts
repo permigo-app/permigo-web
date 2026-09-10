@@ -19,7 +19,8 @@ export interface SignQuizQuestion {
 
 type Lang = 'fr' | 'nl';
 
-const CHOICES_PER_QUESTION = 4;
+// 3 propositions, comme l'examen officiel belge et comme le reste du site.
+const CHOICES_PER_QUESTION = 3;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];

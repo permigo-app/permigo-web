@@ -156,16 +156,36 @@ export async function getAllQuestions(): Promise<LocalQuestion[]> {
   return all;
 }
 
-/** Shuffle choices and return new choices array + new correct index */
+/**
+ * Nombre de propositions affichées. L'examen officiel belge en présente 2 ou 3,
+ * jamais 4 : on s'aligne sur 3. Les données gardent leurs 4 propositions —
+ * on en tire la bonne + 2 mauvaises au hasard, ce qui a l'avantage de varier
+ * d'une session à l'autre plutôt que de servir toujours les mêmes distracteurs.
+ */
+export const CHOICES_SHOWN = 3;
+
+/** Mélange les propositions, en garde CHOICES_SHOWN, et renvoie le nouvel index correct. */
 export function shuffleChoices(q: LocalQuestion): { choices: string[]; correct: number } {
-  const indices = [0, 1, 2, 3];
-  for (let i = indices.length - 1; i > 0; i--) {
+  const wrong = q.choices
+    .map((_, i) => i)
+    .filter(i => i !== q.correct);
+
+  // Fisher-Yates sur les mauvaises réponses (un sort() aléatoire n'est PAS uniforme)
+  for (let i = wrong.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [indices[i], indices[j]] = [indices[j], indices[i]];
+    [wrong[i], wrong[j]] = [wrong[j], wrong[i]];
   }
-  const choices = indices.map(i => q.choices[i]);
-  const correct = indices.indexOf(q.correct);
-  return { choices, correct };
+
+  const kept = [q.correct, ...wrong.slice(0, Math.max(0, CHOICES_SHOWN - 1))];
+  for (let i = kept.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [kept[i], kept[j]] = [kept[j], kept[i]];
+  }
+
+  return {
+    choices: kept.map(i => q.choices[i]),
+    correct: kept.indexOf(q.correct),
+  };
 }
 
 export function getNextThemeCode(code: string): string | null {

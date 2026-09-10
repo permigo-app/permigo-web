@@ -13,6 +13,9 @@ import { prefetchImage } from '@/lib/prefetchImage';
 import Link from 'next/link';
 import QuizLayout from '@/components/QuizLayout';
 
+/** Temps de réflexion officiel par question à l'examen théorique belge. */
+const SECONDS_PER_QUESTION = 15;
+
 function ExamContent() {
   const params = useSearchParams();
   const router = useRouter();
@@ -35,6 +38,9 @@ function ExamContent() {
   const answersRef = useRef<Record<string, number>>({});
   const [shakeWrong, setShakeWrong] = useState(false);
   const [isResuming, setIsResuming] = useState(false);
+  // Chrono officiel : 15 secondes par question. À zéro, on passe à la suivante
+  // avec la réponse en cours (ou aucune) — comme au centre d'examen.
+  const [secondsLeft, setSecondsLeft] = useState(SECONDS_PER_QUESTION);
   const startTimeRef = useRef(Date.now());
   const hasRestoredRef = useRef(false);
 
@@ -55,6 +61,26 @@ function ExamContent() {
   useEffect(() => {
     prefetchImage(questions[currentQ + 1]?.image);
   }, [currentQ, questions]);
+
+  // Décompte des 15 secondes. Redémarre à chaque question ; à zéro, on force
+  // le passage à la suivante. La ref évite de rappeler handleValidate à chaque
+  // tick (elle changerait à chaque rendu et relancerait l'intervalle).
+  const validateRef = useRef<(forced?: boolean) => void>(() => {});
+  useEffect(() => {
+    if (!started || questions.length === 0) return;
+    setSecondsLeft(SECONDS_PER_QUESTION);
+    const id = setInterval(() => {
+      setSecondsLeft(s => {
+        if (s <= 1) {
+          clearInterval(id);
+          validateRef.current(true);
+          return 0;
+        }
+        return s - 1;
+      });
+    }, 1000);
+    return () => clearInterval(id);
+  }, [started, currentQ, questions.length]);
 
   useEffect(() => {
     if (hasRestoredRef.current) return;
@@ -166,15 +192,18 @@ function ExamContent() {
   // Conditions réelles (GOCA) : répondre enregistre et passe à la question
   // suivante SANS révéler la correction — tout se découvre dans le
   // récapitulatif de fin. La réponse alimente aussi la banque d'erreurs.
-  const handleValidate = () => {
-    if (selected === null) return;
+  const handleValidate = (forced = false) => {
+    // `forced` = le chrono est arrivé à zéro. On enregistre alors l'absence de
+    // réponse (-1, comptée fausse) plutôt que de bloquer l'élève sur la
+    // question, exactement comme au centre d'examen.
+    if (selected === null && !forced) return;
     const q = questions[currentQ];
     const isCorrect = selected === q.correct;
     const newScore = isCorrect ? correctCount + 1 : correctCount;
     // Règle GOCA : une erreur sur une question "grave" (3e/4e degré, vitesse)
     // coûte 5 points au lieu de 1
     const newSevere = !isCorrect && q.severe ? severeErrors + 1 : severeErrors;
-    const newAnswers = { ...answersRef.current, [q.id]: selected };
+    const newAnswers = { ...answersRef.current, [q.id]: selected ?? -1 };
     answersRef.current = newAnswers;
 
     // Banque d'erreurs / répétition espacée — comme les leçons
@@ -202,6 +231,10 @@ function ExamContent() {
     if (currentQ + 1 < questions.length) { setCurrentQ(c => c + 1); }
     else { finishExam(newScore, newSevere); }
   };
+
+  // Tenu à jour à chaque rendu pour que le chrono appelle toujours la version
+  // courante de handleValidate, sans redémarrer l'intervalle.
+  validateRef.current = handleValidate;
 
   const finishExam = (finalCorrect: number = correctCount, finalSevere: number = severeErrors) => {
     // Mark completed in localStorage — exam now counts as used
@@ -369,9 +402,17 @@ function ExamContent() {
         <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('examen_header')} {themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}</span>
       }
       headerRight={
-        // Conditions réelles : pas de score en direct — seuil affiché à la place
-        <div className="px-3 py-1 rounded-lg text-xs font-bold" style={{ background: 'rgba(243,156,18,0.12)', color: '#F39C12' }}>
-          {t('examen_seuil_reussite')} {passThreshold}/{questions.length}
+        // Le chrono officiel prend la place du score : à l'examen on ne connaît
+        // pas son score, on connaît le temps qui reste.
+        <div
+          className={`px-3 py-1 rounded-lg text-sm font-black ${secondsLeft <= 5 ? 'animate-pulse' : ''}`}
+          style={{
+            background: secondsLeft <= 5 ? 'rgba(231,76,60,0.14)' : 'rgba(243,156,18,0.12)',
+            color: secondsLeft <= 5 ? '#e74c3c' : '#F39C12',
+            minWidth: 54, textAlign: 'center',
+          }}
+        >
+          {secondsLeft}s
         </div>
       }
       subtitle={`Examen ${themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}`}
@@ -383,8 +424,8 @@ function ExamContent() {
       validated={false}
       correctIndex={q.correct}
       onSelect={setSelected}
-      onValidate={handleValidate}
-      onNext={handleValidate}
+      onValidate={() => handleValidate()}
+      onNext={() => handleValidate()}
       isLastQuestion={currentQ + 1 >= questions.length}
       shakeWrong={false}
       questionId={q.id || `exam_${themeCode}_q${currentQ}`}

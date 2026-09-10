@@ -189,7 +189,9 @@ export default function QuizLayout({
             {questionId && !signCode && !imageUrl && <ImageRequestButton id={questionId} />}
 
             {/* Answer grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
+            {/* À 3 propositions, une seule colonne se lit mieux qu'un 2+1
+                bancal — et c'est aussi la présentation de l'examen officiel. */}
+            <div className={`grid gap-3 mb-5 ${choices.length > 3 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
               {choices.map((choice, i) => {
                 let bg = 'var(--card-primary)';
                 let border = '1px solid var(--border-subtle)';
