@@ -191,14 +191,13 @@
       "questions": [
         {
           "id": "C1_Q1",
-          "question": "Vous venez d'obtenir votre permis B. Quels types de vehicules etes-vous autorise a conduire ?",
+          "question": "Vous venez d'obtenir le permis B. Quels véhicules pouvez-vous conduire ?",
           "choices": [
-            "Uniquement des voitures particulieres",
-            "Voiture, voiture mixte, minibus et camionnette (MMA ≤ 3,5 tonnes)",
-            "Tous les vehicules sans exception",
-            "Voiture et moto jusqu'a 125 cm3"
+            "Voiture, minibus et camionnette",
+            "Les voitures particulières seules",
+            "Voiture et moto jusqu'à 125 cm³"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le permis B autorise : voiture, voiture mixte, minibus et camionnette, à condition que la MMA ne dépasse pas 3,5 tonnes.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q1.webp"
@@ -219,68 +218,61 @@
         },
         {
           "id": "C1_Q5",
-          "question": "Vous avez un permis B provisoire. Autorise-t-il les memes vehicules que le permis B definitif ?",
+          "question": "Le permis B provisoire autorise-t-il les mêmes véhicules que le définitif ?",
           "choices": [
-            "Non, il est plus limite",
-            "Oui, les memes vehicules de maximum 3,5 tonnes MMA",
-            "Non, uniquement les voitures",
-            "Non, pas les camionnettes"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le permis B provisoire autorise les mêmes véhicules que le permis B définitif.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q5.webp"
         },
         {
           "id": "C1_Q6",
-          "question": "Vous lisez votre certificat d'immatriculation. Qu'est-ce que la MMA ?",
+          "question": "Que désigne la MMA sur le certificat d'immatriculation ?",
           "choices": [
-            "Le poids de la voiture vide, sans conducteur",
-            "Le poids maximal autorise, carburant, conducteur, passagers et chargement compris",
-            "Le poids maximal du chargement uniquement",
-            "Le poids du vehicule sans les passagers"
+            "Le poids maximal autorisé en charge",
+            "Le poids du véhicule à vide",
+            "Le poids du chargement seul"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La MMA (Masse Maximale Autorisée) inclut tout : le véhicule, le carburant, le conducteur, les passagers et le chargement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q6.webp"
         },
         {
           "id": "C1_Q8",
-          "question": "Vous vous demandez qui fixe la MMA de votre vehicule. Qui la determine ?",
+          "question": "Qui détermine la MMA de votre véhicule ?",
           "choices": [
-            "Le proprietaire",
-            "Le fabricant du vehicule",
-            "La police",
-            "Le controle technique"
+            "Le fabricant du véhicule",
+            "Le contrôle technique",
+            "Le propriétaire du véhicule"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La MMA est fixée par le fabricant et inscrite sur le certificat d'immatriculation.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q8.webp"
         },
         {
           "id": "C1_Q9",
-          "question": "Vous chargez votre voiture pour un demenagement. Que se passe-t-il si vous depassez la MMA ?",
+          "question": "Que se passe-t-il si vous dépassez la MMA de votre véhicule ?",
           "choices": [
-            "Rien de grave a court terme",
-            "Le vehicule ne repond plus aux normes de securite",
-            "Le moteur cale au demarrage",
-            "Les pneus eclatent immediatement"
+            "Le véhicule n'est plus aux normes",
+            "Le moteur cale au démarrage",
+            "Les pneus éclatent aussitôt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dépasser la MMA signifie que le véhicule ne respecte plus les normes de sécurité pour lesquelles il a été conçu.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q9.webp"
         },
         {
           "id": "C1_Q10",
-          "question": "Vous comparez deux vehicules. Une petite voiture a-t-elle une MMA plus elevee qu'un grand SUV ?",
+          "question": "Une petite voiture a-t-elle une MMA plus élevée qu'un grand SUV ?",
           "choices": [
-            "Oui, les petites voitures sont plus solides",
-            "Non, plus la voiture est petite plus la MMA est basse",
-            "C'est la meme pour tous les vehicules",
-            "Cela depend du carburant"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La MMA est proportionnelle à la taille du véhicule : petite voiture = MMA basse, grande voiture = MMA élevée.",
@@ -304,12 +296,10 @@
         },
         {
           "id": "C1_Q12",
-          "question": "Vous roulez et un signal interdit le depassement aux vehicules de MMA > 3,5 tonnes. Vous conduisez une voiture (MMA 1 800 kg). Etes-vous concerne ?",
+          "question": "Un signal interdit le dépassement aux véhicules de plus de 3,5 tonnes. Votre voiture pèse 1 800 kg. Êtes-vous concerné ?",
           "choices": [
-            "Oui, tout le monde est concerne",
-            "Non, votre MMA est inferieure a 3,5 tonnes",
-            "Oui, c'est un signal general",
-            "Cela depend de la route"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal ne vise que les véhicules de MMA > 3,5 tonnes. Votre voiture (1 800 kg) n'est pas concernée.",
@@ -318,54 +308,49 @@
         },
         {
           "id": "C1_Q15",
-          "question": "Vous cherchez la MMA de votre voiture. Ou est-elle mentionnee ?",
+          "question": "Où est mentionnée la MMA de votre voiture ?",
           "choices": [
-            "Sur le tableau de bord",
             "Sur le certificat d'immatriculation",
-            "Sur le pare-brise",
-            "Sur les pneus"
+            "Sur le flanc des pneus du véhicule",
+            "Sur le tableau de bord de la voiture"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La MMA est mentionnée sur le certificat d'immatriculation.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q15.webp"
         },
         {
           "id": "C1_Q16",
-          "question": "Vous revisez votre theorie. Qu'est-ce que la MEC ?",
+          "question": "Que désigne la MEC d'un véhicule ?",
           "choices": [
-            "Le poids maximal autorise par le fabricant",
-            "Le poids reel d'un vehicule a un moment donne, avec personnes et charge",
-            "Le poids du vehicule vide",
-            "Le poids du chargement uniquement"
+            "Le poids réel à un moment donné",
+            "Le poids maximal autorisé",
+            "Le poids du véhicule à vide"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La MEC (Masse En Charge) est le poids réel du véhicule tel qu'il est au moment considéré.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q16.webp"
         },
         {
           "id": "C1_Q17",
-          "question": "Vous comparez MMA et MEC. Quelle est la difference ?",
+          "question": "Quelle est la différence entre la MMA et la MEC ?",
           "choices": [
-            "Aucune difference",
-            "La MMA est le poids maximal theorique fixe par le fabricant",
-            "La MMA est toujours inferieure a la MEC",
-            "La MEC est fixee par le fabricant"
+            "La MMA est le maximum théorique",
+            "La MEC est fixée par le fabricant",
+            "Il n'y a aucune différence"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "MMA = poids max théorique (fixe). MEC = poids réel actuel (variable).",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q17.webp"
         },
         {
           "id": "C1_Q19",
-          "question": "Vous avez beaucoup charge votre voiture. La MEC peut-elle etre superieure a la MMA ?",
+          "question": "La MEC peut-elle être supérieure à la MMA ?",
           "choices": [
-            "Oui, c'est tout a fait normal",
-            "Non, si la MEC depasse la MMA, le vehicule est en surcharge",
-            "Oui, dans certains cas exceptionnels",
-            "La question n'a pas de sens technique"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Si la MEC dépasse la MMA, le véhicule est en surcharge illégale.",
@@ -388,12 +373,10 @@
         },
         {
           "id": "C1_Q21",
-          "question": "Vous verifiez votre chargement. La MEC de votre voiture est de 1 665 kg et la MMA est de 2 000 kg. Etes-vous en surcharge ?",
+          "question": "La MEC de votre voiture est de 1 665 kg et sa MMA de 2 000 kg. Êtes-vous en surcharge ?",
           "choices": [
             "Oui",
-            "Non, la MEC est inferieure a la MMA",
-            "Cela depend du nombre de passagers",
-            "Il faut verifier avec le controle technique"
+            "Non"
           ],
           "correct": 1,
           "explanation": "1 665 kg < 2 000 kg : pas de surcharge.",
@@ -402,26 +385,22 @@
         },
         {
           "id": "C1_Q22",
-          "question": "Vous arrivez devant un pont avec un panneau limitant la masse en charge a 3,5 tonnes. Votre voiture chargee pese 1 800 kg. Pouvez-vous passer ?",
+          "question": "Un pont limite la masse en charge à 3,5 tonnes. Votre voiture chargée pèse 1 800 kg. Pouvez-vous passer ?",
           "choices": [
-            "Non, c'est un pont limite",
-            "Oui, votre MEC est bien inferieure a 3,5 tonnes",
-            "Cela depend de la route",
-            "Non, aucune voiture ne peut passer"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "1 800 kg < 3,5 tonnes : votre MEC est inférieure à la limite du pont.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q22.webp"
         },
         {
           "id": "C1_Q23",
-          "question": "Vous voyez le meme pont limite a 3,5 tonnes MEC. Un camion charge de 5 tonnes se presente. Peut-il passer ?",
+          "question": "Sur ce même pont limité à 3,5 tonnes, un camion chargé de 5 tonnes se présente. Peut-il passer ?",
           "choices": [
-            "Oui, s'il roule lentement",
-            "Non, sa masse en charge depasse la limite",
-            "Oui, s'il est vide",
-            "Oui, avec une autorisation"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "5 tonnes > 3,5 tonnes : le camion ne peut pas passer.",
@@ -430,56 +409,49 @@
         },
         {
           "id": "C1_Q25",
-          "question": "Vous conduisez un camion vide pesant 4 tonnes. Un signal rond rouge porte le chiffre '5t'. Pouvez-vous passer ?",
+          "question": "Vous conduisez un camion vide de 4 tonnes et voyez ce panneau portant « 5t ». Pouvez-vous passer ?",
           "choices": [
-            "Non, c'est un camion donc interdit",
-            "Oui, si le signal vise la MEC : votre poids reel est de 4 tonnes",
-            "Non, les camions sont toujours interdits ici",
-            "Oui, sans aucune condition a verifier"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si c'est un signal de MEC, votre poids réel (4 t) est inférieur à la limite (5 t) : vous pouvez passer.",
           "theoryCardIndex": 1,
           "sign": "C21"
         },
         {
           "id": "C1_Q26",
-          "question": "Vous verifiez l'equipement de votre voiture. Un triangle de danger est-il obligatoire ?",
+          "question": "Un triangle de danger est-il obligatoire dans votre voiture ?",
           "choices": [
-            "Non, c'est recommande",
-            "Oui, c'est obligatoire",
-            "Uniquement sur autoroute",
-            "Uniquement hors agglomeration"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le triangle de danger est obligatoire dans tout véhicule de maximum 3,5 tonnes MMA.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q26.webp"
         },
         {
           "id": "C1_Q27",
-          "question": "Vous verifiez l'equipement de votre voiture. Une trousse de secours est-elle obligatoire ?",
+          "question": "Une trousse de secours est-elle obligatoire dans votre voiture ?",
           "choices": [
-            "Non, c'est recommande",
-            "Oui, c'est obligatoire",
-            "Uniquement pour les longs trajets",
-            "Uniquement en hiver"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La trousse de secours est obligatoire dans la voiture.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q27.webp"
         },
         {
           "id": "C1_Q28",
-          "question": "Vous verifiez l'equipement de votre voiture. Un extincteur est-il obligatoire ?",
+          "question": "Un extincteur est-il obligatoire dans votre voiture ?",
           "choices": [
-            "Non, c'est recommande",
-            "Oui, avec 1 kg de poudre minimum",
-            "Uniquement pour les camionnettes",
-            "Uniquement sur autoroute"
+            "Oui, d'au moins 1 kg de poudre",
+            "Non, il est simplement conseillé",
+            "Oui, mais sur autoroute"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'extincteur est obligatoire et doit contenir au minimum 1 kg de poudre.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q28.webp"
@@ -500,56 +472,51 @@
         },
         {
           "id": "C1_Q30",
-          "question": "Vous avez utilise votre extincteur un tout petit peu lors d'un incident. Que devez-vous faire ?",
+          "question": "Vous avez utilisé un peu de votre extincteur. Que devez-vous faire ?",
           "choices": [
-            "Rien, il reste assez de poudre",
-            "Le remplacer car il ne contient plus 1 kg de poudre",
+            "Le remplacer par un neuf",
             "Le recharger au garage",
-            "L'utiliser jusqu'a ce qu'il soit vide"
+            "Rien, il reste de la poudre"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Toute utilisation, même minime, signifie que l'extincteur ne contient plus exactement 1 kg : il doit être remplacé.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q30.webp"
         },
         {
           "id": "C1_Q32",
-          "question": "Vous verifiez votre equipement. Un gilet de securite reflechissant est-il obligatoire dans votre voiture ?",
+          "question": "Un gilet de sécurité rétroréfléchissant est-il obligatoire dans votre voiture ?",
           "choices": [
-            "Non, c'est recommande",
-            "Oui, c'est obligatoire",
-            "Uniquement sur autoroute",
-            "Uniquement la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le gilet de sécurité réfléchissant est obligatoire dans la voiture.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q32.webp"
         },
         {
           "id": "C1_Q33",
-          "question": "Vous rangez votre gilet de securite. Ou devez-vous le placer ?",
+          "question": "Où devez-vous placer votre gilet de sécurité ?",
           "choices": [
+            "Dans l'habitacle",
             "Dans le coffre",
-            "Dans l'habitacle de la voiture",
-            "Sous le siege arriere",
-            "N'importe ou"
+            "Sous le siège arrière"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le gilet doit être dans l'habitacle (pas dans le coffre) pour être accessible avant de sortir.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q33.webp"
         },
         {
           "id": "C1_Q35",
-          "question": "Vous revisez votre theorie. Quels sont les quatre equipements obligatoires dans une voiture (MMA ≤ 3,5 tonnes) ?",
+          "question": "Quels sont les quatre équipements obligatoires dans une voiture ?",
           "choices": [
-            "Triangle, trousse de secours, roue de secours, gilet",
-            "Triangle de danger, trousse de secours, extincteur (1 kg), gilet de securite reflechissant",
-            "Triangle, extincteur, cric, gilet",
-            "Triangle, trousse, lampe de poche, gilet"
+            "Triangle, trousse, extincteur, gilet",
+            "Triangle, trousse, roue de secours, gilet",
+            "Triangle, extincteur, cric, gilet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les 4 équipements obligatoires : triangle de danger, trousse de secours, extincteur (1 kg de poudre), gilet réfléchissant.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q35.webp"
@@ -570,54 +537,49 @@
         },
         {
           "id": "C1_Q37",
-          "question": "Vous vous demandez dans quelle situation porter le gilet de securite. Quand devez-vous le porter ?",
+          "question": "Quand devez-vous porter le gilet de sécurité ?",
           "choices": [
-            "Toujours, dès que vous conduisez",
-            "En cas de panne ou d'accident sur autoroute",
-            "Uniquement pendant la nuit",
-            "Uniquement par temps de pluie"
+            "En cas de panne sur autoroute",
+            "Chaque fois que vous conduisez",
+            "La nuit et par temps de pluie"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le gilet est obligatoire avant de sortir du véhicule en cas de panne ou d'accident sur autoroute ou route pour automobiles.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q37.webp"
         },
         {
           "id": "C1_Q38",
-          "question": "Vous prenez le volant. Quels documents personnels devez-vous avoir avec vous en conduisant ?",
+          "question": "Quels documents personnels devez-vous avoir sur vous en conduisant ?",
           "choices": [
-            "Uniquement le permis de conduire",
-            "La carte d'identite et le permis de conduire",
-            "Uniquement la carte d'identite",
+            "La carte d'identité et le permis",
+            "Le permis de conduire, sans plus",
             "Le passeport et le permis"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le conducteur doit avoir avec lui sa carte d'identité ET son permis de conduire.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q38.webp"
         },
         {
           "id": "C1_Q39",
-          "question": "Vous lisez le code de la route. Que signifie etre 'titulaire et porteur' d'un permis ?",
+          "question": "Que signifie être « titulaire et porteur » d'un permis ?",
           "choices": [
-            "Avoir un permis valide range chez soi",
-            "En etre proprietaire (titulaire) ET l'avoir physiquement avec soi (porteur)",
-            "Uniquement l'avoir dans la boite a gants",
-            "Avoir une copie certifiee conforme du permis"
+            "En être propriétaire et l'avoir sur soi",
+            "L'avoir rangé dans la boîte à gants",
+            "En posséder une copie certifiée conforme"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Titulaire = en être propriétaire. Porteur = l'avoir sur soi. Les deux conditions sont requises.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q39.webp"
         },
         {
           "id": "C1_Q40",
-          "question": "Vous avez declare la perte de votre permis et disposez d'une attestation de perte. Pouvez-vous conduire ?",
+          "question": "Vous avez perdu votre permis et disposez d'une attestation de perte. Pouvez-vous conduire ?",
           "choices": [
-            "Oui, l'attestation remplace le permis",
-            "Non, conduire avec une attestation de perte est interdit",
-            "Oui, pendant 30 jours",
-            "Oui, en agglomeration"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "L'attestation de perte ne remplace pas le permis. Il est interdit de conduire sans le document original.",
@@ -626,42 +588,38 @@
         },
         {
           "id": "C1_Q42",
-          "question": "Vous verifiez les documents de votre voiture. Quels documents doivent s'y trouver ?",
+          "question": "Quels documents doivent se trouver dans votre voiture ?",
           "choices": [
-            "Uniquement le certificat d'immatriculation",
-            "Conformité, immatriculation, assurance et contrôle technique",
-            "Uniquement le certificat d'assurance",
+            "Conformité, immatriculation, assurance",
+            "Le certificat d'immatriculation seul",
             "La carte grise et la vignette fiscale"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "4 documents dans la voiture : certificat de conformité, d'immatriculation, d'assurance et de contrôle technique.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q42.webp"
         },
         {
           "id": "C1_Q44",
-          "question": "Vous verifiez vos documents. Doivent-ils etre des originaux ?",
+          "question": "Ces documents doivent-ils être des originaux ?",
           "choices": [
-            "Non, des copies suffisent",
-            "Oui, sauf le certificat d'assurance qui peut etre en copie",
-            "Non, des photos sur telephone suffisent pour tous",
-            "Oui, tous sans exception"
+            "Oui, sauf le certificat d'assurance",
+            "Non, des copies simples suffisent",
+            "Non, une photo au téléphone suffit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Tous les documents doivent être des originaux, sauf le certificat d'assurance qui peut être en copie.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q44.webp"
         },
         {
           "id": "C1_Q45",
-          "question": "Vous avez votre certificat d'assurance en PDF sur votre telephone. Est-ce conforme ?",
+          "question": "Votre certificat d'assurance est en PDF sur votre téléphone. Est-ce conforme ?",
           "choices": [
-            "Non, il doit etre original",
-            "Oui, il peut etre en PDF ou JPEG sur votre telephone",
-            "Uniquement en copie papier",
-            "Non, jamais en numerique"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le certificat d'assurance est le seul document qui peut être en copie, y compris numérique (PDF, JPEG).",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q45.webp"
@@ -696,14 +654,13 @@
         },
         {
           "id": "C1_Q52",
-          "question": "Vous preparez un voyage a l'etranger. Pourquoi devez-vous vous renseigner sur les gilets de securite ?",
+          "question": "Pourquoi vous renseigner sur les gilets avant de partir à l'étranger ?",
           "choices": [
-            "Parce que les gilets belges ne sont pas conformes",
-            "Parce que certains pays exigent plus d'un gilet (deux par vehicule ou un par passager)",
-            "Parce que les gilets ne sont pas obligatoires partout",
-            "Parce que la couleur varie selon les pays"
+            "Certains pays en exigent plusieurs",
+            "Les gilets belges n'y valent rien",
+            "La couleur change selon les pays"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Certains pays exigent plus d'un gilet de sécurité par véhicule.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q52.webp"
@@ -724,28 +681,26 @@
         },
         {
           "id": "C1_Q54",
-          "question": "Vous voyez un signal de stationnement avec un panneau additionnel indiquant une masse. Que signifie-t-il ?",
+          "question": "Ce panneau porte une mention de masse en dessous. Que signifie-t-il ?",
           "choices": [
-            "Stationnement autorise pour tous les vehicules",
-            "Stationnement reserve aux vehicules dont la MMA excede la masse indiquee",
-            "Stationnement interdit au-dessus de cette masse",
-            "Stationnement reserve aux camions de livraison"
+            "Réservé aux véhicules au-dessus",
+            "Interdit aux véhicules au-dessus",
+            "Autorisé à tous les véhicules"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau additionnel de masse restreint le stationnement aux véhicules dépassant la masse indiquée (ex : camions).",
           "destination": "panneaux",
           "sign": "E1"
         },
         {
           "id": "C1_Q56",
-          "question": "Vous voyez un signal C43 de vitesse maximale. Jusqu'ou est-il valable ?",
+          "question": "Jusqu'où ce panneau de vitesse est-il valable ?",
           "choices": [
-            "Sur 500 metres",
             "Jusqu'au prochain carrefour",
-            "Sur 1 km",
-            "Jusqu'au prochain feu"
+            "Sur les 500 mètres suivants",
+            "Jusqu'au prochain feu rouge"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal C43 de limitation de vitesse est valable jusqu'au prochain carrefour.",
           "theoryCardIndex": 1,
           "severe": true,
@@ -753,82 +708,74 @@
         },
         {
           "id": "C1_Q59",
-          "question": "Vous voyez un signal rond rouge avec un chiffre de masse. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Indication de la MMA maximale autorisee",
-            "Acces interdit si la masse en charge depasse la masse indiquee",
-            "Charge maximale supportee par le pont",
-            "Distance restante indiquee en tonnes"
+            "Interdit au-dessus de cette masse",
+            "Charge maximale du pont indiquée",
+            "Distance restante en tonnes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la masse en charge (MEC) dépasse la valeur indiquée.",
           "theoryCardIndex": 1,
           "sign": "C21"
         },
         {
           "id": "C1_Q61",
-          "question": "Vous voyez un signal rond rouge avec une fleche barree vers la gauche. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Interdiction de faire demi-tour au carrefour",
-            "Au prochain carrefour, interdiction de tourner a gauche",
-            "Annonce d'un virage dangereux a gauche",
-            "Deviation obligatoire vers la gauche"
+            "Interdiction de tourner à gauche",
+            "Interdiction de faire demi-tour",
+            "Annonce d'un virage à gauche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit de tourner à gauche au prochain carrefour.",
           "destination": "panneaux",
           "sign": "C31a"
         },
         {
           "id": "C1_Q63",
-          "question": "Vous conduisez une voiture (MEC 1 500 kg) et voyez un signal d'interdiction de tourner a droite avec panneau '3,5t'. Pouvez-vous tourner ?",
+          "question": "Votre voiture pèse 1 500 kg. Un panneau interdit de tourner à droite aux véhicules de plus de 3,5 t. Pouvez-vous tourner ?",
           "choices": [
-            "Non, c'est interdit pour tout le monde",
-            "Oui, l'interdiction ne concerne que les vehicules de MEC > 3,5 tonnes",
-            "Non, les voitures sont concernees",
-            "Cela depend du carrefour"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "1 500 kg < 3,5 tonnes : l'interdiction ne vous concerne pas.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q63.webp"
         },
         {
           "id": "C1_Q64",
-          "question": "Vous voyez un signal rond rouge avec un camion. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Zone de livraison reservee aux camions",
-            "Acces interdit aux vehicules de transport de marchandises",
-            "Itineraire conseille pour les camions",
-            "Fin d'interdiction pour les camions"
+            "Interdit au transport de marchandises",
+            "Zone de livraison pour les camions",
+            "Itinéraire conseillé aux camions"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit l'accès aux véhicules de transport de marchandises.",
           "theoryCardIndex": 0,
           "sign": "C23"
         },
         {
           "id": "C1_Q65",
-          "question": "Vous voyez ce signal avec panneau additionnel MMA. Que signifie-t-il ?",
+          "question": "Ce panneau porte un panneau additionnel de MMA. Que signifie-t-il ?",
           "choices": [
-            "Tous les camions sont interdits sans exception",
-            "Interdit seulement aux vehicules de marchandises dont la MMA depasse la masse indiquee",
-            "Seuls les petits camions sont interdits",
-            "Les voitures particulieres sont aussi concernees"
+            "Interdit au-dessus de cette MMA",
+            "Interdit à tous les camions",
+            "Interdit aussi aux voitures"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau additionnel MMA restreint l'interdiction aux véhicules de transport de marchandises dépassant cette masse.",
           "theoryCardIndex": 0,
           "sign": "C23"
         },
         {
           "id": "C1_Q68",
-          "question": "Vous voyez un signal d'interdiction de tourner a gauche sans panneau additionnel. Votre voiture est legere. Pouvez-vous tourner ?",
+          "question": "Ce panneau ne porte aucun panneau additionnel et votre voiture est légère. Pouvez-vous tourner ?",
           "choices": [
-            "Oui, les voitures legeres ne sont pas concernees",
-            "Non, sans panneau additionnel elle s'applique a tous",
-            "Oui, si le carrefour est libre",
-            "Cela depend de l'heure de la journee"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Sans panneau additionnel de masse, l'interdiction s'applique à TOUS les conducteurs.",
@@ -837,12 +784,10 @@
         },
         {
           "id": "C1_Q69",
-          "question": "Vous voyez un signal de stationnement avec panneau additionnel '3,5t'. Votre voiture a une MMA de 1 600 kg. Pouvez-vous stationner ici ?",
+          "question": "Ce panneau porte la mention « 3,5t » et votre voiture fait 1 600 kg de MMA. Pouvez-vous stationner ici ?",
           "choices": [
-            "Oui, le stationnement est autorise pour tous",
-            "Non, il est reserve aux vehicules de plus de 3,5 tonnes MMA",
-            "Oui, si vous vous garez correctement",
-            "Cela depend de l'heure de la journee"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Ce stationnement est réservé aux véhicules de MMA > 3,5 tonnes. Votre voiture (1 600 kg) ne peut pas s'y garer.",
@@ -851,12 +796,10 @@
         },
         {
           "id": "C1_Q71",
-          "question": "Vous conduisez une camionnette de MMA 3,5 tonnes chargee (MEC 3 200 kg). Un signal interdit les vehicules de MEC > 3 tonnes. Pouvez-vous passer ?",
+          "question": "Votre camionnette chargée pèse 3 200 kg. Un signal interdit les véhicules de plus de 3 tonnes en charge. Pouvez-vous passer ?",
           "choices": [
-            "Oui, votre MMA est de 3,5 tonnes",
-            "Non, votre MEC est de 3 200 kg ce qui depasse les 3 tonnes",
-            "Oui, les camionnettes ne sont pas concernees",
-            "Cela depend du chargement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal porte sur la MEC. Votre MEC (3 200 kg) > 3 000 kg : vous ne pouvez pas passer.",
@@ -865,42 +808,37 @@
         },
         {
           "id": "C1_PROV_1",
-          "question": "Vous avez un permis de conduire provisoire B. Quand ne pouvez-vous PAS conduire ?",
+          "question": "Avec un permis provisoire B, quand ne pouvez-vous pas conduire ?",
           "choices": [
-            "Jamais la nuit, tous les jours",
-            "Les nuits de week-end et de jours fériés, de 22h à 6h",
-            "Uniquement le dimanche toute la journée",
-            "Après 20h en semaine"
+            "Les nuits de week-end, 22h à 6h",
+            "Toutes les nuits de la semaine",
+            "Le dimanche toute la journée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le permis provisoire interdit de conduire du vendredi, samedi et dimanche soir 22h jusqu'au lendemain 6h, ainsi que les veilles et soirs de jours fériés.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_PROV_1.webp"
         },
         {
           "id": "C1_PROV_2",
-          "question": "Samedi soir, 23h. Vous avez un permis provisoire et votre guide est assis à côté de vous. Pouvez-vous conduire ?",
+          "question": "Samedi 23h, permis provisoire, votre guide est à côté de vous. Pouvez-vous conduire ?",
           "choices": [
-            "Non : interdit jusqu'à 6h du matin, même accompagné",
-            "Oui, puisque le guide est présent",
-            "Oui, sur les routes communales uniquement",
-            "Oui, pour un trajet de moins de 10 km"
+            "Oui",
+            "Non"
           ],
-          "correct": 0,
+          "correct": 1,
           "explanation": "Les nuits de week-end (22h-6h), la conduite est interdite avec un permis provisoire — la présence du guide ne change rien.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_PROV_2.webp"
         },
         {
           "id": "C1_PROV_3",
-          "question": "Avec un permis provisoire, vous voulez conduire la veille d'un jour férié à 23h. Est-ce autorisé ?",
+          "question": "Avec un permis provisoire, pouvez-vous conduire la veille d'un jour férié à 23h ?",
           "choices": [
-            "Non : les veilles de jours fériés, la conduite est interdite de 22h à 6h",
-            "Oui, car ce n'est pas un week-end",
-            "Oui, mais jusqu'à minuit seulement",
-            "Oui, si le trajet est court et local"
+            "Oui",
+            "Non"
           ],
-          "correct": 0,
+          "correct": 1,
           "explanation": "L'interdiction 22h-6h couvre les nuits de week-end, mais aussi les veilles et les soirs de jours fériés.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_PROV_3.webp"
@@ -1174,26 +1112,23 @@
         },
         {
           "id": "C2_Q2",
-          "question": "Vous avez charge votre vehicule et il depasse 4 metres de hauteur. Que se passe-t-il ?",
+          "question": "Votre véhicule chargé dépasse 4 mètres de hauteur. Que se passe-t-il ?",
           "choices": [
-            "C'est autorise jusqu'a 5 metres",
-            "Il entre dans la categorie des transports exceptionnels",
-            "C'est interdit, il faut decharger",
-            "Seul un camion peut depasser cette hauteur"
+            "C'est un transport exceptionnel",
+            "C'est autorisé jusqu'à 5 mètres",
+            "C'est réservé aux camions"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un véhicule qui dépasse 4 mètres de hauteur (chargement compris) entre dans la catégorie des transports exceptionnels.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q2.webp"
         },
         {
           "id": "C2_Q3",
-          "question": "Vous approchez d'un tunnel avec un signal de hauteur maximale de 3,2 metres. Votre vehicule avec chargement mesure 3,5 metres. Pouvez-vous passer ?",
+          "question": "Un tunnel est limité à 3,2 m et votre véhicule chargé mesure 3,5 m. Pouvez-vous passer ?",
           "choices": [
-            "Oui, si vous roulez lentement",
-            "Non, votre hauteur depasse la limite indiquee",
-            "Oui, la limite est de 4 metres",
-            "Oui, pour les voitures seulement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal d'interdiction de hauteur s'applique à tous les véhicules. Si votre hauteur (chargement compris) dépasse la limite indiquée, vous ne pouvez pas passer.",
@@ -1202,28 +1137,26 @@
         },
         {
           "id": "C2_Q4",
-          "question": "Vous avez un coffre de toit sur votre voiture. Pourquoi faut-il le retirer quand vous n'en avez plus besoin ?",
+          "question": "Pourquoi retirer le coffre de toit quand vous n'en avez plus besoin ?",
           "choices": [
-            "Pour des raisons purement esthetiques",
-            "Parce qu'il augmente la resistance a l'air et la consommation de carburant",
-            "Parce que c'est interdit hors vacances",
-            "Pour eviter le vol du coffre et de son contenu"
+            "Il augmente la consommation",
+            "Il est interdit hors vacances",
+            "Il risque d'être volé la nuit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le coffre de toit augmente la résistance à l'air et donc la consommation de carburant. Il faut le retirer dès qu'on n'en a plus besoin.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q4.webp"
         },
         {
           "id": "C2_Q5",
-          "question": "Vous chargez votre voiture pour un voyage. Ou devez-vous placer les objets lourds ?",
+          "question": "Où devez-vous placer les objets lourds dans votre voiture ?",
           "choices": [
+            "Dans le coffre, le plus bas",
             "Sur les barres de toit",
-            "Dans le coffre, le plus bas possible",
-            "Sur le siège passager avant",
-            "N'importe où, sans importance"
+            "Sur le siège passager avant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les objets lourds doivent être placés dans le coffre, pas sur le toit, pour ne pas déstabiliser le véhicule dans les virages.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q5.webp"
@@ -1244,12 +1177,10 @@
         },
         {
           "id": "C2_Q7",
-          "question": "Vous avez charge l'arriere de votre voiture et le chargement couvre les feux arriere. Est-ce autorise ?",
+          "question": "Votre chargement couvre les feux arrière. Est-ce autorisé ?",
           "choices": [
-            "Oui, si vous roulez uniquement de jour",
-            "Non, la charge ne peut jamais couvrir les feux arriere ni la plaque d'immatriculation",
-            "Oui, si vous ajoutez des reflecteurs a l'arriere",
-            "Oui, mais pour un court trajet seulement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La charge à l'arrière ne peut jamais couvrir les feux arrière ni la plaque d'immatriculation.",
@@ -1258,14 +1189,13 @@
         },
         {
           "id": "C2_Q8",
-          "question": "Vous transportez des velos a l'arriere et la plaque d'immatriculation n'est plus visible. Que devez-vous faire ?",
+          "question": "Un porte-vélos masque votre plaque d'immatriculation. Que devez-vous faire ?",
           "choices": [
-            "Rien, ce n'est pas grave",
-            "Rendre la plaque visible ou la deplacer",
-            "Rouler uniquement de jour",
-            "Mettre les warnings"
+            "Rendre la plaque visible",
+            "Rouler de jour, sans plus",
+            "Mettre vos feux de détresse"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La plaque d'immatriculation doit toujours rester visible. Si votre chargement la couvre, vous devez la rendre visible ou la déplacer.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C2_Q8.webp"
@@ -1286,40 +1216,35 @@
         },
         {
           "id": "C2_Q10",
-          "question": "Vous avez charge votre vehicule et il fait 2,70 metres de large. Que se passe-t-il ?",
+          "question": "Votre véhicule chargé fait 2,70 mètres de large. Que se passe-t-il ?",
           "choices": [
-            "C'est autorise jusqu'a 3 metres",
             "C'est un transport exceptionnel",
-            "C'est autorise si vous mettez les warnings",
-            "C'est interdit uniquement sur autoroute"
+            "C'est autorisé jusqu'à 3 mètres",
+            "C'est interdit sur autoroute"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un véhicule chargé de plus de 2,55 mètres de large est un transport exceptionnel.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C2_Q10.webp"
         },
         {
           "id": "C2_Q11",
-          "question": "Vous approchez d'un signal de largeur maximale de 2 metres. Votre voiture fait 1,80 metre. Pouvez-vous passer ?",
+          "question": "Un signal limite la largeur à 2 mètres et votre voiture fait 1,80 m. Pouvez-vous passer ?",
           "choices": [
-            "Non, c'est trop risque",
-            "Oui, votre largeur est inferieure a la limite",
-            "Non, les voitures sont interdites",
-            "Uniquement les velos"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Votre voiture fait 1,80 m, ce qui est inférieur à la limite de 2 m. Vous pouvez passer.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C2_Q11.webp"
         },
         {
           "id": "C2_Q12",
-          "question": "Vous vous interrogez. Un signal de largeur maximale concerne-t-il uniquement les camions ?",
+          "question": "Un signal de largeur maximale concerne-t-il uniquement les camions ?",
           "choices": [
-            "Oui, uniquement les poids lourds sont vises",
-            "Non, il vise tout vehicule dont la largeur (chargement compris) depasse la limite",
-            "Oui, les voitures ne sont jamais concernees",
-            "Non, il concerne uniquement les bus et autocars"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal de largeur maximale concerne tous les véhicules dont la largeur (chargement compris) dépasse la limite indiquée.",
@@ -1356,12 +1281,10 @@
         },
         {
           "id": "C2_Q16",
-          "question": "Vous transportez un objet qui depasse de 1,5 metre l'arriere de votre vehicule. Est-ce autorise sans signalisation speciale ?",
+          "question": "Un objet dépasse de 1,5 m l'arrière de votre véhicule. Est-ce autorisé sans signalisation ?",
           "choices": [
-            "Oui, c'est autorise jusqu'a 2 metres",
-            "Non, au-dela d'1 metre : panneau d'avertissement et charge indivisible",
-            "Oui, si vous allumez les feux de detresse",
-            "Non, 1 metre maximum sans aucune exception"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Au-delà d'1 mètre de dépassement, la charge doit être indivisible et un panneau d'avertissement doit être fixé à l'arrière.",
@@ -1370,42 +1293,38 @@
         },
         {
           "id": "C2_Q17",
-          "question": "Vous transportez une charge indivisible qui depasse de 2,5 metres l'arriere. Est-ce autorise ?",
+          "question": "Une charge indivisible dépasse de 2,5 m l'arrière. Est-ce autorisé ?",
           "choices": [
-            "Non, le depassement maximal est de 1 metre",
-            "Oui, si un panneau d'avertissement est fixe a l'arriere",
-            "Non, le depassement maximal est de 2 metres",
-            "Oui, sans aucune condition particuliere"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une charge indivisible peut dépasser de maximum 3 mètres l'arrière, à condition d'y accrocher un panneau d'avertissement. 2,5 mètres est autorisé.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q17.webp"
         },
         {
           "id": "C2_Q19",
-          "question": "Vous revisez votre theorie. Que signifie 'charge indivisible' ?",
+          "question": "Que signifie « charge indivisible » ?",
           "choices": [
-            "Une charge legere",
-            "Une charge qui ne peut etre ni pliee ni retractee",
-            "Une charge inflammable",
-            "Une charge de plus de 100 kg"
+            "Une charge ni pliable ni rétractable",
+            "Une charge de plus de 100 kilos",
+            "Une charge de nature inflammable"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une charge indivisible est une charge qui ne peut être ni pliée ni rétractée.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q19.webp"
         },
         {
           "id": "C2_Q21",
-          "question": "Vous transportez une charge indivisible de nuit. De quoi doit etre muni le panneau d'avertissement ?",
+          "question": "De quoi le panneau d'avertissement doit-il être muni la nuit ?",
           "choices": [
-            "De réflecteurs blancs à l'avant",
-            "D'un feu rouge vers l'arrière et de catadioptres orange latéraux",
-            "D'un feu jaune clignotant sur le toit",
-            "De bandes fluorescentes réfléchissantes"
+            "Un feu rouge et des catadioptres",
+            "Un feu jaune clignotant sur le toit",
+            "Des bandes fluorescentes blanches"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Lorsque l'éclairage est requis, le panneau d'avertissement doit être muni d'un feu rouge orienté vers l'arrière et d'un catadioptre orange de chaque côté.",
           "theoryCardIndex": 3,
           "severe": true,
@@ -1413,12 +1332,10 @@
         },
         {
           "id": "C2_Q22",
-          "question": "Vous vous demandez si le signal de longueur concerne uniquement les camions. Est-ce le cas ?",
+          "question": "Un signal de longueur maximale concerne-t-il uniquement les camions ?",
           "choices": [
-            "Oui, seuls les camions sont concernes",
-            "Non, il concerne tous les vehicules et trains de vehicules",
-            "Oui, les voitures ne sont jamais concernees",
-            "Uniquement les bus"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal de longueur maximale concerne tous les véhicules et trains de véhicules, y compris voiture + caravane.",
@@ -1427,12 +1344,10 @@
         },
         {
           "id": "C2_Q23",
-          "question": "Vous conduisez votre voiture avec une caravane. Un signal interdit les vehicules de plus de 10 metres. Votre ensemble fait 11 metres. Pouvez-vous passer ?",
+          "question": "Un signal interdit les véhicules de plus de 10 m et votre ensemble fait 11 m. Pouvez-vous passer ?",
           "choices": [
-            "Oui, les caravanes ne comptent pas",
-            "Non, votre train de vehicules depasse la longueur autorisee",
-            "Oui, c'est une voiture pas un camion",
-            "Oui, sur les routes de campagne"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal de longueur s'applique à l'ensemble voiture + caravane. Votre train de 11 mètres dépasse la limite de 10 mètres.",
@@ -1497,68 +1412,62 @@
         },
         {
           "id": "C2_Q29",
-          "question": "Vous reglez votre siege. Comment regler correctement l'appui-tete ?",
+          "question": "Comment régler correctement l'appui-tête ?",
           "choices": [
+            "Le haut au niveau du sommet du crâne",
             "Le plus bas possible pour le confort",
-            "La partie superieure a la meme hauteur que le sommet de la tete",
-            "Au niveau des epaules du conducteur",
-            "Le plus haut possible dans tous les cas"
+            "Au niveau des épaules du conducteur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'appui-tête doit être réglé de manière à ce que sa partie supérieure se situe à la même hauteur que le sommet de la tête.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C2_Q29.webp"
         },
         {
           "id": "C2_Q30",
-          "question": "Vous reglez votre appui-tete. Pourquoi est-il important de bien le regler ?",
+          "question": "Pourquoi est-il important de bien régler l'appui-tête ?",
           "choices": [
-            "Pour le confort uniquement",
-            "Pour une protection optimale et une bonne position de conduite",
-            "Pour mieux voir dans le retroviseur",
-            "C'est uniquement esthetique"
+            "Pour la protection en cas de choc",
+            "Pour mieux voir dans le rétroviseur",
+            "Pour le confort du dos, sans plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un appui-tête correctement réglé offre une protection optimale et contribue à une bonne position de conduite.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C2_Q30.webp"
         },
         {
           "id": "C2_Q31",
-          "question": "Vous montez dans votre voiture. Quand devez-vous porter la ceinture de securite ?",
+          "question": "Quand devez-vous porter la ceinture de sécurité ?",
           "choices": [
-            "Uniquement sur autoroute",
-            "Toujours quand elle est presente dans le vehicule",
-            "Uniquement a l'avant",
-            "Uniquement hors agglomeration"
+            "Chaque fois qu'elle est présente",
+            "Sur autoroute et route rapide",
+            "Aux places avant du véhicule"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La ceinture de sécurité doit être portée toujours quand elle est présente dans le véhicule, par le conducteur comme par les passagers.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q31.webp"
         },
         {
           "id": "C2_Q32",
-          "question": "Vous attachez votre ceinture. Comment doit-elle etre portee ?",
+          "question": "Comment la ceinture doit-elle être portée ?",
           "choices": [
-            "Sous le bras",
-            "Au-dessus de l'epaule",
-            "Derriere le dos",
-            "N'importe comment"
+            "Au-dessus de l'épaule",
+            "Sous le bras, contre le flanc",
+            "Derrière le dos"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La ceinture doit être portée au-dessus de l'épaule.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q32.webp"
         },
         {
           "id": "C2_Q34",
-          "question": "Vous effectuez une marche arriere. Devez-vous porter la ceinture ?",
+          "question": "Devez-vous porter la ceinture pendant une marche arrière ?",
           "choices": [
-            "Oui, toujours sans exception",
-            "Non, le conducteur en est dispense pendant la marche arriere",
-            "Oui, sauf en agglomeration",
-            "Non, jamais en marche arriere ni en manoeuvre"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le conducteur effectuant une marche arrière est dispensé du port de la ceinture.",
@@ -1567,12 +1476,10 @@
         },
         {
           "id": "C2_Q35",
-          "question": "Vous etes chauffeur de taxi et transportez des clients. Devez-vous porter la ceinture ?",
+          "question": "Vous êtes chauffeur de taxi avec des clients. Devez-vous porter la ceinture ?",
           "choices": [
-            "Oui, toujours",
-            "Non, vous en etes dispense",
-            "Oui, sauf la nuit",
-            "Uniquement sur autoroute"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un chauffeur de taxi transportant des clients est dispensé du port de la ceinture.",
@@ -1581,12 +1488,10 @@
         },
         {
           "id": "C2_Q36",
-          "question": "Vous etes facteur et distribuez le courrier de porte en porte. Devez-vous porter la ceinture ?",
+          "question": "Vous êtes facteur et distribuez le courrier de porte en porte. Devez-vous porter la ceinture ?",
           "choices": [
-            "Oui, toujours sans exception",
-            "Non, vous en etes dispense pendant la distribution",
-            "Oui, sauf dans les rues residentielles",
-            "Non, jamais pour un facteur"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un facteur de La Poste distribuant le courrier de porte en porte est dispensé du port de la ceinture.",
@@ -1595,26 +1500,23 @@
         },
         {
           "id": "C2_Q37",
-          "question": "Vous vous interrogez. Les agents qualifies et services de secours doivent-ils porter la ceinture ?",
+          "question": "Les agents qualifiés et les services de secours doivent-ils porter la ceinture ?",
           "choices": [
-            "Non, jamais en service",
-            "Ils en sont dispenses si leur mission l'exige",
-            "Oui, toujours comme tout le monde",
-            "Non, uniquement les pompiers en sont dispenses"
+            "Dispensés si la mission l'exige",
+            "Dispensés en toute circonstance",
+            "Tenus de la porter comme tous"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les agents qualifiés et services de secours sont dispensés du port de la ceinture si leur mission l'exige.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q37.webp"
         },
         {
           "id": "C2_Q38",
-          "question": "Vous etes enceinte et prenez le volant. Etes-vous dispensee du port de la ceinture ?",
+          "question": "Vous êtes enceinte et prenez le volant. Êtes-vous dispensée de la ceinture ?",
           "choices": [
-            "Oui, pour votre securite",
-            "Non, vous etes tenue de la porter",
-            "Oui, avec un certificat medical",
-            "Oui, apres 6 mois de grossesse"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les femmes enceintes SONT tenues de porter la ceinture de sécurité. Elles ne bénéficient d'aucune exemption.",
@@ -1637,40 +1539,35 @@
         },
         {
           "id": "C2_Q41",
-          "question": "Vous transportez un enfant. A quelles conditions doit-il voyager dans un DRA ?",
+          "question": "À quelles conditions un enfant doit-il voyager dans un siège adapté ?",
           "choices": [
+            "Moins de 18 ans et moins d'1,35 m",
             "Moins de 12 ans, quelle que soit la taille",
-            "Moins de 18 ans ET taille inferieure a 1,35 m",
-            "Moins de 10 ans et moins d'1 m",
-            "Moins de 18 ans, quelle que soit la taille"
+            "Moins de 10 ans et moins d'un mètre"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un enfant doit voyager dans un DRA s'il a moins de 18 ans ET mesure moins de 1,35 m. Les deux conditions doivent être réunies.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q41.webp"
         },
         {
           "id": "C2_Q42",
-          "question": "Vous transportez un enfant de 15 ans mesurant 1,30 m. Doit-il utiliser un DRA ?",
+          "question": "Un enfant de 15 ans mesure 1,30 m. Doit-il utiliser un siège adapté ?",
           "choices": [
-            "Non, il a plus de 12 ans",
-            "Oui, il a moins de 18 ans ET mesure moins de 1,35 m",
-            "Non, il peut utiliser la ceinture",
-            "Oui, mais uniquement a l'arriere"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Cet enfant a moins de 18 ans ET mesure moins de 1,35 m : les deux conditions sont réunies, il doit utiliser un DRA.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q42.webp"
         },
         {
           "id": "C2_Q43",
-          "question": "Vous transportez un enfant de 10 ans mesurant 1,40 m. Doit-il utiliser un DRA ?",
+          "question": "Un enfant de 10 ans mesure 1,40 m. Doit-il utiliser un siège adapté ?",
           "choices": [
-            "Oui, obligatoirement car il a moins de 18 ans",
-            "Non, il mesure plus de 1,35 m donc il peut utiliser la ceinture seule",
-            "Oui, un DRA est obligatoire a tout age",
-            "Cela depend du type de vehicule"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Cet enfant mesure plus de 1,35 m : même s'il a moins de 18 ans, il peut utiliser uniquement la ceinture.",
@@ -1679,12 +1576,10 @@
         },
         {
           "id": "C2_Q45",
-          "question": "Vous installez un DRA dos a la route sur le siege passager. L'airbag frontal est actif. Est-ce autorise ?",
+          "question": "Un siège dos à la route est placé à l'avant, airbag actif. Est-ce autorisé ?",
           "choices": [
-            "Oui, c'est meme la position recommandee",
-            "Non, sauf si l'airbag a ete desactive ou se desactive automatiquement",
-            "Oui, sans aucune condition particuliere",
-            "Non, jamais meme avec airbag desactive"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit d'installer un DRA dos à la route sur un siège avec airbag frontal actif, sauf si l'airbag a été désactivé ou se désactive automatiquement de manière fiable.",
@@ -1693,54 +1588,47 @@
         },
         {
           "id": "C2_Q47",
-          "question": "Vous installez un enfant dans un DRA. Ou doit passer la partie inferieure de la ceinture ?",
+          "question": "Où doit passer la partie inférieure de la ceinture sur un enfant ?",
           "choices": [
+            "Par-dessus les jambes",
             "Par-dessus le ventre",
-            "Par-dessus les jambes de l'enfant",
-            "Sous les bras",
-            "Derriere le dos"
+            "Sous les bras de l'enfant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La partie inférieure de la ceinture doit passer par-dessus les jambes de l'enfant dans le DRA.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q47.webp"
         },
         {
           "id": "C2_Q48",
-          "question": "Vous achetez un DRA sur internet. Doit-il etre homologue ?",
+          "question": "Un siège pour enfant acheté sur internet doit-il être homologué ?",
           "choices": [
-            "Non, n'importe quel siege convient",
-            "Oui, il doit repondre aux normes CEE",
-            "Non, c'est recommande",
-            "Uniquement pour les nouveau-nes"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un DRA doit être homologué, c'est-à-dire conforme aux normes CEE.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q48.webp"
         },
         {
           "id": "C2_Q49",
-          "question": "Vous etes voisin et transportez exceptionnellement un enfant de 4 ans (1,20 m) sur une courte distance. Peut-il utiliser juste la ceinture ?",
+          "question": "Vous êtes voisin et transportez un enfant de 4 ans sur une courte distance. La ceinture seule suffit-elle ?",
           "choices": [
-            "Non, un DRA est obligatoire dans tous les cas",
-            "Oui, c'est l'exception : plus de 3 ans, courte distance, non-parent",
-            "Oui, la ceinture suffit toujours dès 3 ans",
-            "Non, sauf sur les trajets d'autoroute"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'exception s'applique : plus de 3 ans, courte distance, conducteur non-parent, de manière exceptionnelle. La ceinture suffit mais l'enfant doit être à l'arrière.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q49.webp"
         },
         {
           "id": "C2_Q50",
-          "question": "Vous beneficiez de l'exception DRA pour un enfant de plus de 3 ans. Peut-il etre a l'avant ?",
+          "question": "Dans cette exception, l'enfant peut-il s'asseoir à l'avant ?",
           "choices": [
-            "Oui, avec la ceinture attachee",
-            "Non, il ne peut PAS etre a l'avant dans cette exception",
-            "Oui, si l'airbag est desactive",
-            "Cela depend de l'age de l'enfant"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Dans cette exception, l'enfant ne peut PAS être à l'avant du véhicule.",
@@ -1749,12 +1637,10 @@
         },
         {
           "id": "C2_Q51",
-          "question": "Vous transportez un enfant de 2 ans. Peut-il beneficier de l'exception au DRA ?",
+          "question": "Un enfant de 2 ans peut-il bénéficier de cette exception ?",
           "choices": [
-            "Oui, tous les enfants en beneficient",
-            "Non, l'exception est uniquement pour les enfants de PLUS de 3 ans",
-            "Oui, s'il porte la ceinture a l'arriere",
-            "Oui, uniquement a l'arriere du vehicule"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "L'exception ne s'applique qu'aux enfants de PLUS de 3 ans. Un enfant de 2 ans doit toujours être dans un DRA.",
@@ -1763,14 +1649,13 @@
         },
         {
           "id": "C2_Q52",
-          "question": "Vous avez 3 enfants et seulement 2 DRA tiennent a l'arriere. Le troisieme a 5 ans et mesure 1,40 m. Que faire ?",
+          "question": "Deux sièges occupent l'arrière. Le troisième enfant a 5 ans et mesure 1,40 m. Que faites-vous ?",
           "choices": [
-            "Il peut etre a l'avant sans DRA",
-            "La ceinture suffit car il mesure plus de 1,35 m, a l'arriere",
-            "Il ne peut pas voyager dans ce vehicule",
-            "Il peut voyager sans ceinture a l'arriere"
+            "La ceinture suffit, à l'arrière",
+            "Il s'assoit à l'avant sans siège",
+            "Il ne peut pas voyager ainsi"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Cet enfant mesure plus de 1,35 m : il peut utiliser uniquement la ceinture. Mais il doit rester à l'arrière.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q52.webp"
@@ -1805,68 +1690,61 @@
         },
         {
           "id": "C2_Q55",
-          "question": "Vous conduisez et changez de voie. Qu'est-ce qu'un angle mort ?",
+          "question": "Qu'est-ce qu'un angle mort ?",
           "choices": [
-            "Un virage sans visibilite",
-            "Une zone autour du vehicule invisible dans les retroviseurs",
-            "Une zone d'ombre sur la chaussee",
-            "Un defaut de reglage des retroviseurs"
+            "Une zone invisible dans les miroirs",
+            "Un virage sans aucune visibilité",
+            "Une zone d'ombre sur la chaussée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les angles morts sont les zones à côté ou derrière le véhicule que le conducteur ne peut pas voir, même avec des rétroviseurs correctement réglés.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q55.webp"
         },
         {
           "id": "C2_Q56",
-          "question": "Vous avez correctement regle vos retroviseurs. Les angles morts existent-ils quand meme ?",
+          "question": "Vos rétroviseurs sont bien réglés. Les angles morts existent-ils quand même ?",
           "choices": [
-            "Non, des retroviseurs bien regles eliminent les angles morts",
-            "Oui, il existe toujours des zones invisibles",
-            "Non, uniquement pour les camions",
-            "Cela depend du vehicule"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Même avec des rétroviseurs correctement réglés, il existe toujours des angles morts.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q56.webp"
         },
         {
           "id": "C2_Q57",
-          "question": "Vous conduisez une voiture equipee du Blind Spot Warning. Comment fonctionne ce systeme ?",
+          "question": "Comment fonctionne un système de détection d'angle mort ?",
           "choices": [
-            "Il freine automatiquement le véhicule",
-            "Un voyant s'allume dans le rétroviseur extérieur",
-            "Un signal sonore retentit dans l'habitacle",
-            "Le volant vibre légèrement"
+            "Un voyant s'allume dans le miroir",
+            "Le volant se met à vibrer un peu",
+            "Un signal sonore dans l'habitacle"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le Blind Spot Warning allume un voyant LED dans le rétroviseur extérieur quand un usager se trouve dans l'angle mort.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q57.webp"
         },
         {
           "id": "C2_Q58",
-          "question": "Vous conduisez et le voyant d'angle mort s'allume dans votre retroviseur. Que devez-vous faire ?",
+          "question": "Le voyant d'angle mort s'allume dans votre rétroviseur. Que devez-vous faire ?",
           "choices": [
-            "Depasser quand meme rapidement",
-            "Ne pas depasser et attendre que le voyant s'eteigne",
-            "Accelerer pour passer devant",
-            "Changer de voie immediatement"
+            "Ne pas dépasser et attendre",
+            "Dépasser quand même vite",
+            "Changer de voie aussitôt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Quand le voyant est allumé, ne dépassez pas : attendez qu'il s'éteigne avant de changer de voie.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q58.webp"
         },
         {
           "id": "C2_Q59",
-          "question": "Vous utilisez le systeme de detection d'angle mort. Remplace-t-il le regard par-dessus l'epaule ?",
+          "question": "La détection d'angle mort remplace-t-elle le regard par-dessus l'épaule ?",
           "choices": [
-            "Oui, il est fiable a 100%",
-            "Non, vous devez aussi verifier par-dessus votre epaule",
-            "Oui, pour les voitures recentes",
-            "Cela depend du modele"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le système de détection d'angle mort ne remplace pas la vérification manuelle : vous devez toujours regarder par-dessus votre épaule.",
@@ -1875,42 +1753,39 @@
         },
         {
           "id": "C2_Q60",
-          "question": "Vous voyez un signal d'interdiction pour marchandises dangereuses. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
+            "Interdit aux marchandises dangereuses",
             "Une route particulièrement dangereuse",
-            "Accès interdit à certaines marchandises dangereuses",
-            "Un danger chimique sur la chaussée",
             "L'entrée d'une zone industrielle"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit le passage aux véhicules transportant certaines marchandises dangereuses.",
           "theoryCardIndex": 8,
           "sign": "C24a"
         },
         {
           "id": "C2_Q61",
-          "question": "Vous voyez un signal pour marchandises inflammables ou explosives. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Annonce d'une station-service a proximite",
-            "Interdit aux vehicules transportant des marchandises inflammables ou explosives",
-            "Zone presentant un risque d'incendie ou d'explosion",
-            "Annonce d'une caserne de pompiers"
+            "Interdit aux matières inflammables",
+            "Une station-service à proximité",
+            "Une caserne de pompiers proche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit le passage aux véhicules transportant des marchandises inflammables ou explosives.",
           "theoryCardIndex": 8,
           "sign": "C24b"
         },
         {
           "id": "C2_Q62",
-          "question": "Vous voyez un signal pour marchandises polluantes. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Zone naturelle protegee a proximite",
-            "Interdit aux vehicules transportant des marchandises polluantes",
-            "Cours d'eau a proximite immediate",
-            "Zone industrielle a forte pollution"
+            "Interdit aux matières polluantes",
+            "Une zone naturelle protégée",
+            "Un cours d'eau à proximité"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit le passage aux véhicules transportant des marchandises polluantes.",
           "theoryCardIndex": 8,
           "sign": "C24c"
@@ -1931,14 +1806,12 @@
         },
         {
           "id": "C2_Q65",
-          "question": "Vous conduisez au GPL et voyez le signal d'interdiction pour marchandises dangereuses. Pouvez-vous le franchir ?",
+          "question": "Vous roulez au GPL et voyez ce panneau interdit aux marchandises dangereuses. Pouvez-vous passer ?",
           "choices": [
-            "Non, le GPL est un carburant dangereux",
-            "Oui, le signal vise le chargement, pas le carburant",
-            "Cela dépend du signal rencontré",
-            "Non, jamais avec du GPL"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Tous les signaux de marchandises dangereuses concernent le chargement, pas le carburant. Une voiture au GPL peut les franchir.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q65.webp"
@@ -1959,54 +1832,47 @@
         },
         {
           "id": "C2_Q67",
-          "question": "Vous avez un permis B definitif. Quelle est la MMA maximale de la remorque que vous pouvez tracter sans condition supplementaire ?",
+          "question": "Avec un permis B, quelle MMA de remorque pouvez-vous tracter sans condition ?",
           "choices": [
+            "750 kg",
             "500 kg",
-            "750 kg sans condition supplementaire",
-            "1 000 kg",
-            "1 500 kg"
+            "1 000 kg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avec un permis B définitif, vous pouvez tracter une remorque de MMA ≤ 750 kg sans condition supplémentaire.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q67.webp"
         },
         {
           "id": "C2_Q68",
-          "question": "Vous avez un permis B definitif. Votre voiture a une MMA de 2 000 kg. Pouvez-vous tracter une remorque de 850 kg MMA ?",
+          "question": "Votre voiture fait 2 000 kg de MMA. Pouvez-vous tracter une remorque de 850 kg ?",
           "choices": [
-            "Non, la limite est de 750 kg maximum",
-            "Oui, car 2 000 + 850 = 2 850 kg, ce qui ne depasse pas 3 500 kg",
-            "Non, il faut obligatoirement un permis BE",
-            "Oui, sans aucune condition de masse"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La remorque dépasse 750 kg mais le total (2 000 + 850 = 2 850 kg) ne dépasse pas 3 500 kg. C'est autorisé avec un permis B définitif.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q68.webp"
         },
         {
           "id": "C2_Q69",
-          "question": "Vous avez un permis B. Votre voiture a une MMA de 3 000 kg. Pouvez-vous tracter une remorque de 800 kg MMA ?",
+          "question": "Votre voiture fait 3 000 kg de MMA. Pouvez-vous tracter une remorque de 800 kg ?",
           "choices": [
-            "Non, car 3 000 + 800 = 3 800 kg > 3 500 kg, donc c'est interdit",
-            "Non, la remorque depasse 750 kg",
-            "Oui, car 800 kg est proche de 750 kg",
-            "Oui, sans condition"
+            "Oui",
+            "Non"
           ],
-          "correct": 0,
+          "correct": 1,
           "explanation": "La remorque dépasse 750 kg ET le total (3 000 + 800 = 3 800 kg) dépasse 3 500 kg. C'est interdit avec un permis B.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q69.webp"
         },
         {
           "id": "C2_Q71",
-          "question": "Vous avez un permis B definitif. Votre voiture MMA 2 500 kg, remorque MMA 700 kg. Pouvez-vous tracter ?",
+          "question": "Votre voiture fait 2 500 kg de MMA et la remorque 700 kg. Pouvez-vous tracter ?",
           "choices": [
-            "Oui, la remorque est ≤ 750 kg donc pas de condition supplementaire",
-            "Non, le total depasse 3 000 kg",
-            "Oui, mais uniquement en agglomeration",
-            "Non, il faut un permis special"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
           "explanation": "La remorque est ≤ 750 kg, donc aucune condition supplémentaire n'est requise. Vous pouvez tracter.",
@@ -2015,68 +1881,61 @@
         },
         {
           "id": "C2_Q72",
-          "question": "Vous voyez un signal rond rouge avec un chiffre et une fleche verticale. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Poids maximal autorisé en charge",
-            "Hauteur maximale autorisée (chargement compris)",
-            "Distance minimale à respecter",
-            "Altitude maximale de la route"
+            "Hauteur maximale autorisée",
+            "Poids maximal en charge",
+            "Distance minimale à tenir"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la hauteur (chargement compris) dépasse la limite indiquée.",
           "theoryCardIndex": 1,
           "sign": "C29"
         },
         {
           "id": "C2_Q73",
-          "question": "Vous voyez ce panneau rond rouge avec un chiffre et deux fleches horizontales. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Poids maximal autorisé en charge",
-            "Largeur maximale autorisée (chargement compris)",
-            "Longueur maximale autorisée",
-            "Distance latérale minimale"
+            "Largeur maximale autorisée",
+            "Poids maximal en charge",
+            "Longueur maximale autorisée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la largeur (chargement compris) dépasse la limite indiquée.",
           "theoryCardIndex": 2,
           "sign": "C27"
         },
         {
           "id": "C2_Q74",
-          "question": "Vous voyez ce panneau rond rouge avec un chiffre et une fleche horizontale longue. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Poids maximal autorisé en charge",
-            "Longueur maximale autorisée (remorque comprise)",
+            "Longueur maximale autorisée",
             "Largeur maximale autorisée",
             "Hauteur maximale autorisée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal interdit l'accès aux véhicules dont la longueur totale (chargement + remorque compris) dépasse la limite indiquée.",
           "theoryCardIndex": 3,
           "sign": "C25"
         },
         {
           "id": "C2_Q79",
-          "question": "Vous arrivez devant un tunnel avec signal de hauteur 3,5 m. Votre voiture fait 1,60 m avec coffre de toit. Pouvez-vous passer ?",
+          "question": "Un tunnel est limité à 3,5 m et votre voiture fait 1,60 m avec le coffre de toit. Pouvez-vous passer ?",
           "choices": [
-            "Non, mieux vaut ne pas risquer",
-            "Oui, 1,60 m est bien inferieur a 3,5 m",
-            "Non, les coffres de toit sont interdits dans les tunnels",
-            "Cela depend de la vitesse"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Votre hauteur totale (1,60 m avec coffre) est bien inférieure à la limite de 3,5 m. Vous pouvez passer.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q79.webp"
         },
         {
           "id": "C2_Q83",
-          "question": "Vous transportez un objet depassant de 80 cm l'arriere du vehicule. Devez-vous accrocher le panneau d'avertissement ?",
+          "question": "Un objet dépasse de 80 cm à l'arrière. Devez-vous accrocher le panneau d'avertissement ?",
           "choices": [
-            "Oui, des que la charge depasse a l'arriere",
-            "Non, le panneau n'est requis qu'au-dela d'1 metre de depassement",
-            "Oui, c'est toujours obligatoire",
-            "Non, jamais pour un depassement arriere"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le panneau d'avertissement n'est requis qu'au-delà d'1 mètre de dépassement. 80 cm ne nécessite pas de panneau.",
@@ -2085,28 +1944,26 @@
         },
         {
           "id": "C2_CHG_1",
-          "question": "Vous transportez une charge dans votre voiture. Quelles sont les trois règles de base à respecter ?",
+          "question": "Quelles sont les trois règles de base pour un chargement ?",
           "choices": [
-            "Uniquement ne pas dépasser le poids autorisé",
-            "Ne pas gêner les autres, ne pas masquer feux et plaques, ne pas compromettre la stabilité",
-            "Uniquement bien fermer le coffre et les portes",
-            "Uniquement rouler plus lentement que d'habitude"
+            "Ne pas gêner, masquer, déstabiliser",
+            "Ne pas dépasser le poids autorisé",
+            "Bien fermer le coffre et les portes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une charge ne peut pas gêner les autres usagers, masquer les feux, la signalisation ou les plaques, ni compromettre la stabilité du véhicule.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C2_CHG_1.webp"
         },
         {
           "id": "C2_CHG_2",
-          "question": "Avant de prendre la route avec un chargement, que devez-vous vérifier ?",
+          "question": "Que devez-vous vérifier avant de partir avec un chargement ?",
           "choices": [
-            "Uniquement la pression des pneus",
-            "Qu'il est stable, bien arrimé et ne dépasse pas dangereusement",
-            "Uniquement le niveau de carburant",
-            "Rien de particulier s'il tient dans le coffre"
+            "Qu'il est stable et bien arrimé",
+            "La pression des pneus du véhicule",
+            "Le niveau de carburant du réservoir"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avant de partir, vérifiez que le chargement est stable, bien arrimé et ne dépasse pas de manière dangereuse.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C2_CHG_2.webp"
@@ -2115,24 +1972,21 @@
           "id": "C2_CHG_3",
           "question": "Votre chargement mal arrimé tombe sur la chaussée. Quel est le principal danger ?",
           "choices": [
-            "Une simple amende de stationnement",
-            "Provoquer un accident pour les usagers qui suivent",
-            "User les pneus plus rapidement",
-            "Consommer davantage de carburant"
+            "Provoquer un accident derrière",
+            "User les pneus plus vite",
+            "Consommer plus de carburant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une charge mal arrimée qui tombe peut provoquer un accident grave pour les véhicules qui suivent.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C2_CHG_3.webp"
         },
         {
           "id": "C2_CHG_4",
-          "question": "Vous transportez des planches qui masquent partiellement vos clignotants. Pouvez-vous rouler ainsi ?",
+          "question": "Des planches masquent partiellement vos clignotants. Pouvez-vous rouler ainsi ?",
           "choices": [
-            "Oui, sur un trajet court seulement",
-            "Non, la charge ne peut jamais masquer les feux ni la signalisation",
-            "Oui, en klaxonnant avant chaque manœuvre",
-            "Oui, mais de jour uniquement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La charge ne peut jamais masquer les feux ni les dispositifs de signalisation : les autres usagers doivent voir vos intentions.",
@@ -2376,40 +2230,36 @@
       "questions": [
         {
           "id": "C3_Q1",
-          "question": "Vous conduisez de nuit. Quelle est la double fonction des feux d'une voiture ?",
+          "question": "Quelle est la double fonction des feux d'une voiture ?",
           "choices": [
-            "Decorer et signaler",
-            "Mieux voir et mieux etre vu sans eblouir",
-            "Voir et klaxonner",
-            "Eclairer la route et chauffer"
+            "Mieux voir et être vu sans éblouir",
+            "Éclairer la route et la décorer",
+            "Signaler et réchauffer le moteur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les feux ont une double fonction : mieux voir et mieux être vu par les autres usagers, sans éblouir.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C3_Q1.webp"
         },
         {
           "id": "C3_Q2",
-          "question": "Vous revisez votre theorie. Quels sont les quatre types de feux d'une voiture ?",
+          "question": "Quels sont les quatre types de feux d'une voiture ?",
           "choices": [
+            "Croisement, route, brouillard, position",
             "Clignotants, warnings, phares, veilleuses",
-            "Feux de croisement, feux de route, feux antibrouillard avant, feux de position",
-            "Feux rouges, feux verts, feux orange, feux blancs",
-            "Feux avant, feux arriere, feux lateraux, feux de toit"
+            "Avant, arrière, latéraux, de toit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les quatre types de feux sont : feux de croisement, feux de route, feux antibrouillard avant et feux de position.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C3_Q2.webp"
         },
         {
           "id": "C3_Q3",
-          "question": "Vous verifiez votre voiture. Les feux antibrouillard avant sont-ils presents sur toutes les voitures ?",
+          "question": "Les feux antibrouillard avant sont-ils présents sur toutes les voitures ?",
           "choices": [
-            "Oui, c'est obligatoire sur toutes",
-            "Non, pas sur toutes, donc jamais obligatoires a allumer",
-            "Oui, depuis 2010 sur les neuves",
-            "Non, uniquement sur les voitures neuves"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les feux antibrouillard avant ne sont pas présents sur toutes les voitures. Leur présence n'étant pas obligatoire, il n'est jamais obligatoire de les allumer.",
@@ -2432,12 +2282,10 @@
         },
         {
           "id": "C3_Q6",
-          "question": "Vous verifiez votre vehicule. Toutes les voitures ont-elles des feux de stationnement ?",
+          "question": "Toutes les voitures ont-elles des feux de stationnement ?",
           "choices": [
-            "Oui, tous les vehicules en ont",
-            "Non, seuls certains vehicules en sont equipes",
-            "Oui, c'est une obligation legale",
-            "Non, aucune voiture n'en possede"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Toutes les voitures ont des feux de position, mais toutes n'ont pas des feux de stationnement.",
@@ -2446,26 +2294,23 @@
         },
         {
           "id": "C3_Q7",
-          "question": "Vous preparez votre examen. Devez-vous reconnaitre les logos des feux sur le tableau de bord ?",
+          "question": "Devez-vous savoir reconnaître les logos des feux sur le tableau de bord ?",
           "choices": [
-            "Non, ce n'est pas necessaire",
-            "Oui, vous devez etre capable de les reconnaitre",
-            "Uniquement les feux de route",
-            "Uniquement le logo des warnings"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous devez être capable de reconnaître les logos de chaque type de feux sur le tableau de bord.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C3_Q7.webp"
         },
         {
           "id": "C3_Q8",
-          "question": "Vous regardez votre tableau de bord. Quel logo correspond aux feux de route (pleins phares) ?",
+          "question": "À quoi ressemble le logo des feux de route sur le tableau de bord ?",
           "choices": [
-            "Un symbole avec des traits horizontaux droits",
-            "Un symbole avec des traits inclines vers le bas",
-            "Un symbole rond",
-            "Un symbole triangulaire"
+            "Des traits horizontaux droits",
+            "Des traits inclinés vers le bas",
+            "Un symbole rond et plein"
           ],
           "correct": 0,
           "explanation": "Le logo des feux de route se distingue par des traits horizontaux droits (lumière projetée droit devant).",
@@ -2474,42 +2319,39 @@
         },
         {
           "id": "C3_Q9",
-          "question": "Vous allumez vos feux de croisement. Quels autres feux s'allument simultanement ?",
+          "question": "Vous allumez vos feux de croisement. Quels autres feux s'allument en même temps ?",
           "choices": [
-            "Uniquement les feux rouges arriere",
-            "Les deux feux de position a l'avant et deux feux rouges a l'arriere",
-            "Uniquement les feux antibrouillard avant",
-            "Aucun autre feu ne s'allume"
+            "Les feux de position avant et arrière",
+            "Les feux antibrouillard avant seuls",
+            "Les feux rouges arrière, sans plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Quand vous allumez les feux de croisement ou de route, les deux feux de position à l'avant et deux feux rouges à l'arrière s'allument également.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q9.webp"
         },
         {
           "id": "C3_Q11",
-          "question": "Vous roulez a la tombee du jour. Quand devez-vous allumer les feux de croisement ou de route ?",
+          "question": "Quand devez-vous allumer les feux de croisement ou de route ?",
           "choices": [
-            "Uniquement a minuit",
-            "Des la tombee du jour jusqu'au lever du jour",
-            "Uniquement sur autoroute",
-            "Uniquement hors agglomeration"
+            "De la tombée au lever du jour",
+            "À partir de minuit, pas avant",
+            "Sur autoroute et route rapide"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans l'obscurité, les feux de croisement ou de route doivent être allumés dès la tombée du jour jusqu'au lever du jour.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q11.webp"
         },
         {
           "id": "C3_Q12",
-          "question": "Vous roulez en journee sous une forte pluie. Quand devez-vous allumer les feux de croisement ?",
+          "question": "En journée sous forte pluie, quand allumer les feux de croisement ?",
           "choices": [
-            "Toujours, même par beau temps",
-            "Quand la visibilité est inférieure à 200 mètres",
-            "Uniquement en cas de brouillard épais",
-            "Jamais pendant la journée"
+            "Si la visibilité est sous 200 m",
+            "Par beau temps comme par pluie",
+            "En cas de brouillard épais seul"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pendant la journée, les feux de croisement doivent être allumés quand la visibilité est inférieure à 200 mètres.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q12.webp"
@@ -2530,12 +2372,10 @@
         },
         {
           "id": "C3_Q16",
-          "question": "Vous roulez de nuit sur une route eclairee en continu et voyez a 100 metres. Pouvez-vous allumer les feux de route ?",
+          "question": "De nuit sur une route éclairée où vous voyez à 100 m, pouvez-vous allumer les feux de route ?",
           "choices": [
-            "Oui, pour voir encore mieux",
-            "Non, interdits quand l'éclairage permet de voir à 100 m",
-            "Oui, la nuit c'est toujours permis",
-            "Cela dépend de votre vitesse"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les feux de route sont interdits quand la route est éclairée de manière continue et suffisante pour voir à 100 mètres.",
@@ -2544,12 +2384,10 @@
         },
         {
           "id": "C3_Q17",
-          "question": "Vous suivez un vehicule a 40 metres sans vouloir le depasser. Pouvez-vous garder les feux de route ?",
+          "question": "Vous suivez un véhicule à 40 mètres sans vouloir le dépasser. Pouvez-vous garder les feux de route ?",
           "choices": [
-            "Oui, pour mieux voir la route",
-            "Non, interdits a moins de 50 m du vehicule qui precede",
-            "Oui, s'il roule a moins de 50 km/h",
-            "Non, jamais derriere un autre vehicule"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les feux de route sont interdits quand vous suivez un véhicule à moins de 50 mètres sans intention immédiate de le dépasser.",
@@ -2558,26 +2396,22 @@
         },
         {
           "id": "C3_Q18",
-          "question": "Vous roulez avec les feux de route et un vehicule arrive en face. Devez-vous basculer sur les feux de croisement ?",
+          "question": "Un véhicule arrive en face alors que vous roulez en feux de route. Devez-vous passer en croisement ?",
           "choices": [
-            "Non, gardez les feux de route allumes",
-            "Oui, pour ne pas eblouir l'usager venant en sens inverse",
-            "Non, il s'adaptera de son cote",
-            "Uniquement en agglomeration la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous devez passer aux feux de croisement pour ne pas éblouir les usagers venant en sens inverse.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q18.webp"
         },
         {
           "id": "C3_Q19",
-          "question": "Vous roulez le long d'un canal de nuit et un bateau approche. Pouvez-vous garder les feux de route ?",
+          "question": "Vous roulez la nuit le long d'un canal et un bateau approche. Pouvez-vous garder les feux de route ?",
           "choices": [
-            "Oui, un bateau n'est pas un vehicule routier",
-            "Non, les feux de route sont interdits a l'approche d'un bateau",
-            "Oui, le bateau est loin",
-            "Uniquement en agglomeration"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les feux de route sont interdits à l'approche d'un bateau, comme à l'approche d'un véhicule sur rails.",
@@ -2586,54 +2420,47 @@
         },
         {
           "id": "C3_Q21",
-          "question": "Vous vous appretez a depasser un vehicule de nuit. Pouvez-vous allumer les feux de route ?",
+          "question": "Vous vous apprêtez à dépasser un véhicule de nuit. Pouvez-vous allumer les feux de route ?",
           "choices": [
-            "Non, jamais pendant un depassement",
-            "Oui, les feux de route peuvent etre allumes lors d'un depassement",
-            "Uniquement sur autoroute la nuit",
-            "Uniquement hors agglomeration"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Quand vous vous apprêtez à dépasser ou êtes en train de dépasser, les feux de route peuvent être allumés.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q21.webp"
         },
         {
           "id": "C3_Q22",
-          "question": "Vous suivez un vehicule a 40 metres avec l'intention de le depasser. Pouvez-vous garder les feux de route ?",
+          "question": "Vous suivez un véhicule à 40 mètres avec l'intention de le dépasser. Pouvez-vous garder les feux de route ?",
           "choices": [
-            "Non, vous etes a moins de 50 metres",
-            "Oui, car vous avez l'intention immediate de le depasser",
-            "Non, il faut toujours basculer a 50 metres",
-            "Cela depend de la route"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si vous avez l'intention immédiate de dépasser, vous pouvez garder les feux de route même à moins de 50 mètres.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q22.webp"
         },
         {
           "id": "C3_Q24",
-          "question": "Vous depassez un vehicule avec vos feux de route allumes. Un vehicule arrive en face. Que faites-vous ?",
+          "question": "Un véhicule arrive en face pendant votre dépassement de nuit. Que faites-vous ?",
           "choices": [
-            "Vous gardez les feux de route allumes",
-            "Vous basculez sur les feux de croisement pour ne pas l'eblouir",
-            "Vous eteignez tous les feux",
-            "Vous allumez les feux antibrouillard"
+            "Vous passez en feux de croisement",
+            "Vous gardez les feux de route",
+            "Vous éteignez tous vos feux"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Même pendant un dépassement, si un véhicule arrive en sens inverse, vous devez passer aux feux de croisement.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q24.webp"
         },
         {
           "id": "C3_Q25",
-          "question": "Vous vous interrogez sur les feux brouillard avant. Sont-ils obligatoires ?",
+          "question": "Les feux antibrouillard avant sont-ils obligatoires ?",
           "choices": [
-            "Oui, sur toutes les voitures recentes",
-            "Non, ni leur presence ni leur utilisation ne sont obligatoires",
-            "Oui, depuis 2015 sur les neuves",
-            "Oui, mais uniquement sur autoroute"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les feux brouillard avant ne sont pas obligatoires sur une voiture et il n'est jamais obligatoire de les allumer.",
@@ -2642,84 +2469,76 @@
         },
         {
           "id": "C3_Q26",
-          "question": "Vous conduisez par temps de brouillard. Dans quels cas pouvez-vous utiliser les feux brouillard avant ?",
+          "question": "Dans quels cas pouvez-vous utiliser les feux antibrouillard avant ?",
           "choices": [
-            "Toujours quand il fait sombre",
-            "Uniquement en cas de brouillard, chute de neige ou forte pluie",
-            "En agglomeration uniquement",
-            "Des que la visibilite diminue"
+            "Brouillard, neige ou forte pluie",
+            "Chaque fois qu'il fait sombre",
+            "Dès que la visibilité baisse"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les feux brouillard avant ne peuvent être utilisés qu'en cas de brouillard, chute de neige ou forte pluie.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q26.webp"
         },
         {
           "id": "C3_Q27",
-          "question": "Vous roulez par temps de brouillard. Les feux brouillard avant peuvent-ils remplacer les feux de croisement ?",
+          "question": "Dans le brouillard, les feux antibrouillard avant peuvent-ils remplacer les feux de croisement ?",
           "choices": [
-            "Non, jamais en aucun cas",
-            "Oui, en remplacement ou en complément",
-            "Uniquement pendant la nuit",
-            "Uniquement sur autoroute"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les feux brouillard avant peuvent remplacer les feux de croisement/route ou être allumés simultanément.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q27.webp"
         },
         {
           "id": "C3_Q28",
-          "question": "Vous verifiez votre vehicule. Les feux brouillard arriere sont-ils obligatoires ?",
+          "question": "Les feux antibrouillard arrière sont-ils obligatoires sur une voiture ?",
           "choices": [
-            "Non, c'est totalement facultatif en Belgique",
-            "Oui, une voiture doit etre equipee d'un ou deux feux rouges brouillard arriere",
-            "Uniquement sur les voitures neuves",
-            "Non, ils sont facultatifs comme ceux de l'avant"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Contrairement aux feux brouillard avant, les feux brouillard arrière (un ou deux feux rouges) sont obligatoires sur une voiture.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q28.webp"
         },
         {
           "id": "C3_Q29",
-          "question": "Vous roulez dans le brouillard. Quand les feux brouillard arriere doivent-ils etre allumes ?",
+          "question": "Dans le brouillard, quand les feux antibrouillard arrière doivent-ils être allumés ?",
           "choices": [
-            "Toujours",
-            "Quand la visibilite est inferieure a environ 100 metres",
-            "Quand la visibilite est inferieure a 200 metres",
-            "Des qu'il y a du brouillard"
+            "Sous environ 100 mètres de visibilité",
+            "Sous environ 200 mètres de visibilité",
+            "Dès qu'un peu de brouillard apparaît"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de brouillard, les feux brouillard arrière doivent être allumés quand la visibilité est inférieure à 100 mètres.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q29.webp"
         },
         {
           "id": "C3_Q30",
-          "question": "Vous roulez sous une forte pluie. Quand les feux brouillard arriere doivent-ils etre allumes ?",
+          "question": "Sous une forte pluie, quand les feux antibrouillard arrière doivent-ils être allumés ?",
           "choices": [
-            "Quand la visibilite est inferieure a 100 metres",
             "Toujours en cas de forte pluie",
-            "Quand la visibilite est inferieure a 200 metres",
-            "Jamais en cas de pluie"
+            "Sous 100 mètres de visibilité",
+            "Sous 200 mètres de visibilité"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de forte pluie, les feux brouillard arrière doivent toujours être allumés (pas de seuil de visibilité).",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q30.webp"
         },
         {
           "id": "C3_Q32",
-          "question": "Vous revisez votre theorie. Quelle est la difference de condition pour les feux brouillard arriere entre brouillard/neige et forte pluie ?",
+          "question": "Quelle différence de condition entre brouillard, neige et forte pluie ?",
           "choices": [
-            "Aucune difference entre les trois",
-            "Brouillard et neige : visibilite < 100 m. Forte pluie : toujours",
-            "Brouillard : toujours. Neige et pluie : < 100 m",
-            "Les trois cas : toujours obligatoires"
+            "Brouillard : sous 100 m ; pluie : toujours",
+            "Brouillard : toujours ; pluie : sous 100 m",
+            "Les trois cas sont exactement pareils"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Brouillard et neige : feux brouillard arrière obligatoires si visibilité < 100 m. Forte pluie : toujours obligatoires.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q32.webp"
@@ -2728,108 +2547,98 @@
           "id": "C3_Q33",
           "question": "Vous entrez soudainement dans un banc de brouillard. Que devez-vous faire ?",
           "choices": [
-            "Vous arreter immediatement",
-            "Reduire progressivement votre vitesse",
-            "Allumer les feux de route",
-            "Faire demi-tour"
+            "Réduire progressivement l'allure",
+            "Vous arrêter immédiatement",
+            "Allumer les feux de route"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En entrant dans un banc de brouillard, vous devez réduire progressivement votre vitesse.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q33.webp"
         },
         {
           "id": "C3_Q35",
-          "question": "Vous stationnez votre voiture sur la voie publique. Quand devez-vous allumer des feux ?",
+          "question": "Quand devez-vous allumer des feux sur un véhicule en stationnement ?",
           "choices": [
-            "Toujours, de jour comme de nuit",
-            "De la tombée au lever du jour, ou visibilité < 200 m",
-            "Uniquement en pleine nuit",
-            "Jamais lorsque vous êtes en stationnement"
+            "De la tombée au lever du jour",
+            "De jour comme de nuit, en continu",
+            "En stationnement, aucun feu"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En stationnement, les feux doivent être allumés entre la tombée et le lever du jour, et quand la visibilité est réduite à moins de 200 mètres.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q35.webp"
         },
         {
           "id": "C3_Q36",
-          "question": "Vous stationnez de nuit. Quels feux devez-vous allumer a l'avant ?",
+          "question": "Vous stationnez de nuit. Quels feux allumez-vous à l'avant ?",
           "choices": [
+            "Un ou deux feux de position",
             "Les feux de croisement",
-            "Un ou deux feux de position blancs ou ambres",
-            "Les feux de route",
             "Les feux antibrouillard"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "À l'avant, en stationnement de nuit : un ou deux feux de position blancs ou ambrés.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q36.webp"
         },
         {
           "id": "C3_Q37",
-          "question": "Vous stationnez de nuit. Quels feux devez-vous allumer a l'arriere ?",
+          "question": "Vous stationnez de nuit. Quels feux allumez-vous à l'arrière ?",
           "choices": [
-            "Les feux de brouillard arriere",
             "Un ou deux feux rouges",
-            "Les warnings",
-            "Aucun feu"
+            "Les feux de brouillard",
+            "Les quatre clignotants"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "À l'arrière, en stationnement de nuit : un ou deux feux rouges.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q37.webp"
         },
         {
           "id": "C3_Q38",
-          "question": "Vous etes stationne par temps de brouillard. Pouvez-vous allumer les feux de croisement ?",
+          "question": "Vous êtes stationné par temps de brouillard. Pouvez-vous allumer les feux de croisement ?",
           "choices": [
-            "Vous devez les allumer",
-            "Vous pouvez les allumer mais ce n'est pas obligatoire",
-            "Non, jamais en stationnement",
-            "Uniquement les feux de position"
+            "Oui, mais ce n'est pas obligatoire",
+            "Oui, et c'est même obligatoire",
+            "Non, c'est exclu en stationnement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Par brouillard, neige ou forte pluie, en stationnement, vous POUVEZ utiliser les feux de croisement ou antibrouillard, mais ce n'est pas obligatoire.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q38.webp"
         },
         {
           "id": "C3_Q39",
-          "question": "Vous stationnez de nuit en agglomeration. Pouvez-vous remplacer les feux de position par un feu de stationnement ?",
+          "question": "En agglomération, pouvez-vous remplacer les feux de position par un feu de stationnement ?",
           "choices": [
-            "Non, jamais en agglomeration",
-            "Oui, si le vehicule est parallele a la chaussee et sans remorque",
-            "Oui, toujours sans condition",
-            "Uniquement dans les rues bien eclairees"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En agglomération, le feu de stationnement peut remplacer les feux de position si le véhicule est parallèle à la chaussée et sans remorque.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q39.webp"
         },
         {
           "id": "C3_Q40",
-          "question": "Vous utilisez le feu de stationnement en agglomeration. De quel cote devez-vous l'allumer ?",
+          "question": "De quel côté devez-vous allumer le feu de stationnement ?",
           "choices": [
-            "Du cote du trottoir",
-            "Du cote de l'axe de la chaussee",
-            "Des deux cotes",
-            "Cela n'a pas d'importance"
+            "Du côté de l'axe de la chaussée",
+            "Du côté du trottoir et du bord",
+            "Des deux côtés à la fois"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Seul le feu du côté de l'axe de la chaussée peut être utilisé comme feu de stationnement.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q40.webp"
         },
         {
           "id": "C3_Q41",
-          "question": "Vous etes stationne en agglomeration mais pas parallelement a la chaussee. Pouvez-vous utiliser le feu de stationnement ?",
+          "question": "Vous êtes garé en agglomération mais pas parallèlement à la chaussée. Le feu de stationnement suffit-il ?",
           "choices": [
-            "Oui, en agglomeration toujours",
-            "Non, il faut les feux de position",
-            "Oui, si la rue est eclairee",
-            "Cela n'a pas d'importance"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le feu de stationnement n'est permis qu'à la condition d'être garé parallèlement à la chaussée.",
@@ -2838,12 +2647,10 @@
         },
         {
           "id": "C3_Q42",
-          "question": "Vous etes stationne en agglomeration parallelement a la chaussee mais avec une remorque. Pouvez-vous utiliser le feu de stationnement ?",
+          "question": "Vous êtes garé en agglomération, parallèle, mais avec une remorque. Le feu de stationnement suffit-il ?",
           "choices": [
-            "Oui, vous etes parallele",
-            "Non, pas quand une remorque est attelee, il faut les feux de position",
-            "Oui, la remorque a ses propres feux",
-            "Cela depend de la taille de la remorque"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le feu de stationnement est interdit si une remorque est attelée : il faut utiliser les feux de position.",
@@ -2852,12 +2659,10 @@
         },
         {
           "id": "C3_Q43",
-          "question": "Vous stationnez de nuit hors agglomeration. Pouvez-vous utiliser uniquement le feu de stationnement ?",
+          "question": "Vous stationnez de nuit hors agglomération. Le feu de stationnement seul suffit-il ?",
           "choices": [
-            "Oui, partout sans condition",
-            "Non, hors agglomeration il faut les feux de position",
-            "Oui, si la rue est bien eclairee",
-            "Oui, si vous etes parallele a la chaussee"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Hors agglomération, le feu de stationnement ne suffit pas : il faut les feux de position.",
@@ -2866,68 +2671,62 @@
         },
         {
           "id": "C3_Q44",
-          "question": "Vous revisez votre theorie. Quelle est la difference pour le feu de stationnement entre agglomeration et hors agglomeration ?",
+          "question": "Quelle différence pour le feu de stationnement entre agglomération et hors agglomération ?",
           "choices": [
-            "Aucune difference entre les deux situations",
-            "Le feu de stationnement peut suffire en agglomeration, pas hors agglomeration",
-            "Hors agglomeration, aucun feu n'est necessaire la nuit",
-            "En agglomeration, il faut allumer les feux de route"
+            "Il suffit en agglomération, pas dehors",
+            "Il suffit partout, sans distinction",
+            "Hors agglomération, aucun feu la nuit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En agglomération (conditions : parallèle, sans remorque), le feu de stationnement peut suffire. Hors agglomération, les feux de position sont toujours requis.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q44.webp"
         },
         {
           "id": "C3_Q45",
-          "question": "Vous etes stationne hors agglomeration, parallelement a la chaussee, sans remorque. Quel feu utilisez-vous ?",
+          "question": "Vous êtes garé hors agglomération, parallèle, sans remorque. Quels feux utilisez-vous ?",
           "choices": [
-            "Le feu de stationnement suffit",
             "Les feux de position",
-            "Aucun feu",
+            "Le feu de stationnement",
             "Les feux de croisement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Hors agglomération, même si toutes les conditions sont remplies, il faut les feux de position.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q45.webp"
         },
         {
           "id": "C3_Q46",
-          "question": "Vous revisez votre theorie. Quelles sont les conditions pour utiliser le feu de stationnement seul ?",
+          "question": "Quelles conditions permettent d'utiliser le feu de stationnement seul ?",
           "choices": [
-            "Toujours possible en agglomeration, sans condition",
-            "En agglomeration, vehicule parallele a la chaussee, sans remorque, feu du cote de l'axe",
-            "Partout sauf sur autoroute et route pour automobiles",
-            "Uniquement hors agglomeration, la nuit"
+            "En agglomération, parallèle, sans remorque",
+            "Partout sauf sur autoroute et voie rapide",
+            "Hors agglomération, de nuit surtout"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Feu de stationnement seul autorisé en agglomération, véhicule parallèle à la chaussée, sans remorque, feu allumé du côté de l'axe.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q46.webp"
         },
         {
           "id": "C3_Q47",
-          "question": "Vous vous interrogez sur les warnings. Dans quels cas pouvez-vous allumer les quatre clignotants simultanement ?",
+          "question": "Dans quels cas pouvez-vous allumer les quatre clignotants ?",
           "choices": [
-            "Pour signaler un stationnement en double file",
-            "En panne, risque d'accident imminent, ou bus scolaire qui embarque/debarque",
-            "Quand vous voulez faire une marche arriere",
-            "Pour remercier un autre conducteur courtois"
+            "Panne, danger, bus scolaire à l'arrêt",
+            "Pour un stationnement en double file",
+            "Pour remercier un autre conducteur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les warnings ne sont autorisés que dans 3 cas : panne, risque d'accident imminent, ou bus scolaire embarquant/débarquant des enfants.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q47.webp"
         },
         {
           "id": "C3_Q50",
-          "question": "Vous avez mal gare votre voiture et allumez les warnings. Est-ce autorise ?",
+          "question": "Vous êtes mal garé et vous allumez vos warnings. Est-ce autorisé ?",
           "choices": [
-            "Oui, c'est une pratique courante",
-            "Non, c'est une infraction supplementaire",
-            "Oui, par courtoisie",
-            "Oui, pour un court moment"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Allumer les warnings pour signaler un mauvais stationnement est une infraction supplémentaire.",
@@ -2936,56 +2735,51 @@
         },
         {
           "id": "C3_Q52",
-          "question": "Vous voyez un autobus scolaire arrete avec ses warnings allumes. Que signifie-t-il ?",
+          "question": "Un autobus scolaire est arrêté, warnings allumés. Que signifie ce signal ?",
           "choices": [
+            "Des enfants montent ou descendent",
             "Le bus est en panne sur place",
-            "Des enfants sont en train de monter ou descendre",
-            "Le bus va repartir bientot",
-            "Le bus change de direction"
+            "Le bus va repartir bientôt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un bus scolaire avec warnings = des enfants embarquent ou débarquent.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q52.webp"
         },
         {
           "id": "C3_Q53",
-          "question": "Vous approchez d'un autobus scolaire avec ses warnings allumes. Que devez-vous faire ?",
+          "question": "Vous approchez d'un autobus scolaire warnings allumés. Que devez-vous faire ?",
           "choices": [
-            "Continuer normalement votre route",
-            "Reduire fortement votre vitesse et vous arreter si necessaire",
-            "Klaxonner pour prevenir les enfants",
-            "Changer de voie pour depasser le bus"
+            "Ralentir fortement et s'arrêter",
+            "Continuer votre route normalement",
+            "Klaxonner pour prévenir les enfants"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Quand un bus scolaire a ses warnings allumés, vous devez réduire fortement votre vitesse et vous arrêter si nécessaire.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q53.webp"
         },
         {
           "id": "C3_Q54",
-          "question": "Vous voyez un bus scolaire avec ses warnings allumes. Pouvez-vous le depasser ?",
+          "question": "Un bus scolaire a ses warnings allumés. Pouvez-vous le dépasser ?",
           "choices": [
-            "Non, c'est strictement interdit",
-            "Oui, avec une grande précaution",
-            "Non, jamais un bus à l'arrêt",
-            "Oui, à vitesse normale sans plus"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous pouvez dépasser un bus scolaire avec ses warnings allumés, mais avec précaution.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q54.webp"
         },
         {
           "id": "C3_Q55",
-          "question": "Vous voyez un bus scolaire qui allume ses clignotants de direction (pas les warnings). Que signifie-t-il ?",
+          "question": "Un bus scolaire allume ses clignotants de direction, pas ses warnings. Que signifie ce signal ?",
           "choices": [
-            "Des enfants montent ou descendent du bus",
-            "Le bus s'apprete a repartir ou a changer de direction",
-            "Le bus est en panne sur place",
-            "Rien de special a signaler"
+            "Le bus va repartir ou tourner",
+            "Des enfants montent ou descendent",
+            "Le bus est en panne sur place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les clignotants de direction (pas les warnings) signalent que le bus va repartir ou changer de direction.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q55.webp"
@@ -3006,14 +2800,13 @@
         },
         {
           "id": "C3_Q58",
-          "question": "Vous allez entrer dans un long tunnel. Que devez-vous verifier avant d'y entrer ?",
+          "question": "Que devez-vous vérifier avant d'entrer dans un long tunnel ?",
           "choices": [
+            "Le niveau de carburant",
             "La pression des pneus",
-            "Qu'il y a suffisamment de carburant",
-            "Que les vitres sont fermees",
-            "Que la radio fonctionne"
+            "Le bon état de la radio"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avant d'entrer dans un long tunnel, vérifiez qu'il y a suffisamment de carburant.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q58.webp"
@@ -3034,110 +2827,101 @@
         },
         {
           "id": "C3_Q60",
-          "question": "Vous allez entrer dans un tunnel. Pourquoi est-il conseille de retirer ses lunettes de soleil ?",
+          "question": "Pourquoi est-il conseillé de retirer ses lunettes de soleil avant un tunnel ?",
           "choices": [
+            "Pour éviter l'effet de trou noir",
             "Pour mieux entendre la circulation",
-            "Pour eviter le 'trou noir' (mauvaise adaptation a l'obscurite)",
-            "C'est une obligation legale",
-            "Pour ne pas abimer les lunettes"
+            "Pour ne pas abîmer les lunettes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les lunettes de soleil ralentissent l'adaptation des yeux à l'obscurité, créant un 'trou noir' à l'entrée du tunnel.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q60.webp"
         },
         {
           "id": "C3_Q61",
-          "question": "Vous approchez d'un tunnel. Comment eviter le 'trou noir' a l'entree ?",
+          "question": "Comment éviter l'effet de trou noir à l'entrée d'un tunnel ?",
           "choices": [
-            "Accelerer avant d'entrer dans le tunnel",
-            "Fermer un oeil 100-200 m avant le tunnel et l'ouvrir une fois a l'interieur",
-            "Allumer les feux de route dans le tunnel",
-            "Porter des lunettes de soleil speciales"
+            "Fermer un œil avant d'entrer",
+            "Accélérer juste avant d'entrer",
+            "Allumer les feux de route"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Fermez un œil 100-200 m avant le tunnel et ouvrez-le à l'intérieur : un œil déjà adapté à l'obscurité évite le 'trou noir'.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q61.webp"
         },
         {
           "id": "C3_Q62",
-          "question": "Vous etes dans un tunnel et il y a un incendie. Ou devez-vous vous immobiliser ?",
+          "question": "Un incendie éclate dans un tunnel. Où devez-vous vous immobiliser ?",
           "choices": [
+            "Sur la bande de droite",
             "Sur la bande de gauche",
-            "Sur la bande de circulation de droite",
-            "Au milieu du tunnel",
-            "En marche arriere vers la sortie"
+            "Au milieu du tunnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas d'incendie dans un tunnel, immobilisez-vous sur la bande de droite.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q62.webp"
         },
         {
           "id": "C3_Q63",
-          "question": "Vous devez evacuer votre voiture en urgence dans un tunnel en feu. Que faites-vous de la cle de contact ?",
+          "question": "Vous évacuez votre voiture dans un tunnel en feu. Que faites-vous de la clé ?",
           "choices": [
-            "Vous la prenez avec vous",
             "Vous la laissez sur le contact",
-            "Vous la cachez",
-            "Vous la jetez"
+            "Vous la prenez avec vous",
+            "Vous la cachez dans la voiture"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Laissez la clé sur le contact (ou le transpondeur sur le siège conducteur) pour que les secours puissent déplacer le véhicule.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q63.webp"
         },
         {
           "id": "C3_Q64",
-          "question": "Vous devez fuir un tunnel en feu. Dans quelle direction devez-vous vous diriger ?",
+          "question": "Vous fuyez un tunnel en feu. Dans quelle direction allez-vous ?",
           "choices": [
+            "À contresens de la circulation",
             "Dans le sens de la circulation",
-            "A contresens de la circulation",
-            "Vers le milieu du tunnel",
-            "En restant sur place"
+            "Vers le milieu du tunnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Fuyez à contresens : les ventilateurs poussent les fumées dans le sens de la circulation, donc l'air frais vient de l'autre sens.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q64.webp"
         },
         {
           "id": "C3_Q66",
-          "question": "Vous etes dans un tunnel en feu. Pourquoi faut-il quitter rapidement les lieux ?",
+          "question": "Pourquoi faut-il quitter très vite un tunnel en feu ?",
           "choices": [
-            "Pour ne pas gener les autres usagers qui evacuent",
-            "Parce que les fumees sont souvent mortelles et le risque de flash fire augmente",
-            "Pour appeler les secours a l'exterieur",
-            "Pour proteger votre vehicule du feu"
+            "Les fumées sont souvent mortelles",
+            "Pour ne pas gêner les autres",
+            "Pour protéger votre véhicule"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans un tunnel en feu, les fumées sont souvent mortelles et le risque de flash fire (explosion soudaine) augmente avec le temps.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q66.webp"
         },
         {
           "id": "C3_Q67",
-          "question": "Vous utilisez votre klaxon. Comment doivent etre les avertissements sonores ?",
+          "question": "Comment doivent être les avertissements sonores ?",
           "choices": [
-            "Longs et forts",
-            "Aussi brefs que possible, sans exces",
-            "Continus",
-            "Alternes"
+            "Aussi brefs que possible",
+            "Longs et bien appuyés",
+            "Continus jusqu'à réaction"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les avertissements sonores doivent être aussi brefs que possible, sans excès.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q67.webp"
         },
         {
           "id": "C3_Q68",
-          "question": "Vous souhaitez installer un klaxon musical sur votre voiture. Est-ce autorise ?",
+          "question": "Pouvez-vous installer un klaxon musical sur votre voiture ?",
           "choices": [
-            "Oui, pour se demarquer des autres",
-            "Non, seuls les avertisseurs prevus par le reglement sont autorises",
-            "Oui, mais uniquement en agglomeration",
-            "Oui, si le volume reste suffisamment faible"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit d'utiliser d'autres avertisseurs que ceux prévus par le règlement. Pas de klaxon musical.",
@@ -3160,26 +2944,23 @@
         },
         {
           "id": "C3_Q70",
-          "question": "Vous circulez hors agglomeration pendant la journee. Quand pouvez-vous klaxonner ?",
+          "question": "Hors agglomération et de jour, quand pouvez-vous klaxonner ?",
           "choices": [
-            "Quand vous le souhaitez, sans restriction",
-            "Pour éviter un accident ou annoncer un dépassement",
-            "Uniquement pour saluer un autre conducteur",
-            "Jamais en dehors des agglomérations"
+            "Pour éviter un accident",
+            "Pour saluer un conducteur",
+            "Quand vous le souhaitez"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Hors agglomération de jour, le klaxon est autorisé pour éviter un accident ET pour avertir d'un dépassement imminent.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q70.webp"
         },
         {
           "id": "C3_Q73",
-          "question": "Vous roulez de nuit et souhaitez avertir un conducteur avant de le depasser. Pouvez-vous klaxonner ?",
+          "question": "De nuit, pouvez-vous klaxonner pour annoncer un dépassement ?",
           "choices": [
-            "Oui, comme de jour",
-            "Non, sauf danger imminent",
-            "Oui, mais brievement",
-            "Oui, hors agglomeration uniquement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La nuit, le klaxon est remplacé par les appels de phares, sauf en cas de danger imminent.",
@@ -3188,28 +2969,25 @@
         },
         {
           "id": "C3_Q74",
-          "question": "Vous utilisez vos phares de nuit pour prevenir un autre conducteur. Qu'est-ce qu'un appel de phares ?",
+          "question": "Qu'est-ce qu'un appel de phares ?",
           "choices": [
-            "Allumer les feux de route en continu",
-            "L'usage bref et alterne des feux de route et des feux de croisement",
-            "Allumer les feux antibrouillard",
-            "Allumer et eteindre les feux de position"
+            "Un usage bref et alterné des feux",
+            "Les feux de route allumés en continu",
+            "Les feux antibrouillard allumés"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un appel de phares = usage bref et alterné des feux de route et des feux de croisement.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q74.webp"
         },
         {
           "id": "C3_Q75",
-          "question": "Vous roulez de nuit et un danger imminent se presente. Pouvez-vous klaxonner ?",
+          "question": "De nuit, face à un danger imminent, pouvez-vous klaxonner ?",
           "choices": [
-            "Non, uniquement les appels de phares",
-            "Oui, en cas de danger imminent le klaxon reste autorise meme la nuit",
-            "Non, jamais entre 22 heures et 6 heures",
-            "Oui, mais uniquement hors agglomeration"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de danger imminent, le klaxon reste autorisé même la nuit.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q75.webp"

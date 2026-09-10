@@ -171,14 +171,13 @@
       "questions": [
         {
           "id": "C1_Q1",
-          "question": "Met welke types voertuigen mag je rijden met een rijbewijs B?",
+          "question": "U hebt net uw rijbewijs B. Welke voertuigen mag u besturen?",
           "choices": [
-            "Enkel gewone personenauto's zonder aanhangwagen",
-            "Personenauto, auto voor gemengd gebruik, minibus en lichte vrachtauto (MTM ≤ 3,5 ton)",
-            "Alle voertuigen zonder enige uitzondering",
-            "Personenauto en motorfiets tot 125 cc"
+            "Auto, minibus en bestelwagen",
+            "Enkel de gewone personenwagens",
+            "Auto en motor tot 125 cm³"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Rijbewijs B staat toe: personenauto, auto voor gemengd gebruik, minibus en lichte vrachtauto, op voorwaarde dat de MTM niet meer dan 3,5 ton bedraagt.",
           "theoryCardIndex": 0
         },
@@ -197,64 +196,57 @@
         },
         {
           "id": "C1_Q5",
-          "question": "Staat het voorlopig rijbewijs B dezelfde voertuigen toe als het definitieve rijbewijs B?",
+          "question": "Laat het voorlopig rijbewijs B dezelfde voertuigen toe als het definitieve?",
           "choices": [
-            "Nee, het is beperkter",
-            "Ja, dezelfde voertuigen van maximaal 3,5 ton MTM",
-            "Nee, enkel personenauto's",
-            "Nee, geen lichte vrachtauto's"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het voorlopig rijbewijs B staat dezelfde voertuigen toe als het definitieve rijbewijs B.",
           "theoryCardIndex": 0
         },
         {
           "id": "C1_Q6",
-          "question": "Wat is de MTM?",
+          "question": "Wat betekent de MTM op het inschrijvingsbewijs?",
           "choices": [
-            "Het gewicht van de lege auto, zonder bestuurder",
-            "Het maximaal toegelaten gewicht, inclusief brandstof, bestuurder, passagiers en lading",
-            "Enkel het maximale gewicht van de lading",
-            "Het gewicht van het voertuig zonder passagiers"
+            "De maximaal toegelaten massa in lading",
+            "Het gewicht van het lege voertuig",
+            "Enkel het gewicht van de lading"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De MTM (Maximaal Toegelaten Massa) omvat alles: het voertuig, de brandstof, de bestuurder, de passagiers en de lading.",
           "theoryCardIndex": 0
         },
         {
           "id": "C1_Q8",
-          "question": "Wie bepaalt de MTM van een voertuig?",
+          "question": "Wie bepaalt de MTM van uw voertuig?",
           "choices": [
-            "De eigenaar",
             "De fabrikant van het voertuig",
-            "De politie",
-            "De technische keuring"
+            "De technische keuring",
+            "De eigenaar van het voertuig"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De MTM wordt bepaald door de fabrikant en staat vermeld op het inschrijvingsbewijs.",
           "theoryCardIndex": 0
         },
         {
           "id": "C1_Q9",
-          "question": "Wat gebeurt er als je je auto overlaadt boven de MTM?",
+          "question": "Wat gebeurt er als u de MTM van uw voertuig overschrijdt?",
           "choices": [
-            "Niets ernstigs op korte termijn",
-            "Het voertuig voldoet niet meer aan de veiligheidsnormen",
+            "Het voertuig voldoet niet meer aan de normen",
             "De motor slaat af bij het starten",
-            "De banden barsten onmiddellijk"
+            "De banden klappen meteen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De MTM overschrijden betekent dat het voertuig niet meer voldoet aan de veiligheidsnormen waarvoor het ontworpen is.",
           "theoryCardIndex": 0
         },
         {
           "id": "C1_Q10",
-          "question": "Heeft een kleine auto een hogere MTM dan een grote SUV?",
+          "question": "Heeft een kleine wagen een hogere MTM dan een grote SUV?",
           "choices": [
-            "Ja, kleine auto's zijn steviger",
-            "Nee, hoe kleiner de auto hoe lager de MTM",
-            "Het is hetzelfde voor alle voertuigen",
-            "Dat hangt af van de brandstof"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De MTM is evenredig met de grootte van het voertuig: kleine auto = lage MTM, grote auto = hoge MTM.",
@@ -276,12 +268,10 @@
         },
         {
           "id": "C1_Q12",
-          "question": "Een verkeersbord verbiedt het inhalen voor voertuigen met MTM > 3,5 ton. Je rijdt met een auto (MTM 1 800 kg). Ben je betrokken?",
+          "question": "Een bord verbiedt inhalen voor voertuigen boven 3,5 ton. Uw wagen weegt 1 800 kg. Bent u betrokken?",
           "choices": [
-            "Ja, iedereen is betrokken",
-            "Nee, je MTM is lager dan 3,5 ton",
-            "Ja, het is een algemeen bord",
-            "Dat hangt af van de weg"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het bord is enkel gericht op voertuigen met MTM > 3,5 ton. Je auto (1 800 kg) is niet betrokken.",
@@ -289,51 +279,46 @@
         },
         {
           "id": "C1_Q15",
-          "question": "Waar staat de MTM van je auto vermeld?",
+          "question": "Waar staat de MTM van uw wagen vermeld?",
           "choices": [
-            "Op het dashboard",
             "Op het inschrijvingsbewijs",
-            "Op de voorruit",
-            "Op de banden"
+            "Op de zijkant van de banden",
+            "Op het dashboard van de wagen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De MTM staat vermeld op het inschrijvingsbewijs.",
           "theoryCardIndex": 0
         },
         {
           "id": "C1_Q16",
-          "question": "Wat is de MIB?",
+          "question": "Wat betekent de massa in lading van een voertuig?",
           "choices": [
-            "Het maximale gewicht toegelaten door de fabrikant",
-            "Het werkelijke gewicht van een voertuig op een bepaald moment, met personen en lading",
-            "Het gewicht van het lege voertuig",
-            "Enkel het gewicht van de lading"
+            "Het werkelijke gewicht op dat moment",
+            "De maximaal toegelaten massa",
+            "Het gewicht van het lege voertuig"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De MIB (Massa In Beladen toestand) is het werkelijke gewicht van het voertuig zoals het is op het beschouwde moment.",
           "theoryCardIndex": 1
         },
         {
           "id": "C1_Q17",
-          "question": "Wat is het verschil tussen de MTM en de MIB?",
+          "question": "Wat is het verschil tussen de MTM en de massa in lading?",
           "choices": [
-            "Geen verschil",
-            "De MTM is het maximale theoretische gewicht bepaald door de fabrikant",
-            "De MTM is altijd lager dan de MIB",
-            "De MIB wordt bepaald door de fabrikant"
+            "De MTM is het theoretische maximum",
+            "De massa in lading komt van de fabrikant",
+            "Er is geen enkel verschil"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "MTM = maximaal theoretisch gewicht (vast). MIB = werkelijk huidig gewicht (variabel).",
           "theoryCardIndex": 1
         },
         {
           "id": "C1_Q19",
-          "question": "Kan de MIB hoger zijn dan de MTM?",
+          "question": "Mag de massa in lading hoger zijn dan de MTM?",
           "choices": [
-            "Ja, dat is helemaal normaal",
-            "Nee, als de MIB de MTM overschrijdt, is het voertuig overladen",
-            "Ja, in bepaalde uitzonderlijke gevallen",
-            "De vraag slaat technisch nergens op"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Als de MIB de MTM overschrijdt, is het voertuig illegaal overladen.",
@@ -354,12 +339,10 @@
         },
         {
           "id": "C1_Q21",
-          "question": "De MIB van je auto is 1 665 kg. De MTM is 2 000 kg. Ben je overladen?",
+          "question": "Uw wagen weegt in lading 1 665 kg en heeft een MTM van 2 000 kg. Bent u overladen?",
           "choices": [
             "Ja",
-            "Nee, de MIB is lager dan de MTM",
-            "Dat hangt af van het aantal passagiers",
-            "Je moet het laten nakijken bij de technische keuring"
+            "Nee"
           ],
           "correct": 1,
           "explanation": "1 665 kg < 2 000 kg: geen overlading.",
@@ -367,25 +350,21 @@
         },
         {
           "id": "C1_Q22",
-          "question": "Een bord geeft een massakbeperking in beladen toestand aan van 3,5 ton op een brug. Je beladen auto weegt 1 800 kg. Mag je erover?",
+          "question": "Een brug beperkt de massa in lading tot 3,5 ton. Uw geladen wagen weegt 1 800 kg. Mag u er over?",
           "choices": [
-            "Nee, het is een beperkte brug",
-            "Ja, je MIB is ruim lager dan 3,5 ton",
-            "Dat hangt af van de weg",
-            "Nee, geen enkele auto mag erover"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "1 800 kg < 3,5 ton: je MIB is lager dan de limiet van de brug.",
           "theoryCardIndex": 1
         },
         {
           "id": "C1_Q23",
-          "question": "Dezelfde brug beperkt tot 3,5 ton MIB. Een beladen vrachtwagen van 5 ton komt aangereden. Mag hij erover?",
+          "question": "Op diezelfde brug van 3,5 ton komt een vrachtwagen van 5 ton aan. Mag hij er over?",
           "choices": [
-            "Ja, als hij langzaam rijdt",
-            "Nee, zijn massa in beladen toestand overschrijdt de limiet",
-            "Ja, als hij leeg is",
-            "Ja, met een toelating"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "5 ton > 3,5 ton: de vrachtwagen mag er niet over.",
@@ -393,54 +372,47 @@
         },
         {
           "id": "C1_Q25",
-          "question": "Een bord vermeldt \"5t\" in een rode ronde vorm. Je rijdt met een lege vrachtwagen van 4 ton. Mag je doorrijden?",
+          "question": "U rijdt met een lege vrachtwagen van 4 ton en ziet dit bord met « 5t ». Mag u door?",
           "choices": [
-            "Nee, het is een vrachtwagen dus verboden",
-            "Ja, als het een MIB-bord is: je werkelijke gewicht is 4 ton",
-            "Nee, vrachtwagens zijn hier altijd verboden",
-            "Ja, zonder enige voorwaarde te controleren"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Als het een MIB-bord is, is je werkelijk gewicht (4 t) lager dan de limiet (5 t): je mag doorrijden.",
           "theoryCardIndex": 1,
           "sign": "C21"
         },
         {
           "id": "C1_Q26",
-          "question": "Is een gevarendriehoek verplicht in je auto?",
+          "question": "Is een gevarendriehoek verplicht in uw wagen?",
           "choices": [
-            "Nee, het is aanbevolen",
-            "Ja, het is verplicht",
-            "Enkel op de autosnelweg",
-            "Enkel buiten de bebouwde kom"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De gevarendriehoek is verplicht in elk voertuig met een MTM van maximaal 3,5 ton.",
           "theoryCardIndex": 2
         },
         {
           "id": "C1_Q27",
-          "question": "Is een verbandkist verplicht in je auto?",
+          "question": "Is een verbanddoos verplicht in uw wagen?",
           "choices": [
-            "Nee, het is aanbevolen",
-            "Ja, het is verplicht",
-            "Enkel voor lange ritten",
-            "Enkel in de winter"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De verbandkist is verplicht in de auto.",
           "theoryCardIndex": 2
         },
         {
           "id": "C1_Q28",
-          "question": "Is een brandblusapparaat verplicht in je auto?",
+          "question": "Is een brandblusser verplicht in uw wagen?",
           "choices": [
-            "Nee, het is aanbevolen",
-            "Ja, met minimaal 1 kg poeder",
-            "Enkel voor lichte vrachtauto's",
-            "Enkel op de autosnelweg"
+            "Ja, van minstens 1 kg poeder",
+            "Nee, hij is enkel aanbevolen",
+            "Ja, maar op de autosnelweg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het brandblusapparaat is verplicht en moet minimaal 1 kg poeder bevatten.",
           "theoryCardIndex": 2
         },
@@ -459,53 +431,48 @@
         },
         {
           "id": "C1_Q30",
-          "question": "Je hebt je brandblusapparaat een heel klein beetje gebruikt. Wat moet je doen?",
+          "question": "U hebt een beetje van uw brandblusser gebruikt. Wat moet u doen?",
           "choices": [
-            "Niets, er is nog genoeg poeder",
-            "Het vervangen want het bevat geen 1 kg poeder meer",
-            "Het laten bijvullen in de garage",
-            "Het gebruiken tot het leeg is"
+            "Hem vervangen door een nieuwe",
+            "Hem laten hervullen in de garage",
+            "Niets, er zit nog poeder in"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Elk gebruik, zelfs minimaal, betekent dat het brandblusapparaat niet meer precies 1 kg bevat: het moet vervangen worden.",
           "theoryCardIndex": 2
         },
         {
           "id": "C1_Q32",
-          "question": "Is een retro-reflecterend veiligheidsvest verplicht in je auto?",
+          "question": "Is een retroreflecterend veiligheidsvest verplicht in uw wagen?",
           "choices": [
-            "Nee, het is aanbevolen",
-            "Ja, het is verplicht",
-            "Enkel op de autosnelweg",
-            "Enkel 's nachts"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het retro-reflecterend veiligheidsvest is verplicht in de auto.",
           "theoryCardIndex": 2
         },
         {
           "id": "C1_Q33",
-          "question": "Waar moet je het veiligheidsvest opbergen?",
+          "question": "Waar moet u uw veiligheidsvest leggen?",
           "choices": [
+            "In het interieur",
             "In de koffer",
-            "In het passagierscompartiment van de auto",
-            "Onder de achterbank",
-            "Om het even waar"
+            "Onder de achterbank"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het vest moet zich in het passagierscompartiment bevinden (niet in de koffer) zodat het bereikbaar is vóór je uitstapt.",
           "theoryCardIndex": 2
         },
         {
           "id": "C1_Q35",
-          "question": "Wat zijn de vier verplichte uitrustingsstukken in een auto (MTM ≤ 3,5 ton)?",
+          "question": "Welke vier uitrustingen zijn verplicht in een wagen?",
           "choices": [
-            "Driehoek, verbandkist, reservewiel, vest",
-            "Gevarendriehoek, verbandkist, brandblusapparaat (1 kg), retro-reflecterend veiligheidsvest",
-            "Driehoek, brandblusapparaat, krik, vest",
-            "Driehoek, verbandkist, zaklamp, vest"
+            "Driehoek, verbanddoos, blusser, vest",
+            "Driehoek, verbanddoos, reservewiel, vest",
+            "Driehoek, blusser, krik, vest"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De 4 verplichte uitrustingsstukken: gevarendriehoek, verbandkist, brandblusapparaat (1 kg poeder), retro-reflecterend vest.",
           "theoryCardIndex": 2
         },
@@ -524,51 +491,46 @@
         },
         {
           "id": "C1_Q37",
-          "question": "Wanneer moet je het veiligheidsvest dragen?",
+          "question": "Wanneer moet u het veiligheidsvest dragen?",
           "choices": [
-            "Altijd, zodra je rijdt",
-            "Bij pech of een ongeval op de autosnelweg",
-            "Enkel 's nachts",
-            "Enkel bij regen"
+            "Bij panne op de autosnelweg",
+            "Telkens wanneer u rijdt",
+            "'s Nachts en bij regenweer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het vest is verplicht vóór je uit het voertuig stapt bij pech of een ongeval op de autosnelweg of autoweg.",
           "theoryCardIndex": 2
         },
         {
           "id": "C1_Q38",
-          "question": "Welke persoonlijke documenten moet je bij je hebben als je rijdt?",
+          "question": "Welke persoonlijke documenten moet u bij zich hebben tijdens het rijden?",
           "choices": [
-            "Enkel het rijbewijs",
             "De identiteitskaart en het rijbewijs",
-            "Enkel de identiteitskaart",
+            "Het rijbewijs, en niets meer",
             "Het paspoort en het rijbewijs"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De bestuurder moet zijn identiteitskaart EN zijn rijbewijs bij zich hebben.",
           "theoryCardIndex": 3
         },
         {
           "id": "C1_Q39",
-          "question": "Wat betekent \"houder en drager\" zijn van een rijbewijs?",
+          "question": "Wat betekent « houder en drager » van een rijbewijs zijn?",
           "choices": [
-            "Een geldig rijbewijs thuis bewaren",
-            "Eigenaar ervan zijn (houder) EN het fysiek bij je hebben (drager)",
-            "Het enkel in het handschoenkastje hebben",
-            "Een eensluidend verklaarde kopie hebben"
+            "Er eigenaar van zijn en het bij zich hebben",
+            "Het in het handschoenkastje bewaren",
+            "Er een eensluidend verklaarde kopie van hebben"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Houder = eigenaar ervan zijn. Drager = het bij je hebben. Beide voorwaarden zijn vereist.",
           "theoryCardIndex": 3
         },
         {
           "id": "C1_Q40",
-          "question": "Je hebt het verlies van je rijbewijs aangegeven en je hebt een attest van verlies. Mag je rijden?",
+          "question": "U bent uw rijbewijs verloren en hebt een verliesattest. Mag u rijden?",
           "choices": [
-            "Ja, het attest vervangt het rijbewijs",
-            "Nee, rijden met een attest van verlies is verboden",
-            "Ja, gedurende 30 dagen",
-            "Ja, in de bebouwde kom"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het attest van verlies vervangt het rijbewijs niet. Het is verboden te rijden zonder het originele document.",
@@ -576,40 +538,36 @@
         },
         {
           "id": "C1_Q42",
-          "question": "Welke documenten moeten zich in de auto bevinden?",
+          "question": "Welke documenten moeten in uw wagen liggen?",
           "choices": [
+            "Gelijkvormigheid, inschrijving, verzekering",
             "Enkel het inschrijvingsbewijs",
-            "Gelijkvormigheid, inschrijving, verzekering en keuring",
-            "Enkel het verzekeringsbewijs",
-            "Het kentekenbewijs en het fiscale vignet"
+            "Het kentekenbewijs en het fiscaal vignet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "4 documenten in de auto: gelijkvormigheidsattest, inschrijvingsbewijs, verzekeringsbewijs en bewijs van technische keuring.",
           "theoryCardIndex": 3
         },
         {
           "id": "C1_Q44",
-          "question": "Moeten de documenten in de auto originelen zijn?",
+          "question": "Moeten die documenten originelen zijn?",
           "choices": [
-            "Nee, kopieën volstaan",
-            "Ja, behalve het verzekeringsbewijs dat een kopie mag zijn",
-            "Nee, foto's op je telefoon volstaan voor alles",
-            "Ja, allemaal zonder uitzondering"
+            "Ja, behalve het verzekeringsbewijs",
+            "Nee, gewone kopieën volstaan",
+            "Nee, een foto op de telefoon volstaat"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Alle documenten moeten originelen zijn, behalve het verzekeringsbewijs dat een kopie mag zijn.",
           "theoryCardIndex": 3
         },
         {
           "id": "C1_Q45",
-          "question": "Mag het verzekeringsbewijs een digitale kopie zijn?",
+          "question": "Uw verzekeringsbewijs staat als PDF op uw telefoon. Is dat in orde?",
           "choices": [
-            "Nee, het moet een origineel zijn",
-            "Ja, het mag in PDF of JPEG op je telefoon staan",
-            "Enkel als papieren kopie",
-            "Nee, nooit digitaal"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het verzekeringsbewijs is het enige document dat een kopie mag zijn, ook digitaal (PDF, JPEG).",
           "theoryCardIndex": 3
         },
@@ -641,14 +599,13 @@
         },
         {
           "id": "C1_Q52",
-          "question": "Waarom moet je je vóór een vakantie in het buitenland informeren over veiligheidsvesten?",
+          "question": "Waarom moet u zich informeren over de vesten voor u naar het buitenland vertrekt?",
           "choices": [
-            "Omdat Belgische vesten niet conform zijn",
-            "Omdat sommige landen meer dan één vest eisen (twee per voertuig of één per passagier)",
-            "Omdat vesten niet overal verplicht zijn",
-            "Omdat de kleur verschilt per land"
+            "Sommige landen eisen er meerdere",
+            "De Belgische vesten gelden er niet",
+            "De kleur verschilt per land"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sommige landen eisen meer dan één veiligheidsvest per voertuig.",
           "theoryCardIndex": 3
         },
@@ -667,27 +624,25 @@
         },
         {
           "id": "C1_Q54",
-          "question": "Dit parkeerbord met een onderbord dat een massa aangeeft. Wat betekent het?",
+          "question": "Dit bord draagt eronder een massavermelding. Wat betekent het?",
           "choices": [
-            "Parkeren toegelaten voor alle voertuigen",
-            "Parkeren enkel voor voertuigen waarvan de MTM de massa overschrijdt",
-            "Parkeren verboden boven die massa",
-            "Parkeren voorbehouden voor leveringsvrachtwagens"
+            "Voorbehouden aan zwaardere voertuigen",
+            "Verboden voor zwaardere voertuigen",
+            "Toegelaten voor alle voertuigen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het onderbord met massa beperkt het parkeren tot voertuigen die de aangegeven massa overschrijden (bv.: vrachtwagens).",
           "sign": "E1"
         },
         {
           "id": "C1_Q56",
-          "question": "Dit C43-bord geeft een maximumsnelheid aan. Tot waar is het geldig?",
+          "question": "Tot waar geldt dit snelheidsbord?",
           "choices": [
-            "Over 500 meter",
             "Tot het volgende kruispunt",
-            "Over 1 km",
-            "Tot het volgende verkeerslicht"
+            "Over de volgende 500 meter",
+            "Tot het volgende rode licht"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het C43-bord voor snelheidsbeperking is geldig tot het volgende kruispunt.",
           "theoryCardIndex": 1,
           "severe": true,
@@ -695,80 +650,72 @@
         },
         {
           "id": "C1_Q59",
-          "question": "Dit ronde rode bord met een massacijfer betekent:",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Aanduiding van de maximaal toegelaten MTM",
-            "Verboden als de massa in beladen toestand het cijfer overschrijdt",
-            "Maximale belasting van de brug",
+            "Verboden boven die massa",
+            "Maximale draaglast van de brug",
             "Resterende afstand in ton"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit bord verbiedt de toegang aan voertuigen waarvan de massa in beladen toestand (MIB) de aangegeven waarde overschrijdt.",
           "theoryCardIndex": 1,
           "sign": "C21"
         },
         {
           "id": "C1_Q61",
-          "question": "Dit ronde rode bord met een doorgestreepte pijl naar links betekent:",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Verboden rechtsomkeer te maken op het kruispunt",
-            "Op het volgende kruispunt, verboden links af te slaan",
-            "Aankondiging van een gevaarlijke bocht naar links",
-            "Verplichte omleiding naar links"
+            "Verbod om links af te slaan",
+            "Verbod om te keren",
+            "Aankondiging van een bocht links"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit bord verbiedt links af te slaan op het volgende kruispunt.",
           "sign": "C31a"
         },
         {
           "id": "C1_Q63",
-          "question": "Je rijdt met een auto (MIB 1 500 kg) en je ziet een verbodsbord om rechts af te slaan met onderbord \"3,5t\". Mag je afslaan?",
+          "question": "Uw wagen weegt 1 500 kg. Een bord verbiedt rechts afslaan boven 3,5 t. Mag u afslaan?",
           "choices": [
-            "Nee, het is voor iedereen verboden",
-            "Ja, het verbod geldt enkel voor voertuigen met MIB > 3,5 ton",
-            "Nee, auto's zijn betrokken",
-            "Dat hangt af van het kruispunt"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "1 500 kg < 3,5 ton: het verbod geldt niet voor jou.",
           "theoryCardIndex": 0
         },
         {
           "id": "C1_Q64",
-          "question": "Dit ronde rode bord met een vrachtwagen betekent:",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Leveringszone voorbehouden voor vrachtwagens",
-            "Toegang verboden voor voertuigen voor goederenvervoer",
-            "Aanbevolen reisweg voor vrachtwagens",
-            "Einde van verbod voor vrachtwagens"
+            "Verboden voor goederenvervoer",
+            "Leveringszone voor vrachtwagens",
+            "Aanbevolen route voor vrachtwagens"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit bord verbiedt de toegang aan voertuigen voor goederenvervoer.",
           "theoryCardIndex": 0,
           "sign": "C23"
         },
         {
           "id": "C1_Q65",
-          "question": "Dit bord met onderbord MTM betekent:",
+          "question": "Dit bord draagt een onderbord met een MTM. Wat betekent het?",
           "choices": [
-            "Alle vrachtwagens zijn verboden zonder uitzondering",
-            "Verboden enkel voor goederenvervoer waarvan de MTM de aangegeven massa overschrijdt",
-            "Enkel kleine vrachtwagens zijn verboden",
-            "Personenauto's zijn ook betrokken"
+            "Verboden boven die MTM",
+            "Verboden voor alle vrachtwagens",
+            "Ook verboden voor personenwagens"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het onderbord MTM beperkt het verbod tot voertuigen voor goederenvervoer die deze massa overschrijden.",
           "theoryCardIndex": 0,
           "sign": "C23"
         },
         {
           "id": "C1_Q68",
-          "question": "Je ziet een verbodsbord om links af te slaan zonder onderbord. Je auto is licht. Mag je afslaan?",
+          "question": "Dit bord draagt geen onderbord en uw wagen is licht. Mag u afslaan?",
           "choices": [
-            "Ja, lichte auto's zijn niet betrokken",
-            "Nee, zonder onderbord geldt het verbod voor iedereen",
-            "Ja, als het kruispunt vrij is",
-            "Dat hangt af van het uur van de dag"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Zonder onderbord met massa geldt het verbod voor ALLE bestuurders.",
@@ -776,12 +723,10 @@
         },
         {
           "id": "C1_Q69",
-          "question": "Je ziet een parkeerbord met onderbord \"3,5t\". Je auto heeft een MTM van 1 600 kg. Mag je hier parkeren?",
+          "question": "Dit bord draagt de vermelding « 3,5t » en uw wagen heeft 1 600 kg MTM. Mag u hier parkeren?",
           "choices": [
-            "Ja, parkeren is voor iedereen toegelaten",
-            "Nee, het is voorbehouden voor voertuigen met een MTM boven 3,5 ton",
-            "Ja, als je correct parkeert",
-            "Dat hangt af van het uur van de dag"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Dit parkeren is voorbehouden voor voertuigen met MTM > 3,5 ton. Je auto (1 600 kg) mag hier niet parkeren.",
@@ -789,12 +734,10 @@
         },
         {
           "id": "C1_Q71",
-          "question": "Je rijdt met een lichte vrachtauto van 3,5 ton MTM beladen met een MIB van 3 200 kg. Een bord verbiedt voertuigen met MIB > 3 ton. Mag je doorrijden?",
+          "question": "Uw geladen bestelwagen weegt 3 200 kg. Een bord verbiedt voertuigen boven 3 ton in lading. Mag u door?",
           "choices": [
-            "Ja, je MTM is 3,5 ton",
-            "Nee, je MIB is 3 200 kg en dat overschrijdt de 3 ton",
-            "Ja, lichte vrachtauto's zijn niet betrokken",
-            "Dat hangt af van de lading"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het bord gaat over de MIB. Je MIB (3 200 kg) > 3 000 kg: je mag niet doorrijden.",
@@ -802,40 +745,35 @@
         },
         {
           "id": "C1_PROV_1",
-          "question": "U heeft een voorlopig rijbewijs B. Wanneer mag u NIET rijden?",
+          "question": "Met een voorlopig rijbewijs B, wanneer mag u niet rijden?",
           "choices": [
-            "Nooit 's nachts, elke dag",
-            "Tijdens weekend- en feestdagnachten, van 22u tot 6u",
-            "Enkel op zondag, de hele dag",
-            "Na 20u op weekdagen"
+            "Weekendnachten, van 22u tot 6u",
+            "Alle nachten van de week",
+            "De zondag de hele dag"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Met een voorlopig rijbewijs mag u niet rijden van vrijdag-, zaterdag- en zondagavond 22u tot 6u de volgende ochtend, en ook niet op de vooravond en avond van feestdagen.",
           "theoryCardIndex": 3
         },
         {
           "id": "C1_PROV_2",
-          "question": "Zaterdagavond, 23u. U heeft een voorlopig rijbewijs en uw begeleider zit naast u. Mag u rijden?",
+          "question": "Zaterdag 23u, voorlopig rijbewijs, uw begeleider zit naast u. Mag u rijden?",
           "choices": [
-            "Nee: verboden tot 6u, zelfs met begeleider",
-            "Ja, want de begeleider is aanwezig",
-            "Ja, enkel op gemeentewegen",
-            "Ja, voor een rit van minder dan 10 km"
+            "Ja",
+            "Nee"
           ],
-          "correct": 0,
+          "correct": 1,
           "explanation": "Tijdens weekendnachten (22u-6u) is rijden met een voorlopig rijbewijs verboden — de aanwezigheid van de begeleider verandert daar niets aan.",
           "theoryCardIndex": 3
         },
         {
           "id": "C1_PROV_3",
-          "question": "Met een voorlopig rijbewijs wilt u rijden op de vooravond van een feestdag om 23u. Is dat toegelaten?",
+          "question": "Mag u met een voorlopig rijbewijs rijden op de vooravond van een feestdag om 23u?",
           "choices": [
-            "Nee: op vooravonden van feestdagen is rijden verboden van 22u tot 6u",
-            "Ja, want het is geen weekendnacht",
-            "Ja, maar enkel tot middernacht",
-            "Ja, als de rit kort en plaatselijk is"
+            "Ja",
+            "Nee"
           ],
-          "correct": 0,
+          "correct": 1,
           "explanation": "Het verbod van 22u tot 6u geldt voor weekendnachten, maar ook voor de vooravonden en avonden van feestdagen.",
           "theoryCardIndex": 3
         }
@@ -1082,25 +1020,22 @@
         },
         {
           "id": "C2_Q2",
-          "question": "Een beladen voertuig is hoger dan 4 meter. Wat gebeurt er?",
+          "question": "Uw geladen voertuig is hoger dan 4 meter. Wat gebeurt er?",
           "choices": [
-            "Het is toegestaan tot 5 meter",
-            "Het valt onder de categorie uitzonderlijk vervoer",
-            "Het is verboden, je moet uitladen",
-            "Alleen een vrachtwagen mag die hoogte overschrijden"
+            "Het is uitzonderlijk vervoer",
+            "Het mag tot 5 meter hoogte",
+            "Het geldt enkel voor vrachtwagens"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een voertuig dat hoger is dan 4 meter (lading inbegrepen) valt onder de categorie uitzonderlijk vervoer.",
           "theoryCardIndex": 1
         },
         {
           "id": "C2_Q3",
-          "question": "Een verkeersbord geeft een maximale hoogte van 3,2 meter aan. Je voertuig met lading is 3,5 meter hoog. Mag je er door?",
+          "question": "Een tunnel is beperkt tot 3,2 m en uw geladen voertuig meet 3,5 m. Mag u door?",
           "choices": [
-            "Ja, als je traag rijdt",
-            "Nee, je hoogte overschrijdt de aangegeven limiet",
-            "Ja, de limiet is 4 meter",
-            "Ja, alleen voor auto's"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het verbodsbord voor hoogte geldt voor alle voertuigen. Als je hoogte (lading inbegrepen) de aangegeven limiet overschrijdt, mag je niet passeren.",
@@ -1108,27 +1043,25 @@
         },
         {
           "id": "C2_Q4",
-          "question": "Waarom moet je de dakkoffer verwijderen als je hem niet meer nodig hebt?",
+          "question": "Waarom de dakkoffer verwijderen als u hem niet meer nodig hebt?",
           "choices": [
-            "Om puur esthetische redenen",
-            "Omdat hij de luchtweerstand en het brandstofverbruik verhoogt",
-            "Omdat het verboden is buiten de vakantie",
-            "Om diefstal van de koffer te voorkomen"
+            "Hij verhoogt het verbruik",
+            "Hij is verboden buiten de vakantie",
+            "Hij kan 's nachts gestolen worden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De dakkoffer verhoogt de luchtweerstand en dus het brandstofverbruik. Je moet hem verwijderen zodra je hem niet meer nodig hebt.",
           "theoryCardIndex": 1
         },
         {
           "id": "C2_Q5",
-          "question": "Waar moet je zware voorwerpen plaatsen in je voertuig?",
+          "question": "Waar moet u zware voorwerpen in uw wagen leggen?",
           "choices": [
-            "Op de dakdragers",
             "In de koffer, zo laag mogelijk",
-            "Op de passagiersstoel vooraan",
-            "Om het even waar"
+            "Op de dakdragers",
+            "Op de passagiersstoel vooraan"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Zware voorwerpen moeten in de koffer geplaatst worden, niet op het dak, om het voertuig niet te destabiliseren in de bochten.",
           "theoryCardIndex": 1
         },
@@ -1147,12 +1080,10 @@
         },
         {
           "id": "C2_Q7",
-          "question": "Je lading achteraan bedekt de achterlichten. Is dat toegestaan?",
+          "question": "Uw lading bedekt de achterlichten. Is dat toegelaten?",
           "choices": [
-            "Ja, als je enkel overdag rijdt",
-            "Nee, de lading mag nooit de achterlichten of de nummerplaat bedekken",
-            "Ja, als je achteraan reflectoren toevoegt",
-            "Ja, maar enkel voor een kort traject"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De lading achteraan mag nooit de achterlichten of de nummerplaat bedekken.",
@@ -1160,14 +1091,13 @@
         },
         {
           "id": "C2_Q8",
-          "question": "Je vervoert fietsen achteraan en de nummerplaat is niet meer zichtbaar. Wat moet je doen?",
+          "question": "Een fietsendrager verbergt uw nummerplaat. Wat moet u doen?",
           "choices": [
-            "Niets, dat is niet erg",
-            "De nummerplaat zichtbaar maken of verplaatsen",
-            "Alleen overdag rijden",
-            "De alarmlichten aanzetten"
+            "De plaat zichtbaar maken",
+            "Overdag rijden, meer niet",
+            "Uw waarschuwingslichten aanzetten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De nummerplaat moet altijd zichtbaar blijven. Als je lading ze bedekt, moet je ze zichtbaar maken of verplaatsen.",
           "theoryCardIndex": 0
         },
@@ -1186,38 +1116,33 @@
         },
         {
           "id": "C2_Q10",
-          "question": "Je beladen voertuig is 2,70 meter breed. Wat gebeurt er?",
+          "question": "Uw geladen voertuig is 2,70 meter breed. Wat gebeurt er?",
           "choices": [
-            "Het is toegestaan tot 3 meter",
-            "Het is een uitzonderlijk vervoer",
-            "Het is toegestaan als je de alarmlichten aanzet",
-            "Het is alleen verboden op de autosnelweg"
+            "Het is uitzonderlijk vervoer",
+            "Het mag tot 3 meter breedte",
+            "Het is verboden op de autosnelweg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een beladen voertuig van meer dan 2,55 meter breed is een uitzonderlijk vervoer.",
           "theoryCardIndex": 2
         },
         {
           "id": "C2_Q11",
-          "question": "Een verkeersbord geeft een maximale breedte van 2 meter aan. Je auto is 1,80 meter breed. Mag je er door?",
+          "question": "Een bord beperkt de breedte tot 2 meter en uw wagen is 1,80 m. Mag u door?",
           "choices": [
-            "Nee, dat is te riskant",
-            "Ja, je breedte is kleiner dan de limiet",
-            "Nee, auto's zijn verboden",
-            "Alleen fietsen"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Je auto is 1,80 m, dat is minder dan de limiet van 2 m. Je mag er door.",
           "theoryCardIndex": 2
         },
         {
           "id": "C2_Q12",
-          "question": "Geldt een verkeersbord voor maximale breedte alleen voor vrachtwagens?",
+          "question": "Geldt een bord met maximumbreedte enkel voor vrachtwagens?",
           "choices": [
-            "Ja, alleen zware voertuigen worden bedoeld",
-            "Nee, het geldt voor elk voertuig dat breder is (lading inbegrepen)",
-            "Ja, auto's worden nooit getroffen",
-            "Nee, het geldt enkel voor bussen en autocars"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het verkeersbord voor maximale breedte geldt voor alle voertuigen waarvan de breedte (lading inbegrepen) de aangegeven limiet overschrijdt.",
@@ -1251,12 +1176,10 @@
         },
         {
           "id": "C2_Q16",
-          "question": "Je lading steekt 1,5 meter achteraan uit. Is dat toegestaan zonder speciale signalisatie?",
+          "question": "Een voorwerp steekt 1,5 m achter uw voertuig uit. Mag dat zonder signalisatie?",
           "choices": [
-            "Ja, dat is toegestaan tot 2 meter",
-            "Nee, boven 1 meter: waarschuwingsbord en ondeelbare lading",
-            "Ja, als je de alarmlichten aanzet",
-            "Nee, maximaal 1 meter zonder enige uitzondering"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Boven 1 meter uitsteek moet de lading ondeelbaar zijn en moet er een waarschuwingsbord achteraan bevestigd worden.",
@@ -1264,52 +1187,46 @@
         },
         {
           "id": "C2_Q17",
-          "question": "Je vervoert een ondeelbare lading die 2,5 meter achteraan uitsteekt. Is dat toegestaan?",
+          "question": "Een ondeelbare lading steekt 2,5 m achteraan uit. Is dat toegelaten?",
           "choices": [
-            "Nee, de maximale uitsteek is 1 meter",
-            "Ja, als er een waarschuwingsbord bevestigd is",
-            "Nee, de maximale uitsteek is 2 meter",
-            "Ja, zonder enige bijzondere voorwaarde"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een ondeelbare lading mag maximaal 3 meter achteraan uitsteken, op voorwaarde dat er een waarschuwingsbord aan bevestigd is. 2,5 meter is dus toegestaan.",
           "theoryCardIndex": 3
         },
         {
           "id": "C2_Q19",
-          "question": "Wat betekent 'ondeelbare lading'?",
+          "question": "Wat betekent « ondeelbare lading »?",
           "choices": [
-            "Een lichte lading",
-            "Een lading die niet geplooid of ingetrokken kan worden",
-            "Een ontvlambare lading",
-            "Een lading van meer dan 100 kg"
+            "Een lading die niet plooit of inschuift",
+            "Een lading van meer dan 100 kilo",
+            "Een lading van brandbare aard"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een ondeelbare lading is een lading die niet geplooid of ingetrokken kan worden.",
           "theoryCardIndex": 3
         },
         {
           "id": "C2_Q21",
-          "question": "Wat moet er op het waarschuwingsbord aangebracht worden wanneer verlichting vereist is?",
+          "question": "Waarvan moet het waarschuwingsbord 's nachts voorzien zijn?",
           "choices": [
-            "Witte reflectoren vooraan",
-            "Een rood licht naar achteren en oranje reflectoren opzij",
-            "Een geel knipperlicht op het dak",
-            "Fluorescerende reflecterende strepen"
+            "Een rood licht en reflectoren",
+            "Een geel zwaailicht op het dak",
+            "Witte fluorescerende banden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Wanneer verlichting vereist is, moet het waarschuwingsbord voorzien zijn van een rood licht gericht naar achteren en een oranje reflector aan elke kant.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "C2_Q22",
-          "question": "Geldt het verbodsbord voor lengte alleen voor vrachtwagens?",
+          "question": "Geldt een bord met maximumlengte enkel voor vrachtwagens?",
           "choices": [
-            "Ja, alleen vrachtwagens worden getroffen",
-            "Nee, het geldt voor alle voertuigen en slepen",
-            "Ja, auto's worden nooit getroffen",
-            "Alleen bussen"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het verkeersbord voor maximale lengte geldt voor alle voertuigen en slepen, inclusief auto + caravan.",
@@ -1317,12 +1234,10 @@
         },
         {
           "id": "C2_Q23",
-          "question": "Je rijdt met je auto en caravan. Een verkeersbord verbiedt voertuigen van meer dan 10 meter. Je combinatie is 11 meter. Mag je er door?",
+          "question": "Een bord verbiedt voertuigen langer dan 10 m en uw sleep meet 11 m. Mag u door?",
           "choices": [
-            "Ja, caravans tellen niet mee",
-            "Nee, je sleep overschrijdt de toegelaten lengte",
-            "Ja, het is een auto en geen vrachtwagen",
-            "Ja, op landwegen"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het lengtebord geldt voor de volledige combinatie auto + caravan. Je sleep van 11 meter overschrijdt de limiet van 10 meter.",
@@ -1382,64 +1297,58 @@
         },
         {
           "id": "C2_Q29",
-          "question": "Hoe stel je de hoofdsteun correct af?",
+          "question": "Hoe stelt u de hoofdsteun correct in?",
           "choices": [
+            "De bovenkant op hoofdhoogte",
             "Zo laag mogelijk voor het comfort",
-            "Het bovenste deel op dezelfde hoogte als de bovenkant van het hoofd",
-            "Op schouderhoogte van de bestuurder",
-            "Zo hoog mogelijk in alle gevallen"
+            "Ter hoogte van de schouders"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De hoofdsteun moet zo afgesteld worden dat het bovenste deel op dezelfde hoogte als de bovenkant van het hoofd zit.",
           "theoryCardIndex": 4
         },
         {
           "id": "C2_Q30",
-          "question": "Waarom is het belangrijk om de hoofdsteun goed af te stellen?",
+          "question": "Waarom is een goed ingestelde hoofdsteun belangrijk?",
           "choices": [
-            "Alleen voor het comfort",
-            "Voor een optimale bescherming en een goede rijhouding",
-            "Om beter in de achteruitkijkspiegel te zien",
-            "Dat is puur esthetisch"
+            "Voor bescherming bij een botsing",
+            "Om beter in de spiegel te kijken",
+            "Voor het comfort, meer niet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een correct afgestelde hoofdsteun biedt een optimale bescherming en draagt bij tot een goede rijhouding.",
           "theoryCardIndex": 4
         },
         {
           "id": "C2_Q31",
-          "question": "Wanneer moet je de veiligheidsgordel dragen?",
+          "question": "Wanneer moet u de veiligheidsgordel dragen?",
           "choices": [
-            "Alleen op de autosnelweg",
-            "Altijd wanneer ze aanwezig is in het voertuig",
-            "Alleen vooraan",
-            "Alleen buiten de bebouwde kom"
+            "Telkens als hij aanwezig is",
+            "Op autosnelweg en autoweg",
+            "Op de voorste zitplaatsen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De veiligheidsgordel moet altijd gedragen worden wanneer ze aanwezig is in het voertuig, zowel door de bestuurder als door de passagiers.",
           "theoryCardIndex": 5
         },
         {
           "id": "C2_Q32",
-          "question": "De gordel moet gedragen worden:",
+          "question": "Hoe moet de gordel gedragen worden?",
           "choices": [
-            "Onder de arm",
             "Over de schouder",
-            "Achter de rug",
-            "Om het even hoe"
+            "Onder de arm, tegen de zij",
+            "Achter de rug"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De gordel moet over de schouder gedragen worden.",
           "theoryCardIndex": 5
         },
         {
           "id": "C2_Q34",
-          "question": "Moet je de gordel dragen als je achteruit rijdt?",
+          "question": "Moet u de gordel dragen tijdens het achteruitrijden?",
           "choices": [
-            "Ja, altijd zonder uitzondering",
-            "Nee, de bestuurder is vrijgesteld bij het achteruitrijden",
-            "Ja, behalve in de bebouwde kom",
-            "Nee, nooit bij achteruitrijden of manoeuvres"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De bestuurder die achteruit rijdt is vrijgesteld van het dragen van de gordel.",
@@ -1447,12 +1356,10 @@
         },
         {
           "id": "C2_Q35",
-          "question": "Moet een taxichauffeur die klanten vervoert de gordel dragen?",
+          "question": "U bent taxichauffeur met klanten aan boord. Moet u de gordel dragen?",
           "choices": [
-            "Ja, altijd",
-            "Nee, hij is ervan vrijgesteld",
-            "Ja, behalve 's nachts",
-            "Alleen op de autosnelweg"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Een taxichauffeur die klanten vervoert is vrijgesteld van het dragen van de gordel.",
@@ -1460,12 +1367,10 @@
         },
         {
           "id": "C2_Q36",
-          "question": "Moet een postbode die huis aan huis de post bedient de gordel dragen?",
+          "question": "U bent postbode en bedeelt van deur tot deur. Moet u de gordel dragen?",
           "choices": [
-            "Ja, altijd zonder uitzondering",
-            "Nee, hij is ervan vrijgesteld tijdens de bedeling",
-            "Ja, behalve in woonstraten",
-            "Nee, nooit voor een postbode"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Een postbode die huis aan huis de post bedient is vrijgesteld van het dragen van de gordel.",
@@ -1475,23 +1380,20 @@
           "id": "C2_Q37",
           "question": "Moeten bevoegde agenten en hulpdiensten de gordel dragen?",
           "choices": [
-            "Nee, nooit in dienst",
-            "Ze zijn ervan vrijgesteld als hun opdracht dat vereist",
-            "Ja, altijd zoals iedereen",
-            "Nee, alleen de brandweer is vrijgesteld"
+            "Vrijgesteld als de opdracht het vraagt",
+            "Vrijgesteld in alle omstandigheden",
+            "Verplicht zoals iedereen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bevoegde agenten en hulpdiensten zijn vrijgesteld van het dragen van de gordel als hun opdracht dat vereist.",
           "theoryCardIndex": 5
         },
         {
           "id": "C2_Q38",
-          "question": "Is een zwangere vrouw vrijgesteld van de veiligheidsgordel?",
+          "question": "U bent zwanger en rijdt met de wagen. Bent u vrijgesteld van de gordel?",
           "choices": [
-            "Ja, voor haar veiligheid",
-            "Nee, ze is verplicht ze te dragen",
-            "Ja, met een medisch attest",
-            "Ja, na 6 maanden zwangerschap"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Zwangere vrouwen ZIJN verplicht de veiligheidsgordel te dragen. Ze genieten geen enkele vrijstelling.",
@@ -1512,38 +1414,33 @@
         },
         {
           "id": "C2_Q41",
-          "question": "Onder welke voorwaarden moet een kind in een KBS reizen?",
+          "question": "Onder welke voorwaarden moet een kind in een kinderzitje?",
           "choices": [
-            "Jonger dan 12 jaar, ongeacht de lengte",
-            "Jonger dan 18 jaar EN kleiner dan 1,35 m",
-            "Jonger dan 10 jaar en kleiner dan 1 m",
-            "Jonger dan 18 jaar, ongeacht de lengte"
+            "Jonger dan 18 en kleiner dan 1,35 m",
+            "Jonger dan 12, ongeacht de lengte",
+            "Jonger dan 10 en kleiner dan een meter"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een kind moet in een KBS reizen als het jonger is dan 18 jaar EN kleiner dan 1,35 m. Beide voorwaarden moeten vervuld zijn.",
           "theoryCardIndex": 6
         },
         {
           "id": "C2_Q42",
-          "question": "Moet een kind van 15 jaar dat 1,30 m groot is een KBS gebruiken?",
+          "question": "Een kind van 15 jaar meet 1,30 m. Moet het in een kinderzitje?",
           "choices": [
-            "Nee, het is ouder dan 12 jaar",
-            "Ja, het is jonger dan 18 jaar EN kleiner dan 1,35 m",
-            "Nee, het mag de gordel gebruiken",
-            "Ja, maar alleen achterin"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit kind is jonger dan 18 jaar EN kleiner dan 1,35 m: beide voorwaarden zijn vervuld, het moet een KBS gebruiken.",
           "theoryCardIndex": 6
         },
         {
           "id": "C2_Q43",
-          "question": "Moet een kind van 10 jaar dat 1,40 m groot is een KBS gebruiken?",
+          "question": "Een kind van 10 jaar meet 1,40 m. Moet het in een kinderzitje?",
           "choices": [
-            "Ja, verplicht want het is jonger dan 18 jaar",
-            "Nee, het is groter dan 1,35 m en mag dus alleen de gordel gebruiken",
-            "Ja, een KBS is verplicht op elke leeftijd",
-            "Dat hangt af van het type voertuig"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Dit kind is groter dan 1,35 m: zelfs al is het jonger dan 18 jaar, het mag alleen de gordel gebruiken.",
@@ -1551,12 +1448,10 @@
         },
         {
           "id": "C2_Q45",
-          "question": "Mag je een KBS achterwaarts gericht plaatsen op de passagiersstoel met actieve frontale airbag?",
+          "question": "Een zitje met de rug naar de weg staat vooraan, airbag actief. Is dat toegelaten?",
           "choices": [
-            "Ja, dat is zelfs de aanbevolen positie",
-            "Nee, tenzij de airbag gedeactiveerd is of automatisch wordt gedeactiveerd",
-            "Ja, zonder enige bijzondere voorwaarde",
-            "Nee, nooit, zelfs niet met gedeactiveerde airbag"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het is verboden om een KBS achterwaarts gericht te plaatsen op een zitplaats met actieve frontale airbag, tenzij de airbag gedeactiveerd is of automatisch op een betrouwbare manier wordt gedeactiveerd.",
@@ -1564,51 +1459,44 @@
         },
         {
           "id": "C2_Q47",
-          "question": "Waar moet het onderste deel van de gordel lopen voor een kind in een KBS?",
+          "question": "Waar moet het onderste deel van de gordel over een kind lopen?",
           "choices": [
+            "Over de bovenbenen",
             "Over de buik",
-            "Over de benen van het kind",
-            "Onder de armen",
-            "Achter de rug"
+            "Onder de armen van het kind"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het onderste deel van de gordel moet over de benen van het kind in het KBS lopen.",
           "theoryCardIndex": 6
         },
         {
           "id": "C2_Q48",
-          "question": "Moet een KBS gehomologeerd zijn?",
+          "question": "Moet een kinderzitje van het internet goedgekeurd zijn?",
           "choices": [
-            "Nee, om het even welke stoel volstaat",
-            "Ja, het moet voldoen aan de ECE-normen",
-            "Nee, het is aanbevolen",
-            "Alleen voor pasgeborenen"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een KBS moet gehomologeerd zijn, dat wil zeggen conform de ECE-normen.",
           "theoryCardIndex": 6
         },
         {
           "id": "C2_Q49",
-          "question": "Een kind van 4 jaar dat 1,20 m groot is reist uitzonderlijk mee in de auto van een buurman over een korte afstand. Mag het alleen de gordel gebruiken?",
+          "question": "U bent buur en vervoert een kind van 4 jaar over een korte afstand. Volstaat de gordel alleen?",
           "choices": [
-            "Nee, een KBS is in alle gevallen verplicht",
-            "Ja, de uitzondering: ouder dan 3 jaar, korte afstand, geen ouder",
-            "Ja, de gordel volstaat altijd vanaf 3 jaar",
-            "Nee, behalve op autosnelwegtrajecten"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De uitzondering is van toepassing: ouder dan 3 jaar, korte afstand, bestuurder die niet de ouder is, op uitzonderlijke wijze. De gordel volstaat, maar het kind moet achterin zitten.",
           "theoryCardIndex": 6
         },
         {
           "id": "C2_Q50",
-          "question": "Mag het kind bij deze uitzondering vooraan zitten?",
+          "question": "Mag het kind in die uitzondering vooraan zitten?",
           "choices": [
-            "Ja, met de gordel vast",
-            "Nee, het mag NIET vooraan zitten bij deze uitzondering",
-            "Ja, als de airbag gedeactiveerd is",
-            "Dat hangt af van de leeftijd van het kind"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Bij deze uitzondering mag het kind NIET vooraan in het voertuig zitten.",
@@ -1616,12 +1504,10 @@
         },
         {
           "id": "C2_Q51",
-          "question": "Mag een kind van 2 jaar van deze uitzondering gebruikmaken?",
+          "question": "Kan een kind van 2 jaar van die uitzondering genieten?",
           "choices": [
-            "Ja, alle kinderen mogen ervan gebruikmaken",
-            "Nee, de uitzondering geldt alleen voor kinderen OUDER dan 3 jaar",
-            "Ja, als het de gordel draagt achterin",
-            "Ja, enkel achterin het voertuig"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De uitzondering geldt alleen voor kinderen OUDER dan 3 jaar. Een kind van 2 jaar moet altijd in een KBS zitten.",
@@ -1629,14 +1515,13 @@
         },
         {
           "id": "C2_Q52",
-          "question": "Je hebt 3 kinderen en maar 2 KBS passen achterin. Het derde kind is 5 jaar en 1,40 m groot. Wat doe je?",
+          "question": "Twee zitjes vullen de achterbank. Het derde kind is 5 jaar en meet 1,40 m. Wat doet u?",
           "choices": [
-            "Het mag vooraan zitten zonder KBS",
-            "De gordel volstaat want het is groter dan 1,35 m, achterin",
-            "Het mag niet meereizen in deze auto",
-            "Het mag achterin zonder gordel zitten"
+            "De gordel volstaat, achteraan",
+            "Het zit vooraan zonder zitje",
+            "Het kan zo niet meerijden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit kind is groter dan 1,35 m: het mag alleen de gordel gebruiken. Maar het moet achterin blijven zitten.",
           "theoryCardIndex": 6
         },
@@ -1670,62 +1555,55 @@
           "id": "C2_Q55",
           "question": "Wat is een dode hoek?",
           "choices": [
-            "Een bocht zonder zichtbaarheid",
-            "Een zone rond het voertuig die onzichtbaar is in de spiegels",
-            "Een schaduwzone op de rijbaan",
-            "Een verkeerd afgestelde spiegel"
+            "Een zone onzichtbaar in de spiegels",
+            "Een bocht zonder enig zicht",
+            "Een schaduwzone op de rijbaan"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dode hoeken zijn de zones naast of achter het voertuig die de bestuurder niet kan zien, zelfs met correct afgestelde achteruitkijkspiegels.",
           "theoryCardIndex": 7
         },
         {
           "id": "C2_Q56",
-          "question": "Bestaan er dode hoeken zelfs als de achteruitkijkspiegels correct afgesteld zijn?",
+          "question": "Uw spiegels staan goed. Bestaan er dan toch nog dode hoeken?",
           "choices": [
-            "Nee, goed afgestelde spiegels elimineren de dode hoeken",
-            "Ja, er zijn altijd onzichtbare zones",
-            "Nee, alleen bij vrachtwagens",
-            "Dat hangt af van het voertuig"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Zelfs met correct afgestelde achteruitkijkspiegels bestaan er altijd dode hoeken.",
           "theoryCardIndex": 7
         },
         {
           "id": "C2_Q57",
-          "question": "Hoe werkt het Blind Spot Warning-systeem?",
+          "question": "Hoe werkt een dodehoekdetectie?",
           "choices": [
-            "Het remt het voertuig automatisch af",
-            "Een lampje licht op in de buitenspiegel",
-            "Er klinkt een geluidssignaal in de auto",
-            "Het stuur trilt licht"
+            "Een lampje licht op in de spiegel",
+            "Het stuur begint lichtjes te trillen",
+            "Een geluidssignaal in het interieur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het Blind Spot Warning laat een LED-lampje oplichten in de buitenspiegel wanneer een weggebruiker zich in de dode hoek bevindt.",
           "theoryCardIndex": 7
         },
         {
           "id": "C2_Q58",
-          "question": "Het dodehoeklampje in je achteruitkijkspiegel brandt. Wat moet je doen?",
+          "question": "Het dodehoeklampje licht op in uw spiegel. Wat moet u doen?",
           "choices": [
-            "Toch inhalen, maar snel",
-            "Niet inhalen en wachten tot het lampje uitgaat",
-            "Versnellen om voorbij te raken",
-            "Onmiddellijk van rijstrook veranderen"
+            "Niet inhalen en wachten",
+            "Toch snel inhalen",
+            "Meteen van rijstrook wisselen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Wanneer het lampje brandt, mag je niet inhalen: wacht tot het uitgaat voor je van rijstrook verandert.",
           "theoryCardIndex": 7
         },
         {
           "id": "C2_Q59",
-          "question": "Vervangt het dodehoekdetectiesysteem de blik over de schouder?",
+          "question": "Vervangt de dodehoekdetectie de blik over de schouder?",
           "choices": [
-            "Ja, het is 100% betrouwbaar",
-            "Nee, je moet ook over je schouder kijken",
-            "Ja, voor recente auto's",
-            "Dat hangt af van het model"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het dodehoekdetectiesysteem vervangt de manuele controle niet: je moet altijd over je schouder kijken.",
@@ -1733,42 +1611,39 @@
         },
         {
           "id": "C2_Q60",
-          "question": "Wat betekent het verbodsbord voor gevaarlijke goederen?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
+            "Verboden voor gevaarlijke goederen",
             "Een bijzonder gevaarlijke weg",
-            "Toegang verboden voor bepaalde gevaarlijke goederen",
-            "Chemisch gevaar op de rijbaan",
             "De ingang van een industriezone"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit verkeersbord verbiedt de doorgang aan voertuigen die bepaalde gevaarlijke goederen vervoeren.",
           "theoryCardIndex": 8,
           "sign": "C24a"
         },
         {
           "id": "C2_Q61",
-          "question": "Wat betekent het verkeersbord voor ontvlambare of explosieve goederen?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Aankondiging van een tankstation in de buurt",
-            "Verboden voor voertuigen die ontvlambare of explosieve goederen vervoeren",
-            "Zone met risico op brand of ontploffing",
-            "Aankondiging van een brandweerkazerne"
+            "Verboden voor brandbare stoffen",
+            "Een tankstation in de buurt",
+            "Een brandweerkazerne dichtbij"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit verkeersbord verbiedt de doorgang aan voertuigen die ontvlambare of explosieve goederen vervoeren.",
           "theoryCardIndex": 8,
           "sign": "C24b"
         },
         {
           "id": "C2_Q62",
-          "question": "Wat betekent het verkeersbord voor vervuilende goederen?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Beschermd natuurgebied in de buurt",
-            "Verboden voor voertuigen die vervuilende goederen vervoeren",
-            "Waterloop in de onmiddellijke buurt",
-            "Industriezone met zware vervuiling"
+            "Verboden voor vervuilende stoffen",
+            "Een beschermd natuurgebied",
+            "Een waterloop in de buurt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit verkeersbord verbiedt de doorgang aan voertuigen die vervuilende goederen vervoeren.",
           "theoryCardIndex": 8,
           "sign": "C24c"
@@ -1788,14 +1663,12 @@
         },
         {
           "id": "C2_Q65",
-          "question": "Mag je auto op LPG het verbodsbord voor gevaarlijke goederen voorbijrijden?",
+          "question": "U rijdt op LPG en ziet dit bord voor gevaarlijke goederen. Mag u door?",
           "choices": [
-            "Nee, LPG is een gevaarlijke brandstof",
-            "Ja, het bord gaat over de lading, niet de brandstof",
-            "Dat hangt af van het bord",
-            "Nee, nooit met LPG"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Alle verkeersborden voor gevaarlijke goederen gaan over de lading, niet over de brandstof. Een auto op LPG mag ze allemaal voorbijrijden.",
           "theoryCardIndex": 8
         },
@@ -1814,51 +1687,44 @@
         },
         {
           "id": "C2_Q67",
-          "question": "Wat is de maximale MTM van de aanhangwagen die je mag trekken met een definitief rijbewijs B?",
+          "question": "Met een rijbewijs B, welke MTM mag de aanhangwagen hebben zonder voorwaarde?",
           "choices": [
+            "750 kg",
             "500 kg",
-            "750 kg zonder bijkomende voorwaarde",
-            "1 000 kg",
-            "1 500 kg"
+            "1 000 kg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Met een definitief rijbewijs B mag je een aanhangwagen trekken met een MTM van maximaal 750 kg zonder bijkomende voorwaarde.",
           "theoryCardIndex": 8
         },
         {
           "id": "C2_Q68",
-          "question": "Je auto heeft een MTM van 2 000 kg. Mag je een aanhangwagen van 850 kg MTM trekken?",
+          "question": "Uw wagen heeft 2 000 kg MTM. Mag u een aanhangwagen van 850 kg trekken?",
           "choices": [
-            "Nee, de limiet is maximaal 750 kg",
-            "Ja, want 2 000 + 850 = 2 850 kg, dat overschrijdt 3 500 kg niet",
-            "Nee, je hebt verplicht een rijbewijs BE nodig",
-            "Ja, zonder enige massavoorwaarde"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De aanhangwagen overschrijdt 750 kg maar het totaal (2 000 + 850 = 2 850 kg) overschrijdt 3 500 kg niet. Het is toegestaan met een definitief rijbewijs B.",
           "theoryCardIndex": 8
         },
         {
           "id": "C2_Q69",
-          "question": "Je auto heeft een MTM van 3 000 kg. Mag je een aanhangwagen van 800 kg MTM trekken?",
+          "question": "Uw wagen heeft 3 000 kg MTM. Mag u een aanhangwagen van 800 kg trekken?",
           "choices": [
-            "Nee, want 3 000 + 800 = 3 800 kg > 3 500 kg, dus het is verboden",
-            "Nee, de aanhangwagen overschrijdt 750 kg",
-            "Ja, want 800 kg ligt dicht bij 750 kg",
-            "Ja, zonder voorwaarden"
+            "Ja",
+            "Nee"
           ],
-          "correct": 0,
+          "correct": 1,
           "explanation": "De aanhangwagen overschrijdt 750 kg EN het totaal (3 000 + 800 = 3 800 kg) overschrijdt 3 500 kg. Het is verboden met een rijbewijs B.",
           "theoryCardIndex": 8
         },
         {
           "id": "C2_Q71",
-          "question": "Je hebt een definitief rijbewijs B. Je auto heeft een MTM van 2 500 kg en de aanhangwagen een MTM van 700 kg. Mag je trekken?",
+          "question": "Uw wagen heeft 2 500 kg MTM en de aanhangwagen 700 kg. Mag u trekken?",
           "choices": [
-            "Ja, de aanhangwagen is maximaal 750 kg dus geen bijkomende voorwaarde",
-            "Nee, het totaal overschrijdt 3 000 kg",
-            "Ja, maar alleen in de bebouwde kom",
-            "Nee, je hebt een speciaal rijbewijs nodig"
+            "Ja",
+            "Nee"
           ],
           "correct": 0,
           "explanation": "De aanhangwagen is maximaal 750 kg, dus er is geen bijkomende voorwaarde. Je mag trekken.",
@@ -1866,14 +1732,13 @@
         },
         {
           "id": "C2_Q72",
-          "question": "Dit ronde rode verkeersbord met een cijfer en een verticale pijl betekent:",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Maximaal toegelaten gewicht",
-            "Maximale toegelaten hoogte (lading inbegrepen)",
-            "Minimale te respecteren afstand",
-            "Maximale hoogte van de weg"
+            "Maximaal toegelaten hoogte",
+            "Maximale massa in lading",
+            "Minimaal te houden afstand"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit verkeersbord verbiedt de toegang aan voertuigen waarvan de hoogte (lading inbegrepen) de aangegeven limiet overschrijdt.",
           "theoryCardIndex": 1,
           "sign": "C29"
@@ -1882,12 +1747,11 @@
           "id": "C2_Q73",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Maximaal toegelaten gewicht",
-            "Maximale toegelaten breedte (lading inbegrepen)",
-            "Maximale toegelaten lengte",
-            "Minimale zijdelingse afstand"
+            "Maximaal toegelaten breedte",
+            "Maximale massa in lading",
+            "Maximaal toegelaten lengte"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit verkeersbord verbiedt de toegang aan voertuigen waarvan de breedte (lading inbegrepen) de aangegeven limiet overschrijdt.",
           "theoryCardIndex": 2,
           "sign": "C27"
@@ -1896,37 +1760,32 @@
           "id": "C2_Q74",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Maximaal toegelaten gewicht",
-            "Maximale toegelaten lengte (aanhangwagen inbegrepen)",
-            "Maximale toegelaten breedte",
-            "Maximale toegelaten hoogte"
+            "Maximaal toegelaten lengte",
+            "Maximaal toegelaten breedte",
+            "Maximaal toegelaten hoogte"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dit verkeersbord verbiedt de toegang aan voertuigen waarvan de totale lengte (lading + aanhangwagen inbegrepen) de aangegeven limiet overschrijdt.",
           "theoryCardIndex": 3,
           "sign": "C25"
         },
         {
           "id": "C2_Q79",
-          "question": "Je komt aan bij een tunnel met een hoogtebord van 3,5 m. Je auto is 1,60 m hoog met dakkoffer. Mag je er door?",
+          "question": "Een tunnel is beperkt tot 3,5 m en uw wagen meet 1,60 m met dakkoffer. Mag u door?",
           "choices": [
-            "Nee, beter niet riskeren",
-            "Ja, 1,60 m is ruim onder 3,5 m",
-            "Nee, dakoffers zijn verboden in tunnels",
-            "Dat hangt af van de snelheid"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Je totale hoogte (1,60 m met dakkoffer) is ruim onder de limiet van 3,5 m. Je mag er door.",
           "theoryCardIndex": 1
         },
         {
           "id": "C2_Q83",
-          "question": "Je lading steekt 80 cm achteraan uit. Moet je het waarschuwingsbord bevestigen?",
+          "question": "Een voorwerp steekt 80 cm achteraan uit. Moet u het waarschuwingsbord aanbrengen?",
           "choices": [
-            "Ja, zodra de lading achteraan uitsteekt",
-            "Nee, het bord is pas vereist boven 1 meter uitsteek",
-            "Ja, dat is altijd verplicht",
-            "Nee, nooit voor uitsteek achteraan"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het waarschuwingsbord is pas vereist boven 1 meter uitsteek. 80 cm vereist geen bord.",
@@ -1934,51 +1793,46 @@
         },
         {
           "id": "C2_CHG_1",
-          "question": "U vervoert een lading in uw auto. Wat zijn de drie basisregels?",
+          "question": "Wat zijn de drie basisregels voor een lading?",
           "choices": [
-            "Enkel het toegelaten gewicht niet overschrijden",
-            "Anderen niet hinderen, lichten en platen niet verbergen, de stabiliteit niet aantasten",
-            "Enkel de koffer en de deuren goed sluiten",
-            "Enkel trager rijden dan je gewoonlijk doet"
+            "Niet hinderen, verbergen, destabiliseren",
+            "Het toegelaten gewicht niet overschrijden",
+            "De koffer en de deuren goed sluiten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een lading mag de andere weggebruikers niet hinderen, de lichten, signalisatie of platen niet verbergen, en de stabiliteit van het voertuig niet aantasten.",
           "theoryCardIndex": 0
         },
         {
           "id": "C2_CHG_2",
-          "question": "Wat moet u controleren voor u vertrekt met een lading?",
+          "question": "Wat moet u nakijken voor u met een lading vertrekt?",
           "choices": [
-            "Enkel de bandenspanning",
-            "Dat ze stabiel is, goed vastgemaakt en niet gevaarlijk uitsteekt",
-            "Enkel het brandstofniveau",
-            "Niets bijzonders als ze in de koffer past"
+            "Dat ze stabiel en goed vastzit",
+            "De bandenspanning van het voertuig",
+            "Het brandstofniveau in de tank"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Controleer voor vertrek dat de lading stabiel is, goed vastgemaakt en niet op gevaarlijke wijze uitsteekt.",
           "theoryCardIndex": 0
         },
         {
           "id": "C2_CHG_3",
-          "question": "Uw slecht vastgemaakte lading valt op de rijbaan. Wat is het grootste gevaar?",
+          "question": "Uw slecht vastgezette lading valt op de rijbaan. Wat is het grootste gevaar?",
           "choices": [
-            "Een simpele parkeerboete",
-            "Een ongeval veroorzaken voor de achterliggers",
+            "Een ongeval achter u veroorzaken",
             "De banden sneller verslijten",
             "Meer brandstof verbruiken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een slecht vastgemaakte lading die valt kan een zwaar ongeval veroorzaken voor de volgende voertuigen.",
           "theoryCardIndex": 0
         },
         {
           "id": "C2_CHG_4",
-          "question": "U vervoert planken die uw richtingaanwijzers gedeeltelijk verbergen. Mag u zo rijden?",
+          "question": "Planken verbergen deels uw richtingaanwijzers. Mag u zo rijden?",
           "choices": [
-            "Ja, maar enkel voor een kort traject",
-            "Nee, de lading mag nooit de lichten of signalisatie verbergen",
-            "Ja, door te claxonneren bij elke beweging",
-            "Ja, maar enkel overdag"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De lading mag nooit de lichten of signalisatie-inrichtingen verbergen: de andere weggebruikers moeten uw intenties zien.",
@@ -2197,38 +2051,34 @@
       "questions": [
         {
           "id": "C3_Q1",
-          "question": "Wat is de dubbele functie van de lichten van een auto?",
+          "question": "Wat is de dubbele functie van de lichten van een wagen?",
           "choices": [
-            "Decoreren en signaleren",
-            "Beter zien en beter gezien worden zonder te verblinden",
-            "Zien en toeteren",
-            "De weg verlichten en verwarmen"
+            "Beter zien en gezien worden",
+            "De weg verlichten en versieren",
+            "Signaleren en de motor opwarmen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De lichten hebben een dubbele functie: beter zien en beter gezien worden door andere weggebruikers, zonder te verblinden.",
           "theoryCardIndex": 0
         },
         {
           "id": "C3_Q2",
-          "question": "Wat zijn de vier soorten lichten van een auto?",
+          "question": "Wat zijn de vier soorten lichten van een wagen?",
           "choices": [
-            "Richtingaanwijzers, alarmlichten, koplampen, stadslichten",
-            "Dimlichten, grootlicht, mistlichten voor, standlichten",
-            "Rode lichten, groene lichten, oranje lichten, witte lichten",
-            "Voorlichten, achterlichten, zijlichten, daklichten"
+            "Dimlicht, grootlicht, mistlicht, standlicht",
+            "Pinkers, waarschuwingslichten, koplampen, stadslichten",
+            "Voor, achter, zijkant, op het dak"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De vier soorten lichten zijn: dimlichten, grootlicht, mistlichten voor en standlichten.",
           "theoryCardIndex": 0
         },
         {
           "id": "C3_Q3",
-          "question": "Zijn de mistlichten voor op alle auto's aanwezig?",
+          "question": "Hebben alle wagens mistlichten vooraan?",
           "choices": [
-            "Ja, dat is verplicht op alle auto's",
-            "Nee, niet op alle auto's, dus nooit verplicht aan te zetten",
-            "Ja, sinds 2010 op nieuwe auto's",
-            "Nee, alleen op nieuwe auto's"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De mistlichten voor zijn niet op alle auto's aanwezig. Aangezien hun aanwezigheid niet verplicht is, is het nooit verplicht om ze aan te zetten.",
@@ -2249,12 +2099,10 @@
         },
         {
           "id": "C3_Q6",
-          "question": "Hebben alle auto's parkeerlichten?",
+          "question": "Hebben alle wagens parkeerlichten?",
           "choices": [
-            "Ja, alle voertuigen hebben ze",
-            "Nee, slechts sommige voertuigen zijn ermee uitgerust",
-            "Ja, het is een wettelijke verplichting",
-            "Nee, geen enkele auto heeft ze"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Alle auto's hebben standlichten, maar niet allemaal hebben parkeerlichten.",
@@ -2262,25 +2110,22 @@
         },
         {
           "id": "C3_Q7",
-          "question": "Moet je de symbolen van de lichten op het dashboard kunnen herkennen?",
+          "question": "Moet u de symbolen van de lichten op het dashboard kunnen herkennen?",
           "choices": [
-            "Nee, dat is niet nodig",
-            "Ja, je moet ze kunnen herkennen",
-            "Alleen het grootlicht",
-            "Alleen het symbool van de alarmlichten"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Je moet in staat zijn om de symbolen van elk type licht op het dashboard te herkennen.",
           "theoryCardIndex": 0
         },
         {
           "id": "C3_Q8",
-          "question": "Welk symbool hoort bij het grootlicht (groot licht)?",
+          "question": "Hoe ziet het symbool van het grootlicht op het dashboard eruit?",
           "choices": [
-            "Een symbool met rechte horizontale strepen",
-            "Een symbool met naar beneden gerichte strepen",
-            "Een rond symbool",
-            "Een driehoekig symbool"
+            "Rechte horizontale streepjes",
+            "Streepjes schuin naar beneden",
+            "Een rond en vol symbool"
           ],
           "correct": 0,
           "explanation": "Het symbool van het grootlicht onderscheidt zich door rechte horizontale strepen (licht dat recht vooruit schijnt).",
@@ -2288,40 +2133,37 @@
         },
         {
           "id": "C3_Q9",
-          "question": "Welke andere lichten gaan aan wanneer je de dimlichten aanzet?",
+          "question": "U zet uw dimlichten aan. Welke lichten gaan tegelijk mee aan?",
           "choices": [
-            "Alleen de rode achterlichten",
-            "De twee standlichten vooraan en twee rode lichten achteraan",
-            "Alleen de mistlichten vooraan",
-            "Geen enkel ander licht gaat aan"
+            "De standlichten voor- en achteraan",
+            "Enkel de mistlichten vooraan",
+            "De rode achterlichten, meer niet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Wanneer je de dimlichten of het grootlicht aanzet, gaan de twee standlichten aan de voorkant en twee rode lichten aan de achterkant ook aan.",
           "theoryCardIndex": 1
         },
         {
           "id": "C3_Q11",
-          "question": "Wanneer moet je de dimlichten of het grootlicht aanzetten in het donker?",
+          "question": "Wanneer moet u uw dim- of grootlichten aansteken?",
           "choices": [
-            "Alleen om middernacht",
-            "Vanaf het vallen van de avond tot het aanbreken van de dag",
-            "Alleen op de snelweg",
-            "Alleen buiten de bebouwde kom"
+            "Van valavond tot zonsopgang",
+            "Vanaf middernacht, niet eerder",
+            "Op autosnelweg en autoweg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "In het donker moeten de dimlichten of het grootlicht aanstaan vanaf het vallen van de avond tot het aanbreken van de dag.",
           "theoryCardIndex": 1
         },
         {
           "id": "C3_Q12",
-          "question": "Wanneer moet je overdag de dimlichten aanzetten?",
+          "question": "Wanneer steekt u overdag bij zware regen uw dimlichten aan?",
           "choices": [
-            "Altijd, ook bij mooi weer",
-            "Wanneer het zicht minder dan 200 meter bedraagt",
-            "Enkel bij dichte mist",
-            "Nooit overdag"
+            "Als het zicht onder 200 m zakt",
+            "Bij mooi weer zoals bij regen",
+            "Enkel bij dichte mist"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Overdag moeten de dimlichten aan wanneer het zicht minder dan 200 meter bedraagt.",
           "theoryCardIndex": 1
         },
@@ -2340,12 +2182,10 @@
         },
         {
           "id": "C3_Q16",
-          "question": "De weg is doorlopend verlicht en je kunt 100 meter ver zien. Mag je het grootlicht aanzetten?",
+          "question": "'s Nachts op een verlichte weg waar u 100 m ver ziet, mag u grootlicht voeren?",
           "choices": [
-            "Ja, om nog beter te zien",
-            "Nee, verboden wanneer de verlichting 100 m zicht geeft",
-            "Ja, 's nachts mag het altijd",
-            "Dat hangt af van je snelheid"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het grootlicht is verboden wanneer de weg doorlopend en voldoende verlicht is om 100 meter ver te zien.",
@@ -2353,12 +2193,10 @@
         },
         {
           "id": "C3_Q17",
-          "question": "Je volgt een voertuig op 40 meter zonder de bedoeling om in te halen. Mag je het grootlicht aanhouden?",
+          "question": "U volgt een voertuig op 40 meter zonder het te willen inhalen. Mag u grootlicht houden?",
           "choices": [
-            "Ja, om de weg beter te zien",
-            "Nee, verboden op minder dan 50 m van de voorligger",
-            "Ja, als het trager dan 50 km/u rijdt",
-            "Nee, nooit achter een ander voertuig"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het grootlicht is verboden wanneer je een voertuig op minder dan 50 meter volgt zonder de onmiddellijke bedoeling om in te halen.",
@@ -2366,25 +2204,21 @@
         },
         {
           "id": "C3_Q18",
-          "question": "Er komt een voertuig tegemoet. Moet je overschakelen op de dimlichten?",
+          "question": "Een voertuig komt u tegemoet terwijl u grootlicht voert. Moet u overschakelen op dimlicht?",
           "choices": [
-            "Nee, houd het grootlicht aan",
-            "Ja, om de tegemoetkomende weggebruiker niet te verblinden",
-            "Nee, die past zich wel aan",
-            "Alleen binnen de bebouwde kom 's nachts"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Je moet overschakelen op de dimlichten om de tegemoetkomende weggebruikers niet te verblinden.",
           "theoryCardIndex": 1
         },
         {
           "id": "C3_Q19",
-          "question": "Je rijdt langs een kanaal en een schip komt naderbij. Mag je het grootlicht aanhouden?",
+          "question": "U rijdt 's nachts langs een kanaal en een boot nadert. Mag u grootlicht houden?",
           "choices": [
-            "Ja, een schip is geen wegvoertuig",
-            "Nee, het grootlicht is verboden bij het naderen van een schip",
-            "Ja, het schip is ver weg",
-            "Alleen binnen de bebouwde kom"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het grootlicht is verboden bij het naderen van een schip, net als bij het naderen van een voertuig op rails.",
@@ -2392,51 +2226,44 @@
         },
         {
           "id": "C3_Q21",
-          "question": "Mag je het grootlicht aanzetten wanneer je op het punt staat in te halen?",
+          "question": "U staat op het punt 's nachts in te halen. Mag u grootlicht aansteken?",
           "choices": [
-            "Nee, nooit tijdens een inhaalmanoeuvre",
-            "Ja, het grootlicht mag aanstaan bij een inhaalmanoeuvre",
-            "Alleen op de autosnelweg 's nachts",
-            "Alleen buiten de bebouwde kom"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Wanneer je op het punt staat in te halen of aan het inhalen bent, mag het grootlicht aanstaan.",
           "theoryCardIndex": 1
         },
         {
           "id": "C3_Q22",
-          "question": "Je volgt een voertuig op 40 meter met de bedoeling om in te halen. Mag je het grootlicht aanhouden?",
+          "question": "U volgt een voertuig op 40 meter met de bedoeling in te halen. Mag u grootlicht houden?",
           "choices": [
-            "Nee, je bent op minder dan 50 meter",
-            "Ja, want je hebt de onmiddellijke bedoeling om in te halen",
-            "Nee, je moet altijd omschakelen op 50 meter",
-            "Dat hangt af van de weg"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Als je de onmiddellijke bedoeling hebt om in te halen, mag je het grootlicht aanhouden zelfs op minder dan 50 meter.",
           "theoryCardIndex": 1
         },
         {
           "id": "C3_Q24",
-          "question": "Er komt een voertuig tegemoet tijdens je inhaalmanoeuvre. Wat doe je met je lichten?",
+          "question": "Een voertuig komt u tegemoet tijdens uw inhaalmanoeuvre 's nachts. Wat doet u?",
           "choices": [
-            "Je houdt het grootlicht gewoon aan",
-            "Je schakelt over op de dimlichten om niet te verblinden",
-            "Je doet alle lichten volledig uit",
-            "Je zet de mistlichten erbij aan"
+            "U schakelt over op dimlicht",
+            "U houdt uw grootlicht aan",
+            "U dooft al uw lichten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Zelfs tijdens een inhaalmanoeuvre moet je overschakelen op de dimlichten als er een voertuig tegemoetkomt.",
           "theoryCardIndex": 1
         },
         {
           "id": "C3_Q25",
-          "question": "Zijn de mistlichten voor verplicht?",
+          "question": "Zijn de mistlichten vooraan verplicht?",
           "choices": [
-            "Ja, op alle recente auto's",
-            "Nee, noch hun aanwezigheid noch hun gebruik is verplicht",
-            "Ja, sinds 2015 op nieuwe auto's",
-            "Ja, maar enkel op de autosnelweg"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De mistlichten voor zijn niet verplicht op een auto en het is nooit verplicht om ze aan te zetten.",
@@ -2444,181 +2271,163 @@
         },
         {
           "id": "C3_Q26",
-          "question": "In welke gevallen mag je de mistlichten voor gebruiken?",
+          "question": "In welke gevallen mag u de mistlichten vooraan gebruiken?",
           "choices": [
-            "Altijd wanneer het donker is",
-            "Alleen bij mist, sneeuwval of hevige regen",
-            "Alleen binnen de bebouwde kom",
+            "Mist, sneeuwval of zware regen",
+            "Telkens als het donker wordt",
             "Zodra het zicht vermindert"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De mistlichten voor mogen alleen gebruikt worden bij mist, sneeuwval of hevige regen.",
           "theoryCardIndex": 2
         },
         {
           "id": "C3_Q27",
-          "question": "Kunnen de mistlichten voor de dimlichten vervangen?",
+          "question": "Mogen de mistlichten vooraan bij mist het dimlicht vervangen?",
           "choices": [
-            "Nee, nooit in geen geval",
-            "Ja, ter vervanging of als aanvulling",
-            "Enkel 's nachts",
-            "Enkel op de autosnelweg"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De mistlichten voor kunnen de dimlichten/het grootlicht vervangen of gelijktijdig aanstaan.",
           "theoryCardIndex": 2
         },
         {
           "id": "C3_Q28",
-          "question": "Zijn de mistlichten achter verplicht op een auto?",
+          "question": "Zijn de mistlichten achteraan verplicht op een wagen?",
           "choices": [
-            "Nee, dat is volledig optioneel in België",
-            "Ja, een auto moet een of twee rode mistlichten achter hebben",
-            "Alleen verplicht op nieuwe auto's",
-            "Nee, ze zijn optioneel zoals die vooraan"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "In tegenstelling tot de mistlichten voor zijn de mistlichten achter (een of twee rode lichten) verplicht op een auto.",
           "theoryCardIndex": 2
         },
         {
           "id": "C3_Q29",
-          "question": "Wanneer moeten de mistlichten achter aan bij mist?",
+          "question": "Wanneer moeten de mistlichten achteraan bij mist branden?",
           "choices": [
-            "Altijd",
-            "Wanneer het zicht minder dan ongeveer 100 meter bedraagt",
-            "Wanneer het zicht minder dan 200 meter bedraagt",
-            "Zodra er mist is"
+            "Onder ongeveer 100 meter zicht",
+            "Onder ongeveer 200 meter zicht",
+            "Zodra er wat mist opduikt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij mist moeten de mistlichten achter aan wanneer het zicht minder dan 100 meter bedraagt.",
           "theoryCardIndex": 2
         },
         {
           "id": "C3_Q30",
-          "question": "Wanneer moeten de mistlichten achter aan bij hevige regen?",
+          "question": "Wanneer moeten de mistlichten achteraan bij zware regen branden?",
           "choices": [
-            "Wanneer het zicht minder dan 100 meter bedraagt",
-            "Altijd bij hevige regen",
-            "Wanneer het zicht minder dan 200 meter bedraagt",
-            "Nooit bij regen"
+            "Altijd bij zware regen",
+            "Onder 100 meter zicht",
+            "Onder 200 meter zicht"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij hevige regen moeten de mistlichten achter altijd aan (geen zichtdrempel).",
           "theoryCardIndex": 2
         },
         {
           "id": "C3_Q32",
-          "question": "Wat is het verschil tussen de voorwaarden voor mist/sneeuw en hevige regen?",
+          "question": "Wat is het verschil in voorwaarde tussen mist, sneeuw en zware regen?",
           "choices": [
-            "Geen verschil tussen de drie",
-            "Mist en sneeuw: zicht < 100 m. Hevige regen: altijd",
-            "Mist: altijd. Sneeuw en regen: < 100 m",
-            "Alle drie: altijd verplicht"
+            "Mist: onder 100 m; regen: altijd",
+            "Mist: altijd; regen: onder 100 m",
+            "De drie gevallen zijn precies gelijk"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Mist en sneeuw: mistlichten achter verplicht als zicht < 100 m. Hevige regen: altijd verplicht.",
           "theoryCardIndex": 2
         },
         {
           "id": "C3_Q33",
-          "question": "Je rijdt plotseling een mistbank binnen. Wat moet je doen?",
+          "question": "U rijdt plots een mistbank binnen. Wat moet u doen?",
           "choices": [
+            "Geleidelijk vertragen",
             "Onmiddellijk stoppen",
-            "Geleidelijk je snelheid verminderen",
-            "Het grootlicht aanzetten",
-            "Omdraaien"
+            "Het grootlicht aansteken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij het binnenrijden van een mistbank moet je geleidelijk je snelheid verminderen.",
           "theoryCardIndex": 2
         },
         {
           "id": "C3_Q35",
-          "question": "Wanneer moet je lichten aanzetten bij het parkeren op de openbare weg?",
+          "question": "Wanneer moet een geparkeerd voertuig lichten voeren?",
           "choices": [
-            "Altijd, dag en nacht",
-            "Van valavond tot ochtend, of bij zicht onder 200 m",
-            "Enkel in het holst van de nacht",
-            "Nooit wanneer u geparkeerd staat"
+            "Van valavond tot zonsopgang",
+            "Dag en nacht, onafgebroken",
+            "Bij parkeren, geen enkel licht"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij het parkeren moeten de lichten aan tussen het vallen van de avond en het aanbreken van de dag, en wanneer het zicht minder dan 200 meter bedraagt.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q36",
-          "question": "Welke lichten moet je aan de voorkant aanzetten bij nachtelijk parkeren?",
+          "question": "U parkeert 's nachts. Welke lichten voert u vooraan?",
           "choices": [
+            "Een of twee standlichten",
             "De dimlichten",
-            "Een of twee witte of amberkleurige standlichten",
-            "Het grootlicht",
             "De mistlichten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Aan de voorkant bij nachtelijk parkeren: een of twee witte of amberkleurige standlichten.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q37",
-          "question": "Welke lichten moet je aan de achterkant aanzetten bij nachtelijk parkeren?",
+          "question": "U parkeert 's nachts. Welke lichten voert u achteraan?",
           "choices": [
-            "De mistlichten achter",
             "Een of twee rode lichten",
-            "De alarmlichten",
-            "Geen enkel licht"
+            "De mistlichten",
+            "De vier knipperlichten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Aan de achterkant bij nachtelijk parkeren: een of twee rode lichten.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q38",
-          "question": "Je staat geparkeerd bij mistig weer. Mag je de dimlichten aanzetten?",
+          "question": "U staat geparkeerd bij mist. Mag u het dimlicht aansteken?",
           "choices": [
-            "Je moet ze aanzetten",
-            "Je mag ze aanzetten maar het is niet verplicht",
-            "Nee, nooit bij het parkeren",
-            "Alleen de standlichten"
+            "Ja, maar het is niet verplicht",
+            "Ja, en het is zelfs verplicht",
+            "Nee, uitgesloten bij parkeren"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij mist, sneeuw of hevige regen mag je bij het parkeren de dimlichten of mistlichten voor gebruiken, maar dat is niet verplicht.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q39",
-          "question": "Mag je binnen de bebouwde kom de standlichten vervangen door een parkeerlicht?",
+          "question": "Mag u binnen de bebouwde kom de standlichten vervangen door een parkeerlicht?",
           "choices": [
-            "Nee, nooit binnen de bebouwde kom",
-            "Ja, als het voertuig evenwijdig staat en zonder aanhangwagen",
-            "Ja, altijd zonder voorwaarde",
-            "Alleen in goed verlichte straten"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Binnen de bebouwde kom mag het parkeerlicht de standlichten vervangen als het voertuig evenwijdig met de rijbaan staat en zonder aanhangwagen.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q40",
-          "question": "Aan welke kant moet je het parkeerlicht aanzetten binnen de bebouwde kom?",
+          "question": "Aan welke kant moet u het parkeerlicht aansteken?",
           "choices": [
-            "Aan de kant van het voetpad",
-            "Aan de kant van de as van de rijbaan",
-            "Aan beide kanten",
-            "Dat maakt niet uit"
+            "Aan de kant van het midden van de weg",
+            "Aan de kant van het trottoir en de rand",
+            "Aan beide kanten tegelijk"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Alleen het licht aan de kant van de as van de rijbaan mag als parkeerlicht gebruikt worden.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q41",
-          "question": "Je staat geparkeerd binnen de bebouwde kom maar niet evenwijdig met de rijbaan. Mag je het parkeerlicht gebruiken?",
+          "question": "U staat in de bebouwde kom maar niet evenwijdig met de rijbaan. Volstaat het parkeerlicht?",
           "choices": [
-            "Ja, binnen de bebouwde kom altijd",
-            "Nee, je hebt de standlichten nodig",
-            "Ja, als de straat verlicht is",
-            "Dat maakt niet uit"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het parkeerlicht is alleen toegestaan op voorwaarde dat je evenwijdig met de rijbaan geparkeerd staat.",
@@ -2626,12 +2435,10 @@
         },
         {
           "id": "C3_Q42",
-          "question": "Je staat geparkeerd binnen de bebouwde kom, evenwijdig met de rijbaan, met een aanhangwagen. Mag je het parkeerlicht gebruiken?",
+          "question": "U staat in de bebouwde kom, evenwijdig, maar met aanhangwagen. Volstaat het parkeerlicht?",
           "choices": [
-            "Ja, je staat evenwijdig",
-            "Nee, niet wanneer er een aanhangwagen aan gekoppeld is, je hebt de standlichten nodig",
-            "Ja, de aanhangwagen heeft eigen lichten",
-            "Dat hangt af van de grootte van de aanhangwagen"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het parkeerlicht is verboden als er een aanhangwagen aan gekoppeld is: je moet de standlichten gebruiken.",
@@ -2639,12 +2446,10 @@
         },
         {
           "id": "C3_Q43",
-          "question": "Mag je buiten de bebouwde kom 's nachts alleen het parkeerlicht gebruiken?",
+          "question": "U parkeert 's nachts buiten de bebouwde kom. Volstaat het parkeerlicht alleen?",
           "choices": [
-            "Ja, overal zonder voorwaarde",
-            "Nee, buiten de bebouwde kom heb je de standlichten nodig",
-            "Ja, als de straat goed verlicht is",
-            "Ja, als je evenwijdig met de rijbaan staat"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Buiten de bebouwde kom volstaat het parkeerlicht niet: je hebt de standlichten nodig.",
@@ -2652,64 +2457,58 @@
         },
         {
           "id": "C3_Q44",
-          "question": "Wat is het verschil tussen parkeerlichten binnen en buiten de bebouwde kom?",
+          "question": "Wat is het verschil voor het parkeerlicht binnen en buiten de bebouwde kom?",
           "choices": [
-            "Geen verschil tussen beide situaties",
-            "Het parkeerlicht kan volstaan binnen de bebouwde kom, niet erbuiten",
-            "Buiten de bebouwde kom zijn 's nachts geen lichten nodig",
-            "Binnen de bebouwde kom heb je het grootlicht nodig"
+            "Het volstaat binnen de kom, buiten niet",
+            "Het volstaat overal, zonder onderscheid",
+            "Buiten de kom 's nachts geen licht"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Binnen de bebouwde kom (voorwaarden: evenwijdig, zonder aanhangwagen) kan het parkeerlicht volstaan. Buiten de bebouwde kom zijn de standlichten altijd vereist.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q45",
-          "question": "Je staat geparkeerd buiten de bebouwde kom, evenwijdig met de rijbaan, zonder aanhangwagen. Welk licht gebruik je?",
+          "question": "U staat buiten de bebouwde kom, evenwijdig, zonder aanhangwagen. Welke lichten voert u?",
           "choices": [
-            "Het parkeerlicht volstaat",
             "De standlichten",
-            "Geen enkel licht",
+            "Het parkeerlicht",
             "De dimlichten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Buiten de bebouwde kom heb je altijd de standlichten nodig, zelfs als aan alle voorwaarden is voldaan.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q46",
-          "question": "Vat de voorwaarden samen om alleen het parkeerlicht te mogen gebruiken.",
+          "question": "Onder welke voorwaarden mag het parkeerlicht alleen volstaan?",
           "choices": [
-            "Altijd mogelijk binnen de bebouwde kom, zonder voorwaarde",
-            "Bebouwde kom, evenwijdig met de rijbaan, zonder aanhangwagen, licht aan de askant",
-            "Overal behalve op de autosnelweg en de autoweg",
-            "Alleen buiten de bebouwde kom, 's nachts"
+            "In de kom, evenwijdig, zonder aanhangwagen",
+            "Overal behalve op autosnelweg en autoweg",
+            "Buiten de bebouwde kom, vooral 's nachts"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Parkeerlicht alleen is toegestaan binnen de bebouwde kom, voertuig evenwijdig met de rijbaan, zonder aanhangwagen, licht aan de kant van de as.",
           "theoryCardIndex": 3
         },
         {
           "id": "C3_Q47",
-          "question": "In welke gevallen mag je de vier richtingaanwijzers tegelijk aanzetten (alarmlichten)?",
+          "question": "In welke gevallen mag u de vier knipperlichten aanzetten?",
           "choices": [
-            "Om parkeren in dubbele file te signaleren",
-            "Bij pech, dreigend ongeval, of schoolbus die kinderen laat in-/uitstappen",
-            "Wanneer je wilt achteruitrijden",
-            "Om een hoffelijke bestuurder te bedanken"
+            "Panne, gevaar, schoolbus die stopt",
+            "Voor dubbel parkeren op de weg",
+            "Om een andere bestuurder te bedanken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De alarmlichten zijn slechts in 3 gevallen toegestaan: pech, dreigend ongeval, of schoolbus die kinderen laat in-/uitstappen.",
           "theoryCardIndex": 4
         },
         {
           "id": "C3_Q50",
-          "question": "Je hebt je auto fout geparkeerd en zet de alarmlichten aan. Is dat toegestaan?",
+          "question": "U staat slecht geparkeerd en zet uw waarschuwingslichten aan. Is dat toegelaten?",
           "choices": [
-            "Ja, dat is een gangbare praktijk",
-            "Nee, dat is een extra overtreding",
-            "Ja, uit beleefdheid",
-            "Ja, voor een kort moment"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De alarmlichten aanzetten om fout parkeren te signaleren is een extra overtreding.",
@@ -2717,53 +2516,48 @@
         },
         {
           "id": "C3_Q52",
-          "question": "Een schoolbus staat stil met zijn alarmlichten aan. Wat betekent dat?",
+          "question": "Een schoolbus staat stil met waarschuwingslichten aan. Wat betekent dat?",
           "choices": [
-            "De bus heeft ter plaatse pech",
-            "Er stappen kinderen in of uit",
-            "De bus gaat zo weer vertrekken",
-            "De bus verandert van richting"
+            "Kinderen stappen in of uit",
+            "De bus staat er in panne",
+            "De bus vertrekt zo weer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een schoolbus met alarmlichten = kinderen stappen in of uit.",
           "theoryCardIndex": 4
         },
         {
           "id": "C3_Q53",
-          "question": "Een schoolbus heeft zijn alarmlichten aan. Wat moet je doen?",
+          "question": "U nadert een schoolbus met waarschuwingslichten aan. Wat moet u doen?",
           "choices": [
-            "Gewoon je weg verderzetten",
-            "Sterk vertragen en zo nodig stoppen",
-            "Toeteren om de kinderen te waarschuwen",
-            "Van rijstrook wisselen om de bus voorbij te gaan"
+            "Sterk vertragen en stoppen",
+            "Gewoon uw weg verder zetten",
+            "Toeteren om de kinderen te waarschuwen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Wanneer een schoolbus zijn alarmlichten aan heeft, moet je sterk vertragen en zo nodig stoppen.",
           "theoryCardIndex": 4
         },
         {
           "id": "C3_Q54",
-          "question": "Mag je een schoolbus met alarmlichten voorbijrijden?",
+          "question": "Een schoolbus heeft zijn waarschuwingslichten aan. Mag u hem inhalen?",
           "choices": [
-            "Nee, dat is strikt verboden",
-            "Ja, met grote voorzichtigheid",
-            "Nee, nooit een stilstaande bus",
-            "Ja, gewoon op normale snelheid"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Je mag een schoolbus met alarmlichten voorbijrijden, maar met voorzichtigheid.",
           "theoryCardIndex": 4
         },
         {
           "id": "C3_Q55",
-          "question": "Een schoolbus zet zijn richtingaanwijzers aan (niet de alarmlichten). Wat betekent dat?",
+          "question": "Een schoolbus zet zijn richtingaanwijzers aan, niet zijn waarschuwingslichten. Wat betekent dat?",
           "choices": [
-            "Er stappen kinderen in of uit de bus",
-            "De bus gaat weer vertrekken of van richting veranderen",
-            "De bus heeft ter plaatse pech",
-            "Niets bijzonders te melden"
+            "De bus vertrekt of slaat af",
+            "Kinderen stappen in of uit",
+            "De bus staat er in panne"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De richtingaanwijzers (niet de alarmlichten) geven aan dat de bus weer gaat vertrekken of van richting gaat veranderen.",
           "theoryCardIndex": 4
         },
@@ -2783,14 +2577,13 @@
         },
         {
           "id": "C3_Q58",
-          "question": "Wat moet je controleren voor je een lange tunnel binnenrijdt?",
+          "question": "Wat moet u nakijken voor u een lange tunnel inrijdt?",
           "choices": [
+            "Het brandstofniveau",
             "De bandenspanning",
-            "Of je voldoende brandstof hebt",
-            "Of de ramen dicht zijn",
-            "Of de radio werkt"
+            "De goede staat van de radio"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Voor je een lange tunnel binnenrijdt, controleer je of je voldoende brandstof hebt.",
           "theoryCardIndex": 5
         },
@@ -2809,103 +2602,94 @@
         },
         {
           "id": "C3_Q60",
-          "question": "Waarom wordt aangeraden om je zonnebril af te doen voor je een tunnel binnenrijdt?",
+          "question": "Waarom is het aangeraden uw zonnebril af te zetten voor een tunnel?",
           "choices": [
+            "Om het zwartegatgevoel te vermijden",
             "Om het verkeer beter te horen",
-            "Om het 'zwarte gat'-effect te vermijden",
-            "Het is een wettelijke verplichting",
             "Om de bril niet te beschadigen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een zonnebril vertraagt de aanpassing van de ogen aan de duisternis, waardoor een 'zwart gat'-effect ontstaat bij het binnenrijden van de tunnel.",
           "theoryCardIndex": 5
         },
         {
           "id": "C3_Q61",
-          "question": "Hoe vermijd je het 'zwarte gat'-effect bij het binnenrijden van een tunnel?",
+          "question": "Hoe vermijdt u het zwartegatgevoel aan de ingang van een tunnel?",
           "choices": [
-            "Versnellen voor het binnenrijden van de tunnel",
-            "Een oog sluiten 100-200 m voor de tunnel en het openen eenmaal binnen",
-            "Het grootlicht aanzetten in de tunnel",
-            "Een speciale zonnebril dragen"
+            "Een oog sluiten voor u binnenrijdt",
+            "Versnellen net voor u binnenrijdt",
+            "Het grootlicht aansteken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sluit een oog 100-200 m voor de tunnel en open het binnenin: een oog dat al aan de duisternis is aangepast, vermijdt het 'zwarte gat'-effect.",
           "theoryCardIndex": 5
         },
         {
           "id": "C3_Q62",
-          "question": "Er is brand in de tunnel. Waar moet je stoppen?",
+          "question": "Er breekt brand uit in een tunnel. Waar moet u stoppen?",
           "choices": [
-            "Op de linkerrijstrook",
             "Op de rechterrijstrook",
-            "In het midden van de tunnel",
-            "Achteruitrijden naar de uitgang"
+            "Op de linkerrijstrook",
+            "In het midden van de tunnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij brand in een tunnel stop je op de rechterrijstrook.",
           "theoryCardIndex": 5
         },
         {
           "id": "C3_Q63",
-          "question": "Wat doe je met de contactsleutel bij brand in een tunnel?",
+          "question": "U verlaat uw wagen in een brandende tunnel. Wat doet u met de sleutel?",
           "choices": [
-            "Je neemt ze mee",
-            "Je laat ze in het contact zitten",
-            "Je verstopt ze",
-            "Je gooit ze weg"
+            "U laat hem op het contact",
+            "U neemt hem mee",
+            "U verstopt hem in de wagen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Laat de sleutel in het contact zitten (of de transponder op de bestuurdersstoel) zodat de hulpdiensten het voertuig kunnen verplaatsen.",
           "theoryCardIndex": 5
         },
         {
           "id": "C3_Q64",
-          "question": "In welke richting moet je vluchten bij brand in een tunnel?",
+          "question": "U vlucht uit een brandende tunnel. In welke richting gaat u?",
           "choices": [
-            "In de rijrichting",
             "Tegen de rijrichting in",
-            "Naar het midden van de tunnel",
-            "Ter plaatse blijven"
+            "In de rijrichting mee",
+            "Naar het midden van de tunnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vlucht tegen de rijrichting in: de ventilatoren blazen de rook in de rijrichting, dus de frisse lucht komt van de andere kant.",
           "theoryCardIndex": 5
         },
         {
           "id": "C3_Q66",
-          "question": "Waarom moet je snel een brandende tunnel verlaten?",
+          "question": "Waarom moet u een brandende tunnel heel snel verlaten?",
           "choices": [
-            "Om de andere weggebruikers die evacueren niet te hinderen",
-            "Omdat de rook vaak dodelijk is en het risico op een flash fire toeneemt",
-            "Om buiten de hulpdiensten te bellen",
-            "Om uw voertuig tegen het vuur te beschermen"
+            "De rook is vaak dodelijk",
+            "Om de anderen niet te hinderen",
+            "Om uw voertuig te beschermen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "In een brandende tunnel is de rook vaak dodelijk en neemt het risico op een flash fire (plotselinge explosie) toe met de tijd.",
           "theoryCardIndex": 5
         },
         {
           "id": "C3_Q67",
-          "question": "Hoe moeten geluidswaarschuwingen zijn?",
+          "question": "Hoe moeten geluidssignalen klinken?",
           "choices": [
-            "Lang en luid",
-            "Zo kort mogelijk, zonder overdrijving",
-            "Doorlopend",
-            "Afwisselend"
+            "Zo kort mogelijk",
+            "Lang en goed aangehouden",
+            "Doorlopend tot er reactie komt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Geluidswaarschuwingen moeten zo kort mogelijk zijn, zonder overdrijving.",
           "theoryCardIndex": 6
         },
         {
           "id": "C3_Q68",
-          "question": "Mag je een muzikale claxon op je auto installeren?",
+          "question": "Mag u een muzikale claxon op uw wagen plaatsen?",
           "choices": [
-            "Ja, om op te vallen tussen de anderen",
-            "Nee, enkel de signalen voorzien door het reglement zijn toegelaten",
-            "Ja, maar enkel binnen de bebouwde kom",
-            "Ja, als het volume laag genoeg blijft"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het is verboden om andere waarschuwingssignalen te gebruiken dan die voorzien door het reglement. Geen muzikale claxon.",
@@ -2926,25 +2710,22 @@
         },
         {
           "id": "C3_Q70",
-          "question": "Wanneer mag je overdag buiten de bebouwde kom toeteren?",
+          "question": "Buiten de bebouwde kom en overdag, wanneer mag u toeteren?",
           "choices": [
-            "Wanneer je maar wilt, zonder beperking",
-            "Om een ongeval te vermijden of een inhaalbeweging aan te kondigen",
-            "Enkel om een andere bestuurder te groeten",
-            "Nooit buiten de bebouwde kom"
+            "Om een ongeval te vermijden",
+            "Om een bestuurder te groeten",
+            "Wanneer u dat wil"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Buiten de bebouwde kom overdag is toeteren toegestaan om een ongeval te vermijden EN om te waarschuwen voor een inhaalmanoeuvre.",
           "theoryCardIndex": 6
         },
         {
           "id": "C3_Q73",
-          "question": "Mag je 's nachts toeteren om een inhaalmanoeuvre aan te kondigen?",
+          "question": "Mag u 's nachts toeteren om een inhaalmanoeuvre aan te kondigen?",
           "choices": [
-            "Ja, net als overdag",
-            "Nee, behalve bij dreigend gevaar",
-            "Ja, maar kort",
-            "Ja, alleen buiten de bebouwde kom"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "'s Nachts worden geluidssignalen vervangen door lichtsignalen, behalve bij dreigend gevaar.",
@@ -2952,27 +2733,24 @@
         },
         {
           "id": "C3_Q74",
-          "question": "Wat is een lichtsignaal (appel de phares)?",
+          "question": "Wat is een lichtsignaal met de koplampen?",
           "choices": [
-            "Het grootlicht continu aanzetten",
-            "Kort en afwisselend gebruik van het grootlicht en de dimlichten",
-            "De mistlichten aanzetten",
-            "De standlichten aan- en uitzetten"
+            "Kort en afwisselend gebruik van de lichten",
+            "Het grootlicht onafgebroken aansteken",
+            "De mistlichten aansteken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een lichtsignaal = kort en afwisselend gebruik van het grootlicht en de dimlichten.",
           "theoryCardIndex": 6
         },
         {
           "id": "C3_Q75",
-          "question": "Mag je 's nachts toeteren bij dreigend gevaar?",
+          "question": "Mag u 's nachts toeteren bij dreigend gevaar?",
           "choices": [
-            "Nee, alleen lichtsignalen zijn toegelaten",
-            "Ja, bij dreigend gevaar blijft toeteren toegestaan, ook 's nachts",
-            "Nee, nooit tussen 22 uur en 6 uur",
-            "Ja, maar enkel buiten de bebouwde kom"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij dreigend gevaar blijft toeteren toegestaan, ook 's nachts.",
           "theoryCardIndex": 6
         }
