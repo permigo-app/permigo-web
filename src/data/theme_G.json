@@ -212,14 +212,13 @@
       "questions": [
         {
           "id": "G1_Q1",
-          "question": "Vous approchez d'un signal rond rouge avec une barre blanche horizontale. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Vous ne pouvez circuler dans aucune direction",
-            "Vous ne pouvez pas franchir ce signal dans ce sens",
-            "Vous ne pouvez pas vous garer ici",
-            "Vous ne pouvez pas dépasser à cet endroit"
+            "Sens interdit dans cette direction",
+            "Stationnement interdit sur la voie",
+            "Dépassement interdit sur ce tronçon"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Rond rouge + barre blanche = sens interdit dans ce sens.",
           "theoryCardIndex": 0,
           "sign": "C1",
@@ -227,12 +226,10 @@
         },
         {
           "id": "G1_Q2",
-          "question": "Vous êtes cycliste et vous arrivez devant un signal de sens interdit sans panneau additionnel. Pouvez-vous le franchir ?",
+          "question": "Vous êtes cycliste devant un sens interdit sans panneau additionnel. Pouvez-vous le franchir ?",
           "choices": [
-            "Oui, en tant que cycliste vous êtes exempté",
-            "Non, le sens interdit s'applique à TOUS les conducteurs, y compris les cyclistes",
-            "Oui, seules les voitures sont concernées",
-            "Cela dépend de la présence d'un panneau additionnel"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le sens interdit s'applique à tous les conducteurs, cyclistes inclus.",
@@ -242,28 +239,26 @@
         },
         {
           "id": "G1_Q3",
-          "question": "Vous roulez sur une voie à sens unique et croisez des véhicules qui arrivent en face. D'où viennent-ils ?",
+          "question": "Sur une voie à sens unique, vous croisez des véhicules en face. D'où viennent-ils ?",
           "choices": [
-            "Ils circulent dans le même sens que vous",
-            "Ils roulent en sens inverse avec leur propre signal de sens unique",
-            "Ils débouchent d'un carrefour adjacent",
-            "Ils sortent d'un parking voisin"
+            "De leur propre sens unique",
+            "Du même sens que vous",
+            "D'un parking voisin"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans une rue en sens unique, les autres conducteurs arrivent en face.",
           "theoryCardIndex": 0,
           "image": "/images/questions/G1_Q3.webp"
         },
         {
           "id": "G1_Q4",
-          "question": "Vous hésitez entre deux panneaux lors de votre trajet. Quelle est la différence entre le sens interdit et le sens unique ?",
+          "question": "Quelle différence entre le sens interdit et le sens unique ?",
           "choices": [
-            "Il n'y a aucune différence entre les deux",
-            "Le sens interdit interdit d'entrer ; le sens unique indique la direction autorisée",
-            "Le sens unique interdit, le sens interdit autorise",
-            "Les deux panneaux ont exactement la même forme"
+            "L'un interdit, l'autre indique le sens",
+            "Le sens unique interdit d'y entrer",
+            "Aucune, les deux sont équivalents"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sens interdit (rouge) = interdit d'entrer. Sens unique (bleu) = direction autorisée.",
           "theoryCardIndex": 0,
           "severe": true,
@@ -271,28 +266,25 @@
         },
         {
           "id": "G1_Q6",
-          "question": "Vous apercevez un signal rectangulaire bleu avec une flèche blanche orientée dans votre direction. Que devez-vous en comprendre ?",
+          "question": "Vous voyez ce panneau face à vous. Que devez-vous en comprendre ?",
           "choices": [
-            "Vous êtes face à un sens interdit",
-            "Vous circulez dans le sens autorisé d'une voie à sens unique",
-            "L'accès est interdit dans les deux sens",
+            "Vous êtes dans le bon sens",
+            "Vous êtes en sens interdit",
             "Vous devez faire demi-tour"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Rectangulaire bleu + flèche = sens unique, direction autorisée.",
           "theoryCardIndex": 0,
           "sign": "F19"
         },
         {
           "id": "G1_Q7",
-          "question": "Vous êtes cycliste et vous voyez un sens interdit accompagné d'un panneau additionnel représentant un vélo. Que pouvez-vous faire ?",
+          "question": "Un sens interdit porte un panneau additionnel avec un vélo. Vous êtes cycliste : pouvez-vous passer ?",
           "choices": [
-            "Vous êtes également interdit de passage",
-            "Vous êtes autorisé à franchir ce signal en sens inverse",
-            "Vous devez emprunter la piste cyclable",
-            "Vous pouvez garer votre vélo ici"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Panneau additionnel vélo = les cyclistes peuvent emprunter le sens interdit en sens inverse.",
           "theoryCardIndex": 0,
           "severe": true,
@@ -315,12 +307,10 @@
         },
         {
           "id": "G1_Q11",
-          "question": "Vous circulez normalement lorsqu'un conducteur surgit de votre droite en sortant d'une rue à sens interdit. Devez-vous lui céder le passage ?",
+          "question": "Un conducteur surgit de votre droite en sortant d'un sens interdit. Devez-vous lui céder le passage ?",
           "choices": [
-            "Oui, la priorité de droite s'applique toujours",
-            "Non, un conducteur en infraction n'a pas cette priorité",
-            "Oui, par simple mesure de prudence",
-            "Cela dépend de la vitesse des deux véhicules"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un conducteur en infraction (sens interdit) n'a pas la priorité de droite.",
@@ -330,14 +320,12 @@
         },
         {
           "id": "G1_Q12",
-          "question": "Vous roulez et un cycliste débouche à votre droite d'une rue marquée sens interdit, mais un panneau additionnel autorise les vélos. Devez-vous lui céder le passage ?",
+          "question": "Un cycliste sort à votre droite d'un sens interdit qui l'autorise. Devez-vous lui céder le passage ?",
           "choices": [
-            "Non, il sort d'un sens interdit",
-            "Oui, il est autorisé : priorité de droite",
-            "Non, les cyclistes n'ont jamais la priorité",
-            "Cela dépend de la présence d'une piste"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Cycliste autorisé par panneau additionnel = il a la priorité de droite.",
           "theoryCardIndex": 0,
           "severe": true,
@@ -345,41 +333,37 @@
         },
         {
           "id": "G1_Q13",
-          "question": "Vous arrivez devant un signal rond rouge comportant deux barres blanches (ou un cercle rouge vide). Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Vous ne pouvez pas passer dans un seul sens",
-            "L'accès est interdit dans les DEUX sens à tout conducteur",
-            "Vous ne pouvez pas vous garer ici",
-            "Votre vitesse est limitée"
+            "Accès interdit dans les deux sens",
+            "Accès interdit dans un seul sens",
+            "Stationnement interdit ici même"
           ],
-          "correct": 1,
-          "explanation": "Deux barres (ou cercle vide) = accès interdit dans les deux sens.",
+          "correct": 0,
+          "explanation": "Le disque rouge à bord blanc, sans barre, ferme la voie à tout conducteur dans les deux sens. À ne pas confondre avec le sens interdit, qui porte une barre blanche horizontale et ne vaut que dans un sens.",
           "theoryCardIndex": 1,
           "sign": "C3"
         },
         {
           "id": "G1_Q14",
-          "question": "Vous confondez parfois ces deux signaux. Quelle est la différence entre le sens interdit (une barre) et l'accès interdit dans les deux sens (deux barres) ?",
+          "question": "Quelle différence entre le sens interdit et l'accès interdit dans les deux sens ?",
           "choices": [
-            "Il n'y a aucune différence",
-            "Une barre = un seul sens interdit ; deux barres = les deux sens",
-            "Les deux interdisent la circulation dans les deux sens",
-            "Le sens interdit est le plus restrictif des deux"
+            "Le premier vise un sens, l'autre deux",
+            "Le premier vise deux sens, l'autre un",
+            "Aucune, les deux sont identiques"
           ],
-          "correct": 1,
-          "explanation": "Sens interdit (une barre) = un sens seulement. Accès interdit (deux barres) = aucun sens.",
+          "correct": 0,
+          "explanation": "Le sens interdit porte une barre blanche horizontale et ne vaut que dans le sens où vous circulez. L'accès interdit est un disque rouge sans barre et ferme la voie dans les deux sens.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/G1_Q14.webp"
         },
         {
           "id": "G1_Q15",
-          "question": "Vous êtes cycliste et vous arrivez devant un signal d'accès interdit dans les deux sens. Pouvez-vous passer ?",
+          "question": "Vous êtes cycliste devant un accès interdit dans les deux sens. Pouvez-vous passer ?",
           "choices": [
-            "Oui, en tant que cycliste vous êtes exempté",
-            "Non, ce signal s'applique à tous les conducteurs, y compris les cyclistes",
-            "Oui, seules les voitures sont concernées",
-            "Cela dépend du panneau additionnel"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "L'accès interdit deux sens s'applique à tous, cyclistes inclus.",
@@ -388,54 +372,47 @@
         },
         {
           "id": "G1_Q16",
-          "question": "Vous arrivez devant un signal d'accès interdit accompagné du panneau \"Excepté circulation locale\". Qui a le droit d'entrer dans cette rue ?",
+          "question": "Avec la mention « excepté circulation locale », qui a le droit d'entrer ?",
           "choices": [
-            "Tout le monde, le panneau additionnel n'a pas d'effet",
-            "Les habitants, les travailleurs, les visiteurs, les livreurs, les cyclistes et les cavaliers",
-            "Uniquement les résidents domiciliés dans la rue",
-            "Personne, le signal d'interdiction reste absolu"
+            "Habitants, visiteurs et livreurs",
+            "Les résidents domiciliés seuls",
+            "Tout le monde, sans distinction"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Circulation locale = résidents, visiteurs, livreurs, cyclistes et cavaliers.",
           "theoryCardIndex": 1,
           "image": "/images/questions/G1_Q16.webp"
         },
         {
           "id": "G1_Q17",
-          "question": "Vous avez rendez-vous chez votre dentiste qui habite dans une rue avec un signal \"accès interdit + excepté circulation locale\". Pouvez-vous y entrer ?",
+          "question": "Votre dentiste habite dans une rue « excepté circulation locale ». Pouvez-vous y entrer ?",
           "choices": [
-            "Non, l'accès est interdit à tous",
-            "Oui, rendre visite à quelqu'un dans la rue constitue de la circulation locale",
-            "Non, seuls les résidents sont autorisés",
-            "Oui, uniquement avec un laissez-passer"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Rendre visite = circulation locale = autorisé.",
           "theoryCardIndex": 1,
           "image": "/images/questions/G1_Q17.webp"
         },
         {
           "id": "G1_Q18",
-          "question": "Vous êtes livreur et vous devez déposer des marchandises dans une rue portant le signal \"accès interdit + excepté circulation locale\". Pouvez-vous y entrer ?",
+          "question": "Vous êtes livreur et devez déposer des marchandises dans cette rue. Pouvez-vous y entrer ?",
           "choices": [
-            "Non, l'accès vous est interdit",
-            "Oui, la livraison fait partie de la circulation locale",
-            "Non, seuls les résidents sont autorisés",
-            "Cela dépend de l'heure de livraison"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Livraison = circulation locale = autorisé.",
           "theoryCardIndex": 1,
           "image": "/images/questions/G1_Q18.webp"
         },
         {
           "id": "G1_Q20",
-          "question": "Vous souhaitez utiliser une rue avec \"accès interdit + excepté circulation locale\" comme raccourci. Vous n'y habitez pas et n'y rendez visite à personne. Pouvez-vous y entrer ?",
+          "question": "Vous voulez utiliser cette rue comme raccourci, sans y avoir affaire. Pouvez-vous y entrer ?",
           "choices": [
-            "Oui, à condition que la rue soit vide",
-            "Non, un raccourci n'est pas de la circulation locale",
-            "Oui, en roulant très prudemment",
-            "Oui, en roulant au pas"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Raccourci = pas de circulation locale = interdit.",
@@ -444,12 +421,10 @@
         },
         {
           "id": "G1_Q21",
-          "question": "Vous passez votre examen pratique de conduite et vous arrivez devant une rue avec \"accès interdit + excepté circulation locale\". Pouvez-vous y entrer ?",
+          "question": "Pendant votre examen pratique, pouvez-vous entrer dans une rue « excepté circulation locale » ?",
           "choices": [
-            "Oui, pour aller chez un commerçant de la rue",
-            "Non, c'est strictement interdit pendant l'examen pratique",
-            "Oui, si l'examinateur vous le demande",
-            "Cela dépend de la rue concernée"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "À l'examen pratique, jamais entrer dans une rue à accès interdit.",
@@ -458,26 +433,22 @@
         },
         {
           "id": "G1_Q24",
-          "question": "Vous voyez une voiture de police entrer dans une rue à accès interdit. Est-ce autorisé ?",
+          "question": "Une voiture de police entre dans une rue à accès interdit. Est-ce autorisé ?",
           "choices": [
-            "Non, les règles s'appliquent à tous",
-            "Oui, les véhicules des forces de l'ordre peuvent y entrer",
-            "Non, sauf avec un panneau additionnel",
-            "Cela dépend de la mission en cours"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Forces de l'ordre et véhicules prioritaires peuvent toujours y entrer.",
           "theoryCardIndex": 1,
           "image": "/images/questions/G1_Q24.webp"
         },
         {
           "id": "G1_Q25",
-          "question": "Vous conduisez une voiture et vous arrivez devant un signal interdisant l'accès aux véhicules à moteur de plus de deux roues et aux motos avec side-car. Pouvez-vous passer ?",
+          "question": "Un panneau interdit les véhicules à moteur de plus de deux roues. Vous êtes en voiture : pouvez-vous passer ?",
           "choices": [
-            "Oui, votre voiture n'est pas concernée",
-            "Non, une voiture est un véhicule à moteur de plus de deux roues",
-            "Oui, en roulant prudemment",
-            "Cela dépend du type de voiture"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Une voiture a plus de deux roues — elle est interdite par ce signal.",
@@ -486,138 +457,123 @@
         },
         {
           "id": "G1_Q26",
-          "question": "Vous conduisez une moto SANS side-car et vous arrivez devant le signal interdisant les véhicules >2 roues et motos avec side-car. Pouvez-vous passer ?",
+          "question": "Ce même panneau vise aussi les motos avec side-car. Vous êtes en moto sans side-car : pouvez-vous passer ?",
           "choices": [
-            "Non, toutes les motos sont interdites",
-            "Oui, seules les motos AVEC side-car sont interdites par ce signal",
-            "Non, aucune moto ne peut passer",
-            "Cela dépend de la cylindrée"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal n'interdit que les motos AVEC side-car, pas sans.",
           "theoryCardIndex": 2,
           "image": "/images/questions/G1_Q26.webp"
         },
         {
           "id": "G1_Q27",
-          "question": "Vous êtes interdit de passage par un signal dans un sens. Pouvez-vous emprunter cette voie dans l'autre sens ?",
+          "question": "Un panneau vous interdit le passage dans un sens. Pouvez-vous emprunter cette voie dans l'autre sens ?",
           "choices": [
-            "Non, l'interdiction vaut dans les deux sens",
-            "Oui, vous pouvez circuler dans l'autre sens",
-            "Non, sauf si vous êtes motocycliste",
-            "Cela dépend du panneau"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal interdit dans un sens — l'autre sens reste possible.",
           "theoryCardIndex": 2,
           "image": "/images/questions/G1_Q27.webp"
         },
         {
           "id": "G1_Q28",
-          "question": "Vous conduisez une voiture et vous arrivez devant un signal interdisant l'accès aux motocyclettes (avec ou sans side-car). Pouvez-vous passer ?",
+          "question": "Un panneau interdit l'accès aux motocyclettes. Vous êtes en voiture : pouvez-vous passer ?",
           "choices": [
-            "Non, tous les véhicules motorisés sont interdits",
-            "Oui, ce signal ne concerne que les motocyclettes",
-            "Non, c'est un sens interdit classique",
-            "Cela dépend de la taille du véhicule"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal ne vise que les motocyclettes — les voitures peuvent passer.",
           "theoryCardIndex": 2,
           "image": "/images/questions/G1_Q28.webp"
         },
         {
           "id": "G1_Q29",
-          "question": "Vous conduisez un cyclomoteur et vous arrivez devant un signal interdisant les motocyclettes. Pouvez-vous passer ?",
+          "question": "Ce même panneau interdit les motocyclettes. Vous conduisez un cyclomoteur : pouvez-vous passer ?",
           "choices": [
-            "Non, les cyclomoteurs sont aussi concernés",
-            "Oui, il vise les motocyclettes, pas les cyclomoteurs (sauf signal spécifique)",
-            "Non, vous ne pouvez jamais passer avec un moteur",
-            "Cela dépend de la classe du cyclomoteur"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Cyclomoteur ≠ motocyclette — le cyclomoteur peut passer (sauf signal spécifique).",
           "theoryCardIndex": 2,
           "image": "/images/questions/G1_Q29.webp"
         },
         {
           "id": "G1_Q30",
-          "question": "Vous arrivez devant un signal fusionné interdisant les véhicules à moteur >2 roues ET toutes les motocyclettes. Quels usagers peuvent encore passer ?",
+          "question": "Un panneau interdit les véhicules à moteur de plus de deux roues et toutes les motos. Qui peut encore passer ?",
           "choices": [
-            "Les voitures peuvent encore passer",
-            "Les cyclomoteurs, les cyclistes et les piétons",
-            "Personne ne peut passer",
-            "Les motocyclettes peuvent encore passer"
+            "Cyclomoteurs, cyclistes, piétons",
+            "Les voitures particulières seules",
+            "Les motocyclettes, elles seules"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Fusion = >2 roues + toutes motos. Cyclomoteurs, cyclistes, piétons peuvent encore passer.",
           "theoryCardIndex": 2,
           "image": "/images/questions/G1_Q30.webp"
         },
         {
           "id": "G1_Q31",
-          "question": "Vous comparez deux signaux d'interdiction. Quelle est la différence entre le signal interdisant les >2 roues + motos avec side-car et le signal fusionné ?",
+          "question": "Quelle différence entre le panneau visant les motos avec side-car et le panneau fusionné ?",
           "choices": [
-            "Il n'y a aucune différence entre eux",
-            "Le fusionné interdit TOUTES les motos, avec ou sans side-car",
-            "Le signal fusionné est plus permissif",
-            "Le premier signal est le plus restrictif"
+            "Le fusionné vise toutes les motos",
+            "Le fusionné est plus permissif",
+            "Aucune, ils sont équivalents"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal fusionné élargit l'interdiction à toutes les motos (sans side-car aussi).",
           "theoryCardIndex": 2,
           "image": "/images/questions/G1_Q31.webp"
         },
         {
           "id": "G1_Q32",
-          "question": "Vous voyez un signal rond rouge avec une silhouette de quad. Quels véhicules sont interdits ?",
+          "question": "Quels véhicules ce panneau interdit-il ?",
           "choices": [
-            "Toutes les motocyclettes à deux roues",
-            "Les quads (4 roues tout-terrain à guidon et selle)",
-            "Toutes les voitures particulières",
-            "Les tracteurs et machines agricoles"
+            "Les quads",
+            "Les motos à deux roues",
+            "Les tracteurs agricoles"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal quad vise spécifiquement les quads (4 roues, tout-terrain, guidon, selle).",
           "theoryCardIndex": 2,
           "sign": "C6"
         },
         {
           "id": "G1_Q33",
-          "question": "Vous observez un signal d'interdiction rond rouge SANS emblème central. Dans combien de directions s'applique-t-il ?",
+          "question": "Dans combien de directions ce panneau s'applique-t-il ?",
           "choices": [
-            "Uniquement dans la direction où vous circulez",
-            "Dans les DEUX directions",
-            "Uniquement pendant la journée",
-            "Uniquement en agglomération"
+            "Dans les deux sens",
+            "Dans votre sens seul",
+            "En agglomération seule"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sans emblème = s'applique dans les deux directions.",
           "theoryCardIndex": 2,
           "sign": "C3"
         },
         {
           "id": "G1_Q34",
-          "question": "Vous observez un signal d'interdiction rond rouge AVEC un emblème central (par exemple une moto). Dans combien de directions s'applique-t-il ?",
+          "question": "Dans combien de directions ce panneau s'applique-t-il ?",
           "choices": [
-            "Dans les deux directions",
-            "Uniquement dans la direction où vous circulez",
-            "Partout dans la zone",
-            "Uniquement en agglomération"
+            "Dans votre sens seul",
+            "Dans les deux sens",
+            "Partout dans la zone"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avec emblème = s'applique uniquement à cette direction.",
           "theoryCardIndex": 2,
           "sign": "C7"
         },
         {
           "id": "G1_Q38",
-          "question": "Vous conduisez une moto avec side-car et vous arrivez devant le signal interdisant les véhicules >2 roues et les motos avec side-car. Pouvez-vous passer ?",
+          "question": "Un panneau interdit les motos avec side-car. Vous conduisez une moto avec side-car : pouvez-vous passer ?",
           "choices": [
-            "Oui, les side-cars ne sont pas concernés",
-            "Non, les motos avec side-car sont expressément interdites par ce signal",
-            "Oui, en roulant prudemment",
-            "Cela dépend du poids du side-car"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Motos avec side-car = expressément interdites par ce signal.",
@@ -626,68 +582,60 @@
         },
         {
           "id": "G1_Q39",
-          "question": "Vous chargez votre voiture avec vos passagers et vos bagages. Comment calcule-t-on la masse en charge (MEC) de votre véhicule ?",
+          "question": "Comment calcule-t-on la masse en charge d'un véhicule ?",
           "choices": [
-            "C'est le poids du véhicule à vide",
-            "Véhicule + conducteur + passagers + chargement, pesés à un moment donné",
-            "C'est le poids maximal autorisé par le constructeur",
-            "C'est uniquement le poids du chargement"
+            "Véhicule, occupants et chargement",
+            "Le poids du véhicule à vide",
+            "Le maximum fixé par le constructeur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "MEC = poids réel du véhicule avec tout ce qu'il transporte à un moment donné.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G1_Q39.webp"
         },
         {
           "id": "G1_Q41",
-          "question": "Vous arrivez devant un signal indiquant \"3,5 t\". Quels véhicules sont interdits ?",
+          "question": "Quels véhicules un panneau indiquant « 3,5 t » interdit-il ?",
           "choices": [
-            "Les véhicules dont le poids à vide dépasse 3,5 tonnes",
-            "Les véhicules dont la masse en charge dépasse 3,5 tonnes",
-            "Les véhicules dont la charge utile dépasse 3,5 tonnes",
-            "Les véhicules dont la MMA dépasse 3,5 tonnes"
+            "Ceux dont la masse en charge dépasse",
+            "Ceux dont le poids à vide dépasse",
+            "Ceux dont la charge utile dépasse"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal de masse concerne la MEC (masse en charge réelle).",
           "theoryCardIndex": 3,
           "image": "/images/questions/G1_Q41.webp"
         },
         {
           "id": "G1_Q42",
-          "question": "Vous roulez avec votre voiture chargée de passagers. Le tout pèse 1,8 tonne. Vous arrivez devant un signal indiquant 3,5 t. Pouvez-vous passer ?",
+          "question": "Votre voiture chargée pèse 1,8 tonne et le panneau indique 3,5 t. Pouvez-vous passer ?",
           "choices": [
-            "Non, l'accès est interdit",
-            "Oui, votre MEC (1,8 t) ne dépasse pas les 3,5 t indiquées",
-            "Non, les voitures sont interdites",
-            "Cela dépend du nombre de passagers"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "1,8 t < 3,5 t → vous pouvez passer.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G1_Q42.webp"
         },
         {
           "id": "G1_Q43",
-          "question": "Vous conduisez une voiture familiale. Un signal de limitation de masse affiche 3,5 t. Pouvez-vous passer ?",
+          "question": "Vous conduisez une voiture familiale et le panneau indique 3,5 t. Pouvez-vous passer ?",
           "choices": [
-            "Non, certaines voitures sont trop lourdes",
-            "Oui, toutes les voitures particulières ont une MEC bien inférieure à 3,5 t",
-            "Non, uniquement les petites citadines",
-            "Cela dépend de la marque du véhicule"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Toutes les voitures ont une MEC bien inférieure à 3,5 t.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G1_Q43.webp"
         },
         {
           "id": "G1_Q44",
-          "question": "Vous conduisez un camion chargé pesant 12 tonnes au total. Vous arrivez devant un signal indiquant 7,5 t. Pouvez-vous passer ?",
+          "question": "Votre camion chargé pèse 12 tonnes et le panneau indique 7,5 t. Pouvez-vous passer ?",
           "choices": [
-            "Oui, vous conduisez un camion",
-            "Non, votre MEC (12 t) dépasse la masse indiquée (7,5 t)",
-            "Oui, en roulant prudemment",
-            "Cela dépend du type de chargement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "12 t > 7,5 t → le camion ne peut pas passer.",
@@ -696,28 +644,26 @@
         },
         {
           "id": "G1_Q45",
-          "question": "Vous entrez dans une zone réglementée par un signal de masse sous forme zonale. Quelle masse concerne-t-il ?",
+          "question": "Un signal de masse en forme de zone concerne quelle masse ?",
           "choices": [
-            "La masse maximale autorisée (MMA)",
-            "Toujours la masse en charge (MEC)",
-            "Le poids à vide du véhicule",
-            "La charge utile"
+            "La masse en charge",
+            "La masse maximale autorisée",
+            "Le poids du véhicule à vide"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sous forme zonale, le signal concerne toujours la MEC.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G1_Q45.webp"
         },
         {
           "id": "G1_Q46",
-          "question": "Vous révisez pour l'examen. Quelle est la différence entre la MEC et la MMA ?",
+          "question": "Quelle différence entre la masse en charge et la masse maximale autorisée ?",
           "choices": [
-            "Il n'y a aucune différence entre les deux",
-            "La MEC est le poids réel du moment, la MMA le maximum autorisé",
-            "La MMA est toujours inférieure à la MEC",
-            "La MEC ne concerne que les camions"
+            "La MEC est le poids du moment",
+            "La MMA est le poids du moment",
+            "Aucune, les deux sont pareilles"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "MEC = poids réel actuel. MMA = poids maximal autorisé par le constructeur.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G1_Q46.webp"
@@ -738,28 +684,24 @@
         },
         {
           "id": "G1_Q49",
-          "question": "Vous êtes cycliste et vous arrivez devant un signal d'interdiction de tourner. Êtes-vous concerné par cette interdiction ?",
+          "question": "Vous êtes cycliste devant une interdiction de tourner. Êtes-vous concerné ?",
           "choices": [
-            "Non, seules les voitures sont concernées",
-            "Oui, elle s'applique à TOUS les conducteurs, cyclistes compris",
-            "Non, les cyclistes sont toujours exemptés",
-            "Cela dépend du panneau additionnel"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction de tourner s'applique à tous, cyclistes inclus.",
           "theoryCardIndex": 4,
           "image": "/images/questions/G1_Q49.webp"
         },
         {
           "id": "G1_Q50",
-          "question": "Vous arrivez devant une interdiction de tourner accompagnée d'un panneau additionnel. Certains conducteurs sont-ils exemptés ?",
+          "question": "Une interdiction de tourner porte un panneau additionnel. Certains conducteurs sont-ils exemptés ?",
           "choices": [
-            "Non, l'interdiction est absolue pour tous",
-            "Oui, les conducteurs mentionnés sur le panneau additionnel sont exemptés",
-            "Non, personne ne peut être exempté",
-            "Cela dépend du type de carrefour"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un panneau additionnel peut exempter certains conducteurs.",
           "theoryCardIndex": 4,
           "image": "/images/questions/G1_Q50.webp"
@@ -780,12 +722,10 @@
         },
         {
           "id": "G1_Q52",
-          "question": "Vous roulez et vous voyez un signal d'interdiction de demi-tour. Avez-vous également l'interdiction de tourner à gauche ?",
+          "question": "Vous voyez ce panneau. Vous interdit-il aussi de tourner à gauche ?",
           "choices": [
-            "Oui, les deux manœuvres sont interdites",
-            "Non, le signal interdit UNIQUEMENT le demi-tour, PAS de tourner à gauche",
-            "Oui, tourner à gauche est assimilé à un demi-tour",
-            "Cela dépend de la configuration du carrefour"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "L'interdiction de demi-tour ne concerne pas les virages à gauche.",
@@ -808,14 +748,13 @@
         },
         {
           "id": "G1_SIGN_B5_1",
-          "question": "Vous venez de quitter une route prioritaire et vous apercevez un losange jaune barré suivi d'un triangle inversé blanc. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau. Que devez-vous faire ?",
           "choices": [
-            "Vous pouvez continuer normalement, vous êtes toujours prioritaire",
-            "Vous devez appliquer la priorité de droite et céder le passage aux véhicules venant de droite",
-            "La route prioritaire reprend 200 m plus loin",
-            "Vous devez klaxonner pour avertir les autres"
+            "Appliquer la priorité de droite",
+            "Continuer, vous êtes prioritaire",
+            "Klaxonner pour avertir les autres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau B5 indique que la route prioritaire prend fin et que la priorité de droite ordinaire s'applique à nouveau. Cédez le passage aux véhicules venant de droite.",
           "destination": "panneaux",
           "sign": "B11",
@@ -823,14 +762,13 @@
         },
         {
           "id": "G1_SIGN_B19_1",
-          "question": "Vous approchez d'un passage étroit et vous voyez un rectangle bleu avec une grande flèche blanche à gauche et une petite flèche rouge à droite. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau à un passage étroit. Que devez-vous faire ?",
           "choices": [
-            "Vous devez attendre que les deux sens soient libres",
-            "Vous avez la priorité de passage dans ce passage étroit",
-            "Vous devez céder le passage aux véhicules venant en sens inverse",
-            "Vous ne pouvez pas dépasser dans ce passage"
+            "Vous avez la priorité de passage",
+            "Céder le passage à ceux d'en face",
+            "Attendre que les deux sens soient libres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau B19 indique que vous avez la priorité dans ce passage étroit. Les véhicules venant en sens inverse doivent vous laisser passer.",
           "destination": "panneaux",
           "sign": "B21",
@@ -838,14 +776,13 @@
         },
         {
           "id": "G1_SIGN_B21_1",
-          "question": "Vous arrivez devant un passage étroit et vous voyez un panneau rond avec une flèche rouge montant et une flèche blanche descendant. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau à un passage étroit. Que devez-vous faire ?",
           "choices": [
-            "Vous avez la priorité de passage",
-            "Vous cédez le passage aux véhicules d'en face",
-            "Vous devez klaxonner avant d'entrer",
-            "Vous devez accélérer pour passer en premier"
+            "Céder le passage à ceux d'en face",
+            "Passer avant les véhicules d'en face",
+            "Klaxonner avant d'y entrer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau B21 signifie que vous devez céder le passage aux véhicules venant en sens inverse. Attendez que la voie soit libre avant d'engager le passage étroit.",
           "destination": "panneaux",
           "sign": "B19",
@@ -853,14 +790,13 @@
         },
         {
           "id": "G1_SIGN_D1__1",
-          "question": "Vous arrivez à un carrefour et vous voyez un panneau rond bleu avec une flèche blanche vers la droite. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau à un carrefour. Que devez-vous faire ?",
           "choices": [
-            "Vous pouvez tourner à droite si vous le souhaitez",
-            "Vous devez obligatoirement tourner à droite",
-            "Vous avez la priorité sur les véhicules venant de droite",
-            "Vous pouvez dépasser par la droite"
+            "Tourner obligatoirement à droite",
+            "Tourner à droite si vous voulez",
+            "Dépasser par la droite ici"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "D1a impose la direction droite. Vous devez tourner à droite. Tout autre direction est interdite à cet endroit.",
           "destination": "panneaux",
           "sign": "D1d"
@@ -1037,14 +973,13 @@
       "questions": [
         {
           "id": "G2_Q1",
-          "question": "Vous roulez et vous voyez une flèche non coudée diagonale fixée sur un panneau devant un obstacle. À quoi sert-elle ?",
+          "question": "Une flèche diagonale est fixée devant un obstacle. À quoi sert-elle ?",
           "choices": [
-            "Elle indique la vitesse maximale autorisée",
-            "Elle indique de quel côté vous devez contourner l'obstacle",
-            "Elle signale un emplacement de stationnement",
-            "Le stationnement est autorisé à cet endroit"
+            "À indiquer le côté à contourner",
+            "À indiquer la vitesse maximale",
+            "À signaler un stationnement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une flèche en diagonale sur un panneau indique la direction dans laquelle vous devez contourner l'obstacle.",
           "theoryCardIndex": 0,
           "image": "/images/questions/G2_Q1.webp"
@@ -1065,56 +1000,52 @@
         },
         {
           "id": "G2_Q3",
-          "question": "Vous remarquez un panneau avec une flèche diagonale sur un obstacle. Sur quel support ce panneau peut-il être fixé ?",
+          "question": "Sur quel support ce panneau peut-il être fixé ?",
           "choices": [
-            "Uniquement sur un mur",
-            "Sur un poteau ou sur une borne jaune",
-            "Uniquement au sol",
-            "Uniquement sur un feu de signalisation"
+            "Un poteau ou une borne jaune",
+            "Un mur de bâtiment, sans plus",
+            "Un feu de signalisation seul"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce panneau peut être fixé sur un poteau ou sur une borne jaune.",
           "theoryCardIndex": 0,
           "sign": "D1f"
         },
         {
           "id": "G2_Q4",
-          "question": "Vous arrivez devant un obstacle avec un signal à flèche diagonale. S'agit-il d'une indication ou d'une obligation ?",
+          "question": "Une flèche diagonale sur un obstacle : indication ou obligation ?",
           "choices": [
-            "C'est une indication, vous pouvez passer des deux côtés",
-            "C'est une obligation, vous devez passer du côté indiqué par la flèche",
-            "C'est un simple conseil",
-            "Cela dépend de la route"
+            "Une obligation de contourner",
+            "Une indication à votre choix",
+            "Un simple conseil de prudence"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal est obligatoire : vous devez passer du côté indiqué par la flèche.",
           "theoryCardIndex": 0,
           "image": "/images/questions/G2_Q4.webp"
         },
         {
           "id": "G2_Q6",
-          "question": "Vous révisez pour l'examen. Quelle est la différence entre une flèche non coudée sur un obstacle et un panneau de direction obligatoire à un carrefour ?",
+          "question": "Quelle différence entre une flèche sur un obstacle et un panneau de direction à un carrefour ?",
           "choices": [
-            "Il n'y a aucune différence entre les deux",
-            "Sur un obstacle : côté de contournement imposé. À un carrefour : direction imposée",
-            "Le signal sur l'obstacle n'est qu'indicatif",
-            "Le signal au carrefour n'est qu'indicatif"
+            "Côté à contourner ou direction imposée",
+            "La flèche sur obstacle est indicative",
+            "Le panneau au carrefour est indicatif"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur un obstacle, la flèche impose le côté de contournement. À un carrefour, elle impose la direction à suivre.",
           "theoryCardIndex": 0,
           "image": "/images/questions/G2_Q6.webp"
         },
         {
           "id": "G2_Q7",
-          "question": "Vous arrivez à un carrefour et vous voyez un signal de direction obligatoire. Quelle est sa forme et sa couleur ?",
+          "question": "Quelle est la forme et la couleur d'un signal de direction obligatoire ?",
           "choices": [
-            "Triangulaire et jaune",
-            "Rond et bleu avec une flèche blanche",
-            "Rectangulaire et vert",
-            "Carré et rouge"
+            "Rond et bleu à flèche blanche",
+            "Triangulaire et de couleur jaune",
+            "Rectangulaire et de couleur verte"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal de direction obligatoire est un panneau rond bleu avec une flèche blanche.",
           "theoryCardIndex": 1
         },
@@ -1134,54 +1065,48 @@
         },
         {
           "id": "G2_Q9",
-          "question": "Vous arrivez à un carrefour et vous voyez un signal rond bleu avec une flèche tout droit. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau à un carrefour. Que devez-vous faire ?",
           "choices": [
-            "Vous êtes sur un sens unique",
-            "Vous devez obligatoirement continuer tout droit",
+            "Continuer obligatoirement tout droit",
             "Vous êtes sur une route principale",
-            "Vous êtes sur une voie rapide"
+            "Vous êtes sur une voie rapide ici"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond bleu avec flèche tout droit oblige à continuer tout droit.",
           "theoryCardIndex": 1,
           "sign": "D1a"
         },
         {
           "id": "G2_Q10",
-          "question": "Vous remarquez que la flèche d'un signal de direction obligatoire peut pointer dans différentes directions. Pourquoi ?",
+          "question": "Pourquoi la flèche d'un signal de direction peut-elle pointer différemment ?",
           "choices": [
-            "Cela n'a pas d'importance particulière",
-            "La flèche est orientée selon la configuration réelle du carrefour ou de la route",
-            "La flèche pointe toujours vers le haut",
-            "La flèche change de couleur selon la direction"
+            "Elle suit la configuration réelle",
+            "Elle pointe vers le haut, sans plus",
+            "Elle change de couleur au besoin"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La flèche est orientée selon la configuration réelle : tout droit, gauche, droite ou combinaisons.",
           "theoryCardIndex": 1,
           "image": "/images/questions/G2_Q10.webp"
         },
         {
           "id": "G2_Q12",
-          "question": "Vous arrivez à un carrefour et vous voyez un signal rond bleu avec une flèche tout droit et une flèche à droite. Pouvez-vous tourner à gauche ?",
+          "question": "Vous voyez ce panneau à un carrefour. Pouvez-vous tourner à gauche ?",
           "choices": [
-            "Oui, vous avez le libre choix",
-            "Non, vous devez aller tout droit OU à droite, pas à gauche",
-            "Oui, si aucun véhicule n'arrive en face",
-            "Non, c'est un sens unique vers la droite"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Vous devez choisir entre les deux directions imposées : tout droit ou à droite.",
           "theoryCardIndex": 1,
-          "sign": "D3b"
+          "sign": "D3a"
         },
         {
           "id": "G2_Q13",
-          "question": "Vous arrivez devant un signal de direction obligatoire accompagné d'un panneau additionnel \"excepté cyclistes et speed pedelecs\". Vous êtes cycliste. Devez-vous suivre la direction indiquée ?",
+          "question": "Un panneau de direction porte « excepté cyclistes ». Vous êtes cycliste : devez-vous suivre la direction ?",
           "choices": [
-            "Oui, l'obligation s'applique à tous les usagers",
-            "Non, cette obligation ne vaut pas pour les cyclistes et speed pedelecs",
-            "Oui, les cyclistes y sont même interdits",
-            "Non, mais vous devez mettre pied à terre"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le panneau additionnel dispense les cyclistes et speed pedelecs de suivre la direction obligatoire.",
@@ -1190,26 +1115,22 @@
         },
         {
           "id": "G2_Q15",
-          "question": "Vous êtes cycliste et vous arrivez devant un signal de direction obligatoire sans aucun panneau additionnel. Devez-vous suivre la direction indiquée ?",
+          "question": "Un panneau de direction n'a aucun panneau additionnel. Vous êtes cycliste : devez-vous le suivre ?",
           "choices": [
-            "Non, les cyclistes sont toujours exemptés",
-            "Oui, sans panneau additionnel, tous les conducteurs sont tenus",
-            "Non, le signal est seulement indicatif",
-            "Cela dépend du type de route"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sans panneau additionnel, la direction obligatoire s'applique à tous les conducteurs.",
           "theoryCardIndex": 1,
           "image": "/images/questions/G2_Q15.webp"
         },
         {
           "id": "G2_Q18",
-          "question": "Vous arrivez à un carrefour avec un signal rond bleu indiquant une flèche à gauche. Pouvez-vous continuer tout droit ?",
+          "question": "Vous voyez ce panneau à un carrefour. Pouvez-vous continuer tout droit ?",
           "choices": [
-            "Oui, vous avez le choix",
-            "Non, vous devez tourner à gauche",
-            "Oui, en roulant prudemment",
-            "Oui, en l'absence de trafic"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal rond bleu impose la direction : aller tout droit est interdit.",
@@ -1218,80 +1139,71 @@
         },
         {
           "id": "G2_Q19",
-          "question": "Vous arrivez à un carrefour avec un signal rond bleu montrant une flèche à gauche et une flèche tout droit. Pouvez-vous tourner à droite ?",
+          "question": "Vous voyez ce panneau à un carrefour. Pouvez-vous tourner à droite ?",
           "choices": [
-            "Oui, vous avez le libre choix",
-            "Non, vous devez aller à gauche ou tout droit",
-            "Oui, en utilisant votre clignotant",
-            "Cela dépend de la densité du trafic"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Vous devez suivre l'une des deux directions imposées : gauche ou tout droit.",
           "theoryCardIndex": 1,
-          "sign": "D3a"
+          "sign": "D3b"
         },
         {
           "id": "G2_Q20",
-          "question": "Vous êtes cycliste. Le signal rond bleu indique tout droit, mais un panneau additionnel dit \"excepté cyclistes\". Pouvez-vous tourner à droite ?",
+          "question": "Ce panneau impose tout droit mais porte « excepté cyclistes ». Vous êtes cycliste : pouvez-vous tourner à droite ?",
           "choices": [
-            "Non, vous devez aller tout droit",
-            "Oui, les cyclistes sont exemptés par le panneau additionnel",
-            "Non, les cyclistes ne sont jamais exemptés",
-            "Cela dépend de la piste cyclable"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau additionnel vous dispense de la direction obligatoire.",
           "theoryCardIndex": 1,
           "sign": "D1a"
         },
         {
           "id": "G2_Q21",
-          "question": "Vous voyez un panneau bleu avec une flèche blanche. Il est de forme rectangulaire. De quel signal s'agit-il ?",
+          "question": "De quel signal s'agit-il ?",
           "choices": [
-            "Un signal de direction obligatoire",
-            "Un signal de sens unique (rectangulaire bleu avec flèche blanche)",
-            "Un signal triangulaire de danger",
-            "Un signal octogonal d'arrêt"
+            "Un sens unique",
+            "Une direction obligatoire",
+            "Un danger triangulaire"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal de sens unique est rectangulaire bleu avec une flèche blanche.",
           "theoryCardIndex": 2,
           "sign": "F19"
         },
         {
           "id": "G2_Q23",
-          "question": "Vous cherchez à identifier un signal de direction obligatoire. Quelle est sa forme ?",
+          "question": "Quelle est la forme d'un signal de direction obligatoire ?",
           "choices": [
+            "Rond et bleu",
             "Rectangulaire",
-            "Rond bleu avec une flèche blanche",
-            "Triangulaire",
-            "En losange"
+            "Triangulaire"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal de direction obligatoire est rond bleu avec une flèche blanche.",
           "theoryCardIndex": 2
         },
         {
           "id": "G2_Q25",
-          "question": "Vous hésitez entre deux panneaux bleus avec une flèche blanche. Comment distinguez-vous le sens unique de la direction obligatoire ?",
+          "question": "Comment distinguer le sens unique de la direction obligatoire ?",
           "choices": [
-            "Par leur couleur : bleu clair ou bleu foncé",
-            "Par leur forme : rectangulaire = sens unique, rond = obligation",
-            "Par leur taille : le sens unique est plus grand",
-            "Par le liseré blanc autour du panneau"
+            "Rectangulaire ou rond",
+            "Bleu clair ou bleu foncé",
+            "Grand format ou petit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La forme est la clé : rectangulaire = indication (sens unique), rond = obligation (direction imposée).",
           "theoryCardIndex": 2
         },
         {
           "id": "G2_Q26",
-          "question": "Vous voyez un signal rectangulaire bleu avec une flèche vers la droite à l'entrée d'une rue. Êtes-vous OBLIGÉ de tourner à droite ?",
+          "question": "Vous voyez ce panneau à l'entrée d'une rue. Êtes-vous obligé de tourner à droite ?",
           "choices": [
-            "Oui, c'est une obligation formelle",
-            "Non, ce sens unique INDIQUE la direction sans l'imposer",
-            "Oui, c'est la direction imposée à tous",
-            "Non, c'est un simple conseil de prudence"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal rectangulaire est une indication (sens unique), pas une obligation de tourner.",
@@ -1300,53 +1212,47 @@
         },
         {
           "id": "G2_Q27",
-          "question": "Vous arrivez à un carrefour et vous voyez un signal rond bleu avec une flèche vers la droite. Êtes-vous OBLIGÉ de tourner à droite ?",
+          "question": "Vous voyez ce panneau à un carrefour. Êtes-vous obligé de tourner à droite ?",
           "choices": [
-            "Non, c'est seulement indicatif",
-            "Oui, le signal rond bleu IMPOSE la direction, vous devez tourner à droite",
-            "Non, c'est un signal de sens unique",
-            "Cela dépend de la densité du trafic"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond bleu impose la direction : vous devez tourner à droite.",
           "theoryCardIndex": 2,
           "sign": "D1d"
         },
         {
           "id": "G2_Q30",
-          "question": "Vous révisez pour l'examen et vous confondez le signal de sens unique et celui de direction obligatoire. Quelles en sont les conséquences ?",
+          "question": "Quelles conséquences si vous confondez sens unique et direction obligatoire ?",
           "choices": [
-            "Aucune conséquence grave en pratique",
-            "Vous risquez de tourner à tort ou de ne pas tourner quand c'est imposé",
-            "Vous recevrez un simple avertissement",
-            "Une amende mais pas d'erreur de conduite"
+            "Tourner à tort ou pas du tout",
+            "Aucune conséquence en pratique",
+            "Un simple avertissement écrit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Confondre ces deux signaux peut induire un comportement incorrect et dangereux.",
           "theoryCardIndex": 2
         },
         {
           "id": "G2_Q31",
-          "question": "Vous arrivez devant un obstacle et vous voyez un signal d'indication avec des flèches pointant à gauche et à droite sur une borne jaune. Que pouvez-vous faire ?",
+          "question": "Vous voyez ce panneau devant un obstacle. Que pouvez-vous faire ?",
           "choices": [
-            "Vous ne pouvez pas passer",
-            "Vous pouvez choisir de passer à gauche ou à droite",
-            "Vous devez obligatoirement aller à gauche",
-            "Le passage est interdit"
+            "Passer à gauche ou à droite",
+            "Passer par la gauche seule",
+            "Vous ne pouvez pas passer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal d'indication vous laisse libre de passer d'un côté ou de l'autre.",
           "theoryCardIndex": 3,
           "sign": "F21"
         },
         {
           "id": "G2_Q33",
-          "question": "Vous comparez un signal de choix de direction (indication) et un signal rond bleu à deux flèches (obligation). S'agit-il du même signal ?",
+          "question": "Un signal de choix de direction et un rond bleu à deux flèches sont-ils le même signal ?",
           "choices": [
-            "Oui, c'est exactement le même signal",
-            "Non, le choix est une INDICATION, le rond bleu une OBLIGATION",
-            "Oui, la signification est identique",
-            "Non, mais la différence est négligeable"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal de choix (indication) et le signal à deux flèches rond bleu (obligation) sont fondamentalement différents.",
@@ -1355,53 +1261,48 @@
         },
         {
           "id": "G2_Q34",
-          "question": "Vous voyez un signal de choix de direction. Sur quel support peut-il être fixé ?",
+          "question": "Sur quel support un signal de choix de direction peut-il être fixé ?",
           "choices": [
-            "Uniquement au sol",
-            "Sur un poteau ou sur une borne jaune",
-            "Sur un mur",
-            "Uniquement en hauteur"
+            "Un poteau ou une borne jaune",
+            "Le sol de la chaussée seul",
+            "Un mur de bâtiment, sans plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal peut être fixé sur un poteau ou sur une borne jaune.",
           "theoryCardIndex": 3
         },
         {
           "id": "G2_Q35",
-          "question": "Vous arrivez à un carrefour et vous voyez un marquage au sol hachuré au milieu de la chaussée. De quoi s'agit-il ?",
+          "question": "Un marquage hachuré occupe le milieu de la chaussée. De quoi s'agit-il ?",
           "choices": [
-            "D'un feu de signalisation au sol",
-            "D'un îlot directionnel qui sert à diriger la circulation",
-            "D'un panneau de signalisation peint",
-            "D'un passage pour piétons décoloré"
+            "D'un îlot directionnel",
+            "D'un passage pour piétons",
+            "D'un panneau peint au sol"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'îlot directionnel est un marquage hachuré ou un dispositif construit pour diriger la circulation.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q35.webp"
         },
         {
           "id": "G2_Q37",
-          "question": "Vous arrivez face à un îlot directionnel. De quel côté devez-vous le contourner ?",
+          "question": "De quel côté devez-vous contourner un îlot directionnel ?",
           "choices": [
-            "Par la gauche",
             "Par la droite",
-            "Vous pouvez choisir l'un ou l'autre côté",
-            "Cela dépend de la densité du trafic"
+            "Par la gauche",
+            "Au choix, selon la place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les îlots directionnels se contournent toujours par la droite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q37.webp"
         },
         {
           "id": "G2_Q39",
-          "question": "Vous êtes pressé et vous envisagez de rouler sur un îlot directionnel peint au sol. Avez-vous le droit ?",
+          "question": "Pouvez-vous rouler sur un îlot directionnel peint au sol ?",
           "choices": [
-            "Oui, puisque ce n'est que de la peinture",
-            "Non, il est interdit de circuler sur un îlot directionnel",
-            "Oui, en cas de trafic dense",
-            "Oui, pour dépasser un autre véhicule"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de circuler sur un îlot directionnel, qu'il soit peint ou construit.",
@@ -1410,12 +1311,10 @@
         },
         {
           "id": "G2_Q40",
-          "question": "Vous cherchez un endroit pour vous arrêter brièvement. Pouvez-vous vous arrêter sur un îlot directionnel ?",
+          "question": "Pouvez-vous vous arrêter brièvement sur un îlot directionnel ?",
           "choices": [
-            "Oui, pour quelques instants",
-            "Non, l'arrêt est interdit sur un îlot directionnel",
-            "Oui, en activant vos feux de détresse",
-            "Oui, en cas de panne"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "L'arrêt est interdit sur un îlot directionnel.",
@@ -1424,12 +1323,10 @@
         },
         {
           "id": "G2_Q41",
-          "question": "Vous cherchez un endroit pour stationner. Pouvez-vous vous garer sur un îlot directionnel ?",
+          "question": "Pouvez-vous stationner sur un îlot directionnel ?",
           "choices": [
-            "Oui, s'il est peint au sol",
-            "Non, le stationnement est interdit sur un îlot directionnel",
-            "Oui, en dehors des heures de pointe",
-            "Oui, pour une courte durée"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le stationnement est interdit sur un îlot directionnel.",
@@ -1452,112 +1349,104 @@
         },
         {
           "id": "G2_Q44",
-          "question": "Vous voulez tourner à gauche à un carrefour où un îlot directionnel se trouve au centre. Comment procédez-vous ?",
+          "question": "Un îlot directionnel occupe le centre du carrefour. Comment tournez-vous à gauche ?",
           "choices": [
-            "Vous roulez sur l'îlot directionnel",
-            "Vous contournez l'îlot par la droite, puis vous tournez à gauche",
-            "Vous contournez l'îlot par la gauche",
-            "Vous faites demi-tour avant l'îlot"
+            "Contourner par la droite, puis tourner",
+            "Contourner l'îlot par la gauche",
+            "Rouler sur l'îlot directionnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous contournez l'îlot par la droite avant de tourner à gauche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q44.webp"
         },
         {
           "id": "G2_Q50",
-          "question": "Vous voyez un panneau additionnel \"Les cyclistes et speed pedelecs peuvent conduire dans les deux sens\" sous un signal de sens unique. Que signifie-t-il ?",
+          "question": "Un panneau additionnel avec un vélo est placé sous ce sens unique. Que signifie-t-il ?",
           "choices": [
-            "Les cyclistes sont interdits dans cette rue",
-            "Les cyclistes et speed pedelecs peuvent circuler dans les deux sens sur cette voie à sens unique",
-            "Le sens interdit s'applique aussi aux cyclistes",
-            "Il y a une piste cyclable dans les deux sens"
+            "Les cyclistes vont dans les deux sens",
+            "Les cyclistes sont interdits ici",
+            "Une piste cyclable double sens"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce panneau additionnel autorise les cyclistes et speed pedelecs à circuler dans les deux sens.",
           "theoryCardIndex": 1,
           "sign": "F19"
         },
         {
           "id": "G2_SIGN_C5_1",
-          "question": "Vous arrivez devant un panneau rond rouge avec un symbole barrant tous les véhicules à moteur. À qui s'adresse cette interdiction ?",
+          "question": "À qui s'adresse l'interdiction de ce panneau ?",
           "choices": [
-            "Uniquement aux camions et autocars",
-            "À tous les véhicules à moteur (voitures, motos, camions...)",
-            "Aux vélos et aux piétons uniquement",
-            "Uniquement aux motos et cyclomoteurs"
+            "À tous les véhicules à moteur",
+            "Aux camions et autocars seuls",
+            "Aux vélos et aux piétons seuls"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C5 interdit l'accès à tous les véhicules à moteur (voitures, motos, camions…). Seuls les vélos, piétons et animaux peuvent continuer.",
           "destination": "panneaux",
           "sign": "C5"
         },
         {
           "id": "G2_SIGN_C13_1",
-          "question": "Vous voyez un panneau rond rouge avec la silhouette d'un cavalier sur un cheval. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Les animaux sont interdits sur cette voie",
-            "L'accès est interdit aux cavaliers montés sur un cheval",
-            "Le dépassement est interdit pour les véhicules lents",
-            "Vous entrez dans une zone de chasse réservée"
+            "Accès interdit aux cavaliers",
+            "Accès interdit aux attelages",
+            "Zone de chasse réservée ici"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C13 interdit l'accès aux cavaliers (personnes montées à cheval). Les piétons conduisant un cheval à main restent autorisés.",
           "destination": "panneaux",
           "sign": "C15"
         },
         {
           "id": "G2_SIGN_C15_1",
-          "question": "Vous voyez un panneau rond rouge avec la silhouette d'une charrette tirée par un animal. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Les animaux de trait sont interdits sur cette route",
-            "Les véhicules à traction animale (charrettes, calèches...) ne peuvent pas emprunter cette voie",
-            "Les tracteurs agricoles sont interdits",
-            "Les caravanes et remorques sont interdites"
+            "Accès interdit aux attelages",
+            "Accès interdit aux tracteurs",
+            "Accès interdit aux caravanes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C15 interdit l'accès aux véhicules attelés (charrette tirée par un animal). Il concerne les véhicules à traction animale.",
           "destination": "panneaux",
           "sign": "C13"
         },
         {
           "id": "G2_SIGN_C27_1",
-          "question": "Vous conduisez un véhicule long et vous voyez un panneau rond rouge avec le chiffre \"10 m\". Que signifie-t-il ?",
+          "question": "Ce panneau porte la mention « 10 m ». Que signifie-t-il ?",
           "choices": [
-            "La vitesse est limitée à 10 km/h",
-            "Les véhicules de plus de 10 mètres de long ne peuvent pas passer",
-            "Vous devez maintenir une distance de sécurité de 10 mètres",
-            "La hauteur maximale est de 10 mètres"
+            "Longueur maximale de 10 mètres",
+            "Hauteur maximale de 10 mètres",
+            "Distance minimale de 10 mètres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C27 interdit le passage aux véhicules dont la longueur (y compris chargement) dépasse la valeur indiquée — ici 10 m. Cela cible les semi-remorques et trains routiers longs.",
           "destination": "panneaux",
           "sign": "C25"
         },
         {
           "id": "G2_SIGN_C35_1",
-          "question": "Vous roulez et vous voyez un panneau gris/blanc avec deux voitures et des barres diagonales grises. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Le dépassement est interdit",
-            "L'interdiction de dépasser prend fin",
-            "Le dépassement est réservé aux voitures",
-            "Vous entrez dans une voie de dépassement obligatoire"
+            "Fin de l'interdiction de dépasser",
+            "Début d'interdiction de dépasser",
+            "Voie de dépassement obligatoire"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C35 marque la fin de l'interdiction de dépassement. À partir de ce panneau, vous pouvez à nouveau dépasser si les conditions le permettent.",
           "destination": "panneaux",
           "sign": "C37"
         },
         {
           "id": "G2_SIGN_C45_50_1",
-          "question": "Vous rouliez sous une limitation à 50 km/h et vous voyez un panneau barré en gris avec \"50\". Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "La limite est désormais fixée à 50 km/h",
-            "La limitation de 50 km/h prend fin",
-            "La limitation ne s'applique que de nuit",
-            "Il s'agit d'une limitation provisoire liée à des travaux"
+            "Fin de la limitation à 50",
+            "Nouvelle limitation à 50",
+            "Limitation valable la nuit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C45-50 marque la fin de la limitation à 50 km/h. La vitesse autorisée revient à la limite normale applicable sur ce type de voie.",
           "destination": "panneaux",
           "sign": "C45",
@@ -1565,42 +1454,39 @@
         },
         {
           "id": "G2_SIGN_C45_120_1",
-          "question": "Vous sortez d'une zone de chantier sur autoroute et vous voyez \"120\" barré de gris. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "La vitesse minimale est de 120 km/h",
-            "Fin de la limitation : vous reprenez la vitesse normale d'autoroute",
-            "La limitation de 120 km/h recommence",
-            "La vitesse est réduite à 100 km/h"
+            "Fin de la limitation à 120",
+            "Vitesse minimale de 120",
+            "Nouvelle limitation à 100"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C45-120 marque la fin de la limitation de 120 km/h imposée dans la zone de chantier. La vitesse normale d'autoroute (selon le pays) s'applique à nouveau.",
           "destination": "panneaux",
           "sign": "C45"
         },
         {
           "id": "G2_SIGN_C49_1",
-          "question": "Vous voyez un panneau rond gris/blanc barré de plusieurs lignes. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Toutes les limitations de vitesse prennent fin",
-            "Toutes les interdictions ponctuelles prennent fin en même temps",
-            "Vous quittez une zone résidentielle",
-            "Vous quittez l'autoroute ou la route pour automobiles"
+            "Fin de toutes les interdictions",
+            "Fin des limitations de vitesse",
+            "Sortie d'une zone résidentielle"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C49 annule en une seule fois toutes les interdictions ponctuelles (vitesse, dépassement, klaxon…) encore actives. C'est très pratique pour la fin des zones de chantier.",
           "destination": "panneaux",
           "sign": "C46"
         },
         {
           "id": "G2_SIGN_D5_1",
-          "question": "Vous arrivez à un carrefour giratoire et vous voyez un panneau rond bleu avec des flèches en cercle. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau à un carrefour. Que devez-vous faire ?",
           "choices": [
-            "Vous pouvez aussi continuer tout droit",
-            "Vous devez obligatoirement vous engager dans le carrefour giratoire",
-            "Les véhicules déjà dans le giratoire ont la priorité",
-            "Une voie de déviation est disponible"
+            "Vous engager dans le giratoire",
+            "Continuer tout droit si possible",
+            "Céder le passage à ceux du rond"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "D5 signale un carrefour giratoire obligatoire. Vous devez vous y engager et circuler en sens anti-horaire.",
           "destination": "panneaux",
           "sign": "D5"

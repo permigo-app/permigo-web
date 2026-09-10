@@ -191,54 +191,49 @@
       "questions": [
         {
           "id": "E1_Q1",
-          "question": "Vous roulez sur une route nationale et un véhicule arrive en sens inverse. Comment appelle-t-on cette manœuvre en code de la route ?",
+          "question": "Deux véhicules se rencontrent en sens opposé. Comment appelle-t-on cette situation ?",
           "choices": [
-            "Un dépassement, car les deux véhicules se côtoient",
-            "Un croisement, car deux véhicules circulant en sens opposé se rencontrent",
-            "Un contournement, car vous évitez l'autre véhicule",
-            "Un changement de direction, car vous adaptez votre trajectoire"
+            "Un croisement",
+            "Un dépassement",
+            "Un contournement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le croisement désigne la rencontre de deux véhicules circulant en sens opposé.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q1.webp"
         },
         {
           "id": "E1_Q2",
-          "question": "Vous circulez sur une chaussée à deux bandes par sens et un véhicule arrive en face. Comment devez-vous vous positionner ?",
+          "question": "Un véhicule arrive en face sur une chaussée à deux bandes par sens. Comment vous positionnez-vous ?",
           "choices": [
-            "Vous restez au milieu de la chaussée pour mieux voir",
-            "Vous serrez à droite et circulez sur la bande de droite",
-            "Vous vous déportez sur la bande de gauche pour laisser de l'espace",
-            "Vous ralentissez et vous arrêtez sur place"
+            "Serrer à droite sur votre bande",
+            "Rester au milieu de la chaussée",
+            "Vous déporter sur la gauche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour croiser en sécurité, on serre à droite et on utilise la bande de droite si plusieurs bandes existent.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q2.webp"
         },
         {
           "id": "E1_Q4",
-          "question": "Vous remarquez une large ligne blanche peinte au bord de la chaussée. De quoi s'agit-il ?",
+          "question": "Une large ligne blanche est peinte au bord de la chaussée. De quoi s'agit-il ?",
           "choices": [
-            "D'une ligne de guidage pour les virages",
-            "Du bord fictif de la chaussée (au-delà : arrêt et stationnement)",
-            "De la délimitation de la piste cyclable",
-            "De la limite du trottoir surélevé"
+            "Du bord fictif de la chaussée",
+            "De la limite du trottoir",
+            "D'une ligne de guidage"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le bord fictif est une large ligne blanche ; la zone au-delà est réservée à l'arrêt/stationnement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q4.webp"
         },
         {
           "id": "E1_Q5",
-          "question": "Vous devez croiser un véhicule venant en sens inverse, mais la chaussée est étroite. Pouvez-vous rouler sur la zone située au-delà du bord fictif ?",
+          "question": "Pour croiser sur une chaussée étroite, pouvez-vous rouler au-delà du bord fictif ?",
           "choices": [
-            "Oui, si la manœuvre est nécessaire pour éviter une collision",
-            "Non, cette zone est réservée à l'arrêt et au stationnement",
-            "Oui, mais uniquement en agglomération",
-            "Oui, mais uniquement hors agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La zone au-delà du bord fictif est réservée à l'arrêt et au stationnement, on ne peut pas l'utiliser pour croiser.",
@@ -247,12 +242,10 @@
         },
         {
           "id": "E1_Q6",
-          "question": "Vous roulez sur une route étroite et un camion arrive en face. Pouvez-vous empiéter sur la piste cyclable pour faciliter le croisement ?",
+          "question": "Pour croiser un camion sur une route étroite, pouvez-vous empiéter sur la piste cyclable ?",
           "choices": [
-            "Oui, si aucun cycliste ne s'y trouve",
-            "Non, la piste cyclable ne fait pas partie de la chaussée",
-            "Oui, en cas de nécessité absolue",
-            "Oui, à condition d'y rester brièvement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La piste cyclable ne fait pas partie de la chaussée, il est interdit de l'emprunter pour croiser.",
@@ -261,42 +254,38 @@
         },
         {
           "id": "E1_Q7",
-          "question": "Vous devez croiser un véhicule sur une route étroite bordée d'une bande cyclable suggérée. Pouvez-vous rouler sur cette bande ?",
+          "question": "Pour croiser sur une route étroite, pouvez-vous rouler sur une bande cyclable suggérée ?",
           "choices": [
-            "Non, c'est interdit comme pour la piste cyclable",
-            "Oui, car la bande cyclable suggérée fait partie de la chaussée",
-            "Non, cette bande est exclusivement réservée aux cyclistes",
-            "Uniquement hors agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La bande cyclable suggérée fait partie de la chaussée, donc on peut l'emprunter pour croiser.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q7.webp"
         },
         {
           "id": "E1_Q8",
-          "question": "Vous approchez d'un croisement sur une route étroite. À votre droite, il y a une piste cyclable ; un peu plus loin, une bande cyclable suggérée. Quelle est la différence pour le croisement ?",
+          "question": "Piste cyclable et bande cyclable suggérée : quelle différence pour croiser ?",
           "choices": [
-            "Aucune différence, les deux sont interdites pour croiser",
-            "Vous ne pouvez pas emprunter la piste cyclable pour croiser, mais vous pouvez emprunter la bande cyclable suggérée",
-            "Vous pouvez emprunter les deux pour faciliter le croisement",
-            "Aucune des deux ne peut être utilisée, même en cas de nécessité"
+            "La bande suggérée, oui ; la piste, non",
+            "Les deux peuvent être empruntées",
+            "Aucune des deux ne peut servir"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La piste cyclable ≠ chaussée (interdite). La bande cyclable suggérée = chaussée (autorisée pour croiser).",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q8.webp"
         },
         {
           "id": "E1_Q11",
-          "question": "Vous croisez un véhicule utilitaire sur une route de campagne. Le code de la route fixe-t-il une distance latérale précise à respecter ?",
+          "question": "Le code fixe-t-il une distance latérale précise pour croiser ?",
           "choices": [
-            "Oui, vous devez laisser au moins 1 mètre",
-            "Non, une distance « suffisante » et au besoin serrer à droite",
-            "Oui, vous devez maintenir 1,5 mètre",
-            "Non, il n'y a aucune règle en la matière"
+            "Non, une distance suffisante",
+            "Oui, au moins un mètre",
+            "Oui, au moins 1,5 mètre"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le code n'impose pas de distance précise mais exige une distance latérale suffisante.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q11.webp"
@@ -331,26 +320,22 @@
         },
         {
           "id": "E1_Q15",
-          "question": "Vous devez croiser un véhicule sur une route trop étroite. Un accotement de plain-pied se trouve à droite. Pouvez-vous l'emprunter ?",
+          "question": "Pour croiser sur une route trop étroite, pouvez-vous emprunter l'accotement de plain-pied ?",
           "choices": [
-            "Non, l'accotement est strictement interdit aux véhicules",
-            "Oui, à condition de ne pas mettre en danger les usagers qui s'y trouvent",
-            "Oui, sans aucune restriction",
-            "Non, vous devez plutôt monter sur le trottoir"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'accotement de plain-pied peut être emprunté pour croiser, à condition de ne pas mettre en danger ses usagers.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q15.webp"
         },
         {
           "id": "E1_Q16",
-          "question": "Vous devez croiser un véhicule sur une route étroite. Un piéton marche sur l'accotement de plain-pied. Pouvez-vous y rouler ?",
+          "question": "Un piéton marche sur cet accotement de plain-pied. Pouvez-vous quand même y rouler ?",
           "choices": [
-            "Oui, le piéton doit s'écarter à votre approche",
-            "Non, vous ne pouvez pas mettre en danger les usagers de l'accotement",
-            "Oui, si vous klaxonnez pour le prévenir",
-            "Oui, à condition de rouler lentement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de mettre en danger les usagers de l'accotement.",
@@ -359,54 +344,49 @@
         },
         {
           "id": "E1_Q17",
-          "question": "Vous approchez d'un tram circulant en sens inverse. Par quel côté devez-vous normalement le croiser ?",
+          "question": "Par quel côté devez-vous normalement croiser un tram ?",
           "choices": [
-            "Par la gauche, comme pour tous les véhicules",
             "Par la droite",
-            "Par n'importe quel côté, selon l'espace disponible",
-            "Par le même côté que les autres voitures"
+            "Par la gauche",
+            "Au choix, selon la place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La règle générale est de croiser un tram par la droite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q17.webp"
         },
         {
           "id": "E1_Q18",
-          "question": "Vous devez croiser un tram, mais le passage à droite est bloqué. Dans quelles situations pouvez-vous le croiser par la gauche ?",
+          "question": "Dans quelles situations pouvez-vous croiser un tram par la gauche ?",
           "choices": [
-            "Dans toutes les situations, c'est toujours autorisé",
-            "Passage trop étroit à droite, véhicule stationné à droite, ou obstacle sur la chaussée",
-            "Jamais, croiser un tram par la gauche est interdit",
-            "Uniquement en agglomération, à allure réduite"
+            "Passage bloqué ou trop étroit à droite",
+            "Dans toutes les situations possibles",
+            "En agglomération, à l'allure du pas"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Trois exceptions autorisent le croisement d'un tram par la gauche : passage trop étroit, véhicule stationné à droite, obstacle sur la chaussée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q18.webp"
         },
         {
           "id": "E1_Q20",
-          "question": "Vous vous apprêtez à croiser un tram par la gauche à cause d'un obstacle à droite. Que devez-vous vérifier ?",
+          "question": "Vous allez croiser un tram par la gauche. Que devez-vous vérifier ?",
           "choices": [
-            "La vitesse exacte du tram qui arrive",
-            "Qu'aucun véhicule ne vient en face et que vous ne gênez personne",
+            "Qu'aucun véhicule ne vient en face",
             "Que le tram va s'arrêter pour vous",
-            "Que la chaussée est suffisamment sèche"
+            "Que la chaussée est bien sèche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avant de croiser un tram par la gauche, vérifiez qu'aucun véhicule n'arrive en sens contraire et que vous ne gênez personne.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q20.webp"
         },
         {
           "id": "E1_Q22",
-          "question": "Vous croisez un tram par la gauche en raison d'un obstacle à droite. Pouvez-vous gêner d'autres usagers lors de cette manœuvre ?",
+          "question": "En croisant un tram par la gauche, pouvez-vous gêner d'autres usagers ?",
           "choices": [
-            "Oui, le tram a la priorité et les autres doivent s'adapter",
-            "Non, même en cas d'exception, vous ne pouvez pas gêner d'autres usagers",
-            "Oui, si le tram est prioritaire",
-            "Cela dépend de la situation sur la chaussée"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Même en cas d'exception, vous ne pouvez pas gêner d'autres usagers en croisant un tram par la gauche.",
@@ -415,70 +395,65 @@
         },
         {
           "id": "E1_Q23",
-          "question": "Vous arrivez à un carrefour sans flèches tracées au sol. Un véhicule vient en face. Comment s'effectue le croisement ?",
+          "question": "À un carrefour sans flèches au sol, comment s'effectue le croisement ?",
           "choices": [
-            "Par la gauche, comme dans un rond-point",
             "Par la droite",
-            "Selon les indications des feux de signalisation",
-            "Par n'importe quel côté, au choix du conducteur"
+            "Par la gauche",
+            "Selon les feux du carrefour"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sans flèches au sol, la règle par défaut est le croisement par la droite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q23.webp"
         },
         {
           "id": "E1_Q25",
-          "question": "Vous arrivez à un carrefour où des flèches sont peintes sur la chaussée. Comment s'effectue le croisement avec le véhicule en face ?",
+          "question": "À un carrefour avec des flèches peintes au sol, comment s'effectue le croisement ?",
           "choices": [
-            "Toujours par la droite, quelles que soient les flèches",
-            "Selon les indications des flèches tracées au sol",
-            "Par la gauche, comme c'est un carrefour",
-            "Par n'importe quel côté"
+            "Selon les flèches tracées au sol",
+            "Par la droite malgré les flèches",
+            "Par la gauche, c'est un carrefour"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Quand des flèches sont tracées au sol, le croisement suit leur indication.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q25.webp"
         },
         {
           "id": "E1_Q28",
-          "question": "Vous apercevez un signal triangulaire annonçant un rétrécissement de chaussée. Par quel type de signal ce rétrécissement est-il signalé ?",
+          "question": "Par quel type de signal un rétrécissement de chaussée est-il annoncé ?",
           "choices": [
-            "Par des feux de signalisation",
-            "Par des signaux de danger de forme triangulaire",
-            "Par des lignes au sol spécifiques",
-            "Par des panneaux bleus rectangulaires"
+            "Un signal de danger triangulaire",
+            "Un panneau bleu rectangulaire",
+            "Des lignes peintes sur le sol"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les rétrécissements sont signalés par des signaux de danger triangulaires.",
           "theoryCardIndex": 2,
           "sign": "A7a"
         },
         {
           "id": "E1_Q29",
-          "question": "Vous observez un signal de rétrécissement. Quelles variantes de rétrécissement ces signaux peuvent-ils indiquer ?",
+          "question": "Quelles variantes de rétrécissement ces signaux peuvent-ils indiquer ?",
           "choices": [
-            "Uniquement un rétrécissement des deux côtés",
-            "Un rétrécissement des deux côtés, à gauche seul, ou à droite seul",
-            "Uniquement un rétrécissement à droite",
-            "Uniquement un rétrécissement à gauche"
+            "Des deux côtés, à gauche ou à droite",
+            "Un rétrécissement à droite seul",
+            "Un rétrécissement à gauche seul"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Il existe trois variantes : rétrécissement des deux côtés, à gauche seulement, ou à droite seulement.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E1_Q29.webp"
         },
         {
           "id": "E1_Q30",
-          "question": "Vous arrivez à un rétrécissement sans signaux de priorité. L'obstacle est de votre côté. Un véhicule arrive en face. Que devez-vous faire ?",
+          "question": "À un rétrécissement sans signaux, l'obstacle est de votre côté. Que faites-vous ?",
           "choices": [
-            "Vous avez la priorité car vous êtes arrivé en premier",
-            "Vous devez céder le passage",
-            "Le premier arrivé au rétrécissement passe",
-            "Vous klaxonnez pour signaler votre présence"
+            "Céder le passage",
+            "Passer en premier",
+            "Klaxonner et avancer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sans signaux de priorité, celui qui a l'obstacle de son côté doit céder le passage.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -486,14 +461,13 @@
         },
         {
           "id": "E1_Q31",
-          "question": "Vous arrivez à un rétrécissement sans signaux de priorité. L'obstacle est du côté opposé. Un véhicule arrive en face. Que devez-vous faire ?",
+          "question": "À un rétrécissement sans signaux, l'obstacle est du côté opposé. Que faites-vous ?",
           "choices": [
-            "Vous devez quand même céder le passage",
-            "Vous avez la priorité car l'obstacle est du côté opposé",
-            "Vous attendez un geste du conducteur en face",
-            "Vous passez tous les deux en même temps"
+            "Vous avez la priorité",
+            "Céder quand même le passage",
+            "Attendre un geste d'en face"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'obstacle est du côté opposé, donc c'est l'autre conducteur qui doit céder.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -501,14 +475,13 @@
         },
         {
           "id": "E1_Q34",
-          "question": "Vous arrivez à un passage étroit et voyez le signal rond rouge et blanc. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau à un passage étroit. Que devez-vous faire ?",
           "choices": [
-            "Vous avez la priorité de passage",
-            "Vous devez céder le passage aux véhicules venant en sens opposé",
-            "Vous accélérez pour passer en premier",
-            "Vous faites un appel de phares pour prévenir"
+            "Céder le passage à ceux d'en face",
+            "Passer avant les véhicules d'en face",
+            "Faire un appel de phares"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond rouge/blanc = obligation de céder le passage.",
           "theoryCardIndex": 2,
           "sign": "B19",
@@ -516,14 +489,13 @@
         },
         {
           "id": "E1_Q35",
-          "question": "Vous arrivez à un passage étroit et voyez le signal rectangulaire bleu avec des flèches. Que signifie-t-il ?",
+          "question": "Vous voyez ce panneau à un passage étroit. Que signifie-t-il ?",
           "choices": [
-            "Vous devez céder le passage aux véhicules en face",
-            "Vous avez la priorité de passage par rapport aux véhicules en sens opposé",
-            "Le passage est interdit dans cette direction",
-            "Vous entrez dans une zone piétonne"
+            "Vous avez la priorité de passage",
+            "Vous devez céder le passage",
+            "Le passage est interdit ici"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rectangulaire bleu = priorité de passage dans le passage étroit.",
           "theoryCardIndex": 2,
           "sign": "B21",
@@ -531,14 +503,13 @@
         },
         {
           "id": "E1_Q36",
-          "question": "Vous remarquez que les signaux de passage étroit ont des formes différentes (rond et rectangulaire). Pourquoi ?",
+          "question": "Pourquoi les signaux de passage étroit ont-ils des formes différentes ?",
           "choices": [
-            "Pour des raisons esthétiques uniquement",
-            "Pour pouvoir les reconnaître en toutes circonstances, même s'ils sont délavés ou abîmés",
-            "Pour distinguer les signaux belges des signaux français",
-            "Cela n'a aucune importance particulière"
+            "Pour les reconnaître même abîmés",
+            "Pour distinguer les pays voisins",
+            "Pour une raison purement esthétique"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Des formes différentes permettent de les identifier même dans de mauvaises conditions.",
           "theoryCardIndex": 2,
           "sign": "B19"
@@ -560,26 +531,23 @@
         },
         {
           "id": "E1_Q39",
-          "question": "Vous apercevez un signal triangulaire de danger avec deux flèches (rouge et blanche). Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Passage étroit, vous devez céder le passage",
-            "La circulation est admise dans les deux sens",
-            "Vous êtes sur une voie à sens unique",
-            "Vous avez la priorité de passage"
+            "Circulation dans les deux sens",
+            "Passage étroit, cédez le passage",
+            "Vous êtes sur un sens unique"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal triangulaire avertit que la circulation reprend dans les deux sens après un tronçon à sens unique.",
           "theoryCardIndex": 2,
           "sign": "A39"
         },
         {
           "id": "E1_Q40",
-          "question": "Vous voyez successivement un signal rond rouge/blanc et un signal triangulaire avec deux flèches. Ont-ils la même signification ?",
+          "question": "Le signal rond rouge et blanc et le triangulaire à deux flèches ont-ils la même signification ?",
           "choices": [
-            "Oui, les deux signifient la même chose",
-            "Non : le rond impose de céder, le triangulaire avertit du double sens",
-            "Oui, les deux indiquent un rétrécissement",
-            "Non, le triangulaire indique une priorité"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Ces deux signaux sont souvent confondus à l'examen, mais leur signification est totalement différente.",
@@ -588,26 +556,23 @@
         },
         {
           "id": "E1_Q42",
-          "question": "Vous apercevez un panneau rectangulaire bleu avec une flèche blanche. Que signifie ce signal ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Obligation de suivre la direction indiquée",
             "Voie publique à sens unique",
-            "Fin de sens unique",
-            "Route prioritaire"
+            "Obligation d'aller tout droit",
+            "Fin du sens unique ici"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rectangulaire bleu avec flèche blanche indique une voie à sens unique.",
           "theoryCardIndex": 3,
           "sign": "F19"
         },
         {
           "id": "E1_Q43",
-          "question": "Vous circulez sur une voie à sens unique. Risquez-vous de croiser d'autres conducteurs ?",
+          "question": "Sur une voie à sens unique, risquez-vous de croiser d'autres conducteurs ?",
           "choices": [
-            "Oui, il y a toujours des véhicules en sens inverse",
-            "Non, normalement pas, sauf exceptions signalées par un panneau additionnel",
-            "Oui, les cyclistes circulent toujours en sens inverse",
-            "Oui, les piétons marchent toujours en sens inverse"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "En principe, sur un sens unique, pas de trafic en sens opposé (sauf exception signalée).",
@@ -616,98 +581,90 @@
         },
         {
           "id": "E1_Q44",
-          "question": "Vous circulez sur un sens unique et remarquez un panneau additionnel blanc avec un vélo. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau additionnel sur un sens unique ?",
           "choices": [
-            "Une piste cyclable se trouve à proximité",
-            "Les cyclistes sont autorisés à circuler en sens inverse",
-            "Les vélos sont interdits sur cette voie",
-            "Un stationnement pour vélos est disponible"
+            "Les cyclistes viennent en face",
+            "Les vélos sont interdits ici",
+            "Un parking à vélos plus loin"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau additionnel avec un vélo autorise les cyclistes à circuler en sens inverse.",
           "theoryCardIndex": 3,
           "sign": "M4"
         },
         {
           "id": "E1_Q45",
-          "question": "Vous roulez sur un sens unique où les cyclistes sont autorisés en sens inverse. Que devez-vous faire ?",
+          "question": "Sur un sens unique où les cyclistes viennent en face, que devez-vous faire ?",
           "choices": [
-            "Rouler au milieu de la chaussée, il n'y a pas de trafic en face",
-            "Être attentif aux cyclistes venant en sens inverse et leur laisser suffisamment d'espace",
-            "Klaxonner si vous apercevez un cycliste en face",
-            "Accélérer pour éviter tout risque"
+            "Surveiller les cyclistes en face",
+            "Rouler au milieu de la chaussée",
+            "Klaxonner en voyant un cycliste"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous devez être attentif et laisser suffisamment d'espace aux cyclistes autorisés en sens inverse.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q45.webp"
         },
         {
           "id": "E1_Q46",
-          "question": "Vous circulez sur une voie à sens unique. Devez-vous tout de même rouler à droite ?",
+          "question": "Sur une voie à sens unique, devez-vous tout de même rouler à droite ?",
           "choices": [
-            "Non, vous pouvez rouler n'importe où sur la chaussée",
-            "Oui, normalement vous devez rouler à droite, sauf exceptions",
-            "Non, vous devez rouler à gauche sur un sens unique",
-            "Vous devez rouler au milieu"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur un sens unique, la règle de tenir la droite s'applique sauf exceptions.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q46.webp"
         },
         {
           "id": "E1_Q47",
-          "question": "Vous cherchez à vous garer sur une chaussée à sens unique. De quel côté pouvez-vous stationner ?",
+          "question": "De quel côté pouvez-vous stationner sur une chaussée à sens unique ?",
           "choices": [
-            "Uniquement du côté droit de la chaussée",
-            "Aussi bien à droite qu'à gauche",
-            "Uniquement du côté gauche",
-            "Le stationnement est interdit sur un sens unique"
+            "À droite comme à gauche",
+            "Du côté droit, pas ailleurs",
+            "Du côté gauche, pas ailleurs"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur une chaussée à sens unique, le stationnement est autorisé des deux côtés.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q47.webp"
         },
         {
           "id": "E1_Q48",
-          "question": "Vous souhaitez vous garer sur un sens unique. Quelle condition de largeur devez-vous respecter ?",
+          "question": "En stationnant sur un sens unique, quelle largeur libre devez-vous laisser ?",
           "choices": [
-            "Il faut laisser au moins 2 mètres d'espace libre",
-            "Il faut laisser au moins 3 mètres d'espace libre pour permettre aux autres de passer",
-            "Il faut laisser au moins 4 mètres",
-            "Il n'y a aucune condition de largeur"
+            "Au moins 3 mètres",
+            "Au moins 2 mètres",
+            "Au moins 4 mètres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Il faut laisser au minimum 3 mètres d'espace libre entre les véhicules.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q48.webp"
         },
         {
           "id": "E1_Q51",
-          "question": "Vous apercevez un signal rond bleu avec une flèche blanche. De quel type de signal s'agit-il ?",
+          "question": "De quel type de signal s'agit-il ?",
           "choices": [
-            "D'un signal d'indication signifiant sens unique",
-            "D'un signal d'obligation : suivre la direction indiquée",
-            "D'un signal de danger annonçant un virage",
-            "D'un signal d'interdiction de tourner"
+            "Un signal d'obligation",
+            "Un signal d'indication",
+            "Un signal de danger"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond bleu est un signal d'obligation (direction imposée), contrairement au rectangulaire bleu (indication).",
           "theoryCardIndex": 3,
           "sign": "D1a"
         },
         {
           "id": "E1_Q52",
-          "question": "Vous circulez sur un sens unique et souhaitez tourner à gauche. Où devez-vous vous positionner ?",
+          "question": "Sur un sens unique, où vous positionner pour tourner à gauche ?",
           "choices": [
+            "Le plus à gauche possible",
             "Le plus à droite possible",
-            "Le plus à gauche possible, dans la bande la plus à gauche",
-            "Au milieu de la chaussée",
-            "N'importe où, car c'est un sens unique"
+            "Au milieu de la chaussée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour tourner à gauche depuis un sens unique, se positionner le plus à gauche possible.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q52.webp"
@@ -728,84 +685,78 @@
         },
         {
           "id": "E1_Q57",
-          "question": "Vous apercevez un signal triangulaire avec un rétrécissement symétrique. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Route étroite avec interdiction de dépasser",
-            "Rétrécissement de la chaussée des deux côtés",
-            "Travaux en cours",
+            "Rétrécissement des deux côtés",
+            "Route étroite, sans dépassement",
             "Passage étroit avec priorité"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le triangle avec rétrécissement symétrique indique un rétrécissement des deux côtés.",
           "sign": "A7a",
           "destination": "panneaux"
         },
         {
           "id": "E1_Q58",
-          "question": "Vous apercevez un signal triangulaire indiquant un rétrécissement du côté gauche. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Virage à gauche",
-            "Rétrécissement de la chaussée à gauche",
-            "Sens interdit à gauche",
-            "Déviation vers la gauche"
+            "Rétrécissement par la gauche",
+            "Un virage serré vers la gauche",
+            "Sens interdit sur la gauche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce triangle indique que la chaussée se rétrécit du côté gauche.",
           "sign": "A7b",
           "destination": "panneaux"
         },
         {
           "id": "E1_Q59",
-          "question": "Vous apercevez un signal triangulaire indiquant un rétrécissement du côté droit. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Virage à droite",
-            "Rétrécissement de la chaussée à droite",
-            "Sens interdit à droite",
-            "Travaux à droite"
+            "Rétrécissement par la droite",
+            "Un virage serré vers la droite",
+            "Des travaux sur la droite"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce triangle indique que la chaussée se rétrécit du côté droit.",
           "sign": "A7c",
           "destination": "panneaux"
         },
         {
           "id": "E1_Q64",
-          "question": "Vous apercevez un signal rond bleu avec une flèche blanche vers le haut. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
+            "Obligation d'aller tout droit",
             "Voie à sens unique tout droit",
-            "Obligation de suivre la direction indiquée (tout droit)",
-            "Parking autorisé à proximité",
             "Début d'une route prioritaire"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond bleu est un signal d'obligation : vous devez aller tout droit.",
           "theoryCardIndex": 3,
           "sign": "D1a"
         },
         {
           "id": "E1_Q65",
-          "question": "Vous apercevez un signal rond bleu avec une flèche blanche vers la droite. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
+            "Obligation de tourner à droite",
             "Voie à sens unique vers la droite",
-            "Obligation de suivre la direction indiquée (tourner à droite)",
-            "Stationnement autorisé à droite",
-            "Déviation vers la droite"
+            "Stationnement autorisé à droite"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond bleu avec flèche à droite oblige à tourner à droite.",
           "theoryCardIndex": 3,
           "sign": "D1d"
         },
         {
           "id": "E1_Q66",
-          "question": "Vous arrivez à un rétrécissement. Vous voyez le signal rond rouge/blanc. Le véhicule en face a le signal rectangulaire bleu. Qui passe ?",
+          "question": "Vous avez ce panneau et le véhicule en face a le panneau bleu. Qui passe ?",
           "choices": [
-            "Vous, car vous êtes arrivé le premier",
-            "Le véhicule en face : son signal bleu lui donne la priorité",
-            "Personne, chacun attend l'autre",
-            "Le véhicule le plus large passe en premier"
+            "Le véhicule en face",
+            "Vous, arrivé le premier",
+            "Le plus large des deux"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Rond rouge/blanc = céder. Rectangulaire bleu = priorité. Le véhicule en face passe.",
           "theoryCardIndex": 2,
           "sign": "B19",
@@ -813,14 +764,13 @@
         },
         {
           "id": "E1_Q68",
-          "question": "Vous croisez un cycliste en agglomération à 1,2 m, puis hors agglomération à 1,2 m. Où commettez-vous une infraction ?",
+          "question": "Vous croisez un cycliste à 1,2 m en agglomération, puis à 1,2 m hors agglomération. Où êtes-vous en infraction ?",
           "choices": [
-            "En agglomération, car 1,2 m est insuffisant",
-            "Hors agglomération, car il faut 1,5 mètre et 1,2 mètre est insuffisant",
-            "Dans les deux cas, c'est insuffisant",
-            "Dans aucun des deux cas"
+            "Hors agglomération, il faut 1,5 m",
+            "En agglomération, il faut 1,5 m",
+            "Dans les deux cas, c'est trop peu"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En agglomération, 1 m suffit (1,2 m ok). Hors agglomération, 1,5 m requis (1,2 m insuffisant).",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q68.webp"
@@ -1073,28 +1023,26 @@
       "questions": [
         {
           "id": "E2_Q1",
-          "question": "Vous roulez derrière un véhicule qui avance lentement. Quand parle-t-on de dépassement au sens du code de la route ?",
+          "question": "Quand parle-t-on de dépassement au sens du code ?",
           "choices": [
-            "Quand vous passez un véhicule stationné sur le côté",
-            "Uniquement quand le véhicule devant vous est en mouvement",
-            "Quand vous changez de bande de circulation",
-            "Quand vous tournez à gauche à un carrefour"
+            "Quand le véhicule est en mouvement",
+            "Quand le véhicule est stationné",
+            "Quand vous changez de bande"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le dépassement concerne uniquement un véhicule en mouvement circulant plus lentement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q1.webp"
         },
         {
           "id": "E2_Q2",
-          "question": "Vous souhaitez dépasser un véhicule qui roule en dessous de la vitesse maximale autorisée. Par quel côté effectuez-vous ce dépassement ?",
+          "question": "Par quel côté dépassez-vous un véhicule plus lent ?",
           "choices": [
-            "Par la droite, pour plus de sécurité",
             "Par la gauche",
-            "Par n'importe quel côté selon l'espace disponible",
-            "Par le centre de la chaussée"
+            "Par la droite",
+            "Au choix, selon la place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le dépassement normal s'effectue par la gauche.",
           "theoryCardIndex": 0,
           "severe": true,
@@ -1102,12 +1050,10 @@
         },
         {
           "id": "E2_Q3",
-          "question": "Vous passez devant un véhicule stationné le long du trottoir. S'agit-il d'un dépassement ?",
+          "question": "Vous passez devant un véhicule stationné le long du trottoir. Est-ce un dépassement ?",
           "choices": [
-            "Oui, c'est un dépassement classique",
-            "Non, c'est un contournement d'obstacle car le véhicule n'est pas en mouvement",
-            "Oui, si vous changez de bande pour le passer",
-            "Cela dépend de votre vitesse"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un véhicule stationné n'est pas en mouvement — vous le contournez, ce n'est pas un dépassement.",
@@ -1116,28 +1062,26 @@
         },
         {
           "id": "E2_Q5",
-          "question": "Vous vous demandez pourquoi le code distingue le dépassement du contournement. Quelle est la raison ?",
+          "question": "Pourquoi le code distingue-t-il le dépassement du contournement ?",
           "choices": [
-            "Cette distinction n'a aucune importance pratique",
-            "Parce que les règles et interdictions de dépassement ne s'appliquent qu'aux véhicules en mouvement",
-            "Parce que le contournement est toujours interdit",
-            "C'est uniquement important pour les assurances"
+            "Les règles visent ce qui roule",
+            "Le contournement est interdit partout",
+            "C'est important pour les assurances"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les règles (et interdictions) de dépassement ne concernent que les véhicules en mouvement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q5.webp"
         },
         {
           "id": "E2_Q7",
-          "question": "Vous souhaitez dépasser le véhicule devant vous. Quelle est la PREMIÈRE vérification à effectuer ?",
+          "question": "Quelle est la PREMIÈRE vérification avant de dépasser ?",
           "choices": [
-            "Vérifier si un véhicule arrive en face",
-            "Vérifier qu'il roule sous la vitesse maximale",
-            "Vérifier votre rétroviseur gauche",
-            "Allumer votre clignotant gauche"
+            "Roule-t-il sous la vitesse maximale ?",
+            "Un véhicule arrive-t-il en face ?",
+            "Mon rétroviseur gauche est-il libre ?"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "1re vérification : le véhicule devant roule-t-il en dessous de la vitesse maximale ?",
           "theoryCardIndex": 1,
           "severe": true,
@@ -1145,14 +1089,13 @@
         },
         {
           "id": "E2_Q8",
-          "question": "Vous avez vérifié que le véhicule devant roule en dessous de la vitesse maximale. Quelle est la DEUXIÈME vérification ?",
+          "question": "Quelle est la DEUXIÈME vérification avant de dépasser ?",
           "choices": [
-            "Un véhicule arrive-t-il en sens inverse ?",
-            "Puis-je le dépasser rapidement sans excéder la vitesse autorisée ?",
-            "Y a-t-il de l'espace pour me rabattre après ?",
-            "Des signaux interdisent-ils le dépassement ?"
+            "Puis-je dépasser assez vite ?",
+            "Un véhicule arrive-t-il en face ?",
+            "Ai-je la place pour me rabattre ?"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "2e vérification : puis-je dépasser rapidement sans excéder la vitesse maximale ?",
           "theoryCardIndex": 1,
           "severe": true,
@@ -1160,68 +1103,62 @@
         },
         {
           "id": "E2_Q9",
-          "question": "Vous préparez un dépassement. La TROISIÈME vérification concerne :",
+          "question": "Quelle est la TROISIÈME vérification avant de dépasser ?",
           "choices": [
-            "Le rétroviseur gauche et l'angle mort",
-            "L'espace disponible pour se rabattre",
-            "La présence d'un véhicule venant en sens inverse",
-            "Les signaux de circulation"
+            "Un véhicule arrive-t-il en face ?",
+            "Ai-je la place pour me rabattre ?",
+            "Les signaux l'interdisent-ils ?"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "3e vérification : un véhicule arrive-t-il en sens inverse ? (regard au loin)",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q9.webp"
         },
         {
           "id": "E2_Q10",
-          "question": "Vous préparez un dépassement. La QUATRIÈME vérification concerne :",
+          "question": "Quelle est la QUATRIÈME vérification avant de dépasser ?",
           "choices": [
-            "Le trafic venant en sens inverse",
-            "Un véhicule derrière déjà en train de dépasser",
-            "L'espace disponible pour se rabattre",
-            "La vitesse du véhicule à dépasser"
+            "Suis-je déjà dépassé par derrière ?",
+            "Ai-je la place pour me rabattre ?",
+            "Un véhicule arrive-t-il en face ?"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "4e vérification : un véhicule derrière est-il en train de vous dépasser ? (rétroviseur gauche + angle mort)",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q10.webp"
         },
         {
           "id": "E2_Q11",
-          "question": "Vous préparez un dépassement. La CINQUIÈME vérification concerne :",
+          "question": "Quelle est la CINQUIÈME vérification avant de dépasser ?",
           "choices": [
-            "Les signaux routiers de l'endroit",
-            "L'espace pour se rabattre à droite après le dépassement",
-            "Un véhicule venant en sens inverse",
-            "Le rétroviseur gauche et l'angle mort"
+            "Ai-je la place pour me rabattre ?",
+            "Les signaux l'interdisent-ils ?",
+            "Un véhicule arrive-t-il en face ?"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "5e vérification : y a-t-il suffisamment d'espace pour se rabattre à droite après le dépassement ?",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q11.webp"
         },
         {
           "id": "E2_Q12",
-          "question": "Vous préparez un dépassement. La SIXIÈME et dernière vérification concerne :",
+          "question": "Quelle est la SIXIÈME vérification avant de dépasser ?",
           "choices": [
-            "L'espace disponible pour se rabattre",
-            "Les signaux ou règles interdisent-ils le dépassement ici ?",
-            "Le rétroviseur droit et l'angle mort",
-            "La vitesse du véhicule qui vous précède"
+            "Les signaux l'interdisent-ils ?",
+            "Ai-je la place pour me rabattre ?",
+            "Mon rétroviseur droit est-il libre ?"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "6e vérification : des signaux ou règles interdisent-ils le dépassement ?",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q12.webp"
         },
         {
           "id": "E2_Q13",
-          "question": "Vous roulez derrière un véhicule qui circule exactement à la vitesse maximale autorisée. Pouvez-vous le dépasser ?",
+          "question": "Le véhicule devant vous roule exactement à la vitesse maximale. Pouvez-vous le dépasser ?",
           "choices": [
-            "Oui, si vous roulez un peu plus vite",
-            "Non, car vous devriez excéder la vitesse maximale pour le dépasser",
-            "Oui, si la route est droite et dégagée",
-            "Oui, en agglomération uniquement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Pour dépasser, vous devriez dépasser la vitesse maximale, ce qui est interdit.",
@@ -1231,26 +1168,23 @@
         },
         {
           "id": "E2_Q14",
-          "question": "Vous voulez dépasser. En vérifiant votre rétroviseur gauche, vous constatez qu'un véhicule derrière est en train de vous dépasser. Que faites-vous ?",
+          "question": "Un véhicule derrière vous est déjà en train de vous dépasser. Que faites-vous ?",
           "choices": [
-            "Vous dépassez quand même en accélérant",
-            "Vous attendez qu'il ait terminé son dépassement",
-            "Vous accélérez pour le distancer",
-            "Vous klaxonnez pour qu'il ralentisse"
+            "Attendre qu'il ait terminé",
+            "Dépasser en accélérant fort",
+            "Klaxonner pour qu'il ralentisse"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La 4e vérification impose d'attendre qu'aucun véhicule ne vous dépasse.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q14.webp"
         },
         {
           "id": "E2_Q15",
-          "question": "Vous roulez sur une route à deux sens et souhaitez dépasser plusieurs véhicules lents. Pouvez-vous les dépasser tous en une seule manœuvre ?",
+          "question": "Pouvez-vous dépasser plusieurs véhicules lents en une seule manœuvre ?",
           "choices": [
-            "Oui, si la route est suffisamment droite",
-            "Non, un seul véhicule à la fois, en vous rabattant après chacun",
-            "Oui, mais sur autoroute uniquement",
-            "Oui, mais sur un sens unique uniquement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Vous devez vous rabattre après chaque dépassement (sauf sens unique ou 3 bandes).",
@@ -1259,168 +1193,153 @@
         },
         {
           "id": "E2_Q16",
-          "question": "Vous venez de dépasser un véhicule. Dans quelles deux situations n'êtes-vous pas obligé de vous rabattre après chaque dépassement ?",
+          "question": "Dans quels cas n'êtes-vous pas obligé de vous rabattre après chaque dépassement ?",
           "choices": [
-            "Sur autoroute et sur route ordinaire",
-            "Sur une voie à sens unique et sur une chaussée à 3 bandes dans le sens suivi",
-            "En agglomération et hors agglomération",
-            "De jour et de nuit par bonne visibilité"
+            "Sens unique et chaussée à 3 bandes",
+            "Sur autoroute et route ordinaire",
+            "De jour et par bonne visibilité"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les deux exceptions : sens unique et chaussée à 3 bandes dans le sens suivi.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q16.webp"
         },
         {
           "id": "E2_Q17",
-          "question": "Vous révisez pour l'examen théorique. Devez-vous connaître l'ordre exact des 6 vérifications avant le dépassement ?",
+          "question": "Devez-vous connaître l'ordre exact des six vérifications pour l'examen ?",
           "choices": [
-            "Non, seul le contenu est important, pas l'ordre",
-            "Oui, l'ordre exact doit être connu pour l'examen",
-            "Non, seul le contenu compte",
-            "Oui, mais seulement les 3 premières vérifications"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'ordre exact des 6 vérifications est exigé.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q17.webp"
         },
         {
           "id": "E2_Q19",
-          "question": "Vous avez effectué toutes les vérifications et décidez de dépasser. Quelle est la première action ?",
+          "question": "Vos vérifications faites, quelle est votre première action pour dépasser ?",
           "choices": [
-            "Accélérer franchement avant tout",
-            "Le clignotant gauche, après rétroviseur et angle mort",
-            "Vous déporter immédiatement à gauche",
-            "Klaxonner pour prévenir le conducteur devant"
+            "Le clignotant gauche",
+            "Accélérer franchement",
+            "Klaxonner d'abord"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Première action : clignotant gauche, après contrôle rétroviseur gauche + angle mort.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q19.webp"
         },
         {
           "id": "E2_Q20",
-          "question": "Vous vous êtes déporté à gauche pour dépasser. Vous êtes maintenant positionné dans la bande de gauche. Que faites-vous du clignotant ?",
+          "question": "Vous êtes déporté dans la bande de gauche. Que faites-vous du clignotant ?",
           "choices": [
-            "Vous gardez le clignotant gauche allumé pendant tout le dépassement",
-            "Vous éteignez le clignotant gauche",
-            "Vous allumez immédiatement le clignotant droit",
-            "Vous allumez les feux de route"
+            "Vous l'éteignez",
+            "Vous le laissez",
+            "Vous mettez le droit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une fois à gauche, on éteint le clignotant gauche — il ne sert que pour le déplacement latéral.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q20.webp"
         },
         {
           "id": "E2_Q22",
-          "question": "Vous avez dépassé le véhicule et souhaitez vous rabattre à droite. Que faites-vous en premier ?",
+          "question": "Le dépassement est terminé. Que faites-vous en premier pour vous rabattre ?",
           "choices": [
-            "Vous accélérez encore pour prendre de la distance",
-            "Vous allumez le clignotant droit",
-            "Vous klaxonnez pour prévenir",
-            "Vous freinez progressivement"
+            "Le clignotant droit",
+            "Freiner doucement",
+            "Accélérer encore"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avant de se rabattre à droite, on allume le clignotant droit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q22.webp"
         },
         {
           "id": "E2_Q23",
-          "question": "Vous souhaitez vous rabattre à droite après un dépassement. Comment procédez-vous ?",
+          "question": "Comment procédez-vous pour vous rabattre à droite ?",
           "choices": [
-            "Vous vous rabattez directement sans vérification",
-            "Vous vérifiez d'abord le rétroviseur droit et l'angle mort avant de vous rabattre",
-            "Vous vous rabattez sans vérification si la route est droite",
-            "Vous freinez avant de vous rabattre"
+            "Rétroviseur droit et angle mort",
+            "Directement, sans vérification",
+            "En freinant avant de rentrer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le rabattement à droite se fait après contrôle du rétroviseur droit et de l'angle mort.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q23.webp"
         },
         {
           "id": "E2_Q24",
-          "question": "Vous dépassez un véhicule. Le code de la route précise-t-il exactement la distance latérale à respecter ?",
+          "question": "Le code précise-t-il la distance latérale exacte lors d'un dépassement ?",
           "choices": [
-            "Oui, 1,5 mètre dans absolument tous les cas",
-            "Non, le code dit « suffisante » sans préciser de chiffre exact",
-            "Oui, 1 mètre minimum est imposé",
-            "Oui, 2 mètres minimum sont imposés"
+            "Non, il dit « suffisante »",
+            "Oui, un mètre minimum",
+            "Oui, deux mètres minimum"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le code impose une distance latérale suffisante, sans chiffre précis (sauf pour cyclistes/piétons).",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q24.webp"
         },
         {
           "id": "E2_Q25",
-          "question": "Vous vous préparez à l'examen théorique. Quel est l'ordre complet de la procédure de dépassement ?",
+          "question": "Quel est l'ordre complet de la procédure de dépassement ?",
           "choices": [
-            "Accélérer fort, dépasser, puis se rabattre",
-            "Clignotant gauche, dépasser rapidement, clignotant droit, se rabattre",
-            "Clignotant gauche, dépasser, klaxonner",
-            "Rétroviseur, accélérer, dépasser sans clignotant"
+            "Clignotant gauche, dépasser, droit",
+            "Accélérer, dépasser, se rabattre",
+            "Clignotant gauche, dépasser, klaxon"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La procédure complète en 5 étapes doit être connue dans l'ordre.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q25.webp"
         },
         {
           "id": "E2_Q29",
-          "question": "Vous roulez hors agglomération et souhaitez dépasser un cycliste. Quelle distance latérale minimale devez-vous laisser ?",
+          "question": "Hors agglomération, quelle distance latérale minimale pour dépasser un cycliste ?",
           "choices": [
-            "1 mètre",
             "Au moins 1,5 mètre",
-            "2 mètres",
-            "0,5 mètre"
+            "Au moins 1 mètre",
+            "Au moins 2 mètres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Hors agglomération : minimum 1,5 mètre en dépassant un cycliste.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q29.webp"
         },
         {
           "id": "E2_Q30",
-          "question": "Vous roulez hors agglomération. Un cycliste circule sur la piste cyclable à votre droite. Devez-vous respecter la distance de 1,5 m en le dépassant ?",
+          "question": "Le cycliste est sur la piste cyclable. La distance de 1,5 m s'applique-t-elle quand même ?",
           "choices": [
-            "Non, il est sur la piste cyclable donc pas sur votre chaussée",
-            "Oui, la distance de 1,5 m s'applique aussi quand le cycliste est sur la piste cyclable",
-            "Non, la distance ne s'applique que sur la chaussée",
-            "Cela dépend de la largeur de la piste"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La distance de 1,5 m s'applique que le cycliste soit sur la chaussée ou sur la piste cyclable.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q30.webp"
         },
         {
           "id": "E2_Q31",
-          "question": "Vous roulez hors agglomération et dépassez un piéton qui marche sur la chaussée. Quelle distance latérale devez-vous respecter ?",
+          "question": "Hors agglomération, quelle distance latérale pour dépasser un piéton sur la chaussée ?",
           "choices": [
-            "1 mètre",
             "Au moins 1,5 mètre",
-            "Il n'y a pas de distance minimale pour les piétons",
-            "0,5 mètre"
+            "Au moins 1 mètre",
+            "Aucune distance imposée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La distance de 1,5 m s'applique aussi aux piétons marchant sur la chaussée hors agglomération.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q31.webp"
         },
         {
           "id": "E2_Q32",
-          "question": "Vous circulez hors agglomération et croisez un cycliste venant en sens inverse. La distance de 1,5 m s'applique-t-elle aussi au croisement ?",
+          "question": "La distance de 1,5 m s'applique-t-elle aussi quand vous croisez un cycliste ?",
           "choices": [
-            "Non, uniquement lors du dépassement",
-            "Oui, cette distance s'applique aussi lors du croisement d'un cycliste",
-            "Non, pour le croisement c'est seulement 1 m",
-            "Cela dépend de la largeur de la route"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La distance de 1,5 m hors agglomération s'applique au dépassement ET au croisement d'un cycliste.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q32.webp"
@@ -1441,14 +1360,13 @@
         },
         {
           "id": "E2_Q35",
-          "question": "Vous dépassez un cycliste. Quelle est la différence de distance latérale entre l'agglomération et hors agglomération ?",
+          "question": "Quelle différence de distance latérale entre agglomération et hors agglomération ?",
           "choices": [
-            "1 mètre dans les deux cas",
-            "1 mètre en agglomération, 1,5 mètre hors agglomération",
-            "1,5 mètre dans les deux cas",
-            "2 mètres hors agglomération, 1 mètre en agglomération"
+            "1 m en ville, 1,5 m en dehors",
+            "1,5 m dans les deux situations",
+            "1 m dans les deux situations"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "1 m en agglomération, 1,5 m hors agglomération — pour cyclistes, cyclomotoristes et piétons sur chaussée.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q35.webp"
@@ -1469,12 +1387,10 @@
         },
         {
           "id": "E2_Q38",
-          "question": "Vous dépassez par la droite un véhicule qui tourne à gauche. Pouvez-vous rouler au-delà du bord fictif de la chaussée ?",
+          "question": "Vous dépassez par la droite un véhicule qui tourne à gauche. Pouvez-vous rouler au-delà du bord fictif ?",
           "choices": [
-            "Oui, si c'est nécessaire pour passer",
-            "Non, vous ne pouvez pas rouler au-delà de la large ligne blanche",
-            "Oui, si personne n'y stationne",
-            "Cela dépend de la largeur de la zone"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La zone au-delà du bord fictif est réservée à l'arrêt/stationnement — interdit pour le dépassement.",
@@ -1483,12 +1399,10 @@
         },
         {
           "id": "E2_Q39",
-          "question": "Vous dépassez par la droite un véhicule qui tourne à gauche. Pouvez-vous emprunter la piste cyclable pour effectuer cette manœuvre ?",
+          "question": "Pour cette même manœuvre, pouvez-vous emprunter la piste cyclable ?",
           "choices": [
-            "Oui, si elle est vide de cyclistes",
-            "Non, c'est interdit",
-            "Oui, à condition d'y rester brièvement",
-            "Cela dépend de la présence de vélos"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La piste cyclable ne fait pas partie de la chaussée : l'emprunter pour dépasser est interdit.",
@@ -1497,82 +1411,74 @@
         },
         {
           "id": "E2_Q40",
-          "question": "Vous dépassez par la droite un véhicule qui tourne à gauche. Pouvez-vous emprunter l'accotement de plain-pied ?",
+          "question": "Pour cette même manœuvre, pouvez-vous emprunter l'accotement de plain-pied ?",
           "choices": [
-            "Non, l'accotement est interdit en toutes circonstances",
-            "Oui, à condition de ne pas mettre en danger ceux qui s'y trouvent",
-            "Oui, sans aucune condition particulière",
-            "Uniquement hors agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'accotement de plain-pied est autorisé pour ce dépassement, à condition de ne pas mettre en danger ses usagers.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q40.webp"
         },
         {
           "id": "E2_Q41",
-          "question": "Vous roulez derrière un tram et souhaitez le dépasser. Par quel côté devez-vous normalement le faire ?",
+          "question": "Par quel côté dépassez-vous normalement un tram ?",
           "choices": [
-            "Par la gauche, comme pour les voitures",
             "Par la droite",
-            "Par n'importe quel côté selon l'espace",
-            "Cela dépend de la position des rails"
+            "Par la gauche",
+            "Au choix, selon la place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La règle générale : dépasser les trams par la droite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q41.webp"
         },
         {
           "id": "E2_Q42",
-          "question": "Vous souhaitez dépasser un tram mais le passage à droite est bloqué. Quand pouvez-vous le dépasser par la gauche ?",
+          "question": "Quand pouvez-vous dépasser un tram par la gauche ?",
           "choices": [
-            "Vous pouvez toujours dépasser un tram par la gauche",
-            "Quand le passage à droite est impossible ou quand les voies sont à droite de la chaussée",
-            "Vous ne pouvez jamais dépasser un tram par la gauche",
-            "Uniquement pendant la nuit ou en trafic dense"
+            "Si le passage à droite est impossible",
+            "Dans toutes les situations, sans limite",
+            "Pendant la nuit ou en trafic dense"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Exceptions au dépassement par la droite du tram : passage impossible à droite ou voies sur partie droite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q42.webp"
         },
         {
           "id": "E2_Q43",
-          "question": "Vous souhaitez dépasser un tram dont les voies se trouvent sur la partie droite de la chaussée. Par quel côté le dépassez-vous ?",
+          "question": "Les voies du tram sont sur la partie droite de la chaussée. Par quel côté le dépassez-vous ?",
           "choices": [
-            "Par la droite, comme toujours pour les trams",
             "Par la gauche",
-            "Par la droite, en roulant entre les rails",
-            "Vous ne pouvez pas le dépasser dans cette situation"
+            "Par la droite",
+            "Entre les deux rails"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si les voies du tram sont à droite, on le dépasse par la gauche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q43.webp"
         },
         {
           "id": "E2_Q44",
-          "question": "Vous circulez et un tram s'arrête au milieu de la chaussée. Un passager descend et il n'y a pas de bordure surélevée. Que devez-vous faire ?",
+          "question": "Un passager descend d'un tram arrêté, sans bordure surélevée. Que devez-vous faire ?",
           "choices": [
-            "Continuer à vitesse modérée en contournant le passager",
-            "Ralentir et si nécessaire vous arrêter pour laisser le passager traverser en sécurité",
-            "Klaxonner pour que le passager se dépêche",
-            "Accélérer pour passer avant que d'autres passagers descendent"
+            "Ralentir et au besoin s'arrêter",
+            "Contourner le passager au pas",
+            "Klaxonner pour qu'il se hâte"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sans bordure surélevée, vous devez ralentir et si nécessaire vous arrêter.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q44.webp"
         },
         {
           "id": "E2_Q45",
-          "question": "Un tram s'arrête et des passagers descendent. Il y a une bordure surélevée (refuge) où ils peuvent attendre. Devez-vous vous arrêter ?",
+          "question": "Des passagers descendent d'un tram vers un refuge surélevé. Devez-vous vous arrêter ?",
           "choices": [
-            "Oui, vous devez toujours vous arrêter quand un tram s'arrête",
-            "Non, si une bordure surélevée est présente, les piétons peuvent y attendre en sécurité",
-            "Oui, par mesure de prudence",
-            "Cela dépend du nombre de passagers qui descendent"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Avec une bordure surélevée, les passagers peuvent attendre en sécurité — pas d'obligation de s'arrêter.",
@@ -1581,26 +1487,23 @@
         },
         {
           "id": "E2_Q48",
-          "question": "Vous révisez les règles de dépassement par la droite. Combien de cas l'autorisent ?",
+          "question": "Combien de cas autorisent le dépassement par la droite ?",
           "choices": [
-            "Un seul cas : le tram",
-            "Deux cas : le véhicule qui tourne à gauche et le tram",
-            "Trois cas différents",
-            "Aucun cas, le dépassement par la droite est toujours interdit"
+            "Deux cas",
+            "Un seul cas",
+            "Trois cas"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Deux cas uniquement : le véhicule qui tourne à gauche, et le tram.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q48.webp"
         },
         {
           "id": "E2_Q49",
-          "question": "Vous êtes dans un embouteillage. Votre file avance un peu plus vite que celle à votre gauche. S'agit-il d'un dépassement ?",
+          "question": "Dans un embouteillage, votre file avance plus vite que celle de gauche. Est-ce un dépassement ?",
           "choices": [
-            "Oui, c'est un dépassement par la droite",
-            "Non, le code de la route ne considère pas cela comme un dépassement",
-            "Oui, si vous dépassez plus de 3 véhicules",
-            "Cela dépend de votre vitesse"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "En embouteillage, une file plus rapide que l'autre n'est pas considérée comme un dépassement.",
@@ -1609,26 +1512,23 @@
         },
         {
           "id": "E2_Q50",
-          "question": "Vous circulez sur une chaussée à plusieurs bandes. Quelle est la condition préalable pour que la circulation en plusieurs files soit autorisée ?",
+          "question": "Quelle est la condition préalable pour circuler en plusieurs files ?",
           "choices": [
-            "La vitesse des véhicules le justifie",
-            "La densité de la circulation le justifie",
-            "Le nombre de bandes disponibles",
-            "Les feux de signalisation l'autorisent"
+            "La densité de la circulation",
+            "La vitesse des véhicules",
+            "Le nombre de bandes libres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La circulation en files multiples n'est autorisée que si la densité du trafic le justifie.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q50.webp"
         },
         {
           "id": "E2_Q51",
-          "question": "Vous circulez sur une chaussée à deux sens avec 4 bandes ou plus (2 par sens ou davantage). La circulation en files est autorisée. Pouvez-vous emprunter les bandes du sens inverse ?",
+          "question": "En circulation en files sur une chaussée à deux sens, pouvez-vous emprunter les bandes du sens inverse ?",
           "choices": [
-            "Oui, toutes les bandes sont accessibles",
-            "Non, uniquement les bandes affectées à votre sens de circulation",
-            "Oui, la bande la plus à gauche du sens inverse",
-            "Cela dépend de la couleur du feu"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Uniquement les bandes de votre propre sens de circulation.",
@@ -1637,40 +1537,35 @@
         },
         {
           "id": "E2_Q52",
-          "question": "Vous circulez sur une chaussée à sens unique. La circulation en plusieurs files est-elle autorisée ?",
+          "question": "Sur une chaussée à sens unique, la circulation en plusieurs files est-elle autorisée ?",
           "choices": [
-            "Non, uniquement sur les routes à deux sens",
-            "Oui, c'est l'un des trois cas autorisés",
-            "Non, jamais sur un sens unique",
-            "Uniquement sur autoroute"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La chaussée à sens unique est l'un des 3 cas autorisant la circulation en plusieurs files.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q52.webp"
         },
         {
           "id": "E2_Q53",
-          "question": "Vous circulez sur une chaussée divisée en bandes avec des signaux lumineux au-dessus. Quels types de feux peut-il y avoir ?",
+          "question": "Quels types de feux peut-on trouver au-dessus des bandes de circulation ?",
           "choices": [
-            "Uniquement un feu rouge classique à trois couleurs",
-            "Une croix rouge, une flèche verte vers le bas, et une flèche orange oblique",
-            "Uniquement un feu vert au-dessus de chaque bande",
-            "Un feu orange clignotant uniquement"
+            "Croix rouge, flèche verte, flèche orange",
+            "Un feu rouge classique à trois couleurs",
+            "Un feu orange clignotant, sans plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les 3 types de signaux lumineux au-dessus des bandes : croix rouge, flèche verte (bas), flèche orange (oblique).",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q53.webp"
         },
         {
           "id": "E2_Q54",
-          "question": "Vous suivez des signaux d'indication qui vous permettent de choisir votre bande selon votre destination. Les règles de dépassement s'appliquent-elles AVANT ces signaux ?",
+          "question": "Les règles de dépassement s'appliquent-elles avant les signaux de choix de bande ?",
           "choices": [
-            "Oui, les règles s'appliquent toujours",
-            "Non, les règles de dépassement ne s'appliquent pas avant ces signaux, mais bien après",
-            "Non, les règles ne s'appliquent jamais dans cette zone",
-            "Cela dépend de la bande choisie"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les règles de dépassement ne s'appliquent pas avant les signaux de choix de bande, mais elles s'appliquent après.",
@@ -1679,54 +1574,47 @@
         },
         {
           "id": "E2_Q56",
-          "question": "Vous circulez en agglomération et souhaitez choisir librement votre bande. Quelles sont les deux conditions nécessaires ?",
+          "question": "Quelles sont les deux conditions pour choisir librement votre bande ?",
           "choices": [
+            "Des bandes de circulation et l'agglomération",
             "Plusieurs bandes et être hors agglomération",
-            "Présence de bandes de circulation ET être en agglomération",
-            "Une seule bande et être en agglomération",
-            "Plusieurs bandes et être sur autoroute"
+            "Une seule bande et être en agglomération"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Deux conditions cumulatives : bandes présentes ET en agglomération.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q56.webp"
         },
         {
           "id": "E2_Q57",
-          "question": "Vous circulez en agglomération sur un sens unique divisé en bandes. Pouvez-vous choisir la bande qui convient le mieux à votre destination ?",
+          "question": "En agglomération sur un sens unique à plusieurs bandes, pouvez-vous choisir votre bande ?",
           "choices": [
-            "Non, vous devez rester sur la bande de droite",
-            "Oui, c'est l'un des cas autorisés en agglomération",
-            "Non, uniquement la bande de gauche est autorisée",
-            "Oui, mais uniquement pour tourner à un carrefour"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sens unique en agglomération + bandes = choix libre de la bande.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q57.webp"
         },
         {
           "id": "E2_Q58",
-          "question": "Vous circulez en agglomération sur une chaussée à deux sens avec 4 bandes (2 par sens). Pouvez-vous choisir votre bande ?",
+          "question": "En agglomération sur une chaussée à deux sens et quatre bandes, pouvez-vous choisir votre bande ?",
           "choices": [
-            "Non, vous devez rester sur la bande de droite",
-            "Oui, vous pouvez emprunter la bande qui convient le mieux à votre destination",
-            "Non, le choix de bande n'est possible que sur un sens unique",
-            "Oui, mais pas dans les virages"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "4 bandes en agglomération (au moins 2 par sens) = choix libre de la bande.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q58.webp"
         },
         {
           "id": "E2_Q59",
-          "question": "Vous circulez hors agglomération sur une chaussée à plusieurs bandes. Pouvez-vous choisir librement votre bande de circulation ?",
+          "question": "Hors agglomération sur une route à plusieurs bandes, pouvez-vous choisir librement votre bande ?",
           "choices": [
-            "Oui, comme en agglomération",
-            "Non, sauf si la densité du trafic le justifie",
-            "Oui, sur toutes les routes à plusieurs bandes",
-            "Cela dépend de votre vitesse"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le choix libre de bande selon la destination n'est possible qu'en agglomération.",
@@ -1735,26 +1623,22 @@
         },
         {
           "id": "E2_Q60",
-          "question": "Vous circulez en agglomération sur une route à plusieurs bandes. Pouvez-vous choisir votre bande dans un virage ?",
+          "question": "En agglomération, pouvez-vous choisir votre bande y compris dans un virage ?",
           "choices": [
-            "Non, vous devez rester à droite dans les virages",
-            "Oui, vous pouvez choisir votre bande y compris dans les virages",
-            "Non, le choix de bande ne vaut qu'en ligne droite",
-            "Cela dépend de votre vitesse"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En agglomération, le choix de bande s'applique y compris dans les virages.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q60.webp"
         },
         {
           "id": "E2_Q61",
-          "question": "Vous circulez en agglomération sur une chaussée à deux sens avec seulement 2 bandes (1 par sens). Pouvez-vous choisir librement votre bande ?",
+          "question": "En agglomération sur une chaussée à deux sens et deux bandes, pouvez-vous choisir votre bande ?",
           "choices": [
-            "Oui, puisque c'est en agglomération",
-            "Non, il faut au moins 4 bandes (dont 2 par sens) sur une chaussée à deux sens",
-            "Oui, si la densité du trafic le justifie",
-            "Oui, mais dans les virages uniquement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Sur 2 bandes (1 par sens), le choix libre de bande en agglomération ne s'applique pas.",
@@ -1763,56 +1647,51 @@
         },
         {
           "id": "E2_Q62",
-          "question": "Vous révisez les règles de circulation en files. Quelle est la différence entre la circulation en files et le choix de bande en agglomération ?",
+          "question": "Quelle différence entre la circulation en files et le choix de bande en agglomération ?",
           "choices": [
-            "Il n'y a aucune différence entre les deux",
-            "Les files exigent la densité ; le choix de bande exige seulement d'être en agglomération",
-            "Les deux nécessitent la densité de circulation",
-            "Aucune des deux ne nécessite de condition particulière"
+            "Les files exigent la densité du trafic",
+            "Les deux exigent la densité du trafic",
+            "Aucune des deux n'a de condition"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Deux conditions distinctes : densité pour les files, agglomération + bandes pour le choix libre.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q62.webp"
         },
         {
           "id": "E2_Q63",
-          "question": "Vous êtes en moto dans un embouteillage. Pouvez-vous circuler entre les files de voitures ?",
+          "question": "Vous êtes en moto dans un embouteillage. Pouvez-vous circuler entre les files ?",
           "choices": [
-            "Non, c'est interdit en toutes circonstances",
-            "Oui, circuler entre les files est autorisé en embouteillage",
-            "Oui, mais uniquement sur autoroute",
-            "Oui, mais uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les motocyclettes peuvent circuler entre les files en embouteillage.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q63.webp"
         },
         {
           "id": "E2_Q64",
-          "question": "Vous êtes motocycliste sur une autoroute à 3 bandes en embouteillage. Entre quelles bandes pouvez-vous circuler ?",
+          "question": "Sur une autoroute à trois bandes, entre quelles bandes une moto peut-elle circuler ?",
           "choices": [
-            "Entre toutes les bandes",
-            "Uniquement entre les deux bandes les plus à gauche",
-            "Entre les deux bandes de droite",
-            "Sur la bande d'arrêt d'urgence"
+            "Les deux bandes les plus à gauche",
+            "Les deux bandes les plus à droite",
+            "N'importe quelles bandes libres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur autoroute/route pour automobiles, les motos ne peuvent circuler qu'entre les deux bandes les plus à gauche.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q64.webp"
         },
         {
           "id": "E2_Q65",
-          "question": "Vous circulez en moto entre les files dans un embouteillage. Quelle est votre vitesse maximale autorisée ?",
+          "question": "En moto entre les files, quelle est votre vitesse maximale autorisée ?",
           "choices": [
-            "30 km/h",
             "50 km/h",
-            "70 km/h",
-            "La même vitesse que les voitures"
+            "30 km/h",
+            "70 km/h"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vitesse maximale absolue : 50 km/h pour les motos circulant entre les files.",
           "theoryCardIndex": 5,
           "severe": true,
@@ -1820,40 +1699,35 @@
         },
         {
           "id": "E2_Q66",
-          "question": "Vous êtes motocycliste et circulez entre les files. De combien de km/h maximum pouvez-vous rouler plus vite que les véhicules autour de vous ?",
+          "question": "En moto entre les files, combien pouvez-vous rouler plus vite que les véhicules autour ?",
           "choices": [
-            "10 km/h de plus",
             "20 km/h de plus",
-            "30 km/h de plus",
-            "Il n'y a pas de limite de différence de vitesse"
+            "10 km/h de plus",
+            "30 km/h de plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La moto ne peut pas rouler à plus de 20 km/h par rapport aux véhicules dépassés.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q66.webp"
         },
         {
           "id": "E2_Q67",
-          "question": "Vous êtes motocycliste dans un embouteillage. Les véhicules autour roulent à 35 km/h. Pouvez-vous rouler à 50 km/h entre les files ?",
+          "question": "Les véhicules autour roulent à 35 km/h. En moto entre les files, pouvez-vous rouler à 50 km/h ?",
           "choices": [
-            "Oui, c'est la vitesse maximale absolue permise",
-            "Oui : 35 + 20 = 55 (max relatif) et 50 km/h max absolu respectés",
-            "Non, vous ne pouvez rouler qu'à 35 km/h",
-            "Non, vous devez rester derrière les files"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "35 + 20 = 55 km/h max relatif. Limite absolue 50 km/h. La moto peut donc rouler à 50 km/h.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q67.webp"
         },
         {
           "id": "E2_Q68",
-          "question": "Vous êtes motocycliste dans un embouteillage. Les véhicules sont à l'arrêt complet. Pouvez-vous circuler entre les files à 25 km/h ?",
+          "question": "Les véhicules sont à l'arrêt complet. En moto entre les files, pouvez-vous rouler à 25 km/h ?",
           "choices": [
-            "Non, vous devez aussi être à l'arrêt",
-            "Non, les véhicules sont à 0 km/h donc vous ne pouvez rouler qu'à 20 km/h maximum (0 + 20), pas 25 km/h",
-            "Oui, 25 km/h est en dessous de la limite de 50 km/h",
-            "Oui, il n'y a pas de limite si les voitures sont arrêtées"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "0 + 20 = 20 km/h max. À 25 km/h, la moto dépasse de 25 km/h les véhicules arrêtés — c'est interdit.",
@@ -1862,28 +1736,26 @@
         },
         {
           "id": "E2_Q69",
-          "question": "Vous apercevez un panneau annonçant des flèches sur la chaussée prescrivant le choix de bande. Que signifie ce signal ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Interdiction de dépasser sur cette section",
-            "Des flèches au sol annonceront bientôt le choix d'une bande",
-            "Début d'une voie à sens unique",
-            "Annonce d'une zone de stationnement"
+            "Des flèches de choix de bande",
+            "Une interdiction de dépasser",
+            "Le début d'un sens unique"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal d'indication annonce que des flèches au sol prescrivent le choix de bande.",
           "sign": "F13",
           "destination": "panneaux"
         },
         {
           "id": "E2_Q70",
-          "question": "Vous apercevez un panneau avec des flèches vers le bas et des flèches obliques. Que signifie ce signal ?",
+          "question": "Ce panneau porte des flèches droites et des flèches obliques. Que signifie-t-il ?",
           "choices": [
-            "Des travaux en cours sur la chaussée",
-            "Flèches vers le bas : tout droit ; obliques : sorties",
-            "Le début d'une voie à sens unique",
-            "Une interdiction de dépasser"
+            "Droites : tout droit ; obliques : sorties",
+            "Des travaux en cours sur toute la chaussée",
+            "Une interdiction de dépasser ici"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Flèches vers le bas = continuer tout droit. Flèches obliques = directions sortantes.",
           "sign": "F13",
           "destination": "panneaux"
@@ -1904,14 +1776,12 @@
         },
         {
           "id": "E2_Q73",
-          "question": "Vous venez de dépasser un panneau de choix de bande. Les règles de dépassement s'appliquent-elles après ce panneau ?",
+          "question": "Les règles de dépassement s'appliquent-elles de nouveau après un panneau de choix de bande ?",
           "choices": [
-            "Non, elles ne s'appliquent jamais après",
-            "Oui, elles s'appliquent de nouveau après ces signaux",
-            "Non, jusqu'au prochain carrefour",
-            "Cela dépend de la densité du trafic"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Après les signaux de choix de bande, les règles de dépassement reprennent.",
           "theoryCardIndex": 4,
           "sign": "F13"
@@ -2140,26 +2010,22 @@
       "questions": [
         {
           "id": "E3_Q1",
-          "question": "Vous roulez sur une route et une ligne discontinue blanche sépare les deux sens. Pouvez-vous la franchir pour dépasser par la gauche ?",
+          "question": "Une ligne blanche discontinue sépare les deux sens. Pouvez-vous la franchir pour dépasser ?",
           "choices": [
-            "Non, il est interdit de franchir toute ligne au sol",
-            "Oui, vous pouvez franchir une ligne discontinue pour dépasser",
-            "Uniquement hors agglomération",
-            "Uniquement pendant la journée"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une ligne discontinue (blanche ou jaune) peut être franchie pour dépasser par la gauche.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q1.webp"
         },
         {
           "id": "E3_Q2",
-          "question": "Vous avez franchi la ligne discontinue pour dépasser. Le dépassement terminé, pouvez-vous rester à gauche de cette ligne ?",
+          "question": "Le dépassement terminé, pouvez-vous rester à gauche de cette ligne discontinue ?",
           "choices": [
-            "Oui, vous êtes libre de circuler à gauche",
-            "Non, à gauche de la ligne uniquement pour dépasser",
-            "Oui, si la route est vide devant vous",
-            "Cela dépend de votre vitesse"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La ligne discontinue ne peut être franchie que pour dépasser — pas pour rester à gauche sans raison.",
@@ -2168,12 +2034,10 @@
         },
         {
           "id": "E3_Q3",
-          "question": "Vous roulez sur une route séparée par une ligne continue blanche. Un véhicule roule lentement devant vous. Pouvez-vous franchir cette ligne pour le dépasser ?",
+          "question": "Une ligne blanche continue sépare les deux sens. Pouvez-vous la franchir pour dépasser ?",
           "choices": [
-            "Oui, si le dépassement est nécessaire",
-            "Non, il est interdit de franchir une ligne continue pour dépasser",
-            "Oui, à condition de le faire brièvement",
-            "Oui, si personne ne vient en face"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La ligne continue ne peut jamais être franchie pour dépasser.",
@@ -2182,12 +2046,10 @@
         },
         {
           "id": "E3_Q4",
-          "question": "Vous souhaitez accéder à votre propriété privée située à gauche de la route. Une ligne continue sépare les deux sens. Pouvez-vous la franchir ?",
+          "question": "Votre propriété est à gauche, derrière une ligne continue. Pouvez-vous la franchir pour y accéder ?",
           "choices": [
-            "Oui, c'est une exception pour les propriétés privées",
-            "Non, vous ne pouvez même pas franchir la ligne continue pour cette raison",
-            "Oui, à condition d'utiliser les clignotants",
-            "Oui, si votre propriété est juste en face"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La ligne continue est infranchissable pour toute raison, y compris entrer dans une propriété.",
@@ -2196,40 +2058,34 @@
         },
         {
           "id": "E3_Q6",
-          "question": "Vous roulez sur une route avec une ligne continue et une ligne discontinue côte à côte. La discontinue est de votre côté. Pouvez-vous dépasser ?",
+          "question": "Double ligne mixte, la discontinue est de votre côté. Pouvez-vous dépasser ?",
           "choices": [
-            "Non, la présence de la ligne continue interdit tout dépassement",
-            "Oui, vous pouvez franchir la ligne discontinue de votre côté pour dépasser",
-            "Non, les deux lignes ensemble interdisent tout franchissement",
-            "Uniquement pendant la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si la ligne discontinue est de votre côté, vous pouvez la franchir pour dépasser.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q6.webp"
         },
         {
           "id": "E3_Q7",
-          "question": "Vous avez dépassé en franchissant la ligne discontinue de votre côté. Pouvez-vous revenir à droite en franchissant la ligne continue ?",
+          "question": "Après ce dépassement, pouvez-vous franchir la ligne continue pour revenir à droite ?",
           "choices": [
-            "Non, vous devez attendre que la ligne continue se termine",
-            "Oui, après le dépassement vous franchissez la ligne continue pour rejoindre la bande de droite",
-            "Non, c'est interdit de franchir une ligne continue",
-            "Uniquement si la route est vide"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une fois le dépassement terminé, on franchit la ligne continue pour se remettre à droite.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q7.webp"
         },
         {
           "id": "E3_Q8",
-          "question": "Vous roulez sur une route avec une ligne continue et une discontinue côte à côte. La CONTINUE est de votre côté. Pouvez-vous dépasser ?",
+          "question": "Double ligne mixte, la continue est de votre côté. Pouvez-vous dépasser ?",
           "choices": [
-            "Oui, comme dans le cas inverse",
-            "Non, vous ne pouvez pas franchir la ligne continue de votre côté",
-            "Oui, mais uniquement en moto",
-            "Cela dépend de la largeur de la route"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Si la ligne continue est de votre côté, vous ne pouvez pas la franchir pour dépasser.",
@@ -2238,26 +2094,22 @@
         },
         {
           "id": "E3_Q9",
-          "question": "Vous circulez sur une route avec une ligne discontinue jaune. Pouvez-vous la franchir pour dépasser ?",
+          "question": "Une ligne discontinue jaune est tracée au sol. Pouvez-vous la franchir pour dépasser ?",
           "choices": [
-            "Non, une ligne jaune interdit tout franchissement",
-            "Oui, une ligne discontinue jaune se franchit comme une ligne discontinue blanche",
-            "Uniquement les camions peuvent la franchir",
-            "Uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La couleur jaune ne change pas la règle : une ligne discontinue (jaune ou blanche) peut être franchie pour dépasser.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q9.webp"
         },
         {
           "id": "E3_Q10",
-          "question": "Vous circulez sur une route avec une ligne continue jaune. Pouvez-vous la franchir ?",
+          "question": "Une ligne continue jaune est tracée au sol. Pouvez-vous la franchir ?",
           "choices": [
-            "Oui, les lignes jaunes sont temporaires et peuvent être franchies",
-            "Non, même règle que la ligne continue blanche : infranchissable",
-            "Oui, à condition de le faire brièvement",
-            "Uniquement les bus peuvent la franchir"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Ligne continue jaune = infranchissable, comme la ligne continue blanche.",
@@ -2266,14 +2118,13 @@
         },
         {
           "id": "E3_Q11",
-          "question": "Vous approchez d'un dispositif surélevé signalé. Dans quels cas la vitesse maximale est-elle limitée à 30 km/h ?",
+          "question": "Dans quels cas la vitesse est-elle limitée à 30 km/h devant un dispositif surélevé ?",
           "choices": [
-            "Toujours, dès qu'un dispositif surélevé est présent sur la chaussée",
-            "Quand il est annoncé par A14 et F87, aux carrefours annoncé par A14 seul, ou dans une zone F4a/F4b",
-            "Uniquement à l'intérieur des agglomérations et zones 30",
-            "Uniquement aux abords des écoles signalées par A23"
+            "Annoncé par A14 et F87, ou en zone 30",
+            "Dès qu'un dispositif est sur la route",
+            "Aux abords des écoles signalées"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Trois cas précis imposent 30 km/h sur un dispositif surélevé.",
           "theoryCardIndex": 1,
           "severe": true,
@@ -2281,56 +2132,52 @@
         },
         {
           "id": "E3_Q12",
-          "question": "Vous approchez d'un dispositif surélevé annoncé par un signal. Comment devez-vous aborder cette zone ?",
+          "question": "Comment devez-vous aborder une zone à dispositif surélevé annoncé ?",
           "choices": [
-            "À vitesse normale, le dispositif est conçu pour ralentir naturellement",
-            "En redoublant de prudence et à allure modérée, pour le franchir à max 30 km/h",
-            "En accélérant pour le franchir rapidement",
-            "En freinant brusquement juste avant"
+            "À allure modérée, max 30 km/h",
+            "À vitesse normale, sans changer",
+            "En freinant juste avant le dos"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'approche d'un dispositif surélevé exige prudence et allure modérée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E3_Q12.webp"
         },
         {
           "id": "E3_Q13",
-          "question": "Vous roulez derrière un cycliste et souhaitez le dépasser. Par quel côté devez-vous le faire ?",
+          "question": "Par quel côté devez-vous dépasser un cycliste ?",
           "choices": [
-            "Par la droite, car les cyclistes roulent à droite",
-            "Uniquement par la gauche",
-            "Par n'importe quel côté selon l'espace",
-            "Par la droite en agglomération"
+            "Par la gauche",
+            "Par la droite",
+            "Au choix, selon la place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un cycliste ne peut être dépassé que par la gauche (sauf s'il tourne à gauche).",
           "theoryCardIndex": 1,
           "image": "/images/questions/E3_Q13.webp"
         },
         {
           "id": "E3_Q15",
-          "question": "Vous roulez derrière un cycliste qui a le bras tendu à gauche et s'apprête à tourner. Par quel côté pouvez-vous le dépasser ?",
+          "question": "Le cycliste devant vous tend le bras à gauche. Par quel côté le dépassez-vous ?",
           "choices": [
-            "Par la gauche comme toujours pour les cyclistes",
-            "Par la droite, car il s'apprête à tourner à gauche",
-            "Vous ne pouvez pas le dépasser dans cette situation",
-            "Uniquement par la gauche, la règle ne change pas"
+            "Par la droite",
+            "Par la gauche",
+            "Vous ne pouvez pas dépasser"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Exception : si le cycliste s'apprête à tourner à gauche, vous pouvez le dépasser par la droite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E3_Q15.webp"
         },
         {
           "id": "E3_Q17",
-          "question": "Vous apercevez le signal d'interdiction de dépasser. Quels véhicules est-il interdit de dépasser par la gauche ?",
+          "question": "Sous ce panneau, quels véhicules ne pouvez-vous pas dépasser par la gauche ?",
           "choices": [
-            "Tous les véhicules sans exception",
-            "Un véhicule attelé ou un véhicule à plus de deux roues",
-            "Uniquement les camions et les bus",
-            "Tous les usagers de la route"
+            "Un attelage ou plus de deux roues",
+            "Tous les véhicules, sans exception",
+            "Les camions et les autobus seuls"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction vise les véhicules attelés et ceux à plus de deux roues.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2338,14 +2185,13 @@
         },
         {
           "id": "E3_Q18",
-          "question": "Vous roulez sous un signal d'interdiction de dépasser. Jusqu'où cette interdiction est-elle applicable ?",
+          "question": "Jusqu'où l'interdiction de dépasser est-elle applicable ?",
           "choices": [
+            "Jusqu'au carrefour ou au signal de fin",
             "Sur une distance de 500 mètres",
-            "Jusqu'au carrefour suivant ou jusqu'au signal de fin d'interdiction",
-            "Sur une distance de 1 kilomètre",
-            "Jusqu'au prochain feu de signalisation"
+            "Jusqu'au prochain feu rencontré"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction dure jusqu'au carrefour suivant ou jusqu'au signal de fin.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2353,14 +2199,12 @@
         },
         {
           "id": "E3_Q19",
-          "question": "Vous circulez sous le signal d'interdiction de dépasser. Une motocyclette roule lentement devant vous. Pouvez-vous la dépasser ?",
+          "question": "Sous le panneau d'interdiction de dépasser, pouvez-vous dépasser une motocyclette ?",
           "choices": [
-            "Non, tout dépassement est interdit sous ce signal",
-            "Oui, une moto n'a que deux roues et n'est pas concernée par l'interdiction",
-            "Non, les motos sont incluses dans l'interdiction",
-            "Cela dépend de la vitesse de la moto"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une moto a deux roues — elle n'est pas visée par l'interdiction qui cible les véhicules à plus de deux roues.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2368,12 +2212,10 @@
         },
         {
           "id": "E3_Q20",
-          "question": "Vous êtes motocycliste et circulez sous le signal d'interdiction de dépasser. Une voiture roule lentement devant vous. Pouvez-vous la dépasser ?",
+          "question": "Vous êtes motocycliste sous ce même panneau. Pouvez-vous dépasser une voiture ?",
           "choices": [
-            "Oui, les motos peuvent toujours dépasser",
-            "Non, la voiture a plus de deux roues, l'interdiction s'applique",
-            "Oui, en agglomération",
-            "Cela dépend de la vitesse de la voiture"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La voiture a plus de deux roues : un motocycliste ne peut pas la dépasser sous ce signal.",
@@ -2383,14 +2225,13 @@
         },
         {
           "id": "E3_Q21",
-          "question": "Vous voyez le signal d'interdiction de dépasser réservé aux camions > 3,5 t MMA. À qui s'adresse cette interdiction ?",
+          "question": "Le panneau d'interdiction de dépasser réservé aux camions : à qui s'adresse-t-il ?",
           "choices": [
-            "À tous les conducteurs sans exception",
-            "Aux transports de marchandises de plus de 3,5 t MMA",
-            "Uniquement aux camionnettes de livraison",
-            "À toutes les voitures avec remorque"
+            "Aux marchandises de plus de 3,5 t",
+            "À tous les conducteurs, sans exception",
+            "Aux camionnettes de livraison seules"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal ne vise que les poids lourds de transport de marchandises > 3,5 t MMA.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2398,14 +2239,12 @@
         },
         {
           "id": "E3_Q22",
-          "question": "Vous conduisez une voiture et voyez le signal d'interdiction de dépasser pour camions > 3,5 t. Pouvez-vous dépasser un camion ?",
+          "question": "Vous conduisez une voiture sous ce panneau réservé aux camions. Pouvez-vous dépasser un camion ?",
           "choices": [
-            "Non, le dépassement est interdit pour tous",
-            "Oui, ce signal ne concerne que les véhicules de transport de marchandises > 3,5 t",
-            "Non, les voitures sont aussi concernées",
-            "Cela dépend de la MMA de votre voiture"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal pour camions ne concerne que les transporteurs de marchandises > 3,5 t, pas les voitures.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2413,14 +2252,12 @@
         },
         {
           "id": "E3_Q23",
-          "question": "Vous conduisez un autobus. Le signal d'interdiction de dépasser pour camions > 3,5 t est affiché. Pouvez-vous dépasser ?",
+          "question": "Vous conduisez un autobus sous ce panneau réservé aux camions. Pouvez-vous dépasser ?",
           "choices": [
-            "Non, un autobus est un véhicule lourd",
-            "Oui, un autobus transporte des personnes et non des marchandises",
-            "Non, il dépasse les 3,5 tonnes",
-            "Cela dépend du nombre de passagers"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'autobus transporte des personnes (pas des marchandises) — il n'est pas visé par ce signal.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2428,12 +2265,10 @@
         },
         {
           "id": "E3_Q24",
-          "question": "Vous conduisez un camion de plus de 3,5 t MMA. Le signal d'interdiction pour camions est affiché. Un autobus roule devant vous. Pouvez-vous le dépasser ?",
+          "question": "Vous conduisez un camion de plus de 3,5 t sous ce panneau. Pouvez-vous dépasser un autobus ?",
           "choices": [
-            "Oui, les bus ne sont pas concernés par ce signal",
-            "Non, il ne peut pas dépasser un véhicule à plus de deux roues",
-            "Oui, l'autobus est un véhicule prioritaire",
-            "Cela dépend du type de route"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un autobus a plus de deux roues — un camion ne peut pas le dépasser sous ce signal.",
@@ -2442,14 +2277,13 @@
         },
         {
           "id": "E3_Q25",
-          "question": "Vous révisez les règles. De combien de manières l'interdiction de dépasser peut-elle prendre fin ?",
+          "question": "De combien de manières l'interdiction de dépasser peut-elle prendre fin ?",
           "choices": [
-            "D'une seule : au prochain carrefour",
-            "De trois : carrefour, signal de fin, ou fin de toutes les interdictions",
-            "De deux : carrefour ou demi-tour",
-            "De quatre, selon le type de route"
+            "Trois",
+            "Une",
+            "Deux"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction prend fin de trois façons : carrefour, signal de fin spécifique, ou signal général de fin.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2457,14 +2291,13 @@
         },
         {
           "id": "E3_Q26",
-          "question": "Vous voyez un signal d'interdiction de dépasser accompagné d'un panneau additionnel indiquant « 200 m ». Quand l'interdiction commence-t-elle ?",
+          "question": "Ce panneau d'interdiction porte la mention « 200 m ». Quand l'interdiction commence-t-elle ?",
           "choices": [
-            "Immédiatement à l'emplacement du signal",
             "200 mètres plus loin",
-            "Au prochain carrefour",
-            "500 mètres plus loin"
+            "Tout de suite au panneau",
+            "Au prochain carrefour"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avec le panneau « 200 m », l'interdiction ne commence que 200 mètres plus loin.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2472,14 +2305,13 @@
         },
         {
           "id": "E3_Q28",
-          "question": "Vous conduisez une voiture sous le signal d'interdiction de dépasser. Quels usagers pouvez-vous encore dépasser ?",
+          "question": "En voiture sous une interdiction de dépasser, quels usagers pouvez-vous encore dépasser ?",
           "choices": [
-            "Absolument personne",
-            "Les motos, les cyclistes et les engins de déplacement",
-            "Uniquement les cyclistes",
-            "Tous les véhicules, à condition de rouler lentement"
+            "Motos, cyclistes et trottinettes",
+            "Les cyclistes et personne d'autre",
+            "Tous, en roulant assez lentement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Motos (2 roues), cyclistes et engins de déplacement restent dépassables même sous ce signal.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2487,14 +2319,12 @@
         },
         {
           "id": "E3_Q30",
-          "question": "Vous roulez sous un signal d'interdiction de dépasser. Vous arrivez à un carrefour. L'interdiction se termine-t-elle automatiquement ?",
+          "question": "Vous arrivez à un carrefour sous une interdiction de dépasser. L'interdiction prend-elle fin ?",
           "choices": [
-            "Non, elle continue indéfiniment",
-            "Oui, sauf si un nouveau signal la prolonge après le carrefour",
-            "Non, uniquement avec le signal de fin",
-            "Oui, mais uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction prend fin au carrefour suivant, sauf si un nouveau signal la prolonge.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -2502,14 +2332,13 @@
         },
         {
           "id": "E3_Q31",
-          "question": "Vous arrivez à un passage à niveau signalé uniquement par un panneau (sans barrières). Quels véhicules ne pouvez-vous pas dépasser par la gauche ?",
+          "question": "À un passage à niveau sans barrières, quels véhicules ne pouvez-vous pas dépasser ?",
           "choices": [
-            "Uniquement les camions de plus de 3,5 t",
-            "Les véhicules attelés, à plus de deux roues ou à moteur à deux roues",
-            "Tous les véhicules, y compris les vélos",
-            "Uniquement les voitures et camionnettes"
+            "Attelages, plus de 2 roues, motos",
+            "Tous les véhicules, vélos compris",
+            "Les camions de plus de 3,5 tonnes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les 3 catégories interdites au passage à niveau : attelé, plus de 2 roues, moteur à 2 roues.",
           "theoryCardIndex": 3,
           "severe": true,
@@ -2517,14 +2346,12 @@
         },
         {
           "id": "E3_Q32",
-          "question": "Vous arrivez à un passage à niveau équipé de barrières. Un véhicule roule lentement devant vous. Pouvez-vous le dépasser ?",
+          "question": "À un passage à niveau équipé de barrières, pouvez-vous dépasser un véhicule lent ?",
           "choices": [
-            "Non, le dépassement est interdit comme sans barrières",
-            "Oui, le dépassement est autorisé quand il y a des barrières",
-            "Non, le dépassement est toujours interdit à un passage à niveau",
-            "Uniquement les cyclistes"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La présence de barrières est une exception : le dépassement est alors autorisé.",
           "theoryCardIndex": 3,
           "severe": true,
@@ -2532,14 +2359,12 @@
         },
         {
           "id": "E3_Q33",
-          "question": "Vous arrivez à un passage à niveau et le feu blanc lunaire clignote. Pouvez-vous dépasser le véhicule devant vous ?",
+          "question": "Le feu blanc lunaire clignote au passage à niveau. Pouvez-vous dépasser ?",
           "choices": [
-            "Non, un feu clignotant interdit le dépassement",
-            "Oui, le feu blanc lunaire clignotant autorise le dépassement",
-            "Non, vous devez vous arrêter devant tout feu",
-            "Cela dépend de la proximité du train"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le feu blanc lunaire clignotant est la seconde exception autorisant le dépassement à un passage à niveau.",
           "theoryCardIndex": 3,
           "severe": true,
@@ -2547,14 +2372,12 @@
         },
         {
           "id": "E3_Q34",
-          "question": "Vous arrivez à un passage à niveau sans barrières. Un cycliste roule lentement devant vous. Pouvez-vous le dépasser ?",
+          "question": "À un passage à niveau sans barrières, pouvez-vous dépasser un cycliste ?",
           "choices": [
-            "Non, tout dépassement est interdit au passage à niveau",
-            "Oui, un cycliste n'est pas un véhicule à moteur et n'est pas concerné par cette interdiction",
-            "Non, les vélos sont inclus dans l'interdiction",
-            "Cela dépend de la visibilité"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le cycliste n'est pas dans les 3 catégories interdites — il peut être dépassé même sans barrières.",
           "theoryCardIndex": 3,
           "severe": true,
@@ -2562,12 +2385,10 @@
         },
         {
           "id": "E3_Q36",
-          "question": "Vous arrivez à un carrefour avec un signal cédez-le-passage. Une motocyclette roule devant vous. Pouvez-vous la dépasser par la gauche ?",
+          "question": "À un carrefour avec cédez-le-passage, pouvez-vous dépasser une motocyclette par la gauche ?",
           "choices": [
-            "Oui, les motos ne sont pas concernées par cette interdiction",
-            "Non, les véhicules à moteur à deux roues sont inclus dans l'interdiction aux carrefours",
-            "Oui, si la route est dégagée",
-            "Cela dépend de la vitesse de la moto"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Dans les endroits d'interdiction, les motos (véhicule à moteur à 2 roues) sont incluses dans l'interdiction.",
@@ -2576,26 +2397,22 @@
         },
         {
           "id": "E3_Q38",
-          "question": "Vous arrivez à un carrefour avec cédez-le-passage. Une trottinette électrique roule devant vous. Pouvez-vous la dépasser ?",
+          "question": "À ce même carrefour, pouvez-vous dépasser une trottinette électrique ?",
           "choices": [
-            "Non, les engins de déplacement sont motorisés",
-            "Oui, les engins de déplacement ne sont pas concernés par cette interdiction",
-            "Non, ils sont motorisés et donc inclus",
-            "Cela dépend de la vitesse de la trottinette"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les engins de déplacement peuvent être dépassés dans les endroits d'interdiction.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q38.webp"
         },
         {
           "id": "E3_Q39",
-          "question": "Vous approchez du sommet d'une côte à forte inclinaison. La visibilité est insuffisante. Pouvez-vous dépasser la voiture devant vous ?",
+          "question": "Au sommet d'une côte sans visibilité suffisante, pouvez-vous dépasser une voiture ?",
           "choices": [
-            "Oui, si vous êtes assez rapide",
-            "Non, c'est interdit sans visibilité suffisante",
-            "Oui, si la route est droite après le sommet",
-            "Oui, mais uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le dépassement est interdit à l'approche du sommet d'une côte sans visibilité suffisante.",
@@ -2605,40 +2422,34 @@
         },
         {
           "id": "E3_Q40",
-          "question": "Vous approchez du sommet d'une côte sans visibilité suffisante, mais la chaussée est divisée en bandes et il n'y a pas de ligne continue. Pouvez-vous dépasser ?",
+          "question": "Même sommet, mais la chaussée est en bandes sans ligne continue. Pouvez-vous dépasser ?",
           "choices": [
-            "Non, c'est toujours interdit au sommet d'une côte",
-            "Oui, c'est l'exception autorisée quand la chaussée est en bandes et sans ligne continue",
-            "Non, les bandes ne changent rien à l'interdiction",
-            "Uniquement les cyclistes"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Exception au sommet : si la chaussée est en bandes et qu'on ne franchit pas de ligne continue.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q40.webp"
         },
         {
           "id": "E3_Q41",
-          "question": "Vous approchez du sommet d'une côte sans visibilité suffisante. Un cycliste roule lentement devant vous. Pouvez-vous le dépasser ?",
+          "question": "Au sommet d'une côte sans visibilité suffisante, pouvez-vous dépasser un cycliste ?",
           "choices": [
-            "Non, le dépassement est interdit pour tous les usagers",
-            "Oui, un cycliste n'est pas un véhicule à moteur et peut être dépassé même au sommet",
-            "Non, tous les usagers sont concernés au sommet",
-            "Cela dépend de la pente"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Au sommet d'une côte, le cycliste peut toujours être dépassé (pas dans les 3 catégories interdites).",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q41.webp"
         },
         {
           "id": "E3_Q42",
-          "question": "Vous roulez dans un virage dangereux avec une visibilité insuffisante. Un véhicule roule lentement devant vous. Pouvez-vous le dépasser ?",
+          "question": "Dans un virage sans visibilité suffisante, pouvez-vous dépasser une voiture ?",
           "choices": [
-            "Oui, si vous êtes suffisamment rapide",
-            "Non, c'est interdit dans un virage sans visibilité suffisante",
-            "Oui, si la ligne au sol est discontinue",
-            "Oui, mais uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Dépasser dans un virage dangereux sans visibilité suffisante est interdit.",
@@ -2647,40 +2458,35 @@
         },
         {
           "id": "E3_Q43",
-          "question": "Vous êtes dans un virage dangereux avec une visibilité réduite mais correcte. Un cycliste roule devant vous. Pouvez-vous le dépasser ?",
+          "question": "Dans un virage à visibilité réduite mais correcte, pouvez-vous dépasser un cycliste ?",
           "choices": [
-            "Non, aucun dépassement n'est autorisé dans un virage",
-            "Oui, sauf si la visibilité est très mauvaise au point de ne pas voir un véhicule en sens inverse",
-            "Oui, les cyclistes peuvent toujours être dépassés",
-            "Non, les cyclistes sont inclus dans l'interdiction"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans un virage, le cycliste peut être dépassé sauf si la visibilité est très mauvaise.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q43.webp"
         },
         {
           "id": "E3_Q45",
-          "question": "Vous comparez les règles. Quelle est la différence entre l'exception cycliste au sommet d'une côte et dans un virage ?",
+          "question": "Quelle différence pour dépasser un cycliste au sommet d'une côte et dans un virage ?",
           "choices": [
-            "Aucune différence, les mêmes règles s'appliquent",
-            "Au sommet, dépasser un cycliste reste permis ; pas dans un virage à très mauvaise visibilité",
-            "Au sommet c'est interdit, dans le virage c'est autorisé",
-            "Les deux dépassements sont toujours interdits"
+            "Au sommet oui, dans un virage non",
+            "Dans un virage oui, au sommet non",
+            "Aucune, la règle est identique"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sommet : cycliste toujours dépassable. Virage avec visibilité très mauvaise : même le cycliste est interdit.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q45.webp"
         },
         {
           "id": "E3_Q47",
-          "question": "Vous approchez d'un passage pour piétons. Le véhicule devant vous ralentit. Pouvez-vous le dépasser ?",
+          "question": "Le véhicule devant vous ralentit à l'approche d'un passage pour piétons. Pouvez-vous le dépasser ?",
           "choices": [
-            "Oui, si le véhicule roule anormalement lentement",
-            "Non, dépasser est interdit à l'approche d'un passage pour piétons",
-            "Oui, mais uniquement par la droite",
-            "Oui, si aucun piéton ne s'apprête à traverser"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Interdiction de dépasser tout véhicule qui approche, ralentit ou s'arrête devant un passage pour piétons.",
@@ -2690,12 +2496,10 @@
         },
         {
           "id": "E3_Q49",
-          "question": "Vous cherchez à vous garer. Pouvez-vous stationner sur un passage pour piétons ?",
+          "question": "Pouvez-vous stationner sur un passage pour piétons ?",
           "choices": [
-            "Oui, brièvement si vous restez dans le véhicule",
-            "Non, c'est interdit tant sur la chaussée que sur l'accotement",
-            "Oui, pendant la nuit uniquement",
-            "Oui, hors agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Stationnement interdit sur les passages pour piétons (chaussée et accotement).",
@@ -2704,12 +2508,10 @@
         },
         {
           "id": "E3_Q50",
-          "question": "Vous souhaitez vous garer à 3 mètres AVANT un passage pour piétons. Est-ce autorisé ?",
+          "question": "Pouvez-vous vous garer à 3 mètres avant un passage pour piétons ?",
           "choices": [
-            "Oui, 3 mètres est une distance suffisante",
-            "Non, il est interdit de stationner sur la chaussée jusqu'à 5 mètres avant le passage",
-            "Oui, avec les feux de détresse allumés",
-            "Cela dépend de la largeur de la route"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "L'interdiction de stationner couvre 5 mètres avant le passage. À 3 m, c'est donc encore interdit.",
@@ -2718,54 +2520,47 @@
         },
         {
           "id": "E3_Q51",
-          "question": "Vous souhaitez vous garer juste APRÈS un passage pour piétons. Est-ce autorisé ?",
+          "question": "Pouvez-vous vous garer juste après un passage pour piétons ?",
           "choices": [
-            "Non, l'interdiction de 5 mètres s'applique aussi après le passage",
-            "Oui, au-delà du passage c'est autorisé, sauf panneau d'interdiction",
-            "Non, jamais à proximité d'un passage",
-            "Uniquement pendant la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction ne couvre que les 5 m avant le passage. Après, c'est autorisé.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E3_Q51.webp"
         },
         {
           "id": "E3_Q52",
-          "question": "Vous circulez et un véhicule devant vous est en train d'en dépasser un autre. Vous souhaitez également dépasser. Comment appelle-t-on cette manœuvre ?",
+          "question": "Vous dépassez un conducteur qui est lui-même en train d'en dépasser un autre. Comment appelle-t-on cela ?",
           "choices": [
-            "Un double dépassement de trois véhicules",
-            "Tripler : dépasser un conducteur en train d'en dépasser un autre",
-            "Rouler trois fois plus vite que la limite",
-            "Se trouver entre deux véhicules qui doublent"
+            "Tripler",
+            "Doubler",
+            "Contourner"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Tripler = dépasser un conducteur qui est lui-même en train d'en dépasser un autre.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E3_Q52.webp"
         },
         {
           "id": "E3_Q53",
-          "question": "Vous roulez sur une chaussée à double sens. Une voiture devant vous est en train de dépasser un cyclomoteur. Pouvez-vous dépasser cette voiture ?",
+          "question": "Sur une chaussée à deux sens, une voiture dépasse un cyclomoteur. Pouvez-vous dépasser cette voiture ?",
           "choices": [
-            "Non, tripler est toujours interdit",
-            "Oui, car le cyclomoteur est un véhicule à deux roues",
-            "Non, c'est trop dangereux",
-            "Uniquement hors agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le cyclomoteur a 2 roues — tripler est autorisé sur double sens quand le véhicule intermédiaire est à 2 roues.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E3_Q53.webp"
         },
         {
           "id": "E3_Q55",
-          "question": "Vous roulez sur une chaussée à double sens. Une voiture devant vous est en train de dépasser une autre voiture. Pouvez-vous tripler ?",
+          "question": "Sur une chaussée à deux sens, une voiture en dépasse une autre. Pouvez-vous tripler ?",
           "choices": [
-            "Oui, si vous êtes suffisamment rapide",
-            "Non, c'est interdit car une voiture a plus de deux roues",
-            "Oui, sur une route droite et dégagée",
-            "Cela dépend de la vitesse des véhicules"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Sur double sens, tripler une voiture qui dépasse une autre voiture est interdit (plus de 2 roues).",
@@ -2774,28 +2569,25 @@
         },
         {
           "id": "E3_Q57",
-          "question": "Vous roulez sur une autoroute à 3 bandes. Une voiture sur la bande du milieu dépasse une voiture sur la bande de droite. Pouvez-vous la dépasser par la bande de gauche ?",
+          "question": "Sur une autoroute à trois bandes, une voiture en dépasse une autre. Pouvez-vous tripler par la gauche ?",
           "choices": [
-            "Non, tripler est toujours interdit",
-            "Oui, car la chaussée comporte 3 bandes ou plus dans le sens suivi",
-            "Non, uniquement les motos peuvent tripler",
-            "Cela dépend de la vitesse"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur une chaussée à 3 bandes ou plus dans le sens suivi, le tripler est autorisé.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E3_Q57.webp"
         },
         {
           "id": "E3_Q60",
-          "question": "Vous révisez les exceptions cyclistes. Dans les zones d'interdiction de dépasser (passage à niveau, carrefour, montée, virage), peut-on toujours dépasser un cycliste ?",
+          "question": "Dans les zones d'interdiction de dépasser, peut-on toujours dépasser un cycliste ?",
           "choices": [
-            "Oui, toujours et sans aucune exception",
-            "Oui, sauf dans un virage avec une visibilité très mauvaise",
-            "Non, jamais dans ces zones",
-            "Uniquement en agglomération"
+            "Oui, sauf en virage sans visibilité",
+            "Oui, dans tous les cas possibles",
+            "Non, dans aucune de ces zones"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "On peut dépasser un cycliste dans toutes les interdictions, sauf en virage si la visibilité est très mauvaise.",
           "theoryCardIndex": 5,
           "severe": true,
@@ -2803,14 +2595,12 @@
         },
         {
           "id": "E3_Q61",
-          "question": "Vous vous trouvez dans une zone d'interdiction de dépasser. Une trottinette électrique roule devant vous. Pouvez-vous la dépasser ?",
+          "question": "Dans une zone d'interdiction de dépasser, pouvez-vous dépasser une trottinette électrique ?",
           "choices": [
-            "Non, c'est un véhicule motorisé",
-            "Oui, les engins de déplacement restent dépassables",
-            "Non, tous les véhicules sont concernés",
-            "Uniquement les engins non motorisés"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les engins de déplacement bénéficient de la même exception que les cyclistes.",
           "theoryCardIndex": 5,
           "severe": true,
@@ -2818,28 +2608,26 @@
         },
         {
           "id": "E3_Q62",
-          "question": "Vous êtes dans un virage avec une visibilité très mauvaise. Un cycliste roule devant vous. Pourquoi ne pouvez-vous pas le dépasser dans ce cas ?",
+          "question": "Dans un virage à très mauvaise visibilité, pourquoi ne pouvez-vous pas dépasser un cycliste ?",
           "choices": [
-            "Parce que les cyclistes sont prioritaires dans les virages",
-            "Parce qu'il est impossible de voir un véhicule en sens inverse à temps, rendant tout dépassement dangereux",
-            "Parce que les cyclistes roulent vite dans les virages",
-            "Parce que le code l'interdit sans raison particulière"
+            "On ne voit pas assez loin en face",
+            "Les cyclistes y sont prioritaires",
+            "Les cyclistes y roulent très vite"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Visibilité très mauvaise = impossible de voir en sens inverse = tout dépassement est dangereux.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E3_Q62.webp"
         },
         {
           "id": "E3_Q64",
-          "question": "Vous apercevez un signal rond rouge avec deux silhouettes de voitures. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Voie à sens unique",
-            "Interdiction de dépasser par la gauche",
-            "Interdiction de croiser un autre véhicule",
+            "Interdiction de dépasser",
+            "Interdiction de croiser",
             "Fin de zone de dépassement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond rouge (2 voitures) = interdiction de dépasser pour tous les conducteurs.",
           "sign": "C35",
           "destination": "panneaux",
@@ -2861,14 +2649,13 @@
         },
         {
           "id": "E3_Q66",
-          "question": "Vous apercevez un signal d'interdiction de dépasser avec un camion et une voiture. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Interdiction de dépasser pour tous les conducteurs",
-            "Interdiction pour les marchandises de plus de 3,5 t MMA",
-            "Interdiction de dépasser pour les voitures",
-            "Interdiction de dépasser pour les autocars"
+            "Interdit aux marchandises > 3,5 t",
+            "Interdit à tous les conducteurs",
+            "Interdit aux autocars de tourisme"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal (voiture + camion) vise uniquement les transporteurs de marchandises > 3,5 t MMA.",
           "sign": "C39",
           "destination": "panneaux",
@@ -2876,14 +2663,13 @@
         },
         {
           "id": "E3_Q67",
-          "question": "Vous apercevez un signal rectangulaire de zone avec deux voitures. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau de zone ?",
           "choices": [
-            "Fin de la zone d'interdiction de dépasser",
-            "Début de la zone d'interdiction de dépasser",
-            "Début d'une zone de vitesse limitée",
+            "Début de zone sans dépassement",
+            "Fin de zone sans dépassement",
             "Début d'une zone piétonne"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rectangulaire de zone = début de la zone d'interdiction de dépasser.",
           "destination": "panneaux",
           "sign": "C35",
@@ -2891,28 +2677,26 @@
         },
         {
           "id": "E3_Q69",
-          "question": "Vous apercevez un signal d'autorisation de dépassement pour camions > 3,5 t. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Tous les véhicules peuvent désormais dépasser",
-            "Les camions > 3,5 t sont exceptionnellement autorisés à dépasser par la gauche",
-            "Les camions sont interdits dans cette zone",
+            "Les camions peuvent à nouveau dépasser",
+            "Les camions sont interdits dans la zone",
             "Les camions doivent ralentir"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal lève l'interdiction pour les camions > 3,5 t et les autorise à dépasser.",
           "destination": "panneaux",
           "sign": "C41"
         },
         {
           "id": "E3_Q70",
-          "question": "Vous apercevez un signal triangulaire de danger montrant une pente ascendante. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
+            "Montée à forte pente",
             "Descente dangereuse",
-            "Montée à forte inclinaison",
-            "Route en mauvais état",
-            "Entrée de tunnel"
+            "Route en mauvais état"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal de danger avertit d'une montée à forte inclinaison.",
           "theoryCardIndex": 3,
           "sign": "A5"
