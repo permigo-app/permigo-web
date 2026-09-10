@@ -13,7 +13,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   // /choix-permis = étape d'onboarding : plein écran, sans navbar ni nav du bas,
   // pour que le seul chemin possible soit de choisir son permis
-  const isPublicPage = pathname === '/' || pathname === '/login' || pathname === '/register' || pathname === '/auth' || pathname === '/choix-permis';
+  const isPublicPage = pathname === '/' || pathname === '/login' || pathname === '/register' || pathname === '/auth' || pathname === '/choix-permis' || pathname === '/reset-password';
   const isAdminPage = pathname.startsWith('/admin');
 
   useEffect(() => {
