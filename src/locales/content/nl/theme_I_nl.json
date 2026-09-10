@@ -140,95 +140,84 @@
       "questions": [
         {
           "id": "I1_Q1",
-          "question": "U heeft een paar glazen gedronken op een feestje en overweegt achter het stuur te kruipen. Wat zijn de effecten van alcohol op uw rijgedrag?",
+          "question": "Welke effecten heeft alcohol op uw rijgedrag?",
           "choices": [
-            "Alcohol heeft geen enkel effect op het rijden",
-            "Aangetaste concentratie, oordeel en reflexen, overmoedig gedrag",
-            "Enkel een gevoel van vermoeidheid",
-            "Een betere concentratie achter het stuur"
+            "Oordeel en reflexen aangetast",
+            "Een betere concentratie",
+            "Enkel een gevoel van vermoeidheid"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Alcohol tast de concentratie, het beoordelingsvermogen, de reactietijd aan, veroorzaakt vermoeidheid en overmoedig gedrag.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q2",
-          "question": "U rijdt terwijl u te veel gedronken heeft. Wie brengt u in gevaar?",
+          "question": "U rijdt na te veel gedronken te hebben. Wie brengt u in gevaar?",
           "choices": [
-            "Enkel uzelf",
-            "Uzelf EN de andere weggebruikers",
-            "Enkel uw passagiers",
-            "Niemand als u langzaam rijdt"
+            "Uzelf en de anderen",
+            "Uzelf en niemand anders",
+            "Uw passagiers, meer niet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een dronken bestuurder brengt zowel zijn eigen leven als dat van andere weggebruikers in gevaar.",
           "theoryCardIndex": 0
         },
         {
           "id": "I1_Q3",
-          "question": "U wordt door de politie tegengehouden bij een verkeerscontrole. Wie kan aan een ademtest onderworpen worden?",
+          "question": "Wie kan aan een alcoholcontrole worden onderworpen?",
           "choices": [
-            "Enkel de gecontroleerde automobilisten",
-            "Al wie een voertuig of rijdier bestuurt, fietsers inbegrepen",
-            "Enkel beroepschauffeurs",
-            "Iedereen die zich op de openbare weg bevindt"
+            "Wie een voertuig of rijdier bestuurt",
+            "De autobestuurders en niemand anders",
+            "Elke persoon op de openbare weg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Elke bestuurder van een voertuig of rijdier kan gecontroleerd worden: auto's, fietsers, ruiters, enz.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q4",
-          "question": "U bent fietser en keert met de fiets terug van een feestje. Kunt u aan een ademtest onderworpen worden?",
+          "question": "U keert met de fiets terug van een feest. Kan u aan een alcoholcontrole worden onderworpen?",
           "choices": [
-            "Nee, enkel automobilisten zijn betrokken",
-            "Ja, fietsers besturen een voertuig en kunnen gecontroleerd worden",
-            "Nee, een fiets is geen voertuig",
-            "Dat hangt af van de weg"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Fietsers besturen een voertuig en kunnen aan een ademtest onderworpen worden.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q5",
-          "question": "U bent rijschoolinstructeur en begeleidt een leerling tijdens een rijles. Kunt u aan een ademtest onderworpen worden?",
+          "question": "U bent instructeur en begeleidt een leerling. Kan u aan een alcoholcontrole worden onderworpen?",
           "choices": [
-            "Nee, u rijdt zelf niet",
-            "Ja, de instructeur die een leerling begeleidt kan gecontroleerd worden",
-            "Nee, enkel de leerling kan gecontroleerd worden",
-            "Dat hangt af van het voertuig"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De rijschoolinstructeur, die het voertuig begeleidt, kan gecontroleerd worden.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q6",
-          "question": "U steekt de straat over als voetganger en veroorzaakt een ongeval. Kunt u aan een ademtest onderworpen worden?",
+          "question": "U bent voetganger en veroorzaakte een ongeval. Kan u aan een alcoholcontrole worden onderworpen?",
           "choices": [
-            "Nee, voetgangers zijn vrijgesteld",
-            "Ja, al wie bijdroeg tot het ongeval kan gecontroleerd worden",
-            "Nee, enkel bestuurders komen in aanmerking",
-            "Dat hangt af van de ernst van het ongeval"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Zelfs een voetganger kan gecontroleerd worden als hij heeft bijgedragen tot het veroorzaken van een ongeval, zelfs als slachtoffer.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q7",
-          "question": "U bent passagier in een auto die door de politie wordt tegengehouden. Kunt u aan een ademtest onderworpen worden?",
+          "question": "U bent passagier in een gecontroleerde wagen. Kan u aan een alcoholcontrole worden onderworpen?",
           "choices": [
-            "Ja, iedereen in het voertuig",
-            "Nee, passagiers kunnen NIET gecontroleerd worden",
-            "Ja, als ze duidelijk dronken zijn",
-            "Dat hangt af van de zitplaats"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Passagiers rijden niet en kunnen niet aan een ademtest onderworpen worden.",
@@ -237,12 +226,10 @@
         },
         {
           "id": "I1_Q8",
-          "question": "U slaapt op de achterbank van uw auto na een feestje. Kunt u aan een ademtest onderworpen worden?",
+          "question": "U slaapt op de achterbank van uw wagen. Kan u gecontroleerd worden?",
           "choices": [
-            "Ja, want het is uw auto",
-            "Nee, wie niet op de bestuurdersplaats slaapt kan niet gecontroleerd worden",
-            "Ja, als de motor nog draait",
-            "Dat hangt af van het uur van de nacht"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Slapen op de achterbank stelt u vrij van een ademtest.",
@@ -251,12 +238,10 @@
         },
         {
           "id": "I1_Q9",
-          "question": "U wandelt op het voetpad zonder betrokken te zijn bij een ongeval. Kan de politie u aan een ademtest onderwerpen?",
+          "question": "U wandelt op het trottoir zonder ongeval. Mag de politie uw alcohol controleren?",
           "choices": [
-            "Ja, iedereen kan gecontroleerd worden",
-            "Nee, een niet-betrokken voetganger kan dat niet",
-            "Ja, bij een georganiseerde controle",
-            "Dat hangt af van de wijk waar u wandelt"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Enkel voetgangers die betrokken zijn bij een ongeval kunnen gecontroleerd worden.",
@@ -265,12 +250,10 @@
         },
         {
           "id": "I1_Q10",
-          "question": "U wordt door de politie tegengehouden voor een ademtest. Kunt u de ademtest weigeren?",
+          "question": "Mag u de ademtest bij een controle weigeren?",
           "choices": [
-            "Ja, dat is uw volste recht",
-            "Nee, weigeren zonder wettige reden is strafbaar",
-            "Ja, als u helemaal niets gedronken heeft",
-            "Ja, maar enkel op weekdagen"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Weigeren zonder wettige reden is strafbaar en staat gelijk aan een resultaat Positief (P).",
@@ -279,12 +262,10 @@
         },
         {
           "id": "I1_Q11",
-          "question": "U bent in het ziekenhuis na een ongeval en de politie vraagt een bloedafname. Kunt u weigeren?",
+          "question": "In het ziekenhuis na een ongeval, mag u een bloedafname weigeren?",
           "choices": [
-            "Ja, het is een ingrijpende procedure",
-            "Nee, weigeren zonder wettige reden is strafbaar",
-            "Ja, als u liever blaast",
-            "Dat hangt af van de arts"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het weigeren van een bloedafname zonder wettige reden is strafbaar.",
@@ -292,40 +273,37 @@
         },
         {
           "id": "I1_Q12",
-          "question": "U weigert in de ademtest te blazen bij een politiecontrole. Wat gebeurt er?",
+          "question": "U weigert in het toestel te blazen. Wat gebeurt er?",
           "choices": [
-            "Niets, dat is uw volste recht",
-            "U wordt beschouwd als Positief (P): 6 uur rijverbod",
-            "U gaat rechtstreeks naar de bloedafname",
-            "U krijgt een eenvoudige schriftelijke waarschuwing"
+            "U wordt als positief beschouwd",
+            "U gaat naar de bloedafname",
+            "U krijgt een waarschuwing"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De weigering van de test wordt beschouwd als een resultaat Positief: rijverbod van 6 uur.",
           "theoryCardIndex": 0
         },
         {
           "id": "I1_Q13",
-          "question": "U moet blazen in de ademtoestel bij een controle. Hoelang moet u ongeveer blazen?",
+          "question": "Hoe lang moet u in het ademtesttoestel blazen?",
           "choices": [
-            "3 seconden",
             "Ongeveer 7 seconden",
-            "15 seconden",
-            "1 seconde"
+            "Ongeveer 3 seconden",
+            "Ongeveer 15 seconden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "U moet krachtig blazen gedurende ongeveer 7 seconden in het ademtoestel.",
           "theoryCardIndex": 1
         },
         {
           "id": "I1_Q14",
-          "question": "U blaast in het ademtoestel. Hoe weet u dat u correct blaast?",
+          "question": "Hoe weet u dat u correct blaast?",
           "choices": [
-            "De agent zegt het u",
-            "Een continu fluitgeluid geeft aan dat u correct blaast",
-            "Aan de kleur van het scherm",
-            "U kunt het niet weten"
+            "Een aanhoudend gefluit",
+            "De kleur van het scherm",
+            "De agent zegt het u"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een continu fluitgeluid bevestigt dat u correct blaast in het ademtoestel.",
           "theoryCardIndex": 1
         },
@@ -344,41 +322,38 @@
         },
         {
           "id": "I1_Q16",
-          "question": "U blaast net in het ademtoestel en het resultaat toont \"S\" (Safe). Wat betekent dit?",
+          "question": "Het resultaat toont « S » (Safe). Wat betekent dat?",
           "choices": [
-            "Uw test is positief voor alcohol",
-            "Alcohol onder de wettelijke drempel: u mag rijden",
-            "Dit is een alarmresultaat (Alert)",
-            "Er is een bijkomende analyse nodig"
+            "Onder de grens, u mag rijden",
+            "Positief, u mag niet rijden",
+            "Alarm, een analyse is nodig"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "S = Safe: gehalte onder de toegelaten drempel, u mag rijden.",
           "theoryCardIndex": 1
         },
         {
           "id": "I1_Q17",
-          "question": "U blaast net en het resultaat toont \"A\" (Alarm). Met welke alcoholconcentratie stemt dit overeen?",
+          "question": "Het resultaat toont « A » (Alarm). Met welke concentratie komt dat overeen?",
           "choices": [
+            "Van 0,22 tot 0,35 mg/l",
             "Minder dan 0,22 mg/l",
-            "Van 0,22 tot minder dan 0,35 mg/l",
-            "Minstens 0,35 mg/l",
-            "Meer dan 0,44 mg/l"
+            "Minstens 0,35 mg/l"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "A = Alarm: tussen 0,22 mg/l (0,5 ‰) en 0,35 mg/l (0,8 ‰).",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q18",
-          "question": "U blaast net en het resultaat toont \"P\" (Positief). Met welke alcoholconcentratie stemt dit overeen?",
+          "question": "Het resultaat toont « P » (Positief). Met welke concentratie komt dat overeen?",
           "choices": [
+            "Minstens 0,35 mg/l",
             "Minder dan 0,22 mg/l",
-            "Minstens 0,35 mg/l (0,8 promille)",
-            "Minstens 0,22 mg/l",
-            "Minder dan 0,35 mg/l"
+            "Van 0,22 tot 0,35 mg/l"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "P = Positief: concentratie ≥ 0,35 mg/l (0,8 ‰).",
           "theoryCardIndex": 1,
           "severe": true
@@ -426,28 +401,26 @@
         },
         {
           "id": "I1_Q23",
-          "question": "U onderging een test en vervolgens een ademanalyse. Wat is het verschil tussen beide?",
+          "question": "Wat is het verschil tussen de ademtest en de ademanalyse?",
           "choices": [
-            "Er is geen enkel verschil tussen beide",
-            "De test geeft een indicatie, de analyse meet de exacte concentratie",
-            "De analyse gaat sneller dan de test",
-            "De test is nauwkeuriger dan de analyse"
+            "De test wijst aan, de analyse meet",
+            "De analyse wijst aan, de test meet",
+            "Geen, ze zijn gelijkwaardig"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De test geeft S/A/P. De analyse geeft de precieze concentratie en levert een afgedrukt ticket.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q25",
-          "question": "U onderging een ademanalyse en het resultaat toont 0,18 mg/l. Wat gebeurt er?",
+          "question": "De ademanalyse geeft 0,18 mg/l aan. Wat gebeurt er?",
           "choices": [
-            "U krijgt een boete",
-            "U mag rijden want dit is lager dan 0,22 mg/l",
-            "Uw rijbewijs wordt 3 uur ingetrokken",
-            "Uw rijbewijs wordt 6 uur ingetrokken"
+            "U mag rijden",
+            "Uw rijbewijs wordt ingetrokken",
+            "U krijgt een boete"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Onder 0,22 mg/l mag u gewoon rijden.",
           "theoryCardIndex": 2,
           "severe": true
@@ -482,14 +455,13 @@
         },
         {
           "id": "I1_Q30",
-          "question": "U weigert zich te onderwerpen aan de ademanalyse. Wat gebeurt er?",
+          "question": "U weigert de ademanalyse. Wat gebeurt er?",
           "choices": [
-            "Er gebeurt niets bijzonders",
-            "U wordt als Positief beschouwd: 6 uur rijverbod",
-            "U krijgt enkel een boete",
-            "U krijgt een eenvoudige waarschuwing"
+            "Positief geacht, 6 uur",
+            "Een boete, meer niet",
+            "Een schriftelijke waarschuwing"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het weigeren van de analyse wordt beschouwd als een resultaat Positief: rijverbod van 6 uur.",
           "theoryCardIndex": 2,
           "severe": true
@@ -523,14 +495,13 @@
         },
         {
           "id": "I1_Q34",
-          "question": "U bent astmatisch en kunt niet blazen in het ademtoestel. Wat gebeurt er?",
+          "question": "U hebt astma en kan niet blazen. Wat gebeurt er?",
           "choices": [
-            "U wordt vrijgelaten zonder verdere controle",
-            "De politie kan u ambtshalve onderwerpen aan een bloedafname",
-            "U moet hoe dan ook blazen",
-            "Er is dan geen enkele controle mogelijk"
+            "Een bloedafname van ambtswege",
+            "U wordt vrijgelaten zonder controle",
+            "U moet toch blazen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het onvermogen om te blazen (astma) rechtvaardigt een bloedafname.",
           "theoryCardIndex": 3
         },
@@ -549,28 +520,26 @@
         },
         {
           "id": "I1_Q37",
-          "question": "U heeft een alcoholgerelateerde overtreding begaan. Wie kan u een alcoholslot opleggen?",
+          "question": "Wie kan u een alcoholslot opleggen?",
           "choices": [
-            "De politie",
             "De rechter",
-            "Uw verzekeringsmaatschappij",
-            "De autofabrikant"
+            "De politie",
+            "De verzekeraar"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het alcoholslot wordt opgelegd door een beslissing van de rechter.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "I1_Q38",
-          "question": "U wordt veroordeeld tot een alcoholslot. Voor welke duur kan het opgelegd worden?",
+          "question": "Voor welke duur kan het alcoholslot worden opgelegd?",
           "choices": [
-            "6 maanden maximum",
-            "Van 1 tot 3 jaar, of zelfs levenslang",
-            "1 maand",
-            "6 uur"
+            "Van 1 tot 3 jaar, zelfs levenslang",
+            "Hoogstens zes maanden",
+            "Eén maand, niet langer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het alcoholslot kan opgelegd worden voor 1 tot 3 jaar, of zelfs levenslang.",
           "theoryCardIndex": 3
         },
@@ -589,14 +558,13 @@
         },
         {
           "id": "I1_Q41",
-          "question": "U bereidt zich voor op het examen. Aan welke bestuurders KAN het alcoholslot opgelegd worden (zonder verplichting)?",
+          "question": "Aan welke bestuurders kan het alcoholslot worden opgelegd?",
           "choices": [
-            "Aan bestuurders gecontroleerd met 0,5 promille",
-            "Aan meer dan 0,8 promille, dronken of recidivisten",
-            "Aan bestuurders gecontroleerd met 0,2 promille",
-            "Aan alle bestuurders zonder onderscheid"
+            "Meer dan 0,8 promille of dronken",
+            "Wie 0,5 promille blies",
+            "Alle bestuurders, zonder onderscheid"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het kan opgelegd worden (maar niet verplicht) aan bestuurders > 0,8 ‰, in staat van dronkenschap of recidivisten.",
           "theoryCardIndex": 3,
           "severe": true
@@ -616,65 +584,57 @@
         },
         {
           "id": "I1_Q43",
-          "question": "U leest dat het alcoholslot ook verplicht moet opgelegd worden aan bepaalde zware recidivisten. Aan welke?",
+          "question": "Aan welke recidivisten moet het alcoholslot worden opgelegd?",
           "choices": [
-            "Elke vorm van verkeersrecidive",
-            "Bestuurders die twee keer gecontroleerd zijn met minstens 1,2 promille binnen 3 jaar",
-            "Bestuurders die één keer gecontroleerd zijn met 0,8 promille",
-            "Iedereen in staat van dronkenschap achter het stuur"
+            "Twee keer 1,2 promille in 3 jaar",
+            "Eén keer 0,8 promille aan het stuur",
+            "Elke vorm van herhaling in het verkeer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het alcoholslot is verplicht voor recidivisten die twee keer gecontroleerd zijn met ≥ 1,2 ‰ binnen 3 jaar.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q44",
-          "question": "Een bestuurder heeft een gehalte van 1,8 promille. Kan de rechter beslissen het alcoholslot NIET op te leggen?",
+          "question": "Een bestuurder blaast 1,8 promille. Mag de rechter afzien van het alcoholslot?",
           "choices": [
-            "Nee, dit is automatisch en verplicht",
-            "Ja, maar hij moet dit uitdrukkelijk beslissen en motiveren",
-            "Nee, in geen enkel geval",
-            "Ja, zonder zich te moeten verantwoorden"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De rechter kan uitzonderlijk beslissen het niet op te leggen, maar moet dit uitdrukkelijk beslissen en motiveren.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q45",
-          "question": "U blaast 0,15 promille in uw alcoholslot. Start uw motor?",
+          "question": "U blaast 0,15 promille in het alcoholslot. Start de motor?",
           "choices": [
-            "Nee, de motor blijft geblokkeerd",
-            "Ja, want 0,15 ligt onder de drempel van 0,2 promille",
-            "Dat hangt af van de instelling van het toestel",
-            "Nee, alle alcohol blokkeert het starten"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "0,15 ‰ < 0,2 ‰: de drempel is niet bereikt, de motor start.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q47",
-          "question": "U wordt door de politie tegengehouden op vermoeden van drugsgebruik. Hoe verloopt de speekseltest?",
+          "question": "Hoe verloopt een speekseltest op drugs?",
           "choices": [
-            "Via een bloedafname op het politiebureau",
-            "Via een speekselafname met een wattenstaafje",
-            "Via een grondige ademtest",
-            "Via een urineanalyse in het labo"
+            "Een afname met een wattenstaafje",
+            "Een bloedafname op het bureau",
+            "Een urineanalyse in het labo"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De speekseltest bestaat uit het afnemen van speeksel met een wattenstaafje.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q48",
-          "question": "U heeft geen enkele overtreding begaan en er is geen ongeval. Kan de politie u een speekseltest voor drugs opleggen?",
+          "question": "Zonder overtreding of ongeval, mag de politie u een speekseltest opleggen?",
           "choices": [
-            "Ja, zoals bij alcohol",
-            "Nee, er is een objectief vermoeden vereist",
-            "Ja, bij elke verkeerscontrole",
-            "Nee, nooit zonder ongeval of gewonde"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De speekseltest vereist een objectief vermoeden, behalve bij een ongeval waar hij altijd opgelegd kan worden.",
@@ -683,28 +643,25 @@
         },
         {
           "id": "I1_Q49",
-          "question": "U bent betrokken bij een verkeersongeval. Kan de politie u een speekseltest voor drugs opleggen zonder voorafgaand vermoeden?",
+          "question": "Na een ongeval, mag de politie een speekseltest opleggen zonder vermoeden?",
           "choices": [
-            "Nee, een vermoeden is altijd nodig",
-            "Ja, bij een ongeval kan de politie altijd een speekseltest opleggen",
-            "Nee, enkel de ademtest",
-            "Dat hangt af van de ernst van het ongeval"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij een ongeval kan de speekseltest opgelegd worden zonder voorafgaand vermoeden.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q50",
-          "question": "U herhaalt de verschillen tussen alcohol- en drugscontrole. Wat zijn de vereiste voorwaarden voor elk?",
+          "question": "Welke voorwaarden onderscheiden de alcoholcontrole van de drugscontrole?",
           "choices": [
-            "De voorwaarden zijn precies dezelfde",
-            "Alcohol: elke bestuurder; drugs: objectief vermoeden vereist",
-            "Drugs: iedereen; alcohol: vermoeden vereist",
-            "Beide vereisen altijd een vermoeden"
+            "Alcohol: iedereen; drugs: vermoeden",
+            "Drugs: iedereen; alcohol: vermoeden",
+            "Beide vragen een vermoeden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De alcoholcontrole geldt voor elke bestuurder. De drugscontrole vereist een objectief vermoeden (behalve bij een ongeval).",
           "theoryCardIndex": 4,
           "severe": true
@@ -725,28 +682,25 @@
         },
         {
           "id": "I1_Q52",
-          "question": "U bent positief op drugs bij een controle. Is een onmiddellijke en langdurige intrekking van uw rijbewijs mogelijk?",
+          "question": "U bent positief op drugs. Is een verlengde onmiddellijke intrekking mogelijk?",
           "choices": [
-            "Nee, enkel de 12 uur",
-            "Ja, een langdurige onmiddellijke intrekking kan ook",
-            "Nee, dat is nooit mogelijk",
-            "Dat hangt af van het type drug"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Naast de 12 uur is een onmiddellijke intrekking van het rijbewijs mogelijk bij een positieve test.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q53",
-          "question": "U bent veroordeeld voor rijden onder invloed van drugs. Wat is de maximale duur van het rijverbod?",
+          "question": "Wat is de maximale duur van het rijverbod voor rijden onder invloed van drugs?",
           "choices": [
-            "1 jaar",
-            "Tot 5 jaar maximum",
-            "3 jaar",
-            "Levenslang"
+            "Hoogstens vijf jaar",
+            "Hoogstens drie jaar",
+            "Hoogstens één jaar"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het rijverbod voor drugs kan tot 5 jaar maximum bedragen.",
           "theoryCardIndex": 4,
           "severe": true
@@ -767,41 +721,37 @@
         },
         {
           "id": "I1_Q56",
-          "question": "U neemt medicijnen en overweegt te rijden. Hebben sommige medicijnen effecten op het rijden?",
+          "question": "Hebben sommige geneesmiddelen effect op het rijden?",
           "choices": [
-            "Nee, medicijnen zijn ongevaarlijk achter het stuur",
-            "Ja, sommige medicijnen tasten de concentratie, de reflexen of de waakzaamheid aan",
-            "Nee, enkel alcohol is echt problematisch",
-            "Dat hangt enkel af van de ingenomen dosis"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sommige medicijnen tasten de concentratie, de reflexen of de waakzaamheid aan.",
           "theoryCardIndex": 4
         },
         {
           "id": "I1_Q57",
-          "question": "U neemt medicijnen en drinkt een glas alcohol voor u rijdt. Wat zijn de risico's?",
+          "question": "U mengt geneesmiddelen en alcohol voor u rijdt. Wat is het risico?",
           "choices": [
-            "Er is geen bijkomend gevaar",
-            "Alcohol versterkt de schadelijke effecten van de medicijnen",
-            "Dit is minder gevaarlijk dan alcohol alleen",
-            "De effecten blijven strikt identiek"
+            "Alcohol versterkt hun effect",
+            "Er is geen extra risico",
+            "De effecten blijven dezelfde"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Alcohol versterkt de schadelijke effecten van medicijnen, wat de combinatie nog gevaarlijker maakt.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_SIGN_F3_1",
-          "question": "U ziet een blauw rechthoekig bord met een witte \"H\" en een medisch pictogram. Wat geeft dit aan?",
+          "question": "Wat kondigt dit verkeersbord aan?",
           "choices": [
-            "Een verkeershulppost",
-            "Een ziekenhuis of kliniek in de buurt",
-            "Een wachtdienstapotheek",
-            "Een keuringsstation"
+            "Een ziekenhuis in de buurt",
+            "Een apotheek van wacht",
+            "Een hulppost langs de weg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "F3 geeft de aanwezigheid van een ziekenhuis aan. In de buurt zijn geluidssignalen (claxonneren) doorgaans verboden om patiënten niet te storen.",
           "sign": "F53"
         }
@@ -978,41 +928,38 @@
       "questions": [
         {
           "id": "I2_Q1",
-          "question": "U heeft pech op de weg. Wat moet u in de eerste plaats doen?",
+          "question": "U hebt panne op de weg. Wat moet u eerst doen?",
           "choices": [
-            "Onmiddellijk de gevarendriehoek plaatsen",
-            "Uw voertuig naar een toegelaten plaats verplaatsen",
-            "Eerst uw verzekering bellen",
-            "Eerst de politie bellen"
+            "De wagen op een goede plaats zetten",
+            "Meteen de driehoek plaatsen",
+            "Eerst uw verzekering bellen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij pech probeert u eerst het voertuig op een toegelaten plaats te parkeren.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I2_Q2",
-          "question": "U vervoert goederen en een deel van uw lading valt op de rijbaan. Wat doet u?",
+          "question": "Een deel van uw lading valt op de rijbaan. Wat doet u?",
           "choices": [
-            "U zet uw weg voort zonder te stoppen",
-            "U verwijdert de lading zo snel mogelijk van de rijbaan",
-            "U wacht ter plaatse op de politie",
-            "U schakelt enkel uw alarmlichten in"
+            "Ze snel van de rijbaan halen",
+            "Doorrijden zonder te stoppen",
+            "Ter plaatse de politie afwachten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Als lading op de rijbaan valt, moet u ze zo snel mogelijk verwijderen.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q3",
-          "question": "U bent betrokken bij een ongeval en uw voertuig kan niet verplaatst worden. Wat moet u in de eerste plaats doen?",
+          "question": "Na een ongeval kan uw voertuig niet verplaatst worden. Wat doet u eerst?",
           "choices": [
-            "Eerst uw verzekering bellen",
-            "De gevarendriehoek plaatsen en de alarmlichten aanzetten",
-            "Op de politie wachten zonder iets te doen",
-            "Foto's nemen voor het aanrijdingsformulier"
+            "Driehoek en waarschuwingslichten",
+            "Eerst de verzekering bellen",
+            "Foto's nemen voor het formulier"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Als het voertuig niet verplaatst kan worden: driehoek plaatsen en alarmlichten inschakelen om een tweede ongeval te vermijden.",
           "theoryCardIndex": 0,
           "severe": true
@@ -1032,12 +979,10 @@
         },
         {
           "id": "I2_Q5",
-          "question": "U bent op de plaats van een ongeval en nieuwsgierigen roken in de buurt. Mogen zij dat?",
+          "question": "Nieuwsgierigen roken vlak bij de ongevalplaats. Mag dat?",
           "choices": [
-            "Ja, als ze gestrest zijn door de situatie",
-            "Nee, roken is verboden, ook voor de toeschouwers",
-            "Ja, op voldoende afstand van de voertuigen",
-            "Dat hangt af van de ernst van het ongeval"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Roken op de plaats van een ongeval is verboden wegens brandgevaar. Toeschouwers mogen ook niet roken.",
@@ -1045,27 +990,25 @@
         },
         {
           "id": "I2_Q6",
-          "question": "U moet uw gevarendriehoek plaatsen op een gewone weg. Op welke minimumafstand van het ongeval moet u hem plaatsen?",
+          "question": "Op een gewone weg, op welke minimumafstand plaatst u de gevarendriehoek?",
           "choices": [
-            "10 meter",
             "Minstens 30 meter",
-            "50 meter",
-            "100 meter"
+            "Minstens 10 meter",
+            "Minstens 100 meter"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op een gewone weg moet de driehoek op minstens 30 meter van het obstakel geplaatst worden.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q7",
-          "question": "U heeft pech op de autosnelweg. Op welke minimumafstand moet u uw gevarendriehoek plaatsen?",
+          "question": "Op de autosnelweg, op welke minimumafstand plaatst u de gevarendriehoek?",
           "choices": [
-            "30 meter",
             "Minstens 100 meter",
-            "50 meter",
-            "200 meter"
+            "Minstens 30 meter",
+            "Minstens 50 meter"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op de autosnelweg moet de driehoek op minstens 100 meter van het obstakel geplaatst worden.",
           "theoryCardIndex": 0
         },
@@ -1084,38 +1027,34 @@
         },
         {
           "id": "I2_Q9",
-          "question": "U heeft pech op 20 meter van een kruispunt. Waar plaatst u uw gevarendriehoek?",
+          "question": "U hebt panne op 20 meter van een kruispunt. Waar plaatst u de driehoek?",
           "choices": [
-            "Altijd op 30 meter achter uw voertuig",
-            "Waar het het meest logisch en zichtbaar is (zelfs op het dak)",
-            "Een driehoek is hier niet nodig",
-            "Midden op het kruispunt om gezien te worden"
+            "Op de best zichtbare plaats",
+            "Op 30 meter erachter, meer niet",
+            "Midden op het kruispunt zelf"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Als de regel van 30 m niet logisch is (bv. op 20 m van een kruispunt), plaatst u de driehoek waar het zinvol is, zelfs op het dak.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q10",
-          "question": "U herhaalt de verplichte uitrusting. Wat moet u VERPLICHT in uw auto hebben?",
+          "question": "Wat moet u verplicht in uw wagen hebben?",
           "choices": [
-            "Enkel de gehomologeerde gevarendriehoek",
-            "Driehoek, blusapparaat, fluohesje en verbandkist",
+            "Driehoek, blusser, hesje, verbanddoos",
             "Een driehoek en een fluohesje",
-            "Enkel een poederblusser"
+            "Een poederblusser, meer niet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Deze 4 elementen zijn verplicht in elk voertuig: driehoek, blusapparaat, fluorescerend vest en verbandkist.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q11",
-          "question": "U zoekt uw fluorescerend vest in de koffer. Is dit de juiste plaats om het op te bergen?",
+          "question": "U bewaart uw fluohesje in de koffer. Is dat de juiste plaats?",
           "choices": [
-            "Ja, de koffer is perfect geschikt",
-            "Nee, het moet in het INTERIEUR liggen, aan te trekken VOOR u uitstapt",
-            "Ja, het handschoenkastje kan ook",
-            "Dat maakt niet uit, onder de zetel"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het vest moet in het interieur liggen zodat u het kunt aantrekken VOOR u uitstapt op de autosnelweg/snelle weg.",
@@ -1136,12 +1075,10 @@
         },
         {
           "id": "I2_Q13",
-          "question": "U bent betrokken bij een ongeval zonder gewonden. Moet u de politie bellen?",
+          "question": "Ongeval zonder gewonden, formulier ingevuld en getekend. Moet u de politie bellen?",
           "choices": [
-            "Ja, werkelijk altijd",
-            "Nee, niet als het formulier ingevuld en getekend is",
-            "Ja, het is wettelijk verplicht",
-            "Nee, de politie komt nooit"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Zonder gewonden is de politie niet nodig als beide partijen het Europees aanrijdingsformulier ondertekenen.",
@@ -1149,38 +1086,34 @@
         },
         {
           "id": "I2_Q14",
-          "question": "U vult het Europees aanrijdingsformulier in. Wat moet de schets bevatten?",
+          "question": "Wat moet de schets op het aanrijdingsformulier bevatten?",
           "choices": [
-            "Enkel de namen van beide bestuurders",
-            "De situatie, de posities, de signalen en de identificatie A/B",
-            "Enkel de datum en het uur van het ongeval",
-            "Enkel de lijst van de stoffelijke schade"
+            "Posities, borden en merktekens A/B",
+            "De naam van beide bestuurders",
+            "De datum en het uur van het ongeval"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De schets moet bevatten: verkeerssituatie, straatnaam, rijrichting, positie van de voertuigen, lichten/signalen/markeringen en de identificatie A/B.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q15",
-          "question": "U vult het Europees aanrijdingsformulier in. Wie moet de voorzijde ondertekenen?",
+          "question": "Wie moet de voorzijde van het aanrijdingsformulier tekenen?",
           "choices": [
-            "Slechts één van de twee bestuurders",
             "Beide betrokken partijen",
-            "De politie",
-            "Een getuige"
+            "Slechts één van beide bestuurders",
+            "De politie en een getuige"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De voorzijde moet door beide partijen ingevuld EN ondertekend worden.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q16",
-          "question": "U heeft het Europees aanrijdingsformulier ondertekend en merkt een fout op de voorzijde. Kunt u die corrigeren?",
+          "question": "Het formulier is getekend en u ziet een fout op de voorzijde. Mag u ze verbeteren?",
           "choices": [
-            "Ja, als u een fout vindt",
-            "Nee, eens ondertekend is geen enkele wijziging op de voorzijde toegelaten",
-            "Ja, binnen de 24 uur",
-            "Ja, met akkoord van de andere partij"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Eens het aanrijdingsformulier ondertekend is, is GEEN WIJZIGING meer mogelijk op de voorzijde.",
@@ -1188,91 +1121,81 @@
         },
         {
           "id": "I2_Q17",
-          "question": "U bent betrokken bij een ongeval en de andere partij weigert het formulier te ondertekenen. Wat doet u?",
+          "question": "De tegenpartij weigert te tekenen. Wat doet u?",
           "choices": [
-            "U vertrekt",
             "U verwittigt de politie",
-            "U dwingt de andere partij om te ondertekenen",
+            "U vertrekt gewoon zelf",
             "U belt uw verzekering"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij weigering om te ondertekenen of onenigheid, verwittig de politie. Indien onbeschikbaar, ga naar het politiebureau.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q18",
-          "question": "U beschadigt een geparkeerde auto en vindt de eigenaar niet. Wat moet u doen?",
+          "question": "U beschadigt een geparkeerde wagen en vindt de eigenaar niet. Wat doet u?",
           "choices": [
-            "U vertrekt discreet zonder iets te doen",
-            "U laat uw gegevens ter plaatse OF u verwittigt de politie",
-            "U wacht eindeloos op de eigenaar",
-            "Niets, de verzekering regelt dat"
+            "Uw gegevens ter plaatse achterlaten",
+            "Discreet vertrekken zonder meer",
+            "De eigenaar ter plaatse afwachten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij schade zonder aanwezige eigenaar: uw identiteitsgegevens achterlaten of de politie verwittigen.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q19",
-          "question": "U bent betrokken bij een ongeval met lichtgewonden. Wat doet u met uw voertuig?",
+          "question": "Ongeval met lichtgewonden. Wat doet u met uw voertuig?",
           "choices": [
-            "U blijft ter plaatse met het voertuig midden op de weg",
-            "U parkeert uw voertuig op een toegelaten plaats",
-            "U blokkeert de weg",
-            "Niets bijzonders"
+            "Het op een toegelaten plaats zetten",
+            "Het midden op de weg laten staan",
+            "Bewust de weg blokkeren"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij lichtgewonden, parkeer het voertuig op een toegelaten plaats.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q20",
-          "question": "U komt aan op de plaats van een ongeval met zwaargewonden. Wat moet u in de eerste plaats doen?",
+          "question": "U komt bij een ongeval met zwaargewonden. Wat doet u eerst?",
           "choices": [
-            "Onmiddellijk weggaan om hulp te zoeken",
-            "Vermijden dat er nog ongevallen gebeuren op dezelfde plaats",
-            "Op de hulpdiensten wachten zonder in te grijpen",
-            "De gewonden van de weg verplaatsen"
+            "Een tweede ongeval vermijden",
+            "Vertrekken om hulp te halen",
+            "De gewonden van de weg slepen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij zwaargewonden of onmogelijke verplaatsing: alles in het werk stellen om bijkomende ongevallen te vermijden.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I2_Q21",
-          "question": "U bent betrokken bij een ongeval met gewonden. Moet de politie tussenkomen?",
+          "question": "Er zijn gewonden bij het ongeval. Moet de politie tussenkomen?",
           "choices": [
-            "Nee, het aanrijdingsformulier volstaat",
-            "Ja, de politie moet ALTIJD tussenkomen als er gewonden zijn",
-            "Nee, behalve bij zware verwondingen",
-            "Dat hangt af van de ernst van de schade"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ongeval met gewonden = politie ALTIJD verplicht voor de vaststellingen.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q23",
-          "question": "U stapt uit uw auto na een ongeval op de autosnelweg. Is het fluorescerend vest verplicht?",
+          "question": "U stapt uit na een ongeval op de autosnelweg. Is het hesje verplicht?",
           "choices": [
-            "Nee, nergens in België",
-            "Ja, verplicht voor de bestuurder op die plaats",
-            "Enkel binnen de bebouwde kom",
-            "Nee, het is louter een advies"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het vest is verplicht voor de bestuurder op de autosnelweg en de autoweg.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q24",
-          "question": "Uw passagiers stappen ook uit de auto op de autosnelweg na het ongeval. Is het vest verplicht voor hen?",
+          "question": "Uw passagiers stappen ook uit. Is het hesje voor hen verplicht?",
           "choices": [
-            "Ja, altijd en overal",
-            "Nee, maar het is sterk aan te raden",
-            "Ja, maar enkel op de autosnelweg",
-            "Nee, en het is zelfs af te raden"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het vest is niet verplicht voor passagiers maar wordt sterk aangeraden.",
@@ -1280,38 +1203,34 @@
         },
         {
           "id": "I2_Q26",
-          "question": "U staat stil op de pechstrook van de autosnelweg. Waar moet u de hulpdiensten afwachten?",
+          "question": "U staat op de pechstrook. Waar wacht u op de hulpdiensten?",
           "choices": [
-            "In uw auto",
             "Achter de vangrails",
-            "Op de pechstrook",
-            "Op de rijbaan"
+            "In uw voertuig",
+            "Op de pechstrook zelf"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op de pechstrook wacht u achter de vangrails om ongevallen te vermijden.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q27",
-          "question": "U staat op de pechstrook en overweegt erover te lopen. Is dit toegelaten?",
+          "question": "Mag u op de pechstrook wandelen?",
           "choices": [
-            "Ja, dat is altijd toegelaten",
-            "Enkel indien echt noodzakelijk",
-            "Ja, te voet",
+            "Enkel als het echt nodig is",
+            "Ja, zonder beperking",
             "Nee, in geen geval"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Blijf niet in de auto en loop niet op de pechstrook als het niet nodig is.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q28",
-          "question": "U bent betrokken bij een ongeval. Kunt u de plaats verlaten?",
+          "question": "U bent betrokken bij een ongeval. Mag u de plaats verlaten?",
           "choices": [
-            "Ja, na uw verzekering gebeld te hebben",
-            "Nee, elke betrokken persoon moet ter plaatse blijven",
-            "Ja, na foto's genomen te hebben",
-            "Ja, als u een advocaat belt"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Elke persoon die betrokken is bij een ongeval moet ter plaatse blijven.",
@@ -1319,14 +1238,13 @@
         },
         {
           "id": "I2_Q29",
-          "question": "U bent getuige van een ongeval en gaat de hulpdiensten bellen. Wat moet u beoordelen voor u belt?",
+          "question": "Wat moet u inschatten voor u de hulpdiensten belt?",
           "choices": [
-            "De geschatte kostprijs van de materiële schade",
-            "De precieze plaats, het aantal en de ernst van de gewonden, mensen die vastzitten, en elk brandgevaar",
-            "Het merk, model en de kleur van de betrokken voertuigen",
-            "Het exacte uur van het ongeval en de weersomstandigheden"
+            "Plaats, gewonden, ernst, risico's",
+            "De kostprijs van de schade",
+            "Het merk en de kleur van de wagen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Voor u de hulpdiensten belt: beoordeel de plaats, het aantal gewonden, of er mensen vastzitten en of er brandgevaar is.",
           "theoryCardIndex": 2
         },
@@ -1345,12 +1263,10 @@
         },
         {
           "id": "I2_Q31",
-          "question": "U staat in een file op een weg met 2 rijstroken. Moet u enkel een hulpstrook vormen als u op de autosnelweg bent?",
+          "question": "Vormt men de reddingsstrook enkel op de autosnelweg?",
           "choices": [
-            "Ja, enkel op de Belgische autosnelwegen",
-            "Nee, op elke rijbaan met 2 of meer rijstroken in dezelfde richting",
-            "Ja, enkel binnen de bebouwde kom",
-            "Nee, dat is nooit wettelijk verplicht"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De hulpstrook is vereist op elke rijbaan met 2 of meer rijstroken in dezelfde richting, niet enkel op autosnelwegen.",
@@ -1358,77 +1274,70 @@
         },
         {
           "id": "I2_Q32",
-          "question": "U staat in een file en het verkeer vertraagt. Wanneer moet u beginnen de hulpstrook te vormen?",
+          "question": "Wanneer moet u de reddingsstrook beginnen vormen?",
           "choices": [
-            "Na de volledige stilstand van het verkeer",
-            "Op PREVENTIEVE wijze, voor het verkeer volledig stilvalt",
-            "Pas wanneer de hulpdiensten aankomen",
-            "Pas wanneer de politie het u vraagt"
+            "Voor het verkeer volledig stilstaat",
+            "Nadat het verkeer volledig stilstaat",
+            "Wanneer de politie het vraagt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De hulpstrook wordt PREVENTIEF gevormd, voor het verkeer stilvalt.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q33",
-          "question": "U staat in een file op een rijbaan met 2 rijstroken. Waar moet de hulpstrook gevormd worden?",
+          "question": "Op een rijbaan met twee stroken, waar vormt zich de reddingsstrook?",
           "choices": [
-            "Midden op de rechterrijstrook",
-            "Tussen de linker- en de rechterrijstrook",
+            "Tussen links en rechts",
             "Op de pechstrook",
-            "Op de berm"
+            "Midden op de rechterstrook"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op 2 rijstroken: hulpstrook tussen de linker- en de rechterrijstrook.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q34",
-          "question": "U staat in een file op een rijbaan met 3 rijstroken. Waar moet de hulpstrook gevormd worden?",
+          "question": "Op een rijbaan met drie stroken, waar vormt zich de reddingsstrook?",
           "choices": [
-            "Tussen de rechter- en de middenrijstrook",
-            "Tussen de linker- en de middenrijstrook",
-            "Op de rechterrijstrook",
-            "Midden op de rijbaan"
+            "Tussen links en de middelste",
+            "Tussen rechts en de middelste",
+            "Op de rechterstrook zelf"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op 3 rijstroken: hulpstrook tussen de linker- en de middenrijstrook.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q35",
-          "question": "U bevindt zich op de linkerrijstrook van een autosnelweg met 2 rijstroken tijdens een file. Naar welke kant schuift u om de hulpstrook te vormen?",
+          "question": "U rijdt op de linkerstrook. Naar welke kant schuift u op?",
           "choices": [
-            "Naar rechts zoals de andere rijstroken",
-            "Nog meer naar links om de tussenruimte vrij te maken",
-            "U blijft in het midden van uw rijstrook",
-            "U verlaat de autosnelweg zo snel mogelijk"
+            "Nog verder naar links",
+            "Naar rechts zoals de anderen",
+            "U blijft mooi in het midden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op de linkerrijstrook van een autosnelweg met 2 rijstroken: naar links schuiven om de hulpstrook te creëren.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q36",
-          "question": "U bevindt zich op de rechterrijstrook van een autosnelweg met 2 rijstroken tijdens een file. Naar welke kant schuift u?",
+          "question": "U rijdt op de rechterstrook. Naar welke kant schuift u op?",
           "choices": [
-            "Naar links zoals de eerste rijstrook",
-            "Naar rechts om de tussenruimte vrij te maken",
-            "U blijft in het midden van uw rijstrook",
-            "U verlaat de autosnelweg zo snel mogelijk"
+            "Naar rechts",
+            "Naar links",
+            "U blijft in het midden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op de rechterrijstrook van een autosnelweg met 2 rijstroken: naar rechts schuiven om de hulpstrook te creëren.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q37",
-          "question": "U komt aan bij een ongeval. Een gewonde ligt op de grond. Moet u hem verplaatsen?",
+          "question": "Een gewonde ligt op de grond na het ongeval. Moet u hem verplaatsen?",
           "choices": [
-            "Ja, verwijder hem van het verongelukte voertuig",
-            "Nee, niet verplaatsen en wachten op de hulpdiensten, behalve bij brand",
-            "Ja, leg hem veilig op het voetpad",
-            "Dat hangt af van de ernst van zijn verwondingen"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het slachtoffer mag niet verplaatst worden en u wacht op de hulpdiensten, behalve bij brand.",
@@ -1436,38 +1345,33 @@
         },
         {
           "id": "I2_Q38",
-          "question": "U bent op de plaats van een ongeval en het voertuig vat vuur met een gewonde binnenin. Moet u het slachtoffer verplaatsen?",
+          "question": "Het voertuig vat vuur met een gewonde erin. Moet u hem eruit halen?",
           "choices": [
-            "Nee, wacht altijd op de hulpdiensten ter plaatse",
-            "Ja, bij brandgevaar haalt u het slachtoffer snel uit het voertuig",
-            "Nee, tenzij het slachtoffer erom vraagt",
-            "Nee, in geen enkel geval verplaatsen"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het slachtoffer mag enkel verplaatst worden bij brand of onmiddellijk brandgevaar.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q39",
-          "question": "U vindt een gewonde motorrijder op de grond. Zijn helm zit op. Moet u die verwijderen?",
+          "question": "Een gewonde motorrijder draagt zijn helm. Moet u die afnemen?",
           "choices": [
-            "Ja, onmiddellijk om hem te verlichten",
-            "Nee, tenzij de gewonde moeite heeft met ademen of braakt",
-            "Ja, om zijn hoofdwonden te controleren",
-            "Nee, in geen geval eraan raken"
+            "Nee, tenzij hij slecht ademt",
+            "Ja, meteen om te helpen",
+            "Ja, om zijn wonden te zien"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Verwijder de helm niet, behalve bij ademhalingsmoeilijkheden of braken.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q40",
-          "question": "U helpt een gewonde die u om water vraagt. Moet u hem dat geven?",
+          "question": "Een gewonde vraagt u water. Moet u hem dat geven?",
           "choices": [
-            "Ja, het is maar water",
-            "Nee, geef een gewonde niets te drinken of te eten",
-            "Ja, een beetje water kan geen kwaad",
-            "Ja, als de verwonding niet ernstig is"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Geef een gewonde niets te drinken, te eten of als geneesmiddel.",
@@ -1475,12 +1379,10 @@
         },
         {
           "id": "I2_Q41",
-          "question": "U helpt een gewonde die pijn heeft. Kunt u hem een pijnstiller geven?",
+          "question": "Een gewonde heeft pijn. Mag u hem een pijnstiller geven?",
           "choices": [
-            "Ja, om hem snel te verlichten",
-            "Nee, het is afgeraden een gewonde medicijnen toe te dienen",
-            "Ja, maar enkel paracetamol",
-            "Dat hangt af van de ernst van de verwonding"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het is afgeraden een gewonde medicijnen toe te dienen in afwachting van de hulpdiensten.",
@@ -1488,14 +1390,13 @@
         },
         {
           "id": "I2_Q42",
-          "question": "U helpt een gewonde met een hevige bloeding aan zijn arm. Wat doet u?",
+          "question": "Een gewonde bloedt hevig aan de arm. Wat doet u?",
           "choices": [
-            "U bindt een tourniquet boven de wonde",
-            "U dekt de wonde af met een schone zakdoek of verband",
-            "U doet niets en wacht op de hulpdiensten",
-            "U giet water op de wonde"
+            "De wonde proper afdekken",
+            "Een knevel erboven aanleggen",
+            "Water op de wonde gieten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij bloeding, dek de wonde af. Bind niets boven de wonde (geen tourniquet).",
           "theoryCardIndex": 3
         },
@@ -1514,27 +1415,25 @@
         },
         {
           "id": "I2_Q44",
-          "question": "U vindt een bewusteloze motorrijder op de weg. Zijn helm zit op en hij ademt normaal. Wat doet u?",
+          "question": "Een bewusteloze motorrijder ademt normaal, met helm op. Wat doet u?",
           "choices": [
-            "U verwijdert voorzichtig zijn helm",
-            "U laat de helm zitten en wacht op de hulpdiensten",
-            "U verplaatst hem naar het voetpad",
-            "U geeft hem fris water"
+            "De helm laten zitten",
+            "De helm voorzichtig afnemen",
+            "Hem naar het trottoir slepen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Als de gewonde normaal ademt, laat u de helm zitten en wacht u op de hulpdiensten.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q46",
-          "question": "U helpt een gewonde die hevig bloedt en om water vraagt. Wat doet u in de eerste plaats?",
+          "question": "Een gewonde bloedt hevig en vraagt te drinken. Wat doet u eerst?",
           "choices": [
-            "U geeft hem water te drinken",
-            "U dekt de wonde af, zonder iets te drinken te geven",
-            "U geeft hem een pijnstiller",
-            "U wacht op de hulpdiensten zonder in te grijpen"
+            "De wonde afdekken, niets geven",
+            "Hem water te drinken geven",
+            "Hem een pijnstiller geven"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Prioriteit: de bloeding afdekken met een verband. Niets te drinken of te eten geven.",
           "theoryCardIndex": 3,
           "severe": true
@@ -1554,12 +1453,10 @@
         },
         {
           "id": "I2_Q48",
-          "question": "Uw arts heeft u ongeschikt verklaard om te rijden. Tellen zaterdagen, zondagen en feestdagen mee in de termijn van 4 dagen?",
+          "question": "U bent rijongeschikt verklaard. Tellen de weekends mee in de termijn van 4 dagen?",
           "choices": [
-            "Ja, alle dagen tellen mee",
-            "Nee, ze worden niet meegeteld in de termijn",
-            "Ja, maar enkel de zaterdagen",
-            "Dat hangt af van de gemeente"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Zaterdagen, zondagen en feestdagen worden NIET meegeteld in de termijn van 4 werkdagen.",
@@ -1567,25 +1464,22 @@
         },
         {
           "id": "I2_Q49",
-          "question": "U heeft de gemeente op de hoogte gebracht van uw medische ongeschiktheid. Wat moet u nog meer doen?",
+          "question": "U hebt de gemeente van uw ongeschiktheid verwittigd. Wat moet u nog doen?",
           "choices": [
-            "Niets anders",
-            "Uw rijbewijs afgeven",
-            "Een nieuw medisch onderzoek ondergaan",
-            "Een boete betalen"
+            "Uw rijbewijs inleveren",
+            "Een nieuw medisch examen afleggen",
+            "Een vaste boete betalen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Naast het informeren van de gemeente moet u uw rijbewijs afgeven.",
           "theoryCardIndex": 4
         },
         {
           "id": "I2_Q50",
-          "question": "U rijdt met uw auto met uw kind van 12 jaar als passagier. Mag u roken?",
+          "question": "U rijdt met uw kind van 12 jaar aan boord. Mag u roken?",
           "choices": [
-            "Ja, het is tenslotte uw eigen auto",
-            "Nee, roken is verboden in aanwezigheid van minderjarige passagiers",
-            "Ja, als u het raam wijd openzet",
-            "Dat hangt af van de exacte leeftijd van het kind"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Roken in de auto is verboden in aanwezigheid van minderjarige passagiers.",
@@ -1593,14 +1487,12 @@
         },
         {
           "id": "I2_Q51",
-          "question": "U rijdt met uw auto met enkel volwassen passagiers. Mag u roken?",
+          "question": "U rijdt met uitsluitend volwassen passagiers. Mag u roken?",
           "choices": [
-            "Nee, roken is verboden in alle voertuigen",
-            "Ja, het verbod geldt enkel bij aanwezigheid van minderjarige passagiers",
-            "Nee, het is overal verboden",
-            "Dat hangt af van de eigenaar van het voertuig"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het rookverbod in de auto geldt enkel wanneer er minderjarige passagiers aanwezig zijn.",
           "theoryCardIndex": 4
         },
@@ -1619,14 +1511,13 @@
         },
         {
           "id": "I2_Q53",
-          "question": "U ziet een tunnelbord samen met een bord \"2 km\". Wat betekent deze combinatie?",
+          "question": "Dit tunnelbord draagt de vermelding « 2 km ». Wat betekent het?",
           "choices": [
-            "De tunnel is 2 km lang",
-            "Op 2 km van uw positie bevindt zich een tunnel van minstens 500 m",
-            "U moet vertragen gedurende 2 km",
-            "Er is een omleiding van 2 km voorzien"
+            "Een tunnel op 2 km van hier",
+            "Een tunnel van 2 km lang",
+            "Vertragen gedurende 2 km"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het bord \"2 km\" geeft de afstand tot de tunnel aan, niet de lengte ervan.",
           "theoryCardIndex": 5,
           "sign": "F8"
@@ -1646,27 +1537,25 @@
         },
         {
           "id": "I2_Q55",
-          "question": "U nadert een tunnel. Wanneer moet u uw dimlichten inschakelen?",
+          "question": "Wanneer moet u uw dimlichten aansteken voor een tunnel?",
           "choices": [
-            "Net bij de ingang van de tunnel",
-            "Voldoende vroeg, ruim voor u de tunnel binnenrijdt",
-            "Enkel midden in de tunnel",
-            "Enkel bij het verlaten van de tunnel"
+            "Ruim voor u binnenrijdt",
+            "Vlak aan de ingang zelf",
+            "Midden in de tunnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Schakel uw dimlichten ruim voor u de tunnel binnenrijdt in.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q56",
-          "question": "U gaat een tunnel binnenrijden en men raadt u aan één oog te sluiten. Waarom?",
+          "question": "Waarom raadt men aan één oog te sluiten voor u een tunnel inrijdt?",
           "choices": [
-            "Om uw ogen te laten rusten voor de duisternis",
-            "Om het \"zwart gat\"-effect bij het binnenrijden te vermijden",
-            "Om afstanden beter in te schatten",
-            "Om verblinding bij het buitenrijden te vermijden"
+            "Om het zwartegatgevoel te vermijden",
+            "Om uw ogen vooraf te laten rusten",
+            "Om afstanden beter in te schatten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Eén oog sluiten vermijdt het \"zwart gat\"-effect bij de ingang van de tunnel.",
           "theoryCardIndex": 5
         },
@@ -1685,25 +1574,22 @@
         },
         {
           "id": "I2_Q58",
-          "question": "U reed met de mistlichten aan voor u de tunnel binnenreed. Wat doet u in de tunnel?",
+          "question": "U reed met mistlichten aan. Wat doet u bij het inrijden van de tunnel?",
           "choices": [
-            "U houdt ze aan voor de veiligheid",
-            "U schakelt ze uit: die omstandigheden bestaan niet in een tunnel",
-            "U voegt er de grootlichten aan toe",
-            "Dat maakt niet uit in een tunnel"
+            "U dooft ze",
+            "U laat ze branden",
+            "U zet ook het grootlicht aan"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Schakel de mistlichten uit in een tunnel (geen weersomstandigheden die hun gebruik rechtvaardigen).",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q59",
-          "question": "U bent in een tunnel en wilt stoppen op de rijbaan. Is dit toegelaten?",
+          "question": "Mag u stoppen op de rijbaan in een tunnel?",
           "choices": [
-            "Ja, voor een kort moment",
-            "Nee, dat is verboden op de rijbaan in een tunnel",
-            "Ja, bij heel druk verkeer",
-            "Ja, om een passagier te laten uitstappen"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het is verboden te parkeren of te stoppen op de rijbaan in een tunnel.",
@@ -1711,12 +1597,10 @@
         },
         {
           "id": "I2_Q60",
-          "question": "U bent in een tunnel en wilt een U-bocht maken. Is dit toegelaten?",
+          "question": "Mag u keren in een tunnel?",
           "choices": [
-            "Ja, als het veilig is",
-            "Nee, een U-bocht maken is verboden in een tunnel",
-            "Ja, in noodgeval",
-            "Dat hangt af van de breedte van de tunnel"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Een U-bocht maken is verboden in een tunnel.",
@@ -1724,12 +1608,10 @@
         },
         {
           "id": "I2_Q61",
-          "question": "U bent in een tunnel en wilt achteruitrijden. Is dit toegelaten?",
+          "question": "Mag u achteruitrijden in een tunnel?",
           "choices": [
-            "Ja, maar voor een kort moment",
-            "Nee, achteruitrijden is verboden in een tunnel",
-            "Ja, maar enkel om te parkeren",
-            "Dat hangt af van de verkeersdrukte"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Achteruitrijden is verboden in een tunnel.",
@@ -1739,12 +1621,11 @@
           "id": "I2_Q62",
           "question": "U bent getuige van een ongeval in een tunnel. Hoe verwittigt u de hulpdiensten?",
           "choices": [
-            "Enkel via de gsm terwijl u verder rijdt",
-            "Bij voorkeur via de noodtelefoon in de tunnel, anders via gsm (112)",
-            "Door te claxonneren om de anderen te verwittigen",
-            "Door de tunnel te voet te verlaten om te bellen"
+            "Via de noodtelefoon",
+            "Via gsm tijdens het rijden",
+            "Door te toeteren als alarm"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Gebruik bij voorkeur de noodtelefoon van de tunnel, anders het 112.",
           "theoryCardIndex": 5
         },
@@ -1763,12 +1644,10 @@
         },
         {
           "id": "I2_Q64",
-          "question": "U moet uw auto verlaten in een brandende tunnel. Moet u uw contactsleutel meenemen?",
+          "question": "U verlaat uw wagen in een brandende tunnel. Moet u uw sleutel meenemen?",
           "choices": [
-            "Ja, altijd uit veiligheidsreflex",
-            "Nee, laat de sleutel in het contact (of de transponder op de stoel)",
-            "Ja, voor de veiligheid van uw voertuig",
-            "Dat hangt af van het type voertuig"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Laat de sleutel in het contact (of de transponder op de zetel) zodat de hulpdiensten het voertuig kunnen verplaatsen.",
@@ -1776,40 +1655,37 @@
         },
         {
           "id": "I2_Q65",
-          "question": "U moet een brandende tunnel te voet evacueren. In welke richting moet u zich begeven?",
+          "question": "U vlucht te voet uit een brandende tunnel. In welke richting gaat u?",
           "choices": [
-            "In de rijrichting",
-            "Bij voorkeur terug naar waar u vandaan komt",
-            "Om het even welke richting",
-            "U blijft op uw plaats"
+            "Naar waar u vandaan komt",
+            "In de rijrichting mee",
+            "Naar het midden van de tunnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Evacueer bij voorkeur tegen de rijrichting in, naar de tunnelingang.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q66",
-          "question": "U bent in een tunnel en er breekt brand uit. Hoe worden de evacuatie-instructies aan u doorgegeven?",
+          "question": "Hoe krijgt u de evacuatie-instructies in een tunnel?",
           "choices": [
-            "Enkel via lichtborden",
-            "Vaak via luidsprekers in de tunnel",
-            "Enkel via de lokale radio",
-            "Via een automatische sms"
+            "Via luidsprekers in de tunnel",
+            "Via de lokale radio, meer niet",
+            "Via een sms naar de bestuurder"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Noodinstructies worden vaak via de luidsprekers van de tunnel uitgezonden.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q67",
-          "question": "U evacueert een tunnel via de nooduitgang. Waar leidt deze naartoe?",
+          "question": "Waarheen leidt een nooduitgang in een tunnel?",
           "choices": [
+            "Naar schuilplaatsen met vluchtwegen",
             "Naar de tegenoverliggende rijbaan",
-            "Naar schuilplaatsen uitgerust met evacuatiewegen",
-            "Rechtstreeks naar buiten",
-            "Naar de pechstrook"
+            "Naar de pechstrook langs de weg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De nooduitgang leidt naar schuilplaatsen uitgerust met evacuatiewegen.",
           "theoryCardIndex": 5
         },
@@ -1828,27 +1704,24 @@
         },
         {
           "id": "I2_Q69",
-          "question": "U herhaalt het begrip vluchtmisdrijf. Welke 3 elementen vormen het?",
+          "question": "Welke elementen vormen het vluchtmisdrijf?",
           "choices": [
+            "Wegrijden terwijl u weet dat u betrokken bent",
             "De snelheid, het ongeval en de vlucht",
-            "Vrijwillig de plaats verlaten, wetend betrokken te zijn, om de vaststellingen te ontlopen",
-            "De weigering, de vlucht en het verbergen van bewijs",
-            "Het ongeval, het niet-getekende formulier en het vertrek"
+            "De weigering en het niet-getekende formulier"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De 3 elementen: opzettelijk vertrek + weten dat men de oorzaak is + bedoeling de vaststellingen te ontlopen.",
           "theoryCardIndex": 6
         },
         {
           "id": "I2_Q70",
-          "question": "U vraagt zich af of vluchtmisdrijf streng bestraft wordt. Wat is er van aan?",
+          "question": "Wordt vluchtmisdrijf zwaar bestraft?",
           "choices": [
-            "Nee, het is een lichte overtreding",
-            "Ja, vluchtmisdrijf wordt streng bestraft",
-            "Nee, het is een eenvoudige waarschuwing",
-            "Dat hangt af van de schade"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vluchtmisdrijf wordt streng bestraft: gevangenisstraf, boete en verval van het recht om te sturen.",
           "theoryCardIndex": 6
         },
@@ -1867,12 +1740,10 @@
         },
         {
           "id": "I2_Q72",
-          "question": "U bent betrokken bij een ongeval. Kunt u de plaats verlaten na uw gegevens achtergelaten te hebben?",
+          "question": "Mag u de plaats van een ongeval verlaten door uw gegevens achter te laten?",
           "choices": [
-            "Ja, uw gegevens achterlaten volstaat",
-            "Nee, elke betrokkene moet ter plaatse blijven",
-            "Ja, als de schade gering is",
-            "Dat hangt af van het uur van het ongeval"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Elke betrokken persoon moet ter plaatse blijven. Enige uitzondering: schade aan privé-eigendom zonder gevonden eigenaar (gegevens achterlaten).",
@@ -2018,155 +1889,139 @@
       "questions": [
         {
           "id": "I3_Q1",
-          "question": "U staat op het punt uw auto te nemen voor een korte rit. Waarom zou u zich moeten afvragen of dit echt nodig is?",
+          "question": "Waarom afvragen of de auto echt nodig is voor een korte rit?",
           "choices": [
-            "Om tijd te winnen over het hele traject",
-            "Verplaatsingen met de auto zijn duur EN schadelijk voor het milieu",
-            "Uit gewoonte, zonder andere reden",
-            "Enkel om de ochtendfiles te vermijden"
+            "Het is duur en vervuilend",
+            "Om wat tijd te winnen",
+            "Om de files te vermijden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Elke autorit brengt een financiële kost en een milieu-impact met zich mee. Zich deze vraag stellen laat toe een alternatief te kiezen wanneer mogelijk.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q2",
-          "question": "U moet zich naar een plaats op 800 meter begeven. Welk vervoermiddel is het meest geschikt?",
+          "question": "Welk vervoermiddel past het best voor 800 meter?",
           "choices": [
-            "De auto",
-            "Te voet",
-            "De taxi",
-            "De bus"
+            "Te voet gaan",
+            "De eigen wagen",
+            "De taxi van de standplaats"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Te voet gaan is redelijk voor afstanden tot 1 km.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q3",
-          "question": "U moet een afstand van 5 km afleggen. Welk vervoermiddel is aanbevolen voor deze afstand?",
+          "question": "Welk vervoermiddel is aangeraden voor een afstand van 5 km?",
           "choices": [
-            "De auto, sneller in de stad",
-            "De fiets, geschikt voor afstanden van 1 tot 10 km",
-            "De taxi, om vermoeidheid te vermijden",
-            "Te voet, ideaal tot 5 km"
+            "De fiets",
+            "De auto",
+            "De taxi"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De fiets is het aanbevolen vervoermiddel voor afstanden van 1 tot 10 km.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q4",
-          "question": "U start uw auto voor een rit van 500 meter. Waarom is het schadelijk om korte afstanden af te leggen met een koude motor?",
+          "question": "Waarom is korte ritten rijden met een koude motor schadelijk?",
           "choices": [
-            "De motor riskeert veel te snel op te warmen",
-            "Dit schaadt de motor EN verhoogt het brandstofverbruik",
-            "Dit heeft geen enkele impact op de mechaniek",
-            "Dit slijt vooral de banden"
+            "Slecht voor de motor en meer verbruik",
+            "De motor wordt veel te snel warm",
+            "Het slijt vooral de voorbanden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een intensief belaste koude motor slijt sneller en verbruikt meer.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q5",
-          "question": "U heeft net uw auto gestart en de motor is nog koud. Hoe moet u rijden?",
+          "question": "Uw motor is nog koud. Hoe moet u rijden?",
           "choices": [
-            "Sportief om de motor op te warmen",
-            "Zacht met de motor en wachten tot hij op temperatuur is",
-            "Krachtig accelererend",
-            "In vrijloop blijven"
+            "Zacht tot hij op temperatuur is",
+            "Sportief om hem op te warmen",
+            "Door stevig te versnellen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Met een koude motor, zacht rijden en de werkingstemperatuur afwachten.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q6",
-          "question": "Uw motor is nu op normale temperatuur. Kunt u dynamischer rijden?",
+          "question": "Uw motor is op temperatuur. Mag u dynamischer rijden?",
           "choices": [
-            "Nee, nooit met dit type motor",
-            "Ja, maar altijd met respect voor de verkeersregels",
-            "Ja, zonder enige snelheidslimiet",
-            "Nee, dat verbruikt veel te veel"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Eens op temperatuur is een dynamischer rijgedrag mogelijk, maar altijd binnen de regels van het verkeer.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q7",
-          "question": "U rijdt met een benzineauto. Bij welk toerental is het aanbevolen naar de hogere versnelling te schakelen?",
+          "question": "Bij benzine, bij welk toerental schakelt u op?",
           "choices": [
-            "Tussen 1000 en 1500 toeren/minuut",
-            "Tussen 2000 en 2500 toeren/minuut",
-            "Tussen 3000 en 4000 toeren/minuut",
-            "Op 500 toeren/minuut"
+            "Tussen 2000 en 2500 toeren",
+            "Tussen 1000 en 1500 toeren",
+            "Tussen 3000 en 4000 toeren"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Voor benzine, schakel naar de hogere versnelling tussen 2000 en 2500 toeren/min om te besparen.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q8",
-          "question": "U rijdt met een dieselauto. Bij welk toerental is het aanbevolen naar de hogere versnelling te schakelen?",
+          "question": "Bij diesel, bij welk toerental schakelt u op?",
           "choices": [
-            "Tussen 2000 en 2500 toeren/minuut",
-            "Tussen 1500 en 2000 toeren/minuut",
-            "Op 3000 toeren/minuut",
-            "Op 1000 toeren/minuut"
+            "Tussen 1500 en 2000 toeren",
+            "Tussen 2000 en 2500 toeren",
+            "Tussen 3000 en 3500 toeren"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Voor diesel, schakel naar de hogere versnelling tussen 1500 en 2000 toeren/min.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q9",
-          "question": "U rijdt sportief met frequente versnellingen. Wat is de impact op uw verbruik?",
+          "question": "Welk effect heeft sportief rijden op uw verbruik?",
           "choices": [
-            "Geen enkele meetbare impact",
-            "Uw brandstofverbruik stijgt aanzienlijk",
-            "U komt trager aan op uw bestemming",
-            "Dit vermindert het brandstofverbruik"
+            "Het stijgt aanzienlijk",
+            "Het daalt aanzienlijk",
+            "Het verandert helemaal niet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een hoog toerental aanhouden en constant schakelen verhoogt het verbruik sterk.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q10",
-          "question": "U rijdt een snelweg op of moet snel inhalen. Mag u het aanbevolen toerental overschrijden?",
+          "question": "Om een autoweg op te rijden of in te halen, mag u het aanbevolen toerental overschrijden?",
           "choices": [
-            "Nee, het aanbevolen toerental overschrijd je nooit",
-            "Ja, in deze specifieke situaties is dat gerechtvaardigd",
-            "Enkel in de stad bij lage snelheid",
-            "Enkel als de weg helemaal leeg is"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het aanbevolen toerental overschrijden is aanvaardbaar om een snelweg op te rijden of in te halen.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q11",
-          "question": "U staat al enkele minuten stil in een file. Moet u de motor uitschakelen?",
+          "question": "U staat al minuten stil in de file. Moet u de motor afzetten?",
           "choices": [
-            "Nee, laat hem stationair draaien",
-            "Ja, het reglement voorziet dit bij files en overwegen",
-            "Nee, dat is facultatief en weinig nuttig",
-            "Enkel op de autosnelweg bij stilstand"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het reglement voorziet het uitschakelen van de motor bij langdurige stilstand.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q12",
-          "question": "U hoorde dat men de motor moet uitschakelen na 30 seconden stilstand. Staat deze duur in de wet?",
+          "question": "Staat de regel van 30 seconden voor het afzetten van de motor in de wet?",
           "choices": [
-            "Ja, dit staat in het reglement",
-            "Nee, de vaak vernoemde duur van 30 seconden staat NIET in de wet",
-            "Ja, het is verplicht na 1 minuut",
-            "Ja, het is 10 seconden in de wet"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Er is geen precieze duur in de wet vastgelegd; de regel van 30 seconden is slechts een aanbeveling.",
@@ -2174,27 +2029,25 @@
         },
         {
           "id": "I3_Q13",
-          "question": "U wilt uw brandstofverbruik verminderen. Welke motorgerelateerde factoren verhogen dit verbruik?",
+          "question": "Welke factoren aan de motor doen het verbruik stijgen?",
           "choices": [
-            "Nieuwe, goed opgepompte banden",
-            "Een slecht afgestelde motor en een vuil luchtfilter",
+            "Slecht afgestelde motor, vuile filter",
             "Een goed onderhouden motor",
-            "Een recent vervangen katalysator"
+            "Een gloednieuwe katalysator"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een slecht afgestelde motor en een verstopt luchtfilter verhogen het verbruik.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q14",
-          "question": "U vraagt zich af waar de katalysator van uw voertuig voor dient. Wat is zijn rol?",
+          "question": "Wat is de rol van de katalysator van uw voertuig?",
           "choices": [
-            "Het motorvermogen verhogen",
-            "De vervuiling verminderen door de uitlaatgassen te behandelen",
-            "Het uitlaatlawaai verminderen",
-            "De aangevoerde lucht van de motor filteren"
+            "De vervuiling verminderen",
+            "Het vermogen verhogen",
+            "Het motorlawaai dempen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De katalysator vermindert of vernietigt schadelijke gassen, wat de vervuiling vermindert.",
           "theoryCardIndex": 1
         },
@@ -2213,25 +2066,22 @@
         },
         {
           "id": "I3_Q17",
-          "question": "U heeft nutteloze voorwerpen in uw koffer. Waarom zou u ze moeten verwijderen?",
+          "question": "Waarom onnodige voorwerpen uit uw koffer halen?",
           "choices": [
-            "Om plaats te maken in de koffer",
-            "Een zwaardere lading doet meer verbruiken",
-            "Om puur esthetische redenen",
-            "Om beter te zien door de achterruit"
+            "Gewicht doet meer verbruiken",
+            "Om plaats te maken",
+            "Om beter naar achter te kijken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Elke extra kilo verhoogt het brandstofverbruik.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q18",
-          "question": "U gebruikt uw aanhangwagen niet meer. Moet u hem aan uw auto gekoppeld laten?",
+          "question": "U gebruikt uw aanhangwagen niet meer. Moet u hem aangekoppeld laten?",
           "choices": [
-            "Ja, dat is praktischer in het dagelijks gebruik",
-            "Nee, koppel hem los: gewicht en luchtweerstand verhogen het verbruik",
-            "Ja, voor de veiligheid van de koppeling",
-            "Dit heeft geen enkele impact op het verbruik"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Een nodeloos gekoppelde aanhangwagen verhoogt het gewicht en de weerstand, dus het verbruik.",
@@ -2239,25 +2089,22 @@
         },
         {
           "id": "I3_Q19",
-          "question": "U heeft een dakkoffer op uw auto geplaatst. Waarom verhoogt hij het verbruik?",
+          "question": "Waarom doet een dakkoffer het verbruik stijgen?",
           "choices": [
-            "Enkel door het gewicht",
             "Hij verhoogt de luchtweerstand",
-            "Hij verhoogt het verbruik niet",
-            "Door zijn kleur"
+            "Vooral door zijn eigen gewicht",
+            "Door zijn donkere kleur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een dakkoffer creëert extra aerodynamische weerstand, wat het verbruik verhoogt.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q20",
-          "question": "U heeft uw dakkoffer na de vakantie leeggemaakt maar hij zit nog op het dak. Kunt u zo verder rijden?",
+          "question": "Uw dakkoffer is leeg maar staat er nog op. Mag u zo rijden?",
           "choices": [
-            "Ja, dat verandert niets aan het rijden",
-            "Nee, verwijder de lege dakkoffer en de onnodige dakdragers",
-            "Ja, het is zelfs voorzichtiger hem te laten",
-            "Dat hangt af van de gereden snelheid"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Zelfs leeg creëert een dakkoffer luchtweerstand. Verwijder hem wanneer u hem niet gebruikt.",
@@ -2265,14 +2112,13 @@
         },
         {
           "id": "I3_Q21",
-          "question": "U moet fietsen vervoeren. Waar bevestigt u de fietsendrager best om minder te verbruiken?",
+          "question": "Waar bevestigt u een fietsdrager om het minst te verbruiken?",
           "choices": [
-            "Op het dak",
-            "Achteraan de auto",
-            "Op de motorkap",
-            "Dat maakt niets uit"
+            "Achteraan op de wagen",
+            "Op het dak van de wagen",
+            "Op de motorkap vooraan"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een fietsendrager achteraan genereert minder luchtweerstand dan een dakfietsendrager.",
           "theoryCardIndex": 2
         },
@@ -2291,90 +2137,81 @@
         },
         {
           "id": "I3_Q23",
-          "question": "U heeft het warm in de auto maar wilt uw verbruik niet verhogen. Wat is de beste oplossing?",
+          "question": "U hebt het warm maar wil niet meer verbruiken. Wat is de beste oplossing?",
           "choices": [
-            "Alle ramen wijd openen",
-            "De ramen gesloten houden en de ventilatie gebruiken",
-            "Sneller rijden voor meer wind",
-            "Het schuifdak voortdurend openen"
+            "Ramen dicht en ventilatie aan",
+            "Alle ramen wijd open zetten",
+            "Sneller rijden voor de wind"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De binnenventilatie gebruiken met gesloten ramen vermijdt de aerodynamische weerstand.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q24",
-          "question": "U opent het raam van de bestuurder en voelt een onaangename luchtstroom (\"parachute-effect\"). Wat moet u doen?",
+          "question": "Er ontstaat een hinderlijke luchtstroom als u uw raam opent. Wat doet u?",
           "choices": [
+            "Het achterraam wat openzetten",
             "Alle andere ramen sluiten",
-            "Ook het raam achteraan rechts een beetje openen",
-            "Trager rijden",
-            "Het schuifdak sluiten"
+            "Merkelijk trager rijden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het raam achteraan rechts licht openen compenseert en vermindert het parachute-effect langs de bestuurderskant.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q25",
-          "question": "U gebruikt de airconditioning in uw auto. Waarom verhoogt dit het brandstofverbruik?",
+          "question": "Waarom doet de airco het verbruik stijgen?",
           "choices": [
-            "De airconditioning koelt de motor af",
-            "De motor moet meer energie leveren om het systeem te voeden",
-            "De airconditioning verhoogt het verbruik niet",
-            "Dit slijt de banden"
+            "De motor levert meer energie",
+            "Ze koelt ook de motor af",
+            "Ze slijt de banden sneller"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De airconditioning vereist meer elektriciteit, wat de motor meer doet werken.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q26",
-          "question": "U wilt uw verbruik verminderen. Welke elektrische uitrusting moet u uitschakelen als ze niet nodig is?",
+          "question": "Welke elektrische uitrusting zet u uit als ze niet nodig is?",
           "choices": [
+            "Airco, ruitverwarming, zetelverwarming",
             "De koplampen en standlichten",
-            "De airco, de achterruit- en zetelverwarming",
-            "De richtingaanwijzers en remlichten",
-            "De radio en de ingebouwde gps"
+            "De pinkers en de stoplichten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Al deze uitrustingen verbruiken elektriciteit en verhogen het brandstofverbruik.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q29",
-          "question": "U controleert de spanning van uw banden. Welke spanning moet u respecteren?",
+          "question": "Welke bandenspanning moet u aanhouden?",
           "choices": [
-            "Altijd 2 bar op elk wiel",
-            "De aanwijzingen van de fabrikant in de handleiding",
-            "De laagst mogelijke spanning",
-            "Maakt niet uit, dit heeft geen belang"
+            "Die van de constructeur",
+            "Twee bar op elk wiel",
+            "De laagst mogelijke spanning"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De juiste spanning volgens de fabrikant garandeert veiligheid en een optimaal verbruik.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q30",
-          "question": "U bereidt een lange reis voor met een goed geladen auto. Moet u de bandenspanning aanpassen?",
+          "question": "U vertrekt zwaar geladen op reis. Past u de bandenspanning aan?",
           "choices": [
-            "Nee, behoud de gebruikelijke spanning",
-            "Ja, verhoog de spanning lichtjes voor de zware lading",
-            "Verhoog de spanning enkel in de zomer",
-            "Controleer enkel na elke tankbeurt"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een zware lading of een lange rit vereist een lichte verhoging van de spanning.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q31",
-          "question": "U stelt vast dat uw banden versleten zijn. Kunt u ermee blijven rijden?",
+          "question": "Uw banden zijn versleten. Mag u ermee blijven rijden?",
           "choices": [
-            "Ja, voorzichtig",
-            "Nee, rijden met versleten banden is verboden",
-            "Ja, enkel in de stad",
-            "Dat hangt af van de staat van de weg"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Rijden met versleten banden is verboden want dit brengt de veiligheid in gevaar.",
@@ -2382,12 +2219,10 @@
         },
         {
           "id": "I3_Q32",
-          "question": "Uw banden zijn versleten en u overweegt de groeven opnieuw uit te snijden. Is dit toegelaten?",
+          "question": "Uw banden zijn versleten. Mag u de groeven opnieuw uitsnijden?",
           "choices": [
-            "Ja, dat is een economische oplossing",
-            "Nee, groeven opnieuw uitsnijden is verboden",
-            "Ja, als het door een professional gebeurt",
-            "Dat hangt af van het bandentype"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Groeven opnieuw uitsnijden is verboden.",
@@ -2421,38 +2256,33 @@
         },
         {
           "id": "I3_Q35",
-          "question": "U kiest tussen diesel met of zonder zwavel. Is diesel zonder zwavel meer of minder ecologisch?",
+          "question": "Is zwavelvrije diesel milieuvriendelijker dan gewone diesel?",
           "choices": [
-            "Minder ecologisch",
-            "Meer ecologisch dan gewone diesel",
-            "Identiek",
-            "Dat hangt af van de motor"
+            "Milieuvriendelijker",
+            "Minder milieuvriendelijk",
+            "Precies hetzelfde"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Diesel zonder zwavel is ecologischer dan gewone witte of rode diesel.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q36",
-          "question": "U vraagt zich af of witte diesel (voor auto's) en rode verwarmingsmazout hetzelfde product zijn. Wat is er van aan?",
+          "question": "Zijn witte diesel en rode huisbrandolie hetzelfde product?",
           "choices": [
-            "Nee, dit zijn verschillende producten",
-            "Ja, het is hetzelfde product maar met verschillende belastingen",
-            "Nee, het rode is zuiverder",
-            "Ja, en de belastingen zijn identiek"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Chemisch is het hetzelfde product, maar verwarmingsmazout wordt rood gekleurd en minder belast.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q37",
-          "question": "U heeft toegang tot verwarmingsmazout (rood) en overweegt het te gebruiken in uw dieselwagen. Is dit toegelaten?",
+          "question": "Mag u rode huisbrandolie in uw dieselwagen gebruiken?",
           "choices": [
-            "Ja, het is hetzelfde product",
-            "Nee, rijden op rode mazout is verboden",
-            "Ja, in noodgeval",
-            "Ja, als uw voertuig diesel is"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Rijden op rode mazout is verboden want de wegverkeersbelastingen zijn niet betaald.",
@@ -2460,52 +2290,47 @@
         },
         {
           "id": "I3_Q39",
-          "question": "U ziet een bord dat een lage-emissiezone (LEZ) aangeeft. Wat is dit precies?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Een volledige voetgangerszone",
-            "Een zone verboden voor te vervuilende voertuigen",
-            "Een volledig autovrije zone",
-            "Een betalende parkeerzone"
+            "Zone verboden voor vervuilers",
+            "Volledig voetgangersgebied",
+            "Zone met betalend parkeren"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een LEZ is een zone waar bepaalde vervuilende voertuigen verboden zijn.",
           "theoryCardIndex": 4,
           "sign": "F117"
         },
         {
           "id": "I3_Q40",
-          "question": "U vraagt zich af wie beslist over de invoering van een lage-emissiezone (LEZ). Wie heeft deze bevoegdheid?",
+          "question": "Wie beslist over de invoering van een lage-emissiezone?",
           "choices": [
-            "De federale staat",
-            "Elke stad of gemeente kan dit beslissen",
-            "De Europese Unie",
-            "De autoconstructeurs"
+            "Elke stad of gemeente",
+            "De Belgische federale staat",
+            "De Europese Unie"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De beslissing om een LEZ in te voeren is lokaal: elke stad of gemeente kan dit beslissen.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q41",
-          "question": "U wilt weten hoeveel lage-emissiezones er momenteel in België bestaan. Hoeveel zijn er?",
+          "question": "Hoeveel lage-emissiezones bestaan er in België?",
           "choices": [
-            "1",
-            "3: Antwerpen, Brussel en Gent",
-            "5",
-            "10"
+            "Drie",
+            "Eén",
+            "Tien"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "In België hebben drie steden een LEZ: Antwerpen, Brussel en Gent.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q42",
-          "question": "U overweegt naar een LEZ te rijden. Zijn de toegangsvoorwaarden identiek in de 3 Belgische steden?",
+          "question": "Zijn de toegangsvoorwaarden in de drie lage-emissiezones dezelfde?",
           "choices": [
-            "Ja, overal dezelfde regels",
-            "Nee, de voorwaarden zijn NIET identiek in de drie steden",
-            "Ja, het is een federale reglementering",
-            "Dat hangt af van het voertuig"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De toegangsvoorwaarden verschillen tussen Antwerpen, Brussel en Gent.",
@@ -2513,27 +2338,25 @@
         },
         {
           "id": "I3_Q43",
-          "question": "U plant een verplaatsing naar een lage-emissiezone. Wat moet u vooraf doen?",
+          "question": "Wat moet u doen voor u een lage-emissiezone binnenrijdt?",
           "choices": [
-            "Een speciale LEZ-sticker kopen",
-            "De toegangsvoorwaarden op internet controleren",
-            "De betrokken gemeente bellen",
-            "Niets bijzonders voorbereiden"
+            "De toegangsvoorwaarden nakijken",
+            "Een speciale sticker kopen",
+            "De betrokken gemeente bellen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Aangezien de regels van stad tot stad verschillen, moet u ze op internet controleren voor u erheen rijdt.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q44",
-          "question": "U zoekt de EURO-norm van uw voertuig. Waar vindt u die?",
+          "question": "Waar vindt u de EURO-norm van uw voertuig?",
           "choices": [
-            "Op het dashboard",
             "Op het inschrijvingsbewijs",
-            "Op de voorruit",
-            "Op de motorkap"
+            "Op het dashboard van de wagen",
+            "Op de motorkap van de wagen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De EURO-norm staat vermeld op het inschrijvingsbewijs van het voertuig.",
           "theoryCardIndex": 4
         },
@@ -2552,92 +2375,84 @@
         },
         {
           "id": "I3_Q47",
-          "question": "U ontvangt uw inschrijvingsbewijs. Wat is dit precies?",
+          "question": "Wat is het inschrijvingsbewijs?",
           "choices": [
-            "Uw definitief rijbewijs",
-            "De identiteitskaart van uw auto, met al haar kenmerken",
+            "De identiteitskaart van de wagen",
             "Uw autoverzekeringscontract",
-            "Het rapport van de technische keuring"
+            "Het verslag van de technische keuring"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het inschrijvingsbewijs is het officiële document met alle kenmerken van het voertuig.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q49",
-          "question": "U hoort spreken over \"defensief rijden\". Waarin bestaat dit?",
+          "question": "Waaruit bestaat defensief rijden?",
           "choices": [
-            "Duidelijk trager rijden dan de toegelaten snelheid",
-            "Ver vooruit kijken en fouten van andere weggebruikers anticiperen",
-            "Vroeg en bruusk remmen bij elk gevaar",
-            "Altijd voorrang verlenen aan iedereen"
+            "Ver kijken en anticiperen",
+            "Ruim onder de limiet rijden",
+            "Vroeg en bruusk remmen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Defensief rijden bestaat erin gevaarlijke situaties te anticiperen voor ze zich voordoen.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q50",
-          "question": "U past defensief rijden toe. Wat is het belangrijkste voordeel voor uw veiligheid?",
+          "question": "Wat is het grootste voordeel van defensief rijden voor uw veiligheid?",
           "choices": [
-            "U rijdt sneller en toch veilig",
-            "U detecteert gevaarlijke situaties VOOR ze zich voordoen",
-            "U vermijdt flitspalen en boetes",
-            "U haalt vaker in zonder risico"
+            "Gevaar op tijd zien aankomen",
+            "Sneller en toch veilig rijden",
+            "Flitspalen en boetes vermijden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Gevaren anticiperen voor ze zich voordoen is de essentie van defensief rijden.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q51",
-          "question": "U past defensief rijden toe. Hoe laat dit u toe brandstof te besparen?",
+          "question": "Hoe bespaart defensief rijden brandstof?",
           "choices": [
-            "Door zo laat mogelijk op te schakelen",
-            "Door het gaspedaal op tijd te lossen en de motorrem te gebruiken",
-            "Door in vrijloop de hellingen af te rijden",
-            "Door krachtig te remmen op het laatste moment"
+            "Tijdig lossen en op de motor remmen",
+            "De versnellingen zo laat mogelijk opschakelen",
+            "In vrijloop rijden in de afdalingen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Anticiperen laat toe vroeg het gas los te laten en de motorrem te gebruiken, wat brandstof bespaart.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q52",
-          "question": "U past defensief rijden toe. Wat bespaart u nog, naast brandstof?",
+          "question": "Wat spaart defensief rijden nog uit, naast brandstof?",
           "choices": [
-            "Enkel de banden, niets anders",
-            "De remblokjes, want u remt minder bruusk",
-            "Niets anders dan de brandstof zelf",
+            "De remblokken",
+            "De banden, en niets anders",
             "De koelvloeistof van de motor"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Door minder bruusk te remmen, slijt u de remblokjes minder.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q53",
-          "question": "U past defensief rijden toe. Vermindert dit uw remafstand?",
+          "question": "Verkort defensief rijden uw remafstand?",
           "choices": [
-            "Nee, het verhoogt ze licht",
-            "Ja, anticiperen laat toe vroeger te remmen",
-            "Nee, het verandert helemaal niets",
-            "Dat hangt af van het wegtype"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Anticiperen laat toe vroeger en zachter te remmen, wat de nodige afstand om te stoppen vermindert.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q55",
-          "question": "U past defensief rijden toe en merkt op dat een voertuig drie auto's voor u bruusk remt. Wat doet u?",
+          "question": "Drie wagens voor u remt er iemand bruusk. Wat doet u?",
           "choices": [
-            "U remt bruusk op het laatste moment",
-            "U laat het gaspedaal op tijd los en remt zacht",
-            "U verandert onmiddellijk van rijstrook",
-            "U claxonneert om de anderen te verwittigen"
+            "Lossen en zacht afremmen",
+            "Hard remmen op het laatste",
+            "Meteen van strook wisselen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Defensief rijden laat toe dit soort situatie te anticiperen en er zacht op te reageren.",
           "theoryCardIndex": 5
         }
@@ -2840,14 +2655,13 @@
       "questions": [
         {
           "id": "I4_Q1",
-          "question": "U rijdt met versleten banden. Wat zijn de effecten op uw rijgedrag?",
+          "question": "Welke gevolgen hebben versleten banden op uw rijgedrag?",
           "choices": [
-            "Er is geen enkel merkbaar effect op het rijden",
-            "De remafstand stijgt, het verbruik ook, en de wegligging verslechtert",
-            "Dit is enkel een esthetisch en wettelijk probleem",
-            "Uw banden grijpen beter op droge weg"
+            "Langere remweg, slechtere wegligging",
+            "Geen merkbaar gevolg aan het stuur",
+            "Een betere grip op droog wegdek"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Versleten banden verlengen de remafstand, verhogen het verbruik en verslechteren de wegligging.",
           "theoryCardIndex": 0
         },
@@ -2866,25 +2680,22 @@
         },
         {
           "id": "I4_Q3",
-          "question": "U rijdt in de regen. Vanaf welke profieldiepte bestaat het aquaplaningsrisico al?",
+          "question": "Vanaf welke groefdiepte bestaat het risico op aquaplaning?",
           "choices": [
-            "Enkel onder 1,6 mm",
-            "Vanaf minder dan 2 mm diepte",
-            "Bij 3 mm",
-            "Enkel bij 1 mm"
+            "Vanaf minder dan 2 mm",
+            "Vanaf minder dan 1 mm",
+            "Vanaf minder dan 3 mm"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het aquaplaningsrisico is al aanwezig onder 2 mm, dus voor de wettelijke limiet van 1,6 mm.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q4",
-          "question": "Uw banden hebben exact 1,6 mm profieldiepte. Is dit voldoende om veilig te rijden?",
+          "question": "Uw banden hebben precies 1,6 mm groef. Is dat genoeg om veilig te rijden?",
           "choices": [
-            "Ja, dat is exact de wettelijke norm",
-            "Nee, bij 1,6 mm is de veiligheid niet meer gegarandeerd",
-            "Ja, het wettelijk minimum garandeert veiligheid",
-            "Dat hangt af van de staat van de weg"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het aquaplaningsrisico begint onder 2 mm: vervang de banden voor u de wettelijke limiet van 1,6 mm bereikt.",
@@ -2892,14 +2703,13 @@
         },
         {
           "id": "I4_Q5",
-          "question": "U leest de vermelding \"TWI\" op de zijkant van uw band. Wat betekent dit?",
+          "question": "Wat betekent de vermelding « TWI » op de flank van uw band?",
           "choices": [
-            "Het type band",
-            "De plaats van de slijtage-indicatoren",
+            "De slijtage-indicatoren",
             "Het merk van de fabrikant",
             "De snelheidsindex"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "TWI (Tread Wear Indicator) geeft de plaats van de slijtage-indicatoren in de groeven aan.",
           "theoryCardIndex": 0
         },
@@ -2918,12 +2728,10 @@
         },
         {
           "id": "I4_Q7",
-          "question": "U overweegt een versleten band te laten vernieuwen. Is dit toegelaten?",
+          "question": "Mag u een versleten band laten vernieuwen met een nieuw loopvlak?",
           "choices": [
-            "Ja, dat is ecologisch",
-            "Nee, vernieuwing is verboden voor versleten banden",
-            "Ja, enkel voor winterbanden",
-            "Dat hangt af van de resterende diepte"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het vernieuwen van versleten banden is verboden.",
@@ -2931,40 +2739,37 @@
         },
         {
           "id": "I4_Q8",
-          "question": "U wilt de spanning van uw banden controleren. Wanneer moet u dit doen?",
+          "question": "Wanneer moet u de bandenspanning controleren?",
           "choices": [
-            "Net na een lange rit op de autosnelweg",
-            "Wanneer de banden koud zijn, dat wil zeggen na minder dan 5 km gereden",
-            "Na minstens 100 km gereden te hebben",
-            "Wanneer de banden nog warm zijn"
+            "Wanneer de banden koud zijn",
+            "Na een lange warme rit",
+            "Na minstens honderd kilometer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De spanning moet koud gecontroleerd worden (minder dan 5 km gereden) voor een correcte meting.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q9",
-          "question": "U controleert de spanning van uw banden altijd koud. Waarom is dit belangrijk?",
+          "question": "Waarom de bandenspanning koud controleren?",
           "choices": [
-            "Uit puur praktisch gemak",
-            "De warmte van het rijden wijzigt de werkelijke spanning",
-            "Dit heeft eigenlijk geen belang",
-            "Om de manometer gemakkelijker af te lezen"
+            "De warmte wijzigt de spanning",
+            "Het is gewoon praktischer zo",
+            "Om de meter beter af te lezen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De warmte door wrijving doet de band opzwellen: de meting bij warme banden zou onjuist zijn.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q10",
-          "question": "U stelt vast dat uw banden versleten zijn aan de RANDEN. Wat is de waarschijnlijke oorzaak?",
+          "question": "Uw banden zijn aan de randen versleten. Wat is de waarschijnlijke oorzaak?",
           "choices": [
-            "De banden zijn te hard opgepompt",
-            "De banden zijn onvoldoende opgepompt",
-            "De banden zijn nieuw",
-            "Er is een stuurprobleem"
+            "Ze staan te zacht",
+            "Ze staan te hard",
+            "Een probleem met de sturing"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een onderspannen band steunt op zijn randen, wat slijtage aan de randen veroorzaakt.",
           "theoryCardIndex": 0
         },
@@ -2983,40 +2788,37 @@
         },
         {
           "id": "I4_Q12",
-          "question": "U rijdt met banden waarvan de spanning te laag is. Welk risico loopt u in een bocht?",
+          "question": "Welk risico loopt u in een bocht met te zachte banden?",
           "choices": [
+            "Instabiliteit in de bocht",
             "Een betere wegligging",
-            "Instabiliteit van het voertuig in de bocht",
-            "Geen enkel effect",
-            "Een betere grip"
+            "Een versterkte grip"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een onderspannen band veroorzaakt zijdelingse instabiliteit, vooral merkbaar in bochten.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q13",
-          "question": "U bereidt een lange reis voor met een geladen auto. Met hoeveel moet u de bandenspanning verhogen?",
+          "question": "Met hoeveel verhoogt u de bandenspanning bij een zwaar geladen wagen?",
           "choices": [
-            "0,5 bar",
-            "0,2 bar",
-            "1 bar",
-            "Geen verhoging nodig"
+            "Met 0,2 bar",
+            "Met 0,5 bar",
+            "Met een volle bar"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Voor een lange rit of een zware lading, verhoog de spanning lichtjes met 0,2 bar.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q14",
-          "question": "U rijdt aan hoge snelheid met onderspannen banden. Wat riskeert u?",
+          "question": "Wat riskeert u aan hoge snelheid met te zachte banden?",
           "choices": [
-            "Een trage en geleidelijke leegloop",
-            "Oververhitting van de banden die tot een barst kan leiden",
-            "Een betere grip op het wegdek",
-            "Niets ernstigs bij hoge snelheid"
+            "Oververhitting en een klapband",
+            "Een traag en geleidelijk leeglopen",
+            "Een betere grip op het wegdek"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Onderspannen banden oververhitten door overmatige vervorming en kunnen barsten bij hoge snelheid.",
           "theoryCardIndex": 0
         },
@@ -3089,66 +2891,61 @@
         },
         {
           "id": "I4_Q20",
-          "question": "U monteert winterbanden. Op hoeveel wielen is het ideaal ze te monteren?",
+          "question": "Op hoeveel wielen zet u idealiter winterbanden?",
           "choices": [
-            "2, enkel vooraan",
-            "4, op de vier wielen",
-            "2, enkel achteraan",
-            "1, op het aandrijfwiel"
+            "Op de vier wielen",
+            "Op de twee voorwielen",
+            "Op de twee achterwielen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het is ideaal winterbanden op de 4 wielen te monteren voor een betere veiligheid.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q21",
-          "question": "De lente komt eraan. Wanneer moet u uw zomerbanden terug monteren?",
+          "question": "Wanneer moet u uw zomerbanden terugzetten?",
           "choices": [
+            "Vanaf eind maart",
             "Begin juni",
-            "Vanaf eind maart, vóór mei",
-            "In januari",
-            "Nooit: ze blijven het hele jaar"
+            "In de loop van januari"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Monteer de zomerbanden terug vanaf eind maart en voor mei om voortijdige slijtage van de winterbanden te vermijden.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q22",
-          "question": "U overweegt sneeuwkettingen te monteren. Wanneer mag u ze gebruiken?",
+          "question": "Wanneer mag u sneeuwkettingen gebruiken?",
           "choices": [
-            "Altijd in de winter",
-            "Enkel als er sneeuw of ijzel op de rijbaan ligt",
-            "Van 1 november tot 31 maart",
-            "Wanneer de temperatuur onder 7 graden C daalt"
+            "Bij sneeuw of ijzel",
+            "De hele winter, meer niet",
+            "Van 1 november tot 31 maart"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sneeuwkettingen zijn enkel toegelaten bij effectieve aanwezigheid van sneeuw of ijzel.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q23",
-          "question": "U aarzelt tussen sneeuwkettingen en spijkerbanden. Wat is het verschil?",
+          "question": "Wat is het verschil tussen sneeuwkettingen en spijkerbanden?",
           "choices": [
-            "Er is geen verschil, beide volgen dezelfde regels",
-            "Kettingen: enkel bij sneeuw of ijzel. Spijkerbanden: enkel van 1/11 tot 31/3",
-            "Spijkerbanden: enkel bij sneeuw. Kettingen: het hele jaar toegelaten",
-            "Beide zijn verboden op de openbare weg in België"
+            "Kettingen: sneeuw; spijkers: data",
+            "Spijkers: sneeuw; kettingen: data",
+            "Geen, dezelfde regels gelden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Kettingen: enkel bij sneeuw/ijzel, zonder datumbeperking. Spijkerbanden: van 1/11 tot 31/3 met beperkte snelheden.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q24",
-          "question": "U vervangt een band op een as. Wat moeten de twee banden op dezelfde as gemeenschappelijk hebben?",
+          "question": "Wat moeten twee banden op dezelfde as gemeen hebben?",
           "choices": [
-            "Niets bijzonders is vereist",
-            "Dezelfde structuur (radiaal of diagonaal) en dezelfde afmeting",
-            "Enkel hetzelfde merk van fabrikant",
-            "Enkel dezelfde bandenspanning"
+            "Zelfde structuur en zelfde maat",
+            "Hetzelfde merk van fabrikant",
+            "Dezelfde bandenspanning"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op dezelfde as moeten de banden dezelfde structuur en dezelfde afmeting hebben.",
           "theoryCardIndex": 1
         },
@@ -3167,14 +2964,13 @@
         },
         {
           "id": "I4_Q26",
-          "question": "U leest \"165/70 R 14 81 T\" op uw band. Wat betekent \"R\"?",
+          "question": "Wat betekent de « R » in de markering « 165/70 R 14 81 T »?",
           "choices": [
-            "Route",
-            "De radiale structuur van de band",
-            "Weerstand",
-            "Vernieuwde band"
+            "De radiale structuur",
+            "Een vernieuwde band",
+            "De weerstand van de band"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "R = radiale structuur van de band.",
           "theoryCardIndex": 2
         },
@@ -3207,27 +3003,25 @@
         },
         {
           "id": "I4_Q29",
-          "question": "U ziet de \"E\"-markering op uw band. Wat betekent dit?",
+          "question": "Wat betekent de markering « E » op uw band?",
           "choices": [
-            "De naam van de fabrikant van de band",
-            "Het naleven van de Europese veiligheidsnormen",
-            "De productiedatum van de band",
-            "Het land van herkomst van de band"
+            "De Europese normen",
+            "De naam van de fabrikant",
+            "De fabricagedatum"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De E-markering bevestigt dat de band voldoet aan de Europese veiligheidsnormen.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q30",
-          "question": "U gaat naar de technische keuring en uw banden dragen geen E-markering (voertuig ingeschreven na 01/01/2004). Wat gebeurt er?",
+          "question": "Bij de keuring dragen uw banden geen E-markering. Wat gebeurt er?",
           "choices": [
-            "Niets bijzonders, een eenvoudige waarschuwing",
-            "U krijgt een rood certificaat, 15 dagen geldig om in orde te komen",
-            "U krijgt onmiddellijk een zware boete",
-            "U mag niet meer rijden tot de vervanging"
+            "Een rood bewijs, 15 dagen geldig",
+            "Een gewone schriftelijke waarschuwing",
+            "Een onmiddellijke zware boete"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Zonder E-markering op een voertuig na 2004: rode keuring (15 dagen om te regulariseren).",
           "theoryCardIndex": 2
         },
@@ -3246,40 +3040,37 @@
         },
         {
           "id": "I4_Q32",
-          "question": "U verwisselt uw banden. Hoe gaat u te werk?",
+          "question": "Hoe wisselt u uw banden van plaats?",
           "choices": [
-            "Enkel links en rechts",
-            "Kruiselings: linksvoor naar rechtsachter, en omgekeerd",
-            "Enkel voor en achter",
-            "Er is geen precieze methode"
+            "Kruiselings, voor en achter",
+            "Links en rechts onderling",
+            "Voor en achter onderling"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De kruiselingse verwisseling: linksvoor ↔ rechtsachter en rechtsvoor ↔ linksachter.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q33",
-          "question": "U informeert u over motorolie. Wat zijn haar rollen?",
+          "question": "Wat zijn de rollen van de motorolie?",
           "choices": [
-            "Enkel en alleen de smering van de motor",
-            "Smeren, oververhitting voorkomen, blokkering voorkomen en beschermen tegen roest",
-            "Enkel en alleen de afkoeling van de motor",
-            "Enkel en alleen de bescherming tegen roest"
+            "Smeren, koelen, beschermen",
+            "De motor smeren, meer niet",
+            "De motor koelen, meer niet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Motorolie smeert, vermindert oververhitting, verhindert blokkering en beschermt tegen roest.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q34",
-          "question": "U wilt het oliepeil van uw motor controleren. Wanneer moet u dit doen?",
+          "question": "Wanneer moet u het oliepeil van uw motor nakijken?",
           "choices": [
-            "Bij warme motor",
-            "Bij koude motor of al enige tijd stilstaand",
-            "Terwijl u rijdt",
-            "Na een lange rit, bij warme motor"
+            "Koude of stilstaande motor",
+            "Warme motor na een rit",
+            "Al rijdend op de autosnelweg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Controleer de olie bij koude motor en op vlakke ondergrond voor een precieze meting.",
           "theoryCardIndex": 3
         },
@@ -3298,40 +3089,37 @@
         },
         {
           "id": "I4_Q36",
-          "question": "U controleert uw oliepeil. Waarom moet de auto op een vlakke ondergrond staan?",
+          "question": "Waarom moet de wagen vlak staan om het oliepeil te meten?",
           "choices": [
-            "Uit gemak",
-            "Om een correcte meting te bekomen",
-            "Dit heeft geen belang",
+            "Voor een juiste meting",
+            "Gewoon voor het gemak",
             "Om veiligheidsredenen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op een helling concentreert de olie zich aan één kant en vervalst de aflezing van de peilstok.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q37",
-          "question": "U stelt vast dat het oliepeil van uw motor te laag is. Wat riskeert u?",
+          "question": "Uw oliepeil staat te laag. Wat riskeert u?",
           "choices": [
+            "Oververhitting en motorschade",
             "Niets ernstigs op korte termijn",
-            "Oververhitting, voortijdige slijtage en blokkering van de motor",
-            "Een vermindering van het olieverbruik",
-            "Betere motorprestaties"
+            "Betere prestaties van de motor"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een te laag oliepeil veroorzaakt oververhitting, versnelde slijtage en risico op motorschade.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q38",
-          "question": "U zoekt de oliepeilstok van uw voertuig. Waar bevindt die zich?",
+          "question": "Waar bevindt zich de oliepeilstok van uw voertuig?",
           "choices": [
-            "Op het dashboard, aan de bestuurderskant",
-            "Onder de motorkap, in het motorcompartiment",
-            "In de koffer, bij het reservewiel",
-            "Onder de auto, aan de motorzijde"
+            "Onder de motorkap",
+            "Op het dashboard",
+            "In de koffer, bij het reservewiel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De oliepeilstok bevindt zich onder de motorkap in het motorcompartiment.",
           "theoryCardIndex": 3
         },
@@ -3350,116 +3138,106 @@
         },
         {
           "id": "I4_Q40",
-          "question": "U hoort een scherp gefluit wanneer u remt. Wat betekent dit?",
+          "question": "U hoort een scherp gefluit bij het remmen. Wat betekent dat?",
           "choices": [
-            "Uw remmen zijn in perfecte staat",
-            "Uw remblokjes zijn versleten en moeten vervangen worden",
-            "Uw banden zijn vooraan versleten",
-            "Het ABS is aan het werken"
+            "Uw remblokken zijn versleten",
+            "Uw remmen zijn in goede staat",
+            "Uw voorbanden zijn versleten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De remblokjes piepen opzettelijk om aan te geven dat ze vervangen moeten worden.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q41",
-          "question": "U nadert een bocht. Wanneer moet u remmen?",
+          "question": "Wanneer moet u remmen bij het naderen van een bocht?",
           "choices": [
-            "In de bocht, geleidelijk",
-            "VOOR de bocht, door voldoende te vertragen voor u erin rijdt",
-            "Na de bocht, bij het uitrijden",
-            "U mag nooit remmen voor een bocht"
+            "Voor u de bocht inrijdt",
+            "In de bocht, zachtjes",
+            "Na de bocht, bij het uitrijden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "U moet vertragen en terugschakelen VOOR u de bocht inrijdt.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q42",
-          "question": "U bevindt zich in een bocht. Kunt u versnellen?",
+          "question": "U bevindt zich in een bocht. Mag u versnellen?",
           "choices": [
-            "Nee, nooit in een bocht",
-            "Ja, lichtjes om het voertuig te stabiliseren",
-            "Ja, krachtig om sneller uit te komen",
-            "Nee, u moet remmen in de bocht"
+            "Ja, licht om te stabiliseren",
+            "Ja, stevig om er snel uit te zijn",
+            "Nee, in geen enkel geval"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Men kan lichtjes versnellen in de bocht eens de invoersnelheid goed aangepast is.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q43",
-          "question": "U nadert een bocht naar rechts. Hoe moet u die nemen?",
+          "question": "Hoe moet u een bocht naar rechts nemen?",
           "choices": [
-            "Door een brede bocht te nemen",
-            "Door een korte, strakke bocht naar rechts te nemen",
-            "Door midden op de weg te blijven",
-            "Door langs links van de rijbaan te gaan"
+            "Kort, dicht bij rechts",
+            "Ruim, naar links toe",
+            "In het midden van de weg"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een bocht naar rechts wordt kort genomen.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q44",
-          "question": "U nadert een bocht naar links. Hoe moet u die nemen?",
+          "question": "Hoe moet u een bocht naar links nemen?",
           "choices": [
-            "Door een zo kort mogelijke bocht te nemen",
-            "Door een brede bocht te nemen (bijna 90 graden) zonder te snijden",
-            "Door de bocht te snijden om tijd te winnen",
-            "Door midden op de weg te blijven"
+            "Ruim, zonder ze af te snijden",
+            "Zo kort mogelijk",
+            "Door af te snijden voor tijdwinst"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een bocht naar links wordt breed genomen om niet te snijden en op zijn rijstrook te blijven.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q45",
-          "question": "U wilt afslaan aan een kruispunt. Wat is de correcte procedure?",
+          "question": "Wat is de juiste werkwijze om af te slaan op een kruispunt?",
           "choices": [
-            "De richtingaanwijzer activeren en dan direct afslaan zonder controle",
-            "De achteruitkijkspiegels controleren (en de dode hoek indien nodig), de richtingaanwijzer activeren, vertragen, dan afslaan",
-            "Eerst afslaan en dan pas de richtingaanwijzer activeren",
-            "Claxonneren om te verwittigen en dan afslaan zonder te vertragen"
+            "Spiegels, pinker, vertragen",
+            "Pinker en meteen afslaan",
+            "Afslaan en dan pas pinken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De procedure: achteruitkijkspiegels > dode hoek indien nodig > richtingaanwijzer > vertragen > afslaan.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q46",
-          "question": "U snijdt een bocht naar links om tijd te winnen. Waarom is dit gevaarlijk?",
+          "question": "Waarom is het gevaarlijk een bocht naar links af te snijden?",
           "choices": [
-            "Dit is niet gevaarlijk als de weg leeg is",
-            "U riskeert het verkeer uit tegengestelde richting tegen te komen",
-            "Dit is uiteindelijk gewoon trager",
-            "Dit slijt de banden sneller"
+            "U kruist het tegemoetkomend verkeer",
+            "Het slijt de banden sneller",
+            "Het is uiteindelijk trager"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een bocht naar links snijden doet u overlopen in de rijstrook van voertuigen uit tegengestelde richting.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q47",
-          "question": "U remt bruusk en voelt pulsaties in het rempedaal. Dit is uw ABS dat inwerkt. Wat doet het precies?",
+          "question": "Wat doet het ABS precies bij een noodstop?",
           "choices": [
-            "Het blokkeert de wielen om het voertuig te stoppen",
-            "Het verhindert dat de wielen blokkeren en het voertuig slipt",
-            "Het versnelt het remmen",
-            "Het vermindert altijd de remafstand"
+            "Het belet de wielen te blokkeren",
+            "Het blokkeert de wielen om te stoppen",
+            "Het versnelt het remmen zelf"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het ABS verhindert het blokkeren van de wielen, waardoor de directionele controle van het voertuig behouden blijft.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q48",
-          "question": "Uw auto is uitgerust met ABS. Laat dit u toe korter te remmen?",
+          "question": "Laat het ABS u korter remmen?",
           "choices": [
-            "Ja, altijd en op elk wegdek",
-            "Nee, maar de auto blijft bestuurbaar tijdens het remmen",
-            "Ja, maar enkel op nat wegdek",
-            "Ja, maar enkel op droog wegdek"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Het ABS vermindert niet noodzakelijk de remafstand, maar behoudt de controle over het voertuig.",
@@ -3467,12 +3245,10 @@
         },
         {
           "id": "I4_Q49",
-          "question": "U remt op droge ondergrond met ABS. Is de remafstand korter dan bij een auto zonder ABS?",
+          "question": "Is de remafstand met ABS op droog wegdek korter dan zonder ABS?",
           "choices": [
-            "Ja, ze is altijd korter",
-            "Nee, ze kan zelfs iets langer zijn",
-            "Ze is strikt identiek",
-            "Ze is veel korter"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Op droge ondergrond kan het ABS een iets langere afstand geven dan een optimale remming zonder ABS.",
@@ -3480,14 +3256,12 @@
         },
         {
           "id": "I4_Q50",
-          "question": "U remt op natte ondergrond met ABS. Is de afstand langer dan op droge ondergrond met ABS?",
+          "question": "Is de remafstand met ABS langer op nat dan op droog wegdek?",
           "choices": [
-            "Nee, dat is strikt identiek",
-            "Ja, de remafstand is langer op natte ondergrond",
-            "Nee, ze is zelfs korter",
-            "Dit hangt enkel af van de snelheid"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Op natte ondergrond is de remafstand, zelfs met ABS, langer dan op droge ondergrond.",
           "theoryCardIndex": 5
         },
@@ -3506,53 +3280,49 @@
         },
         {
           "id": "I4_Q52",
-          "question": "Uw auto is uitgerust met ESP. Wat doet dit systeem?",
+          "question": "Wat doet het ESP-systeem van uw wagen?",
           "choices": [
-            "Het blokkeert alle wielen tegelijk",
-            "Het remt bepaalde wielen afzonderlijk af om slippen te vermijden",
-            "Het versnelt automatisch bergop",
-            "Het houdt afstand met de voorligger"
+            "Het remt wielen afzonderlijk af",
+            "Het blokkeert alle wielen samen",
+            "Het houdt uw afstand aan"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het ESP werkt selectief in op een of meerdere wielen om de koers te corrigeren en slippen te vermijden.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q53",
-          "question": "U voert een bruusk ontwijkmanoeuvre uit. In welke situaties grijpt het ESP in?",
+          "question": "In welke situaties komt het ESP tussen?",
           "choices": [
-            "Enkel in rechte lijn bij hoge snelheid op de autosnelweg",
-            "Bij een bruusk ontwijkmanoeuvre, een slecht berekende bocht of een gladde rijbaan",
-            "Enkel bij achteruitrijden of parkeren",
-            "Enkel bij lage snelheid in stedelijke zones"
+            "Uitwijken, bocht, glad wegdek",
+            "Rechtdoor op de autosnelweg",
+            "Bij achteruitrijden en parkeren"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het ESP grijpt in bij bruuske manoeuvres, slecht berekende bochten of een gladde rijbaan.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q54",
-          "question": "U herhaalt het belang van het ESP. Sinds welke veiligheidsuitrustingen wordt het beschouwd als de grootste bijdrage aan de veiligheid?",
+          "question": "Het ESP geldt als de grootste veiligheidswinst sinds wat?",
           "choices": [
-            "Sinds de gps",
-            "Sinds de veiligheidsgordel en de airbag",
-            "Sinds de snelheidsbegrenzer",
-            "Sinds de LED-verlichting"
+            "De gordel en de airbag",
+            "De snelheidsbegrenzer",
+            "De ledkoplampen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Het ESP is de belangrijkste bijdrage aan de veiligheid sinds de veiligheidsgordel en de airbag.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q55",
-          "question": "U verliest de grip van de vooras in een bocht. In welke richting rijdt uw voertuig uit de bocht?",
+          "question": "U verliest de grip vooraan. In welke richting gaat u de bocht uit?",
           "choices": [
-            "Naar de binnenkant van de bocht",
             "Naar de buitenkant van de bocht",
-            "Rechtdoor",
-            "Achteruit"
+            "Naar de binnenkant van de bocht",
+            "Rechtdoor, zonder af te wijken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij onderstuur (slip van de vooras) rijdt het voertuig naar de buitenkant van de bocht.",
           "theoryCardIndex": 6
         },
@@ -3571,12 +3341,10 @@
         },
         {
           "id": "I4_Q57",
-          "question": "U bevindt zich in een onderstuursituatie. Moet u hard remmen?",
+          "question": "U bevindt zich in onderstuur. Moet u stevig remmen?",
           "choices": [
-            "Ja, dat is de juiste onmiddellijke reflex",
-            "Nee, hard remmen blokkeert de wielen en doet de grip verliezen",
-            "Ja, maar enkel met ABS geactiveerd",
-            "Dat hangt af van de snelheid van het voertuig"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Hard remmen bij onderstuur blokkeert de voorwielen, wat het gripverlies verergert.",
@@ -3597,92 +3365,85 @@
         },
         {
           "id": "I4_Q59",
-          "question": "Uw voertuig bevindt zich in overstuur. Wat moet u doen, in welke volgorde?",
+          "question": "Uw wagen overstuurt. Wat doet u, in welke volgorde?",
           "choices": [
-            "Hard remmen en dan onmiddellijk versnellen",
-            "Kijken in de gewenste richting, contra-sturen, op de koppeling duwen, het gaspedaal loslaten",
-            "Versnellen en het stuur naar buiten draaien",
-            "Hard remmen en het stuur bruusk naar binnen draaien"
+            "Kijken, tegensturen, ontkoppelen",
+            "Hard remmen en dan versnellen",
+            "Versnellen en naar buiten sturen"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij overstuur: 1) Kijken in de gewenste richting, 2) Contra-sturen, 3) Koppeling, 4) Gaspedaal loslaten.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q60",
-          "question": "U moet \"contra-sturen\" bij een slip. Wat betekent deze term?",
+          "question": "Wat betekent « tegensturen » bij een slip?",
           "choices": [
-            "Hard remmen",
-            "Het stuur draaien in de richting van de slip",
-            "Het stuur draaien in de richting tegengesteld aan de slip",
-            "Het stuur loslaten"
+            "Sturen in de richting van de slip",
+            "Sturen tegen de slip in",
+            "Het stuur volledig loslaten"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Contra-sturen = het stuur draaien in de richting van de achterslip om de koers te corrigeren.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q61",
-          "question": "U slipt en men raadt u aan te kijken in de richting waar u naartoe wilt. Waarom?",
+          "question": "Waarom kijken naar waar u heen wil tijdens een slip?",
           "choices": [
-            "Uit gewoonte aangeleerd op de rijschool",
-            "Onbewust stuurt u in de richting waar u naar kijkt",
-            "Om de andere auto's te zien aankomen",
-            "Dit heeft in werkelijkheid geen effect"
+            "Men gaat waar men kijkt",
+            "Om de andere wagens te zien",
+            "Uit gewoonte van de rijschool"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De blik bepaalt de richting van het stuur: kijken waar u naartoe wilt helpt u daar te geraken.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q62",
-          "question": "U remt bruusk en de 4 wielen van uw voertuig blokkeren. Wat gebeurt er?",
+          "question": "U remt en de vier wielen blokkeren. Wat gebeurt er?",
           "choices": [
+            "Het voertuig gaat slippen",
             "Enkel de voorwielen blokkeren",
-            "De 4 wielen blokkeren gelijktijdig en het voertuig slipt",
-            "Enkel de achterwielen blokkeren",
             "Geen enkel wiel blokkeert"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bij een slip op 4 wielen blokkeren alle wielen tegelijk.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q63",
-          "question": "Uw auto uitgerust met ABS begint te slippen. Wat moet u doen met het rempedaal?",
+          "question": "Uw wagen met ABS begint te slippen. Wat doet u met het rempedaal?",
           "choices": [
-            "Het rempedaal geleidelijk loslaten",
-            "Nog HARDER duwen om het ABS volledig te activeren",
-            "Het rempedaal pompen met korte stoten",
-            "Niets veranderen aan de uitgeoefende druk"
+            "Nog harder induwen",
+            "Geleidelijk lossen",
+            "Pompend indrukken"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Om het ABS te activeren bij een slip, moet u nog harder op het rempedaal duwen.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q65",
-          "question": "U controleert het niveau van de koelvloeistof. Wat is de rol van deze vloeistof?",
+          "question": "Wat is de rol van de koelvloeistof?",
           "choices": [
+            "Temperatuur houden, vorst beletten",
             "De motoronderdelen smeren",
-            "De motortemperatuur regelen en bevriezing voorkomen",
-            "Het remcircuit voeden",
-            "De binnenkant van de motor reinigen"
+            "Het remcircuit voeden"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De koelvloeistof houdt de motortemperatuur constant, voorkomt oververhitting en bevriezing.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q66",
-          "question": "U vraagt zich af bij welke temperatuur de koelvloeistof kookt. Bij welke temperatuur kookt ze?",
+          "question": "Bij welke temperatuur kookt de koelvloeistof?",
           "choices": [
-            "80 graden C",
-            "Boven de 100 graden C",
-            "50 graden C",
-            "200 graden C"
+            "Boven de 100 °C",
+            "Rond de 80 °C",
+            "Rond de 50 °C"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De koelvloeistof kookt boven de 100°C.",
           "theoryCardIndex": 7
         },
@@ -3714,51 +3475,46 @@
         },
         {
           "id": "I4_Q69",
-          "question": "U heeft net geschakeld. Waar moet u uw linkervoet plaatsen?",
+          "question": "Waar zet u uw linkervoet na het schakelen?",
           "choices": [
-            "Op het koppelingspedaal, klaar om te ontkoppelen",
-            "Op de voorziene voetsteun naast het koppelingspedaal",
-            "Onder het koppelingspedaal",
-            "Voor het koppelingspedaal"
+            "Op de voorziene steun ernaast",
+            "Op het koppelingspedaal",
+            "Onder het koppelingspedaal"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Na het schakelen wordt de linkervoet op de zijdelingse voetsteun geplaatst, niet op het pedaal.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q70",
-          "question": "U houdt uw voet op het koppelingspedaal na het schakelen. Waarom is dit afgeraden?",
+          "question": "Waarom uw voet niet op het koppelingspedaal laten?",
           "choices": [
-            "Dit is gewoon een oncomfortabele houding",
-            "Dit doet de koppeling slippen en brengt de enkel in gevaar bij een ongeval",
-            "Dit verhoogt het brandstofverbruik",
-            "Dit verslijt de banden voortijdig"
+            "Het slijt de koppeling",
+            "Het is een oncomfortabele houding",
+            "Het slijt de banden sneller"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De voet op de koppeling veroorzaakt slippen en, bij een ongeval, risico op een enkelbreuk.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q71",
-          "question": "U komt aan bij een steile helling. Wat moet u doen voor u ze beklimt of afdaalt?",
+          "question": "Wat doet u voor u een steile helling op- of afrijdt?",
           "choices": [
-            "Versnellen",
             "Een versnelling terugschakelen",
-            "Naar een hogere versnelling schakelen",
-            "In neutraal blijven"
+            "Een versnelling opschakelen",
+            "In vrijloop blijven"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een versnelling terugschakelen voor een steile helling (bergop of bergaf) garandeert controle.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q72",
-          "question": "U ziet een pechstrook (\"zandbak\") in de bergen. Kunt u die gebruiken om te parkeren?",
+          "question": "Mag u parkeren op een noodstopstrook in de bergen?",
           "choices": [
-            "Ja, dat is praktisch voor een pauze",
-            "Nee, die is voorbehouden voor voertuigen met remproblemen",
-            "Ja, maar enkel voor korte pauzes",
-            "Dat hangt af van het type weg"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "De pechstrook is voorbehouden voor voertuigen die hun remmen verloren hebben. Parkeren is er verboden.",
@@ -3766,12 +3522,10 @@
         },
         {
           "id": "I4_Q73",
-          "question": "U wilt een bericht raadplegen op uw telefoon terwijl u rijdt. Kunt u die in de hand houden?",
+          "question": "Mag u uw telefoon in de hand houden om een bericht te lezen tijdens het rijden?",
           "choices": [
-            "Ja, als het snel gaat",
-            "Nee, een toestel met scherm vasthouden is verboden achter het stuur",
-            "Ja, maar enkel om te telefoneren",
-            "Ja, stilstaand aan een rood licht"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Een mobiel toestel met scherm gebruiken, vasthouden of manipuleren is verboden tijdens het rijden.",
@@ -3779,25 +3533,22 @@
         },
         {
           "id": "I4_Q74",
-          "question": "U wilt uw smartphone als gps gebruiken tijdens het rijden. Is dit toegelaten?",
+          "question": "Mag u uw smartphone als gps gebruiken tijdens het rijden?",
           "choices": [
-            "Nee, dat is verboden in alle omstandigheden",
-            "Ja, op voorwaarde dat hij in een houder bevestigd is aan het voertuig",
-            "Ja, zelfs door hem in de hand te houden",
-            "Nee, enkel specifieke gps-toestellen mogen"
+            "Ja, in een vaste houder",
+            "Ja, zelfs in de hand",
+            "Nee, op geen enkele manier"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Een smartphone mag als gps dienen als hij in een geschikte houder bevestigd is.",
           "theoryCardIndex": 8
         },
         {
           "id": "I4_Q75",
-          "question": "U staat stil aan een rood licht en wilt uw telefoon in de hand raadplegen. Kunt u dit doen?",
+          "question": "U staat stil aan een rood licht. Mag u uw telefoon in de hand nemen?",
           "choices": [
-            "Ja, u staat stil",
-            "Nee, stilstaan aan het licht is geen 'stilstaan' in wettelijke zin",
-            "Ja, zolang het licht rood blijft",
-            "Ja, enkel voor een kort moment"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
           "explanation": "Een rood licht wordt niet beschouwd als een arrêt in wettelijke zin: het gebruik blijft verboden.",
@@ -3806,28 +3557,26 @@
         },
         {
           "id": "I4_Q77",
-          "question": "U vraagt zich af wanneer u uw telefoon in de hand mag gebruiken. In welke situaties is dit toegelaten?",
+          "question": "In welke situatie mag u uw telefoon in de hand gebruiken?",
           "choices": [
-            "Aan een rood licht",
-            "Wanneer u aan de arrêt bent",
-            "In files",
-            "Op de autosnelweg"
+            "Wanneer u geparkeerd staat",
+            "Aan het rode licht",
+            "In de file"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De telefoon in de hand is enkel toegelaten wanneer u werkelijk aan de arrêt of geparkeerd bent.",
           "theoryCardIndex": 8,
           "severe": true
         },
         {
           "id": "I4_Q78",
-          "question": "U raadpleegt uw telefoon terwijl u rijdt. Waarom zijn elektronische toestellen gevaarlijk aan het stuur?",
+          "question": "Waarom zijn elektronische toestellen gevaarlijk achter het stuur?",
           "choices": [
-            "Ze verbruiken de batterij van het voertuig",
-            "Ze leiden de bestuurder af en verminderen zijn aandacht op de weg",
-            "Ze beschadigen het voertuig",
-            "Ze zijn niet gevaarlijk"
+            "Ze leiden uw aandacht af",
+            "Ze legen de boordbatterij",
+            "Ze beschadigen uw voertuig"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Elektronische toestellen leiden de bestuurder af, wat het ongevalsrisico verhoogt.",
           "theoryCardIndex": 8
         }

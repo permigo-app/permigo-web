@@ -218,14 +218,13 @@
       "questions": [
         {
           "id": "I1_Q1",
-          "question": "Vous avez bu quelques verres lors d'une soirée et vous envisagez de prendre le volant. Quels sont les effets de l'alcool sur votre conduite ?",
+          "question": "Quels sont les effets de l'alcool sur votre conduite ?",
           "choices": [
-            "L'alcool n'a aucun effet sur la conduite",
-            "Concentration, jugement et réflexes altérés, comportement téméraire",
-            "Uniquement une sensation de fatigue",
-            "Une meilleure concentration au volant"
+            "Jugement et réflexes altérés",
+            "Une meilleure concentration",
+            "Une simple sensation de fatigue"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'alcool altère la concentration, le jugement, le temps de réaction, provoque de la fatigue et un comportement téméraire.",
           "theoryCardIndex": 0,
           "severe": true
@@ -234,79 +233,69 @@
           "id": "I1_Q2",
           "question": "Vous prenez le volant en ayant trop bu. Qui mettez-vous en danger ?",
           "choices": [
-            "Uniquement vous-même",
-            "Vous-même ET les autres usagers de la route",
-            "Uniquement vos passagers",
-            "Personne si vous roulez lentement"
+            "Vous-même et les autres",
+            "Vous-même et personne d'autre",
+            "Vos passagers, sans plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un conducteur ivre met en danger sa propre vie ET celle des autres usagers de la route.",
           "theoryCardIndex": 0
         },
         {
           "id": "I1_Q3",
-          "question": "Vous êtes arrêté par la police lors d'un contrôle routier. Qui peut être soumis à un contrôle d'alcoolémie ?",
+          "question": "Qui peut être soumis à un contrôle d'alcoolémie ?",
           "choices": [
-            "Uniquement les automobilistes contrôlés",
-            "Quiconque conduit un véhicule ou une monture, cyclistes inclus",
-            "Uniquement les conducteurs professionnels",
-            "Toute personne présente sur la voie publique"
+            "Qui conduit un véhicule ou une monture",
+            "Les automobilistes et personne d'autre",
+            "Toute personne sur la voie publique"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Tout conducteur de véhicule ou monture peut être contrôlé : voitures, cyclistes, cavaliers, etc.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q4",
-          "question": "Vous êtes cycliste et vous rentrez d'une fête à vélo. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Vous rentrez d'une fête à vélo. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
           "choices": [
-            "Non, seuls les automobilistes sont concernés",
-            "Oui, les cyclistes conduisent un véhicule et peuvent être contrôlés",
-            "Non, un vélo n'est pas un véhicule",
-            "Cela dépend de la route"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les cyclistes conduisent un véhicule et peuvent être soumis à un contrôle d'alcoolémie.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q5",
-          "question": "Vous êtes moniteur d'auto-école et vous accompagnez un élève lors d'un cours de conduite. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Vous êtes moniteur et accompagnez un élève. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
           "choices": [
-            "Non, vous ne conduisez pas vous-même",
-            "Oui, le moniteur qui accompagne un élève peut être contrôlé",
-            "Non, seul l'élève peut être contrôlé",
-            "Cela dépend du véhicule"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le moniteur d'auto-école, qui est le guide du véhicule, peut être contrôlé.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q6",
-          "question": "Vous traversez la rue comme piéton et vous provoquez un accident. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Vous êtes piéton et avez provoqué un accident. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
           "choices": [
-            "Non, les piétons sont exemptés",
-            "Oui, quiconque a contribué à l'accident peut être contrôlé",
-            "Non, seuls les conducteurs sont concernés",
-            "Cela dépend de la gravité de l'accident"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Même un piéton peut être contrôlé s'il a contribué à provoquer un accident, même en tant que victime.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q7",
-          "question": "Vous êtes passager dans une voiture arrêtée par la police. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Vous êtes passager d'une voiture contrôlée. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
           "choices": [
-            "Oui, tout le monde dans le véhicule",
-            "Non, les passagers ne peuvent PAS être contrôlés",
-            "Oui, s'ils sont manifestement ivres",
-            "Cela dépend de la place occupée"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les passagers ne conduisent pas et ne peuvent pas être soumis à un contrôle d'alcoolémie.",
@@ -315,12 +304,10 @@
         },
         {
           "id": "I1_Q8",
-          "question": "Vous dormez sur la banquette arrière de votre voiture après une soirée. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Vous dormez sur la banquette arrière de votre voiture. Pouvez-vous être contrôlé ?",
           "choices": [
-            "Oui, car c'est votre voiture",
-            "Non, un dormeur hors du siège conducteur n'est pas contrôlable",
-            "Oui, si le moteur tourne encore",
-            "Cela dépend de l'heure de la nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Dormir sur la banquette arrière ne vous expose pas au contrôle d'alcoolémie.",
@@ -329,12 +316,10 @@
         },
         {
           "id": "I1_Q9",
-          "question": "Vous marchez sur le trottoir sans être impliqué dans un accident. La police peut-elle vous soumettre à un contrôle d'alcoolémie ?",
+          "question": "Vous marchez sur le trottoir sans accident. La police peut-elle vous contrôler l'alcoolémie ?",
           "choices": [
-            "Oui, tout le monde peut être contrôlé",
-            "Non, un piéton non impliqué ne peut pas l'être",
-            "Oui, lors d'un contrôle routier organisé",
-            "Cela dépend du quartier où vous marchez"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Seuls les piétons impliqués dans un accident peuvent être contrôlés.",
@@ -343,12 +328,10 @@
         },
         {
           "id": "I1_Q10",
-          "question": "Vous êtes arrêté par la police pour un contrôle d'alcoolémie. Pouvez-vous refuser le test de l'haleine ?",
+          "question": "Pouvez-vous refuser le test de l'haleine lors d'un contrôle ?",
           "choices": [
-            "Oui, c'est votre droit le plus strict",
-            "Non, le refus sans motif légitime est punissable",
-            "Oui, si vous n'avez rien bu du tout",
-            "Oui, mais uniquement en semaine"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le refus sans motif légitime est punissable et équivaut à un résultat Positif (P).",
@@ -357,12 +340,10 @@
         },
         {
           "id": "I1_Q11",
-          "question": "Vous êtes à l'hôpital après un accident et la police demande un prélèvement sanguin. Pouvez-vous refuser ?",
+          "question": "À l'hôpital après un accident, pouvez-vous refuser un prélèvement sanguin ?",
           "choices": [
-            "Oui, c'est une procédure invasive",
-            "Non, le refus sans motif légitime est punissable",
-            "Oui, si vous préférez souffler",
-            "Cela dépend du médecin"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le refus de prélèvement sanguin sans motif légitime est punissable.",
@@ -370,40 +351,37 @@
         },
         {
           "id": "I1_Q12",
-          "question": "Vous refusez de souffler dans l'éthylomètre lors d'un contrôle policier. Que se passe-t-il ?",
+          "question": "Vous refusez de souffler dans l'éthylomètre. Que se passe-t-il ?",
           "choices": [
-            "Rien, c'est votre droit le plus strict",
-            "Vous êtes considéré Positif (P) : interdiction de conduire 6 heures",
-            "Vous passez directement à la prise de sang",
-            "Vous recevez un simple avertissement écrit"
+            "Vous êtes considéré positif",
+            "Vous passez à la prise de sang",
+            "Vous recevez un avertissement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le refus du test est considéré comme un résultat Positif : interdiction de conduire 6 heures.",
           "theoryCardIndex": 0
         },
         {
           "id": "I1_Q13",
-          "question": "Vous devez souffler dans l'éthylomètre lors d'un contrôle. Pendant combien de temps devez-vous souffler environ ?",
+          "question": "Pendant combien de temps devez-vous souffler dans l'éthylomètre ?",
           "choices": [
-            "3 secondes",
             "Environ 7 secondes",
-            "15 secondes",
-            "1 seconde"
+            "Environ 3 secondes",
+            "Environ 15 secondes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Il faut souffler avec vigueur pendant environ 7 secondes dans l'éthylomètre.",
           "theoryCardIndex": 1
         },
         {
           "id": "I1_Q14",
-          "question": "Vous soufflez dans l'éthylomètre. Comment savez-vous que vous soufflez correctement ?",
+          "question": "Comment savez-vous que vous soufflez correctement ?",
           "choices": [
-            "L'agent de police vous le dit",
-            "Un sifflement continu indique que vous soufflez correctement",
-            "Par la couleur de l'écran",
-            "Vous ne pouvez pas le savoir"
+            "Un sifflement continu",
+            "La couleur de l'écran",
+            "L'agent vous le dit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un sifflement continu confirme que vous soufflez correctement dans l'éthylomètre.",
           "theoryCardIndex": 1
         },
@@ -422,41 +400,38 @@
         },
         {
           "id": "I1_Q16",
-          "question": "Vous venez de souffler dans l'éthylomètre et le résultat affiche \"S\" (Safe). Que signifie-t-il ?",
+          "question": "Le résultat affiche « S » (Safe). Que signifie-t-il ?",
           "choices": [
-            "Votre test est positif à l'alcool",
-            "Alcool sous le seuil légal : vous pouvez conduire",
-            "C'est un résultat d'alarme (Alert)",
-            "Une analyse supplémentaire est nécessaire"
+            "Sous le seuil, vous pouvez rouler",
+            "Positif, vous ne pouvez pas rouler",
+            "Alarme, une analyse est requise"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "S = Safe : concentration en dessous du seuil autorisé, vous pouvez conduire.",
           "theoryCardIndex": 1
         },
         {
           "id": "I1_Q17",
-          "question": "Vous venez de souffler et le résultat affiche \"A\" (Alarme). À quelle concentration d'alcool cela correspond-il ?",
+          "question": "Le résultat affiche « A » (Alarme). À quelle concentration cela correspond-il ?",
           "choices": [
+            "De 0,22 à 0,35 mg/l",
             "Moins de 0,22 mg/l",
-            "De 0,22 à moins de 0,35 mg/l",
-            "Au moins 0,35 mg/l",
-            "Plus de 0,44 mg/l"
+            "Au moins 0,35 mg/l"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "A = Alarme : entre 0,22 mg/l (0,5 ‰) et 0,35 mg/l (0,8 ‰).",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q18",
-          "question": "Vous venez de souffler et le résultat affiche \"P\" (Positif). À quelle concentration d'alcool cela correspond-il ?",
+          "question": "Le résultat affiche « P » (Positif). À quelle concentration cela correspond-il ?",
           "choices": [
+            "Au moins 0,35 mg/l",
             "Moins de 0,22 mg/l",
-            "Au moins 0,35 mg/l (0,8 pour mille)",
-            "Au moins 0,22 mg/l",
-            "Moins de 0,35 mg/l"
+            "De 0,22 à 0,35 mg/l"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "P = Positif : concentration ≥ 0,35 mg/l (0,8 ‰).",
           "theoryCardIndex": 1,
           "severe": true
@@ -504,28 +479,26 @@
         },
         {
           "id": "I1_Q23",
-          "question": "Vous avez subi un test puis une analyse de l'haleine. Quelle est la différence entre les deux ?",
+          "question": "Quelle différence entre le test et l'analyse de l'haleine ?",
           "choices": [
-            "Il n'y a aucune différence entre les deux",
-            "Le test donne une indication, l'analyse mesure la concentration exacte",
-            "L'analyse est plus rapide que le test",
-            "Le test est plus précis que l'analyse"
+            "Le test indique, l'analyse mesure",
+            "L'analyse indique, le test mesure",
+            "Aucune, les deux se valent"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le test indique S/A/P. L'analyse donne la concentration précise et délivre un ticket imprimé.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q25",
-          "question": "Vous avez subi une analyse de l'haleine et le résultat indique 0,18 mg/l. Que se passe-t-il ?",
+          "question": "L'analyse de l'haleine indique 0,18 mg/l. Que se passe-t-il ?",
           "choices": [
-            "Vous recevez une amende",
-            "Vous pouvez conduire car c'est inférieur à 0,22 mg/l",
-            "Votre permis est retiré 3 heures",
-            "Votre permis est retiré 6 heures"
+            "Vous pouvez conduire",
+            "Votre permis est retiré",
+            "Vous recevez une amende"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En dessous de 0,22 mg/l, vous pouvez conduire normalement.",
           "theoryCardIndex": 2,
           "severe": true
@@ -560,14 +533,13 @@
         },
         {
           "id": "I1_Q30",
-          "question": "Vous refusez de vous soumettre à l'analyse de l'haleine. Que se passe-t-il ?",
+          "question": "Vous refusez l'analyse de l'haleine. Que se passe-t-il ?",
           "choices": [
-            "Rien de particulier ne se passe",
-            "Vous êtes considéré comme Positif : 6 heures sans conduire",
-            "Vous recevez uniquement une amende",
-            "Vous recevez un simple avertissement"
+            "Considéré positif, 6 heures",
+            "Une amende, sans plus",
+            "Un avertissement écrit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le refus de l'analyse est considéré comme un résultat Positif : interdiction de conduire 6 heures.",
           "theoryCardIndex": 2,
           "severe": true
@@ -601,14 +573,13 @@
         },
         {
           "id": "I1_Q34",
-          "question": "Vous êtes asthmatique et vous ne pouvez pas souffler dans l'éthylomètre. Que se passe-t-il ?",
+          "question": "Vous êtes asthmatique et ne pouvez pas souffler. Que se passe-t-il ?",
           "choices": [
-            "Vous êtes libéré sans autre contrôle",
-            "La police peut vous soumettre d'office à un prélèvement sanguin",
-            "Vous devez quand même souffler",
-            "Aucun contrôle n'est alors possible"
+            "Un prélèvement sanguin d'office",
+            "Vous êtes libéré sans contrôle",
+            "Vous devez souffler quand même"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'impossibilité de souffler (asthme) justifie un prélèvement sanguin.",
           "theoryCardIndex": 3
         },
@@ -627,28 +598,26 @@
         },
         {
           "id": "I1_Q37",
-          "question": "Vous avez commis une infraction liée à l'alcool. Qui peut vous imposer un éthylotest antidémarrage ?",
+          "question": "Qui peut vous imposer un éthylotest antidémarrage ?",
           "choices": [
-            "La police",
             "Le juge",
-            "Votre compagnie d'assurance",
-            "Le constructeur automobile"
+            "La police",
+            "L'assureur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'éthylotest antidémarrage est imposé par décision du juge.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "I1_Q38",
-          "question": "Vous êtes condamné à un éthylotest antidémarrage. Pour quelle durée peut-il être imposé ?",
+          "question": "Pour quelle durée l'éthylotest antidémarrage peut-il être imposé ?",
           "choices": [
-            "6 mois maximum",
             "De 1 à 3 ans, voire à vie",
-            "1 mois",
-            "6 heures"
+            "Six mois au maximum",
+            "Un mois, pas davantage"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'éthylotest antidémarrage peut être imposé de 1 à 3 ans, voire à vie.",
           "theoryCardIndex": 3
         },
@@ -667,14 +636,13 @@
         },
         {
           "id": "I1_Q41",
-          "question": "Vous révisez pour l'examen. À quels conducteurs l'éthylotest antidémarrage PEUT-il être imposé (sans obligation) ?",
+          "question": "À quels conducteurs l'éthylotest antidémarrage peut-il être imposé ?",
           "choices": [
-            "Aux conducteurs contrôlés à 0,5 pour mille",
-            "Aux plus de 0,8 pour mille, ivres ou récidivistes",
-            "Aux conducteurs contrôlés à 0,2 pour mille",
-            "À tous les conducteurs sans distinction"
+            "Plus de 0,8 pour mille ou ivres",
+            "Ceux contrôlés à 0,5 pour mille",
+            "Tous les conducteurs, sans tri"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Il peut être imposé (mais pas obligatoirement) aux conducteurs > 0,8 ‰, en état d'ivresse ou récidivistes.",
           "theoryCardIndex": 3,
           "severe": true
@@ -694,65 +662,57 @@
         },
         {
           "id": "I1_Q43",
-          "question": "Vous lisez que l'éthylotest antidémarrage DOIT aussi être imposé à certains récidivistes graves. Lesquels ?",
+          "question": "À quels récidivistes l'éthylotest antidémarrage doit-il être imposé ?",
           "choices": [
-            "Toute forme de récidive routière",
-            "Les conducteurs contrôlés deux fois avec au moins 1,2 pour mille dans un délai de 3 ans",
-            "Les conducteurs contrôlés une fois avec 0,8 pour mille",
-            "Toute personne en état d'ivresse au volant"
+            "Deux fois 1,2 pour mille en 3 ans",
+            "Une fois 0,8 pour mille au volant",
+            "Toute forme de récidive routière"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'éthylotest est obligatoire pour les récidivistes contrôlés deux fois avec ≥ 1,2 ‰ en 3 ans.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q44",
-          "question": "Un conducteur présente un taux de 1,8 pour mille. Le juge peut-il décider de ne PAS imposer l'éthylotest antidémarrage ?",
+          "question": "Un conducteur affiche 1,8 pour mille. Le juge peut-il renoncer à l'éthylotest antidémarrage ?",
           "choices": [
-            "Non, c'est automatique et obligatoire",
-            "Oui, mais il doit explicitement le décider et motiver sa décision",
-            "Non, en aucun cas ce n'est possible",
-            "Oui, sans avoir à se justifier"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le juge peut exceptionnellement ne pas l'imposer, mais doit explicitement le décider et motiver sa décision.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q45",
-          "question": "Vous soufflez 0,15 pour mille dans votre éthylotest antidémarrage. Votre moteur démarre-t-il ?",
+          "question": "Vous soufflez 0,15 pour mille dans l'éthylotest antidémarrage. Le moteur démarre-t-il ?",
           "choices": [
-            "Non, le moteur reste bloqué",
-            "Oui, car 0,15 est inférieur au seuil de 0,2 pour mille",
-            "Cela dépend du réglage de l'appareil",
-            "Non, tout alcool bloque le démarrage"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "0,15 ‰ < 0,2 ‰ : le seuil n'est pas atteint, le moteur démarre.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q47",
-          "question": "Vous êtes arrêté par la police qui soupçonne une consommation de drogues. Comment se déroule le test salivaire ?",
+          "question": "Comment se déroule un test salivaire de drogues ?",
           "choices": [
-            "Par une prise de sang au poste de police",
-            "Par un prélèvement de salive avec un coton-tige",
-            "Par un test de l'haleine approfondi",
-            "Par une analyse d'urine en laboratoire"
+            "Un prélèvement au coton-tige",
+            "Une prise de sang au poste",
+            "Une analyse d'urine au labo"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le test salivaire consiste à recueillir de la salive avec un coton-tige.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q48",
-          "question": "Vous n'avez commis aucune infraction et il n'y a pas d'accident. La police peut-elle vous imposer un test salivaire de drogues ?",
+          "question": "Sans infraction ni accident, la police peut-elle vous imposer un test salivaire ?",
           "choices": [
-            "Oui, comme pour l'alcool",
-            "Non, il faut un soupçon basé sur des éléments objectifs",
-            "Oui, lors de tout contrôle routier",
-            "Non, jamais sans accident ni blessé"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le test salivaire nécessite un soupçon objectif, sauf en cas d'accident où il peut toujours être imposé.",
@@ -761,28 +721,25 @@
         },
         {
           "id": "I1_Q49",
-          "question": "Vous êtes impliqué dans un accident de la route. La police peut-elle vous imposer un test salivaire de drogues sans soupçon préalable ?",
+          "question": "Après un accident, la police peut-elle imposer un test salivaire sans soupçon ?",
           "choices": [
-            "Non, un soupçon est toujours nécessaire",
-            "Oui, en cas d'accident la police peut toujours imposer un test salivaire",
-            "Non, uniquement le test de l'haleine",
-            "Cela dépend de la gravité de l'accident"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas d'accident, le test salivaire peut être imposé sans soupçon préalable.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q50",
-          "question": "Vous révisez les différences entre contrôle alcool et contrôle drogues. Quelles sont les conditions requises pour chacun ?",
+          "question": "Quelles conditions distinguent le contrôle alcool du contrôle drogues ?",
           "choices": [
-            "Les conditions sont exactement identiques",
-            "Alcool : tout conducteur ; drogues : soupçon objectif requis",
-            "Drogues : tout le monde ; alcool : soupçon requis",
-            "Les deux nécessitent toujours un soupçon"
+            "Alcool : tous ; drogues : soupçon",
+            "Drogues : tous ; alcool : soupçon",
+            "Les deux exigent un soupçon"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le contrôle alcool peut s'appliquer à tout conducteur. Le contrôle drogue nécessite un soupçon objectif (sauf accident).",
           "theoryCardIndex": 4,
           "severe": true
@@ -803,28 +760,25 @@
         },
         {
           "id": "I1_Q52",
-          "question": "Vous êtes positif aux drogues lors d'un contrôle. Un retrait immédiat et prolongé de votre permis est-il possible ?",
+          "question": "Vous êtes positif aux drogues. Un retrait immédiat prolongé est-il possible ?",
           "choices": [
-            "Non, uniquement les 12 heures",
-            "Oui, un retrait immédiat prolongé est possible",
-            "Non, ce n'est jamais possible",
-            "Cela dépend du type de drogue"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En plus des 12 heures, un retrait immédiat du permis est possible en cas de test positif.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q53",
-          "question": "Vous avez été condamné pour conduite sous l'influence de drogues. Quelle est la durée maximale d'interdiction de conduire ?",
+          "question": "Quelle est la durée maximale d'interdiction de conduire pour conduite sous drogues ?",
           "choices": [
-            "1 an",
-            "Jusqu'à 5 ans maximum",
-            "3 ans",
-            "À vie"
+            "Cinq ans au maximum",
+            "Trois ans au maximum",
+            "Un an au maximum"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction de conduire pour drogue peut aller jusqu'à 5 ans maximum.",
           "theoryCardIndex": 4,
           "severe": true
@@ -845,41 +799,37 @@
         },
         {
           "id": "I1_Q56",
-          "question": "Vous prenez des médicaments et vous envisagez de conduire. Certains médicaments ont-ils des effets sur la conduite ?",
+          "question": "Certains médicaments ont-ils des effets sur la conduite ?",
           "choices": [
-            "Non, les médicaments sont sans danger au volant",
-            "Oui, certains médicaments altèrent la concentration, les réflexes ou la vigilance",
-            "Non, seul l'alcool pose vraiment problème",
-            "Cela dépend uniquement de la dose prise"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Certains médicaments altèrent la concentration, les réflexes ou la vigilance.",
           "theoryCardIndex": 4
         },
         {
           "id": "I1_Q57",
-          "question": "Vous prenez des médicaments et vous buvez un verre d'alcool avant de conduire. Quels sont les risques ?",
+          "question": "Vous mélangez médicaments et alcool avant de conduire. Quel est le risque ?",
           "choices": [
-            "Il n'y a pas de danger supplémentaire",
-            "L'alcool renforce les effets néfastes des médicaments",
-            "C'est moins dangereux que l'alcool seul",
-            "Les effets restent strictement identiques"
+            "L'alcool renforce leurs effets",
+            "Il n'y a aucun risque de plus",
+            "Les effets restent identiques"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'alcool amplifie les effets néfastes des médicaments, rendant la combinaison encore plus dangereuse.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_SIGN_F3_1",
-          "question": "Vous voyez un panneau bleu rectangulaire avec un \"H\" blanc et un pictogramme médical. Que signale-t-il ?",
+          "question": "Que signale ce panneau ?",
           "choices": [
-            "Un poste de secours routier",
-            "Un hôpital ou une clinique à proximité",
+            "Un hôpital à proximité",
             "Une pharmacie de garde",
-            "Un centre de contrôle technique"
+            "Un poste de secours routier"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "F3 signale la présence d'un hôpital. À proximité, les signaux sonores (klaxon) sont généralement interdits pour ne pas gêner les patients.",
           "destination": "panneaux",
           "sign": "F53"
@@ -1155,39 +1105,36 @@
           "id": "I2_Q1",
           "question": "Vous êtes en panne sur la route. Que devez-vous faire en priorité ?",
           "choices": [
-            "Placer immédiatement le triangle de danger",
-            "Ranger votre véhicule à un emplacement autorisé",
-            "Appeler votre assurance en premier",
-            "Appeler la police en premier"
+            "Ranger le véhicule au bon endroit",
+            "Placer le triangle tout de suite",
+            "Appeler votre assurance d'abord"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de panne, essayer avant tout de stationner le véhicule à un endroit autorisé.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I2_Q2",
-          "question": "Vous transportez des marchandises et une partie de votre chargement tombe sur la chaussée. Que faites-vous ?",
+          "question": "Une partie de votre chargement tombe sur la chaussée. Que faites-vous ?",
           "choices": [
-            "Vous continuez votre route sans vous arrêter",
-            "Vous enlevez le chargement de la chaussée au plus vite",
-            "Vous attendez la police sur place",
-            "Vous activez seulement vos feux de détresse"
+            "L'enlever de la chaussée vite",
+            "Continuer sans vous arrêter",
+            "Attendre la police sur place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si du chargement tombe sur la chaussée, vous devez l'enlever le plus rapidement possible.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q3",
-          "question": "Vous êtes impliqué dans un accident et votre véhicule ne peut pas être déplacé. Que devez-vous faire en priorité ?",
+          "question": "Après un accident, votre véhicule ne peut pas être déplacé. Que faites-vous en priorité ?",
           "choices": [
-            "Appeler votre assurance en premier",
-            "Placer le triangle et allumer les feux de détresse",
-            "Attendre la police sans rien faire",
-            "Prendre des photos pour le constat"
+            "Triangle et feux de détresse",
+            "Appeler l'assurance d'abord",
+            "Photographier pour le constat"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si le véhicule ne peut pas être déplacé, placer le triangle et allumer les feux de détresse pour éviter un autre accident.",
           "theoryCardIndex": 0,
           "severe": true
@@ -1207,12 +1154,10 @@
         },
         {
           "id": "I2_Q5",
-          "question": "Vous êtes sur le lieu d'un accident et des curieux fument à proximité. Peuvent-ils le faire ?",
+          "question": "Des curieux fument près du lieu de l'accident. Peuvent-ils le faire ?",
           "choices": [
-            "Oui, s'ils sont stressés par la situation",
-            "Non, fumer est interdit, pour les spectateurs aussi",
-            "Oui, à bonne distance des véhicules",
-            "Cela dépend de la gravité de l'accident"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Fumer sur le lieu d'un accident est interdit à cause du risque d'incendie. Les spectateurs doivent également ne pas fumer.",
@@ -1220,27 +1165,25 @@
         },
         {
           "id": "I2_Q6",
-          "question": "Vous devez placer votre triangle de danger sur une route ordinaire. À quelle distance minimum de l'accident devez-vous le poser ?",
+          "question": "Sur une route ordinaire, à quelle distance minimum placez-vous le triangle de danger ?",
           "choices": [
-            "10 mètres",
             "Au moins 30 mètres",
-            "50 mètres",
-            "100 mètres"
+            "Au moins 10 mètres",
+            "Au moins 100 mètres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur route ordinaire, le triangle doit être placé à au moins 30 mètres de l'obstacle.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q7",
-          "question": "Vous êtes en panne sur l'autoroute. À quelle distance minimum devez-vous placer votre triangle de danger ?",
+          "question": "Sur l'autoroute, à quelle distance minimum placez-vous le triangle de danger ?",
           "choices": [
-            "30 mètres",
             "Au moins 100 mètres",
-            "50 mètres",
-            "200 mètres"
+            "Au moins 30 mètres",
+            "Au moins 50 mètres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur autoroute, le triangle doit être placé à au moins 100 mètres de l'obstacle.",
           "theoryCardIndex": 0
         },
@@ -1259,38 +1202,34 @@
         },
         {
           "id": "I2_Q9",
-          "question": "Vous êtes en panne à 20 mètres d'un carrefour. Où placez-vous votre triangle de danger ?",
+          "question": "Vous êtes en panne à 20 mètres d'un carrefour. Où placez-vous le triangle ?",
           "choices": [
-            "Toujours à 30 mètres derrière votre véhicule",
-            "À l'endroit le plus logique et visible (même sur le toit)",
-            "Aucun triangle n'est nécessaire ici",
-            "Au milieu du carrefour pour être vu"
+            "À l'endroit le plus visible",
+            "À 30 mètres derrière, sans plus",
+            "Au milieu du carrefour même"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si la règle des 30 m n'est pas logique (ex : 20 m d'un carrefour), placez le triangle là où c'est sensé, voire sur le toit.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q10",
-          "question": "Vous révisez l'équipement obligatoire. Que devez-vous OBLIGATOIREMENT avoir dans votre voiture ?",
+          "question": "Que devez-vous obligatoirement avoir dans votre voiture ?",
           "choices": [
-            "Uniquement le triangle de danger homologué",
-            "Triangle, extincteur, gilet fluorescent et trousse de secours",
+            "Triangle, extincteur, gilet, trousse",
             "Un triangle et un gilet fluorescent",
-            "Uniquement un extincteur à poudre"
+            "Un extincteur à poudre, sans plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ces 4 éléments sont obligatoires dans tout véhicule : triangle, extincteur, gilet fluorescent et trousse de premiers secours.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q11",
-          "question": "Vous cherchez votre gilet fluorescent dans le coffre. Est-ce le bon endroit pour le ranger ?",
+          "question": "Vous rangez votre gilet fluorescent dans le coffre. Est-ce le bon endroit ?",
           "choices": [
-            "Oui, le coffre convient parfaitement",
-            "Non, il doit être dans l'HABITACLE, à enfiler AVANT de sortir",
-            "Oui, la boîte à gants est aussi valable",
-            "Peu importe, sous le siège par exemple"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le gilet doit être dans l'habitacle pour pouvoir l'enfiler AVANT de sortir du véhicule sur autoroute/voie rapide.",
@@ -1311,12 +1250,10 @@
         },
         {
           "id": "I2_Q13",
-          "question": "Vous êtes impliqué dans un accident sans blessés. Devez-vous appeler la police ?",
+          "question": "Accident sans blessés, constat rempli et signé. Devez-vous appeler la police ?",
           "choices": [
-            "Oui, absolument toujours",
-            "Non, pas si le constat est rempli et signé",
-            "Oui, c'est une obligation légale",
-            "Non, la police ne vient jamais"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Sans blessés, la police n'est pas nécessaire si les deux parties signent le constat européen.",
@@ -1324,38 +1261,34 @@
         },
         {
           "id": "I2_Q14",
-          "question": "Vous remplissez le constat européen d'accident. Que doit contenir le croquis ?",
+          "question": "Que doit contenir le croquis du constat européen ?",
           "choices": [
-            "Uniquement les noms des deux conducteurs",
-            "La situation, les positions, les signaux et l'identification A/B",
-            "Uniquement la date et l'heure de l'accident",
-            "Uniquement la liste des dégâts matériels"
+            "Positions, signaux et repères A/B",
+            "Le nom des deux conducteurs",
+            "La date et l'heure de l'accident"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le croquis doit inclure : situation routière, nom de rue, sens de marche, position des véhicules, feux/signaux/marquages et l'identification A/B.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q15",
-          "question": "Vous remplissez le constat européen. Qui doit signer la face avant ?",
+          "question": "Qui doit signer la face avant du constat européen ?",
           "choices": [
-            "Un seul des deux conducteurs",
             "Les deux parties impliquées",
-            "La police",
-            "Un témoin"
+            "Un seul des deux conducteurs",
+            "La police et un témoin"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La face avant doit être remplie ET signée par les deux parties.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q16",
-          "question": "Vous avez signé le constat européen et vous remarquez une erreur sur le recto. Pouvez-vous la corriger ?",
+          "question": "Le constat est signé et vous voyez une erreur au recto. Pouvez-vous la corriger ?",
           "choices": [
-            "Oui, si vous trouvez une erreur",
-            "Non, une fois signé, aucune modification au recto n'est permise",
-            "Oui, dans les 24 heures",
-            "Oui, avec l'accord de l'autre partie"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Une fois le constat signé, PLUS DE MODIFICATION possible au recto.",
@@ -1363,91 +1296,81 @@
         },
         {
           "id": "I2_Q17",
-          "question": "Vous êtes impliqué dans un accident et l'autre partie refuse de signer le constat. Que faites-vous ?",
+          "question": "L'autre partie refuse de signer le constat. Que faites-vous ?",
           "choices": [
-            "Vous partez",
             "Vous avertissez la police",
-            "Vous forcez l'autre partie à signer",
+            "Vous partez de votre côté",
             "Vous appelez votre assurance"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de refus de signer ou de désaccord, avertir la police. Si indisponible, se rendre au commissariat.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q18",
-          "question": "Vous abîmez une voiture garée et vous ne trouvez pas le propriétaire. Que devez-vous faire ?",
+          "question": "Vous abîmez une voiture garée sans trouver le propriétaire. Que faites-vous ?",
           "choices": [
-            "Vous partez discrètement sans rien faire",
-            "Vous laissez vos coordonnées sur place OU vous informez la police",
-            "Vous attendez le propriétaire indéfiniment",
-            "Rien, l'assurance s'en chargera"
+            "Laisser vos coordonnées sur place",
+            "Partir discrètement sans rien",
+            "Attendre le propriétaire sur place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de dégâts sans propriétaire présent : laisser vos données d'identité ou informer la police.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q19",
-          "question": "Vous êtes impliqué dans un accident avec des blessés légers. Que faites-vous avec votre véhicule ?",
+          "question": "Accident avec blessés légers. Que faites-vous de votre véhicule ?",
           "choices": [
-            "Vous restez sur place avec le véhicule au milieu de la route",
-            "Vous stationnez votre véhicule à un endroit autorisé",
-            "Vous bloquez la route",
-            "Rien de particulier"
+            "Le garer à un endroit autorisé",
+            "Le laisser au milieu de la route",
+            "Bloquer la route volontairement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de blessés légers, stationnez le véhicule à un endroit autorisé.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q20",
-          "question": "Vous arrivez sur le lieu d'un accident avec des blessés graves. Que devez-vous faire en priorité ?",
+          "question": "Vous arrivez sur un accident avec blessés graves. Que faites-vous en priorité ?",
           "choices": [
-            "Partir immédiatement chercher de l'aide",
-            "Éviter que d'autres accidents ne surviennent au même endroit",
-            "Attendre les secours sans intervenir",
-            "Déplacer les blessés hors de la route"
+            "Éviter un second accident",
+            "Partir chercher de l'aide",
+            "Déplacer les blessés hors route"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de blessés graves ou déplacement impossible, tout mettre en œuvre pour éviter d'autres accidents.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I2_Q21",
-          "question": "Vous êtes impliqué dans un accident avec des blessés. La police doit-elle intervenir ?",
+          "question": "Il y a des blessés dans l'accident. La police doit-elle intervenir ?",
           "choices": [
-            "Non, le constat à l'amiable suffit",
-            "Oui, la police doit TOUJOURS intervenir s'il y a des blessés",
-            "Non, sauf en cas de blessés graves",
-            "Cela dépend de la gravité des dégâts"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Accident avec blessés = police TOUJOURS obligatoire pour les constatations.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q23",
-          "question": "Vous sortez de votre voiture après un accident sur l'autoroute. Le gilet fluorescent est-il obligatoire ?",
+          "question": "Vous sortez de votre voiture après un accident sur autoroute. Le gilet est-il obligatoire ?",
           "choices": [
-            "Non, nulle part en Belgique",
-            "Oui, obligatoire pour le conducteur à cet endroit",
-            "Uniquement en agglomération",
-            "Non, c'est un simple conseil"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le gilet est obligatoire pour le conducteur sur l'autoroute et la route pour automobiles.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q24",
-          "question": "Vos passagers sortent également de la voiture sur l'autoroute après l'accident. Le gilet est-il obligatoire pour eux ?",
+          "question": "Vos passagers sortent aussi. Le gilet est-il obligatoire pour eux ?",
           "choices": [
-            "Oui, toujours et partout",
-            "Non, mais c'est vivement conseillé",
-            "Oui, mais uniquement sur autoroute",
-            "Non, et c'est même déconseillé"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le gilet n'est pas obligatoire pour les passagers mais est vivement conseillé.",
@@ -1455,27 +1378,25 @@
         },
         {
           "id": "I2_Q26",
-          "question": "Vous êtes arrêté sur la bande d'arrêt d'urgence de l'autoroute. Où devez-vous attendre les secours ?",
+          "question": "Vous êtes arrêté sur la bande d'arrêt d'urgence. Où attendez-vous les secours ?",
           "choices": [
+            "Derrière les glissières",
             "Dans votre voiture",
-            "Derrière les glissières de sécurité",
-            "Sur la bande d'arrêt d'urgence",
-            "Sur la chaussée"
+            "Sur la bande d'arrêt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur la BAU, attendre derrière les glissières de sécurité pour éviter les accidents.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q27",
-          "question": "Vous êtes sur la bande d'arrêt d'urgence et vous envisagez d'y marcher. Est-ce autorisé ?",
+          "question": "Pouvez-vous marcher sur la bande d'arrêt d'urgence ?",
           "choices": [
-            "Oui, c'est toujours autorisé",
-            "Uniquement si c'est vraiment nécessaire",
-            "Oui, à pied",
+            "Uniquement si nécessaire",
+            "Oui, sans restriction",
             "Non, en aucun cas"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ne pas rester dans la voiture ni circuler sur la BAU si ce n'est pas nécessaire.",
           "theoryCardIndex": 1
         },
@@ -1483,10 +1404,8 @@
           "id": "I2_Q28",
           "question": "Vous êtes impliqué dans un accident. Pouvez-vous quitter les lieux ?",
           "choices": [
-            "Oui, après avoir appelé votre assurance",
-            "Non, toute personne impliquée doit rester sur place",
-            "Oui, après avoir pris des photos",
-            "Oui, si vous appelez un avocat"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Toute personne impliquée dans un accident doit rester sur place.",
@@ -1494,14 +1413,13 @@
         },
         {
           "id": "I2_Q29",
-          "question": "Vous êtes témoin d'un accident et vous allez appeler les secours. Que devez-vous évaluer avant d'appeler ?",
+          "question": "Que devez-vous évaluer avant d'appeler les secours ?",
           "choices": [
-            "Le coût approximatif des dégâts matériels des véhicules",
-            "Le lieu exact, le nombre et la gravité des blessés, les personnes bloquées, et tout risque d'incendie",
-            "La marque, le modèle et la couleur des véhicules impliqués",
-            "L'heure exacte de l'accident et les conditions météo"
+            "Lieu, blessés, gravité, risques",
+            "Le coût des dégâts matériels",
+            "La marque et la couleur du véhicule"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avant d'appeler les secours : évaluer le lieu, le nombre de blessés, si des personnes sont bloquées et s'il y a risque d'incendie.",
           "theoryCardIndex": 2
         },
@@ -1520,12 +1438,10 @@
         },
         {
           "id": "I2_Q31",
-          "question": "Vous êtes dans un embouteillage sur une route à 2 bandes. Devez-vous former un couloir de secours uniquement si vous êtes sur l'autoroute ?",
+          "question": "Le couloir de secours se forme-t-il uniquement sur autoroute ?",
           "choices": [
-            "Oui, uniquement sur les autoroutes belges",
-            "Non, il se forme sur toute chaussée à 2 bandes ou plus dans le même sens",
-            "Oui, uniquement en agglomération",
-            "Non, ce n'est jamais une obligation légale"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le couloir de secours est requis sur toute chaussée à 2 bandes ou plus dans le même sens, pas seulement les autoroutes.",
@@ -1533,77 +1449,70 @@
         },
         {
           "id": "I2_Q32",
-          "question": "Vous êtes dans un embouteillage et la circulation ralentit. Quand devez-vous commencer à former le couloir de secours ?",
+          "question": "Quand devez-vous commencer à former le couloir de secours ?",
           "choices": [
-            "Après l'arrêt complet de la circulation",
-            "De manière PRÉVENTIVE, avant l'arrêt complet du trafic",
-            "Seulement quand les secours arrivent",
-            "Seulement quand la police le demande"
+            "Avant l'arrêt complet du trafic",
+            "Après l'arrêt complet du trafic",
+            "Quand la police le demande"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le couloir de secours se forme de manière PRÉVENTIVE, avant que la circulation ne s'arrête.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q33",
-          "question": "Vous êtes dans un embouteillage sur une chaussée à 2 bandes. Où doit se former le couloir de secours ?",
+          "question": "Sur une chaussée à deux bandes, où se forme le couloir de secours ?",
           "choices": [
-            "Au milieu de la bande de droite",
-            "Entre la voie de gauche et la voie de droite",
+            "Entre la gauche et la droite",
             "Sur la bande d'arrêt d'urgence",
-            "Sur l'accotement"
+            "Au milieu de la bande droite"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur 2 bandes : couloir entre les voies gauche et droite.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q34",
-          "question": "Vous êtes dans un embouteillage sur une chaussée à 3 bandes. Où doit se former le couloir de secours ?",
+          "question": "Sur une chaussée à trois bandes, où se forme le couloir de secours ?",
           "choices": [
-            "Entre la bande de droite et la bande centrale",
-            "Entre la voie de gauche et la voie centrale",
-            "Sur la bande de droite",
-            "Au milieu de la chaussée"
+            "Entre la gauche et la centrale",
+            "Entre la droite et la centrale",
+            "Sur la bande de droite même"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur 3 bandes : couloir entre les voies gauche et centrale.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q35",
-          "question": "Vous êtes sur la bande de gauche d'une autoroute à 2 bandes lors d'un embouteillage. De quel côté vous décalez-vous pour former le couloir ?",
+          "question": "Vous êtes sur la bande de gauche. De quel côté vous décalez-vous ?",
           "choices": [
-            "Vers la droite comme les autres bandes",
-            "Encore plus à gauche pour libérer l'espace entre les deux bandes",
-            "Vous restez au centre de votre bande",
-            "Vous sortez de l'autoroute au plus vite"
+            "Encore plus à gauche",
+            "Vers la droite comme les autres",
+            "Vous restez bien au centre"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur la bande de gauche d'une autoroute à 2 bandes : se décaler à gauche pour créer le couloir.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q36",
-          "question": "Vous êtes sur la bande de droite d'une autoroute à 2 bandes lors d'un embouteillage. De quel côté vous décalez-vous ?",
+          "question": "Vous êtes sur la bande de droite. De quel côté vous décalez-vous ?",
           "choices": [
-            "Vers la gauche comme la première bande",
-            "Vers la droite pour libérer l'espace entre les deux bandes",
-            "Vous restez au centre de votre bande",
-            "Vous sortez de l'autoroute au plus vite"
+            "Vers la droite",
+            "Vers la gauche",
+            "Vous restez au centre"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur la bande de droite d'une autoroute à 2 bandes : se décaler à droite pour créer le couloir.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q37",
-          "question": "Vous arrivez sur un accident. Un blessé est au sol. Devez-vous le déplacer ?",
+          "question": "Un blessé est au sol après l'accident. Devez-vous le déplacer ?",
           "choices": [
-            "Oui, éloignez-le du véhicule accidenté",
-            "Non, ne déplacez pas la victime et attendez les secours, sauf en cas d'incendie",
-            "Oui, mettez-le à l'abri sur le trottoir",
-            "Cela dépend de la gravité de ses blessures"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il ne faut pas déplacer la victime et attendre les secours, sauf en cas d'incendie.",
@@ -1611,38 +1520,33 @@
         },
         {
           "id": "I2_Q38",
-          "question": "Vous êtes sur les lieux d'un accident et le véhicule prend feu avec un blessé à l'intérieur. Devez-vous déplacer la victime ?",
+          "question": "Le véhicule prend feu avec un blessé à l'intérieur. Devez-vous le sortir ?",
           "choices": [
-            "Non, attendez toujours les secours sur place",
-            "Oui, en cas de danger d'incendie, sortez rapidement la victime",
-            "Non, sauf si la victime le demande",
-            "Non, en aucun cas il ne faut la déplacer"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La victime ne doit être déplacée qu'en cas d'incendie ou de danger d'incendie immédiat.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q39",
-          "question": "Vous trouvez un motard blessé au sol. Son casque est en place. Devez-vous le retirer ?",
+          "question": "Un motard blessé porte son casque. Devez-vous le retirer ?",
           "choices": [
-            "Oui, immédiatement pour le soulager",
-            "Non, sauf si le blessé a des difficultés à respirer ou des vomissements",
-            "Oui, pour vérifier ses blessures à la tête",
-            "Non, en aucun cas il ne faut y toucher"
+            "Non, sauf s'il respire mal",
+            "Oui, tout de suite pour aider",
+            "Oui, pour voir ses blessures"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ne pas retirer le casque, sauf en cas de difficultés respiratoires ou de vomissements.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q40",
-          "question": "Vous portez secours à un blessé qui vous demande de l'eau. Devez-vous lui en donner ?",
+          "question": "Un blessé vous demande de l'eau. Devez-vous lui en donner ?",
           "choices": [
-            "Oui, ce n'est que de l'eau",
-            "Non, il est recommandé de ne rien donner à boire ni à manger à un blessé",
-            "Oui, un peu d'eau ne peut pas faire de mal",
-            "Oui, si la blessure n'est pas grave"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il ne faut rien donner à boire, à manger ni comme médicament au blessé.",
@@ -1650,12 +1554,10 @@
         },
         {
           "id": "I2_Q41",
-          "question": "Vous portez secours à un blessé qui souffre. Pouvez-vous lui donner un antidouleur ?",
+          "question": "Un blessé souffre. Pouvez-vous lui donner un antidouleur ?",
           "choices": [
-            "Oui, pour le soulager rapidement",
-            "Non, il est déconseillé d'administrer des médicaments à un blessé",
-            "Oui, mais uniquement du paracétamol",
-            "Cela dépend de la gravité de la blessure"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est déconseillé de donner tout médicament à un blessé en attente des secours.",
@@ -1663,14 +1565,13 @@
         },
         {
           "id": "I2_Q42",
-          "question": "Vous portez secours à un blessé qui a une forte hémorragie au bras. Que faites-vous ?",
+          "question": "Un blessé a une forte hémorragie au bras. Que faites-vous ?",
           "choices": [
-            "Vous nouez un garrot au-dessus de la plaie",
-            "Vous couvrez la plaie avec un mouchoir propre ou un bandage",
-            "Vous ne faites rien et attendez les secours",
-            "Vous mettez de l'eau sur la plaie"
+            "Couvrir la plaie proprement",
+            "Nouer un garrot au-dessus",
+            "Verser de l'eau sur la plaie"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas d'hémorragie, couvrir la plaie. Ne pas nouer au-dessus (pas de garrot).",
           "theoryCardIndex": 3
         },
@@ -1689,27 +1590,25 @@
         },
         {
           "id": "I2_Q44",
-          "question": "Vous trouvez un motard inconscient sur la route. Son casque est en place et il respire normalement. Que faites-vous ?",
+          "question": "Un motard inconscient respire normalement, casque en place. Que faites-vous ?",
           "choices": [
-            "Vous retirez son casque avec précaution",
-            "Vous laissez le casque en place et vous attendez les secours",
-            "Vous le déplacez sur le trottoir",
-            "Vous lui donnez de l'eau fraîche"
+            "Laisser le casque en place",
+            "Retirer le casque doucement",
+            "Le déplacer sur le trottoir"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si le blessé respire normalement, laissez le casque en place et attendez les secours.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q46",
-          "question": "Vous portez secours à un blessé qui saigne abondamment et qui demande de l'eau. Que faites-vous en priorité ?",
+          "question": "Un blessé saigne abondamment et demande à boire. Que faites-vous en priorité ?",
           "choices": [
-            "Vous lui donnez de l'eau à boire",
-            "Vous couvrez la plaie, sans rien lui donner à boire",
-            "Vous lui donnez un médicament antidouleur",
-            "Vous attendez les secours sans intervenir"
+            "Couvrir la plaie, sans donner",
+            "Lui donner de l'eau à boire",
+            "Lui donner un antidouleur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Priorité : couvrir l'hémorragie avec un bandage. Ne rien donner à boire ni à manger.",
           "theoryCardIndex": 3,
           "severe": true
@@ -1729,12 +1628,10 @@
         },
         {
           "id": "I2_Q48",
-          "question": "Votre médecin vous a déclaré inapte à conduire. Les samedis, dimanches et jours fériés comptent-ils dans le délai de 4 jours ?",
+          "question": "Vous êtes déclaré inapte à conduire. Les week-ends comptent-ils dans le délai de 4 jours ?",
           "choices": [
-            "Oui, tous les jours comptent",
-            "Non, ils ne sont pas comptés dans le délai",
-            "Oui, mais uniquement les samedis",
-            "Cela dépend de la commune"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Samedis, dimanches et jours fériés ne sont PAS inclus dans le délai de 4 jours ouvrables.",
@@ -1742,25 +1639,22 @@
         },
         {
           "id": "I2_Q49",
-          "question": "Vous avez informé la commune de votre inaptitude médicale. Que devez-vous faire en plus ?",
+          "question": "Vous avez informé la commune de votre inaptitude. Que devez-vous faire en plus ?",
           "choices": [
-            "Rien d'autre",
-            "Rendre votre permis de conduire",
-            "Passer un nouvel examen médical",
-            "Payer une amende"
+            "Rendre votre permis",
+            "Repasser un examen médical",
+            "Payer une amende forfaitaire"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En plus d'informer la commune, vous devez rendre votre permis de conduire.",
           "theoryCardIndex": 4
         },
         {
           "id": "I2_Q50",
-          "question": "Vous conduisez votre voiture avec votre enfant de 12 ans comme passager. Pouvez-vous fumer ?",
+          "question": "Vous conduisez avec votre enfant de 12 ans à bord. Pouvez-vous fumer ?",
           "choices": [
-            "Oui, c'est votre voiture privée",
-            "Non, il est interdit de fumer en présence de passagers mineurs",
-            "Oui, en ouvrant grand la fenêtre",
-            "Cela dépend de l'âge exact de l'enfant"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de fumer en voiture en présence de passagers mineurs.",
@@ -1768,14 +1662,12 @@
         },
         {
           "id": "I2_Q51",
-          "question": "Vous conduisez votre voiture avec uniquement des passagers adultes. Pouvez-vous fumer ?",
+          "question": "Vous conduisez avec uniquement des passagers adultes. Pouvez-vous fumer ?",
           "choices": [
-            "Non, fumer est interdit dans tous les véhicules",
-            "Oui, l'interdiction ne concerne que la présence de passagers mineurs",
-            "Non, c'est interdit partout",
-            "Cela dépend du propriétaire du véhicule"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction de fumer en voiture ne s'applique que lorsqu'il y a des passagers mineurs.",
           "theoryCardIndex": 4
         },
@@ -1794,14 +1686,13 @@
         },
         {
           "id": "I2_Q53",
-          "question": "Vous voyez un signal de tunnel accompagné d'un panneau indiquant \"2 km\". Que signifie cette combinaison ?",
+          "question": "Ce panneau de tunnel porte la mention « 2 km ». Que signifie-t-il ?",
           "choices": [
-            "Le tunnel fait 2 km de long",
-            "À 2 km de votre position, il y a un tunnel d'au moins 500 m",
-            "Vous devez ralentir sur 2 km",
-            "Une déviation de 2 km est prévue"
+            "Un tunnel à 2 km d'ici",
+            "Un tunnel long de 2 km",
+            "Ralentir pendant 2 km"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau \"2 km\" indique la distance jusqu'au tunnel, pas sa longueur.",
           "theoryCardIndex": 5,
           "sign": "F8"
@@ -1821,27 +1712,25 @@
         },
         {
           "id": "I2_Q55",
-          "question": "Vous approchez d'un tunnel. Quand devez-vous allumer vos feux de croisement ?",
+          "question": "Quand devez-vous allumer vos feux de croisement avant un tunnel ?",
           "choices": [
-            "Juste à l'entrée du tunnel",
-            "Suffisamment tôt, bien avant de vous engager dans le tunnel",
-            "Au milieu du tunnel seulement",
-            "En sortant du tunnel uniquement"
+            "Bien avant d'y entrer",
+            "Juste à l'entrée même",
+            "Au milieu du tunnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Allumer les feux de croisement bien avant de s'engager dans le tunnel.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q56",
-          "question": "Vous allez entrer dans un tunnel et on vous conseille de fermer un oeil. Pourquoi ?",
+          "question": "Pourquoi vous conseille-t-on de fermer un œil avant d'entrer dans un tunnel ?",
           "choices": [
-            "Pour reposer vos yeux avant l'obscurité",
-            "Pour éviter l'effet \"trou noir\" à l'entrée du tunnel",
-            "Pour mieux évaluer les distances",
-            "Pour éviter l'éblouissement à la sortie"
+            "Pour éviter l'effet de trou noir",
+            "Pour reposer vos yeux avant",
+            "Pour mieux juger les distances"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Fermer un œil permet d'éviter l'effet de \"trou noir\" à l'entrée du tunnel.",
           "theoryCardIndex": 5
         },
@@ -1860,25 +1749,22 @@
         },
         {
           "id": "I2_Q58",
-          "question": "Vous rouliez avec les feux antibrouillard allumés avant d'entrer dans le tunnel. Que faites-vous dans le tunnel ?",
+          "question": "Vous rouliez avec les antibrouillards. Que faites-vous en entrant dans le tunnel ?",
           "choices": [
-            "Vous les gardez allumés par sécurité",
-            "Vous les éteignez : ces conditions n'existent pas dans un tunnel",
-            "Vous ajoutez les feux de route en plus",
-            "Cela n'a aucune importance dans un tunnel"
+            "Vous les éteignez",
+            "Vous les gardez allumés",
+            "Vous ajoutez les feux de route"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Éteindre les feux antibrouillard dans un tunnel (pas de conditions météo justifiant leur usage).",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q59",
-          "question": "Vous êtes dans un tunnel et vous souhaitez vous arrêter sur la chaussée. Est-ce autorisé ?",
+          "question": "Pouvez-vous vous arrêter sur la chaussée dans un tunnel ?",
           "choices": [
-            "Oui, pour un bref instant seulement",
-            "Non, c'est interdit sur la chaussée dans un tunnel",
-            "Oui, en cas de trafic très dense",
-            "Oui, pour faire descendre un passager"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de stationner ou de s'arrêter sur la chaussée dans un tunnel.",
@@ -1886,12 +1772,10 @@
         },
         {
           "id": "I2_Q60",
-          "question": "Vous êtes dans un tunnel et vous souhaitez faire demi-tour. Est-ce autorisé ?",
+          "question": "Pouvez-vous faire demi-tour dans un tunnel ?",
           "choices": [
-            "Oui, si c'est sûr",
-            "Non, le demi-tour est interdit dans un tunnel",
-            "Oui, en cas d'urgence",
-            "Cela dépend de la largeur du tunnel"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le demi-tour est interdit dans un tunnel.",
@@ -1899,12 +1783,10 @@
         },
         {
           "id": "I2_Q61",
-          "question": "Vous êtes dans un tunnel et vous souhaitez faire marche arrière. Est-ce autorisé ?",
+          "question": "Pouvez-vous faire marche arrière dans un tunnel ?",
           "choices": [
-            "Oui, mais pour un bref instant",
-            "Non, la marche arrière est interdite dans un tunnel",
-            "Oui, mais uniquement pour stationner",
-            "Cela dépend de la densité du trafic"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La marche arrière est interdite dans un tunnel.",
@@ -1914,12 +1796,11 @@
           "id": "I2_Q62",
           "question": "Vous êtes témoin d'un accident dans un tunnel. Comment prévenez-vous les secours ?",
           "choices": [
-            "Uniquement par téléphone portable en roulant",
-            "De préférence par le téléphone d'urgence du tunnel, sinon par GSM (112)",
-            "En klaxonnant pour alerter les autres usagers",
-            "En sortant du tunnel à pied pour appeler"
+            "Par le téléphone d'urgence",
+            "Par GSM en roulant, sans plus",
+            "En klaxonnant pour alerter"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Utiliser le téléphone d'urgence du tunnel de préférence, sinon le 112.",
           "theoryCardIndex": 5
         },
@@ -1938,12 +1819,10 @@
         },
         {
           "id": "I2_Q64",
-          "question": "Vous devez évacuer votre voiture dans un tunnel en feu. Devez-vous emporter votre clé de contact ?",
+          "question": "Vous évacuez votre voiture dans un tunnel en feu. Devez-vous emporter votre clé ?",
           "choices": [
-            "Oui, toujours par réflexe de sécurité",
-            "Non, laissez la clé sur le contact (ou le transpondeur sur le siège)",
-            "Oui, pour la sécurité de votre véhicule",
-            "Cela dépend du type de véhicule"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Laisser la clé sur le contact (ou le transpondeur sur le siège) pour permettre aux secours de déplacer le véhicule.",
@@ -1951,40 +1830,37 @@
         },
         {
           "id": "I2_Q65",
-          "question": "Vous devez évacuer un tunnel en feu à pied. Dans quelle direction devez-vous vous diriger ?",
+          "question": "Vous évacuez un tunnel en feu à pied. Dans quelle direction allez-vous ?",
           "choices": [
+            "Vers l'endroit d'où vous venez",
             "Dans le sens de la circulation",
-            "De préférence vers l'endroit d'où vous venez",
-            "N'importe quelle direction",
-            "Restez sur place"
+            "Vers le milieu du tunnel"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Évacuer de préférence en sens inverse de la circulation, vers l'entrée du tunnel.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q66",
-          "question": "Vous êtes dans un tunnel et un incendie se déclare. Comment les instructions d'évacuation vous sont-elles transmises ?",
+          "question": "Comment les instructions d'évacuation d'un tunnel vous parviennent-elles ?",
           "choices": [
-            "Uniquement par des panneaux lumineux",
-            "Souvent via des haut-parleurs présents dans le tunnel",
-            "Par la radio locale uniquement",
-            "Par SMS envoyé automatiquement"
+            "Par des haut-parleurs du tunnel",
+            "Par la radio locale, sans plus",
+            "Par un SMS envoyé au conducteur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les instructions d'urgence sont souvent diffusées via les hauts-parleurs du tunnel.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q67",
-          "question": "Vous évacuez un tunnel par la sortie de secours. Vers quoi mène-t-elle ?",
+          "question": "Vers quoi mène une sortie de secours dans un tunnel ?",
           "choices": [
+            "Vers des abris d'évacuation",
             "Vers la chaussée opposée",
-            "Vers des abris équipés de voies d'évacuation",
-            "Directement vers l'extérieur",
             "Vers la bande d'arrêt d'urgence"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La sortie de secours mène vers des abris équipés de voies d'évacuation.",
           "theoryCardIndex": 5
         },
@@ -2003,27 +1879,24 @@
         },
         {
           "id": "I2_Q69",
-          "question": "Vous révisez la notion de délit de fuite. Quels sont les 3 éléments qui le constituent ?",
+          "question": "Quels éléments constituent le délit de fuite ?",
           "choices": [
-            "La vitesse, l'accident et la fuite du lieu",
-            "Quitter volontairement les lieux, en se sachant impliqué, pour échapper aux constatations",
-            "Le refus, la fuite et la dissimulation de preuves",
-            "L'accident, le constat non signé et le départ"
+            "Partir en se sachant impliqué",
+            "La vitesse, l'accident, la fuite",
+            "Le refus et le constat non signé"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les 3 éléments : abandon intentionnel + connaissance d'être la cause + intention d'échapper aux constatations.",
           "theoryCardIndex": 6
         },
         {
           "id": "I2_Q70",
-          "question": "Vous vous demandez si le délit de fuite est sévèrement puni. Qu'en est-il ?",
+          "question": "Le délit de fuite est-il sévèrement puni ?",
           "choices": [
-            "Non, c'est une infraction mineure",
-            "Oui, le délit de fuite est sévèrement sanctionné",
-            "Non, c'est un simple avertissement",
-            "Cela dépend des dégâts"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le délit de fuite est sévèrement puni : emprisonnement, amende et déchéance du droit de conduire.",
           "theoryCardIndex": 6
         },
@@ -2042,12 +1915,10 @@
         },
         {
           "id": "I2_Q72",
-          "question": "Vous êtes impliqué dans un accident. Pouvez-vous quitter les lieux en laissant vos coordonnées ?",
+          "question": "Pouvez-vous quitter les lieux d'un accident en laissant vos coordonnées ?",
           "choices": [
-            "Oui, laisser ses coordonnées suffit",
-            "Non, toute personne impliquée doit rester sur place",
-            "Oui, si les dégâts sont mineurs",
-            "Cela dépend de l'heure de l'accident"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Toute personne impliquée doit rester sur place. Seule exception : dégâts sur propriété privée sans propriétaire trouvé (laisser ses coordonnées).",
@@ -2268,155 +2139,139 @@
       "questions": [
         {
           "id": "I3_Q1",
-          "question": "Vous vous apprêtez à prendre votre voiture pour un court trajet. Pourquoi devriez-vous vous demander si elle est vraiment nécessaire ?",
+          "question": "Pourquoi vous demander si la voiture est vraiment nécessaire pour un court trajet ?",
           "choices": [
-            "Pour gagner du temps sur l'ensemble du trajet",
-            "Les déplacements en voiture sont coûteux ET nuisibles pour l'environnement",
-            "Par simple habitude, sans autre raison",
-            "Uniquement pour éviter les embouteillages du matin"
+            "C'est coûteux et polluant",
+            "Pour gagner un peu de temps",
+            "Pour éviter les embouteillages"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Chaque trajet en voiture engendre un coût financier et un impact environnemental. Se poser la question permet de choisir une alternative quand c'est possible.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q2",
-          "question": "Vous devez vous rendre à un endroit situé à 800 mètres. Quel moyen de transport est le plus adapté ?",
+          "question": "Quel moyen de transport est le plus adapté pour 800 mètres ?",
           "choices": [
-            "La voiture",
             "La marche à pied",
-            "Le taxi",
-            "Le bus"
+            "La voiture personnelle",
+            "Le taxi de la station"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La marche est raisonnable pour des distances allant jusque 1 km.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q3",
-          "question": "Vous devez parcourir une distance de 5 km. Quel moyen de transport est recommandé pour cette distance ?",
+          "question": "Quel moyen de transport est recommandé pour une distance de 5 km ?",
           "choices": [
-            "La voiture, plus rapide en ville",
-            "Le vélo, adapté aux distances de 1 à 10 km",
-            "Le taxi, pour éviter la fatigue",
-            "La marche à pied, idéale jusqu'à 5 km"
+            "Le vélo",
+            "La voiture",
+            "Le taxi"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le vélo est le moyen de transport recommandé pour les distances de 1 à 10 km.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q4",
-          "question": "Vous démarrez votre voiture pour un trajet de 500 mètres. Pourquoi est-ce néfaste de rouler sur de courtes distances avec un moteur froid ?",
+          "question": "Pourquoi rouler sur de courtes distances avec un moteur froid est-il néfaste ?",
           "choices": [
-            "Le moteur risque de chauffer beaucoup trop vite",
-            "C'est néfaste pour le moteur ET cela augmente la consommation de carburant",
-            "Cela n'a aucun impact sur la mécanique",
-            "Cela use principalement les pneus"
+            "Mauvais moteur et plus de carburant",
+            "Le moteur chauffe beaucoup trop vite",
+            "Cela use surtout les pneus avant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un moteur froid sollicité intensément s'use plus vite et consomme davantage.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q5",
-          "question": "Vous venez de démarrer votre voiture et le moteur est encore froid. Comment devez-vous conduire ?",
+          "question": "Votre moteur est encore froid. Comment devez-vous conduire ?",
           "choices": [
-            "De manière sportive pour faire chauffer le moteur",
-            "En étant doux avec le moteur et en attendant qu'il soit à température",
-            "En accélérant fortement",
-            "En restant au point mort"
+            "En douceur jusqu'à température",
+            "De façon sportive pour chauffer",
+            "En accélérant franchement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avec un moteur froid, conduire en douceur et attendre la température de fonctionnement.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q6",
-          "question": "Votre moteur est maintenant à température normale. Pouvez-vous conduire de manière plus dynamique ?",
+          "question": "Votre moteur est à température. Pouvez-vous conduire plus dynamiquement ?",
           "choices": [
-            "Non, jamais avec ce type de moteur",
-            "Oui, mais toujours en respectant les règles de circulation",
-            "Oui, sans aucune limite de vitesse",
-            "Non, cela consomme beaucoup trop"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une fois à température, une conduite plus dynamique est possible, mais toujours dans le respect du code.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q7",
-          "question": "Vous conduisez une voiture essence. À quel régime moteur est-il conseillé de passer à la vitesse supérieure ?",
+          "question": "En essence, à quel régime passer la vitesse supérieure ?",
           "choices": [
-            "Entre 1000 et 1500 tours/minute",
-            "Entre 2000 et 2500 tours/minute",
-            "Entre 3000 et 4000 tours/minute",
-            "À 500 tours/minute"
+            "Entre 2000 et 2500 tours",
+            "Entre 1000 et 1500 tours",
+            "Entre 3000 et 4000 tours"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour l'essence, passer la vitesse supérieure entre 2000 et 2500 tours/min pour économiser.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q8",
-          "question": "Vous conduisez une voiture diesel. À quel régime moteur est-il conseillé de passer à la vitesse supérieure ?",
+          "question": "En diesel, à quel régime passer la vitesse supérieure ?",
           "choices": [
-            "Entre 2000 et 2500 tours/minute",
-            "Entre 1500 et 2000 tours/minute",
-            "À 3000 tours/minute",
-            "À 1000 tours/minute"
+            "Entre 1500 et 2000 tours",
+            "Entre 2000 et 2500 tours",
+            "Entre 3000 et 3500 tours"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour le diesel, passer la vitesse supérieure entre 1500 et 2000 tours/min.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q9",
-          "question": "Vous adoptez une conduite sportive avec des accélérations fréquentes. Quel est l'impact sur votre consommation ?",
+          "question": "Quel est l'impact d'une conduite sportive sur votre consommation ?",
           "choices": [
-            "Cela n'a aucun impact mesurable",
-            "Votre consommation de carburant augmente considérablement",
-            "Vous arrivez plus lentement à destination",
-            "Cela réduit la consommation de carburant"
+            "Elle augmente nettement",
+            "Elle diminue nettement",
+            "Elle ne change pas du tout"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Maintenir un régime élevé et faire des changements de vitesse constants augmente fortement la consommation.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q10",
-          "question": "Vous montez sur une voie rapide ou vous devez effectuer un dépassement rapide. Pouvez-vous dépasser le régime conseillé ?",
+          "question": "Pour rejoindre une voie rapide ou dépasser, pouvez-vous dépasser le régime conseillé ?",
           "choices": [
-            "Non, le régime conseillé ne se dépasse jamais",
-            "Oui, c'est justifié dans ces situations précises",
-            "Uniquement en ville à basse vitesse",
-            "Uniquement quand la route est complètement vide"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dépasser le régime conseillé est acceptable pour s'insérer sur une voie rapide ou effectuer un dépassement.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q11",
-          "question": "Vous êtes immobilisé dans un embouteillage depuis plusieurs minutes. Devez-vous couper le moteur ?",
+          "question": "Vous êtes immobilisé dans une file depuis plusieurs minutes. Devez-vous couper le moteur ?",
           "choices": [
-            "Non, laissez-le tourner au ralenti",
-            "Oui, le code le prévoit dans les files et aux passages à niveau",
-            "Non, c'est facultatif et peu utile",
-            "Uniquement sur l'autoroute à l'arrêt"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le code prévoit de couper le moteur lors d'une immobilisation prolongée.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q12",
-          "question": "Vous avez entendu dire qu'il faut couper le moteur après 30 secondes d'immobilisation. Cette durée figure-t-elle dans la loi ?",
+          "question": "La règle des 30 secondes avant de couper le moteur figure-t-elle dans la loi ?",
           "choices": [
-            "Oui, c'est inscrit dans le code",
-            "Non, la durée de 30 secondes souvent citée n'est PAS dans la loi",
-            "Oui, c'est une obligation après 1 minute",
-            "Oui, c'est 10 secondes dans la loi"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Aucune durée précise n'est fixée par la loi ; la règle des 30 secondes n'est qu'une recommandation.",
@@ -2424,27 +2279,25 @@
         },
         {
           "id": "I3_Q13",
-          "question": "Vous souhaitez réduire votre consommation de carburant. Quels facteurs liés au moteur augmentent cette consommation ?",
+          "question": "Quels facteurs liés au moteur augmentent la consommation ?",
           "choices": [
-            "Des pneus neufs bien gonflés",
-            "Un moteur mal réglé et un filtre à air sale",
+            "Moteur mal réglé, filtre sale",
             "Un moteur bien entretenu",
-            "Un catalyseur récemment remplacé"
+            "Un catalyseur tout neuf"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un moteur mal réglé et un filtre à air encrassé augmentent la consommation.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q14",
-          "question": "Vous vous demandez à quoi sert le catalyseur de votre véhicule. Quel est son rôle ?",
+          "question": "Quel est le rôle du catalyseur de votre véhicule ?",
           "choices": [
-            "Augmenter la puissance du moteur",
-            "Diminuer la pollution en traitant les gaz d'échappement",
-            "Réduire le bruit d'échappement",
-            "Filtrer l'air d'admission du moteur"
+            "Diminuer la pollution",
+            "Augmenter la puissance",
+            "Réduire le bruit du moteur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le catalyseur réduit ou détruit les gaz polluants, diminuant ainsi la pollution.",
           "theoryCardIndex": 1
         },
@@ -2463,25 +2316,22 @@
         },
         {
           "id": "I3_Q17",
-          "question": "Vous avez des objets inutiles dans votre coffre. Pourquoi devriez-vous les retirer ?",
+          "question": "Pourquoi retirer les objets inutiles de votre coffre ?",
           "choices": [
-            "Pour faire de la place dans le coffre",
-            "Un chargement plus lourd fait consommer davantage",
-            "Pour des raisons purement esthétiques",
-            "Pour mieux voir par la lunette arrière"
+            "Le poids fait consommer plus",
+            "Pour faire de la place",
+            "Pour mieux voir à l'arrière"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Chaque kilo supplémentaire augmente la consommation de carburant.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q18",
-          "question": "Vous n'utilisez plus votre remorque. Devez-vous la laisser attachée à votre voiture ?",
+          "question": "Vous n'utilisez plus votre remorque. Devez-vous la laisser attachée ?",
           "choices": [
-            "Oui, c'est plus pratique au quotidien",
-            "Non, détachez-la : poids et résistance à l'air font consommer plus",
-            "Oui, pour la sécurité de l'attelage",
-            "Cela n'a aucun impact sur la consommation"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Une remorque attachée inutilement augmente le poids et la résistance, donc la consommation.",
@@ -2489,25 +2339,22 @@
         },
         {
           "id": "I3_Q19",
-          "question": "Vous avez installé un coffre de toit sur votre voiture. Pourquoi augmente-t-il la consommation ?",
+          "question": "Pourquoi un coffre de toit augmente-t-il la consommation ?",
           "choices": [
-            "Uniquement à cause du poids",
             "Il augmente la résistance à l'air",
-            "Il n'augmente pas la consommation",
-            "À cause de sa couleur"
+            "Surtout à cause de son poids",
+            "À cause de sa couleur foncée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un coffre de toit crée une résistance aérodynamique supplémentaire, augmentant la consommation.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q20",
-          "question": "Vous avez vidé votre coffre de toit après les vacances mais il est toujours sur le toit. Pouvez-vous rouler ainsi ?",
+          "question": "Votre coffre de toit est vide mais toujours en place. Pouvez-vous rouler ainsi ?",
           "choices": [
-            "Oui, cela ne change rien à la conduite",
-            "Non, retirez le coffre vide et les barres inutiles",
-            "Oui, c'est même plus prudent de le laisser",
-            "Cela dépend de la vitesse pratiquée"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Même vide, un coffre de toit crée de la résistance à l'air. Il faut le retirer quand inutilisé.",
@@ -2515,14 +2362,13 @@
         },
         {
           "id": "I3_Q21",
-          "question": "Vous devez transporter des vélos. Où est-il préférable de fixer le porte-vélo pour consommer moins ?",
+          "question": "Où fixer un porte-vélos pour consommer le moins possible ?",
           "choices": [
-            "Sur le toit",
             "À l'arrière de la voiture",
-            "Sur le capot",
-            "Cela ne change rien"
+            "Sur le toit du véhicule",
+            "Sur le capot avant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un porte-vélo à l'arrière génère moins de résistance à l'air qu'un porte-vélo sur le toit.",
           "theoryCardIndex": 2
         },
@@ -2541,90 +2387,81 @@
         },
         {
           "id": "I3_Q23",
-          "question": "Vous avez chaud en voiture mais vous souhaitez éviter d'augmenter votre consommation. Quelle est la meilleure solution ?",
+          "question": "Vous avez chaud sans vouloir consommer plus. Quelle est la meilleure solution ?",
           "choices": [
-            "Ouvrir toutes les vitres en grand",
-            "Garder les vitres fermées et utiliser la ventilation",
-            "Rouler plus vite pour créer du vent",
-            "Ouvrir le toit ouvrant en continu"
+            "Vitres fermées et ventilation",
+            "Toutes les vitres grandes ouvertes",
+            "Rouler plus vite pour le vent"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Utiliser la ventilation intérieure avec les vitres fermées évite la résistance aérodynamique.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q24",
-          "question": "Vous ouvrez la vitre du conducteur et vous ressentez un courant d'air désagréable (effet \"parachute\"). Que devez-vous faire ?",
+          "question": "Un courant d'air désagréable apparaît quand vous ouvrez votre vitre. Que faites-vous ?",
           "choices": [
+            "Ouvrir un peu la vitre arrière",
             "Fermer toutes les autres vitres",
-            "Ouvrir aussi un peu la vitre du passager arrière droit",
-            "Rouler plus lentement",
-            "Fermer le toit ouvrant"
+            "Rouler nettement plus lentement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ouvrir légèrement la vitre arrière droite compense et réduit l'effet de parachute côté conducteur.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q25",
-          "question": "Vous utilisez la climatisation dans votre voiture. Pourquoi cela augmente-t-il la consommation de carburant ?",
+          "question": "Pourquoi la climatisation augmente-t-elle la consommation ?",
           "choices": [
-            "La climatisation refroidit le moteur",
-            "Le moteur doit produire plus d'énergie pour alimenter le système",
-            "La climatisation n'augmente pas la consommation",
-            "Cela use les pneus"
+            "Le moteur fournit plus d'énergie",
+            "Elle refroidit aussi le moteur",
+            "Elle use davantage les pneus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La climatisation exige davantage d'électricité, ce qui fait travailler plus le moteur.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q26",
-          "question": "Vous souhaitez réduire votre consommation. Quels équipements électriques devez-vous éteindre s'ils ne sont pas nécessaires ?",
+          "question": "Quels équipements électriques éteindre s'ils ne sont pas nécessaires ?",
           "choices": [
+            "Clim, lunette et sièges chauffants",
             "Les phares et feux de position",
-            "La climatisation, la lunette et les sièges chauffants",
-            "Les clignotants et feux stop",
-            "La radio et le GPS intégré"
+            "Les clignotants et feux stop"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Tous ces équipements consomment de l'électricité et augmentent la consommation de carburant.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q29",
-          "question": "Vous vérifiez la pression de vos pneus. Quelle pression devez-vous respecter ?",
+          "question": "Quelle pression devez-vous respecter pour vos pneus ?",
           "choices": [
-            "Toujours 2 bars sur chaque roue",
-            "Les indications du constructeur figurant dans le manuel",
-            "La pression minimale possible",
-            "Peu importe, cela n'a pas d'importance"
+            "Celle du constructeur",
+            "Deux bars sur chaque roue",
+            "La pression la plus basse"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La pression correcte selon le constructeur assure sécurité et consommation optimale.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q30",
-          "question": "Vous préparez un long voyage avec une voiture bien chargée. Devez-vous adapter la pression des pneus ?",
+          "question": "Vous partez en voyage avec une voiture bien chargée. Adaptez-vous la pression des pneus ?",
           "choices": [
-            "Non, gardez la pression habituelle",
-            "Oui, augmentez légèrement la pression pour la charge",
-            "Augmentez la pression uniquement en été",
-            "Vérifiez seulement après chaque plein"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une charge lourde ou un long trajet nécessite une légère augmentation de la pression.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q31",
-          "question": "Vous constatez que vos pneus sont usés. Pouvez-vous continuer à rouler avec ?",
+          "question": "Vos pneus sont usés. Pouvez-vous continuer à rouler avec ?",
           "choices": [
-            "Oui, en étant prudent",
-            "Non, rouler avec des pneus usés est interdit",
-            "Oui, uniquement en ville",
-            "Cela dépend de l'état de la route"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Rouler avec des pneus usés est interdit car cela compromet la sécurité.",
@@ -2632,12 +2469,10 @@
         },
         {
           "id": "I3_Q32",
-          "question": "Vos pneus sont usés et vous envisagez de recreuser les rainures. Est-ce autorisé ?",
+          "question": "Vos pneus sont usés. Pouvez-vous recreuser les rainures ?",
           "choices": [
-            "Oui, c'est une solution économique",
-            "Non, retailler ou recreuser les rainures est interdit",
-            "Oui, si c'est fait par un professionnel",
-            "Cela dépend du type de pneu"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Retailler ou recreuser les rainures est interdit.",
@@ -2671,38 +2506,33 @@
         },
         {
           "id": "I3_Q35",
-          "question": "Vous choisissez entre du diesel avec ou sans soufre. Le diesel sans soufre est-il plus ou moins écologique ?",
+          "question": "Le diesel sans soufre est-il plus ou moins écologique que le diesel ordinaire ?",
           "choices": [
+            "Plus écologique",
             "Moins écologique",
-            "Plus écologique que le diesel ordinaire",
-            "Identique",
-            "Cela dépend du moteur"
+            "Exactement identique"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le diesel sans soufre est plus écologique que le gazole blanc ou rouge ordinaire.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q36",
-          "question": "Vous vous demandez si le diesel blanc (pour voitures) et le mazout de chauffage rouge sont le même produit. Qu'en est-il ?",
+          "question": "Le diesel blanc et le mazout de chauffage rouge sont-ils le même produit ?",
           "choices": [
-            "Non, ce sont des produits différents",
-            "Oui, c'est le même produit mais avec des taxes différentes",
-            "Non, le rouge est plus pur",
-            "Oui, et les taxes sont identiques"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "C'est chimiquement le même produit, mais le mazout de chauffage est coloré en rouge et moins taxé.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q37",
-          "question": "Vous avez accès à du mazout de chauffage (rouge) et vous envisagez de l'utiliser dans votre voiture diesel. Est-ce autorisé ?",
+          "question": "Pouvez-vous utiliser du mazout de chauffage rouge dans votre voiture diesel ?",
           "choices": [
-            "Oui, c'est le même produit",
-            "Non, rouler au mazout rouge est interdit",
-            "Oui, en cas d'urgence",
-            "Oui, si votre véhicule est diesel"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Rouler au mazout rouge est interdit car les taxes du carburant routier n'ont pas été payées.",
@@ -2710,52 +2540,47 @@
         },
         {
           "id": "I3_Q39",
-          "question": "Vous voyez un panneau indiquant une zone de basses émissions (LEZ). De quoi s'agit-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "D'une zone entièrement piétonne",
-            "D'une zone interdite aux véhicules trop polluants",
-            "D'une zone sans aucune voiture",
-            "D'une zone de stationnement payant"
+            "Zone interdite aux plus polluants",
+            "Zone entièrement piétonne",
+            "Zone de stationnement payant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une LEZ est une zone où certains véhicules polluants sont interdits.",
           "theoryCardIndex": 4,
           "sign": "F117"
         },
         {
           "id": "I3_Q40",
-          "question": "Vous vous demandez qui décide de l'implantation d'une zone de basses émissions (LEZ). Qui a ce pouvoir ?",
+          "question": "Qui décide de l'implantation d'une zone de basses émissions ?",
           "choices": [
-            "L'État fédéral",
-            "Chaque ville ou commune peut le décider",
-            "L'Union européenne",
-            "Les constructeurs automobiles"
+            "Chaque ville ou commune",
+            "L'État fédéral belge",
+            "L'Union européenne"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La décision d'instaurer une LEZ est locale : chaque ville ou village peut la décider.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q41",
-          "question": "Vous souhaitez savoir combien de zones de basses émissions existent actuellement en Belgique. Combien y en a-t-il ?",
+          "question": "Combien de zones de basses émissions existent en Belgique ?",
           "choices": [
-            "1",
-            "3 : Anvers, Bruxelles et Gand",
-            "5",
-            "10"
+            "Trois",
+            "Une",
+            "Dix"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En Belgique, trois villes ont une LEZ : Anvers, Bruxelles et Gand.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q42",
-          "question": "Vous envisagez de vous rendre dans une LEZ. Les conditions d'accès sont-elles identiques dans les 3 villes belges ?",
+          "question": "Les conditions d'accès sont-elles identiques dans les trois zones de basses émissions ?",
           "choices": [
-            "Oui, les règles sont les mêmes partout",
-            "Non, les conditions ne sont PAS identiques dans les trois villes",
-            "Oui, c'est une réglementation fédérale",
-            "Cela dépend du véhicule"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les conditions d'accès diffèrent entre Anvers, Bruxelles et Gand.",
@@ -2763,27 +2588,25 @@
         },
         {
           "id": "I3_Q43",
-          "question": "Vous prévoyez de vous rendre dans une zone de basses émissions. Que devez-vous faire avant ?",
+          "question": "Que devez-vous faire avant de vous rendre dans une zone de basses émissions ?",
           "choices": [
-            "Acheter un autocollant spécial LEZ",
-            "Vérifier les conditions d'accès sur Internet",
-            "Appeler la commune concernée",
-            "Rien de particulier à prévoir"
+            "Vérifier les conditions d'accès",
+            "Acheter un autocollant spécial",
+            "Appeler la commune concernée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les règles variant d'une ville à l'autre, il faut les vérifier sur Internet avant d'y entrer.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q44",
-          "question": "Vous cherchez la norme EURO de votre véhicule. Où la trouvez-vous ?",
+          "question": "Où trouvez-vous la norme EURO de votre véhicule ?",
           "choices": [
-            "Sur le tableau de bord",
             "Sur le certificat d'immatriculation",
-            "Sur le pare-brise",
-            "Sur le capot du moteur"
+            "Sur le tableau de bord du véhicule",
+            "Sur le capot du compartiment moteur"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La norme EURO est indiquée sur le certificat d'immatriculation du véhicule.",
           "theoryCardIndex": 4
         },
@@ -2802,92 +2625,84 @@
         },
         {
           "id": "I3_Q47",
-          "question": "Vous recevez votre certificat d'immatriculation. De quoi s'agit-il ?",
+          "question": "Qu'est-ce que le certificat d'immatriculation ?",
           "choices": [
-            "De votre permis de conduire définitif",
-            "De la carte d'identité de la voiture et ses caractéristiques",
-            "De votre contrat d'assurance auto",
-            "Du rapport du contrôle technique"
+            "La carte d'identité de la voiture",
+            "Votre contrat d'assurance auto",
+            "Le rapport du contrôle technique"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le certificat d'immatriculation est le document officiel contenant toutes les caractéristiques du véhicule.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q49",
-          "question": "Vous entendez parler de \"conduite défensive\". En quoi cela consiste-t-il ?",
+          "question": "En quoi consiste la conduite défensive ?",
           "choices": [
-            "À rouler nettement plus lentement que la limite",
-            "À regarder loin devant et anticiper les erreurs des autres",
-            "À freiner tôt et brusquement à chaque danger",
-            "À toujours céder le passage à tout le monde"
+            "Regarder loin et anticiper",
+            "Rouler bien sous la limite",
+            "Freiner tôt et brusquement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La conduite défensive consiste à anticiper les situations dangereuses avant qu'elles ne surviennent.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q50",
-          "question": "Vous adoptez une conduite défensive. Quel est le principal avantage pour votre sécurité ?",
+          "question": "Quel est le principal avantage de la conduite défensive pour votre sécurité ?",
           "choices": [
-            "Vous roulez plus vite en sécurité",
-            "Vous détectez les situations dangereuses AVANT qu'elles ne surviennent",
-            "Vous évitez les radars et amendes",
-            "Vous dépassez plus souvent sans risque"
+            "Détecter le danger à l'avance",
+            "Rouler plus vite en sécurité",
+            "Éviter les radars et amendes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Anticiper les dangers avant qu'ils ne se produisent est l'essence même de la conduite défensive.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q51",
-          "question": "Vous pratiquez la conduite défensive. Comment cela vous permet-il d'économiser du carburant ?",
+          "question": "Comment la conduite défensive permet-elle d'économiser du carburant ?",
           "choices": [
-            "En montant les rapports le plus tard possible",
-            "En relâchant l'accélérateur à temps et en utilisant le frein moteur",
-            "En roulant au point mort dans les descentes",
-            "En freinant fort au dernier moment"
+            "Relâcher tôt et freiner moteur",
+            "Monter les rapports au plus tard",
+            "Rouler au point mort en descente"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Anticiper permet de lever le pied tôt et d'utiliser le frein moteur, économisant ainsi le carburant.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q52",
-          "question": "Vous adoptez une conduite défensive. En plus du carburant, qu'économisez-vous ?",
+          "question": "En plus du carburant, qu'économise la conduite défensive ?",
           "choices": [
-            "Uniquement les pneus, rien d'autre",
-            "Les plaquettes de frein, car vous freinez moins brusquement",
-            "Rien d'autre que le carburant lui-même",
-            "Le liquide de refroidissement du moteur"
+            "Les plaquettes de frein",
+            "Les pneus, et rien d'autre",
+            "Le liquide de refroidissement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En freinant moins brusquement, on use moins les plaquettes de frein.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q53",
-          "question": "Vous pratiquez la conduite défensive. Cela diminue-t-il votre distance de freinage ?",
+          "question": "La conduite défensive diminue-t-elle votre distance de freinage ?",
           "choices": [
-            "Non, elle l'augmente légèrement",
-            "Oui, l'anticipation permet de freiner plus tôt",
-            "Non, cela ne change strictement rien",
-            "Cela dépend du type de route"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Anticiper permet de freiner plus tôt et en douceur, réduisant la distance nécessaire pour s'arrêter.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q55",
-          "question": "Vous pratiquez la conduite défensive et vous remarquez qu'un véhicule freine brusquement trois voitures devant vous. Que faites-vous ?",
+          "question": "Un véhicule freine brusquement trois voitures devant vous. Que faites-vous ?",
           "choices": [
-            "Vous freinez brusquement au dernier moment",
-            "Vous relâchez l'accélérateur à temps et freinez en douceur",
-            "Vous changez immédiatement de bande",
-            "Vous klaxonnez pour avertir les autres"
+            "Relâcher et freiner en douceur",
+            "Freiner fort au dernier moment",
+            "Changer de bande aussitôt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La conduite défensive permet d'anticiper ce type de situation et de réagir en douceur.",
           "theoryCardIndex": 5
         }
@@ -3198,14 +3013,13 @@
       "questions": [
         {
           "id": "I4_Q1",
-          "question": "Vous roulez avec des pneus usés. Quels en sont les effets sur votre conduite ?",
+          "question": "Quels sont les effets de pneus usés sur votre conduite ?",
           "choices": [
-            "Il n'y a aucun effet notable sur la conduite",
-            "La distance de freinage augmente, la consommation aussi, et la tenue de route se détériore",
-            "C'est uniquement un problème esthétique et légal",
-            "Vos pneus adhèrent mieux à la route sèche"
+            "Freinage plus long, tenue dégradée",
+            "Aucun effet notable au volant",
+            "Une meilleure adhérence à sec"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Des pneus usés allongent la distance de freinage, augmentent la consommation et dégradent la tenue de route.",
           "theoryCardIndex": 0
         },
@@ -3224,25 +3038,22 @@
         },
         {
           "id": "I4_Q3",
-          "question": "Vous roulez sous la pluie. À quelle profondeur de rainure le risque d'aquaplaning existe-t-il déjà ?",
+          "question": "À partir de quelle profondeur de rainure le risque d'aquaplaning existe-t-il ?",
           "choices": [
-            "Uniquement en dessous de 1,6 mm",
-            "Dès moins de 2 mm de profondeur",
-            "À 3 mm",
-            "Uniquement à 1 mm"
+            "Dès moins de 2 mm",
+            "Dès moins de 1 mm",
+            "Dès moins de 3 mm"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le risque d'aquaplaning est déjà présent sous 2 mm, soit avant d'atteindre la limite légale de 1,6 mm.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q4",
-          "question": "Vos pneus ont exactement 1,6 mm de profondeur de rainure. Est-ce suffisant pour rouler en toute sécurité ?",
+          "question": "Vos pneus ont exactement 1,6 mm de rainure. Est-ce suffisant pour rouler en sécurité ?",
           "choices": [
-            "Oui, c'est exactement la norme légale",
-            "Non, à 1,6 mm la sécurité n'est plus assurée",
-            "Oui, le minimum légal garantit la sécurité",
-            "Cela dépend de l'état de la route"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le risque d'aquaplaning commence sous 2 mm : il faut remplacer les pneus avant d'atteindre la limite légale de 1,6 mm.",
@@ -3250,14 +3061,13 @@
         },
         {
           "id": "I4_Q5",
-          "question": "Vous lisez la mention \"TWI\" sur le flanc de votre pneu. Que signifie-t-elle ?",
+          "question": "Que signifie la mention « TWI » sur le flanc de votre pneu ?",
           "choices": [
-            "Le type de pneu",
-            "L'emplacement des indicateurs d'usure",
+            "Les indicateurs d'usure",
             "La marque du fabricant",
             "L'indice de vitesse"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "TWI (Tread Wear Indicator) indique l'emplacement des témoins d'usure dans les rainures.",
           "theoryCardIndex": 0
         },
@@ -3276,12 +3086,10 @@
         },
         {
           "id": "I4_Q7",
-          "question": "Vous envisagez de faire rechaper un pneu usé. Est-ce autorisé ?",
+          "question": "Pouvez-vous faire rechaper un pneu usé ?",
           "choices": [
-            "Oui, c'est écologique",
-            "Non, le rechapage est interdit pour les pneus usés",
-            "Oui, pour les pneus hiver uniquement",
-            "Cela dépend de la profondeur restante"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le rechapage des pneus usés est interdit.",
@@ -3289,40 +3097,37 @@
         },
         {
           "id": "I4_Q8",
-          "question": "Vous souhaitez vérifier la pression de vos pneus. Quand devez-vous le faire ?",
+          "question": "Quand devez-vous vérifier la pression de vos pneus ?",
           "choices": [
-            "Juste après un long trajet d'autoroute",
-            "Quand les pneus sont froids, c'est-à-dire après moins de 5 km parcourus",
-            "Après avoir roulé au moins 100 km",
-            "Quand les pneus sont encore chauds"
+            "Quand les pneus sont froids",
+            "Après un long trajet chaud",
+            "Après au moins cent kilomètres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La pression doit être vérifiée à froid (moins de 5 km parcourus) pour une mesure correcte.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q9",
-          "question": "Vous vérifiez toujours la pression de vos pneus à froid. Pourquoi est-ce important ?",
+          "question": "Pourquoi vérifier la pression des pneus à froid ?",
           "choices": [
-            "Par simple commodité pratique",
-            "La chaleur du roulage modifie la pression réelle",
-            "Cela n'a en réalité pas d'importance",
-            "Pour lire plus facilement le manomètre"
+            "La chaleur modifie la pression",
+            "C'est simplement plus pratique",
+            "Pour mieux lire le manomètre"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La chaleur créée par le frottement gonfle le pneu : la mesure à chaud serait inexacte.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q10",
-          "question": "Vous constatez que vos pneus sont usés sur les BORDS. Quelle en est la cause probable ?",
+          "question": "Vos pneus sont usés sur les bords. Quelle en est la cause probable ?",
           "choices": [
-            "Les pneus sont trop gonflés",
-            "Les pneus sont trop peu gonflés",
-            "Les pneus sont neufs",
-            "Il y a un problème de direction"
+            "Ils sont trop peu gonflés",
+            "Ils sont trop gonflés",
+            "Un problème de direction"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un pneu sous-gonflé s'appuie sur ses bords, ce qui provoque une usure en bords.",
           "theoryCardIndex": 0
         },
@@ -3341,40 +3146,37 @@
         },
         {
           "id": "I4_Q12",
-          "question": "Vous roulez avec des pneus dont la pression est trop basse. Quel risque courez-vous en virage ?",
+          "question": "Quel risque courez-vous en virage avec des pneus sous-gonflés ?",
           "choices": [
+            "Une instabilité en virage",
             "Une meilleure tenue de route",
-            "Une instabilité du véhicule en virage",
-            "Aucun effet",
-            "Une meilleure adhérence"
+            "Une adhérence renforcée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un pneu sous-gonflé provoque une instabilité latérale, particulièrement sensible en virage.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q13",
-          "question": "Vous préparez un long voyage avec une voiture chargée. De combien devez-vous augmenter la pression des pneus ?",
+          "question": "De combien augmenter la pression des pneus pour une voiture chargée ?",
           "choices": [
-            "0,5 bar",
-            "0,2 bar",
-            "1 bar",
-            "Aucune augmentation nécessaire"
+            "De 0,2 bar",
+            "De 0,5 bar",
+            "D'un bar entier"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour un long trajet ou une charge lourde, augmenter légèrement la pression de 0,2 bar.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q14",
-          "question": "Vous roulez à grande vitesse avec des pneus sous-gonflés. Que risquez-vous ?",
+          "question": "Que risquez-vous à grande vitesse avec des pneus sous-gonflés ?",
           "choices": [
+            "Une surchauffe et un éclatement",
             "Un dégonflage lent et progressif",
-            "Une surchauffe des pneus pouvant entraîner un éclatement",
-            "Une meilleure adhérence au sol",
-            "Rien de grave à haute vitesse"
+            "Une meilleure adhérence au sol"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Des pneus sous-gonflés surchauffent sous l'effet de la flexion excessive et peuvent éclater à grande vitesse.",
           "theoryCardIndex": 0
         },
@@ -3447,66 +3249,61 @@
         },
         {
           "id": "I4_Q20",
-          "question": "Vous montez des pneus hiver. Sur combien de roues est-il idéal de les installer ?",
+          "question": "Sur combien de roues faut-il idéalement monter les pneus hiver ?",
           "choices": [
-            "2, uniquement à l'avant",
-            "4, sur les quatre roues",
-            "2, uniquement à l'arrière",
-            "1, sur la roue motrice"
+            "Sur les quatre roues",
+            "Sur les deux avant",
+            "Sur les deux arrière"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Il est idéal de monter les pneus hiver sur les 4 roues pour une meilleure sécurité.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q21",
-          "question": "Le printemps arrive. Quand devez-vous remonter vos pneus été ?",
+          "question": "Quand devez-vous remonter vos pneus été ?",
           "choices": [
+            "Dès la fin du mois de mars",
             "Au début du mois de juin",
-            "Dès la fin mars, avant le mois de mai",
-            "Au mois de janvier",
-            "Jamais : ils se gardent toute l'année"
+            "Au cours du mois de janvier"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Remettre les pneus été dès fin mars et avant mai pour éviter l'usure accélérée des pneus hiver.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q22",
-          "question": "Vous envisagez de monter des chaînes à neige. Quand pouvez-vous les utiliser ?",
+          "question": "Quand pouvez-vous utiliser des chaînes à neige ?",
           "choices": [
-            "Toujours en hiver",
-            "Uniquement s'il y a de la neige ou du verglas sur la chaussée",
-            "Du 1er novembre au 31 mars",
-            "Quand la température descend en dessous de 7 degres C"
+            "Sur neige ou verglas",
+            "Tout l'hiver, sans plus",
+            "Du 1er novembre au 31 mars"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les chaînes à neige ne sont autorisées qu'en présence effective de neige ou de verglas.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q23",
-          "question": "Vous hésitez entre chaînes à neige et pneus cloutés. Quelle est la différence ?",
+          "question": "Quelle différence entre les chaînes à neige et les pneus cloutés ?",
           "choices": [
-            "Il n'y a aucune différence, les deux suivent les mêmes règles",
-            "Chaînes : uniquement sur neige ou verglas. Pneus cloutés : uniquement du 1/11 au 31/3",
-            "Pneus cloutés : uniquement sur neige. Chaînes : autorisées toute l'année",
-            "Les deux sont interdits sur la voie publique en Belgique"
+            "Chaînes : neige ; cloutés : dates",
+            "Cloutés : neige ; chaînes : dates",
+            "Aucune, les mêmes règles valent"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Chaînes : uniquement si neige/verglas, sans limitation de dates. Pneus cloutés : du 1/11 au 31/3 avec vitesses limitées.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q24",
-          "question": "Vous remplacez un pneu sur un essieu. Que doivent avoir en commun les deux pneus montés sur le même essieu ?",
+          "question": "Que doivent avoir en commun deux pneus montés sur le même essieu ?",
           "choices": [
-            "Rien de particulier n'est exigé",
-            "La même structure (radiale ou diagonale) et la même dimension",
-            "Uniquement la même marque de fabricant",
-            "Uniquement la même pression de gonflage"
+            "Même structure et même dimension",
+            "La même marque de fabricant",
+            "La même pression de gonflage"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur un même essieu, les pneus doivent avoir la même structure et la même dimension.",
           "theoryCardIndex": 1
         },
@@ -3525,14 +3322,13 @@
         },
         {
           "id": "I4_Q26",
-          "question": "Vous lisez \"165/70 R 14 81 T\" sur votre pneu. Que signifie le \"R\" ?",
+          "question": "Sur le marquage « 165/70 R 14 81 T », que signifie le « R » ?",
           "choices": [
-            "Route",
-            "La structure radiale du pneu",
-            "Résistance",
-            "Pneu rechapé"
+            "La structure radiale",
+            "Un pneu rechapé",
+            "La résistance du pneu"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "R = structure radiale du pneu.",
           "theoryCardIndex": 2
         },
@@ -3565,27 +3361,25 @@
         },
         {
           "id": "I4_Q29",
-          "question": "Vous voyez le marquage \"E\" sur votre pneu. Que signifie-t-il ?",
+          "question": "Que signifie le marquage « E » sur votre pneu ?",
           "choices": [
-            "Le nom du fabricant du pneu",
-            "Le respect des normes de sécurité européennes",
-            "La date de fabrication du pneu",
-            "Le pays d'origine du pneu"
+            "Les normes européennes",
+            "Le nom du fabricant",
+            "La date de fabrication"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le marquage E atteste que le pneu répond aux normes de sécurité européennes.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q30",
-          "question": "Vous passez le contrôle technique et vos pneus ne portent pas le marquage E (véhicule immatriculé après le 01/01/2004). Que se passe-t-il ?",
+          "question": "Au contrôle technique, vos pneus n'ont pas le marquage E. Que se passe-t-il ?",
           "choices": [
-            "Rien de particulier, un simple avertissement",
-            "Vous recevez un certificat rouge, valable 15 jours pour vous mettre en règle",
-            "Vous recevez immédiatement une amende salée",
-            "Vous ne pouvez plus rouler jusqu'au remplacement"
+            "Un certificat rouge, 15 jours",
+            "Un simple avertissement écrit",
+            "Une amende immédiate et salée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sans marquage E sur un véhicule post-2004 : contrôle technique rouge (15 jours pour régulariser).",
           "theoryCardIndex": 2
         },
@@ -3604,40 +3398,37 @@
         },
         {
           "id": "I4_Q32",
-          "question": "Vous permutez vos pneus. Comment procédez-vous ?",
+          "question": "Comment permutez-vous vos pneus ?",
           "choices": [
-            "Gauche et droite uniquement",
-            "En croix : avant-gauche vers arrière-droit, et inversement",
-            "Avant et arrière seulement",
-            "Il n'y a pas de méthode précise"
+            "En croix, avant et arrière",
+            "Gauche et droite entre eux",
+            "Avant et arrière entre eux"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La permutation en croix : avant-gauche ↔ arrière-droit et avant-droit ↔ arrière-gauche.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q33",
-          "question": "Vous vous informez sur l'huile moteur. Quels sont ses rôles ?",
+          "question": "Quels sont les rôles de l'huile moteur ?",
           "choices": [
-            "Uniquement la lubrification du moteur",
-            "Lubrifier, empêcher la surchauffe, empêcher le blocage et protéger de la rouille",
-            "Uniquement le refroidissement du moteur",
-            "Uniquement la protection contre la rouille"
+            "Lubrifier, refroidir, protéger",
+            "Lubrifier le moteur, sans plus",
+            "Refroidir le moteur, sans plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'huile moteur lubrifie, réduit la surchauffe, empêche le blocage et protège contre la rouille.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q34",
-          "question": "Vous souhaitez vérifier le niveau d'huile de votre moteur. Quand devez-vous le faire ?",
+          "question": "Quand devez-vous vérifier le niveau d'huile de votre moteur ?",
           "choices": [
-            "Moteur chaud",
-            "Moteur froid ou arrêté depuis un moment",
-            "En roulant",
-            "Après un long trajet, moteur chaud"
+            "Moteur froid ou arrêté",
+            "Moteur chaud après un trajet",
+            "En roulant, sur autoroute"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vérifier l'huile moteur froid et sur sol plat pour une mesure précise.",
           "theoryCardIndex": 3
         },
@@ -3656,40 +3447,37 @@
         },
         {
           "id": "I4_Q36",
-          "question": "Vous vérifiez votre niveau d'huile. Pourquoi la voiture doit-elle être sur un sol plat ?",
+          "question": "Pourquoi la voiture doit-elle être sur un sol plat pour vérifier l'huile ?",
           "choices": [
-            "Par commodité",
-            "Pour obtenir une mesure correcte",
-            "Cela n'a pas d'importance",
+            "Pour une mesure correcte",
+            "Par simple commodité",
             "Pour des raisons de sécurité"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur sol incliné, l'huile se concentre d'un côté et fausse la lecture de la jauge.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q37",
-          "question": "Vous constatez que le niveau d'huile de votre moteur est trop bas. Que risquez-vous ?",
+          "question": "Votre niveau d'huile est trop bas. Que risquez-vous ?",
           "choices": [
+            "Surchauffe et blocage du moteur",
             "Rien de grave à court terme",
-            "Une surchauffe, une usure prématurée et un blocage du moteur",
-            "Une réduction de la consommation d'huile",
-            "De meilleures performances moteur"
+            "De meilleures performances"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un niveau d'huile trop bas entraîne surchauffe, usure accélérée et risque de casse moteur.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q38",
-          "question": "Vous cherchez la jauge d'huile de votre véhicule. Où se trouve-t-elle ?",
+          "question": "Où se trouve la jauge d'huile de votre véhicule ?",
           "choices": [
-            "Sur le tableau de bord, côté conducteur",
-            "Sous le capot, dans le compartiment moteur",
-            "Dans le coffre, près de la roue de secours",
-            "Sous la voiture, côté moteur"
+            "Sous le capot, côté moteur",
+            "Sur le tableau de bord",
+            "Dans le coffre, près de la roue"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La jauge d'huile se trouve sous le capot dans le compartiment moteur.",
           "theoryCardIndex": 3
         },
@@ -3708,27 +3496,25 @@
         },
         {
           "id": "I4_Q40",
-          "question": "Vous entendez un sifflement aigu lorsque vous freinez. Que signifie-t-il ?",
+          "question": "Vous entendez un sifflement aigu en freinant. Que signifie-t-il ?",
           "choices": [
-            "Vos freins sont en parfait état",
-            "Vos plaquettes de frein sont usées et doivent être remplacées",
-            "Vos pneus sont usés à l'avant",
-            "L'ABS est en train de fonctionner"
+            "Vos plaquettes sont usées",
+            "Vos freins sont en bon état",
+            "Vos pneus avant sont usés"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les plaquettes crissent intentionnellement pour signaler qu'elles doivent être changées.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q41",
-          "question": "Vous approchez d'un virage. Quand devez-vous freiner ?",
+          "question": "Quand devez-vous freiner à l'approche d'un virage ?",
           "choices": [
-            "Dans le virage, progressivement",
-            "AVANT le virage, en ralentissant suffisamment avant d'y entrer",
-            "Après le virage, en sortie",
-            "Vous ne devez jamais freiner avant un virage"
+            "Avant d'entrer dans le virage",
+            "Dans le virage, en douceur",
+            "Après le virage, en sortie"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Il faut ralentir et rétrograder AVANT d'entrer dans le virage.",
           "theoryCardIndex": 4
         },
@@ -3736,88 +3522,80 @@
           "id": "I4_Q42",
           "question": "Vous êtes dans un virage. Pouvez-vous accélérer ?",
           "choices": [
-            "Non, jamais dans un virage",
-            "Oui, légèrement pour stabiliser le véhicule",
-            "Oui, fortement pour sortir plus vite",
-            "Non, il faut freiner dans le virage"
+            "Oui, légèrement pour stabiliser",
+            "Oui, fortement pour sortir vite",
+            "Non, en aucune circonstance"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "On peut accélérer légèrement dans le virage une fois la vitesse d'entrée bien adaptée.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q43",
-          "question": "Vous abordez un virage à droite. Comment devez-vous le prendre ?",
+          "question": "Comment devez-vous prendre un virage à droite ?",
           "choices": [
-            "En prenant un virage large",
-            "En prenant un virage bien court, serré à droite",
-            "En restant au milieu de la route",
-            "En passant par la gauche de la chaussée"
+            "Bien court, serré à droite",
+            "Bien large, vers la gauche",
+            "En restant au milieu"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un virage à droite se prend court.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q44",
-          "question": "Vous abordez un virage à gauche. Comment devez-vous le prendre ?",
+          "question": "Comment devez-vous prendre un virage à gauche ?",
           "choices": [
-            "En prenant un virage le plus court possible",
-            "En prenant un virage bien large (presque à 90 degrés) sans couper",
-            "En coupant le virage pour gagner du temps",
-            "En restant au milieu de la route"
+            "Bien large, sans le couper",
+            "Le plus court possible",
+            "En coupant pour gagner du temps"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un virage à gauche se prend large pour ne pas couper et rester sur sa bande.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q45",
-          "question": "Vous souhaitez tourner à un carrefour. Quelle est la procédure correcte ?",
+          "question": "Quelle est la procédure correcte pour tourner à un carrefour ?",
           "choices": [
-            "Activer le clignotant puis tourner directement sans vérifier",
-            "Vérifier les rétroviseurs (et l'angle mort si nécessaire), activer le clignotant, ralentir, puis tourner",
-            "Tourner d'abord, puis activer le clignotant ensuite",
-            "Klaxonner pour avertir, puis tourner sans ralentir"
+            "Miroirs, clignotant, ralentir",
+            "Clignotant puis tourner direct",
+            "Tourner puis mettre le clignotant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La procédure : rétroviseurs > angle mort si nécessaire > clignotant > ralentir > tourner.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q46",
-          "question": "Vous coupez un virage à gauche pour gagner du temps. Pourquoi est-ce dangereux ?",
+          "question": "Pourquoi est-il dangereux de couper un virage à gauche ?",
           "choices": [
-            "Ce n'est pas dangereux si la route est vide",
-            "Vous risquez de croiser le trafic venant en sens inverse",
-            "C'est simplement plus lent au final",
-            "Cela use les pneus plus rapidement"
+            "Vous croisez le trafic en face",
+            "Cela use les pneus plus vite",
+            "C'est plus lent au final"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Couper un virage à gauche vous fait empiéter sur la voie des véhicules en sens inverse.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q47",
-          "question": "Vous freinez brusquement et vous sentez des pulsations dans la pédale de frein. C'est votre ABS qui s'active. Que fait-il exactement ?",
+          "question": "Que fait exactement l'ABS pendant un freinage d'urgence ?",
           "choices": [
-            "Il bloque les roues pour arrêter le véhicule",
-            "Il empêche les roues de se bloquer et la voiture de déraper",
-            "Il accélère le freinage",
-            "Il réduit toujours la distance de freinage"
+            "Il empêche les roues de bloquer",
+            "Il bloque les roues pour arrêter",
+            "Il accélère le freinage lui-même"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'ABS empêche le blocage des roues, maintenant la maîtrise directionnelle du véhicule.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q48",
-          "question": "Votre voiture est équipée de l'ABS. Cela vous permet-il de freiner plus court ?",
+          "question": "L'ABS vous permet-il de freiner plus court ?",
           "choices": [
-            "Oui, toujours et sur tous les revêtements",
-            "Non, mais la voiture reste maîtrisable pendant le freinage",
-            "Oui, mais uniquement sur sol mouillé",
-            "Oui, mais uniquement sur sol sec"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "L'ABS ne réduit pas forcément la distance de freinage, mais maintient la maîtrise du véhicule.",
@@ -3825,12 +3603,10 @@
         },
         {
           "id": "I4_Q49",
-          "question": "Vous freinez sur sol sec avec l'ABS. La distance de freinage est-elle plus courte qu'une voiture sans ABS ?",
+          "question": "Sur sol sec, la distance de freinage avec ABS est-elle plus courte que sans ?",
           "choices": [
-            "Oui, elle est toujours plus courte",
-            "Non, elle peut même être légèrement plus longue",
-            "Elle est strictement identique",
-            "Elle est beaucoup plus courte"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Sur sol sec, l'ABS peut donner une distance légèrement plus longue qu'un freinage optimal sans ABS.",
@@ -3838,14 +3614,12 @@
         },
         {
           "id": "I4_Q50",
-          "question": "Vous freinez sur sol mouillé avec l'ABS. La distance est-elle plus longue que sur sol sec avec ABS ?",
+          "question": "Avec l'ABS, la distance de freinage est-elle plus longue sur sol mouillé que sur sol sec ?",
           "choices": [
-            "Non, c'est strictement identique",
-            "Oui, la distance de freinage est plus longue sur sol mouillé",
-            "Non, elle est même plus courte",
-            "Cela dépend uniquement de la vitesse"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur sol mouillé, même avec ABS, la distance de freinage est plus longue que sur sol sec.",
           "theoryCardIndex": 5
         },
@@ -3864,53 +3638,49 @@
         },
         {
           "id": "I4_Q52",
-          "question": "Votre voiture est équipée de l'ESP. Que fait ce système ?",
+          "question": "Que fait le système ESP de votre voiture ?",
           "choices": [
-            "Il bloque toutes les roues en même temps",
-            "Il freine certaines roues séparément pour éviter le dérapage",
-            "Il accélère automatiquement en côte",
-            "Il maintient la distance avec le véhicule devant"
+            "Il freine des roues séparément",
+            "Il bloque toutes les roues",
+            "Il maintient votre distance"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'ESP agit sélectivement sur une ou plusieurs roues pour corriger la trajectoire et éviter le dérapage.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q53",
-          "question": "Vous faites une manoeuvre d'évitement brusque. Dans quelles situations l'ESP intervient-il ?",
+          "question": "Dans quelles situations l'ESP intervient-il ?",
           "choices": [
-            "Uniquement en ligne droite à haute vitesse sur autoroute",
-            "Lors d'une manoeuvre d'évitement brusque, d'un virage mal calculé ou sur une chaussée trompeuse",
-            "Uniquement lors d'une marche arrière ou d'un créneau",
-            "Uniquement à basse vitesse dans les zones urbaines"
+            "Évitement, virage, sol trompeur",
+            "En ligne droite sur autoroute",
+            "En marche arrière et créneau"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'ESP intervient lors de manœuvres brusques, virages mal calculés ou chaussée glissante.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q54",
-          "question": "Vous révisez l'importance de l'ESP. Depuis quels équipements de sécurité est-il considéré comme la plus grande contribution à la sécurité ?",
+          "question": "L'ESP est considéré comme la plus grande avancée de sécurité depuis quoi ?",
           "choices": [
-            "Depuis le GPS",
-            "Depuis la ceinture de sécurité et l'airbag",
-            "Depuis le limiteur de vitesse",
-            "Depuis les feux LED"
+            "La ceinture et l'airbag",
+            "Le limiteur de vitesse",
+            "Les phares à LED"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'ESP est la contribution à la sécurité la plus significative depuis la ceinture de sécurité et l'airbag.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q55",
-          "question": "Vous perdez l'adhérence du train avant dans un virage. Dans quelle direction votre véhicule sort-il du virage ?",
+          "question": "Vous perdez l'adhérence du train avant. Dans quelle direction sortez-vous du virage ?",
           "choices": [
-            "Vers l'intérieur du virage",
             "Vers l'extérieur du virage",
-            "Tout droit",
-            "En arrière"
+            "Vers l'intérieur du virage",
+            "Tout droit, sans dévier"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Lors d'un sous-virage (dérapage train avant), le véhicule part vers l'extérieur du virage.",
           "theoryCardIndex": 6
         },
@@ -3931,10 +3701,8 @@
           "id": "I4_Q57",
           "question": "Vous êtes en situation de sous-virage. Devez-vous freiner fortement ?",
           "choices": [
-            "Oui, c'est le bon réflexe immédiat",
-            "Non, freiner fortement bloque les roues et fait perdre l'adhérence",
-            "Oui, mais uniquement avec l'ABS activé",
-            "Cela dépend de la vitesse du véhicule"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Freiner fort lors d'un sous-virage bloque les roues avant, aggravant la perte d'adhérence.",
@@ -3955,92 +3723,85 @@
         },
         {
           "id": "I4_Q59",
-          "question": "Votre véhicule est en survirage. Que devez-vous faire dans l'ordre ?",
+          "question": "Votre véhicule survire. Que devez-vous faire, dans l'ordre ?",
           "choices": [
-            "Freiner fortement puis accélérer aussitôt après",
-            "Regarder la direction voulue, contre-braquer, appuyer sur l'embrayage, lâcher l'accélérateur",
-            "Accélérer et tourner le volant vers l'extérieur",
-            "Freiner fort et tourner brusquement le volant vers l'intérieur"
+            "Regarder, contre-braquer, débrayer",
+            "Freiner fort puis accélérer",
+            "Accélérer et tourner dehors"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas de survirage : 1) Regarder la direction souhaitée, 2) Contre-braquer, 3) Embrayage, 4) Lâcher l'accélérateur.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q60",
-          "question": "Vous devez \"contre-braquer\" lors d'un dérapage. Que signifie ce terme ?",
+          "question": "Que signifie « contre-braquer » lors d'un dérapage ?",
           "choices": [
-            "Freiner brusquement",
-            "Tourner le volant dans le sens du dérapage",
-            "Tourner le volant dans le sens opposé au dérapage",
-            "Lâcher le volant"
+            "Tourner dans le sens du dérapage",
+            "Tourner à l'opposé du dérapage",
+            "Lâcher complètement le volant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Contre-braquer = tourner le volant dans le sens du dérapage arrière pour corriger la trajectoire.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q61",
-          "question": "Vous dérapez et on vous conseille de regarder dans la direction où vous voulez aller. Pourquoi ?",
+          "question": "Pourquoi regarder où vous voulez aller pendant un dérapage ?",
           "choices": [
-            "Par simple habitude apprise à l'auto-école",
-            "Inconsciemment, vous vous dirigez dans la direction que vous regardez",
-            "Pour voir les autres voitures arriver",
-            "Cela n'a en réalité aucun effet"
+            "On va où l'on regarde",
+            "Pour voir les autres voitures",
+            "Par habitude d'auto-école"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le regard conditionne la direction du volant : regarder où vous voulez aller aide à y aller.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q62",
-          "question": "Vous freinez brusquement et les 4 roues de votre véhicule se bloquent. Que se passe-t-il ?",
+          "question": "Vous freinez et les quatre roues se bloquent. Que se passe-t-il ?",
           "choices": [
+            "Le véhicule part en dérapage",
             "Seules les roues avant bloquent",
-            "Les 4 roues se bloquent simultanément et le véhicule dérape",
-            "Seules les roues arrière bloquent",
-            "Aucune roue ne bloque"
+            "Aucune roue ne se bloque"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Lors d'un dérapage des 4 roues, toutes les roues se bloquent en même temps.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q63",
-          "question": "Votre voiture équipée de l'ABS commence à déraper. Que devez-vous faire avec la pédale de frein ?",
+          "question": "Votre voiture à ABS commence à déraper. Que faites-vous de la pédale de frein ?",
           "choices": [
-            "Relâcher la pédale de frein progressivement",
-            "Appuyer encore PLUS FORT pour activer pleinement l'ABS",
-            "Pomper la pédale de frein par à-coups",
-            "Ne rien changer à la pression exercée"
+            "Appuyer encore plus fort",
+            "Relâcher progressivement",
+            "Pomper par à-coups"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour activer l'ABS en cas de dérapage, il faut appuyer encore plus fort sur la pédale de frein.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q65",
-          "question": "Vous vérifiez le niveau de liquide de refroidissement. Quel est le rôle de ce liquide ?",
+          "question": "Quel est le rôle du liquide de refroidissement ?",
           "choices": [
+            "Tenir la température, éviter le gel",
             "Lubrifier les pièces du moteur",
-            "Maintenir la température du moteur et éviter le gel",
-            "Alimenter le circuit de freinage",
-            "Nettoyer l'intérieur du moteur"
+            "Alimenter le circuit de freinage"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le liquide de refroidissement maintient la température moteur, évite la surchauffe et le gel.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q66",
-          "question": "Vous vous interrogez sur la température d'ébullition du liquide de refroidissement. À quelle température bout-il ?",
+          "question": "À quelle température bout le liquide de refroidissement ?",
           "choices": [
-            "80 degres C",
-            "Au-delà de 100 degres C",
-            "50 degres C",
-            "200 degres C"
+            "Au-delà de 100 °C",
+            "Vers 80 °C environ",
+            "Vers 50 °C environ"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le liquide de refroidissement bout au-delà de 100°C.",
           "theoryCardIndex": 7
         },
@@ -4072,51 +3833,46 @@
         },
         {
           "id": "I4_Q69",
-          "question": "Vous venez de changer de vitesse. Où devez-vous placer votre pied gauche ?",
+          "question": "Où devez-vous placer votre pied gauche après un changement de vitesse ?",
           "choices": [
-            "Sur la pédale d'embrayage, prêt à débrayer",
-            "Sur l'appui prévu à côté de la pédale d'embrayage",
-            "Sous la pédale d'embrayage",
-            "Devant la pédale d'embrayage"
+            "Sur l'appui prévu à côté",
+            "Sur la pédale d'embrayage",
+            "Sous la pédale d'embrayage"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Après le changement de vitesse, le pied gauche se place sur l'appui latéral prévu, pas sur la pédale.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q70",
-          "question": "Vous gardez votre pied sur la pédale d'embrayage après le changement de vitesse. Pourquoi est-ce déconseillé ?",
+          "question": "Pourquoi ne pas laisser le pied sur la pédale d'embrayage ?",
           "choices": [
-            "C'est simplement une position inconfortable",
-            "Cela use l'embrayage et expose la cheville en cas d'accident",
-            "Cela augmente la consommation de carburant",
-            "Cela use prématurément les pneus"
+            "Cela use l'embrayage",
+            "C'est une position inconfortable",
+            "Cela use les pneus plus vite"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le pied sur l'embrayage provoque un glissement et en cas d'accident, risque de fracture de cheville.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q71",
-          "question": "Vous arrivez devant une forte côte. Que devez-vous faire avant de la monter ou de la descendre ?",
+          "question": "Que devez-vous faire avant de monter ou descendre une forte côte ?",
           "choices": [
-            "Accélérer",
             "Rétrograder d'une vitesse",
-            "Passer une vitesse supérieure",
+            "Passer la vitesse supérieure",
             "Rester au point mort"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Rétrograder d'une vitesse avant une forte côte (montée ou descente) assure le contrôle.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q72",
-          "question": "Vous voyez une voie de détresse (\"bac à sable\") en montagne. Pouvez-vous l'utiliser pour stationner ?",
+          "question": "Pouvez-vous stationner sur une voie de détresse en montagne ?",
           "choices": [
-            "Oui, c'est pratique pour une pause",
-            "Non, elle est réservée aux véhicules en panne de freins",
-            "Oui, mais pour les pauses courtes",
-            "Cela dépend du type de route"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La voie de détresse est réservée aux véhicules ayant perdu leurs freins. Le stationnement y est interdit.",
@@ -4124,12 +3880,10 @@
         },
         {
           "id": "I4_Q73",
-          "question": "Vous souhaitez consulter un message sur votre téléphone en conduisant. Pouvez-vous le tenir en main ?",
+          "question": "Pouvez-vous tenir votre téléphone en main pour lire un message en conduisant ?",
           "choices": [
-            "Oui, si la consultation est rapide",
-            "Non, tenir un appareil à écran est interdit au volant",
-            "Oui, mais uniquement pour téléphoner",
-            "Oui, à l'arrêt à un feu rouge"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Utiliser, tenir ou manipuler un appareil mobile avec écran est interdit pendant la conduite.",
@@ -4137,25 +3891,22 @@
         },
         {
           "id": "I4_Q74",
-          "question": "Vous souhaitez utiliser votre smartphone comme GPS en conduisant. Est-ce autorisé ?",
+          "question": "Pouvez-vous utiliser votre smartphone comme GPS en conduisant ?",
           "choices": [
-            "Non, c'est interdit en toutes circonstances",
-            "Oui, à condition qu'il soit placé dans un support approprié fixé au véhicule",
-            "Oui, même en le tenant en main",
-            "Non, seuls les GPS dédiés sont autorisés"
+            "Oui, dans un support fixé",
+            "Oui, même tenu en main",
+            "Non, en aucune manière"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un smartphone peut servir de GPS s'il est fixé dans un support approprié.",
           "theoryCardIndex": 8
         },
         {
           "id": "I4_Q75",
-          "question": "Vous êtes immobilisé à un feu rouge et vous souhaitez consulter votre téléphone en main. Pouvez-vous le faire ?",
+          "question": "Vous êtes arrêté à un feu rouge. Pouvez-vous consulter votre téléphone en main ?",
           "choices": [
-            "Oui, vous êtes à l'arrêt",
-            "Non, l'immobilisation au feu n'est pas un arrêt au sens du code",
-            "Oui, tant que le feu reste rouge",
-            "Oui, pour un bref instant seulement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un feu rouge n'est pas considéré comme un arrêt au sens du code : l'utilisation reste interdite.",
@@ -4164,28 +3915,26 @@
         },
         {
           "id": "I4_Q77",
-          "question": "Vous vous demandez quand vous pouvez utiliser votre téléphone en main. Dans quelles situations est-ce autorisé ?",
+          "question": "Dans quelle situation pouvez-vous utiliser votre téléphone en main ?",
           "choices": [
-            "Au feu rouge",
-            "Lorsque vous êtes à l'arrêt",
-            "Dans les embouteillages",
-            "Sur l'autoroute"
+            "Quand vous êtes à l'arrêt",
+            "Au feu rouge du carrefour",
+            "Dans les embouteillages"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le téléphone en main n'est autorisé que lorsque vous êtes réellement à l'arrêt ou stationné.",
           "theoryCardIndex": 8,
           "severe": true
         },
         {
           "id": "I4_Q78",
-          "question": "Vous consultez votre téléphone en conduisant. Pourquoi les appareils électroniques sont-ils dangereux au volant ?",
+          "question": "Pourquoi les appareils électroniques sont-ils dangereux au volant ?",
           "choices": [
-            "Ils consomment de la batterie du véhicule",
-            "Ils distraient le conducteur et réduisent son attention sur la route",
-            "Ils endommagent le véhicule",
-            "Ils ne sont pas dangereux"
+            "Ils détournent votre attention",
+            "Ils vident la batterie du bord",
+            "Ils abîment votre véhicule"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les appareils électroniques distraient le conducteur, ce qui augmente le risque d'accident.",
           "theoryCardIndex": 8
         }
