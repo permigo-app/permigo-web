@@ -1684,12 +1684,11 @@
           "id": "A2_Q1",
           "question": "Vous circulez sur une chaussée divisée en bandes. Comment ces bandes sont-elles délimitées ?",
           "choices": [
-            "Par des poteaux de signalisation",
-            "Par des lignes blanches continues ou discontinues",
-            "Par des lignes de couleur jaune",
-            "Par des barrières métalliques amovibles"
+            "Par des lignes blanches",
+            "Par des poteaux au sol",
+            "Par des lignes jaunes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les bandes de circulation sont délimitées par des lignes blanches continues ou discontinues peintes sur la chaussée.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A2_Q1.webp"
@@ -1698,12 +1697,11 @@
           "id": "A2_Q3",
           "question": "Vous circulez sur une chaussée à plusieurs bandes en conditions normales. Sur quelle bande devez-vous rouler ?",
           "choices": [
-            "Sur la bande de gauche pour faciliter les dépassements",
-            "Sur la bande du milieu pour avoir la meilleure visibilité",
             "Sur la bande de droite",
-            "Sur n'importe quelle bande selon votre préférence"
+            "Sur la bande de gauche",
+            "Sur la bande du milieu"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "La règle fondamentale est de circuler sur la bande de droite. La bande de gauche est réservée au dépassement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A2_Q3.webp"
@@ -1712,12 +1710,11 @@
           "id": "A2_Q5",
           "question": "Vous approchez d'un carrefour et voyez des flèches peintes au sol. À quoi servent-elles ?",
           "choices": [
-            "À indiquer les limites de vitesse applicables",
-            "À indiquer la direction que vous devez obligatoirement suivre",
-            "À signaler un danger à l'approche du carrefour",
-            "À indiquer les emplacements de stationnement"
+            "À imposer la direction à suivre",
+            "À indiquer la vitesse maximale",
+            "À signaler un danger proche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les flèches au sol près des carrefours indiquent la direction à suivre obligatoirement pour chaque bande.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A2_Q5.webp"
@@ -1726,12 +1723,10 @@
           "id": "A2_Q8",
           "question": "Vous voyez un panneau de limitation de vitesse sur une route ordinaire. Peut-il imposer une vitesse différente de la limite standard ?",
           "choices": [
-            "Non, la limite standard régionale s'applique toujours",
-            "Oui, des signaux ou règles de circulation peuvent imposer une autre vitesse",
-            "Uniquement en agglomération",
-            "Uniquement sur autoroute"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les signaux routiers peuvent toujours imposer une vitesse différente de la limite générale.",
           "theoryCardIndex": 0,
           "sign": "C43"
@@ -1740,12 +1735,10 @@
           "id": "A2_Q9",
           "question": "Le véhicule devant vous roule lentement et une ligne blanche discontinue sépare les bandes. Pouvez-vous le dépasser en franchissant cette ligne ?",
           "choices": [
-            "Non, il est interdit de franchir toute ligne blanche",
-            "Oui, si la visibilité est bonne et qu'aucun signal ne l'interdit",
-            "Oui, dans tous les cas sans exception",
-            "Uniquement pendant la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une ligne discontinue peut être franchie pour dépasser un véhicule plus lent, à condition que la visibilité soit bonne et qu'aucun signal ne l'interdise.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q9.webp"
@@ -1754,12 +1747,11 @@
           "id": "A2_Q10",
           "question": "Vous souhaitez dépasser en franchissant une ligne discontinue. Dans quel cas est-ce interdit ?",
           "choices": [
-            "Lorsque la route est suffisamment large",
-            "Si la visibilité est insuffisante ou qu'un signal l'interdit",
-            "Les jours ouvrables uniquement",
-            "Lorsque vous circulez en agglomération"
+            "Si la visibilité est insuffisante",
+            "Si la route est assez large",
+            "Si vous êtes en agglomération"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Même si la ligne est discontinue, vous ne pouvez pas dépasser si la visibilité est insuffisante ou si un signal l'interdit.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q10.webp"
@@ -1768,12 +1760,10 @@
           "id": "A2_Q12",
           "question": "Vous circulez derrière un véhicule lent mais la ligne de séparation est blanche et continue. Pouvez-vous la franchir pour dépasser ?",
           "choices": [
-            "Oui, si la route est dégagée devant vous",
-            "Oui, si vous effectuez la manoeuvre rapidement",
-            "Non, il est strictement interdit de franchir une ligne continue pour dépasser",
-            "Oui, mais uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 2,
+          "correct": 1,
           "explanation": "Il est totalement interdit de franchir une ligne blanche continue pour dépasser, quelle que soit la situation.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q12.webp"
@@ -1782,10 +1772,8 @@
           "id": "A2_Q13",
           "question": "Une ligne blanche continue sépare les deux sens de circulation. Pouvez-vous circuler à gauche de cette ligne ?",
           "choices": [
-            "Oui, pour effectuer un dépassement rapide",
-            "Non, c'est interdit même si la route semble libre",
-            "Oui, si aucun véhicule ne vient en face",
-            "Oui, uniquement pendant les heures de nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de circuler à gauche d'une ligne continue séparant les deux sens, même si la route est libre.",
@@ -1796,12 +1784,10 @@
           "id": "A2_Q14",
           "question": "Vous voyez une ligne continue et une ligne discontinue côte à côte. La ligne discontinue est de votre côté. Pouvez-vous dépasser ?",
           "choices": [
-            "Non, la présence de la ligne continue l'emporte toujours",
-            "Oui, vous pouvez franchir la ligne discontinue de votre côté pour dépasser",
-            "Non, vous devez attendre un signal autorisant le dépassement",
-            "Oui, mais uniquement pour dépasser un cycliste"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Avec une double ligne mixte, c'est la ligne de votre côté qui compte. Si elle est discontinue, vous pouvez la franchir pour dépasser.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q14.webp"
@@ -1824,10 +1810,8 @@
           "id": "A2_Q16",
           "question": "Vous voyez une double ligne mixte : la ligne continue est de votre côté. Pouvez-vous dépasser le véhicule devant vous ?",
           "choices": [
-            "Oui, la ligne discontinue de l'autre côté vous y autorise",
-            "Non, la ligne continue de votre côté vous l'interdit",
-            "Oui, si la route est complètement dégagée",
-            "Oui, mais uniquement pour dépasser un cycliste"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Avec une double ligne mixte, si la ligne continue est de votre côté, vous ne pouvez pas dépasser.",
@@ -1836,15 +1820,14 @@
         },
         {
           "id": "A2_Q17",
-          "question": "Vous voyez un signal annonçant une réduction du nombre de bandes. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Un sens interdit à l'approche",
-            "Le nombre de bandes de circulation va diminuer : préparez-vous à changer de bande",
-            "Un changement de vitesse maximale est imminent",
-            "Des travaux sont en cours sur la route"
+            "Le nombre de bandes diminue",
+            "Un changement de vitesse",
+            "Des travaux sur la route"
           ],
-          "correct": 1,
-          "explanation": "Ces signaux d'indication préviennent les conducteurs que le nombre de bandes va diminuer afin qu'ils anticipent et se placent correctement.",
+          "correct": 0,
+          "explanation": "Une bande de circulation va prendre fin : anticipez et placez-vous correctement.",
           "theoryCardIndex": 1,
           "sign": "F79"
         },
@@ -1852,10 +1835,9 @@
           "id": "A2_Q18",
           "question": "Il existe deux signaux différents pour annoncer la réduction de bandes. Que distinguent-ils ?",
           "choices": [
-            "Un rétrécissement par la gauche et un rétrécissement par la droite",
-            "Un passage en sens unique et un passage en double sens",
-            "La création d'une zone de stationnement",
-            "L'approche d'un carrefour dangereux"
+            "Un rétrécissement à gauche ou à droite",
+            "Un sens unique ou une route à double sens",
+            "Un carrefour dangereux ou un giratoire"
           ],
           "correct": 0,
           "explanation": "Il y a deux signaux distincts : l'un pour un rétrécissement par la gauche, l'autre pour un rétrécissement par la droite.",
@@ -1866,12 +1848,11 @@
           "id": "A2_Q19",
           "question": "Vous circulez sur une route à plusieurs bandes et la circulation est fortement ralentie à cause d'un rétrécissement. Que devez-vous appliquer ?",
           "choices": [
-            "La règle de priorité de droite habituelle",
-            "Le principe de la tirette : alternance un par un devant le rétrécissement",
-            "Le dépassement par la gauche uniquement",
-            "L'arrêt d'urgence sur la bande la plus à droite"
+            "Le principe de la tirette",
+            "La priorité de droite",
+            "Le dépassement par la gauche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La tirette s'applique uniquement quand la circulation est fortement ralentie ET qu'une bande prend fin.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A2_Q19.webp"
@@ -1880,10 +1861,8 @@
           "id": "A2_Q20",
           "question": "Vous circulez et une bande prend fin, mais la circulation est fluide. Devez-vous appliquer la tirette ?",
           "choices": [
-            "Oui, la tirette s'applique dès qu'une bande disparaît",
-            "Non, la tirette ne s'applique que si la circulation est fortement ralentie",
-            "Oui, si un autre conducteur le demande",
-            "Uniquement aux heures de pointe"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La tirette ne s'applique que si la circulation est fortement ralentie. Si la circulation est fluide, les règles normales de priorité s'appliquent.",
@@ -1895,12 +1874,10 @@
           "id": "A2_Q21",
           "question": "Vous êtes dans un embouteillage devant un rétrécissement. Un conducteur refuse de vous laisser vous intercaler. Le principe de la tirette est-il obligatoire ?",
           "choices": [
-            "Non, c'est une simple recommandation de courtoisie",
-            "Oui, c'est une règle obligatoire du Code de la route",
-            "Uniquement sur les autoroutes",
-            "Uniquement quand un agent de police est présent"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le principe de la tirette est une règle obligatoire du Code de la route.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A2_Q21.webp"
@@ -1909,10 +1886,8 @@
           "id": "A2_Q22",
           "question": "Vous appliquez le principe de la tirette. Est-ce considéré comme une manoeuvre ?",
           "choices": [
-            "Oui, c'est une manoeuvre qui nécessite de vérifier vos angles morts",
-            "Non, le principe de la tirette n'est pas considéré comme une manoeuvre",
-            "Oui, uniquement sur autoroute",
-            "Cela dépend de la situation et de la vitesse"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le principe de la tirette n'est pas une manœuvre : il ne nécessite pas de vérification spéciale ni de signal.",
@@ -1923,12 +1898,11 @@
           "id": "A2_Q23",
           "question": "Vous êtes sur une bande qui prend fin et la circulation est fortement ralentie. Où devez-vous vous intercaler ?",
           "choices": [
-            "Le plus tôt possible pour ne pas gêner les autres",
-            "Uniquement juste devant le rétrécissement, pas avant",
-            "N'importe où sur la bande libre adjacente",
-            "Après le rétrécissement, sur la bande suivante"
+            "Juste devant le rétrécissement",
+            "Le plus tôt possible avant",
+            "Après le rétrécissement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les conducteurs doivent s'intercaler uniquement juste devant le rétrécissement, pas avant.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A2_Q23.webp"
@@ -1937,12 +1911,11 @@
           "id": "A2_Q26",
           "question": "Vous circulez sur la bande libre et un conducteur veut s'intercaler juste devant le rétrécissement. Que devez-vous faire ?",
           "choices": [
-            "Accélérer pour ne pas le laisser passer",
-            "Lui céder le passage à tour de rôle conformément à la tirette",
-            "Klaxonner pour signaler votre présence",
-            "Changer immédiatement de bande"
+            "Lui céder le passage à tour de rôle",
+            "Accélérer pour ne pas le laisser",
+            "Klaxonner pour signaler votre présence"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur la bande libre, vous devez céder le passage à tour de rôle au conducteur qui s'intercale.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -1952,12 +1925,11 @@
           "id": "A2_Q28",
           "question": "La circulation est interrompue à la fois sur la bande de gauche et sur celle de droite. Qui passe en premier ?",
           "choices": [
-            "Le conducteur venant de la bande de gauche",
-            "Le conducteur circulant sur la bande libre",
-            "Le conducteur venant de la bande de droite",
+            "Le conducteur venant de droite",
+            "Le conducteur venant de gauche",
             "Le véhicule le plus rapide"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "Quand deux bandes sont interrompues, la priorité va d'abord au conducteur de droite.",
           "theoryCardIndex": 2,
           "severe": true,
@@ -1995,10 +1967,8 @@
           "id": "A2_Q31",
           "question": "Vous circulez le long d'une bande de bus. Fait-elle partie de la chaussée ?",
           "choices": [
-            "Oui, elle fait partie intégrante de la chaussée",
-            "Non, la bande de bus ne fait pas partie de la chaussée",
-            "Oui, uniquement en agglomération",
-            "Oui, si elle est recouverte du même revêtement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La bande de bus est une voie séparée qui ne fait PAS partie de la chaussée.",
@@ -2009,12 +1979,11 @@
           "id": "A2_Q32",
           "question": "Vous devez identifier une bande de bus. Comment la reconnaissez-vous ?",
           "choices": [
-            "Par des lignes jaunes et un feu clignotant au-dessus",
-            "Par de larges lignes blanches discontinues, des damiers, et le signal F17",
-            "Par un revêtement de couleur rouge exclusivement",
-            "Par des poteaux de signalisation spéciaux"
+            "À de larges lignes blanches discontinues",
+            "À un revêtement de couleur rouge",
+            "À des poteaux de signalisation particuliers"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La bande de bus est signalée par une ou deux larges lignes blanches discontinues, parfois des marques en damier, et le signal F17.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q32.webp"
@@ -2023,12 +1992,11 @@
           "id": "A2_Q33",
           "question": "Vous circulez en voiture à côté d'une bande de bus. Qu'est-il interdit d'y faire ?",
           "choices": [
-            "Uniquement d'y stationner votre véhicule",
-            "D'y circuler, d'y stationner et de vous y arrêter",
-            "Uniquement d'y circuler avec votre véhicule",
-            "Rien, la bande de bus est accessible à tous"
+            "Y circuler, y stationner, s'y arrêter",
+            "Y stationner votre véhicule",
+            "Rien du tout, elle est accessible à tous"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Il est interdit de circuler, de stationner et de s'arrêter sur une bande de bus avec une voiture.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q33.webp"
@@ -2037,12 +2005,11 @@
           "id": "A2_Q34",
           "question": "Vous devez tourner à droite au prochain carrefour. Pouvez-vous emprunter la bande de bus pour vous positionner ?",
           "choices": [
-            "Non, c'est strictement interdit en toute circonstance",
-            "Oui, à proximité immédiate du carrefour pour changer de direction",
-            "Oui, dès que la bande de bus est libre de tout bus",
-            "Uniquement le dimanche et les jours fériés"
+            "Oui, à proximité du carrefour",
+            "Oui, dès qu'elle est libre",
+            "Non, c'est interdit partout"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous pouvez emprunter la bande de bus uniquement à proximité immédiate d'un carrefour pour changer de direction.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q34.webp"
@@ -2051,12 +2018,10 @@
           "id": "A2_Q35",
           "question": "Vous devez entrer dans une propriété privée située de l'autre côté de la bande de bus. Pouvez-vous la traverser ?",
           "choices": [
-            "Non, vous devez trouver un autre accès",
-            "Oui, la traversée de la bande de bus est autorisée pour accéder à une propriété riveraine",
-            "Uniquement avec la permission écrite du gestionnaire de voirie",
-            "Uniquement pendant les heures creuses de la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Traverser une bande de bus pour entrer dans une propriété riveraine est autorisé.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q35.webp"
@@ -2065,12 +2030,10 @@
           "id": "A2_Q36",
           "question": "Un obstacle bloque votre chaussée et la seule possibilité est de passer par la bande de bus. Pouvez-vous le faire ?",
           "choices": [
-            "Non, la bande de bus est strictement interdite aux voitures",
-            "Oui, contourner un obstacle en chaussée via la bande de bus est autorisé",
-            "Uniquement si un agent de police vous y autorise expressément",
-            "Uniquement si vous klaxonnez pour prévenir"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous pouvez utiliser la bande de bus pour contourner un obstacle qui bloque la chaussée.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q36.webp"
@@ -2079,12 +2042,11 @@
           "id": "A2_Q37",
           "question": "Vous voyez des cyclistes rouler sur la bande de bus. Est-ce autorisé ?",
           "choices": [
-            "Non, seuls les bus de transport en commun y sont autorisés",
-            "Oui, si des panneaux additionnels ou des marquages au sol les y autorisent",
-            "Oui, tous les usagers peuvent emprunter la bande de bus",
-            "Uniquement les taxis et les cyclistes"
+            "Oui, si des panneaux l'autorisent",
+            "Oui, pour tous les usagers",
+            "Non, seuls les bus y ont accès"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Des panneaux additionnels peuvent autoriser d'autres usagers (cyclistes, cyclomoteurs, motos) à utiliser la bande de bus.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q37.webp"
@@ -2093,12 +2055,11 @@
           "id": "A2_Q39",
           "question": "Vous voyez de larges lignes diagonales peintes au sol. De quoi s'agit-il ?",
           "choices": [
-            "D'une zone de stationnement réservée aux riverains",
-            "D'une zone d'évitement où il est interdit de circuler, de s'arrêter et de stationner",
-            "D'une bande réservée aux bus et taxis",
+            "D'une zone d'évitement interdite",
+            "D'une bande réservée aux bus",
             "D'un passage pour piétons élargi"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La zone d'évitement est identifiable par de larges lignes diagonales au sol. Il y est interdit de circuler, s'arrêter et stationner.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q39.webp"
@@ -2107,12 +2068,11 @@
           "id": "A2_Q42",
           "question": "Vous traversez une zone de travaux et voyez des lignes au sol d'une couleur différente. De quelle couleur sont les lignes provisoires de chantier ?",
           "choices": [
-            "Blanche comme les lignes permanentes",
-            "Jaune vif pour attirer l'attention",
             "Orange",
-            "Rouge pour signaler le danger"
+            "Jaune",
+            "Rouge"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "Les lignes provisoires lors de travaux sont de couleur orange.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q42.webp"
@@ -2121,12 +2081,10 @@
           "id": "A2_Q43",
           "question": "Vous voyez des lignes provisoires orange sur un chantier. Ont-elles la même valeur que les lignes blanches ?",
           "choices": [
-            "Non, elles sont purement indicatives",
-            "Oui, elles ont exactement la même signification réglementaire",
-            "Non, elles signifient que la route est fermée plus loin",
-            "Oui, mais uniquement de nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les lignes orange ont exactement la même signification que les lignes blanches : continue = interdit de franchir, discontinue = franchissable.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q43.webp"
@@ -2135,12 +2093,11 @@
           "id": "A2_Q44",
           "question": "Vous voyez à la fois des lignes blanches et des lignes orange sur la chaussée. Lesquelles devez-vous suivre ?",
           "choices": [
-            "Les lignes blanches permanentes",
-            "Les deux types de lignes simultanément",
-            "Les lignes orange uniquement, elles priment sur les blanches",
-            "Aucune des deux, vous circulez librement"
+            "Les lignes orange",
+            "Les lignes blanches",
+            "Les deux en même temps"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "En présence de lignes blanches et orange simultanément, seules les lignes orange font foi.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q44.webp"
@@ -2149,12 +2106,10 @@
           "id": "A2_Q45",
           "question": "Les lignes orange de chantier vous dirigent sur une zone d'évitement. Pouvez-vous y circuler ?",
           "choices": [
-            "Non, une zone d'évitement reste toujours strictement interdite",
-            "Oui, si les lignes orange l'indiquent, c'est autorisé pendant les travaux",
-            "Uniquement si vous êtes un véhicule de transport en commun",
-            "Uniquement pendant les heures de nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si les lignes orange de chantier vous autorisent à circuler sur une zone d'évitement, c'est légalement autorisé.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q45.webp"
@@ -2163,68 +2118,62 @@
           "id": "A2_Q46",
           "question": "Les lignes orange de chantier vous dirigent sur la bande d'arrêt d'urgence. Pouvez-vous y circuler ?",
           "choices": [
-            "Non, la bande d'arrêt d'urgence est toujours interdite à la circulation",
-            "Oui, si les lignes orange vous y dirigent, la circulation y est autorisée",
-            "Uniquement pour les poids lourds",
-            "Uniquement si vous roulez à moins de 30 km/h"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En présence de lignes orange de chantier, la circulation sur la BAU est autorisée si ces lignes vous y dirigent.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q46.webp"
         },
         {
           "id": "A2_Q47",
-          "question": "Ce signal d'indication bleu avec des flèches sur des bandes signifie :",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Un sens interdit aux véhicules lents",
-            "Annonce de flèches de sélection sur la chaussée",
-            "Une obligation de tourner à la flèche",
-            "Un parking organisé en bandes"
+            "Des flèches de sélection au sol",
+            "Un parking organisé en bandes",
+            "Un sens interdit aux poids lourds"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal prévient que des flèches directionnelles au sol obligent à choisir sa bande selon la direction souhaitée.",
           "theoryCardIndex": 2,
           "sign": "F13"
         },
         {
           "id": "A2_Q48",
-          "question": "Vous voyez ce signal au bord de la route. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau. Que devez-vous faire ?",
           "choices": [
-            "Vous arrêter avant le signal",
-            "Choisir votre bande selon votre direction",
-            "Changer d'itinéraire immédiatement",
-            "Ralentir à 30 km/h maximum"
+            "Choisir votre bande à l'avance",
+            "Ralentir à 30 km/h maximum",
+            "Changer d'itinéraire aussitôt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal annonce des flèches directionnelles : vous devez anticiper et choisir la bonne bande selon votre destination.",
           "sign": "F13",
           "destination": "panneaux"
         },
         {
           "id": "A2_Q49",
-          "question": "Ce signal d'indication montre un rétrécissement par la gauche. Que signifie-t-il ?",
+          "question": "Ce panneau annonce un rétrécissement par la gauche. Que signifie-t-il ?",
           "choices": [
-            "Sens interdit à gauche",
-            "La bande de gauche va disparaître",
-            "Virage à gauche",
-            "Travaux à gauche"
+            "La bande de gauche disparaît",
+            "Un virage serré vers la gauche",
+            "Des travaux sur la gauche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal d'indication annonce que la bande de gauche va prendre fin et que les conducteurs de cette bande devront se déplacer vers la droite.",
           "theoryCardIndex": 1,
           "sign": "F79"
         },
         {
           "id": "A2_Q50",
-          "question": "Ce signal d'indication montre un rétrécissement par la droite. Que signifie-t-il ?",
+          "question": "Ce panneau annonce un rétrécissement par la droite. Que signifie-t-il ?",
           "choices": [
-            "Sens interdit à droite",
-            "Virage à droite",
-            "La bande de droite va disparaître",
-            "Stationnement à droite"
+            "La bande de droite disparaît",
+            "Un virage serré vers la droite",
+            "Un stationnement sur la droite"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "Ce signal d'indication annonce que la bande de droite va prendre fin et que les conducteurs de cette bande devront se déplacer vers la gauche.",
           "theoryCardIndex": 1,
           "sign": "F79"
@@ -2233,26 +2182,24 @@
           "id": "A2_Q51",
           "question": "Vous voyez un signal de rétrécissement par la droite. Vous êtes sur la bande de droite. Que faites-vous ?",
           "choices": [
-            "Vous accélérez pour passer avant",
-            "Vous vous préparez à vous intercaler sur la bande de gauche",
-            "Vous vous arrêtez immédiatement",
-            "Vous faites demi-tour prudemment"
+            "Vous vous intercalez à gauche",
+            "Vous accélérez pour passer",
+            "Vous vous arrêtez sur place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Si vous êtes sur la bande qui disparaît, vous devez vous préparer à vous intercaler sur la bande adjacente.",
           "theoryCardIndex": 1,
-          "sign": "F97"
+          "sign": "F79"
         },
         {
           "id": "A2_Q55",
-          "question": "Ce signal montre une bande bus avec un pictogramme moto. Que signifie-t-il ?",
+          "question": "Ce panneau de bande bus porte un pictogramme moto. Que signifie-t-il ?",
           "choices": [
-            "Les motocyclettes y sont interdites",
-            "Les motocyclettes peuvent rouler sur la bande réservée aux bus",
-            "Un parking réservé aux motos",
-            "Une vitesse limitée pour les motos"
+            "Les motos peuvent y circuler",
+            "Les motos y sont interdites",
+            "Un parking réservé aux motos"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un pictogramme moto sur le signal de bande bus signifie que les motocyclettes sont autorisées à y circuler.",
           "theoryCardIndex": 3,
           "sign": "F17"
@@ -2275,27 +2222,25 @@
           "id": "A2_Q58",
           "question": "Que signifie ce panneau ?",
           "choices": [
+            "Circulation dans les deux sens",
             "Début d'une voie à sens unique",
-            "Circulation dans les deux sens après un sens unique",
-            "Dépassement interdit sur cette section",
-            "Route barrée à 150 mètres"
+            "Dépassement interdit plus loin"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce panneau de danger annonce la fin d'un sens unique et le retour à la circulation en double sens.",
           "sign": "A39",
           "destination": "panneaux"
         },
         {
           "id": "A2_Q60",
-          "question": "Ce signal de préavis annonce un évitement. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Une déviation obligatoire de l'itinéraire",
-            "La circulation va être déviée autour d'un obstacle",
-            "La route est fermée à la circulation",
-            "Un passage pour piétons à proximité"
+            "Un double sens temporaire",
+            "Une route fermée plus loin",
+            "Un passage pour piétons"
           ],
-          "correct": 1,
-          "explanation": "Ce signal prévient que la circulation va être déviée autour d'un obstacle ou d'une zone de travaux.",
+          "correct": 0,
+          "explanation": "Sur un chantier, la circulation passe temporairement en double sens : restez à droite et surveillez les véhicules en face.",
           "theoryCardIndex": 3,
           "sign": "F85"
         },
@@ -2317,12 +2262,11 @@
           "id": "A2_Q63",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Voie à sens unique",
-            "Circulation admise dans les deux sens",
-            "Dépassement interdit sur la section",
-            "Entrée d'autoroute"
+            "Circulation dans les deux sens",
+            "Une voie à sens unique",
+            "Une entrée d'autoroute"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal d'indication rectangulaire bleu confirme qu'une section à sens unique admet la circulation dans les deux sens.",
           "sign": "F85",
           "destination": "panneaux"
@@ -2331,12 +2275,11 @@
           "id": "A2_Q65",
           "question": "Vous voyez un signal indiquant que la circulation va passer en double sens. Vous étiez sur une route à sens unique. Comment adaptez-vous votre conduite ?",
           "choices": [
-            "Vous continuez normalement sans rien changer",
-            "Vous restez bien à droite et surveillez les véhicules en sens inverse",
-            "Vous accélérez pour quitter la zone",
-            "Vous faites demi-tour immédiatement"
+            "Rester à droite et surveiller",
+            "Accélérer pour quitter la zone",
+            "Continuer sans rien changer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En passant d'un sens unique à un double sens, vous devez rester à droite et être attentif aux véhicules venant en sens inverse.",
           "theoryCardIndex": 1,
           "sign": "A39"
@@ -2594,14 +2537,13 @@
       "questions": [
         {
           "id": "A3_Q1",
-          "question": "Qu'est-ce qu'une piste cyclable ?",
+          "question": "Sur une piste cyclable, qui doit circuler ?",
           "choices": [
-            "Une partie de la chaussée réservée aux voitures",
-            "La partie de la voie publique où vélos et cyclomoteurs classe A doivent circuler",
-            "Un trottoir aménagé pour les piétons",
-            "Une bande de stationnement pour vélos"
+            "Les vélos et cyclomoteurs classe A",
+            "Les voitures et les camionnettes",
+            "Les piétons et les poussettes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La piste cyclable est une partie de la voie publique (pas de la chaussée) destinée aux vélos et cyclomoteurs classe A.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q1.webp"
@@ -2610,12 +2552,11 @@
           "id": "A3_Q2",
           "question": "Comment reconnaît-on une piste cyclable sur la chaussée ?",
           "choices": [
-            "Par sa couleur rouge ou verte",
-            "Par deux lignes discontinues parallèles blanches",
-            "Par des poteaux de délimitation",
-            "Par une ligne jaune continue"
+            "À deux lignes blanches discontinues",
+            "À un revêtement rouge ou vert",
+            "À des poteaux de délimitation"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La piste cyclable est délimitée par deux lignes blanches discontinues parallèles. La couleur (ocre, jaune, rouge) ne joue aucun rôle.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q2.webp"
@@ -2624,41 +2565,36 @@
           "id": "A3_Q4",
           "question": "Les tricycles de moins d'un mètre de large sont-ils assimilés aux bicyclettes ?",
           "choices": [
-            "Non, ils doivent rouler sur la chaussée",
-            "Oui, ils sont assimilés aux bicyclettes",
-            "Uniquement hors agglomération",
-            "Uniquement s'ils ont un moteur"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les tricycles, quadricycles et triporteurs de moins d'un mètre de large sont assimilés aux bicyclettes et doivent emprunter la piste cyclable.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q4.webp"
         },
         {
           "id": "A3_Q5",
-          "question": "Le signal avec piéton et vélo côte à côte signifie :",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Seuls les piétons peuvent circuler",
-            "Vélos, cyclomoteurs classe A et piétons doivent utiliser cette partie",
-            "Tous les véhicules peuvent circuler",
-            "Uniquement les cyclomoteurs classe B"
+            "Chemin pour piétons et cyclistes",
+            "Chemin réservé aux piétons",
+            "Chemin réservé aux cyclomoteurs"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Symboles côte à côte = vélos + cyclomoteurs classe A + piétons. Les cyclomoteurs classe B ne peuvent pas y circuler.",
           "theoryCardIndex": 0,
           "sign": "D10"
         },
         {
           "id": "A3_Q6",
-          "question": "Le signal avec piéton et vélo l'un au-dessus de l'autre signifie :",
+          "question": "Sur un chemin réservé aux piétons et cyclistes, les cyclomoteurs sont-ils admis ?",
           "choices": [
-            "Vélos, cyclomoteurs classe A et piétons doivent l'emprunter",
-            "Seuls vélos et piétons doivent l'emprunter, les cyclomoteurs classe A et B ne peuvent pas",
-            "Tous les cyclomoteurs peuvent l'emprunter",
-            "Uniquement les piétons"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Symboles l'un au-dessus de l'autre = uniquement vélos et piétons. Les cyclomoteurs classes A et B sont exclus.",
+          "explanation": "Ce chemin n'est pas accessible aux cyclomoteurs, ni de classe A ni de classe B.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q6.webp"
         },
@@ -2666,12 +2602,11 @@
           "id": "A3_Q8",
           "question": "Un cycliste peut-il rouler sur le trottoir en agglomération ?",
           "choices": [
-            "Oui, toujours à allure modérée",
-            "Non, c'est interdit, sauf pour les enfants de moins de 10 ans",
-            "Oui, si la piste cyclable est occupée",
-            "Non, jamais, même pour les enfants"
+            "Non, sauf les enfants de moins de 10 ans",
+            "Oui, à condition de rouler au pas",
+            "Oui, si la piste cyclable est occupée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Rouler à vélo sur le trottoir en agglomération est interdit, sauf pour les enfants de moins de 10 ans.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q8.webp"
@@ -2680,12 +2615,11 @@
           "id": "A3_Q9",
           "question": "Hors agglomération, un cycliste peut-il circuler sur le trottoir s'il n'y a pas de piste cyclable ?",
           "choices": [
-            "Non, le trottoir reste réservé aux piétons",
-            "Oui, en roulant à droite dans le sens de la circulation",
-            "Oui, dans n'importe quel sens de circulation",
-            "Uniquement les enfants de moins de 10 ans"
+            "Oui, à droite dans le sens de la marche",
+            "Oui, dans le sens qu'il préfère",
+            "Non, le trottoir reste réservé aux piétons"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Hors agglomération, sans piste cyclable, tous les cyclistes peuvent circuler sur le trottoir ou l'accotement en saillie, à droite dans le sens de la circulation.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q9.webp"
@@ -2694,10 +2628,8 @@
           "id": "A3_Q11",
           "question": "La piste cyclable fait-elle partie de la chaussée ?",
           "choices": [
-            "Oui, elle en fait toujours partie",
-            "Non, elle fait partie de la voie publique mais pas de la chaussée",
-            "Oui, mais uniquement en agglomération",
-            "Oui, si elle est goudronnée comme la route"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La piste cyclable est une partie de la voie publique mais n'est PAS une partie de la chaussée.",
@@ -2708,10 +2640,8 @@
           "id": "A3_Q12",
           "question": "Pouvez-vous circuler en voiture sur une piste cyclable ?",
           "choices": [
-            "Oui, si elle est libre",
-            "Non, c'est interdit",
-            "Oui, en cas d'embouteillage",
-            "Oui, uniquement la nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La piste cyclable n'est pas une partie de la chaussée. Les voitures n'ont pas le droit d'y circuler.",
@@ -2736,10 +2666,8 @@
           "id": "A3_Q14",
           "question": "Pouvez-vous vous arrêter sur une piste cyclable pour faire descendre un passager ?",
           "choices": [
-            "Oui, c'est autorisé",
-            "Non, c'est interdit",
-            "Oui, si c'est rapide",
-            "Oui, uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de s'arrêter sur une piste cyclable pour embarquer ou faire descendre un passager.",
@@ -2750,12 +2678,10 @@
           "id": "A3_Q15",
           "question": "Pouvez-vous traverser une piste cyclable avec votre voiture ?",
           "choices": [
-            "Non, jamais avec une voiture",
-            "Oui, pour changer de direction ou faire une manœuvre",
-            "Oui, quand vous le souhaitez",
-            "Uniquement avec le clignotant activé"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous pouvez traverser une piste cyclable uniquement pour changer de direction ou effectuer une manœuvre.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q15.webp"
@@ -2764,12 +2690,11 @@
           "id": "A3_Q16",
           "question": "À quelle distance se trouve le signal de danger rouge avant un passage pour cyclistes ?",
           "choices": [
-            "50 mètres",
-            "100 mètres",
             "Environ 150 mètres",
-            "200 mètres"
+            "Environ 50 mètres",
+            "Environ 300 mètres"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "Le signal de danger (panneau triangulaire rouge) est placé à environ 150 mètres avant le passage pour cyclistes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q16.webp"
@@ -2792,12 +2717,10 @@
           "id": "A3_Q19",
           "question": "Un cycliste est déjà engagé sur le passage pour cyclistes. A-t-il priorité ?",
           "choices": [
-            "Non, les voitures ont priorité",
-            "Oui, une fois engagé il a priorité",
-            "Non, il doit s'arrêter",
-            "Uniquement s'il y a un feu"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une fois que le cycliste est engagé sur le passage, il a la priorité et les conducteurs doivent lui céder le passage.",
           "theoryCardIndex": 1,
           "severe": true,
@@ -2807,10 +2730,8 @@
           "id": "A3_Q20",
           "question": "Un cycliste attend au bord du passage pour cyclistes. Devez-vous vous arrêter ?",
           "choices": [
-            "Oui, il a toujours priorité",
-            "Non, il doit vous céder le passage tant qu'il n'est pas engagé",
-            "Oui, comme pour un passage piéton",
-            "Non, mais vous devez ralentir"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Contrairement au passage piéton, le cycliste n'a pas priorité s'il n'est pas encore engagé. Il doit céder le passage aux véhicules sur la chaussée.",
@@ -2836,10 +2757,8 @@
           "id": "A3_Q22",
           "question": "Pouvez-vous stationner sur la chaussée à 3 mètres en deçà d'un passage pour cyclistes ?",
           "choices": [
-            "Oui, c'est suffisamment loin",
-            "Non, c'est interdit à moins de 5 mètres en deçà",
-            "Oui, si vous mettez vos warnings",
-            "Uniquement pour un court arrêt"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de s'arrêter ou stationner à moins de 5 mètres en deçà (avant) d'un passage pour cyclistes.",
@@ -2850,12 +2769,10 @@
           "id": "A3_Q23",
           "question": "Pouvez-vous stationner juste AU-DELÀ d'un passage pour cyclistes ?",
           "choices": [
-            "Non, c'est aussi interdit après",
-            "Oui, c'est autorisé sauf si des signaux l'interdisent",
-            "Oui, mais uniquement la nuit",
-            "Oui, mais uniquement hors agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Au-delà du passage (après), vous pouvez stationner, sauf si des signaux l'interdisent.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q23.webp"
@@ -2864,10 +2781,8 @@
           "id": "A3_Q24",
           "question": "Un conducteur ralentit devant un passage pour cyclistes. Pouvez-vous le dépasser ?",
           "choices": [
-            "Oui, s'il roule vraiment trop lentement",
-            "Non, dépasser est interdit devant un passage pour cyclistes",
-            "Oui, mais uniquement par la gauche",
-            "Oui, si le passage est totalement libre"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de dépasser un conducteur qui ralentit ou s'arrête devant un passage pour cyclistes.",
@@ -2878,27 +2793,24 @@
           "id": "A3_Q25",
           "question": "Comment devez-vous approcher un passage pour cyclistes ?",
           "choices": [
-            "À vitesse normale sans précaution",
-            "À allure modérée pour protéger les usagers engagés",
-            "En accélérant pour passer rapidement",
-            "En klaxonnant pour signaler votre présence"
+            "À allure modérée",
+            "À vitesse normale",
+            "En accélérant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "On ne peut s'approcher d'un passage pour cyclistes qu'à allure modérée pour ne pas mettre en danger les cyclistes engagés.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q25.webp"
         },
         {
           "id": "A3_Q28",
-          "question": "Qu'est-ce qu'une bande cyclable suggérée ?",
+          "question": "Une bande cyclable suggérée est-elle une piste cyclable ?",
           "choices": [
-            "Une piste cyclable obligatoire classique",
-            "Une bande peinte sur la chaussée qui n'est PAS une piste cyclable",
-            "Un trottoir coloré pour les vélos",
-            "Une zone d'évitement pour véhicules"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "La bande cyclable suggérée est une bande colorée peinte sur la chaussée. Ce n'est pas une piste cyclable : pas de lignes discontinues, pas de signaux.",
+          "explanation": "Elle est peinte sur la chaussée mais n'est ni délimitée par des lignes discontinues ni signalée : elle fait partie de la chaussée.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A3_Q28.webp"
         },
@@ -2906,12 +2818,11 @@
           "id": "A3_Q29",
           "question": "Pourquoi une bande cyclable suggérée n'est-elle pas une piste cyclable ?",
           "choices": [
-            "Parce qu'elle est trop étroite pour les vélos",
-            "Parce qu'elle n'est pas délimitée par des lignes discontinues ni signalée",
-            "Parce qu'elle est réservée aux cyclomoteurs",
-            "Parce qu'elle est peinte dans une autre couleur"
+            "Elle n'a ni lignes discontinues ni signal",
+            "Elle est trop étroite pour les vélos",
+            "Elle est réservée aux cyclomoteurs"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La bande cyclable suggérée n'a ni lignes discontinues parallèles ni signaux routiers : deux éléments indispensables pour qualifier une piste cyclable.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A3_Q29.webp"
@@ -2920,12 +2831,10 @@
           "id": "A3_Q30",
           "question": "La bande cyclable suggérée fait-elle partie de la chaussée ?",
           "choices": [
-            "Non, c'est une piste cyclable",
-            "Oui, elle fait partie de la chaussée",
-            "Non, c'est un accotement",
-            "Uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La bande cyclable suggérée fait partie de la chaussée, contrairement à la piste cyclable.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A3_Q30.webp"
@@ -2934,12 +2843,10 @@
           "id": "A3_Q32",
           "question": "Pouvez-vous stationner sur une bande cyclable suggérée ?",
           "choices": [
-            "Non, c'est une piste cyclable",
-            "Oui, vous pouvez vous y arrêter et stationner",
-            "Uniquement la nuit",
-            "Uniquement 15 minutes"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur une bande cyclable suggérée (partie de la chaussée), vous pouvez vous arrêter et stationner.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A3_Q32.webp"
@@ -2963,12 +2870,11 @@
           "id": "A3_Q34",
           "question": "Les piétons peuvent-ils emprunter la bande latérale ?",
           "choices": [
-            "Non, elle est réservée aux véhicules",
-            "Oui, celle de gauche dans leur sens de marche, à défaut de trottoir",
-            "Oui, celle de droite dans leur sens de marche",
-            "Uniquement les enfants et les personnes à mobilité réduite"
+            "Oui, celle de gauche, à défaut de trottoir",
+            "Oui, celle de droite, à défaut de trottoir",
+            "Non, elle est réservée aux véhicules"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les piétons peuvent emprunter la bande latérale de gauche s'il n'y a pas de trottoir.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A3_Q34.webp"
@@ -2977,12 +2883,10 @@
           "id": "A3_Q35",
           "question": "Un cavalier peut-il circuler sur la bande latérale ?",
           "choices": [
-            "Non, uniquement sur la chaussée",
-            "Oui, la bande latérale est aussi destinée aux cavaliers",
-            "Uniquement hors agglomération",
-            "Uniquement avec autorisation"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La bande latérale est destinée entre autres aux cavaliers et aux animaux de trait.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A3_Q35.webp"
@@ -2991,12 +2895,10 @@
           "id": "A3_Q36",
           "question": "Deux voitures doivent se croiser sur une chaussée à voie centrale. Peuvent-elles empiéter sur la bande latérale ?",
           "choices": [
-            "Non, c'est strictement interdit",
-            "Oui, sans gêner les autres usagers",
-            "Oui, sans aucune condition",
-            "Uniquement le véhicule le plus léger"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les voitures peuvent empiéter sur la bande latérale pour se croiser ou dépasser, à condition de ne pas gêner les cyclistes et de respecter les distances.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A3_Q36.webp"
@@ -3019,12 +2921,11 @@
           "id": "A3_Q39",
           "question": "Le signal de danger avec une bicyclette a combien de significations ?",
           "choices": [
-            "Une seule : passage pour cyclistes",
-            "Deux : passage pour cyclistes ET fin de piste cyclable",
-            "Trois significations différentes",
-            "Aucune signification particulière"
+            "Deux",
+            "Une",
+            "Trois"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal de danger a deux significations : il indique un passage pour cyclistes OU que des cyclistes vont quitter la piste cyclable.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A3_Q39.webp"
@@ -3033,12 +2934,10 @@
           "id": "A3_Q41",
           "question": "Un cycliste reprend sa place sur la chaussée à la fin d'une piste cyclable. A-t-il la priorité ?",
           "choices": [
-            "Non, il doit céder le passage",
-            "Oui, les voitures et motos doivent lui céder le passage",
-            "Uniquement s'il tend le bras",
-            "Uniquement aux carrefours"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En fin de piste cyclable, le cycliste qui rejoint la chaussée a la priorité. Les voitures et motos doivent lui céder.",
           "theoryCardIndex": 4,
           "severe": true,
@@ -3048,10 +2947,8 @@
           "id": "A3_Q42",
           "question": "Un cycliste quitte la piste cyclable à cause d'un obstacle. A-t-il la priorité ?",
           "choices": [
-            "Oui, comme en fin de piste cyclable",
-            "Non, cette priorité ne vaut qu'en fin de piste",
-            "Oui, dans absolument tous les cas",
-            "Uniquement s'il porte un gilet réfléchissant"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La priorité du cycliste qui rejoint la chaussée s'applique uniquement en fin de piste cyclable, pas s'il quitte la piste à cause d'un obstacle.",
@@ -3063,10 +2960,8 @@
           "id": "A3_Q45",
           "question": "Pouvez-vous stationner à 3 mètres de l'endroit où les cyclistes quittent la piste pour la chaussée ?",
           "choices": [
-            "Oui, c'est assez loin",
-            "Non, c'est interdit à moins de 5 mètres",
-            "Oui, si vous mettez vos warnings",
-            "Uniquement pour 5 minutes"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de s'arrêter ou stationner à moins de 5 mètres des points de jonction entre la piste cyclable et la chaussée.",
@@ -3077,12 +2972,10 @@
           "id": "A3_Q46",
           "question": "Pouvez-vous vous arrêter à 6 mètres de l'endroit où les cyclistes rejoignent la piste cyclable depuis la chaussée ?",
           "choices": [
-            "Non, c'est interdit à moins de 10 mètres",
-            "Oui, car c'est à plus de 5 mètres",
-            "Non, c'est toujours interdit",
-            "Uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction s'étend à moins de 5 mètres. À 6 mètres, c'est autorisé (sauf signal contraire).",
           "theoryCardIndex": 4,
           "image": "/images/questions/A3_Q46.webp"
@@ -3091,10 +2984,8 @@
           "id": "A3_Q47",
           "question": "Un groupe de 20 cyclistes doit-il emprunter la piste cyclable ?",
           "choices": [
-            "Oui, toujours quand une piste cyclable existe",
-            "Non, un groupe de 15 à 50 n'est pas tenu d'emprunter les pistes cyclables",
-            "Oui, mais uniquement en agglomération",
-            "Oui, mais uniquement hors agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un groupe de 15 à 50 cyclistes n'est pas tenu d'emprunter les pistes cyclables.",
@@ -3105,12 +2996,11 @@
           "id": "A3_Q48",
           "question": "Un groupe de 15 à 50 cyclistes peut rouler à combien de front ?",
           "choices": [
+            "Deux de front",
             "Un seul de front",
-            "Deux de front en restant groupés",
-            "Trois de front",
-            "Quatre de front"
+            "Trois de front"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un groupe de 15 à 50 cyclistes peut rouler à deux de front sur la chaussée.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q48.webp"
@@ -3119,12 +3009,11 @@
           "id": "A3_Q49",
           "question": "Quelle bande de circulation un groupe de 15 à 50 cyclistes peut-il utiliser ?",
           "choices": [
+            "La bande de droite",
             "La bande de gauche",
-            "Uniquement la bande de droite",
-            "N'importe quelle bande",
-            "La bande du milieu"
+            "N'importe quelle bande"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un groupe de cyclistes doit utiliser uniquement la bande de droite.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q49.webp"
@@ -3161,12 +3050,10 @@
           "id": "A3_Q52",
           "question": "Un groupe de 80 cyclistes doit-il avoir des véhicules d'escorte ?",
           "choices": [
-            "Non, c'est facultatif",
-            "Oui, un devant et un derrière à environ 30 mètres",
-            "Un seul véhicule suffit",
-            "Uniquement sur autoroute"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un groupe de 51 à 150 cyclistes doit obligatoirement être précédé ET suivi d'un véhicule d'escorte à environ 30 mètres.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q52.webp"
@@ -3189,12 +3076,11 @@
           "id": "A3_Q54",
           "question": "Aux carrefours sans feux, que peuvent faire les capitaines de route ?",
           "choices": [
-            "Rien de spécial, seuls les agents le peuvent",
-            "Immobiliser la circulation transversale durant la traversée du groupe",
-            "Uniquement signaler la présence du groupe",
-            "Uniquement réguler les cyclistes du groupe"
+            "Immobiliser la circulation transversale",
+            "Signaler la présence du groupe, sans plus",
+            "Régler la circulation à un feu rouge"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les capitaines de route peuvent immobiliser la circulation transversale aux carrefours sans feux, pour permettre au groupe de traverser.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q54.webp"
@@ -3203,40 +3089,37 @@
           "id": "A3_Q55",
           "question": "Que portent les capitaines de route ?",
           "choices": [
+            "Un brassard avec le drapeau belge",
             "Un gilet jaune et un casque blanc",
-            "Un brassard au bras gauche avec le drapeau belge et un signal C3",
-            "Un uniforme semblable à celui de la police",
             "Un drapeau rouge et un sifflet"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les capitaines de route portent un brassard avec le drapeau belge au bras gauche et utilisent le signal C3 pour arrêter le trafic.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q55.webp"
         },
         {
           "id": "A3_Q56",
-          "question": "Vous arrivez à un carrefour et un capitaine de route vous montre un signal C3. Que devez-vous faire ?",
+          "question": "Un capitaine de route vous présente un disque C3. Que faites-vous ?",
           "choices": [
-            "Vous pouvez continuer lentement",
-            "Vous devez vous arrêter pour laisser passer le groupe de cyclistes",
-            "Vous klaxonnez pour signaler votre présence",
+            "Vous vous arrêtez pour laisser passer",
+            "Vous continuez lentement votre route",
             "Vous contournez le groupe par la gauche"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal C3 est un signal d'arrêt obligatoire. Vous devez vous arrêter pour laisser passer le groupe et ses véhicules d'escorte.",
           "theoryCardIndex": 5,
-          "sign": "B5"
+          "sign": "C3"
         },
         {
           "id": "A3_Q57",
-          "question": "Qu'est-ce qu'une zone cyclable ?",
+          "question": "Dans une zone cyclable, quel est le statut des cyclistes ?",
           "choices": [
-            "Une piste cyclable élargie à toute la rue",
-            "Une zone où les cyclistes sont prioritaires et les voitures invitées",
-            "Une zone totalement interdite aux voitures",
-            "Un ensemble de parkings réservés aux vélos"
+            "Ils sont prioritaires sur les voitures",
+            "Ils doivent rester le long du bord droit",
+            "Ils sont interdits sur la chaussée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La zone cyclable est une zone signalisée où les cyclistes ont la priorité et les véhicules motorisés sont considérés comme des invités.",
           "theoryCardIndex": 6,
           "severe": true,
@@ -3246,12 +3129,11 @@
           "id": "A3_Q58",
           "question": "Comment reconnaît-on une zone cyclable ?",
           "choices": [
-            "Par des lignes peintes au sol",
-            "Par un panneau de zone DÉBUT et un panneau de zone FIN",
-            "Par un feu orange clignotant",
-            "Par un revêtement de couleur rouge"
+            "À un panneau de début et de fin",
+            "À des lignes peintes au sol",
+            "À un revêtement de couleur rouge"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La zone cyclable est délimitée par un panneau de début et un panneau de fin.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q58.webp"
@@ -3260,12 +3142,11 @@
           "id": "A3_Q59",
           "question": "Les cyclistes dans une zone cyclable peuvent utiliser :",
           "choices": [
-            "Uniquement la bande de droite",
             "Toute la largeur de la chaussée",
-            "Uniquement la piste cyclable",
-            "Uniquement l'accotement"
+            "Le bord droit de la chaussée",
+            "La piste cyclable et rien d'autre"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans une zone cyclable, les cyclistes et speed pedelecs peuvent utiliser toute la largeur de la chaussée.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q59.webp"
@@ -3303,10 +3184,8 @@
           "id": "A3_Q63",
           "question": "Pouvez-vous dépasser un cycliste dans une zone cyclable avec votre voiture ?",
           "choices": [
-            "Oui, s'il roule lentement",
-            "Non, c'est interdit",
-            "Oui, par la gauche uniquement",
-            "Oui, si vous ne dépassez pas 30 km/h"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de dépasser un cycliste (ou engin assimilé) dans une zone cyclable.",
@@ -3317,10 +3196,8 @@
           "id": "A3_Q64",
           "question": "Pouvez-vous dépasser une trottinette dans une zone cyclable ?",
           "choices": [
-            "Oui, les trottinettes ne sont pas des vélos",
-            "Non, c'est interdit de dépasser un cycliste, une trottinette ou tout engin assimilé",
-            "Oui, si elle roule à moins de 10 km/h",
-            "Oui, mais uniquement par la droite"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les trottinettes sont des engins assimilés aux cyclistes dans une zone cyclable : on ne peut pas les dépasser.",
@@ -3331,12 +3208,11 @@
           "id": "A3_Q65",
           "question": "Pouvez-vous dépasser un cyclomoteur dans une zone cyclable ?",
           "choices": [
-            "Non, c'est interdit de dépasser dans une zone cyclable",
-            "Oui, par la gauche, à condition de ne pas dépasser 30 km/h",
+            "Oui, à 30 km/h maximum",
             "Oui, par la droite",
-            "Uniquement si le cyclomoteur vous fait signe"
+            "Non, c'est interdit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un cyclomoteur peut être dépassé dans une zone cyclable, par la gauche, sans dépasser 30 km/h.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q65.webp"
@@ -3345,12 +3221,11 @@
           "id": "A3_Q67",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Piste cyclable interdite",
             "Piste cyclable obligatoire",
-            "Fin de piste cyclable",
-            "Parking vélo"
+            "Piste cyclable interdite",
+            "Fin de piste cyclable"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond bleu avec une bicyclette indique une piste cyclable obligatoire.",
           "sign": "D7",
           "destination": "panneaux"
@@ -3359,70 +3234,65 @@
           "id": "A3_Q69",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Partie réservée aux piétons, vélos et cyclomoteurs classe A",
-            "Partie réservée aux piétons et cyclistes, cyclomoteurs interdits",
-            "Zone piétonne interdite aux vélos",
-            "Parking mixte pour vélos et piétons"
+            "Chemin séparé piétons et cyclistes",
+            "Chemin partagé sans séparation",
+            "Zone piétonne interdite aux vélos"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Symboles l'un au-dessus de l'autre : réservé aux piétons et cyclistes seulement. Cyclomoteurs A et B interdits.",
           "sign": "D9a",
           "destination": "panneaux"
         },
         {
           "id": "A3_Q70",
-          "question": "Le panneau additionnel M6 signifie :",
+          "question": "Que signifie ce panneau additionnel ?",
           "choices": [
-            "Cyclomoteurs classe B interdits sur la piste",
-            "Cyclomoteurs classe B doivent emprunter la piste cyclable",
-            "Cyclistes interdits sur la piste",
-            "Speed pedelecs autorisés sur la piste"
+            "Les cyclomoteurs B doivent y rouler",
+            "Les cyclomoteurs B y sont interdits",
+            "Les cyclistes y sont interdits"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau additionnel M6 oblige les cyclomoteurs classe B à emprunter la piste cyclable.",
           "destination": "panneaux",
           "sign": "M6"
         },
         {
           "id": "A3_Q71",
-          "question": "Le panneau additionnel M7 signifie :",
+          "question": "Que signifie ce panneau additionnel ?",
           "choices": [
-            "Cyclomoteurs classe B doivent emprunter la piste",
-            "Cyclomoteurs classe B ne peuvent PAS emprunter la piste cyclable",
-            "Cyclistes interdits sur la piste",
-            "Piétons interdits sur la piste"
+            "Les cyclomoteurs B y sont interdits",
+            "Les cyclomoteurs B doivent y rouler",
+            "Les piétons y sont interdits"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau additionnel M7 interdit aux cyclomoteurs classe B d'emprunter la piste cyclable.",
           "destination": "panneaux",
           "sign": "M7"
         },
         {
           "id": "A3_Q72",
-          "question": "Ce signal indique un chemin réservé. Quels usagers y sont admis ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Uniquement les piétons et les enfants",
-            "Piétons, cyclistes et cavaliers selon les symboles",
-            "Tous les véhicules motorisés",
-            "Uniquement les cyclistes rapides"
+            "Chemin pour piétons, cyclistes, cavaliers",
+            "Chemin réservé aux piétons et aux enfants",
+            "Chemin ouvert à tous les véhicules"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal indique un chemin partagé dont les usagers autorisés sont précisés par les symboles (piétons, cyclistes, cavaliers).",
-          "sign": "D10",
+          "sign": "F99a",
           "destination": "panneaux"
         },
         {
           "id": "A3_Q73",
-          "question": "Ce signal d'indication bleu avec un vélo sur un passage signifie :",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Piste cyclable obligatoire pour les vélos",
-            "Passage pour conducteurs de bicyclettes et cyclomoteurs à deux roues",
-            "Fin de la piste cyclable obligatoire",
-            "Début d'une zone cyclable"
+            "Passage pour cyclistes et cyclomoteurs",
+            "Piste cyclable obligatoire ici",
+            "Fin de la piste cyclable obligatoire"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal d'indication bleu indique un passage pour bicyclettes et cyclomoteurs à deux roues.",
-          "sign": "F33b",
+          "sign": "F50",
           "destination": "panneaux"
         },
         {
@@ -3443,26 +3313,24 @@
           "id": "A3_Q75",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Interdiction d'accès aux vélos et piétons",
-            "Voie sans issue sauf pour les cyclistes et les piétons",
-            "Début d'une zone piétonne",
-            "Parking réservé aux vélos"
+            "Voie sans issue sauf vélos et piétons",
+            "Accès interdit aux vélos et aux piétons",
+            "Début d'une zone piétonne"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Voie sans issue pour les voitures, mais les cyclistes et les piétons peuvent continuer.",
           "sign": "F45b",
           "destination": "panneaux"
         },
         {
           "id": "A3_Q76",
-          "question": "Ce signal indique le début d'une rue cyclable. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Le début d'une piste cyclable obligatoire",
-            "Le début d'une rue où les cyclistes sont prioritaires",
-            "Une rue interdite aux véhicules motorisés",
+            "Le début d'une rue cyclable",
+            "Le début d'une piste cyclable",
             "Le début d'une zone 30"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La rue cyclable est une rue où les cyclistes ont la priorité. Les véhicules motorisés y sont des invités.",
           "theoryCardIndex": 6,
           "sign": "F111",
@@ -3470,42 +3338,39 @@
         },
         {
           "id": "A3_Q77",
-          "question": "Ce signal indique la fin d'une rue cyclable. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Fin de la zone 30 adjacente",
-            "Les règles de la rue cyclable ne s'appliquent plus",
+            "Les règles de rue cyclable cessent",
             "Le début d'une piste cyclable",
             "Un sens interdit aux vélos"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal indique la fin de la rue cyclable. Les règles normales du code de la route reprennent.",
           "theoryCardIndex": 6,
           "sign": "F113"
         },
         {
           "id": "A3_Q78",
-          "question": "Que signifie ce panneau ?",
+          "question": "Quelle différence entre une zone cyclable et une rue cyclable ?",
           "choices": [
-            "Il n'y a aucune différence entre les deux",
-            "Zone cyclable = plusieurs rues ; rue cyclable = une seule rue",
-            "La zone cyclable est interdite aux voitures",
-            "La zone cyclable a une vitesse de 50 km/h"
+            "La zone couvre plusieurs rues",
+            "La zone est interdite aux voitures",
+            "Il n'y a aucune différence"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La zone cyclable englobe plusieurs rues, tandis que la rue cyclable ne concerne qu'une seule rue.",
           "theoryCardIndex": 6,
           "sign": "F111"
         },
         {
           "id": "A3_Q79",
-          "question": "Ce signal indique la fin d'une zone cyclable. Que devez-vous savoir ?",
+          "question": "Que devez-vous savoir en voyant ce panneau ?",
           "choices": [
-            "Les cyclistes doivent quitter la chaussée",
-            "Les règles normales de circulation reprennent",
+            "Les règles normales reprennent",
             "Vous entrez dans une zone 30",
-            "Le dépassement des cyclistes reste interdit"
+            "Les cyclistes quittent la chaussée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal marque la fin de la zone cyclable. Les règles normales du code de la route s'appliquent à nouveau.",
           "theoryCardIndex": 6,
           "sign": "F113"
@@ -3514,26 +3379,24 @@
           "id": "A3_Q80",
           "question": "Que signifie ce panneau ?",
           "choices": [
+            "Accès interdit aux cyclistes",
             "Piste cyclable obligatoire",
-            "Accès interdit aux conducteurs de cycles",
-            "Fin de piste cyclable",
-            "Parking vélo interdit"
+            "Fin de la piste cyclable"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal rond rouge avec une bicyclette est un signal d'interdiction : les cyclistes n'ont pas accès.",
           "theoryCardIndex": 6,
           "sign": "C11"
         },
         {
           "id": "A3_Q81",
-          "question": "Vous êtes cycliste et voyez ce signal d'interdiction. Que devez-vous faire ?",
+          "question": "Vous êtes cycliste et vous voyez ce panneau. Que faites-vous ?",
           "choices": [
-            "Vous pouvez continuer si la route est libre",
-            "Vous ne pouvez pas emprunter cette voie, vous devez trouver un autre itinéraire",
-            "Vous pouvez continuer en poussant votre vélo",
-            "Vous pouvez continuer à moins de 10 km/h"
+            "Prendre un autre itinéraire",
+            "Continuer si la route est libre",
+            "Continuer en poussant le vélo"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal d'accès interdit aux cyclistes vous interdit d'emprunter cette voie, que vous rouliez ou poussiez votre vélo.",
           "sign": "C11",
           "destination": "panneaux"
@@ -3542,26 +3405,24 @@
           "id": "A3_Q82",
           "question": "Que signifie ce panneau ?",
           "choices": [
+            "Passage pour cyclistes",
             "Piste cyclable obligatoire",
-            "Passage pour cyclistes et cyclomoteurs",
-            "Début de zone cyclable",
-            "Emplacement de parking vélo"
+            "Début de zone cyclable"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal de danger indique un passage pour cyclistes ou un endroit où des cyclistes débouchent sur la chaussée.",
           "sign": "A25",
           "destination": "panneaux"
         },
         {
           "id": "A3_Q83",
-          "question": "Vous voyez un signal de danger avec une bicyclette. Que devez-vous anticiper ?",
+          "question": "Que devez-vous anticiper en voyant ce panneau ?",
           "choices": [
-            "Rien de spécial à cet endroit",
-            "Des cyclistes ou cyclomoteurs peuvent déboucher sur la chaussée",
-            "La route est fermée aux cyclistes",
-            "Un parking vélo se trouve à proximité"
+            "Des cyclistes qui débouchent",
+            "Un parking vélo à proximité",
+            "Une route fermée aux cyclistes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal vous prévient que des cyclistes peuvent arriver sur la chaussée depuis une piste cyclable.",
           "destination": "panneaux",
           "sign": "A25"
@@ -3570,40 +3431,37 @@
           "id": "A3_Q85",
           "question": "Vous voyez un signal d'accès interdit aux cycles suivi d'une piste cyclable obligatoire un peu plus loin. Que comprenez-vous ?",
           "choices": [
-            "Les cyclistes sont interdits partout dans la zone",
-            "Interdit sur cette voie : les cyclistes doivent prendre la piste indiquée",
-            "Les cyclistes peuvent choisir leur itinéraire",
-            "Les signaux sont contradictoires, ils s'annulent"
+            "Les cyclistes prennent la piste indiquée",
+            "Les cyclistes sont interdits partout",
+            "Les cyclistes choisissent librement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'accès interdit aux cycles ferme une voie aux cyclistes, qui sont redirigés vers la piste cyclable signalée plus loin.",
           "theoryCardIndex": 1,
           "sign": "C11"
         },
         {
           "id": "A3_Q86",
-          "question": "Vous voyez un panneau de voie sans issue sauf cyclistes et piétons. Vous êtes en voiture. Que faites-vous ?",
+          "question": "Vous voyez ce panneau et vous êtes en voiture. Que faites-vous ?",
           "choices": [
-            "Vous pouvez traverser normalement",
-            "Vous pouvez entrer mais devrez faire demi-tour",
-            "Vous ne pouvez pas entrer",
-            "Vous devez être accompagné d'un cycliste"
+            "Vous entrez, puis faites demi-tour",
+            "Vous traversez la rue normalement",
+            "Vous ne pouvez pas y entrer"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Voie sans issue pour les voitures = vous ne pouvez pas entrer. Seuls les cyclistes et piétons peuvent continuer.",
           "theoryCardIndex": 1,
           "sign": "F45b"
         },
         {
           "id": "A3_Q87",
-          "question": "Vous voyez un signal de début de zone cyclable puis un panneau 30 km/h. Lequel prime ?",
+          "question": "Ce panneau est suivi d'un panneau 30 km/h. Lequel prime ?",
           "choices": [
-            "Le panneau 30 km/h uniquement",
-            "Les deux s'appliquent, la zone cyclable impose déjà 30 km/h",
-            "Le panneau zone cyclable uniquement",
-            "Aucun des deux ne s'applique"
+            "Les deux, la zone impose déjà 30",
+            "Le panneau 30 km/h, lui seul",
+            "Le panneau de zone cyclable"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La zone cyclable impose déjà une vitesse de 30 km/h. Le panneau 30 km/h confirme cette limite. Les deux s'appliquent simultanément.",
           "theoryCardIndex": 6,
           "sign": "F111"
@@ -3903,14 +3761,13 @@
       "questions": [
         {
           "id": "A4_Q1",
-          "question": "Qu'est-ce qu'une autoroute ?",
+          "question": "Qu'est-ce qui caractérise une autoroute ?",
           "choices": [
-            "Une route avec des feux de signalisation",
-            "Une route express pour automobiles sans feux ni carrefours avec priorité",
-            "Une route réservée aux camions",
-            "Toute route à plusieurs bandes"
+            "Ni feux ni carrefours à niveau",
+            "Un accès réservé aux camions",
+            "Au moins trois bandes par sens"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une autoroute est une route express réservée aux automobiles, sans feux ni carrefours avec priorité, accessible uniquement par des voies d'accès.",
           "theoryCardIndex": 0,
           "severe": true,
@@ -3920,12 +3777,11 @@
           "id": "A4_Q3",
           "question": "Quels véhicules sont interdits sur l'autoroute ?",
           "choices": [
-            "Uniquement les vélos, trottinettes et engins de déplacement",
-            "Cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et véhicules forains",
-            "Uniquement les tracteurs et machines agricoles lentes",
-            "Les motos de moins de 400 cm³ et leurs side-cars"
+            "Les cyclomoteurs et engins agricoles",
+            "Les motos de moins de 400 cm³",
+            "Les camionnettes et les remorques"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Plusieurs catégories de véhicules sont interdits sur l'autoroute : cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et trains forains.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A4_Q3.webp"
@@ -3963,10 +3819,8 @@
           "id": "A4_Q7",
           "question": "Pouvez-vous toujours rouler à 120 km/h sur autoroute ?",
           "choices": [
-            "Oui, c'est la vitesse garantie sur autoroute",
-            "Non, seulement si les conditions et la signalisation le permettent",
-            "Oui, sauf la nuit et par temps de pluie",
-            "Non, uniquement sur les tronçons à trois bandes"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La limite de 120 km/h n'est possible que si les conditions de circulation le permettent et qu'aucun signal ou agent ne l'interdit.",
@@ -3992,10 +3846,8 @@
           "id": "A4_Q9",
           "question": "Un signal de préavis indique une limitation à 1,5 km. Devez-vous déjà ralentir ?",
           "choices": [
-            "Oui, immédiatement dès le panneau",
-            "Non, la limitation s'applique à 1,5 km plus loin",
-            "Oui, mais seulement à 500 mètres",
-            "Non, ce panneau n'est qu'indicatif"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le signal de préavis vous informe de la limitation à venir, mais celle-ci ne s'applique qu'au point indiqué.",
@@ -4019,14 +3871,13 @@
         },
         {
           "id": "A4_Q12",
-          "question": "Un signal indique 90 km/h à la sortie. Que signifie-t-il ?",
+          "question": "Ce panneau est placé à la sortie. Que signifie-t-il ?",
           "choices": [
-            "Vous devez rouler à 90 km/h minimum",
-            "Vous ne pouvez pas dépasser 90 km/h dans la sortie",
-            "La sortie est à 90 km",
-            "Vitesse recommandée"
+            "Vitesse maximale de 90 km/h",
+            "Vitesse minimale de 90 km/h",
+            "Vitesse conseillée de 90 km/h"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un signal de limitation dans la sortie indique la vitesse maximale autorisée sur cette bretelle.",
           "theoryCardIndex": 1,
           "sign": "C43",
@@ -4050,12 +3901,11 @@
           "id": "A4_Q14",
           "question": "Comment la limitation smog est-elle indiquée ?",
           "choices": [
-            "Par des cônes orange sur la chaussée",
-            "Par panneaux électroniques ou C43 avec mention SMOG",
-            "Uniquement par des agents qualifiés",
-            "Par un simple message à la radio"
+            "Par panneau électronique ou C43",
+            "Par des cônes orange au sol",
+            "Par un message diffusé à la radio"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La limitation smog est signalée par des panneaux électroniques variables ou par le signal C43 accompagné d'un panneau additionnel SMOG.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q14.webp"
@@ -4064,12 +3914,11 @@
           "id": "A4_Q15",
           "question": "Quand pouvez-vous monter des pneus cloutés ?",
           "choices": [
-            "Toute l'année",
             "Du 1er novembre au 31 mars",
             "Du 1er octobre au 30 avril",
-            "Uniquement en décembre et janvier"
+            "Toute l'année sans limite"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les pneus cloutés sont autorisés du 1er novembre au 31 mars.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q15.webp"
@@ -4108,12 +3957,11 @@
           "id": "A4_Q18",
           "question": "Sur quel type de véhicule pouvez-vous monter des pneus cloutés ?",
           "choices": [
+            "Une MMA de 3,5 tonnes maximum",
             "Tous les véhicules sans exception",
-            "Véhicule d'une MMA n'excédant pas 3,5 tonnes",
-            "Uniquement les 4x4 et SUV",
-            "Uniquement les camions légers"
+            "Les 4x4 et les SUV"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les pneus cloutés ne sont autorisés que sur les véhicules dont la masse maximale autorisée ne dépasse pas 3,5 tonnes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q18.webp"
@@ -4136,10 +3984,8 @@
           "id": "A4_Q21",
           "question": "Pouvez-vous vous arrêter sur la bande d'arrêt d'urgence pour consulter une carte ?",
           "choices": [
-            "Oui, pour un court moment",
-            "Non, c'est interdit",
-            "Oui, si vous mettez vos warnings",
-            "Oui, uniquement la nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de s'arrêter sur la BAU pour quelque raison que ce soit, y compris consulter une carte ou téléphoner.",
@@ -4150,12 +3996,11 @@
           "id": "A4_Q22",
           "question": "Pouvez-vous circuler sur la bande d'arrêt d'urgence ?",
           "choices": [
-            "Oui, si la circulation est très dense",
-            "Non, sauf en cas de panne, d'accident ou si des marques orange l'autorisent",
-            "Oui, pour dépasser par la droite",
-            "Oui, à condition de rouler à moins de 50 km/h"
+            "Non, sauf panne ou marques orange",
+            "Oui, si la circulation est dense",
+            "Oui, pour dépasser par la droite"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La circulation sur la BAU n'est autorisée qu'en cas de panne, d'accident ou si des marques orange le permettent.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A4_Q22.webp"
@@ -4164,12 +4009,11 @@
           "id": "A4_Q23",
           "question": "Vous êtes en panne sur la bande d'arrêt d'urgence. Où devez-vous attendre les secours ?",
           "choices": [
+            "Derrière les barrières",
             "Dans votre véhicule",
-            "Derrière les barrières de protection",
-            "Sur la chaussée",
             "Sur la berme centrale"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En attendant les secours sur la BAU, restez derrière les barrières de protection, pas dans votre véhicule.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q23.webp"
@@ -4220,12 +4064,11 @@
           "id": "A4_Q28",
           "question": "Quand devez-vous porter le gilet de sécurité réfléchissant ?",
           "choices": [
-            "Toujours lorsque vous conduisez",
-            "Lorsque vous quittez votre véhicule sur la bande d'arrêt d'urgence",
-            "Uniquement la nuit ou par brouillard",
-            "Uniquement par temps de pluie"
+            "En quittant le véhicule sur la BAU",
+            "Chaque fois que vous conduisez",
+            "La nuit et par temps de brouillard"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le gilet réfléchissant est obligatoire pour le conducteur qui quitte son véhicule (immobilisé en urgence).",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q28.webp"
@@ -4234,12 +4077,11 @@
           "id": "A4_Q29",
           "question": "Où devez-vous ranger le gilet de sécurité dans votre voiture ?",
           "choices": [
+            "Dans l'habitacle, à portée",
             "Dans le coffre du véhicule",
-            "À l'intérieur de l'habitacle, accessible avant de sortir",
-            "Sous la roue de secours dans le coffre",
-            "Uniquement dans la boîte à gants"
+            "Sous la roue de secours"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le gilet doit être rangé dans l'habitacle (pas dans le coffre) pour pouvoir le mettre avant de sortir du véhicule.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q29.webp"
@@ -4248,10 +4090,8 @@
           "id": "A4_Q30",
           "question": "Le gilet est-il obligatoire pour les passagers ?",
           "choices": [
-            "Oui, pour tous les passagers",
-            "Non, mais c'est conseillé",
-            "Oui, uniquement pour les enfants",
-            "Oui, la nuit uniquement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le gilet réfléchissant est obligatoire uniquement pour le conducteur. Il est conseillé pour les passagers mais pas obligatoire.",
@@ -4276,12 +4116,11 @@
           "id": "A4_Q33",
           "question": "Que devez-vous mentionner lorsque vous appelez le 112 sur autoroute ?",
           "choices": [
-            "Uniquement votre nom et prénom",
-            "L'endroit exact (numéro de voirie et km) et le sens de circulation",
+            "Le lieu exact et le sens de circulation",
             "La marque et la couleur de votre voiture",
-            "Le nombre exact de passagers à bord"
+            "Le nombre de passagers à bord"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Lors d'un appel au 112, indiquez l'endroit précis (numéro de voirie, km) et le sens de circulation pour permettre aux secours de vous localiser.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q33.webp"
@@ -4290,10 +4129,8 @@
           "id": "A4_Q34",
           "question": "Le couloir de secours s'applique-t-il uniquement sur autoroute ?",
           "choices": [
-            "Oui, uniquement sur autoroute",
-            "Non, sur toutes les routes divisées en bandes de circulation",
-            "Uniquement sur les routes pour automobiles",
-            "Uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le couloir de secours s'applique sur toutes les routes divisées en bandes de circulation, pas uniquement sur les autoroutes.",
@@ -4304,12 +4141,11 @@
           "id": "A4_Q35",
           "question": "Sur une chaussée à 2 bandes, comment se forme le couloir de secours ?",
           "choices": [
-            "Tout le monde serre au maximum à droite",
-            "La bande de gauche serre à gauche, la bande de droite serre à droite",
-            "Tout le monde s'arrête sur place",
-            "La bande de droite serre à gauche"
+            "Gauche à gauche, droite à droite",
+            "Tout le monde serre à droite",
+            "Tout le monde s'arrête sur place"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur 2 bandes : gauche serre à gauche, droite serre à droite. Un couloir se forme entre les deux files.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q35.webp"
@@ -4318,26 +4154,24 @@
           "id": "A4_Q36",
           "question": "Sur une chaussée à 3 bandes, où se forme le couloir de secours ?",
           "choices": [
-            "Au milieu",
             "À côté de la bande de gauche",
-            "À droite",
-            "Sur la bande d'arrêt d'urgence"
+            "Sur la bande d'arrêt d'urgence",
+            "Au milieu de la chaussée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur 3 bandes : la bande de gauche serre à gauche, toutes les autres serrent à droite. Le couloir se forme à côté de la bande de gauche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q36.webp"
         },
         {
           "id": "A4_Q38",
-          "question": "Qu'est-ce qu'un conducteur fantôme ?",
+          "question": "Un conducteur fantôme est un conducteur qui :",
           "choices": [
-            "Un conducteur qui roule sans phares",
-            "Un conducteur qui roule en sens inverse sur l'autoroute",
-            "Un conducteur trop lent",
-            "Un conducteur sans permis"
+            "Roule en sens inverse",
+            "Roule sans ses phares",
+            "Roule beaucoup trop lentement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un conducteur fantôme est un conducteur qui circule en sens inverse sur une autoroute, créant un danger mortel.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A4_Q38.webp"
@@ -4346,12 +4180,11 @@
           "id": "A4_Q39",
           "question": "Que devez-vous faire face à un conducteur fantôme ?",
           "choices": [
-            "Accélérer pour le dépasser au plus vite",
-            "Ralentir, serrer à droite, appel de phares en le croisant et appeler le 112",
-            "Faire demi-tour sur l'autoroute",
-            "S'arrêter immédiatement sur la bande de gauche"
+            "Ralentir, serrer à droite, appeler",
+            "Accélérer pour le dépasser vite",
+            "Faire demi-tour sur l'autoroute"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Face à un conducteur fantôme : ralentir + serrer à droite + appel de phares en le croisant + appeler le 112.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A4_Q39.webp"
@@ -4360,26 +4193,23 @@
           "id": "A4_Q41",
           "question": "Pouvez-vous vous réfugier sur la bande d'arrêt d'urgence face à un conducteur fantôme ?",
           "choices": [
-            "Non, c'est interdit",
-            "Oui, si nécessaire pour éviter la collision",
-            "Non, sauf en cas de panne",
-            "Oui, mais uniquement de nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Face à un conducteur fantôme, vous pouvez vous réfugier sur la BAU si nécessaire pour éviter la collision.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A4_Q41.webp"
         },
         {
           "id": "A4_Q43",
-          "question": "Qu'est-ce qu'une bande réservée aux heures de pointe ?",
+          "question": "À quoi sert une bande réservée aux heures de pointe ?",
           "choices": [
-            "Une bande d'arrêt d'urgence élargie",
-            "Une bande supplémentaire pour fluidifier la circulation",
-            "Une bande réservée aux bus et taxis",
-            "Une bande de stationnement temporaire"
+            "À fluidifier la circulation",
+            "À réserver une voie aux bus",
+            "À stationner temporairement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La bande réservée aux heures de pointe est une bande supplémentaire disponible à certains moments pour fluidifier le trafic.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q43.webp"
@@ -4388,12 +4218,11 @@
           "id": "A4_Q44",
           "question": "Comment est séparée la bande réservée aux heures de pointe des autres bandes ?",
           "choices": [
+            "Par une ligne blanche striée",
             "Par une ligne blanche continue",
-            "Par une ligne blanche striée (10 m de trait, 2,5 m d'espace)",
-            "Par des poteaux réfléchissants",
             "Par une ligne orange discontinue"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La bande réservée aux heures de pointe est séparée par une ligne blanche striée (10 m de trait, 2,5 m d'espace).",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q44.webp"
@@ -4402,12 +4231,11 @@
           "id": "A4_Q45",
           "question": "Une flèche verte est affichée au-dessus de la bande réservée. Que signifie-t-elle ?",
           "choices": [
-            "Bande interdite",
-            "Vous pouvez utiliser cette bande",
-            "Bande réservée aux bus",
-            "Ralentir"
+            "Vous pouvez utiliser la bande",
+            "La bande vous est interdite",
+            "La bande est réservée aux bus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une flèche verte au-dessus d'une bande signifie que vous êtes autorisé à l'emprunter.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q45.webp"
@@ -4416,12 +4244,11 @@
           "id": "A4_Q46",
           "question": "Une croix rouge est affichée au-dessus de la bande réservée. Que signifie-t-elle ?",
           "choices": [
-            "Vous pouvez y circuler à vitesse réduite",
-            "La bande est interdite, sauf pour entrer ou sortir de l'autoroute",
-            "La bande est réservée aux véhicules lents",
-            "La bande est fermée pour cause de travaux"
+            "La bande est interdite",
+            "La bande est réservée aux lents",
+            "La bande est fermée pour travaux"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une croix rouge signifie que la bande est interdite, sauf pour les véhicules entrant ou sortant de l'autoroute.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q46.webp"
@@ -4430,12 +4257,11 @@
           "id": "A4_Q47",
           "question": "Vous tombez en panne sur la bande réservée aux heures de pointe. Que faites-vous ?",
           "choices": [
-            "Vous restez sur place et attendez dans la voiture",
-            "Vous rejoignez un port de refuge, sinon vous placez le triangle",
-            "Vous roulez sur la berme centrale",
-            "Vous faites marche arrière prudemment"
+            "Rejoindre un port de refuge",
+            "Rester dans votre voiture",
+            "Reculer jusqu'à la sortie"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En panne sur la bande de pointe : rejoignez un port de refuge si possible. Sinon, restez et signalez avec le triangle.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q47.webp"
@@ -4458,12 +4284,10 @@
           "id": "A4_Q50",
           "question": "Vous restez inutilement sur la voie du milieu sur autoroute. Est-ce une infraction ?",
           "choices": [
-            "Non, vous êtes libre de choisir votre bande",
-            "Oui, c'est une infraction",
-            "Non, si vous roulez à 120 km/h",
-            "Non, sauf la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Rester inutilement sur la voie du milieu ou de gauche sans raison est une infraction.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A4_Q50.webp"
@@ -4472,10 +4296,8 @@
           "id": "A4_Q52",
           "question": "Dans un bouchon, la file de droite avance plus vite que celle de gauche. Est-ce un dépassement ?",
           "choices": [
-            "Oui, c'est un dépassement interdit",
-            "Non, ce n'est pas considéré comme un dépassement",
-            "Oui, mais c'est toléré",
-            "Uniquement si la différence est de plus de 20 km/h"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "En embouteillage, si la file de droite avance plus vite, ce n'est pas juridiquement un dépassement.",
@@ -4486,12 +4308,11 @@
           "id": "A4_Q54",
           "question": "En cas d'embouteillage, entre quelles bandes les motos peuvent-elles remonter les files ?",
           "choices": [
-            "Entre n'importe quelles bandes",
-            "Entre les deux bandes de circulation de gauche",
-            "Entre la bande de droite et la bande d'arrêt d'urgence",
-            "Sur la bande d'arrêt d'urgence"
+            "Les deux bandes de gauche",
+            "Les deux bandes de droite",
+            "La droite et la bande d'urgence"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les motos peuvent circuler uniquement entre les deux bandes de gauche pour remonter les files.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A4_Q54.webp"
@@ -4530,12 +4351,10 @@
           "id": "A4_Q57",
           "question": "Lorsque vous entrez sur l'autoroute via la bande d'accès, devez-vous céder le passage ?",
           "choices": [
-            "Non, les véhicules sur l'autoroute doivent vous laisser passer",
-            "Oui, vous devez céder le passage aux véhicules déjà présents",
-            "La tirette s'applique",
-            "Le premier arrivé passe"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En entrant par la bande d'accès, vous devez céder le passage aux véhicules déjà sur l'autoroute.",
           "theoryCardIndex": 7,
           "severe": true,
@@ -4545,10 +4364,8 @@
           "id": "A4_Q58",
           "question": "Devez-vous obligatoirement rouler jusqu'à la fin de la bande d'accès ?",
           "choices": [
-            "Oui, toujours jusqu'au bout",
-            "Non, vous pouvez vous insérer avant si votre vitesse suffit",
-            "Oui, c'est une obligation légale",
-            "Oui, sauf pendant la nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il n'est pas obligatoire de rouler jusqu'à la fin de la bande d'accès. Vous pouvez vous insérer plus tôt si votre vitesse est suffisante.",
@@ -4559,12 +4376,11 @@
           "id": "A4_Q59",
           "question": "Vous roulez sur la bande de droite de l'autoroute et un véhicule veut s'insérer. Que pouvez-vous faire ?",
           "choices": [
-            "Rien, il doit vous céder le passage",
-            "Vous écarter à gauche si vous ne gênez personne",
-            "Vous devez obligatoirement changer de bande",
-            "Accélérer pour passer avant lui"
+            "Vous écarter à gauche si possible",
+            "Accélérer pour passer avant lui",
+            "Rien, il doit vous céder le passage"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous pouvez vous écarter vers la gauche par courtoisie pour faciliter l'insertion, à condition de ne pas gêner d'autres véhicules.",
           "theoryCardIndex": 7,
           "image": "/images/questions/A4_Q59.webp"
@@ -4573,10 +4389,8 @@
           "id": "A4_Q61",
           "question": "Le principe de la tirette s'applique-t-il sur la bande d'accès à l'autoroute ?",
           "choices": [
-            "Oui, toujours",
-            "Non, les véhicules doivent céder le passage",
-            "Oui, si la circulation est dense",
-            "Oui, aux heures de pointe"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La tirette ne s'applique jamais sur la bande d'accès. On cède toujours le passage aux véhicules déjà sur l'autoroute.",
@@ -4587,12 +4401,11 @@
           "id": "A4_Q63",
           "question": "Quelle est la différence entre la bande d'accès et une bande qui se réduit sur autoroute ?",
           "choices": [
-            "Aucune différence entre les deux",
-            "Bande d'accès : céder ; réduction de bande : tirette",
-            "La tirette s'applique dans les deux cas",
+            "Accès : céder ; réduction : tirette",
+            "La tirette dans les deux cas",
             "On cède le passage dans les deux cas"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bande d'accès = toujours céder le passage. Réduction de bande sur l'autoroute elle-même = tirette obligatoire (si circulation fortement ralentie).",
           "theoryCardIndex": 7,
           "severe": true,
@@ -4602,12 +4415,11 @@
           "id": "A4_Q64",
           "question": "Quand devez-vous commencer à freiner pour quitter l'autoroute ?",
           "choices": [
+            "Sur la bande de sortie",
             "500 mètres avant la sortie",
-            "Uniquement lorsque vous êtes sur la bande de sortie",
-            "Dès que vous voyez le panneau de sortie",
-            "Sur la bande de droite, avant la sortie"
+            "Dès le panneau de sortie"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous ne freinez que lorsque vous êtes sur la bande de sortie, pas avant.",
           "theoryCardIndex": 7,
           "image": "/images/questions/A4_Q64.webp"
@@ -4616,10 +4428,8 @@
           "id": "A4_Q66",
           "question": "Vous avez raté votre sortie sur l'autoroute. Pouvez-vous faire marche arrière ?",
           "choices": [
-            "Oui, sur la bande d'arrêt d'urgence",
-            "Non, c'est interdit, vous devez prendre la sortie suivante",
-            "Oui, si vous mettez vos warnings",
-            "Oui, mais lentement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La marche arrière sur autoroute est strictement interdite. En cas de sortie ratée, prenez la sortie suivante.",
@@ -4631,10 +4441,8 @@
           "id": "A4_Q67",
           "question": "Pouvez-vous vous garer sur la chaussée de l'autoroute ?",
           "choices": [
-            "Oui, sur la bande de droite",
-            "Non, c'est interdit",
-            "Oui, en cas d'urgence uniquement",
-            "Oui, la nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de stationner sur la chaussée de l'autoroute.",
@@ -4645,12 +4453,10 @@
           "id": "A4_Q68",
           "question": "L'interdiction de s'arrêter s'applique-t-elle aussi aux accès et sorties de l'autoroute ?",
           "choices": [
-            "Non, uniquement sur la chaussée principale",
-            "Oui, l'interdiction s'applique aussi aux accès et sorties",
-            "Non, les sorties sont des zones d'arrêt",
-            "Uniquement aux accès"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction de s'arrêter s'étend à la chaussée principale, aux accès et aux sorties.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q68.webp"
@@ -4673,10 +4479,8 @@
           "id": "A4_Q70",
           "question": "Pouvez-vous faire marche arrière sur l'autoroute ?",
           "choices": [
-            "Oui, sur la bande d'arrêt d'urgence",
-            "Non, c'est interdit même si vous avez manqué une sortie",
-            "Oui, lentement avec les warnings",
-            "Oui, la nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La marche arrière est strictement interdite sur l'autoroute, quelle que soit la raison.",
@@ -4758,12 +4562,11 @@
           "id": "A4_Q78",
           "question": "Avec un permis provisoire, pouvez-vous rouler sur l'autoroute ?",
           "choices": [
+            "Oui, en voiture ou à moto",
             "Non, c'est interdit",
-            "Oui, en voiture ou à motocyclette",
-            "Oui, mais uniquement accompagné",
-            "Non, sauf sur la bande de droite"
+            "Oui, mais accompagné"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le permis provisoire autorise la conduite sur l'autoroute, en voiture ou à motocyclette.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q78.webp"
@@ -4772,12 +4575,11 @@
           "id": "A4_Q79",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Fin d'autoroute ou sortie d'autoroute",
-            "Commencement d'une autoroute ou accès à une autoroute",
-            "Début d'une route pour automobiles",
-            "Début d'une voie rapide urbaine"
+            "Début d'autoroute",
+            "Fin d'autoroute",
+            "Début de voie rapide"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal vert avec une autoroute stylisée (F5) indique le début d'une autoroute ou un accès à l'autoroute.",
           "sign": "F5",
           "destination": "panneaux"
@@ -4798,14 +4600,13 @@
         },
         {
           "id": "A4_Q81",
-          "question": "Vous voyez le signal de fin d'autoroute. Que devez-vous savoir ?",
+          "question": "Vous voyez ce panneau. Que devez-vous savoir ?",
           "choices": [
-            "Rien ne change pour vous",
-            "Les règles propres à l'autoroute cessent de s'appliquer",
-            "Vous devez marquer l'arrêt au panneau",
+            "Les règles d'autoroute cessent",
+            "Vous devez marquer l'arrêt ici",
             "Vous entrez d'office sur un ring"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Après le signal de fin d'autoroute, les règles de l'autoroute ne s'appliquent plus. La vitesse maximale redevient celle de la route ordinaire.",
           "theoryCardIndex": 0,
           "severe": true,
@@ -4813,70 +4614,63 @@
         },
         {
           "id": "A4_Q82",
-          "question": "Ce signal indique des réglementations différentes par bande. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Un changement de direction obligatoire",
-            "Une réglementation limitée à certaines bandes",
-            "Des travaux sur toutes les bandes",
-            "Une sortie d'autoroute prochaine"
+            "Une règle limitée à certaines bandes",
+            "Un changement de direction imposé",
+            "Des travaux sur toutes les bandes"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal indique que les réglementations (vitesse, interdictions) varient selon les bandes de circulation.",
           "theoryCardIndex": 5,
           "sign": "F13"
         },
         {
           "id": "A4_Q83",
-          "question": "Ce signal de préavis annonce une réglementation par bande à distance. Où est-il placé ?",
+          "question": "Où est placé ce panneau de préavis ?",
           "choices": [
+            "Au bord de la chaussée",
             "Au-dessus de la chaussée",
-            "Au bord de la chaussée, pas au-dessus",
-            "Uniquement dans les tunnels",
-            "À la sortie"
+            "À l'intérieur des tunnels"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal de préavis de réglementation par bande est placé sur le côté de la chaussée, pas au-dessus.",
           "theoryCardIndex": 5,
           "sign": "F13"
         },
         {
           "id": "A4_Q84",
-          "question": "Vous voyez un panneau vert ou bleu avec la lettre \"E\" suivie d'un chiffre (par exemple E40, E19). Que signifie ce panneau ?",
+          "question": "Que signifie un panneau portant la lettre E suivie d'un chiffre, comme E40 ?",
           "choices": [
-            "Sortie d'autoroute",
-            "Numéro d'une route internationale",
-            "Échangeur",
-            "Zone de stationnement"
+            "Une route internationale",
+            "Une sortie d'autoroute",
+            "Un échangeur autoroutier"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La lettre E suivie d'un chiffre indique un numéro de route internationale (réseau européen).",
-          "destination": "panneaux",
-          "sign": "F23c"
+          "destination": "panneaux"
         },
         {
           "id": "A4_Q85",
-          "question": "Ce signal avec \"Ring\" signifie :",
+          "question": "Que signifie un panneau portant la mention « Ring » ?",
           "choices": [
-            "Sortie vers une ville",
-            "Ring (rocade autour d'une ville)",
-            "Route internationale",
-            "Échangeur"
+            "Une rocade autour d'une ville",
+            "Une route internationale",
+            "Une sortie vers le centre-ville"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal \"Ring\" indique une rocade (route circulaire autour d'une ville).",
-          "theoryCardIndex": 8,
-          "sign": "F23d"
+          "theoryCardIndex": 8
         },
         {
           "id": "A4_Q86",
-          "question": "Vous voyez un panneau rond bleu affichant un chiffre de vitesse, placé dans une bretelle de sortie d'autoroute. Que signifie ce panneau ?",
+          "question": "Ce panneau est placé dans une bretelle de sortie. Que signifie-t-il ?",
           "choices": [
-            "Vitesse recommandée",
-            "Vitesse maximale autorisée sur la sortie : 90 km/h",
-            "Vitesse minimale sur la sortie",
-            "Distance de la sortie"
+            "La vitesse maximale autorisée",
+            "La vitesse minimale imposée",
+            "La distance jusqu'à la sortie"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un signal rond bleu avec une vitesse dans une sortie indique la vitesse maximale autorisée sur cette bretelle.",
           "destination": "panneaux",
           "sign": "C43",
@@ -4884,14 +4678,13 @@
         },
         {
           "id": "A4_Q87",
-          "question": "Vous voyez le signal de début d'autoroute. Quelles règles s'appliquent maintenant ?",
+          "question": "Vous voyez ce panneau. Quelles règles s'appliquent maintenant ?",
           "choices": [
-            "Les règles habituelles de la route restent d'application",
-            "Vitesse max 120 km/h, min 70 km/h, dépassement par la gauche uniquement, pas de feux ni carrefours",
-            "Seule la vitesse maximale change, le reste est identique",
-            "Vitesse max 120 km/h, dépassement autorisé des deux côtés"
+            "120 km/h max, 70 km/h min",
+            "120 km/h max, sans minimum",
+            "Les règles ordinaires de la route"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En entrant sur l'autoroute : vitesse max 120 km/h, min 70 km/h, dépassement par la gauche, pas de feux ni carrefours.",
           "theoryCardIndex": 0,
           "sign": "F5"
@@ -4900,10 +4693,8 @@
           "id": "A4_Q88",
           "question": "Vous roulez sur une route ordinaire et voyez un signal de numéro de route internationale. Êtes-vous sur autoroute ?",
           "choices": [
-            "Oui, automatiquement",
-            "Non, une route internationale n'est pas forcément une autoroute",
-            "Oui, toutes les routes internationales sont des autoroutes",
-            "Oui, si le numéro commence par E"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un numéro de route internationale (E + chiffre) ne signifie pas que vous êtes sur une autoroute.",
@@ -4912,28 +4703,25 @@
         },
         {
           "id": "A4_Q89",
-          "question": "Vous voyez un signal de limitation par bande indiquant 70 km/h sur la bande de droite et 90 km/h sur les autres. Vous voulez dépasser. Que faites-vous ?",
+          "question": "Une limitation par bande indique 70 km/h à droite et 90 km/h ailleurs. Vous voulez dépasser. Que faites-vous ?",
           "choices": [
-            "Vous restez à 70 km/h sur la bande de droite",
-            "Vous passez à gauche où la limite est de 90 km/h",
-            "Vous dépassez par la droite à 70 km/h",
-            "Vous roulez à 120 km/h sur toutes les bandes"
+            "Passer à gauche, à 90 km/h",
+            "Rester à droite, à 70 km/h",
+            "Dépasser par la droite à 70"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour dépasser avec une limitation par bande de 90 km/h sur les bandes de gauche, vous changez de bande vers la gauche.",
-          "theoryCardIndex": 6,
-          "sign": "F91"
+          "theoryCardIndex": 6
         },
         {
           "id": "A4_Q90",
           "question": "Vous êtes sur un ring autour d'une ville. Les règles de l'autoroute s'appliquent-elles ?",
           "choices": [
-            "Non, un ring n'est jamais une autoroute",
-            "Ça dépend, uniquement si le signal de début d'autoroute est affiché",
-            "Oui, toujours sur tous les rings",
-            "Uniquement aux heures de pointe"
+            "Oui, si le panneau de début est là",
+            "Oui, sur tous les rings sans exception",
+            "Non, un ring n'est pas une autoroute"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un ring peut être une autoroute ou non. Les règles de l'autoroute ne s'appliquent que si le signal correspondant est affiché.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q90.webp"
@@ -5088,14 +4876,13 @@
       "questions": [
         {
           "id": "A5_Q1",
-          "question": "Qu'est-ce qu'une route pour automobiles ?",
+          "question": "Comment reconnaît-on une route pour automobiles ?",
           "choices": [
-            "Une autoroute avec moins de bandes",
-            "Une voie publique signalée par des panneaux de début et de fin",
-            "Une route interdite aux véhicules lents",
-            "Toute route hors agglomération à deux bandes"
+            "À ses panneaux de début et de fin",
+            "À son absence totale de carrefours",
+            "À ses trois bandes par sens"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La route pour automobiles est définie par ses signaux : un signal de début (bleu) et un signal de fin.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q1.webp"
@@ -5104,12 +4891,11 @@
           "id": "A5_Q2",
           "question": "Quelle est la principale différence entre une route pour automobiles et une autoroute ?",
           "choices": [
-            "La vitesse maximale autorisée",
-            "La présence possible de carrefours et de feux",
-            "L'interdiction des camions",
-            "Il n'y a aucune différence"
+            "Des carrefours et des feux possibles",
+            "L'interdiction faite aux camions",
+            "La vitesse maximale autorisée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Contrairement à l'autoroute, une route pour automobiles peut avoir des carrefours avec priorité et des feux de signalisation.",
           "theoryCardIndex": 0,
           "severe": true,
@@ -5119,12 +4905,11 @@
           "id": "A5_Q4",
           "question": "Quels véhicules sont interdits sur une route pour automobiles ?",
           "choices": [
-            "Uniquement les vélos, trottinettes et engins de déplacement",
-            "Cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et véhicules forains",
-            "Uniquement les tracteurs et machines agricoles lentes",
-            "Les motos de moins de 400 cm³ et leurs side-cars"
+            "Les cyclomoteurs et engins agricoles",
+            "Les motos de moins de 400 cm³",
+            "Les camionnettes et les remorques"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les mêmes véhicules qu'en autoroute sont interdits sur les routes pour automobiles.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q4.webp"
@@ -5133,12 +4918,11 @@
           "id": "A5_Q8",
           "question": "Comment les chaussées d'une route pour automobiles peuvent-elles être séparées ?",
           "choices": [
-            "Uniquement par une berme centrale",
-            "Par des marques routières ou une berme centrale",
-            "Uniquement par des barrières",
+            "Par des marques ou une berme",
+            "Par des barrières métalliques",
             "Par des feux clignotants"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les chaussées peuvent être séparées par des marques routières ou par une berme centrale.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q8.webp"
@@ -5147,12 +4931,10 @@
           "id": "A5_Q9",
           "question": "Une chaussée sur une route pour automobiles peut-elle comporter plusieurs bandes de circulation ?",
           "choices": [
-            "Non, une seule bande",
-            "Oui, deux ou plusieurs bandes",
-            "Uniquement deux bandes",
-            "Uniquement trois bandes"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une chaussée peut comporter deux bandes ou plus sur une route pour automobiles.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q9.webp"
@@ -5161,12 +4943,11 @@
           "id": "A5_Q10",
           "question": "Pouvez-vous emprunter la chaussée de gauche sur une route à trois chaussées séparées ?",
           "choices": [
-            "Oui, pour dépasser",
             "Non, sauf réglementation locale",
-            "Oui, si elle est libre",
-            "Oui, aux heures de pointe"
+            "Oui, pour dépasser un véhicule",
+            "Oui, si elle est dégagée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Il est interdit d'emprunter la chaussée de gauche sur une route à plusieurs chaussées séparées, sauf réglementation locale.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q10.webp"
@@ -5190,12 +4971,11 @@
           "id": "A5_Q13",
           "question": "Quelles sont les deux conditions pour rouler à 120 km/h sur une route pour automobiles ?",
           "choices": [
-            "Deux bandes par sens et feux de signalisation",
-            "Au moins deux bandes par sens et sens séparés par une berme centrale",
-            "Trois bandes par sens et ligne continue",
+            "Deux bandes par sens et berme",
+            "Trois bandes et ligne continue",
             "Quatre bandes et éclairage"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour rouler à 120 km/h : berme centrale ET au moins 2 bandes par sens.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A5_Q13.webp"
@@ -5294,10 +5074,8 @@
           "id": "A5_Q24",
           "question": "Y a-t-il une vitesse minimale sur une route pour automobiles ?",
           "choices": [
-            "Oui, 70 km/h comme sur autoroute",
-            "Non, il n'y a pas de vitesse minimale",
-            "Oui, 50 km/h",
-            "Oui, 60 km/h"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Contrairement à l'autoroute, la route pour automobiles n'a pas de vitesse minimale.",
@@ -5309,12 +5087,10 @@
           "id": "A5_Q25",
           "question": "Vous roulez très lentement sans raison sur une route pour automobiles et gênez les autres. Est-ce une infraction ?",
           "choices": [
-            "Non, il n'y a pas de vitesse minimale",
-            "Oui, gêner les autres en roulant trop lentement sans raison est une infraction",
-            "Non, les autres n'ont qu'à dépasser",
-            "Oui, mais uniquement en agglomération"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Même sans vitesse minimale, rouler trop lentement sans raison valable et gêner les autres conducteurs constitue une infraction.",
           "theoryCardIndex": 1,
           "severe": true,
@@ -5324,12 +5100,11 @@
           "id": "A5_Q28",
           "question": "À quelle distance devez-vous placer le triangle de danger sur une route pour automobiles ?",
           "choices": [
-            "10 mètres",
             "Au moins 30 mètres",
-            "100 mètres",
-            "50 mètres"
+            "Au moins 100 mètres",
+            "Au moins 10 mètres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Sur une route pour automobiles, le triangle se place à au moins 30 mètres en amont du véhicule.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q28.webp"
@@ -5338,12 +5113,11 @@
           "id": "A5_Q29",
           "question": "À quelle distance le triangle doit-il être placé sur autoroute ?",
           "choices": [
-            "30 mètres",
-            "50 mètres",
             "Au moins 100 mètres",
-            "150 mètres"
+            "Au moins 30 mètres",
+            "Au moins 50 mètres"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "Sur autoroute, le triangle doit être placé à au moins 100 mètres en amont.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q29.webp"
@@ -5352,12 +5126,11 @@
           "id": "A5_Q32",
           "question": "Quand devez-vous porter le gilet de sécurité sur une route pour automobiles ?",
           "choices": [
-            "Toujours, dès que vous conduisez",
-            "En quittant le véhicule après un arrêt forcé",
-            "Uniquement pendant la nuit",
-            "Uniquement par mauvais temps"
+            "En quittant le véhicule à l'arrêt",
+            "Chaque fois que vous conduisez",
+            "La nuit et par mauvais temps"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le gilet est obligatoire pour le conducteur qui quitte son véhicule immobilisé à un endroit où le stationnement est interdit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q32.webp"
@@ -5366,12 +5139,11 @@
           "id": "A5_Q33",
           "question": "Où devez-vous ranger le gilet de sécurité ?",
           "choices": [
-            "Dans le coffre",
-            "Dans l'habitacle à portée de main",
-            "Sur le siège arrière uniquement",
-            "N'importe où dans la voiture"
+            "Dans l'habitacle, à portée",
+            "Dans le coffre du véhicule",
+            "Sur le siège arrière"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le gilet doit être accessible dans l'habitacle avant de sortir du véhicule.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q33.webp"
@@ -5380,10 +5152,8 @@
           "id": "A5_Q34",
           "question": "Les passagers doivent-ils porter le gilet de sécurité ?",
           "choices": [
-            "Oui, c'est obligatoire",
-            "Non, mais c'est recommandé",
-            "Oui, uniquement les enfants",
-            "Oui, sur autoroute uniquement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le gilet est obligatoire uniquement pour le conducteur. Les passagers ne sont pas obligés, mais c'est recommandé.",
@@ -5422,10 +5192,8 @@
           "id": "A5_Q40",
           "question": "Dans un embouteillage, la file de droite avance plus vite que celle de gauche. Est-ce un dépassement ?",
           "choices": [
-            "Oui, et c'est strictement interdit",
-            "Non, ce n'est pas considéré comme un dépassement",
-            "Oui, mais c'est toléré en pratique",
-            "Ça dépend de la vitesse des files"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "En embouteillage dense, si la file de droite avance plus vite, ce n'est juridiquement pas un dépassement.",
@@ -5436,10 +5204,8 @@
           "id": "A5_Q42",
           "question": "Pouvez-vous vous garer sur la chaussée d'une route pour automobiles ?",
           "choices": [
-            "Oui, sur la bande de droite",
-            "Non, c'est interdit",
-            "Oui, si vous mettez vos warnings",
-            "Oui, la nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de stationner sur la chaussée d'une route pour automobiles.",
@@ -5450,12 +5216,10 @@
           "id": "A5_Q43",
           "question": "L'interdiction de s'arrêter s'applique-t-elle aux accès et sorties ?",
           "choices": [
-            "Non, uniquement sur la chaussée principale",
-            "Oui, aussi aux accès et sorties",
-            "Non, les sorties sont des zones d'arrêt",
-            "Uniquement aux accès"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "L'interdiction d'arrêt s'étend à la chaussée principale, aux accès et aux sorties.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q43.webp"
@@ -5478,10 +5242,8 @@
           "id": "A5_Q45",
           "question": "Vous avez raté votre sortie. Pouvez-vous faire marche arrière ?",
           "choices": [
-            "Oui, lentement",
-            "Non, c'est interdit même si vous avez raté la sortie",
-            "Oui, sur la bande d'arrêt d'urgence",
-            "Oui, avec les warnings"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "La marche arrière est strictement interdite. En cas de sortie ratée, prenez la sortie suivante.",
@@ -5506,12 +5268,11 @@
           "id": "A5_Q47",
           "question": "Les interdictions sur une route pour automobiles sont-elles les mêmes que sur autoroute ?",
           "choices": [
+            "Oui, sauf la vitesse minimale",
             "Non, il y en a beaucoup moins",
-            "Oui, les mêmes sauf la vitesse minimale",
-            "Non, il y en a nettement plus",
-            "Aucune interdiction n'y existe"
+            "Non, il y en a nettement plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les mêmes interdictions qu'en autoroute s'appliquent, à l'exception de la vitesse minimale qui n'existe pas sur route pour automobiles.",
           "theoryCardIndex": 3,
           "severe": true,
@@ -5549,12 +5310,11 @@
           "id": "A5_Q50",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Autoroute",
             "Route pour automobiles",
-            "Parking",
-            "Voie rapide"
+            "Début d'autoroute",
+            "Voie rapide urbaine"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal bleu avec une voiture blanche indique le début d'une route pour automobiles.",
           "sign": "F9",
           "destination": "panneaux"
@@ -5575,14 +5335,13 @@
         },
         {
           "id": "A5_Q52",
-          "question": "Vous voyez le signal de fin de route pour automobiles. Que change-t-il ?",
+          "question": "Vous voyez ce panneau. Que change-t-il ?",
           "choices": [
-            "Rien ne change pour vous",
-            "Les règles de ce type de route cessent de s'appliquer",
-            "Vous entrez d'office sur une autoroute",
-            "Seule la vitesse maximale augmente"
+            "Les règles de cette route cessent",
+            "Vous entrez sur une autoroute",
+            "Seule la vitesse maximale monte"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La fin de route pour automobiles signifie que les règles spécifiques ne s'appliquent plus.",
           "theoryCardIndex": 0,
           "sign": "F11"
@@ -5591,12 +5350,11 @@
           "id": "A5_Q53",
           "question": "Que signifie ce panneau ?",
           "choices": [
+            "Début d'autoroute",
             "Route pour automobiles",
-            "Commencement d'une autoroute",
-            "Échangeur",
-            "Sortie"
+            "Sortie d'autoroute"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal vert avec une autoroute stylisée indique le début d'une autoroute.",
           "sign": "F5",
           "destination": "panneaux"
@@ -5605,12 +5363,11 @@
           "id": "A5_Q54",
           "question": "Quelle est la différence visuelle entre le signal d'autoroute et celui de route pour automobiles ?",
           "choices": [
-            "Aucune différence visuelle",
-            "Le symbole : une autoroute stylisée vs une voiture",
-            "L'un est vert, l'autre bleu",
-            "Les deux signaux montrent une voiture"
+            "Une autoroute stylisée ou une voiture",
+            "La couleur, l'un est vert l'autre bleu",
+            "Aucune, ils sont identiques"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Autoroute = fond vert. Route pour automobiles = fond bleu. Deux signaux bien distincts.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q54.webp"
@@ -5619,12 +5376,11 @@
           "id": "A5_Q55",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Direction vers cette localité",
-            "Commencement d'une agglomération",
-            "Fin d'une agglomération",
-            "Zone industrielle"
+            "Début d'agglomération",
+            "Fin d'agglomération",
+            "Direction de la localité"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau avec le nom d'une localité sur fond blanc indique le début d'une agglomération.",
           "sign": "F1",
           "destination": "panneaux"
@@ -5633,12 +5389,11 @@
           "id": "A5_Q56",
           "question": "Que signifie ce panneau ?",
           "choices": [
+            "Fin d'agglomération",
             "Début d'agglomération",
-            "Fin d'une agglomération",
-            "Localité interdite",
-            "Déviation"
+            "Localité interdite d'accès"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau barré avec le nom de la localité signale la fin de l'agglomération.",
           "sign": "F3",
           "destination": "panneaux"
@@ -5661,26 +5416,24 @@
           "id": "A5_Q60",
           "question": "Vous roulez sur une route pour automobiles et voyez le signal de fin de route pour automobiles suivi d'un signal de début d'agglomération. Quelles règles s'appliquent ?",
           "choices": [
-            "Les règles de l'autoroute",
-            "Les règles normales de circulation en agglomération",
-            "Aucune règle particulière",
-            "Les règles de la route pour automobiles"
+            "Celles de l'agglomération",
+            "Celles de l'autoroute",
+            "Celles de la route pour automobiles"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Fin de route pour automobiles + début d'agglomération = les règles normales de l'agglomération s'appliquent.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q60.webp"
         },
         {
           "id": "A5_Q61",
-          "question": "Vous voyez le signal de début de route pour automobiles puis un panneau 90 km/h. Quelle vitesse respectez-vous ?",
+          "question": "Ce panneau est suivi d'un panneau 90 km/h. Quelle vitesse respectez-vous ?",
           "choices": [
-            "120 km/h car c'est une route pour automobiles",
-            "90 km/h car le panneau impose une vitesse inférieure",
-            "La moyenne des deux",
-            "Celle que vous voulez"
+            "90 km/h, la plus basse",
+            "120 km/h, celle de la route",
+            "La moyenne des deux vitesses"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un signal spécifique de limitation prime sur la vitesse générale de la route pour automobiles.",
           "theoryCardIndex": 1,
           "sign": "F9"
@@ -5970,14 +5723,13 @@
       "questions": [
         {
           "id": "A6_Q1",
-          "question": "Qu'est-ce qu'une agglomération ?",
+          "question": "Comment une agglomération est-elle délimitée ?",
           "choices": [
-            "Toute zone habitée en continu",
-            "Un espace délimité par des signaux de début et de fin",
-            "Une zone comportant des commerces",
-            "Toute zone où se trouvent des maisons"
+            "Par un signal de début et de fin",
+            "Par la continuité des habitations",
+            "Par la présence de commerces"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une agglomération est délimitée par des signaux spéciaux de début et de fin, pas par la présence de maisons ou commerces.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q1.webp"
@@ -5986,10 +5738,8 @@
           "id": "A6_Q2",
           "question": "Le panneau jaune à bord rouge indiquant le nom d'une commune a-t-il une signification pour le code de la route ?",
           "choices": [
-            "Oui, il indique le début d'une agglomération",
-            "Non, il indique uniquement la frontière administrative d'une commune",
-            "Oui, la vitesse change",
-            "Oui, c'est la même chose que le signal d'agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le panneau jaune à bord rouge est une indication administrative, pas un signal de code de la route. Il ne modifie pas la vitesse.",
@@ -6030,12 +5780,11 @@
           "id": "A6_Q7",
           "question": "Que risquez-vous si vous dépassez de plus de 20 km/h la vitesse maximale en agglomération ?",
           "choices": [
-            "Un simple avertissement",
-            "Un retrait immédiat du permis de 8 jours à 6 mois",
-            "Rien si c'est la première fois",
-            "Uniquement une amende"
+            "Un retrait de permis de 8 jours à 6 mois",
+            "Une amende, sans aucune autre conséquence",
+            "Un simple avertissement écrit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dépasser de plus de 20 km/h en agglomération entraîne un retrait immédiat du permis de 8 jours à 6 mois par le Procureur du Roi.",
           "theoryCardIndex": 0,
           "severe": true,
@@ -6045,12 +5794,11 @@
           "id": "A6_Q8",
           "question": "Vous avez le permis B depuis 1 an et vous dépassez de plus de 20 km/h en agglomération. Que risquez-vous en plus ?",
           "choices": [
-            "Rien de plus qu'un conducteur expérimenté",
-            "Le juge devra vous déchoir du droit de conduire de 8 jours à 5 ans",
-            "Un simple rappel à l'ordre par courrier",
-            "Uniquement une amende doublée"
+            "Une déchéance du droit de conduire",
+            "Rien de plus qu'un autre conducteur",
+            "Une amende simplement doublée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pour les titulaires du permis B depuis moins de 2 ans, le juge devra prononcer la déchéance du droit de conduire.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q8.webp"
@@ -6059,26 +5807,24 @@
           "id": "A6_Q9",
           "question": "Un signal de limitation à 70 km/h se trouve après le panneau d'accès à l'agglomération. Jusqu'où est-il valable ?",
           "choices": [
-            "Dans toute l'agglomération",
             "Jusqu'au prochain carrefour",
-            "Sur 500 mètres",
-            "Jusqu'à la sortie de l'agglomération"
+            "Dans toute l'agglomération",
+            "Sur les 500 mètres suivants"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un signal de limitation placé au-dessus ou après le panneau d'agglomération n'est valable que jusqu'au prochain carrefour.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q9.webp"
         },
         {
           "id": "A6_Q10",
-          "question": "Un signal de limitation à 30 km/h se trouve au-dessus du signal de début d'agglomération. Que signifie-t-il ?",
+          "question": "Un signal 30 km/h est placé au-dessus de ce panneau. Que signifie-t-il ?",
           "choices": [
-            "30 km/h jusqu'au prochain carrefour",
-            "30 km/h dans toute l'agglomération",
-            "30 km/h sur 200 mètres",
-            "30 km/h uniquement sur cette route"
+            "30 dans toute l'agglomération",
+            "30 jusqu'au prochain carrefour",
+            "30 sur les 200 mètres suivants"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Exception : si la limitation est de 30 km/h au-dessus du signal de début d'agglomération, le 30 km/h s'applique dans toute l'agglomération.",
           "theoryCardIndex": 0,
           "sign": "F1"
@@ -6132,12 +5878,11 @@
           "id": "A6_Q15",
           "question": "Vous quittez l'agglomération et voyez un panneau 50 km/h juste après le signal de fin. Que faites-vous ?",
           "choices": [
-            "Vous roulez à 90 km/h car vous avez quitté l'agglomération",
-            "Vous respectez le 50 km/h jusqu'au prochain carrefour",
-            "Vous roulez à 70 km/h",
-            "Vous ignorez le panneau"
+            "Vous respectez le 50 km/h",
+            "Vous passez à 90 km/h",
+            "Vous ignorez ce panneau"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un signal de limitation placé après le signal de fin d'agglomération est valable jusqu'au prochain carrefour.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q15.webp"
@@ -6146,12 +5891,10 @@
           "id": "A6_Q16",
           "question": "Des signaux routiers peuvent-ils imposer une autre vitesse que la vitesse standard hors agglomération ?",
           "choices": [
-            "Non, la vitesse standard s'applique toujours",
-            "Oui, des signaux peuvent imposer une autre vitesse",
-            "Uniquement sur autoroute",
-            "Non, sauf un agent"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Des signaux routiers peuvent toujours imposer une vitesse différente de la vitesse standard.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q16.webp"
@@ -6160,12 +5903,11 @@
           "id": "A6_Q17",
           "question": "Comment reconnaît-on une zone résidentielle ?",
           "choices": [
-            "Par la présence de ralentisseurs sur la route",
-            "Par un signal de début et un signal de fin de zone résidentielle",
-            "Par un feu orange clignotant",
-            "Par un panneau jaune spécifique"
+            "À un signal de début et de fin",
+            "À la présence de ralentisseurs",
+            "À un feu orange clignotant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une zone résidentielle est délimitée par un signal de début et un signal de fin spécifiques.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q17.webp"
@@ -6174,12 +5916,10 @@
           "id": "A6_Q18",
           "question": "Dans une zone résidentielle, les piétons peuvent-ils utiliser toute la largeur de la voirie ?",
           "choices": [
-            "Non, uniquement le trottoir",
-            "Oui, mais ils ne peuvent pas gêner le trafic sans raison",
-            "Oui, sans aucune restriction",
-            "Non, uniquement la bande de droite"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les piétons peuvent utiliser toute la largeur de la voirie, mais sans gêner le trafic sans raison valable.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q18.webp"
@@ -6188,10 +5928,8 @@
           "id": "A6_Q19",
           "question": "Les cyclistes peuvent-ils utiliser toute la largeur de la voirie dans une zone résidentielle ?",
           "choices": [
-            "Oui, comme les piétons",
-            "Non, ce droit est réservé aux piétons, pas aux cyclistes",
-            "Oui, s'il n'y a pas de piste cyclable",
-            "Oui, uniquement les enfants à vélo"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Dans une zone résidentielle, c'est uniquement les piétons (pas les cyclistes) qui peuvent utiliser toute la largeur de la voirie.",
@@ -6202,12 +5940,10 @@
           "id": "A6_Q20",
           "question": "Les enfants peuvent-ils jouer sur la chaussée dans une zone résidentielle ?",
           "choices": [
-            "Non, c'est trop dangereux même là",
-            "Oui, les enfants et les adultes peuvent jouer sur la chaussée",
-            "Uniquement sur le trottoir élargi",
-            "Uniquement le week-end et jours fériés"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans une zone résidentielle, les enfants et les adultes peuvent jouer sur la chaussée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q20.webp"
@@ -6231,12 +5967,11 @@
           "id": "A6_Q23",
           "question": "Où pouvez-vous stationner dans une zone résidentielle ?",
           "choices": [
+            "Sur un emplacement prévu",
             "N'importe où dans la zone",
-            "Uniquement sur un emplacement prévu à cet effet",
-            "Sur le trottoir uniquement",
-            "Sur la chaussée si vous ne gênez pas"
+            "Sur le trottoir élargi"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans une zone résidentielle, vous ne pouvez stationner que sur un emplacement prévu à cet effet.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q23.webp"
@@ -6245,12 +5980,10 @@
           "id": "A6_Q24",
           "question": "Pouvez-vous stationner à gauche dans une zone résidentielle si un emplacement est prévu ?",
           "choices": [
-            "Non, toujours du côté droit",
-            "Oui, à droite ou à gauche du sens de la marche",
-            "Uniquement à droite de la chaussée",
-            "Uniquement en créneau à droite"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans une zone résidentielle avec emplacement prévu, vous pouvez stationner à droite ou à gauche du sens de la marche.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q24.webp"
@@ -6273,12 +6006,11 @@
           "id": "A6_Q27",
           "question": "Dans une rue réservée au jeu, que couvre la zone de jeu ?",
           "choices": [
-            "Uniquement le trottoir",
-            "Toute la largeur de la voie publique",
-            "Uniquement la chaussée",
-            "Un espace clôturé"
+            "Toute la largeur de la voie",
+            "La chaussée sans le trottoir",
+            "Un espace clôturé à part"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans une rue réservée au jeu, toute la largeur de la voie publique est réservée pour les jeux.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q27.webp"
@@ -6287,12 +6019,11 @@
           "id": "A6_Q28",
           "question": "Qui peut accéder à une rue réservée au jeu avec un véhicule à moteur ?",
           "choices": [
-            "Tout conducteur qui roule au pas",
-            "Habitants, véhicules prioritaires ou autorisés, et cyclistes",
-            "Uniquement les piétons et les enfants",
-            "Personne, la rue est totalement fermée"
+            "Habitants et véhicules autorisés",
+            "Tout conducteur roulant au pas",
+            "Personne, la rue est fermée"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Seuls les habitants, les véhicules prioritaires, les véhicules autorisés par le gestionnaire, et les cyclistes peuvent y accéder.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q28.webp"
@@ -6301,12 +6032,10 @@
           "id": "A6_Q29",
           "question": "Pouvez-vous quitter une rue réservée au jeu en voiture ?",
           "choices": [
-            "Non, si vous y êtes vous restez",
-            "Oui, vous pouvez quitter la rue",
-            "Uniquement à l'allure du pas",
-            "Uniquement en marche arrière"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous pouvez toujours quitter une rue réservée au jeu.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q29.webp"
@@ -6315,12 +6044,11 @@
           "id": "A6_Q31",
           "question": "À quelle vitesse devez-vous circuler dans une rue réservée au jeu ?",
           "choices": [
-            "20 km/h",
-            "30 km/h",
             "À l'allure du pas",
-            "10 km/h"
+            "À 20 km/h maximum",
+            "À 30 km/h maximum"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "Les conducteurs autorisés doivent circuler à l'allure du pas dans une rue réservée au jeu.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q31.webp"
@@ -6329,12 +6057,11 @@
           "id": "A6_Q32",
           "question": "Vous habitez dans une rue réservée au jeu et rentrez chez vous en voiture. À quelle vitesse circulez-vous ?",
           "choices": [
-            "30 km/h",
-            "50 km/h",
             "À l'allure du pas",
-            "20 km/h"
+            "À 30 km/h maximum",
+            "À 50 km/h maximum"
           ],
-          "correct": 2,
+          "correct": 0,
           "explanation": "Même les habitants doivent circuler à l'allure du pas dans une rue réservée au jeu.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q32.webp"
@@ -6357,10 +6084,8 @@
           "id": "A6_Q35",
           "question": "Pouvez-vous dépasser un cycliste dans une zone cyclable ?",
           "choices": [
-            "Oui, par la gauche",
-            "Non, c'est interdit",
-            "Oui, si vous ne dépassez pas 30 km/h",
-            "Oui, si le cycliste roule très lentement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il est interdit de dépasser un cycliste dans une zone cyclable.",
@@ -6371,12 +6096,11 @@
           "id": "A6_Q37",
           "question": "Pouvez-vous dépasser un cyclomotoriste dans une zone cyclable ?",
           "choices": [
-            "Non, on ne peut dépasser personne",
             "Oui, par la gauche",
-            "Non, les mêmes règles que pour les cyclistes",
-            "Oui, par la droite"
+            "Oui, par la droite",
+            "Non, c'est interdit"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "On peut dépasser un cyclomotoriste par la gauche dans une zone cyclable.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A6_Q37.webp"
@@ -6399,10 +6123,8 @@
           "id": "A6_Q40",
           "question": "Pouvez-vous dépasser une trottinette électrique dans une zone cyclable ?",
           "choices": [
-            "Oui, ce n'est pas un vélo",
-            "Non, les conducteurs doivent la considérer comme un cycliste",
-            "Oui, mais uniquement par la droite",
-            "Oui, si elle roule très lentement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Une trottinette électrique circulant plus vite que l'allure du pas est soumise aux règles des cyclistes : vous ne pouvez pas la dépasser.",
@@ -6413,12 +6135,10 @@
           "id": "A6_Q42",
           "question": "Les obligations imposées à l'accès d'une zone restent-elles valables de nuit ?",
           "choices": [
-            "Non, uniquement de jour",
-            "Oui, de jour et de nuit",
-            "Non, la nuit les règles changent",
-            "Uniquement en semaine"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les obligations d'une zone sont valables de jour et de nuit.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q42.webp"
@@ -6427,12 +6147,11 @@
           "id": "A6_Q43",
           "question": "Comment est délimitée une zone ?",
           "choices": [
-            "Par des feux orange clignotants",
-            "Par un signal de début et un signal de fin de zone",
+            "Par un signal de début et de fin",
             "Par des lignes peintes au sol",
             "Par des barrières amovibles"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une zone est délimitée par un signal de début et un signal de fin.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q43.webp"
@@ -6441,10 +6160,8 @@
           "id": "A6_Q44",
           "question": "Un panneau électronique de zone n'est pas illuminé. L'obligation est-elle valable ?",
           "choices": [
-            "Oui, elle reste valable même éteint",
-            "Non, l'obligation n'est valable que lorsque le panneau est illuminé",
-            "Oui, le panneau est juste en panne",
-            "Ça dépend de l'heure de la journée"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Pour les panneaux électroniques, l'obligation n'est valable que lorsque le panneau est illuminé.",
@@ -6469,12 +6186,11 @@
           "id": "A6_Q46",
           "question": "Vous voyez un panneau électronique de zone 30 illuminé. Que devez-vous faire ?",
           "choices": [
-            "Rien, ce panneau n'est qu'indicatif",
-            "Respecter la limite de 30 km/h tant que vous êtes dans la zone",
-            "Ralentir uniquement à hauteur du panneau",
-            "Vous arrêter au niveau du panneau"
+            "Respecter le 30 dans la zone",
+            "Ralentir au niveau du panneau",
+            "Rien, il n'est qu'indicatif"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un panneau de zone illuminé impose la limite dans toute la zone jusqu'au signal de fin.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q46.webp"
@@ -6483,12 +6199,11 @@
           "id": "A6_Q47",
           "question": "Quels sont les deux signaux nécessaires pour délimiter les abords d'école ?",
           "choices": [
-            "Zone 30 uniquement",
-            "\"Présence possible d'enfants\" ET \"zone 30\", il faut les deux",
-            "\"Présence possible d'enfants\" uniquement",
+            "Présence d'enfants ET zone 30",
+            "Présence d'enfants seule",
             "Zone résidentielle et zone 30"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les abords d'école nécessitent obligatoirement les deux signaux ensemble : \"présence possible d'enfants\" et \"zone 30\".",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q47.webp"
@@ -6497,10 +6212,8 @@
           "id": "A6_Q48",
           "question": "Vous voyez un signal \"présence possible d'enfants\" mais pas de signal zone 30. Êtes-vous dans les abords d'école ?",
           "choices": [
-            "Oui, le signal d'enfants suffit",
-            "Non, il faut les deux signaux ensemble",
-            "Oui, si c'est près d'une école",
-            "Ça dépend de l'heure"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Il faut impérativement les deux signaux ensemble pour délimiter les abords d'école.",
@@ -6526,26 +6239,23 @@
           "id": "A6_Q50",
           "question": "Vous roulez à 40 km/h dans les abords d'école. Commettez-vous une infraction ?",
           "choices": [
-            "Non, c'est en dessous de 50 km/h",
-            "Oui, la limite est 30 km/h dans les abords d'école",
-            "Non, c'est toléré près des écoles",
-            "Oui, la limite est 20 km/h"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans les abords d'école, la limite est 30 km/h. Rouler à 40 km/h est une infraction.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q50.webp"
         },
         {
           "id": "A6_Q51",
-          "question": "Qu'est-ce qu'une rue scolaire ?",
+          "question": "Qu'est-ce qui caractérise une rue scolaire ?",
           "choices": [
-            "N'importe quelle rue comportant une école",
-            "Une rue fermée aux heures d'école par des barrières",
-            "Une zone 30 permanente autour d'une école",
-            "Un parking réservé au personnel scolaire"
+            "Elle est fermée aux heures d'école",
+            "Elle est en zone 30 permanente",
+            "Elle longe simplement une école"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une rue scolaire est une voie temporairement fermée avec des barrières C3 portant la mention \"rue scolaire\".",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q51.webp"
@@ -6554,12 +6264,11 @@
           "id": "A6_Q52",
           "question": "Qu'est-ce qui peut remplacer la barrière dans une rue scolaire ?",
           "choices": [
+            "Un signal C3 avec mention",
             "Un feu orange clignotant",
-            "Un signal C3 avec la mention « rue scolaire »",
-            "Un agent de police en permanence",
             "Des cônes de signalisation"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Un signal C3 fixe avec la mention \"rue scolaire\" et l'horaire peut remplacer la barrière déplaçable.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q52.webp"
@@ -6568,12 +6277,11 @@
           "id": "A6_Q53",
           "question": "À qui la rue scolaire est-elle réservée pendant les heures scolaires ?",
           "choices": [
-            "Uniquement aux piétons",
-            "Aux piétons, cyclistes et speed pedelecs",
-            "À tout le monde",
-            "Uniquement aux enfants"
+            "Piétons, cyclistes, speed pedelecs",
+            "Aux piétons et aux enfants",
+            "À tous les usagers de la route"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Pendant les heures scolaires, la rue scolaire est réservée aux piétons, cyclistes et speed pedelecs.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q53.webp"
@@ -6582,10 +6290,8 @@
           "id": "A6_Q54",
           "question": "Un habitant de la rue scolaire peut-il y entrer en voiture pendant les heures scolaires ?",
           "choices": [
-            "Oui, les habitants y ont toujours accès",
-            "Non, il peut la quitter mais pas y entrer",
-            "Oui, à l'allure du pas uniquement",
-            "Oui, avec une autorisation communale"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Les habitants peuvent quitter la rue scolaire mais ne peuvent pas y entrer aux heures scolaires.",
@@ -6596,12 +6302,10 @@
           "id": "A6_Q55",
           "question": "Un habitant de la rue scolaire peut-il quitter la rue en voiture pendant les heures scolaires ?",
           "choices": [
-            "Non, il doit attendre",
-            "Oui, il peut quitter la rue",
-            "Uniquement en marche arrière",
-            "Uniquement à pied"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les habitants peuvent quitter la rue scolaire même pendant les heures scolaires.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q55.webp"
@@ -6610,12 +6314,10 @@
           "id": "A6_Q56",
           "question": "Un véhicule prioritaire peut-il entrer dans une rue scolaire ?",
           "choices": [
-            "Non, jamais même en urgence",
-            "Oui, lorsque la nature de sa mission le justifie",
-            "Oui, toujours sans condition",
-            "Uniquement les ambulances en intervention"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les véhicules prioritaires peuvent entrer dans une rue scolaire lorsque leur mission le justifie.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q56.webp"
@@ -6624,12 +6326,11 @@
           "id": "A6_Q58",
           "question": "Un piéton traverse devant vous dans la rue scolaire. Que faites-vous ?",
           "choices": [
-            "Vous klaxonnez",
-            "Vous cédez le passage et vous arrêtez au besoin",
+            "Vous cédez le passage",
             "Vous continuez lentement",
             "Vous faites un appel de phares"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans une rue scolaire, vous devez céder le passage aux piétons et vous arrêter si nécessaire.",
           "theoryCardIndex": 4,
           "severe": true,
@@ -6639,12 +6340,11 @@
           "id": "A6_Q59",
           "question": "Quelles sont vos obligations envers les piétons et cyclistes dans une rue scolaire ?",
           "choices": [
-            "Aucune obligation particulière",
-            "Leur céder le passage et vous arrêter si nécessaire",
-            "Les avertir de votre présence en klaxonnant",
-            "Simplement limiter votre vitesse à 30 km/h"
+            "Céder le passage et s'arrêter",
+            "Limiter la vitesse à 30 km/h",
+            "Les avertir en klaxonnant"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous devez ne pas mettre en danger ni gêner les piétons et cyclistes, et leur céder le passage en vous arrêtant si nécessaire.",
           "theoryCardIndex": 4,
           "severe": true,
@@ -6654,12 +6354,11 @@
           "id": "A6_Q60",
           "question": "Comment savez-vous quels usagers peuvent emprunter un chemin réservé ?",
           "choices": [
-            "Par la couleur du revêtement",
-            "Par les emblèmes sur le panneau",
+            "Par les emblèmes du panneau",
             "Par la largeur du chemin",
-            "Par un agent de police"
+            "Par la couleur du revêtement"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les emblèmes sur le panneau du chemin réservé indiquent quels usagers peuvent l'emprunter.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A6_Q60.webp"
@@ -6668,12 +6367,10 @@
           "id": "A6_Q63",
           "question": "Votre propriété est accessible uniquement par un chemin réservé. Pouvez-vous l'emprunter même si vous n'êtes pas repris sur le signal ?",
           "choices": [
-            "Non, c'est interdit sans exception",
-            "Oui, pour rejoindre une propriété accessible par ce chemin",
-            "Oui, mais uniquement à pied",
-            "Non, sauf autorisation communale"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Exception : vous pouvez emprunter un chemin réservé pour rejoindre une propriété accessible uniquement par ce chemin.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A6_Q63.webp"
@@ -6682,10 +6379,8 @@
           "id": "A6_Q64",
           "question": "Vous n'êtes pas repris sur le signal d'un chemin réservé et votre propriété n'est pas dans ce chemin. Pouvez-vous y circuler ?",
           "choices": [
-            "Oui, si vous roulez lentement",
-            "Non, vous n'y avez pas accès",
-            "Oui, en dehors des heures de pointe",
-            "Oui, à vélo"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Sans être repris sur le signal et sans propriété accessible par ce chemin, vous n'avez pas accès au chemin réservé.",
@@ -6696,10 +6391,8 @@
           "id": "A6_Q65",
           "question": "Pouvez-vous entraver la circulation sans nécessité sur un chemin réservé ?",
           "choices": [
-            "Oui, si vous êtes un usager autorisé",
-            "Non, on ne peut pas entraver la circulation sans nécessité",
-            "Oui, pour décharger des marchandises",
-            "Oui, mais uniquement en cas d'urgence"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Même si vous êtes autorisé à emprunter le chemin, vous ne devez pas entraver la circulation sans nécessité.",
@@ -6708,14 +6401,13 @@
         },
         {
           "id": "A6_Q66",
-          "question": "Qu'est-ce qu'un site spécial franchissable ?",
+          "question": "À qui un site spécial franchissable est-il réservé ?",
           "choices": [
-            "Un trottoir élargi pour les piétons",
-            "Une partie de la voie réservée aux trams et à certains bus",
-            "Un parking réservé aux transports en commun",
-            "Une piste cyclable bidirectionnelle"
+            "Aux trams et à certains bus",
+            "Aux piétons et aux poussettes",
+            "Aux cyclistes des deux sens"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le SSF est une partie de la voie publique réservée à la circulation des trams et de certains bus de transport en commun.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q66.webp"
@@ -6724,10 +6416,8 @@
           "id": "A6_Q67",
           "question": "Le SSF fait-il partie de la chaussée ?",
           "choices": [
-            "Oui, toujours",
-            "Non, il ne fait pas partie de la chaussée",
-            "Oui, en agglomération",
-            "Oui, si des voitures y circulent"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le SSF ne fait PAS partie de la chaussée.",
@@ -6738,10 +6428,8 @@
           "id": "A6_Q68",
           "question": "Pouvez-vous circuler en voiture sur un SSF ?",
           "choices": [
-            "Oui, quand vous le souhaitez",
-            "Non, sauf si un panneau additionnel l'autorise pour certains conducteurs",
-            "Oui, s'il n'y a pas de tram en vue",
-            "Oui, à condition de rouler à moins de 30 km/h"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Vous ne pouvez pas circuler sur un SSF, sauf si un panneau additionnel l'autorise pour votre catégorie de conducteurs.",
@@ -6752,12 +6440,10 @@
           "id": "A6_Q69",
           "question": "Avec le covoiturage (minimum 2 ou 3 personnes), pouvez-vous emprunter le SSF ?",
           "choices": [
-            "Non, jamais en voiture",
-            "Oui, si un panneau additionnel l'autorise pour le covoiturage",
-            "Oui, toujours avec des passagers",
-            "Uniquement aux heures de pointe"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le covoiturage peut être autorisé sur le SSF uniquement si un panneau additionnel le précise.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q69.webp"
@@ -6766,12 +6452,10 @@
           "id": "A6_Q70",
           "question": "Pouvez-vous traverser le SSF pour rejoindre un emplacement de stationnement ?",
           "choices": [
-            "Non, c'est interdit",
-            "Oui, c'est autorisé",
-            "Uniquement si le tram n'est pas là",
-            "Uniquement la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous pouvez traverser le SSF pour rejoindre un emplacement de stationnement le long du SSF.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q70.webp"
@@ -6780,12 +6464,10 @@
           "id": "A6_Q71",
           "question": "Pouvez-vous traverser le SSF pour rejoindre votre propriété ?",
           "choices": [
-            "Non, faites le tour",
-            "Oui, c'est autorisé",
-            "Uniquement avec autorisation",
-            "Uniquement à pied"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Vous pouvez traverser le SSF pour rejoindre ou quitter une propriété.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q71.webp"
@@ -6794,12 +6476,10 @@
           "id": "A6_Q72",
           "question": "Pouvez-vous traverser le SSF dans un carrefour ?",
           "choices": [
-            "Non, jamais",
-            "Oui, c'est autorisé dans les carrefours",
-            "Uniquement avec un feu vert",
-            "Uniquement s'il n'y a pas de tram"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La traversée du SSF est autorisée dans les carrefours.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q72.webp"
@@ -6808,12 +6488,10 @@
           "id": "A6_Q73",
           "question": "Un obstacle bloque la chaussée. Pouvez-vous utiliser le SSF pour le contourner ?",
           "choices": [
-            "Non, c'est interdit même dans ce cas",
-            "Oui, en cas d'obstacle en chaussée c'est autorisé",
-            "Uniquement sous le contrôle d'un agent",
-            "Uniquement les bus peuvent le faire"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "En cas d'obstacle sur la chaussée, vous pouvez utiliser le SSF pour le contourner.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q73.webp"
@@ -6822,12 +6500,11 @@
           "id": "A6_Q74",
           "question": "Si vous circulez dans un SSF, que devez-vous respecter ?",
           "choices": [
-            "Uniquement les panneaux routiers classiques",
-            "Les feux lumineux spéciaux des véhicules de transport en commun",
-            "Rien de particulier dans ce site",
-            "Uniquement la vitesse maximale"
+            "Les feux spéciaux des trams",
+            "Les panneaux routiers seuls",
+            "La vitesse maximale, sans plus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Lorsque vous circulez dans un SSF, vous devez respecter les feux lumineux spéciaux des véhicules de transport en commun.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q74.webp"
@@ -6836,12 +6513,11 @@
           "id": "A6_Q76",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Direction vers la localité",
-            "Commencement d'une agglomération",
-            "Fin d'une agglomération",
-            "Zone industrielle"
+            "Début d'agglomération",
+            "Fin d'agglomération",
+            "Direction de la localité"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal blanc avec le nom d'une localité en noir indique le commencement d'une agglomération.",
           "sign": "F1",
           "destination": "panneaux"
@@ -6850,12 +6526,11 @@
           "id": "A6_Q77",
           "question": "Que signifie ce panneau ?",
           "choices": [
+            "Fin d'agglomération",
             "Début d'agglomération",
-            "Fin d'une agglomération",
-            "Localité interdite",
-            "Déviation"
+            "Déviation obligatoire"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal avec le nom barré indique la fin d'une agglomération.",
           "sign": "F3",
           "destination": "panneaux"
@@ -6864,40 +6539,37 @@
           "id": "A6_Q80",
           "question": "Que signifie ce panneau ?",
           "choices": [
+            "Début de zone résidentielle",
             "Début d'une zone piétonne",
-            "Commencement d'une zone résidentielle ou zone de rencontre",
-            "Parking réservé aux riverains",
-            "Début d'une zone 30 aux abords d'une école"
+            "Parking réservé aux riverains"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal bleu indique le commencement d'une zone résidentielle (ou zone de rencontre).",
           "sign": "F12a",
           "destination": "panneaux"
         },
         {
           "id": "A6_Q81",
-          "question": "Ce signal barré signifie :",
+          "question": "Que signifie ce panneau barré ?",
           "choices": [
+            "Fin de zone résidentielle",
             "Début de zone résidentielle",
-            "Fin d'une zone résidentielle",
-            "Zone résidentielle interdite",
-            "Déviation"
+            "Zone résidentielle interdite"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal de zone résidentielle barré indique la fin d'une zone résidentielle.",
           "theoryCardIndex": 1,
           "sign": "F12b"
         },
         {
           "id": "A6_Q83",
-          "question": "Ce signal indiquant \"zone 30\" signifie :",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Une vitesse recommandée de 30 km/h",
-            "Commencement d'une zone où la vitesse est limitée à 30 km/h",
-            "Un danger annoncé à 30 mètres",
-            "Une zone piétonne de 30 mètres"
+            "Une zone limitée à 30 km/h",
+            "Une vitesse conseillée de 30",
+            "Un danger annoncé à 30 mètres"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal zone 30 indique le commencement d'une zone où la vitesse est limitée à 30 km/h.",
           "theoryCardIndex": 4,
           "sign": "F4a"
@@ -6906,10 +6578,8 @@
           "id": "A6_Q84",
           "question": "Vous êtes dans une zone 30. Un panneau 50 km/h apparaît-il automatiquement dans cette zone ?",
           "choices": [
-            "Oui, à chaque intersection importante",
-            "Non, le 30 km/h reste valable dans toute la zone jusqu'au signal de fin",
-            "Oui, en dehors des rues principales",
-            "Cela dépend de la commune concernée"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Le 30 km/h est valable dans toute la zone jusqu'au signal de fin, sans exception automatique.",
@@ -6920,12 +6590,11 @@
           "id": "A6_Q85",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Début d'une zone piétonne",
-            "Chemin réservé aux usagers indiqués sur le panneau",
-            "Piste cyclable obligatoire",
-            "Passage pour piétons surélevé"
+            "Chemin réservé aux usagers indiqués",
+            "Début d'une zone piétonne fermée",
+            "Passage pour piétons surélevé au sol"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal indique un chemin réservé aux catégories d'usagers représentées sur le panneau.",
           "sign": "D10",
           "destination": "panneaux"
@@ -6934,68 +6603,62 @@
           "id": "A6_Q86",
           "question": "Le signal de chemin réservé peut-il être adapté en fonction des catégories d'usagers ?",
           "choices": [
-            "Non, il est toujours identique",
-            "Oui, il peut être adapté selon les catégories admises",
-            "Uniquement pour les cyclistes",
-            "Non, il est fixe"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le signal de chemin réservé peut être adapté pour indiquer différentes catégories d'usagers autorisés.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A6_Q86.webp"
         },
         {
           "id": "A6_Q87",
-          "question": "Ce signal avec un tram/bus sur fond bleu signifie :",
+          "question": "Que signifie ce panneau ?",
           "choices": [
+            "Un site spécial franchissable",
             "Un arrêt de tram ou de bus",
-            "Site spécial franchissable (transports en commun)",
-            "Une gare routière à proximité",
             "Un parking réservé aux bus"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Ce signal indique un site spécial franchissable (SSF) réservé aux transports en commun.",
           "theoryCardIndex": 6,
           "sign": "F18"
         },
         {
           "id": "A6_Q88",
-          "question": "Un panneau bleu rectangulaire indique un site spécial franchissable (SSF) avec le pictogramme d'un cyclomoteur. Que signifie-t-il ?",
+          "question": "Ce panneau porte un pictogramme de cyclomoteur. Que signifie-t-il ?",
           "choices": [
-            "Les cyclomoteurs sont interdits sur le SSF",
-            "Les cyclomotoristes sont aussi autorisés sur le SSF",
-            "Un parking pour cyclomoteurs",
-            "Une zone réservée aux cyclomoteurs"
+            "Les cyclomoteurs y sont admis",
+            "Les cyclomoteurs y sont interdits",
+            "Un parking pour cyclomoteurs"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau SSF avec pictogramme cyclomoteur signifie que les cyclomotoristes sont autorisés sur ce SSF.",
           "theoryCardIndex": 6,
           "sign": "F18"
         },
         {
           "id": "A6_Q89",
-          "question": "Que signifie ce panneau ?",
+          "question": "Ce panneau porte un pictogramme de moto. Que signifie-t-il ?",
           "choices": [
+            "Les motos y sont admises",
             "Les motos y sont interdites",
-            "Les motos sont aussi admises sur ce SSF",
-            "Un parking réservé aux motos",
-            "Une zone d'entraînement moto"
+            "Un parking réservé aux motos"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau SSF avec pictogramme moto signifie que les motocyclettes sont autorisées sur ce SSF.",
           "sign": "F18",
           "destination": "panneaux"
         },
         {
           "id": "A6_Q90",
-          "question": "Ce signal SSF avec un pictogramme vélo signifie :",
+          "question": "Ce panneau porte un pictogramme de vélo. Que signifie-t-il ?",
           "choices": [
-            "Les cyclistes sont interdits sur le SSF",
-            "Les cyclistes sont aussi autorisés sur le SSF",
-            "Une piste cyclable obligatoire",
-            "Un parking pour vélos"
+            "Les cyclistes y sont admis",
+            "Les cyclistes y sont interdits",
+            "Un parking pour les vélos"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le panneau SSF avec pictogramme vélo signifie que les cyclistes sont autorisés sur ce SSF.",
           "theoryCardIndex": 6,
           "sign": "F18"
@@ -7004,40 +6667,37 @@
           "id": "A6_Q91",
           "question": "Que signifie ce panneau ?",
           "choices": [
+            "Une rue cyclable, max 30 km/h",
             "Une piste cyclable obligatoire",
-            "Une rue cyclable : cyclistes prioritaires, max 30 km/h",
-            "Une rue interdite aux voitures",
-            "Le début d'une zone piétonne"
+            "Une rue interdite aux voitures"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Dans une rue cyclable, les cyclistes sont prioritaires, les voitures sont des \"invités\" et la vitesse max est 30 km/h.",
           "sign": "F111",
           "destination": "panneaux"
         },
         {
           "id": "A6_Q93",
-          "question": "Que signifie ce panneau ?",
+          "question": "Quelle est la particularité d'une zone cyclable ?",
           "choices": [
-            "Aucune",
-            "La zone s'applique à plusieurs rues",
-            "La zone interdit les voitures",
-            "La zone a une vitesse de 50 km/h"
+            "Elle couvre plusieurs rues",
+            "Elle interdit les voitures",
+            "Elle autorise 50 km/h"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Une zone cyclable s'applique à plusieurs rues, tandis qu'une rue cyclable concerne une seule rue.",
           "sign": "F111",
           "destination": "panneaux"
         },
         {
           "id": "A6_Q95",
-          "question": "Vous voyez un signal de zone résidentielle suivi d'un signal de zone 30. Quelle vitesse respectez-vous ?",
+          "question": "Ce panneau est suivi d'un signal zone 30. Quelle vitesse respectez-vous ?",
           "choices": [
-            "30 km/h car le dernier signal rencontré prime",
-            "20 km/h car la zone résidentielle est plus restrictive",
-            "50 km/h, la vitesse par défaut en agglomération",
-            "25 km/h, la moyenne des deux limitations"
+            "20 km/h, la plus restrictive",
+            "30 km/h, le dernier signal",
+            "50 km/h, la règle par défaut"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La zone résidentielle impose 20 km/h, ce qui est plus restrictif que la zone 30. C'est cette limite qui s'applique.",
           "theoryCardIndex": 1,
           "sign": "F12a"
@@ -7046,10 +6706,8 @@
           "id": "A6_Q97",
           "question": "Vous voyez un panneau électronique de zone 30 éteint. Devez-vous rouler à 30 km/h ?",
           "choices": [
-            "Oui, par simple précaution",
-            "Non, l'obligation n'est valable que quand le panneau est illuminé",
-            "Oui, le panneau est peut-être en panne",
-            "Ça dépend de l'heure de la journée"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un panneau électronique éteint n'impose aucune obligation. L'obligation n'est valable que lorsque le panneau est illuminé.",
