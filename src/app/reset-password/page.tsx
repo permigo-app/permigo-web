@@ -48,6 +48,10 @@ export default function ResetPasswordPage() {
         errShort: 'Minstens 6 tekens.',
         errMatch: 'De wachtwoorden komen niet overeen.',
         errGeneric: 'Er ging iets mis. Vraag een nieuwe link aan.',
+        errSame: 'Dit is je huidige wachtwoord. Kies een ander.',
+        errWeak: 'Wachtwoord te zwak. Kies een langer wachtwoord.',
+        errExpired: 'De link is verlopen. Vraag een nieuwe aan vanaf de inlogpagina.',
+        errRate: 'Te veel pogingen. Probeer over een paar minuten opnieuw.',
         checking: 'Even geduld…',
       }
     : {
@@ -65,6 +69,10 @@ export default function ResetPasswordPage() {
         errShort: 'Au moins 6 caractères.',
         errMatch: 'Les mots de passe ne correspondent pas.',
         errGeneric: 'Une erreur est survenue. Demande un nouveau lien.',
+        errSame: 'C\'est ton mot de passe actuel. Choisis-en un autre.',
+        errWeak: 'Mot de passe trop faible. Choisis-en un plus long.',
+        errExpired: 'Le lien a expiré. Demandes-en un nouveau depuis la page de connexion.',
+        errRate: 'Trop de tentatives. Réessaie dans quelques minutes.',
         checking: 'Un instant…',
       };
 
@@ -97,7 +105,19 @@ export default function ResetPasswordPage() {
     setBusy(true);
     const { error: err } = await supabase.auth.updateUser({ password: pwd });
     setBusy(false);
-    if (err) { setError(T.errGeneric); return; }
+
+    if (err) {
+      // Un message generique n apprend rien a l utilisateur ni a nous : on
+      // traduit les cas reels que Supabase renvoie ici.
+      const m = (err.message || '').toLowerCase();
+      console.error('[PermiGo] updateUser password:', err.status, err.message);
+      if (m.includes('should be different') || m.includes('same as the old')) setError(T.errSame);
+      else if (m.includes('weak') || m.includes('at least') || m.includes('characters')) setError(T.errWeak);
+      else if (m.includes('expired') || m.includes('session') || m.includes('jwt') || err.status === 401) setError(T.errExpired);
+      else if (m.includes('rate limit') || err.status === 429) setError(T.errRate);
+      else setError(`${T.errGeneric} (${err.message})`);
+      return;
+    }
     setDone(true);
   };
 
