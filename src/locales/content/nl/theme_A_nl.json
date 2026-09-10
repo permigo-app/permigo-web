@@ -249,12 +249,10 @@
           "id": "A1Q12",
           "question": "Kan je bestraft worden voor een zware overtreding op een openbaar terrein?",
           "choices": [
-            "Nee, de Wegcode is niet van toepassing",
-            "Ja, je kan veroordeeld worden tot een boete of vervolgd worden voor de rechtbank",
-            "Nee, tenzij een agent aanwezig is",
-            "Ja, maar alleen een waarschuwing"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Zelfs buiten de openbare weg kan een zware overtreding voor de rechtbank vervolgd worden.",
           "theoryCardIndex": 0
         },
@@ -301,12 +299,10 @@
           "id": "A1Q19",
           "question": "Je ziet een tram een straat inrijden die verboden is voor voertuigen. Is dat normaal?",
           "choices": [
-            "Nee, de tram moet alle verkeersborden naleven",
-            "Ja, want de tram gehoorzaamt enkel aan bevoegde personen en verkeerslichten",
-            "Nee, tenzij in noodsituaties",
-            "Ja, maar enkel tijdens de daluren 's nachts"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De tram gehoorzaamt enkel aan bevoegde personen en verkeerslichten, niet aan verkeersborden.",
           "theoryCardIndex": 1,
           "severe": true
@@ -341,52 +337,45 @@
           "id": "A1Q24",
           "question": "Je rijdt met de auto. Op welk deel van de openbare weg rijd je?",
           "choices": [
-            "Op de hele openbare weg",
             "Op de rijbaan",
-            "Op het gedeelte voorbehouden aan voetgangers",
-            "Op het gedeelte voorbehouden aan fietsers"
+            "Op de berm",
+            "Op het trottoir"
           ],
-          "correct": 1,
-          "explanation": "De rijbaan is het gedeelte ingericht voor motorvoertuigen.",
+          "correct": 0,
+          "explanation": "De rijbaan is het deel van de openbare weg dat is aangelegd voor het verkeer van voertuigen.",
           "theoryCardIndex": 1
         },
         {
           "id": "A1Q25",
-          "question": "Welke van deze elementen maken GEEN deel uit van de rijbaan?",
+          "question": "Maakt het trottoir deel uit van de rijbaan?",
           "choices": [
-            "De auto's en motorfietsen die er rijden",
-            "Fietspaden, bermen en voetpaden",
-            "De autobussen en vrachtwagens die er rijden",
-            "De landbouwtractoren die er rijden"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "Fietspaden, bermen en voetpaden maken geen deel uit van de rijbaan.",
+          "explanation": "De rijbaan is voorbehouden aan het verkeer van voertuigen. Trottoirs, bermen en fietspaden staan daarvan los.",
           "theoryCardIndex": 1
         },
         {
           "id": "A1Q26",
           "question": "Je bent fietser en er is geen fietspad. Mag je op de rijbaan rijden?",
           "choices": [
-            "Nee, een fietser mag nooit op de rijbaan rijden",
-            "Ja, altijd en in elke omstandigheid",
-            "Ja, wanneer er geen fietspad beschikbaar is",
-            "Enkel in het weekend en op feestdagen"
+            "Ja",
+            "Nee"
           ],
-          "correct": 2,
-          "explanation": "Bij ontstentenis van een fietspad mag de fietser op de rijbaan rijden.",
+          "correct": 0,
+          "explanation": "Als er geen fietspad is, rijdt de fietser op de rijbaan.",
           "theoryCardIndex": 1
         },
         {
           "id": "A1Q27",
           "question": "Je bent voetganger en er is geen voetpad of berm. Mag je op de rijbaan stappen?",
           "choices": [
-            "Nee, dat is in elke omstandigheid strikt verboden",
-            "Ja, altijd zonder beperking",
-            "Ja, bij ontstentenis van voetpad en berm, met de nodige voorzichtigheid",
-            "Enkel in de bebouwde kom en overdag"
+            "Ja",
+            "Nee"
           ],
-          "correct": 2,
-          "explanation": "Zonder voetpad of berm mag de voetganger voorzichtig op de rijbaan stappen.",
+          "correct": 0,
+          "explanation": "Zonder trottoir of begaanbare berm mag de voetganger op de rijbaan lopen, voorzichtig en zo dicht mogelijk bij de rand.",
           "theoryCardIndex": 1
         },
         {
@@ -445,13 +434,12 @@
           "id": "A1Q35",
           "question": "Je rijdt links op de rijbaan zonder geldige reden. Wat riskeer je?",
           "choices": [
-            "Niets, je bent vrij om je rijstrook te kiezen",
-            "Een overtreding van de Wegcode",
-            "Enkel een mondelinge verwittiging",
-            "Een overtreding enkel op de autosnelweg"
+            "Een overtreding van de wegcode",
+            "Een gewone mondelinge waarschuwing",
+            "Niets, de rijstrook is vrij te kiezen"
           ],
-          "correct": 1,
-          "explanation": "Links rijden zonder reden is een overtreding: je moet rechts houden.",
+          "correct": 0,
+          "explanation": "U moet zo dicht mogelijk bij de rechterrand van de rijbaan rijden. Links rijden zonder reden is een overtreding.",
           "theoryCardIndex": 2
         },
         {
@@ -553,26 +541,23 @@
           "id": "A1Q45",
           "question": "Je bekijkt de zijstrook van een rijbaan met middenrijstrook. Maakt ze deel uit van de rijbaan?",
           "choices": [
-            "Ja, ze maakt er altijd integraal deel van uit",
-            "Nee, de zijstrook maakt geen deel uit van de rijbaan",
-            "Ja, enkel buiten de bebouwde kom",
-            "Ja, enkel in de bebouwde kom"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "De zijstrook is te onderscheiden van de rijbaan met middenrijstrook.",
+          "explanation": "Op een rijbaan met centrale rijstrook staan de zijstroken los van de rijbaan.",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q46",
           "question": "Je rijdt op een middenrijstrook. In welke omstandigheden mag je de zijstrook gebruiken?",
           "choices": [
-            "Op elk moment en zonder beperking",
-            "Enkel om een tegenligger te kruisen of om in te halen",
-            "Enkel om er je voertuig te parkeren",
-            "In geen geval, dat is strikt verboden"
+            "Om te kruisen of in te halen",
+            "Om te stoppen en te parkeren",
+            "Om sneller te rijden dan in het midden"
           ],
-          "correct": 1,
-          "explanation": "De zijstrook mag enkel gebruikt worden om te kruisen of in te halen.",
+          "correct": 0,
+          "explanation": "De zijstrook mag enkel worden gebruikt om te kruisen of in te halen, nooit om te parkeren.",
           "theoryCardIndex": 3
         },
         {
@@ -605,12 +590,11 @@
           "id": "A1Q52",
           "question": "Je merkt weggebruikers op de zijstrook op. Wie mag er rijden?",
           "choices": [
-            "Enkel auto's die aan lage snelheid rijden",
-            "Fietsers, speed pedelecs, bromfietsen klasse A, trekdieren en voetgangers zonder voetpad",
-            "Alle motorvoertuigen zonder uitzondering",
-            "Enkel voetgangers, met uitsluiting van alle anderen"
+            "Fietsers, bromfietsers A en voetgangers",
+            "Auto's die traag rijden",
+            "Landbouwvoertuigen en motoren"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "De zijstrook is voorbehouden aan fietsers, speed pedelecs, bromfietsen klasse A, bestuurders van trekdieren en voetgangers (zonder voetpad).",
           "theoryCardIndex": 3
         },
@@ -644,13 +628,12 @@
           "id": "A1Q58",
           "question": "Je moet vertragen bij het naderen van dieren op de openbare weg. Om welke soorten dieren gaat het?",
           "choices": [
-            "Enkel melkkoeien",
-            "Trek-, last- en rijdieren, en vee",
-            "Enkel paarden bereden door een ruiter",
-            "Alle dieren, inclusief honden aan de leiband"
+            "Trek- en rijdieren en het vee",
+            "Honden aan de leiband van hun baasje",
+            "Wilde dieren die in het bos leven"
           ],
-          "correct": 1,
-          "explanation": "Trek-, last- en rijdieren, en vee verplichten je om te vertragen.",
+          "correct": 0,
+          "explanation": "Trek-, last- en rijdieren en vee verplichten u te vertragen en zelfs te stoppen.",
           "theoryCardIndex": 4
         },
         {
@@ -772,15 +755,14 @@
         },
         {
           "id": "A1Q70",
-          "question": "Je merkt een driehoekig bord met opspattend grind op. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Onverharde weg in aantocht",
-            "Gevaar voor opspattend grind",
-            "Onverharde rijbaan",
-            "Wegdekwerken aan de gang"
+            "Opspattende steenslag",
+            "Weg in aangestampte aarde",
+            "Wegdek in slechte staat"
           ],
-          "correct": 1,
-          "explanation": "Rode driehoek + grind = 'Opspattend grind'.",
+          "correct": 0,
+          "explanation": "Steenslag kan door de wielen worden opgeworpen: vertraag en houd meer afstand.",
           "sign": "A17"
         },
         {
@@ -839,13 +821,12 @@
           "id": "A1Q75",
           "question": "Wat betekent dit bord?",
           "choices": [
-            "Verkeersdrempel",
+            "Verhoogde inrichting",
             "Overweg",
-            "Verhoogde inrichting(en)",
-            "Weg in werken"
+            "Oneffen wegdek"
           ],
-          "correct": 2,
-          "explanation": "Rode driehoek + verhoogde inrichting = 'Verhoogde inrichting(en)'.",
+          "correct": 0,
+          "explanation": "Een verkeersdrempel of verhoogd plateau ligt voor u.",
           "sign": "A14"
         },
         {
@@ -891,13 +872,12 @@
           "id": "A1Q79",
           "question": "Wat betekent dit bord?",
           "choices": [
-            "Opeenvolging van gevaarlijke bochten",
-            "Glad wegdek, het onderbord preciseert de omstandigheden",
-            "Noodremzone in de buurt",
-            "Blijvend beijzelde weg in de winter"
+            "Slipgevaar",
+            "Opeenvolgende bochten",
+            "Remzone"
           ],
-          "correct": 1,
-          "explanation": "Het onderbord preciseert de omstandigheden (regen, vorst...) waarin het wegdek glad kan zijn.",
+          "correct": 0,
+          "explanation": "Het wegdek kan glad zijn, vooral bij vochtig weer: vertraag en vermijd bruusk remmen.",
           "sign": "A15"
         },
         {
@@ -943,13 +923,12 @@
           "id": "A1Q83",
           "question": "Wat betekent dit bord?",
           "choices": [
-            "Blijvend gevaargebied",
-            "Gevaar niet bepaald door een symbool",
-            "Einde van gevaarlijke zone",
+            "Niet nader omschreven gevaar",
+            "Einde van de gevaarlijke zone",
             "Verboden te rijden"
           ],
-          "correct": 1,
-          "explanation": "Driehoek + uitroepteken zonder symbool = algemeen gevaar, het onderbord preciseert de aard.",
+          "correct": 0,
+          "explanation": "Een onderbord eronder geeft de aard van het gevaar aan.",
           "sign": "A51"
         },
         {
@@ -969,26 +948,24 @@
           "id": "A1Q85",
           "question": "Wat betekent dit bord?",
           "choices": [
-            "Natuurreservaat",
-            "Jacht toegelaten",
-            "Bosgebied",
-            "Oversteekplaats voor groot wild"
+            "Overstekend grof wild",
+            "Natuurreservaat vlakbij",
+            "Zone waar jacht is toegelaten"
           ],
-          "correct": 3,
-          "explanation": "Rode driehoek + hert = 'Oversteekplaats voor groot wild'.",
+          "correct": 0,
+          "explanation": "Herten en everzwijnen kunnen oversteken: vertraag, vooral bij dageraad en schemering.",
           "sign": "A27"
         },
         {
           "id": "A1Q87",
           "question": "Wat betekent dit bord?",
           "choices": [
+            "Kruising met een spoorlijn",
             "Station in de buurt",
-            "Overweg met slagbomen",
-            "Kruising met spoorweg op de rijbaan",
-            "Tramhalte"
+            "Tramhalte verderop"
           ],
-          "correct": 2,
-          "explanation": "Rode driehoek + spoorweg op rijbaan = 'Kruising met spoorweg op de rijbaan'.",
+          "correct": 0,
+          "explanation": "Een trein of tram kan hier de weg kruisen.",
           "sign": "A49"
         },
         {
@@ -1032,15 +1009,14 @@
         },
         {
           "id": "A1Q91",
-          "question": "Je ziet een bord voor werken. Wat moet je verwachten?",
+          "question": "U ziet dit verkeersbord. Waarop moet u anticiperen?",
           "choices": [
-            "Niets bijzonders, de weg is normaal",
-            "De aanwezigheid van arbeiders, machines, mogelijke versmalling en aangetast wegdek",
-            "Enkel een wijziging van de snelheidsbeperking",
-            "De volledige afsluiting van de weg"
+            "Werklieden en machines",
+            "Een volledig vrije weg",
+            "Een afsluiting van de weg"
           ],
-          "correct": 1,
-          "explanation": "De werkzone kan arbeiders, machines, versmalling en aangetast wegdek bevatten.",
+          "correct": 0,
+          "explanation": "Werf in uitvoering: vertraag, de rijbaan kan versmald zijn en er kunnen werklieden staan.",
           "sign": "A31"
         },
         {
@@ -1058,15 +1034,14 @@
         },
         {
           "id": "A1Q93",
-          "question": "Je ziet een bord dat zijwind aankondigt. Hoe pas je je rijgedrag aan?",
+          "question": "U ziet dit verkeersbord. Hoe past u uw rijstijl aan?",
           "choices": [
-            "Je versnelt om je voertuig te stabiliseren",
-            "Je houdt het stuur stevig vast en past je snelheid aan",
-            "Je opent de ramen om minder wind te vangen",
-            "Je zet je dimlichten aan"
+            "Het stuur vasthouden en vertragen",
+            "Versnellen om stabiel te blijven",
+            "De ramen wijd openzetten"
           ],
-          "correct": 1,
-          "explanation": "Het stuur vasthouden en de snelheid aanpassen beschermt tegen zijwind.",
+          "correct": 0,
+          "explanation": "Zijwind kan het voertuig uit koers brengen: vertraag en houd het stuur stevig vast.",
           "sign": "A37"
         },
         {
@@ -1149,28 +1124,25 @@
         },
         {
           "id": "A1Q100",
-          "question": "Je ziet een blauw bord met de letter « N » gevolgd door een cijfer. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Nationale autosnelweg in aantocht",
-            "Gewone rijbaan (nummer van een nationale weg)",
-            "Voorbehouden gewestweg",
-            "Snelweg met beperkte toegang"
+            "Een nationale weg",
+            "Een autosnelweg",
+            "Een autoweg"
           ],
-          "correct": 1,
-          "explanation": "Dit bord duidt een gewone rijbaan aan (einde van een bijzondere regel).",
+          "correct": 0,
+          "explanation": "De letter N gevolgd door een cijfer duidt een nationale weg aan, die een gewone rijbaan is.",
           "sign": "F23a"
         },
         {
           "id": "A1Q101",
-          "question": "Je ziet een bord voor doodlopende weg. Mag je er met je auto inrijden?",
+          "question": "U ziet dit verkeersbord. Mag u er met uw auto inrijden?",
           "choices": [
-            "Nee, het is verboden er binnen te rijden",
-            "Ja, maar je zal niet kunnen oversteken en moet rechtsomkeer maken",
-            "Nee, de weg is in werken",
-            "Ja, maar parkeren is er verboden"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
-          "explanation": "Doodlopende weg = je mag inrijden maar moet rechtsomkeer maken.",
+          "correct": 0,
+          "explanation": "Niets verbiedt u erin te rijden, maar de straat heeft geen uitweg: u zult moeten keren.",
           "sign": "F45"
         },
         {
@@ -1201,15 +1173,14 @@
         },
         {
           "id": "A1_SIGN_A16_1",
-          "question": "Je merkt een driehoekig bord op met een steil stijgende weg. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Een gevaarlijke afdaling in aantocht",
-            "Een steile helling wacht je",
-            "De aanwezigheid van een verkeersdrempel",
-            "Een verkeersdrempel op de rijbaan"
+            "Een steile helling omhoog",
+            "Een gevaarlijke afdaling",
+            "Een verkeersdrempel"
           ],
-          "correct": 1,
-          "explanation": "Het bord A16 (rode driehoek) kondigt een steile helling aan. Het aangegeven percentage preciseert de helling.",
+          "correct": 0,
+          "explanation": "De helling is steil: schakel tijdig terug om vermogen te behouden.",
           "sign": "A5"
         },
         {
@@ -1240,226 +1211,209 @@
         },
         {
           "id": "A1_SIGN_A31_1",
-          "question": "Je ziet een rode driehoek met een Andreaskruis zonder slagboom getekend. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Een overweg uitgerust met automatische slagbomen",
-            "Een overweg zonder slagbomen of halve slagbomen: verhoog je waakzaamheid",
-            "Een oversteekplaats voor tramspoor",
-            "Een voetgangersoversteekplaats met absolute voorrang"
+            "Overweg zonder slagbomen",
+            "Overweg met slagbomen",
+            "Kruising met een tramspoor"
           ],
-          "correct": 1,
-          "explanation": "Het bord A31 duidt een overweg zonder slagbomen of halve slagbomen aan. Dit is een bijzonder gevaarlijke situatie: verhoog je waakzaamheid.",
+          "correct": 0,
+          "explanation": "Geen enkele slagboom beveiligt het spoor: kijk in beide richtingen en rijd enkel als u zeker bent.",
           "sign": "A43",
           "severe": true
         },
         {
           "id": "A1_SIGN_A33_1",
-          "question": "Je ziet een rode driehoek met een tram erin. Hoe moet je reageren?",
+          "question": "Wat moet u doen bij dit verkeersbord?",
           "choices": [
-            "Versnellen om te passeren vóór de eventuele tram",
-            "Vertragen want een tramoversteekplaats is op deze plaats aangeduid",
-            "Toeteren om de trambestuurder te verwittigen",
-            "Niets doen, de tram stopt altijd aan kruispunten"
+            "Vertragen en het spoor controleren",
+            "Versnellen om er eerst te zijn",
+            "Toeteren om te waarschuwen"
           ],
-          "correct": 1,
-          "explanation": "Het bord A33 kondigt een tramoversteekplaats aan. De tram heeft op die plaats altijd voorrang op de andere weggebruikers.",
+          "correct": 0,
+          "explanation": "Een tram of trein kan de weg kruisen: vertraag en verleen voorrang.",
           "sign": "A49",
           "severe": true
         },
         {
           "id": "A1_SIGN_A35_1",
-          "question": "Je ziet een rode driehoek met een uitroepteken of een kruispunt met ongewone vorm. Wat betekent het?",
+          "question": "Wat moet u doen bij dit verkeersbord?",
           "choices": [
-            "Een overweg in de buurt",
-            "Een gevaarlijk kruispunt dat verhoogde voorzichtigheid vereist",
-            "Een kruispunt waar je absolute voorrang hebt",
-            "Een tijdelijke werkzone"
+            "Vertragen en het onderbord lezen",
+            "Verder rijden zonder te vertragen",
+            "Onmiddellijk ter plaatse stoppen"
           ],
-          "correct": 1,
-          "explanation": "Het bord A35 duidt een gevaarlijk kruispunt aan waar de bijzondere configuratie (slecht zicht, scherpe hoek…) verhoogde voorzichtigheid vereist.",
+          "correct": 0,
+          "explanation": "Het gevaar wordt niet door het symbool bepaald: het onderbord eronder geeft het aan.",
           "sign": "A51"
         },
         {
           "id": "A1_SIGN_A41_1",
-          "question": "Je ziet een rode driehoek met het woord « STOP » gevolgd door een afstand. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Je moet onmiddellijk op deze plaats stoppen",
-            "Een STOP-bord bevindt zich op de aangegeven afstand: begin te vertragen",
-            "De voorrang van rechts wordt hersteld vanaf dit punt",
-            "Een rotonde bevindt zich op de aangegeven afstand"
+            "Een STOP op de aangegeven afstand",
+            "Onmiddellijk stoppen op deze plaats",
+            "Een rotonde in aantocht"
           ],
-          "correct": 1,
-          "explanation": "Het bord A41 is een voorsignalisatiebord: het kondigt aan dat een STOP-bord zich op de vermelde afstand bevindt. Begin te vertragen.",
+          "correct": 0,
+          "explanation": "De STOP staat niet hier maar verderop: begin te vertragen.",
           "sign": "B7",
           "severe": true
         },
         {
           "id": "A1_SIGN_A47_1",
-          "question": "Je ziet een rode driehoek met meerdere dicht opeenvolgende auto's (file). Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Een werkzone met wisselend verkeer",
-            "Een risico op filevorming: verminder je snelheid",
-            "Een volledige parking in de buurt",
-            "Een druk kruispunt met verkeerslichten"
+            "Kans op file",
+            "Een volle parking",
+            "Een werfzone"
           ],
-          "correct": 1,
-          "explanation": "Het bord A47 waarschuwt voor een risico op filevorming. Verminder je snelheid en houd voldoende volgafstand.",
+          "correct": 0,
+          "explanation": "Er kan een file ontstaan: verminder uw snelheid en houd afstand.",
           "sign": "A50"
         },
         {
           "id": "A1_SIGN_A49_1",
-          "question": "Je ziet een driehoekig bord met een springend hert. Wat moet je verwachten?",
+          "question": "Waarop moet u anticiperen bij dit bord?",
           "choices": [
-            "De toegang tot een beschermd natuurreservaat verboden voor voertuigen",
-            "Wilde dieren zouden de weg kunnen oversteken: vertraag",
-            "Een hertenkwekerij bevindt zich in de buurt",
-            "Een jachtzone: gebruik je claxon"
+            "Wilde dieren op de weg",
+            "Een hertenkwekerij vlakbij",
+            "Een open jachtgebied"
           ],
-          "correct": 1,
-          "explanation": "Het bord A49 duidt aan dat wilde dieren (herten, reeën, everzwijnen…) kunnen oversteken. Vertraag en blijf waakzaam.",
+          "correct": 0,
+          "explanation": "Grof wild kan oversteken: vertraag en wees klaar om te remmen.",
           "sign": "A27"
         },
         {
           "id": "A1_SIGN_D1__1",
-          "question": "Je komt bij een kruispunt met een rond blauw bord met een pijl rechtdoor en een pijl naar rechts. Wat moet je doen?",
+          "question": "Wat legt dit verkeersbord u op?",
           "choices": [
-            "Je bent verplicht enkel rechtdoor te rijden",
-            "Je mag rechtdoor rijden of rechts afslaan, maar links afslaan is verboden",
-            "Je moet verplicht rechts afslaan",
-            "Je mag rechtsomkeer maken"
+            "Rechtdoor of naar rechts",
+            "Naar rechts, zonder andere keuze",
+            "Rechtdoor, zonder af te slaan"
           ],
-          "correct": 1,
-          "explanation": "D1c verplicht rechtdoor te rijden of rechts af te slaan. Links afslaan is op deze plaats verboden.",
+          "correct": 0,
+          "explanation": "Dit bord laat twee richtingen toe: rechtdoor en naar rechts. Links afslaan is verboden.",
           "sign": "D3b"
         },
         {
           "id": "A1_SIGN_D1__2",
-          "question": "Je komt bij een kruispunt met een rond blauw bord met een pijl rechtdoor en een pijl naar links. Wat moet je doen?",
+          "question": "Wat legt dit verkeersbord u op?",
           "choices": [
-            "Je bent verplicht enkel rechtdoor te rijden",
-            "Je mag rechtdoor rijden of links afslaan, maar rechts afslaan is verboden",
-            "Je moet verplicht links afslaan",
-            "Alle richtingen zijn toegelaten"
+            "Rechtdoor of naar links",
+            "Naar links, zonder andere keuze",
+            "Rechtdoor, zonder af te slaan"
           ],
-          "correct": 1,
-          "explanation": "D1d verplicht rechtdoor te rijden of links af te slaan. Rechts afslaan is op deze plaats verboden.",
+          "correct": 0,
+          "explanation": "Dit bord laat twee richtingen toe: rechtdoor en naar links. Rechts afslaan is verboden.",
           "sign": "D3a"
         },
         {
           "id": "A1_SIGN_D3_1",
-          "question": "Je ziet een rond blauw bord met een pijl die een obstakel langs rechts omzeilt. Wat moet je doen?",
+          "question": "Wat legt dit verkeersbord u op?",
           "choices": [
-            "Verplicht links inhalen",
-            "Het obstakel langs rechts omzeilen zoals aangegeven",
-            "De voorrang is er rechts",
-            "Verplicht de rotonde nemen"
+            "Het obstakel rechts voorbijrijden",
+            "Het obstakel links voorbijrijden",
+            "Stoppen voor het obstakel"
           ],
-          "correct": 1,
-          "explanation": "D3 verplicht een obstakel (verkeersgeleider, voetgangersrefuge…) langs rechts te omzeilen. Links van dit obstakel passeren is verboden.",
+          "correct": 0,
+          "explanation": "Het obstakel moet worden voorbijgereden aan de zijde die de pijl aangeeft, hier rechts.",
           "sign": "D1f"
         },
         {
           "id": "A1_SIGN_D9_1",
-          "question": "Je ziet een rond blauw bord met een voetganger. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Voetgangersoversteekplaats: je moet stoppen",
-            "Weg uitsluitend voorbehouden aan voetgangers, geen enkel voertuig heeft er toegang",
-            "Voetgangers mogen op deze plaats oversteken",
-            "Tijdelijke voetgangerszone tijdens bepaalde uren"
+            "Verplicht pad voor voetgangers",
+            "Oversteekplaats voor voetgangers",
+            "Voetgangerszone tijdens daluren"
           ],
-          "correct": 1,
-          "explanation": "D9 duidt een weg of voetpad aan die uitsluitend voorbehouden is aan voetgangers. Fietsers en voertuigen hebben er geen toegang.",
+          "correct": 0,
+          "explanation": "Dit pad is voorbehouden aan voetgangers, die het moeten volgen. Voertuigen hebben er geen toegang.",
           "sign": "D11"
         },
         {
           "id": "A1_SIGN_D10_1",
-          "question": "Je ziet een rond blauw bord met een voetganger en een fietser naast elkaar, niet gescheiden. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Voetgangers en fietsers zijn er beide verboden",
-            "Gemengd pad: voetgangers en fietsers delen hetzelfde oppervlak",
-            "Fietspad met een gescheiden zijdelings voetpad",
-            "Exclusief fietspad verboden voor voetgangers"
+            "Gedeeld pad voetgangers en fietsers",
+            "Fietspad verboden voor voetgangers",
+            "Trottoir verboden voor fietsers"
           ],
-          "correct": 1,
-          "explanation": "D10 duidt een niet-gescheiden gemengd pad voor voetgangers en fietsers aan. Beide weggebruikers delen dezelfde ruimte en moeten elkaar respecteren.",
+          "correct": 0,
+          "explanation": "Voetgangers en fietsers gebruiken hetzelfde oppervlak: elk houdt rekening met de ander.",
           "sign": "D10"
         },
         {
           "id": "A1_SIGN_D11_1",
-          "question": "Je ziet een rond blauw bord met een voetganger links en een fietser rechts, gescheiden door een streep. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Enkel voetgangers links, geen fietsen toegelaten",
-            "Gescheiden pad: voetgangers links, fietsers rechts",
-            "Fietsers hebben voorrang op voetgangers",
-            "Eenrichtingsverkeer voor voetgangers en fietsers"
+            "Gescheiden pad voetgangers en fietsers",
+            "Gedeeld pad zonder scheiding",
+            "Pad enkel voor fietsers"
           ],
-          "correct": 1,
-          "explanation": "D11 duidt een pad aan dat in twee delen is gescheiden: linkerkant voor voetgangers, rechterkant voor fietsers. Iedereen blijft in zijn deel.",
+          "correct": 0,
+          "explanation": "De scheidingsstreep geeft aan dat elk zijn kant heeft: voetgangers aan de ene kant, fietsers aan de andere.",
           "sign": "D9b"
         },
         {
           "id": "A1_SIGN_F5_1",
-          "question": "Je ziet een blauw rechthoekig bord dat een doodlopende straat aanduidt. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Einde van de autosnelweg in aantocht",
-            "Eenrichtingsverkeer in deze richting",
-            "Doodlopende straat: de straat heeft geen uitweg en je zal rechtsomkeer moeten maken",
-            "Toegang voorbehouden aan bewoners van deze straat"
+            "Een doodlopende weg",
+            "Een eenrichtingsstraat",
+            "Een einde van de autosnelweg"
           ],
-          "correct": 1,
-          "explanation": "F5 duidt aan dat de weg een doodlopende straat is. Ze leidt nergens naartoe en je zal rechtsomkeer moeten maken. Rijd er enkel in als je een reden hebt om erheen te gaan.",
+          "correct": 0,
+          "explanation": "De straat heeft geen uitweg: u zult moeten keren om er weer uit te rijden.",
           "sign": "F45"
         },
         {
           "id": "A1_SIGN_CHEVRONS_1",
-          "question": "Je ziet chevrons of arceringen op de grond geschilderd. Wat betekenen ze?",
+          "question": "Wat betekenen deze pijlpunten op het wegdek?",
           "choices": [
-            "Een zone waar inhalen toegelaten is",
-            "Een zone waar het verboden is te rijden, te parkeren of zelfs te overschrijden",
-            "Een voorbehouden fietsstrook",
-            "Een veiligheidsstrook waarop je traag mag rijden"
+            "Een zone waar rijden verboden is",
+            "Een zone waar inhalen mag",
+            "Een strook voor fietsers"
           ],
-          "correct": 1,
-          "explanation": "Chevrons of arceringen op de grond bakenen een zone af waar het verboden is te rijden, te parkeren of zelfs te overschrijden. Ze bevinden zich vaak bij vertakkingen of verkeersgeleiders.",
+          "correct": 0,
+          "explanation": "U mag er niet rijden, niet parkeren en er zelfs niet op komen.",
           "sign": "CHEVRONS"
         },
         {
           "id": "A1_SIGN_FLECHE_SOL_GAUCHE_1",
-          "question": "Je rijdt op een rijstrook waar een pijl op de grond naar links wijst. Wat legt ze je op?",
+          "question": "Wat legt deze pijl op het wegdek u op?",
           "choices": [
-            "De rijstrook is eenrichtingsverkeer naar rechts",
-            "Je moet verplicht links afslaan op deze rijstrook",
-            "Inhalen langs links is toegelaten",
-            "Het is een eenvoudige suggestie: je mag ook rechtdoor rijden"
+            "Verplicht naar links afslaan",
+            "Een gewone suggestie van richting",
+            "Inhalen langs links is toegelaten"
           ],
-          "correct": 1,
-          "explanation": "De pijl op de grond die naar links wijst, is een verplichting: alle voertuigen op deze rijstrook moeten links afslaan. Kies tijdig de juiste rijstrook.",
+          "correct": 0,
+          "explanation": "Een voorsorteerpijl op het wegdek is verplicht: deze rijstrook verplicht u links af te slaan.",
           "sign": "FLECHE_SOL_GAUCHE"
         },
         {
           "id": "A1_SIGN_FLECHE_SOL_TOUT_DROIT_1",
-          "question": "Je rijdt op een rijstrook waar een pijl op de grond rechtdoor wijst. Wat betekent ze?",
+          "question": "Wat legt deze pijl op het wegdek u op?",
           "choices": [
-            "De rijstrook is voorbehouden aan vrachtwagens die rechtdoor rijden",
-            "Je moet verplicht rechtdoor blijven rijden op deze rijstrook",
-            "Je mag rechtdoor rijden of rechts afslaan",
-            "Het is een niet-bindende aanduiding"
+            "Verplicht rechtdoor rijden",
+            "Een strook voor vrachtwagens",
+            "Een gewone richtingsaanduiding"
           ],
-          "correct": 1,
-          "explanation": "De pijl op de grond \"rechtdoor\" verplicht om in de aangegeven richting te blijven rijden. Wil je afslaan, kies dan een rijstrook waarvan de pijl overeenkomt met je bedoeling.",
+          "correct": 0,
+          "explanation": "Deze rijstrook verplicht u rechtdoor te rijden: u moet vooraf van rijstrook veranderen om af te slaan.",
           "sign": "FLECHE_SOL_TOUT_DROIT"
         },
         {
           "id": "A1_SIGN_A21_1",
-          "question": "Je ziet een rode driehoek met de silhouet van een fietser. Wat moet je verwachten?",
+          "question": "Waarop moet u anticiperen bij dit bord?",
           "choices": [
-            "Een verplicht fietspad begint",
-            "Fietsers kunnen oversteken of op de weg rijden: wees waakzaam",
-            "Fietsers zijn verboden op dit stuk",
-            "Een wielerwedstrijd is aan de gang: absolute voorrang voor fietsen"
+            "Overstekende fietsers",
+            "Een fietspad dat begint",
+            "Een wielerwedstrijd"
           ],
-          "correct": 1,
-          "explanation": "Het bord A21 waarschuwt voor de mogelijke aanwezigheid van fietsers op of overstekend de rijbaan. Verminder je snelheid en wees bereid voorrang te verlenen.",
+          "correct": 0,
+          "explanation": "Fietsers en bromfietsers kunnen de rijbaan oversteken: vertraag en wees klaar om voorrang te verlenen.",
           "sign": "A25",
           "severe": true
         }

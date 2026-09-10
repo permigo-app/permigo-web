@@ -274,12 +274,10 @@
           "id": "A1Q12",
           "question": "Vous commettez une infraction grave sur le parking d'un supermarché. Pouvez-vous être sanctionné ?",
           "choices": [
-            "Non, on est hors de la voie publique",
-            "Oui, vous risquez une poursuite en justice",
-            "Non, sauf si un agent est présent",
-            "Oui, mais un simple avertissement écrit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Même hors voie publique, une infraction grave peut être poursuivie en justice et sanctionnée par une amende.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1Q12.webp"
@@ -330,12 +328,10 @@
           "id": "A1Q19",
           "question": "Vous voyez un tram s'engager dans une rue en sens interdit pour les véhicules. Est-ce normal ?",
           "choices": [
-            "Non, le tram respecte tous les panneaux",
-            "Oui, il n'obéit qu'aux agents et aux feux",
-            "Non, sauf en situation d'urgence",
-            "Oui, mais seulement la nuit"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Le tram n'obéit qu'aux agents qualifiés et aux feux de circulation, pas aux panneaux de signalisation.",
           "theoryCardIndex": 1,
           "severe": true,
@@ -373,27 +369,24 @@
           "id": "A1Q24",
           "question": "Vous circulez en voiture. Sur quelle partie de la voie publique roulez-vous ?",
           "choices": [
-            "Sur toute la voie publique",
             "Sur la chaussée",
-            "Sur la partie réservée aux piétons",
-            "Sur la partie réservée aux cyclistes"
+            "Sur l'accotement",
+            "Sur le trottoir"
           ],
-          "correct": 1,
-          "explanation": "La chaussée est la partie aménagée pour les véhicules motorisés.",
+          "correct": 0,
+          "explanation": "La chaussée est la partie de la voie publique aménagée pour la circulation des véhicules.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q24.webp"
         },
         {
           "id": "A1Q25",
-          "question": "Parmi les éléments suivants, lesquels ne font PAS partie de la chaussée ?",
+          "question": "Le trottoir fait-il partie de la chaussée ?",
           "choices": [
-            "Les voitures et les motocyclettes qui y circulent",
-            "Les pistes cyclables, les accotements et les trottoirs",
-            "Les autobus et les camions qui y circulent",
-            "Les tracteurs agricoles qui y circulent"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Pistes cyclables, accotements et trottoirs ne font pas partie de la chaussée.",
+          "explanation": "La chaussée est réservée à la circulation des véhicules. Trottoirs, accotements et pistes cyclables en sont distincts.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q25.webp"
         },
@@ -401,13 +394,11 @@
           "id": "A1Q26",
           "question": "Vous êtes cycliste et il n'y a pas de piste cyclable. Pouvez-vous rouler sur la chaussée ?",
           "choices": [
-            "Non, le cycliste reste hors de la chaussée",
-            "Oui, à tout moment et en toute situation",
-            "Oui, s'il n'y a pas de piste cyclable",
-            "Seulement les week-ends et jours fériés"
+            "Oui",
+            "Non"
           ],
-          "correct": 2,
-          "explanation": "En l'absence de piste cyclable, le cycliste peut rouler sur la chaussée.",
+          "correct": 0,
+          "explanation": "En l'absence de piste cyclable, le cycliste circule sur la chaussée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q26.webp"
         },
@@ -415,13 +406,11 @@
           "id": "A1Q27",
           "question": "Vous êtes piéton et il n'y a ni trottoir ni accotement. Pouvez-vous marcher sur la chaussée ?",
           "choices": [
-            "Non, c'est interdit en toute circonstance",
-            "Oui, à tout moment et sans restriction",
-            "Oui, avec prudence, s'il n'y a rien d'autre",
-            "Seulement en agglomération et de jour"
+            "Oui",
+            "Non"
           ],
-          "correct": 2,
-          "explanation": "Sans trottoir ni accotement praticable, le piéton peut marcher sur la chaussée, en faisant preuve de prudence.",
+          "correct": 0,
+          "explanation": "Sans trottoir ni accotement praticable, le piéton peut marcher sur la chaussée, en restant prudent et le plus près possible du bord.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q27.webp"
         },
@@ -485,13 +474,12 @@
           "id": "A1Q35",
           "question": "Vous roulez à gauche de la chaussée sans raison valable. Que risquez-vous ?",
           "choices": [
-            "Rien, vous choisissez votre bande",
             "Une infraction au Code de la route",
             "Un simple avertissement verbal",
-            "Une infraction sur autoroute seulement"
+            "Rien, la bande se choisit librement"
           ],
-          "correct": 1,
-          "explanation": "Circuler à gauche sans raison est une infraction : vous devez serrer à droite.",
+          "correct": 0,
+          "explanation": "Vous devez circuler le plus près possible du bord droit de la chaussée. Rouler à gauche sans raison est une infraction.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A1Q35.webp"
         },
@@ -601,13 +589,11 @@
           "id": "A1Q45",
           "question": "Vous observez la bande latérale d'une chaussée à voie centrale. Fait-elle partie de la chaussée ?",
           "choices": [
-            "Oui, elle en fait toujours partie",
-            "Non, elle est distincte de la chaussée",
-            "Oui, mais hors agglomération seulement",
-            "Oui, mais en agglomération seulement"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "La bande latérale est distincte de la chaussée à voie centrale.",
+          "explanation": "Sur une chaussée à voie centrale, les bandes latérales sont distinctes de la chaussée.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q45.webp"
         },
@@ -615,13 +601,12 @@
           "id": "A1Q46",
           "question": "Vous circulez sur une voie centrale. Dans quelles circonstances pouvez-vous utiliser la bande latérale ?",
           "choices": [
-            "À tout moment et sans restriction",
-            "Pour croiser un véhicule ou dépasser",
-            "Pour y stationner votre véhicule",
-            "En aucun cas, c'est toujours interdit"
+            "Pour croiser ou dépasser un véhicule",
+            "Pour vous arrêter et stationner",
+            "Pour rouler plus vite qu'au centre"
           ],
-          "correct": 1,
-          "explanation": "La bande latérale n'est utilisable que pour croiser ou dépasser.",
+          "correct": 0,
+          "explanation": "La bande latérale ne s'emprunte que pour croiser ou dépasser, jamais pour stationner.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q46.webp"
         },
@@ -657,12 +642,11 @@
           "id": "A1Q52",
           "question": "Vous observez des usagers circuler sur la bande latérale. Lesquels y sont autorisés ?",
           "choices": [
-            "Les voitures roulant lentement",
             "Les cyclistes, cyclomoteurs A et piétons",
-            "Tous les véhicules motorisés",
-            "Les piétons, à l'exclusion des autres"
+            "Les voitures qui roulent lentement",
+            "Les véhicules agricoles et les motos"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "La bande latérale est réservée aux cyclistes, speed pedelecs, cyclomoteurs de classe A, conducteurs d'animaux et piétons en l'absence de trottoir.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q52.webp"
@@ -699,13 +683,12 @@
           "id": "A1Q58",
           "question": "Vous devez ralentir à l'approche d'animaux sur la voie publique. Quels types d'animaux sont concernés ?",
           "choices": [
-            "Les vaches laitières seulement",
-            "Les animaux de trait, de selle, le bétail",
-            "Les chevaux montés seulement",
-            "Tous, y compris les chiens en laisse"
+            "Les animaux de trait, de selle et le bétail",
+            "Les chiens tenus en laisse par leur maître",
+            "Les animaux sauvages vivant en forêt"
           ],
-          "correct": 1,
-          "explanation": "Les animaux de trait, de charge, de selle et le bétail imposent de ralentir immédiatement.",
+          "correct": 0,
+          "explanation": "Les animaux de trait, de charge, de selle et le bétail imposent de ralentir, voire de s'arrêter.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A1Q58.webp"
         },
@@ -830,15 +813,14 @@
         },
         {
           "id": "A1Q70",
-          "question": "Vous apercevez un panneau triangulaire avec des gravillons projetés. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Route non revêtue à l'approche",
-            "Risque de projection de gravillons",
+            "Projection de gravillons",
             "Chaussée en terre battue",
-            "Travaux de revêtement en cours"
+            "Revêtement en mauvais état"
           ],
-          "correct": 1,
-          "explanation": "Triangle rouge + gravillons = 'Projection de gravillons'.",
+          "correct": 0,
+          "explanation": "Des gravillons peuvent être projetés par les roues : ralentissez et augmentez vos distances.",
           "sign": "A17"
         },
         {
@@ -897,13 +879,12 @@
           "id": "A1Q75",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Cassis ou dos d'âne",
+            "Dispositif surélevé",
             "Passage à niveau",
-            "Dispositif(s) surélevé(s)",
-            "Route en travaux"
+            "Chaussée déformée"
           ],
-          "correct": 2,
-          "explanation": "Triangle rouge + dispositif surélevé = 'Dispositif(s) surélevé(s)'.",
+          "correct": 0,
+          "explanation": "Un ralentisseur ou un plateau surélevé se trouve devant vous.",
           "sign": "A14"
         },
         {
@@ -949,13 +930,12 @@
           "id": "A1Q79",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Succession de virages dangereux",
-            "Chaussée glissante selon les conditions",
-            "Zone de freinage d'urgence",
-            "Route verglacée tout l'hiver"
+            "Chaussée glissante",
+            "Virages successifs",
+            "Zone de freinage"
           ],
-          "correct": 1,
-          "explanation": "Le panneau additionnel précise les conditions (pluie, gel…) dans lesquelles la chaussée peut être glissante.",
+          "correct": 0,
+          "explanation": "Le revêtement peut être glissant, surtout par temps humide : ralentissez et évitez les freinages brusques.",
           "sign": "A15"
         },
         {
@@ -1001,13 +981,12 @@
           "id": "A1Q83",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Zone de danger permanent",
-            "Danger non déterminé par symbole",
+            "Danger non précisé",
             "Fin de zone dangereuse",
-            "Interdiction de circuler"
+            "Circulation interdite"
           ],
-          "correct": 1,
-          "explanation": "Triangle + point d'exclamation sans symbole = danger générique, le panneau en dessous précise la nature.",
+          "correct": 0,
+          "explanation": "Un panneau additionnel placé dessous précise la nature du danger.",
           "sign": "A51"
         },
         {
@@ -1027,26 +1006,24 @@
           "id": "A1Q85",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Réserve naturelle",
-            "Chasse autorisée",
-            "Zone de forêt",
-            "Traversée de gros gibier"
+            "Traversée de gros gibier",
+            "Réserve naturelle proche",
+            "Zone de chasse autorisée"
           ],
-          "correct": 3,
-          "explanation": "Triangle rouge + cerf = 'Traversée de gros gibier'.",
+          "correct": 0,
+          "explanation": "Cerfs et sangliers peuvent traverser : ralentissez, surtout à l'aube et au crépuscule.",
           "sign": "A27"
         },
         {
           "id": "A1Q87",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Gare ferroviaire à proximité",
-            "Passage à niveau avec barrières",
-            "Croisement de voies ferrées sur la route",
-            "Arrêt de tram à proximité"
+            "Croisement de voie ferrée",
+            "Gare située à proximité",
+            "Arrêt de tram plus loin"
           ],
-          "correct": 2,
-          "explanation": "Triangle rouge + voie ferrée sur chaussée = 'Croisement par voies ferrées sur la chaussée'.",
+          "correct": 0,
+          "explanation": "Un train ou un tram peut croiser la route à cet endroit.",
           "sign": "A49"
         },
         {
@@ -1090,15 +1067,14 @@
         },
         {
           "id": "A1Q91",
-          "question": "Vous voyez un panneau de travaux. Que devez-vous anticiper ?",
+          "question": "Vous voyez ce panneau. Que devez-vous anticiper ?",
           "choices": [
-            "Rien de particulier, la route est normale",
-            "Des ouvriers, des engins, un rétrécissement",
-            "Un changement de limitation de vitesse",
-            "La fermeture complète de la route"
+            "Des ouvriers et des engins",
+            "Une route parfaitement libre",
+            "Une fermeture de la route"
           ],
-          "correct": 1,
-          "explanation": "Une zone de travaux peut comporter des ouvriers, des engins, un rétrécissement de la chaussée et un revêtement dégradé.",
+          "correct": 0,
+          "explanation": "Chantier en cours : ralentissez, la chaussée peut être rétrécie et des ouvriers présents.",
           "sign": "A31"
         },
         {
@@ -1116,15 +1092,14 @@
         },
         {
           "id": "A1Q93",
-          "question": "Vous voyez un panneau signalant un vent latéral. Comment adaptez-vous votre conduite ?",
+          "question": "Vous voyez ce panneau. Comment adaptez-vous votre conduite ?",
           "choices": [
-            "Vous accélérez pour vous stabiliser",
-            "Vous tenez le volant et ralentissez",
-            "Vous ouvrez les fenêtres",
-            "Vous allumez vos feux de croisement"
+            "Tenir le volant et ralentir",
+            "Accélérer pour se stabiliser",
+            "Ouvrir les fenêtres en grand"
           ],
-          "correct": 1,
-          "explanation": "Tenir le volant et adapter la vitesse protège contre le vent latéral.",
+          "correct": 0,
+          "explanation": "Le vent latéral peut déporter le véhicule : ralentissez et tenez fermement le volant.",
           "sign": "A37"
         },
         {
@@ -1207,28 +1182,25 @@
         },
         {
           "id": "A1Q100",
-          "question": "Vous voyez un panneau bleu avec la lettre « N » suivie d'un chiffre. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Autoroute nationale à l'approche",
-            "Chaussée ordinaire, route nationale",
-            "Route régionale à accès réservé",
-            "Voie rapide à accès limité"
+            "Une route nationale",
+            "Une autoroute",
+            "Une voie rapide"
           ],
-          "correct": 1,
-          "explanation": "Ce panneau indique une chaussée ordinaire (fin d'une règle spéciale).",
+          "correct": 0,
+          "explanation": "La lettre N suivie d'un chiffre désigne une route nationale, qui est une chaussée ordinaire.",
           "sign": "F23a"
         },
         {
           "id": "A1Q101",
-          "question": "Vous voyez un panneau de voie sans issue. Pouvez-vous y entrer avec votre voiture ?",
+          "question": "Vous voyez ce panneau. Pouvez-vous y entrer avec votre voiture ?",
           "choices": [
-            "Non, il est interdit d'y pénétrer",
-            "Oui, mais vous devrez faire demi-tour",
-            "Non, la route est en travaux",
-            "Oui, mais sans pouvoir stationner"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
-          "explanation": "Voie sans issue = vous pouvez entrer mais devrez faire demi-tour.",
+          "correct": 0,
+          "explanation": "Rien n'interdit d'y entrer, mais la rue n'a pas d'issue : vous devrez faire demi-tour.",
           "sign": "F45"
         },
         {
@@ -1259,15 +1231,14 @@
         },
         {
           "id": "A1_SIGN_A16_1",
-          "question": "Vous apercevez un panneau triangulaire montrant une route montante à forte pente. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Une descente dangereuse à venir",
-            "Une montée à forte inclinaison vous attend",
-            "La présence d'un ralentisseur",
-            "Un dos d'âne sur la chaussée"
+            "Une montée à forte pente",
+            "Une descente dangereuse",
+            "Un ralentisseur au sol"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A16 (triangle rouge) annonce une montée à forte inclinaison. Le pourcentage indiqué précise la déclivité.",
+          "correct": 0,
+          "explanation": "La côte est raide : rétrogradez à temps pour garder de la puissance.",
           "destination": "panneaux",
           "sign": "A5"
         },
@@ -1301,242 +1272,225 @@
         },
         {
           "id": "A1_SIGN_A31_1",
-          "question": "Vous voyez un triangle rouge contenant une croix de Saint-André sans barrière dessinée. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Un passage à niveau équipé de barrières automatiques",
-            "Un passage à niveau sans barrières ni demi-barrières : redoublez de vigilance",
-            "Une traversée de voie de tramway",
-            "Un passage piétons avec priorité absolue"
+            "Passage à niveau sans barrières",
+            "Passage à niveau avec barrières",
+            "Traversée de voie de tramway"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A31 signale un passage à niveau sans barrières ni demi-barrières. C'est une situation particulièrement dangereuse : doublez votre vigilance.",
+          "correct": 0,
+          "explanation": "Aucune barrière ne protège la voie : regardez des deux côtés et ne vous engagez qu'à coup sûr.",
           "destination": "panneaux",
           "sign": "A43",
           "severe": true
         },
         {
           "id": "A1_SIGN_A33_1",
-          "question": "Vous voyez un triangle rouge contenant un tramway. Comment devez-vous réagir ?",
+          "question": "Que devez-vous faire en voyant ce panneau ?",
           "choices": [
-            "Accélérer pour passer avant le tram éventuel",
-            "Ralentir car une traversée de tramway est signalée à cet endroit",
-            "Klaxonner pour avertir le conducteur du tram",
-            "Ne rien faire, le tram s'arrête toujours aux intersections"
+            "Ralentir et vérifier la voie",
+            "Accélérer pour passer avant",
+            "Klaxonner pour avertir"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A33 annonce une traversée de tramway. Le tram a toujours la priorité sur les autres usagers à cet endroit.",
+          "correct": 0,
+          "explanation": "Un tram ou un train peut croiser la route : ralentissez et cédez le passage.",
           "destination": "panneaux",
           "sign": "A49",
           "severe": true
         },
         {
           "id": "A1_SIGN_A35_1",
-          "question": "Vous voyez un triangle rouge avec un point d'exclamation ou un carrefour à configuration inhabituelle. Que signifie-t-il ?",
+          "question": "Que devez-vous faire en voyant ce panneau ?",
           "choices": [
-            "Un passage à niveau à proximité",
-            "Un carrefour dangereux nécessitant une prudence accrue",
-            "Une intersection où vous avez la priorité absolue",
-            "Une zone de travaux temporaire"
+            "Ralentir et lire le panneau additionnel",
+            "Continuer sans changer votre allure",
+            "Vous arrêter immédiatement sur place"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A35 indique un carrefour dangereux où la configuration particulière (mauvaise visibilité, angle aigu…) impose une prudence accrue.",
+          "correct": 0,
+          "explanation": "Le danger n'est pas précisé par le symbole : c'est le panneau additionnel placé dessous qui l'indique.",
           "destination": "panneaux",
           "sign": "A51"
         },
         {
           "id": "A1_SIGN_A41_1",
-          "question": "Vous voyez un triangle rouge contenant le mot « STOP » suivi d'une distance. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Vous devez vous arrêter immédiatement à cet endroit",
-            "Un panneau STOP se trouve à la distance indiquée : commencez à ralentir",
-            "La priorité de droite est rétablie à partir de ce point",
-            "Un carrefour giratoire se situe à la distance indiquée"
+            "Un STOP à la distance indiquée",
+            "Un arrêt immédiat à cet endroit",
+            "Un giratoire à l'approche"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A41 est un panneau de pré-signalisation : il annonce qu'un panneau STOP se trouve à la distance mentionnée. Commencez à ralentir.",
+          "correct": 0,
+          "explanation": "Le STOP n'est pas ici mais plus loin : commencez à ralentir.",
           "destination": "panneaux",
           "sign": "B7",
           "severe": true
         },
         {
           "id": "A1_SIGN_A47_1",
-          "question": "Vous voyez un triangle rouge avec plusieurs voitures serrées (file). Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Une zone de travaux avec circulation alternée",
-            "Un risque de formation de bouchon : réduisez votre vitesse",
-            "Un parking complet à proximité",
-            "Un croisement de routes très fréquenté avec feux"
+            "Un risque de bouchon",
+            "Un parking complet",
+            "Une zone de travaux"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A47 prévient d'un risque de congestion (bouchon). Réduisez votre vitesse et maintenez vos distances de sécurité.",
+          "correct": 0,
+          "explanation": "Une file peut se former : réduisez votre vitesse et gardez vos distances.",
           "destination": "panneaux",
           "sign": "A50"
         },
         {
           "id": "A1_SIGN_A49_1",
-          "question": "Vous voyez un panneau triangulaire représentant un cerf bondissant. Que devez-vous anticiper ?",
+          "question": "Que devez-vous anticiper en voyant ce panneau ?",
           "choices": [
-            "L'entrée dans une réserve naturelle protégée interdite aux véhicules",
-            "Des animaux sauvages pourraient traverser la route : ralentissez",
-            "Un élevage de cerfs se trouve à proximité",
-            "Une zone de chasse : utilisez votre klaxon"
+            "Des animaux sauvages sur la route",
+            "Un élevage de cerfs à proximité",
+            "Une zone de chasse ouverte"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A49 signale que des animaux sauvages (cerfs, chevreuils, sangliers…) peuvent traverser. Ralentissez et restez vigilant.",
+          "correct": 0,
+          "explanation": "Du gros gibier peut traverser : ralentissez et soyez prêt à freiner.",
           "destination": "panneaux",
           "sign": "A27"
         },
         {
           "id": "A1_SIGN_D1__1",
-          "question": "Vous arrivez à un carrefour avec un panneau rond bleu montrant une flèche tout droit et une flèche à droite. Que devez-vous faire ?",
+          "question": "Que vous impose ce panneau ?",
           "choices": [
-            "Vous êtes obligé d'aller tout droit uniquement",
-            "Vous pouvez aller tout droit ou tourner à droite, mais tourner à gauche est interdit",
-            "Vous devez obligatoirement tourner à droite",
-            "Vous pouvez faire demi-tour"
+            "Aller tout droit ou à droite",
+            "Tourner à droite, sans autre choix",
+            "Aller tout droit, sans tourner"
           ],
-          "correct": 1,
-          "explanation": "D1c impose d'aller tout droit ou de tourner à droite. Tourner à gauche est interdit à cet endroit.",
-          "destination": "panneaux",
-          "sign": "D3b"
-        },
-        {
-          "id": "A1_SIGN_D1__2",
-          "question": "Vous arrivez à un carrefour avec un panneau rond bleu montrant une flèche tout droit et une flèche à gauche. Que devez-vous faire ?",
-          "choices": [
-            "Vous êtes obligé d'aller tout droit uniquement",
-            "Vous pouvez aller tout droit ou tourner à gauche, mais tourner à droite est interdit",
-            "Vous devez obligatoirement tourner à gauche",
-            "Toutes les directions sont autorisées"
-          ],
-          "correct": 1,
-          "explanation": "D1d impose d'aller tout droit ou de tourner à gauche. Tourner à droite est interdit à cet endroit.",
+          "correct": 0,
+          "explanation": "Ce panneau autorise deux directions : tout droit et à droite. Tourner à gauche est interdit.",
           "destination": "panneaux",
           "sign": "D3a"
         },
         {
-          "id": "A1_SIGN_D3_1",
-          "question": "Vous voyez un panneau rond bleu avec une flèche contournant un obstacle par la droite. Que devez-vous faire ?",
+          "id": "A1_SIGN_D1__2",
+          "question": "Que vous impose ce panneau ?",
           "choices": [
-            "Dépasser obligatoirement par la gauche",
-            "Contourner l'obstacle par la droite comme indiqué",
-            "La priorité est à droite à cet endroit",
-            "Emprunter le sens giratoire obligatoirement"
+            "Aller tout droit ou à gauche",
+            "Tourner à gauche, sans autre choix",
+            "Aller tout droit, sans tourner"
           ],
-          "correct": 1,
-          "explanation": "D3 impose le contournement d'un obstacle (îlot, refuge piéton…) par la droite. Passer à gauche de cet obstacle est interdit.",
+          "correct": 0,
+          "explanation": "Ce panneau autorise deux directions : tout droit et à gauche. Tourner à droite est interdit.",
+          "destination": "panneaux",
+          "sign": "D3b"
+        },
+        {
+          "id": "A1_SIGN_D3_1",
+          "question": "Que vous impose ce panneau ?",
+          "choices": [
+            "Contourner l'obstacle par la droite",
+            "Contourner l'obstacle par la gauche",
+            "Vous arrêter avant l'obstacle"
+          ],
+          "correct": 0,
+          "explanation": "L'obstacle doit être contourné du côté indiqué par la flèche, ici par la droite.",
           "destination": "panneaux",
           "sign": "D1f"
         },
         {
           "id": "A1_SIGN_D9_1",
-          "question": "Vous voyez un panneau rond bleu avec un piéton. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Passage pour piétons : vous devez vous arrêter",
-            "Chemin réservé exclusivement aux piétons, aucun véhicule n'y a accès",
-            "Les piétons sont autorisés à traverser à cet endroit",
-            "Zone piétonne temporaire pendant certaines heures"
+            "Chemin obligatoire pour piétons",
+            "Passage pour piétons à traverser",
+            "Zone piétonne aux heures creuses"
           ],
-          "correct": 1,
-          "explanation": "D9 indique un chemin ou trottoir réservé exclusivement aux piétons. Les cyclistes et véhicules n'y ont pas accès.",
+          "correct": 0,
+          "explanation": "Ce chemin est réservé aux piétons, qui doivent l'emprunter. Les véhicules n'y ont pas accès.",
           "destination": "panneaux",
           "sign": "D11"
         },
         {
           "id": "A1_SIGN_D10_1",
-          "question": "Vous voyez un panneau rond bleu avec un piéton et un cycliste côte à côte, non séparés. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Les piétons et cyclistes sont tous deux interdits",
-            "Chemin mixte : piétons et cyclistes partagent la même surface",
-            "Voie cyclable avec un trottoir latéral séparé",
-            "Piste cyclable exclusive interdite aux piétons"
+            "Chemin partagé piétons et cyclistes",
+            "Piste cyclable interdite aux piétons",
+            "Trottoir interdit aux cyclistes"
           ],
-          "correct": 1,
-          "explanation": "D10 indique un chemin mixte piétons/cyclistes non séparé. Les deux usagers partagent le même espace et doivent se respecter mutuellement.",
+          "correct": 0,
+          "explanation": "Piétons et cyclistes empruntent la même surface : chacun tient compte de l'autre.",
           "destination": "panneaux",
           "sign": "D10"
         },
         {
           "id": "A1_SIGN_D11_1",
-          "question": "Vous voyez un panneau rond bleu avec un piéton à gauche et un cycliste à droite, séparés par un trait. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Les piétons uniquement à gauche, pas de vélos autorisés",
-            "Chemin séparé : piétons à gauche, cyclistes à droite",
-            "Les cyclistes ont priorité sur les piétons",
-            "Sens unique pour piétons et cyclistes"
+            "Chemin séparé piétons et cyclistes",
+            "Chemin partagé sans séparation",
+            "Chemin réservé aux cyclistes"
           ],
-          "correct": 1,
-          "explanation": "D11 indique un chemin séparé en deux parties : côté gauche pour les piétons, côté droit pour les cyclistes. Chacun reste dans sa partie.",
+          "correct": 0,
+          "explanation": "Le trait de séparation indique que chacun a son côté : les piétons d'un côté, les cyclistes de l'autre.",
           "destination": "panneaux",
           "sign": "D9b"
         },
         {
           "id": "A1_SIGN_F5_1",
-          "question": "Vous voyez un panneau bleu rectangulaire indiquant une impasse. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Fin d'autoroute à l'approche",
-            "Sens unique dans cette direction",
-            "Impasse : la rue n'a pas d'issue et vous devrez faire demi-tour",
-            "Accès réservé aux riverains de cette rue"
+            "Une voie sans issue",
+            "Un sens unique",
+            "Une fin d'autoroute"
           ],
-          "correct": 1,
-          "explanation": "F5 indique que la voie est une impasse. Elle ne mène nulle part et vous devrez faire demi-tour. Entrez seulement si vous avez une raison d'y aller.",
+          "correct": 0,
+          "explanation": "La rue n'a pas d'issue : vous devrez faire demi-tour pour en ressortir.",
           "destination": "panneaux",
           "sign": "F45"
         },
         {
           "id": "A1_SIGN_CHEVRONS_1",
-          "question": "Vous voyez des chevrons ou des hachures peints au sol. Que signifient-ils ?",
+          "question": "Que signifient ces chevrons peints au sol ?",
           "choices": [
-            "Zone où le dépassement est autorisé",
-            "Zone où il est interdit de circuler, de stationner ou même de chevaucher",
-            "Voie réservée aux cyclistes",
-            "Bande de sécurité sur laquelle vous pouvez rouler lentement"
+            "Une zone interdite à la circulation",
+            "Une zone de dépassement autorisé",
+            "Une bande réservée aux cyclistes"
           ],
-          "correct": 1,
-          "explanation": "Les chevrons ou hachures au sol délimitent une zone où il est interdit de circuler, stationner ou même chevaucher. Ils se trouvent souvent aux bifurcations ou îlots directionnels.",
+          "correct": 0,
+          "explanation": "On ne peut ni y circuler, ni y stationner, ni même la chevaucher.",
           "destination": "panneaux",
           "sign": "CHEVRONS"
         },
         {
           "id": "A1_SIGN_FLECHE_SOL_GAUCHE_1",
-          "question": "Vous circulez sur une voie où une flèche au sol pointe vers la gauche. Que vous impose-t-elle ?",
+          "question": "Que vous impose cette flèche au sol ?",
           "choices": [
-            "La voie est en sens unique vers la droite",
-            "Vous devez obligatoirement tourner à gauche sur cette voie",
-            "Le dépassement par la gauche est autorisé",
-            "C'est une simple suggestion : vous pouvez aussi continuer tout droit"
+            "Tourner obligatoirement à gauche",
+            "Une simple suggestion de direction",
+            "Un dépassement autorisé à gauche"
           ],
-          "correct": 1,
-          "explanation": "La flèche au sol indiquant la gauche est une obligation : tous les véhicules sur cette voie doivent tourner à gauche. Choisissez la bonne voie à l'avance.",
+          "correct": 0,
+          "explanation": "Une flèche de sélection au sol est obligatoire : cette voie impose de tourner à gauche.",
           "destination": "panneaux",
           "sign": "FLECHE_SOL_GAUCHE"
         },
         {
           "id": "A1_SIGN_FLECHE_SOL_TOUT_DROIT_1",
-          "question": "Vous circulez sur une voie où une flèche au sol pointe tout droit. Que signifie-t-elle ?",
+          "question": "Que vous impose cette flèche au sol ?",
           "choices": [
-            "La voie est réservée aux poids lourds allant tout droit",
-            "Vous devez obligatoirement continuer tout droit sur cette voie",
-            "Vous pouvez aller tout droit ou tourner à droite",
-            "C'est une indication non contraignante"
+            "Continuer obligatoirement tout droit",
+            "Une voie réservée aux poids lourds",
+            "Une simple indication de direction"
           ],
-          "correct": 1,
-          "explanation": "La flèche au sol \"tout droit\" oblige à continuer dans la direction indiquée. Si vous voulez tourner, vous devez vous placer sur une voie dont la flèche correspond à votre intention.",
+          "correct": 0,
+          "explanation": "Cette voie impose de continuer tout droit : il faut changer de bande avant pour tourner.",
           "destination": "panneaux",
           "sign": "FLECHE_SOL_TOUT_DROIT"
         },
         {
           "id": "A1_SIGN_A21_1",
-          "question": "Vous voyez un triangle rouge contenant la silhouette d'un cycliste. Que devez-vous anticiper ?",
+          "question": "Que devez-vous anticiper en voyant ce panneau ?",
           "choices": [
-            "Une piste cyclable obligatoire commence",
-            "Des cyclistes peuvent traverser ou circuler sur la route : soyez vigilant",
-            "Les cyclistes sont interdits sur cette section",
-            "Une course cycliste est en cours : priorité absolue aux vélos"
+            "Des cyclistes qui traversent",
+            "Une piste cyclable qui débute",
+            "Une course cycliste en cours"
           ],
-          "correct": 1,
-          "explanation": "Le panneau A21 avertit de la présence potentielle de cyclistes sur ou traversant la chaussée. Réduisez votre vitesse et soyez prêt à céder le passage.",
+          "correct": 0,
+          "explanation": "Des cyclistes et cyclomotoristes peuvent traverser la chaussée : ralentissez et soyez prêt à céder le passage.",
           "destination": "panneaux",
           "sign": "A25",
           "severe": true

@@ -224,7 +224,9 @@ export function shuffleChoices(q: LocalQuestion): { choices: string[]; correct: 
  * telle quelle — on ne complète jamais pour atteindre un quota.
  */
 export function reduceQuestion(q: LocalQuestion): LocalQuestion {
-  if (!Array.isArray(q.choices) || q.choices.length <= CHOICES_SHOWN) return q;
+  // A partir de 3 propositions on melange aussi : sans ca, une question ecrite
+  // avec sa bonne reponse en premier la garderait en premiere position a vie.
+  if (!Array.isArray(q.choices) || q.choices.length <= 2) return q;
   const { choices, correct } = shuffleChoices(q);
   return { ...q, choices: choices, correct };
 }

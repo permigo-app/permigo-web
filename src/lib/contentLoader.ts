@@ -85,10 +85,16 @@ export async function localizeTheme(frTheme: LocalTheme, lang: 'fr' | 'nl'): Pro
     const localizedQuestions: LocalQuestion[] = frLesson.questions.map(q => {
       const nlQ = nlQMap.get(q.id);
       if (!nlQ || !nlQ['question']) return q;
+      // Le NL remplace les propositions en bloc, mais l index de la bonne
+      // reponse vient du FR. Si les deux versions n ont pas le meme nombre de
+      // propositions, cet index designerait la mauvaise reponse en neerlandais.
+      // Dans ce cas on renonce a traduire la question plutot que de la fausser.
+      const nlChoices = nlQ['choices'] as string[] | undefined;
+      if (!Array.isArray(nlChoices) || nlChoices.length !== q.choices.length) return q;
       return {
         ...q,
         question: nlQ['question'] as string,
-        choices: nlQ['choices'] as string[],
+        choices: nlChoices,
         ...(nlQ['explanation'] ? { explanation: nlQ['explanation'] as string } : {}),
       };
     });
