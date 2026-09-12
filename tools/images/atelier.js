@@ -108,6 +108,10 @@ async function takeFileForJob(job, src) {
     throw new Error('doublon détecté — rien n\'a été écrit');
   }
   state.hashes[hash] = job.id;
+  // Journal des images produites DEPUIS l'audit visuel : reprendre.js s'en sert pour
+  // ne jamais remettre au plan une image qui vient d'être refaite.
+  state.reprises = state.reprises || [];
+  if (!state.reprises.includes(job.id)) state.reprises.push(job.id);
   saveState();
 
   const outAbs = path.join(ROOT, 'public', job.out.replace(/^\//, ''));

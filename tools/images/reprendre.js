@@ -54,6 +54,16 @@ const theoAmel    = ONLY_QUEST ? {} : load('theorie-a-ameliorer.json');
 const questRefaire = ONLY_THEO ? {} : load('a-refaire.json');
 const questAmel    = ONLY_THEO ? {} : load('a-ameliorer.json');
 
+// Images déjà reproduites DEPUIS L'AUDIT : atelier.js les journalise dans
+// state.json → reprises. On ne les remet jamais au plan, sinon chaque passage de
+// reprendre.js effacerait le travail qui vient d'être fait.
+// (state.hashes ne convient pas : il remonte au tout début du projet et contient
+// aussi les images d'avant l'audit, qui elles doivent bien être reprises.)
+const STATE = path.join(__dirname, 'state.json');
+const dejaFaites = new Set(
+  fs.existsSync(STATE) ? (JSON.parse(fs.readFileSync(STATE, 'utf8')).reprises || []) : []
+);
+
 const rattachees = new Set();
 const codes = ORDRE.filter(c => !THEME || c === THEME);
 const tot = { tR: 0, tA: 0, tImg: 0, qR: 0, qA: 0, qImg: 0 };
@@ -73,6 +83,7 @@ for (const code of codes) {
     (lesson.theory || []).forEach((partie, pi) => {
       (partie.cards || []).forEach((card, ci) => {
         if (!card.image) return;
+        if (dejaFaites.has(`CARD_${lesson.id}_p${pi}_c${ci}`)) return;
         const base = card.image.split('/').pop().replace(/\.webp$/, '');
         const estRefaire = theoRefaire[base] !== undefined;
         const scene = estRefaire ? theoRefaire[base] : theoAmel[base];
@@ -89,6 +100,7 @@ for (const code of codes) {
   // --- 2. PUIS LES QUESTIONS ---
   for (const lesson of data.lessons) {
     for (const q of lesson.questions) {
+      if (dejaFaites.has(q.id)) continue;
       const estRefaire = questRefaire[q.id] !== undefined;
       const scene = estRefaire ? questRefaire[q.id] : questAmel[q.id];
       if (scene === undefined) continue;
