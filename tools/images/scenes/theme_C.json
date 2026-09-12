@@ -1,463 +1,394 @@
 {
- "_comment": "Scènes thème C (La voiture) — MMA/MEC, équipements, chargement, ceintures/DRA, angle mort, feux/klaxon. Beaucoup de questions C1/C2/C3 testent des chiffres précis ou des choix binaires directement visibles (ex: quel côté, quelle jauge) : dans ces cas -> null pour ne jamais trahir la réponse. Les badges/flèches Modèle 3 ne servent qu'à enseigner un fait sur une CARTE, jamais à confirmer la bonne réponse d'une QUESTION.",
- "C1_Q1": "Une voiture particulière, un minibus et une camionnette garés côte à côte sur un parking belge, tailles raisonnables et comparables.",
- "C1_Q3": {
-  "model": 3,
-  "scene": "Une voiture particulière garée normalement sur un parking belge, vue neutre. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q5": "Une voiture avec un signe L blanc sur fond bleu à l'arrière, garée à côté d'une voiture identique sans signe L.",
- "C1_Q6": "Gros plan sur un certificat d'immatriculation belge tenu en main, flou artistique sur les mentions précises pour ne pas les rendre lisibles.",
- "C1_Q8": {
-  "model": 3,
-  "scene": "Une voiture neuve chez un concessionnaire ou dans un garage générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q9": "Une voiture nettement surchargée, suspension arrière visiblement affaissée sous le poids de nombreux bagages entassés.",
- "C1_Q10": "Une petite citadine et un grand SUV garés côte à côte pour comparaison de gabarit.",
- "C1_Q11": {
-  "model": 1,
-  "scene": "Route pour automobiles avec un portique électronique affichant deux vitesses différentes selon le type de véhicule, une voiture particulière roulant dessous — la configuration à deux valeurs est le sujet, sans chiffre net affiché."
- },
- "C1_Q12": "Un panneau réel rond d'interdiction de dépasser avec un panneau additionnel « > 3,5t », une voiture particulière clairement légère roulant en dessous sans y prêter attention.",
- "C1_Q15": "Gros plan sur un certificat d'immatriculation belge tenu en main, flou artistique sur le détail exact des mentions.",
- "C1_Q16": {
-  "model": 3,
-  "scene": "Une voiture avec le coffre ouvert, des bagages en train d'être chargés avant un voyage. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q17": {
-  "model": 3,
-  "scene": "Une voiture particulière générique roulant sur une route belge ordinaire. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q19": "Une voiture visiblement surchargée, coffre qui ne ferme plus, suspension enfoncée.",
- "C1_Q20": {
-  "model": 3,
-  "scene": "Une voiture chargée de bagages, des passagers montant à bord avant un départ. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q21": {
-  "model": 3,
-  "scene": "Une voiture chargée de bagages roulant sur une route belge ordinaire. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q22": "Un pont de campagne avec un panneau rond réel de limitation de masse, une voiture particulière légère s'apprêtant à s'y engager.",
- "C1_Q23": "Le même pont avec panneau de limitation de masse, cette fois un camion chargé, visiblement lourd, hésitant devant le panneau.",
- "C1_Q25": "Un panneau réel rond d'interdiction avec un panneau additionnel indiquant une masse, un camion à la benne ouverte et manifestement vide roulant en dessous.",
- "C1_Q26": "Gros plan sur un triangle de danger rouge et blanc, plié, rangé dans le coffre d'une voiture.",
- "C1_Q27": "Gros plan sur une trousse de secours blanche à croix rouge, rangée dans une voiture.",
- "C1_Q28": "Gros plan sur un extincteur rouge fixé sous le siège conducteur d'une voiture.",
- "C1_Q29": "Gros plan sur un extincteur rouge facilement accessible sous le siège conducteur d'une voiture, une main qui l'attrape.",
- "C1_Q30": "Un extincteur dont le manomètre indique clairement une pression partielle (aiguille pas au maximum), suggérant une utilisation partielle antérieure.",
- "C1_Q32": "Gros plan sur un gilet de sécurité jaune fluo plié, rangé dans la boîte à gants d'une voiture.",
- "C1_Q33": "Deux options comparées dans une même voiture : un gilet jaune visible dans l'habitacle (boîte à gants ouverte) et un coffre fermé à l'arrière.",
- "C1_Q35": {
-  "model": 3,
-  "scene": "Un coffre de voiture fermé, vu de l'extérieur, sans indice sur son contenu. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q36": "Vue d'ensemble dans une voiture : un extincteur au manomètre partiel visible, et un gilet de sécurité rangé dans le coffre à l'arrière (visible par le hayon ouvert) plutôt que dans l'habitacle.",
- "C1_Q37": "Un conducteur enfile son gilet jaune fluo en sortant de sa voiture arrêtée sur la bande d'arrêt d'urgence d'une autoroute.",
- "C1_Q38": "Un conducteur tient sa carte d'identité et son permis de conduire en main, prêt pour un contrôle routier.",
- "C1_Q39": "Un conducteur montre son permis de conduire physique à un agent de police lors d'un contrôle.",
- "C1_Q40": "Un conducteur montre une attestation de perte de permis (papier administratif) à un agent, qui secoue la tête.",
- "C1_Q42": "Une pochette de documents de voiture posée ouverte sur le tableau de bord.",
- "C1_Q44": "Sur un tableau de bord : des documents papier originaux posés à côté d'un téléphone affichant un certificat d'assurance numérique.",
- "C1_Q45": "Un conducteur montre l'écran de son téléphone affichant un certificat d'assurance en PDF à un agent de police.",
- "C1_Q49": {
-  "model": 3,
-  "scene": "Une pochette de documents fermée posée sur le tableau de bord d'une voiture. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q50": "Une voiture avec plaque belge et signe L franchissant un panneau de frontière européenne générique.",
- "C1_Q52": {
-  "model": 3,
-  "scene": "Une voiture chargée de valises devant une maison, prête pour un départ en vacances à l'étranger. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C1_Q53": "Un panneau carré bleu réel avec une lettre P blanche, une voiture stationnée régulièrement en dessous sur une rue calme.",
- "C1_Q54": "Un panneau de stationnement réel avec un panonceau additionnel indiquant une masse, un camion garé dessous, une voiture légère qui continue son chemin sans se garer.",
- "C1_Q56": "Vue conducteur : un panneau rond réel de limitation de vitesse, une intersection routière visible plus loin sur la même route.",
- "C1_Q59": "Un panneau rond réel d'interdiction avec un chiffre de masse, un camion chargé hésitant devant, une voiture légère continuant son chemin.",
- "C1_Q61": "Un panneau rond réel d'interdiction avec une flèche barrée vers la gauche, une voiture roulant tout droit à un carrefour sans tourner.",
- "C1_Q63": "Un panneau réel rond d'interdiction de tourner à droite avec panneau additionnel « 3,5t », une voiture particulière légère au carrefour.",
- "C1_Q64": "Un panneau rond réel d'interdiction avec la silhouette d'un camion, ce dernier faisant demi-tour tandis qu'une voiture particulière passe librement.",
- "C1_Q65": "Le même panneau avec un panonceau additionnel de masse, une petite camionnette légère continuant son chemin tandis qu'un gros camion chargé s'arrête.",
- "C1_Q68": "Un panneau rond réel d'interdiction de tourner à gauche, sans aucun panonceau, une voiture légère roulant tout droit au carrefour sans tourner.",
- "C1_Q69": "Un panneau de stationnement réel avec panonceau additionnel « 3,5t », une voiture particulière légère continuant son chemin sans se garer.",
- "C1_Q71": "Un panneau réel rond d'interdiction avec panonceau « 3t », une camionnette visiblement chargée et lourde à l'arrêt devant.",
- "C1_PROV_1": "Une voiture avec signe L, de nuit, garée devant une maison — scène calme évoquant l'immobilisation nocturne du permis provisoire.",
- "C1_PROV_2": "Vue conducteur de nuit dans une voiture avec signe L, un adulte accompagnateur assis sur le siège passager, horloge de bord générique sans chiffre net.",
- "C1_PROV_3": {
-  "model": 3,
-  "scene": "Une voiture avec signe L garée dans une rue résidentielle calme en fin de soirée, ciel crépusculaire. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "CARD_C1_p0_c0": "Une voiture particulière, une voiture mixte, un minibus et une camionnette garés côte à côte sur un parking belge.",
- "CARD_C1_p0_c1": "Gros plan sur un certificat d'immatriculation belge tenu en main, flou artistique sur les mentions précises.",
- "CARD_C1_p0_c2": "Une voiture particulière posée sur un pont bascule générique dans un garage, aiguille du cadran floutée.",
- "CARD_C1_p0_c3": "Une chaîne de montage automobile générique, une voiture neuve en cours de fabrication en usine.",
- "CARD_C1_p0_c4": "Une voiture citadine visiblement surchargée, suspension affaissée, à côté d'un grand SUV non chargé pour comparaison de gabarit.",
- "CARD_C1_p0_c5": "Un panneau réel rond d'interdiction avec panonceau additionnel « > 3,5t », une voiture particulière légère passant en dessous sans y prêter attention.",
- "CARD_C1_p1_c0": "Une voiture dont le coffre se remplit de bagages, prête pour un départ en vacances.",
- "CARD_C1_p1_c1": {
-  "model": 3,
-  "scene": "Une voiture particulière générique roulant sur une route belge ordinaire. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "CARD_C1_p1_c2": {
-  "model": 3,
-  "scene": "Une voiture chargée de bagages, des passagers montant à bord avant un départ. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "CARD_C1_p1_c3": "Un pont de campagne avec panneau rond réel de limitation de masse en charge, une voiture particulière légère passant sans encombre tandis qu'un camion chargé de 5 tonnes reste bloqué devant.",
- "CARD_C1_p2_c0": "Un triangle de danger rouge et blanc déplié, posé sur la chaussée à bonne distance derrière une voiture en panne, feux de détresse allumés.",
- "CARD_C1_p2_c1": "Une trousse de secours ouverte, quelqu'un désinfecte une petite blessure au bord de la route près d'un léger incident.",
- "CARD_C1_p2_c2": "Gros plan sur un extincteur rouge sous le siège conducteur, le manomètre affichant une pression partielle.",
- "CARD_C1_p2_c3": "Un conducteur enfile son gilet jaune fluo en sortant de sa voiture arrêtée sur la bande d'arrêt d'urgence d'une autoroute, triangle posé en amont.",
- "CARD_C1_p3_c0": "Un conducteur montre sa carte d'identité et son permis de conduire à un agent de police lors d'un contrôle routier.",
- "CARD_C1_p3_c1": "Un conducteur reste debout à côté de sa voiture garée, une attestation de perte en main, sans prendre le volant.",
- "CARD_C1_p3_c2": "Une boîte à gants ouverte laissant voir une pochette de documents de voiture bien rangée.",
- "CARD_C1_p3_c3": "Sur un tableau de bord : des documents papier originaux posés à côté d'un téléphone affichant un certificat d'assurance numérique.",
- "CARD_C1_p3_c4": "Une voiture avec plaque belge et signe L franchissant un panneau de frontière européenne générique.",
- "CARD_C1_p3_c5": "Une voiture avec signe L blanc sur fond bleu à l'arrière, garée devant une maison, de nuit calme.",
- "C2_Q1": {
-  "model": 1,
-  "scene": "Une voiture avec un grand coffre de toit chargé, roulant vers l'entrée d'un tunnel dont le portique est visible en arrière-plan, sans chiffre affiché."
- },
- "C2_Q2": "Un chargement exceptionnellement volumineux sur le toit d'un véhicule, avec un fanion orange de transport exceptionnel visible.",
- "C2_Q3": "Vue conducteur approchant d'un tunnel avec un panneau réel de limitation de hauteur, une voiture avec coffre de toit chargé roulant devant.",
- "C2_Q4": "Une voiture roulant sur autoroute avec un grand coffre de toit vide, non utilisé, juste installé.",
- "C2_Q5": "Coffre d'une voiture ouvert : des valises lourdes rangées tout en bas, des objets légers empilés au-dessus.",
- "C2_Q6": "Des vélos fixés sur un porte-vélos à l'arrière d'une voiture, plutôt que sur le toit.",
- "C2_Q7": "Vue arrière d'une voiture chargée dont les cartons empilés cachent complètement les feux arrière et la plaque d'immatriculation.",
- "C2_Q8": "Vue arrière d'une voiture avec vélos fixés à l'arrière, la plaque d'immatriculation déplacée sur un support articulé pour rester visible.",
- "C2_Q9": {
-  "model": 1,
-  "scene": "Vue arrière d'une voiture dont le chargement dépasse légèrement de chaque côté de la carrosserie, silhouette large mais raisonnable, sans chiffre affiché."
- },
- "C2_Q10": "Un chargement nettement plus large que la voiture elle-même, avec un fanion orange de transport exceptionnel des deux côtés.",
- "C2_Q11": {
-  "model": 1,
-  "scene": "Vue conducteur sur une route de campagne bordée de haies, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture particulière de gabarit clairement inférieur roulant en dessous."
- },
- "C2_Q12": {
-  "model": 1,
-  "scene": "Sur une route de campagne à ciel ouvert, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), un grand autocar s'en approchant."
- },
- "C2_Q13": "Vue de côté d'une échelle fixée sur les barres de toit, dépassant clairement par l'arrière du véhicule, rien ne dépasse à l'avant.",
- "C2_Q15": "Vue arrière d'une voiture avec un chargement qui dépasse modérément à l'arrière, sans aucun panneau d'avertissement visible.",
- "C2_Q16": "Vue arrière d'une voiture avec de longues planches dépassant nettement à l'arrière, un panneau carré d'avertissement rouge et blanc fixé au bout.",
- "C2_Q17": "Vue arrière d'une voiture avec une longue charge indivisible (poutre) dépassant largement à l'arrière, panneau d'avertissement carré rouge et blanc bien visible fixé à l'extrémité.",
- "C2_Q19": {
-  "model": 3,
-  "scene": "Un coffre de voiture chargé, fermé, chargement débordant légèrement à l'arrière sans détail précis. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q21": "Vue arrière de nuit d'un chargement dépassant, panneau d'avertissement carré éclairé par un feu rouge, catadioptres orange visibles sur les côtés du chargement.",
- "C2_Q22": "Un panneau réel rond de limitation de longueur maximale, un grand autocar s'en approchant.",
- "C2_Q23": "Une voiture tractant une longue caravane, ensemble visiblement long, passant devant un panneau réel de limitation de longueur.",
- "C2_Q24": "Une voiture tractant une remorque simple sur une route belge.",
- "C2_Q25": {
-  "model": 3,
-  "scene": "Vue intérieure du côté conducteur d'une voiture, place générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q26": {
-  "model": 3,
-  "scene": "Vue intérieure du côté passager avant d'une voiture, place générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q27": "Vue intérieure d'une banquette avant de voiture accueillant trois personnes assises côte à côte.",
- "C2_Q29": "Une personne assise dans une voiture règle son appui-tête, main sur le mécanisme de réglage.",
- "C2_Q30": "Une personne assise dans une voiture règle son appui-tête, main sur le mécanisme de réglage.",
- "C2_Q31": "Tous les occupants d'une voiture (conducteur et passagers) attachent leur ceinture avant le départ.",
- "C2_Q32": "Gros plan sur une ceinture de sécurité portée par un conducteur, passant par-dessus l'épaule.",
- "C2_Q34": "Un conducteur tourné vers l'arrière pour effectuer une marche arrière, épaule légèrement dégagée de la ceinture.",
- "C2_Q35": "Un chauffeur de taxi (véhicule marqué taxi) au volant avec un client à l'arrière, en pleine course.",
- "C2_Q36": "Un facteur en uniforme, véhicule de la poste, descendant et remontant fréquemment de son véhicule pour distribuer le courrier.",
- "C2_Q37": "Une ambulance en intervention urgente, gyrophares allumés, roulant en trafic.",
- "C2_Q38": "Une femme enceinte visible au volant d'une voiture, ceinture de sécurité correctement attachée.",
- "C2_Q39": {
-  "model": 3,
-  "scene": "Plusieurs personnes assises dans une voiture (conducteur et passagers), sans mettre en avant l'une d'elles. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q41": "Un enfant installé dans un siège auto rehausseur à l'arrière d'une voiture, ceinture bien ajustée.",
- "C2_Q42": {
-  "model": 3,
-  "scene": "Un enfant assis sur la banquette arrière d'une voiture, vue générique sans détail du dispositif de retenue. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q43": "Un enfant plus grand assis sur la banquette arrière, ceinture de sécurité classique bien ajustée sans siège rehausseur.",
- "C2_Q45": "Un siège auto bébé installé dos à la route sur le siège passager avant, un voyant airbag désactivé visible sur le tableau de bord.",
- "C2_Q47": "Gros plan sur un enfant installé dans un siège auto, la ceinture basse visible sur ses jambes.",
- "C2_Q48": "Un siège auto pour enfant avec une étiquette d'homologation visible (pastille ronde générique, sans texte lisible) cousue sur le tissu.",
- "C2_Q49": "Un enfant d'environ 4 ans, ceinture de sécurité classique attachée sur la banquette arrière, sans siège rehausseur, dans une voiture qui n'est pas celle de ses parents.",
- "C2_Q50": "Un enfant assis avec ceinture classique sur la banquette arrière (pas à l'avant) d'une voiture.",
- "C2_Q51": "Un tout jeune enfant (bébé, environ 2 ans) fermement installé dans un siège auto adapté à sa taille.",
- "C2_Q52": "Banquette arrière avec deux sièges auto installés aux extrémités et un enfant plus grand assis au milieu avec la ceinture classique.",
- "C2_Q53": {
-  "model": 3,
-  "scene": "Un enfant assis sur la banquette arrière d'une voiture, vue générique sans détail. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q54": {
-  "model": 3,
-  "scene": "Un enfant assis sur la banquette arrière d'une voiture, vue générique sans détail. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q55": {
-  "model": 2,
-  "scene": "Vue du dessus d'une voiture avec deux zones ovales rouges marquées de chaque côté, juste en arrière des portières, représentant les angles morts invisibles dans les rétroviseurs. Aucun mot."
- },
- "C2_Q56": "Un conducteur ajuste soigneusement ses deux rétroviseurs extérieurs avant de démarrer.",
- "C2_Q57": "Gros plan sur un rétroviseur extérieur de voiture avec un petit voyant orange allumé dans le coin du miroir.",
- "C2_Q58": "Vue conducteur : un voyant d'angle mort allumé dans le rétroviseur extérieur, une voiture cachée juste à côté dans l'angle mort.",
- "C2_Q59": "Un conducteur tourne la tête par-dessus son épaule pour vérifier visuellement, en plus de son rétroviseur équipé d'un voyant d'angle mort.",
- "C2_Q60": "Un panneau rond réel d'interdiction aux marchandises dangereuses, une route de campagne calme, aucun véhicule concerné à proximité.",
- "C2_Q61": "Un panneau rond réel d'interdiction aux marchandises inflammables ou explosives, une citerne de transport de carburant à l'arrêt devant, n'osant pas s'engager.",
- "C2_Q62": "Un panneau rond réel d'interdiction aux marchandises polluantes, un camion-citerne à l'arrêt devant, n'osant pas s'engager.",
- "C2_Q63": {
-  "model": 3,
-  "scene": "Une route belge générique avec des panneaux ronds flous en arrière-plan, sans détail lisible. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q65": "Une voiture avec un autocollant discret « LPG/GPL » sur la vitre arrière, passant sous un panneau réel d'interdiction aux marchandises dangereuses sans y être concernée.",
- "C2_Q66": "Une voiture avec signe L attelée à une remorque, immobile sur une allée, n'étant pas censée prendre la route ainsi.",
- "C2_Q67": "Une voiture particulière tractant une petite remorque simple sur une route belge.",
- "C2_Q68": {
-  "model": 3,
-  "scene": "Une voiture tractant une remorque générique sur une route belge, sans détail de gabarit. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q69": {
-  "model": 3,
-  "scene": "Une voiture tractant une remorque générique sur une route belge, sans détail de gabarit. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C2_Q71": "Une voiture particulière de taille moyenne tractant une remorque de taille raisonnable, ensemble équilibré sur une route belge.",
- "C2_Q72": "Vue conducteur approchant d'un tunnel avec un panneau rond réel de limitation de hauteur, une voiture avec coffre de toit chargé roulant devant.",
- "C2_Q73": {
-  "model": 1,
-  "scene": "Sur une route étroite en campagne à ciel ouvert, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture de gabarit normal s'en approchant."
- },
- "C2_Q74": "Un panneau rond réel de limitation de longueur, une voiture tractant une caravane s'en approchant.",
- "C2_Q79": "Vue conducteur approchant d'un tunnel avec panneau réel de hauteur maximale, une voiture avec un coffre de toit fin et compact roulant devant.",
- "C2_Q83": "Vue arrière d'une voiture avec un léger dépassement de chargement à l'arrière, sans aucun panneau d'avertissement visible.",
- "C2_CHG_1": {
-  "model": 3,
-  "scene": "Le coffre arrière fermé d'une voiture familiale garée dans une allée, visiblement chargé de bagages sans qu'on en voie le détail. Ajoute un unique badge « ? » discret dans un coin, sans autre mot."
- },
- "C2_CHG_2": "Un conducteur vérifie manuellement l'arrimage de son chargement (sangles) avant de prendre la route.",
- "C2_CHG_3": "Un carton tombé au milieu de la chaussée depuis une voiture en train de s'éloigner, un véhicule qui suit doit freiner brusquement.",
- "C2_CHG_4": "Vue arrière d'une voiture dont le chargement masque partiellement les clignotants arrière.",
- "CARD_C2_p0_c0": "Un conducteur vérifie les sangles d'un chargement bien arrimé dans son coffre, feux arrière et plaque bien visibles.",
- "CARD_C2_p1_c0": {
-  "model": 1,
-  "scene": "Une voiture avec un coffre de toit chargé roulant vers l'entrée d'un tunnel dont le portique est visible en arrière-plan, sans chiffre affiché."
- },
- "CARD_C2_p1_c1": "Vue de profil d'une voiture avec un grand coffre de toit chargé roulant sur autoroute à bonne vitesse.",
- "CARD_C2_p1_c2": "Des vélos fixés sur un porte-vélos à l'arrière d'une voiture, le toit du véhicule resté libre.",
- "CARD_C2_p2_c0": {
-  "model": 1,
-  "scene": "Sur une route à ciel ouvert, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture particulière de gabarit normal s'en approchant."
- },
- "CARD_C2_p3_c0": "Vue avant d'une voiture chargée dont rien ne dépasse à l'avant de la carrosserie.",
- "CARD_C2_p3_c1": {
-  "model": 3,
-  "scene": "Vue arrière d'une voiture avec une échelle dépassant modérément à l'arrière, sans panneau visible. Ajoute un unique badge « 1m » discret, sans autre mot."
- },
- "CARD_C2_p3_c2": {
-  "model": 3,
-  "scene": "Vue arrière d'une voiture avec de longues planches en bois attachées, dépassant nettement à l'arrière du véhicule, un panneau carré d'avertissement rouge et blanc fixé à l'extrémité. Ajoute un unique badge « 3m » discret, sans autre mot."
- },
- "CARD_C2_p3_c3": "Vue arrière de nuit d'un chargement dépassant, panneau d'avertissement carré éclairé par un feu rouge, catadioptres orange visibles sur les côtés.",
- "CARD_C2_p4_c0": "Vue intérieure du côté conducteur, aucun bagage entre le siège et la portière, le conducteur ayant les coudes libres pour manier le volant.",
- "CARD_C2_p4_c1": "Vue intérieure d'une banquette avant de voiture avec exactement trois places assises occupées côte à côte.",
- "CARD_C2_p4_c2": {
-  "model": 3,
-  "scene": "Gros plan sur un appui-tête de siège conducteur vu de profil, bien aligné avec le sommet d'une tête assise devant. Ajoute une unique flèche verte pointant l'alignement correct, sans aucun mot."
- },
- "CARD_C2_p5_c0": {
-  "model": 3,
-  "scene": "Gros plan sur une ceinture de sécurité correctement portée par-dessus l'épaule d'un conducteur. Ajoute une unique flèche verte le long du trajet correct de la ceinture, sans aucun mot."
- },
- "CARD_C2_p5_c1": "Une image en trois parties : à gauche un conducteur tourné en marche arrière, au centre un taxi en service avec un client, à droite une ambulance gyrophares allumés.",
- "CARD_C2_p5_c2": "Une femme enceinte visible au volant d'une voiture, ceinture de sécurité correctement attachée et adaptée.",
- "CARD_C2_p6_c0": "Un enfant installé dans un siège auto rehausseur à l'arrière d'une voiture, ceinture bien ajustée sur ses épaules.",
- "CARD_C2_p6_c1": "Un siège auto bébé installé dos à la route sur le siège passager avant, un voyant airbag désactivé visible sur le tableau de bord.",
- "CARD_C2_p6_c2": {
-  "model": 3,
-  "scene": "Gros plan sur un enfant dans un siège auto avec la ceinture basse bien visible sur les jambes. Ajoute une unique flèche verte montrant le trajet correct de la sangle, sans aucun mot."
- },
- "CARD_C2_p6_c3": "Un enfant d'environ 5 ans assis à l'arrière avec la ceinture classique bien ajustée, dans une voiture qui n'est pas celle de ses parents.",
- "CARD_C2_p7_c0": {
-  "model": 2,
-  "scene": "Vue du dessus d'une voiture avec deux zones ovales rouges marquées de chaque côté, juste en arrière des portières, représentant les angles morts. Aucun mot."
- },
- "CARD_C2_p7_c1": {
-  "model": 3,
-  "scene": "Gros plan sur un rétroviseur extérieur avec un voyant orange allumé, une voiture visible juste dans l'angle mort à côté. Ajoute une unique flèche pointant le voyant, sans aucun mot."
- },
- "CARD_C2_p8_c0": "Trois panneaux ronds réels d'interdiction aux marchandises dangereuses (général, inflammable/explosif, polluant) alignés au bord d'une route, aucun véhicule concerné à proximité.",
- "CARD_C2_p8_c1": "Une voiture avec un autocollant discret « LPG/GPL » sur la vitre arrière, passant sous un panneau réel d'interdiction aux marchandises dangereuses sans y être concernée.",
- "CARD_C2_p8_c2": "Une voiture avec signe L attelée à une remorque, immobile sur une allée, n'étant pas censée prendre la route ainsi.",
- "CARD_C2_p8_c3": "Une voiture particulière (sans signe L) tractant une remorque de taille raisonnable sur une route belge.",
- "C3_Q1": "Une voiture de nuit sur route de campagne, feux de croisement allumés, éclairant la route devant sans éblouir un véhicule qui vient en face au loin.",
- "C3_Q2": {
-  "model": 3,
-  "scene": "Un tableau de bord de voiture générique et flou, de nuit. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q3": {
-  "model": 3,
-  "scene": "Vue avant de plusieurs voitures garées côte à côte, génériques. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q4": {
-  "model": 3,
-  "scene": "Un tableau de bord de voiture générique, de nuit. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q6": {
-  "model": 3,
-  "scene": "Une voiture stationnée de nuit dans une rue générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q7": {
-  "model": 3,
-  "scene": "Un tableau de bord de voiture générique et flou, de nuit. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q8": {
-  "model": 3,
-  "scene": "Gros plan flou sur un tableau de bord de voiture de nuit, sans icône lisible. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q9": "Vue d'ensemble nocturne d'une voiture avec les feux de croisement avant allumés, feux rouges arrière également allumés, phares de position visibles aux extrémités avant.",
- "C3_Q11": "Une voiture roulant au crépuscule, phares de croisement qui viennent de s'allumer, ciel orangé du coucher de soleil.",
- "C3_Q12": "Une voiture roulant sous une pluie battante en plein jour, feux de croisement allumés, visibilité réduite par la pluie.",
- "C3_Q14": {
-  "model": 3,
-  "scene": "Une voiture roulant de nuit sur une route belge générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q16": "Une voiture roulant de nuit dans une rue bien éclairée par l'éclairage public continu, feux de croisement (pas feux de route) allumés.",
- "C3_Q17": {
-  "model": 2,
-  "scene": "Vue de dessus nocturne : une voiture suit une autre voiture de près sur la même voie. Ajoute une unique icône ampoule barrée d'un trait rouge au-dessus de la voiture qui suit, sans aucun mot."
- },
- "C3_Q18": {
-  "model": 2,
-  "scene": "Vue de dessus nocturne : deux voitures se croisant en sens inverse sur une route à deux voies. Ajoute une unique icône ampoule barrée d'un trait rouge au-dessus de la voiture de premier plan, sans aucun mot."
- },
- "C3_Q19": "Une route longeant un canal la nuit, un bateau naviguant sur l'eau à proximité, une voiture roulant sur la route en feux de croisement.",
- "C3_Q21": {
-  "model": 1,
-  "scene": "Vue arrière nocturne d'une voiture doublant une autre voiture sur une route à deux voies, ses phares avant projetant un faisceau lumineux intense et large caractéristique des feux de route allumés."
- },
- "C3_Q22": {
-  "model": 3,
-  "scene": "Deux voitures roulant l'une derrière l'autre de nuit sur une route belge générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q24": {
-  "model": 2,
-  "scene": "Vue de dessus nocturne : une voiture termine un dépassement pendant qu'un véhicule arrive en sens inverse. Ajoute une unique icône ampoule barrée d'un trait rouge au-dessus de la voiture qui dépasse, sans aucun mot."
- },
- "C3_Q25": {
-  "model": 3,
-  "scene": "Vue avant d'une voiture générique, temps neutre. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q26": "Une voiture roulant dans un épais brouillard, feux de brouillard avant allumés (lumière blanche basse et large).",
- "C3_Q27": "Une voiture roulant dans un épais brouillard, feux de croisement et feux de brouillard avant allumés simultanément.",
- "C3_Q28": "Vue arrière d'une voiture dans le brouillard dense, feu de brouillard arrière rouge intense bien visible.",
- "C3_Q29": "Vue arrière d'une voiture roulant dans un brouillard dense, feu de brouillard arrière rouge intense allumé.",
- "C3_Q30": "Vue arrière d'une voiture roulant sous une pluie battante, feu de brouillard arrière rouge intense allumé.",
- "C3_Q32": {
-  "model": 3,
-  "scene": "Vue arrière d'une voiture générique, temps neutre. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q33": "Une voiture entrant dans un épais banc de brouillard soudain, feux de freinage légèrement allumés indiquant un ralentissement progressif.",
- "C3_Q35": "Une voiture stationnée en bord de route au crépuscule, feux de position allumés.",
- "C3_Q36": "Gros plan sur les feux de position avant (petits, doux, blancs ou ambrés) d'une voiture stationnée de nuit.",
- "C3_Q37": "Gros plan sur les feux de position arrière (petits, rouges) d'une voiture stationnée de nuit.",
- "C3_Q38": "Une voiture stationnée en bord de route par temps de brouillard, feux de croisement allumés en plus des feux de position.",
- "C3_Q39": {
-  "model": 3,
-  "scene": "Une voiture stationnée de nuit dans une rue de ville générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q40": {
-  "model": 3,
-  "scene": "Vue arrière d'une voiture stationnée de nuit dans une rue générique, sans précision de côté. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q41": "Une voiture stationnée en épi (pas parallèlement à la chaussée) dans une rue de ville la nuit, feux de position avant et arrière tous allumés.",
- "C3_Q42": "Une voiture attelée à une remorque, stationnée parallèlement au trottoir en ville la nuit, feux de position allumés sur la voiture et sur la remorque.",
- "C3_Q43": "Une voiture stationnée en bord de route de campagne la nuit, feux de position avant et arrière allumés, aucun éclairage public alentour.",
- "C3_Q44": {
-  "model": 3,
-  "scene": "Une voiture stationnée de nuit dans une rue générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q45": "Une voiture stationnée en bord de route de campagne la nuit, feux de position avant et arrière allumés, aucun éclairage public alentour.",
- "C3_Q46": {
-  "model": 3,
-  "scene": "Une voiture stationnée de nuit dans une rue de ville générique. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q47": "Une voiture en panne à l'arrêt sur le bord de la route, feux de détresse clignotants allumés, triangle posé en amont.",
- "C3_Q50": "Une voiture stationnée en double file dans une rue étroite, feux de détresse allumés, gênant nettement la circulation qui doit la contourner.",
- "C3_Q52": "Un autobus scolaire arrêté avec ses feux de détresse allumés, des enfants en train de monter dans le bus par la porte ouverte.",
- "C3_Q53": "Vue conducteur approchant d'un autobus scolaire arrêté avec ses feux de détresse allumés, la voiture ralentissant nettement.",
- "C3_Q54": "Une voiture dépassant très prudemment et à faible vitesse un autobus scolaire à l'arrêt avec ses feux de détresse allumés, en laissant un large espace.",
- "C3_Q55": "Un autobus scolaire dont un clignotant de direction est allumé (pas les warnings), s'apprêtant à quitter l'arrêt.",
- "C3_Q57": {
-  "model": 3,
-  "scene": "Une entrée de tunnel routier générique, panneau flou sans chiffre lisible. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q58": {
-  "model": 3,
-  "scene": "Un tableau de bord de voiture générique et flou, une entrée de tunnel visible au loin par le pare-brise. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q59": "Vue à l'intérieur d'un tunnel éclairé, une voiture avec les feux de croisement clairement allumés, murs du tunnel visibles.",
- "C3_Q60": "Un conducteur retire ses lunettes de soleil juste avant d'entrer dans un tunnel, entrée du tunnel visible et sombre devant.",
- "C3_Q61": "Gros plan sur le visage d'un conducteur approchant d'un tunnel, un œil fermé et l'autre ouvert.",
- "C3_Q62": "Une voiture immobilisée sur la bande de droite à l'intérieur d'un tunnel, de la fumée visible au loin, feux de détresse allumés.",
- "C3_Q63": {
-  "model": 3,
-  "scene": "Intérieur d'une voiture générique, portière conducteur ouverte. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q64": {
-  "model": 1,
-  "scene": "À l'intérieur d'un tunnel routier envahi par une épaisse fumée noire, des silhouettes de personnes courant vers une sortie de secours éclairée, sans indication de la circulation des véhicules."
- },
- "C3_Q66": "Une épaisse fumée noire envahissant rapidement un tunnel, des silhouettes courant vers une sortie de secours en laissant leurs véhicules.",
- "C3_Q67": {
-  "model": 3,
-  "scene": "Gros plan sur un volant de voiture générique, zone du klaxon visible. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q68": {
-  "model": 3,
-  "scene": "Gros plan sur un volant de voiture générique, zone du klaxon visible. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q69": "Un conducteur klaxonne brièvement en ville de jour pour avertir un piéton distrait qui s'apprête à traverser sans le voir.",
- "C3_Q70": "Un conducteur klaxonne brièvement avant d'entamer un dépassement sur une route de campagne en plein jour.",
- "C3_Q73": "Un conducteur fait un appel de phares, et non un coup de klaxon, pour prévenir qu'il va dépasser un véhicule devant lui, de nuit sur route nationale.",
- "C3_Q74": {
-  "model": 3,
-  "scene": "Vue avant d'une voiture de nuit, phares allumés, état générique sans précision. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "C3_Q75": "Une voiture de nuit dont les phares éclairent soudainement un animal traversant la chaussée, scène de danger imminent.",
- "CARD_C3_p0_c0": "Une voiture de nuit sur route de campagne, feux de croisement allumés, éclairant la route devant sans éblouir un véhicule qui vient en face au loin.",
- "CARD_C3_p0_c1": {
-  "model": 3,
-  "scene": "Un tableau de bord de voiture générique et flou, de nuit. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "CARD_C3_p0_c2": {
-  "model": 3,
-  "scene": "Gros plan flou sur un tableau de bord de voiture de nuit, sans icône lisible. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "CARD_C3_p1_c0": "Vue d'ensemble nocturne d'une voiture avec les feux de croisement avant allumés, feux rouges arrière également allumés, phares de position visibles aux extrémités avant.",
- "CARD_C3_p1_c1": "Une voiture stationnée en bord de route au crépuscule, feux de position allumés.",
- "CARD_C3_p1_c2": {
-  "model": 2,
-  "scene": "Vue de dessus nocturne : deux voitures se croisant en sens inverse sur une route à deux voies. Ajoute une unique icône ampoule barrée d'un trait rouge au-dessus de la voiture de premier plan, sans aucun mot."
- },
- "CARD_C3_p1_c3": {
-  "model": 1,
-  "scene": "Vue arrière nocturne d'une voiture doublant une autre voiture sur une route à deux voies, ses phares avant projetant un faisceau lumineux intense et large caractéristique des feux de route allumés."
- },
- "CARD_C3_p2_c0": "Une voiture roulant dans un épais brouillard, feux de brouillard avant allumés (lumière blanche basse et large).",
- "CARD_C3_p2_c1": "Vue arrière d'une voiture dans le brouillard dense, feu de brouillard arrière rouge intense bien visible.",
- "CARD_C3_p2_c2": "Une voiture entrant dans un épais banc de brouillard soudain, feux de freinage légèrement allumés indiquant un ralentissement progressif.",
- "CARD_C3_p3_c0": "Une voiture stationnée en bord de route au crépuscule, feux de position allumés.",
- "CARD_C3_p3_c1": "Vue d'ensemble nocturne d'une voiture stationnée : feux de position blancs/ambrés à l'avant, feux rouges à l'arrière, tous allumés.",
- "CARD_C3_p3_c2": "Une voiture stationnée en bord de route par temps de brouillard, feux de croisement allumés en plus des feux de position.",
- "CARD_C3_p3_c3": "Une voiture stationnée parallèlement au trottoir dans une rue de ville la nuit, un feu de stationnement allumé.",
- "CARD_C3_p3_c4": "Une voiture stationnée en bord de route de campagne la nuit, feux de position avant et arrière allumés, aucun éclairage public alentour.",
- "CARD_C3_p4_c0": "Un cortège funèbre de plusieurs voitures roulant en file avec leurs feux de détresse allumés, phares allumés en plein jour.",
- "CARD_C3_p4_c1": "Une voiture stationnée en double file dans une rue étroite, feux de détresse allumés, gênant nettement la circulation qui doit la contourner.",
- "CARD_C3_p4_c2": "Un autobus scolaire arrêté avec ses feux de détresse allumés, des enfants en train de monter dans le bus par la porte ouverte.",
- "CARD_C3_p5_c0": "Un conducteur approchant de l'entrée d'un long tunnel routier, un panneau triangulaire réel annonçant un tunnel, phares de croisement déjà allumés avant l'entrée.",
- "CARD_C3_p5_c1": {
-  "model": 3,
-  "scene": "Un conducteur retire ses lunettes de soleil juste avant d'entrer dans un tunnel, entrée du tunnel visible et sombre devant. Ajoute une unique flèche pointant les lunettes retirées, sans aucun mot."
- },
- "CARD_C3_p5_c2": "Une épaisse fumée noire envahissant un tunnel, une voiture immobilisée sur la bande de droite, feux de détresse allumés, une silhouette évacuant vers une sortie de secours.",
- "CARD_C3_p6_c0": {
-  "model": 3,
-  "scene": "Gros plan sur un volant de voiture générique, zone du klaxon visible. Ajoute un unique badge « ? » discret, sans autre mot."
- },
- "CARD_C3_p6_c1": "Un conducteur klaxonne brièvement en ville de jour pour avertir un piéton distrait qui s'apprête à traverser sans le voir.",
- "CARD_C3_p6_c2": "Un conducteur fait un appel de phares, et non un coup de klaxon, pour prévenir qu'il va dépasser un véhicule devant lui, de nuit sur route nationale."
+  "_comment": "Scènes thème C (La voiture) — MMA/MEC, équipements, chargement, ceintures/DRA, angle mort, feux/klaxon. Beaucoup de questions C1/C2/C3 testent des chiffres précis ou des choix binaires directement visibles (ex: quel côté, quelle jauge) : dans ces cas -> null pour ne jamais trahir la réponse. Les badges/flèches Modèle 3 ne servent qu'à enseigner un fait sur une CARTE, jamais à confirmer la bonne réponse d'une QUESTION.",
+  "C1_Q1": "Une voiture particulière, un minibus et une camionnette garés côte à côte sur un parking belge, tailles raisonnables et comparables.",
+  "C1_Q3": {
+    "model": 3,
+    "scene": "Une voiture particulière garée normalement sur un parking belge, vue neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C1_Q5": "Une voiture avec un signe L blanc sur fond bleu à l'arrière, garée à côté d'une voiture identique sans signe L.",
+  "C1_Q6": "Gros plan NET sur un certificat d'immatriculation belge tenu à la main au-dessus d'un volant : carte cartonnée rose-beige portant en en-tête « CERTIFICAT D'IMMATRICULATION » et le « B » européen sur bande bleue. Le document est net et bien éclairé, ses rubriques alignées et son cadre lisibles, sans qu'aucune ligne ne soit mise en évidence ni entourée. Aucun flou, aucun brouillage volontaire.",
+  "C1_Q8": {
+    "model": 3,
+    "scene": "Une voiture neuve chez un concessionnaire ou dans un garage générique. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C1_Q9": "Une voiture nettement surchargée, suspension arrière visiblement affaissée sous le poids de nombreux bagages entassés.",
+  "C1_Q10": "Une petite citadine et un grand SUV garés côte à côte pour comparaison de gabarit.",
+  "C1_Q11": {
+    "model": 1,
+    "scene": "Route pour automobiles avec un portique électronique affichant deux vitesses différentes selon le type de véhicule, une voiture particulière roulant dessous — la configuration à deux valeurs est le sujet, sans chiffre net affiché."
+  },
+  "C1_Q12": "Un panneau réel rond d'interdiction de dépasser avec un panneau additionnel « > 3,5t », une voiture particulière clairement légère roulant en dessous sans y prêter attention.",
+  "C1_Q15": "Gros plan sur un certificat d'immatriculation belge tenu en main, flou artistique sur le détail exact des mentions.",
+  "C1_Q16": {
+    "model": 3,
+    "scene": "Une voiture avec le coffre ouvert, des bagages en train d'être chargés avant un voyage. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C1_Q17": {
+    "model": 3,
+    "scene": "Une voiture particulière générique roulant sur une route belge ordinaire. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C1_Q19": "Une voiture visiblement surchargée, coffre qui ne ferme plus, suspension enfoncée.",
+  "C1_Q20": "Portière arrière et coffre ouverts d'une berline familiale belge : EXACTEMENT DEUX adultes sont visibles — le conducteur debout près de la portière avant et un seul passager — et des bagages sont chargés dans le coffre. Aucune autre personne dans le cadre : le compte des occupants fait partie du calcul demandé.",
+  "C1_Q21": {
+    "model": 3,
+    "scene": "Une voiture chargée de bagages roulant sur une route belge ordinaire. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C1_Q22": "Vue conducteur à l'entrée d'un pont routier belge : un panneau C21 rond à bord rouge portant « 3,5 t » en gros caractères noirs, parfaitement net et lisible, est planté au bord droit juste avant le tablier. Une voiture particulière s'approche du pont. Le chiffre doit être « 3,5 t » exactement, pas une autre valeur.",
+  "C1_Q23": "Le même pont avec panneau de limitation de masse, cette fois un camion chargé, visiblement lourd, hésitant devant le panneau.",
+  "C1_Q25": "Un panneau réel rond d'interdiction avec un panneau additionnel indiquant une masse, un camion à la benne ouverte et manifestement vide roulant en dessous.",
+  "C1_Q26": "Gros plan sur un triangle de danger rouge et blanc, plié, rangé dans le coffre d'une voiture.",
+  "C1_Q27": "Gros plan sur une trousse de secours blanche à croix rouge, rangée dans une voiture.",
+  "C1_Q28": "Gros plan sur un extincteur rouge fixé sous le siège conducteur d'une voiture.",
+  "C1_Q29": "Gros plan sur un extincteur rouge facilement accessible sous le siège conducteur d'une voiture, une main qui l'attrape.",
+  "C1_Q30": "Un extincteur dont le manomètre indique clairement une pression partielle (aiguille pas au maximum), suggérant une utilisation partielle antérieure.",
+  "C1_Q32": "Gros plan sur un gilet de sécurité jaune fluo plié, rangé dans la boîte à gants d'une voiture.",
+  "C1_Q33": "Image en DIPTYQUE, deux moitiés côte à côte séparées par un fin trait blanc, même lumière. À GAUCHE : l'habitacle, un gilet jaune fluo rangé dans le vide-poche de la portière conducteur, à portée de main depuis le siège. À DROITE : le COFFRE OUVERT de la même voiture, avec un gilet jaune posé au fond, sous les bagages. Les deux emplacements doivent être visibles : un coffre fermé ne montre rien.",
+  "C1_Q35": "Coffre de voiture OUVERT, vu de face et bien éclairé : les QUATRE équipements obligatoires y sont posés côte à côte, distincts et identifiables — un triangle de danger déplié, une trousse de secours blanche à croix, un extincteur rouge, un gilet de sécurité jaune fluo. Rien d'autre dans le coffre. Ajoute un unique badge « ? » discret dans un coin.",
+  "C1_Q36": "Vue d'ensemble dans une voiture : un extincteur au manomètre partiel visible, et un gilet de sécurité rangé dans le coffre à l'arrière (visible par le hayon ouvert) plutôt que dans l'habitacle.",
+  "C1_Q37": "Vue de trois quarts sur la bande d'arrêt d'urgence d'une autoroute belge : un conducteur vient de sortir de son véhicule en panne et enfile son GILET jaune fluo, debout DU CÔTÉ DE L'ACCOTEMENT, entre sa voiture et le talus — jamais du côté des voies. Warnings allumés, glissière et talus derrière lui.",
+  "C1_Q38": "Un conducteur tient sa carte d'identité et son permis de conduire en main, prêt pour un contrôle routier.",
+  "C1_Q39": "Un conducteur montre son permis de conduire physique à un agent de police lors d'un contrôle.",
+  "C1_Q40": "Un conducteur montre une attestation de perte de permis (papier administratif) à un agent, qui secoue la tête.",
+  "C1_Q42": "Une pochette de documents de voiture posée ouverte sur le tableau de bord.",
+  "C1_Q44": "Sur un tableau de bord : des documents papier originaux posés à côté d'un téléphone affichant un certificat d'assurance numérique.",
+  "C1_Q45": "Un conducteur montre l'écran de son téléphone affichant un certificat d'assurance en PDF à un agent de police.",
+  "C1_Q49": {
+    "model": 3,
+    "scene": "Une pochette de documents fermée posée sur le tableau de bord d'une voiture. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C1_Q50": "Une voiture avec plaque belge et signe L franchissant un panneau de frontière européenne générique.",
+  "C1_Q52": "Coffre ouvert d'une voiture chargée pour un départ en vacances (valises, sac de voyage) sur lequel sont posés bien en évidence TROIS OU QUATRE GILETS DE SÉCURITÉ jaune fluo pliés, prêts à être embarqués — un par occupant. Les gilets sont le sujet de l'image, au premier plan et parfaitement identifiables.",
+  "C1_Q53": "Un panneau carré bleu réel avec une lettre P blanche, une voiture stationnée régulièrement en dessous sur une rue calme.",
+  "C1_Q54": "Un panneau de stationnement réel avec un panonceau additionnel indiquant une masse, un camion garé dessous, une voiture légère qui continue son chemin sans se garer.",
+  "C1_Q56": "Vue conducteur : un panneau rond réel de limitation de vitesse, une intersection routière visible plus loin sur la même route.",
+  "C1_Q59": "Un panneau rond réel d'interdiction avec un chiffre de masse, un camion chargé hésitant devant, une voiture légère continuant son chemin.",
+  "C1_Q61": "Un panneau rond réel d'interdiction avec une flèche barrée vers la gauche, une voiture roulant tout droit à un carrefour sans tourner.",
+  "C1_Q63": "Un panneau réel rond d'interdiction de tourner à droite avec panneau additionnel « 3,5t », une voiture particulière légère au carrefour.",
+  "C1_Q64": "Un panneau rond réel d'interdiction avec la silhouette d'un camion, ce dernier faisant demi-tour tandis qu'une voiture particulière passe librement.",
+  "C1_Q65": "Le même panneau avec un panonceau additionnel de masse, une petite camionnette légère continuant son chemin tandis qu'un gros camion chargé s'arrête.",
+  "C1_Q68": "Un panneau rond réel d'interdiction de tourner à gauche, sans aucun panonceau, une voiture légère roulant tout droit au carrefour sans tourner.",
+  "C1_Q69": "Un panneau de stationnement réel avec panonceau additionnel « 3,5t », une voiture particulière légère continuant son chemin sans se garer.",
+  "C1_Q71": "Un panneau réel rond d'interdiction avec panonceau « 3t », une camionnette visiblement chargée et lourde à l'arrêt devant.",
+  "C1_PROV_1": "Une voiture avec signe L, de nuit, garée devant une maison — scène calme évoquant l'immobilisation nocturne du permis provisoire.",
+  "C1_PROV_2": "Vue depuis la banquette arrière d'une voiture, DE NUIT : une jeune conductrice au volant, son guide assis à sa droite, le « L » bleu visible sur la lunette arrière. Sur la planche de bord, l'HORLOGE DE BORD affiche clairement « 23:00 » en chiffres lumineux nets. L'heure affichée doit correspondre exactement à l'énoncé.",
+  "C1_PROV_3": {
+    "model": 3,
+    "scene": "Une voiture avec signe L garée dans une rue résidentielle calme en fin de soirée, ciel crépusculaire. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "CARD_C1_p0_c0": "Une voiture particulière, une voiture mixte, un minibus et une camionnette garés côte à côte sur un parking belge.",
+  "CARD_C1_p0_c1": "Vue de trois quarts d'une camionnette belge à l'arrêt, avec un badge circulaire blanc à liseré gris portant « 3,5t » posé dans un coin de l'image. À côté d'elle, une voiture particulière pour l'échelle. Le chiffre que la carte enseigne doit être visible : le certificat seul ne l'enseigne pas.",
+  "CARD_C1_p0_c2": "Gros plan sur un certificat d'immatriculation belge tenu à la main : carte cartonnée rose-beige, en-tête « CERTIFICAT D'IMMATRICULATION », le « B » européen sur bande bleue. Une main pointe du doigt une rubrique du document, et un badge circulaire blanc à liseré gris portant « 3,5t » est posé dans un coin. La MMA est une valeur inscrite sur un document, pas une pesée : aucune balance, aucun pont-bascule dans cette image.",
+  "CARD_C1_p0_c3": "Une chaîne de montage automobile générique, une voiture neuve en cours de fabrication en usine.",
+  "CARD_C1_p0_c4": "Une voiture citadine visiblement surchargée, suspension affaissée, à côté d'un grand SUV non chargé pour comparaison de gabarit.",
+  "CARD_C1_p0_c5": "Un panneau réel rond d'interdiction avec panonceau additionnel « > 3,5t », une voiture particulière légère passant en dessous sans y prêter attention.",
+  "CARD_C1_p1_c0": "Une voiture dont le coffre se remplit de bagages, prête pour un départ en vacances.",
+  "CARD_C1_p1_c1": "Image en DIPTYQUE, séparée d'un fin trait blanc : à GAUCHE, un certificat d'immatriculation belge tenu à la main, avec un badge « 2000 kg » dans le coin — la MMA, maximum théorique fixé une fois pour toutes ; à DROITE, la même voiture sur un PONT-BASCULE, afficheur visible, avec un badge « 1640 kg » — la MEC, poids réel du moment. Les deux notions que la carte oppose, chacune avec son support et sa valeur. Aucun badge « ? ».",
+  "CARD_C1_p1_c2": "Vue de trois quarts sur une voiture familiale belge chargée pour un départ : le coffre ouvert plein de valises, deux adultes et deux enfants debout à côté. Quatre petits badges circulaires blancs à liseré gris sont posés près de chaque élément — « 1400 kg » près de la voiture, « 80 kg » et « 60 kg » près des adultes, « 100 kg » près des bagages — et un cinquième, plus grand, dans un coin : « 1640 kg ». L'addition que la carte décrit devient lisible. Aucun badge « ? ».",
+  "CARD_C1_p1_c3": "Un pont de campagne avec panneau rond réel de limitation de masse en charge, une voiture particulière légère passant sans encombre tandis qu'un camion chargé de 5 tonnes reste bloqué devant.",
+  "CARD_C1_p2_c0": "Un triangle de danger rouge et blanc déplié, posé sur la chaussée à bonne distance derrière une voiture en panne, feux de détresse allumés.",
+  "CARD_C1_p2_c1": "Une trousse de secours ouverte, quelqu'un désinfecte une petite blessure au bord de la route près d'un léger incident.",
+  "CARD_C1_p2_c2": "Gros plan sur un extincteur rouge sous le siège conducteur, le manomètre affichant une pression partielle.",
+  "CARD_C1_p2_c3": "Vue de trois quarts sur la bande d'arrêt d'urgence d'une autoroute belge : le conducteur enfile son gilet jaune fluo DU CÔTÉ DE L'ACCOTEMENT, entre sa portière et le talus, jamais du côté des voies. Le gilet sort de l'habitacle, pas du coffre : la portière avant est ouverte et le vide-poche visible. Triangle déjà posé plus loin.",
+  "CARD_C1_p3_c0": "Un conducteur montre sa carte d'identité et son permis de conduire à un agent de police lors d'un contrôle routier.",
+  "CARD_C1_p3_c1": "Gros plan sur les mains d'un conducteur qui sort de sa poche intérieure un PERMIS DE CONDUIRE belge rose, reconnaissable à sa couleur et à son format carte, et le présente. On voit le volant et le pare-brise derrière. C'est le permis rose qui doit être identifiable : une feuille blanche ne dit rien.",
+  "CARD_C1_p3_c2": "Gros plan sur une boîte à gants ouverte de voiture belge d'où l'on retire trois documents nettement distincts et identifiables à leur format et à leur couleur : le certificat d'immatriculation (carte rose-beige à bande bleue « B »), le certificat de conformité (feuillet) et la carte verte d'assurance. Les trois documents que la carte énumère doivent être visibles et différenciables, pas enfermés dans un porte-documents fermé.",
+  "CARD_C1_p3_c3": "Image en DIPTYQUE, séparée d'un fin trait blanc : à GAUCHE, deux documents ORIGINAUX papier posés sur un tableau de bord — un certificat d'immatriculation belge à bande bleue et une carte verte d'assurance —, chacun reconnaissable à son format et à ses couleurs, sans qu'aucun titre ne soit lisible ; à DROITE, un téléphone tenu en main affichant un document d'assurance à l'écran. AUCUN texte lisible en français dans l'image : c'est le support (papier / écran) qui porte la différence.",
+  "CARD_C1_p3_c4": "Une voiture avec plaque belge et signe L franchissant un panneau de frontière européenne générique.",
+  "CARD_C1_p3_c5": "Une voiture avec signe L blanc sur fond bleu à l'arrière, garée devant une maison, de nuit calme.",
+  "C2_Q1": {
+    "model": 1,
+    "scene": "Une voiture avec un grand coffre de toit chargé, roulant vers l'entrée d'un tunnel dont le portique est visible en arrière-plan, sans chiffre affiché."
+  },
+  "C2_Q2": "Un chargement exceptionnellement volumineux sur le toit d'un véhicule, avec un fanion orange de transport exceptionnel visible.",
+  "C2_Q3": "Vue conducteur à l'entrée d'un tunnel routier belge : un panneau C29 rond à bord rouge portant « 3,2 m » en gros caractères noirs, parfaitement net et lisible, est fixé au-dessus de l'entrée. Une voiture surmontée d'un coffre de toit s'approche. Le chiffre doit être « 3,2 m » exactement.",
+  "C2_Q4": "Une voiture roulant sur autoroute avec un grand coffre de toit vide, non utilisé, juste installé.",
+  "C2_Q5": "Coffre d'une voiture ouvert : des valises lourdes rangées tout en bas, des objets légers empilés au-dessus.",
+  "C2_Q6": "Des vélos fixés sur un porte-vélos à l'arrière d'une voiture, plutôt que sur le toit.",
+  "C2_Q7": "Vue arrière d'une voiture chargée dont les cartons empilés cachent complètement les feux arrière et la plaque d'immatriculation.",
+  "C2_Q8": "Vue arrière d'une voiture avec vélos fixés à l'arrière, la plaque d'immatriculation déplacée sur un support articulé pour rester visible.",
+  "C2_Q9": "Vue de trois quarts avant d'une voiture à l'arrêt, chargée de planches longues SANGLÉES SUR UNE GALERIE DE TOIT : les planches reposent sur les barres de toit, solidement arrimées, et DÉBORDENT LATÉRALEMENT de plusieurs dizaines de centimètres de chaque côté de la carrosserie. Rien ne doit traverser l'habitacle ni les vitres : le chargement est posé sur le toit, au-dessus du véhicule.",
+  "C2_Q10": "Un chargement nettement plus large que la voiture elle-même, avec un fanion orange de transport exceptionnel des deux côtés.",
+  "C2_Q11": {
+    "model": 1,
+    "scene": "Vue conducteur sur une route de campagne bordée de haies, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture particulière de gabarit clairement inférieur roulant en dessous."
+  },
+  "C2_Q12": "Vue conducteur à l'approche d'un passage étroit belge : un panneau C25 rond à bord rouge portant « 2 m » entre deux flèches horizontales, net et lisible. DEUX véhicules s'en approchent : une VOITURE PARTICULIÈRE au premier plan et un camion derrière elle. La présence de la voiture est essentielle — la réponse est que le panneau ne vise pas que les camions.",
+  "C2_Q13": "Vue de côté d'une échelle fixée sur les barres de toit, dépassant clairement par l'arrière du véhicule, rien ne dépasse à l'avant.",
+  "C2_Q15": "Vue de PROFIL d'une voiture à l'arrêt, hayon ouvert : des planches longues sortent du coffre vers l'arrière, dans le prolongement du véhicule, et dépassent nettement du pare-chocs. Le débord arrière doit être mesurable à l'œil grâce à l'angle de profil. Rien ne traverse l'habitacle ni les vitres.",
+  "C2_Q16": "Vue arrière d'une voiture avec de longues planches dépassant nettement à l'arrière, un panneau carré d'avertissement rouge et blanc fixé au bout.",
+  "C2_Q17": "Vue arrière d'une voiture avec une longue charge indivisible (poutre) dépassant largement à l'arrière, panneau d'avertissement carré rouge et blanc bien visible fixé à l'extrémité.",
+  "C2_Q19": "Gros plan sur une charge manifestement INDIVISIBLE arrimée à l'arrière d'une remorque : une longue poutre de bois massif d'un seul tenant, ou un tuyau métallique rigide, impossible à plier, à rouler ou à raccourcir. Surtout pas un tapis roulé, pas une bâche, pas un objet souple — ce serait le contre-exemple exact.",
+  "C2_Q21": "Vue arrière de nuit d'un chargement dépassant, panneau d'avertissement carré éclairé par un feu rouge, catadioptres orange visibles sur les côtés du chargement.",
+  "C2_Q22": "Vue conducteur à l'approche d'un passage belge : un panneau C24 rond à bord rouge portant « 5 m » indiquant une longueur maximale, net et lisible. Sous le panneau passent DEUX véhicules très différents : une VOITURE TRACTANT UNE CARAVANE au premier plan et un autocar derrière. La voiture attelée est essentielle — la réponse est que le panneau ne vise pas que les camions.",
+  "C2_Q23": "Une voiture tractant une longue caravane, ensemble visiblement long, passant devant un panneau réel de limitation de longueur.",
+  "C2_Q24": "Une voiture tractant une remorque simple sur une route belge.",
+  "C2_Q25": "Vue du poste de conduite d'une voiture belge depuis le siège conducteur : volant, tableau de bord, portière à gauche et console à droite, de façon à rendre perceptible l'espace latéral dont dispose le conducteur. Le badge « ? » blanc à liseré gris est placé dans un COIN de l'image — jamais sur le volant, jamais au centre.",
+  "C2_Q26": {
+    "model": 3,
+    "scene": "Vue intérieure du côté passager avant d'une voiture, place générique. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C2_Q27": "Vue intérieure d'une banquette avant de voiture accueillant trois personnes assises côte à côte.",
+  "C2_Q29": "Gros plan de profil sur un conducteur assis au volant, la main levée derrière sa tête en train de régler son appui-tête : l'appui-tête est réglé CORRECTEMENT, son bord supérieur arrivant à la hauteur du SOMMET DU CRÂNE. La position montrée doit être la bonne position, pas une position basse au niveau de la nuque.",
+  "C2_Q30": "Une personne assise dans une voiture règle son appui-tête, main sur le mécanisme de réglage.",
+  "C2_Q31": "Tous les occupants d'une voiture (conducteur et passagers) attachent leur ceinture avant le départ.",
+  "C2_Q32": "Gros plan sur une ceinture de sécurité portée par un conducteur, passant par-dessus l'épaule.",
+  "C2_Q34": "Vue depuis l'arrière de l'habitacle : le conducteur est tourné vers l'arrière, bras passé sur le dossier du siège passager, et regarde par la lunette pour reculer. Sa CEINTURE DE SÉCURITÉ EST DÉTACHÉE et pend visiblement le long du montant, boucle libre — aucune sangle ne traverse son torse. Les feux de recul éclairent la chaussée derrière.",
+  "C2_Q35": "Un chauffeur de taxi (véhicule marqué taxi) au volant avec un client à l'arrière, en pleine course.",
+  "C2_Q36": "Un facteur en uniforme, véhicule de la poste, descendant et remontant fréquemment de son véhicule pour distribuer le courrier.",
+  "C2_Q37": "Une ambulance en intervention urgente, gyrophares allumés, roulant en trafic.",
+  "C2_Q38": "Une femme enceinte visible au volant d'une voiture, ceinture de sécurité correctement attachée.",
+  "C2_Q39": "Quatre personnes réunies dans le même cadre, devant leurs véhicules respectifs, chacune immédiatement identifiable : une FEMME ENCEINTE au ventre très visible, un CHAUFFEUR DE TAXI devant sa voiture à enseigne « TAXI », un FACTEUR en tenue devant une camionnette rouge de distribution postale, sans logo, et un AMBULANCIER en tenue devant une ambulance. La comparaison annoncée par la question doit exister dans l'image.",
+  "C2_Q41": "Un enfant installé dans un siège auto rehausseur à l'arrière d'une voiture, ceinture bien ajustée.",
+  "C2_Q42": "Un ADOLESCENT d'une quinzaine d'années, de petite taille, est assis à l'arrière d'une voiture sur un REHAUSSEUR, ceinture bouclée. Son âge doit être évident au premier regard : visage, morphologie et vêtements d'adolescent, pas d'un jeune enfant. Cadrage depuis la portière ouverte.",
+  "C2_Q43": "Un enfant plus grand assis sur la banquette arrière, ceinture de sécurité classique bien ajustée sans siège rehausseur.",
+  "C2_Q45": "Un siège auto bébé installé dos à la route sur le siège passager avant, un voyant airbag désactivé visible sur le tableau de bord.",
+  "C2_Q47": "Gros plan sur un enfant installé dans un siège auto, la ceinture basse visible sur ses jambes.",
+  "C2_Q48": "Très gros plan sur l'étiquette d'homologation orange cousue sur le flanc d'un siège enfant : le texte de l'étiquette est NET et lisible — un grand « E » dans un cercle suivi d'un chiffre, et la mention de la norme européenne. L'étiquette est le sujet unique du cadre et ne doit pas être laissée vide.",
+  "C2_Q49": "Un enfant d'environ 4 ans, ceinture de sécurité classique attachée sur la banquette arrière, sans siège rehausseur, dans une voiture qui n'est pas celle de ses parents.",
+  "C2_Q50": "Un enfant assis avec ceinture classique sur la banquette arrière (pas à l'avant) d'une voiture.",
+  "C2_Q51": "Un tout jeune enfant (bébé, environ 2 ans) fermement installé dans un siège auto adapté à sa taille.",
+  "C2_Q52": "Banquette arrière avec deux sièges auto installés aux extrémités et un enfant plus grand assis au milieu avec la ceinture classique.",
+  "C2_Q53": {
+    "model": 3,
+    "scene": "Un enfant assis sur la banquette arrière d'une voiture, vue générique sans détail. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C2_Q54": {
+    "model": 3,
+    "scene": "Un enfant assis sur la banquette arrière d'une voiture, vue générique sans détail. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C2_Q55": {
+    "model": 2,
+    "scene": "Vue du dessus d'une voiture avec deux zones ovales rouges marquées de chaque côté, juste en arrière des portières, représentant les angles morts invisibles dans les rétroviseurs. Aucun mot."
+  },
+  "C2_Q56": "Un conducteur ajuste soigneusement ses deux rétroviseurs extérieurs avant de démarrer.",
+  "C2_Q57": "Gros plan sur un rétroviseur extérieur de voiture avec un petit voyant orange allumé dans le coin du miroir.",
+  "C2_Q58": "Vue conducteur : un voyant d'angle mort allumé dans le rétroviseur extérieur, une voiture cachée juste à côté dans l'angle mort.",
+  "C2_Q59": "Un conducteur tourne la tête par-dessus son épaule pour vérifier visuellement, en plus de son rétroviseur équipé d'un voyant d'angle mort.",
+  "C2_Q60": "Un panneau rond réel d'interdiction aux marchandises dangereuses, une route de campagne calme, aucun véhicule concerné à proximité.",
+  "C2_Q61": "Un panneau rond réel d'interdiction aux marchandises inflammables ou explosives, une citerne de transport de carburant à l'arrêt devant, n'osant pas s'engager.",
+  "C2_Q62": "Un panneau rond réel d'interdiction aux marchandises polluantes, un camion-citerne à l'arrêt devant, n'osant pas s'engager.",
+  "C2_Q63": {
+    "model": 3,
+    "scene": "Une route belge générique avec des panneaux ronds flous en arrière-plan, sans détail lisible. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C2_Q65": "Une voiture avec un autocollant discret « LPG/GPL » sur la vitre arrière, passant sous un panneau réel d'interdiction aux marchandises dangereuses sans y être concernée.",
+  "C2_Q66": "Une voiture avec signe L attelée à une remorque, immobile sur une allée, n'étant pas censée prendre la route ainsi.",
+  "C2_Q67": "Une voiture particulière tractant une petite remorque simple sur une route belge.",
+  "C2_Q68": {
+    "model": 3,
+    "scene": "Une voiture tractant une remorque générique sur une route belge, sans détail de gabarit. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C2_Q69": {
+    "model": 3,
+    "scene": "Une voiture tractant une remorque générique sur une route belge, sans détail de gabarit. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C2_Q71": "Une voiture particulière de taille moyenne tractant une remorque de taille raisonnable, ensemble équilibré sur une route belge.",
+  "C2_Q72": "Vue conducteur approchant d'un tunnel avec un panneau rond réel de limitation de hauteur, une voiture avec coffre de toit chargé roulant devant.",
+  "C2_Q73": {
+    "model": 1,
+    "scene": "Sur une route étroite en campagne à ciel ouvert, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture de gabarit normal s'en approchant."
+  },
+  "C2_Q74": "Un panneau rond réel de limitation de longueur, une voiture tractant une caravane s'en approchant.",
+  "C2_Q79": "Vue conducteur à l'entrée d'un tunnel routier belge : un panneau C29 rond à bord rouge portant « 3,5 m » en gros caractères noirs, parfaitement net et lisible, est fixé au-dessus de l'entrée. Une voiture particulière surmontée d'un coffre de toit s'approche. Le chiffre doit être « 3,5 m » exactement.",
+  "C2_Q83": "Vue de PROFIL d'une voiture à l'arrêt, hayon ouvert : des planches sortent du coffre dans le prolongement du véhicule et dépassent du pare-chocs arrière d'une distance COURTE, nettement inférieure à un mètre. Aucun panneau d'avertissement rouge et blanc n'est accroché au bout. L'angle de profil rend la courte longueur du débord appréciable.",
+  "C2_CHG_1": {
+    "model": 3,
+    "scene": "Le coffre arrière fermé d'une voiture familiale garée dans une allée, visiblement chargé de bagages sans qu'on en voie le détail. Ajoute un unique badge « ? » discret dans un coin, sans autre mot."
+  },
+  "C2_CHG_2": "Vue de trois quarts arrière d'une voiture chargée, arrêtée devant une maison : le chargement est SANGLÉ SUR UNE GALERIE DE TOIT, sangles croisées bien tendues et visibles, et une main vérifie la tension d'une sangle. Le chargement repose entièrement sur le toit ; rien ne traverse l'habitacle ni les vitres, et les feux arrière restent dégagés.",
+  "C2_CHG_3": "Un carton tombé au milieu de la chaussée depuis une voiture en train de s'éloigner, un véhicule qui suit doit freiner brusquement.",
+  "C2_CHG_4": "Vue de l'arrière d'une voiture à l'arrêt : des planches sanglées sur la galerie de toit dépassent vers l'arrière et RETOMBENT devant le hayon, masquant complètement les CLIGNOTANTS et les feux arrière. Le chargement est posé sur le toit et sanglé ; il ne traverse ni les vitres ni la carrosserie. Le masquage des feux est le sujet de l'image.",
+  "CARD_C2_p0_c0": "Un conducteur vérifie les sangles d'un chargement bien arrimé dans son coffre, feux arrière et plaque bien visibles.",
+  "CARD_C2_p1_c0": {
+    "model": 1,
+    "scene": "Une voiture avec un coffre de toit chargé roulant vers l'entrée d'un tunnel dont le portique est visible en arrière-plan, sans chiffre affiché."
+  },
+  "CARD_C2_p1_c1": "Vue de profil d'une voiture avec un grand coffre de toit chargé roulant sur autoroute à bonne vitesse.",
+  "CARD_C2_p1_c2": "Des vélos fixés sur un porte-vélos à l'arrière d'une voiture, le toit du véhicule resté libre.",
+  "CARD_C2_p2_c0": {
+    "model": 1,
+    "scene": "Sur une route à ciel ouvert, sans pont ni tunnel : un panneau réel rond à bordure rouge et fond blanc de limitation de LARGEUR maximale (pictogramme : une flèche double HORIZONTALE entre deux barres VERTICALES, jamais de barres horizontales ni de flèche verticale — à ne surtout pas confondre avec un panneau de hauteur), une voiture particulière de gabarit normal s'en approchant."
+  },
+  "CARD_C2_p3_c0": "Vue de PROFIL d'une voiture belge à l'arrêt, chargée d'une échelle sanglée sur les barres de toit : l'échelle s'arrête exactement au niveau du pare-brise et ne dépasse EN RIEN l'avant du véhicule ; elle déborde en revanche à l'arrière. Une cote à double flèche marquée « 0 » ou une petite marque verticale au niveau du pare-chocs avant souligne l'absence de tout débord. Le profil est indispensable : de face, une longueur ne se lit pas.",
+  "CARD_C2_p3_c1": "Vue de PROFIL d'une voiture belge à l'arrêt, hayon ouvert, des planches sortant du coffre vers l'ARRIÈRE dans le prolongement du véhicule. Une cote à double flèche marquée « 1m », tracée HORIZONTALEMENT dans l'axe de la voiture, relie le pare-chocs arrière au bout des planches. La cote mesure un débord vers l'arrière : elle ne doit jamais être tracée en travers du véhicule.",
+  "CARD_C2_p3_c2": {
+    "model": 3,
+    "scene": "Vue arrière d'une voiture avec de longues planches en bois attachées, dépassant nettement à l'arrière du véhicule, un panneau carré d'avertissement rouge et blanc fixé à l'extrémité. Ajoute un unique badge « 3m » discret, sans autre mot."
+  },
+  "CARD_C2_p3_c3": "Vue arrière de nuit d'un chargement dépassant, panneau d'avertissement carré éclairé par un feu rouge, catadioptres orange visibles sur les côtés.",
+  "CARD_C2_p4_c0": "Vue du poste de conduite d'une voiture belge, cadrée depuis l'arrière du siège conducteur pour rendre visible l'espace LATÉRAL dont il dispose : de la portière à la console centrale. Une cote à double flèche marquée « 70 cm » traverse cet espace à hauteur des coudes. Un seul occupant : le conducteur. Cette image ne doit pas montrer une banquette de trois places — c'est le sujet de la carte suivante.",
+  "CARD_C2_p4_c1": "Vue de trois quarts sur une BANQUETTE AVANT de trois places occupée par trois adultes ceinturés, cadrée depuis la portière passager. Une cote à double flèche marquée « 1,30 m » traverse toute la largeur de la banquette. Les deux images de cette partie sont actuellement interverties : celle-ci doit montrer la banquette, pas l'espace du seul conducteur.",
+  "CARD_C2_p4_c2": {
+    "model": 3,
+    "scene": "Gros plan sur un appui-tête de siège conducteur vu de profil, bien aligné avec le sommet d'une tête assise devant. Ajoute une unique flèche verte pointant l'alignement correct, sans aucun mot."
+  },
+  "CARD_C2_p5_c0": {
+    "model": 3,
+    "scene": "Gros plan sur une ceinture de sécurité correctement portée par-dessus l'épaule d'un conducteur. Ajoute une unique flèche verte le long du trajet correct de la ceinture, sans aucun mot."
+  },
+  "CARD_C2_p5_c1": "Image en TRIPTYQUE, trois vignettes de même taille séparées de fins traits blancs, chacune montrant un conducteur SANS CEINTURE, sangle visiblement détachée : 1) un conducteur tourné vers l'arrière en MARCHE ARRIÈRE, ceinture pendante ; 2) un CHAUFFEUR DE TAXI, enseigne « TAXI » sur le toit, client ceinturé à l'arrière ; 3) un LIVREUR au volant d'une camionnette rouge de distribution postale, sans logo, portière ouverte, en tournée porte à porte. Ce sont les trois exemples exacts de la carte : pas d'ambulance, et le chauffeur de taxi doit bien être sans ceinture.",
+  "CARD_C2_p5_c2": "Une femme enceinte visible au volant d'une voiture, ceinture de sécurité correctement attachée et adaptée.",
+  "CARD_C2_p6_c0": "Un enfant installé dans un siège auto rehausseur à l'arrière d'une voiture, ceinture bien ajustée sur ses épaules.",
+  "CARD_C2_p6_c1": "Vue de trois quarts depuis la portière passager d'une voiture belge : un siège bébé DOS À LA ROUTE est installé à l'avant, et sur la planche de bord le témoin « PASSENGER AIR BAG » affiche nettement **ON** en lettres lumineuses. Une croix rouge est posée sur la scène pour marquer l'interdiction. L'état ON du témoin est l'élément décisif : sans lui, la situation n'est pas tranchée.",
+  "CARD_C2_p6_c2": {
+    "model": 3,
+    "scene": "Gros plan sur un enfant dans un siège auto avec la ceinture basse bien visible sur les jambes. Ajoute une unique flèche verte montrant le trajet correct de la sangle, sans aucun mot."
+  },
+  "CARD_C2_p6_c3": "Vue de trois quarts sur la banquette arrière d'une voiture belge : DEUX sièges enfants sont installés et occupés aux deux places latérales, et au CENTRE, entre eux, un enfant de plus de trois ans est assis directement sur la banquette avec la seule ceinture de sécurité. C'est l'occupation des deux places latérales qui déclenche l'exception : la banquette ne doit pas être vide à côté de lui.",
+  "CARD_C2_p7_c0": {
+    "model": 2,
+    "scene": "Vue du dessus d'une voiture avec deux zones ovales rouges marquées de chaque côté, juste en arrière des portières, représentant les angles morts. Aucun mot."
+  },
+  "CARD_C2_p7_c1": {
+    "model": 3,
+    "scene": "Gros plan sur un rétroviseur extérieur avec un voyant orange allumé, une voiture visible juste dans l'angle mort à côté. Ajoute une unique flèche pointant le voyant, sans aucun mot."
+  },
+  "CARD_C2_p8_c0": "Trois panneaux ronds réels d'interdiction aux marchandises dangereuses (général, inflammable/explosif, polluant) alignés au bord d'une route, aucun véhicule concerné à proximité.",
+  "CARD_C2_p8_c1": "Une voiture avec un autocollant discret « LPG/GPL » sur la vitre arrière, passant sous un panneau réel d'interdiction aux marchandises dangereuses sans y être concernée.",
+  "CARD_C2_p8_c2": "Une voiture avec signe L attelée à une remorque, immobile sur une allée, n'étant pas censée prendre la route ainsi.",
+  "CARD_C2_p8_c3": "Vue de trois quarts d'un attelage belge en circulation : une voiture particulière tractant une petite remorque bâchée à un essieu, catadioptres triangulaires rouges corrects. Un badge circulaire blanc à liseré gris portant « 750 kg » est posé dans un coin. Aucun « L » sur le véhicule : il s'agit du permis définitif.",
+  "C3_Q1": "Une voiture de nuit sur route de campagne, feux de croisement allumés, éclairant la route devant sans éblouir un véhicule qui vient en face au loin.",
+  "C3_Q2": "Gros plan NET sur le COMMODO D'ÉCLAIRAGE d'une voiture, à gauche du volant : la molette ou la bague de commande avec ses crans et ses pictogrammes gravés (feux de position, feux de croisement, antibrouillard) est parfaitement focalisée, sans qu'aucun cran ne soit sélectionné. Aucun flou. L'objet est le commodo, pas le paysage.",
+  "C3_Q3": {
+    "model": 3,
+    "scene": "Vue avant de plusieurs voitures garées côte à côte, génériques. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q4": "Gros plan NET sur le combiné d'instruments d'une voiture, de nuit : plusieurs témoins de feux sont allumés simultanément — le témoin VERT des feux de position, le témoin BLEU des feux de route, le témoin VERT des antibrouillard avant. Chaque pictogramme doit être net et identifiable. Le badge « ? » est BLANC à liseré gris, dans un coin — jamais bleu.",
+  "C3_Q6": {
+    "model": 3,
+    "scene": "Une voiture stationnée de nuit dans une rue générique. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q7": "Gros plan NET et parfaitement focalisé sur le combiné d'instruments d'une voiture, de nuit, contact mis : plusieurs témoins de feux sont allumés et chacun est distinctement identifiable — le témoin vert des feux de position, le témoin bleu des feux de route, le témoin vert des feux antibrouillard avant et le témoin orange des feux antibrouillard arrière. Aucun flou, aucun reflet qui masque un pictogramme. Cadrage serré sur les témoins.",
+  "C3_Q8": "Très gros plan NET sur une seule zone du combiné d'instruments : le TÉMOIN BLEU DES FEUX DE ROUTE allumé, dont le pictogramme (un phare vu de profil projetant des traits HORIZONTAUX et DROITS vers la gauche) doit être parfaitement lisible et dessiné avec exactitude. Fond de compteur sombre et flou autour. Aucun autre témoin allumé.",
+  "C3_Q9": "Vue d'ensemble nocturne d'une voiture avec les feux de croisement avant allumés, feux rouges arrière également allumés, phares de position visibles aux extrémités avant.",
+  "C3_Q11": "Une voiture roulant au crépuscule, phares de croisement qui viennent de s'allumer, ciel orangé du coucher de soleil.",
+  "C3_Q12": "Une voiture roulant sous une pluie battante en plein jour, feux de croisement allumés, visibilité réduite par la pluie.",
+  "C3_Q14": "Vue de trois quarts arrière d'une voiture qui roule DE NUIT sur une route belge, TOUS FEUX ÉTEINTS : ni feux de position, ni feux de croisement, ni feux arrière allumés, seule la lueur d'un lampadaire dessine sa silhouette sombre. Un autre véhicule arrive au loin, feux allumés, pour la comparaison. L'oubli d'allumer doit être flagrant.",
+  "C3_Q16": "Une voiture roulant de nuit dans une rue bien éclairée par l'éclairage public continu, feux de croisement (pas feux de route) allumés.",
+  "C3_Q17": "Schéma vu du dessus, de nuit, d'une route belge à deux sens : deux véhicules se suivent dans le même sens, celui de derrière à une distance courte de celui de devant, leurs faisceaux de phares dessinés au sol. AUCUN pictogramme ajouté : pas d'ampoule, pas d'ampoule barrée, pas de croix, pas de flèche. Badge « ? » blanc à liseré gris dans un coin.",
+  "C3_Q18": "Schéma vu du dessus, de nuit, d'une route belge à deux sens : notre véhicule circule dans un sens, phares allumés, et un second véhicule arrive EN FACE sur l'autre bande, ses propres faisceaux dirigés vers nous. AUCUN pictogramme ajouté : pas d'ampoule, pas d'ampoule barrée, pas de croix, pas de flèche, et rien ne doit masquer les véhicules. Badge « ? » blanc à liseré gris dans un coin.",
+  "C3_Q19": "Une route longeant un canal la nuit, un bateau naviguant sur l'eau à proximité, une voiture roulant sur la route en feux de croisement.",
+  "C3_Q21": {
+    "model": 1,
+    "scene": "Vue arrière nocturne d'une voiture doublant une autre voiture sur une route à deux voies, ses phares avant projetant un faisceau lumineux intense et large caractéristique des feux de route allumés."
+  },
+  "C3_Q22": {
+    "model": 3,
+    "scene": "Deux voitures roulant l'une derrière l'autre de nuit sur une route belge générique. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q24": "Vue conducteur de nuit sur une route de campagne belge, à deux sens : notre véhicule est en train de dépasser, déporté sur la voie de gauche, à hauteur de l'arrière d'une camionnette qu'il double, et un véhicule arrive EN FACE à distance moyenne, ses deux phares bien visibles. Photo réaliste : aucun schéma, aucune flèche, aucun chiffre, aucun pictogramme d'ampoule. Ajoute un unique badge « ? » discret dans un coin.",
+  "C3_Q25": {
+    "model": 3,
+    "scene": "Vue avant d'une voiture générique, temps neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q26": "Une voiture roulant dans un épais brouillard, feux de brouillard avant allumés (lumière blanche basse et large).",
+  "C3_Q27": "Une voiture roulant dans un épais brouillard, feux de croisement et feux de brouillard avant allumés simultanément.",
+  "C3_Q28": "Vue de l'ARRIÈRE d'une voiture belge à l'arrêt, cadrage serré sur le bloc optique arrière droit : le feu de brouillard arrière, plus petit et nettement plus intense que les feux de position, est bien visible dans le bloc. La question porte sur les feux arrière : le véhicule ne doit en aucun cas être photographié de face.",
+  "C3_Q29": "Vue arrière d'une voiture roulant dans un brouillard dense, feu de brouillard arrière rouge intense allumé.",
+  "C3_Q30": "Vue arrière d'une voiture roulant sous une pluie battante, feu de brouillard arrière rouge intense allumé.",
+  "C3_Q32": {
+    "model": 3,
+    "scene": "Vue arrière d'une voiture générique, temps neutre. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q33": "Une voiture entrant dans un épais banc de brouillard soudain, feux de freinage légèrement allumés indiquant un ralentissement progressif.",
+  "C3_Q35": "Une voiture stationnée en bord de route au crépuscule, feux de position allumés.",
+  "C3_Q36": "Gros plan sur les feux de position avant (petits, doux, blancs ou ambrés) d'une voiture stationnée de nuit.",
+  "C3_Q37": "Gros plan sur les feux de position arrière (petits, rouges) d'une voiture stationnée de nuit.",
+  "C3_Q38": "Une voiture stationnée en bord de route par temps de brouillard, feux de croisement allumés en plus des feux de position.",
+  "C3_Q39": {
+    "model": 3,
+    "scene": "Une voiture stationnée de nuit dans une rue de ville générique. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q40": {
+    "model": 3,
+    "scene": "Vue arrière d'une voiture stationnée de nuit dans une rue générique, sans précision de côté. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q41": "Une voiture stationnée en épi (pas parallèlement à la chaussée) dans une rue de ville la nuit, feux de position avant et arrière tous allumés.",
+  "C3_Q42": "Une voiture attelée à une remorque, stationnée parallèlement au trottoir en ville la nuit, feux de position allumés sur la voiture et sur la remorque.",
+  "C3_Q43": "Une voiture stationnée en bord de route de campagne la nuit, feux de position avant et arrière allumés, aucun éclairage public alentour.",
+  "C3_Q44": {
+    "model": 3,
+    "scene": "Une voiture stationnée de nuit dans une rue générique. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q45": "Une voiture stationnée en bord de route de campagne la nuit, feux de position avant et arrière allumés, aucun éclairage public alentour.",
+  "C3_Q46": {
+    "model": 3,
+    "scene": "Une voiture stationnée de nuit dans une rue de ville générique. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q47": "Une voiture en panne à l'arrêt sur le bord de la route, feux de détresse clignotants allumés, triangle posé en amont.",
+  "C3_Q50": "Une voiture stationnée en double file dans une rue étroite, feux de détresse allumés, gênant nettement la circulation qui doit la contourner.",
+  "C3_Q52": "Un autobus scolaire arrêté avec ses feux de détresse allumés, des enfants en train de monter dans le bus par la porte ouverte.",
+  "C3_Q53": "Vue conducteur derrière le pare-brise : devant nous, un MINIBUS SCOLAIRE BELGE — véhicule blanc ordinaire de type minibus, portant à l'arrière le panneau jaune carré « enfants » — est arrêté le long du trottoir, ses QUATRE WARNINGS orange allumés. Aucun autobus jaune de type américain, aucune livrée scolaire nord-américaine.",
+  "C3_Q54": "Vue de trois quarts arrière : un minibus scolaire belge (véhicule blanc ordinaire, panneau jaune « enfants » à l'arrière) est à l'arrêt le long du trottoir, ses QUATRE clignotants allumés simultanément — avant gauche, avant droit, arrière gauche, arrière droit — ce qui doit se distinguer sans hésitation d'un simple indicateur de direction. Notre voiture arrive derrière lui.",
+  "C3_Q55": "Vue de trois quarts arrière : un minibus scolaire belge (véhicule blanc, panneau jaune « enfants ») quitte son arrêt le long du trottoir et se déporte vers la chaussée, avec UNIQUEMENT SON CLIGNOTANT GAUCHE allumé — les trois autres clignotants sont éteints, ce n'est pas un warning. Les roues avant sont braquées vers la gauche et le bus est déjà légèrement en biais : il repart.",
+  "C3_Q57": {
+    "model": 3,
+    "scene": "Une entrée de tunnel routier générique, panneau flou sans chiffre lisible. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q58": {
+    "model": 3,
+    "scene": "Un tableau de bord de voiture générique et flou, une entrée de tunnel visible au loin par le pare-brise. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q59": "Vue à l'intérieur d'un tunnel éclairé, une voiture avec les feux de croisement clairement allumés, murs du tunnel visibles.",
+  "C3_Q60": "Un conducteur retire ses lunettes de soleil juste avant d'entrer dans un tunnel, entrée du tunnel visible et sombre devant.",
+  "C3_Q61": "Gros plan sur le visage d'un conducteur approchant d'un tunnel, un œil fermé et l'autre ouvert.",
+  "C3_Q62": "Une voiture immobilisée sur la bande de droite à l'intérieur d'un tunnel, de la fumée visible au loin, feux de détresse allumés.",
+  "C3_Q63": "Gros plan depuis l'extérieur, à travers la portière conducteur grande ouverte d'une voiture abandonnée dans un tunnel : l'habitacle est vide et la CLÉ EST RESTÉE SUR LE CONTACT, bien visible et nette, son porte-clés pendant sous la colonne de direction. De la fumée est visible au loin dans le tunnel. Le badge « ? » est BLANC à liseré gris, dans un coin.",
+  "C3_Q64": {
+    "model": 1,
+    "scene": "À l'intérieur d'un tunnel routier envahi par une épaisse fumée noire, des silhouettes de personnes courant vers une sortie de secours éclairée, sans indication de la circulation des véhicules."
+  },
+  "C3_Q66": "Une épaisse fumée noire envahissant rapidement un tunnel, des silhouettes courant vers une sortie de secours en laissant leurs véhicules.",
+  "C3_Q67": {
+    "model": 3,
+    "scene": "Gros plan sur un volant de voiture générique, zone du klaxon visible. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q68": {
+    "model": 3,
+    "scene": "Gros plan sur un volant de voiture générique, zone du klaxon visible. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q69": "Un conducteur klaxonne brièvement en ville de jour pour avertir un piéton distrait qui s'apprête à traverser sans le voir.",
+  "C3_Q70": "Vue conducteur sur une route de campagne belge : notre véhicule déboîte pour dépasser et un tracteur arrive en face à distance. La main du conducteur appuie au centre du volant, sur le klaxon. AUCUN élément graphique ajouté : pas de traits de son, pas d'ondes, pas de symbole de note de musique — la scène doit rester une photographie réaliste.",
+  "C3_Q73": "Un conducteur fait un appel de phares, et non un coup de klaxon, pour prévenir qu'il va dépasser un véhicule devant lui, de nuit sur route nationale.",
+  "C3_Q74": {
+    "model": 3,
+    "scene": "Vue avant d'une voiture de nuit, phares allumés, état générique sans précision. Ajoute un unique badge « ? » discret, sans autre mot."
+  },
+  "C3_Q75": "Une voiture de nuit dont les phares éclairent soudainement un animal traversant la chaussée, scène de danger imminent.",
+  "CARD_C3_p0_c0": "Une voiture de nuit sur route de campagne, feux de croisement allumés, éclairant la route devant sans éblouir un véhicule qui vient en face au loin.",
+  "CARD_C3_p0_c1": "Gros plan NET et parfaitement focalisé sur le combiné d'instruments d'une voiture belge, de nuit, contact mis : les QUATRE témoins de feux sont allumés en même temps et chacun est distinctement identifiable — le témoin VERT des feux de position (deux demi-cercles avec traits latéraux), le témoin BLEU des feux de route (phare projetant des traits horizontaux droits), le témoin VERT des antibrouillard avant (traits obliques coupés d'une ondulation) et le témoin ORANGE de l'antibrouillard arrière. Cadrage serré sur la zone des témoins. Aucun flou, aucun reflet qui masque un pictogramme, aucun badge « ? ».",
+  "CARD_C3_p0_c2": "Très gros plan NET sur la zone des témoins du combiné d'une voiture : quatre pictogrammes de feux allumés, agrandis et parfaitement lisibles, avec leurs couleurs réelles (vert, bleu, vert, orange). Chaque symbole doit être dessiné avec exactitude, comme dans un manuel : c'est précisément la reconnaissance des logos que la carte demande d'apprendre. Fond de compteur sombre autour, profondeur de champ nulle sur les pictogrammes. Aucun flou artistique.",
+  "CARD_C3_p1_c0": "Vue d'ensemble nocturne d'une voiture avec les feux de croisement avant allumés, feux rouges arrière également allumés, phares de position visibles aux extrémités avant.",
+  "CARD_C3_p1_c1": "Vue de trois quarts sur une route belge au crépuscule : une voiture ROULE (léger filé au sol), ses FEUX DE CROISEMENT blancs allumés à l'avant et ses feux rouges à l'arrière. Elle n'est ni arrêtée ni sur l'accotement, et aucun feu orange de warning n'est allumé. Le ciel entre chien et loup dit le moment où l'allumage devient obligatoire.",
+  "CARD_C3_p1_c2": {
+    "model": 2,
+    "scene": "Vue de dessus nocturne : deux voitures se croisant en sens inverse sur une route à deux voies. Ajoute une unique icône ampoule barrée d'un trait rouge au-dessus de la voiture de premier plan, sans aucun mot."
+  },
+  "CARD_C3_p1_c3": {
+    "model": 1,
+    "scene": "Vue arrière nocturne d'une voiture doublant une autre voiture sur une route à deux voies, ses phares avant projetant un faisceau lumineux intense et large caractéristique des feux de route allumés."
+  },
+  "CARD_C3_p2_c0": "Une voiture roulant dans un épais brouillard, feux de brouillard avant allumés (lumière blanche basse et large).",
+  "CARD_C3_p2_c1": "Vue arrière d'une voiture dans le brouillard dense, feu de brouillard arrière rouge intense bien visible.",
+  "CARD_C3_p2_c2": "Une voiture entrant dans un épais banc de brouillard soudain, feux de freinage légèrement allumés indiquant un ralentissement progressif.",
+  "CARD_C3_p3_c0": "Une voiture stationnée en bord de route au crépuscule, feux de position allumés.",
+  "CARD_C3_p3_c1": "Vue d'ensemble nocturne d'une voiture stationnée : feux de position blancs/ambrés à l'avant, feux rouges à l'arrière, tous allumés.",
+  "CARD_C3_p3_c2": "Une voiture stationnée en bord de route par temps de brouillard, feux de croisement allumés en plus des feux de position.",
+  "CARD_C3_p3_c3": "Une voiture stationnée parallèlement au trottoir dans une rue de ville la nuit, un feu de stationnement allumé.",
+  "CARD_C3_p3_c4": "Une voiture stationnée en bord de route de campagne la nuit, feux de position avant et arrière allumés, aucun éclairage public alentour.",
+  "CARD_C3_p4_c0": {
+    "model": 4,
+    "scene": "Image composée de TROIS VIGNETTES de même taille, en bande, séparées de fins traits blancs, chacune un petit schéma vu du dessus sur fond clair, et chacune montrant une voiture dont les QUATRE clignotants sont allumés (quatre points orange aux angles) : 1) une voiture en PANNE, arrêtée sur l'accotement, capot ouvert ; 2) une voiture REMORQUÉE par une autre, reliées par une barre d'attelage ; 3) une voiture qui freine brusquement devant un DANGER soudain sur la chaussée (obstacle tombé), pour avertir ceux qui suivent. Ce sont les trois cas de la carte. Aucun cortège funéraire, aucun mot, aucune numérotation."
+  },
+  "CARD_C3_p4_c1": "Une voiture stationnée en double file dans une rue étroite, feux de détresse allumés, gênant nettement la circulation qui doit la contourner.",
+  "CARD_C3_p4_c2": "Vue conducteur derrière un transport scolaire belge arrêté : un MINIBUS BLANC ordinaire portant le panneau jaune carré « enfants » à l'arrière, ses QUATRE warnings allumés, et des enfants qui descendent sur le trottoir. Notre véhicule est à l'arrêt derrière lui. Aucune carrosserie intégralement jaune de type américain.",
+  "CARD_C3_p5_c0": "Un conducteur approchant de l'entrée d'un long tunnel routier, un panneau triangulaire réel annonçant un tunnel, phares de croisement déjà allumés avant l'entrée.",
+  "CARD_C3_p5_c1": {
+    "model": 3,
+    "scene": "Un conducteur retire ses lunettes de soleil juste avant d'entrer dans un tunnel, entrée du tunnel visible et sombre devant. Ajoute une unique flèche pointant les lunettes retirées, sans aucun mot."
+  },
+  "CARD_C3_p5_c2": "Une épaisse fumée noire envahissant un tunnel, une voiture immobilisée sur la bande de droite, feux de détresse allumés, une silhouette évacuant vers une sortie de secours.",
+  "CARD_C3_p6_c0": "Gros plan NET sur le moyeu du volant d'une voiture belge : le PICTOGRAMME DE KLAXON (trompe stylisée entourée de deux arcs) est parfaitement dessiné, net et de taille suffisante pour être identifié sans effort, avec une main posée dessus. Aucun badge « ? » : la carte explique la règle, elle ne la fait pas deviner.",
+  "CARD_C3_p6_c1": "Un conducteur klaxonne brièvement en ville de jour pour avertir un piéton distrait qui s'apprête à traverser sans le voir.",
+  "CARD_C3_p6_c2": "Un conducteur fait un appel de phares, et non un coup de klaxon, pour prévenir qu'il va dépasser un véhicule devant lui, de nuit sur route nationale."
 }
