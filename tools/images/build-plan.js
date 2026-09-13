@@ -76,7 +76,11 @@ const PRECISION_PHOTO =
   `Si la scène dit qu'un panneau est vu DE DOS, ne montre que sa plaque arrière grise et ses fixations — sa face avant ne doit ` +
   `apparaître nulle part. Un panneau doit être NET et lisible : jamais flou, jamais vide, jamais vu de trop loin, et ne porte ` +
   `JAMAIS son code réglementaire écrit dessus (« F17 », « C43 »… n'existent pas sur un vrai panneau). ` +
-  `Un grand panneau directionnel bleu ou vert doit porter un nom de localité belge plausible plutôt que rester vide.\n\n` +
+  `Un grand panneau directionnel bleu ou vert doit porter un nom de localité belge plausible plutôt que rester vide. ` +
+  `SIGNAL D'AGGLOMÉRATION BELGE — JAMAIS BLEU : le signal de DÉBUT d'agglomération est un rectangle vertical à fond ` +
+  `BLANC portant en NOIR la silhouette de bâtiments serrés (pignons, clocher) ; le signal de FIN est exactement le ` +
+  `même, barré d'une large bande ROUGE oblique. Ne le dessine jamais sur fond bleu ni avec une silhouette blanche : ` +
+  `ce panneau-là n'existe pas en Belgique.\n\n` +
   `COHÉRENCE DES USAGERS ET DES GESTES : un motard, même à l'arrêt ou poussant sa machine, porte un CASQUE ; ` +
   `une personne qui pousse un cyclomoteur est piétonne et n'en porte pas. Une personne sortie de son véhicule sur une ` +
   `autoroute ou une bande d'arrêt d'urgence porte le GILET fluo et se tient DERRIÈRE la glissière, côté talus. ` +
@@ -87,8 +91,8 @@ const PRECISION_PHOTO =
   CONTROLE_FINAL;
 
 const STYLE_BLOCKS = {
-  1: `STYLE : photographie réaliste, type photo d'examen du permis de conduire belge (GOCA). ` +
-     `Belgique, circulation à droite, lumière naturelle. ` +
+  1: `STYLE : photographie documentaire réaliste d'une situation de circulation, comme dans un manuel ` +
+     `d'apprentissage de la conduite. Belgique, circulation à droite, lumière naturelle. ` +
      `Composition SIMPLE, lisible en 2 secondes, avec UN sujet principal clair. ` +
      `Aucun texte lisible et aucune enseigne (sauf si la scène l'exige explicitement), aucune flèche ajoutée, aucun filigrane. ` +
      `MARQUAGES ROUTIERS BELGES UNIQUEMENT : lignes BLANCHES (orange seulement pour les chantiers) — JAMAIS de ligne jaune au sol. ` +
@@ -132,7 +136,7 @@ const STYLE_BLOCKS = {
      `une trajectoire dessinée doit être celle que la règle impose, une numérotation doit suivre l'ordre réel, ` +
      `un segment de distance doit partir du bon point. Vérifie la cohérence de l'ensemble avant de générer : ` +
      `un schéma faux enseigne le contraire de la carte.`,
-  3: `STYLE : photographie réaliste (même exigence qu'une photo d'examen GOCA belge, lumière naturelle, ` +
+  3: `STYLE : photographie documentaire réaliste d'une situation de circulation (lumière naturelle, ` +
      `circulation à droite), à laquelle est ajouté UN SEUL repère graphique simple et discret : soit un ` +
      `chiffre isolé dans un petit badge circulaire, soit une flèche unique — jamais les deux ensemble, ` +
      `et JAMAIS de mot écrit (site bilingue FR/NL). Le repère ne doit pas transformer la photo en schéma : ` +
@@ -177,9 +181,12 @@ function buildPrompt(lic, themeTitle, sceneEntry, kind) {
   // Rétrocompatibilité : une scène simple (string) = modèle 1, comme avant.
   const model = typeof sceneEntry === 'object' && sceneEntry.model ? sceneEntry.model : 1;
   const scene = typeof sceneEntry === 'object' ? sceneEntry.scene : sceneEntry;
+  // Formulation volontairement neutre : nommer un examen officiel ou un organisme réel
+  // (« GOCA », « examen du permis ») faisait refuser la génération pour contenu protégé.
+  const vehicule = lic === 'AM' ? 'cyclomoteur' : 'voiture';
   const contexte = kind === 'card'
-    ? `carte de théorie du permis ${lic === 'AM' ? 'AM (cyclomoteur)' : 'B (voiture)'} belge, thème « ${themeTitle} »`
-    : `question d'examen du permis ${lic === 'AM' ? 'AM (cyclomoteur)' : 'B (voiture)'} belge, thème « ${themeTitle} »`;
+    ? `illustration pédagogique d'un cours de conduite (${vehicule}) en Belgique, thème « ${themeTitle} »`
+    : `illustration d'un exercice de code de la route (${vehicule}) en Belgique, thème « ${themeTitle} »`;
   return `Génère une image.\n\n${STYLE_BLOCKS[model]}` +
     (kind === 'card' ? CONTROLE_CARTE : '') + `\n\n` +
     `SCÈNE PRÉCISE À REPRÉSENTER :\n${scene}\n\n` +
