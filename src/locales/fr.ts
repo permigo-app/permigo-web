@@ -221,6 +221,10 @@
   passer_quiz: 'Passer au quiz →',
   jai_pas_compris: "J'ai pas compris",
   fermer_btn: 'Fermer',
+  // Le détail d'une carte est replié par défaut : la règle suffit pour répondre aux
+  // questions. Le libellé annonce ce qu'on trouve dessous, sinon personne ne l'ouvre.
+  voir_exemple: 'Un exemple concret',
+  masquer_exemple: 'Masquer le détail',
   lecon_introuvable: 'Leçon introuvable',
   retour: 'Retour',
   theme: 'Thème',

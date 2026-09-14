@@ -221,6 +221,8 @@
   passer_quiz: 'Naar de quiz →',
   jai_pas_compris: 'Ik snap het niet',
   fermer_btn: 'Sluiten',
+  voir_exemple: 'Een concreet voorbeeld',
+  masquer_exemple: 'Details verbergen',
   lecon_introuvable: 'Les niet gevonden',
   retour: 'Terug',
   theme: 'Thema',

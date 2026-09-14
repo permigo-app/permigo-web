@@ -85,6 +85,24 @@ export default function LessonPage() {
   const [currentCard, setCurrentCard] = useState(0);
   const [showSimple, setShowSimple] = useState(false);
 
+  // Détail des cartes de théorie : la règle reste toujours visible, le reste (pourquoi,
+  // en pratique, exemple) est replié. Le choix de l'élève est retenu d'une carte à
+  // l'autre et d'une session à l'autre : celui qui veut tout lire n'ouvre qu'une fois,
+  // celui qui veut l'essentiel n'ouvre jamais.
+  const [showDetails, setShowDetails] = useState(false);
+  useEffect(() => {
+    try {
+      if (localStorage.getItem('permigo_theorie_detail') === '1') setShowDetails(true);
+    } catch { /* navigation privée ou stockage refusé : on garde le repli par défaut */ }
+  }, []);
+  const toggleDetails = () => {
+    setShowDetails(v => {
+      const next = !v;
+      try { localStorage.setItem('permigo_theorie_detail', next ? '1' : '0'); } catch { /* ignoré */ }
+      return next;
+    });
+  };
+
   // Quiz
   const [questions, setQuestions] = useState<LocalQuestion[]>([]);
   const [currentQ, setCurrentQ] = useState(0);
@@ -427,6 +445,16 @@ export default function LessonPage() {
 
     const contentSections = parseContentSections(card.content);
 
+    // Ce qui suffit à répondre aux questions reste visible ; le reste est repliable.
+    // « La règle » porte la réponse, « Erreur fréquente » évite de la rater : les deux
+    // restent à l'écran. « Pourquoi », « En pratique » et « Exemple » expliquent.
+    const TOUJOURS_VISIBLE = ['La règle', 'Erreur fréquente'];
+    const estVisible = (sec: { emoji: string; label: string }) =>
+      sec.emoji === '📋' || sec.emoji === '⚠️' ||
+      TOUJOURS_VISIBLE.some(l => sec.label.toLowerCase().includes(l.toLowerCase().split(' ')[1] || l.toLowerCase()));
+    const sectionsVisibles = contentSections?.filter(estVisible) ?? null;
+    const sectionsRepliees = contentSections?.filter(s => !estVisible(s)) ?? null;
+
     // Smart key points: first sentence of La règle, En pratique, Erreur fréquente
     const KEY_SECTION_LABELS = ['La règle', 'En pratique', 'Erreur fréquente'];
     const keyPoints: string[] = contentSections
@@ -559,10 +587,10 @@ export default function LessonPage() {
             {/* Content sections or plain text */}
             {contentSections ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {contentSections.map((sec, i) => {
+                {(sectionsVisibles ?? []).map((sec, i) => {
                   const s = getSectionStyle(sec);
                   return (
-                    <div key={i} style={{ background: s.bg, borderLeft: `4px solid ${s.border}`, borderRadius: '0 10px 10px 0', padding: '11px 14px' }}>
+                    <div key={'v' + i} style={{ background: s.bg, borderLeft: `4px solid ${s.border}`, borderRadius: '0 10px 10px 0', padding: '11px 14px' }}>
                       <p style={{ margin: '0 0 5px', fontSize: 10, fontWeight: 700, letterSpacing: '1.1px', textTransform: 'uppercase', color: s.labelColor }}>
                         {sec.emoji} {sec.label}
                       </p>
@@ -572,6 +600,43 @@ export default function LessonPage() {
                     </div>
                   );
                 })}
+
+                {/* Détail repliable — le libellé annonce ce qu'il y a dessous */}
+                {sectionsRepliees && sectionsRepliees.length > 0 && (
+                  <>
+                    {showDetails && sectionsRepliees.map((sec, i) => {
+                      const s = getSectionStyle(sec);
+                      return (
+                        <div key={'d' + i} style={{ background: s.bg, borderLeft: `4px solid ${s.border}`, borderRadius: '0 10px 10px 0', padding: '11px 14px' }}>
+                          <p style={{ margin: '0 0 5px', fontSize: 10, fontWeight: 700, letterSpacing: '1.1px', textTransform: 'uppercase', color: s.labelColor }}>
+                            {sec.emoji} {sec.label}
+                          </p>
+                          <p style={{ margin: 0, fontSize: 13, lineHeight: 1.65, color: 'var(--text-sub)', whiteSpace: 'pre-line' }}>
+                            {sec.body}
+                          </p>
+                        </div>
+                      );
+                    })}
+                    <button
+                      onClick={toggleDetails}
+                      className="press-scale"
+                      aria-expanded={showDetails}
+                      style={{
+                        width: '100%', background: 'var(--bg-input)', border: '1.5px solid var(--border-card)',
+                        borderRadius: 12, padding: '11px 14px', fontSize: 13, fontWeight: 700,
+                        color: 'var(--text-title)', cursor: 'pointer',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+                      }}
+                    >
+                      {showDetails ? t('masquer_exemple') : t('voir_exemple')}
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                           strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"
+                           style={{ transform: showDetails ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </button>
+                  </>
+                )}
               </div>
             ) : (
               <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, color: 'var(--text-sub)' }}>
