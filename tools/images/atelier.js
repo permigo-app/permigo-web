@@ -60,13 +60,16 @@ function copyToClipboard(text) {
   } catch { return false; }
 }
 
-function showJob(job, tag) {
+function showJob(job, tag, rangDansLot = 1) {
   // Compteur de PROGRESSION (combien de faites + celle-ci), pas la position brute
   // dans le tableau — sinon une question tôt dans la liste ré-ouverte affiche un
   // chiffre trompeusement bas alors que le vrai reste-à-faire est ailleurs.
+  // En mode lot, rien n'est encore installé tant que le lot n'est pas récolté :
+  // sans le rang, les prompts empilés afficheraient tous le même numéro et on
+  // croirait l'atelier bloqué.
   const doneCount = plan.filter(isDone).length;
   console.log('────────────────────────────────────────────');
-  console.log(`${tag ? tag + '  ' : ''}[${doneCount + 1}/${plan.length}]  ${job.lic} · thème ${job.theme} · ${job.kind === 'question' ? 'question' : 'carte'} ${job.id}`);
+  console.log(`${tag ? tag + '  ' : ''}[${doneCount + rangDansLot}/${plan.length}]  ${job.lic} · thème ${job.theme} · ${job.kind === 'question' ? 'question' : 'carte'} ${job.id}`);
   console.log(`« ${job.label.slice(0, 110)} »`);
   console.log('────────────────────────────────────────────');
   console.log(job.prompt);
@@ -76,14 +79,18 @@ function showJob(job, tag) {
                  : '⚠ Copie presse-papiers impossible — copie le prompt ci-dessus à la main.');
 }
 
-// Images récentes de Téléchargements, de la plus RÉCENTE à la plus ancienne
+// Images récentes de Téléchargements, de la plus RÉCENTE à la plus ancienne.
+// Les images DÉJÀ installées sont écartées : sans ce filtre, un lot auquel il manque
+// une image se complétait avec celle du lot précédent, et tout se décalait d'un cran.
 function recentDownloads() {
   const exts = ['.png', '.jpg', '.jpeg', '.webp'];
   if (!fs.existsSync(DL_DIR)) return [];
+  const dejaUtilisees = new Set(Object.keys(state.hashes || {}));
   return fs.readdirSync(DL_DIR)
     .filter(f => exts.includes(path.extname(f).toLowerCase()))
     .map(f => ({ f: path.join(DL_DIR, f), t: fs.statSync(path.join(DL_DIR, f)).mtimeMs }))
     .filter(x => Date.now() - x.t <= RECENT_MS)
+    .filter(x => { try { return !dejaUtilisees.has(fileHash(x.f)); } catch { return true; } })
     .sort((a, b) => b.t - a.t);
 }
 
@@ -198,7 +205,8 @@ async function loop() {
       const j = nextJob(pending.map(p => p.id));
       if (!j) { console.log('Plus rien à empiler — termine ce lot.'); continue; }
       pending.push(j);
-      showJob(j, ['🅰', '🅱', '🅲', '🅳', '🅴'][pending.length - 1] || '•');
+      showJob(j, ['🅰', '🅱', '🅲', '🅳', '🅴'][pending.length - 1] || '•', pending.length);
+      console.log(`   (${pending.length} prompts en attente — il te faudra ${pending.length} images)`);
       continue;
     }
 
