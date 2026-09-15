@@ -119,6 +119,9 @@
   resultats_sans_faute: 'Foutloos — perfect! 🎯',
   resultats_ta_reponse: 'Jouw antwoord',
   resultats_bonne_reponse: 'Juist antwoord',
+  resultats_refaire_erreurs: 'Mijn {n} fouten opnieuw',
+  resultats_recommencer_examen: 'Volledig examen opnieuw',
+  resultats_revoir_point: 'Dit punt herbekijken',
 
   // ── Révision ──
   revision_titre: 'Herziening — Thema',

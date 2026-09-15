@@ -21,6 +21,8 @@ function ExamContent() {
   const router = useRouter();
   const { t, lang } = useLang();
   const themeCode = params.get('theme') || 'FINAL';
+  // Reprise ciblée : on ne rejoue que les questions ratées au dernier examen.
+  const modeErreurs = params.get('erreurs') === '1';
   // Format officiel par permis : B = 50 questions (erreur grave = -5),
   // AM = 40 questions (chaque erreur coûte 1 point, pas de règle des -5)
   const isAM = getActiveLicense() === 'AM';
@@ -87,6 +89,9 @@ function ExamContent() {
     hasRestoredRef.current = true;
     const restore = async () => {
       try {
+        // Une reprise ciblée ne restaure jamais l'examen complet en cours :
+        // elle joue sa propre liste et laisse la session intacte.
+        if (modeErreurs) return;
         const saved = localStorage.getItem(scopedKey('exam_active'));
         if (!saved) return;
         const data = JSON.parse(saved);
@@ -163,11 +168,35 @@ function ExamContent() {
     );
   }
 
+  // Rejouer UNIQUEMENT les questions ratées au dernier examen. Recommencer les 50
+  // quand on en a manqué 7 fait réviser 43 questions déjà acquises : la reprise
+  // ciblée est ce qui fait progresser, et elle tient en deux minutes.
+  const idsDesFautes = (): string[] => {
+    try {
+      const raw = localStorage.getItem(scopedKey('exam_last_review'));
+      if (!raw) return [];
+      const review = JSON.parse(raw);
+      if (review.theme !== themeCode) return [];
+      return (review.items || [])
+        .filter((it: { selected: number; correct: number }) => it.selected !== it.correct)
+        .map((it: { id: string }) => it.id);
+    } catch { return []; }
+  };
+
   const startExam = async () => {
-    const qs = (await getExamQuestionsLocalized(themeCode, lang, questionCount)).map(q => {
-      const s = shuffleChoices(q);
-      return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
-    });
+    const fautes = modeErreurs ? idsDesFautes() : [];
+    const qs = fautes.length > 0
+      ? (await getExamQuestionsLocalized(themeCode, lang, 500))
+          .filter(q => fautes.includes(q.id))
+          .sort((a, b) => fautes.indexOf(a.id) - fautes.indexOf(b.id))
+          .map(q => {
+            const s = shuffleChoices(q);
+            return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+          })
+      : (await getExamQuestionsLocalized(themeCode, lang, questionCount)).map(q => {
+          const s = shuffleChoices(q);
+          return { ...q, choices: s.choices as [string, string, string, string], correct: s.correct };
+        });
 
     // Save session — exam is NOT counted as used yet
     localStorage.setItem(scopedKey('exam_active'), JSON.stringify({
@@ -272,10 +301,16 @@ function ExamContent() {
           explanation: q.explanation,
           severe: !!q.severe,
           sign: q.sign,
+          // L'illustration et le point théorique d'origine : la page résultats
+          // en a besoin pour montrer la situation et renvoyer à la bonne carte.
+          image: q.image,
+          theoryCardIndex: q.theoryCardIndex,
         })),
       }));
     } catch { /* ignore */ }
-    if (passed) {
+    // Réussir une reprise de quelques questions ne vaut pas un examen : on ne
+    // valide le thème et on ne débloque la suite que sur un examen complet.
+    if (passed && !modeErreurs) {
       // 'FINAL' est aussi enregistré — il donne le trophée Diamant global
       setExamPassed(themeCode);
       if (themeCode !== 'FINAL') {

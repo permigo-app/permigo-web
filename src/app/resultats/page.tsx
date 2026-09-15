@@ -19,6 +19,10 @@ interface ExamReviewItem {
   explanation: string;
   severe: boolean;
   sign?: string;
+  /** Illustration de la situation : sans elle, « qui passe en premier ? » ne veut rien dire. */
+  image?: string;
+  /** Carte de théorie d'où vient la question, pour y renvoyer directement. */
+  theoryCardIndex?: number;
 }
 
 function ResultsContent() {
@@ -62,7 +66,12 @@ function ResultsContent() {
       if (review.theme !== themeCode || review.total !== total) return;
       if (Date.now() - (review.ts ?? 0) > 30 * 60 * 1000) return;
       const all = review.items as ExamReviewItem[];
-      setFaults(all.filter(it => it.selected !== it.correct));
+      // Les erreurs graves coûtent 5 points : on les met en tête, c'est là que
+      // l'examen se joue.
+      setFaults(
+        all.filter(it => it.selected !== it.correct)
+           .sort((a, b) => Number(b.severe) - Number(a.severe))
+      );
 
       // Répartition par thème : le code du thème est la 1re lettre de l'id
       // ("F1_Q12" → F). N'a de sens que pour l'examen final, qui pioche
@@ -205,6 +214,19 @@ function ResultsContent() {
             <div className="flex flex-col gap-3">
               {faults.map(f => (
                 <div key={f.id} className="rounded-2xl p-4" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)' }}>
+                  {/* L'illustration d'abord : beaucoup de questions ne se comprennent
+                      pas sans elle (« qui passe en premier ? »). */}
+                  {f.image && (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={f.image}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full rounded-xl mb-3"
+                      style={{ border: '1px solid var(--border-subtle)', aspectRatio: '4 / 3', objectFit: 'contain', background: 'var(--bg-input)' }}
+                    />
+                  )}
                   <div className="flex items-start gap-3 mb-3">
                     {f.sign && (
                       <div className="flex-shrink-0">
@@ -235,6 +257,25 @@ function ResultsContent() {
                       {f.explanation}
                     </p>
                   )}
+                  {/* Renvoi vers LA carte d'où vient la question, pas seulement vers
+                      le thème : sinon l'élève cherche parmi des dizaines de cartes. */}
+                  {(() => {
+                    const lecon = (f.id || '').split('_')[0].replace(/Q\d+$/, '');
+                    if (!/^[A-I]\d$/.test(lecon)) return null;
+                    const href = f.theoryCardIndex !== undefined
+                      ? `/lecon/${lecon}?carte=${f.theoryCardIndex}`
+                      : `/lecon/${lecon}`;
+                    return (
+                      <Link
+                        href={href}
+                        className="inline-flex items-center gap-1.5 mt-3 text-xs font-bold press-scale"
+                        style={{ color: 'var(--brand)', textDecoration: 'none' }}
+                      >
+                        {t('resultats_revoir_point')}
+                        <span aria-hidden="true">→</span>
+                      </Link>
+                    );
+                  })()}
                 </div>
               ))}
             </div>
@@ -244,6 +285,27 @@ function ResultsContent() {
 
       {/* Buttons */}
       <div className="flex flex-col gap-3">
+        {/* Reprise ciblée : rejouer ses erreurs plutôt que les 50 questions, dont
+            la plupart étaient déjà acquises. C'est le geste principal après un
+            examen raté, d'où sa place en tête et sa couleur. */}
+        {isExam && faults !== null && faults.length > 0 && (
+          <button
+            onClick={() => router.push(`/examen?theme=${themeCode}&erreurs=1`)}
+            className="w-full py-4 rounded-3xl font-black text-sm press-scale text-white btn-glow-green"
+            style={{ background: 'var(--success)' }}
+          >
+            {t('resultats_refaire_erreurs').replace('{n}', String(faults.length))}
+          </button>
+        )}
+        {isExam && (
+          <button
+            onClick={() => router.push(`/examen?theme=${themeCode}`)}
+            className="w-full py-4 rounded-3xl font-black text-sm press-scale"
+            style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)' }}
+          >
+            {t('resultats_recommencer_examen')}
+          </button>
+        )}
         {passed && hasNextPartie && lessonId && (
           <button
             onClick={() => router.push(`/lecon/${lessonId}?partie=${partieNum! + 1}`)}
