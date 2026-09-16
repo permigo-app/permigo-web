@@ -39,6 +39,55 @@ function setItemGlobal(key: string, value: string): void {
   localStorage.setItem(key, value);
 }
 
+// ── Remontée automatique vers Supabase ──────────────────────────────────────
+// La progression ne remontait qu'à la CONNEXION, et seulement si le XP local
+// dépassait le distant. Tant que l'élève ne se reconnectait pas, tout son
+// travail restait sur son seul appareil : changer de téléphone, vider son
+// cache ou se reconnecter ailleurs l'effaçait définitivement.
+// Chaque avancée planifie donc maintenant un envoi, groupé pour ne pas faire
+// une requête par clic, et forcé quand l'onglet passe en arrière-plan.
+let minuterieSync: ReturnType<typeof setTimeout> | null = null;
+let syncEnCours = false;
+const DELAI_SYNC = 4000;
+
+async function envoyerProgression(): Promise<void> {
+  if (typeof window === 'undefined' || syncEnCours) return;
+  syncEnCours = true;
+  try {
+    const { supabase, hasSupabase } = await import('./supabase');
+    if (!hasSupabase || !supabase) return;
+    const { data } = await supabase.auth.getUser();
+    const uid = data?.user?.id;
+    if (!uid) return;                       // visiteur non connecté : rien à remonter
+    await syncAllToSupabase(uid);
+    await syncAmToSupabase(uid);
+  } catch (e) {
+    // Hors ligne ou session expirée : on réessaiera à la prochaine avancée.
+    console.error('[PermiGo] remontée de progression impossible :', e);
+  } finally {
+    syncEnCours = false;
+  }
+}
+
+/** À appeler après toute écriture de progression. Groupe les envois. */
+export function planifierSync(): void {
+  if (typeof window === 'undefined') return;
+  if (minuterieSync) clearTimeout(minuterieSync);
+  minuterieSync = setTimeout(() => { minuterieSync = null; void envoyerProgression(); }, DELAI_SYNC);
+}
+
+if (typeof window !== 'undefined') {
+  // Quitter l'app ou verrouiller le téléphone ne doit pas emporter les dernières
+  // minutes de travail : on envoie sans attendre la fin du regroupement.
+  const envoiImmediat = () => {
+    if (document.visibilityState !== 'hidden') return;
+    if (minuterieSync) { clearTimeout(minuterieSync); minuterieSync = null; }
+    void envoyerProgression();
+  };
+  document.addEventListener('visibilitychange', envoiImmediat);
+  window.addEventListener('pagehide', envoiImmediat);
+}
+
 // ── Stars ──
 export function getStars(lessonId: string): number {
   const raw = getItem(KEY_STARS);
@@ -53,6 +102,7 @@ export function setStars(lessonId: string, stars: number): void {
   if (stars > (obj[lessonId] ?? 0)) {
     obj[lessonId] = stars;
     setItem(KEY_STARS, JSON.stringify(obj));
+    planifierSync();
   }
 }
 
@@ -81,6 +131,7 @@ export function unlockTheme(themeCode: string): void {
   if (!themes.includes(themeCode)) {
     themes.push(themeCode);
     setItem(KEY_THEMES, JSON.stringify(themes));
+    planifierSync();
   }
 }
 
@@ -97,6 +148,7 @@ export function setExamPassed(themeCode: string): void {
   const obj: Record<string, boolean> = raw ? JSON.parse(raw) : {};
   obj[themeCode] = true;
   setItem(KEY_EXAMS, JSON.stringify(obj));
+  planifierSync();
 }
 
 export function getAllExams(): Record<string, boolean> {
@@ -123,6 +175,7 @@ export function updateQuizHistory(correct: number, total: number): void {
     totalAnswers: current.totalAnswers + total,
   };
   setItem(KEY_QUIZ, JSON.stringify(updated));
+  planifierSync();
 }
 
 // ── Streak Data ──
@@ -189,6 +242,7 @@ export function updateXP(xpToAdd: number): XPData & { prevLevel: number } {
   const level = calcLevel(totalXP);
   const updated: XPData = { totalXP, level };
   setItemGlobal(KEY_XP, JSON.stringify(updated));
+  planifierSync();
   return { ...updated, prevLevel };
 }
 
@@ -238,6 +292,7 @@ export function markPartieDone(lessonId: string, partieIndex: number): void {
     setItem(lessonPartiesDoneKey(lessonId), JSON.stringify(done));
   }
   setItem(`partie_completed_${lessonId}_p${partieIndex}`, 'true');
+  planifierSync();
 }
 
 /** Toutes les parties complétées, tous lessonId confondus — pour la synchro Supabase. */
