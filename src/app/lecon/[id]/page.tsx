@@ -132,14 +132,6 @@ export default function LessonPage() {
     setQuestions([]);
   }, [partieIndex]);
 
-  // « Revoir ce point » depuis la page résultats : ?carte=N ouvre directement la
-  // carte de théorie d'où venait la question ratée, au lieu de la première.
-  const carteParam = searchParams.get('carte');
-  useEffect(() => {
-    if (carteParam === null || !lesson) return;
-    const n = Number(carteParam);
-    if (Number.isInteger(n) && n >= 0) setCurrentCard(n);
-  }, [carteParam, lesson]);
 
   const theories: LocalPartie[] = lesson?.theory ?? [];
   const allQuestions: LocalQuestion[] = lesson?.questions ?? [];

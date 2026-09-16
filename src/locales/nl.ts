@@ -120,8 +120,7 @@
   resultats_ta_reponse: 'Jouw antwoord',
   resultats_bonne_reponse: 'Juist antwoord',
   resultats_refaire_erreurs: 'Mijn {n} fouten opnieuw',
-  resultats_recommencer_examen: 'Volledig examen opnieuw',
-  resultats_revoir_point: 'Dit punt herbekijken',
+  resultats_recommencer_examen: 'Volledig examen opnieuw',
 
   // ── Révision ──
   revision_titre: 'Herziening — Thema',

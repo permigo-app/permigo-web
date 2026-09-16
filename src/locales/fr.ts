@@ -119,10 +119,8 @@
   resultats_sans_faute: 'Sans faute — parfait ! 🎯',
   resultats_ta_reponse: 'Ta réponse',
   resultats_bonne_reponse: 'Bonne réponse',
-  // Reprise ciblée après un examen : {n} est remplacé par le nombre d'erreurs.
   resultats_refaire_erreurs: 'Refaire mes {n} erreurs',
-  resultats_recommencer_examen: "Recommencer l'examen complet",
-  resultats_revoir_point: 'Revoir ce point',
+  resultats_recommencer_examen: "Recommencer l'examen complet",
 
   // ── Révision ──
   revision_titre: 'Révision — Thème',

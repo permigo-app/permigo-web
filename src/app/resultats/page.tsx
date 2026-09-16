@@ -97,7 +97,9 @@ function ResultsContent() {
   const scoreColor = passed ? '#00B894' : '#FFD700';
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-8" style={{ background: 'var(--bg-page)', minHeight: '100vh' }}>
+    // La barre de navigation et le bandeau d'abonnement flottent au-dessus du bas de
+    // page : sans cette réserve, ils recouvrent la dernière faute et les boutons.
+    <div className="max-w-lg mx-auto px-4 pt-8" style={{ background: 'var(--bg-page)', minHeight: '100vh', paddingBottom: 150 }}>
       {/* Result title */}
       <div className="text-center mb-6">
         <h1 className="text-[28px] font-black" style={{ color: scoreColor }}>{title}</h1>
@@ -128,12 +130,14 @@ function ResultsContent() {
       {/* Score circle */}
       <div className="flex justify-center mb-6">
         <div
-          className="w-40 h-40 rounded-full flex flex-col items-center justify-center"
+          className="w-40 h-40 rounded-full flex flex-col items-center justify-center px-3 text-center"
           style={{ border: `5px solid ${scoreColor}`, background: scoreColor + '15' }}
         >
-          <span className="text-[42px] font-black">{examPoints !== null ? `${examPoints}/${total}` : `${pct}%`}</span>
-          <span className="text-sm" style={{ color: 'var(--text-hint)' }}>
-            {examPoints !== null ? `${t('resultats_points')} · ${correct}/${total} ${t('resultats_correct').toLowerCase()}` : `${correct}/${total}`}
+          <span className="text-[42px] font-black leading-none">{examPoints !== null ? `${examPoints}/${total}` : `${pct}%`}</span>
+          {/* Une seule mention sous le score : « 47/50 correct » débordait du cercle
+              et répétait les trois compteurs affichés juste en dessous. */}
+          <span className="text-sm mt-1" style={{ color: 'var(--text-hint)' }}>
+            {examPoints !== null ? t('resultats_points') : `${correct}/${total}`}
           </span>
         </div>
       </div>
@@ -257,25 +261,11 @@ function ResultsContent() {
                       {f.explanation}
                     </p>
                   )}
-                  {/* Renvoi vers LA carte d'où vient la question, pas seulement vers
-                      le thème : sinon l'élève cherche parmi des dizaines de cartes. */}
-                  {(() => {
-                    const lecon = (f.id || '').split('_')[0].replace(/Q\d+$/, '');
-                    if (!/^[A-I]\d$/.test(lecon)) return null;
-                    const href = f.theoryCardIndex !== undefined
-                      ? `/lecon/${lecon}?carte=${f.theoryCardIndex}`
-                      : `/lecon/${lecon}`;
-                    return (
-                      <Link
-                        href={href}
-                        className="inline-flex items-center gap-1.5 mt-3 text-xs font-bold press-scale"
-                        style={{ color: 'var(--brand)', textDecoration: 'none' }}
-                      >
-                        {t('resultats_revoir_point')}
-                        <span aria-hidden="true">→</span>
-                      </Link>
-                    );
-                  })()}
+                  {/* Pas de lien « revoir ce point » ici : la bonne réponse et
+                      l'explication sont juste au-dessus. Renvoyer vers une carte qui
+                      redit la même chose sortirait l'élève de sa correction pour rien.
+                      La révision se lance par THÈME, plus haut, là où le score agrégé
+                      montre ce qui mérite d'être repris. */}
                 </div>
               ))}
             </div>
