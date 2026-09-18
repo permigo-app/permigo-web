@@ -133,27 +133,27 @@ function ExamContent() {
         {/* Hero card */}
         <div className="rounded-3xl p-8 mb-4 text-center" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)' }}>
           <h1 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>
-            {themeCode === 'A' ? 'Ton examen gratuit est déjà utilisé' : 'Examen réservé aux membres Premium'}
+            {themeCode === 'A' ? t('examen_gratuit_utilise') : t('examen_reserve_premium')}
           </h1>
           <p className="text-base mb-5" style={{ color: 'var(--text-secondary)' }}>
-            Passe à Premium pour des examens illimités, sur tous les thèmes.
+            {t('examen_premium_passe')}
           </p>
 
           {/* Stats pills — premium benefits */}
           <div className="flex justify-center gap-3 mb-5 flex-wrap">
             <div className="px-4 py-2 rounded-full text-sm font-bold" style={{ background: 'rgba(255,201,40,0.12)', color: 'var(--premium)' }}>
-              Examens illimités
+              {t('examen_premium_illimites')}
             </div>
             <div className="px-4 py-2 rounded-full text-sm font-bold" style={{ background: 'rgba(50,214,107,0.10)', color: 'var(--success)' }}>
-              Tous les thèmes
+              {t('examen_premium_themes')}
             </div>
             <div className="px-4 py-2 rounded-full text-sm font-bold" style={{ background: 'rgba(100,181,255,0.10)', color: 'var(--btn-blue)' }}>
-              Corrections détaillées
+              {t('examen_premium_corrections')}
             </div>
           </div>
 
           <p className="text-sm mb-6" style={{ color: 'var(--text-disabled)' }}>
-            Les membres Premium passent l&apos;examen autant de fois qu&apos;ils veulent, sur tous les thèmes.
+            {t('examen_premium_note')}
           </p>
 
           <Link
@@ -161,7 +161,7 @@ function ExamContent() {
             className="inline-block w-full px-8 py-3.5 rounded-2xl font-black text-base press-scale"
             style={{ background: 'var(--premium)', color: '#0a0e2a', boxShadow: '0 4px 20px rgba(255,201,40,0.35)' }}
           >
-            Passer Premium
+            {t('examen_premium_cta')}
           </Link>
         </div>
       </div>
@@ -340,10 +340,10 @@ function ExamContent() {
     const passCount = Math.ceil(questionCount * 0.82); // 41/50
     const examTitle = themeCode === 'FINAL' ? t('examen_blanc_final') : `${t('examen_theme')} ${themeCode}`;
     const EXAM_STATS = [
-      { label: 'Questions', value: `${questionCount}` },
-      { label: 'Durée', value: isAM ? '~35 min' : '~45 min' },
-      { label: 'Pour réussir', value: `${passCount}/${questionCount}` },
-      { label: 'Format', value: 'Officiel' },
+      { label: t('examen_stat_questions'), value: `${questionCount}` },
+      { label: t('examen_stat_duree'), value: isAM ? '~35 min' : '~45 min' },
+      { label: t('examen_stat_pour_reussir'), value: `${passCount}/${questionCount}` },
+      { label: t('examen_stat_format'), value: t('examen_stat_officiel') },
     ];
     return (
       <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', padding: '0 0 calc(58px + env(safe-area-inset-bottom) + 24px)' }}>
@@ -352,13 +352,13 @@ function ExamContent() {
         <div style={{ background: '#0b2659', padding: '52px 20px 28px' }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
-              Examen blanc
+              {t('examen_blanc')}
             </p>
             <h1 style={{ margin: '6px 0 0', fontSize: 26, fontWeight: 800, color: '#ffffff', lineHeight: 1.2 }}>
               {examTitle}
             </h1>
             <p style={{ margin: '8px 0 0', fontSize: 13, color: 'rgba(255,255,255,0.6)', fontWeight: 500 }}>
-              {questionCount} questions · format officiel belge
+              {questionCount} {t('examen_questions')} · {t('examen_format_officiel')}
             </p>
           </div>
         </div>
@@ -379,11 +379,9 @@ function ExamContent() {
           <div style={{ background: 'var(--bg-why)', border: '1.5px solid #fde68a', borderRadius: 14, padding: '13px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
             <span style={{ fontSize: 18, flexShrink: 0 }}>⚡</span>
             <p style={{ margin: 0, fontSize: 13, color: '#92400e', lineHeight: 1.5, fontWeight: 500 }}>
-              {isAM ? (
-                <>Il faut obtenir <strong>{passCount} points sur {questionCount}</strong> (82%) pour réussir. Comme à l'examen officiel AM, chaque erreur coûte <strong>1 point</strong> — il n'y a pas de règle des fautes graves.</>
-              ) : (
-                <>Il faut obtenir <strong>{passCount} points sur {questionCount}</strong> (82%) pour réussir. Comme à l'examen officiel, une erreur sur une <strong>infraction grave</strong> (feu rouge, priorité, vitesse, alcool…) coûte <strong>5 points</strong> au lieu de 1.</>
-              )}
+              {t(isAM ? 'examen_regle_am' : 'examen_regle_b')
+                .replace('{n}', String(passCount))
+                .replace('{t}', String(questionCount))}
             </p>
           </div>
 
@@ -392,7 +390,7 @@ function ExamContent() {
             <div style={{ background: 'var(--bg-rule)', border: '1.5px solid #c7d2fe', borderRadius: 14, padding: '13px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <span style={{ fontSize: 18, flexShrink: 0 }}>💾</span>
               <p style={{ margin: 0, fontSize: 13, color: '#3730a3', lineHeight: 1.5, fontWeight: 500 }}>
-                Tu as un examen en cours. En cliquant sur Commencer, tu reprends là où tu en étais.
+                {t('examen_en_cours')}
               </p>
             </div>
           )}
@@ -407,11 +405,11 @@ function ExamContent() {
               cursor: 'pointer', boxShadow: '0 4px 20px rgba(11,38,89,.30)',
             }}
           >
-            {hasActiveExam ? 'Reprendre l\'examen →' : t('examen_commencer')}
+            {hasActiveExam ? t('examen_reprendre') : t('examen_commencer')}
           </button>
 
           <p style={{ textAlign: 'center', margin: '14px 0 0', fontSize: 11, color: 'var(--text-hint)', fontWeight: 500 }}>
-            Les questions sont tirées au sort depuis la banque officielle.
+            {t('examen_tirage')}
           </p>
         </div>
       </div>
@@ -434,7 +432,7 @@ function ExamContent() {
         </button>
       }
       headerCenter={
-        <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('examen_header')} {themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}</span>
+        <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('examen_header')} {themeCode !== 'FINAL' ? `${t('resultats_medaille_theme_prefix')} ${themeCode}` : t('examen_mot_final')}</span>
       }
       headerRight={
         // Le chrono officiel prend la place du score : à l'examen on ne connaît
@@ -450,7 +448,7 @@ function ExamContent() {
           {secondsLeft}s
         </div>
       }
-      subtitle={`Examen ${themeCode !== 'FINAL' ? `Thème ${themeCode}` : 'Final'}`}
+      subtitle={`${t('examen_header')} ${themeCode !== 'FINAL' ? `${t('resultats_medaille_theme_prefix')} ${themeCode}` : t('examen_mot_final')}`}
       question={q.question}
       signCode={q.sign}
       imageUrl={q.image}

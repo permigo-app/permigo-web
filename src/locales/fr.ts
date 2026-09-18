@@ -96,6 +96,29 @@
   examen_seuil_reussite: 'Seuil réussite',
   examen_grille: 'Progression',
   examen_grille_note: 'Vert = question déjà répondue. Les corrections arrivent à la fin, comme à l\'examen officiel.',
+  // « Final » employé seul, à la suite du mot Examen — la clé examen_final
+  // existante vaut « 🏆 Examen Final » et ne peut pas servir ici.
+  examen_mot_final: 'Final',
+  examen_format_officiel: 'format officiel belge',
+  examen_stat_questions: 'Questions',
+  examen_stat_duree: 'Durée',
+  examen_stat_pour_reussir: 'Pour réussir',
+  examen_stat_format: 'Format',
+  examen_stat_officiel: 'Officiel',
+  examen_reprendre: "Reprendre l'examen →",
+  examen_tirage: 'Les questions sont tirées au sort depuis la banque officielle.',
+  examen_en_cours: 'Tu as un examen en cours. En cliquant sur Commencer, tu reprends là où tu en étais.',
+  // {n} = points à obtenir, {t} = total de questions
+  examen_regle_am: 'Il faut obtenir {n} points sur {t} (82%) pour réussir. Comme à l\'examen officiel AM, chaque erreur coûte 1 point — il n\'y a pas de règle des fautes graves.',
+  examen_regle_b: 'Il faut obtenir {n} points sur {t} (82%) pour réussir. Comme à l\'examen officiel, une erreur sur une infraction grave (feu rouge, priorité, vitesse, alcool…) coûte 5 points au lieu de 1.',
+  examen_gratuit_utilise: 'Ton examen gratuit est déjà utilisé',
+  examen_reserve_premium: 'Examen réservé aux membres Premium',
+  examen_premium_passe: 'Passe à Premium pour des examens illimités, sur tous les thèmes.',
+  examen_premium_illimites: 'Examens illimités',
+  examen_premium_themes: 'Tous les thèmes',
+  examen_premium_corrections: 'Corrections détaillées',
+  examen_premium_note: 'Les membres Premium passent l\'examen autant de fois qu\'ils veulent, sur tous les thèmes.',
+  examen_premium_cta: 'Passer Premium',
 
   // ── Résultats ──
   resultats_courage: 'Courage !',
@@ -120,7 +143,7 @@
   resultats_ta_reponse: 'Ta réponse',
   resultats_bonne_reponse: 'Bonne réponse',
   resultats_refaire_erreurs: 'Refaire mes {n} erreurs',
-  resultats_recommencer_examen: "Recommencer l'examen complet",
+  resultats_recommencer_examen: "Recommencer l'examen complet",
 
   // ── Révision ──
   revision_titre: 'Révision — Thème',

@@ -96,6 +96,27 @@
   examen_seuil_reussite: 'Slaagdrempel',
   examen_grille: 'Voortgang',
   examen_grille_note: 'Groen = vraag al beantwoord. De verbetering komt op het einde, zoals op het officiële examen.',
+  examen_mot_final: 'Finaal',
+  examen_format_officiel: 'officieel Belgisch formaat',
+  examen_stat_questions: 'Vragen',
+  examen_stat_duree: 'Duur',
+  examen_stat_pour_reussir: 'Om te slagen',
+  examen_stat_format: 'Formaat',
+  examen_stat_officiel: 'Officieel',
+  examen_reprendre: 'Examen hervatten →',
+  examen_tirage: 'De vragen worden willekeurig gekozen uit de officiële vragenbank.',
+  examen_en_cours: 'Je hebt een examen lopen. Klik op Starten om verder te gaan waar je gebleven was.',
+  // {n} = te behalen punten, {t} = totaal aantal vragen
+  examen_regle_am: 'Je hebt {n} punten op {t} (82%) nodig om te slagen. Zoals op het officiële AM-examen kost elke fout 1 punt — er is geen regel voor zware fouten.',
+  examen_regle_b: 'Je hebt {n} punten op {t} (82%) nodig om te slagen. Zoals op het officiële examen kost een fout op een zware overtreding (rood licht, voorrang, snelheid, alcohol…) 5 punten in plaats van 1.',
+  examen_gratuit_utilise: 'Je gratis examen is al gebruikt',
+  examen_reserve_premium: 'Examen voorbehouden aan Premium-leden',
+  examen_premium_passe: 'Ga naar Premium voor onbeperkte examens, op alle thema\'s.',
+  examen_premium_illimites: 'Onbeperkt examens',
+  examen_premium_themes: 'Alle thema\'s',
+  examen_premium_corrections: 'Uitgebreide verbeteringen',
+  examen_premium_note: 'Premium-leden leggen het examen zo vaak af als ze willen, op alle thema\'s.',
+  examen_premium_cta: 'Premium nemen',
 
   // ── Résultats ──
   resultats_courage: 'Moed!',
@@ -120,7 +141,7 @@
   resultats_ta_reponse: 'Jouw antwoord',
   resultats_bonne_reponse: 'Juist antwoord',
   resultats_refaire_erreurs: 'Mijn {n} fouten opnieuw',
-  resultats_recommencer_examen: 'Volledig examen opnieuw',
+  resultats_recommencer_examen: 'Volledig examen opnieuw',
 
   // ── Révision ──
   revision_titre: 'Herziening — Thema',
