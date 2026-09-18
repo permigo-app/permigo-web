@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { supabase, hasSupabase } from '@/lib/supabase';
+import { useLang } from '@/contexts/LanguageContext';
 
 interface Props {
   userId: string | undefined;
@@ -10,6 +11,7 @@ interface Props {
 const FEEDBACK_EMAIL = 'ycroitor8096@gmail.com';
 
 export default function FeedbackPromptModal({ userId }: Props) {
+  const { t } = useLang();
   const [visible, setVisible] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -57,37 +59,33 @@ export default function FeedbackPromptModal({ userId }: Props) {
     <div className="modal-overlay" onClick={handleClose}>
       <div className="modal-box" onClick={e => e.stopPropagation()}>
         <div className="modal-icon">💌</div>
-        <h2 className="modal-title">Un avis nous aiderait beaucoup</h2>
-        <p className="modal-text">
-          MyPermiGo s&apos;améliore grâce aux retours des utilisateurs. Si tu as deux minutes,
-          dis-nous ce qui te plaît, ce qui te manque ou ce qui coince — ça compte énormément
-          pour la suite du projet.
-        </p>
-        <p className="modal-sub">Merci pour ton aide !</p>
+        <h2 className="modal-title">{t('avis_titre')}</h2>
+        <p className="modal-text">{t('avis_texte')}</p>
+        <p className="modal-sub">{t('avis_merci')}</p>
         <a
           className="modal-btn"
           href={`mailto:${FEEDBACK_EMAIL}?subject=Avis%20sur%20MyPermiGo`}
           onClick={handleClose}
           style={{ display: 'block', boxSizing: 'border-box', textDecoration: 'none', textAlign: 'center' }}
         >
-          Envoyer un avis par email →
+          {t('avis_envoyer')}
         </a>
         <p className="modal-sub" style={{ marginTop: 12, marginBottom: 6 }}>
-          Pas de messagerie configurée sur cet appareil ?
+          {t('avis_pas_messagerie')}
         </p>
         <button
           className="modal-btn"
           style={{ background: 'transparent', border: '1px solid var(--border)', color: 'var(--text-sub)' }}
           onClick={handleCopy}
         >
-          {copied ? `Copié : ${FEEDBACK_EMAIL} ✓` : `Copier l'adresse (${FEEDBACK_EMAIL})`}
+          {copied ? t('avis_copie').replace('{m}', FEEDBACK_EMAIL) : t('avis_copier').replace('{m}', FEEDBACK_EMAIL)}
         </button>
         <button
           className="modal-btn"
           style={{ background: 'transparent', color: 'var(--text-sub)', marginTop: 8 }}
           onClick={handleClose}
         >
-          Plus tard
+          {t('avis_plus_tard')}
         </button>
       </div>
     </div>

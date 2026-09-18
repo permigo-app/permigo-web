@@ -22,14 +22,14 @@ export default function PremiumPage() {
   // sont la part payante.
   type TableVal = string | boolean;
   const TABLE_ROWS: { label: string; free: TableVal; prem: TableVal }[] = [
-    { label: t('premium_f_theorie'),  free: '✅ 9 thèmes',    prem: '✅ 9 thèmes' },
-    { label: t('premium_f_flash'),    free: '✅ Toutes',      prem: '✅ Toutes' },
-    { label: t('premium_f_catalogue'),free: '✅ 214 panneaux',prem: '✅ 214 panneaux' },
+    { label: t('premium_f_theorie'),  free: t('tab_9_themes'), prem: t('tab_9_themes') },
+    { label: t('premium_f_flash'),    free: t('tab_toutes'), prem: t('tab_toutes') },
+    { label: t('premium_f_catalogue'),free: t('tab_214_panneaux'), prem: t('tab_214_panneaux') },
     { label: t('premium_f_erreurs'),  free: true,             prem: true },
-    { label: t('premium_f_questions'),free: '1 leçon',        prem: '✅ 1 770 questions' },
-    { label: t('premium_f9'),         free: '1 par jour',     prem: '✅ Illimité' },
-    { label: t('premium_f8'),         free: '1 essai',        prem: '✅ Illimité' },
-    { label: t('premium_f10'),        free: '3 catégories',   prem: '✅ 10 catégories' },
+    { label: t('premium_f_questions'),free: t('tab_1_lecon'), prem: t('tab_1770_questions') },
+    { label: t('premium_f9'),         free: t('tab_1_par_jour'), prem: t('tab_illimite') },
+    { label: t('premium_f8'),         free: t('tab_1_essai'), prem: t('tab_illimite') },
+    { label: t('premium_f10'),        free: t('tab_3_categories'), prem: t('tab_10_categories') },
   ];
 
   const PREMIUM_FEATURES = [

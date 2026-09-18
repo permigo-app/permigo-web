@@ -1,9 +1,11 @@
 'use client';
 
 import { useTheme } from '@/contexts/ThemeContext';
+import { useLang } from '@/contexts/LanguageContext';
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const { t } = useLang();
   const isNight = theme === 'night';
 
   return (
@@ -14,8 +16,8 @@ export function ThemeToggle() {
         ? { background: 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.20)' }
         : { background: 'rgba(255,201,40,0.15)', border: '1px solid rgba(255,201,40,0.40)' }
       }
-      aria-label={isNight ? 'Passer en mode jour' : 'Passer en mode nuit'}
-      title={isNight ? 'Mode jour' : 'Mode nuit'}
+      aria-label={isNight ? t('passer_mode_jour') : t('passer_mode_nuit')}
+      title={isNight ? t('mode_jour') : t('mode_nuit')}
     >
       <div
         className={`

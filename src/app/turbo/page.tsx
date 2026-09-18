@@ -271,7 +271,7 @@ function TurboContent() {
         {/* Header */}
         <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
-            <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Entraînement</p>
+            <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>{t('turbo_entrainement')}</p>
             <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>{t('turbo_titre')}</h1>
             <p style={{ margin: '4px 0 0', fontSize: 14, color: 'var(--text-sub)' }}>{t('turbo_subtitle')}</p>
             {themeTitle && (
@@ -308,7 +308,7 @@ function TurboContent() {
           {/* stats cards */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
             <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
-              <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Record du jour</p>
+              <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>{t('turbo_record_jour')}</p>
               <p style={{ margin: '6px 0 0', fontSize: 28, fontWeight: 800, color: 'var(--text-navy)' }}>{todayBest || '—'}</p>
             </div>
             <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
@@ -374,7 +374,7 @@ function TurboContent() {
           {/* historique */}
           <div style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 18, overflow: 'hidden' }}>
             <div style={{ padding: '16px 20px', borderBottom: '1px solid var(--border-row)' }}>
-              <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Parties jouées</p>
+              <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>{t('turbo_parties_jouees')}</p>
             </div>
             {[
               { icon: '⏱️', label: t('turbo_sprint_3'), value: allTime.games3min },

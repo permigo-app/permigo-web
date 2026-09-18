@@ -202,7 +202,7 @@ function RevisionContent() {
       onValidate={validateSelected}
       onNext={goNext}
       isLastQuestion={index + 1 === questions.length}
-      lastLabel="Voir les résultats →"
+      lastLabel={t('voir_les_resultats')}
       explanation={q.explanation}
       shakeWrong={shakeWrong}
       sidebar={

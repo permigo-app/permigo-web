@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useLang } from '@/contexts/LanguageContext';
 import dynamic from 'next/dynamic';
 
 // Chargement lazy du modal pour ne pas alourdir le bundle initial
 const FeedbackModal = dynamic(() => import('./FeedbackModal'), { ssr: false });
 
 export default function FeedbackButton() {
+  const { t } = useLang();
   const [open, setOpen] = useState(false);
 
   return (
@@ -21,8 +23,8 @@ export default function FeedbackButton() {
        */}
       <button
         onClick={() => setOpen(true)}
-        aria-label="Donner un feedback"
-        title="Donner un feedback"
+        aria-label={t('feedback_donner')}
+        title={t('feedback_donner')}
         className="feedback-fab press-scale"
         style={{
           position: 'fixed',

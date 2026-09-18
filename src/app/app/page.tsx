@@ -369,7 +369,7 @@ export default function HomePage() {
                         l'utilisateur sait avant de cliquer. */}
                     {tile.premium && !tile.done && (
                       <span
-                        title="Réservé aux membres Premium"
+                        title={t('reserve_premium')}
                         style={{
                           position: 'absolute', top: 10, right: 10,
                           width: 22, height: 22, borderRadius: 99,

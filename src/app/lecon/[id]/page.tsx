@@ -733,7 +733,7 @@ export default function LessonPage() {
       <div className="min-h-screen flex items-center justify-center px-6">
         <div className="max-w-md w-full text-center">
           <div className="text-7xl mb-6">😓</div>
-          <h2 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>Pas encore !</h2>
+          <h2 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>{t('pas_encore')}</h2>
           <p className="text-base mb-2" style={{ color: 'var(--text-secondary)' }}>
             Tu dois avoir <span className="font-black" style={{ color: 'var(--brand)' }}>90%</span> de bonnes réponses pour valider cette partie.
           </p>

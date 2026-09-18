@@ -114,7 +114,7 @@ export default function ProfilePage() {
       const sessionData = supabase ? await supabase.auth.getSession() : null;
       const token = sessionData?.data?.session?.access_token;
       if (!token) {
-        setCancelError('Session expirée. Reconnecte-toi puis réessaie.');
+        setCancelError(t('err_session_expiree'));
         return;
       }
       const res = await fetch('/api/stripe/cancel', {
@@ -126,10 +126,10 @@ export default function ProfilePage() {
         setShowConfirm(false);
       } else {
         const data = await res.json().catch(() => null);
-        setCancelError(data?.error || 'Erreur lors de la résiliation. Réessaie ou contacte le support.');
+        setCancelError(data?.error || t('err_resiliation'));
       }
     } catch {
-      setCancelError('Erreur réseau. Vérifie ta connexion et réessaie.');
+      setCancelError(t('err_reseau_reessaie'));
     } finally { setCancelling(false); }
   };
 
@@ -145,17 +145,17 @@ export default function ProfilePage() {
     if (!premium) return null;
     if (cancelled) return (
       <div style={{ background: '#f0fdf4', borderRadius: 16, padding: 20, border: '1.5px solid #22c55e', marginTop: 16 }}>
-        <p style={{ fontWeight: 800, fontSize: 15, color: '#16a34a', marginBottom: 4 }}>✅ Résiliation confirmée</p>
+        <p style={{ fontWeight: 800, fontSize: 15, color: '#16a34a', marginBottom: 4 }}>{t('profil_resiliation_confirmee')}</p>
         <p style={{ fontSize: 13, color: '#374151', lineHeight: 1.6, margin: 0 }}>
-          Votre abonnement ne sera pas renouvelé. Votre accès premium reste actif jusqu&apos;à la fin de la période payée.
+          {t('profil_resiliation_faite_note')}
         </p>
       </div>
     );
     if (showConfirm) return (
       <div style={{ background: '#fef2f2', borderRadius: 16, padding: 20, border: '1.5px solid #ef4444', marginTop: 16 }}>
-        <p style={{ fontWeight: 800, fontSize: 15, color: '#dc2626', marginBottom: 8 }}>Confirmer la résiliation ?</p>
+        <p style={{ fontWeight: 800, fontSize: 15, color: '#dc2626', marginBottom: 8 }}>{t('profil_resiliation_confirmer')}</p>
         <p style={{ fontSize: 13, color: '#374151', marginBottom: 16, lineHeight: 1.6, margin: '0 0 16px' }}>
-          Votre accès premium restera actif jusqu&apos;à la fin de la période en cours. Vous ne serez plus débité après.
+          {t('profil_resiliation_note')}
         </p>
         {cancelError && (
           <p style={{ fontSize: 13, color: '#dc2626', fontWeight: 600, margin: '0 0 12px' }}>{cancelError}</p>
@@ -163,22 +163,22 @@ export default function ProfilePage() {
         <div style={{ display: 'flex', gap: 10 }}>
           <button onClick={handleCancel} disabled={cancelling}
             style={{ background: '#ef4444', color: '#fff', border: 'none', borderRadius: 10, padding: '10px 20px', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>
-            {cancelling ? 'Résiliation...' : 'Oui, résilier'}
+            {cancelling ? t('profil_resiliation_en_cours') : t('profil_resiliation_oui')}
           </button>
           <button onClick={() => setShowConfirm(false)}
             style={{ background: 'var(--bg-card)', color: 'var(--text-title)', border: '1.5px solid var(--border-card)', borderRadius: 10, padding: '10px 20px', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>
-            Annuler
+            {t('profil_annuler')}
           </button>
         </div>
       </div>
     );
     return (
       <div style={{ background: 'var(--bg-card)', borderRadius: 16, padding: 20, border: '1.5px solid var(--border-card)', marginTop: 16 }}>
-        <p style={{ fontWeight: 700, fontSize: 15, color: 'var(--text-title)', marginBottom: 4 }}>Abonnement Premium actif</p>
-        <p style={{ fontSize: 13, color: 'var(--text-sub)', marginBottom: 16 }}>{formatSubLine(subInfo)} · Renouvellement automatique</p>
+        <p style={{ fontWeight: 700, fontSize: 15, color: 'var(--text-title)', marginBottom: 4 }}>{t('profil_abo_actif')}</p>
+        <p style={{ fontSize: 13, color: 'var(--text-sub)', marginBottom: 16 }}>{formatSubLine(subInfo)} · {t('profil_renouvellement_auto')}</p>
         <button onClick={() => setShowConfirm(true)}
           style={{ background: 'none', border: '1.5px solid #ef4444', color: '#ef4444', borderRadius: 10, padding: '10px 20px', fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>
-          Résilier mon abonnement
+          {t('profil_resilier')}
         </button>
       </div>
     );
@@ -248,7 +248,7 @@ export default function ProfilePage() {
       {/* Page header */}
       <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
         <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Compte</p>
-        <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>Mon profil</h1>
+        <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>{t('profil_titre')}</h1>
       </div>
 
       <div className="py-6 px-4">
@@ -349,13 +349,13 @@ export default function ProfilePage() {
               >
                 <span>{muted ? '🔇' : '🔊'}</span>
                 <span className="text-sm font-bold" style={{ color: muted ? 'var(--text-disabled)' : 'var(--text-secondary)' }}>
-                  {muted ? 'Sons coupés' : 'Sons actifs'}
+                  {muted ? t('sons_coupes') : t('sons_actifs')}
                 </span>
               </button>
               <div style={{ height: 1, background: 'var(--border-subtle)' }} />
               <a href="https://www.iubenda.com/privacy-policy/43486445" target="_blank"
                 className="flex items-center px-4 py-3" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
-                <span className="text-xs" style={{ color: 'var(--text-disabled)' }}>Politique de confidentialité</span>
+                <span className="text-xs" style={{ color: 'var(--text-disabled)' }}>{t('politique_confidentialite')}</span>
               </a>
               <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy" target="_blank"
                 className="flex items-center px-4 py-3" style={{ borderBottom: '1px solid var(--border-subtle)' }}>

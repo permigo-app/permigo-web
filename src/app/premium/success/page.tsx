@@ -104,18 +104,18 @@ function SuccessContent() {
 
           <h1 style={{ fontSize: 24, fontWeight: 900, color: 'var(--text-title)', marginBottom: 8 }}>
             {status === 'activating'
-              ? 'Activation en cours…'
+              ? t('premium_activation_cours')
               : status === 'done'
               ? t('premium_success_titre')
-              : 'Paiement reçu'}
+              : t('premium_paiement_recu')}
           </h1>
 
           <p style={{ fontSize: 15, color: 'var(--text-sub)', marginBottom: 24, lineHeight: 1.6 }}>
             {status === 'activating'
-              ? 'Confirmation du paiement en cours…'
+              ? t('premium_confirmation_cours')
               : status === 'done'
               ? t('premium_success_msg')
-              : 'Ton paiement est confirmé. L\'activation peut prendre quelques secondes supplémentaires — rafraîchis la page si les fonctionnalités ne sont pas encore débloquées.'}
+              : t('premium_paiement_confirme')}
           </p>
 
           {(status === 'done' || status === 'timeout') && (

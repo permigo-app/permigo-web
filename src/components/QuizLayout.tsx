@@ -78,7 +78,7 @@ export default function QuizLayout({
   onValidate,
   onNext,
   isLastQuestion,
-  lastLabel = 'VOIR RÉSULTATS →',
+  lastLabel,
   sidebar,
   leftPanel,
   explanation,
@@ -313,7 +313,7 @@ export default function QuizLayout({
                 className="w-full py-4 rounded-xl font-black text-base press-scale btn-glow-green"
                 style={{ background: 'var(--success)', color: '#ffffff' }}
               >
-                {isLastQuestion ? lastLabel : t('question_suivante')}
+                {isLastQuestion ? (lastLabel ?? t('voir_resultats')) : t('question_suivante')}
               </button>
             )}
           </div>
