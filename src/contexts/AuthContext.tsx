@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState, useCallback } from 'rea
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 import { supabase, hasSupabase } from '@/lib/supabase';
 import { getUserProfile, createUserProfile, mapProfileToUser, type AppUser } from '@/lib/supabaseUser';
-import { syncAllToSupabase, getXPData, getStreakData, applyCompletedPartiesFromRemote, applyPanneauxMasteredFromRemote, applyAmProgressFromRemote, getAmProgressSnapshot, syncAmToSupabase } from '@/lib/progressStorage';
+import { syncAllToSupabase, getXPData, getStreakData, applyCompletedPartiesFromRemote, applyPanneauxMasteredFromRemote, applyStarsFromRemote, applyExamsFromRemote, applyAmProgressFromRemote, getAmProgressSnapshot, syncAmToSupabase } from '@/lib/progressStorage';
 import { useLang } from '@/contexts/LanguageContext';
 
 type Lang = 'fr' | 'nl';
@@ -109,33 +109,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }));
       }
 
-      // Progress: take whichever has more XP, sync loser to winner
+      // Compteurs globaux : départagés par l'XP, comme avant.
+      //
+      // La progression FINE, elle, ne l'est plus. L'XP n'est attribuée nulle
+      // part dans l'application (updateXP n'est jamais appelé) : elle vaut 0
+      // des deux côtés pour la quasi-totalité des comptes. Tant qu'elle
+      // gardait la porte, « distant > local » était toujours faux et une
+      // progression remontée dans le compte ne redescendait JAMAIS sur
+      // l'appareil — c'est ce qui a fait perdre sa progression à une élève
+      // qui avait changé de mot de passe.
       const localXP = getXPData();
       const remoteXP = profile.xp_data?.totalXP ?? 0;
       if (remoteXP > localXP.totalXP) {
-        // Supabase wins → overwrite localStorage
         localStorage.setItem('xpData', JSON.stringify(profile.xp_data));
         if (profile.streak_data) localStorage.setItem('streakData', JSON.stringify(profile.streak_data));
-        if (profile.stars && Object.keys(profile.stars).length > 0) localStorage.setItem('@progress_stars', JSON.stringify(profile.stars));
         if (profile.quiz_history) localStorage.setItem('quizHistory', JSON.stringify(profile.quiz_history));
         if (profile.survival_best > 0) localStorage.setItem('survie_best_score', String(profile.survival_best));
-        // Détail par partie : sans ça, une leçon multi-parties commencée sur cet
-        // appareil peut réapparaître à 0% après avoir restauré `stars` seul.
-        if (profile.lesson_parties_done && Object.keys(profile.lesson_parties_done).length > 0) {
-          applyCompletedPartiesFromRemote(profile.lesson_parties_done);
-        }
-        // Examens réussis par thème : sans ça, le palier Diamant et le badge
-        // "examen réussi" restent invisibles sur un appareil qui n'a pas
-        // lui-même fait passer l'examen (seul `stars`/xp étaient restaurés).
-        if (profile.exams && Object.keys(profile.exams).length > 0) {
-          localStorage.setItem('@progress_exams', JSON.stringify(profile.exams));
-        }
-        // Panneaux maîtrisés (flashcards) — fusion avec le local
-        applyPanneauxMasteredFromRemote(profile.panneaux_mastered);
-      } else if (localXP.totalXP > remoteXP) {
-        // localStorage wins → auto-migrate to Supabase
-        syncAllToSupabase(sbUser.id).catch(console.error);
       }
+
+      // Progression fine : FUSION systématique, quelle que soit l'XP. Chaque
+      // élément acquis d'un côté ou de l'autre est conservé, jamais écrasé :
+      // étoiles au meilleur score, examens réussis, parties terminées,
+      // panneaux maîtrisés.
+      applyStarsFromRemote(profile.stars);
+      applyExamsFromRemote(profile.exams);
+      applyCompletedPartiesFromRemote(profile.lesson_parties_done);
+      applyPanneauxMasteredFromRemote(profile.panneaux_mastered);
+
+      // Le local porte maintenant l'union des deux côtés : on la renvoie au
+      // compte, pour que le prochain appareil la retrouve entière. C'est ce
+      // qui fait du compte — et non de l'appareil — la source de vérité.
+      syncAllToSupabase(sbUser.id).catch(console.error);
 
       // Progression AM : fusion distant ↔ local (le meilleur des deux gagne),
       // puis renvoi vers la colonne isolée progress_am si le local a des données.

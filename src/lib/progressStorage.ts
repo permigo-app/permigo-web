@@ -320,11 +320,47 @@ export function applyCompletedPartiesFromRemote(remote: Record<string, number[]>
   if (typeof window === 'undefined' || !remote) return;
   // Les colonnes Supabase contiennent la progression du permis B :
   // on écrit les clés B brutes, quel que soit le permis actif.
+  //
+  // FUSION (union) et jamais écrasement : cette restauration tourne à chaque
+  // connexion, y compris sur un appareil plus avancé que le compte. Écraser
+  // ferait perdre à l'élève ce qu'il vient de faire ici.
   for (const [lessonId, indices] of Object.entries(remote)) {
-    if (Array.isArray(indices) && indices.length > 0) {
-      setItemGlobal(lessonPartiesDoneKey(lessonId), JSON.stringify(indices));
-    }
+    if (!Array.isArray(indices) || indices.length === 0) continue;
+    const cle = lessonPartiesDoneKey(lessonId);
+    let local: number[] = [];
+    try {
+      const brut = JSON.parse(getItemGlobal(cle) ?? '[]');
+      if (Array.isArray(brut)) local = brut;
+    } catch { local = []; }
+    const union = Array.from(new Set([...local, ...indices])).sort((a, b) => a - b);
+    setItemGlobal(cle, JSON.stringify(union));
   }
+}
+
+/** Étoiles distantes fusionnées au local : on garde le meilleur score par leçon. */
+export function applyStarsFromRemote(remote: Record<string, number> | null | undefined): void {
+  if (typeof window === 'undefined' || !remote || Object.keys(remote).length === 0) return;
+  let local: Record<string, number> = {};
+  try {
+    const brut = JSON.parse(getItemGlobal(KEY_STARS) ?? '{}');
+    if (brut && typeof brut === 'object') local = brut;
+  } catch { local = {}; }
+  for (const [lessonId, etoiles] of Object.entries(remote)) {
+    if (typeof etoiles === 'number' && etoiles > (local[lessonId] ?? 0)) local[lessonId] = etoiles;
+  }
+  setItemGlobal(KEY_STARS, JSON.stringify(local));
+}
+
+/** Examens réussis distants fusionnés au local : un examen réussi ne se reperd pas. */
+export function applyExamsFromRemote(remote: Record<string, boolean> | null | undefined): void {
+  if (typeof window === 'undefined' || !remote || Object.keys(remote).length === 0) return;
+  let local: Record<string, boolean> = {};
+  try {
+    const brut = JSON.parse(getItemGlobal(KEY_EXAMS) ?? '{}');
+    if (brut && typeof brut === 'object') local = brut;
+  } catch { local = {}; }
+  for (const [theme, reussi] of Object.entries(remote)) if (reussi) local[theme] = true;
+  setItemGlobal(KEY_EXAMS, JSON.stringify(local));
 }
 
 // ── Panneaux maîtrisés (flashcards) ──
