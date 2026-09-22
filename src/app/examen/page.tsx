@@ -448,7 +448,6 @@ function ExamContent() {
           {secondsLeft}s
         </div>
       }
-      subtitle={`${t('examen_header')} ${themeCode !== 'FINAL' ? `${t('resultats_medaille_theme_prefix')} ${themeCode}` : t('examen_mot_final')}`}
       question={q.question}
       signCode={q.sign}
       imageUrl={q.image}

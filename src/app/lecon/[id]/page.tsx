@@ -781,7 +781,6 @@ export default function LessonPage() {
         headerCenter={
           <span className="text-sm font-bold">{themeEmoji} {currentPartieTitle || lesson.title} — Quiz</span>
         }
-        subtitle={currentPartieTitle ? `${currentPartieTitle} — Quiz` : `${lesson.title} — Quiz`}
         question={q.question}
         signCode={q.sign}
       imageUrl={q.image}

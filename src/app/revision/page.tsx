@@ -190,7 +190,6 @@ function RevisionContent() {
       headerCenter={
         <span className="text-sm font-bold">{themeEmoji} {t('erreurs_titre')} {themeCode}</span>
       }
-      subtitle={`${t('erreurs_titre')} ${themeCode}`}
       question={q.question}
       signCode={q.sign}
       imageUrl={q.image}
