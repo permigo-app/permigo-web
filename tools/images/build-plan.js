@@ -211,6 +211,29 @@ const CONTROLE_CARTE =
   `· UNE FLÈCHE MÈNE LÀ OÙ LE VÉHICULE DOIT ALLER : elle part de son avant et se termine sur sa destination réelle — ` +
   `la voie qu'il rejoint, l'espace où il s'insère. Jamais sur un symbole, jamais dans le vide, jamais vers un obstacle.`;
 
+// Relecture finale. Placée en dernier dans le prompt, après la scène : c'est la
+// position la plus forte, celle que le générateur applique juste avant de rendre.
+// Reprend en une liste unique les sept causes de rejet relevées sur les audits.
+const RELECTURE_FINALE =
+  `\n\nRELECTURE AVANT DE RENDRE L'IMAGE — reprends la scène ligne par ligne et vérifie ces sept points. ` +
+  `S'il en manque un seul, corrige l'image AVANT de la rendre :\n` +
+  `1. COHÉRENCE — rien ne se contredit dans le cadre : directions, distances, ombres, positions et gestes tiennent ` +
+  `ensemble. Aucune situation physiquement impossible, aucun véhicule qui roule des deux côtés à la fois, aucune ` +
+  `ombre qui contredit la lumière.\n` +
+  `2. RIEN NE MANQUE — chaque élément que la scène nomme est réellement dans le cadre : chaque panneau, chaque ` +
+  `marquage, chaque véhicule, chaque usager, chaque chiffre, chaque feu, chaque clignotant. Un seul élément absent ` +
+  `rend l'exercice impossible à résoudre.\n` +
+  `3. LES PANNEAUX — si la scène cite un panneau, il est PRÉSENT, net, entier, vu de face, et dessiné exactement ` +
+  `comme elle le décrit. Aucun panneau inventé, aucun panneau en plus, aucun pictogramme approximatif.\n` +
+  `4. VISIBILITÉ — tout ce qui compte se lit : rien d'essentiel n'est coupé par le bord du cadre, caché derrière un ` +
+  `objet, noyé dans l'ombre ou repoussé si loin qu'on ne le distingue plus.\n` +
+  `5. AUCUN DÉFAUT DE RENDU — pas de véhicule déformé, pas de roue ovale, pas de main ou de visage incomplet, pas ` +
+  `d'objet flottant sans appui, pas de double image, pas de texte incrusté illisible, pas de tache parasite.\n` +
+  `6. RIEN EN TROP — aucun élément que la scène n'a pas demandé, et surtout aucun panneau, aucune flèche et aucun ` +
+  `marquage supplémentaire : un élément ajouté change la règle enseignée et fausse la réponse.\n` +
+  `7. UNE SEULE LECTURE POSSIBLE — un élève qui regarde l'image deux secondes doit comprendre exactement ce que la ` +
+  `scène décrit, et rien d'autre. Si deux interprétations sont possibles, l'image est à refaire.`;
+
 function buildPrompt(lic, themeTitle, sceneEntry, kind) {
   // Rétrocompatibilité : une scène simple (string) = modèle 1, comme avant.
   const model = typeof sceneEntry === 'object' && sceneEntry.model ? sceneEntry.model : 1;
@@ -224,7 +247,7 @@ function buildPrompt(lic, themeTitle, sceneEntry, kind) {
   return `Génère une image.\n\n${STYLE_BLOCKS[model]}` +
     (kind === 'card' ? CONTROLE_CARTE : '') + `\n\n` +
     `SCÈNE PRÉCISE À REPRÉSENTER :\n${scene}\n\n` +
-    `Contexte : ${contexte}.`;
+    `Contexte : ${contexte}.` + RELECTURE_FINALE;
 }
 
 const jobs = [];
