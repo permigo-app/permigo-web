@@ -55,7 +55,11 @@ const CONTROLE_FINAL =
   `tours du quartier Nord. Ne place jamais un décor urbain dense sur une scène « hors agglomération », ni l'inverse.`;
 
 const PRECISION_PHOTO =
-  `NETTETÉ ET PRÉCISION OBLIGATOIRES : image nette et bien focalisée, haute clarté, aucun flou artistique, aucun grain. ` +
+  `NETTETÉ ET PRÉCISION OBLIGATOIRES : image NETTE SUR TOUTE SA SURFACE, du premier plan jusqu'au fond — mise au point ` +
+  `uniforme, contours francs, haute définition. Aucun flou artistique, aucun bokeh, aucune profondeur de champ courte, ` +
+  `aucun grain, aucun halo lumineux. Aucune tache, salissure ou marque parasite sur la chaussée, sur les véhicules ou ` +
+  `dans le ciel. Les lignes droites sont DROITES, la perspective est juste, et les marquages au sol sont réguliers, ` +
+  `d'épaisseur constante et correctement alignés sur la chaussée. ` +
   `Place chaque véhicule et chaque personnage EXACTEMENT à la position et dans la direction décrites dans la scène — ` +
   `sans ambiguïté possible sur qui est où et qui va où. Respecte EXACTEMENT le point de vue indiqué dans la scène ` +
   `(vue conducteur derrière le pare-brise, vue piétonne, vue aérienne…) — ne le change pas. ` +
@@ -81,7 +85,22 @@ const PRECISION_PHOTO =
   `BLANC portant en NOIR la silhouette de bâtiments serrés (pignons, clocher) ; le signal de FIN est exactement le ` +
   `même, barré d'une large bande ROUGE oblique. Ne le dessine jamais sur fond bleu ni avec une silhouette blanche : ` +
   `ce panneau-là n'existe pas en Belgique.\n\n` +
-  `COHÉRENCE DES USAGERS ET DES GESTES : un motard, même à l'arrêt ou poussant sa machine, porte un CASQUE ; ` +
+  `\n\nCADRAGE ET LISIBILITÉ — les cinq fautes les plus fréquentes, à écarter avant de générer :\n` +
+  `· LE LIEU QUE LA SCÈNE NOMME DOIT RESTER VISIBLE. Si la scène dit carrefour, rond-point, passage à niveau, pont ou ` +
+  `tunnel, ce lieu doit se reconnaître dans le cadre. Ne serre jamais au point qu'il n'en reste qu'un détail : une scène ` +
+  `de carrefour où aucune rue transversale n'apparaît est une image ratée, même si le sujet est net.\n` +
+  `· L'ÉLÉMENT CENTRAL DOIT SE VOIR EN DEUX SECONDES. Le panneau, le feu, le marquage, la cote chiffrée ou l'usager sur ` +
+  `lequel porte la scène occupe une part suffisante du cadre. S'il se retrouverait minuscule au fond, rapproche le point ` +
+  `de vue plutôt que de le laisser illisible.\n` +
+  `· EN VUE CONDUCTEUR, LE PREMIER PLAN N'APPARTIENT QU'À NOUS : notre capot, notre pare-brise, notre tableau de bord, ` +
+  `et rien d'autre. Aucun autre véhicule ne vient chevaucher ni toucher ce premier plan — sinon on ne sait plus à qui ` +
+  `appartient un clignotant, un phare ou une roue.\n` +
+  `· NE MONTRE JAMAIS UN INDICE INVISIBLE DEPUIS CE POINT DE VUE. Les feux stop d'un véhicule vu DE FACE ne se voient ` +
+  `pas : montre alors l'avant qui plonge au freinage, les roues braquées ou le visage du conducteur. De même, un ` +
+  `clignotant ne se voit que du côté où il est allumé, et un rétroviseur ne montre que ce qui est derrière.\n` +
+  `· UN REPÈRE PAR USAGER DÉSIGNÉ. Si la scène dit qu'une flèche désigne un cycliste ET un piéton, chacun reçoit la ` +
+  `sienne : un repère unique posé sur l'un des deux laisse l'autre sans explication.` +
+  `\n\nCOHÉRENCE DES USAGERS ET DES GESTES : un motard, même à l'arrêt ou poussant sa machine, porte un CASQUE ; ` +
   `une personne qui pousse un cyclomoteur est piétonne et n'en porte pas. Une personne sortie de son véhicule sur une ` +
   `autoroute ou une bande d'arrêt d'urgence porte le GILET fluo et se tient DERRIÈRE la glissière, côté talus. ` +
   `Une intention de tourner ou de changer de bande se lit au CLIGNOTANT allumé du bon côté. ` +
@@ -89,6 +108,21 @@ const PRECISION_PHOTO =
   `véhicule de secours jaune à damier, autobus et tram urbains aux couleurs sobres, véhicule de transport scolaire ` +
   `de type minibus ordinaire — jamais d'autobus scolaire jaune de type nord-américain.` +
   CONTROLE_FINAL;
+
+const SCHEMA_GEOMETRIE =
+  `\n\nGÉOMÉTRIE D'UN SCHÉMA VU DU DESSUS — à vérifier trait par trait :\n` +
+  `· CHAQUE VÉHICULE MONTRE UN AVANT ET UN ARRIÈRE SANS ÉQUIVOQUE : pare-brise et deux phares clairs à l'avant, deux ` +
+  `feux rouges à l'arrière. On doit pouvoir dire d'un seul coup d'œil dans quel sens il roule. Une voiture dont on ne ` +
+  `devine pas le sens rend le schéma illisible, et une lueur rouge posée à l'AVANT le rend faux.\n` +
+  `· CHACUN DANS SA VOIE, DU CÔTÉ DROIT de sa chaussée. Jamais deux véhicules dans la même file en sens contraire, ` +
+  `jamais un véhicule à cheval sur la ligne médiane, et JAMAIS une voiture posée sur des rails de tram : les rails ne ` +
+  `portent que le tram.\n` +
+  `· DEUX VÉHICULES QUI ARRIVENT PAR DES BRANCHES DIFFÉRENTES ne sont pas dessinés à la même distance du centre : ` +
+  `décale-les, sinon ils paraissent alignés dans une même file.\n` +
+  `· UNE TRAJECTOIRE PART DE L'AVANT DU VÉHICULE et se termine sur sa destination réelle. Deux trajectoires qui doivent ` +
+  `se croiser se croisent VISIBLEMENT ; deux trajectoires qui ne doivent pas se croiser restent nettement séparées. ` +
+  `L'œil doit suivre chaque courbe du départ à l'arrivée sans hésiter.\n` +
+  `· FOND PROPRE : aucune tache, aucun halo, aucune salissure au milieu de la chaussée ni dans les angles.`;
 
 const STYLE_BLOCKS = {
   1: `STYLE : photographie documentaire réaliste d'une situation de circulation, comme dans un manuel ` +
@@ -118,7 +152,7 @@ const STYLE_BLOCKS = {
      `NETTETÉ ET PRÉCISION OBLIGATOIRES : lignes et contours nets et propres, aucun flou. Place chaque véhicule ` +
      `EXACTEMENT selon les positions et directions décrites dans la scène — sans ambiguïté sur qui est où et qui va où. ` +
      `Vérifie la cohérence géométrique et logique de l'ensemble avant de générer. ` +
-     `Inclus TOUS les éléments explicitement mentionnés dans la scène, sans en omettre aucun.` + CONTROLE_FINAL,
+     `Inclus TOUS les éléments explicitement mentionnés dans la scène, sans en omettre aucun.` + SCHEMA_GEOMETRIE + CONTROLE_FINAL,
   4: `STYLE : SCHÉMA PÉDAGOGIQUE DE CARTE DE THÉORIE, vu du dessus (vue aérienne stylisée et épurée, PAS une ` +
      `photographie), façon diagramme de manuel de code de la route. Contrairement au schéma d'une question, ` +
      `celui-ci EXPLIQUE la règle : utilise une FLÈCHE VERTE pour la trajectoire autorisée ou prioritaire, ` +
@@ -135,7 +169,7 @@ const STYLE_BLOCKS = {
      `NETTETÉ ET PRÉCISION OBLIGATOIRES : lignes et contours nets, aucun flou. La géométrie doit être JUSTE — ` +
      `une trajectoire dessinée doit être celle que la règle impose, une numérotation doit suivre l'ordre réel, ` +
      `un segment de distance doit partir du bon point. Vérifie la cohérence de l'ensemble avant de générer : ` +
-     `un schéma faux enseigne le contraire de la carte.`,
+     `un schéma faux enseigne le contraire de la carte.` + SCHEMA_GEOMETRIE,
   3: `STYLE : photographie documentaire réaliste d'une situation de circulation (lumière naturelle, ` +
      `circulation à droite), à laquelle est ajouté UN SEUL repère graphique simple et discret : soit un ` +
      `chiffre isolé dans un petit badge circulaire, soit une flèche unique — jamais les deux ensemble, ` +
