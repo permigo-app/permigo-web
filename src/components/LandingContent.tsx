@@ -35,6 +35,7 @@ interface LandingCopy {
   priceLineStrong: string;
   ctaStart: string;
   ctaLogin: string;
+  ctaGuest: string;
   trust: string[];
   mockTheme: string;
   mockThemeTitle: string;
@@ -85,6 +86,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     priceLine: 'Premium dès',
     priceLineStrong: 'par semaine',
     ctaStart: 'Commencer gratuitement',
+    ctaGuest: 'ou essayer sans compte \u2192',
     ctaLogin: 'J\'ai déjà un compte',
     trust: ['Sans carte bancaire', 'Français & Néerlandais', 'Sur mobile et ordinateur'],
     mockTheme: 'Thème D · Leçon 1',
@@ -203,6 +205,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     priceLine: 'Premium vanaf',
     priceLineStrong: 'per week',
     ctaStart: 'Gratis beginnen',
+    ctaGuest: 'of proberen zonder account \u2192',
     ctaLogin: 'Ik heb al een account',
     trust: ['Zonder bankkaart', 'Frans & Nederlands', 'Op gsm en computer'],
     mockTheme: 'Thema D · Les 1',
@@ -326,6 +329,14 @@ const MOCK_ANSWERS_NL = [
 
 export default function LandingContent() {
   const { lang, setLang } = useLang();
+  // Même raccourci que les pages de connexion et d'inscription : on marque
+  // l'onboarding comme vu, puis on entre dans l'app sans compte.
+  const entrerEnInvite = () => {
+    localStorage.setItem('@onboarding_done', 'true');
+    document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
+    window.location.href = '/app';
+  };
+
   const c = COPY[lang];
   const plan = cheapestPlan();
   const answers = lang === 'nl' ? MOCK_ANSWERS_NL : MOCK_ANSWERS;
@@ -498,6 +509,22 @@ export default function LandingContent() {
                 {c.ctaLogin}
               </Link>
             </div>
+
+            {/* Porte de sortie pour qui ne veut pas remplir un formulaire tout
+                de suite. Volontairement DISCRÈTE et en simple lien : le chemin
+                par défaut reste la création de compte, car la progression d'un
+                invité ne vit que sur son appareil. */}
+            <button
+              onClick={entrerEnInvite}
+              style={{
+                display: 'inline-block', marginTop: 12, padding: '4px 0',
+                background: 'none', border: 'none', cursor: 'pointer',
+                fontSize: 13.5, fontWeight: 600, color: 'rgba(11,18,32,0.5)',
+                textDecoration: 'underline', textUnderlineOffset: 3,
+                fontFamily: 'inherit',
+              }}>
+              {c.ctaGuest}
+            </button>
 
             <div className="flex flex-wrap items-center" style={{ gap: 15, marginTop: 16 }}>
               {c.trust.map(t => (

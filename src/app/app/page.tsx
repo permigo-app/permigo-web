@@ -11,6 +11,7 @@ import { countThemeParts, lessonEffectivelyCompleted } from '@/lib/medals';
 import ExamRoute from '@/components/ExamRoute';
 import GlobalTrophies from '@/components/GlobalTrophies';
 import RenewalNotice from '@/components/RenewalNotice';
+import GuestAccountNotice from '@/components/GuestAccountNotice';
 import OnboardingTour from '@/components/OnboardingTour';
 import { useIsPremium, isThemeFree, canPlayTurbo, canPlayExam } from '@/lib/premium';
 
@@ -246,6 +247,9 @@ export default function HomePage() {
 
       {/* ── BODY ── */}
       <div className="hub-body" style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px 40px' }}>
+
+        {/* ── Invité : sa progression ne vit que sur cet appareil ── */}
+        <GuestAccountNotice />
 
         {/* ── Rappel de renouvellement (≤ 2 jours) ── */}
         <RenewalNotice />

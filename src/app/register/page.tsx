@@ -29,6 +29,15 @@ export default function RegisterPage() {
   // /choix-permis — ce garde ne doit viser que les visiteurs déjà connectés.
   const registeringRef = useRef(false);
 
+  // Même raccourci que sur la page de connexion : on marque l'onboarding
+  // comme vu et on entre dans l'app sans compte. La progression reste alors
+  // sur l'appareil ; elle remonte dans le compte dès que l'élève en crée un.
+  const handleGuest = () => {
+    localStorage.setItem('@onboarding_done', 'true');
+    document.cookie = 'onboarding_done=true; path=/; max-age=31536000; SameSite=Lax';
+    window.location.href = '/app';
+  };
+
   if (user && !registeringRef.current) {
     router.push('/app');
     return null;
@@ -232,6 +241,26 @@ export default function RegisterPage() {
                   {loading ? t('register_loading') : t('register_creer')}
                 </button>
               </form>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '20px 0' }}>
+                <div style={{ flex: 1, height: 1, background: 'var(--border-card)' }} />
+                <span style={{ fontSize: 12, color: 'var(--text-hint)', fontWeight: 500 }}>{t('login_ou')}</span>
+                <div style={{ flex: 1, height: 1, background: 'var(--border-card)' }} />
+              </div>
+
+              <button
+                onClick={handleGuest}
+                className="press-scale"
+                style={{
+                  width: '100%', padding: '13px', borderRadius: 13,
+                  fontWeight: 700, fontSize: 14,
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border-card)',
+                  color: 'var(--text-primary)',
+                  cursor: 'pointer', fontFamily: 'Sora, sans-serif',
+                }}>
+                {t('login_invite')}
+              </button>
 
               <p style={{ textAlign: 'center', fontSize: 13, marginTop: 20, color: 'var(--text-sub)' }}>
                 {t('register_deja_compte')}{' '}
