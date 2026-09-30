@@ -13,10 +13,6 @@ import {
 import {
   TemoinVeilleuses, TemoinCroisement, TemoinRoute, TemoinBrouillardAvant,
 } from './Temoins';
-import {
-  E1, E3, E5, E7, E9a, E9b, E9c,
-  StationnementInterdit, ArretStationnementInterdit,
-} from './Stationnement';
 
 export type SVGSignCode = keyof typeof SVG_SIGNS;
 
@@ -53,16 +49,6 @@ export const SVG_SIGNS: Record<string, (props: { size?: number }) => React.React
   TEMOIN_CROISEMENT: TemoinCroisement,
   TEMOIN_ROUTE: TemoinRoute,
   TEMOIN_BROUILLARD_AVANT: TemoinBrouillardAvant,
-  // Stationnement
-  E1,
-  E3,
-  E5,
-  E7,
-  E9a,
-  E9b,
-  E9c,
-  STAT_INTERDIT: StationnementInterdit,
-  ARRET_STAT_INTERDIT: ArretStationnementInterdit,
 };
 
 /** Render a sign by code — works for both SVG signs and file-based signs */

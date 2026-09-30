@@ -2336,25 +2336,25 @@
           "sign": "E1",
           "question": "Que signifie ce panneau ?",
           "answers": [
-            "Parking payant",
             "Stationnement autorisé",
-            "Parking interdit",
-            "Parking réservé"
+            "Stationnement interdit de ce côté de la route",
+            "Arrêt et stationnement interdits",
+            "Parking payant"
           ],
           "correct": 1,
-          "explanation": "Le signal bleu avec P blanc indique un stationnement autorisé.",
-          "question_nl": "Wat betekent dit bord?",
+          "explanation": "Le disque bleu barré d'une seule bande rouge (E1) interdit le STATIONNEMENT du côté où il est placé. L'arrêt, lui, reste permis : vous pouvez vous immobiliser brièvement pour embarquer ou débarquer.",
+          "question_nl": "Wat betekent dit verkeersbord?",
           "answers_nl": [
-            "Betalende parking",
-            "Parkeren toegelaten",
-            "Parkeren verboden",
-            "Voorbehouden parking"
+            "Parkeren toegestaan",
+            "Parkeerverbod aan deze kant van de weg",
+            "Stilstaan en parkeren verboden",
+            "Betalend parkeren"
           ],
-          "explanation_nl": "Het blauwe bord met witte P duidt toegelaten parkeren aan."
+          "explanation_nl": "De blauwe schijf met één rode schuine streep (E1) verbiedt het PARKEREN aan de kant waar het bord staat. Stilstaan blijft wel toegelaten, bijvoorbeeld om iemand te laten in- of uitstappen."
         },
         {
           "id": "C1_Q54",
-          "sign": "E1",
+          "sign": "E9a",
           "question": "Vous voyez un signal de stationnement avec un panneau additionnel indiquant une masse. Que signifie-t-il ?",
           "answers": [
             "Stationnement pour tous",
@@ -2375,7 +2375,7 @@
         },
         {
           "id": "C1_Q69",
-          "sign": "E1",
+          "sign": "E9a",
           "question": "Vous voyez un signal de stationnement avec panneau additionnel « 3,5 t ». Votre voiture a une MMA de 1 600 kg. Pouvez-vous stationner ici ?",
           "answers": [
             "Oui, le stationnement est autorisé pour tous",
@@ -2397,48 +2397,48 @@
         {
           "id": "H1_SIGN_E7_1",
           "sign": "E7",
-          "question": "Vous cherchez à vous garer et voyez ce panneau. Que devez-vous faire ?",
+          "question": "Que signifie ce panneau ?",
           "answers": [
-            "Vous pouvez stationner gratuitement sans limite de temps",
-            "Vous devez payer au parcomètre ou à l'horodateur pour stationner",
-            "Vous devez utiliser votre disque de stationnement",
-            "Le stationnement est réservé aux résidents"
+            "Stationnement payant du 16 au 31",
+            "Stationnement interdit du 16 à la fin du mois",
+            "Zone bleue du 16 au 31",
+            "Stationnement réservé aux riverains du 16 au 31"
           ],
           "correct": 1,
-          "explanation": "E7 indique un stationnement payant. Vous devez acquitter le tarif à l'horodateur ou au parcomètre et placer le ticket bien visible.",
-          "question_nl": "U zoekt een parkeerplaats en ziet dit bord. Wat moet u doen?",
+          "explanation": "E7 interdit le stationnement du 16 à la fin du mois, du côté où il est placé. C'est le stationnement alterné semi-mensuel : l'autre côté de la rue porte le signal E5, qui couvre du 1er au 15.",
+          "question_nl": "Wat betekent dit verkeersbord?",
           "answers_nl": [
-            "U mag gratis en onbeperkt parkeren",
-            "U moet betalen aan de parkeermeter of automaat om te parkeren",
-            "U moet uw parkeerschijf gebruiken",
-            "Het parkeren is voorbehouden voor bewoners"
+            "Betalend parkeren van 16 tot 31",
+            "Parkeerverbod van de 16e tot het einde van de maand",
+            "Blauwe zone van 16 tot 31",
+            "Voorbehouden aan bewoners van 16 tot 31"
           ],
-          "explanation_nl": "E7 duidt betalend parkeren aan. Betaal het tarief aan de automaat en leg het ticket zichtbaar."
+          "explanation_nl": "E7 verbiedt het parkeren van de 16e tot het einde van de maand aan de kant waar het staat. Dat is het halfmaandelijks beurtelings parkeren: de andere kant draagt bord E5, van de 1e tot de 15e."
         },
         {
           "id": "H1_SIGN_E9__1",
           "sign": "E9b",
-          "question": "Vous voyez ce panneau en périphérie de la ville. Que signifie-t-il ?",
+          "question": "Ce panneau P porte une silhouette de voiture. À quels véhicules est-il réservé ?",
           "answers": [
-            "C'est un parking d'autoroute",
-            "C'est un parking relais (P+R) : garez votre voiture et prenez les transports en commun",
-            "Le stationnement est réservé aux usagers du train",
-            "Le stationnement est interdit sauf pour les véhicules de transport"
+            "Aux camionnettes et camions",
+            "Aux motos, voitures, camionnettes et minibus",
+            "Aux autocars",
+            "Aux véhicules électriques"
           ],
           "correct": 1,
-          "explanation": "E9b (parking relais / Park & Ride) vous invite à laisser votre voiture et à continuer en transports en commun. Souvent situé en périphérie des villes.",
-          "question_nl": "U ziet dit bord aan de rand van de stad. Wat betekent het?",
+          "explanation": "Le signal E9b réserve le stationnement aux motocyclettes, voitures, camionnettes et minibus — autrement dit aux véhicules dont la MMA ne dépasse pas 3,5 tonnes. Les camions ont leur propre signal, le E9c.",
+          "question_nl": "Dit P-bord toont de silhouet van een auto. Voor welke voertuigen is het voorbehouden?",
           "answers_nl": [
-            "Het is een autosnelwegparking",
-            "Het is een pendelparking (P+R): parkeer uw auto en neem het openbaar vervoer",
-            "Het parkeren is voorbehouden voor treinreizigers",
-            "Parkeren is verboden behalve voor transportvoertuigen"
+            "Voor bestelwagens en vrachtwagens",
+            "Voor moto's, auto's, bestelwagens en minibussen",
+            "Voor autocars",
+            "Voor elektrische voertuigen"
           ],
-          "explanation_nl": "E9b (pendelparking / Park & Ride) nodigt u uit uw auto achter te laten en verder te reizen met het openbaar vervoer."
+          "explanation_nl": "Bord E9b behoudt het parkeren voor aan moto's, auto's, bestelwagens en minibussen — voertuigen met een MTM van hoogstens 3,5 ton. Vrachtwagens hebben hun eigen bord, E9c."
         },
         {
           "id": "H1_SIGN_C39_1",
-          "sign": "ARRET_STAT_INTERDIT",
+          "sign": "E3",
           "question": "Que signifie ce panneau ?",
           "answers": [
             "Seul le stationnement est interdit",
@@ -2459,7 +2459,7 @@
         },
         {
           "id": "PQ_E_STAT_1",
-          "sign": "STAT_INTERDIT",
+          "sign": "E1",
           "question": "Vous voyez ce panneau. Que pouvez-vous faire ?",
           "answers": [
             "Ni vous arrêter, ni stationner",
@@ -2480,7 +2480,7 @@
         },
         {
           "id": "PQ_E_E3_1",
-          "sign": "E3",
+          "sign": "E11",
           "question": "Que signifie ce panneau de stationnement avec « 1-15 » ou « 16-31 » ?",
           "answers": [
             "Stationnement limité à 15 ou 31 minutes",
@@ -2501,7 +2501,7 @@
         },
         {
           "id": "PQ_E_E5_1",
-          "sign": "E5",
+          "sign": "E9a_disque",
           "question": "Vous vous garez dans une zone bleue signalée par ce panneau. Que devez-vous faire ?",
           "answers": [
             "Payer à l'horodateur",
@@ -2522,7 +2522,7 @@
         },
         {
           "id": "PQ_E_E9C_1",
-          "sign": "E9c",
+          "sign": "E9a_handicap",
           "question": "Que signifie ce panneau ?",
           "answers": [
             "Hôpital à proximité",

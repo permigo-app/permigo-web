@@ -958,31 +958,31 @@
             "Stilstaan verboden, parkeren mag"
           ],
           "explanation": "C39 verbiedt elke immobilisatie van het voertuig, zelfs kortstondig. Noch stilstaan, noch parkeren is toegestaan. Het is strenger dan C37 (alleen parkeren verboden).",
-          "sign": "ARRET_STAT_INTERDIT",
+          "sign": "E3",
           "correct": 0
         },
         {
           "id": "H1_SIGN_E7_1",
-          "question": "U ziet dit bord. Wat moet u doen om te parkeren?",
+          "question": "Dit P-bord heeft een onderbord « betalend ». Wat moet u doen om te parkeren?",
           "choices": [
             "Betalen aan de automaat",
             "Uw blauwe schijf gebruiken",
             "Niets, het is hier gratis"
           ],
-          "explanation": "E7 duidt op betalend parkeren. Je moet het tarief betalen aan de parkeerautomaat of parkeermeter en het ticket zichtbaar plaatsen.",
-          "sign": "E7",
+          "explanation": "Betalend parkeren wordt niet door een apart bord aangeduid: het is het bord E9a (parkeren toegestaan) met een onderbord. U betaalt aan de parkeerautomaat en legt het ticket zichtbaar.",
+          "sign": "E9a",
           "correct": 0
         },
         {
           "id": "H1_SIGN_E9__1",
-          "question": "Wat betekent dit verkeersbord?",
+          "question": "Dit P-bord toont de silhouet van een kampeerwagen. Wat betekent het?",
           "choices": [
-            "Een overstapparking P+R",
-            "Een parking langs de snelweg",
-            "Een parking voor de bussen"
+            "Parkeren voorbehouden aan kampeerauto’s",
+            "Parkeerverbod voor kampeerauto’s",
+            "Serviceplaats voor kampeerauto’s"
           ],
-          "explanation": "E9b (park-and-ride / P+R) nodigt je uit om je auto te laten staan en verder te reizen met het openbaar vervoer. Vaak gelegen aan de rand van steden.",
-          "sign": "E9b",
+          "explanation": "Het bord E9h behoudt de plaatsen voor aan kampeerauto’s. Een gewone auto mag er niet parkeren.",
+          "sign": "E9h",
           "correct": 0
         }
       ]
@@ -1600,7 +1600,7 @@
           ],
           "explanation": "Rond blauw bord + 1 rode diagonaal = parkeren verboden (stilstaan toegelaten), aan de kant van het bord, tot het volgende kruispunt.",
           "theoryCardIndex": 3,
-          "sign": "STAT_INTERDIT",
+          "sign": "E1",
           "correct": 0
         },
         {
@@ -1613,7 +1613,7 @@
           ],
           "explanation": "Rond blauw bord + 2 rode diagonalen = stilstaan EN parkeren verboden aan beide kanten.",
           "theoryCardIndex": 3,
-          "sign": "ARRET_STAT_INTERDIT",
+          "sign": "E3",
           "correct": 0
         },
         {
@@ -1625,7 +1625,7 @@
           ],
           "explanation": "Het bord met twee diagonalen verbiedt ook stilstaan: je mag er geen passagier afzetten.",
           "theoryCardIndex": 3,
-          "sign": "ARRET_STAT_INTERDIT",
+          "sign": "E3",
           "correct": 1
         },
         {
@@ -1674,7 +1674,7 @@
           ],
           "explanation": "Zonder cijferaanduiding geldt het bord voor de rijbaan EN de berm.",
           "theoryCardIndex": 3,
-          "sign": "STAT_INTERDIT",
+          "sign": "E1",
           "correct": 0
         },
         {
@@ -1687,7 +1687,7 @@
           ],
           "explanation": "Met cijferaanduiding geldt het bord alleen voor de rijbaan, over de aangegeven afstand.",
           "theoryCardIndex": 3,
-          "sign": "STAT_INTERDIT",
+          "sign": "E1",
           "correct": 0
         },
         {
@@ -1711,7 +1711,7 @@
           ],
           "explanation": "Het bord \"1–15\" verbiedt het parkeren aan deze kant van de rijbaan van de 1e tot de 15e van de maand.",
           "theoryCardIndex": 4,
-          "sign": "E3",
+          "sign": "E5",
           "correct": 0
         },
         {
@@ -1724,7 +1724,7 @@
           ],
           "explanation": "Het bord \"16–31\" verbiedt het parkeren aan deze kant van de rijbaan van de 16e tot het einde van de maand.",
           "theoryCardIndex": 4,
-          "sign": "E3",
+          "sign": "E7",
           "correct": 0
         },
         {
@@ -1737,7 +1737,7 @@
           ],
           "explanation": "Van de 1e tot de 15e is de kant \"1–15\" verboden: je parkeert aan de andere kant (kant \"16–31\").",
           "theoryCardIndex": 4,
-          "sign": "E3",
+          "sign": "E5",
           "correct": 0
         },
         {
@@ -1822,7 +1822,7 @@
           ],
           "explanation": "Op de 20e is de periode \"1–15\" voorbij: het bord \"1–15\" verbiedt niets. Je mag aan deze kant parkeren.",
           "theoryCardIndex": 4,
-          "sign": "E3",
+          "sign": "E5",
           "correct": 0
         },
         {
@@ -1835,7 +1835,7 @@
           ],
           "explanation": "Het blauwe vierkante P-bord duidt een parkeerplaats aan waar parkeren is toegelaten.",
           "theoryCardIndex": 3,
-          "sign": "E1",
+          "sign": "E9a",
           "correct": 0
         },
         {
@@ -1848,7 +1848,7 @@
           ],
           "explanation": "Een bord met tijdsaanduiding verbiedt het parkeren op rijbaan en berm gedurende het aangegeven tijdstip.",
           "theoryCardIndex": 4,
-          "sign": "STAT_INTERDIT",
+          "sign": "E1",
           "correct": 0
         },
         {
@@ -1861,7 +1861,7 @@
           ],
           "explanation": "Pijl naar boven = begint hier. Cijferaanduiding = alleen de rijbaan, over 20 m.",
           "theoryCardIndex": 3,
-          "sign": "STAT_INTERDIT",
+          "sign": "E1",
           "correct": 0
         }
       ]
@@ -2066,7 +2066,7 @@
           ],
           "explanation": "De blauwe zone is een parkeerzone met beperkte duur waar het gebruik van de parkeerschijf verplicht is.",
           "theoryCardIndex": 0,
-          "sign": "E5",
+          "sign": "E9a_disque",
           "correct": 0
         },
         {
@@ -2207,7 +2207,7 @@
           ],
           "explanation": "De parkeerschijf kan verplicht zijn buiten de blauwe zone als een parkeerbord de vermelding \"parkeerschijf verplicht\" draagt.",
           "theoryCardIndex": 1,
-          "sign": "E5",
+          "sign": "E9a_disque",
           "correct": 0
         },
         {
@@ -2337,7 +2337,7 @@
           ],
           "explanation": "Het P-bord + auto is voorbehouden voor auto's, auto's voor gemengd gebruik (pick-up), minibussen en motorfietsen.",
           "theoryCardIndex": 3,
-          "sign": "E1",
+          "sign": "E9b",
           "correct": 0
         },
         {
@@ -2349,7 +2349,7 @@
           ],
           "explanation": "Ondanks het rijbewijs B is de bestelwagen uitgesloten van het P-bord + auto.",
           "theoryCardIndex": 3,
-          "sign": "E1",
+          "sign": "E9b",
           "correct": 1
         },
         {
@@ -2361,7 +2361,7 @@
           ],
           "explanation": "Motorfietsen zijn inbegrepen in het P-bord + auto.",
           "theoryCardIndex": 3,
-          "sign": "E1",
+          "sign": "E9b",
           "correct": 0
         },
         {
@@ -2615,7 +2615,7 @@
           ],
           "explanation": "Het P-bord + bestelwagen/vrachtwagen is voorbehouden voor bestelwagens en vrachtwagens.",
           "theoryCardIndex": 3,
-          "sign": "E1",
+          "sign": "E9c",
           "correct": 1
         },
         {
@@ -2628,7 +2628,7 @@
           ],
           "explanation": "Het P-bord + elektrische stekker duidt een parkeerplaats aan die voorbehouden is voor elektrische voertuigen.",
           "theoryCardIndex": 3,
-          "sign": "E1",
+          "sign": "E9a",
           "correct": 0
         }
       ]
