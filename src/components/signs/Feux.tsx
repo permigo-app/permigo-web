@@ -1,209 +1,262 @@
 'use client';
 
-/** Traffic lights (feux de signalisation) — SVG components */
+/**
+ * Feux de signalisation — icônes vectorielles.
+ *
+ * Refonte : l'ancien gabarit laissait le boîtier flotter au milieu d'un cadre
+ * deux fois trop large, les lentilles éteintes se confondaient avec le corps
+ * et le halo n'était qu'un disque plus clair. Ici le boîtier occupe tout le
+ * cadre, les lentilles sont grandes, et une lentille allumée porte un vrai
+ * halo plus un reflet — elle se distingue d'une lentille éteinte d'un seul
+ * coup d'œil, même affichée petit.
+ */
 
 interface Props { size?: number }
 
-function LightBox({ children, size = 80, width = 36, height = 90 }: Props & { children: React.ReactNode; width?: number; height?: number }) {
-  const s = size;
-  const vw = 50 + width;
-  const vh = height + 20;
+const CORPS = '#15181C';
+const CONTOUR = '#2F343B';
+const ETEINTE = '#23272C';
+const CERNE = '#30363E';
+const SOCLE = '#434A53';
+
+const ROUGE = '#E8242B';
+const ORANGE = '#F3A312';
+const VERT = '#0FBF5A';
+const BLANC = '#F2F5F8';
+
+/** Boîtier vertical. `lentilles` = nombre de feux, pour ajuster la hauteur. */
+function Boitier({ children, size = 80, lentilles = 3 }: Props & { children: React.ReactNode; lentilles?: number }) {
+  const h = 22 + lentilles * 38;
   return (
-    <svg width={s} height={s} viewBox={`0 0 ${vw} ${vh}`}>
-      <rect x={(vw - width) / 2} y="5" width={width} height={height} rx="6" fill="#1A1A1A" stroke="#333" strokeWidth="2" />
+    <svg width={size} height={size} viewBox={`0 0 62 ${h + 10}`}>
+      <rect x="3" y="3" width="56" height={h} rx="11" fill={CORPS} stroke={CONTOUR} strokeWidth="2.5" />
       {children}
-      <rect x={(vw - 6) / 2} y={height + 5} width="6" height="12" rx="1" fill="#555" />
+      <rect x="26" y={h + 2} width="10" height="8" rx="2" fill={SOCLE} />
     </svg>
   );
 }
 
-export function FeuTricolore({ size = 80 }: Props) {
-  const cx = 43;
+/** Centre vertical de la lentille n° i (0 en haut). */
+const cy = (i: number) => 34 + i * 38;
+
+function Eteinte({ i }: { i: number }) {
   return (
-    <LightBox size={size}>
-      <circle cx={cx} cy="24" r="11" fill="#FF0000" />
-      <circle cx={cx} cy="24" r="7" fill="#FF3333" opacity={0.5} />
-      <circle cx={cx} cy="50" r="11" fill="#FF8C00" />
-      <circle cx={cx} cy="50" r="7" fill="#FFB347" opacity={0.5} />
-      <circle cx={cx} cy="76" r="11" fill="#00CC00" />
-      <circle cx={cx} cy="76" r="7" fill="#33FF33" opacity={0.5} />
-    </LightBox>
+    <>
+      <circle cx="31" cy={cy(i)} r="16" fill={ETEINTE} />
+      <circle cx="31" cy={cy(i)} r="16" fill="none" stroke={CERNE} strokeWidth="1.5" />
+    </>
+  );
+}
+
+function Allumee({ i, couleur }: { i: number; couleur: string }) {
+  return (
+    <>
+      <circle cx="31" cy={cy(i)} r="22" fill={couleur} opacity={0.17} />
+      <circle cx="31" cy={cy(i)} r="16" fill={couleur} />
+      <circle cx="26" cy={cy(i) - 5} r="5.5" fill="#FFFFFF" opacity={0.3} />
+    </>
+  );
+}
+
+export function FeuTricolore({ size = 80 }: Props) {
+  return (
+    <Boitier size={size}>
+      <Allumee i={0} couleur={ROUGE} />
+      <Allumee i={1} couleur={ORANGE} />
+      <Allumee i={2} couleur={VERT} />
+    </Boitier>
   );
 }
 
 export function FeuRouge({ size = 80 }: Props) {
-  const cx = 43;
   return (
-    <LightBox size={size}>
-      <circle cx={cx} cy="24" r="11" fill="#FF0000" />
-      <circle cx={cx} cy="24" r="7" fill="#FF3333" opacity={0.6} />
-      <circle cx={cx} cy="50" r="11" fill="#333" />
-      <circle cx={cx} cy="76" r="11" fill="#333" />
-    </LightBox>
+    <Boitier size={size}>
+      <Allumee i={0} couleur={ROUGE} />
+      <Eteinte i={1} />
+      <Eteinte i={2} />
+    </Boitier>
   );
 }
 
 export function FeuOrange({ size = 80 }: Props) {
-  const cx = 43;
   return (
-    <LightBox size={size}>
-      <circle cx={cx} cy="24" r="11" fill="#333" />
-      <circle cx={cx} cy="50" r="11" fill="#FF8C00" />
-      <circle cx={cx} cy="50" r="7" fill="#FFB347" opacity={0.6} />
-      <circle cx={cx} cy="76" r="11" fill="#333" />
-    </LightBox>
+    <Boitier size={size}>
+      <Eteinte i={0} />
+      <Allumee i={1} couleur={ORANGE} />
+      <Eteinte i={2} />
+    </Boitier>
   );
 }
 
 export function FeuVert({ size = 80 }: Props) {
-  const cx = 43;
   return (
-    <LightBox size={size}>
-      <circle cx={cx} cy="24" r="11" fill="#333" />
-      <circle cx={cx} cy="50" r="11" fill="#333" />
-      <circle cx={cx} cy="76" r="11" fill="#00CC00" />
-      <circle cx={cx} cy="76" r="7" fill="#33FF33" opacity={0.6} />
-    </LightBox>
+    <Boitier size={size}>
+      <Eteinte i={0} />
+      <Eteinte i={1} />
+      <Allumee i={2} couleur={VERT} />
+    </Boitier>
   );
 }
 
+/** Orange CLIGNOTANT : des traits rayonnants le distinguent de l'orange fixe. */
 export function FeuClignotant({ size = 80 }: Props) {
-  const cx = 43;
+  const y = cy(1);
   return (
-    <LightBox size={size}>
-      <circle cx={cx} cy="24" r="11" fill="#333" />
-      <circle cx={cx} cy="50" r="11" fill="#FF8C00" />
-      <circle cx={cx} cy="50" r="7" fill="#FFB347" opacity={0.6} />
-      {/* Rays to indicate blinking */}
-      {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => {
-        const rad = (angle * Math.PI) / 180;
-        const x1 = cx + Math.cos(rad) * 13;
-        const y1 = 50 + Math.sin(rad) * 13;
-        const x2 = cx + Math.cos(rad) * 17;
-        const y2 = 50 + Math.sin(rad) * 17;
-        return <line key={angle} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#FFB347" strokeWidth="1.5" opacity={0.7} />;
+    <Boitier size={size}>
+      <Eteinte i={0} />
+      <Allumee i={1} couleur={ORANGE} />
+      {[0, 45, 90, 135, 180, 225, 270, 315].map(a => {
+        const r = (a * Math.PI) / 180;
+        return (
+          <line
+            key={a}
+            x1={31 + Math.cos(r) * 24} y1={y + Math.sin(r) * 24}
+            x2={31 + Math.cos(r) * 29} y2={y + Math.sin(r) * 29}
+            stroke={ORANGE} strokeWidth="2.5" strokeLinecap="round" opacity={0.85}
+          />
+        );
       })}
-      <circle cx={cx} cy="76" r="11" fill="#333" />
-    </LightBox>
+      <Eteinte i={2} />
+    </Boitier>
   );
 }
 
+/** Flèche verte : le passage n'est autorisé que dans la direction indiquée. */
 export function FeuFlecheVerte({ size = 80 }: Props) {
-  const cx = 43;
+  const y = cy(2);
   return (
-    <LightBox size={size}>
-      <circle cx={cx} cy="24" r="11" fill="#333" />
-      <circle cx={cx} cy="50" r="11" fill="#333" />
-      <circle cx={cx} cy="76" r="11" fill="#00CC00" />
-      {/* Arrow pointing right */}
-      <polygon points={`${cx - 5},73 ${cx + 3},76 ${cx - 5},79`} fill="#003300" />
-      <line x1={cx - 8} y1={76} x2={cx - 3} y2={76} stroke="#003300" strokeWidth="2" />
-    </LightBox>
+    <Boitier size={size}>
+      <Eteinte i={0} />
+      <Eteinte i={1} />
+      <circle cx="31" cy={y} r="22" fill={VERT} opacity={0.17} />
+      <circle cx="31" cy={y} r="16" fill={CORPS} />
+      <circle cx="31" cy={y} r="16" fill="none" stroke={VERT} strokeWidth="1.5" opacity={0.5} />
+      <path
+        d={`M22 ${y} L33 ${y} L33 ${y - 7} L42 ${y} L33 ${y + 7} L33 ${y} Z`}
+        fill={VERT}
+      />
+      <rect x="22" y={y - 2.5} width="12" height="5" rx="1" fill={VERT} />
+    </Boitier>
+  );
+}
+
+/** Silhouette de piéton, debout (rouge) ou en marche (vert). */
+function Pieton({ y, couleur, marche }: { y: number; couleur: string; marche: boolean }) {
+  return (
+    <g fill={couleur} stroke={couleur} strokeWidth="2.6" strokeLinecap="round">
+      <circle cx="31" cy={y - 10} r="3.6" stroke="none" />
+      <line x1="31" y1={y - 6} x2="31" y2={y + 2} />
+      {marche ? (
+        <>
+          <line x1="31" y1={y - 3} x2="25" y2={y + 1} />
+          <line x1="31" y1={y - 3} x2="37" y2={y - 6} />
+          <line x1="31" y1={y + 2} x2="25" y2={y + 10} />
+          <line x1="31" y1={y + 2} x2="38" y2={y + 8} />
+        </>
+      ) : (
+        <>
+          <line x1="31" y1={y - 3} x2="26" y2={y + 2} />
+          <line x1="31" y1={y - 3} x2="36" y2={y + 2} />
+          <line x1="31" y1={y + 2} x2="28" y2={y + 10} />
+          <line x1="31" y1={y + 2} x2="34" y2={y + 10} />
+        </>
+      )}
+    </g>
   );
 }
 
 export function FeuPietonRouge({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 70 100">
-      <rect x="10" y="5" width="50" height="90" rx="6" fill="#1A1A1A" stroke="#333" strokeWidth="2" />
-      {/* Red standing person */}
-      <circle cx="35" cy="25" r="12" fill="#FF0000" />
-      <circle cx="35" cy="22" r="3" fill="#CC0000" />
-      <line x1="35" y1="25" x2="35" y2="33" stroke="#CC0000" strokeWidth="2" />
-      <line x1="30" y1="28" x2="40" y2="28" stroke="#CC0000" strokeWidth="2" />
-      <line x1="35" y1="33" x2="31" y2="38" stroke="#CC0000" strokeWidth="2" />
-      <line x1="35" y1="33" x2="39" y2="38" stroke="#CC0000" strokeWidth="2" />
-      {/* Green off */}
-      <circle cx="35" cy="65" r="12" fill="#333" />
-      <rect x="29" y="87" width="12" height="6" rx="1" fill="#555" />
-    </svg>
+    <Boitier size={size} lentilles={2}>
+      <circle cx="31" cy={cy(0)} r="22" fill={ROUGE} opacity={0.15} />
+      <circle cx="31" cy={cy(0)} r="16" fill={CORPS} stroke={ROUGE} strokeWidth="1.5" />
+      <Pieton y={cy(0)} couleur={ROUGE} marche={false} />
+      <Eteinte i={1} />
+    </Boitier>
   );
 }
 
 export function FeuPietonVert({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 70 100">
-      <rect x="10" y="5" width="50" height="90" rx="6" fill="#1A1A1A" stroke="#333" strokeWidth="2" />
-      {/* Red off */}
-      <circle cx="35" cy="25" r="12" fill="#333" />
-      {/* Green walking person */}
-      <circle cx="35" cy="65" r="12" fill="#00CC00" />
-      <circle cx="35" cy="59" r="3" fill="#009900" />
-      <line x1="35" y1="62" x2="35" y2="69" stroke="#009900" strokeWidth="2" />
-      <line x1="30" y1="65" x2="40" y2="65" stroke="#009900" strokeWidth="2" />
-      <line x1="35" y1="69" x2="30" y2="75" stroke="#009900" strokeWidth="2" />
-      <line x1="35" y1="69" x2="40" y2="75" stroke="#009900" strokeWidth="2" />
-      <rect x="29" y="87" width="12" height="6" rx="1" fill="#555" />
-    </svg>
+    <Boitier size={size} lentilles={2}>
+      <Eteinte i={0} />
+      <circle cx="31" cy={cy(1)} r="22" fill={VERT} opacity={0.15} />
+      <circle cx="31" cy={cy(1)} r="16" fill={CORPS} stroke={VERT} strokeWidth="1.5" />
+      <Pieton y={cy(1)} couleur={VERT} marche />
+    </Boitier>
+  );
+}
+
+/** Silhouette de vélo. */
+function Velo({ y, couleur }: { y: number; couleur: string }) {
+  return (
+    <g fill="none" stroke={couleur} strokeWidth="2.2" strokeLinecap="round">
+      <circle cx="23" cy={y + 4} r="5.5" />
+      <circle cx="39" cy={y + 4} r="5.5" />
+      <path d={`M23 ${y + 4} L29 ${y - 4} L36 ${y - 4} L39 ${y + 4}`} />
+      <line x1="29" y1={y - 4} x2="33" y2={y + 4} />
+      <line x1="33" y1={y - 7} x2="38" y2={y - 7} />
+    </g>
   );
 }
 
 export function FeuVeloRouge({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 70 100">
-      <rect x="10" y="5" width="50" height="90" rx="6" fill="#1A1A1A" stroke="#333" strokeWidth="2" />
-      <circle cx="35" cy="30" r="15" fill="#FF0000" />
-      {/* Bicycle silhouette */}
-      <circle cx="28" cy="33" r="5" fill="none" stroke="#800000" strokeWidth="1.5" />
-      <circle cx="42" cy="33" r="5" fill="none" stroke="#800000" strokeWidth="1.5" />
-      <line x1="28" y1="33" x2="35" y2="26" stroke="#800000" strokeWidth="1.5" />
-      <line x1="35" y1="26" x2="42" y2="33" stroke="#800000" strokeWidth="1.5" />
-      <line x1="35" y1="26" x2="38" y2="26" stroke="#800000" strokeWidth="1.5" />
-      <circle cx="35" cy="70" r="15" fill="#333" />
-      <rect x="29" y="87" width="12" height="6" rx="1" fill="#555" />
-    </svg>
+    <Boitier size={size} lentilles={2}>
+      <circle cx="31" cy={cy(0)} r="22" fill={ROUGE} opacity={0.15} />
+      <circle cx="31" cy={cy(0)} r="16" fill={CORPS} stroke={ROUGE} strokeWidth="1.5" />
+      <Velo y={cy(0)} couleur={ROUGE} />
+      <Eteinte i={1} />
+    </Boitier>
   );
 }
 
 export function FeuVeloVert({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 70 100">
-      <rect x="10" y="5" width="50" height="90" rx="6" fill="#1A1A1A" stroke="#333" strokeWidth="2" />
-      <circle cx="35" cy="30" r="15" fill="#333" />
-      <circle cx="35" cy="70" r="15" fill="#00CC00" />
-      {/* Bicycle silhouette */}
-      <circle cx="28" cy="73" r="5" fill="none" stroke="#006600" strokeWidth="1.5" />
-      <circle cx="42" cy="73" r="5" fill="none" stroke="#006600" strokeWidth="1.5" />
-      <line x1="28" y1="73" x2="35" y2="66" stroke="#006600" strokeWidth="1.5" />
-      <line x1="35" y1="66" x2="42" y2="73" stroke="#006600" strokeWidth="1.5" />
-      <line x1="35" y1="66" x2="38" y2="66" stroke="#006600" strokeWidth="1.5" />
-      <rect x="29" y="87" width="12" height="6" rx="1" fill="#555" />
-    </svg>
+    <Boitier size={size} lentilles={2}>
+      <Eteinte i={0} />
+      <circle cx="31" cy={cy(1)} r="22" fill={VERT} opacity={0.15} />
+      <circle cx="31" cy={cy(1)} r="16" fill={CORPS} stroke={VERT} strokeWidth="1.5" />
+      <Velo y={cy(1)} couleur={VERT} />
+    </Boitier>
   );
 }
 
+/** Panneau de voie (portique autoroutier) : croix rouge = voie fermée. */
 export function CroixRougeVoie({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 80 80">
-      <rect width="80" height="80" rx="8" fill="#1A1A1A" stroke="#333" strokeWidth="2" />
-      <line x1="20" y1="20" x2="60" y2="60" stroke="#FF0000" strokeWidth="6" strokeLinecap="round" />
-      <line x1="60" y1="20" x2="20" y2="60" stroke="#FF0000" strokeWidth="6" strokeLinecap="round" />
+    <svg width={size} height={size} viewBox="0 0 100 100">
+      <rect x="3" y="3" width="94" height="94" rx="12" fill={CORPS} stroke={CONTOUR} strokeWidth="3" />
+      <line x1="30" y1="30" x2="70" y2="70" stroke={ROUGE} strokeWidth="11" strokeLinecap="round" />
+      <line x1="70" y1="30" x2="30" y2="70" stroke={ROUGE} strokeWidth="11" strokeLinecap="round" />
     </svg>
   );
 }
 
+/** Panneau de voie : flèche verte = voie ouverte. */
 export function FlecheVerteVoie({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 80 80">
-      <rect width="80" height="80" rx="8" fill="#1A1A1A" stroke="#333" strokeWidth="2" />
-      <polygon points="40,18 58,45 48,45 48,62 32,62 32,45 22,45" fill="#00CC00" />
+    <svg width={size} height={size} viewBox="0 0 100 100">
+      <rect x="3" y="3" width="94" height="94" rx="12" fill={CORPS} stroke={CONTOUR} strokeWidth="3" />
+      <path d="M50 76 L50 44 L34 44 L50 22 L66 44 L50 44 Z" fill={VERT} />
+      <rect x="44" y="44" width="12" height="32" rx="2" fill={VERT} />
     </svg>
   );
 }
 
+/**
+ * Signal réservé aux trams et aux bus : des barres BLANCHES, jamais des
+ * couleurs — c'est précisément ce qui le distingue d'un feu ordinaire.
+ */
 export function FeuTram({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 90 110">
-      <rect x="15" y="5" width="60" height="100" rx="6" fill="#1A1A1A" stroke="#333" strokeWidth="2" />
-      {/* T-shape signal (white) */}
-      <rect x="30" y="18" width="30" height="6" rx="2" fill="#FFFFFF" />
-      <rect x="42" y="18" width="6" height="25" rx="2" fill="#FFFFFF" />
-      {/* Orange circle below */}
-      <circle cx="45" cy="60" r="10" fill="#FF8C00" />
-      <circle cx="45" cy="60" r="6" fill="#FFB347" opacity={0.5} />
-      {/* Bottom bar */}
-      <rect x="30" y="80" width="30" height="6" rx="2" fill="#FFFFFF" />
-      <rect x="37" y="97" width="16" height="6" rx="1" fill="#555" />
-    </svg>
+    <Boitier size={size} lentilles={3}>
+      <circle cx="31" cy={cy(0)} r="16" fill={ETEINTE} stroke={CERNE} strokeWidth="1.5" />
+      <rect x="18" y={cy(0) - 3} width="26" height="6" rx="2" fill={BLANC} />
+      <circle cx="31" cy={cy(1)} r="16" fill={ETEINTE} stroke={CERNE} strokeWidth="1.5" />
+      <rect x="28" y={cy(1) - 13} width="6" height="26" rx="2" fill={BLANC} />
+      <circle cx="31" cy={cy(2)} r="16" fill={ETEINTE} stroke={CERNE} strokeWidth="1.5" />
+      <circle cx="31" cy={cy(2)} r="5" fill={BLANC} />
+    </Boitier>
   );
 }

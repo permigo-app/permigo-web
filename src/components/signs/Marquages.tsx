@@ -1,133 +1,162 @@
 'use client';
 
-/** Road markings (marquages au sol) — SVG components */
+/**
+ * Marquages au sol — icônes vectorielles.
+ *
+ * Toutes partagent le même gabarit : une case d'asphalte 100×100, vue du
+ * dessus, et de la peinture blanche qui occupe largement le cadre. Un seul
+ * gris d'asphalte pour les onze (l'ancienne version en mélangeait deux) et
+ * aucun mot écrit : le site est bilingue, un mot gravé ne se traduit pas.
+ */
 
 interface Props { size?: number }
 
-export function LigneContinue({ size = 80 }: Props) {
+const ASPHALTE = '#3A3F45';
+const BORD = '#2B2F34';
+const PEINTURE = '#F5F7FA';
+
+function Case({ children, size = 80 }: Props & { children: React.ReactNode }) {
   return (
     <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      <rect x="48" y="5" width="4" height="90" rx="1" fill="#FFFFFF" />
-      <rect x="15" y="85" width="70" height="2" rx="1" fill="#666" opacity={0.3} />
+      <rect width="100" height="100" rx="10" fill={ASPHALTE} />
+      <rect x="0.75" y="0.75" width="98.5" height="98.5" rx="9.25" fill="none" stroke={BORD} strokeWidth="1.5" />
+      {children}
     </svg>
+  );
+}
+
+export function LigneContinue({ size = 80 }: Props) {
+  return (
+    <Case size={size}>
+      <rect x="46" y="8" width="8" height="84" rx="2" fill={PEINTURE} />
+    </Case>
   );
 }
 
 export function LigneDiscontinue({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      {[8, 24, 40, 56, 72, 88].map((y) => (
-        <rect key={y} x="48" y={y} width="4" height="10" rx="1" fill="#FFFFFF" />
+    <Case size={size}>
+      {[9, 30, 51, 72].map(y => (
+        <rect key={y} x="46" y={y} width="8" height="13" rx="2" fill={PEINTURE} />
       ))}
-    </svg>
+    </Case>
   );
 }
 
 export function DoubleContinue({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      <rect x="44" y="5" width="4" height="90" rx="1" fill="#FFFFFF" />
-      <rect x="52" y="5" width="4" height="90" rx="1" fill="#FFFFFF" />
-    </svg>
+    <Case size={size}>
+      <rect x="38" y="8" width="8" height="84" rx="2" fill={PEINTURE} />
+      <rect x="54" y="8" width="8" height="84" rx="2" fill={PEINTURE} />
+    </Case>
   );
 }
 
+/** Continue d'un côté, discontinue de l'autre : c'est la ligne la plus proche qui compte. */
 export function LigneMixte({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      <rect x="44" y="5" width="4" height="90" rx="1" fill="#FFFFFF" />
-      {[8, 24, 40, 56, 72, 88].map((y) => (
-        <rect key={y} x="52" y={y} width="4" height="10" rx="1" fill="#FFFFFF" />
+    <Case size={size}>
+      <rect x="38" y="8" width="8" height="84" rx="2" fill={PEINTURE} />
+      {[9, 30, 51, 72].map(y => (
+        <rect key={y} x="54" y={y} width="8" height="13" rx="2" fill={PEINTURE} />
       ))}
-    </svg>
+    </Case>
   );
 }
 
+/**
+ * Ligne d'arrêt du STOP : une LARGE bande blanche continue en travers de la
+ * bande. L'ancienne version peignait le mot « STOP » au sol — ce mot n'est
+ * pas un marquage belge, et il ne se traduirait pas en néerlandais.
+ */
 export function MarquageStop({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      <rect x="10" y="55" width="80" height="5" rx="1" fill="#FFFFFF" />
-      <text x="50" y="45" textAnchor="middle" fontSize="18" fontWeight="900" fill="#FFFFFF" fontFamily="Arial">STOP</text>
-      {[15, 35, 55, 75].map((x) => (
-        <rect key={x} x={x} y="65" width="4" height="10" rx="1" fill="#FFFFFF" opacity={0.5} />
-      ))}
-    </svg>
+    <Case size={size}>
+      <rect x="8" y="42" width="84" height="16" rx="2" fill={PEINTURE} />
+    </Case>
   );
 }
 
+/**
+ * Cédez le passage : les « dents de requin », une rangée de TRIANGLES blancs
+ * pointant vers le conducteur. L'ancienne version dessinait un grand triangle
+ * creux, ce qui ne correspond à aucun marquage réel — et l'énoncé de la
+ * question parle bien de « triangles blancs peints en travers de la bande ».
+ */
 export function MarquageCedez({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      <polygon points="50,25 25,65 75,65" fill="none" stroke="#FFFFFF" strokeWidth="4" />
-      {[15, 35, 55, 75].map((x) => (
-        <rect key={x} x={x} y="75" width="4" height="10" rx="1" fill="#FFFFFF" opacity={0.5} />
+    <Case size={size}>
+      {[12, 30, 48, 66].map(x => (
+        <polygon key={x} points={`${x},40 ${x + 22},40 ${x + 11},66`} fill={PEINTURE} />
       ))}
-    </svg>
+    </Case>
   );
 }
 
+/** Passage pour piétons. */
 export function Zebras({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      {[15, 27, 39, 51, 63, 75].map((x) => (
-        <rect key={x} x={x} y="20" width="8" height="60" rx="1" fill="#FFFFFF" />
+    <Case size={size}>
+      {[13, 28, 43, 58, 73].map(x => (
+        <rect key={x} x={x} y="16" width="10" height="68" rx="1.5" fill={PEINTURE} />
       ))}
-    </svg>
+    </Case>
   );
 }
 
+/** Zone hachurée interdite à la circulation et au stationnement. */
 export function Chevrons({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      {[20, 40, 60, 80].map((y) => (
-        <g key={y}>
-          <line x1="30" y1={y} x2="50" y2={y - 12} stroke="#FFFFFF" strokeWidth="3" />
-          <line x1="50" y1={y - 12} x2="70" y2={y} stroke="#FFFFFF" strokeWidth="3" />
-        </g>
-      ))}
-    </svg>
+    <Case size={size}>
+      <defs>
+        <clipPath id="zoneHachuree">
+          <rect x="24" y="14" width="52" height="72" rx="2" />
+        </clipPath>
+      </defs>
+      <rect x="22" y="12" width="56" height="76" rx="3" fill="none" stroke={PEINTURE} strokeWidth="4" />
+      <g clipPath="url(#zoneHachuree)">
+        {[14, 30, 46, 62, 78, 94, 110].map(y => (
+          <line key={y} x1="20" y1={y} x2="80" y2={y - 32} stroke={PEINTURE} strokeWidth="3.5" />
+        ))}
+      </g>
+    </Case>
   );
 }
 
+/** Damier : zone tampon entre deux bandes, interdite à la circulation. */
 export function Damier({ size = 80 }: Props) {
+  const cases: { x: number; y: number }[] = [];
+  for (let r = 0; r < 5; r++) {
+    for (let c = 0; c < 4; c++) {
+      if ((r + c) % 2 === 0) cases.push({ x: 18 + c * 16, y: 12 + r * 15 });
+    }
+  }
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#505050" />
-      {[0, 1, 2, 3, 4].map((row) =>
-        [0, 1, 2, 3, 4].map((col) => (
-          (row + col) % 2 === 0 && (
-            <rect key={`${row}-${col}`} x={20 + col * 12} y={20 + row * 12} width="12" height="12" fill="#FFFFFF" />
-          )
-        ))
-      )}
-    </svg>
+    <Case size={size}>
+      {cases.map(k => (
+        <rect key={`${k.x}-${k.y}`} x={k.x} y={k.y} width="16" height="15" fill={PEINTURE} />
+      ))}
+    </Case>
   );
 }
 
+/** Flèche de sélection de voie — obligation de tourner à gauche. */
 export function FlecheSolGauche({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#374151" />
-      <rect x="38" y="45" width="42" height="10" rx="3" fill="#FFFFFF" />
-      <polygon points="20,50 40,30 40,70" fill="#FFFFFF" />
-    </svg>
+    <Case size={size}>
+      <path
+        d="M42 92 L54 92 L54 58 L24 58 L24 68 L8 52 L24 36 L24 46 L42 46 Z"
+        fill={PEINTURE}
+      />
+    </Case>
   );
 }
 
+/** Flèche de sélection de voie — obligation de continuer tout droit. */
 export function FlecheSolToutDroit({ size = 80 }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="8" fill="#374151" />
-      <rect x="45" y="38" width="10" height="42" rx="3" fill="#FFFFFF" />
-      <polygon points="50,15 30,40 70,40" fill="#FFFFFF" />
-    </svg>
+    <Case size={size}>
+      <path d="M43 90 L43 38 L28 38 L50 10 L72 38 L57 38 L57 90 Z" fill={PEINTURE} />
+    </Case>
   );
 }

@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useLang } from '@/contexts/LanguageContext';
-import { cheapestPlan } from '@/lib/pricing';
 import { THEME_COLORS } from '@/lib/constants';
 import LandingTestimonials from '@/components/LandingTestimonials';
 
@@ -64,6 +63,7 @@ interface LandingCopy {
   premiumBadge: string;
   premiumItems: string[];
   premiumPeriod: string;
+  premiumVoirTarif: string;
   premiumNote: string;
   faqKicker: string;
   faqTitle: string;
@@ -95,7 +95,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     pillars: [
       { title: 'Théorie complète', price: 'Toute la théorie offerte', cta: 'Commencer !', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
       { title: 'Examens blancs', price: 'Un examen offert', cta: 'Tester !', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
-      { title: 'Premium, tout débloqué', price: 'À partir de 4,99 €', cta: 'Voir Premium', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
+      { title: 'Premium, tout débloqué', price: 'Tout se débloque d\u2019un coup', cta: 'Voir Premium', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
     ],
     stats: [
       { v: '1 770', l: 'questions officielles' },
@@ -160,6 +160,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       'Sans engagement, résiliable en deux clics',
     ],
     premiumPeriod: 'par semaine',
+    premiumVoirTarif: 'Voir les tarifs \u2192',
     premiumNote: 'Aussi en 2 semaines et 1 mois · Sans engagement, résiliable à tout moment',
     faqKicker: 'Questions fréquentes',
     faqTitle: 'Ce qu\'on nous demande le plus',
@@ -214,7 +215,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     pillars: [
       { title: 'Volledige theorie', price: 'Alle theorie gratis', cta: 'Beginnen!', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
       { title: 'Proefexamens', price: 'Eén examen gratis', cta: 'Testen!', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
-      { title: 'Premium, alles vrij', price: 'Vanaf 4,99 €', cta: 'Premium bekijken', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
+      { title: 'Premium, alles vrij', price: 'Alles in één keer vrij', cta: 'Premium bekijken', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
     ],
     stats: [
       { v: '1 770', l: 'officiële vragen' },
@@ -279,6 +280,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       'Zonder verplichtingen, in twee klikken opzegbaar',
     ],
     premiumPeriod: 'per week',
+    premiumVoirTarif: 'Tarieven bekijken \u2192',
     premiumNote: 'Ook in 2 weken en 1 maand · Zonder verplichtingen, elk moment opzegbaar',
     faqKicker: 'Veelgestelde vragen',
     faqTitle: 'Wat men ons het vaakst vraagt',
@@ -338,7 +340,6 @@ export default function LandingContent() {
   };
 
   const c = COPY[lang];
-  const plan = cheapestPlan();
   const answers = lang === 'nl' ? MOCK_ANSWERS_NL : MOCK_ANSWERS;
 
   const check = (color: string, size = 15) => (
@@ -477,27 +478,10 @@ export default function LandingContent() {
                   {c.ctaStart}
                 </Link>
 
-                {/* Tarif MOBILE UNIQUEMENT (sm:hidden) : sur ordinateur, la
-                    troisième carte d'offre porte déjà le prix, ce serait un
-                    doublon. Pas d'encadré ici — un simple bloc de texte posé
-                    dans la page, le prix souligné d'un trait ambre. */}
-                <Link href="/premium" className="sm:hidden" style={{
-                  display: 'inline-block', textDecoration: 'none', color: INK,
-                  lineHeight: 1.1, flexShrink: 0,
-                }}>
-                  <span style={{ display: 'block', fontSize: 11.5, fontWeight: 700, color: 'rgba(11,18,32,0.55)' }}>
-                    {c.priceLine}
-                  </span>
-                  <span style={{
-                    display: 'inline-block', fontSize: 27, fontWeight: 900, letterSpacing: '-1px',
-                    borderBottom: `3px solid ${AMBER}`, paddingBottom: 1, margin: '1px 0 2px',
-                  }}>
-                    {plan.priceDisplay}
-                  </span>
-                  <span style={{ display: 'block', fontSize: 11, fontWeight: 600, color: 'rgba(11,18,32,0.5)' }}>
-                    {c.priceLineStrong}
-                  </span>
-                </Link>
+                {/* Le tarif ne figure plus ici : le visiteur découvre d'abord
+                    le produit. Le montant exact est sur /premium, à un clic,
+                    et la section Offres plus bas dit clairement ce qui est
+                    payant — ne rien en dire serait trompeur. */}
               </div>
 
               <Link href="/login" style={{
@@ -755,10 +739,16 @@ export default function LandingContent() {
                 <span style={{ fontSize: 20, fontWeight: 900 }}>{c.premiumTitle}</span>
                 <span style={{ fontSize: 11, fontWeight: 800, padding: '3px 10px', borderRadius: 99, background: BRAND, color: INK }}>{c.premiumBadge}</span>
               </div>
-              <p className="flex flex-wrap items-baseline" style={{ margin: '0 0 20px', gap: 7 }}>
-                <span style={{ fontSize: 32, fontWeight: 900, color: BRAND_DEEP, letterSpacing: '-1px' }}>{plan.priceDisplay}</span>
-                <span style={{ fontSize: 13, color: 'rgba(11,18,32,0.5)', fontWeight: 600 }}>{c.premiumPeriod}</span>
-              </p>
+              {/* Le montant vit sur /premium. Ici on dit seulement que c'est
+                  payant et on y mène : le visiteur découvre le prix au moment
+                  où il a envie de continuer, pas à l'accueil. */}
+              <Link href="/premium" style={{
+                display: 'inline-block', margin: '0 0 20px',
+                fontSize: 17, fontWeight: 800, color: BRAND_DEEP, textDecoration: 'none',
+                borderBottom: `2px solid ${BRAND}`, paddingBottom: 2,
+              }}>
+                {c.premiumVoirTarif}
+              </Link>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 11, marginBottom: 22 }}>
                 {c.premiumItems.map(item => (
                   <div key={item} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
