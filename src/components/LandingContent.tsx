@@ -409,11 +409,10 @@ export default function LandingContent() {
       {/* ── HERO : deux colonnes, pleine largeur ───────────────── */}
       <section style={{
         position: 'relative', overflow: 'hidden',
-        background: 'linear-gradient(165deg, #F2FCFB 0%, #FFFFFF 45%, #FFF8EC 100%)',
+        background: 'linear-gradient(165deg, #FFFFFF 0%, #FFFFFF 45%, #FFF8EC 100%)',
         padding: 'clamp(26px,3.5vw,42px) 20px clamp(30px,4vw,46px)',
         borderBottom: '1px solid rgba(11,18,32,0.06)',
       }}>
-        <div style={{ position: 'absolute', top: -220, left: -160, width: 620, height: 620, borderRadius: '50%', background: `radial-gradient(circle, ${BRAND}26 0%, transparent 62%)`, pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', bottom: -240, right: -140, width: 640, height: 640, borderRadius: '50%', background: `radial-gradient(circle, ${AMBER}22 0%, transparent 62%)`, pointerEvents: 'none' }} />
 
         {/* items-start et NON items-center : la carte de droite est plus haute
