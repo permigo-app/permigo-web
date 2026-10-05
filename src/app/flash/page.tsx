@@ -416,12 +416,6 @@ function FlashContent() {
                   <p className="text-lg font-bold text-center" style={{ color: themeColor }}>
                     {t('flash_question_prompt')}
                   </p>
-                  <div className="px-3 py-1.5 rounded-lg" style={{ background: themeColor + '18' }}>
-                    <span className="text-xs font-bold" style={{ color: themeColor }}>
-                      {t('theme')} {themeCode} : {themeTitle}
-                    </span>
-                  </div>
-
                   {/* CTA button */}
                   <button
                     onClick={(e) => { e.stopPropagation(); flipCard(); }}
