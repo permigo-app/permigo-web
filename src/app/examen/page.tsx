@@ -431,6 +431,7 @@ function ExamContent() {
           {'✕'}
         </button>
       }
+      compactTitle
       headerCenter={
         <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('examen_header')} {themeCode !== 'FINAL' ? `${t('resultats_medaille_theme_prefix')} ${themeCode}` : t('examen_mot_final')}</span>
       }

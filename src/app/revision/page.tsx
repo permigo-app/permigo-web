@@ -187,6 +187,7 @@ function RevisionContent() {
           {'←'}
         </button>
       }
+      compactTitle
       headerCenter={
         <span className="text-sm font-bold">{themeEmoji} {t('erreurs_titre')} {themeCode}</span>
       }

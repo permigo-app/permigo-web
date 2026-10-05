@@ -29,7 +29,7 @@ export default function PremiumBanner() {
 
   return (
     <div
-      className="fixed bottom-[60px] lg:bottom-0 left-0 right-0 z-40 lg:left-[250px]"
+      className="bandeau-premium fixed bottom-[60px] lg:bottom-0 left-0 right-0 z-40 lg:left-[250px]"
       style={{ background: 'var(--card-primary)', borderTop: '1px solid var(--border-subtle)' }}
     >
       <div className="flex items-center justify-between px-4 py-2.5 max-w-3xl mx-auto">

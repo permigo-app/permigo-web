@@ -951,8 +951,13 @@ input[type="reset"] {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* SANS « forwards » : l'état final (opacité 1, aucune translation) est
+   déjà l'état normal. Avec « forwards », un transform restait posé pour
+   toujours sur <main>, ce qui transforme <main> en référence pour tous les
+   éléments position:fixed qu'il contient — un bouton « fixé en bas de
+   l'écran » se retrouvait collé en bas de la PAGE, hors de vue. */
 main, .page-content {
-  animation: pageFadeIn 0.25s ease-out forwards;
+  animation: pageFadeIn 0.25s ease-out;
 }
 
 /* ── Hub d'étude (accueil) ───────────────────────────────────── */
@@ -993,3 +998,18 @@ main, .page-content {
 .faq-item > summary::marker { content: ''; }
 .faq-item > summary { list-style: none; }
 .faq-item[open] > summary { color: var(--brand, #1AB8AB); }
+
+/* Mode focus du quiz (posé par QuizLayout) : sur téléphone, plus rien en bas
+   de l'écran pendant une question. Sur ordinateur, la barre du bas n'existe
+   pas et le bandeau reste à sa place. */
+@media (max-width: 1023px) {
+  body.quiz-focus .nav-bas-mobile,
+  body.quiz-focus .bandeau-premium,
+  body.quiz-focus .feedback-fab {
+    display: none !important;
+  }
+  /* la marge réservée à la barre du bas n'a plus lieu d'être */
+  body.quiz-focus main {
+    padding-bottom: 0 !important;
+  }
+}

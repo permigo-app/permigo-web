@@ -20,6 +20,12 @@ interface QuizLayoutProps {
   headerLeft?: ReactNode; // e.g. close button
   headerCenter?: ReactNode; // e.g. timer
   headerRight?: ReactNode; // e.g. score
+  /**
+   * Sur téléphone, masque le titre central et remonte la barre de progression
+   * sur la même ligne que la croix : l'en-tête passe de deux lignes à une.
+   * À NE PAS activer quand le centre porte une info vitale (chrono du Turbo).
+   */
+  compactTitle?: boolean;
 
   /* Question */
   subtitle?: string; // e.g. "Partie 1 — Quiz"
@@ -66,6 +72,7 @@ export default function QuizLayout({
   headerLeft,
   headerCenter,
   headerRight,
+  compactTitle = false,
   subtitle,
   question,
   signCode,
@@ -101,6 +108,15 @@ export default function QuizLayout({
   // Volontairement PAS déclenché par `validated` : l'explication s'affiche sous
   // les choix, remonter la ferait manquer.
   // `instant` est obligatoire : globals.css impose scroll-behavior:smooth.
+  // Mode focus : pendant une question, rien d'autre en bas de l'écran.
+  // La barre de navigation, le bandeau Premium et la bulle de feedback
+  // mangeaient ~230 px sur téléphone et poussaient « Question suivante »
+  // derrière eux. On sort du quiz par la ✕ de l'en-tête.
+  useEffect(() => {
+    document.body.classList.add('quiz-focus');
+    return () => document.body.classList.remove('quiz-focus');
+  }, []);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
   }, [questionKey ?? question]);
@@ -109,18 +125,29 @@ export default function QuizLayout({
     <div style={{ minHeight: '100vh' }}>
       {/* ── Sticky header ── */}
       <div
-        className="sticky top-0 z-30 px-6 py-3"
+        className="sticky top-0 z-30 px-4 lg:px-6 py-2 lg:py-3"
         style={{ background: 'var(--bg-blur)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-subtle)' }}
       >
         <div className="max-w-screen-xl mx-auto">
-          <div className="flex items-center gap-4 mb-2">
+          <div className={`flex items-center gap-3 lg:gap-4 ${compactTitle ? 'lg:mb-2' : 'mb-2'}`}>
             {headerLeft}
-            <div className="flex-1 flex items-center justify-center gap-3">
+            <div className={`flex-1 items-center justify-center gap-3 ${compactTitle ? 'hidden lg:flex' : 'flex'}`}>
               {headerCenter}
             </div>
+            {/* Téléphone + compactTitle : la progression prend la place du titre */}
+            {compactTitle && (
+              <div className="flex-1 flex lg:hidden items-center gap-2">
+                <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
+                  <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progress}%`, background: 'var(--brand)' }} />
+                </div>
+                {progressLabel && (
+                  <span className="text-xs font-bold flex-shrink-0" style={{ color: 'var(--brand)' }}>{progressLabel}</span>
+                )}
+              </div>
+            )}
             {headerRight}
           </div>
-          <div className="flex items-center gap-3">
+          <div className={`items-center gap-3 ${compactTitle ? 'hidden lg:flex' : 'flex'}`}>
             <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: 'var(--border-subtle)' }}>
               <div
                 className="h-full rounded-full transition-all duration-500"
@@ -135,7 +162,7 @@ export default function QuizLayout({
       </div>
 
       {/* ── 2-column layout ── */}
-      <div className="px-4 lg:px-6 pt-5 lg:pt-6 pb-6">
+      <div className="px-4 lg:px-6 pt-3 lg:pt-6 pb-6">
         <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6">
 
           {/* ── Colonne de gauche optionnelle (grille de l'examen blanc) ──
@@ -156,8 +183,8 @@ export default function QuizLayout({
 
             {/* Sign image */}
             {!imageUrl && signCode && (
-              <div className="flex justify-center mb-5">
-                <div className="rounded-xl p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
+              <div className="flex justify-center mb-3 lg:mb-5">
+                <div className="rounded-xl p-3 lg:p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
                   <SignImage code={signCode} size={148} />
                 </div>
               </div>
@@ -167,11 +194,16 @@ export default function QuizLayout({
             {/* L'énoncé était en 24px face à des réponses en 14px. On resserre
                 l'écart : c'est la comparaison des 4 propositions qui demande le
                 plus d'attention, pas la relecture de la question. */}
-            <p className="text-[20px] md:text-[22px] font-bold text-center mb-3 leading-snug max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
+            <p className="text-[19px] md:text-[22px] font-bold text-center mb-2 lg:mb-3 leading-snug max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
 
             {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
             {imageUrl && (
-              <div className="flex justify-center mb-5">
+              <div className="flex justify-center mb-3 lg:mb-5">
+                {/* Sur téléphone, l'image se limite à 28 % de la hauteur d'écran :
+                    grande sur un grand téléphone, plus compacte sur un petit —
+                    pour que les réponses et le bouton restent visibles sans
+                    scroller. La photo garde sa forme naturelle : plus de bandes
+                    grises vides au-dessus et en dessous. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={imageUrl}
@@ -179,8 +211,8 @@ export default function QuizLayout({
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  className="rounded-xl w-full max-w-md lg:max-w-lg"
-                  style={{ border: '1px solid var(--border-subtle)', aspectRatio: '4 / 3', objectFit: 'contain', background: 'var(--card-secondary)' }}
+                  className="rounded-xl w-auto max-w-full max-h-[28vh] lg:max-h-none lg:w-full lg:max-w-lg"
+                  style={{ border: '1px solid var(--border-subtle)', height: 'auto' }}
                 />
               </div>
             )}
@@ -191,7 +223,7 @@ export default function QuizLayout({
             {/* Answer grid */}
             {/* À 3 propositions, une seule colonne se lit mieux qu'un 2+1
                 bancal — et c'est aussi la présentation de l'examen officiel. */}
-            <div className={`grid gap-3 mb-5 ${choices.length > 3 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+            <div className={`grid gap-2 lg:gap-3 mb-3 lg:mb-5 ${choices.length > 3 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
               {choices.map((choice, i) => {
                 let bg = 'var(--card-primary)';
                 let border = '1px solid var(--border-subtle)';
@@ -229,14 +261,14 @@ export default function QuizLayout({
                     key={i}
                     onClick={() => !validated && onSelect(i)}
                     disabled={validated}
-                    className={`rounded-xl p-5 flex items-center gap-3 text-left press-scale ${
+                    className={`rounded-xl px-4 py-3 lg:p-5 flex items-center gap-3 text-left press-scale ${
                       shakeWrong && validated && i === selected && i !== correctIndex ? 'shake' : ''
                     } ${validated && i === correctIndex ? 'correct-pulse' : ''
                     } ${validated && i === selected && i !== correctIndex ? 'wrong-flash' : ''}`}
                     // 80px de haut pour du texte de 14px laissait beaucoup de
                     // vide ; 64px avec un texte plus grand se lit mieux et rend
                     // ~64px d'écran sur les 4 réponses.
-                    style={{ background: bg, border, minHeight: 64, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
+                    style={{ background: bg, border, minHeight: 52, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
                     onMouseEnter={e => {
                       if (!validated && i !== selected) {
                         (e.currentTarget as HTMLButtonElement).style.background = 'rgba(78,205,196,0.12)';
@@ -251,7 +283,7 @@ export default function QuizLayout({
                     }}
                   >
                     <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-sm font-bold"
+                      className="w-7 h-7 lg:w-8 lg:h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-sm font-bold"
                       style={{ background: labelBg, color: labelCol }}
                     >
                       {icon || CHOICE_LABELS[i]}
@@ -276,7 +308,7 @@ export default function QuizLayout({
             {/* Feedback panel after validation */}
             {validated && (
               <div
-                className="rounded-2xl p-5 mb-5 feedback-slide"
+                className="rounded-2xl p-4 lg:p-5 mb-3 lg:mb-5 feedback-slide"
                 style={{
                   background: isCorrect ? 'rgba(46,204,113,0.10)' : 'rgba(231,76,60,0.10)',
                   border: `1.5px solid ${isCorrect ? 'rgba(46,204,113,0.4)' : 'rgba(231,76,60,0.4)'}`,
@@ -292,30 +324,40 @@ export default function QuizLayout({
               </div>
             )}
 
-            {/* Validate / Next button */}
-            {!validated ? (
-              <button
-                onClick={onValidate}
-                disabled={selected === null}
-                className="w-full py-4 rounded-xl font-black text-base press-scale btn-glow-teal"
-                style={{
-                  background: 'var(--brand)',
-                  color: 'var(--bg-primary)',
-                  cursor: selected !== null ? 'pointer' : 'not-allowed',
-                  opacity: selected !== null ? 1 : 0.35,
-                }}
-              >
-                {t('valider')}
-              </button>
-            ) : (
-              <button
-                onClick={onNext}
-                className="w-full py-4 rounded-xl font-black text-base press-scale btn-glow-green"
-                style={{ background: 'var(--success)', color: '#ffffff' }}
-              >
-                {isLastQuestion ? (lastLabel ?? t('voir_resultats')) : t('question_suivante')}
-              </button>
-            )}
+            {/* Réserve la place du bouton fixe, pour que rien ne passe dessous. */}
+            <div className="h-20 lg:hidden" aria-hidden />
+
+            {/* Bouton d'action — fixé en bas de l'écran sur téléphone : il reste
+                visible quelle que soit la longueur de l'explication, qui défile
+                derrière lui. Sur ordinateur, il reprend sa place dans le flux. */}
+            <div
+              className="fixed bottom-0 left-0 right-0 z-30 px-4 pt-3 lg:static lg:px-0 lg:pt-0"
+              style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-page) 30%)', paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}
+            >
+              {!validated ? (
+                <button
+                  onClick={onValidate}
+                  disabled={selected === null}
+                  className="w-full py-3 lg:py-4 rounded-xl font-black text-base press-scale btn-glow-teal"
+                  style={{
+                    background: 'var(--brand)',
+                    color: 'var(--bg-primary)',
+                    cursor: selected !== null ? 'pointer' : 'not-allowed',
+                    opacity: selected !== null ? 1 : 0.35,
+                  }}
+                >
+                  {t('valider')}
+                </button>
+              ) : (
+                <button
+                  onClick={onNext}
+                  className="w-full py-3 lg:py-4 rounded-xl font-black text-base press-scale btn-glow-green"
+                  style={{ background: 'var(--success)', color: '#ffffff' }}
+                >
+                  {isLastQuestion ? (lastLabel ?? t('voir_resultats')) : t('question_suivante')}
+                </button>
+              )}
+            </div>
           </div>
 
           {/* ── Right sidebar (40%) — desktop only ── */}

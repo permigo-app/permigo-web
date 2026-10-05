@@ -778,6 +778,7 @@ export default function LessonPage() {
             {'✕'}
           </button>
         }
+        compactTitle
         headerCenter={
           <span className="text-sm font-bold">{themeEmoji} {currentPartieTitle || lesson.title} — Quiz</span>
         }

@@ -231,7 +231,7 @@ export default function Navbar() {
       <MobileTopBar muted={muted} onToggleMute={handleToggleMute} />
 
       {/* ── Mobile bottom nav ───────────────────────────────────────── */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50"
+      <nav className="nav-bas-mobile lg:hidden fixed bottom-0 left-0 right-0 z-50"
         style={{ background: 'var(--nav-bg)', borderTop: '1px solid var(--nav-border)' }}>
         <div className="flex justify-around items-end px-1" style={{ height: 58, paddingBottom: 2 }}>
           {NAV_ITEMS.filter(item => item.href !== '/lecons').map((item) => {
