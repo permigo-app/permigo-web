@@ -1013,3 +1013,12 @@ main, .page-content {
     padding-bottom: 0 !important;
   }
 }
+
+/* Écran de théorie : les boutons Précédent / Continuer se posent au-dessus
+   de la barre du bas sur ordinateur, et tout en bas en mode focus. */
+.theorie-actions { bottom: 70px; }
+.theorie-page { padding-bottom: 140px; }
+@media (max-width: 1023px) {
+  body.quiz-focus .theorie-actions { bottom: max(12px, env(safe-area-inset-bottom)); }
+  body.quiz-focus .theorie-page { padding-bottom: 84px; }
+}

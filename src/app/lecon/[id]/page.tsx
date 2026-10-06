@@ -83,13 +83,20 @@ export default function LessonPage() {
 
   // Theory
   const [currentCard, setCurrentCard] = useState(0);
-  const [showSimple, setShowSimple] = useState(false);
 
   // Détail des cartes de théorie : la règle reste toujours visible, le reste (pourquoi,
   // en pratique, exemple) est replié. Le choix de l'élève est retenu d'une carte à
   // l'autre et d'une session à l'autre : celui qui veut tout lire n'ouvre qu'une fois,
   // celui qui veut l'essentiel n'ouvre jamais.
   const [showDetails, setShowDetails] = useState(false);
+  // Mode focus : pendant la théorie comme pendant le quiz, la barre du bas,
+  // le bandeau Premium et la bulle de feedback disparaissent sur téléphone.
+  useEffect(() => {
+    if (phase !== 'theory' && phase !== 'quiz') return;
+    document.body.classList.add('quiz-focus');
+    return () => document.body.classList.remove('quiz-focus');
+  }, [phase]);
+
   useEffect(() => {
     try {
       if (localStorage.getItem('permigo_theorie_detail') === '1') setShowDetails(true);
@@ -128,7 +135,6 @@ export default function LessonPage() {
     setValidated(false);
     setCorrectCount(0);
     setPartieFailScore(null);
-    setShowSimple(false);
     setQuestions([]);
   }, [partieIndex]);
 
@@ -487,7 +493,7 @@ export default function LessonPage() {
     }
 
     return (
-      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', paddingBottom: 140 }}>
+      <div className="theorie-page" style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
 
         {/* ── Sticky header ───────────────────────────────────────── */}
         <div style={{
@@ -495,8 +501,10 @@ export default function LessonPage() {
           background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)',
           padding: '12px 16px 12px',
         }}>
+          {/* Une seule ligne : retour · progression · compteur. Le titre de la
+              partie a disparu — la carte porte déjà le sien juste en dessous. */}
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <button
                 onClick={() => router.back()}
                 style={{
@@ -509,25 +517,21 @@ export default function LessonPage() {
                   <polyline points="15 18 9 12 15 6" />
                 </svg>
               </button>
-              <p style={{ flex: 1, margin: 0, fontSize: 13, fontWeight: 700, color: 'var(--text-title)', textAlign: 'center', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                {currentPartieTitle || lesson.title}
-              </p>
+              <div style={{ flex: 1, display: 'flex', gap: 4 }}>
+                {displayTheories.map((_, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      flex: 1, height: 5, borderRadius: 4,
+                      background: i <= currentCard ? '#0b2659' : '#e8eaed',
+                      transition: 'background 0.3s',
+                    }}
+                  />
+                ))}
+              </div>
               <span style={{ fontSize: 12, fontWeight: 700, color: '#f59e0b', flexShrink: 0 }}>
                 {currentCard + 1}/{totalCards}
               </span>
-            </div>
-            {/* Step progress dots */}
-            <div style={{ display: 'flex', gap: 4 }}>
-              {displayTheories.map((_, i) => (
-                <div
-                  key={i}
-                  style={{
-                    flex: 1, height: 4, borderRadius: 4,
-                    background: i <= currentCard ? '#0b2659' : '#e8eaed',
-                    transition: 'background 0.3s',
-                  }}
-                />
-              ))}
             </div>
           </div>
         </div>
@@ -549,7 +553,7 @@ export default function LessonPage() {
             {/* Theory image */}
             {card.image && (
               <div style={{
-                position: 'relative', width: '100%', height: 240, marginBottom: 16,
+                position: 'relative', width: '100%', height: 'min(240px, 28vh)', marginBottom: 14,
                 borderRadius: 16, overflow: 'hidden',
                 border: '1px solid var(--border-card)',
                 boxShadow: '0 10px 28px rgba(0,0,0,0.14)',
@@ -652,28 +656,10 @@ export default function LessonPage() {
               </div>
             )}
 
-            {/* "J'ai pas compris" */}
-            {card.explanation_simple && (
-              <div style={{ marginTop: 16 }}>
-                <button
-                  onClick={() => setShowSimple(!showSimple)}
-                  className="press-scale"
-                  style={{
-                    background: 'transparent', border: '1.5px solid #ef4444', color: '#ef4444',
-                    borderRadius: 10, padding: '7px 14px', fontSize: 13, fontWeight: 600,
-                    cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, transition: 'none',
-                  }}
-                >
-                  <span>❓</span>
-                  {showSimple ? t('fermer_btn') : t('jai_pas_compris')}
-                </button>
-                {showSimple && (
-                  <div style={{ marginTop: 10, background: 'var(--bg-why)', borderLeft: '4px solid #f59e0b', borderRadius: '0 10px 10px 0', padding: '11px 14px' }}>
-                    <p style={{ margin: 0, fontSize: 13, color: '#92400e', lineHeight: 1.65 }}>{card.explanation_simple}</p>
-                  </div>
-                )}
-              </div>
-            )}
+            {/* « J'ai pas compris » retiré : la carte affiche déjà la règle, le
+                pourquoi, la pratique, l'exemple et l'erreur fréquente — une
+                sixième reformulation derrière un bouton n'ajoutait que de
+                l'encombrement. Le texte reste dans les données. */}
           </div>
 
           {/* Skip to quiz link */}
@@ -688,14 +674,14 @@ export default function LessonPage() {
         </div>
 
         {/* ── Fixed bottom navigation ──────────────────────────────── */}
-        <div style={{
-          position: 'fixed', bottom: 70, left: 0, right: 0,
+        <div className="theorie-actions" style={{
+          position: 'fixed', left: 0, right: 0,
           padding: '0 16px', zIndex: 40, pointerEvents: 'none',
         }}>
           <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', gap: 10, pointerEvents: 'auto' }}>
             {currentCard > 0 && (
               <button
-                onClick={() => { setShowSimple(false); setCurrentCard(c => c - 1); }}
+                onClick={() => setCurrentCard(c => c - 1)}
                 className="press-scale"
                 style={{
                   height: 52, paddingLeft: 18, paddingRight: 18, borderRadius: 14,
@@ -708,7 +694,7 @@ export default function LessonPage() {
               </button>
             )}
             <button
-              onClick={() => { setShowSimple(false); if (isLastCard) { startQuiz(); } else { setCurrentCard(c => c + 1); } }}
+              onClick={() => { if (isLastCard) { startQuiz(); } else { setCurrentCard(c => c + 1); } }}
               className="press-scale"
               style={{
                 flex: 1, height: 52, borderRadius: 14, border: 'none',
