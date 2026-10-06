@@ -1,6 +1,6 @@
 'use client';
 
-import { type ReactNode, useEffect } from 'react';
+import { type ReactNode, useEffect, useRef, useCallback } from 'react';
 import SignImage from '@/components/SignImage';
 import { useLang } from '@/contexts/LanguageContext';
 import ImageRequestButton from '@/components/ImageRequestButton';
@@ -95,6 +95,9 @@ export default function QuizLayout({
 }: QuizLayoutProps) {
   const { t } = useLang();
   const isCorrect = selected === correctIndex;
+  // 2 ou 3 réponses (81 % des questions) : on profite de la place pour
+  // agrandir l'énoncé et les réponses. À 4, on garde la taille compacte.
+  const ample = choices.length <= 3;
 
   useEffect(() => {
     if (validated) {
@@ -114,8 +117,31 @@ export default function QuizLayout({
   // derrière eux. On sort du quiz par la ✕ de l'en-tête.
   useEffect(() => {
     document.body.classList.add('quiz-focus');
-    return () => document.body.classList.remove('quiz-focus');
+    return () => {
+      document.body.classList.remove('quiz-focus');
+      document.documentElement.classList.remove('quiz-fige');
+    };
   }, []);
+
+  // Écran figé — mais SEULEMENT si tout tient. On mesure à chaque question,
+  // à la validation, au chargement de l'image et au redimensionnement : si la
+  // fin du contenu passe sous le bouton fixe, on laisse défiler. Une réponse
+  // cachée sous le bouton et inaccessible serait bien pire qu'un défilement.
+  const finContenuRef = useRef<HTMLDivElement>(null);
+  const actionRef = useRef<HTMLDivElement>(null);
+  const verifierTient = useCallback(() => {
+    const fin = finContenuRef.current, action = actionRef.current;
+    if (!fin || !action) return;
+    const tient = fin.getBoundingClientRect().top <= action.getBoundingClientRect().top + 1;
+    document.documentElement.classList.toggle('quiz-fige', tient);
+  }, []);
+  useEffect(() => {
+    // le rétrécissement de l'image après validation dure 0,3 s
+    const t1 = requestAnimationFrame(verifierTient);
+    const t2 = setTimeout(verifierTient, 350);
+    window.addEventListener('resize', verifierTient);
+    return () => { cancelAnimationFrame(t1); clearTimeout(t2); window.removeEventListener('resize', verifierTient); };
+  }, [verifierTient, questionKey, question, validated, choices.length]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
@@ -196,7 +222,7 @@ export default function QuizLayout({
             {/* L'énoncé était en 24px face à des réponses en 14px. On resserre
                 l'écart : c'est la comparaison des 4 propositions qui demande le
                 plus d'attention, pas la relecture de la question. */}
-            <p className="text-[19px] md:text-[22px] font-bold text-center mb-2 lg:mb-3 leading-snug max-w-2xl mx-auto fade-in-up" style={{ color: 'var(--text-primary)' }}>{question}</p>
+            <p className={`${ample ? 'text-[21px]' : 'text-[19px]'} md:text-[22px] font-bold text-center mb-2 lg:mb-3 leading-snug max-w-2xl mx-auto fade-in-up`} style={{ color: 'var(--text-primary)' }}>{question}</p>
 
             {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
             {imageUrl && (
@@ -216,7 +242,8 @@ export default function QuizLayout({
                   // Après validation, l'image a fait son travail : elle se réduit
                   // en douceur pour laisser la place à l'explication, et tout
                   // reste à l'écran sans scroller, même avec 3 réponses longues.
-                  className={`quiz-img ${validated ? 'quiz-img-valide max-h-[15vh]' : 'max-h-[28vh]'} rounded-xl w-auto max-w-full lg:max-h-none lg:w-full lg:max-w-lg`}
+                  className={`quiz-img ${validated ? 'quiz-img-valide max-h-[15vh]' : ample ? 'max-h-[28vh]' : 'quiz-img-quatre max-h-[22vh]'} rounded-xl w-auto max-w-full lg:max-h-none lg:w-full lg:max-w-lg`}
+                  onLoad={verifierTient}
                   style={{ border: '1px solid var(--border-subtle)', height: 'auto', transition: 'max-height 0.3s ease' }}
                 />
               </div>
@@ -272,14 +299,14 @@ export default function QuizLayout({
                     key={i}
                     onClick={() => !validated && onSelect(i)}
                     disabled={validated}
-                    className={`rounded-xl px-4 py-3 lg:p-5 ${effacee ? 'hidden lg:flex' : 'flex'} items-center gap-3 text-left press-scale ${
+                    className={`rounded-xl px-4 ${ample ? 'py-3.5' : 'py-3'} lg:p-5 ${effacee ? 'hidden lg:flex' : 'flex'} items-center gap-3 text-left press-scale ${
                       shakeWrong && validated && i === selected && i !== correctIndex ? 'shake' : ''
                     } ${validated && i === correctIndex ? 'correct-pulse' : ''
                     } ${validated && i === selected && i !== correctIndex ? 'wrong-flash' : ''}`}
                     // 80px de haut pour du texte de 14px laissait beaucoup de
                     // vide ; 64px avec un texte plus grand se lit mieux et rend
                     // ~64px d'écran sur les 4 réponses.
-                    style={{ background: bg, border, minHeight: 52, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
+                    style={{ background: bg, border, minHeight: ample ? 58 : 52, cursor: validated ? 'default' : 'pointer', transition: 'background 0s, border-color 0s' }}
                     onMouseEnter={e => {
                       if (!validated && i !== selected) {
                         (e.currentTarget as HTMLButtonElement).style.background = 'rgba(78,205,196,0.12)';
@@ -299,7 +326,7 @@ export default function QuizLayout({
                     >
                       {icon || CHOICE_LABELS[i]}
                     </div>
-                    <span className="flex-1 text-[15px] md:text-base font-semibold leading-snug" style={{ color: textCol }}>
+                    <span className={`flex-1 ${ample ? 'text-[16.5px]' : 'text-[15px]'} md:text-base font-semibold leading-snug`} style={{ color: textCol }}>
                       {choice}
                     </span>
                   </button>
@@ -350,6 +377,9 @@ export default function QuizLayout({
               </div>
             )}
 
+            {/* Repère de fin du contenu : sert à vérifier que tout tient. */}
+            <div ref={finContenuRef} aria-hidden />
+
             {/* Réserve la place du bouton fixe, pour que rien ne passe dessous. */}
             <div className="h-20 lg:hidden" aria-hidden />
 
@@ -357,6 +387,7 @@ export default function QuizLayout({
                 visible quelle que soit la longueur de l'explication, qui défile
                 derrière lui. Sur ordinateur, il reprend sa place dans le flux. */}
             <div
+              ref={actionRef}
               className="fixed bottom-0 left-0 right-0 z-30 px-4 pt-3 lg:static lg:px-0 lg:pt-0"
               style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-page) 30%)', paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}
             >

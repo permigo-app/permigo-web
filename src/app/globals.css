@@ -1029,4 +1029,16 @@ main, .page-content {
 @media (max-width: 1023px) and (max-height: 800px) {
   .quiz-img { max-height: 22vh !important; }
   .quiz-img.quiz-img-valide { max-height: 12vh !important; }
+  .quiz-img.quiz-img-quatre { max-height: 18vh !important; }
+}
+
+/* Écran figé pendant une question (posé par QuizLayout). Uniquement sur
+   téléphone en portrait d'au moins 640 px de haut : en dessous, ou en
+   paysage, le contenu pourrait ne pas tenir et doit rester accessible. */
+@media (max-width: 1023px) and (min-height: 640px) and (orientation: portrait) {
+  html.quiz-fige, html.quiz-fige body {
+    overflow: hidden;
+    overscroll-behavior: none;
+    height: 100%;
+  }
 }
