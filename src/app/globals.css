@@ -1022,3 +1022,11 @@ main, .page-content {
   body.quiz-focus .theorie-actions { bottom: max(12px, env(safe-area-inset-bottom)); }
   body.quiz-focus .theorie-page { padding-bottom: 84px; }
 }
+
+/* Petits écrans (hauteur < 800 px) : l'image du quiz se resserre un peu plus,
+   pour que le pire cas du site (question longue, 4 réponses, explication de
+   200 caractères) tienne quand même sans scroller. */
+@media (max-width: 1023px) and (max-height: 800px) {
+  .quiz-img { max-height: 22vh !important; }
+  .quiz-img.quiz-img-valide { max-height: 12vh !important; }
+}

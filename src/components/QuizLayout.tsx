@@ -185,7 +185,9 @@ export default function QuizLayout({
             {!imageUrl && signCode && (
               <div className="flex justify-center mb-3 lg:mb-5">
                 <div className="rounded-xl p-3 lg:p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                  <SignImage code={signCode} size={148} />
+                  {/* Même logique que l'image : plus petit une fois la réponse donnée. */}
+                  <span className="lg:hidden"><SignImage code={signCode} size={validated ? 84 : 148} /></span>
+                  <span className="hidden lg:inline"><SignImage code={signCode} size={148} /></span>
                 </div>
               </div>
             )}
@@ -211,8 +213,11 @@ export default function QuizLayout({
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  className="rounded-xl w-auto max-w-full max-h-[28vh] lg:max-h-none lg:w-full lg:max-w-lg"
-                  style={{ border: '1px solid var(--border-subtle)', height: 'auto' }}
+                  // Après validation, l'image a fait son travail : elle se réduit
+                  // en douceur pour laisser la place à l'explication, et tout
+                  // reste à l'écran sans scroller, même avec 3 réponses longues.
+                  className={`quiz-img ${validated ? 'quiz-img-valide max-h-[15vh]' : 'max-h-[28vh]'} rounded-xl w-auto max-w-full lg:max-h-none lg:w-full lg:max-w-lg`}
+                  style={{ border: '1px solid var(--border-subtle)', height: 'auto', transition: 'max-height 0.3s ease' }}
                 />
               </div>
             )}
@@ -256,12 +261,18 @@ export default function QuizLayout({
                   textCol = 'var(--text-primary)';
                 }
 
+                // Après validation, sur téléphone, on ne garde que ce qui compte :
+                // la bonne réponse, et la sienne si elle était fausse. Les autres
+                // propositions s'effacent — c'est ce qui permet à l'explication de
+                // tenir à l'écran même avec 4 réponses longues. Ordinateur : tout reste.
+                const effacee = validated && i !== correctIndex && i !== selected;
+
                 return (
                   <button
                     key={i}
                     onClick={() => !validated && onSelect(i)}
                     disabled={validated}
-                    className={`rounded-xl px-4 py-3 lg:p-5 flex items-center gap-3 text-left press-scale ${
+                    className={`rounded-xl px-4 py-3 lg:p-5 ${effacee ? 'hidden lg:flex' : 'flex'} items-center gap-3 text-left press-scale ${
                       shakeWrong && validated && i === selected && i !== correctIndex ? 'shake' : ''
                     } ${validated && i === correctIndex ? 'correct-pulse' : ''
                     } ${validated && i === selected && i !== correctIndex ? 'wrong-flash' : ''}`}
@@ -331,7 +342,9 @@ export default function QuizLayout({
                 >
                   {isCorrect ? '✓' : '✗'}
                 </span>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                {/* Filet de sécurité : si une explication était exceptionnellement
+                    longue, c'est ce cadre qui défile — jamais l'écran. */}
+                <p className="text-sm leading-relaxed max-h-[24vh] overflow-y-auto lg:max-h-none" style={{ color: 'var(--text-secondary)' }}>
                   {explanation || (isCorrect ? t('correct') : t('incorrect'))}
                 </p>
               </div>
