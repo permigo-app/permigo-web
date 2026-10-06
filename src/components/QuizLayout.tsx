@@ -98,6 +98,9 @@ export default function QuizLayout({
   // 2 ou 3 réponses (81 % des questions) : on profite de la place pour
   // agrandir l'énoncé et les réponses. À 4, on garde la taille compacte.
   const ample = choices.length <= 3;
+  // Image bord à bord : seulement si l'énoncé tient en ~3 lignes (96 % des
+  // questions illustrées). Au-delà, elle garde sa marge pour que tout tienne.
+  const grandeImage = ample && !validated && question.length <= 110;
 
   useEffect(() => {
     if (validated) {
@@ -132,7 +135,8 @@ export default function QuizLayout({
   const verifierTient = useCallback(() => {
     const fin = finContenuRef.current, action = actionRef.current;
     if (!fin || !action) return;
-    const tient = fin.getBoundingClientRect().top <= action.getBoundingClientRect().top + 1;
+    // +14 : on ignore la marge vide (mb-3) laissée sous le dernier bloc.
+    const tient = fin.getBoundingClientRect().top <= action.getBoundingClientRect().top + 14;
     document.documentElement.classList.toggle('quiz-fige', tient);
   }, []);
   useEffect(() => {
@@ -226,7 +230,10 @@ export default function QuizLayout({
 
             {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
             {imageUrl && (
-              <div className="flex justify-center mb-3 lg:mb-5">
+              // Téléphone, 2-3 réponses : l'image va d'un bord à l'autre de
+              // l'écran (-mx-4 annule la marge latérale). Plus large, donc plus
+              // haute, sans rien rogner de la scène.
+              <div className={`flex justify-center mb-3 lg:mb-5 ${grandeImage ? '-mx-4 lg:mx-0' : ''}`}>
                 {/* Sur téléphone, l'image se limite à 28 % de la hauteur d'écran :
                     grande sur un grand téléphone, plus compacte sur un petit —
                     pour que les réponses et le bouton restent visibles sans
@@ -242,7 +249,7 @@ export default function QuizLayout({
                   // Après validation, l'image a fait son travail : elle se réduit
                   // en douceur pour laisser la place à l'explication, et tout
                   // reste à l'écran sans scroller, même avec 3 réponses longues.
-                  className={`quiz-img ${validated ? 'quiz-img-valide max-h-[15vh]' : ample ? 'max-h-[28vh]' : 'quiz-img-quatre max-h-[22vh]'} rounded-xl w-auto max-w-full lg:max-h-none lg:w-full lg:max-w-lg`}
+                  className={`quiz-img ${validated ? 'quiz-img-valide max-h-[15vh] rounded-xl' : grandeImage ? 'max-h-[34vh] rounded-none lg:rounded-xl' : ample ? 'max-h-[28vh] rounded-xl' : 'quiz-img-quatre max-h-[22vh] rounded-xl'} w-auto max-w-full lg:max-h-none lg:w-full lg:max-w-lg`}
                   onLoad={verifierTient}
                   style={{ border: '1px solid var(--border-subtle)', height: 'auto', transition: 'max-height 0.3s ease' }}
                 />

@@ -16,6 +16,9 @@ import QuizLayout from '@/components/QuizLayout';
 import ImageRequestButton from '@/components/ImageRequestButton';
 import { SkeletonList } from '@/components/ui/SkeletonList';
 
+/** Part de bonnes réponses exigée pour valider une partie de leçon. */
+const SEUIL_PARTIE = 0.8;
+
 type Phase = 'theory' | 'quiz';
 
 /** Get questions for a specific partie */
@@ -221,8 +224,9 @@ export default function LessonPage() {
     const total = questions.length;
     const pct = total > 0 ? correctCount / total : 0;
 
-    // Mode partie : 90% de bonnes réponses requis pour valider
-    if (isPartieMode && partieIndex !== undefined && pct < 0.9) {
+    // Mode partie : 80 % de bonnes réponses requis pour valider (90 % obligeait
+    // à un sans-faute sur 8 questions : 7/8 = 88 % échouait).
+    if (isPartieMode && partieIndex !== undefined && pct < SEUIL_PARTIE) {
       updateQuizHistory(correctCount, total);
       setPartieFailScore({ correct: correctCount, total });
       return;
@@ -246,7 +250,7 @@ export default function LessonPage() {
       saveLessonCardProgress(lessonId, partieIndex + 1, theories.length);
       // La leçon n'est terminée (et étoilée) que quand TOUTES ses parties
       // sont faites — sinon la progression par parties saute d'un coup
-      if (pct >= 0.9 && getCompletedParties(lessonId).length >= theories.length) {
+      if (pct >= SEUIL_PARTIE && getCompletedParties(lessonId).length >= theories.length) {
         setStars(lessonId, earnedStars);
         markLessonCompleted(lessonId);
       }
@@ -721,10 +725,10 @@ export default function LessonPage() {
           <div className="text-7xl mb-6">😓</div>
           <h2 className="text-2xl font-black mb-3" style={{ color: 'var(--text-primary)' }}>{t('pas_encore')}</h2>
           <p className="text-base mb-2" style={{ color: 'var(--text-secondary)' }}>
-            Tu dois avoir <span className="font-black" style={{ color: 'var(--brand)' }}>90%</span> de bonnes réponses pour valider cette partie.
+            {t('partie_seuil_requis').split('{p}')[0]}<span className="font-black" style={{ color: 'var(--brand)' }}>{Math.round(SEUIL_PARTIE * 100)}%</span>{t('partie_seuil_requis').split('{p}')[1]}
           </p>
           <p className="text-sm mb-8" style={{ color: 'var(--text-secondary)' }}>
-            Tu as obtenu <span className="font-black" style={{ color: pct >= 50 ? '#e67e22' : 'var(--error)' }}>{pct}%</span> ({partieFailScore.correct}/{partieFailScore.total} bonnes réponses).
+            {t('partie_score_obtenu').split('{p}')[0]}<span className="font-black" style={{ color: pct >= 50 ? '#e67e22' : 'var(--error)' }}>{pct}%</span>{t('partie_score_obtenu').split('{p}')[1].replace('{c}', String(partieFailScore.correct)).replace('{t}', String(partieFailScore.total))}
           </p>
           <div className="flex flex-col gap-3">
             <button
