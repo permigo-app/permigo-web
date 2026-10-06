@@ -305,22 +305,35 @@ export default function QuizLayout({
               </div>
             )}
 
-            {/* Feedback panel after validation */}
+            {/* Explication après validation.
+                Plus de titre « 🎉 Correct ! » : les réponses viennent déjà de
+                se colorer (vert ✓ pour la bonne, rouge ✗ pour la tienne), le
+                titre répétait l'information et coûtait une ligne. Il reste le
+                cadre coloré, et un petit tampon ✓ / ✗ posé sur le coin. */}
             {validated && (
               <div
-                className="rounded-2xl p-4 lg:p-5 mb-3 lg:mb-5 feedback-slide"
+                role="status"
+                aria-label={isCorrect ? t('correct') : t('incorrect')}
+                className="relative rounded-xl px-4 py-3 lg:p-5 mb-3 lg:mb-5 feedback-slide"
                 style={{
                   background: isCorrect ? 'rgba(46,204,113,0.10)' : 'rgba(231,76,60,0.10)',
                   border: `1.5px solid ${isCorrect ? 'rgba(46,204,113,0.4)' : 'rgba(231,76,60,0.4)'}`,
                 }}
               >
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl">{isCorrect ? '🎉' : '😅'}</span>
-                  <span className="text-base font-black" style={{ color: isCorrect ? 'var(--success)' : 'var(--error)' }}>
-                    {isCorrect ? t('correct') : t('incorrect')}
-                  </span>
-                </div>
-                {explanation && <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{explanation}</p>}
+                <span
+                  aria-hidden
+                  className="absolute -top-2.5 -right-2.5 w-7 h-7 rounded-full flex items-center justify-center text-sm font-black"
+                  style={{
+                    background: isCorrect ? 'var(--success)' : 'var(--error)',
+                    color: '#ffffff',
+                    boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
+                  }}
+                >
+                  {isCorrect ? '✓' : '✗'}
+                </span>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                  {explanation || (isCorrect ? t('correct') : t('incorrect'))}
+                </p>
               </div>
             )}
 
