@@ -77,6 +77,10 @@ const PRECISION_PHOTO =
   `forme, couleur de fond, et pictogramme intérieur au mot près. N'invente JAMAIS un pictogramme, n'ajoute JAMAIS une barre, ` +
   `un trait, un chiffre ou un symbole qui n'est pas décrit, et n'en retire aucun. Un panneau au centre laissé vide est lui-même ` +
   `un panneau réglementaire distinct : ne laisse un centre vide que si la scène le demande explicitement. ` +
+  `AUCUN PANNEAU EN TROP, NI DE FACE NI DE DOS : si la scène ne cite pas un panneau, il n'y en a AUCUN dans l'image — ni au ` +
+  `premier plan, ni au loin, ni de dos, ni sur un poteau en arrière-plan. Un panneau vu de dos GARDE SA FORME, et la forme ` +
+  `suffit à le lire : un octogone se lit STOP, un triangle pointe en bas se lit cédez-le-passage, un losange se lit priorité. ` +
+  `Posé du côté d'un autre usager, il change qui doit céder et rend la réponse fausse. ` +
   `Si la scène dit qu'un panneau est vu DE DOS, ne montre que sa plaque arrière grise et ses fixations — sa face avant ne doit ` +
   `apparaître nulle part. Un panneau doit être NET et lisible : jamais flou, jamais vide, jamais vu de trop loin, et ne porte ` +
   `JAMAIS son code réglementaire écrit dessus (« F17 », « C43 »… n'existent pas sur un vrai panneau). ` +
@@ -230,7 +234,8 @@ const RELECTURE_FINALE =
   `5. AUCUN DÉFAUT DE RENDU — pas de véhicule déformé, pas de roue ovale, pas de main ou de visage incomplet, pas ` +
   `d'objet flottant sans appui, pas de double image, pas de texte incrusté illisible, pas de tache parasite.\n` +
   `6. RIEN EN TROP — aucun élément que la scène n'a pas demandé, et surtout aucun panneau, aucune flèche et aucun ` +
-  `marquage supplémentaire : un élément ajouté change la règle enseignée et fausse la réponse.\n` +
+  `marquage supplémentaire : un élément ajouté change la règle enseignée et fausse la réponse. Cela vaut aussi pour un ` +
+  `panneau VU DE DOS ou LOINTAIN : sa forme (octogone, triangle, losange) suffit à le lire comme une règle.\n` +
   `7. UNE SEULE LECTURE POSSIBLE — un élève qui regarde l'image deux secondes doit comprendre exactement ce que la ` +
   `scène décrit, et rien d'autre. Si deux interprétations sont possibles, l'image est à refaire.`;
 

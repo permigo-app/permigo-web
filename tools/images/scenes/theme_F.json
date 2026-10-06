@@ -404,10 +404,7 @@
     "model": 3,
     "scene": "Un carrefour avec un feu de signalisation fonctionnel allumé, ambiance neutre. Ajoute un unique badge « ? » discret, sans autre mot."
   },
-  "F5_Q1": {
-    "model": 3,
-    "scene": "Un carrefour où deux voitures se font face, l'une allant tout droit, l'autre positionnée pour tourner. Ajoute un unique badge « ? » discret, sans autre mot."
-  },
+  "F5_Q1": "Vue conducteur derrière le pare-brise, à un carrefour belge en croix SANS AUCUNE SIGNALISATION : notre véhicule s'est avancé vers l'axe de la chaussée, CLIGNOTANT GAUCHE allumé (le témoin vert du clignotant est visible au tableau de bord), prêt à tourner à gauche. Une voiture arrive EN FACE, dans sa voie, et continue TOUT DROIT, sans clignotant. AUCUN panneau de signalisation nulle part dans l'image — ni de face, ni DE DOS, ni au loin : pas de STOP, pas de cédez-le-passage, pas de losange, aucun poteau portant une plaque. Aucun marquage de priorité au sol : ni ligne d'arrêt, ni dents de requin. Un panneau vu de dos garde sa forme et se lirait comme une règle — il fausserait la réponse. Badge « ? » discret dans un coin.",
   "F5_Q3": {
     "model": 3,
     "scene": "Une voiture amorçant un virage à gauche à un carrefour, un véhicule arrivant en sens inverse. Ajoute un unique badge « ? » discret, sans autre mot."
@@ -492,7 +489,7 @@
   "CARD_F5_p0_c1": "Vue conducteur à un carrefour belge : notre véhicule a son CLIGNOTANT DROIT allumé et amorce son virage à droite ; le véhicule d'en face a son CLIGNOTANT GAUCHE allumé et s'est déporté vers l'axe. Une flèche verte suit celui qui tourne à droite, une flèche rouge pointillée celui qui tourne à gauche. Les deux clignotants, de côtés opposés, sont indispensables.",
   "CARD_F5_p0_c2": {
     "model": 4,
-    "scene": "Schéma vu du dessus d'un carrefour en croix belge, sans aucune flèche peinte au sol. Deux voitures se font FACE de part et d'autre du carrefour, chacune dans SA voie du côté droit de sa chaussée. Chacune montre clairement son sens de marche : pare-brise et deux phares clairs à l'AVANT, deux feux rouges à l'ARRIÈRE, et son CLIGNOTANT GAUCHE allumé (point orange au coin avant gauche). Leurs deux trajectoires, tracées en vert, SE CROISENT FRANCHEMENT au milieu du carrefour : chacune passe DEVANT LE NEZ de l'autre — c'est le croisement « par la droite », la règle par défaut en Belgique. Les deux courbes doivent visiblement se couper, et chaque voiture ressort par la rue située à SA gauche. Aucune lettre « A » ni « B », aucun texte."
+    "scene": "Schéma vu du dessus d'un carrefour en croix belge, sans aucune flèche peinte au sol. Deux voitures se font FACE de part et d'autre du carrefour, chacune sur sa bande, chacune avec son clignotant gauche allumé (point orange à l'angle avant gauche). Leurs deux trajectoires, tracées en vert, les font se croiser PAR LA DROITE : chaque voiture contourne l'autre en passant derrière elle, les deux courbes restant côte à côte sans jamais se couper, comme deux véhicules qui se longent. Aucune lettre « A » ni « B », aucun texte. La géométrie doit être exacte : c'est un croisement par la droite, pas par la gauche."
   },
   "CARD_F5_p0_c3": "Vue conducteur à un carrefour belge : notre véhicule, CLIGNOTANT DROIT allumé et roues braquées, s'engage dans une rue transversale où traversent simultanément un PIÉTON et un CYCLISTE. Une flèche verte désigne les deux usagers, une flèche rouge pointillée notre véhicule. Le clignotant et les deux catégories d'usagers doivent être présents.",
   "CARD_F5_p0_c4": "Vue conducteur à un carrefour belge : notre véhicule, CLIGNOTANT GAUCHE allumé, coupe la trajectoire d'un véhicule qui arrive en face et qui freine brusquement, feux stop allumés. Une croix rouge est posée sur notre trajectoire pour marquer la faute. Le clignotant est indispensable, et la scène doit se distinguer de celle qui énonce simplement la règle de base.",
@@ -519,10 +516,7 @@
   "CARD_F5_p3_c2": "Une voiture en train de reculer sur une petite route, le conducteur tourné vers l'arrière pour observer.",
   "CARD_F5_p3_c3": "Une voiture traversant perpendiculairement une chaussée en dehors de tout carrefour pour entrer dans une propriété privée.",
   "CARD_F5_p3_c4": "Deux files de voitures denses fusionnant en alternance à l'endroit où une bande de circulation se termine, façon fermeture éclair.",
-  "CARD_F5_p3_c5": {
-    "model": 1,
-    "scene": "Image en DIPTYQUE composée de DEUX PHOTOGRAPHIES de même style, même lumière et même cadrage en vue conducteur, séparées d'un fin trait blanc. À GAUCHE : une chaussée à deux bandes TRACÉES au sol dont celle de droite se termine en biseau hachuré ; deux véhicules s'imbriquent en tirette, la FLÈCHE VERTE est posée sur le véhicule de la bande qui CONTINUE et une flèche ROUGE pointillée sur celui dont la bande se termine, car c'est lui qui exécute une manœuvre et qui cède. À DROITE : une chaussée SANS aucune bande tracée, qui se rétrécit simplement par la droite ; deux véhicules roulent côte à côte, la FLÈCHE VERTE est posée sur celui qui RESTE À DROITE et une flèche ROUGE pointillée sur l'autre. Les deux configurations doivent être visiblement DIFFÉRENTES l'une de l'autre — bandes peintes à gauche, aucune à droite. Aucun badge « ? »."
-  },
+  "CARD_F5_p3_c5": "Image en DIPTYQUE composée de DEUX PHOTOGRAPHIES de même style, même lumière et même cadrage en vue conducteur, séparées d'un fin trait blanc : à GAUCHE, une chaussée à deux bandes TRACÉES dont celle de droite se termine en biseau hachuré, avec deux véhicules qui s'imbriquent et une flèche verte pour la tirette ; à DROITE, une chaussée SANS aucune bande tracée qui se rétrécit simplement par la droite, avec deux véhicules côte à côte et une flèche verte sur celui qui reste à droite. Les deux configurations doivent être visiblement DIFFÉRENTES l'une de l'autre. Aucun badge « ? ».",
   "F6_Q1": "Un long train de marchandises approchant au loin d'un passage à niveau, une voiture attendant prudemment derrière la ligne d'arrêt.",
   "F6_Q2": {
     "model": 3,
@@ -615,10 +609,7 @@
   "CARD_F6_p1_c5": "Un site spécial franchissable avec un panneau additionnel montrant un pictogramme vélo, un cycliste y circulant.",
   "CARD_F6_p2_c0": "Sur une autoroute belge, l'ancienne bande d'arrêt d'urgence convertie en site spécial franchissable pour bus, marquage au sol distinct.",
   "CARD_F6_p2_c1": "Une autoroute avec une ligne continue blanche, le mot BUS peint régulièrement au sol, et un panneau réel F18, un bus y circulant.",
-  "CARD_F6_p2_c2": {
-    "model": 1,
-    "scene": "Vue conducteur sur une autoroute belge dont l'ancienne bande d'arrêt d'urgence est devenue un site spécial franchissable pour bus : mot « BUS » peint au sol, large ligne blanche CONTINUE le séparant des bandes normales. Au-dessus de la chaussée, un PORTIQUE porte un panneau de vitesse AU-DESSUS DE CHAQUE BANDE : un disque blanc à large bordure ROUGE portant « 50 » exactement au-dessus du site bus, et un disque identique portant « 120 » au-dessus des bandes normales. Chaque chiffre doit être net, lisible, et clairement rattaché à sa bande par sa position verticale. Ce sont les deux valeurs que la carte oppose. Aucun badge « ? »."
-  },
+  "CARD_F6_p2_c2": "Vue conducteur sur une autoroute belge dont l'ancienne bande d'arrêt d'urgence est devenue un site franchissable pour bus (mot « BUS » au sol, ligne continue, panneau F18) : DEUX badges circulaires blancs à liseré gris sont posés dans un coin, l'un portant « 50 » rattaché au site, l'autre « 120 » rattaché aux bandes normales. Les deux valeurs que la carte oppose doivent être lisibles. Aucun badge « ? ».",
   "CARD_F6_p3_c0": "Vue conducteur dans une avenue belge où les rails du tram sont NOYÉS DANS L'ASPHALTE de la chaussée : au bord droit, le panneau de danger A47 (triangle blanc à bordure rouge portant la silhouette d'un tram) est planté au premier plan, net et lisible. La carte dit qu'un panneau de danger prévient : il doit être là.",
   "CARD_F6_p3_c1": "Un tram arrivant de la droite à un carrefour sans aucune signalisation, une voiture s'arrêtant pour le laisser passer.",
   "CARD_F6_p3_c2": "Un tram immobilisé à un feu rouge spécifique aux transports en commun, à un carrefour urbain.",
