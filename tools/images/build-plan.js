@@ -89,22 +89,7 @@ const PRECISION_PHOTO =
   `BLANC portant en NOIR la silhouette de bâtiments serrés (pignons, clocher) ; le signal de FIN est exactement le ` +
   `même, barré d'une large bande ROUGE oblique. Ne le dessine jamais sur fond bleu ni avec une silhouette blanche : ` +
   `ce panneau-là n'existe pas en Belgique.\n\n` +
-  `\n\nCADRAGE ET LISIBILITÉ — les cinq fautes les plus fréquentes, à écarter avant de générer :\n` +
-  `· LE LIEU QUE LA SCÈNE NOMME DOIT RESTER VISIBLE. Si la scène dit carrefour, rond-point, passage à niveau, pont ou ` +
-  `tunnel, ce lieu doit se reconnaître dans le cadre. Ne serre jamais au point qu'il n'en reste qu'un détail : une scène ` +
-  `de carrefour où aucune rue transversale n'apparaît est une image ratée, même si le sujet est net.\n` +
-  `· L'ÉLÉMENT CENTRAL DOIT SE VOIR EN DEUX SECONDES. Le panneau, le feu, le marquage, la cote chiffrée ou l'usager sur ` +
-  `lequel porte la scène occupe une part suffisante du cadre. S'il se retrouverait minuscule au fond, rapproche le point ` +
-  `de vue plutôt que de le laisser illisible.\n` +
-  `· EN VUE CONDUCTEUR, LE PREMIER PLAN N'APPARTIENT QU'À NOUS : notre capot, notre pare-brise, notre tableau de bord, ` +
-  `et rien d'autre. Aucun autre véhicule ne vient chevaucher ni toucher ce premier plan — sinon on ne sait plus à qui ` +
-  `appartient un clignotant, un phare ou une roue.\n` +
-  `· NE MONTRE JAMAIS UN INDICE INVISIBLE DEPUIS CE POINT DE VUE. Les feux stop d'un véhicule vu DE FACE ne se voient ` +
-  `pas : montre alors l'avant qui plonge au freinage, les roues braquées ou le visage du conducteur. De même, un ` +
-  `clignotant ne se voit que du côté où il est allumé, et un rétroviseur ne montre que ce qui est derrière.\n` +
-  `· UN REPÈRE PAR USAGER DÉSIGNÉ. Si la scène dit qu'une flèche désigne un cycliste ET un piéton, chacun reçoit la ` +
-  `sienne : un repère unique posé sur l'un des deux laisse l'autre sans explication.` +
-  `\n\nCOHÉRENCE DES USAGERS ET DES GESTES : un motard, même à l'arrêt ou poussant sa machine, porte un CASQUE ; ` +
+  `COHÉRENCE DES USAGERS ET DES GESTES : un motard, même à l'arrêt ou poussant sa machine, porte un CASQUE ; ` +
   `une personne qui pousse un cyclomoteur est piétonne et n'en porte pas. Une personne sortie de son véhicule sur une ` +
   `autoroute ou une bande d'arrêt d'urgence porte le GILET fluo et se tient DERRIÈRE la glissière, côté talus. ` +
   `Une intention de tourner ou de changer de bande se lit au CLIGNOTANT allumé du bon côté. ` +
@@ -113,6 +98,12 @@ const PRECISION_PHOTO =
   `de type minibus ordinaire — jamais d'autobus scolaire jaune de type nord-américain.` +
   CONTROLE_FINAL;
 
+// SCHEMA_GEOMETRIE et RELECTURE_FINALE ne sont PLUS envoyés : ajoutés le 23/09,
+// ils avaient presque doublé la longueur du prompt (~10 600 caractères) et les
+// images produites ensuite ont été jugées « hideuses ». Les bonnes images du
+// thème F avaient toutes été faites avec le prompt court. Gardés ici comme
+// mémoire des défauts relevés : à remettre dans une SCÈNE précise si besoin,
+// jamais en bloc global.
 const SCHEMA_GEOMETRIE =
   `\n\nGÉOMÉTRIE D'UN SCHÉMA VU DU DESSUS — à vérifier trait par trait :\n` +
   `· CHAQUE VÉHICULE MONTRE UN AVANT ET UN ARRIÈRE SANS ÉQUIVOQUE : pare-brise et deux phares clairs à l'avant, deux ` +
@@ -156,7 +147,7 @@ const STYLE_BLOCKS = {
      `NETTETÉ ET PRÉCISION OBLIGATOIRES : lignes et contours nets et propres, aucun flou. Place chaque véhicule ` +
      `EXACTEMENT selon les positions et directions décrites dans la scène — sans ambiguïté sur qui est où et qui va où. ` +
      `Vérifie la cohérence géométrique et logique de l'ensemble avant de générer. ` +
-     `Inclus TOUS les éléments explicitement mentionnés dans la scène, sans en omettre aucun.` + SCHEMA_GEOMETRIE + CONTROLE_FINAL,
+     `Inclus TOUS les éléments explicitement mentionnés dans la scène, sans en omettre aucun.` + CONTROLE_FINAL,
   4: `STYLE : SCHÉMA PÉDAGOGIQUE DE CARTE DE THÉORIE, vu du dessus (vue aérienne stylisée et épurée, PAS une ` +
      `photographie), façon diagramme de manuel de code de la route. Contrairement au schéma d'une question, ` +
      `celui-ci EXPLIQUE la règle : utilise une FLÈCHE VERTE pour la trajectoire autorisée ou prioritaire, ` +
@@ -173,7 +164,7 @@ const STYLE_BLOCKS = {
      `NETTETÉ ET PRÉCISION OBLIGATOIRES : lignes et contours nets, aucun flou. La géométrie doit être JUSTE — ` +
      `une trajectoire dessinée doit être celle que la règle impose, une numérotation doit suivre l'ordre réel, ` +
      `un segment de distance doit partir du bon point. Vérifie la cohérence de l'ensemble avant de générer : ` +
-     `un schéma faux enseigne le contraire de la carte.` + SCHEMA_GEOMETRIE,
+     `un schéma faux enseigne le contraire de la carte.`,
   3: `STYLE : photographie documentaire réaliste d'une situation de circulation (lumière naturelle, ` +
      `circulation à droite), à laquelle est ajouté UN SEUL repère graphique simple et discret : soit un ` +
      `chiffre isolé dans un petit badge circulaire, soit une flèche unique — jamais les deux ensemble, ` +
@@ -252,7 +243,45 @@ function buildPrompt(lic, themeTitle, sceneEntry, kind) {
   return `Génère une image.\n\n${STYLE_BLOCKS[model]}` +
     (kind === 'card' ? CONTROLE_CARTE : '') + `\n\n` +
     `SCÈNE PRÉCISE À REPRÉSENTER :\n${scene}\n\n` +
-    `Contexte : ${contexte}.` + RELECTURE_FINALE;
+    `Contexte : ${contexte}.`;
+}
+
+// ── Mode « refaire les prompts » ─────────────────────────────────────────
+//   node tools/images/build-plan.js --refaire-prompts [--theme F]
+// Régénère le prompt de chaque tâche DÉJÀ dans plan.json à partir des scènes
+// et du style actuels, sans reconstruire la liste. Indispensable quand les
+// données ne sont pas en « mode atelier » (avant-commit.js a rattaché les
+// anciennes images) : une reconstruction complète perdrait les reprises.
+// --theme X ne garde que le thème X dans l'atelier (travail par paquets) ;
+// la liste complète est sauvegardée dans plan-complet.json.
+if (process.argv.includes('--refaire-prompts')) {
+  const planPath = path.join(__dirname, 'plan.json');
+  const completPath = path.join(__dirname, 'plan-complet.json');
+  const iTheme = process.argv.indexOf('--theme');
+  const seul = iTheme > 0 ? (process.argv[iTheme + 1] || '').toUpperCase() : null;
+  // on part toujours de la liste complète, pour pouvoir changer de paquet
+  let plan = JSON.parse(fs.readFileSync(fs.existsSync(completPath) ? completPath : planPath, 'utf8'));
+  if (!fs.existsSync(completPath)) fs.writeFileSync(completPath, JSON.stringify(plan, null, 1));
+  const cache = {};
+  let n = 0;
+  for (const job of plan) {
+    const sec = SECTIONS.find(x => x.lic === job.lic);
+    const k = job.lic + job.theme;
+    if (!cache[k]) cache[k] = {
+      titre: JSON.parse(fs.readFileSync(path.join(ROOT, sec.dataFile(job.theme)), 'utf8')).title,
+      scenes: JSON.parse(fs.readFileSync(path.join(SCENES_DIR, sec.sceneFile(job.theme)), 'utf8')),
+    };
+    const cle = job.id.replace(/^AM_/, '');
+    const scene = cache[k].scenes[cle];
+    if (scene == null) continue;
+    job.prompt = buildPrompt(job.lic, cache[k].titre, scene, job.kind);
+    n++;
+  }
+  fs.writeFileSync(completPath, JSON.stringify(plan, null, 1));
+  if (seul) plan = plan.filter(j => j.theme === seul);
+  fs.writeFileSync(planPath, JSON.stringify(plan, null, 1));
+  console.log(`prompts régénérés : ${n} — atelier : ${plan.length} images${seul ? ' (thème ' + seul + ' seulement)' : ''}`);
+  process.exit(0);
 }
 
 const jobs = [];
