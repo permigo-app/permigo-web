@@ -109,22 +109,39 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }));
       }
 
-      // Compteurs globaux : départagés par l'XP, comme avant.
+      // Compteurs globaux : pour CHACUN, on garde la plus grande valeur des
+      // deux côtés — jamais d'écrasement.
       //
-      // La progression FINE, elle, ne l'est plus. L'XP n'est attribuée nulle
-      // part dans l'application (updateXP n'est jamais appelé) : elle vaut 0
-      // des deux côtés pour la quasi-totalité des comptes. Tant qu'elle
-      // gardait la porte, « distant > local » était toujours faux et une
-      // progression remontée dans le compte ne redescendait JAMAIS sur
-      // l'appareil — c'est ce qui a fait perdre sa progression à une élève
-      // qui avait changé de mot de passe.
+      // Ils étaient départagés par l'XP, qui n'est attribuée nulle part
+      // (updateXP n'est jamais appelé) et vaut donc 0 des deux côtés. La
+      // condition était toujours fausse : rien ne redescendait, et le local
+      // était ensuite renvoyé au compte. Un nouvel appareil écrasait donc les
+      // compteurs du compte — une élève est passée de 133 à 28 réponses en
+      // se connectant sur un autre téléphone.
+      const lireJson = <T,>(cle: string): T | null => {
+        try { return JSON.parse(localStorage.getItem(cle) || 'null') as T | null; } catch { return null; }
+      };
       const localXP = getXPData();
       const remoteXP = profile.xp_data?.totalXP ?? 0;
       if (remoteXP > localXP.totalXP) {
         localStorage.setItem('xpData', JSON.stringify(profile.xp_data));
-        if (profile.streak_data) localStorage.setItem('streakData', JSON.stringify(profile.streak_data));
-        if (profile.quiz_history) localStorage.setItem('quizHistory', JSON.stringify(profile.quiz_history));
-        if (profile.survival_best > 0) localStorage.setItem('survie_best_score', String(profile.survival_best));
+      }
+      const qhLocal = lireJson<{ totalAnswers?: number }>('quizHistory');
+      if (profile.quiz_history && (profile.quiz_history.totalAnswers ?? 0) > (qhLocal?.totalAnswers ?? 0)) {
+        localStorage.setItem('quizHistory', JSON.stringify(profile.quiz_history));
+      }
+      if (profile.streak_data) {
+        type Serie = { currentStreak?: number; bestStreak?: number; lastActiveDate?: string };
+        const distant = profile.streak_data as Serie;
+        const local = lireJson<Serie>('streakData');
+        // la série en cours vient du côté le plus récent ; le record, du plus haut
+        const plusRecent = (distant.lastActiveDate || '') > (local?.lastActiveDate || '');
+        const fusion: Serie = { ...(plusRecent || !local ? distant : local) };
+        fusion.bestStreak = Math.max(distant.bestStreak ?? 0, local?.bestStreak ?? 0);
+        localStorage.setItem('streakData', JSON.stringify(fusion));
+      }
+      if ((profile.survival_best ?? 0) > Number(localStorage.getItem('survie_best_score') || 0)) {
+        localStorage.setItem('survie_best_score', String(profile.survival_best));
       }
 
       // Progression fine : FUSION systématique, quelle que soit l'XP. Chaque
