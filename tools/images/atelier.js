@@ -33,8 +33,12 @@ const state = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, 'utf8')) 
 
 function saveState() { fs.writeFileSync(STATE, JSON.stringify(state, null, 1)); }
 
-// "fait" = le JSON de données porte déjà le champ image (source de vérité)
+// "fait" = le JSON de données porte déjà le champ image (source de vérité)…
+// SAUF pour une reprise : son ancienne image a pu être rattachée par
+// avant-commit.js, le champ image ne prouve donc rien. Elle n'est faite que
+// lorsque la nouvelle a été produite et journalisée dans state.reprises.
 function isDone(job) {
+  if (job.reprise) return (state.reprises || []).includes(job.id);
   const data = JSON.parse(fs.readFileSync(path.join(ROOT, job.file), 'utf8'));
   const lesson = data.lessons.find(l => l.id === job.lessonId);
   if (!lesson) return true;

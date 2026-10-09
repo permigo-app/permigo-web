@@ -308,6 +308,13 @@ for (const { lic, codes, dataFile, sceneFile } of SECTIONS) {
   }
 }
 
+// Une « reprise » remplace une image qui existe déjà : l'ancienne version est
+// sur le disque. L'atelier ne la tient pour faite qu'une fois la NOUVELLE
+// produite (journal state.reprises) — le champ image, lui, a pu être remis en
+// place par avant-commit.js pour ne pas publier un site amputé, et ne prouve
+// donc rien. Sans ce repère, l'atelier sautait toutes les reprises.
+for (const j of jobs) j.reprise = fs.existsSync(path.join(ROOT, 'public', j.out.slice(1)));
+
 fs.writeFileSync(path.join(__dirname, 'plan.json'), JSON.stringify(jobs, null, 1));
 console.log(`plan.json : ${jobs.length} images à produire (scènes rédigées à la main)`);
 console.log(`ignorées : ${scenesNull} questions marquées "sans image" · ${noScene} en attente de scènes`);
