@@ -2097,215 +2097,198 @@
       "questions": [
         {
           "id": "F3_Q1",
-          "question": "Vous apercevez un signal jaune en forme de losange en bord de route. Que signifie-t-il ?",
+          "question": "Que signifie ce losange jaune ?",
           "choices": [
-            "Vous entrez dans une zone de danger",
-            "Vous circulez sur une voie prioritaire",
-            "Des travaux sont en cours devant vous",
-            "Vous entrez dans une zone scolaire"
+            "Vous êtes sur une voie prioritaire",
+            "Danger",
+            "Travaux"
           ],
-          "correct": 1,
-          "explanation": "Le losange jaune = voie prioritaire.",
+          "correct": 0,
+          "explanation": "Losange jaune : voie prioritaire, jusqu'au panneau de fin.",
           "theoryCardIndex": 0,
           "sign": "B9"
         },
         {
           "id": "F3_Q3",
-          "question": "Sur une voie prioritaire, votre priorité vaut pour combien de carrefours ?",
+          "question": "Sur une voie prioritaire, votre priorité vaut pour quels carrefours ?",
           "choices": [
-            "Tous, jusqu'au signal de fin",
-            "Le prochain carrefour seul",
-            "Ceux équipés de feux, seuls"
+            "Tous, jusqu'au panneau de fin",
+            "Le prochain seulement",
+            "Ceux avec des feux"
           ],
           "correct": 0,
-          "explanation": "La voie prioritaire donne la priorité à tous les carrefours suivants.",
+          "explanation": "Elle vaut à tous les carrefours jusqu'au panneau de fin.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F3_Q3.webp"
         },
         {
           "id": "F3_Q4",
-          "question": "Sur une voie prioritaire, devez-vous respecter les feux d'un carrefour ?",
+          "question": "Sur une voie prioritaire, respectez-vous les feux d'un carrefour ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Feux et agents priment toujours, même sur voie prioritaire.",
+          "explanation": "Les feux passent avant les panneaux de priorité.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F3_Q4.webp"
         },
         {
           "id": "F3_Q5",
-          "question": "Sur une voie prioritaire, pouvez-vous dépasser un véhicule lent dans un carrefour ?",
+          "question": "Sur une voie prioritaire, pouvez-vous dépasser une voiture dans un carrefour ?",
           "choices": [
-            "Oui",
+            "Oui, si c'est sûr",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Sur voie prioritaire, le dépassement dans les carrefours est autorisé si c'est sûr.",
+          "explanation": "Sur une voie prioritaire, le dépassement au carrefour est permis, si c'est sûr.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F3_Q5.webp"
         },
         {
           "id": "F3_Q7",
-          "question": "Vous roulez sur une voie prioritaire et apercevez un losange jaune barré d'une diagonale. Que signifie-t-il ?",
+          "question": "Que signifie ce losange jaune barré ?",
           "choices": [
-            "Qu'un panneau STOP approche",
-            "Que la voie prioritaire se termine",
-            "Qu'un feu rouge se trouve plus loin",
-            "Qu'un agent régule la circulation"
+            "Fin de la voie prioritaire",
+            "Fin d'une zone jaune",
+            "Fin des travaux"
           ],
-          "correct": 1,
-          "explanation": "La fin de voie prioritaire est signalée par un losange jaune barré.",
+          "correct": 0,
+          "explanation": "La voie prioritaire se termine.",
           "theoryCardIndex": 0,
           "sign": "B11"
         },
         {
           "id": "F3_Q8",
-          "question": "Ce panneau est accompagné de « 100 m » et d'un cédez-le-passage. Que signifie cette combinaison ?",
+          "question": "Fin de priorité avec « 100 m » et un « cédez le passage ». Que ferez-vous dans 100 m ?",
           "choices": [
-            "Fin de la priorité dans 100 m",
-            "Priorité encore sur 100 mètres",
-            "Un rond-point dans 100 mètres"
+            "Céder le passage, et vous arrêter si nécessaire",
+            "Vous arrêter toujours",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Le panneau annonce la fin de la voie prioritaire à 100 m avec obligation de céder.",
+          "explanation": "Dans 100 m : vous cédez le passage.",
           "theoryCardIndex": 0,
           "sign": "B11"
         },
         {
           "id": "F3_Q9",
-          "question": "La voie prioritaire vient de finir. Quelle règle s'applique au prochain carrefour ?",
+          "question": "La voie prioritaire vient de finir. Au prochain carrefour sans panneau, quelle règle ?",
           "choices": [
-            "Les signaux, sinon la droite",
+            "La priorité de droite",
             "Vous gardez votre priorité",
-            "Plus aucune règle ne joue"
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "Sans voie prioritaire, on retourne aux règles normales de priorité.",
+          "explanation": "Sans panneau : priorité de droite.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F3_Q9.webp"
         },
         {
           "id": "F3_Q11",
-          "question": "Ce panneau annonce la priorité au prochain carrefour. Pour combien de carrefours vaut-il ?",
+          "question": "Ce panneau donne la priorité pour combien de carrefours ?",
           "choices": [
-            "Un seul, le prochain",
-            "Tous les carrefours suivants",
-            "Les deux prochains carrefours"
+            "Le prochain seulement",
+            "Tous les suivants",
+            "Les deux prochains"
           ],
           "correct": 0,
-          "explanation": "Ce signal ne vaut que pour le prochain carrefour.",
+          "explanation": "Ce triangle vaut seulement pour le prochain carrefour.",
           "theoryCardIndex": 1,
           "severe": true,
           "sign": "B15"
         },
         {
-          "id": "F3_Q12",
-          "question": "Quelle différence entre le losange jaune et le signal de priorité au prochain carrefour ?",
-          "choices": [
-            "Le losange vaut pour tous",
-            "Le losange vaut pour un seul",
-            "Aucune, ils sont équivalents"
-          ],
-          "correct": 0,
-          "explanation": "Voie prioritaire = tous les carrefours. Priorité au prochain = un seul.",
-          "theoryCardIndex": 1,
-          "sign": "B9",
-          "severe": true
-        },
-        {
           "id": "F3_Q13",
-          "question": "Que représentent les petites lignes sur ce signal de priorité ?",
+          "question": "Que représentent les petits traits sur ce panneau de priorité ?",
           "choices": [
-            "Les voiries transversales",
+            "Les rues qui croisent",
             "Le nombre de bandes",
-            "La distance au carrefour"
+            "La distance"
           ],
           "correct": 0,
-          "explanation": "Les petites lignes décrivent la disposition des voiries transversales.",
+          "explanation": "Ils montrent la forme du carrefour et les rues transversales.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F3_Q13.webp"
         },
         {
           "id": "F3_Q14",
-          "question": "Ce signal porte des petites lignes uniquement à droite. Que cela indique-t-il ?",
+          "question": "Les petits traits ne sont qu'à droite. Qu'est-ce que cela signifie ?",
           "choices": [
-            "La voie transversale est à droite",
-            "Il y a des voies des deux côtés",
+            "Une seule rue arrive, à droite",
+            "Des rues des deux côtés",
             "Vous devez tourner à droite"
           ],
           "correct": 0,
-          "explanation": "Petites lignes uniquement à droite = voirie transversale à droite seulement.",
+          "explanation": "Une seule rue transversale, à droite.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F3_Q14.webp"
         },
         {
           "id": "F3_Q15",
-          "question": "Avec ce signal de priorité, pouvez-vous dépasser un véhicule lent dans le carrefour ?",
+          "question": "Avec ce panneau de priorité, pouvez-vous dépasser une voiture dans le carrefour ?",
           "choices": [
-            "Oui",
+            "Oui, si c'est sûr",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le dépassement dans le carrefour est autorisé, comme sur voie prioritaire.",
+          "explanation": "Vous êtes prioritaire : le dépassement au carrefour est permis.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F3_Q15.webp"
         },
         {
           "id": "F3_Q16",
-          "question": "Que représente la large ligne blanche du panneau additionnel bleu ?",
+          "question": "Sous le losange, un panonceau montre une ligne large et une ligne fine. Que montre la ligne large ?",
           "choices": [
             "Le tracé de la voie prioritaire",
-            "L'emplacement du stationnement",
-            "La ligne d'arrêt tracée au sol"
+            "Un parking",
+            "La ligne d'arrêt"
           ],
           "correct": 0,
-          "explanation": "La large ligne blanche = direction de la voie prioritaire.",
+          "explanation": "La ligne large montre où va la voie prioritaire.",
           "theoryCardIndex": 1,
           "sign": "B9",
           "severe": true
         },
         {
           "id": "F3_Q17",
-          "question": "Que représente la ligne étroite sur ce panneau additionnel bleu ?",
+          "question": "Et la ligne fine sur ce panonceau ?",
           "choices": [
-            "Les voies qui doivent céder",
-            "Le tracé de la voie prioritaire",
-            "L'emplacement du trottoir"
+            "Les rues qui doivent céder",
+            "Le tracé prioritaire",
+            "Le trottoir"
           ],
           "correct": 0,
-          "explanation": "La ligne étroite = les conducteurs qui doivent céder.",
+          "explanation": "Les lignes fines montrent les rues qui doivent céder le passage.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F3_Q17.webp"
         },
         {
           "id": "F3_Q18",
-          "question": "Une voie prioritaire va-t-elle toujours tout droit à un carrefour ?",
+          "question": "Une voie prioritaire continue-t-elle toujours tout droit ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "La voie prioritaire peut tourner — le panneau additionnel bleu l'indique.",
+          "correct": 0,
+          "explanation": "Elle peut tourner : le panonceau sous le losange le montre.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F3_Q18.webp"
         },
         {
           "id": "F3_Q19",
-          "question": "Le panneau additionnel montre que la voie prioritaire tourne à gauche. Que faites-vous ?",
+          "question": "La voie prioritaire tourne à gauche. Vous la suivez. Avez-vous la priorité ?",
           "choices": [
-            "Vous suivez le tracé, à gauche",
-            "Vous continuez tout droit",
-            "Vous vous arrêtez et cédez"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Vous suivez le tracé indiqué par le panneau additionnel bleu.",
+          "explanation": "En suivant le tracé prioritaire, vous gardez la priorité. Mettez votre clignotant.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F3_Q19.webp"
@@ -2314,152 +2297,138 @@
           "id": "F3_Q21",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Céder le passage",
-            "Arrêt obligatoire ici",
+            "Céder le passage, et s'arrêter si nécessaire",
+            "Arrêt obligatoire",
             "Vous êtes prioritaire"
           ],
           "correct": 0,
-          "explanation": "Triangle sur pointe = cédez le passage aux conducteurs.",
+          "explanation": "Triangle pointe en bas : vous cédez le passage.",
           "theoryCardIndex": 2,
           "sign": "B1"
         },
         {
           "id": "F3_Q22",
-          "question": "Un piéton marche sur le trottoir transversal. Le cédez-le-passage vous oblige-t-il à le laisser passer ?",
+          "question": "Un piéton marche sur le trottoir de la rue transversale. Ce « cédez le passage » vous oblige-t-il à l'attendre ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le cédez-le-passage concerne les conducteurs, pas les piétons.",
+          "correct": 0,
+          "explanation": "Le panneau vise les conducteurs de la voie transversale, pas les piétons sur le trottoir.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F3_Q22.webp"
         },
         {
           "id": "F3_Q23",
-          "question": "À un cédez-le-passage, la voie transversale est totalement libre. Devez-vous vous arrêter ?",
+          "question": "« Cédez le passage », la rue transversale est vide. Devez-vous vous arrêter ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Au cédez-le-passage, l'arrêt n'est obligatoire que si des conducteurs arrivent.",
+          "correct": 0,
+          "explanation": "Vous ne vous arrêtez que si quelqu'un arrive.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F3_Q23.webp"
         },
         {
-          "id": "F3_Q24",
-          "question": "Quelle différence entre le cédez-le-passage et le STOP ?",
-          "choices": [
-            "Cédez : si besoin ; STOP : toujours",
-            "STOP : si besoin ; cédez : toujours",
-            "Aucune, les deux imposent l'arrêt"
-          ],
-          "correct": 0,
-          "explanation": "Cédez = s'arrêter si nécessaire. STOP = s'arrêter toujours.",
-          "theoryCardIndex": 2,
-          "severe": true,
-          "image": "/images/questions/F3_Q24.webp"
-        },
-        {
           "id": "F3_Q25",
-          "question": "Que représentent les « dents de requin » tracées au sol ?",
+          "question": "Comment s'appellent ces triangles peints au sol ?",
           "choices": [
-            "Le marquage du cédez-le-passage",
-            "Un dispositif surélevé au sol",
-            "L'annonce d'un passage piétons"
+            "Des dents de requin",
+            "Des coins d'arrêt",
+            "Des chevrons"
           ],
           "correct": 0,
-          "explanation": "Les dents de requin = triangles pointe en bas marquant la ligne d'arrêt du cédez.",
+          "explanation": "Les dents de requin marquent où céder le passage.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F3_Q25.webp"
         },
         {
           "id": "F3_Q27",
-          "question": "Un panneau additionnel sous ce signal montre des cyclistes dans les deux sens. Que signifie-t-il ?",
+          "question": "Sous ce panneau, un panonceau montre des vélos dans les deux sens. Que signifie-t-il ?",
           "choices": [
-            "Des cyclistes viennent des deux côtés",
-            "La piste cyclable est interdite ici",
-            "Les cyclistes ont aussi un arrêt"
+            "Des cyclistes peuvent venir des deux côtés",
+            "Vélos interdits",
+            "Les cyclistes ont un STOP"
           ],
           "correct": 0,
-          "explanation": "Le panneau signale des cyclistes et cyclomoteurs pouvant venir des deux côtés.",
+          "explanation": "Des cyclistes et cyclomoteurs peuvent arriver de gauche et de droite : cédez-leur aussi.",
           "theoryCardIndex": 2,
           "sign": "B1"
         },
         {
           "id": "F3_Q28",
-          "question": "Ce panneau est accompagné de « 125 m » et d'un triangle sur pointe. Que signifie-t-il ?",
+          "question": "Ce panneau porte « 125 m » et un triangle pointe en bas. Que signifie-t-il ?",
           "choices": [
-            "Un cédez-le-passage dans 125 m",
-            "Un cédez-le-passage ici même",
-            "Un rond-point dans 125 mètres"
+            "Céder le passage dans 125 m",
+            "Céder le passage ici",
+            "Rond-point dans 125 m"
           ],
           "correct": 0,
-          "explanation": "Signal de danger + triangle + 125 m = cédez-le-passage dans 125 m.",
+          "explanation": "Il annonce un « cédez le passage » 125 m plus loin.",
           "theoryCardIndex": 2,
           "sign": "B3"
         },
         {
           "id": "F3_Q29",
-          "question": "Ce panneau est accompagné de « 150 m » et du mot STOP. Que signifie-t-il ?",
+          "question": "Ce panneau porte « 150 m » et STOP. Que signifie-t-il ?",
           "choices": [
-            "Un STOP dans 150 mètres",
-            "Un cédez-le-passage dans 150 m",
-            "Un rond-point dans 150 mètres"
+            "Un STOP dans 150 m",
+            "Arrêtez-vous ici",
+            "Cédez le passage dans 150 m"
           ],
           "correct": 0,
-          "explanation": "Signal de danger + STOP + 150 m = STOP dans 150 m.",
+          "explanation": "C'est un préavis : le STOP est 150 m plus loin.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "B7"
         },
         {
           "id": "F3_Q31",
-          "question": "À un cédez-le-passage, un véhicule arrive par la gauche. Que faites-vous ?",
+          "question": "« Cédez le passage » : une voiture arrive par la gauche. Que faites-vous ?",
           "choices": [
-            "Vous lui cédez le passage",
-            "Vous passez, priorité à droite",
-            "Vous klaxonnez pour prévenir"
+            "Vous la laissez passer",
+            "Vous passez, priorité de droite",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "Vous cédez à tout conducteur sur la voie transversale.",
+          "explanation": "Vous cédez à tous ceux de la voie transversale, de gauche comme de droite.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F3_Q31.webp"
         },
         {
           "id": "F3_Q33",
-          "question": "Un cycliste arrive par la gauche sur la piste cyclable transversale. Que faites-vous ?",
+          "question": "Un cycliste arrive par la gauche sur la piste cyclable de la rue transversale. Que faites-vous ?",
           "choices": [
             "Vous le laissez passer",
             "Vous passez avant lui",
-            "Vous klaxonnez pour prévenir"
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "Le panneau additionnel signale que des cyclistes peuvent venir des deux côtés — cédez-leur.",
+          "explanation": "Vous cédez aussi aux cyclistes de la voie transversale, des deux côtés.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F3_Q33.webp"
         },
         {
           "id": "F3_Q34",
-          "question": "Vous devez vous arrêter devant des dents de requin. Où exactement ?",
+          "question": "Vous devez vous arrêter à ces dents de requin. Où exactement ?",
           "choices": [
-            "À l'endroit des dents de requin",
-            "Cinq mètres avant les dents au sol",
+            "À la ligne des dents de requin",
+            "5 m avant",
             "Au milieu du carrefour"
           ],
           "correct": 0,
-          "explanation": "Les dents de requin marquent exactement l'endroit où s'arrêter.",
+          "explanation": "Elles marquent l'endroit où s'arrêter si nécessaire.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F3_Q34.webp"
         },
         {
           "id": "F3_Q35",
-          "question": "Que devez-vous toujours faire à un signal STOP ?",
+          "question": "Que devez-vous toujours faire au STOP ?",
           "choices": [
-            "Marquer un arrêt complet",
-            "Ralentir et bien regarder",
-            "Activer votre clignotant"
+            "Vous arrêter complètement",
+            "Ralentir et regarder",
+            "Mettre le clignotant"
           ],
           "correct": 0,
           "explanation": "Au STOP, l'arrêt complet est toujours obligatoire.",
@@ -2469,212 +2438,186 @@
         },
         {
           "id": "F3_Q36",
-          "question": "Il est 3 heures du matin et la route est déserte. Devez-vous vous arrêter au STOP ?",
+          "question": "3 heures du matin, personne en vue. Devez-vous vous arrêter au STOP ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Au STOP, l'arrêt est toujours obligatoire, même sans trafic.",
+          "explanation": "Oui, toujours, même sans personne.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F3_Q36.webp"
         },
         {
           "id": "F3_Q38",
-          "question": "Où exactement devez-vous immobiliser votre véhicule au STOP ?",
+          "question": "Où vous arrêtez-vous au STOP ?",
           "choices": [
-            "À la ligne d'arrêt au sol",
-            "Cinq mètres avant le carrefour",
-            "N'importe où avant le carrefour"
+            "Juste avant la ligne d'arrêt",
+            "1 m avant la ligne",
+            "Juste avant le panneau"
           ],
           "correct": 0,
-          "explanation": "On s'arrête à la ligne d'arrêt marquée au sol.",
+          "explanation": "Juste avant la ligne d'arrêt. Sans ligne, là où vous voyez la voie transversale.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F3_Q38.webp"
         },
         {
           "id": "F3_Q39",
-          "question": "Un panneau additionnel sous ce STOP montre des cyclistes dans les deux sens. Que signifie-t-il ?",
+          "question": "Sous ce STOP, un panonceau montre des vélos dans les deux sens. Que signifie-t-il ?",
           "choices": [
-            "Des cyclistes viennent des deux côtés",
-            "Les cyclistes sont interdits ici",
+            "Des cyclistes peuvent venir des deux côtés",
+            "Vélos interdits",
             "Les cyclistes ont aussi un STOP"
           ],
           "correct": 0,
-          "explanation": "Le panneau additionnel au STOP avertit de la présence de cyclistes des deux côtés.",
+          "explanation": "Attention aux cyclistes venant des deux côtés.",
           "theoryCardIndex": 3,
           "sign": "B5",
           "severe": true
         },
         {
           "id": "F3_Q40",
-          "question": "Vous avez marqué l'arrêt au STOP et la voie est libre. Pouvez-vous vous engager ?",
+          "question": "Vous vous êtes arrêté au STOP et la voie est libre. Pouvez-vous repartir ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Après l'arrêt obligatoire, vous vous engagez quand la voie est libre.",
+          "explanation": "Après l'arrêt, vous repartez si personne ne vient.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F3_Q40.webp"
         },
         {
-          "id": "F3_Q42",
-          "question": "Vous voyez un signal de danger accompagné du panneau « 150 m STOP ». Devez-vous vous arrêter immédiatement ?",
-          "choices": [
-            "Oui, arrêtez-vous immédiatement ici",
-            "Non, il annonce un STOP à 150 mètres",
-            "Oui, par simple mesure de précaution",
-            "Non, ce signal ne concerne que les camions"
-          ],
-          "correct": 1,
-          "explanation": "Le signal avancé est une annonce — vous vous arrêtez à l'endroit du STOP.",
-          "theoryCardIndex": 3,
-          "severe": true,
-          "sign": "B7"
-        },
-        {
           "id": "F3_Q43",
-          "question": "Quels sont les trois éléments qui caractérisent juridiquement un rond-point ?",
+          "question": "Qu'est-ce qui fait d'un carrefour un rond-point ?",
           "choices": [
-            "Dispositif central, B1 ou B5, signal bleu",
-            "Des feux, des panneaux, un marquage",
-            "Un îlot, des trottoirs et des arbres"
+            "Le panneau bleu aux trois flèches, avec un « cédez le passage » à l'entrée",
+            "Un îlot central, sans plus",
+            "Des feux"
           ],
           "correct": 0,
-          "explanation": "Dispositif central + B1/B5 aux entrées + signal bleu 3 flèches = rond-point.",
+          "explanation": "Un rond-point est signalé par le panneau bleu aux trois flèches, avec un « cédez le passage » ou un STOP aux entrées.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F3_Q43.webp"
         },
         {
-          "id": "F3_Q44",
-          "question": "Le dispositif central d'un rond-point doit-il toujours être rond ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Le dispositif central peut prendre diverses formes.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/F3_Q44.webp"
-        },
-        {
           "id": "F3_Q45",
-          "question": "Dans quel sens devez-vous circuler dans un rond-point ?",
+          "question": "Dans quel sens tourne-t-on dans un rond-point ?",
           "choices": [
-            "Dans le sens giratoire indiqué",
-            "Dans les deux sens au choix",
-            "Selon le panneau à l'entrée"
+            "Dans le sens des flèches",
+            "Au choix",
+            "Selon le trafic"
           ],
           "correct": 0,
-          "explanation": "Le rond-point impose un sens de circulation unique (giratoire).",
+          "explanation": "On suit le sens giratoire indiqué.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F3_Q45.webp"
         },
         {
           "id": "F3_Q46",
-          "question": "Devez-vous activer votre clignotant droit pour entrer dans un rond-point ?",
+          "question": "Mettez-vous le clignotant pour entrer dans un rond-point ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, à droite"
           ],
-          "correct": 1,
-          "explanation": "En entrant dans le rond-point, pas de clignotant droit requis.",
+          "correct": 0,
+          "explanation": "Entrer dans un rond-point n'impose pas le clignotant.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F3_Q46.webp"
         },
         {
           "id": "F3_Q47",
-          "question": "Pouvez-vous utiliser le clignotant droit pour signaler votre sortie du rond-point ?",
+          "question": "Mettez-vous le clignotant droit pour sortir du rond-point ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, c'est obligatoire",
+            "Non, c'est facultatif",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "À la première sortie, le clignotant droit peut signaler votre sortie.",
+          "explanation": "Sortir d'un rond-point est un changement de direction : le clignotant droit est obligatoire.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F3_Q47.webp"
         },
         {
           "id": "F3_Q48",
-          "question": "En vous engageant dans un rond-point, à qui devez-vous céder le passage ?",
+          "question": "Vous entrez dans un rond-point. À qui cédez-vous le passage ?",
           "choices": [
-            "À ceux qui viennent de gauche",
-            "À ceux qui viennent de droite",
-            "À personne, vous entrez"
+            "À ceux qui sont déjà dans le rond-point",
+            "À ceux qui arrivent de droite",
+            "À personne"
           ],
           "correct": 0,
-          "explanation": "On cède à ceux déjà dans le rond-point et à ceux des entrées précédentes.",
+          "explanation": "Vous cédez à ceux qui roulent déjà dans le rond-point.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/F3_Q48.webp"
         },
         {
           "id": "F3_Q51",
-          "question": "Vous quittez un rond-point et un cycliste circule sur la piste qui l'entoure. Devez-vous lui céder le passage ?",
+          "question": "Vous sortez du rond-point, un cycliste roule sur la piste qui l'entoure. Devez-vous lui céder ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En quittant le rond-point, les cyclistes sur la piste ont la priorité.",
+          "explanation": "En sortant, vous traversez la piste : vous cédez aux cyclistes et cyclomoteurs.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/F3_Q51.webp"
         },
         {
           "id": "F3_Q52",
-          "question": "Vous sortez du rond-point et un piéton veut traverser. Devez-vous lui céder le passage ?",
+          "question": "Vous sortez du rond-point, un piéton traverse la rue où vous allez. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En sortant du rond-point, les piétons qui traversent ont la priorité.",
+          "explanation": "En changeant de direction, vous cédez aux piétons qui traversent.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/F3_Q52.webp"
         },
         {
           "id": "F3_Q54",
-          "question": "Un passage cyclistes est écarté du rond-point et les cyclistes y ont un triangle inversé. Devez-vous leur céder ?",
+          "question": "Le passage cyclistes est écarté du rond-point, avec un triangle pour les cyclistes. Qui cède ?",
           "choices": [
-            "Non, sauf s'ils sont déjà engagés",
-            "Oui, dans tous les cas de figure",
-            "Non, en aucune circonstance"
+            "Les cyclistes, sauf s'ils sont déjà engagés",
+            "Vous, toujours",
+            "Personne"
           ],
           "correct": 0,
-          "explanation": "Passage écarté + triangle pour cyclistes = ce sont eux qui cèdent, sauf s'ils sont déjà engagés.",
+          "explanation": "Le triangle est pour les cyclistes : ils vous cèdent, sauf s'ils sont déjà engagés.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F3_Q54.webp"
         },
         {
           "id": "F3_Q56",
-          "question": "Une place ronde n'a pas les trois éléments d'un rond-point. Quelle règle s'applique ?",
+          "question": "Une place ronde, sans panneau de rond-point ni « cédez le passage ». Quelle règle ?",
           "choices": [
             "La priorité de droite",
-            "Le cédez-le-passage",
-            "Le STOP à chaque entrée"
+            "Céder à ceux qui tournent",
+            "STOP à chaque entrée"
           ],
           "correct": 0,
-          "explanation": "Sans les 3 éléments du rond-point, c'est la priorité de droite.",
+          "explanation": "Sans la signalisation du rond-point, c'est la priorité de droite.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/F3_Q56.webp"
         },
         {
           "id": "F3_Q59",
-          "question": "Vous sortez à la deuxième sortie. Quand activez-vous le clignotant droit ?",
+          "question": "Vous prenez la deuxième sortie. Quand mettez-vous le clignotant droit ?",
           "choices": [
-            "Après avoir passé la première",
-            "Dès l'entrée dans le rond-point",
-            "Il n'est pas utile ici"
+            "Après avoir passé la première sortie",
+            "Dès l'entrée",
+            "Jamais"
           ],
           "correct": 0,
-          "explanation": "On met le clignotant droit juste avant la sortie choisie.",
+          "explanation": "Juste avant votre sortie, après avoir passé la précédente.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F3_Q59.webp"
         },
@@ -2683,13 +2626,25 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Rond-point, sens giratoire",
-            "Sens unique devant vous",
-            "Demi-tour obligatoire ici"
+            "Sens unique",
+            "Demi-tour obligatoire"
           ],
           "correct": 0,
-          "explanation": "Signal bleu rond avec 3 flèches = sens giratoire obligatoire (rond-point).",
+          "explanation": "Panneau bleu à trois flèches en rond : rond-point.",
           "theoryCardIndex": 4,
           "sign": "D5"
+        },
+        {
+          "id": "F3_Q70",
+          "question": "Vous êtes sur la bande intérieure d'un rond-point à deux bandes et voulez sortir. Que faites-vous ?",
+          "choices": [
+            "Vous laissez passer les voitures de la bande extérieure",
+            "Vous passez, vous êtes prioritaire",
+            "Vous sortez en klaxonnant"
+          ],
+          "correct": 0,
+          "explanation": "Changer de bande est une manœuvre : vous cédez à ceux de la bande extérieure, quitte à faire un tour de plus.",
+          "theoryCardIndex": 4
         }
       ]
     },

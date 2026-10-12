@@ -1926,206 +1926,189 @@
       "questions": [
         {
           "id": "F3_Q1",
-          "question": "Wat betekent het gele ruitvormige verkeersbord?",
+          "question": "Wat betekent deze gele ruit?",
           "choices": [
-            "Gevarenzone",
             "Je rijdt op een voorrangsweg",
-            "Werken aan de gang",
-            "Schoolzone"
+            "Gevaar",
+            "Werken"
           ],
-          "correct": 1,
-          "explanation": "De gele ruit = voorrangsweg.",
+          "correct": 0,
+          "explanation": "Gele ruit: voorrangsweg, tot het eindbord.",
           "theoryCardIndex": 0,
           "sign": "B9"
         },
         {
           "id": "F3_Q3",
-          "question": "Op een voorrangsweg geldt uw voorrang voor hoeveel kruispunten?",
+          "question": "Voor welke kruispunten geldt je voorrang op een voorrangsweg?",
           "choices": [
             "Alle, tot het eindbord",
-            "Enkel het volgende kruispunt",
-            "Enkel die met verkeerslichten"
+            "Alleen het volgende",
+            "Die met lichten"
           ],
           "correct": 0,
-          "explanation": "De voorrangsweg geeft je voorrang op alle volgende kruispunten.",
+          "explanation": "Ze geldt aan alle kruispunten tot het eindbord.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F3_Q4",
-          "question": "Moet u op een voorrangsweg de lichten van een kruispunt respecteren?",
+          "question": "Respecteer je op een voorrangsweg de lichten van een kruispunt?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Verkeerslichten en agenten gaan altijd voor, ook op een voorrangsweg.",
+          "explanation": "Lichten gaan voor op voorrangsborden.",
           "theoryCardIndex": 0
         },
         {
           "id": "F3_Q5",
-          "question": "Mag u op een voorrangsweg een traag voertuig inhalen op een kruispunt?",
+          "question": "Mag je op een voorrangsweg een auto inhalen op een kruispunt?",
           "choices": [
-            "Ja",
+            "Ja, als het veilig is",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Op een voorrangsweg is inhalen op kruispunten toegestaan als het veilig kan.",
+          "explanation": "Op een voorrangsweg mag je op een kruispunt inhalen, als het veilig is.",
           "theoryCardIndex": 0
         },
         {
           "id": "F3_Q7",
-          "question": "Hoe weet je dat de voorrangsweg eindigt?",
+          "question": "Wat betekent deze doorstreepte gele ruit?",
           "choices": [
-            "Door het STOP-bord",
-            "Door het verkeersbord einde voorrangsweg (doorgestreepte gele ruit)",
-            "Door een rood licht",
-            "Door een agent"
+            "Einde van de voorrangsweg",
+            "Einde van een gele zone",
+            "Einde van de werken"
           ],
-          "correct": 1,
-          "explanation": "Het einde van de voorrangsweg wordt aangeduid door een doorgestreepte gele ruit.",
+          "correct": 0,
+          "explanation": "De voorrangsweg houdt op.",
           "theoryCardIndex": 0,
           "sign": "B11"
         },
         {
           "id": "F3_Q8",
-          "question": "Dit bord gaat samen met « 100 m » en een voorrangsbord. Wat betekent die combinatie?",
+          "question": "Einde voorrang met « 100 m » en « voorrang verlenen ». Wat doe je over 100 m?",
           "choices": [
-            "Einde van de voorrang over 100 m",
-            "Nog 100 meter voorrang",
-            "Een rotonde over 100 meter"
+            "Voorrang verlenen, en stoppen indien nodig",
+            "Altijd stoppen",
+            "Niets"
           ],
           "correct": 0,
-          "explanation": "Het bord kondigt het einde van de voorrangsweg aan op 100 m met verplichting om voorrang te verlenen.",
+          "explanation": "Over 100 m: je verleent voorrang.",
           "theoryCardIndex": 0,
           "sign": "B11"
         },
         {
           "id": "F3_Q9",
-          "question": "De voorrangsweg is net geëindigd. Welke regel geldt op het volgende kruispunt?",
+          "question": "De voorrangsweg is net geëindigd. Welke regel geldt aan het volgende kruispunt zonder bord?",
           "choices": [
-            "De borden, anders rechts",
-            "U behoudt uw voorrang",
-            "Geen enkele regel meer"
+            "Voorrang van rechts",
+            "Je houdt je voorrang",
+            "Wie eerst komt"
           ],
           "correct": 0,
-          "explanation": "Zonder voorrangsweg keer je terug naar de normale voorrangsregels.",
+          "explanation": "Zonder bord: voorrang van rechts.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F3_Q11",
-          "question": "Dit bord kondigt voorrang aan op het volgende kruispunt. Voor hoeveel kruispunten geldt het?",
+          "question": "Voor hoeveel kruispunten geeft dit bord voorrang?",
           "choices": [
-            "Eén enkel, het volgende",
-            "Alle volgende kruispunten",
-            "De twee volgende kruispunten"
+            "Alleen het volgende",
+            "Alle volgende",
+            "De twee volgende"
           ],
           "correct": 0,
-          "explanation": "Dit verkeersbord geldt enkel voor het volgende kruispunt.",
+          "explanation": "Deze driehoek geldt alleen voor het volgende kruispunt.",
           "theoryCardIndex": 1,
           "severe": true,
           "sign": "B15"
         },
         {
-          "id": "F3_Q12",
-          "question": "Wat is het verschil tussen de gele ruit en het bord voor het volgende kruispunt?",
-          "choices": [
-            "De ruit geldt voor alle",
-            "De ruit geldt voor één enkel",
-            "Geen, ze zijn gelijkwaardig"
-          ],
-          "correct": 0,
-          "explanation": "Voorrangsweg = alle kruispunten. Voorrang op het volgende = één enkel.",
-          "theoryCardIndex": 1,
-          "sign": "B9",
-          "severe": true
-        },
-        {
           "id": "F3_Q13",
-          "question": "Wat stellen de kleine streepjes op dat voorrangsbord voor?",
+          "question": "Wat stellen de kleine streepjes op dit voorrangsbord voor?",
           "choices": [
-            "De dwarsende wegen",
+            "De kruisende straten",
             "Het aantal rijstroken",
-            "De afstand tot het kruispunt"
+            "De afstand"
           ],
           "correct": 0,
-          "explanation": "De kleine lijntjes beschrijven de ligging van de dwarswegen.",
+          "explanation": "Ze tonen de vorm van het kruispunt en de dwarsstraten.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "F3_Q14",
-          "question": "Dat bord draagt streepjes enkel rechts. Wat wijst dat aan?",
+          "question": "De streepjes staan alleen rechts. Wat betekent dat?",
           "choices": [
-            "De dwarsweg ligt rechts",
-            "Er zijn wegen aan beide kanten",
-            "U moet rechts afslaan"
+            "Er komt maar één straat, rechts",
+            "Er zijn straten aan beide kanten",
+            "Je moet rechtsaf"
           ],
           "correct": 0,
-          "explanation": "Kleine lijntjes enkel rechts = dwarsweg enkel aan de rechterkant.",
+          "explanation": "Maar één dwarsstraat, rechts.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "F3_Q15",
-          "question": "Mag u met dat voorrangsbord een traag voertuig inhalen op het kruispunt?",
+          "question": "Mag je met dit voorrangsbord een auto inhalen op het kruispunt?",
           "choices": [
-            "Ja",
+            "Ja, als het veilig is",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Inhalen op het kruispunt is toegestaan, net als op een voorrangsweg.",
+          "explanation": "Je hebt voorrang: inhalen op het kruispunt mag.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "F3_Q16",
-          "question": "Wat stelt de brede witte lijn op het blauwe onderbord voor?",
+          "question": "Onder de ruit toont een onderbord een brede en een smalle lijn. Wat toont de brede lijn?",
           "choices": [
-            "Het tracé van de voorrangsweg",
-            "De plaats van het parkeren",
-            "De stopstreep op het wegdek"
+            "Het verloop van de voorrangsweg",
+            "Een parking",
+            "De stopstreep"
           ],
           "correct": 0,
-          "explanation": "De brede witte lijn = richting van de voorrangsweg.",
+          "explanation": "De brede lijn toont waar de voorrangsweg loopt.",
           "theoryCardIndex": 1,
           "sign": "B9",
           "severe": true
         },
         {
           "id": "F3_Q17",
-          "question": "Wat stelt de smalle lijn op dat blauwe onderbord voor?",
+          "question": "En de smalle lijn op dit onderbord?",
           "choices": [
-            "De wegen die voorrang moeten geven",
-            "Het tracé van de voorrangsweg",
-            "De plaats van het trottoir"
+            "De straten die voorrang moeten verlenen",
+            "Het voorrangsverloop",
+            "Het voetpad"
           ],
           "correct": 0,
-          "explanation": "De smalle lijn = de bestuurders die voorrang moeten verlenen.",
+          "explanation": "De smalle lijnen tonen de straten die voorrang moeten verlenen.",
           "theoryCardIndex": 1
         },
         {
           "id": "F3_Q18",
-          "question": "Gaat een voorrangsweg altijd rechtdoor op een kruispunt?",
+          "question": "Loopt een voorrangsweg altijd rechtdoor?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "De voorrangsweg kan afbuigen — het blauwe onderbord geeft dit aan.",
+          "correct": 0,
+          "explanation": "Hij kan afbuigen: het onderbord onder de ruit toont dat.",
           "theoryCardIndex": 1
         },
         {
           "id": "F3_Q19",
-          "question": "Het onderbord toont dat de voorrangsweg links afbuigt. Wat doet u?",
+          "question": "De voorrangsweg buigt naar links af. Je volgt hem. Heb je voorrang?",
           "choices": [
-            "U volgt het tracé, naar links",
-            "U rijdt gewoon rechtdoor",
-            "U stopt en verleent voorrang"
+            "Ja",
+            "Nee"
           ],
           "correct": 0,
-          "explanation": "Je volgt het tracé dat op het blauwe onderbord wordt aangegeven.",
+          "explanation": "Als je het voorrangsverloop volgt, hou je voorrang. Zet je richtingaanwijzer aan.",
           "theoryCardIndex": 1,
           "severe": true
         },
@@ -2133,360 +2116,334 @@
           "id": "F3_Q21",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Voorrang verlenen",
-            "Hier verplicht stoppen",
-            "U hebt voorrang"
+            "Voorrang verlenen, en stoppen indien nodig",
+            "Verplicht stoppen",
+            "Jij hebt voorrang"
           ],
           "correct": 0,
-          "explanation": "Driehoek op zijn punt = voorrang verlenen aan bestuurders.",
+          "explanation": "Driehoek met de punt naar beneden: je verleent voorrang.",
           "theoryCardIndex": 2,
           "sign": "B1"
         },
         {
           "id": "F3_Q22",
-          "question": "Een voetganger loopt op het dwarse trottoir. Moet u hem door dat bord laten voorgaan?",
+          "question": "Een voetganger loopt op het voetpad van de dwarsstraat. Verplicht dit bord « voorrang verlenen » je om op hem te wachten?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Het voorrang-verlenen-bord betreft bestuurders, niet voetgangers.",
+          "correct": 0,
+          "explanation": "Het bord geldt voor de bestuurders op de dwarsweg, niet voor voetgangers op het voetpad.",
           "theoryCardIndex": 2
         },
         {
           "id": "F3_Q23",
-          "question": "Aan een voorrangsbord is de dwarsweg volledig vrij. Moet u stoppen?",
+          "question": "« Voorrang verlenen », de dwarsstraat is leeg. Moet je stoppen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Bij het voorrang-verlenen-bord is stoppen enkel verplicht als er bestuurders aankomen.",
+          "correct": 0,
+          "explanation": "Je stopt alleen als er iemand aankomt.",
           "theoryCardIndex": 2
         },
         {
-          "id": "F3_Q24",
-          "question": "Wat is het verschil tussen voorrang verlenen en STOP?",
-          "choices": [
-            "Voorrang: indien nodig; STOP: altijd",
-            "STOP: indien nodig; voorrang: altijd",
-            "Geen, beide leggen stoppen op"
-          ],
-          "correct": 0,
-          "explanation": "Voorrang verlenen = stoppen indien nodig. STOP = altijd stoppen.",
-          "theoryCardIndex": 2,
-          "severe": true
-        },
-        {
           "id": "F3_Q25",
-          "question": "Wat stellen de « haaientanden » op het wegdek voor?",
+          "question": "Hoe heten deze driehoeken op de grond?",
           "choices": [
-            "De markering van voorrang verlenen",
-            "Een verhoogde inrichting op de weg",
-            "De aankondiging van een zebrapad"
+            "Haaientanden",
+            "Stopwiggen",
+            "Chevrons"
           ],
           "correct": 0,
-          "explanation": "Haaietanden = driehoeken met de punt naar beneden die de stopstreep van het voorrang-verlenen-bord markeren.",
+          "explanation": "Haaientanden duiden aan waar je voorrang verleent.",
           "theoryCardIndex": 2
         },
         {
           "id": "F3_Q27",
-          "question": "Een onderbord toont fietsers in twee richtingen. Wat betekent dat?",
+          "question": "Onder dit bord toont een onderbord fietsen in beide richtingen. Wat betekent het?",
           "choices": [
-            "Fietsers komen van beide kanten",
-            "Het fietspad is hier verboden",
-            "De fietsers moeten ook stoppen"
+            "Er kunnen fietsers van beide kanten komen",
+            "Fietsen verboden",
+            "Fietsers hebben een STOP"
           ],
           "correct": 0,
-          "explanation": "Het bord waarschuwt voor fietsers en bromfietsers die van beide kanten kunnen komen.",
+          "explanation": "Fietsers en bromfietsers kunnen van links en rechts komen: verleen ook hen voorrang.",
           "theoryCardIndex": 2,
           "sign": "B1"
         },
         {
           "id": "F3_Q28",
-          "question": "Dit bord gaat samen met « 125 m » en een driehoek op de punt. Wat betekent het?",
+          "question": "Dit bord toont « 125 m » en een driehoek met de punt naar beneden. Wat betekent het?",
           "choices": [
             "Voorrang verlenen over 125 m",
-            "Voorrang verlenen hier ter plaatse",
-            "Een rotonde over 125 meter"
+            "Hier voorrang verlenen",
+            "Rotonde over 125 m"
           ],
           "correct": 0,
-          "explanation": "Gevarendriehoek + omgekeerde driehoek + 125 m = voorrang verlenen over 125 m.",
+          "explanation": "Het kondigt « voorrang verlenen » 125 m verder aan.",
           "theoryCardIndex": 2,
           "sign": "B3"
         },
         {
           "id": "F3_Q29",
-          "question": "Dit bord gaat samen met « 150 m » en het woord STOP. Wat betekent het?",
+          "question": "Dit bord toont « 150 m » en STOP. Wat betekent het?",
           "choices": [
-            "Een STOP over 150 meter",
-            "Voorrang verlenen over 150 m",
-            "Een rotonde over 150 meter"
+            "Een STOP over 150 m",
+            "Stop hier",
+            "Voorrang verlenen over 150 m"
           ],
           "correct": 0,
-          "explanation": "Gevarendriehoek + STOP + 150 m = STOP over 150 m.",
+          "explanation": "Het is een vooraankondiging: de STOP is 150 m verder.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "B7"
         },
         {
           "id": "F3_Q31",
-          "question": "Aan een voorrangsbord komt een voertuig van links. Wat doet u?",
+          "question": "« Voorrang verlenen »: er komt een auto van links. Wat doe je?",
           "choices": [
-            "U verleent hem voorrang",
-            "U rijdt door, voorrang van rechts",
-            "U toetert om te waarschuwen"
+            "Je laat hem voorgaan",
+            "Je rijdt door, voorrang van rechts",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "Je verleent voorrang aan elke bestuurder op de dwarsweg.",
+          "explanation": "Je verleent voorrang aan iedereen op de dwarsweg, van links en van rechts.",
           "theoryCardIndex": 2
         },
         {
           "id": "F3_Q33",
-          "question": "Een fietser komt van links op het dwarse fietspad. Wat doet u?",
+          "question": "Een fietser komt van links op het fietspad van de dwarsstraat. Wat doe je?",
           "choices": [
-            "U laat hem voorgaan",
-            "U rijdt voor hem door",
-            "U toetert om te waarschuwen"
+            "Je laat hem voorgaan",
+            "Je rijdt voor hem",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "Het onderbord geeft aan dat fietsers van beide kanten kunnen komen — verleen hun voorrang.",
+          "explanation": "Je verleent ook voorrang aan de fietsers op de dwarsweg, van beide kanten.",
           "theoryCardIndex": 2
         },
         {
           "id": "F3_Q34",
-          "question": "U moet stoppen voor haaientanden. Waar precies?",
+          "question": "Je moet stoppen aan deze haaientanden. Waar precies?",
           "choices": [
-            "Ter hoogte van de haaientanden",
-            "Vijf meter voor de tanden op het wegdek",
+            "Aan de lijn van haaientanden",
+            "5 m ervoor",
             "In het midden van het kruispunt"
           ],
           "correct": 0,
-          "explanation": "De haaietanden markeren exact de plaats waar je moet stoppen.",
+          "explanation": "Ze duiden de plaats aan waar je zo nodig stopt.",
           "theoryCardIndex": 2
         },
         {
           "id": "F3_Q35",
-          "question": "Wat moet u altijd doen aan een STOP-bord?",
+          "question": "Wat moet je altijd doen aan een STOP-bord?",
           "choices": [
-            "Volledig tot stilstand komen",
-            "Vertragen en goed rondkijken",
-            "Uw richtingaanwijzer aanzetten"
+            "Volledig stoppen",
+            "Vertragen en kijken",
+            "De richtingaanwijzer aanzetten"
           ],
           "correct": 0,
-          "explanation": "Bij het STOP-bord is volledig stoppen altijd verplicht.",
+          "explanation": "Aan een STOP-bord moet je altijd volledig stoppen.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F3_Q36",
-          "question": "Het is 3 uur 's nachts en de weg is verlaten. Moet u stoppen aan de STOP?",
+          "question": "3 uur 's nachts, niemand te zien. Moet je stoppen aan het STOP-bord?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Bij het STOP-bord is stoppen altijd verplicht, ook zonder verkeer.",
+          "explanation": "Ja, altijd, ook zonder iemand.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F3_Q38",
-          "question": "Waar precies moet u uw voertuig tot stilstand brengen aan de STOP?",
+          "question": "Waar stop je aan een STOP-bord?",
           "choices": [
-            "Aan de stopstreep op het wegdek",
-            "Vijf meter voor het kruispunt",
-            "Om het even waar voor het kruispunt"
+            "Net voor de stopstreep",
+            "1 m voor de streep",
+            "Net voor het bord"
           ],
           "correct": 0,
-          "explanation": "Je stopt aan de stopstreep op het wegdek.",
+          "explanation": "Net voor de stopstreep. Zonder streep: waar je de dwarsweg ziet.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F3_Q39",
-          "question": "Een onderbord onder deze STOP toont fietsers in twee richtingen. Wat betekent dat?",
+          "question": "Onder dit STOP-bord toont een onderbord fietsen in beide richtingen. Wat betekent het?",
           "choices": [
-            "Fietsers komen van beide kanten",
-            "Fietsers zijn hier verboden",
-            "De fietsers hebben ook een STOP"
+            "Er kunnen fietsers van beide kanten komen",
+            "Fietsen verboden",
+            "Fietsers hebben ook een STOP"
           ],
           "correct": 0,
-          "explanation": "Het onderbord bij het STOP-bord waarschuwt voor de aanwezigheid van fietsers uit beide richtingen.",
+          "explanation": "Let op fietsers die van beide kanten komen.",
           "theoryCardIndex": 3,
           "sign": "B5",
           "severe": true
         },
         {
           "id": "F3_Q40",
-          "question": "U hebt gestopt aan de STOP en de weg is vrij. Mag u optrekken?",
+          "question": "Je bent gestopt aan het STOP-bord en de weg is vrij. Mag je vertrekken?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Na de verplichte stilstand rij je door wanneer de weg vrij is.",
+          "explanation": "Na het stoppen vertrek je als er niemand komt.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
-          "id": "F3_Q42",
-          "question": "Je ziet het vooraankondigingsbord \"150 m STOP\". Moet je nu stoppen?",
-          "choices": [
-            "Ja, stop hier onmiddellijk",
-            "Nee, het kondigt een STOP aan over 150 meter",
-            "Ja, uit louter voorzorg",
-            "Nee, dit bord geldt enkel voor vrachtwagens"
-          ],
-          "correct": 1,
-          "explanation": "Het vooraankondigingsbord is een aankondiging — je stopt op de plaats van het STOP-bord.",
-          "theoryCardIndex": 3,
-          "severe": true,
-          "sign": "B7"
-        },
-        {
           "id": "F3_Q43",
-          "question": "Welke drie elementen kenmerken juridisch een rotonde?",
+          "question": "Wat maakt van een kruispunt een rotonde?",
           "choices": [
-            "Middeneiland, B1 of B5, blauw bord",
-            "Lichten, borden, een wegmarkering",
-            "Een eiland, trottoirs en bomen"
+            "Het blauwe bord met drie pijlen, met « voorrang verlenen » bij het oprijden",
+            "Alleen een middeneiland",
+            "Verkeerslichten"
           ],
           "correct": 0,
-          "explanation": "Middenvak + B1/B5 aan de toegangen + blauw bord met 3 pijlen = rotonde.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "F3_Q44",
-          "question": "Moet het middeneiland van een rotonde altijd rond zijn?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Het middenvak kan verschillende vormen hebben.",
+          "explanation": "Een rotonde wordt aangeduid met het blauwe bord met drie pijlen, met « voorrang verlenen » of STOP bij het oprijden.",
           "theoryCardIndex": 4
         },
         {
           "id": "F3_Q45",
-          "question": "In welke richting moet u op een rotonde rijden?",
+          "question": "In welke richting rijd je rond op een rotonde?",
           "choices": [
-            "In de aangegeven draairichting",
-            "In beide richtingen naar keuze",
-            "Volgens het bord aan de inrit"
+            "In de richting van de pijlen",
+            "Naar keuze",
+            "Volgens het verkeer"
           ],
           "correct": 0,
-          "explanation": "De rotonde legt één enkele rijrichting op (rondgaand verkeer).",
+          "explanation": "Je volgt de aangegeven rijrichting.",
           "theoryCardIndex": 4
         },
         {
           "id": "F3_Q46",
-          "question": "Moet u uw rechter richtingaanwijzer aanzetten om een rotonde op te rijden?",
+          "question": "Zet je je richtingaanwijzer aan om een rotonde op te rijden?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, rechts"
           ],
-          "correct": 1,
-          "explanation": "Bij het oprijden van de rotonde is de rechter richtingaanwijzer niet vereist.",
+          "correct": 0,
+          "explanation": "Een rotonde oprijden vraagt geen richtingaanwijzer.",
           "theoryCardIndex": 4
         },
         {
           "id": "F3_Q47",
-          "question": "Mag u de rechter richtingaanwijzer gebruiken om uw uitrit aan te kondigen?",
+          "question": "Zet je je rechtse richtingaanwijzer aan om de rotonde te verlaten?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Ja, het is verplicht",
+            "Nee, het is vrijwillig",
+            "Nee, nooit"
           ],
           "correct": 0,
-          "explanation": "Bij de eerste afslag kan de rechter richtingaanwijzer je uitrit aankondigen.",
+          "explanation": "Een rotonde verlaten is van richting veranderen: de rechtse richtingaanwijzer is verplicht.",
           "theoryCardIndex": 4
         },
         {
           "id": "F3_Q48",
-          "question": "Aan wie moet u voorrang verlenen bij het oprijden van een rotonde?",
+          "question": "Je rijdt een rotonde op. Aan wie verleen je voorrang?",
           "choices": [
-            "Aan wie van links komt",
+            "Aan wie al op de rotonde rijdt",
             "Aan wie van rechts komt",
-            "Aan niemand, u rijdt op"
+            "Aan niemand"
           ],
           "correct": 0,
-          "explanation": "Je verleent voorrang aan wie al op de rotonde is en aan wie van eerdere toegangen komt.",
+          "explanation": "Je verleent voorrang aan wie al op de rotonde rijdt.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "F3_Q51",
-          "question": "U verlaat een rotonde en een fietser rijdt op het omliggende fietspad. Moet u hem voorrang verlenen?",
+          "question": "Je verlaat de rotonde, een fietser rijdt op het fietspad eromheen. Moet je hem voorrang verlenen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Bij het verlaten van de rotonde hebben fietsers op het fietspad voorrang.",
+          "explanation": "Bij het verlaten steek je het fietspad over: je verleent voorrang aan fietsers en bromfietsers.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "F3_Q52",
-          "question": "U verlaat de rotonde en een voetganger wil oversteken. Moet u hem voorrang verlenen?",
+          "question": "Je verlaat de rotonde, een voetganger steekt de straat over waar je naartoe rijdt. Moet je hem laten voorgaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Bij het verlaten van de rotonde hebben voetgangers die oversteken voorrang.",
+          "explanation": "Als je van richting verandert, laat je overstekende voetgangers voorgaan.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "F3_Q54",
-          "question": "Een fietsoversteek ligt los van de rotonde en de fietsers hebben er een omgekeerde driehoek. Moet u hen voorrang geven?",
+          "question": "De fietsoversteek ligt verder van de rotonde, met een driehoek voor de fietsers. Wie verleent voorrang?",
           "choices": [
-            "Nee, tenzij ze al bezig zijn",
-            "Ja, in alle mogelijke gevallen",
-            "Nee, in geen enkel geval"
+            "De fietsers, behalve als ze al oversteken",
+            "Jij, altijd",
+            "Niemand"
           ],
           "correct": 0,
-          "explanation": "Teruggetrokken oversteek + driehoek voor fietsers = zij verlenen voorrang, tenzij ze al op de rijbaan zijn.",
+          "explanation": "De driehoek is voor de fietsers: zij verlenen jou voorrang, behalve als ze al oversteken.",
           "theoryCardIndex": 4
         },
         {
           "id": "F3_Q56",
-          "question": "Een rond plein heeft niet de drie elementen van een rotonde. Welke regel geldt?",
+          "question": "Een rond plein, zonder rotondebord of « voorrang verlenen ». Welke regel?",
           "choices": [
-            "De voorrang van rechts",
-            "Het voorrang verlenen",
-            "De STOP aan elke inrit"
+            "Voorrang van rechts",
+            "Voorrang aan wie rondrijdt",
+            "STOP aan elke ingang"
           ],
           "correct": 0,
-          "explanation": "Zonder de 3 kenmerken van een rotonde geldt de voorrang van rechts.",
+          "explanation": "Zonder rotondesignalisatie geldt voorrang van rechts.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "F3_Q59",
-          "question": "U verlaat de rotonde aan de tweede uitrit. Wanneer pinkt u rechts?",
+          "question": "Je neemt de tweede afrit. Wanneer zet je je rechtse richtingaanwijzer aan?",
           "choices": [
-            "Nadat u de eerste voorbij bent",
-            "Meteen bij het oprijden",
-            "Dat is hier niet nodig"
+            "Nadat je de eerste afrit voorbij bent",
+            "Bij het oprijden",
+            "Nooit"
           ],
           "correct": 0,
-          "explanation": "Je gebruikt de rechter richtingaanwijzer net voor de gekozen afslag.",
+          "explanation": "Vlak voor je afrit, nadat je de vorige voorbij bent.",
           "theoryCardIndex": 4
         },
         {
           "id": "F3_Q67",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Rotonde, verplichte draairichting",
-            "Eenrichtingsweg voor u",
-            "Hier verplicht keren"
+            "Rotonde, verplichte rijrichting",
+            "Eenrichtingsweg",
+            "Verplicht keren"
           ],
           "correct": 0,
-          "explanation": "Blauw rond bord met 3 pijlen = verplicht rondgaand verkeer (rotonde).",
+          "explanation": "Blauw bord met drie pijlen in een cirkel: rotonde.",
           "theoryCardIndex": 4,
           "sign": "D5"
+        },
+        {
+          "id": "F3_Q70",
+          "question": "Je rijdt op de binnenste rijstrook van een rotonde met twee rijstroken en wilt eraf. Wat doe je?",
+          "choices": [
+            "Je laat de auto's op de buitenste rijstrook voorgaan",
+            "Je rijdt door, jij hebt voorrang",
+            "Je rijdt eraf en toetert"
+          ],
+          "correct": 0,
+          "explanation": "Van rijstrook veranderen is een manoeuvre: je verleent voorrang aan wie op de buitenste rijstrook rijdt, desnoods rij je een extra ronde.",
+          "theoryCardIndex": 4
         }
       ]
     },
