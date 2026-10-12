@@ -353,13 +353,9 @@ export default function ProfilePage() {
                 </span>
               </button>
               <div style={{ height: 1, background: 'var(--border-subtle)' }} />
-              <a href="https://www.iubenda.com/privacy-policy/43486445" target="_blank"
+              <a href="/privacy"
                 className="flex items-center px-4 py-3" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                 <span className="text-xs" style={{ color: 'var(--text-disabled)' }}>{t('politique_confidentialite')}</span>
-              </a>
-              <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy" target="_blank"
-                className="flex items-center px-4 py-3" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
-                <span className="text-xs" style={{ color: 'var(--text-disabled)' }}>Cookies</span>
               </a>
               <a href="/terms" className="flex items-center px-4 py-3">
                 <span className="text-xs" style={{ color: 'var(--text-disabled)' }}>CGU</span>

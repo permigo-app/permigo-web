@@ -220,8 +220,7 @@ export default function Navbar() {
 
         {/* Legal */}
         <div style={{ marginTop: 'auto', display: 'flex', flexWrap: 'wrap', gap: '4px 10px', padding: '8px 4px 0', borderTop: '1px solid var(--border-subtle)' }}>
-          <a href="https://www.iubenda.com/privacy-policy/43486445" target="_blank" style={{ fontSize: 10, color: 'var(--text-disabled)', textDecoration: 'none' }}>{t('confidentialite')}</a>
-          <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy" target="_blank" style={{ fontSize: 10, color: 'var(--text-disabled)', textDecoration: 'none' }}>Cookies</a>
+          <a href="/privacy" style={{ fontSize: 10, color: 'var(--text-disabled)', textDecoration: 'none' }}>{t('confidentialite')}</a>
           <a href="/terms" style={{ fontSize: 10, color: 'var(--text-disabled)', textDecoration: 'none' }}>CGU</a>
           <span style={{ fontSize: 10, color: 'var(--text-disabled)', width: '100%' }}>© 2025-2026 MyPermiGo</span>
         </div>

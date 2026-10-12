@@ -11,13 +11,13 @@ export default function PrivacyPage() {
         ← Retour
       </Link>
 
-      <h1 className="text-3xl font-black text-white mb-2">Politique de confidentialité</h1>
-      <p className="text-sm mb-10" style={{ color: '#5A6B8A' }}>Dernière mise à jour : janvier 2025</p>
+      <h1 style={{ color: 'var(--text-title)' }} className="text-3xl font-black mb-2">Politique de confidentialité</h1>
+      <p className="text-sm mb-10" style={{ color: 'var(--text-hint)' }}>Dernière mise à jour : octobre 2026</p>
 
-      <div className="flex flex-col gap-8" style={{ color: '#d1d5db', lineHeight: 1.75 }}>
+      <div className="flex flex-col gap-8" style={{ color: 'var(--text-sub)', lineHeight: 1.75 }}>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">1. Qui sommes-nous ?</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">1. Qui sommes-nous ?</h2>
           <p>
             MyPermiGo est une application de préparation au permis de conduire théorique belge.
             Responsable du traitement des données : MyPermiGo — contact :{' '}
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">2. Données collectées</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">2. Données collectées</h2>
           <p className="mb-3">Nous collectons les données suivantes :</p>
           <ul className="flex flex-col gap-2 pl-4" style={{ listStyleType: 'disc' }}>
             <li><strong>Adresse e-mail</strong> — pour créer et gérer votre compte.</li>
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">3. Base légale du traitement</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">3. Base légale du traitement</h2>
           <p>
             Le traitement est fondé sur l'exécution du contrat (fourniture du service), votre consentement (données
             optionnelles), et notre intérêt légitime (amélioration de l'application, sécurité).
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">4. Sous-traitants et partenaires</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">4. Sous-traitants et partenaires</h2>
           <ul className="flex flex-col gap-2 pl-4" style={{ listStyleType: 'disc' }}>
             <li>
               <strong>Supabase</strong> — hébergement de la base de données et authentification. Données stockées en Union Européenne.{' '}
@@ -64,7 +64,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">5. Durée de conservation</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">5. Durée de conservation</h2>
           <p>
             Vos données sont conservées tant que votre compte est actif. En cas de suppression de compte,
             vos données personnelles sont effacées sous 30 jours. Les données de paiement sont conservées
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">6. Vos droits (RGPD)</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">6. Vos droits (RGPD)</h2>
           <p className="mb-3">Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
           <ul className="flex flex-col gap-2 pl-4" style={{ listStyleType: 'disc' }}>
             <li><strong>Droit d'accès</strong> — obtenir une copie de vos données.</li>
@@ -90,16 +90,18 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">7. Cookies</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">7. Cookies</h2>
           <p>
-            Nous utilisons des cookies strictement nécessaires au fonctionnement du service (authentification, préférences de langue).
-            Nous utilisons également des cookies tiers via iubenda pour la gestion du consentement.
-            Vous pouvez gérer vos préférences via la bannière de consentement.
+            Nous n'utilisons que des cookies et un stockage local strictement nécessaires au fonctionnement du service :
+            connexion à votre compte, paiement sécurisé (Stripe, uniquement au moment de payer), langue, thème et
+            progression. Ils ne servent ni à la publicité ni au suivi. Pour cette raison, aucune bannière de
+            consentement n'est nécessaire. Nos statistiques de fréquentation (Vercel Analytics) sont anonymes et
+            n'utilisent aucun cookie.
           </p>
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">8. Sécurité</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">8. Sécurité</h2>
           <p>
             Les communications sont chiffrées via HTTPS/TLS. Les mots de passe sont hachés et ne sont jamais stockés en clair.
             L'accès aux données est restreint aux membres de l'équipe qui en ont besoin.
@@ -107,7 +109,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">9. Contact</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">9. Contact</h2>
           <p>
             Pour toute question relative à la confidentialité de vos données :{' '}
             <a href="mailto:ycroitor8096@gmail.com" style={{ color: '#4ecdc4' }}>ycroitor8096@gmail.com</a>

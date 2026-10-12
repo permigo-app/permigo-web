@@ -6,7 +6,6 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import AppShell from '@/components/AppShell';
 import Link from 'next/link';
-import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { SITE_URL } from '@/lib/site';
 
@@ -60,24 +59,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: `
 (function(){try{var t=localStorage.getItem('permigo_theme');if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'night':'day';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
         `}} />
-        {/* Force-hide iubenda floating widget — links are in the footer */}
-        <style>{`
-          #iubenda-cs-banner, #iubenda-widget,
-          [class*="iubenda"], [id*="iubenda"],
-          .iubenda-tp-btn, .iubenda-tp-circle,
-          ._iub_cs_activate, .__iub_opt_out_iframe {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-          }
-        `}</style>
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script
-          type="text/javascript"
-          src="https://embeds.iubenda.com/widgets/beada13f-591a-4009-9e09-ae66b8d57cc6.js"
-          async
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="min-h-screen">
@@ -91,28 +72,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
                 <span style={{ fontSize: '12px', color: 'var(--text-disabled)' }}>© 2025-2026 MyPermiGo</span>
 
-                <a href="https://www.iubenda.com/privacy-policy/43486445"
-                   className="iubenda-white iubenda-noiframe iubenda-embed"
-                   target="_blank"
-                   style={{ fontSize: '12px', color: 'var(--text-disabled)', textDecoration: 'none' }}>
-                  Politique de confidentialité
-                </a>
-
-                <a href="https://www.iubenda.com/privacy-policy/43486445/cookie-policy"
-                   className="iubenda-white iubenda-noiframe iubenda-embed"
-                   target="_blank"
-                   style={{ fontSize: '12px', color: 'var(--text-disabled)', textDecoration: 'none' }}>
-                  Politique relative aux Cookies
-                </a>
+                <Link href="/privacy" style={{ fontSize: '12px', color: 'var(--text-disabled)', textDecoration: 'none' }}>
+                  Confidentialité et cookies
+                </Link>
 
                 <Link href="/terms" style={{ fontSize: '12px', color: 'var(--text-disabled)', textDecoration: 'none' }}>
                   CGU
                 </Link>
               </div>
-
-              <Script id="iubenda-script" strategy="lazyOnload">
-                {`(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);`}
-              </Script>
             </footer>
           </AuthProvider>
         </LanguageProvider>

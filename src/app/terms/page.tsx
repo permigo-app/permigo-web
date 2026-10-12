@@ -12,13 +12,13 @@ export default function TermsPage() {
         ← Retour
       </Link>
 
-      <h1 className="text-3xl font-black text-white mb-2">Conditions Générales d&apos;Utilisation</h1>
-      <p className="text-sm mb-10" style={{ color: '#5A6B8A' }}>Dernière mise à jour : août 2026</p>
+      <h1 style={{ color: 'var(--text-title)' }} className="text-3xl font-black mb-2">Conditions Générales d&apos;Utilisation</h1>
+      <p className="text-sm mb-10" style={{ color: 'var(--text-hint)' }}>Dernière mise à jour : août 2026</p>
 
-      <div className="flex flex-col gap-8" style={{ color: '#d1d5db', lineHeight: 1.75 }}>
+      <div className="flex flex-col gap-8" style={{ color: 'var(--text-sub)', lineHeight: 1.75 }}>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">1. Présentation du service</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">1. Présentation du service</h2>
           <p>
             MyPermiGo est une plateforme en ligne de préparation au permis de conduire théorique belge.
             Le service est édité par MyPermiGo — contact : <a href="mailto:ycroitor8096@gmail.com" style={{ color: '#4ecdc4' }}>ycroitor8096@gmail.com</a>
@@ -29,7 +29,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">2. Accès au service</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">2. Accès au service</h2>
           <p className="mb-2">MyPermiGo propose deux niveaux d&apos;accès (permis B) :</p>
           <ul className="flex flex-col gap-2 pl-4" style={{ listStyleType: 'disc' }}>
             <li>
@@ -47,9 +47,9 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">3. Abonnement Premium</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">3. Abonnement Premium</h2>
 
-          <h3 className="font-bold text-white mb-2">3.1 Formules et prix</h3>
+          <h3 style={{ color: 'var(--text-title)' }} className="font-bold mb-2">3.1 Formules et prix</h3>
           <p className="mb-3">
             L&apos;abonnement Premium est proposé sous plusieurs formules, au choix lors de la souscription :
           </p>
@@ -64,7 +64,7 @@ export default function TermsPage() {
             Le paiement est dû dès la souscription. Ces prix peuvent être modifiés sur notification préalable de 30 jours.
           </p>
 
-          <h3 className="font-bold text-white mb-2">3.2 Renouvellement et résiliation</h3>
+          <h3 style={{ color: 'var(--text-title)' }} className="font-bold mb-2">3.2 Renouvellement et résiliation</h3>
           <p className="mb-3">
             L&apos;abonnement est renouvelé automatiquement à la fin de chaque période, selon la formule choisie
             (semaine, 2 semaines ou mois). Vous pouvez résilier à tout moment depuis
@@ -73,7 +73,7 @@ export default function TermsPage() {
             La résiliation prend effet à la fin de la période de facturation en cours.
           </p>
 
-          <h3 className="font-bold text-white mb-2">3.3 Remboursement</h3>
+          <h3 style={{ color: 'var(--text-title)' }} className="font-bold mb-2">3.3 Remboursement</h3>
           <p>
             Conformément à la législation européenne sur les contrats conclus à distance, vous disposez d&apos;un
             délai de rétractation de <strong>14 jours</strong> à compter de la souscription. Pour exercer ce droit,
@@ -84,7 +84,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">4. Paiement</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">4. Paiement</h2>
           <p>
             Les paiements sont traités de façon sécurisée par <strong>Stripe</strong>, certifié PCI-DSS.
             MyPermiGo ne stocke aucune donnée bancaire. En cas d&apos;échec de paiement, l&apos;accès Premium
@@ -93,7 +93,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">5. Utilisation acceptable</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">5. Utilisation acceptable</h2>
           <p className="mb-3">En utilisant MyPermiGo, vous vous engagez à :</p>
           <ul className="flex flex-col gap-2 pl-4" style={{ listStyleType: 'disc' }}>
             <li>Ne pas tenter de contourner les protections techniques (accès non autorisé à du contenu Premium).</li>
@@ -108,7 +108,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">6. Propriété intellectuelle</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">6. Propriété intellectuelle</h2>
           <p>
             L&apos;ensemble du contenu de MyPermiGo (textes, questions, design, logo, mascotte Prof. Gaston,
             code source) est la propriété exclusive de MyPermiGo et est protégé par les lois sur la propriété
@@ -120,7 +120,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">7. Responsabilité</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">7. Responsabilité</h2>
           <p>
             MyPermiGo est un outil d&apos;aide à la préparation et ne garantit pas la réussite à l&apos;examen officiel.
             Le contenu pédagogique est fourni à titre informatif et peut contenir des erreurs ou être sujet
@@ -134,7 +134,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">8. Modification des CGU</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">8. Modification des CGU</h2>
           <p>
             Nous nous réservons le droit de modifier les présentes CGU. Les utilisateurs seront notifiés
             par e-mail ou via l&apos;application en cas de modification substantielle. La poursuite de
@@ -143,7 +143,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">9. Droit applicable</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">9. Droit applicable</h2>
           <p>
             Les présentes CGU sont régies par le droit belge. En cas de litige, les parties s&apos;engagent
             à chercher une résolution amiable avant tout recours judiciaire. À défaut, les tribunaux
@@ -152,7 +152,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-black text-white mb-3">10. Contact</h2>
+          <h2 style={{ color: 'var(--text-title)' }} className="text-lg font-black mb-3">10. Contact</h2>
           <p>
             Pour toute question relative aux présentes CGU :{' '}
             <a href="mailto:ycroitor8096@gmail.com" style={{ color: '#4ecdc4' }}>ycroitor8096@gmail.com</a>
