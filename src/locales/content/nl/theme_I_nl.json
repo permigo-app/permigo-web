@@ -1727,26 +1727,26 @@
         },
         {
           "id": "I3_Q7",
-          "question": "Benzine: bij welk toerental schakel je op?",
+          "question": "Benzine: rond welk toerental schakel je op?",
           "choices": [
-            "2000 tot 2500 t/min",
-            "1000 tot 1500 t/min",
-            "3000 tot 4000 t/min"
+            "Rond 2500 t/min",
+            "Rond 1500 t/min",
+            "Rond 4000 t/min"
           ],
           "correct": 0,
-          "explanation": "Benzine: tussen 2000 en 2500 toeren.",
+          "explanation": "Benzinemotor: rond 2500 toeren.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q8",
-          "question": "Diesel: bij welk toerental schakel je op?",
+          "question": "Diesel: rond welk toerental schakel je op?",
           "choices": [
-            "1500 tot 2000 t/min",
-            "2000 tot 2500 t/min",
-            "3000 tot 3500 t/min"
+            "Rond 2000 t/min",
+            "Rond 3000 t/min",
+            "Rond 1000 t/min"
           ],
           "correct": 0,
-          "explanation": "Diesel: tussen 1500 en 2000 toeren.",
+          "explanation": "Dieselmotor: rond 2000 toeren.",
           "theoryCardIndex": 1
         },
         {
@@ -2345,929 +2345,780 @@
       "questions": [
         {
           "id": "I4_Q1",
-          "question": "Welke gevolgen hebben versleten banden op uw rijgedrag?",
+          "question": "Met versleten banden is je remafstand:",
           "choices": [
-            "Langere remweg, slechtere wegligging",
-            "Geen merkbaar gevolg aan het stuur",
-            "Een betere grip op droog wegdek"
+            "Langer",
+            "Korter",
+            "Dezelfde"
           ],
           "correct": 0,
-          "explanation": "Versleten banden verlengen de remafstand, verhogen het verbruik en verslechteren de wegligging.",
+          "explanation": "Versleten banden: minder grip, langere remafstand.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q2",
-          "question": "U controleert uw banden. Wat is de wettelijke minimumdiepte van de hoofdgroeven?",
+          "question": "Wettelijke minimale profieldiepte?",
           "choices": [
-            "1 mm",
             "1,6 mm",
-            "2 mm",
+            "1 mm",
             "3 mm"
           ],
-          "correct": 1,
-          "explanation": "Het wettelijke minimum is 1,6 mm over ¾ van het loopvlak.",
+          "correct": 0,
+          "explanation": "Minimum 1,6 mm.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q3",
-          "question": "Vanaf welke groefdiepte bestaat het risico op aquaplaning?",
+          "question": "Onder welke profieldiepte stijgt het risico op aquaplaning?",
           "choices": [
-            "Vanaf minder dan 2 mm",
-            "Vanaf minder dan 1 mm",
-            "Vanaf minder dan 3 mm"
+            "2 mm",
+            "1 mm",
+            "5 mm"
           ],
           "correct": 0,
-          "explanation": "Het aquaplaningsrisico is al aanwezig onder 2 mm, dus voor de wettelijke limiet van 1,6 mm.",
+          "explanation": "Onder 2 mm wordt het water slecht afgevoerd.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q4",
-          "question": "Uw banden hebben precies 1,6 mm groef. Is dat genoeg om veilig te rijden?",
+          "question": "Je banden hebben 1,8 mm profiel. Zijn ze nog wettelijk?",
           "choices": [
-            "Ja",
+            "Ja, maar vervang ze binnenkort",
             "Nee"
           ],
-          "correct": 1,
-          "explanation": "Het aquaplaningsrisico begint onder 2 mm: vervang de banden voor u de wettelijke limiet van 1,6 mm bereikt.",
+          "correct": 0,
+          "explanation": "Meer dan 1,6 mm: wettelijk. Maar onder 2 mm dreigt aquaplaning.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q5",
-          "question": "Wat betekent de vermelding « TWI » op de flank van uw band?",
+          "question": "« TWI » op de flank van de band duidt aan:",
           "choices": [
             "De slijtage-indicatoren",
-            "Het merk van de fabrikant",
+            "Het merk",
             "De snelheidsindex"
           ],
           "correct": 0,
-          "explanation": "TWI (Tread Wear Indicator) geeft de plaats van de slijtage-indicatoren in de groeven aan.",
+          "explanation": "Het toont waar de slijtage-indicatoren zitten.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q6",
-          "question": "Uw banden zijn versleten en u overweegt zelf de groeven opnieuw uit te snijden. Is dit toegelaten?",
+          "question": "Mag je je versleten banden opnieuw insnijden?",
           "choices": [
-            "Ja, dat is economisch",
-            "Nee, dit is verboden",
-            "Ja, bij een professional",
-            "Dat hangt af van het bandentype"
+            "Nee",
+            "Ja, bij een garagist"
           ],
-          "correct": 1,
-          "explanation": "Het is verboden de groeven van versleten banden opnieuw uit te snijden.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "I4_Q7",
-          "question": "Mag u een versleten band laten vernieuwen met een nieuw loopvlak?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Het vernieuwen van versleten banden is verboden.",
+          "correct": 0,
+          "explanation": "De groeven opnieuw insnijden is verboden.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q8",
-          "question": "Wanneer moet u de bandenspanning controleren?",
+          "question": "Wanneer controleer je de bandenspanning?",
           "choices": [
-            "Wanneer de banden koud zijn",
-            "Na een lange warme rit",
-            "Na minstens honderd kilometer"
+            "Met koude banden",
+            "Na een lange rit",
+            "Tijdens het rijden"
           ],
           "correct": 0,
-          "explanation": "De spanning moet koud gecontroleerd worden (minder dan 5 km gereden) voor een correcte meting.",
+          "explanation": "Koud: warmte vertekent de meting.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q9",
-          "question": "Waarom de bandenspanning koud controleren?",
+          "question": "Waarom meet je de spanning koud?",
           "choices": [
-            "De warmte wijzigt de spanning",
-            "Het is gewoon praktischer zo",
-            "Om de meter beter af te lezen"
+            "Warmte doet de spanning stijgen",
+            "Het is praktischer",
+            "De manometer is beter leesbaar"
           ],
           "correct": 0,
-          "explanation": "De warmte door wrijving doet de band opzwellen: de meting bij warme banden zou onjuist zijn.",
+          "explanation": "Warme banden = te hoge spanning op de meter.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q10",
-          "question": "Uw banden zijn aan de randen versleten. Wat is de waarschijnlijke oorzaak?",
+          "question": "Je banden zijn aan de randen versleten. Waarschijnlijke oorzaak?",
           "choices": [
-            "Ze staan te zacht",
-            "Ze staan te hard",
-            "Een probleem met de sturing"
+            "Te weinig opgepompt",
+            "Te hard opgepompt",
+            "Niets abnormaal"
           ],
           "correct": 0,
-          "explanation": "Een onderspannen band steunt op zijn randen, wat slijtage aan de randen veroorzaakt.",
+          "explanation": "Te zacht steunt de band op zijn randen.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q11",
-          "question": "U stelt vast dat uw banden versleten zijn in het MIDDEN. Wat is de waarschijnlijke oorzaak?",
+          "question": "Je banden zijn in het midden versleten. Waarschijnlijke oorzaak?",
           "choices": [
-            "De banden zijn onvoldoende opgepompt",
-            "De banden zijn te hard opgepompt",
-            "De banden slijten normaal",
-            "Er is een uitlijningsprobleem"
+            "Te hard opgepompt",
+            "Te weinig opgepompt",
+            "Niets abnormaal"
           ],
-          "correct": 1,
-          "explanation": "Een te hard opgepompte band bolt en steunt vooral in het midden, wat centrale slijtage veroorzaakt.",
+          "correct": 0,
+          "explanation": "Te hard rijdt de band op zijn midden.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q12",
-          "question": "Welk risico loopt u in een bocht met te zachte banden?",
+          "question": "Te zachte banden in een bocht:",
           "choices": [
-            "Instabiliteit in de bocht",
-            "Een betere wegligging",
-            "Een versterkte grip"
+            "De auto wordt onstabiel",
+            "Betere wegligging",
+            "Geen effect"
           ],
           "correct": 0,
-          "explanation": "Een onderspannen band veroorzaakt zijdelingse instabiliteit, vooral merkbaar in bochten.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "I4_Q13",
-          "question": "Met hoeveel verhoogt u de bandenspanning bij een zwaar geladen wagen?",
-          "choices": [
-            "Met 0,2 bar",
-            "Met 0,5 bar",
-            "Met een volle bar"
-          ],
-          "correct": 0,
-          "explanation": "Voor een lange rit of een zware lading, verhoog de spanning lichtjes met 0,2 bar.",
+          "explanation": "De band vervormt en houdt slecht.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q14",
-          "question": "Wat riskeert u aan hoge snelheid met te zachte banden?",
+          "question": "Te zachte banden aan hoge snelheid: risico?",
           "choices": [
-            "Oververhitting en een klapband",
-            "Een traag en geleidelijk leeglopen",
-            "Een betere grip op het wegdek"
+            "Oververhitting en klappen",
+            "Betere grip",
+            "Geen"
           ],
           "correct": 0,
-          "explanation": "Onderspannen banden oververhitten door overmatige vervorming en kunnen barsten bij hoge snelheid.",
+          "explanation": "De band wordt te warm en kan klappen.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q15",
-          "question": "U overweegt spijkerbanden te monteren. Gedurende welke periode van het jaar mag u ze gebruiken?",
+          "question": "Wanneer mag je met spijkerbanden rijden?",
           "choices": [
-            "Het hele jaar",
             "Van 1 november tot 31 maart",
-            "Van 1 oktober tot 30 april",
-            "Van 1 december tot 28 februari"
+            "Het hele jaar",
+            "Alleen als het sneeuwt"
           ],
-          "correct": 1,
-          "explanation": "Spijkerbanden zijn enkel toegelaten van 1 november tot 31 maart.",
+          "correct": 0,
+          "explanation": "Van 1 november tot en met 31 maart.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q16",
-          "question": "U wilt spijkerbanden monteren op uw voertuig. Wat is de maximale toegelaten massa (MTM) om ermee uitgerust te zijn?",
+          "question": "Spijkerbanden: maximale MTM van het voertuig?",
           "choices": [
-            "7,5 ton",
-            "3,5 ton",
-            "2 ton",
-            "5 ton"
+            "3,5 t",
+            "7,5 t",
+            "2 t"
           ],
-          "correct": 1,
-          "explanation": "Spijkerbanden zijn enkel toegelaten op voertuigen met een MTM ≤ 3,5 ton.",
+          "correct": 0,
+          "explanation": "Alleen voor voertuigen tot 3,5 t.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q17",
-          "question": "U rijdt op de autosnelweg met spijkerbanden. Wat is de maximumsnelheid?",
+          "question": "Spijkerbanden op de autosnelweg: maximumsnelheid?",
           "choices": [
-            "120 km/u",
             "90 km/u",
-            "60 km/u",
+            "120 km/u",
             "70 km/u"
           ],
-          "correct": 1,
-          "explanation": "Met spijkerbanden is de maximumsnelheid op de autosnelweg 90 km/u.",
+          "correct": 0,
+          "explanation": "90 km/u op de autosnelweg.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I4_Q18",
-          "question": "U rijdt op een gewone weg met spijkerbanden. Wat is de maximumsnelheid?",
+          "question": "Spijkerbanden op een gewone weg: maximumsnelheid?",
           "choices": [
-            "90 km/u",
             "60 km/u",
-            "50 km/u",
-            "80 km/u"
+            "90 km/u",
+            "50 km/u"
           ],
-          "correct": 1,
-          "explanation": "Met spijkerbanden is de maximumsnelheid op een gewone weg 60 km/u.",
+          "correct": 0,
+          "explanation": "60 km/u op de andere wegen.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I4_Q19",
-          "question": "U vraagt zich af wanneer u winterbanden moet monteren. Onder welke temperatuur is dit aanbevolen?",
+          "question": "Onder welke temperatuur zijn winterbanden aangeraden?",
           "choices": [
-            "0 graden C",
-            "7 graden C",
-            "10 graden C",
-            "-5 graden C"
+            "7 °C",
+            "0 °C",
+            "-5 °C"
           ],
-          "correct": 1,
-          "explanation": "Winterbanden zijn aanbevolen zodra de temperatuur onder 7°C daalt.",
+          "correct": 0,
+          "explanation": "Onder 7 °C wordt een zomerband hard en grijpt minder.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q20",
-          "question": "Op hoeveel wielen zet u idealiter winterbanden?",
+          "question": "Winterbanden: op hoeveel wielen?",
           "choices": [
-            "Op de vier wielen",
-            "Op de twee voorwielen",
-            "Op de twee achterwielen"
+            "Alle vier",
+            "De twee voorwielen",
+            "De twee achterwielen"
           ],
           "correct": 0,
-          "explanation": "Het is ideaal winterbanden op de 4 wielen te monteren voor een betere veiligheid.",
+          "explanation": "Op alle vier, voor het evenwicht.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q21",
-          "question": "Wanneer moet u uw zomerbanden terugzetten?",
+          "question": "Wanneer leg je de zomerbanden terug?",
           "choices": [
-            "Vanaf eind maart",
-            "Begin juni",
-            "In de loop van januari"
+            "Eind maart, begin april",
+            "In juni",
+            "In januari"
           ],
           "correct": 0,
-          "explanation": "Monteer de zomerbanden terug vanaf eind maart en voor mei om voortijdige slijtage van de winterbanden te vermijden.",
+          "explanation": "Als de temperatuur boven 7 °C komt.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q22",
-          "question": "Wanneer mag u sneeuwkettingen gebruiken?",
+          "question": "6 april, sneeuwstorm. Waarmee mag je rijden?",
           "choices": [
-            "Bij sneeuw of ijzel",
-            "De hele winter, meer niet",
-            "Van 1 november tot 31 maart"
+            "Sneeuwkettingen",
+            "Spijkerbanden",
+            "Allebei"
           ],
           "correct": 0,
-          "explanation": "Sneeuwkettingen zijn enkel toegelaten bij effectieve aanwezigheid van sneeuw of ijzel.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "I4_Q23",
-          "question": "Wat is het verschil tussen sneeuwkettingen en spijkerbanden?",
-          "choices": [
-            "Kettingen: sneeuw; spijkers: data",
-            "Spijkers: sneeuw; kettingen: data",
-            "Geen, dezelfde regels gelden"
-          ],
-          "correct": 0,
-          "explanation": "Kettingen: enkel bij sneeuw/ijzel, zonder datumbeperking. Spijkerbanden: van 1/11 tot 31/3 met beperkte snelheden.",
+          "explanation": "Na 31 maart geen spijkers meer. Kettingen: zodra er sneeuw ligt.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q24",
-          "question": "Wat moeten twee banden op dezelfde as gemeen hebben?",
+          "question": "Twee banden op dezelfde as moeten hebben:",
           "choices": [
-            "Zelfde structuur en zelfde maat",
-            "Hetzelfde merk van fabrikant",
-            "Dezelfde bandenspanning"
+            "Dezelfde structuur en afmeting",
+            "Hetzelfde merk",
+            "Dezelfde datum"
           ],
           "correct": 0,
-          "explanation": "Op dezelfde as moeten de banden dezelfde structuur en dezelfde afmeting hebben.",
+          "explanation": "Zelfde type en maat op één as.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q25",
-          "question": "U leest de opschrift \"165/70 R 14 81 T\" op uw band. Wat betekent \"165\"?",
+          "question": "« 165/70 R 14 81 T »: wat betekent 165?",
           "choices": [
-            "De diameter van de velg in mm",
-            "De breedte van de band in mm",
-            "De hoogte van de band",
-            "De laadindex"
+            "De breedte in mm",
+            "De diameter",
+            "De belasting"
           ],
-          "correct": 1,
-          "explanation": "165 = breedte van de band in millimeter.",
+          "correct": 0,
+          "explanation": "165 mm breed.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q26",
-          "question": "Wat betekent de « R » in de markering « 165/70 R 14 81 T »?",
+          "question": "In « 165/70 R 14 81 T », wat betekent R?",
           "choices": [
-            "De radiale structuur",
-            "Een vernieuwde band",
-            "De weerstand van de band"
+            "Radiale structuur",
+            "Coverband",
+            "Versterkt"
           ],
           "correct": 0,
-          "explanation": "R = radiale structuur van de band.",
+          "explanation": "R = radiaal.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q27",
-          "question": "U leest \"165/70 R 14 81 T\" op uw band. \"81\" is een index van wat?",
+          "question": "In « 165/70 R 14 81 T » is 81:",
           "choices": [
-            "Van snelheid",
-            "Van lading",
-            "Van breedte",
-            "Van diameter"
+            "De belastingsindex",
+            "De snelheidsindex",
+            "De breedte"
           ],
-          "correct": 1,
-          "explanation": "81 = laadindex, overeenstemmend met het maximale gewicht dat de band kan dragen.",
+          "correct": 0,
+          "explanation": "81 = maximaal gewicht per band.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q28",
-          "question": "U leest \"165/70 R 14 81 T\" op uw band. \"T\" is een index van wat?",
+          "question": "In « 165/70 R 14 81 T » is T:",
           "choices": [
-            "Van lading",
-            "Van snelheid",
-            "Van temperatuur",
-            "Van grootte"
+            "De snelheidsindex",
+            "De belastingsindex",
+            "De temperatuur"
           ],
-          "correct": 1,
-          "explanation": "T = snelheidsindex, geeft de maximumsnelheid aan waarvoor de band ontworpen is.",
+          "correct": 0,
+          "explanation": "T = maximumsnelheid van de band.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I4_Q29",
-          "question": "Wat betekent de markering « E » op uw band?",
+          "question": "De markering « E » op een band betekent:",
           "choices": [
-            "De Europese normen",
-            "De naam van de fabrikant",
-            "De fabricagedatum"
+            "Conform de Europese normen",
+            "De fabrikant",
+            "De datum"
           ],
           "correct": 0,
-          "explanation": "De E-markering bevestigt dat de band voldoet aan de Europese veiligheidsnormen.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "I4_Q30",
-          "question": "Bij de keuring dragen uw banden geen E-markering. Wat gebeurt er?",
-          "choices": [
-            "Een rood bewijs, 15 dagen geldig",
-            "Een gewone schriftelijke waarschuwing",
-            "Een onmiddellijke zware boete"
-          ],
-          "correct": 0,
-          "explanation": "Zonder E-markering op een voertuig na 2004: rode keuring (15 dagen om te regulariseren).",
+          "explanation": "Band goedgekeurd in Europa.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q31",
-          "question": "U wilt de levensduur van uw banden verlengen. Om de hoeveel km moet u ze verwisselen?",
+          "question": "Om de hoeveel km wissel je de banden?",
           "choices": [
-            "Om de 5 000 km",
-            "Om de 10 000 à 15 000 km",
-            "Om de 50 000 km",
-            "Verwisselen is niet nodig"
+            "10 000 tot 15 000 km",
+            "5 000 km",
+            "50 000 km"
           ],
-          "correct": 1,
-          "explanation": "Verwisseling is aanbevolen om de 10 000 tot 15 000 km om de slijtage gelijk te maken.",
+          "correct": 0,
+          "explanation": "Om de 10 000 tot 15 000 km.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q32",
-          "question": "Hoe wisselt u uw banden van plaats?",
+          "question": "Hoe wissel je de banden?",
           "choices": [
-            "Kruiselings, voor en achter",
-            "Links en rechts onderling",
-            "Voor en achter onderling"
+            "Kruiselings",
+            "Links en rechts",
+            "Alleen vooraan"
           ],
           "correct": 0,
-          "explanation": "De kruiselingse verwisseling: linksvoor ↔ rechtsachter en rechtsvoor ↔ linksachter.",
+          "explanation": "Linksvoor naar rechtsachter, en omgekeerd.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q33",
-          "question": "Wat zijn de rollen van de motorolie?",
+          "question": "Waarvoor dient motorolie?",
           "choices": [
             "Smeren, koelen, beschermen",
-            "De motor smeren, meer niet",
-            "De motor koelen, meer niet"
+            "Alleen koelen",
+            "De remmen voeden"
           ],
           "correct": 0,
-          "explanation": "Motorolie smeert, vermindert oververhitting, verhindert blokkering en beschermt tegen roest.",
+          "explanation": "Ze smeert, koelt en beschermt de motor.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q34",
-          "question": "Wanneer moet u het oliepeil van uw motor nakijken?",
+          "question": "Wanneer controleer je het oliepeil?",
           "choices": [
-            "Koude of stilstaande motor",
-            "Warme motor na een rit",
-            "Al rijdend op de autosnelweg"
+            "Koude motor, auto op vlakke grond",
+            "Warme motor",
+            "Tijdens het rijden"
           ],
           "correct": 0,
-          "explanation": "Controleer de olie bij koude motor en op vlakke ondergrond voor een precieze meting.",
+          "explanation": "Koude motor, op vlakke grond.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q35",
-          "question": "U bereidt een lange rit voor. Op welk niveau moet de motorolie zich bevinden?",
+          "question": "Voor een lange rit moet het oliepeil zijn:",
           "choices": [
+            "Dicht bij het maximum",
             "Op het minimum",
-            "Dicht bij het maximum (+)",
-            "In het midden tussen min en max",
-            "Dit heeft geen belang"
+            "Maakt niet uit"
           ],
-          "correct": 1,
-          "explanation": "Voor een lange rit moet het oliepeil dicht bij het + liggen om elk risico te vermijden.",
+          "correct": 0,
+          "explanation": "Dicht bij het maximumstreepje.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q36",
-          "question": "Waarom moet de wagen vlak staan om het oliepeil te meten?",
+          "question": "Waarom zet je de auto vlak om de olie te meten?",
           "choices": [
-            "Voor een juiste meting",
-            "Gewoon voor het gemak",
-            "Om veiligheidsredenen"
+            "Anders klopt de meting niet",
+            "Voor het comfort",
+            "Voor de veiligheid"
           ],
           "correct": 0,
-          "explanation": "Op een helling concentreert de olie zich aan één kant en vervalst de aflezing van de peilstok.",
+          "explanation": "Op een helling loopt de olie scheef in het carter.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q37",
-          "question": "Uw oliepeil staat te laag. Wat riskeert u?",
+          "question": "Het oliecontrolelampje gaat branden. Wat doe je?",
           "choices": [
-            "Oververhitting en motorschade",
-            "Niets ernstigs op korte termijn",
-            "Betere prestaties van de motor"
+            "Ik stop zo snel mogelijk",
+            "Ik rij rustig verder",
+            "Ik rij sneller"
           ],
           "correct": 0,
-          "explanation": "Een te laag oliepeil veroorzaakt oververhitting, versnelde slijtage en risico op motorschade.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "I4_Q38",
-          "question": "Waar bevindt zich de oliepeilstok van uw voertuig?",
-          "choices": [
-            "Onder de motorkap",
-            "Op het dashboard",
-            "In de koffer, bij het reservewiel"
-          ],
-          "correct": 0,
-          "explanation": "De oliepeilstok bevindt zich onder de motorkap in het motorcompartiment.",
+          "explanation": "Zonder olie kan de motor kapotgaan.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q39",
-          "question": "U onderhoudt regelmatig uw remmen. Wat moet u controleren?",
+          "question": "Wat controleer je voor het onderhoud van de remmen?",
           "choices": [
+            "Het remvloeistofpeil",
             "De kleur van de schijven",
-            "Het niveau van de remvloeistof",
-            "Het merk van de remblokjes",
-            "Het aantal uitgevoerde remmingen"
+            "Het merk van de remblokken"
           ],
-          "correct": 1,
-          "explanation": "U moet regelmatig het niveau van de remvloeistof controleren.",
+          "correct": 0,
+          "explanation": "De remvloeistof moet op peil zijn.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q40",
-          "question": "U hoort een scherp gefluit bij het remmen. Wat betekent dat?",
+          "question": "Een schel gefluit bij het remmen betekent:",
           "choices": [
-            "Uw remblokken zijn versleten",
-            "Uw remmen zijn in goede staat",
-            "Uw voorbanden zijn versleten"
+            "Versleten remblokken",
+            "Remmen in goede staat",
+            "Versleten banden"
           ],
           "correct": 0,
-          "explanation": "De remblokjes piepen opzettelijk om aan te geven dat ze vervangen moeten worden.",
+          "explanation": "Versleten remblokken fluiten om je te waarschuwen.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q41",
-          "question": "Wanneer moet u remmen bij het naderen van een bocht?",
+          "question": "Wanneer rem je voor een bocht?",
           "choices": [
-            "Voor u de bocht inrijdt",
-            "In de bocht, zachtjes",
-            "Na de bocht, bij het uitrijden"
+            "Voor je erin rijdt",
+            "In de bocht",
+            "Bij het uitrijden"
           ],
           "correct": 0,
-          "explanation": "U moet vertragen en terugschakelen VOOR u de bocht inrijdt.",
+          "explanation": "Vertraag voor de bocht.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q42",
-          "question": "U bevindt zich in een bocht. Mag u versnellen?",
+          "question": "Mag je in de bocht gas geven?",
           "choices": [
-            "Ja, licht om te stabiliseren",
-            "Ja, stevig om er snel uit te zijn",
-            "Nee, in geen enkel geval"
+            "Licht, om te stabiliseren",
+            "Flink",
+            "Nooit"
           ],
           "correct": 0,
-          "explanation": "Men kan lichtjes versnellen in de bocht eens de invoersnelheid goed aangepast is.",
+          "explanation": "Licht gas stabiliseert de auto.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q43",
-          "question": "Hoe moet u een bocht naar rechts nemen?",
+          "question": "Hoe neem je een bocht naar rechts?",
           "choices": [
-            "Kort, dicht bij rechts",
-            "Ruim, naar links toe",
-            "In het midden van de weg"
+            "Kort, dicht bij de rechterrand",
+            "Breed",
+            "In het midden"
           ],
           "correct": 0,
-          "explanation": "Een bocht naar rechts wordt kort genomen.",
+          "explanation": "Naar rechts: kort.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q44",
-          "question": "Hoe moet u een bocht naar links nemen?",
+          "question": "Hoe neem je een bocht naar links?",
           "choices": [
-            "Ruim, zonder ze af te snijden",
-            "Zo kort mogelijk",
-            "Door af te snijden voor tijdwinst"
+            "Breed, zonder af te snijden",
+            "Afsnijdend",
+            "Zo kort mogelijk"
           ],
           "correct": 0,
-          "explanation": "Een bocht naar links wordt breed genomen om niet te snijden en op zijn rijstrook te blijven.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "I4_Q45",
-          "question": "Wat is de juiste werkwijze om af te slaan op een kruispunt?",
-          "choices": [
-            "Spiegels, pinker, vertragen",
-            "Pinker en meteen afslaan",
-            "Afslaan en dan pas pinken"
-          ],
-          "correct": 0,
-          "explanation": "De procedure: achteruitkijkspiegels > dode hoek indien nodig > richtingaanwijzer > vertragen > afslaan.",
+          "explanation": "Naar links: breed, zonder af te snijden.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q46",
-          "question": "Waarom is het gevaarlijk een bocht naar links af te snijden?",
+          "question": "Waarom snijd je een bocht naar links niet af?",
           "choices": [
-            "U kruist het tegemoetkomend verkeer",
-            "Het slijt de banden sneller",
-            "Het is uiteindelijk trager"
+            "Je komt op de rijstrook van de tegenliggers",
+            "De banden slijten",
+            "Het is trager"
           ],
           "correct": 0,
-          "explanation": "Een bocht naar links snijden doet u overlopen in de rijstrook van voertuigen uit tegengestelde richting.",
+          "explanation": "Je riskeert een tegenligger te raken.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q47",
-          "question": "Wat doet het ABS precies bij een noodstop?",
+          "question": "Wat doet ABS bij een noodstop?",
           "choices": [
-            "Het belet de wielen te blokkeren",
-            "Het blokkeert de wielen om te stoppen",
-            "Het versnelt het remmen zelf"
+            "Het voorkomt dat de wielen blokkeren",
+            "Het blokkeert de wielen",
+            "Het remt in jouw plaats"
           ],
           "correct": 0,
-          "explanation": "Het ABS verhindert het blokkeren van de wielen, waardoor de directionele controle van het voertuig behouden blijft.",
+          "explanation": "Je kan tegelijk remmen en sturen.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q48",
-          "question": "Laat het ABS u korter remmen?",
+          "question": "Maakt ABS het remmen altijd korter?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, het houdt vooral de controle",
+            "Ja, altijd"
           ],
-          "correct": 1,
-          "explanation": "Het ABS vermindert niet noodzakelijk de remafstand, maar behoudt de controle over het voertuig.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "I4_Q49",
-          "question": "Is de remafstand met ABS op droog wegdek korter dan zonder ABS?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Op droge ondergrond kan het ABS een iets langere afstand geven dan een optimale remming zonder ABS.",
+          "correct": 0,
+          "explanation": "Het doel: de auto nog kunnen sturen.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q50",
-          "question": "Is de remafstand met ABS langer op nat dan op droog wegdek?",
+          "question": "Is de remafstand met ABS langer op een natte weg?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Op natte ondergrond is de remafstand, zelfs met ABS, langer dan op droge ondergrond.",
+          "explanation": "ABS verandert niets aan de grip van de weg.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q51",
-          "question": "U start uw auto en het ABS-lampje blijft branden op het dashboard. Wat moet u doen?",
+          "question": "Het ABS-lampje blijft branden. Wat doe je?",
           "choices": [
-            "Niets, dat is normaal",
-            "Naar de garage gaan",
-            "Sneller rijden",
-            "De motor uitschakelen en opnieuw starten"
+            "Ik ga naar de garage",
+            "Niets, het is normaal",
+            "Ik rij sneller"
           ],
-          "correct": 1,
-          "explanation": "Een ABS-lampje dat blijft branden wijst op een defect: ga naar de garage.",
+          "correct": 0,
+          "explanation": "Het ABS werkt misschien niet meer.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q52",
-          "question": "Wat doet het ESP-systeem van uw wagen?",
+          "question": "Wat doet ESP?",
           "choices": [
-            "Het remt wielen afzonderlijk af",
-            "Het blokkeert alle wielen samen",
-            "Het houdt uw afstand aan"
+            "Het remt bepaalde wielen om slippen te vermijden",
+            "Het blokkeert alle wielen",
+            "Het houdt je afstand"
           ],
           "correct": 0,
-          "explanation": "Het ESP werkt selectief in op een of meerdere wielen om de koers te corrigeren en slippen te vermijden.",
+          "explanation": "Het remt wiel per wiel om de auto op koers te houden.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q53",
-          "question": "In welke situaties komt het ESP tussen?",
+          "question": "Wanneer grijpt ESP in?",
           "choices": [
-            "Uitwijken, bocht, glad wegdek",
+            "Bij uitwijken of in een gladde bocht",
             "Rechtdoor op de autosnelweg",
-            "Bij achteruitrijden en parkeren"
+            "Bij achteruitrijden"
           ],
           "correct": 0,
-          "explanation": "Het ESP grijpt in bij bruuske manoeuvres, slecht berekende bochten of een gladde rijbaan.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "I4_Q54",
-          "question": "Het ESP geldt als de grootste veiligheidswinst sinds wat?",
-          "choices": [
-            "De gordel en de airbag",
-            "De snelheidsbegrenzer",
-            "De ledkoplampen"
-          ],
-          "correct": 0,
-          "explanation": "Het ESP is de belangrijkste bijdrage aan de veiligheid sinds de veiligheidsgordel en de airbag.",
+          "explanation": "Als de auto begint te slippen.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q55",
-          "question": "U verliest de grip vooraan. In welke richting gaat u de bocht uit?",
+          "question": "De voorkant glijdt weg in een bocht. Waar gaat de auto heen?",
           "choices": [
             "Naar de buitenkant van de bocht",
-            "Naar de binnenkant van de bocht",
-            "Rechtdoor, zonder af te wijken"
+            "Naar de binnenkant",
+            "Ze draait rond"
           ],
           "correct": 0,
-          "explanation": "Bij onderstuur (slip van de vooras) rijdt het voertuig naar de buitenkant van de bocht.",
+          "explanation": "Onderstuur: de auto gaat rechtdoor, naar buiten.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q56",
-          "question": "U verliest de grip van de voorkant van uw voertuig in een bocht. Hoe noemt men dit verschijnsel?",
+          "question": "De voorkant van de auto glijdt weg in een bocht. Dat is:",
           "choices": [
-            "Overstuur",
             "Onderstuur",
-            "Slippen",
-            "Tolbeweging"
+            "Overstuur",
+            "Aquaplaning"
           ],
-          "correct": 1,
-          "explanation": "Een slip van de vooras (voorwielen verliezen grip) = onderstuur.",
+          "correct": 0,
+          "explanation": "Voorkant die wegglijdt = onderstuur.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q57",
-          "question": "U bevindt zich in onderstuur. Moet u stevig remmen?",
+          "question": "Onderstuur: rem je hard?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Hard remmen bij onderstuur blokkeert de voorwielen, wat het gripverlies verergert.",
+          "correct": 0,
+          "explanation": "Hard remmen laat de voorkant nog meer glijden.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q58",
-          "question": "De achterkant van uw voertuig slipt in een bocht. Hoe noemt men dit verschijnsel?",
+          "question": "De achterkant van de auto glijdt weg in een bocht. Dat is:",
           "choices": [
-            "Onderstuur",
             "Overstuur",
-            "Aquaplaning",
-            "Zijdelingse slip"
+            "Onderstuur",
+            "Aquaplaning"
           ],
-          "correct": 1,
-          "explanation": "Een slip van de achteras (achterkant die de voorkant wil inhalen) = overstuur.",
+          "correct": 0,
+          "explanation": "Achterkant die wegglijdt = overstuur.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q59",
-          "question": "Uw wagen overstuurt. Wat doet u, in welke volgorde?",
+          "question": "De auto overstuurt. Wat doe je?",
           "choices": [
-            "Kijken, tegensturen, ontkoppelen",
-            "Hard remmen en dan versnellen",
-            "Versnellen en naar buiten sturen"
+            "Ik kijk waar ik heen wil en stuur tegen",
+            "Ik rem vol",
+            "Ik geef flink gas"
           ],
           "correct": 0,
-          "explanation": "Bij overstuur: 1) Kijken in de gewenste richting, 2) Contra-sturen, 3) Koppeling, 4) Gaspedaal loslaten.",
+          "explanation": "Kijk naar de uitgang, stuur tegen en ontkoppel.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q60",
-          "question": "Wat betekent « tegensturen » bij een slip?",
+          "question": "Tegensturen is het stuur draaien:",
           "choices": [
-            "Sturen in de richting van de slip",
-            "Sturen tegen de slip in",
-            "Het stuur volledig loslaten"
+            "Naar de kant waar de achterkant heen gaat",
+            "Naar de andere kant",
+            "Helemaal niet"
           ],
           "correct": 0,
-          "explanation": "Contra-sturen = het stuur draaien in de richting van de achterslip om de koers te corrigeren.",
+          "explanation": "De achterkant gaat naar rechts: je stuurt naar rechts.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q61",
-          "question": "Waarom kijken naar waar u heen wil tijdens een slip?",
+          "question": "Waar kijk je tijdens het slippen?",
           "choices": [
-            "Men gaat waar men kijkt",
-            "Om de andere wagens te zien",
-            "Uit gewoonte van de rijschool"
+            "Waar je heen wilt",
+            "Naar de hindernis",
+            "Naar het stuur"
           ],
           "correct": 0,
-          "explanation": "De blik bepaalt de richting van het stuur: kijken waar u naartoe wilt helpt u daar te geraken.",
+          "explanation": "Je gaat waar je kijkt.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q62",
-          "question": "U remt en de vier wielen blokkeren. Wat gebeurt er?",
+          "question": "Zonder ABS blokkeren de vier wielen bij het remmen. Gevolg?",
           "choices": [
-            "Het voertuig gaat slippen",
-            "Enkel de voorwielen blokkeren",
-            "Geen enkel wiel blokkeert"
+            "Je kan niet meer sturen",
+            "Je remt beter",
+            "Niets"
           ],
           "correct": 0,
-          "explanation": "Bij een slip op 4 wielen blokkeren alle wielen tegelijk.",
+          "explanation": "Geblokkeerde wielen: de auto glijdt rechtdoor.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q63",
-          "question": "Uw wagen met ABS begint te slippen. Wat doet u met het rempedaal?",
+          "question": "Hoe rem je in nood met ABS?",
           "choices": [
-            "Nog harder induwen",
-            "Geleidelijk lossen",
-            "Pompend indrukken"
+            "Ik trap het pedaal volledig in en hou het",
+            "Ik pomp",
+            "Ik druk zacht"
           ],
           "correct": 0,
-          "explanation": "Om het ABS te activeren bij een slip, moet u nog harder op het rempedaal duwen.",
+          "explanation": "Volledig, zonder los te laten: ABS doet de rest.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q65",
-          "question": "Wat is de rol van de koelvloeistof?",
+          "question": "De koelvloeistof dient om:",
           "choices": [
-            "Temperatuur houden, vorst beletten",
-            "De motoronderdelen smeren",
-            "Het remcircuit voeden"
+            "Warmte af te voeren en tegen vorst te beschermen",
+            "Te smeren",
+            "Te remmen"
           ],
           "correct": 0,
-          "explanation": "De koelvloeistof houdt de motortemperatuur constant, voorkomt oververhitting en bevriezing.",
-          "theoryCardIndex": 7
-        },
-        {
-          "id": "I4_Q66",
-          "question": "Bij welke temperatuur kookt de koelvloeistof?",
-          "choices": [
-            "Boven de 100 °C",
-            "Rond de 80 °C",
-            "Rond de 50 °C"
-          ],
-          "correct": 0,
-          "explanation": "De koelvloeistof kookt boven de 100°C.",
-          "theoryCardIndex": 7
-        },
-        {
-          "id": "I4_Q67",
-          "question": "U rijdt met een benzinewagen op een horizontale weg. Bij welk toerental moet u naar de hogere versnelling schakelen?",
-          "choices": [
-            "1500 toeren/minuut",
-            "2500 toeren/minuut",
-            "3500 toeren/minuut",
-            "1000 toeren/minuut"
-          ],
-          "correct": 1,
-          "explanation": "Voor een benzinemotor bij normaal rijden: schakel bij 2500 toeren/min.",
-          "theoryCardIndex": 7
-        },
-        {
-          "id": "I4_Q68",
-          "question": "U rijdt met een dieselwagen op een horizontale weg. Bij welk toerental moet u naar de hogere versnelling schakelen?",
-          "choices": [
-            "2500 toeren/minuut",
-            "2000 toeren/minuut",
-            "1000 toeren/minuut",
-            "3000 toeren/minuut"
-          ],
-          "correct": 1,
-          "explanation": "Voor een dieselmotor bij normaal rijden: schakel bij 2000 toeren/min.",
+          "explanation": "Met de radiator voert ze de warmte van de motor af.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q69",
-          "question": "Waar zet u uw linkervoet na het schakelen?",
+          "question": "Waar zet je je linkervoet na het schakelen?",
           "choices": [
-            "Op de voorziene steun ernaast",
-            "Op het koppelingspedaal",
-            "Onder het koppelingspedaal"
+            "Links van de koppeling",
+            "Op de koppeling",
+            "Onder de koppeling"
           ],
           "correct": 0,
-          "explanation": "Na het schakelen wordt de linkervoet op de zijdelingse voetsteun geplaatst, niet op het pedaal.",
+          "explanation": "Op de voetsteun, links van het pedaal.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q70",
-          "question": "Waarom uw voet niet op het koppelingspedaal laten?",
+          "question": "Waarom laat je je voet niet op de koppeling?",
           "choices": [
-            "Het slijt de koppeling",
-            "Het is een oncomfortabele houding",
-            "Het slijt de banden sneller"
+            "Ze slijt",
+            "Het is oncomfortabel",
+            "De banden slijten"
           ],
           "correct": 0,
-          "explanation": "De voet op de koppeling veroorzaakt slippen en, bij een ongeval, risico op een enkelbreuk.",
+          "explanation": "De koppeling slipt en slijt.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q71",
-          "question": "Wat doet u voor u een steile helling op- of afrijdt?",
+          "question": "Wat doe je voor een steile afdaling?",
           "choices": [
-            "Een versnelling terugschakelen",
-            "Een versnelling opschakelen",
-            "In vrijloop blijven"
+            "Ik schakel terug",
+            "Ik schakel op",
+            "Ik zet hem in neutraal"
           ],
           "correct": 0,
-          "explanation": "Een versnelling terugschakelen voor een steile helling (bergop of bergaf) garandeert controle.",
+          "explanation": "De motorrem ontlast de remmen.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q72",
-          "question": "Mag u parkeren op een noodstopstrook in de bergen?",
+          "question": "Waarvoor dient een noodstrook in de bergen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Om te stoppen als de remmen het begeven",
+            "Om te parkeren",
+            "Om in te halen"
           ],
-          "correct": 1,
-          "explanation": "De pechstrook is voorbehouden voor voertuigen die hun remmen verloren hebben. Parkeren is er verboden.",
+          "correct": 0,
+          "explanation": "Ze is voor voertuigen zonder remmen: parkeer er nooit.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q73",
-          "question": "Mag u uw telefoon in de hand houden om een bericht te lezen tijdens het rijden?",
+          "question": "Mag je al rijdend een bericht lezen met je gsm in de hand?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, snel"
           ],
-          "correct": 1,
-          "explanation": "Een mobiel toestel met scherm gebruiken, vasthouden of manipuleren is verboden tijdens het rijden.",
+          "correct": 0,
+          "explanation": "Een gsm vasthouden of bedienen tijdens het rijden is verboden.",
           "theoryCardIndex": 8
         },
         {
           "id": "I4_Q74",
-          "question": "Mag u uw smartphone als gps gebruiken tijdens het rijden?",
+          "question": "Mag je je smartphone als gps gebruiken?",
           "choices": [
             "Ja, in een vaste houder",
-            "Ja, zelfs in de hand",
-            "Nee, op geen enkele manier"
+            "Ja, in de hand",
+            "Nee, nooit"
           ],
           "correct": 0,
-          "explanation": "Een smartphone mag als gps dienen als hij in een geschikte houder bevestigd is.",
+          "explanation": "In een vaste houder, zonder te bedienen tijdens het rijden.",
           "theoryCardIndex": 8
         },
         {
           "id": "I4_Q75",
-          "question": "U staat stil aan een rood licht. Mag u uw telefoon in de hand nemen?",
+          "question": "Stilstaand voor het rode licht: mag je je gsm in de hand nemen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Een rood licht wordt niet beschouwd als een arrêt in wettelijke zin: het gebruik blijft verboden.",
+          "correct": 0,
+          "explanation": "Voor het rode licht neem je nog altijd deel aan het verkeer.",
           "theoryCardIndex": 8,
           "severe": true
         },
         {
           "id": "I4_Q77",
-          "question": "In welke situatie mag u uw telefoon in de hand gebruiken?",
+          "question": "Wanneer mag je je gsm in de hand gebruiken?",
           "choices": [
-            "Wanneer u geparkeerd staat",
-            "Aan het rode licht",
+            "Auto geparkeerd",
+            "Voor het rode licht",
             "In de file"
           ],
           "correct": 0,
-          "explanation": "De telefoon in de hand is enkel toegelaten wanneer u werkelijk aan de arrêt of geparkeerd bent.",
+          "explanation": "Alleen bij stilstaan of parkeren, buiten het verkeer.",
           "theoryCardIndex": 8,
           "severe": true
         },
         {
           "id": "I4_Q78",
-          "question": "Waarom zijn elektronische toestellen gevaarlijk achter het stuur?",
+          "question": "Waarom is een gsm gevaarlijk achter het stuur?",
           "choices": [
-            "Ze leiden uw aandacht af",
-            "Ze legen de boordbatterij",
-            "Ze beschadigen uw voertuig"
+            "Hij leidt je aandacht af",
+            "Hij maakt de batterij leeg",
+            "Hij beschadigt de auto"
           ],
           "correct": 0,
-          "explanation": "Elektronische toestellen leiden de bestuurder af, wat het ongevalsrisico verhoogt.",
+          "explanation": "Enkele seconden niet naar de weg kijken volstaat voor een ongeval.",
           "theoryCardIndex": 8
         }
       ]

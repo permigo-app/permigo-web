@@ -1977,26 +1977,26 @@
         },
         {
           "id": "I3_Q7",
-          "question": "Essence : à quel régime passez-vous la vitesse supérieure ?",
+          "question": "Essence : vers quel régime passez-vous la vitesse supérieure ?",
           "choices": [
-            "2000 à 2500 tr/min",
-            "1000 à 1500 tr/min",
-            "3000 à 4000 tr/min"
+            "Vers 2500 tr/min",
+            "Vers 1500 tr/min",
+            "Vers 4000 tr/min"
           ],
           "correct": 0,
-          "explanation": "Essence : entre 2000 et 2500 tours.",
+          "explanation": "Moteur essence : vers 2500 tours.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q8",
-          "question": "Diesel : à quel régime passez-vous la vitesse supérieure ?",
+          "question": "Diesel : vers quel régime passez-vous la vitesse supérieure ?",
           "choices": [
-            "1500 à 2000 tr/min",
-            "2000 à 2500 tr/min",
-            "3000 à 3500 tr/min"
+            "Vers 2000 tr/min",
+            "Vers 3000 tr/min",
+            "Vers 1000 tr/min"
           ],
           "correct": 0,
-          "explanation": "Diesel : entre 1500 et 2000 tours.",
+          "explanation": "Moteur diesel : vers 2000 tours.",
           "theoryCardIndex": 1
         },
         {
@@ -2703,929 +2703,780 @@
       "questions": [
         {
           "id": "I4_Q1",
-          "question": "Quels sont les effets de pneus usés sur votre conduite ?",
+          "question": "Avec des pneus usés, votre distance de freinage est :",
           "choices": [
-            "Freinage plus long, tenue dégradée",
-            "Aucun effet notable au volant",
-            "Une meilleure adhérence à sec"
+            "Plus longue",
+            "Plus courte",
+            "La même"
           ],
           "correct": 0,
-          "explanation": "Des pneus usés allongent la distance de freinage, augmentent la consommation et dégradent la tenue de route.",
+          "explanation": "Pneus usés : moins d'adhérence, freinage plus long.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q2",
-          "question": "Vous vérifiez vos pneus. Quelle est la profondeur minimale légale des rainures principales ?",
+          "question": "Profondeur minimale légale des rainures ?",
           "choices": [
-            "1 mm",
             "1,6 mm",
-            "2 mm",
+            "1 mm",
             "3 mm"
           ],
-          "correct": 1,
-          "explanation": "Le minimum légal est de 1,6 mm sur les ¾ de la bande de roulement.",
+          "correct": 0,
+          "explanation": "1,6 mm minimum.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q3",
-          "question": "À partir de quelle profondeur de rainure le risque d'aquaplaning existe-t-il ?",
+          "question": "Sous quelle profondeur le risque d'aquaplaning augmente-t-il ?",
           "choices": [
-            "Dès moins de 2 mm",
-            "Dès moins de 1 mm",
-            "Dès moins de 3 mm"
+            "2 mm",
+            "1 mm",
+            "5 mm"
           ],
           "correct": 0,
-          "explanation": "Le risque d'aquaplaning est déjà présent sous 2 mm, soit avant d'atteindre la limite légale de 1,6 mm.",
+          "explanation": "Sous 2 mm, l'eau s'évacue mal.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q4",
-          "question": "Vos pneus ont exactement 1,6 mm de rainure. Est-ce suffisant pour rouler en sécurité ?",
+          "question": "Vos pneus ont 1,8 mm de profil. Sont-ils encore légaux ?",
           "choices": [
-            "Oui",
+            "Oui, mais changez-les bientôt",
             "Non"
           ],
-          "correct": 1,
-          "explanation": "Le risque d'aquaplaning commence sous 2 mm : il faut remplacer les pneus avant d'atteindre la limite légale de 1,6 mm.",
+          "correct": 0,
+          "explanation": "Plus de 1,6 mm : légal. Mais sous 2 mm, l'aquaplaning guette.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q5",
-          "question": "Que signifie la mention « TWI » sur le flanc de votre pneu ?",
+          "question": "« TWI » sur le flanc du pneu indique :",
           "choices": [
-            "Les indicateurs d'usure",
-            "La marque du fabricant",
+            "Les témoins d'usure",
+            "La marque",
             "L'indice de vitesse"
           ],
           "correct": 0,
-          "explanation": "TWI (Tread Wear Indicator) indique l'emplacement des témoins d'usure dans les rainures.",
+          "explanation": "Il montre où se trouvent les témoins d'usure.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q6",
-          "question": "Vos pneus sont usés et vous envisagez de recreuser les rainures vous-même. Est-ce autorisé ?",
+          "question": "Pouvez-vous regraver vos pneus usés ?",
           "choices": [
-            "Oui, c'est économique",
-            "Non, c'est interdit",
-            "Oui, chez un professionnel",
-            "Cela dépend du type de pneu"
+            "Non",
+            "Oui, chez un garagiste"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit de recreuser les rainures des pneus usés.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "I4_Q7",
-          "question": "Pouvez-vous faire rechaper un pneu usé ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Le rechapage des pneus usés est interdit.",
+          "correct": 0,
+          "explanation": "Regraver les rainures est interdit.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q8",
-          "question": "Quand devez-vous vérifier la pression de vos pneus ?",
+          "question": "Quand vérifiez-vous la pression des pneus ?",
           "choices": [
-            "Quand les pneus sont froids",
-            "Après un long trajet chaud",
-            "Après au moins cent kilomètres"
+            "Pneus froids",
+            "Après un long trajet",
+            "En roulant"
           ],
           "correct": 0,
-          "explanation": "La pression doit être vérifiée à froid (moins de 5 km parcourus) pour une mesure correcte.",
+          "explanation": "À froid : la chaleur fausse la mesure.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q9",
-          "question": "Pourquoi vérifier la pression des pneus à froid ?",
+          "question": "Pourquoi mesurer la pression à froid ?",
           "choices": [
-            "La chaleur modifie la pression",
-            "C'est simplement plus pratique",
-            "Pour mieux lire le manomètre"
+            "La chaleur fait monter la pression",
+            "C'est plus pratique",
+            "Le manomètre est plus lisible"
           ],
           "correct": 0,
-          "explanation": "La chaleur créée par le frottement gonfle le pneu : la mesure à chaud serait inexacte.",
+          "explanation": "Pneus chauds = pression faussement élevée.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q10",
-          "question": "Vos pneus sont usés sur les bords. Quelle en est la cause probable ?",
+          "question": "Vos pneus sont usés sur les bords. Cause probable ?",
           "choices": [
-            "Ils sont trop peu gonflés",
-            "Ils sont trop gonflés",
-            "Un problème de direction"
+            "Pas assez gonflés",
+            "Trop gonflés",
+            "Rien d'anormal"
           ],
           "correct": 0,
-          "explanation": "Un pneu sous-gonflé s'appuie sur ses bords, ce qui provoque une usure en bords.",
+          "explanation": "Sous-gonflé, le pneu s'appuie sur ses bords.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q11",
-          "question": "Vous constatez que vos pneus sont usés au CENTRE. Quelle en est la cause probable ?",
+          "question": "Vos pneus sont usés au centre. Cause probable ?",
           "choices": [
-            "Les pneus sont trop peu gonflés",
-            "Les pneus sont trop gonflés",
-            "Les pneus s'usent normalement",
-            "Il y a un problème d'alignement"
+            "Trop gonflés",
+            "Pas assez gonflés",
+            "Rien d'anormal"
           ],
-          "correct": 1,
-          "explanation": "Un pneu sur-gonflé bombé s'appuie surtout au centre, ce qui provoque une usure centrale.",
+          "correct": 0,
+          "explanation": "Trop gonflé, le pneu roule sur son centre.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q12",
-          "question": "Quel risque courez-vous en virage avec des pneus sous-gonflés ?",
+          "question": "Pneus sous-gonflés en virage :",
           "choices": [
-            "Une instabilité en virage",
-            "Une meilleure tenue de route",
-            "Une adhérence renforcée"
+            "La voiture devient instable",
+            "Meilleure tenue",
+            "Aucun effet"
           ],
           "correct": 0,
-          "explanation": "Un pneu sous-gonflé provoque une instabilité latérale, particulièrement sensible en virage.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "I4_Q13",
-          "question": "De combien augmenter la pression des pneus pour une voiture chargée ?",
-          "choices": [
-            "De 0,2 bar",
-            "De 0,5 bar",
-            "D'un bar entier"
-          ],
-          "correct": 0,
-          "explanation": "Pour un long trajet ou une charge lourde, augmenter légèrement la pression de 0,2 bar.",
+          "explanation": "Le pneu se déforme et tient mal.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q14",
-          "question": "Que risquez-vous à grande vitesse avec des pneus sous-gonflés ?",
+          "question": "Pneus sous-gonflés à grande vitesse : risque ?",
           "choices": [
-            "Une surchauffe et un éclatement",
-            "Un dégonflage lent et progressif",
-            "Une meilleure adhérence au sol"
+            "Surchauffe et éclatement",
+            "Meilleure adhérence",
+            "Aucun"
           ],
           "correct": 0,
-          "explanation": "Des pneus sous-gonflés surchauffent sous l'effet de la flexion excessive et peuvent éclater à grande vitesse.",
+          "explanation": "Le pneu chauffe trop et peut éclater.",
           "theoryCardIndex": 0
         },
         {
           "id": "I4_Q15",
-          "question": "Vous envisagez de monter des pneus cloutés. Pendant quelle période de l'année pouvez-vous les utiliser ?",
+          "question": "Quand pouvez-vous rouler avec des pneus cloutés ?",
           "choices": [
-            "Toute l'année",
             "Du 1er novembre au 31 mars",
-            "Du 1er octobre au 30 avril",
-            "Du 1er décembre au 28 février"
+            "Toute l'année",
+            "Seulement s'il neige"
           ],
-          "correct": 1,
-          "explanation": "Les pneus cloutés sont autorisés du 1er novembre au 31 mars uniquement.",
+          "correct": 0,
+          "explanation": "Du 1er novembre au 31 mars compris.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q16",
-          "question": "Vous souhaitez monter des pneus cloutés sur votre véhicule. Quelle est la masse maximale autorisée (MMA) pour en être équipé ?",
+          "question": "Pneus cloutés : MMA maximale du véhicule ?",
           "choices": [
-            "7,5 tonnes",
-            "3,5 tonnes",
-            "2 tonnes",
-            "5 tonnes"
+            "3,5 t",
+            "7,5 t",
+            "2 t"
           ],
-          "correct": 1,
-          "explanation": "Les pneus cloutés ne sont autorisés que sur des véhicules avec une MMA ≤ 3,5 tonnes.",
+          "correct": 0,
+          "explanation": "Seulement pour les véhicules de 3,5 t maximum.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q17",
-          "question": "Vous roulez sur l'autoroute avec des pneus cloutés. Quelle est la vitesse maximale autorisée ?",
+          "question": "Pneus cloutés sur autoroute : vitesse maximale ?",
           "choices": [
-            "120 km/h",
             "90 km/h",
-            "60 km/h",
+            "120 km/h",
             "70 km/h"
           ],
-          "correct": 1,
-          "explanation": "Avec des pneus cloutés, la vitesse maximale sur autoroute est de 90 km/h.",
+          "correct": 0,
+          "explanation": "90 km/h sur autoroute.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I4_Q18",
-          "question": "Vous roulez sur une route ordinaire avec des pneus cloutés. Quelle est la vitesse maximale autorisée ?",
+          "question": "Pneus cloutés sur route ordinaire : vitesse maximale ?",
           "choices": [
-            "90 km/h",
             "60 km/h",
-            "50 km/h",
-            "80 km/h"
+            "90 km/h",
+            "50 km/h"
           ],
-          "correct": 1,
-          "explanation": "Avec des pneus cloutés, la vitesse maximale sur route ordinaire est de 60 km/h.",
+          "correct": 0,
+          "explanation": "60 km/h sur les autres routes.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I4_Q19",
-          "question": "Vous vous demandez quand monter des pneus hiver. En dessous de quelle température est-ce conseillé ?",
+          "question": "Sous quelle température les pneus hiver sont-ils conseillés ?",
           "choices": [
-            "0 degres C",
-            "7 degres C",
-            "10 degres C",
-            "-5 degres C"
+            "7 °C",
+            "0 °C",
+            "-5 °C"
           ],
-          "correct": 1,
-          "explanation": "Les pneus hiver sont conseillés dès que la température descend sous 7°C.",
+          "correct": 0,
+          "explanation": "Sous 7 °C, le pneu été durcit et accroche moins.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q20",
-          "question": "Sur combien de roues faut-il idéalement monter les pneus hiver ?",
+          "question": "Pneus hiver : sur combien de roues ?",
           "choices": [
-            "Sur les quatre roues",
-            "Sur les deux avant",
-            "Sur les deux arrière"
+            "Les quatre",
+            "Les deux avant",
+            "Les deux arrière"
           ],
           "correct": 0,
-          "explanation": "Il est idéal de monter les pneus hiver sur les 4 roues pour une meilleure sécurité.",
+          "explanation": "Sur les quatre roues, pour garder l'équilibre.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q21",
-          "question": "Quand devez-vous remonter vos pneus été ?",
+          "question": "Quand remettez-vous les pneus été ?",
           "choices": [
-            "Dès la fin du mois de mars",
-            "Au début du mois de juin",
-            "Au cours du mois de janvier"
+            "Fin mars, début avril",
+            "En juin",
+            "En janvier"
           ],
           "correct": 0,
-          "explanation": "Remettre les pneus été dès fin mars et avant mai pour éviter l'usure accélérée des pneus hiver.",
+          "explanation": "Quand les températures remontent au-dessus de 7 °C.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q22",
-          "question": "Quand pouvez-vous utiliser des chaînes à neige ?",
+          "question": "6 avril, tempête de neige. Avec quoi pouvez-vous rouler ?",
           "choices": [
-            "Sur neige ou verglas",
-            "Tout l'hiver, sans plus",
-            "Du 1er novembre au 31 mars"
+            "Des chaînes à neige",
+            "Des pneus cloutés",
+            "Les deux"
           ],
           "correct": 0,
-          "explanation": "Les chaînes à neige ne sont autorisées qu'en présence effective de neige ou de verglas.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "I4_Q23",
-          "question": "Quelle différence entre les chaînes à neige et les pneus cloutés ?",
-          "choices": [
-            "Chaînes : neige ; cloutés : dates",
-            "Cloutés : neige ; chaînes : dates",
-            "Aucune, les mêmes règles valent"
-          ],
-          "correct": 0,
-          "explanation": "Chaînes : uniquement si neige/verglas, sans limitation de dates. Pneus cloutés : du 1/11 au 31/3 avec vitesses limitées.",
+          "explanation": "Après le 31 mars, plus de clous. Les chaînes : dès qu'il y a de la neige.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q24",
-          "question": "Que doivent avoir en commun deux pneus montés sur le même essieu ?",
+          "question": "Deux pneus sur le même essieu doivent avoir :",
           "choices": [
-            "Même structure et même dimension",
-            "La même marque de fabricant",
-            "La même pression de gonflage"
+            "La même structure et la même dimension",
+            "La même marque",
+            "La même date"
           ],
           "correct": 0,
-          "explanation": "Sur un même essieu, les pneus doivent avoir la même structure et la même dimension.",
+          "explanation": "Même type et même taille sur un essieu.",
           "theoryCardIndex": 1
         },
         {
           "id": "I4_Q25",
-          "question": "Vous lisez l'inscription \"165/70 R 14 81 T\" sur votre pneu. Que signifie le \"165\" ?",
+          "question": "« 165/70 R 14 81 T » : que signifie 165 ?",
           "choices": [
-            "Le diamètre de la jante en mm",
-            "La largeur du pneu en mm",
-            "La hauteur du pneu",
-            "L'indice de charge"
+            "La largeur en mm",
+            "Le diamètre",
+            "La charge"
           ],
-          "correct": 1,
-          "explanation": "165 = largeur du pneu en millimètres.",
+          "correct": 0,
+          "explanation": "165 mm de large.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q26",
-          "question": "Sur le marquage « 165/70 R 14 81 T », que signifie le « R » ?",
+          "question": "Dans « 165/70 R 14 81 T », que signifie R ?",
           "choices": [
-            "La structure radiale",
-            "Un pneu rechapé",
-            "La résistance du pneu"
+            "Structure radiale",
+            "Rechapé",
+            "Résistant"
           ],
           "correct": 0,
-          "explanation": "R = structure radiale du pneu.",
+          "explanation": "R = radial.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q27",
-          "question": "Vous lisez \"165/70 R 14 81 T\" sur votre pneu. Le \"81\" est un indice de quoi ?",
+          "question": "Dans « 165/70 R 14 81 T », 81 est :",
           "choices": [
-            "De vitesse",
-            "De charge",
-            "De largeur",
-            "De diamètre"
+            "L'indice de charge",
+            "L'indice de vitesse",
+            "La largeur"
           ],
-          "correct": 1,
-          "explanation": "81 = indice de charge, correspondant au poids maximum que le pneu peut supporter.",
+          "correct": 0,
+          "explanation": "81 = poids maximum par pneu.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q28",
-          "question": "Vous lisez \"165/70 R 14 81 T\" sur votre pneu. Le \"T\" est un indice de quoi ?",
+          "question": "Dans « 165/70 R 14 81 T », T est :",
           "choices": [
-            "De charge",
-            "De vitesse",
-            "De température",
-            "De taille"
+            "L'indice de vitesse",
+            "L'indice de charge",
+            "La température"
           ],
-          "correct": 1,
-          "explanation": "T = indice de vitesse, indiquant la vitesse maximale pour laquelle le pneu est conçu.",
+          "correct": 0,
+          "explanation": "T = vitesse maximale du pneu.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I4_Q29",
-          "question": "Que signifie le marquage « E » sur votre pneu ?",
+          "question": "Le marquage « E » sur un pneu signifie :",
           "choices": [
-            "Les normes européennes",
-            "Le nom du fabricant",
-            "La date de fabrication"
+            "Conforme aux normes européennes",
+            "Le fabricant",
+            "La date"
           ],
           "correct": 0,
-          "explanation": "Le marquage E atteste que le pneu répond aux normes de sécurité européennes.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "I4_Q30",
-          "question": "Au contrôle technique, vos pneus n'ont pas le marquage E. Que se passe-t-il ?",
-          "choices": [
-            "Un certificat rouge, 15 jours",
-            "Un simple avertissement écrit",
-            "Une amende immédiate et salée"
-          ],
-          "correct": 0,
-          "explanation": "Sans marquage E sur un véhicule post-2004 : contrôle technique rouge (15 jours pour régulariser).",
+          "explanation": "Pneu homologué en Europe.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q31",
-          "question": "Vous souhaitez prolonger la durée de vie de vos pneus. Tous les combien de km devez-vous les permuter ?",
+          "question": "Tous les combien permutez-vous les pneus ?",
           "choices": [
-            "Tous les 5 000 km",
-            "Tous les 10 000 à 15 000 km",
-            "Tous les 50 000 km",
-            "La permutation n'est pas nécessaire"
+            "10 000 à 15 000 km",
+            "5 000 km",
+            "50 000 km"
           ],
-          "correct": 1,
-          "explanation": "La permutation est recommandée tous les 10 000 à 15 000 km pour uniformiser l'usure.",
+          "correct": 0,
+          "explanation": "Tous les 10 000 à 15 000 km.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q32",
-          "question": "Comment permutez-vous vos pneus ?",
+          "question": "Comment permutez-vous les pneus ?",
           "choices": [
-            "En croix, avant et arrière",
-            "Gauche et droite entre eux",
-            "Avant et arrière entre eux"
+            "En croix",
+            "Gauche et droite",
+            "Seulement à l'avant"
           ],
           "correct": 0,
-          "explanation": "La permutation en croix : avant-gauche ↔ arrière-droit et avant-droit ↔ arrière-gauche.",
+          "explanation": "Avant gauche vers arrière droit, et inversement.",
           "theoryCardIndex": 2
         },
         {
           "id": "I4_Q33",
-          "question": "Quels sont les rôles de l'huile moteur ?",
+          "question": "À quoi sert l'huile moteur ?",
           "choices": [
             "Lubrifier, refroidir, protéger",
-            "Lubrifier le moteur, sans plus",
-            "Refroidir le moteur, sans plus"
+            "Seulement refroidir",
+            "Alimenter les freins"
           ],
           "correct": 0,
-          "explanation": "L'huile moteur lubrifie, réduit la surchauffe, empêche le blocage et protège contre la rouille.",
+          "explanation": "Elle lubrifie, refroidit et protège le moteur.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q34",
-          "question": "Quand devez-vous vérifier le niveau d'huile de votre moteur ?",
+          "question": "Quand vérifiez-vous le niveau d'huile ?",
           "choices": [
-            "Moteur froid ou arrêté",
-            "Moteur chaud après un trajet",
-            "En roulant, sur autoroute"
+            "Moteur froid, voiture à plat",
+            "Moteur chaud",
+            "En roulant"
           ],
           "correct": 0,
-          "explanation": "Vérifier l'huile moteur froid et sur sol plat pour une mesure précise.",
+          "explanation": "Moteur froid, sur sol plat.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q35",
-          "question": "Vous préparez un long trajet. À quel niveau doit se trouver l'huile moteur ?",
+          "question": "Avant un long trajet, le niveau d'huile doit être :",
           "choices": [
+            "Près du maximum",
             "Au minimum",
-            "Proche du maximum (+)",
-            "Au milieu entre min et max",
-            "Cela n'a pas d'importance"
+            "Peu importe"
           ],
-          "correct": 1,
-          "explanation": "Avant un long trajet, le niveau d'huile doit être proche du + pour éviter tout risque.",
+          "correct": 0,
+          "explanation": "Près du repère maximum.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q36",
-          "question": "Pourquoi la voiture doit-elle être sur un sol plat pour vérifier l'huile ?",
+          "question": "Pourquoi mettre la voiture à plat pour mesurer l'huile ?",
           "choices": [
-            "Pour une mesure correcte",
-            "Par simple commodité",
-            "Pour des raisons de sécurité"
+            "Sinon la mesure est fausse",
+            "Par confort",
+            "Par sécurité"
           ],
           "correct": 0,
-          "explanation": "Sur sol incliné, l'huile se concentre d'un côté et fausse la lecture de la jauge.",
+          "explanation": "En pente, l'huile penche dans le carter.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q37",
-          "question": "Votre niveau d'huile est trop bas. Que risquez-vous ?",
+          "question": "Le témoin d'huile s'allume. Que faites-vous ?",
           "choices": [
-            "Surchauffe et blocage du moteur",
-            "Rien de grave à court terme",
-            "De meilleures performances"
+            "Je m'arrête dès que possible",
+            "Je continue doucement",
+            "Je roule plus vite"
           ],
           "correct": 0,
-          "explanation": "Un niveau d'huile trop bas entraîne surchauffe, usure accélérée et risque de casse moteur.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "I4_Q38",
-          "question": "Où se trouve la jauge d'huile de votre véhicule ?",
-          "choices": [
-            "Sous le capot, côté moteur",
-            "Sur le tableau de bord",
-            "Dans le coffre, près de la roue"
-          ],
-          "correct": 0,
-          "explanation": "La jauge d'huile se trouve sous le capot dans le compartiment moteur.",
+          "explanation": "Sans huile, le moteur peut casser.",
           "theoryCardIndex": 3
         },
         {
           "id": "I4_Q39",
-          "question": "Vous entretenez régulièrement vos freins. Que devez-vous contrôler ?",
+          "question": "Pour l'entretien des freins, que contrôlez-vous ?",
           "choices": [
-            "La couleur des disques",
             "Le niveau du liquide de frein",
-            "La marque des plaquettes",
-            "Le nombre de freinages effectués"
+            "La couleur des disques",
+            "La marque des plaquettes"
           ],
-          "correct": 1,
-          "explanation": "Il faut contrôler régulièrement le niveau du liquide de frein.",
+          "correct": 0,
+          "explanation": "Le liquide de frein doit être au bon niveau.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q40",
-          "question": "Vous entendez un sifflement aigu en freinant. Que signifie-t-il ?",
+          "question": "Un sifflement aigu au freinage signifie :",
           "choices": [
-            "Vos plaquettes sont usées",
-            "Vos freins sont en bon état",
-            "Vos pneus avant sont usés"
+            "Plaquettes usées",
+            "Freins en bon état",
+            "Pneus usés"
           ],
           "correct": 0,
-          "explanation": "Les plaquettes crissent intentionnellement pour signaler qu'elles doivent être changées.",
+          "explanation": "Les plaquettes usées sifflent pour vous prévenir.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q41",
-          "question": "Quand devez-vous freiner à l'approche d'un virage ?",
+          "question": "Quand freinez-vous pour un virage ?",
           "choices": [
-            "Avant d'entrer dans le virage",
-            "Dans le virage, en douceur",
-            "Après le virage, en sortie"
+            "Avant d'y entrer",
+            "Dans le virage",
+            "À la sortie"
           ],
           "correct": 0,
-          "explanation": "Il faut ralentir et rétrograder AVANT d'entrer dans le virage.",
+          "explanation": "Ralentissez avant le virage.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q42",
-          "question": "Vous êtes dans un virage. Pouvez-vous accélérer ?",
+          "question": "Dans le virage, pouvez-vous accélérer ?",
           "choices": [
-            "Oui, légèrement pour stabiliser",
-            "Oui, fortement pour sortir vite",
-            "Non, en aucune circonstance"
+            "Légèrement, pour stabiliser",
+            "Fortement",
+            "Jamais"
           ],
           "correct": 0,
-          "explanation": "On peut accélérer légèrement dans le virage une fois la vitesse d'entrée bien adaptée.",
+          "explanation": "Un léger gaz stabilise la voiture.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q43",
-          "question": "Comment devez-vous prendre un virage à droite ?",
+          "question": "Comment prenez-vous un virage à droite ?",
           "choices": [
-            "Bien court, serré à droite",
-            "Bien large, vers la gauche",
-            "En restant au milieu"
+            "Court, près du bord droit",
+            "Large",
+            "Au milieu"
           ],
           "correct": 0,
-          "explanation": "Un virage à droite se prend court.",
+          "explanation": "À droite : court.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q44",
-          "question": "Comment devez-vous prendre un virage à gauche ?",
+          "question": "Comment prenez-vous un virage à gauche ?",
           "choices": [
-            "Bien large, sans le couper",
-            "Le plus court possible",
-            "En coupant pour gagner du temps"
+            "Large, sans couper",
+            "En coupant",
+            "Le plus court possible"
           ],
           "correct": 0,
-          "explanation": "Un virage à gauche se prend large pour ne pas couper et rester sur sa bande.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "I4_Q45",
-          "question": "Quelle est la procédure correcte pour tourner à un carrefour ?",
-          "choices": [
-            "Miroirs, clignotant, ralentir",
-            "Clignotant puis tourner direct",
-            "Tourner puis mettre le clignotant"
-          ],
-          "correct": 0,
-          "explanation": "La procédure : rétroviseurs > angle mort si nécessaire > clignotant > ralentir > tourner.",
+          "explanation": "À gauche : large, sans couper.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q46",
-          "question": "Pourquoi est-il dangereux de couper un virage à gauche ?",
+          "question": "Pourquoi ne pas couper un virage à gauche ?",
           "choices": [
-            "Vous croisez le trafic en face",
-            "Cela use les pneus plus vite",
-            "C'est plus lent au final"
+            "Vous empiétez sur la voie d'en face",
+            "Les pneus s'usent",
+            "C'est plus lent"
           ],
           "correct": 0,
-          "explanation": "Couper un virage à gauche vous fait empiéter sur la voie des véhicules en sens inverse.",
+          "explanation": "Vous risquez de heurter quelqu'un qui arrive en face.",
           "theoryCardIndex": 4
         },
         {
           "id": "I4_Q47",
-          "question": "Que fait exactement l'ABS pendant un freinage d'urgence ?",
+          "question": "Que fait l'ABS lors d'un freinage d'urgence ?",
           "choices": [
-            "Il empêche les roues de bloquer",
-            "Il bloque les roues pour arrêter",
-            "Il accélère le freinage lui-même"
+            "Il empêche les roues de se bloquer",
+            "Il bloque les roues",
+            "Il freine à votre place"
           ],
           "correct": 0,
-          "explanation": "L'ABS empêche le blocage des roues, maintenant la maîtrise directionnelle du véhicule.",
+          "explanation": "Vous pouvez freiner et diriger en même temps.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q48",
-          "question": "L'ABS vous permet-il de freiner plus court ?",
+          "question": "L'ABS raccourcit-il toujours le freinage ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, il garde surtout la maîtrise",
+            "Oui, toujours"
           ],
-          "correct": 1,
-          "explanation": "L'ABS ne réduit pas forcément la distance de freinage, mais maintient la maîtrise du véhicule.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "I4_Q49",
-          "question": "Sur sol sec, la distance de freinage avec ABS est-elle plus courte que sans ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Sur sol sec, l'ABS peut donner une distance légèrement plus longue qu'un freinage optimal sans ABS.",
+          "correct": 0,
+          "explanation": "Son but : pouvoir encore diriger la voiture.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q50",
-          "question": "Avec l'ABS, la distance de freinage est-elle plus longue sur sol mouillé que sur sol sec ?",
+          "question": "Avec ABS, la distance de freinage est-elle plus longue sur sol mouillé ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Sur sol mouillé, même avec ABS, la distance de freinage est plus longue que sur sol sec.",
+          "explanation": "L'ABS ne change rien à l'adhérence de la route.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q51",
-          "question": "Vous démarrez votre voiture et le témoin ABS reste allumé au tableau de bord. Que devez-vous faire ?",
+          "question": "Le témoin ABS reste allumé. Que faites-vous ?",
           "choices": [
+            "Je vais au garage",
             "Rien, c'est normal",
-            "Vous rendre au garage",
-            "Rouler plus vite",
-            "Éteindre le moteur et redémarrer"
+            "Je roule plus vite"
           ],
-          "correct": 1,
-          "explanation": "Un témoin ABS qui reste allumé signale un dysfonctionnement : aller au garage.",
+          "correct": 0,
+          "explanation": "L'ABS ne fonctionne peut-être plus.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q52",
-          "question": "Que fait le système ESP de votre voiture ?",
+          "question": "Que fait l'ESP ?",
           "choices": [
-            "Il freine des roues séparément",
+            "Il freine certaines roues pour éviter le dérapage",
             "Il bloque toutes les roues",
-            "Il maintient votre distance"
+            "Il garde vos distances"
           ],
           "correct": 0,
-          "explanation": "L'ESP agit sélectivement sur une ou plusieurs roues pour corriger la trajectoire et éviter le dérapage.",
+          "explanation": "Il freine roue par roue pour garder la voiture dans sa trajectoire.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q53",
-          "question": "Dans quelles situations l'ESP intervient-il ?",
+          "question": "Quand l'ESP intervient-il ?",
           "choices": [
-            "Évitement, virage, sol trompeur",
+            "Lors d'un évitement ou d'un virage glissant",
             "En ligne droite sur autoroute",
-            "En marche arrière et créneau"
+            "En marche arrière"
           ],
           "correct": 0,
-          "explanation": "L'ESP intervient lors de manœuvres brusques, virages mal calculés ou chaussée glissante.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "I4_Q54",
-          "question": "L'ESP est considéré comme la plus grande avancée de sécurité depuis quoi ?",
-          "choices": [
-            "La ceinture et l'airbag",
-            "Le limiteur de vitesse",
-            "Les phares à LED"
-          ],
-          "correct": 0,
-          "explanation": "L'ESP est la contribution à la sécurité la plus significative depuis la ceinture de sécurité et l'airbag.",
+          "explanation": "Quand la voiture commence à déraper.",
           "theoryCardIndex": 5
         },
         {
           "id": "I4_Q55",
-          "question": "Vous perdez l'adhérence du train avant. Dans quelle direction sortez-vous du virage ?",
+          "question": "L'avant glisse dans un virage. Où part la voiture ?",
           "choices": [
             "Vers l'extérieur du virage",
-            "Vers l'intérieur du virage",
-            "Tout droit, sans dévier"
+            "Vers l'intérieur",
+            "Elle tourne sur elle-même"
           ],
           "correct": 0,
-          "explanation": "Lors d'un sous-virage (dérapage train avant), le véhicule part vers l'extérieur du virage.",
+          "explanation": "Sous-virage : la voiture tire tout droit, vers l'extérieur.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q56",
-          "question": "Vous perdez l'adhérence de l'avant de votre véhicule en virage. Comment appelle-t-on ce phénomène ?",
+          "question": "L'avant de la voiture glisse en virage. C'est :",
           "choices": [
-            "Le survirage",
             "Le sous-virage",
-            "La glissade",
-            "Le tête-à-queue"
+            "Le survirage",
+            "L'aquaplaning"
           ],
-          "correct": 1,
-          "explanation": "Un dérapage du train avant (roues avant qui perdent l'adhérence) = sous-virage.",
+          "correct": 0,
+          "explanation": "Avant qui glisse = sous-virage.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q57",
-          "question": "Vous êtes en situation de sous-virage. Devez-vous freiner fortement ?",
+          "question": "Sous-virage : freinez-vous fort ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Freiner fort lors d'un sous-virage bloque les roues avant, aggravant la perte d'adhérence.",
+          "correct": 0,
+          "explanation": "Freiner fort fait encore plus glisser l'avant.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q58",
-          "question": "L'arrière de votre véhicule dérape en virage. Comment appelle-t-on ce phénomène ?",
+          "question": "L'arrière de la voiture glisse en virage. C'est :",
           "choices": [
-            "Le sous-virage",
             "Le survirage",
-            "L'aquaplaning",
-            "La glissade latérale"
+            "Le sous-virage",
+            "L'aquaplaning"
           ],
-          "correct": 1,
-          "explanation": "Un dérapage du train arrière (arrière qui veut dépasser l'avant) = survirage.",
+          "correct": 0,
+          "explanation": "Arrière qui glisse = survirage.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q59",
-          "question": "Votre véhicule survire. Que devez-vous faire, dans l'ordre ?",
+          "question": "La voiture survire. Que faites-vous ?",
           "choices": [
-            "Regarder, contre-braquer, débrayer",
-            "Freiner fort puis accélérer",
-            "Accélérer et tourner dehors"
+            "Je regarde où aller et je contre-braque",
+            "Je freine à fond",
+            "J'accélère fort"
           ],
           "correct": 0,
-          "explanation": "En cas de survirage : 1) Regarder la direction souhaitée, 2) Contre-braquer, 3) Embrayage, 4) Lâcher l'accélérateur.",
+          "explanation": "Regard vers la sortie, contre-braquage, et débrayer.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q60",
-          "question": "Que signifie « contre-braquer » lors d'un dérapage ?",
+          "question": "Contre-braquer, c'est tourner le volant :",
           "choices": [
-            "Tourner dans le sens du dérapage",
-            "Tourner à l'opposé du dérapage",
-            "Lâcher complètement le volant"
+            "Du côté où part l'arrière",
+            "Du côté opposé",
+            "Pas du tout"
           ],
           "correct": 0,
-          "explanation": "Contre-braquer = tourner le volant dans le sens du dérapage arrière pour corriger la trajectoire.",
+          "explanation": "L'arrière part à droite : vous braquez à droite.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q61",
-          "question": "Pourquoi regarder où vous voulez aller pendant un dérapage ?",
+          "question": "Pendant un dérapage, où regardez-vous ?",
           "choices": [
-            "On va où l'on regarde",
-            "Pour voir les autres voitures",
-            "Par habitude d'auto-école"
+            "Là où vous voulez aller",
+            "L'obstacle",
+            "Le volant"
           ],
           "correct": 0,
-          "explanation": "Le regard conditionne la direction du volant : regarder où vous voulez aller aide à y aller.",
+          "explanation": "On va où l'on regarde.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q62",
-          "question": "Vous freinez et les quatre roues se bloquent. Que se passe-t-il ?",
+          "question": "Sans ABS, les quatre roues se bloquent au freinage. Conséquence ?",
           "choices": [
-            "Le véhicule part en dérapage",
-            "Seules les roues avant bloquent",
-            "Aucune roue ne se bloque"
+            "Vous ne pouvez plus diriger",
+            "Vous freinez mieux",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Lors d'un dérapage des 4 roues, toutes les roues se bloquent en même temps.",
+          "explanation": "Roues bloquées : la voiture glisse tout droit.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q63",
-          "question": "Votre voiture à ABS commence à déraper. Que faites-vous de la pédale de frein ?",
+          "question": "Avec ABS, comment freinez-vous en urgence ?",
           "choices": [
-            "Appuyer encore plus fort",
-            "Relâcher progressivement",
-            "Pomper par à-coups"
+            "J'enfonce la pédale à fond et je la garde",
+            "Je pompe",
+            "J'appuie doucement"
           ],
           "correct": 0,
-          "explanation": "Pour activer l'ABS en cas de dérapage, il faut appuyer encore plus fort sur la pédale de frein.",
+          "explanation": "À fond, sans relâcher : l'ABS fait le reste.",
           "theoryCardIndex": 6
         },
         {
           "id": "I4_Q65",
-          "question": "Quel est le rôle du liquide de refroidissement ?",
+          "question": "Le liquide de refroidissement sert à :",
           "choices": [
-            "Tenir la température, éviter le gel",
-            "Lubrifier les pièces du moteur",
-            "Alimenter le circuit de freinage"
+            "Évacuer la chaleur et protéger du gel",
+            "Lubrifier",
+            "Freiner"
           ],
           "correct": 0,
-          "explanation": "Le liquide de refroidissement maintient la température moteur, évite la surchauffe et le gel.",
-          "theoryCardIndex": 7
-        },
-        {
-          "id": "I4_Q66",
-          "question": "À quelle température bout le liquide de refroidissement ?",
-          "choices": [
-            "Au-delà de 100 °C",
-            "Vers 80 °C environ",
-            "Vers 50 °C environ"
-          ],
-          "correct": 0,
-          "explanation": "Le liquide de refroidissement bout au-delà de 100°C.",
-          "theoryCardIndex": 7
-        },
-        {
-          "id": "I4_Q67",
-          "question": "Vous conduisez une voiture essence sur une route horizontale. À quel régime devez-vous passer la vitesse supérieure ?",
-          "choices": [
-            "1500 tours/minute",
-            "2500 tours/minute",
-            "3500 tours/minute",
-            "1000 tours/minute"
-          ],
-          "correct": 1,
-          "explanation": "Pour un moteur essence en conduite normale : passer la vitesse à 2500 tours/min.",
-          "theoryCardIndex": 7
-        },
-        {
-          "id": "I4_Q68",
-          "question": "Vous conduisez une voiture diesel sur une route horizontale. À quel régime devez-vous passer la vitesse supérieure ?",
-          "choices": [
-            "2500 tours/minute",
-            "2000 tours/minute",
-            "1000 tours/minute",
-            "3000 tours/minute"
-          ],
-          "correct": 1,
-          "explanation": "Pour un moteur diesel en conduite normale : passer la vitesse à 2000 tours/min.",
+          "explanation": "Avec le radiateur, il évacue la chaleur du moteur.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q69",
-          "question": "Où devez-vous placer votre pied gauche après un changement de vitesse ?",
+          "question": "Après avoir changé de vitesse, où mettez-vous le pied gauche ?",
           "choices": [
-            "Sur l'appui prévu à côté",
-            "Sur la pédale d'embrayage",
-            "Sous la pédale d'embrayage"
+            "À gauche de l'embrayage",
+            "Sur l'embrayage",
+            "Sous l'embrayage"
           ],
           "correct": 0,
-          "explanation": "Après le changement de vitesse, le pied gauche se place sur l'appui latéral prévu, pas sur la pédale.",
+          "explanation": "Sur le repose-pied, à gauche de la pédale.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q70",
-          "question": "Pourquoi ne pas laisser le pied sur la pédale d'embrayage ?",
+          "question": "Pourquoi ne pas laisser le pied sur l'embrayage ?",
           "choices": [
-            "Cela use l'embrayage",
-            "C'est une position inconfortable",
-            "Cela use les pneus plus vite"
+            "Il s'use",
+            "C'est inconfortable",
+            "Les pneus s'usent"
           ],
           "correct": 0,
-          "explanation": "Le pied sur l'embrayage provoque un glissement et en cas d'accident, risque de fracture de cheville.",
+          "explanation": "L'embrayage patine et s'use.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q71",
-          "question": "Que devez-vous faire avant de monter ou descendre une forte côte ?",
+          "question": "Avant une forte descente, que faites-vous ?",
           "choices": [
-            "Rétrograder d'une vitesse",
-            "Passer la vitesse supérieure",
-            "Rester au point mort"
+            "Je rétrograde",
+            "Je passe la vitesse supérieure",
+            "Je me mets au point mort"
           ],
           "correct": 0,
-          "explanation": "Rétrograder d'une vitesse avant une forte côte (montée ou descente) assure le contrôle.",
+          "explanation": "Le frein moteur soulage les freins.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q72",
-          "question": "Pouvez-vous stationner sur une voie de détresse en montagne ?",
+          "question": "À quoi sert une voie de détresse en montagne ?",
           "choices": [
-            "Oui",
-            "Non"
+            "À s'arrêter quand les freins lâchent",
+            "À stationner",
+            "À dépasser"
           ],
-          "correct": 1,
-          "explanation": "La voie de détresse est réservée aux véhicules ayant perdu leurs freins. Le stationnement y est interdit.",
+          "correct": 0,
+          "explanation": "Elle est réservée aux véhicules sans freins : n'y stationnez jamais.",
           "theoryCardIndex": 7
         },
         {
           "id": "I4_Q73",
-          "question": "Pouvez-vous tenir votre téléphone en main pour lire un message en conduisant ?",
+          "question": "Pouvez-vous lire un message, téléphone en main, en roulant ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, vite"
           ],
-          "correct": 1,
-          "explanation": "Utiliser, tenir ou manipuler un appareil mobile avec écran est interdit pendant la conduite.",
+          "correct": 0,
+          "explanation": "Tenir ou manipuler un téléphone en conduisant est interdit.",
           "theoryCardIndex": 8
         },
         {
           "id": "I4_Q74",
-          "question": "Pouvez-vous utiliser votre smartphone comme GPS en conduisant ?",
+          "question": "Pouvez-vous utiliser votre smartphone comme GPS ?",
           "choices": [
-            "Oui, dans un support fixé",
-            "Oui, même tenu en main",
-            "Non, en aucune manière"
+            "Oui, fixé dans un support",
+            "Oui, en main",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "Un smartphone peut servir de GPS s'il est fixé dans un support approprié.",
+          "explanation": "Dans un support fixé, sans le manipuler en roulant.",
           "theoryCardIndex": 8
         },
         {
           "id": "I4_Q75",
-          "question": "Vous êtes arrêté à un feu rouge. Pouvez-vous consulter votre téléphone en main ?",
+          "question": "Arrêté au feu rouge, pouvez-vous prendre votre téléphone en main ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Un feu rouge n'est pas considéré comme un arrêt au sens du code : l'utilisation reste interdite.",
+          "correct": 0,
+          "explanation": "Au feu rouge, vous êtes toujours en circulation.",
           "theoryCardIndex": 8,
           "severe": true
         },
         {
           "id": "I4_Q77",
-          "question": "Dans quelle situation pouvez-vous utiliser votre téléphone en main ?",
+          "question": "Quand pouvez-vous utiliser votre téléphone en main ?",
           "choices": [
-            "Quand vous êtes à l'arrêt",
-            "Au feu rouge du carrefour",
-            "Dans les embouteillages"
+            "Voiture garée",
+            "Au feu rouge",
+            "Dans un bouchon"
           ],
           "correct": 0,
-          "explanation": "Le téléphone en main n'est autorisé que lorsque vous êtes réellement à l'arrêt ou stationné.",
+          "explanation": "Seulement à l'arrêt ou en stationnement, hors circulation.",
           "theoryCardIndex": 8,
           "severe": true
         },
         {
           "id": "I4_Q78",
-          "question": "Pourquoi les appareils électroniques sont-ils dangereux au volant ?",
+          "question": "Pourquoi le téléphone est-il dangereux au volant ?",
           "choices": [
-            "Ils détournent votre attention",
-            "Ils vident la batterie du bord",
-            "Ils abîment votre véhicule"
+            "Il détourne votre attention",
+            "Il vide la batterie",
+            "Il abîme la voiture"
           ],
           "correct": 0,
-          "explanation": "Les appareils électroniques distraient le conducteur, ce qui augmente le risque d'accident.",
+          "explanation": "Quelques secondes sans regarder la route suffisent pour un accident.",
           "theoryCardIndex": 8
         }
       ]
