@@ -1133,372 +1133,325 @@
       "questions": [
         {
           "id": "H2_Q1",
-          "question": "Er is geen meter vrij voor en achter uw voertuig. Mag u parkeren?",
+          "question": "Er blijft minder dan 1 m voor en achter je auto. Mag je parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "Parkeren is verboden als je niet minstens 1 meter voor en 1 meter achter je auto vrijlaat.",
+          "explanation": "Je moet minstens 1 m ervoor en erachter laten.",
           "theoryCardIndex": 0,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q2",
-          "question": "Mag u zonder die meter ruimte toch even stilstaan?",
+          "question": "Zelfde plaats: mag je stoppen om iemand af te zetten?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "De regel van 1 meter geldt alleen voor parkeren: stilstaan blijft altijd toegelaten.",
+          "explanation": "De regel van 1 meter geldt voor parkeren, niet voor stilstaan.",
           "theoryCardIndex": 0,
           "correct": 0
         },
         {
           "id": "H2_Q3",
-          "question": "Op welke afstand van een haltebord is parkeren verboden?",
+          "question": "Parkeren verboden op minder dan hoeveel meter van een bushaltebord?",
           "choices": [
-            "15 meter aan elke kant",
-            "5 meter aan elke kant",
-            "20 meter aan elke kant"
+            "15 m aan elke kant",
+            "5 m aan elke kant",
+            "20 m aan elke kant"
           ],
-          "explanation": "Parkeren is verboden binnen 15 meter aan elke kant van het haltebordje.",
+          "explanation": "15 m voor en 15 m na het bord.",
           "theoryCardIndex": 0,
           "correct": 0
         },
         {
           "id": "H2_Q4",
-          "question": "Mag u voor een bushalte stoppen om een passagier af te zetten?",
+          "question": "Mag je aan de bushalte stoppen om een passagier af te zetten?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Voor een bushalte is alleen het parkeren verboden: stilstaan om iemand te laten in- of uitstappen is toegelaten.",
-          "theoryCardIndex": 0,
-          "correct": 0
-        },
-        {
-          "id": "H2_Q5",
-          "question": "Hoe wordt de verboden zone rond een bushalte meestal aangeduid?",
-          "choices": [
-            "Met markeringen op het wegdek",
-            "Met knipperende lichten",
-            "Met paaltjes langs de rand"
-          ],
-          "explanation": "De zone van 15 m aan elke kant van een halte wordt vaak aangeduid met wegmarkeringen op het wegdek.",
+          "explanation": "Parkeren is verboden, stilstaan mag.",
           "theoryCardIndex": 0,
           "correct": 0
         },
         {
           "id": "H2_Q6",
-          "question": "Mag u parkeren voor de inrit van een eigendom?",
+          "question": "Mag je parkeren voor de garage-inrit van een huis?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "Parkeren is verboden voor een inrit. Stilstaan blijft toegelaten.",
+          "explanation": "Parkeren voor een inrit is verboden. Stilstaan mag.",
           "theoryCardIndex": 0,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q7",
-          "question": "U woont daar en uw nummerplaat staat op de inrit. Mag u er parkeren?",
+          "question": "Wanneer mag de eigenaar voor zijn garage parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Als zijn nummerplaat er leesbaar op staat",
+            "Altijd",
+            "Nooit"
           ],
-          "explanation": "De bewoner mag voor zijn eigen inrit parkeren als hij zijn nummerplaat er zichtbaar op heeft aangebracht.",
+          "explanation": "Alleen als zijn nummerplaat duidelijk op de inrit staat.",
           "theoryCardIndex": 0,
           "correct": 0
         },
         {
           "id": "H2_Q8",
-          "question": "Mag u parkeren voor een garagepoort?",
+          "question": "Mag je voor een garagepoort stoppen om je boodschappen uit te laden?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Parkeren is verboden voor een garagepoort. Stilstaan is toegelaten.",
+          "explanation": "Stilstaan mag, parkeren niet.",
           "theoryCardIndex": 0,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q9",
-          "question": "Uw nummerplaat staat op uw garagepoort. Mag u er voor parkeren?",
+          "question": "De nummerplaat van een buur staat op deze garagepoort. Mag jij er parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "De bewoner mag voor zijn garagepoort parkeren als hij zijn nummerplaat zichtbaar op de poort heeft aangebracht.",
+          "explanation": "Alleen het voertuig waarvan de plaat erop staat, mag er parkeren.",
           "theoryCardIndex": 0,
           "correct": 0
         },
         {
           "id": "H2_Q10",
-          "question": "Uw voertuig zou een ander beletten weg te rijden. Mag u parkeren?",
+          "question": "Je zou een andere auto blokkeren. Mag je parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, als je in de buurt blijft"
           ],
-          "explanation": "Parkeren is verboden als je een voertuig belet zijn parkeerplaats te verlaten.",
+          "explanation": "Verboden een voertuig te verhinderen weg te rijden.",
           "theoryCardIndex": 0,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q15",
-          "question": "Uw parkeren zou fietsers de rijbaan opdringen. Mag u er staan?",
+          "question": "Een hindernis dwingt fietsers op de rijbaan. Mag je daar parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "Als je parkeerplaats fietsers dwingt om de rijbaan te gebruiken door een hindernis, is parkeren verboden.",
+          "explanation": "Je zou hen in gevaar brengen: parkeren verboden.",
           "theoryCardIndex": 1,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q16",
-          "question": "Op het einde van een fietspad, op welke afstand zijn stilstaan en parkeren verboden?",
+          "question": "Einde van een fietspad: stilstaan en parkeren verboden op minder dan:",
           "choices": [
-            "3 meter aan beide kanten",
-            "5 meter aan beide kanten",
-            "10 meter aan beide kanten",
-            "15 meter aan beide kanten"
+            "5 m",
+            "3 m",
+            "10 m"
           ],
-          "explanation": "Binnen 5 meter aan beide kanten van het einde van een fietspad mag je noch stilstaan noch parkeren.",
+          "explanation": "Op minder dan 5 m van de plaats waar fietsers het fietspad verlaten of oprijden.",
           "theoryCardIndex": 1,
-          "correct": 1
-        },
-        {
-          "id": "H2_Q17",
-          "question": "Geldt het verbod op minder dan 5 m van het einde van een fietspad ook voor stilstaan?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "explanation": "Op het einde van een fietspad mag je noch stilstaan noch parkeren binnen 5 m: fietsers die de rijbaan oprijden hebben voorrang.",
-          "theoryCardIndex": 1,
-          "severe": true,
           "correct": 0
         },
         {
           "id": "H2_Q18",
-          "question": "Hoeveel vrije doorgang moet u laten op een smalle rijbaan?",
+          "question": "Hoeveel vrije doorgang moet je op de rijbaan laten om te parkeren?",
           "choices": [
-            "Minstens 3 meter",
-            "Minstens 2 meter",
-            "Minstens 5 meter"
+            "3 m",
+            "2 m",
+            "5 m"
           ],
-          "explanation": "Je moet minstens 3 meter vrije doorgang overlaten om te mogen parkeren op een smalle rijbaan.",
+          "explanation": "Minstens 3 m vrije doorgang.",
           "theoryCardIndex": 1,
           "correct": 0
         },
         {
           "id": "H2_Q19",
-          "question": "De vrije doorgang is maar 2,5 m. Mag u toch even stilstaan?",
+          "question": "Er blijft 2,5 m doorgang. Mag je stoppen om iemand af te zetten?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "De regel van 3 m geldt alleen voor parkeren: stilstaan blijft toegelaten, ook met minder dan 3 m doorgang.",
+          "explanation": "De 3 m gelden voor parkeren, niet voor stilstaan.",
           "theoryCardIndex": 1,
           "correct": 0
         },
         {
           "id": "H2_Q20",
-          "question": "Een voertuig staat aan de overkant van een tweerichtingsweg. Mag u ertegenover parkeren?",
+          "question": "Smalle straat met tweerichtingsverkeer, er staat een auto geparkeerd aan de overkant. Mag je er recht tegenover parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, als kruisen niet meer gaat",
+            "Ja, altijd"
           ],
-          "explanation": "Parkeren tegenover is verboden als het kruisen van twee andere voertuigen daardoor gehinderd zou worden.",
+          "explanation": "Verboden als twee auto's elkaar moeilijk kunnen kruisen.",
           "theoryCardIndex": 1,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q21",
-          "question": "Mag u even stilstaan tegenover dat geparkeerde voertuig?",
+          "question": "Zelfde straat: mag je tegenover stoppen om iemand af te zetten?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Alleen parkeren is verboden tegenover een ander voertuig als het kruisen gehinderd wordt. Stilstaan blijft toegelaten.",
+          "explanation": "Alleen parkeren is verboden.",
           "theoryCardIndex": 1,
           "correct": 0
         },
         {
           "id": "H2_Q22",
-          "question": "De rijbaan is 5 m breed en uw wagen 1,8 m. Is de vrije doorgang voldoende?",
+          "question": "Rijbaan van 5 m, auto van 1,8 m breed. Mag je parkeren?",
           "choices": [
-            "Ja",
+            "Ja, er blijft 3,2 m",
             "Nee"
           ],
-          "explanation": "5 m − 1,8 m = 3,2 m vrije doorgang, dus ≥ 3 m: parkeren is toegelaten.",
+          "explanation": "5 − 1,8 = 3,2 m: meer dan 3 m, dat is goed.",
           "theoryCardIndex": 1,
           "correct": 0
         },
         {
           "id": "H2_Q23",
-          "question": "De rijbaan is 4,5 m breed en uw wagen 1,8 m. Mag u parkeren?",
+          "question": "Rijbaan van 4,5 m, auto van 1,8 m breed. Mag je parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, er blijft 2,7 m",
+            "Ja"
           ],
-          "explanation": "4,5 m − 1,8 m = 2,7 m, onvoldoende: je hebt minstens 3 m vrije doorgang nodig.",
+          "explanation": "4,5 − 1,8 = 2,7 m: minder dan 3 m.",
           "theoryCardIndex": 1,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q24",
-          "question": "Een hindernis dringt de fietsers de rijbaan op. Mag u stoppen om iemand af te zetten?",
+          "question": "Een hindernis dwingt fietsers op de rijbaan. Mag je stoppen om iemand af te zetten?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Als een hindernis fietsers op de rijbaan dwingt, is alleen parkeren verboden. Stilstaan blijft toegelaten.",
+          "explanation": "Alleen parkeren is verboden.",
           "theoryCardIndex": 1,
           "correct": 0
         },
         {
           "id": "H2_Q25",
-          "question": "Buiten de bebouwde kom op een voorrangsweg, mag u op de rijbaan parkeren?",
+          "question": "Voorrangsweg, buiten de bebouwde kom. Mag je op de rijbaan parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "Buiten de bebouwde kom is parkeren op de rijbaan van een voorrangsweg verboden. Stilstaan is toegelaten.",
+          "explanation": "Verboden op de rijbaan. Stilstaan mag wel.",
           "theoryCardIndex": 2,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q26",
-          "question": "Buiten de bebouwde kom op een voorrangsweg, mag u op de berm parkeren?",
+          "question": "Voorrangsweg, buiten de bebouwde kom. Mag je op de berm parkeren?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Buiten de bebouwde kom is parkeren op de berm van een voorrangsweg toegelaten.",
+          "explanation": "Het verbod geldt alleen op de rijbaan.",
           "theoryCardIndex": 2,
           "correct": 0
         },
         {
           "id": "H2_Q27",
-          "question": "Binnen de bebouwde kom op een voorrangsweg, mag u op de rijbaan parkeren?",
+          "question": "Voorrangsweg, binnen de bebouwde kom. Mag je op de rijbaan parkeren?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Binnen de bebouwde kom zijn de regels soepeler: stilstaan en parkeren zijn toegelaten op de rijbaan van een voorrangsweg.",
+          "explanation": "Het verbod geldt alleen buiten de bebouwde kom.",
           "theoryCardIndex": 2,
           "correct": 0
         },
         {
           "id": "H2_Q28",
-          "question": "Mag u parkeren op een rijbaan die in rijstroken is verdeeld?",
+          "question": "De rijbaan is in rijstroken verdeeld. Mag je erop parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, tenzij een bord het toelaat",
+            "Ja"
           ],
-          "explanation": "Parkeren is verboden op een rijbaan die verdeeld is in rijstroken, tenzij anders aangegeven door signalisatie.",
+          "explanation": "Verboden op een rijbaan met rijstroken, tenzij een parkeerbord.",
           "theoryCardIndex": 2,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q29",
-          "question": "Een parkeerstrook loopt langs die rijbaan. Mag u er parkeren?",
+          "question": "Zelfde rijbaan, maar er ligt een parkeerstrook langs. Mag je daar parkeren?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Parkeren is verboden op de rijbaan verdeeld in rijstroken, maar wel toegelaten in de parkeerstrook of op de berm.",
+          "explanation": "De parkeerstrook is geen rijstrook.",
           "theoryCardIndex": 2,
           "correct": 0
         },
         {
           "id": "H2_Q30",
-          "question": "Op een weg met drie rijbanen, mag u op de middelste parkeren?",
+          "question": "Laan met drie rijbanen: mag je op de middelste parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "Parkeren is verboden op de middenrijbaan van een weg met 3 rijbanen, tenzij anders aangegeven.",
+          "explanation": "Verboden op de middelste rijbaan.",
           "theoryCardIndex": 2,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q31",
-          "question": "Buiten de kom op een weg met twee rijbanen, mag u links parkeren?",
+          "question": "Buiten de bebouwde kom, weg met twee gescheiden rijbanen. Mag je links parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "Buiten de bebouwde kom is parkeren aan de linkerkant van een weg met 2 rijbanen verboden.",
+          "explanation": "Verboden links en op de middenberm.",
           "theoryCardIndex": 2,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q33",
-          "question": "Binnen de kom op een weg met twee rijbanen, mag u links parkeren?",
+          "question": "Binnen de bebouwde kom, weg met twee gescheiden rijbanen. Mag je links parkeren?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Binnen de bebouwde kom is parkeren links toegelaten op de rijbaan of op de gelijkgrondse berm/parkeerstrook.",
+          "explanation": "Elke rijbaan is eenrichting: beide kanten mogen.",
           "theoryCardIndex": 2,
           "correct": 0
         },
         {
           "id": "H2_Q34",
-          "question": "Binnen de kom, mag u links op een verhoogde berm parkeren?",
+          "question": "Binnen de bebouwde kom: mag je op een verhoogde berm parkeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "Binnen de bebouwde kom is parkeren op een verhoogde berm aan de linkerkant verboden.",
+          "explanation": "Binnen de bebouwde kom is een verhoogde berm verboden, tenzij borden het toelaten.",
           "theoryCardIndex": 2,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q39",
-          "question": "Wat betekent een onderbroken gele lijn aan de rand van de rijbaan?",
+          "question": "Gele onderbroken lijn langs de rijbaan. Wat mag je?",
           "choices": [
-            "Parkeren verboden, stilstaan mag",
-            "Stilstaan en parkeren allebei verboden",
-            "Parkeren is hier toegelaten"
+            "Stilstaan, niet parkeren",
+            "Parkeren",
+            "Niets"
           ],
-          "explanation": "De onderbroken gele lijn betekent: parkeren verboden, stilstaan toegelaten.",
+          "explanation": "Parkeren verboden langs deze lijn. Stilstaan mag.",
           "theoryCardIndex": 3,
           "correct": 0
-        },
-        {
-          "id": "H2_Q40",
-          "question": "Wat betekent een doorlopende gele lijn aan de rand van de rijbaan?",
-          "choices": [
-            "Stilstaan en parkeren verboden",
-            "Parkeren verboden, stilstaan mag",
-            "Ze duidt een fietspad aan"
-          ],
-          "explanation": "In tegenstelling tot de onderbroken gele lijn (parkeren verboden, stilstaan toegestaan) verbiedt de doorlopende gele lijn zowel stilstaan ALS parkeren.",
-          "theoryCardIndex": 3,
-          "correct": 0
-        },
-        {
-          "id": "H2_Q41",
-          "question": "Verbiedt een onderbroken witte lijn aan de rand het parkeren?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "explanation": "Alleen de gele onderbroken lijn verbiedt het parkeren. Een witte lijn heeft niets te maken met parkeren.",
-          "theoryCardIndex": 3,
-          "correct": 1
         },
         {
           "id": "H2_Q42",
-          "question": "Mag u langs een onderbroken gele lijn stoppen om iemand af te zetten?",
+          "question": "Langs een gele onderbroken lijn: mag je een passagier afzetten?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "De onderbroken gele lijn verbiedt alleen het parkeren: stilstaan is toegelaten.",
+          "explanation": "De lijn verbiedt parkeren, niet stilstaan.",
           "theoryCardIndex": 3,
           "correct": 0
         },
@@ -1506,11 +1459,11 @@
           "id": "H2_Q43",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Parkeren verboden, stilstaan mag",
-            "Stilstaan en parkeren allebei verboden",
-            "Parkeren toegelaten aan beide kanten"
+            "Parkeerverbod",
+            "Verbod stil te staan en te parkeren",
+            "Parking"
           ],
-          "explanation": "Rond blauw bord + 1 rode diagonaal = parkeren verboden (stilstaan toegelaten), aan de kant van het bord, tot het volgende kruispunt.",
+          "explanation": "Eén rode streep: parkeren verboden, stilstaan mag.",
           "theoryCardIndex": 3,
           "sign": "E1",
           "correct": 0
@@ -1519,220 +1472,194 @@
           "id": "H2_Q45",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Stilstaan en parkeren verboden",
-            "Parkeren verboden, stilstaan mag",
-            "Parkeren toegelaten aan beide kanten"
+            "Verbod stil te staan en te parkeren",
+            "Parkeerverbod",
+            "Parking"
           ],
-          "explanation": "Rond blauw bord + 2 rode diagonalen = stilstaan EN parkeren verboden aan beide kanten.",
+          "explanation": "Rood kruis: niet stilstaan en niet parkeren, aan de kant van het bord.",
           "theoryCardIndex": 3,
           "sign": "E3",
           "correct": 0
         },
         {
           "id": "H2_Q46",
-          "question": "Mag u onder dit bord stoppen om een passagier af te zetten?",
+          "question": "Mag je onder dit bord een passagier afzetten?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "explanation": "Het bord met twee diagonalen verbiedt ook stilstaan: je mag er geen passagier afzetten.",
+          "explanation": "Rood kruis: zelfs stilstaan is verboden.",
           "theoryCardIndex": 3,
           "sign": "E3",
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q47",
-          "question": "Een pijl wijst omhoog onder dit bord. Wat betekent dat?",
+          "question": "Onder een parkeerverbodsbord een pijl naar boven. Wat betekent die?",
           "choices": [
             "Het verbod begint hier",
             "Het verbod eindigt hier",
-            "Het verbod loopt hier"
+            "Het verbod loopt door"
           ],
-          "explanation": "Pijl naar boven = het verbod begint na het bord.",
+          "explanation": "Pijl naar boven: begin van het verbod.",
           "theoryCardIndex": 3,
           "correct": 0
         },
         {
           "id": "H2_Q48",
-          "question": "Een pijl wijst omlaag onder dit bord. Wat betekent dat?",
+          "question": "Onder een parkeerverbodsbord een pijl naar beneden. Wat betekent die?",
           "choices": [
             "Het verbod eindigt hier",
             "Het verbod begint hier",
-            "Het verbod loopt verder"
+            "Het verbod loopt door"
           ],
-          "explanation": "Pijl naar beneden = het verbod eindigt bij het bord (geldt tot hier).",
+          "explanation": "Pijl naar beneden: einde van het verbod.",
           "theoryCardIndex": 3,
           "correct": 0
         },
         {
           "id": "H2_Q49",
-          "question": "Pijlen wijzen omhoog én omlaag. Wat betekent dat?",
+          "question": "Onder een parkeerverbodsbord een pijl naar boven en naar beneden. Wat betekent die?",
           "choices": [
-            "Het verbod geldt aan beide kanten",
-            "Het verbod begint hier ter plaatse",
+            "Het verbod loopt door, voor en na het bord",
+            "Het verbod begint hier",
             "Het verbod eindigt hier"
           ],
-          "explanation": "Pijl naar boven en naar beneden = het verbod geldt aan beide kanten van het bord.",
+          "explanation": "Dubbele pijl: je staat midden in de verbodszone.",
           "theoryCardIndex": 3,
           "correct": 0
         },
         {
           "id": "H2_Q50",
-          "question": "Zonder cijfer, op welke ruimtes geldt dit bord?",
+          "question": "Dit parkeerverbodsbord geldt:",
           "choices": [
             "Op de rijbaan en de berm",
-            "Op de rijbaan en niets anders",
-            "Op de berm en het trottoir"
+            "Alleen op de rijbaan",
+            "Op het trottoir"
           ],
-          "explanation": "Zonder cijferaanduiding geldt het bord voor de rijbaan EN de berm.",
+          "explanation": "De borden die stilstaan en parkeren verbieden, gelden op de rijbaan en de berm.",
           "theoryCardIndex": 3,
           "sign": "E1",
           "correct": 0
         },
         {
           "id": "H2_Q51",
-          "question": "Met de vermelding « 20 m », op welke ruimte geldt dit bord?",
+          "question": "Tot waar geldt dit bord zonder onderbord?",
           "choices": [
-            "Op de rijbaan, over 20 meter",
-            "Op de rijbaan en de berm",
-            "Op de berm en het trottoir"
+            "Tot het volgende kruispunt, aan zijn kant",
+            "Over 100 m",
+            "Aan beide kanten van de straat"
           ],
-          "explanation": "Met cijferaanduiding geldt het bord alleen voor de rijbaan, over de aangegeven afstand.",
+          "explanation": "Aan de kant waar het staat, tot het volgende kruispunt.",
           "theoryCardIndex": 3,
           "sign": "E1",
           "correct": 0
         },
         {
-          "id": "H2_Q53",
-          "question": "Uw wagen staat met panne onder een bord stilstaan en parkeren verboden. Bent u in overtreding?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "explanation": "De borden voor stilstaan en parkeren gelden niet voor voertuigen met pech.",
-          "theoryCardIndex": 3,
-          "correct": 1
-        },
-        {
           "id": "H2_Q55",
-          "question": "Wat betekent de vermelding « 1–15 » op dit bord?",
+          "question": "Wat betekent dit bord (« 1–15 »)?",
           "choices": [
-            "Parkeren verboden van 1 tot 15",
+            "Parkeren verboden aan deze kant van 1 tot 15",
             "Parkeren toegelaten van 1 tot 15",
-            "Parkeren verboden van 16 tot 31"
+            "Parkeren verboden van 16 tot het einde van de maand"
           ],
-          "explanation": "Het bord \"1–15\" verbiedt het parkeren aan deze kant van de rijbaan van de 1e tot de 15e van de maand.",
+          "explanation": "Van de 1ste tot de 15de: niet parkeren aan deze kant.",
           "theoryCardIndex": 4,
           "sign": "E5",
           "correct": 0
         },
         {
           "id": "H2_Q56",
-          "question": "Wat betekent de vermelding « 16–31 » op dit bord?",
+          "question": "Wat betekent dit bord (« 16–31 »)?",
           "choices": [
-            "Parkeren verboden van 16 tot 31",
-            "Parkeren toegelaten van 16 tot 31",
+            "Parkeren verboden aan deze kant van 16 tot het einde van de maand",
+            "Parkeren toegelaten van 16 tot het einde",
             "Parkeren verboden van 1 tot 15"
           ],
-          "explanation": "Het bord \"16–31\" verbiedt het parkeren aan deze kant van de rijbaan van de 16e tot het einde van de maand.",
+          "explanation": "Van de 16de tot het einde van de maand: niet parkeren aan deze kant.",
           "theoryCardIndex": 4,
           "sign": "E7",
           "correct": 0
         },
         {
           "id": "H2_Q57",
-          "question": "Op de 5de van de maand staat het bord « 1–15 » aan uw kant. Aan welke kant parkeert u?",
+          "question": "De 5de van de maand staat het bord « 1–15 » aan jouw kant. Waar parkeer je?",
           "choices": [
-            "Aan de overkant van de rijbaan",
-            "Aan de kant van het bord « 1–15 »",
-            "Aan beide kanten, naar keuze"
+            "Aan de overkant",
+            "Aan deze kant",
+            "Naar keuze"
           ],
-          "explanation": "Van de 1e tot de 15e is de kant \"1–15\" verboden: je parkeert aan de andere kant (kant \"16–31\").",
+          "explanation": "De 5de valt tussen 1 en 15: deze kant is verboden.",
           "theoryCardIndex": 4,
           "sign": "E5",
           "correct": 0
         },
         {
           "id": "H2_Q58",
-          "question": "Geldt het verbod van het beurtelings parkeren ook op de berm?",
+          "question": "Geldt het halfmaandelijks parkeren ook op de berm?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, alleen op de rijbaan",
+            "Ja"
           ],
-          "explanation": "Het wisselend parkeren geldt alleen voor de rijbaan. De berm is altijd vrij.",
+          "explanation": "Het geldt alleen op de rijbaan.",
           "theoryCardIndex": 5,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q59",
-          "question": "Het bord voor halfmaandelijks wisselend parkeren in de hele bebouwde kom geeft aan: van de 1e tot de 15e, parkeren aan de kant van de huisnummers:",
+          "question": "Gemeente met halfmaandelijks parkeren. De 7de van de maand: aan welke kant parkeer je?",
           "choices": [
-            "Even",
-            "Oneven",
-            "Om het even welke",
-            "Dat hangt af van de straat"
+            "Kant van de oneven nummers",
+            "Kant van de even nummers",
+            "Naar keuze"
           ],
-          "explanation": "Voor de hele bebouwde kom: van de 1e tot de 15e = kant van de ONEVEN huisnummers.",
+          "explanation": "Van 1 tot 15: oneven kant. Van 16 tot het einde: even kant.",
           "theoryCardIndex": 5,
-          "correct": 1
+          "correct": 0
         },
         {
           "id": "H2_Q61",
-          "question": "Wanneer moet u uw wagen verplaatsen bij beurtelings parkeren?",
+          "question": "Wanneer verander je van kant?",
           "choices": [
-            "De laatste dag, tussen 19u30 en 20u",
-            "De eerste dag van de periode",
-            "De eerste van de maand om 8 uur"
+            "De laatste dag, tussen 19.30 en 20 uur",
+            "De eerste dag, om 8 uur",
+            "De 15de om middernacht"
           ],
-          "explanation": "Het wisselen van kant gebeurt op de laatste dag van elke periode, tussen 19u30 en 20u.",
+          "explanation": "De laatste dag van de periode, tussen 19.30 en 20 uur.",
           "theoryCardIndex": 5,
           "correct": 0
         },
         {
           "id": "H2_Q63",
-          "question": "De laatste dag van de maand november is:",
+          "question": "In november: op welke dag verander je van kant op het einde van de maand?",
           "choices": [
-            "31 november",
-            "30 november",
-            "29 november",
-            "28 november"
+            "De 30ste",
+            "De 31ste",
+            "De 29ste"
           ],
-          "explanation": "November heeft 30 dagen: de laatste dag is 30 november.",
-          "theoryCardIndex": 5,
-          "correct": 1
-        },
-        {
-          "id": "H2_Q64",
-          "question": "Het is 30 april. Moet u tussen 19u30 en 20u van kant wisselen?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "explanation": "April heeft 30 dagen: 30 april is wel degelijk de laatste dag, dus wisselen van kant tussen 19u30 en 20u.",
+          "explanation": "November heeft 30 dagen.",
           "theoryCardIndex": 5,
           "correct": 0
         },
         {
-          "id": "H2_Q65",
-          "question": "Waarom wordt 28 februari nooit gevraagd op het examen?",
-          "choices": [
-            "Bij louter examenafspraak",
-            "Februari telt soms 29 dagen",
-            "Puur statistisch toeval",
-            "De datum heeft geen belang"
-          ],
-          "explanation": "Om de 4 jaar heeft februari 29 dagen. De 28e is dus niet altijd de laatste dag van de maand.",
-          "theoryCardIndex": 5,
-          "correct": 1
-        },
-        {
-          "id": "H2_Q68",
-          "question": "Op de 20ste staat het bord « 1–15 » aan uw kant. Mag u er parkeren?",
+          "id": "H2_Q64",
+          "question": "Het is 30 april. Verander je van kant tussen 19.30 en 20 uur?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Op de 20e is de periode \"1–15\" voorbij: het bord \"1–15\" verbiedt niets. Je mag aan deze kant parkeren.",
+          "explanation": "April heeft 30 dagen: het is de laatste dag.",
+          "theoryCardIndex": 5,
+          "correct": 0
+        },
+        {
+          "id": "H2_Q68",
+          "question": "De 20ste van de maand staat het bord « 1–15 » aan jouw kant. Mag je er parkeren?",
+          "choices": [
+            "Ja",
+            "Nee"
+          ],
+          "explanation": "De 20ste verbiedt dit bord niets meer.",
           "theoryCardIndex": 4,
           "sign": "E5",
           "correct": 0
@@ -1741,37 +1668,24 @@
           "id": "H2_Q69",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Hier is parkeren toegelaten",
-            "Hier is parkeren verboden",
-            "Hier een voetgangerszone"
+            "Parkeren toegelaten",
+            "Parkeerverbod",
+            "Voetgangerszone"
           ],
-          "explanation": "Het blauwe vierkante P-bord duidt een parkeerplaats aan waar parkeren is toegelaten.",
+          "explanation": "Witte P op blauwe achtergrond: parkeren toegelaten.",
           "theoryCardIndex": 3,
           "sign": "E9a",
           "correct": 0
         },
         {
-          "id": "H2_Q74",
-          "question": "Een zonebord draagt de vermelding « 9u–12u ». Wat betekent het?",
-          "choices": [
-            "Verboden tussen 9u en 12u",
-            "Verboden de hele dag door",
-            "Toegelaten tussen 9u en 12u"
-          ],
-          "explanation": "Een bord met tijdsaanduiding verbiedt het parkeren op rijbaan en berm gedurende het aangegeven tijdstip.",
-          "theoryCardIndex": 4,
-          "sign": "E1",
-          "correct": 0
-        },
-        {
           "id": "H2_Q75",
-          "question": "Dit bord draagt « 20 m » en een pijl omhoog. Wat betekent het?",
+          "question": "Onder dit bord: « 20 m » en een pijl naar boven. Wat betekent het?",
           "choices": [
-            "Het verbod begint, over 20 m",
-            "Het verbod eindigt hier",
-            "Het verbod dekt 20 m ervoor"
+            "Verbod over de volgende 20 m",
+            "Einde van het verbod",
+            "Verbod over 20 m ervoor"
           ],
-          "explanation": "Pijl naar boven = begint hier. Cijferaanduiding = alleen de rijbaan, over 20 m.",
+          "explanation": "Het verbod begint hier en geldt over 20 m.",
           "theoryCardIndex": 3,
           "sign": "E1",
           "correct": 0

@@ -1166,385 +1166,338 @@
       "questions": [
         {
           "id": "H2_Q1",
-          "question": "Il n'y a pas 1 mètre libre devant et derrière votre véhicule. Pouvez-vous stationner ?",
+          "question": "Il reste moins d'1 m devant et derrière votre voiture. Pouvez-vous stationner ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit si vous ne laissez pas au moins 1 mètre à l'avant et 1 mètre à l'arrière.",
+          "correct": 0,
+          "explanation": "Il faut au moins 1 m devant et derrière.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q2",
-          "question": "Sans ce mètre d'espace libre, pouvez-vous quand même vous arrêter brièvement ?",
+          "question": "Même endroit : pouvez-vous vous arrêter pour déposer quelqu'un ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La règle du 1 mètre concerne uniquement le stationnement : l'arrêt reste toujours permis.",
+          "explanation": "La règle du mètre vise le stationnement, pas l'arrêt.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q3",
-          "question": "À quelle distance d'un panneau d'arrêt de bus le stationnement est-il interdit ?",
+          "question": "Stationnement interdit à moins de combien de mètres d'un panneau d'arrêt de bus ?",
           "choices": [
-            "15 mètres de chaque côté",
-            "5 mètres de chaque côté",
-            "20 mètres de chaque côté"
+            "15 m de chaque côté",
+            "5 m de chaque côté",
+            "20 m de chaque côté"
           ],
           "correct": 0,
-          "explanation": "Le stationnement est interdit à moins de 15 mètres de chaque côté du panneau d'arrêt.",
+          "explanation": "15 m avant et 15 m après le panneau.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q4",
-          "question": "Pouvez-vous vous arrêter devant un arrêt de bus pour déposer un passager ?",
+          "question": "Pouvez-vous vous arrêter à l'arrêt de bus pour déposer un passager ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Devant un arrêt de bus, seul le stationnement est interdit : l'arrêt pour embarquer/débarquer est permis.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "H2_Q5",
-          "question": "Comment la zone interdite autour d'un arrêt de bus est-elle souvent indiquée ?",
-          "choices": [
-            "Par des marques au sol",
-            "Par des feux clignotants",
-            "Par des bornes au bord"
-          ],
-          "correct": 0,
-          "explanation": "L'espace de 15 m de chaque côté d'un arrêt est souvent matérialisé par des marques routières au sol.",
+          "explanation": "Le stationnement est interdit, l'arrêt est permis.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q6",
-          "question": "Pouvez-vous stationner devant l'accès carrossable d'une propriété ?",
+          "question": "Pouvez-vous stationner devant l'entrée de garage d'une maison ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit devant un accès carrossable. L'arrêt reste permis.",
+          "correct": 0,
+          "explanation": "Interdit de stationner devant un accès carrossable. L'arrêt est permis.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q7",
-          "question": "Vous habitez là et votre plaque est reproduite sur l'accès. Pouvez-vous y stationner ?",
+          "question": "Quand le propriétaire peut-il stationner devant son garage ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Si sa plaque y est reproduite lisiblement",
+            "Toujours",
+            "Jamais"
           ],
           "correct": 0,
-          "explanation": "L'occupant peut stationner devant son propre accès s'il a reproduit sa plaque d'immatriculation visiblement dessus.",
+          "explanation": "Seulement si son numéro de plaque est bien visible sur l'accès.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q8",
-          "question": "Pouvez-vous stationner devant une porte de garage ?",
+          "question": "Pouvez-vous vous arrêter devant une porte de garage pour décharger vos courses ?",
           "choices": [
             "Oui",
             "Non"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit devant une porte de garage. L'arrêt est permis.",
+          "correct": 0,
+          "explanation": "L'arrêt est permis, le stationnement non.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q9",
-          "question": "Votre plaque est reproduite sur votre porte de garage. Pouvez-vous stationner devant ?",
+          "question": "La plaque d'un voisin est reproduite sur cette porte de garage. Pouvez-vous y stationner ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "L'occupant peut stationner devant sa porte de garage s'il a reproduit sa plaque visiblement sur la porte.",
+          "explanation": "Seul le véhicule dont la plaque est reproduite peut y stationner.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q10",
-          "question": "Votre véhicule empêcherait un autre de sortir de sa place. Pouvez-vous stationner ?",
+          "question": "Vous bloqueriez la sortie d'une autre voiture. Pouvez-vous stationner ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, si vous restez près"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit si vous empêchez un véhicule de quitter son emplacement.",
+          "correct": 0,
+          "explanation": "Interdit d'empêcher un véhicule de sortir.",
           "theoryCardIndex": 0
         },
         {
           "id": "H2_Q15",
-          "question": "Votre stationnement obligerait les cyclistes à rouler sur la chaussée. Pouvez-vous vous garer ?",
+          "question": "Un obstacle force les cyclistes à passer sur la chaussée. Pouvez-vous stationner à cet endroit ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Si votre stationnement contraint les cyclistes à emprunter la chaussée à cause d'un obstacle, le stationnement est interdit.",
+          "correct": 0,
+          "explanation": "Vous les mettriez en danger : stationnement interdit.",
           "theoryCardIndex": 1
         },
         {
           "id": "H2_Q16",
-          "question": "Vous circulez et une piste cyclable se termine. À quelle distance de cette fin de piste l'arrêt et le stationnement sont-ils interdits ?",
+          "question": "Fin de piste cyclable : arrêt et stationnement interdits à moins de :",
           "choices": [
-            "3 mètres de part et d'autre",
-            "5 mètres de part et d'autre",
-            "10 mètres de part et d'autre",
-            "15 mètres de part et d'autre"
+            "5 m",
+            "3 m",
+            "10 m"
           ],
-          "correct": 1,
-          "explanation": "À moins de 5 mètres de part et d'autre de la fin d'une piste cyclable, ni arrêt ni stationnement.",
+          "correct": 0,
+          "explanation": "À moins de 5 m de l'endroit où les cyclistes quittent ou rejoignent la piste.",
           "theoryCardIndex": 1
         },
         {
-          "id": "H2_Q17",
-          "question": "En fin de piste cyclable, l'interdiction à moins de 5 m vise-t-elle aussi l'arrêt ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "En fin de piste cyclable, ni arrêt ni stationnement à moins de 5 m : les cyclistes qui reprennent la chaussée ont la priorité.",
-          "theoryCardIndex": 1,
-          "severe": true
-        },
-        {
           "id": "H2_Q18",
-          "question": "Sur une chaussée étroite, quel passage libre minimum devez-vous laisser ?",
+          "question": "Quel passage libre devez-vous laisser sur la chaussée pour stationner ?",
           "choices": [
-            "Au moins 3 mètres",
-            "Au moins 2 mètres",
-            "Au moins 5 mètres"
+            "3 m",
+            "2 m",
+            "5 m"
           ],
           "correct": 0,
-          "explanation": "Il faut laisser au moins 3 mètres de passage libre pour stationner sur une chaussée étroite.",
+          "explanation": "Au moins 3 m de passage libre.",
           "theoryCardIndex": 1
         },
         {
           "id": "H2_Q19",
-          "question": "Le passage libre ne fait que 2,5 m. Pouvez-vous quand même vous arrêter brièvement ?",
+          "question": "Il reste 2,5 m de passage. Pouvez-vous vous arrêter pour déposer quelqu'un ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La règle des 3 m concerne uniquement le stationnement : l'arrêt reste permis même avec moins de 3 m de passage.",
+          "explanation": "Les 3 m visent le stationnement, pas l'arrêt.",
           "theoryCardIndex": 1
         },
         {
           "id": "H2_Q20",
-          "question": "Un véhicule est garé en face sur une chaussée à double sens. Pouvez-vous stationner en face ?",
+          "question": "Rue étroite à double sens, une voiture est garée en face. Pouvez-vous vous garer juste en face d'elle ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, si on ne peut plus se croiser",
+            "Oui, toujours"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement en face est interdit si le croisement de deux autres véhicules en serait gêné.",
+          "correct": 0,
+          "explanation": "Interdit si le croisement de deux voitures devient difficile.",
           "theoryCardIndex": 1
         },
         {
           "id": "H2_Q21",
-          "question": "Pouvez-vous vous arrêter brièvement en face de ce véhicule stationné ?",
+          "question": "Même rue : pouvez-vous vous arrêter en face pour déposer quelqu'un ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Seul le stationnement est interdit en face d'un autre véhicule si le croisement est gêné. L'arrêt reste permis.",
+          "explanation": "Seul le stationnement est interdit.",
           "theoryCardIndex": 1
         },
         {
           "id": "H2_Q22",
-          "question": "La chaussée fait 5 m et votre voiture 1,8 m. Le passage libre est-il suffisant ?",
+          "question": "Chaussée de 5 m, voiture de 1,8 m de large. Pouvez-vous stationner ?",
           "choices": [
-            "Oui",
+            "Oui, il reste 3,2 m",
             "Non"
           ],
           "correct": 0,
-          "explanation": "5 m − 1,8 m = 3,2 m de passage libre, soit ≥ 3 m : le stationnement est autorisé.",
+          "explanation": "5 − 1,8 = 3,2 m : plus de 3 m, c'est bon.",
           "theoryCardIndex": 1
         },
         {
           "id": "H2_Q23",
-          "question": "La chaussée fait 4,5 m et votre voiture 1,8 m. Pouvez-vous stationner ?",
+          "question": "Chaussée de 4,5 m, voiture de 1,8 m de large. Pouvez-vous stationner ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, il reste 2,7 m",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "4,5 m − 1,8 m = 2,7 m, insuffisant : il faut au moins 3 m de passage libre.",
+          "correct": 0,
+          "explanation": "4,5 − 1,8 = 2,7 m : moins de 3 m.",
           "theoryCardIndex": 1
         },
         {
           "id": "H2_Q24",
-          "question": "Un obstacle force les cyclistes sur la chaussée. Pouvez-vous vous arrêter pour déposer un passager ?",
+          "question": "Un obstacle force les cyclistes sur la chaussée. Pouvez-vous vous arrêter pour déposer quelqu'un ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Quand un obstacle contraint les cyclistes sur la chaussée, seul le stationnement est interdit. L'arrêt reste permis.",
+          "explanation": "Seul le stationnement est interdit.",
           "theoryCardIndex": 1
         },
         {
           "id": "H2_Q25",
-          "question": "Hors agglomération sur une voie prioritaire, pouvez-vous stationner sur la chaussée ?",
+          "question": "Route prioritaire, hors agglomération. Pouvez-vous stationner sur la chaussée ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Hors agglomération, sur une voie prioritaire, le stationnement est interdit sur la chaussée. L'arrêt est permis.",
+          "correct": 0,
+          "explanation": "Interdit sur la chaussée. L'arrêt reste permis.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q26",
-          "question": "Hors agglomération sur une voie prioritaire, pouvez-vous stationner sur l'accotement ?",
+          "question": "Route prioritaire, hors agglomération. Pouvez-vous stationner sur l'accotement ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Hors agglomération, sur une voie prioritaire, le stationnement est permis sur l'accotement.",
+          "explanation": "L'interdiction vise seulement la chaussée.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q27",
-          "question": "En agglomération sur une voie prioritaire, pouvez-vous stationner sur la chaussée ?",
+          "question": "Route prioritaire, en agglomération. Pouvez-vous stationner sur la chaussée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En agglomération, les règles sont plus souples : arrêt et stationnement sont permis sur la chaussée d'une voie prioritaire.",
+          "explanation": "L'interdiction ne vaut que hors agglomération.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q28",
-          "question": "Sur une chaussée divisée en bandes de circulation, pouvez-vous stationner ?",
+          "question": "La chaussée est divisée en bandes de circulation. Pouvez-vous y stationner ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, sauf panneau qui l'autorise",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit sur une chaussée divisée en bandes, sauf indication contraire par signalisation.",
+          "correct": 0,
+          "explanation": "Interdit sur une chaussée à bandes, sauf panneau de stationnement.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q29",
-          "question": "Une bande de stationnement longe cette chaussée. Pouvez-vous y stationner ?",
+          "question": "Même chaussée, mais une bande de stationnement la longe. Pouvez-vous y stationner ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le stationnement est interdit sur la chaussée divisée en bandes, mais autorisé dans la bande de stationnement ou sur l'accotement.",
+          "explanation": "La bande de stationnement n'est pas une bande de circulation.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q30",
-          "question": "Sur une voie à trois chaussées, pouvez-vous stationner sur la chaussée centrale ?",
+          "question": "Avenue à trois chaussées : pouvez-vous stationner sur celle du milieu ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit sur la chaussée centrale d'une voie à 3 chaussées, sauf indication contraire.",
+          "correct": 0,
+          "explanation": "Interdit sur la chaussée centrale.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q31",
-          "question": "Hors agglomération sur une voie à deux chaussées, pouvez-vous stationner à gauche ?",
+          "question": "Hors agglomération, route à deux chaussées séparées. Pouvez-vous stationner à gauche ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Hors agglomération, le stationnement est interdit du côté gauche d'une voie à 2 chaussées.",
+          "correct": 0,
+          "explanation": "Interdit à gauche et sur le terre-plein central.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q33",
-          "question": "En agglomération sur une voie à deux chaussées, pouvez-vous stationner à gauche ?",
+          "question": "En agglomération, route à deux chaussées séparées. Pouvez-vous stationner à gauche ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En agglomération, le stationnement à gauche est permis sur la chaussée ou sur l'accotement de plain-pied/bande de stationnement.",
+          "explanation": "Chaque chaussée est à sens unique : les deux côtés sont permis.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q34",
-          "question": "En agglomération, pouvez-vous stationner sur un accotement en saillie à gauche ?",
+          "question": "En agglomération, pouvez-vous stationner sur un accotement en saillie ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "En agglomération, le stationnement sur un accotement en saillie à gauche est interdit.",
+          "correct": 0,
+          "explanation": "En agglomération, l'accotement en saillie est interdit, sauf signalisation.",
           "theoryCardIndex": 2
         },
         {
           "id": "H2_Q39",
-          "question": "Que signifie une ligne jaune discontinue au bord de la chaussée ?",
+          "question": "Ligne jaune discontinue au bord de la chaussée. Que pouvez-vous faire ?",
           "choices": [
-            "Stationnement interdit, arrêt permis",
-            "Arrêt et stationnement tous interdits",
-            "Stationnement autorisé ici"
+            "Vous arrêter, pas stationner",
+            "Stationner",
+            "Rien du tout"
           ],
           "correct": 0,
-          "explanation": "La ligne jaune discontinue signifie : stationnement interdit, arrêt permis.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H2_Q40",
-          "question": "Que signifie une ligne jaune continue au bord de la chaussée ?",
-          "choices": [
-            "Arrêt et stationnement interdits",
-            "Stationnement interdit, arrêt permis",
-            "Elle marque une piste cyclable"
-          ],
-          "correct": 0,
-          "explanation": "Contrairement à la ligne jaune discontinue (stationnement interdit, arrêt permis), la ligne jaune continue interdit à la fois l'arrêt ET le stationnement.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H2_Q41",
-          "question": "Une ligne blanche discontinue au bord de la chaussée interdit-elle le stationnement ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Seule la ligne jaune discontinue interdit le stationnement. Une ligne blanche ne concerne pas le stationnement.",
+          "explanation": "Stationnement interdit le long de cette ligne. L'arrêt reste permis.",
           "theoryCardIndex": 3
         },
         {
           "id": "H2_Q42",
-          "question": "Le long d'une ligne jaune discontinue, pouvez-vous vous arrêter pour déposer un passager ?",
+          "question": "Le long d'une ligne jaune discontinue, pouvez-vous déposer un passager ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La ligne jaune discontinue interdit uniquement le stationnement : l'arrêt est permis.",
+          "explanation": "La ligne interdit le stationnement, pas l'arrêt.",
           "theoryCardIndex": 3
         },
         {
           "id": "H2_Q43",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Stationnement interdit, arrêt permis",
-            "Arrêt et stationnement tous interdits",
-            "Stationnement autorisé des deux côtés"
+            "Stationnement interdit",
+            "Arrêt et stationnement interdits",
+            "Parking"
           ],
           "correct": 0,
-          "explanation": "Rond bleu + 1 diagonale rouge = stationnement interdit (arrêt permis), côté du signal, jusqu'au carrefour suivant.",
+          "explanation": "Une barre rouge : stationnement interdit, arrêt permis.",
           "theoryCardIndex": 3,
           "sign": "E1"
         },
@@ -1553,220 +1506,194 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Arrêt et stationnement interdits",
-            "Stationnement interdit, arrêt permis",
-            "Stationnement autorisé des deux côtés"
+            "Stationnement interdit",
+            "Parking"
           ],
           "correct": 0,
-          "explanation": "Rond bleu + 2 diagonales rouges = arrêt ET stationnement interdits des deux côtés.",
+          "explanation": "Croix rouge : ni arrêt ni stationnement, du côté du panneau.",
           "theoryCardIndex": 3,
           "sign": "E3"
         },
         {
           "id": "H2_Q46",
-          "question": "Sous ce panneau, pouvez-vous vous arrêter pour déposer un passager ?",
+          "question": "Sous ce panneau, pouvez-vous déposer un passager ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le signal à deux diagonales interdit également l'arrêt : vous ne pouvez pas déposer un passager.",
+          "correct": 0,
+          "explanation": "Croix rouge : même l'arrêt est interdit.",
           "theoryCardIndex": 3,
           "sign": "E3"
         },
         {
           "id": "H2_Q47",
-          "question": "Une flèche pointe vers le haut sous ce panneau. Que signifie-t-elle ?",
+          "question": "Sous un panneau « stationnement interdit », une flèche vers le haut. Que signifie-t-elle ?",
           "choices": [
             "L'interdiction commence ici",
             "L'interdiction se termine ici",
-            "L'interdiction est en cours"
+            "L'interdiction continue"
           ],
           "correct": 0,
-          "explanation": "Flèche vers le haut = l'interdiction commence après le signal.",
+          "explanation": "Flèche vers le haut : début de l'interdiction.",
           "theoryCardIndex": 3
         },
         {
           "id": "H2_Q48",
-          "question": "Une flèche pointe vers le bas sous ce panneau. Que signifie-t-elle ?",
+          "question": "Sous un panneau « stationnement interdit », une flèche vers le bas. Que signifie-t-elle ?",
           "choices": [
             "L'interdiction se termine ici",
             "L'interdiction commence ici",
-            "L'interdiction se poursuit"
+            "L'interdiction continue"
           ],
           "correct": 0,
-          "explanation": "Flèche vers le bas = l'interdiction se termine au signal (applicable jusqu'ici).",
+          "explanation": "Flèche vers le bas : fin de l'interdiction.",
           "theoryCardIndex": 3
         },
         {
           "id": "H2_Q49",
-          "question": "Des flèches pointent vers le haut et vers le bas. Que signifient-elles ?",
+          "question": "Sous un panneau « stationnement interdit », une flèche vers le haut et vers le bas. Que signifie-t-elle ?",
           "choices": [
-            "L'interdiction vaut des deux côtés",
-            "L'interdiction commence ici même",
+            "L'interdiction continue, avant et après le panneau",
+            "L'interdiction commence ici",
             "L'interdiction se termine ici"
           ],
           "correct": 0,
-          "explanation": "Flèche vers le haut et le bas = l'interdiction s'applique de part et d'autre du signal.",
+          "explanation": "Double flèche : vous êtes au milieu de la zone d'interdiction.",
           "theoryCardIndex": 3
         },
         {
           "id": "H2_Q50",
-          "question": "Sans indication chiffrée, à quels espaces ce panneau s'applique-t-il ?",
+          "question": "Ce panneau d'interdiction de stationner vaut :",
           "choices": [
-            "À la chaussée et à l'accotement",
-            "À la chaussée et rien d'autre",
-            "À l'accotement et au trottoir"
+            "Sur la chaussée et l'accotement",
+            "Sur la chaussée seulement",
+            "Sur le trottoir"
           ],
           "correct": 0,
-          "explanation": "Sans indication chiffrée, le signal s'applique à la chaussée ET à l'accotement.",
+          "explanation": "Les panneaux d'interdiction d'arrêt et de stationnement valent sur la chaussée et l'accotement.",
           "theoryCardIndex": 3,
           "sign": "E1"
         },
         {
           "id": "H2_Q51",
-          "question": "Avec l'indication « 20 m », à quel espace ce panneau s'applique-t-il ?",
+          "question": "Sans panneau additionnel, jusqu'où vaut ce panneau ?",
           "choices": [
-            "À la chaussée, sur 20 mètres",
-            "À la chaussée et l'accotement",
-            "À l'accotement et au trottoir"
+            "Jusqu'au prochain carrefour, de son côté",
+            "Sur 100 m",
+            "Des deux côtés de la rue"
           ],
           "correct": 0,
-          "explanation": "Avec indication chiffrée, le signal s'applique uniquement à la chaussée, sur la distance indiquée.",
+          "explanation": "Du côté où il est placé, jusqu'au prochain carrefour.",
           "theoryCardIndex": 3,
           "sign": "E1"
         },
         {
-          "id": "H2_Q53",
-          "question": "Votre voiture est en panne sous un panneau d'arrêt et stationnement interdits. Êtes-vous en infraction ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Les signaux d'arrêt et de stationnement ne s'appliquent pas aux véhicules en panne.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "H2_Q55",
-          "question": "Que signifie l'indication « 1–15 » sur ce panneau ?",
+          "question": "Que signifie ce panneau (« 1–15 ») ?",
           "choices": [
-            "Stationnement interdit du 1 au 15",
+            "Stationnement interdit de ce côté du 1 au 15",
             "Stationnement permis du 1 au 15",
-            "Stationnement interdit du 16 au 31"
+            "Stationnement interdit du 16 à la fin du mois"
           ],
           "correct": 0,
-          "explanation": "Le signal \"1–15\" interdit le stationnement de ce côté de la chaussée du 1er au 15 du mois.",
+          "explanation": "Du 1er au 15 du mois, pas de stationnement de ce côté.",
           "theoryCardIndex": 4,
           "sign": "E5"
         },
         {
           "id": "H2_Q56",
-          "question": "Que signifie l'indication « 16–31 » sur ce panneau ?",
+          "question": "Que signifie ce panneau (« 16–31 ») ?",
           "choices": [
-            "Stationnement interdit du 16 au 31",
-            "Stationnement permis du 16 au 31",
+            "Stationnement interdit de ce côté du 16 à la fin du mois",
+            "Stationnement permis du 16 à la fin du mois",
             "Stationnement interdit du 1 au 15"
           ],
           "correct": 0,
-          "explanation": "Le signal \"16–31\" interdit le stationnement de ce côté de la chaussée du 16 à la fin du mois.",
+          "explanation": "Du 16 à la fin du mois, pas de stationnement de ce côté.",
           "theoryCardIndex": 4,
           "sign": "E7"
         },
         {
           "id": "H2_Q57",
-          "question": "Le 5 du mois, le signal « 1–15 » est de votre côté. De quel côté stationnez-vous ?",
+          "question": "Le 5 du mois, le panneau « 1–15 » est de votre côté. Où vous garez-vous ?",
           "choices": [
-            "De l'autre côté de la chaussée",
-            "Du côté du signal « 1–15 »",
-            "Des deux côtés, au choix"
+            "De l'autre côté",
+            "De ce côté",
+            "Au choix"
           ],
           "correct": 0,
-          "explanation": "Du 1er au 15, le côté \"1–15\" est interdit : vous stationnez de l'autre côté (côté \"16–31\").",
+          "explanation": "Le 5 est entre le 1 et le 15 : ce côté est interdit.",
           "theoryCardIndex": 4,
           "sign": "E5"
         },
         {
           "id": "H2_Q58",
-          "question": "L'interdiction du stationnement alterné s'applique-t-elle aussi à l'accotement ?",
+          "question": "Le stationnement alterné vaut-il aussi sur l'accotement ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, seulement sur la chaussée",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement alterné s'applique uniquement à la chaussée. L'accotement est toujours libre.",
+          "correct": 0,
+          "explanation": "Il ne vise que la chaussée.",
           "theoryCardIndex": 5
         },
         {
           "id": "H2_Q59",
-          "question": "Vous êtes dans une agglomération appliquant le stationnement semi-mensuel. Du 1er au 15 du mois, de quel côté devez-vous stationner ?",
+          "question": "Agglomération à stationnement alterné. Le 7 du mois, de quel côté vous garez-vous ?",
           "choices": [
-            "Du côté des numéros pairs",
-            "Du côté des numéros IMPAIRS",
-            "N'importe quel côté",
-            "Cela dépend de la rue"
+            "Côté numéros impairs",
+            "Côté numéros pairs",
+            "Au choix"
           ],
-          "correct": 1,
-          "explanation": "Pour toute l'agglomération : du 1er au 15 = côté des numéros IMPAIRS.",
+          "correct": 0,
+          "explanation": "Du 1 au 15 : côté impair. Du 16 à la fin : côté pair.",
           "theoryCardIndex": 5
         },
         {
           "id": "H2_Q61",
-          "question": "Quand devez-vous déplacer votre voiture pour le stationnement alterné ?",
+          "question": "Quand changez-vous de côté ?",
           "choices": [
             "Le dernier jour, entre 19h30 et 20h",
-            "Le premier jour de la période",
-            "Le premier du mois à 8 heures"
+            "Le premier jour, à 8h",
+            "Le 15 à minuit"
           ],
           "correct": 0,
-          "explanation": "Le changement de côté se fait le dernier jour de chaque période, entre 19h30 et 20h.",
+          "explanation": "Le dernier jour de la période, entre 19h30 et 20h.",
           "theoryCardIndex": 5
         },
         {
           "id": "H2_Q63",
-          "question": "Vous devez changer de côté le dernier jour du mois de novembre. Quel jour est-ce ?",
+          "question": "En novembre, quel jour changez-vous de côté en fin de mois ?",
           "choices": [
-            "Le 31 novembre",
-            "Le 30 novembre",
-            "Le 29 novembre",
-            "Le 28 novembre"
+            "Le 30",
+            "Le 31",
+            "Le 29"
           ],
-          "correct": 1,
-          "explanation": "Novembre a 30 jours : le dernier jour est le 30 novembre.",
+          "correct": 0,
+          "explanation": "Novembre a 30 jours.",
           "theoryCardIndex": 5
         },
         {
           "id": "H2_Q64",
-          "question": "Nous sommes le 30 avril. Devez-vous changer de côté entre 19h30 et 20h ?",
+          "question": "Nous sommes le 30 avril. Changez-vous de côté entre 19h30 et 20h ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Avril a 30 jours : le 30 avril est bien le dernier jour, donc changement de côté entre 19h30 et 20h.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "H2_Q65",
-          "question": "Vous révisez pour l'examen. Pourquoi ne demande-t-on jamais le 28 février à l'examen ?",
-          "choices": [
-            "Par simple convention d'examen",
-            "Février a parfois 29 jours",
-            "Par pur hasard statistique",
-            "La date n'a aucune importance"
-          ],
-          "correct": 1,
-          "explanation": "Tous les 4 ans, février a 29 jours. Le 28 n'est donc pas toujours le dernier jour du mois.",
+          "explanation": "Avril a 30 jours : c'est le dernier jour.",
           "theoryCardIndex": 5
         },
         {
           "id": "H2_Q68",
-          "question": "Le 20 du mois, le signal « 1–15 » est de votre côté. Pouvez-vous y stationner ?",
+          "question": "Le 20 du mois, le panneau « 1–15 » est de votre côté. Pouvez-vous vous y garer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le 20, la période \"1–15\" est terminée : le signal \"1–15\" n'interdit rien. Vous pouvez stationner de ce côté.",
+          "explanation": "Le 20, ce panneau n'interdit plus rien.",
           "theoryCardIndex": 4,
           "sign": "E5"
         },
@@ -1774,38 +1701,25 @@
           "id": "H2_Q69",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Stationnement autorisé ici",
-            "Stationnement interdit ici",
-            "Zone piétonne à cet endroit"
+            "Stationnement autorisé",
+            "Stationnement interdit",
+            "Zone piétonne"
           ],
           "correct": 0,
-          "explanation": "Le signal P bleu carré indique un emplacement de stationnement autorisé.",
+          "explanation": "P blanc sur fond bleu : stationnement autorisé.",
           "theoryCardIndex": 3,
           "sign": "E9a"
         },
         {
-          "id": "H2_Q74",
-          "question": "Un signal de zone porte la mention « 9h–12h ». Que signifie-t-il ?",
-          "choices": [
-            "Interdit entre 9h et 12h",
-            "Interdit toute la journée",
-            "Permis entre 9h et 12h"
-          ],
-          "correct": 0,
-          "explanation": "Un signal avec plage horaire interdit le stationnement sur chaussée et accotement durant l'horaire indiqué.",
-          "theoryCardIndex": 4,
-          "sign": "E1"
-        },
-        {
           "id": "H2_Q75",
-          "question": "Ce panneau porte « 20 m » et une flèche vers le haut. Que signifie-t-il ?",
+          "question": "Sous ce panneau : « 20 m » et une flèche vers le haut. Que signifie-t-il ?",
           "choices": [
-            "L'interdiction commence, sur 20 m",
-            "L'interdiction se termine ici",
-            "L'interdiction couvre 20 m avant"
+            "Interdiction sur les 20 m suivants",
+            "Fin de l'interdiction",
+            "Interdiction sur 20 m avant"
           ],
           "correct": 0,
-          "explanation": "Flèche vers le haut = commence ici. Indication chiffrée = chaussée uniquement, sur 20 m.",
+          "explanation": "L'interdiction commence ici et vaut 20 m.",
           "theoryCardIndex": 3,
           "sign": "E1"
         }
