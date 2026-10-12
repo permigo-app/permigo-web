@@ -93,8 +93,8 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     mockThemeTitle: 'La vitesse',
     mockQuestion: 'Vous roulez sur l\'autoroute belge. À quelle vitesse maximale pouvez-vous circuler ?',
     pillars: [
-      { title: 'Théorie complète', price: 'Toute la théorie offerte', cta: 'Commencer !', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
-      { title: 'Examens blancs', price: 'Un examen offert', cta: 'Tester !', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
+      { title: 'Théorie complète', price: 'Toute la théorie offerte', cta: '', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
+      { title: 'Examens blancs', price: 'Un examen offert', cta: '', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
       { title: 'Premium, tout débloqué', price: 'Tout se débloque d\u2019un coup', cta: 'Voir Premium', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
     ],
     stats: [
@@ -213,8 +213,8 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     mockThemeTitle: 'De snelheid',
     mockQuestion: 'Wat is de maximumsnelheid op de autosnelweg?',
     pillars: [
-      { title: 'Volledige theorie', price: 'Alle theorie gratis', cta: 'Beginnen!', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
-      { title: 'Proefexamens', price: 'Eén examen gratis', cta: 'Testen!', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
+      { title: 'Volledige theorie', price: 'Alle theorie gratis', cta: '', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
+      { title: 'Proefexamens', price: 'Eén examen gratis', cta: '', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
       { title: 'Premium, alles vrij', price: 'Alles in één keer vrij', cta: 'Premium bekijken', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
     ],
     stats: [
@@ -395,14 +395,7 @@ export default function LandingContent() {
             {c.navLogin}
           </Link>
 
-          <Link href="/register" style={{
-            fontSize: 12.5, fontWeight: 800, color: INK, whiteSpace: 'nowrap',
-            background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DEEP})`,
-            textDecoration: 'none', padding: '9px 16px', borderRadius: 10,
-            boxShadow: `0 4px 14px ${BRAND}3A`,
-          }}>
-            {c.navStart}
-          </Link>
+          {/* Bouton « Commencer » retiré : le gros bouton du hero suffit. */}
         </div>
       </nav>
 
@@ -540,12 +533,12 @@ export default function LandingContent() {
                   <p style={{ margin: '0 0 10px', fontSize: 15, fontWeight: 900, color: p.fg, letterSpacing: '-0.3px', lineHeight: 1.25 }}>
                     {p.price}
                   </p>
-                  <Link href={p.href} style={{
+                  {p.cta && <Link href={p.href} style={{
                     display: 'inline-block', background: p.btnBg, color: p.btnFg,
                     padding: '7px 15px', borderRadius: 8, fontWeight: 800, fontSize: 11.5, textDecoration: 'none',
                   }}>
                     {p.cta}
-                  </Link>
+                  </Link>}
                 </div>
               ))}
             </div>
