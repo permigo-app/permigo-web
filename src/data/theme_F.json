@@ -2820,186 +2820,186 @@
       "questions": [
         {
           "id": "F4_Q1",
-          "question": "Quelle règle de priorité à un carrefour sans agent, sans feux et sans panneaux ?",
+          "question": "Carrefour sans agent, sans feux, sans panneau. Qui passe en premier ?",
           "choices": [
-            "La priorité de droite",
-            "Le premier arrivé passe",
-            "Le plus rapide passe"
+            "Celui qui vient de droite",
+            "Le premier arrivé",
+            "Le plus rapide"
           ],
           "correct": 0,
-          "explanation": "La priorité de droite s'applique partout sauf si feux, agents ou signaux règlent la priorité.",
+          "explanation": "Sans rien d'autre : priorité de droite.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q1.webp"
         },
         {
           "id": "F4_Q2",
-          "question": "Un agent règle la circulation au carrefour. La priorité de droite s'applique-t-elle ?",
+          "question": "Un agent règle le carrefour. La priorité de droite s'applique-t-elle ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, vous suivez l'agent",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les agents qualifiés priment sur toutes les règles de priorité.",
+          "correct": 0,
+          "explanation": "L'agent l'emporte sur les règles de priorité.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q2.webp"
         },
         {
           "id": "F4_Q3",
-          "question": "Le carrefour est équipé de feux qui fonctionnent. La priorité de droite s'applique-t-elle ?",
+          "question": "Le carrefour a des feux qui fonctionnent. La priorité de droite s'applique-t-elle ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, vous suivez les feux",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les feux de signalisation priment sur la priorité de droite.",
+          "correct": 0,
+          "explanation": "Les feux l'emportent sur la priorité de droite.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q3.webp"
         },
         {
           "id": "F4_Q4",
-          "question": "Un conducteur vient de votre droite et tourne à gauche. A-t-il la priorité ?",
+          "question": "La voiture de droite va tourner à gauche. A-t-elle la priorité ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La direction empruntée ne change rien : la priorité de droite s'applique toujours.",
+          "explanation": "La direction qu'elle prend ne change rien : elle vient de droite.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q4.webp"
         },
         {
           "id": "F4_Q6",
-          "question": "Dans quels cas la priorité de droite ne s'applique-t-elle pas ?",
+          "question": "Dans quel cas celui qui vient de droite n'a-t-il PAS la priorité ?",
           "choices": [
-            "Rond-point ou conducteur en infraction",
-            "Quand un tram ou des piétons passent",
-            "En agglomération et hors agglomération"
+            "Il sort d'un sens interdit, ou vous êtes dans un rond-point",
+            "Il roule lentement",
+            "Il est en agglomération"
           ],
           "correct": 0,
-          "explanation": "Dans un rond-point (priorité à gauche) et le sens interdit (pas de priorité) sont les deux exceptions.",
+          "explanation": "Pas de priorité de droite dans un rond-point, ni pour celui qui sort d'un sens interdit.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q6.webp"
         },
         {
           "id": "F4_Q7",
-          "question": "Le conducteur venant de droite s'arrête un instant. Perd-il sa priorité ?",
+          "question": "La voiture de droite s'arrête un instant. Perd-elle sa priorité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "S'arrêter ou ralentir ne fait pas perdre la priorité de droite.",
+          "correct": 0,
+          "explanation": "S'arrêter ou ralentir ne fait pas perdre la priorité.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q7.webp"
         },
         {
           "id": "F4_Q9",
-          "question": "À un carrefour à priorité de droite, pouvez-vous dépasser une voiture par la gauche ?",
+          "question": "Carrefour à priorité de droite. Pouvez-vous y dépasser cette voiture ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le dépassement par la gauche est interdit aux carrefours avec priorité de droite pour les véhicules à plus de deux roues.",
+          "correct": 0,
+          "explanation": "Interdit d'y dépasser les véhicules à plus de deux roues.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q9.webp"
         },
         {
           "id": "F4_Q10",
-          "question": "À ce même carrefour, pouvez-vous dépasser une moto par la gauche ?",
+          "question": "Même carrefour. Pouvez-vous dépasser cette moto ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les véhicules à moteur à deux roues sont aussi concernés par l'interdiction.",
+          "correct": 0,
+          "explanation": "Les deux-roues à moteur sont visés aussi.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q10.webp"
         },
         {
           "id": "F4_Q11",
-          "question": "À ce même carrefour, pouvez-vous dépasser un cycliste par la gauche ?",
+          "question": "Même carrefour. Pouvez-vous dépasser ce cycliste ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'interdiction ne vise pas les cyclistes (vélos sans moteur).",
+          "explanation": "L'interdiction ne vise pas les vélos.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q11.webp"
         },
         {
           "id": "F4_Q12",
-          "question": "Le conducteur de droite ne peut pas avancer car le carrefour est encombré. Avez-vous la priorité ?",
+          "question": "La voiture de droite ne peut pas avancer, le carrefour est encombré. Avez-vous la priorité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Carrefour bloqué : le conducteur de droite garde la priorité mais peut vous laisser passer.",
+          "correct": 0,
+          "explanation": "Elle garde sa priorité, même bloquée.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q12.webp"
         },
         {
           "id": "F4_Q13",
-          "question": "Ce conducteur de droite est bloqué. Que devez-vous faire par prudence ?",
+          "question": "Le conducteur de droite est bloqué. Que faites-vous avant de passer ?",
           "choices": [
-            "Établir un contact visuel",
-            "Klaxonner pour l'alerter",
-            "Passer vite pendant qu'il bloque"
+            "Vous cherchez son regard",
+            "Vous klaxonnez",
+            "Vous passez vite"
           ],
           "correct": 0,
-          "explanation": "Le contact visuel permet de s'assurer que le conducteur de droite vous invite à passer.",
+          "explanation": "Le contact visuel vous assure qu'il vous laisse passer.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q13.webp"
         },
         {
           "id": "F4_Q14",
-          "question": "Comment ce conducteur peut-il vous signaler qu'il vous laisse passer ?",
+          "question": "Comment le conducteur de droite peut-il vous laisser passer ?",
           "choices": [
-            "Par un geste ou un appel de phares",
-            "Par un coup de klaxon prolongé",
-            "Il ne peut rien faire du tout"
+            "D'un geste ou d'un appel de phares",
+            "En klaxonnant longtemps",
+            "Il ne peut pas"
           ],
           "correct": 0,
-          "explanation": "Un geste ou un appel de phares signale qu'il vous cède le passage.",
+          "explanation": "Un geste ou un appel de phares montre qu'il vous cède le passage.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q14.webp"
         },
         {
           "id": "F4_Q15",
-          "question": "À un carrefour sans signalisation, personne ne vient de droite. Pouvez-vous passer ?",
+          "question": "Carrefour sans panneau, personne ne vient de droite. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Sans conducteur à droite, vous pouvez vous engager normalement.",
+          "explanation": "Personne à droite : vous passez, prudemment.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F4_Q15.webp"
         },
         {
           "id": "F4_Q16",
-          "question": "Deux véhicules arrivent en même temps que vous, l'un de droite, l'autre de gauche. Qui passe en premier ?",
+          "question": "Une voiture arrive de droite, une autre de gauche, en même temps que vous. Qui passe en premier ?",
           "choices": [
-            "Le véhicule venant de droite",
-            "Le véhicule venant de gauche",
-            "Le premier arrivé au carrefour"
+            "Celle de droite",
+            "Celle de gauche",
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "La voiture de droite a la priorité.",
+          "explanation": "La voiture de droite passe en premier.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F4_Q16.webp"
@@ -3008,377 +3008,329 @@
           "id": "F4_Q17",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "La priorité de droite s'applique",
-            "Un arrêt obligatoire au carrefour",
-            "Un danger à proximité immédiate"
+            "Carrefour à priorité de droite",
+            "Arrêt obligatoire",
+            "Vous avez la priorité"
           ],
           "correct": 0,
-          "explanation": "Triangle sur pointe avec croix = la priorité de droite s'applique.",
+          "explanation": "Triangle avec une croix : au carrefour, priorité de droite.",
           "theoryCardIndex": 1,
           "sign": "B17",
           "severe": true
         },
         {
-          "id": "F4_Q18",
-          "question": "Où le signal de priorité de droite est-il généralement placé ?",
-          "choices": [
-            "Aux endroits à visibilité réduite",
-            "À tous les carrefours sans signal",
-            "Dans la seule agglomération"
-          ],
-          "correct": 0,
-          "explanation": "Ce signal rappelle la priorité de droite dans des situations particulièrement délicates.",
-          "theoryCardIndex": 1,
-          "severe": true,
-          "image": "/images/questions/F4_Q18.webp"
-        },
-        {
           "id": "F4_Q19",
-          "question": "Vous rouliez sur une voie prioritaire et vous voyez ce panneau. Que signifie-t-il ?",
+          "question": "Vous étiez sur une voie prioritaire et voyez ce panneau. Que signifie-t-il ?",
           "choices": [
-            "Fin de priorité, priorité à droite",
-            "Vous conservez votre priorité",
-            "Vous devez marquer l'arrêt ici"
+            "Fin de la priorité : priorité de droite",
+            "Vous gardez la priorité",
+            "Vous devez vous arrêter"
           ],
           "correct": 0,
-          "explanation": "Ce signal indique que la voie prioritaire est finie et que la priorité de droite reprend.",
+          "explanation": "La voie prioritaire est finie : la priorité de droite reprend.",
           "theoryCardIndex": 1,
           "sign": "B17",
           "severe": true
         },
         {
           "id": "F4_Q20",
-          "question": "La rue de droite est en sens unique mais autorise les cyclistes en contresens. Ce panneau est-il utile ?",
+          "question": "La rue de droite est en sens unique, mais des cyclistes peuvent en sortir à contresens. Ce panneau est-il utile ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Des cyclistes peuvent rouler à contresens — le signal prévient de leur possible présence.",
+          "explanation": "Oui : des cyclistes peuvent arriver de droite, avec la priorité.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F4_Q20.webp"
         },
         {
           "id": "F4_Q21",
-          "question": "Vous voyez ce panneau avant un carrefour. Que devez-vous faire concrètement ?",
+          "question": "Vous voyez ce panneau avant un carrefour. Que faites-vous ?",
           "choices": [
-            "Ralentir et céder à droite",
-            "Continuer sans rien changer",
-            "Accélérer pour franchir vite"
+            "Vous ralentissez et cédez à droite",
+            "Rien ne change",
+            "Vous accélérez"
           ],
           "correct": 0,
-          "explanation": "Ce signal impose prudence et ralentissement avant le carrefour.",
+          "explanation": "Ralentissez et laissez passer ceux de droite.",
           "theoryCardIndex": 1,
           "severe": true,
           "sign": "B17"
         },
         {
-          "id": "F4_Q22",
-          "question": "Le signal de priorité de droite crée-t-il de nouvelles règles de circulation ?",
-          "choices": [
-            "Oui, il modifie les règles de priorité",
-            "Non, il rappelle simplement la règle normale",
-            "Oui, il donne la priorité à ceux de gauche",
-            "Non, ce panneau n'a aucune valeur légale"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal ne crée pas de nouvelles règles — il rappelle celles existantes.",
-          "theoryCardIndex": 1,
-          "severe": true,
-          "image": "/images/questions/F4_Q22.webp"
-        },
-        {
           "id": "F4_Q23",
-          "question": "Vous devez traverser une piste cyclable où circule un cycliste. Devez-vous lui céder le passage ?",
+          "question": "Vous traversez une piste cyclable où roule un cycliste. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Traverser une piste cyclable = céder le passage aux cyclistes qui y circulent.",
+          "explanation": "En traversant une piste cyclable, vous cédez à ceux qui y roulent.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q23.webp"
         },
         {
           "id": "F4_Q24",
-          "question": "Vous sortez d'une propriété et traversez un trottoir où marche un piéton. Devez-vous lui céder ?",
+          "question": "Vous sortez de chez vous et traversez le trottoir où marche un piéton. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Traverser un trottoir = céder le passage aux piétons qui s'y trouvent.",
+          "explanation": "En traversant un trottoir, vous cédez aux piétons.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q24.webp"
         },
         {
           "id": "F4_Q25",
-          "question": "Vous traversez une piste cyclable et un conducteur vient de droite. Quel est l'ordre de passage ?",
+          "question": "Vous traversez une piste cyclable ; un cycliste y roule et une voiture vient de droite. Ordre de passage ?",
           "choices": [
-            "Le cycliste, le conducteur, vous",
-            "Vous, le cycliste, le conducteur",
-            "Le conducteur, vous, le cycliste"
+            "Le cycliste, la voiture, vous",
+            "Vous, le cycliste, la voiture",
+            "La voiture, vous, le cycliste"
           ],
           "correct": 0,
-          "explanation": "D'abord le cycliste sur la piste, ensuite le conducteur de droite, puis vous.",
+          "explanation": "D'abord le cycliste sur la piste, puis la voiture de droite, puis vous.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F4_Q25.webp"
         },
         {
           "id": "F4_Q26",
-          "question": "Un conducteur de droite traverse une bande cyclable suggérée. Doit-il céder aux cyclistes ?",
+          "question": "Le conducteur de droite traverse une bande cyclable suggérée où roule un cycliste. Doit-il céder au cycliste ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Bande cyclable suggérée ≠ piste cyclable : la priorité de droite s'applique normalement.",
+          "correct": 0,
+          "explanation": "La bande suggérée fait partie de la chaussée : la priorité de droite s'applique normalement.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q26.webp"
         },
         {
           "id": "F4_Q30",
-          "question": "Vous arrivez à un carrefour sans signalisation. Un véhicule arrive de votre droite en circulant dans un sens interdit. Devez-vous lui céder le passage ?",
+          "question": "Une voiture arrive de droite en sortant d'un sens interdit. Devez-vous lui céder ?",
           "choices": [
-            "Oui, la priorité de droite s'applique quand même",
-            "Non, pas de priorité pour un sens interdit",
-            "Oui, dans absolument tous les cas",
-            "Cela dépend de sa vitesse d'arrivée"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Sens interdit = pas de priorité de droite.",
+          "correct": 0,
+          "explanation": "Celui qui sort d'un sens interdit n'a pas la priorité de droite.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q30.webp"
         },
         {
           "id": "F4_Q31",
-          "question": "Un cycliste autorisé débouche en contresens de la rue de droite. Devez-vous lui céder le passage ?",
+          "question": "Un cycliste autorisé sort à contresens de la rue de droite. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le cycliste autorisé par panneau additionnel bénéficie de la priorité de droite.",
+          "explanation": "Autorisé par un panonceau, il a la priorité de droite.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q31.webp"
         },
         {
-          "id": "F4_Q32",
-          "question": "Comment savez-vous qu'un sens unique implique un sens interdit de l'autre côté ?",
+          "id": "F4_Q33",
+          "question": "Un tram arrive de droite à un carrefour sans panneau. Qui passe ?",
           "choices": [
-            "Un sens unique l'implique",
-            "Grâce aux feux du carrefour",
-            "Grâce au marquage au sol"
+            "Le tram",
+            "Vous"
           ],
           "correct": 0,
-          "explanation": "Le sens unique implique que l'entrée depuis l'autre côté est un sens interdit.",
-          "theoryCardIndex": 2,
-          "severe": true,
-          "sign": "F19"
-        },
-        {
-          "id": "F4_Q33",
-          "question": "Un tram vient de votre droite à un carrefour sans signalisation. Respecte-t-il la priorité de droite ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Le tram est toujours prioritaire — il ne respecte pas la priorité de droite.",
+          "explanation": "Le tram passe avant les autres, de quelque côté qu'il vienne.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q33.webp"
         },
         {
           "id": "F4_Q34",
-          "question": "Un tram arrive d'en face et une voiture de votre droite. Quel est l'ordre de passage ?",
+          "question": "Un tram arrive d'en face, une voiture de droite. Ordre de passage ?",
           "choices": [
             "Le tram, la voiture, vous",
             "Vous, la voiture, le tram",
             "La voiture, le tram, vous"
           ],
           "correct": 0,
-          "explanation": "Tram en premier, puis priorité de droite entre les autres.",
+          "explanation": "Le tram d'abord, puis la priorité de droite entre les autres.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q34.webp"
         },
         {
           "id": "F4_Q35",
-          "question": "Aucun tram, une voiture vient de votre droite. Quelle règle s'applique ?",
+          "question": "Carrefour de campagne sans panneau : une voiture arrive de droite. Qui passe ?",
           "choices": [
-            "La priorité de droite normale",
-            "Le premier arrivé passe",
-            "Aucune règle ne s'applique"
+            "La voiture de droite",
+            "Vous",
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "Sans tram, la priorité de droite normale s'applique.",
+          "explanation": "Priorité de droite, en ville comme à la campagne.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q35.webp"
         },
         {
           "id": "F4_Q36",
-          "question": "Un tram vient de votre gauche à un carrefour sans signalisation. Devez-vous le laisser passer ?",
+          "question": "Un tram arrive de gauche à un carrefour sans panneau. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le tram est prioritaire quel que soit son côté d'arrivée.",
+          "explanation": "Le tram passe en premier, même venant de gauche.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F4_Q36.webp"
         },
         {
           "id": "F4_Q38",
-          "question": "La voiture de droite s'est engagée après le cycliste. Pouvez-vous passer à votre tour ?",
+          "question": "La voiture de droite est passée après le cycliste. Pouvez-vous y aller ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une fois la voiture de droite passée, vous pouvez vous engager.",
+          "explanation": "Les prioritaires sont passés : à vous.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F4_Q38.webp"
         },
         {
           "id": "F4_Q39",
-          "question": "Un cycliste sur bande suggérée et une voiture arrivent de votre droite. Qui a la priorité ?",
+          "question": "Une voiture et un cycliste sur bande suggérée arrivent tous deux de votre droite. Qui passe avant vous ?",
           "choices": [
-            "La voiture venant de droite",
-            "Le cycliste de la bande",
-            "Le premier arrivé au carrefour"
+            "Les deux",
+            "Seulement la voiture",
+            "Personne"
           ],
           "correct": 0,
-          "explanation": "Sur bande suggérée, la priorité de droite s'applique — la voiture passe.",
+          "explanation": "Ils viennent tous deux de droite : vous les laissez passer.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F4_Q39.webp"
         },
         {
           "id": "F4_Q41",
-          "question": "Un véhicule arrive de votre droite par un chemin de terre. A-t-il la priorité ?",
+          "question": "Une voiture sort d'un chemin de terre, à votre droite. A-t-elle la priorité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Chaussée + chemin de terre : le conducteur du chemin de terre cède.",
+          "correct": 0,
+          "explanation": "Celui qui sort d'un chemin de terre cède à ceux de la chaussée.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F4_Q41.webp"
         },
         {
           "id": "F4_Q42",
-          "question": "Un chemin de terre pavé sur ses derniers mètres reste-t-il un chemin de terre ?",
+          "question": "Ce chemin de terre est asphalté sur ses derniers mètres. Reste-t-il un chemin de terre ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Même pavés sur les derniers mètres, le chemin reste un chemin de terre.",
+          "explanation": "Oui : un revêtement seulement à la jonction ne change rien.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F4_Q42.webp"
         },
         {
           "id": "F4_Q44",
-          "question": "Deux chemins de terre se croisent. La priorité de droite s'applique-t-elle ?",
+          "question": "Deux chemins de terre se croisent. Qui passe ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Celui qui vient de droite",
+            "Le premier arrivé",
+            "Le plus gros"
           ],
           "correct": 0,
-          "explanation": "Entre deux chemins de terre : priorité de droite normale.",
+          "explanation": "Entre deux chemins de terre : priorité de droite.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F4_Q44.webp"
         },
         {
           "id": "F4_Q46",
-          "question": "Vous sortez de votre allée privée (accès carrossable) et débouchez sur la chaussée. Avez-vous la priorité de droite ?",
+          "question": "Vous sortez de votre allée vers la chaussée. Avez-vous la priorité de droite ?",
           "choices": [
-            "Oui, si vous venez de la droite des autres",
-            "Non, vous cédez à tous, piétons compris",
-            "Oui, comme sur n'importe quelle chaussée",
-            "Cela dépend du type de route abordée"
+            "Non, vous cédez à tous",
+            "Oui, si vous venez de droite"
           ],
-          "correct": 1,
-          "explanation": "Quitter un accès privé = manœuvre, céder à tous.",
+          "correct": 0,
+          "explanation": "Sortir d'une propriété est une manœuvre : vous cédez à tous, piétons compris.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F4_Q46.webp"
         },
         {
           "id": "F4_Q49",
-          "question": "Vous quittez une place de stationnement en bord de chaussée. Avez-vous la priorité ?",
+          "question": "La voiture rouge quitte sa place de stationnement, à droite de la voiture blanche. Qui passe ?",
           "choices": [
-            "Oui",
-            "Non"
+            "La voiture blanche",
+            "La voiture rouge, elle vient de droite"
           ],
-          "correct": 1,
-          "explanation": "Quitter un stationnement = manœuvre, céder à tous.",
+          "correct": 0,
+          "explanation": "Quitter un stationnement est une manœuvre : on cède à tous.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F4_Q49.webp"
         },
         {
           "id": "F4_Q51",
-          "question": "Un véhicule circule à votre gauche dans le rond-point où vous entrez. Avez-vous la priorité ?",
+          "question": "Vous entrez dans un rond-point ; une voiture y circule déjà, à votre gauche. Qui passe ?",
           "choices": [
-            "Oui",
-            "Non"
+            "La voiture dans le rond-point",
+            "Vous, vous venez de droite"
           ],
-          "correct": 1,
-          "explanation": "Dans un rond-point, on cède à ceux déjà dedans — pas de priorité de droite à l'entrée.",
+          "correct": 0,
+          "explanation": "À l'entrée d'un rond-point, vous cédez à ceux qui y circulent.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F4_Q51.webp"
         },
         {
           "id": "F4_Q55",
-          "question": "Vous arrivez à un carrefour sans signalisation. Un tram arrive, une voiture vient de votre droite, et vous arrivez en face. Quel est l'ordre de passage ?",
+          "question": "Carrefour sans panneau : un tram, une voiture à votre droite, et vous. Ordre de passage ?",
           "choices": [
-            "Vous, la voiture de droite, puis le tram",
-            "Le tram, la voiture de droite, puis vous",
-            "La voiture de droite, le tram, puis vous",
-            "Le tram, vous, puis la voiture de droite"
+            "Le tram, la voiture de droite, vous",
+            "Vous, la voiture, le tram",
+            "La voiture, le tram, vous"
           ],
-          "correct": 1,
-          "explanation": "Tram toujours en premier, puis priorité de droite entre les autres.",
+          "correct": 0,
+          "explanation": "Le tram d'abord, puis la priorité de droite.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F4_Q55.webp"
         },
         {
           "id": "F4_Q56",
-          "question": "Même carrefour, mais sans tram. Seule une voiture vient de votre droite. Quel est l'ordre ?",
+          "question": "Même carrefour, sans tram. Ordre de passage ?",
           "choices": [
-            "Vous passez en premier",
             "La voiture de droite, puis vous",
-            "Le premier arrivé au carrefour",
-            "Vous passez tous les deux en même temps"
+            "Vous d'abord",
+            "Ensemble"
           ],
-          "correct": 1,
-          "explanation": "Sans tram : priorité de droite normale.",
+          "correct": 0,
+          "explanation": "Priorité de droite.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F4_Q56.webp"
         },
         {
           "id": "F4_Q59",
-          "question": "Vous avez le feu vert et un tram est présent. Le tram passe-t-il quand même en premier ?",
+          "question": "Votre feu est vert et un tram est là, à l'arrêt devant son propre feu. Le tram passe-t-il avant vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, vous suivez votre feu",
+            "Oui, toujours"
           ],
-          "correct": 1,
-          "explanation": "Aux feux, les feux régissent tout — le tram a ses propres signaux.",
+          "correct": 0,
+          "explanation": "Aux feux, chacun suit son feu : le tram a ses propres signaux.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F4_Q59.webp"
         },

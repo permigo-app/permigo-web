@@ -2601,173 +2601,173 @@
       "questions": [
         {
           "id": "F4_Q1",
-          "question": "Welke voorrangsregel geldt op een kruispunt zonder agent, lichten of borden?",
+          "question": "Kruispunt zonder agent, zonder lichten, zonder bord. Wie mag eerst?",
           "choices": [
-            "De voorrang van rechts",
-            "Wie eerst aankomt rijdt door",
-            "De snelste rijdt door"
+            "Wie van rechts komt",
+            "Wie eerst aankomt",
+            "De snelste"
           ],
           "correct": 0,
-          "explanation": "De voorrang van rechts geldt overal, behalve als verkeerslichten, agenten of verkeersborden de voorrang regelen.",
+          "explanation": "Zonder iets anders: voorrang van rechts.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q2",
-          "question": "Een agent regelt het verkeer op het kruispunt. Geldt de voorrang van rechts?",
+          "question": "Een agent regelt het kruispunt. Geldt voorrang van rechts?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, je volgt de agent",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Bevoegde agenten hebben voorrang op alle voorrangsregels.",
+          "correct": 0,
+          "explanation": "De agent gaat voor op de voorrangsregels.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q3",
-          "question": "Het kruispunt heeft werkende verkeerslichten. Geldt de voorrang van rechts?",
+          "question": "Het kruispunt heeft werkende lichten. Geldt voorrang van rechts?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, je volgt de lichten",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Verkeerslichten hebben voorrang op de voorrang van rechts.",
+          "correct": 0,
+          "explanation": "De lichten gaan voor op voorrang van rechts.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q4",
-          "question": "Een bestuurder komt van rechts en slaat links af. Heeft hij voorrang?",
+          "question": "De auto van rechts gaat linksaf slaan. Heeft hij voorrang?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De ingeslagen richting verandert niets: de voorrang van rechts geldt altijd.",
+          "explanation": "De richting die hij neemt, verandert niets: hij komt van rechts.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q6",
-          "question": "In welke gevallen geldt de voorrang van rechts niet?",
+          "question": "Wanneer heeft wie van rechts komt GEEN voorrang?",
           "choices": [
-            "Rotonde of bestuurder in overtreding",
-            "Als een tram of voetgangers passeren",
-            "Binnen en buiten de bebouwde kom"
+            "Hij komt uit een verboden richting, of jij rijdt op een rotonde",
+            "Hij rijdt traag",
+            "Hij is binnen de bebouwde kom"
           ],
           "correct": 0,
-          "explanation": "Op een rotonde (voorrang van links) en verboden richting (geen voorrang) zijn de twee uitzonderingen.",
+          "explanation": "Geen voorrang van rechts op een rotonde, en niet voor wie uit een verboden richting komt.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q7",
-          "question": "De bestuurder van rechts stopt even. Verliest hij zijn voorrang?",
+          "question": "De auto van rechts stopt even. Verliest hij zijn voorrang?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Stoppen of vertragen doet de voorrang van rechts niet verliezen.",
+          "correct": 0,
+          "explanation": "Stoppen of vertragen doet de voorrang niet verliezen.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q9",
-          "question": "Mag u op een kruispunt met voorrang van rechts een auto langs links inhalen?",
+          "question": "Kruispunt met voorrang van rechts. Mag je hier deze auto inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Links inhalen is verboden op kruispunten met voorrang van rechts voor voertuigen met meer dan twee wielen.",
+          "correct": 0,
+          "explanation": "Verboden er voertuigen met meer dan twee wielen in te halen.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q10",
-          "question": "Mag u op datzelfde kruispunt een motor langs links inhalen?",
+          "question": "Hetzelfde kruispunt. Mag je deze motorfiets inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Motorvoertuigen op twee wielen vallen ook onder het verbod.",
+          "correct": 0,
+          "explanation": "Gemotoriseerde tweewielers vallen er ook onder.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q11",
-          "question": "Mag u op datzelfde kruispunt een fietser langs links inhalen?",
+          "question": "Hetzelfde kruispunt. Mag je deze fietser inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Het verbod geldt niet voor fietsers (fietsen zonder motor).",
+          "explanation": "Het verbod geldt niet voor fietsen.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q12",
-          "question": "De bestuurder van rechts kan niet vooruit want het kruispunt zit vast. Hebt u voorrang?",
+          "question": "De auto van rechts kan niet verder, het kruispunt staat vol. Heb jij voorrang?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Geblokkeerd kruispunt: de bestuurder van rechts behoudt de voorrang maar kan je laten doorrijden.",
+          "correct": 0,
+          "explanation": "Hij houdt zijn voorrang, ook als hij vaststaat.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q13",
-          "question": "Die bestuurder van rechts staat vast. Wat doet u uit voorzichtigheid?",
+          "question": "De bestuurder van rechts staat vast. Wat doe je voor je doorrijdt?",
           "choices": [
-            "Oogcontact met hem maken",
-            "Toeteren om hem te waarschuwen",
-            "Snel door terwijl hij vaststaat"
+            "Je zoekt oogcontact",
+            "Je toetert",
+            "Je rijdt snel door"
           ],
           "correct": 0,
-          "explanation": "Oogcontact maakt het mogelijk om er zeker van te zijn dat de bestuurder van rechts je laat doorrijden.",
+          "explanation": "Oogcontact verzekert je dat hij je laat voorgaan.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q14",
-          "question": "Hoe kan die bestuurder u laten weten dat hij u laat voorgaan?",
+          "question": "Hoe kan de bestuurder van rechts je laten voorgaan?",
           "choices": [
-            "Met een handgebaar of lichtsignaal",
-            "Met een lang aangehouden claxon",
-            "Hij kan helemaal niets doen"
+            "Met een gebaar of lichtsignalen",
+            "Door lang te toeteren",
+            "Dat kan hij niet"
           ],
           "correct": 0,
-          "explanation": "Een gebaar of lichtsignaal geeft aan dat hij je doorgang verleent.",
+          "explanation": "Een gebaar of lichtsignalen tonen dat hij je voorlaat.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F4_Q15",
-          "question": "Op een kruispunt zonder borden komt er niemand van rechts. Mag u doorrijden?",
+          "question": "Kruispunt zonder bord, er komt niemand van rechts. Mag je doorrijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zonder bestuurder van rechts mag je normaal doorrijden.",
+          "explanation": "Niemand rechts: je rijdt door, voorzichtig.",
           "theoryCardIndex": 0
         },
         {
           "id": "F4_Q16",
-          "question": "Twee voertuigen komen tegelijk aan, één van rechts en één van links. Wie rijdt eerst?",
+          "question": "Er komt een auto van rechts en een van links, tegelijk met jou. Wie mag eerst?",
           "choices": [
-            "Het voertuig van rechts",
-            "Het voertuig van links",
-            "Wie eerst aan het kruispunt was"
+            "Die van rechts",
+            "Die van links",
+            "Wie eerst aankomt"
           ],
           "correct": 0,
-          "explanation": "De auto van rechts heeft voorrang.",
+          "explanation": "De auto van rechts mag eerst.",
           "theoryCardIndex": 0,
           "severe": true
         },
@@ -2775,354 +2775,308 @@
           "id": "F4_Q17",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "De voorrang van rechts geldt hier",
-            "Hier verplicht stoppen aan het kruispunt",
-            "Een gevaar in de onmiddellijke buurt"
+            "Kruispunt met voorrang van rechts",
+            "Verplicht stoppen",
+            "Jij hebt voorrang"
           ],
           "correct": 0,
-          "explanation": "Driehoek op punt met kruis = de voorrang van rechts geldt.",
+          "explanation": "Driehoek met een kruis: op het kruispunt voorrang van rechts.",
           "theoryCardIndex": 1,
           "sign": "B17",
           "severe": true
         },
         {
-          "id": "F4_Q18",
-          "question": "Waar wordt het bord voorrang van rechts meestal geplaatst?",
-          "choices": [
-            "Op plaatsen met beperkt zicht",
-            "Op alle kruispunten zonder bord",
-            "In de bebouwde kom alleen"
-          ],
-          "correct": 0,
-          "explanation": "Dit verkeersbord herinnert aan de voorrang van rechts in bijzonder gevaarlijke situaties.",
-          "theoryCardIndex": 1,
-          "severe": true
-        },
-        {
           "id": "F4_Q19",
-          "question": "U reed op een voorrangsweg en ziet dit bord. Wat betekent het?",
+          "question": "Je reed op een voorrangsweg en ziet dit bord. Wat betekent het?",
           "choices": [
-            "Einde voorrang, rechts gaat voor",
-            "U behoudt uw voorrang",
-            "U moet hier volledig stoppen"
+            "Einde voorrang: voorrang van rechts",
+            "Je houdt voorrang",
+            "Je moet stoppen"
           ],
           "correct": 0,
-          "explanation": "Dit verkeersbord geeft aan dat de voorrangsweg voorbij is en de voorrang van rechts opnieuw geldt.",
+          "explanation": "De voorrangsweg is voorbij: voorrang van rechts geldt weer.",
           "theoryCardIndex": 1,
           "sign": "B17",
           "severe": true
         },
         {
           "id": "F4_Q20",
-          "question": "De rechterstraat is eenrichting maar laat fietsers in tegenrichting toe. Is dit bord nuttig?",
+          "question": "De straat rechts is eenrichting, maar fietsers mogen er in tegenrichting uit komen. Is dit bord nuttig?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Fietsers mogen in tegengestelde richting rijden — het verkeersbord waarschuwt voor hun mogelijke aanwezigheid.",
+          "explanation": "Ja: er kunnen fietsers van rechts komen, met voorrang.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "F4_Q21",
-          "question": "U ziet dit bord voor een kruispunt. Wat doet u concreet?",
+          "question": "Je ziet dit bord voor een kruispunt. Wat doe je?",
           "choices": [
-            "Vertragen en rechts laten voorgaan",
-            "Verder rijden zonder iets te wijzigen",
-            "Versnellen om snel over te steken"
+            "Je vertraagt en laat rechts voorgaan",
+            "Er verandert niets",
+            "Je versnelt"
           ],
           "correct": 0,
-          "explanation": "Dit verkeersbord vereist voorzichtigheid en vertragen voor het kruispunt.",
+          "explanation": "Vertraag en laat wie van rechts komt voorgaan.",
           "theoryCardIndex": 1,
           "severe": true,
           "sign": "B17"
         },
         {
-          "id": "F4_Q22",
-          "question": "Verandert het verkeersbord voorrang van rechts de regels?",
-          "choices": [
-            "Ja, het wijzigt de voorrangsregels",
-            "Nee, het herinnert enkel aan de gewone regel",
-            "Ja, het geeft voorrang aan wie van links komt",
-            "Nee, dit bord heeft geen wettelijke waarde"
-          ],
-          "correct": 1,
-          "explanation": "Dit verkeersbord creëert geen nieuwe regels — het herinnert aan de bestaande.",
-          "theoryCardIndex": 1,
-          "severe": true
-        },
-        {
           "id": "F4_Q23",
-          "question": "U moet een fietspad kruisen waar een fietser rijdt. Moet u hem voorrang verlenen?",
+          "question": "Je steekt een fietspad over waarop een fietser rijdt. Moet je hem laten voorgaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een fietspad oversteken = voorrang verlenen aan fietsers die erop rijden.",
+          "explanation": "Als je een fietspad oversteekt, laat je wie erop rijdt voorgaan.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F4_Q24",
-          "question": "U rijdt een eigendom uit en kruist een trottoir waar een voetganger loopt. Moet u hem voorrang verlenen?",
+          "question": "Je rijdt van thuis weg en steekt het voetpad over waar een voetganger loopt. Moet je hem laten voorgaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een voetpad oversteken = voorrang verlenen aan de voetgangers die er lopen.",
+          "explanation": "Als je een voetpad oversteekt, laat je voetgangers voorgaan.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F4_Q25",
-          "question": "U kruist een fietspad en een bestuurder komt van rechts. Wat is de volgorde?",
+          "question": "Je steekt een fietspad over; er rijdt een fietser op en er komt een auto van rechts. Volgorde?",
           "choices": [
-            "De fietser, de bestuurder, u",
-            "U, de fietser, de bestuurder",
-            "De bestuurder, u, de fietser"
+            "De fietser, de auto, jij",
+            "Jij, de fietser, de auto",
+            "De auto, jij, de fietser"
           ],
           "correct": 0,
-          "explanation": "Eerst de fietser op het fietspad, dan de bestuurder van rechts, dan jij.",
+          "explanation": "Eerst de fietser op het fietspad, dan de auto van rechts, dan jij.",
           "theoryCardIndex": 2
         },
         {
           "id": "F4_Q26",
-          "question": "Een bestuurder van rechts kruist een aanbevolen fietsstrook. Moet hij de fietsers voorrang geven?",
+          "question": "De bestuurder van rechts steekt een fietssuggestiestrook over waar een fietser rijdt. Moet hij de fietser voorlaten?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Fietssuggestiestrook ≠ fietspad: de voorrang van rechts geldt gewoon.",
+          "correct": 0,
+          "explanation": "De fietssuggestiestrook hoort bij de rijbaan: voorrang van rechts geldt gewoon.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F4_Q30",
-          "question": "Een voertuig komt van rechts uit een verboden richting. Moet je voorrang verlenen?",
+          "question": "Er komt een auto van rechts uit een verboden richting. Moet je hem voorlaten?",
           "choices": [
-            "Ja, de voorrang van rechts geldt toch",
-            "Nee, geen voorrang voor wie uit een verboden richting komt",
-            "Ja, in werkelijk alle gevallen",
-            "Dat hangt af van zijn snelheid"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Verboden richting = geen voorrang van rechts.",
+          "correct": 0,
+          "explanation": "Wie uit een verboden richting komt, heeft geen voorrang van rechts.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F4_Q31",
-          "question": "Een toegelaten fietser komt in tegenrichting uit de rechterstraat. Moet u hem voorrang verlenen?",
+          "question": "Een toegelaten fietser komt in tegenrichting uit de straat rechts. Moet je hem laten voorgaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De fietser die via het aanvullend verkeersbord is toegelaten geniet de voorrang van rechts.",
+          "explanation": "Toegelaten door een onderbord heeft hij voorrang van rechts.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
-          "id": "F4_Q32",
-          "question": "Hoe weet u dat een eenrichtingsweg een verboden richting aan de andere kant inhoudt?",
+          "id": "F4_Q33",
+          "question": "Er komt een tram van rechts op een kruispunt zonder bord. Wie mag eerst?",
           "choices": [
-            "Een eenrichtingsweg houdt dat in",
-            "Dankzij de lichten van het kruispunt",
-            "Dankzij de markering op het wegdek"
+            "De tram",
+            "Jij"
           ],
           "correct": 0,
-          "explanation": "Eenrichtingsverkeer houdt in dat de ingang aan de andere kant een verboden richting is.",
-          "theoryCardIndex": 2,
-          "severe": true,
-          "sign": "F19"
-        },
-        {
-          "id": "F4_Q33",
-          "question": "Een tram komt van rechts op een kruispunt zonder borden. Respecteert hij de voorrang van rechts?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "De tram heeft altijd voorrang — hij respecteert de voorrang van rechts niet.",
+          "explanation": "De tram gaat voor op de anderen, van welke kant hij ook komt.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F4_Q34",
-          "question": "Een tram komt u tegemoet en een auto komt van rechts. Wat is de volgorde?",
+          "question": "Er komt een tram van voren en een auto van rechts. Volgorde?",
           "choices": [
-            "De tram, de auto, u",
-            "U, de auto, de tram",
-            "De auto, de tram, u"
+            "De tram, de auto, jij",
+            "Jij, de auto, de tram",
+            "De auto, de tram, jij"
           ],
           "correct": 0,
-          "explanation": "De tram gaat eerst, daarna voorrang van rechts tussen de anderen.",
+          "explanation": "Eerst de tram, dan voorrang van rechts tussen de anderen.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F4_Q35",
-          "question": "Geen tram, een auto komt van uw rechterkant. Welke regel geldt?",
+          "question": "Landelijk kruispunt zonder bord: er komt een auto van rechts. Wie mag eerst?",
           "choices": [
-            "De gewone voorrang van rechts",
-            "Wie eerst aankomt rijdt door",
-            "Geen enkele regel geldt hier"
+            "De auto van rechts",
+            "Jij",
+            "Wie eerst aankomt"
           ],
           "correct": 0,
-          "explanation": "Zonder tram geldt de gewone voorrang van rechts.",
+          "explanation": "Voorrang van rechts, in de stad en op het platteland.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F4_Q36",
-          "question": "Een tram komt van uw linkerkant op een kruispunt zonder borden. Moet u hem laten voorgaan?",
+          "question": "Er komt een tram van links op een kruispunt zonder bord. Moet je hem laten voorgaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De tram heeft voorrang, ongeacht van welke kant hij komt.",
+          "explanation": "De tram gaat eerst, ook van links.",
           "theoryCardIndex": 2
         },
         {
           "id": "F4_Q38",
-          "question": "De auto van rechts is na de fietser vertrokken. Mag u nu ook doorrijden?",
+          "question": "De auto van rechts is na de fietser doorgereden. Mag je nu?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Eens de auto van rechts is doorgereden, mag je het kruispunt oprijden.",
+          "explanation": "Wie voorrang had, is voorbij: nu jij.",
           "theoryCardIndex": 2
         },
         {
           "id": "F4_Q39",
-          "question": "Een fietser op een aanbevolen strook en een auto komen van rechts. Wie heeft voorrang?",
+          "question": "Een auto en een fietser op een fietssuggestiestrook komen allebei van rechts. Wie gaat voor jou?",
           "choices": [
-            "De auto die van rechts komt",
-            "De fietser op de strook",
-            "Wie eerst aan het kruispunt was"
+            "Allebei",
+            "Alleen de auto",
+            "Niemand"
           ],
           "correct": 0,
-          "explanation": "Op een suggestiestrook geldt de voorrang van rechts — de auto gaat voor.",
+          "explanation": "Ze komen allebei van rechts: je laat ze voorgaan.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F4_Q41",
-          "question": "Een voertuig komt van rechts uit een aardeweg. Heeft het voorrang?",
+          "question": "Een auto komt van rechts uit een aardeweg. Heeft hij voorrang?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Rijbaan + aarden weg: de bestuurder van de aarden weg verleent voorrang.",
+          "correct": 0,
+          "explanation": "Wie uit een aardeweg komt, verleent voorrang aan wie op de rijbaan rijdt.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F4_Q42",
-          "question": "Blijft een aardeweg met verharde laatste meters een aardeweg?",
+          "question": "Deze aardeweg is op de laatste meters geasfalteerd. Blijft hij een aardeweg?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zelfs als de laatste meters verhard zijn, blijft het een aarden weg.",
+          "explanation": "Ja: een verharding alleen aan de aansluiting verandert niets.",
           "theoryCardIndex": 3
         },
         {
           "id": "F4_Q44",
-          "question": "Twee aardewegen kruisen elkaar. Geldt de voorrang van rechts?",
+          "question": "Twee aardewegen kruisen elkaar. Wie mag eerst?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Wie van rechts komt",
+            "Wie eerst aankomt",
+            "De grootste"
           ],
           "correct": 0,
-          "explanation": "Tussen twee aarden wegen: gewone voorrang van rechts.",
+          "explanation": "Tussen twee aardewegen: voorrang van rechts.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F4_Q46",
-          "question": "Je verlaat een private toegangsweg (je oprit). Heb je voorrang van rechts?",
+          "question": "Je rijdt van je oprit de rijbaan op. Heb je voorrang van rechts?",
           "choices": [
-            "Ja, als je van rechts komt",
-            "Nee, je verleent iedereen voorrang, ook voetgangers",
-            "Ja, net als op elke rijbaan",
-            "Dat hangt af van het wegtype"
+            "Nee, je verleent iedereen voorrang",
+            "Ja, als je van rechts komt"
           ],
-          "correct": 1,
-          "explanation": "Een private toegangsweg verlaten = manoeuvre, voorrang verlenen aan iedereen.",
+          "correct": 0,
+          "explanation": "Een eigendom verlaten is een manoeuvre: je verleent iedereen voorrang, ook voetgangers.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F4_Q49",
-          "question": "U verlaat een parkeerplaats langs de rijbaan. Hebt u voorrang?",
+          "question": "De rode auto verlaat zijn parkeerplaats, rechts van de witte auto. Wie mag eerst?",
           "choices": [
-            "Ja",
-            "Nee"
+            "De witte auto",
+            "De rode auto, hij komt van rechts"
           ],
-          "correct": 1,
-          "explanation": "Een parkeerplaats verlaten = manoeuvre, voorrang verlenen aan iedereen.",
+          "correct": 0,
+          "explanation": "Een parkeerplaats verlaten is een manoeuvre: je verleent iedereen voorrang.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F4_Q51",
-          "question": "Een voertuig rijdt links van u op de rotonde die u oprijdt. Hebt u voorrang?",
+          "question": "Je rijdt een rotonde op; er rijdt al een auto op, links van je. Wie mag eerst?",
           "choices": [
-            "Ja",
-            "Nee"
+            "De auto op de rotonde",
+            "Jij, je komt van rechts"
           ],
-          "correct": 1,
-          "explanation": "Op een rotonde verleen je voorrang aan wie er al op rijdt — geen voorrang van rechts bij het oprijden.",
+          "correct": 0,
+          "explanation": "Bij het oprijden van een rotonde verleen je voorrang aan wie erop rijdt.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F4_Q55",
-          "question": "Een kruispunt zonder signalisatie: een tram, een auto van rechts (bruin), en jij (blauw). Wat is de volgorde?",
+          "question": "Kruispunt zonder bord: een tram, een auto rechts van je, en jij. Volgorde?",
           "choices": [
-            "Jij, de auto van rechts, dan de tram",
-            "De tram, de auto van rechts, dan jij",
-            "De auto van rechts, de tram, dan jij",
-            "De tram, jij, dan de auto van rechts"
+            "De tram, de auto van rechts, jij",
+            "Jij, de auto, de tram",
+            "De auto, de tram, jij"
           ],
-          "correct": 1,
-          "explanation": "De tram gaat altijd eerst, daarna voorrang van rechts tussen de anderen.",
+          "correct": 0,
+          "explanation": "Eerst de tram, dan voorrang van rechts.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F4_Q56",
-          "question": "Zelfde kruispunt zonder tram: auto van rechts en jij. Wat is de volgorde?",
+          "question": "Hetzelfde kruispunt, zonder tram. Volgorde?",
           "choices": [
-            "Jij rijdt eerst",
             "De auto van rechts, dan jij",
-            "Wie het eerst aan het kruispunt komt",
-            "Jullie rijden allebei tegelijk"
+            "Jij eerst",
+            "Tegelijk"
           ],
-          "correct": 1,
-          "explanation": "Zonder tram: gewone voorrang van rechts.",
+          "correct": 0,
+          "explanation": "Voorrang van rechts.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F4_Q59",
-          "question": "U hebt groen licht en er is ook een tram. Rijdt de tram toch eerst?",
+          "question": "Je licht is groen en er staat een tram, stilstaand voor zijn eigen licht. Gaat de tram voor jou?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, je volgt je licht",
+            "Ja, altijd"
           ],
-          "correct": 1,
-          "explanation": "Bij verkeerslichten regelen de lichten alles — de tram heeft zijn eigen signalen.",
+          "correct": 0,
+          "explanation": "Aan lichten volgt iedereen zijn licht: de tram heeft zijn eigen signalen.",
           "theoryCardIndex": 3
         },
         {
