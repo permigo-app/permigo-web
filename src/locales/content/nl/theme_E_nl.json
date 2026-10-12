@@ -867,659 +867,501 @@
       "questions": [
         {
           "id": "E2_Q1",
-          "question": "Wanneer spreekt de wegcode van inhalen?",
+          "question": "Je rijdt langs een geparkeerde auto. Is dat inhalen?",
           "choices": [
-            "Als het voertuig in beweging is",
-            "Als het voertuig geparkeerd staat",
-            "Als u van rijstrook verandert"
+            "Nee",
+            "Ja"
           ],
           "correct": 0,
-          "explanation": "Inhalen betreft alleen een voertuig dat in beweging is en trager rijdt.",
+          "explanation": "Je haalt alleen een rijdend voertuig in. Een geparkeerde auto rijd je voorbij.",
           "theoryCardIndex": 0
         },
         {
           "id": "E2_Q2",
-          "question": "Langs welke kant haalt u een trager voertuig in?",
+          "question": "Langs welke kant haal je normaal in?",
           "choices": [
-            "Langs links",
-            "Langs rechts",
-            "Naar keuze, waar plaats is"
+            "Links",
+            "Rechts",
+            "Langs de vrijste kant"
           ],
           "correct": 0,
-          "explanation": "Normaal inhalen gebeurt langs links.",
+          "explanation": "Je haalt links in.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "E2_Q3",
-          "question": "U rijdt voorbij een wagen die langs het trottoir geparkeerd staat. Is dat inhalen?",
+          "question": "De bruine auto staat geparkeerd. De blauwe rijdt erlangs. Ze:",
           "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Een geparkeerd voertuig is niet in beweging — je rijdt eromheen, dat is geen inhalen.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "E2_Q5",
-          "question": "Waarom maakt de wegcode een verschil tussen inhalen en voorbijrijden?",
-          "choices": [
-            "De regels gelden voor wat rijdt",
-            "Voorbijrijden is overal verboden",
-            "Het is belangrijk voor de verzekering"
+            "Rijdt voorbij de bruine auto",
+            "Haalt de bruine auto in"
           ],
           "correct": 0,
-          "explanation": "De regels (en verboden) voor inhalen gelden alleen voor voertuigen in beweging.",
+          "explanation": "Een stilstaand voertuig haal je niet in: je rijdt het voorbij.",
           "theoryCardIndex": 0
         },
         {
           "id": "E2_Q7",
-          "question": "Wat is de EERSTE controle voor het inhalen?",
+          "question": "Wat moet je controleren voor je inhaalt?",
           "choices": [
-            "Rijdt hij onder de maximumsnelheid?",
-            "Komt er een voertuig tegemoet?",
-            "Is mijn linkerspiegel vrij?"
+            "Weg vrij vooraan, niemand haalt mij in, ik kan terug naar rechts",
+            "Alleen de spiegel",
+            "Alleen dat de weg recht is"
           ],
           "correct": 0,
-          "explanation": "1e controle: rijdt het voertuig voor je trager dan de maximaal toegelaten snelheid?",
+          "explanation": "De weg moet ver genoeg vrij zijn, niemand achter je mag al aan het inhalen zijn, en je moet snel en zonder hinder terug naar rechts kunnen.",
           "theoryCardIndex": 1,
           "severe": true
-        },
-        {
-          "id": "E2_Q8",
-          "question": "Wat is de TWEEDE controle voor het inhalen?",
-          "choices": [
-            "Kan ik snel genoeg inhalen?",
-            "Komt er een voertuig tegemoet?",
-            "Heb ik plaats om terug te keren?"
-          ],
-          "correct": 0,
-          "explanation": "2e controle: kan ik snel inhalen zonder de maximumsnelheid te overschrijden?",
-          "theoryCardIndex": 1,
-          "severe": true
-        },
-        {
-          "id": "E2_Q9",
-          "question": "Wat is de DERDE controle voor het inhalen?",
-          "choices": [
-            "Komt er een voertuig tegemoet?",
-            "Heb ik plaats om terug te keren?",
-            "Verbieden de borden het hier?"
-          ],
-          "correct": 0,
-          "explanation": "3e controle: komt er een voertuig uit de tegenovergestelde richting? (blik in de verte)",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "E2_Q10",
-          "question": "Wat is de VIERDE controle voor het inhalen?",
-          "choices": [
-            "Word ik zelf al ingehaald?",
-            "Heb ik plaats om terug te keren?",
-            "Komt er een voertuig tegemoet?"
-          ],
-          "correct": 0,
-          "explanation": "4e controle: is een voertuig achter je bezig je in te halen? (linkerbuitenspiegel + dode hoek)",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "E2_Q11",
-          "question": "Wat is de VIJFDE controle voor het inhalen?",
-          "choices": [
-            "Heb ik plaats om terug te keren?",
-            "Verbieden de borden het hier?",
-            "Komt er een voertuig tegemoet?"
-          ],
-          "correct": 0,
-          "explanation": "5e controle: is er voldoende ruimte om na het inhalen weer naar rechts in te voegen?",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "E2_Q12",
-          "question": "Wat is de ZESDE controle voor het inhalen?",
-          "choices": [
-            "Verbieden de borden het hier?",
-            "Heb ik plaats om terug te keren?",
-            "Is mijn rechterspiegel vrij?"
-          ],
-          "correct": 0,
-          "explanation": "6e controle: verbieden verkeersborden of verkeersregels het inhalen?",
-          "theoryCardIndex": 1
         },
         {
           "id": "E2_Q13",
-          "question": "Het voertuig voor u rijdt precies aan de maximumsnelheid. Mag u het inhalen?",
+          "question": "De auto voor je rijdt 70 km/u, de grens is 70 km/u. Mag je hem inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Om in te halen zou je de maximumsnelheid moeten overschrijden, en dat is verboden.",
+          "correct": 0,
+          "explanation": "Je zou boven de grens moeten rijden: dat is verboden.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "E2_Q14",
-          "question": "Een voertuig achter u is u al aan het inhalen. Wat doet u?",
+          "question": "Een auto achter je is je al aan het inhalen. Wat doe je?",
           "choices": [
-            "Wachten tot hij klaar is",
-            "Toch inhalen door hard te versnellen",
-            "Toeteren zodat hij vertraagt"
+            "Je wacht tot hij klaar is",
+            "Je haalt in en versnelt",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "De 4e controle verplicht je te wachten tot geen enkel voertuig je inhaalt.",
+          "explanation": "Je begint geen inhaalmanoeuvre als iemand jou al inhaalt.",
           "theoryCardIndex": 1
         },
         {
           "id": "E2_Q15",
-          "question": "Mag u meerdere trage voertuigen in één beweging inhalen?",
+          "question": "Gewone weg met tweerichtingsverkeer. Mag je twee auto's in één keer inhalen, zonder ertussen terug naar rechts te gaan?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Je moet na elke inhaalbeweging weer naar rechts invoegen (behalve bij eenrichtingsverkeer of 3 rijstroken).",
+          "correct": 0,
+          "explanation": "Na elke inhaalmanoeuvre ga je zo snel mogelijk terug naar rechts.",
           "theoryCardIndex": 1
         },
         {
           "id": "E2_Q16",
-          "question": "Wanneer moet u zich niet na elke inhaalbeweging terug invoegen?",
+          "question": "Wanneer mag je meerdere keren inhalen zonder terug naar rechts te gaan?",
           "choices": [
-            "Eenrichtingsweg en rijbaan met 3 stroken",
-            "Op autosnelweg en gewone weg",
-            "Overdag en bij goed zicht"
+            "Op een eenrichtingsweg of met 4 rijstroken en meer",
+            "Op elke rechte weg",
+            "Overdag bij mooi weer"
           ],
           "correct": 0,
-          "explanation": "De twee uitzonderingen: eenrichtingsverkeer en rijbaan met 3 rijstroken in jouw richting.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "E2_Q17",
-          "question": "Moet u de juiste volgorde van de zes controles kennen voor het examen?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 0,
-          "explanation": "De exacte volgorde van de 6 controles wordt vereist.",
+          "explanation": "Op een rijbaan met eenrichtingsverkeer, of met tweerichtingsverkeer en minstens 4 rijstroken (in je eigen richting).",
           "theoryCardIndex": 1
         },
         {
           "id": "E2_Q19",
-          "question": "Na uw controles, wat is uw eerste handeling om in te halen?",
+          "question": "Alles is gecontroleerd. Wat is je eerste handeling om in te halen?",
           "choices": [
-            "De linker richtingaanwijzer",
-            "Stevig versnellen",
-            "Eerst toeteren"
+            "De linkse richtingaanwijzer aanzetten",
+            "Fors versnellen",
+            "Toeteren"
           ],
           "correct": 0,
-          "explanation": "Eerste handeling: linkerrichtingaanwijzer, na controle linkerbuitenspiegel + dode hoek.",
+          "explanation": "Je kondigt je verplaatsing naar links aan met de richtingaanwijzer.",
           "theoryCardIndex": 2
         },
         {
           "id": "E2_Q20",
-          "question": "U bent op de linkerstrook. Wat doet u met de richtingaanwijzer?",
+          "question": "Je bent naar links gegaan. Wat doe je met de richtingaanwijzer?",
           "choices": [
-            "U zet hem uit",
-            "U laat hem aan",
-            "U zet de rechtse aan"
+            "Je zet hem uit",
+            "Je laat hem aan",
+            "Je zet de rechtse aan"
           ],
           "correct": 0,
-          "explanation": "Eenmaal links gepositioneerd, zet je de linkerrichtingaanwijzer uit — die dient alleen voor de zijdelingse verplaatsing.",
+          "explanation": "De richtingaanwijzer stopt zodra de verplaatsing gedaan is.",
           "theoryCardIndex": 2
         },
         {
           "id": "E2_Q22",
-          "question": "Het inhalen is klaar. Wat doet u eerst om terug in te voegen?",
+          "question": "De inhaalmanoeuvre is klaar. Wat doe je voor je terug naar rechts gaat?",
           "choices": [
-            "De rechter richtingaanwijzer",
-            "Zachtjes afremmen",
-            "Nog wat versnellen"
+            "Je zet de rechtse richtingaanwijzer aan",
+            "Je remt",
+            "Je versnelt nog"
           ],
           "correct": 0,
-          "explanation": "Voor je weer naar rechts invoegt, zet je de rechterrichtingaanwijzer aan.",
+          "explanation": "Je kondigt de terugkeer naar rechts aan met de rechtse richtingaanwijzer.",
           "theoryCardIndex": 2
         },
         {
           "id": "E2_Q23",
-          "question": "Hoe gaat u te werk om rechts terug in te voegen?",
+          "question": "Waar kijk je naar voor je terug naar rechts gaat?",
           "choices": [
-            "Rechterspiegel en dode hoek",
-            "Meteen, zonder controle",
-            "Remmen voor u invoegt"
+            "De rechterspiegel en de dode hoek",
+            "Nergens, de weg is vrij",
+            "De snelheidsmeter"
           ],
           "correct": 0,
-          "explanation": "Het weer naar rechts invoegen doe je na controle van de rechterbuitenspiegel en de dode hoek.",
+          "explanation": "De ingehaalde moet ruim achter je zijn: rechterspiegel en een blik opzij.",
           "theoryCardIndex": 2
         },
         {
           "id": "E2_Q24",
-          "question": "Legt de wegcode een precieze zijdelingse afstand op bij het inhalen?",
+          "question": "Je haalt een auto in. Welke zijdelingse afstand legt de wegcode op?",
           "choices": [
-            "Nee, hij zegt « voldoende »",
-            "Ja, minstens één meter",
-            "Ja, minstens twee meter"
+            "Een voldoende afstand",
+            "1 m",
+            "2 m"
           ],
           "correct": 0,
-          "explanation": "De wet schrijft een voldoende zijdelingse afstand voor, zonder exact cijfer (behalve voor fietsers/voetgangers).",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "E2_Q25",
-          "question": "Wat is de volledige volgorde van de inhaalprocedure?",
-          "choices": [
-            "Links pinken, inhalen, rechts pinken",
-            "Versnellen, inhalen, invoegen",
-            "Links pinken, inhalen, toeteren"
-          ],
-          "correct": 0,
-          "explanation": "De volledige procedure in 5 stappen moet je in de juiste volgorde kennen.",
+          "explanation": "Tussen auto's: een voldoende afstand. De cijfers (1 m / 1,5 m) gelden voor fietsers en bromfietsen.",
           "theoryCardIndex": 2
         },
         {
           "id": "E2_Q29",
-          "question": "Buiten de bebouwde kom, welke zijdelingse afstand om een fietser in te halen?",
+          "question": "Buiten de bebouwde kom haal je een fietser in. Minimale afstand?",
           "choices": [
-            "Minstens 1,5 meter",
-            "Minstens 1 meter",
-            "Minstens 2 meter"
+            "1,5 m",
+            "1 m",
+            "Een voldoende afstand"
           ],
           "correct": 0,
-          "explanation": "Buiten de bebouwde kom: minimaal 1,5 meter bij het inhalen van een fietser.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "E2_Q30",
-          "question": "De fietser rijdt op het fietspad. Geldt de afstand van 1,5 m dan toch?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 0,
-          "explanation": "De afstand van 1,5 m geldt of de fietser nu op de rijbaan of op het fietspad rijdt.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "E2_Q31",
-          "question": "Buiten de kom, welke zijdelingse afstand om een voetganger op de rijbaan in te halen?",
-          "choices": [
-            "Minstens 1,5 meter",
-            "Minstens 1 meter",
-            "Geen opgelegde afstand"
-          ],
-          "correct": 0,
-          "explanation": "De afstand van 1,5 m geldt ook voor voetgangers die op de rijbaan lopen buiten de bebouwde kom.",
+          "explanation": "Buiten de bebouwde kom: 1,5 m met een fietser of bromfiets.",
           "theoryCardIndex": 0
         },
         {
           "id": "E2_Q32",
-          "question": "Geldt de afstand van 1,5 m ook wanneer u een fietser kruist?",
+          "question": "Geldt de regel van 1,5 m buiten de bebouwde kom ook als je een fietser kruist?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De afstand van 1,5 m buiten de bebouwde kom geldt bij het inhalen EN bij het kruisen van een fietser.",
+          "explanation": "Ja: de minimale afstand met een fietser geldt bij inhalen en kruisen.",
           "theoryCardIndex": 0
         },
         {
           "id": "E2_Q33",
-          "question": "Welke zijdelingse afstand moet je bewaren als je een fietser inhaalt binnen de bebouwde kom?",
+          "question": "Binnen de bebouwde kom haal je een bromfietser in. Minimale afstand?",
           "choices": [
-            "1,5 meter",
-            "1 meter",
-            "0,5 meter",
-            "2 meter"
+            "1 m",
+            "1,5 m",
+            "Een voldoende afstand"
           ],
-          "correct": 1,
-          "explanation": "Binnen de bebouwde kom: minimaal 1 meter bij het inhalen van een fietser.",
+          "correct": 0,
+          "explanation": "Binnen de bebouwde kom: 1 m met een fietser of bromfiets.",
           "theoryCardIndex": 0
         },
         {
           "id": "E2_Q35",
-          "question": "Welk verschil in zijdelingse afstand binnen en buiten de bebouwde kom?",
+          "question": "Minimale afstand met een fietser: binnen / buiten de bebouwde kom?",
           "choices": [
-            "1 m in de stad, 1,5 m erbuiten",
-            "1,5 m in beide situaties",
-            "1 m in beide situaties"
+            "1 m / 1,5 m",
+            "1,5 m / 1,5 m",
+            "1 m / 1 m"
           ],
           "correct": 0,
-          "explanation": "1 m binnen de bebouwde kom, 1,5 m buiten de bebouwde kom — voor fietsers, bromfietsers en voetgangers op de rijbaan.",
+          "explanation": "1 m binnen de bebouwde kom, 1,5 m erbuiten, voor fietsers en bromfietsen.",
           "theoryCardIndex": 0
         },
         {
           "id": "E2_Q37",
-          "question": "Het voertuig voor je heeft zijn linkerrichtingaanwijzer aan en is naar links uitgeweken. Langs welke kant haal je in?",
+          "question": "De auto voor je zet zijn linkse richtingaanwijzer aan en gaat links staan om af te slaan. Langs waar haal je hem in?",
           "choices": [
-            "Langs links",
-            "Langs rechts",
-            "Je wacht",
-            "Om het even welke kant"
+            "Rechts",
+            "Links",
+            "Je wacht tot hij afgeslagen is"
           ],
-          "correct": 1,
-          "explanation": "Wanneer het voertuig naar links is uitgeweken om af te slaan, haal je het rechts in.",
+          "correct": 0,
+          "explanation": "Een voertuig dat links staat om af te slaan, haal je rechts in.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q38",
-          "question": "U haalt rechts in bij een voertuig dat links afslaat. Mag u voorbij de denkbeeldige rand rijden?",
+          "question": "Mag je over de parkeerstrook rijden om deze afslaande auto rechts in te halen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De zone voorbij de denkbeeldige rand is voorbehouden voor stilstaan/parkeren — verboden om in te halen.",
+          "explanation": "Naast de brede witte streep: alleen stilstaan en parkeren.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q39",
-          "question": "Mag u voor diezelfde beweging het fietspad gebruiken?",
+          "question": "Mag je voor dezelfde manoeuvre over het fietspad rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het fietspad maakt geen deel uit van de rijbaan: het gebruiken om in te halen is verboden.",
+          "explanation": "Het fietspad is niet voor auto's.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q40",
-          "question": "Mag u voor diezelfde beweging de gelijkgrondse berm gebruiken?",
+          "question": "Mag je voor dezelfde manoeuvre over de gelijkgrondse berm rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De gelijkgrondse berm mag je gebruiken voor deze inhaalbeweging, op voorwaarde dat je de gebruikers ervan niet in gevaar brengt.",
+          "explanation": "Ja, als de rijbaan te smal is, zonder iemand in gevaar te brengen.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q41",
-          "question": "Langs welke kant haalt u een tram normaal in?",
+          "question": "Langs welke kant haal je een tram in?",
           "choices": [
-            "Langs rechts",
-            "Langs links",
-            "Naar keuze, waar plaats is"
+            "Rechts",
+            "Links",
+            "Naar keuze"
           ],
           "correct": 0,
-          "explanation": "De algemene regel: trams inhalen langs rechts.",
+          "explanation": "Een tram haal je rechts in, of hij rijdt of stilstaat.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q42",
-          "question": "Wanneer mag u een tram langs links inhalen?",
+          "question": "Wanneer mag je een tram links inhalen?",
           "choices": [
-            "Als de doorgang rechts onmogelijk is",
-            "In alle situaties, zonder beperking",
-            "'s Nachts of bij druk verkeer"
+            "Als het rechts niet kan",
+            "Altijd",
+            "'s Nachts"
           ],
           "correct": 0,
-          "explanation": "Uitzonderingen op het rechts inhalen van de tram: onmogelijke doorgang rechts of sporen op het rechterdeel.",
+          "explanation": "Als rechts te smal of geblokkeerd is (of op een eenrichtingsweg), zonder de tegenliggers te hinderen.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q43",
-          "question": "De tramsporen liggen rechts op de rijbaan. Langs welke kant haalt u in?",
+          "question": "De tramsporen liggen langs de rechterrand van de rijbaan. Langs waar haal je in?",
           "choices": [
-            "Langs links",
-            "Langs rechts",
-            "Tussen de twee sporen"
+            "Links",
+            "Rechts",
+            "Tussen de sporen"
           ],
           "correct": 0,
-          "explanation": "Als de tramsporen rechts liggen, haal je de tram links in.",
+          "explanation": "Rechts is er geen plaats: je haalt links in.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q44",
-          "question": "Een reiziger stapt uit een stilstaande tram, zonder verhoogde boord. Wat moet u doen?",
+          "question": "De tram staat stil, zonder vluchtheuvel: reizigers stappen uit op de rijbaan. Wat doe je?",
           "choices": [
-            "Vertragen en zo nodig stoppen",
-            "Stapvoets om de reiziger heen",
-            "Toeteren zodat hij zich haast"
+            "Je stopt om hen door te laten",
+            "Je rijdt rond hen",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "Zonder verhoogde boordsteen moet je vertragen en indien nodig stoppen.",
+          "explanation": "Zonder vluchtheuvel stop je, zodat de reizigers het voetpad kunnen bereiken.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q45",
-          "question": "Reizigers stappen uit een tram naar een verhoogde vluchtheuvel. Moet u stoppen?",
+          "question": "De tramreizigers stappen uit op een vluchtheuvel. Moet je stoppen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Met een verhoogde boordsteen kunnen de reizigers veilig wachten — geen verplichting om te stoppen.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "E2_Q48",
-          "question": "Hoeveel gevallen laten inhalen langs rechts toe?",
-          "choices": [
-            "Twee gevallen",
-            "Eén enkel geval",
-            "Drie gevallen"
-          ],
-          "correct": 0,
-          "explanation": "Slechts twee gevallen: het voertuig dat links afslaat, en de tram.",
+          "explanation": "Ze zijn veilig op de vluchtheuvel: je rijdt met matige snelheid voorbij.",
           "theoryCardIndex": 3
         },
         {
           "id": "E2_Q49",
-          "question": "In een file schuift uw rij sneller op dan die links. Is dat inhalen?",
+          "question": "File: jouw rij gaat sneller dan de linkse. Is dat rechts inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "In de file wordt een rij die sneller rijdt dan de andere niet als inhalen beschouwd.",
+          "correct": 0,
+          "explanation": "Als je in rijen rijdt, is een snellere rij geen inhalen.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q50",
-          "question": "Wat is de voorwaarde om in meerdere files te rijden?",
+          "question": "Wanneer mag je in meerdere rijen rijden?",
           "choices": [
-            "De dichtheid van het verkeer",
-            "De snelheid van de voertuigen",
-            "Het aantal vrije rijstroken"
+            "Als het verkeer druk is",
+            "Altijd",
+            "Alleen 's nachts"
           ],
           "correct": 0,
-          "explanation": "Rijden in meerdere rijen is alleen toegestaan als de verkeersdichtheid het rechtvaardigt.",
+          "explanation": "Als de drukte van het verkeer het rechtvaardigt.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q51",
-          "question": "Mag u bij filerijden op een tweerichtingsweg de stroken van de andere richting gebruiken?",
+          "question": "Mag je, in rijen op een rijbaan met tweerichtingsverkeer, de rijstroken van de andere richting gebruiken?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Alleen de rijstroken van je eigen rijrichting.",
+          "explanation": "Alleen de rijstroken van je eigen richting.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q52",
-          "question": "Is filerijden toegelaten op een eenrichtingsweg?",
+          "question": "Mag je op een eenrichtingsweg in meerdere rijen rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De rijbaan met eenrichtingsverkeer is een van de 3 gevallen die rijden in meerdere rijen toestaan.",
+          "explanation": "Ja, als het verkeer het rechtvaardigt.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q53",
-          "question": "Welke soorten lichten kunnen boven de rijstroken hangen?",
+          "question": "Welke lichtsignalen vind je boven de rijstroken?",
           "choices": [
-            "Rood kruis, groene pijl, oranje pijl",
-            "Een klassiek licht met drie kleuren",
-            "Een oranje knipperlicht, meer niet"
+            "Rood kruis, groene pijl, schuine oranje pijl",
+            "Een gewoon driekleurig licht",
+            "Alleen een knipperend oranje licht"
           ],
           "correct": 0,
-          "explanation": "De 3 types verkeerslichten boven de rijstroken: rood kruis, groene pijl (naar beneden), oranje pijl (schuin).",
+          "explanation": "Rood kruis: rijstrook dicht. Groene pijl: rijstrook open. Schuine oranje pijl: verlaat de rijstrook.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q54",
-          "question": "Gelden de inhaalregels vóór de borden voor strookkeuze?",
+          "question": "Voor een kruispunt volg je de sorteerpijlen van je rijstrook. De rijstrook naast je rijdt trager. Is het verboden inhalen om er rechts voorbij te gaan?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "De inhaalregels gelden niet voor de borden voor rijstrookkeuze, maar ze gelden wel erna.",
+          "correct": 0,
+          "explanation": "Als iedereen de pijlen van zijn rijstrook volgt, is sneller rijden dan een andere rijstrook geen inhalen.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q56",
-          "question": "Wat zijn de twee voorwaarden om vrij uw rijstrook te kiezen?",
+          "question": "Mag je binnen de bebouwde kom, op een rijbaan met meerdere rijstroken in jouw richting, op de rijstrook van je keuze rijden?",
           "choices": [
-            "Rijstroken en de bebouwde kom",
-            "Meerdere stroken en buiten de kom zijn",
-            "Eén strook en in de bebouwde kom zijn"
+            "Ja",
+            "Nee"
           ],
           "correct": 0,
-          "explanation": "Twee cumulatieve voorwaarden: rijstroken aanwezig EN binnen de bebouwde kom.",
+          "explanation": "Binnen de bebouwde kom, met minstens 2 rijstroken in je richting, mag je je rijstrook kiezen.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q57",
-          "question": "Mag u in de kom op een eenrichtingsweg met meerdere stroken uw strook kiezen?",
+          "question": "Eenrichtingsstraat met twee rijstroken, binnen de bebouwde kom. Mag de blauwe auto op de linkse rijstrook blijven?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Eenrichtingsverkeer binnen de bebouwde kom + rijstroken = vrije keuze van rijstrook.",
+          "explanation": "Binnen de bebouwde kom, op meerdere rijstroken, is de keuze van de rijstrook vrij.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q58",
-          "question": "Mag u in de kom op een tweerichtingsweg met vier stroken uw strook kiezen?",
+          "question": "Binnen de bebouwde kom, rijbaan met tweerichtingsverkeer en 4 rijstroken (2 per richting). Mag je je rijstrook kiezen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "4 rijstroken binnen de bebouwde kom (minstens 2 per richting) = vrije keuze van rijstrook.",
+          "explanation": "Minstens 2 rijstroken in je richting: vrije keuze.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q59",
-          "question": "Mag u buiten de kom op een weg met meerdere stroken vrij uw strook kiezen?",
+          "question": "Mag je buiten de bebouwde kom, op een weg met meerdere rijstroken, op om het even welke rijstrook blijven?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De vrije keuze van rijstrook volgens bestemming is alleen mogelijk binnen de bebouwde kom.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "E2_Q60",
-          "question": "Mag u in de kom uw strook kiezen, ook in een bocht?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 0,
-          "explanation": "Binnen de bebouwde kom geldt de vrije rijstrookkeuze ook in de bochten.",
+          "explanation": "Buiten de bebouwde kom rijd je rechts. De vrije keuze bestaat alleen binnen de bebouwde kom.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q61",
-          "question": "Mag u in de kom op een tweerichtingsweg met twee stroken uw strook kiezen?",
+          "question": "Binnen de bebouwde kom, rijbaan met tweerichtingsverkeer en 2 rijstroken (1 per richting). Mag je je rijstrook kiezen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Met 2 rijstroken (1 per richting) geldt de vrije rijstrookkeuze binnen de bebouwde kom niet.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "E2_Q62",
-          "question": "Wat is het verschil tussen filerijden en vrije strookkeuze in de kom?",
-          "choices": [
-            "Files vragen een dicht verkeer",
-            "Beide vragen een dicht verkeer",
-            "Geen van beide stelt een voorwaarde"
-          ],
-          "correct": 0,
-          "explanation": "Twee verschillende voorwaarden: dichtheid voor de rijen, bebouwde kom + rijstroken voor de vrije keuze.",
+          "explanation": "Maar één rijstrook in je richting: daar blijf je, rechts.",
           "theoryCardIndex": 4
         },
         {
           "id": "E2_Q63",
-          "question": "U rijdt met de motor in een file. Mag u tussen de files rijden?",
+          "question": "Mag je met de motor in de file tussen de rijen rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Motorfietsen mogen bij file tussen de rijen rijden.",
+          "explanation": "Ja, met maximaal 50 km/u en 20 km/u sneller dan de rijen.",
           "theoryCardIndex": 5
         },
         {
           "id": "E2_Q64",
-          "question": "Op een autosnelweg met drie stroken, tussen welke stroken mag een motor rijden?",
+          "question": "Autosnelweg met 3 rijstroken, file. Tussen welke rijstroken mag de motor rijden?",
           "choices": [
-            "De twee meest linkse stroken",
-            "De twee meest rechtse stroken",
-            "Om het even welke vrije stroken"
+            "Tussen de twee linkse rijstroken",
+            "Tussen de twee rechtse rijstroken",
+            "Waar hij wil"
           ],
           "correct": 0,
-          "explanation": "Op de autosnelweg/autoweg mogen motorfietsen alleen tussen de twee meest linkse rijstroken rijden.",
+          "explanation": "Op autosnelweg en autoweg: tussen de twee meest linkse rijstroken.",
           "theoryCardIndex": 5
         },
         {
           "id": "E2_Q65",
-          "question": "Met de motor tussen de files, wat is uw toegelaten maximumsnelheid?",
+          "question": "Maximumsnelheid van een motor tussen de rijen?",
           "choices": [
             "50 km/u",
             "30 km/u",
             "70 km/u"
           ],
           "correct": 0,
-          "explanation": "Absolute maximumsnelheid: 50 km/u voor motorfietsen die tussen de rijen rijden.",
+          "explanation": "Maximaal 50 km/u.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "E2_Q66",
-          "question": "Met de motor tussen de files, hoeveel sneller mag u dan de voertuigen rondom?",
+          "question": "Hoeveel sneller dan de rijen mag de motor rijden?",
           "choices": [
-            "20 km/u sneller",
-            "10 km/u sneller",
-            "30 km/u sneller"
+            "20 km/u",
+            "10 km/u",
+            "30 km/u"
           ],
           "correct": 0,
-          "explanation": "De motorfiets mag niet meer dan 20 km/u sneller rijden dan de ingehaalde voertuigen.",
+          "explanation": "Maximaal 20 km/u sneller.",
           "theoryCardIndex": 5
         },
         {
           "id": "E2_Q67",
-          "question": "De voertuigen rondom rijden 35 km/u. Mag u met de motor 50 km/u tussen de files rijden?",
+          "question": "De rijen rijden 35 km/u. Mag de motor ertussen rijden aan 50 km/u?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "35 + 20 = 55 km/u relatief maximum. Absolute limiet 50 km/u. De motorfiets mag dus 50 km/u rijden.",
+          "explanation": "35 + 20 = 55, maar het absolute maximum is 50: 50 km/u mag.",
           "theoryCardIndex": 5
         },
         {
           "id": "E2_Q68",
-          "question": "De voertuigen staan volledig stil. Mag u met de motor 25 km/u tussen de files rijden?",
+          "question": "De rijen staan stil. Mag de motor ertussen rijden aan 25 km/u?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "0 + 20 = 20 km/u maximaal. Aan 25 km/u rijdt de motorfiets 25 km/u sneller dan de stilstaande voertuigen — dat is verboden.",
+          "explanation": "0 + 20 = maximaal 20 km/u: 25 is te veel.",
           "theoryCardIndex": 5
         },
         {
@@ -1561,15 +1403,37 @@
         },
         {
           "id": "E2_Q73",
-          "question": "Gelden de inhaalregels opnieuw na een bord voor strookkeuze?",
+          "question": "Na het kruispunt zijn de sorteerpijlen voorbij. Gelden de gewone inhaalregels weer?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Na de borden voor rijstrookkeuze gelden de inhaalregels weer.",
+          "explanation": "Ja: eens de sorteerstroken voorbij, haal je weer links in.",
           "theoryCardIndex": 4,
           "sign": "F13"
+        },
+        {
+          "id": "E2_Q80",
+          "question": "De witte auto haalt een bromfiets in. Mag je de witte auto tegelijk inhalen?",
+          "choices": [
+            "Ja",
+            "Nee"
+          ],
+          "correct": 0,
+          "explanation": "Een voertuig inhalen dat zelf inhaalt is verboden, behalve als het een fiets, een bromfiets of een tweewielige motor inhaalt.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "E2_Q81",
+          "question": "De witte auto haalt een vrachtwagen in, op een weg met 2 rijstroken. Mag je de witte auto tegelijk inhalen?",
+          "choices": [
+            "Nee",
+            "Ja"
+          ],
+          "correct": 0,
+          "explanation": "Verboden een voertuig in te halen dat zelf een auto of vrachtwagen inhaalt, behalve met minstens 3 rijstroken in jouw richting.",
+          "theoryCardIndex": 1
         }
       ]
     },

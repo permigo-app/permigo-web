@@ -941,414 +941,282 @@
       "questions": [
         {
           "id": "E2_Q1",
-          "question": "Quand parle-t-on de dépassement au sens du code ?",
+          "question": "Vous passez à côté d'une voiture garée. Est-ce un dépassement ?",
           "choices": [
-            "Quand le véhicule est en mouvement",
-            "Quand le véhicule est stationné",
-            "Quand vous changez de bande"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "Le dépassement concerne uniquement un véhicule en mouvement circulant plus lentement.",
+          "explanation": "On ne dépasse qu'un véhicule en mouvement. Une voiture garée, on la contourne.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q1.webp"
         },
         {
           "id": "E2_Q2",
-          "question": "Par quel côté dépassez-vous un véhicule plus lent ?",
+          "question": "Par quel côté dépassez-vous normalement ?",
           "choices": [
             "Par la gauche",
             "Par la droite",
-            "Au choix, selon la place"
+            "Par le côté le plus libre"
           ],
           "correct": 0,
-          "explanation": "Le dépassement normal s'effectue par la gauche.",
+          "explanation": "On dépasse par la gauche.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/E2_Q2.webp"
         },
         {
           "id": "E2_Q3",
-          "question": "Vous passez devant un véhicule stationné le long du trottoir. Est-ce un dépassement ?",
+          "question": "La voiture brune est garée. La voiture bleue passe à côté. Elle :",
           "choices": [
-            "Oui",
-            "Non"
+            "Contourne la voiture brune",
+            "Dépasse la voiture brune"
           ],
-          "correct": 1,
-          "explanation": "Un véhicule stationné n'est pas en mouvement — vous le contournez, ce n'est pas un dépassement.",
+          "correct": 0,
+          "explanation": "Un véhicule à l'arrêt n'est pas dépassé : on le contourne.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q3.webp"
         },
         {
-          "id": "E2_Q5",
-          "question": "Pourquoi le code distingue-t-il le dépassement du contournement ?",
-          "choices": [
-            "Les règles visent ce qui roule",
-            "Le contournement est interdit partout",
-            "C'est important pour les assurances"
-          ],
-          "correct": 0,
-          "explanation": "Les règles (et interdictions) de dépassement ne concernent que les véhicules en mouvement.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/E2_Q5.webp"
-        },
-        {
           "id": "E2_Q7",
-          "question": "Quelle est la PREMIÈRE vérification avant de dépasser ?",
+          "question": "Avant de dépasser, que devez-vous vérifier ?",
           "choices": [
-            "Roule-t-il sous la vitesse maximale ?",
-            "Un véhicule arrive-t-il en face ?",
-            "Mon rétroviseur gauche est-il libre ?"
+            "Voie libre devant, personne ne me dépasse, je pourrai me rabattre",
+            "Seulement le rétroviseur",
+            "Seulement que la route est droite"
           ],
           "correct": 0,
-          "explanation": "1re vérification : le véhicule devant roule-t-il en dessous de la vitesse maximale ?",
+          "explanation": "La voie doit être libre assez loin, personne derrière ne doit déjà dépasser, et vous devez pouvoir vous rabattre vite et sans gêner.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/E2_Q7.webp"
         },
         {
-          "id": "E2_Q8",
-          "question": "Quelle est la DEUXIÈME vérification avant de dépasser ?",
-          "choices": [
-            "Puis-je dépasser assez vite ?",
-            "Un véhicule arrive-t-il en face ?",
-            "Ai-je la place pour me rabattre ?"
-          ],
-          "correct": 0,
-          "explanation": "2e vérification : puis-je dépasser rapidement sans excéder la vitesse maximale ?",
-          "theoryCardIndex": 1,
-          "severe": true,
-          "image": "/images/questions/E2_Q8.webp"
-        },
-        {
-          "id": "E2_Q9",
-          "question": "Quelle est la TROISIÈME vérification avant de dépasser ?",
-          "choices": [
-            "Un véhicule arrive-t-il en face ?",
-            "Ai-je la place pour me rabattre ?",
-            "Les signaux l'interdisent-ils ?"
-          ],
-          "correct": 0,
-          "explanation": "3e vérification : un véhicule arrive-t-il en sens inverse ? (regard au loin)",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/E2_Q9.webp"
-        },
-        {
-          "id": "E2_Q10",
-          "question": "Quelle est la QUATRIÈME vérification avant de dépasser ?",
-          "choices": [
-            "Suis-je déjà dépassé par derrière ?",
-            "Ai-je la place pour me rabattre ?",
-            "Un véhicule arrive-t-il en face ?"
-          ],
-          "correct": 0,
-          "explanation": "4e vérification : un véhicule derrière est-il en train de vous dépasser ? (rétroviseur gauche + angle mort)",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/E2_Q10.webp"
-        },
-        {
-          "id": "E2_Q11",
-          "question": "Quelle est la CINQUIÈME vérification avant de dépasser ?",
-          "choices": [
-            "Ai-je la place pour me rabattre ?",
-            "Les signaux l'interdisent-ils ?",
-            "Un véhicule arrive-t-il en face ?"
-          ],
-          "correct": 0,
-          "explanation": "5e vérification : y a-t-il suffisamment d'espace pour se rabattre à droite après le dépassement ?",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/E2_Q11.webp"
-        },
-        {
-          "id": "E2_Q12",
-          "question": "Quelle est la SIXIÈME vérification avant de dépasser ?",
-          "choices": [
-            "Les signaux l'interdisent-ils ?",
-            "Ai-je la place pour me rabattre ?",
-            "Mon rétroviseur droit est-il libre ?"
-          ],
-          "correct": 0,
-          "explanation": "6e vérification : des signaux ou règles interdisent-ils le dépassement ?",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/E2_Q12.webp"
-        },
-        {
           "id": "E2_Q13",
-          "question": "Le véhicule devant vous roule exactement à la vitesse maximale. Pouvez-vous le dépasser ?",
+          "question": "La voiture devant vous roule à 70 km/h, la limite est de 70 km/h. Pouvez-vous la dépasser ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Pour dépasser, vous devriez dépasser la vitesse maximale, ce qui est interdit.",
+          "correct": 0,
+          "explanation": "Il faudrait rouler au-dessus de la limite : c'est interdit.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/E2_Q13.webp"
         },
         {
           "id": "E2_Q14",
-          "question": "Un véhicule derrière vous est déjà en train de vous dépasser. Que faites-vous ?",
+          "question": "Une voiture derrière vous a déjà commencé à vous dépasser. Que faites-vous ?",
           "choices": [
-            "Attendre qu'il ait terminé",
-            "Dépasser en accélérant fort",
-            "Klaxonner pour qu'il ralentisse"
+            "Vous attendez qu'elle ait fini",
+            "Vous dépassez en accélérant",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "La 4e vérification impose d'attendre qu'aucun véhicule ne vous dépasse.",
+          "explanation": "Vous ne commencez pas un dépassement si quelqu'un vous dépasse déjà.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q14.webp"
         },
         {
           "id": "E2_Q15",
-          "question": "Pouvez-vous dépasser plusieurs véhicules lents en une seule manœuvre ?",
+          "question": "Route ordinaire à double sens. Pouvez-vous dépasser deux voitures d'un coup, sans vous rabattre entre elles ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Vous devez vous rabattre après chaque dépassement (sauf sens unique ou 3 bandes).",
+          "correct": 0,
+          "explanation": "Vous vous rabattez dès que possible après chaque dépassement.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q15.webp"
         },
         {
           "id": "E2_Q16",
-          "question": "Dans quels cas n'êtes-vous pas obligé de vous rabattre après chaque dépassement ?",
+          "question": "Quand pouvez-vous enchaîner les dépassements sans vous rabattre ?",
           "choices": [
-            "Sens unique et chaussée à 3 bandes",
-            "Sur autoroute et route ordinaire",
-            "De jour et par bonne visibilité"
+            "Sur un sens unique ou avec 4 bandes et plus",
+            "Sur toute route droite",
+            "De jour par beau temps"
           ],
           "correct": 0,
-          "explanation": "Les deux exceptions : sens unique et chaussée à 3 bandes dans le sens suivi.",
+          "explanation": "Sur une chaussée à sens unique, ou à double sens avec au moins 4 bandes (en restant dans votre sens).",
           "theoryCardIndex": 1,
           "image": "/images/questions/E2_Q16.webp"
         },
         {
-          "id": "E2_Q17",
-          "question": "Devez-vous connaître l'ordre exact des six vérifications pour l'examen ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "L'ordre exact des 6 vérifications est exigé.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/E2_Q17.webp"
-        },
-        {
           "id": "E2_Q19",
-          "question": "Vos vérifications faites, quelle est votre première action pour dépasser ?",
+          "question": "Tout est vérifié. Quelle est votre première action pour dépasser ?",
           "choices": [
-            "Le clignotant gauche",
-            "Accélérer franchement",
-            "Klaxonner d'abord"
+            "Mettre le clignotant gauche",
+            "Accélérer fort",
+            "Klaxonner"
           ],
           "correct": 0,
-          "explanation": "Première action : clignotant gauche, après contrôle rétroviseur gauche + angle mort.",
+          "explanation": "Vous annoncez votre déplacement à gauche avec le clignotant.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q19.webp"
         },
         {
           "id": "E2_Q20",
-          "question": "Vous êtes déporté dans la bande de gauche. Que faites-vous du clignotant ?",
+          "question": "Vous êtes passé à gauche. Que faites-vous du clignotant ?",
           "choices": [
             "Vous l'éteignez",
             "Vous le laissez",
             "Vous mettez le droit"
           ],
           "correct": 0,
-          "explanation": "Une fois à gauche, on éteint le clignotant gauche — il ne sert que pour le déplacement latéral.",
+          "explanation": "Le clignotant s'arrête dès que le déplacement est fait.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q20.webp"
         },
         {
           "id": "E2_Q22",
-          "question": "Le dépassement est terminé. Que faites-vous en premier pour vous rabattre ?",
+          "question": "Le dépassement est fini. Que faites-vous avant de vous rabattre ?",
           "choices": [
-            "Le clignotant droit",
-            "Freiner doucement",
-            "Accélérer encore"
+            "Vous mettez le clignotant droit",
+            "Vous freinez",
+            "Vous accélérez encore"
           ],
           "correct": 0,
-          "explanation": "Avant de se rabattre à droite, on allume le clignotant droit.",
+          "explanation": "Vous annoncez le retour à droite avec le clignotant droit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q22.webp"
         },
         {
           "id": "E2_Q23",
-          "question": "Comment procédez-vous pour vous rabattre à droite ?",
+          "question": "Avant de vous rabattre, que regardez-vous ?",
           "choices": [
-            "Rétroviseur droit et angle mort",
-            "Directement, sans vérification",
-            "En freinant avant de rentrer"
+            "Le rétroviseur droit et l'angle mort",
+            "Rien, la voie est libre",
+            "Le compteur"
           ],
           "correct": 0,
-          "explanation": "Le rabattement à droite se fait après contrôle du rétroviseur droit et de l'angle mort.",
+          "explanation": "Le dépassé doit être bien derrière vous : rétroviseur droit et coup d'œil.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q23.webp"
         },
         {
           "id": "E2_Q24",
-          "question": "Le code précise-t-il la distance latérale exacte lors d'un dépassement ?",
+          "question": "Vous dépassez une voiture. Quelle distance latérale le code impose-t-il ?",
           "choices": [
-            "Non, il dit « suffisante »",
-            "Oui, un mètre minimum",
-            "Oui, deux mètres minimum"
+            "Une distance suffisante",
+            "1 m",
+            "2 m"
           ],
           "correct": 0,
-          "explanation": "Le code impose une distance latérale suffisante, sans chiffre précis (sauf pour cyclistes/piétons).",
+          "explanation": "Entre voitures : une distance suffisante. Les chiffres (1 m / 1,5 m) valent pour les cyclistes et cyclomoteurs.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E2_Q24.webp"
         },
         {
-          "id": "E2_Q25",
-          "question": "Quel est l'ordre complet de la procédure de dépassement ?",
-          "choices": [
-            "Clignotant gauche, dépasser, droit",
-            "Accélérer, dépasser, se rabattre",
-            "Clignotant gauche, dépasser, klaxon"
-          ],
-          "correct": 0,
-          "explanation": "La procédure complète en 5 étapes doit être connue dans l'ordre.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/E2_Q25.webp"
-        },
-        {
           "id": "E2_Q29",
-          "question": "Hors agglomération, quelle distance latérale minimale pour dépasser un cycliste ?",
+          "question": "Hors agglomération, vous dépassez un cycliste. Écart minimal ?",
           "choices": [
-            "Au moins 1,5 mètre",
-            "Au moins 1 mètre",
-            "Au moins 2 mètres"
+            "1,5 m",
+            "1 m",
+            "Une distance suffisante"
           ],
           "correct": 0,
-          "explanation": "Hors agglomération : minimum 1,5 mètre en dépassant un cycliste.",
+          "explanation": "Hors agglomération : 1,5 m avec un cycliste ou un cyclomoteur.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q29.webp"
         },
         {
-          "id": "E2_Q30",
-          "question": "Le cycliste est sur la piste cyclable. La distance de 1,5 m s'applique-t-elle quand même ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "La distance de 1,5 m s'applique que le cycliste soit sur la chaussée ou sur la piste cyclable.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/E2_Q30.webp"
-        },
-        {
-          "id": "E2_Q31",
-          "question": "Hors agglomération, quelle distance latérale pour dépasser un piéton sur la chaussée ?",
-          "choices": [
-            "Au moins 1,5 mètre",
-            "Au moins 1 mètre",
-            "Aucune distance imposée"
-          ],
-          "correct": 0,
-          "explanation": "La distance de 1,5 m s'applique aussi aux piétons marchant sur la chaussée hors agglomération.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/E2_Q31.webp"
-        },
-        {
           "id": "E2_Q32",
-          "question": "La distance de 1,5 m s'applique-t-elle aussi quand vous croisez un cycliste ?",
+          "question": "Hors agglomération, la règle des 1,5 m vaut-elle aussi quand vous croisez un cycliste ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La distance de 1,5 m hors agglomération s'applique au dépassement ET au croisement d'un cycliste.",
+          "explanation": "Oui : l'écart minimal avec un cycliste vaut pour le dépassement et le croisement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q32.webp"
         },
         {
           "id": "E2_Q33",
-          "question": "Vous roulez en agglomération et souhaitez dépasser un cycliste. Quelle distance latérale minimale devez-vous respecter ?",
+          "question": "En agglomération, vous dépassez un cyclomotoriste. Écart minimal ?",
           "choices": [
-            "1,5 mètre",
-            "1 mètre",
-            "0,5 mètre",
-            "2 mètres"
+            "1 m",
+            "1,5 m",
+            "Une distance suffisante"
           ],
-          "correct": 1,
-          "explanation": "En agglomération : minimum 1 mètre en dépassant un cycliste.",
+          "correct": 0,
+          "explanation": "En agglomération : 1 m avec un cycliste ou un cyclomoteur.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q33.webp"
         },
         {
           "id": "E2_Q35",
-          "question": "Quelle différence de distance latérale entre agglomération et hors agglomération ?",
+          "question": "Écart minimal avec un cycliste : en agglomération / hors agglomération ?",
           "choices": [
-            "1 m en ville, 1,5 m en dehors",
-            "1,5 m dans les deux situations",
-            "1 m dans les deux situations"
+            "1 m / 1,5 m",
+            "1,5 m / 1,5 m",
+            "1 m / 1 m"
           ],
           "correct": 0,
-          "explanation": "1 m en agglomération, 1,5 m hors agglomération — pour cyclistes, cyclomotoristes et piétons sur chaussée.",
+          "explanation": "1 m en agglomération, 1,5 m hors agglomération, pour les cyclistes et les cyclomoteurs.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E2_Q35.webp"
         },
         {
           "id": "E2_Q37",
-          "question": "Vous roulez derrière un véhicule qui a allumé son clignotant gauche et s'est déporté à gauche pour tourner. Par quel côté le dépassez-vous ?",
+          "question": "La voiture devant a mis son clignotant gauche et s'est placée à gauche pour tourner. Par où la dépassez-vous ?",
           "choices": [
-            "Par la gauche comme d'habitude",
             "Par la droite",
-            "Vous attendez qu'il ait tourné",
-            "Par n'importe quel côté"
+            "Par la gauche",
+            "Vous attendez qu'elle ait tourné"
           ],
-          "correct": 1,
-          "explanation": "Quand le véhicule s'est déporté à gauche pour tourner, vous le dépassez par la droite.",
+          "correct": 0,
+          "explanation": "Un véhicule placé à gauche pour tourner se dépasse par la droite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q37.webp"
         },
         {
           "id": "E2_Q38",
-          "question": "Vous dépassez par la droite un véhicule qui tourne à gauche. Pouvez-vous rouler au-delà du bord fictif ?",
+          "question": "Pour dépasser par la droite cette voiture qui tourne, pouvez-vous rouler sur la bande de stationnement ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La zone au-delà du bord fictif est réservée à l'arrêt/stationnement — interdit pour le dépassement.",
+          "explanation": "Au-delà de la large ligne blanche : arrêt et stationnement seulement.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q38.webp"
         },
         {
           "id": "E2_Q39",
-          "question": "Pour cette même manœuvre, pouvez-vous emprunter la piste cyclable ?",
+          "question": "Pour la même manœuvre, pouvez-vous rouler sur la piste cyclable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La piste cyclable ne fait pas partie de la chaussée : l'emprunter pour dépasser est interdit.",
+          "explanation": "La piste cyclable n'est pas pour les voitures.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q39.webp"
         },
         {
           "id": "E2_Q40",
-          "question": "Pour cette même manœuvre, pouvez-vous emprunter l'accotement de plain-pied ?",
+          "question": "Pour la même manœuvre, pouvez-vous rouler sur l'accotement de plain-pied ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'accotement de plain-pied est autorisé pour ce dépassement, à condition de ne pas mettre en danger ses usagers.",
+          "explanation": "Oui, si la chaussée est trop étroite, sans mettre personne en danger.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q40.webp"
         },
         {
           "id": "E2_Q41",
-          "question": "Par quel côté dépassez-vous normalement un tram ?",
+          "question": "Par quel côté dépassez-vous un tram ?",
           "choices": [
             "Par la droite",
             "Par la gauche",
-            "Au choix, selon la place"
+            "Au choix"
           ],
           "correct": 0,
-          "explanation": "La règle générale : dépasser les trams par la droite.",
+          "explanation": "Un tram se dépasse par la droite, qu'il roule ou qu'il soit arrêté.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q41.webp"
         },
@@ -1356,299 +1224,260 @@
           "id": "E2_Q42",
           "question": "Quand pouvez-vous dépasser un tram par la gauche ?",
           "choices": [
-            "Si le passage à droite est impossible",
-            "Dans toutes les situations, sans limite",
-            "Pendant la nuit ou en trafic dense"
+            "Quand c'est impossible à droite",
+            "Toujours",
+            "La nuit"
           ],
           "correct": 0,
-          "explanation": "Exceptions au dépassement par la droite du tram : passage impossible à droite ou voies sur partie droite.",
+          "explanation": "Si la droite est trop étroite ou bloquée (ou sur un sens unique), sans gêner ceux d'en face.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q42.webp"
         },
         {
           "id": "E2_Q43",
-          "question": "Les voies du tram sont sur la partie droite de la chaussée. Par quel côté le dépassez-vous ?",
+          "question": "Les rails du tram longent le bord droit de la chaussée. Par où le dépassez-vous ?",
           "choices": [
             "Par la gauche",
             "Par la droite",
-            "Entre les deux rails"
+            "Entre les rails"
           ],
           "correct": 0,
-          "explanation": "Si les voies du tram sont à droite, on le dépasse par la gauche.",
+          "explanation": "À droite, il n'y a pas la place : vous le dépassez par la gauche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q43.webp"
         },
         {
           "id": "E2_Q44",
-          "question": "Un passager descend d'un tram arrêté, sans bordure surélevée. Que devez-vous faire ?",
+          "question": "Le tram est arrêté, sans refuge : des voyageurs descendent sur la chaussée. Que faites-vous ?",
           "choices": [
-            "Ralentir et au besoin s'arrêter",
-            "Contourner le passager au pas",
-            "Klaxonner pour qu'il se hâte"
+            "Vous vous arrêtez pour les laisser passer",
+            "Vous les contournez",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "Sans bordure surélevée, vous devez ralentir et si nécessaire vous arrêter.",
+          "explanation": "Sans refuge, vous vous arrêtez pour laisser les voyageurs gagner le trottoir.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q44.webp"
         },
         {
           "id": "E2_Q45",
-          "question": "Des passagers descendent d'un tram vers un refuge surélevé. Devez-vous vous arrêter ?",
+          "question": "Les voyageurs du tram descendent sur un refuge. Devez-vous vous arrêter ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Avec une bordure surélevée, les passagers peuvent attendre en sécurité — pas d'obligation de s'arrêter.",
+          "explanation": "Ils sont en sécurité sur le refuge : vous passez à allure modérée.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E2_Q45.webp"
         },
         {
-          "id": "E2_Q48",
-          "question": "Combien de cas autorisent le dépassement par la droite ?",
+          "id": "E2_Q49",
+          "question": "Embouteillage : votre file avance plus vite que celle de gauche. Est-ce un dépassement par la droite ?",
           "choices": [
-            "Deux cas",
-            "Un seul cas",
-            "Trois cas"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "Deux cas uniquement : le véhicule qui tourne à gauche, et le tram.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/E2_Q48.webp"
-        },
-        {
-          "id": "E2_Q49",
-          "question": "Dans un embouteillage, votre file avance plus vite que celle de gauche. Est-ce un dépassement ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "En embouteillage, une file plus rapide que l'autre n'est pas considérée comme un dépassement.",
+          "explanation": "Quand on roule en files, une file plus rapide n'est pas un dépassement.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q49.webp"
         },
         {
           "id": "E2_Q50",
-          "question": "Quelle est la condition préalable pour circuler en plusieurs files ?",
+          "question": "Quand peut-on rouler en plusieurs files ?",
           "choices": [
-            "La densité de la circulation",
-            "La vitesse des véhicules",
-            "Le nombre de bandes libres"
+            "Quand la circulation est dense",
+            "Toujours",
+            "Seulement la nuit"
           ],
           "correct": 0,
-          "explanation": "La circulation en files multiples n'est autorisée que si la densité du trafic le justifie.",
+          "explanation": "Quand la densité du trafic le justifie.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q50.webp"
         },
         {
           "id": "E2_Q51",
-          "question": "En circulation en files sur une chaussée à deux sens, pouvez-vous emprunter les bandes du sens inverse ?",
+          "question": "En files sur une chaussée à double sens, pouvez-vous utiliser les bandes de l'autre sens ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Uniquement les bandes de votre propre sens de circulation.",
+          "explanation": "Seulement les bandes de votre sens.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q51.webp"
         },
         {
           "id": "E2_Q52",
-          "question": "Sur une chaussée à sens unique, la circulation en plusieurs files est-elle autorisée ?",
+          "question": "Sur une chaussée à sens unique, peut-on rouler en plusieurs files ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La chaussée à sens unique est l'un des 3 cas autorisant la circulation en plusieurs files.",
+          "explanation": "Oui, quand le trafic le justifie.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q52.webp"
         },
         {
           "id": "E2_Q53",
-          "question": "Quels types de feux peut-on trouver au-dessus des bandes de circulation ?",
+          "question": "Quels signaux lumineux trouve-t-on au-dessus des bandes ?",
           "choices": [
-            "Croix rouge, flèche verte, flèche orange",
-            "Un feu rouge classique à trois couleurs",
-            "Un feu orange clignotant, sans plus"
+            "Croix rouge, flèche verte, flèche orange oblique",
+            "Un feu tricolore normal",
+            "Un feu orange clignotant seul"
           ],
           "correct": 0,
-          "explanation": "Les 3 types de signaux lumineux au-dessus des bandes : croix rouge, flèche verte (bas), flèche orange (oblique).",
+          "explanation": "Croix rouge : bande fermée. Flèche verte : bande ouverte. Flèche orange oblique : quittez la bande.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q53.webp"
         },
         {
           "id": "E2_Q54",
-          "question": "Les règles de dépassement s'appliquent-elles avant les signaux de choix de bande ?",
+          "question": "Avant un carrefour, vous suivez les flèches de sélection de votre bande. La bande voisine roule plus lentement. Est-ce un dépassement interdit de la dépasser à droite ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les règles de dépassement ne s'appliquent pas avant les signaux de choix de bande, mais elles s'appliquent après.",
+          "correct": 0,
+          "explanation": "Quand chacun suit les flèches de sa bande, rouler plus vite qu'une autre bande n'est pas un dépassement.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q54.webp"
         },
         {
           "id": "E2_Q56",
-          "question": "Quelles sont les deux conditions pour choisir librement votre bande ?",
+          "question": "En agglomération, sur une chaussée à plusieurs bandes dans votre sens, pouvez-vous rouler sur la bande de votre choix ?",
           "choices": [
-            "Des bandes de circulation et l'agglomération",
-            "Plusieurs bandes et être hors agglomération",
-            "Une seule bande et être en agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Deux conditions cumulatives : bandes présentes ET en agglomération.",
+          "explanation": "En agglomération, avec au moins 2 bandes dans votre sens, vous pouvez choisir votre bande.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q56.webp"
         },
         {
           "id": "E2_Q57",
-          "question": "En agglomération sur un sens unique à plusieurs bandes, pouvez-vous choisir votre bande ?",
+          "question": "Rue à sens unique à deux bandes, en agglomération. La voiture bleue peut-elle rester sur la bande de gauche ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Sens unique en agglomération + bandes = choix libre de la bande.",
+          "explanation": "En agglomération, sur plusieurs bandes, le choix de la bande est libre.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q57.webp"
         },
         {
           "id": "E2_Q58",
-          "question": "En agglomération sur une chaussée à deux sens et quatre bandes, pouvez-vous choisir votre bande ?",
+          "question": "En agglomération, chaussée à double sens à 4 bandes (2 par sens). Pouvez-vous choisir votre bande ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "4 bandes en agglomération (au moins 2 par sens) = choix libre de la bande.",
+          "explanation": "Au moins 2 bandes dans votre sens : choix libre.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q58.webp"
         },
         {
           "id": "E2_Q59",
-          "question": "Hors agglomération sur une route à plusieurs bandes, pouvez-vous choisir librement votre bande ?",
+          "question": "Hors agglomération, sur une route à plusieurs bandes, pouvez-vous rester sur n'importe quelle bande ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le choix libre de bande selon la destination n'est possible qu'en agglomération.",
+          "explanation": "Hors agglomération, vous roulez à droite. Le choix libre n'existe qu'en agglomération.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q59.webp"
         },
         {
-          "id": "E2_Q60",
-          "question": "En agglomération, pouvez-vous choisir votre bande y compris dans un virage ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "En agglomération, le choix de bande s'applique y compris dans les virages.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/E2_Q60.webp"
-        },
-        {
           "id": "E2_Q61",
-          "question": "En agglomération sur une chaussée à deux sens et deux bandes, pouvez-vous choisir votre bande ?",
+          "question": "En agglomération, chaussée à double sens à 2 bandes (1 par sens). Pouvez-vous choisir votre bande ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Sur 2 bandes (1 par sens), le choix libre de bande en agglomération ne s'applique pas.",
+          "explanation": "Une seule bande dans votre sens : vous y restez, à droite.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E2_Q61.webp"
         },
         {
-          "id": "E2_Q62",
-          "question": "Quelle différence entre la circulation en files et le choix de bande en agglomération ?",
-          "choices": [
-            "Les files exigent la densité du trafic",
-            "Les deux exigent la densité du trafic",
-            "Aucune des deux n'a de condition"
-          ],
-          "correct": 0,
-          "explanation": "Deux conditions distinctes : densité pour les files, agglomération + bandes pour le choix libre.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/E2_Q62.webp"
-        },
-        {
           "id": "E2_Q63",
-          "question": "Vous êtes en moto dans un embouteillage. Pouvez-vous circuler entre les files ?",
+          "question": "En moto, dans un embouteillage, pouvez-vous rouler entre les files ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les motocyclettes peuvent circuler entre les files en embouteillage.",
+          "explanation": "Oui, en respectant 50 km/h maximum et 20 km/h de plus que les files.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q63.webp"
         },
         {
           "id": "E2_Q64",
-          "question": "Sur une autoroute à trois bandes, entre quelles bandes une moto peut-elle circuler ?",
+          "question": "Autoroute à 3 bandes, embouteillage. Entre quelles bandes la moto peut-elle passer ?",
           "choices": [
-            "Les deux bandes les plus à gauche",
-            "Les deux bandes les plus à droite",
-            "N'importe quelles bandes libres"
+            "Entre les deux bandes de gauche",
+            "Entre les deux bandes de droite",
+            "Où elle veut"
           ],
           "correct": 0,
-          "explanation": "Sur autoroute/route pour automobiles, les motos ne peuvent circuler qu'entre les deux bandes les plus à gauche.",
+          "explanation": "Sur autoroute et route pour automobiles : entre les deux bandes les plus à gauche.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q64.webp"
         },
         {
           "id": "E2_Q65",
-          "question": "En moto entre les files, quelle est votre vitesse maximale autorisée ?",
+          "question": "Vitesse maximale d'une moto entre les files ?",
           "choices": [
             "50 km/h",
             "30 km/h",
             "70 km/h"
           ],
           "correct": 0,
-          "explanation": "Vitesse maximale absolue : 50 km/h pour les motos circulant entre les files.",
+          "explanation": "50 km/h maximum.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/E2_Q65.webp"
         },
         {
           "id": "E2_Q66",
-          "question": "En moto entre les files, combien pouvez-vous rouler plus vite que les véhicules autour ?",
+          "question": "De combien la moto peut-elle rouler plus vite que les files ?",
           "choices": [
-            "20 km/h de plus",
-            "10 km/h de plus",
-            "30 km/h de plus"
+            "20 km/h",
+            "10 km/h",
+            "30 km/h"
           ],
           "correct": 0,
-          "explanation": "La moto ne peut pas rouler à plus de 20 km/h par rapport aux véhicules dépassés.",
+          "explanation": "Au maximum 20 km/h de plus.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q66.webp"
         },
         {
           "id": "E2_Q67",
-          "question": "Les véhicules autour roulent à 35 km/h. En moto entre les files, pouvez-vous rouler à 50 km/h ?",
+          "question": "Les files roulent à 35 km/h. La moto peut-elle passer entre elles à 50 km/h ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "35 + 20 = 55 km/h max relatif. Limite absolue 50 km/h. La moto peut donc rouler à 50 km/h.",
+          "explanation": "35 + 20 = 55, mais le maximum absolu est 50 : 50 km/h, c'est permis.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q67.webp"
         },
         {
           "id": "E2_Q68",
-          "question": "Les véhicules sont à l'arrêt complet. En moto entre les files, pouvez-vous rouler à 25 km/h ?",
+          "question": "Les files sont à l'arrêt. La moto peut-elle passer entre elles à 25 km/h ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "0 + 20 = 20 km/h max. À 25 km/h, la moto dépasse de 25 km/h les véhicules arrêtés — c'est interdit.",
+          "explanation": "0 + 20 = 20 km/h maximum : 25, c'est trop.",
           "theoryCardIndex": 5,
           "image": "/images/questions/E2_Q68.webp"
         },
@@ -1694,15 +1523,37 @@
         },
         {
           "id": "E2_Q73",
-          "question": "Les règles de dépassement s'appliquent-elles de nouveau après un panneau de choix de bande ?",
+          "question": "Après le carrefour, les flèches de sélection sont finies. Les règles normales du dépassement reprennent-elles ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Après les signaux de choix de bande, les règles de dépassement reprennent.",
+          "explanation": "Oui : une fois les bandes de sélection passées, on dépasse de nouveau par la gauche.",
           "theoryCardIndex": 4,
           "sign": "F13"
+        },
+        {
+          "id": "E2_Q80",
+          "question": "La voiture blanche dépasse un cyclomoteur. Pouvez-vous dépasser la voiture blanche en même temps ?",
+          "choices": [
+            "Oui",
+            "Non"
+          ],
+          "correct": 0,
+          "explanation": "Dépasser un véhicule qui dépasse est interdit, sauf s'il dépasse un vélo, un cyclomoteur ou une moto à deux roues.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "E2_Q81",
+          "question": "La voiture blanche dépasse un camion, sur une route à 2 bandes. Pouvez-vous dépasser la voiture blanche en même temps ?",
+          "choices": [
+            "Non",
+            "Oui"
+          ],
+          "correct": 0,
+          "explanation": "Interdit de dépasser un véhicule qui dépasse lui-même une voiture ou un camion, sauf s'il y a au moins 3 bandes dans votre sens.",
+          "theoryCardIndex": 1
         }
       ]
     },
