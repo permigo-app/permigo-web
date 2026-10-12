@@ -45,8 +45,8 @@ export default function PremiumGate({ children }: PremiumGateProps) {
   // Les cartes flash et la banque d'erreurs sont devenues gratuites : les
   // laisser ici ferait payer pour quelque chose qu'on donne déjà.
   const features = isNL
-    ? ["De 1 770 vragen van de 9 thema's", 'Onbeperkte proefexamens', 'Onbeperkte reflextraining', 'De quiz met 214 verkeersborden']
-    : ['Les 1 770 questions des 9 thèmes', 'Examens blancs illimités', 'Entraînement réflexe illimité', 'Le quiz des 214 panneaux belges'];
+    ? ["Meer dan 1 500 vragen over de 9 thema's", 'Onbeperkte proefexamens', 'Onbeperkte reflextraining', 'De quiz met 214 verkeersborden']
+    : ['Plus de 1 500 questions sur les 9 thèmes', 'Examens blancs illimités', 'Entraînement réflexe illimité', 'Le quiz des 214 panneaux belges'];
   const stillFree = isNL
     ? 'De theorie, de flashcards, de catalogus met borden en je foutenbank blijven gratis.'
     : 'La théorie, les cartes flash, le catalogue des panneaux et ta banque d\'erreurs restent gratuits.';

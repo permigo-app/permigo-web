@@ -17,12 +17,15 @@ const KEY_MASQUE = 'invite_avis_compte_masque';
  * l'élève a alors quelque chose à perdre, et c'est là que le message porte.
  */
 export default function GuestAccountNotice() {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
   const { t } = useLang();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (user) return; // connecté : sa progression est déjà dans son compte
+    // On attend de savoir si l'élève est connecté : sinon le bandeau s'affichait
+    // pendant le chargement de la session et restait visible pour un connecté.
+    if (loading) return;
+    if (user) { setVisible(false); return; } // connecté : sa progression est déjà dans son compte
     if (localStorage.getItem(KEY_MASQUE) === 'true') return;
     try {
       const faites = getAllCompletedParties();
@@ -30,7 +33,7 @@ export default function GuestAccountNotice() {
     } catch {
       // localStorage indisponible : on n'insiste pas
     }
-  }, [user]);
+  }, [user, loading]);
 
   if (!visible) return null;
 
@@ -57,7 +60,7 @@ export default function GuestAccountNotice() {
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
         <Link href="/register" style={{
           display: 'inline-flex', alignItems: 'center', padding: '9px 16px',
-          borderRadius: 11, background: 'var(--brand)', color: '#0B1220',
+          borderRadius: 11, background: 'var(--brand)', color: 'var(--bg-primary)',
           fontWeight: 800, fontSize: 13, textDecoration: 'none',
         }}>
           {t('invite_creer_compte')}

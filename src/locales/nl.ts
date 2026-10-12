@@ -132,7 +132,7 @@
   examen_stat_format: 'Formaat',
   examen_stat_officiel: 'Officieel',
   examen_reprendre: 'Examen hervatten →',
-  examen_tirage: 'De vragen worden willekeurig gekozen uit de officiële vragenbank.',
+  examen_tirage: 'De vragen worden willekeurig gekozen uit alle vragen van de site.',
   examen_en_cours: 'Je hebt een examen lopen. Klik op Starten om verder te gaan waar je gebleven was.',
   // {n} = te behalen punten, {t} = totaal aantal vragen
   examen_regle_am: 'Je hebt {n} punten op {t} (82%) nodig om te slagen. Zoals op het officiële AM-examen kost elke fout 1 punt — er is geen regel voor zware fouten.',
@@ -764,7 +764,7 @@
   tab_toutes: '✅ Alle',
   tab_214_panneaux: '✅ 214 borden',
   tab_1_lecon: '1 les',
-  tab_1770_questions: '✅ 1 770 vragen',
+  tab_1770_questions: '✅ +1 500 vragen',
   tab_1_par_jour: '1 per dag',
   tab_illimite: '✅ Onbeperkt',
   tab_1_essai: '1 poging',

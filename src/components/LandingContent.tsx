@@ -98,7 +98,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { title: 'Premium, tout débloqué', price: 'Tout se débloque d\u2019un coup', cta: 'Voir Premium', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
     ],
     stats: [
-      { v: '1 770', l: 'questions officielles' },
+      { v: '1 500+', l: "questions d'entraînement" },
       { v: '9', l: 'thèmes du programme' },
       { v: '214', l: 'panneaux belges' },
       { v: '15 min', l: 'par jour suffisent' },
@@ -107,7 +107,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     featuresTitle: 'Six façons d\'arriver prêt le jour J',
     featuresSub: 'Pas juste une liste de questions : une méthode qui te fait revenir chaque jour.',
     features: [
-      { icon: '📚', color: '#3B82F6', title: '1 770 questions', desc: 'Les 9 thèmes du programme officiel belge, triés par difficulté, avec l\'explication après chaque réponse.' },
+      { icon: '📚', color: '#3B82F6', title: '1 500+ questions', desc: 'Les 9 thèmes du programme officiel belge, triés par difficulté, avec l\'explication après chaque réponse.' },
       { icon: '⚡', color: AMBER, title: 'Mode Turbo', desc: 'Trois à cinq minutes chrono en main. Parfait dans le bus, entre deux cours, quand tu n\'as pas le temps.' },
       { icon: '📝', color: '#22C55E', title: 'Examen blanc', desc: 'Les conditions réelles de l\'examen belge : même format, même pression, sans la correction en direct.' },
       { icon: '🚦', color: '#EF4444', title: '214 panneaux', desc: 'Tout le catalogue belge en cartes flash, plus un quiz qui interroge chaque panneau un par un.' },
@@ -152,7 +152,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     premiumTitle: 'Premium',
     premiumBadge: 'Tout débloqué',
     premiumItems: [
-      'Les 1 770 questions des 9 thèmes',
+      'Plus de 1 500 questions sur les 9 thèmes',
       'Examens blancs illimités, sur tous les thèmes',
       'Entraînement Turbo illimité',
       'Le quiz des 10 catégories de panneaux',
@@ -167,11 +167,11 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     faq: [
       {
         q: 'Vos questions correspondent-elles vraiment à l\'examen ?',
-        a: 'Elles couvrent les 9 thèmes du programme officiel belge et reprennent le format de l\'examen : un énoncé, quatre propositions, une seule bonne réponse. L\'examen blanc reproduit les conditions réelles, sans correction en direct. Nous ne sommes pas l\'organisme officiel : pour passer l\'examen, tu réserves auprès d\'un centre agréé.',
+        a: 'Elles couvrent les 9 thèmes du programme officiel belge et reprennent le format de l\'examen : un énoncé, deux ou trois propositions, une seule bonne réponse. L\'examen blanc reproduit les conditions réelles, sans correction en direct. Nous ne sommes pas l\'organisme officiel : pour passer l\'examen, tu réserves auprès d\'un centre agréé.',
       },
       {
         q: 'Pourquoi une partie est-elle payante ?',
-        a: 'Écrire, traduire et illustrer 1 770 questions prend un temps considérable, et la plateforme doit rester en ligne et à jour. La partie gratuite est volontairement assez large pour que tu juges par toi-même avant de payer quoi que ce soit : une leçon entière, un examen blanc, des cartes flash dans chaque thème.',
+        a: 'Écrire, traduire et illustrer plus de 1 500 questions prend un temps considérable, et la plateforme doit rester en ligne et à jour. La partie gratuite est volontairement assez large pour que tu juges par toi-même avant de payer quoi que ce soit : une leçon entière, un examen blanc, des cartes flash dans chaque thème.',
       },
       {
         q: 'En combien de temps peut-on être prêt ?',
@@ -218,7 +218,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { title: 'Premium, alles vrij', price: 'Alles in één keer vrij', cta: 'Premium bekijken', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
     ],
     stats: [
-      { v: '1 770', l: 'officiële vragen' },
+      { v: '1 500+', l: 'oefenvragen' },
       { v: '9', l: 'thema\'s van het programma' },
       { v: '214', l: 'Belgische borden' },
       { v: '15 min', l: 'per dag volstaat' },
@@ -227,7 +227,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     featuresTitle: 'Zes manieren om klaar te zijn op de grote dag',
     featuresSub: 'Niet zomaar een lijst vragen: een methode die je elke dag doet terugkomen.',
     features: [
-      { icon: '📚', color: '#3B82F6', title: '1 770 vragen', desc: 'De 9 thema\'s van het officiële Belgische programma, gesorteerd op moeilijkheid, met uitleg na elk antwoord.' },
+      { icon: '📚', color: '#3B82F6', title: '1 500+ vragen', desc: 'De 9 thema\'s van het officiële Belgische programma, gesorteerd op moeilijkheid, met uitleg na elk antwoord.' },
       { icon: '⚡', color: AMBER, title: 'Turbo-modus', desc: 'Drie tot vijf minuten, klok mee. Ideaal op de bus, tussen twee lessen, wanneer je weinig tijd hebt.' },
       { icon: '📝', color: '#22C55E', title: 'Proefexamen', desc: 'De echte examenomstandigheden: zelfde formaat, zelfde druk, zonder verbetering tussendoor.' },
       { icon: '🚦', color: '#EF4444', title: '214 verkeersborden', desc: 'De volledige Belgische catalogus als flashcards, plus een quiz die elk bord één voor één overhoort.' },
@@ -272,7 +272,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     premiumTitle: 'Premium',
     premiumBadge: 'Alles ontgrendeld',
     premiumItems: [
-      'De 1 770 vragen van de 9 thema\'s',
+      'Meer dan 1 500 vragen over de 9 thema\'s',
       'Onbeperkt proefexamens, in alle thema\'s',
       'Onbeperkt Turbo-training',
       'De quiz over de 10 categorieën verkeersborden',
@@ -287,11 +287,11 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     faq: [
       {
         q: 'Komen jullie vragen echt overeen met het examen?',
-        a: 'Ze dekken de 9 thema\'s van het officiële Belgische programma en volgen het examenformaat: een vraag, vier voorstellen, één juist antwoord. Het proefexamen bootst de echte omstandigheden na, zonder verbetering tussendoor. Wij zijn niet de officiële instantie: voor het examen zelf boek je bij een erkend centrum.',
+        a: 'Ze dekken de 9 thema\'s van het officiële Belgische programma en volgen het examenformaat: een vraag, twee of drie voorstellen, één juist antwoord. Het proefexamen bootst de echte omstandigheden na, zonder verbetering tussendoor. Wij zijn niet de officiële instantie: voor het examen zelf boek je bij een erkend centrum.',
       },
       {
         q: 'Waarom is een deel betalend?',
-        a: '1 770 vragen schrijven, vertalen en illustreren kost enorm veel tijd, en het platform moet online en up-to-date blijven. Het gratis gedeelte is bewust ruim genoeg om zelf te oordelen vóór je iets betaalt: een volledige les, een proefexamen, flashcards in elk thema.',
+        a: 'Meer dan 1 500 vragen schrijven, vertalen en illustreren kost enorm veel tijd, en het platform moet online en up-to-date blijven. Het gratis gedeelte is bewust ruim genoeg om zelf te oordelen vóór je iets betaalt: een volledige les, een proefexamen, flashcards in elk thema.',
       },
       {
         q: 'Hoe lang duurt het voor je klaar bent?',
@@ -460,7 +460,7 @@ export default function LandingContent() {
             </h1>
 
             {/* Le paragraphe d'introduction a été retiré : il mangeait trop de
-                hauteur dans le premier écran. Ses chiffres (1 770 questions,
+                hauteur dans le premier écran. Ses chiffres (plus de 1 500 questions,
                 9 thèmes) sont repris juste en dessous dans le bandeau. */}
 
             <div className="flex flex-wrap items-center" style={{ gap: 11, marginTop: 22 }}>

@@ -36,7 +36,7 @@ export default function PanneauCategoriePage() {
     return (
       <div className="max-w-lg mx-auto px-4 py-12 text-center">
         <p className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>{t('panneaux_categorie_introuvable')}</p>
-        <button onClick={() => router.push('/panneaux')} className="mt-4 px-6 py-3 rounded-2xl font-black press-scale" style={{ background: 'var(--brand)', color: '#0a0e2a' }}>
+        <button onClick={() => router.push('/panneaux')} className="mt-4 px-6 py-3 rounded-2xl font-black press-scale" style={{ background: 'var(--brand)', color: 'var(--bg-primary)' }}>
           {t('retour')}
         </button>
       </div>

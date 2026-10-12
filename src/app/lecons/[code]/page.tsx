@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { getThemeDataLocalized, type LocalTheme } from '@/lib/lessonData';
-import { THEME_EMOJIS, THEME_CITIES } from '@/lib/constants';
+import { THEME_EMOJIS } from '@/lib/constants';
 import { isLessonCompleted, getLessonProgress, getCompletedParties } from '@/lib/progressStorage';
 import { lessonEffectivelyCompleted } from '@/lib/medals';
 import { useLang } from '@/contexts/LanguageContext';
@@ -71,9 +71,6 @@ export default function ThemeDetailPage() {
   }
 
   if (!theme) return null;
-
-  // La ville vient du contenu du permis actif (les villes AM ≠ villes B)
-  const city = theme.city || THEME_CITIES[code] || '';
   const emoji = THEME_EMOJIS[code] || '📖';
   const nextLesson = lessons.find(l => l.status !== 'done');
   const doneCount = lessons.filter(l => l.status === 'done').length;
@@ -103,10 +100,10 @@ export default function ThemeDetailPage() {
             </div>
             <div style={{ flex: 1 }}>
               <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: '1.2px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>
-                THÈME {code} · {city}
+                {lang === 'nl' ? 'THEMA' : 'THÈME'} {code}
               </p>
               <h1 style={{ margin: '4px 0 0', fontSize: 20, fontWeight: 800, color: 'var(--text-title)', lineHeight: 1.2 }}>
-                {t('theme_title_' + code)}
+                {theme.title || t('theme_title_' + code)}
               </h1>
             </div>
           </div>

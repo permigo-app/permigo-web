@@ -135,7 +135,7 @@
   examen_stat_format: 'Format',
   examen_stat_officiel: 'Officiel',
   examen_reprendre: "Reprendre l'examen →",
-  examen_tirage: 'Les questions sont tirées au sort depuis la banque officielle.',
+  examen_tirage: 'Les questions sont tirées au sort parmi toutes celles du site.',
   examen_en_cours: 'Tu as un examen en cours. En cliquant sur Commencer, tu reprends là où tu en étais.',
   // {n} = points à obtenir, {t} = total de questions
   examen_regle_am: 'Il faut obtenir {n} points sur {t} (82%) pour réussir. Comme à l\'examen officiel AM, chaque erreur coûte 1 point — il n\'y a pas de règle des fautes graves.',
@@ -769,7 +769,7 @@
   tab_toutes: '✅ Toutes',
   tab_214_panneaux: '✅ 214 panneaux',
   tab_1_lecon: '1 leçon',
-  tab_1770_questions: '✅ 1 770 questions',
+  tab_1770_questions: '✅ +1 500 questions',
   tab_1_par_jour: '1 par jour',
   tab_illimite: '✅ Illimité',
   tab_1_essai: '1 essai',

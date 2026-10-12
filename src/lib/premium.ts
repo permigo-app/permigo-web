@@ -10,7 +10,7 @@ const KEY_PREMIUM = 'isPremium';
 //   Gratuit  — toute la théorie des 9 thèmes (cartes + fiches flash), tout le
 //              catalogue des panneaux, la banque d'erreurs, le quiz de la
 //              leçon A1, une session Turbo PAR JOUR, un examen blanc à vie.
-//   Premium  — les 1 770 questions des leçons, les examens illimités, le Turbo
+//   Premium  — toutes les questions des leçons, les examens illimités, le Turbo
 //              illimité, le quiz des 10 catégories de panneaux.
 //
 // C'est le découpage des concurrents belges, qui offrent tous leur cours et
