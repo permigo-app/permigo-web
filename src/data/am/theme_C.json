@@ -26,10 +26,10 @@
             },
             {
               "type": "card",
-              "title": "Le carré vert à flèches : ignore-le",
-              "content": "📋 La règle\nLe feu carré vert avec un vélo entouré de flèches permet aux CYCLISTES de traverser le carrefour dans toutes les directions, même en diagonale. Les cyclomoteurs ne doivent PAS en tenir compte.\n\n💡 Pourquoi\nCette traversée « libre » est pensée pour l'agilité du vélo : un cyclo motorisé qui traverserait en diagonale surprendrait tout le monde.\n\n🛵 En pratique\nCe feu s'allume ? Les vélos partent dans tous les sens ; toi, tu continues de suivre ton feu tricolore normal.\n\n📍 Exemple\nCarrefour équipé du carré vert : le cycliste coupe en diagonale vers la rue d'en face — toi tu tournes en deux temps, selon les feux classiques.\n\n⚠️ Erreur fréquente\nCroire que « feu vélo = feu cyclo » dans tous les cas : le carré vert à flèches est l'exception réservée aux seuls cyclistes.",
+              "title": "Le vélo entouré de flèches",
+              "content": "📋 La règle\nLe feu qui montre un vélo entouré de flèches laisse traverser le carrefour dans toutes les directions. Il vaut pour les cyclistes et pour les cyclomoteurs à deux roues autorisés sur la piste cyclable.\n\n💡 Pourquoi\nTous les usagers de la piste partent en même temps, pendant que les voitures attendent.\n\n🛵 En pratique\nEn classe A, tu roules sur la piste : ce feu est le tien. En classe B, il est aussi le tien si tu as le droit d'être sur la piste. Si tu roules sur la chaussée, suis les feux normaux.\n\n⚠️ Erreur fréquente\nCroire que ce feu est réservé aux vélos : il vaut aussi pour les cyclos qui ont accès à la piste.",
               "emoji": "🟩",
-              "explanation_simple": "Carré vert avec vélo et flèches = cyclistes uniquement. En cyclo, tu l'ignores et tu suis les feux normaux."
+              "explanation_simple": "Vélo + flèches : vaut pour les vélos et les cyclos autorisés sur la piste. Sur la chaussée, tu suis les feux normaux."
             }
           ]
         },
@@ -63,166 +63,154 @@
       "questions": [
         {
           "id": "AM_C1_Q1",
-          "question": "Un feu montre une silhouette de vélo. Qui doit le respecter ?",
+          "question": "Un feu montre un vélo. Qui doit le respecter ?",
           "choices": [
-            "Les cyclistes uniquement",
-            "Les cyclistes et les cyclomoteurs à 2 roues",
-            "Tous les véhicules du carrefour",
-            "Les piétons et les cyclistes"
+            "Les vélos et les cyclomoteurs à deux roues",
+            "Les vélos seulement",
+            "Tout le monde"
           ],
-          "correct": 1,
-          "explanation": "Le feu à silhouette de vélo s'adresse aux cyclistes ET aux cyclomoteurs à deux roues : c'est ton feu sur la piste.",
+          "correct": 0,
+          "explanation": "Le feu « vélo » vaut pour les vélos et les cyclomoteurs à deux roues.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C1_Q2",
-          "question": "Feu rouge avec panneau B22 (vélo + flèche à droite). En scooter classe B, tu :",
+          "question": "Feu rouge avec le panneau « vélo + flèche à droite » dessous. En classe B, tu :",
           "choices": [
+            "Attends le vert",
             "Tournes à droite en cédant le passage",
-            "Attends le feu vert comme les voitures",
-            "Franchis tout droit prudemment",
-            "Klaxonnes pour signaler ton passage"
+            "Passes tout droit"
           ],
-          "correct": 1,
-          "explanation": "Les B22/B23 n'autorisent que les bicyclettes et speed pedelecs à franchir le rouge : les cyclomoteurs attendent le vert.",
+          "correct": 0,
+          "explanation": "Ce panneau n'autorise que les vélos et les speed pedelecs.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C1_Q3",
-          "question": "Qui peut franchir le feu rouge sous un panneau B22/B23 ?",
+          "question": "Qui peut passer au rouge sous le panneau « vélo + flèche » ?",
           "choices": [
             "Les vélos et les speed pedelecs",
-            "Tous les deux-roues sans exception",
-            "Les cyclomoteurs classe A uniquement",
-            "Les vélos et les cyclomoteurs classe B"
+            "Tous les deux-roues",
+            "Les cyclomoteurs classe A"
           ],
           "correct": 0,
-          "explanation": "Seuls les cyclistes et les speed pedelecs bénéficient des B22/B23, en cédant le passage. Les cyclomoteurs classe A et B en sont exclus.",
+          "explanation": "Seulement les vélos et les speed pedelecs, en cédant le passage.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C1_Q4",
-          "question": "Le feu carré vert avec un vélo entouré de flèches s'allume. En cyclomoteur, tu :",
+          "question": "En classe A sur la piste, un feu vélo entouré de flèches devient vert. Tu :",
           "choices": [
-            "Traverses en diagonale comme les vélos",
-            "N'en tiens pas compte et suis les feux normaux",
-            "T'arrêtes obligatoirement",
-            "Tournes uniquement à droite"
+            "Le suis, comme les vélos",
+            "N'en tiens pas compte",
+            "T'arrêtes"
           ],
-          "correct": 1,
-          "explanation": "Ce feu de traversée toutes directions est réservé aux cyclistes : les cyclomoteurs l'ignorent et suivent les feux classiques.",
+          "correct": 0,
+          "explanation": "Ce feu vaut pour les vélos et les cyclomoteurs autorisés sur la piste.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C1_Q5",
-          "question": "Que signifie le panneau rond rouge C9 (pictogramme cyclomoteur) ?",
+          "question": "Rond rouge avec un cyclomoteur dessiné :",
           "choices": [
-            "Parking réservé aux cyclos",
             "Accès interdit aux cyclomoteurs",
-            "Piste obligatoire pour cyclos",
-            "Fin de zone cyclomoteur"
+            "Parking cyclos",
+            "Piste obligatoire"
           ],
-          "correct": 1,
-          "explanation": "Le C9 interdit l'accès aux conducteurs de cyclomoteurs. En le poussant moteur coupé, tu es piéton et peux passer (sauf interdiction piétons).",
+          "correct": 0,
+          "explanation": "Ce panneau interdit l'accès aux cyclomoteurs.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C1_Q6",
-          "question": "Piste cyclable D7 avec panneau additionnel M7. Ta classe B :",
+          "question": "Piste cyclable D7 avec un cyclomoteur B barré dessous. En classe B :",
           "choices": [
-            "Doit emprunter la piste",
-            "Ne peut pas emprunter la piste",
-            "Choisit librement",
-            "Doit pousser le cyclo"
+            "Tu ne peux pas la prendre",
+            "Tu dois la prendre",
+            "Tu choisis"
           ],
-          "correct": 1,
-          "explanation": "Le M7 interdit la piste aux cyclomoteurs classe B : ce panneau additionnel prime sur la règle générale des 50 km/h.",
+          "correct": 0,
+          "explanation": "Ce panneau additionnel interdit la piste à la classe B.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C1_Q7",
-          "question": "Sur un passage pour cyclistes (carrés blancs), as-tu priorité sur les voitures ?",
+          "question": "Passage pour cyclistes (carrés blancs). As-tu la priorité sur les voitures ?",
           "choices": [
-            "Oui, comme un piéton sur les zébrures",
-            "Oui, si tu roules à moins de 25 km/h",
-            "Non, tu dois céder aux véhicules de la chaussée",
-            "Oui, mais uniquement de jour"
+            "Non, tu cèdes le passage",
+            "Oui, toujours",
+            "Oui, sous 25 km/h"
           ],
-          "correct": 2,
-          "explanation": "Le passage rend ta traversée visible mais ne te donne pas priorité : tu cèdes le passage, sauf signalisation contraire.",
+          "correct": 0,
+          "explanation": "Sur ce passage, tu cèdes aux véhicules de la chaussée.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C1_B1",
-          "question": "Ton feu vélo passe au vert mais le carrefour est encombré. Tu :",
+          "question": "Ton feu vélo passe au vert, mais le carrefour est encombré. Tu :",
           "choices": [
-            "T'engages, le vert te protège",
-            "Klaxonnes pour dégager le passage",
-            "T'engages lentement en slalomant",
-            "Attends que le carrefour soit dégagé"
+            "Attends qu'il se libère",
+            "T'engages",
+            "Slalomes"
           ],
-          "correct": 3,
-          "explanation": "Le vert autorise le passage seulement si tu peux dégager le carrefour sans bloquer ni t'exposer."
+          "correct": 0,
+          "explanation": "On ne s'engage pas si on risque de bloquer le carrefour."
         },
         {
           "id": "AM_C1_B2",
-          "question": "Le panneau C11 (rond rouge avec un vélo) interdit l'accès aux cyclistes. Ton cyclomoteur est-il visé ?",
+          "question": "Rond rouge avec un vélo (accès interdit aux cyclistes). Vise-t-il ton cyclomoteur ?",
           "choices": [
-            "Non, sauf mention cyclomoteur sur un panneau additionnel",
-            "Oui, tout deux-roues est visé",
-            "Oui, mais uniquement la classe A",
-            "Non, sauf le week-end"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "Chaque pictogramme désigne son usager : le C11 vise les cycles ; ton cyclo n'est concerné que si un additionnel le mentionne."
+          "explanation": "Il vise les cycles. Les cyclomoteurs ont leur propre panneau.",
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_C1_B3",
-          "question": "Tu es en cyclomoteur CLASSE A. Sens interdit avec panneau additionnel M3 « excepté cyclistes et cyclomoteurs classe A ». Tu :",
+          "question": "En classe A : sens interdit « excepté cyclistes et cyclomoteurs A ». Tu :",
           "choices": [
-            "Ne peux pas passer",
-            "Passes uniquement en poussant",
-            "Peux emprunter la rue : le M3 couvre ta classe A",
-            "Peux passer de nuit seulement"
+            "Peux y entrer",
+            "Ne peux pas",
+            "Dois pousser"
           ],
-          "correct": 2,
-          "explanation": "Le M3 excepte les cyclistes ET les cyclomoteurs à deux roues classe A. Attention : la classe B, elle, reste interdite — le M3 ne la couvre pas."
+          "correct": 0,
+          "explanation": "L'exception vise aussi la classe A.",
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_C1_C1",
-          "question": "Feu à flèche verte vers la droite ; tu veux aller tout droit. Tu :",
+          "question": "Feu avec une flèche verte vers la droite. Tu veux aller tout droit. Tu :",
           "choices": [
-            "Passes tout droit, le vert reste le vert",
-            "Attends : la flèche ne vaut que pour la direction indiquée",
-            "Tournes obligatoirement à droite",
-            "Recules pour changer de bande"
+            "Attends",
+            "Passes",
+            "Tournes à droite"
           ],
-          "correct": 1,
-          "explanation": "Un feu à flèche n'autorise que la direction de la flèche : pour aller tout droit, tu attends ton feu."
+          "correct": 0,
+          "explanation": "La flèche ne vaut que pour sa direction."
         },
         {
           "id": "AM_C1_C2",
-          "question": "En speed pedelec au feu rouge sous un panneau B22 (vélo + flèche à droite), tu :",
+          "question": "En speed pedelec, feu rouge avec le panneau « vélo + flèche à droite ». Tu :",
           "choices": [
-            "Attends le vert comme les cyclomoteurs",
-            "Dois d'abord mettre pied à terre",
-            "Peux tourner à droite en cédant le passage : le B22 t'inclut",
-            "Passes tout droit librement"
+            "Peux tourner à droite en cédant le passage",
+            "Attends le vert",
+            "Passes tout droit"
           ],
-          "correct": 2,
-          "explanation": "Le B22 couvre les bicyclettes ET les speed pedelecs — contrairement aux cyclomoteurs classe A et B qui restent au feu."
+          "correct": 0,
+          "explanation": "Ce panneau vise aussi les speed pedelecs."
         },
         {
           "id": "AM_C1_C3",
-          "question": "Ton feu vélo est vert mais un agent te fait signe d'attendre. Tu :",
+          "question": "Ton feu vélo est vert, un agent te fait signe d'attendre. Tu :",
           "choices": [
-            "Attends : l'agent prime sur ton feu",
-            "Passes, ton feu est vert",
-            "Klaxonnes pour signaler ton droit",
-            "Contournes l'agent lentement"
+            "Attends",
+            "Passes",
+            "Le contournes"
           ],
           "correct": 0,
-          "explanation": "L'agent prime sur les feux et les panneaux — feu vélo compris."
+          "explanation": "L'agent l'emporte sur les feux."
         }
       ]
     },
@@ -286,179 +274,166 @@
       "questions": [
         {
           "id": "AM_C2_Q1",
-          "question": "Que t'annonce un panneau triangulaire à bord rouge ?",
+          "question": "Un triangle à bord rouge t'annonce :",
           "choices": [
+            "Un danger",
             "Une interdiction",
-            "Un danger à l'approche",
-            "Une obligation",
-            "Une indication de direction"
+            "Une obligation"
           ],
-          "correct": 1,
-          "explanation": "Les triangles annoncent un danger : à deux roues, gravillons, rails et chaussées déformées comptent double.",
+          "correct": 0,
+          "explanation": "Triangle = danger à venir.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C2_Q2",
-          "question": "Au panneau STOP (B5), tu dois :",
+          "question": "Au STOP, tu dois :",
           "choices": [
-            "Ralentir fortement et passer si c'est libre",
             "T'arrêter complètement, puis repartir quand c'est libre",
-            "Céder uniquement aux véhicules venant de droite",
-            "T'arrêter seulement si un véhicule arrive"
+            "Ralentir et passer si c'est libre",
+            "T'arrêter seulement si quelqu'un arrive"
           ],
-          "correct": 1,
-          "explanation": "Le STOP impose un arrêt complet dans tous les cas — le « stop roulé » est une infraction.",
+          "correct": 0,
+          "explanation": "Arrêt complet, toujours.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C2_Q3",
-          "question": "Que signifie le losange jaune et blanc barré (B11) ?",
+          "question": "Losange jaune barré :",
           "choices": [
-            "Début de voie prioritaire",
             "Fin de la voie prioritaire",
-            "Interdiction de stationner",
-            "Annonce d'un STOP"
+            "Début de la voie prioritaire",
+            "Stationnement interdit"
           ],
-          "correct": 1,
-          "explanation": "Le B11 annonce la fin de ta priorité : aux carrefours suivants, la priorité de droite reprend.",
+          "correct": 0,
+          "explanation": "Après ce panneau, la priorité de droite revient.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C2_Q4",
-          "question": "Sens interdit (C1) avec panneau additionnel « excepté vélos » (M2). Ton scooter :",
+          "question": "Sens interdit « excepté vélos ». Ton scooter peut-il passer ?",
           "choices": [
-            "Peut passer comme les vélos",
-            "Ne peut pas passer : l'exception ne vise que les cyclistes",
-            "Peut passer en poussant sur le trottoir moteur allumé",
-            "Peut passer à moins de 25 km/h"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "« Excepté vélos » (M2) ne couvre pas les cyclomoteurs, et même le M3 n'y ajoute que la classe A : un scooter classe B reste interdit.",
+          "correct": 0,
+          "explanation": "L'exception vise seulement les cyclistes.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C2_Q5",
-          "question": "Un panneau C43 indique 30 km/h. Ton scooter classe B peut rouler à 45. Ta limite ?",
+          "question": "Panneau 30 km/h. Ton scooter classe B peut rouler à 45. Ta limite ?",
           "choices": [
-            "45 km/h, ta limite de construction",
-            "30 km/h, la limite du panneau",
-            "35 km/h, un compromis",
-            "40 km/h en agglomération"
+            "30 km/h",
+            "45 km/h",
+            "35 km/h"
           ],
-          "correct": 1,
-          "explanation": "La limite la plus basse s'applique toujours : ici 30 km/h, même si ton véhicule peut rouler plus vite.",
+          "correct": 0,
+          "explanation": "Tu respectes la plus basse : celle du panneau.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C2_Q6",
-          "question": "Un rond bleu D2 avec flèche vers la droite sur un îlot signifie :",
+          "question": "Rond bleu avec flèche oblique vers la droite, sur un îlot :",
           "choices": [
-            "Contourner l'îlot par la droite",
+            "Passer à droite de l'îlot",
             "Tourner à droite au carrefour",
-            "Stationnement à droite autorisé",
-            "Voie réservée aux cyclos à droite"
+            "Parking à droite"
           ],
           "correct": 0,
-          "explanation": "Le D2 impose le côté de contournement de l'obstacle : tu passes du côté de la flèche, jamais de l'autre.",
+          "explanation": "Tu contournes l'obstacle du côté de la flèche.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C2_Q7",
-          "question": "Dans une zone 30, la limite s'applique :",
+          "question": "Dans une zone 30, la limite vaut :",
           "choices": [
+            "Jusqu'au panneau de fin de zone",
             "Jusqu'au prochain carrefour",
-            "Sur 500 mètres après le panneau",
-            "Dans toute la zone, jusqu'au panneau de fin",
-            "Uniquement aux heures scolaires"
+            "Aux heures d'école"
           ],
-          "correct": 2,
-          "explanation": "Un panneau de zone vaut dans toute la zone, sans rappel, jusqu'au panneau de fin de zone.",
+          "correct": 0,
+          "explanation": "Toute la zone, jusqu'au panneau de fin.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C2_Q8",
-          "question": "Quelle est la vitesse par défaut en agglomération (panneau F1) ?",
+          "question": "Vitesse maximale en agglomération, pour les voitures ?",
           "choices": [
-            "30 km/h",
             "50 km/h",
-            "45 km/h",
+            "30 km/h",
             "70 km/h"
           ],
-          "correct": 1,
-          "explanation": "L'agglomération est limitée à 50 km/h par défaut — mais ta classe B reste bridée à 45 et une zone 30 t'abaisse à 30.",
+          "correct": 0,
+          "explanation": "50 km/h (30 à Bruxelles). Toi, en classe B, jamais plus de 45.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C2_B1",
-          "question": "Triangle annonçant un passage à niveau sans barrières. À cyclo, ta priorité est :",
+          "question": "Passage à niveau sans barrières annoncé. À cyclomoteur :",
           "choices": [
-            "Accélérer pour traverser vite",
-            "Ralentir et te méfier des rails glissants",
-            "Klaxonner en traversant",
-            "T'arrêter systématiquement"
+            "Tu ralentis et te méfies des rails glissants",
+            "Tu accélères",
+            "Tu klaxonnes"
           ],
-          "correct": 1,
-          "explanation": "Outre le train, les rails eux-mêmes sont un piège pour un deux-roues : on ralentit et on traverse bien droit."
+          "correct": 0,
+          "explanation": "Regarde bien et traverse les rails le plus droit possible."
         },
         {
           "id": "AM_C2_B2",
-          "question": "Dans une zone résidentielle, la vitesse maximale est de :",
+          "question": "Vitesse maximale dans une zone résidentielle ?",
           "choices": [
-            "30 km/h",
-            "45 km/h",
             "20 km/h",
-            "25 km/h"
+            "30 km/h",
+            "45 km/h"
           ],
-          "correct": 2,
-          "explanation": "Zone résidentielle : 20 km/h pour tous — les piétons peuvent y utiliser toute la largeur de la voirie."
+          "correct": 0,
+          "explanation": "20 km/h."
         },
         {
           "id": "AM_C2_B3",
-          "question": "Tu passes le panneau de FIN de zone 30, toujours en agglomération. Ta limite redevient :",
+          "question": "Fin de zone 30, toujours en agglomération. Ta limite en classe B ?",
           "choices": [
-            "30 km/h par prudence",
-            "70 km/h",
-            "50 km/h… mais 45 pour ta classe B",
-            "Libre, plus aucune limite"
+            "45 km/h",
+            "30 km/h",
+            "50 km/h"
           ],
-          "correct": 2,
-          "explanation": "Après la zone 30, le régime d'agglomération (50) reprend — plafonné par ta bride de construction (45)."
+          "correct": 0,
+          "explanation": "La limite redevient 50, mais ton cyclo ne dépasse pas 45."
         },
         {
           "id": "AM_C2_B4",
-          "question": "Tu circules sous le losange B9 (voie prioritaire). Aux carrefours suivants :",
+          "question": "Tu roules sur une voie prioritaire (losange jaune). Aux carrefours :",
           "choices": [
-            "Les voies transversales te cèdent le passage",
+            "Les rues transversales te cèdent le passage",
             "La priorité de droite s'applique",
-            "Tu dois marquer un arrêt",
-            "Les feux sont désactivés"
+            "Tu t'arrêtes"
           ],
           "correct": 0,
-          "explanation": "Le B9 te place sur une voie prioritaire : les transversales cèdent — mais reste attentif aux distraits."
+          "explanation": "Tu as la priorité jusqu'au panneau de fin.",
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_C2_C1",
-          "question": "Hors agglomération, à quelle distance du danger un triangle est-il généralement placé ?",
+          "question": "Hors agglomération, à quelle distance du danger est placé le triangle ?",
           "choices": [
-            "Environ 20 mètres",
-            "Environ 500 mètres",
-            "Juste au niveau du danger",
-            "Environ 150 mètres"
+            "Environ 150 m",
+            "Environ 20 m",
+            "Environ 500 m"
           ],
-          "correct": 3,
-          "explanation": "Les signaux de danger se placent en général à ±150 m du danger hors agglomération — le temps de ralentir."
+          "correct": 0,
+          "explanation": "Environ 150 m avant le danger.",
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_C2_C2",
-          "question": "Le panneau de fin d'agglomération signifie :",
+          "question": "Tu sors de l'agglomération en classe B. Ta vitesse maximale ?",
           "choices": [
-            "Tu peux rouler à 90 km/h",
-            "L'agglomération suivante commence aussitôt",
-            "Les règles d'agglomération cessent ; ta limite reste 45 (bride)",
-            "Le stationnement devient interdit"
+            "45 km/h",
+            "70 km/h",
+            "90 km/h"
           ],
-          "correct": 2,
-          "explanation": "Le régime hors agglomération reprend — mais ta limite de construction (45 km/h) reste ton plafond."
+          "correct": 0,
+          "explanation": "Ton cyclo est limité à 45 km/h partout."
         }
       ]
     },
@@ -515,153 +490,145 @@
       "questions": [
         {
           "id": "AM_C3_Q1",
-          "question": "Le feu passe à l'orange fixe alors que tu peux encore freiner en sécurité. Tu :",
+          "question": "Le feu passe à l'orange, tu peux encore freiner sans danger. Tu :",
           "choices": [
-            "Accélères pour passer avant le rouge",
-            "T'arrêtes avant la ligne",
-            "Continues à la même allure",
-            "Klaxonnes et passes"
+            "T'arrêtes",
+            "Accélères",
+            "Continues"
           ],
-          "correct": 1,
-          "explanation": "L'orange fixe impose l'arrêt, sauf si freiner devient dangereux parce que tu es trop près. Ici, tu peux : tu t'arrêtes.",
+          "correct": 0,
+          "explanation": "Orange fixe : tu t'arrêtes si c'est possible sans danger.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C3_Q2",
-          "question": "Que signifie un feu orange clignotant à un carrefour ?",
+          "question": "Feu orange clignotant à un carrefour :",
           "choices": [
-            "Le passage est interdit jusqu'au vert",
-            "Passage autorisé avec prudence, priorités et panneaux reprennent",
-            "Tu as la priorité absolue sur le carrefour",
-            "Le feu va repasser au vert dans quelques secondes"
+            "Tu passes prudemment ; panneaux et priorités s'appliquent",
+            "C'est comme un rouge",
+            "Tu as la priorité"
           ],
-          "correct": 1,
-          "explanation": "L'orange clignotant n'interdit pas le passage : il te renvoie aux panneaux et à la priorité de droite, avec prudence redoublée.",
+          "correct": 0,
+          "explanation": "Le feu ne règle plus rien : suis les panneaux, sinon la priorité de droite.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C3_Q3",
-          "question": "Ton feu est vert mais un agent te fait signe de t'arrêter. Tu :",
+          "question": "Feu vert, mais l'agent lève le bras. Tu :",
           "choices": [
-            "Passes, le feu prime",
-            "T'arrêtes, l'agent prime sur les feux",
-            "Passes lentement en le contournant",
-            "Attends que l'agent parte"
+            "T'arrêtes",
+            "Passes",
+            "Le contournes"
           ],
-          "correct": 1,
-          "explanation": "Hiérarchie : agent > feux > panneaux. Les injonctions de l'agent remplacent la signalisation.",
+          "correct": 0,
+          "explanation": "L'agent l'emporte sur les feux.",
           "theoryCardIndex": 0
         },
         {
           "id": "AM_C3_Q4",
-          "question": "Peux-tu chevaucher une ligne blanche continue pour dépasser un cycliste ?",
+          "question": "Peux-tu franchir une ligne blanche continue pour dépasser un cycliste ?",
           "choices": [
-            "Oui, pour un cycliste c'est permis",
-            "Non, ni la franchir ni la chevaucher",
-            "Oui, sur 20 mètres maximum",
-            "Oui, en klaxonnant d'abord"
+            "Non",
+            "Oui, pour un cycliste",
+            "Oui, sur 20 m"
           ],
-          "correct": 1,
-          "explanation": "La ligne continue ne se franchit ni ne se chevauche. Tu ne dépasses que si l'écart est possible sans y toucher, sinon tu patientes.",
+          "correct": 0,
+          "explanation": "Une ligne continue ne se franchit pas, même pour un vélo.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C3_Q5",
-          "question": "Des triangles blancs pointés vers toi sont peints au sol. Ils signifient :",
+          "question": "Triangles blancs peints au sol, pointe vers toi :",
           "choices": [
-            "Ralentisseur à franchir doucement",
-            "Céder le passage à cet endroit",
-            "Passage pour piétons",
-            "Zone interdite aux cyclos"
+            "Céder le passage",
+            "Ralentisseur",
+            "Passage pour piétons"
           ],
-          "correct": 1,
-          "explanation": "Les « dents de requin » marquent l'endroit exact où tu dois céder le passage.",
+          "correct": 0,
+          "explanation": "Ce sont des « dents de requin » : tu cèdes le passage.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C3_Q6",
-          "question": "Pourquoi les marquages peints demandent-ils une prudence spéciale à deux roues ?",
+          "question": "Pourquoi te méfier des marquages au sol à deux roues ?",
           "choices": [
+            "Mouillés, ils glissent",
             "Ils sont surélevés",
-            "Mouillés, ils deviennent très glissants",
-            "Ils aimantent les pneus",
-            "Ils sont réservés aux voitures"
+            "Ils sont pour les voitures"
           ],
-          "correct": 1,
-          "explanation": "La peinture routière mouillée offre très peu d'adhérence : freiner ou tourner dessus fait glisser un deux-roues.",
+          "correct": 0,
+          "explanation": "Sous la pluie, la peinture devient très glissante.",
           "theoryCardIndex": 1
         },
         {
           "id": "AM_C3_B1",
-          "question": "Franchir des dents de requin sans céder le passage, c'est :",
+          "question": "Passer les dents de requin sans céder le passage, c'est :",
           "choices": [
-            "Permis si tu es un deux-roues",
-            "Une infraction et un vrai risque de collision",
-            "Toléré aux heures creuses",
-            "Permis sous 25 km/h"
+            "Une infraction et un risque d'accident",
+            "Permis en deux-roues",
+            "Toléré la nuit"
           ],
-          "correct": 1,
-          "explanation": "Les dents de requin matérialisent l'obligation de céder : les ignorer expose à la collision latérale."
+          "correct": 0,
+          "explanation": "Tu dois céder le passage."
         },
         {
           "id": "AM_C3_B2",
-          "question": "Feux en orange clignotant + panneau B1 en dessous. Tu :",
+          "question": "Feux orange clignotants et un « cédez le passage » dessous. Tu :",
           "choices": [
-            "Passes sans regarder, le feu est « éteint »",
-            "T'arrêtes 3 secondes",
-            "Cèdes le passage selon le B1",
-            "Attends le retour du vert"
+            "Cèdes le passage",
+            "Passes sans regarder",
+            "Attends le vert"
           ],
-          "correct": 2,
-          "explanation": "Orange clignotant = les panneaux reprennent le pouvoir : ici le B1 t'impose de céder le passage."
+          "correct": 0,
+          "explanation": "Le feu clignote : c'est le panneau qui compte.",
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_C3_B3",
           "question": "Quand peux-tu franchir une ligne blanche discontinue ?",
           "choices": [
+            "Pour dépasser ou tourner, si c'est sûr",
             "Jamais à cyclomoteur",
-            "Uniquement aux carrefours",
-            "Uniquement hors agglomération",
-            "Pour dépasser ou tourner, si la manœuvre est sûre"
+            "Seulement aux carrefours"
           ],
-          "correct": 3,
-          "explanation": "La discontinue se franchit pour une manœuvre sûre (dépassement, changement de direction) — contrairement à la continue."
+          "correct": 0,
+          "explanation": "Une ligne discontinue se franchit pour dépasser, tourner ou changer de bande.",
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_C3_C1",
-          "question": "Aux dents de requin, le carrefour est totalement dégagé. Tu :",
+          "question": "Dents de requin, carrefour totalement libre. Tu :",
           "choices": [
-            "T'arrêtes 3 secondes comme au STOP",
-            "T'engages sans arrêt complet, après avoir ralenti et vérifié",
-            "Klaxonnes avant de passer",
-            "Attends qu'un véhicule arrive"
+            "Passes après avoir ralenti et regardé",
+            "T'arrêtes 3 secondes",
+            "Attends une voiture"
           ],
-          "correct": 1,
-          "explanation": "Céder le passage n'impose pas d'arrêt si la voie est libre — contrairement au STOP qui impose l'arrêt complet dans tous les cas."
+          "correct": 0,
+          "explanation": "Céder le passage n'oblige pas à s'arrêter si c'est libre."
         },
         {
           "id": "AM_C3_C2",
-          "question": "Où t'arrêtes-tu face à une large ligne blanche continue en travers de ta bande ?",
+          "question": "Large ligne blanche continue en travers de ta bande, au STOP. Où t'arrêtes-tu ?",
           "choices": [
-            "Avant la ligne, sans la chevaucher",
-            "Sur la ligne, pour bien voir",
-            "Après la ligne, au bord du carrefour",
-            "N'importe où selon le trafic"
+            "Juste avant la ligne",
+            "Sur la ligne",
+            "Après la ligne"
           ],
           "correct": 0,
-          "explanation": "La ligne d'arrêt marque l'endroit exact : ta roue avant s'immobilise avant elle, jamais dessus."
+          "explanation": "Tu t'arrêtes avant la ligne d'arrêt.",
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_C3_C3",
-          "question": "Les feux d'un carrefour sont en panne (éteints), aucun panneau. Qui a priorité ?",
+          "question": "Feux en panne, aucun panneau. Qui a la priorité ?",
           "choices": [
-            "Le plus gros véhicule",
-            "Celui qui arrive le premier",
-            "Les véhicules de la route la plus large",
-            "Celui qui vient de droite"
+            "Celui qui vient de droite",
+            "Le plus gros",
+            "Le premier arrivé"
           ],
-          "correct": 3,
-          "explanation": "Feux hors service et pas de panneaux : on retombe sur la règle de base, la priorité de droite."
+          "correct": 0,
+          "explanation": "Sans feux ni panneaux : priorité de droite.",
+          "theoryCardIndex": 0
         }
       ]
     }
