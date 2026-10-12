@@ -1197,644 +1197,599 @@
       "questions": [
         {
           "id": "D2_Q1",
-          "question": "Wat is de formule om de minimale veiligheidsafstand te berekenen?",
+          "question": "Welke minimale afstand hou je met de auto voor je?",
           "choices": [
-            "Snelheid x 2",
-            "Snelheid / 2",
-            "Snelheid / 3",
-            "Snelheid x 3"
+            "De helft van je snelheid, in meter",
+            "Altijd 50 m",
+            "1 seconde"
           ],
-          "explanation": "De minimale veiligheidsafstand (in meter) bereken je met: snelheid / 2. Aan 120 km/u = 60 m, aan 100 km/u = 50 m.",
-          "correct": 1,
+          "explanation": "Snelheid ÷ 2: aan 120 km/u 60 m, aan 90 km/u 45 m. Dat is ongeveer 2 seconden.",
+          "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D2_Q2",
-          "question": "Wat is de minimale veiligheidsafstand aan 120 km/u op droog wegdek?",
+          "question": "120 km/u, droge weg. Minimale veiligheidsafstand?",
           "choices": [
-            "30 meter",
-            "60 meter",
-            "90 meter",
-            "120 meter"
+            "30 m",
+            "60 m",
+            "120 m"
           ],
-          "explanation": "Aan 120 km/u is de minimale veiligheidsafstand 120 / 2 = 60 meter (2 seconden).",
+          "explanation": "120 ÷ 2 = 60 m.",
           "correct": 1,
           "theoryCardIndex": 0
         },
         {
           "id": "D2_Q4",
-          "question": "Hoeveel seconden legt de tweeseconderegel je op om te behouden?",
+          "question": "Droge weg: hoeveel seconden hou je achter de auto voor je?",
           "choices": [
-            "1 seconde",
             "2 seconden",
-            "3 seconden",
+            "1 seconde",
             "5 seconden"
           ],
-          "explanation": "De tweeseconderegel legt op om minstens 2 seconden afstand te houden op droog wegdek.",
-          "correct": 1,
+          "explanation": "Minstens 2 seconden op een droge weg.",
+          "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D2_Q5",
-          "question": "Hoe past u de tweesecondenregel toe?",
+          "question": "Hoe controleer je de regel van 2 seconden?",
           "choices": [
-            "Twee seconden tellen aan een vast punt",
-            "Twee seconden naar de klok kijken",
-            "Twee seconden wachten bij het vertrekken"
+            "Je telt 2 seconden vanaf een vast punt",
+            "Je kijkt op de klok",
+            "Je wacht 2 seconden bij het vertrek"
           ],
-          "explanation": "Je kiest een vast punt, je zegt 'een krokodil, twee krokodillen' wanneer het voertuig voor je dat punt passeert. Als je het punt passeert nadat je de twee krokodillen hebt gezegd, is de afstand correct.",
+          "explanation": "Als de auto voor je een vast punt passeert, tel je « éénentwintig, tweeëntwintig »: je mag het punt niet eerder bereiken.",
           "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D2_Q7",
-          "question": "Hoeveel neemt de veiligheidsafstand toe op nat wegdek?",
+          "question": "Hoeveel verhoog je de veiligheidsafstand bij regen?",
           "choices": [
-            "25%",
-            "50%",
-            "75%",
-            "100%"
+            "Met de helft (3 seconden)",
+            "Met een kwart",
+            "Ze verandert niet"
           ],
-          "explanation": "Op nat wegdek neemt de veiligheidsafstand toe met 50% (2 seconden -> 3 seconden).",
-          "correct": 1,
+          "explanation": "Op een natte weg: +50 %, dus 3 seconden.",
+          "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D2_Q8",
-          "question": "Je rijdt aan 120 km/u op nat wegdek. Welke veiligheidsafstand?",
+          "question": "120 km/u op de autosnelweg, het begint hard te regenen. Wat doe je?",
           "choices": [
-            "60 meter",
-            "75 meter",
-            "90 meter",
-            "120 meter"
+            "Je vertraagt en vergroot de afstand (90 m)",
+            "Je houdt 60 m",
+            "Je blijft 120 km/u rijden"
           ],
-          "explanation": "Aan 120 km/u, droog wegdek: 60 m. Nat wegdek (+50%): 60 + 30 = 90 meter (3 seconden).",
-          "correct": 2,
+          "explanation": "Bij regen: 60 m + 50 % = 90 m, en een aangepaste snelheid.",
+          "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D2_Q11",
-          "question": "Op een besneeuwde of ijzige weg, hoeveel seconden veiligheidsafstand?",
+          "question": "Besneeuwde of ijzige weg: veiligheidsafstand?",
           "choices": [
             "Minstens 4 seconden",
-            "Minstens 2 seconden",
-            "Minstens 3 seconden"
+            "2 seconden",
+            "3 seconden"
           ],
-          "explanation": "Op besneeuwd of ijzig wegdek is de veiligheidsafstand minstens 4 seconden (4 krokodillen).",
+          "explanation": "Sneeuw of ijzel: minstens 4 seconden.",
           "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D2_Q13",
-          "question": "Rangschik van kortste naar langste: veiligheidsafstand op droog, nat, besneeuwd wegdek.",
+          "question": "Veiligheidsafstand, van kort naar lang?",
           "choices": [
-            "Nat < droog < besneeuwd",
-            "Droog < nat < besneeuwd",
-            "Besneeuwd < nat < droog",
-            "Droog < besneeuwd < nat"
+            "Droog < nat < sneeuw",
+            "Nat < droog < sneeuw",
+            "Sneeuw < nat < droog"
           ],
-          "explanation": "Droog wegdek (2 s) < nat wegdek (3 s) < besneeuwd/ijzig wegdek (4 s+).",
-          "correct": 1,
+          "explanation": "Droog 2 s, nat 3 s, sneeuw of ijzel 4 s en meer.",
+          "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D2_Q15",
           "question": "Wat is de reactieafstand?",
           "choices": [
-            "Van gevaar gezien tot remmen",
-            "Van remmen tot volledige stilstand",
-            "De ruimte tussen twee voertuigen"
+            "Van het zien van het gevaar tot het remmen",
+            "Van het remmen tot de stilstand",
+            "De afstand tot de auto voor je"
           ],
-          "explanation": "De reactieafstand is de afstand die je aflegt tijdens de tijd die de bestuurder nodig heeft om een gevaar te herkennen en op de rem te trappen.",
+          "explanation": "De afstand die je aflegt terwijl je reageert, voor je remt.",
           "correct": 0,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q16",
-          "question": "Wat is de normale reactietijd van een bestuurder?",
+          "question": "Reactietijd van een uitgeruste, oplettende bestuurder?",
           "choices": [
-            "0,5 seconde",
-            "1 seconde",
-            "2 seconden",
-            "3 seconden"
+            "Ongeveer 1 seconde",
+            "Ongeveer 0,2 seconde",
+            "Ongeveer 3 seconden"
           ],
-          "explanation": "De normale reactietijd van een bestuurder is ongeveer 1 seconde.",
-          "correct": 1,
+          "explanation": "Ongeveer 1 seconde.",
+          "correct": 0,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q17",
-          "question": "U gaat van 60 naar 120 km/u. Verandert uw reactietijd?",
+          "question": "Hoe sneller je rijdt, hoe langer je reactieafstand. Waar of niet?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Waar",
+            "Niet waar"
           ],
-          "explanation": "De reactietijd (ongeveer 1 s) hangt niet af van de snelheid. Maar de afgelegde afstand in 1 s neemt toe met de snelheid.",
-          "correct": 1,
+          "explanation": "De reactietijd blijft ongeveer 1 s, maar hoe sneller je rijdt, hoe meer meter je in die seconde aflegt.",
+          "correct": 0,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q18",
-          "question": "Wat is de formule om de afgelegde afstand in 1 seconde te berekenen?",
+          "question": "Hoe bereken je de reactieafstand (1 seconde)?",
           "choices": [
-            "Snelheid x 3",
-            "Snelheid / 10 x 3",
-            "Snelheid / 2",
-            "Snelheid / 3"
+            "Snelheid ÷ 10 × 3",
+            "Snelheid ÷ 2",
+            "Snelheid × 3"
           ],
-          "explanation": "De geschatte formule is: snelheid / 10 x 3 (geeft de afstand in meter afgelegd in 1 seconde).",
-          "correct": 1,
+          "explanation": "Snelheid ÷ 10 × 3: aan 50 km/u 15 m.",
+          "correct": 0,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q19",
-          "question": "Welke afstand legt u aan 50 km/u af tijdens uw reactietijd?",
+          "question": "Aan 50 km/u, reactieafstand?",
           "choices": [
-            "Ongeveer 15 meter",
-            "Ongeveer 5 meter",
-            "Ongeveer 25 meter"
+            "Ongeveer 15 m",
+            "Ongeveer 30 m",
+            "Ongeveer 45 m"
           ],
-          "explanation": "Aan 50 km/u: 50 / 10 x 3 = 15 m (werkelijk: ongeveer 14 m).",
+          "explanation": "50 ÷ 10 × 3 = 15 m.",
           "correct": 0,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q20",
-          "question": "Welke afstand legt u aan 90 km/u af tijdens uw reactietijd?",
+          "question": "Aan 90 km/u, reactieafstand?",
           "choices": [
-            "Ongeveer 27 meter",
-            "Ongeveer 15 meter",
-            "Ongeveer 45 meter"
+            "17 m",
+            "22 m",
+            "27 m"
           ],
-          "explanation": "Aan 90 km/u: 90 / 10 x 3 = 27 m (werkelijk: ongeveer 25 m).",
-          "correct": 0,
+          "explanation": "90 ÷ 10 × 3 = 27 m.",
+          "correct": 2,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q21",
-          "question": "Welke afstand legt u aan 120 km/u af tijdens uw reactietijd?",
+          "question": "Aan 120 km/u, reactieafstand?",
           "choices": [
-            "Ongeveer 36 meter",
-            "Ongeveer 25 meter",
-            "Ongeveer 60 meter"
+            "Ongeveer 36 m",
+            "Ongeveer 25 m",
+            "Ongeveer 60 m"
           ],
-          "explanation": "Aan 120 km/u: 120 / 10 x 3 = 36 m (werkelijk: ongeveer 33 m).",
+          "explanation": "120 ÷ 10 × 3 = 36 m.",
           "correct": 0,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q22",
-          "question": "Aan 30 km/u, welke afstand leg je af in 1 seconde?",
+          "question": "Aan 30 km/u, reactieafstand?",
           "choices": [
-            "5 meter",
-            "9 meter",
-            "15 meter",
-            "20 meter"
+            "5 m",
+            "9 m",
+            "15 m"
           ],
-          "explanation": "Aan 30 km/u: 30 / 10 x 3 = 9 meter.",
+          "explanation": "30 ÷ 10 × 3 = 9 m.",
           "correct": 1,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q23",
-          "question": "Aan 70 km/u, welke afstand leg je af in 1 seconde?",
+          "question": "Aan 70 km/u, reactieafstand?",
           "choices": [
-            "14 meter",
-            "21 meter",
-            "28 meter",
-            "35 meter"
+            "14 m",
+            "21 m",
+            "28 m"
           ],
-          "explanation": "Aan 70 km/u: 70 / 10 x 3 = 21 meter.",
+          "explanation": "70 ÷ 10 × 3 = 21 m.",
           "correct": 1,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q24",
-          "question": "Wat is de reactietijd van een bestuurder onder invloed van alcohol?",
+          "question": "Na het drinken van alcohol wordt je reactietijd:",
           "choices": [
-            "1 seconde",
-            "2-3 seconden",
-            "5-8 seconden",
-            "0,5 seconde"
+            "Langer, tot 2 of 3 seconden",
+            "Blijft ongeveer 1 seconde",
+            "Korter"
           ],
-          "explanation": "Onder invloed van alcohol stijgt de reactietijd naar 2-3 seconden.",
-          "correct": 1,
+          "explanation": "Alcohol vertraagt je reflexen: je reactietijd kan verdubbelen of verdrievoudigen.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
-          "id": "D2_Q25",
-          "question": "Wat is de reactietijd van een bestuurder onder invloed van drugs?",
-          "choices": [
-            "1-2 seconden",
-            "2-3 seconden",
-            "5-8 seconden",
-            "10 seconden"
-          ],
-          "explanation": "Onder invloed van drugs kan de reactietijd oplopen tot 5-8 seconden.",
-          "correct": 2,
-          "theoryCardIndex": 1
-        },
-        {
           "id": "D2_Q26",
-          "question": "Een bestuurder onder invloed van alcohol rijdt aan 120 km/u. Zijn reactietijd is 3 seconden. Welke afstand legt hij af voor hij remt?",
+          "question": "120 km/u, reactietijd van 3 seconden (alcohol). Afgelegde afstand voor je remt?",
           "choices": [
-            "33 meter",
-            "66 meter",
-            "99 meter",
-            "120 meter"
+            "Ongeveer 33 m",
+            "Ongeveer 66 m",
+            "Ongeveer 100 m"
           ],
-          "explanation": "Aan 120 km/u ≈ 33 m/s. In 3 seconden: 33 x 3 = 99 meter afgelegd voor hij remt.",
+          "explanation": "Aan 120 km/u leg je ongeveer 33 m per seconde af: 3 × 33 ≈ 100 m.",
           "correct": 2,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D2_Q27",
-          "question": "Welke factoren verlengen uw reactietijd?",
+          "question": "Wat maakt je reactietijd langer?",
           "choices": [
-            "Leeftijd, vermoeidheid, medicijnen, alcohol",
-            "Alcohol en drugs, meer niet",
-            "De snelheid waaraan u rijdt"
+            "Vermoeidheid, alcohol, drugs, geneesmiddelen",
+            "Alleen alcohol",
+            "Alleen de snelheid"
           ],
-          "explanation": "De reactietijd wordt verhoogd door: leeftijd, concentratie, temperatuur, medicijnen, drugs en alcohol.",
+          "explanation": "Vermoeidheid, alcohol, drugs, sommige geneesmiddelen, gebrek aan concentratie.",
           "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D2_Q29",
-          "question": "U rijdt al uren en bent moe. Is uw reactietijd aangetast?",
+          "question": "Je bent moe. Je reactietijd:",
           "choices": [
-            "Ja",
-            "Nee"
+            "Wordt langer",
+            "Blijft dezelfde"
           ],
-          "explanation": "Vermoeidheid vertraagt de reflexen en verhoogt de reactietijd aanzienlijk.",
+          "explanation": "Vermoeidheid vertraagt je reflexen.",
           "correct": 0,
           "theoryCardIndex": 1
         },
         {
           "id": "D2_Q31",
-          "question": "Wat is de remafstand?",
+          "question": "De remafstand is:",
           "choices": [
-            "Van remmen tot volledige stilstand",
-            "Van gevaar gezien tot remmen",
-            "De afstand tot de voorligger"
+            "Van het remmen tot de volledige stilstand",
+            "Van het zien van het gevaar tot het remmen",
+            "De afstand tot de auto voor je"
           ],
-          "explanation": "De remafstand is de afstand die het voertuig aflegt vanaf het moment dat de bestuurder op de rem trapt tot het voertuig volledig stilstaat.",
+          "explanation": "De afstand tussen het remmen en de stilstand.",
           "correct": 0,
           "theoryCardIndex": 2
         },
         {
           "id": "D2_Q33",
-          "question": "Welke factoren beïnvloeden uw remafstand?",
+          "question": "Waarvan hangt de remafstand af?",
           "choices": [
-            "Weer, banden, wegdek, gewicht, remmen",
-            "De snelheid van het voertuig, meer niet",
-            "De staat van de banden en niets anders"
+            "Snelheid, weer, banden, weg, gewicht, remmen",
+            "Alleen van de snelheid",
+            "Alleen van de banden"
           ],
-          "explanation": "De remafstand hangt af van vele factoren: weersomstandigheden, banden, wegdek, gewicht, helling en staat van de remmen.",
+          "explanation": "Vooral van de snelheid, maar ook van het weer, de banden, het wegdek, het gewicht en de remmen.",
           "correct": 0,
           "theoryCardIndex": 2
         },
         {
           "id": "D2_Q36",
-          "question": "Op welke rijbaan is de remafstand het langst?",
+          "question": "Op een natte weg is de remafstand:",
           "choices": [
-            "Op droge rijbaan",
-            "Op natte rijbaan",
-            "Het is hetzelfde",
-            "Op betonnen rijbaan"
+            "Langer",
+            "Dezelfde",
+            "Korter"
           ],
-          "explanation": "De remafstand is aanzienlijk langer op natte rijbaan dan op droge rijbaan.",
-          "correct": 1,
+          "explanation": "Minder grip: je remt over een langere afstand.",
+          "correct": 0,
           "theoryCardIndex": 2
         },
         {
           "id": "D2_Q38",
-          "question": "Hoe sneller je rijdt, wat gebeurt er met de remafstand?",
+          "question": "Hoe sneller je rijdt, hoe meer de remafstand:",
           "choices": [
-            "Ze neemt af",
-            "Ze neemt toe",
-            "Ze blijft gelijk",
-            "Ze neemt af en neemt dan toe"
+            "Toeneemt, en zelfs sterk",
+            "Gelijk blijft",
+            "Afneemt"
           ],
-          "explanation": "De remafstand neemt toe met de snelheid (en zelfs meer dan evenredig).",
-          "correct": 1,
+          "explanation": "Ze stijgt sneller dan de snelheid: bij dubbele snelheid ongeveer vier keer zo lang.",
+          "correct": 0,
           "theoryCardIndex": 2
         },
         {
           "id": "D2_Q39",
-          "question": "Wat is de stopafstand?",
+          "question": "De stopafstand is:",
           "choices": [
-            "Reactie plus remmen",
-            "Enkel het remmen alleen",
+            "Reactieafstand + remafstand",
+            "Alleen de remafstand",
             "De veiligheidsafstand"
           ],
-          "explanation": "De stopafstand = reactieafstand + remafstand.",
+          "explanation": "Reactie + remmen = stopafstand. Het is geen synoniem van remafstand.",
           "correct": 0,
           "theoryCardIndex": 3
         },
         {
           "id": "D2_Q40",
-          "question": "Als je reactieafstand 15 m is en je remafstand 25 m, wat is je stopafstand?",
+          "question": "Reactie: 15 m. Remmen: 25 m. Stopafstand?",
           "choices": [
-            "15 meter",
-            "25 meter",
-            "40 meter",
-            "50 meter"
+            "25 m",
+            "40 m",
+            "50 m"
           ],
-          "explanation": "Stopafstand = 15 m (reactie) + 25 m (remmen) = 40 meter.",
-          "correct": 2,
+          "explanation": "15 + 25 = 40 m.",
+          "correct": 1,
           "theoryCardIndex": 3
         },
         {
           "id": "D2_Q42",
-          "question": "Uw snelheid stijgt. Hoe evolueert uw stopafstand?",
+          "question": "Je snelheid neemt toe. Je stopafstand:",
           "choices": [
-            "Hij wordt langer",
-            "Hij wordt korter",
-            "Hij blijft gelijk"
+            "Neemt toe",
+            "Neemt af",
+            "Verandert niet"
           ],
-          "explanation": "De stopafstand neemt toe met de snelheid: beide componenten (reactie en remmen) worden langer.",
+          "explanation": "Reactie en remmen worden allebei langer.",
           "correct": 0,
           "theoryCardIndex": 3
         },
         {
           "id": "D2_Q43",
-          "question": "Op droog of op nat wegdek: waar is de stopafstand het langst?",
+          "question": "Stopafstand op sneeuw, vergeleken met een droge weg?",
           "choices": [
-            "Op nat wegdek",
-            "Op droog wegdek",
-            "Beide zijn gelijk"
+            "Langer",
+            "Korter",
+            "Gelijk"
           ],
-          "explanation": "Op nat wegdek is de remafstand langer, dus de totale stopafstand is ook langer.",
+          "explanation": "Op sneeuw is het remmen veel langer.",
           "correct": 0,
           "theoryCardIndex": 3
         },
         {
           "id": "D2_Q44",
-          "question": "Bij hoge snelheid, welke afstand is het langst?",
+          "question": "Welke afstand is het langst bij hoge snelheid?",
           "choices": [
             "De remafstand",
             "De reactieafstand",
-            "Ze blijven onderling gelijk"
+            "Ze zijn gelijk"
           ],
-          "explanation": "Bij hoge snelheid neemt de remafstand sneller toe dan de reactieafstand en wordt ze overwegend.",
+          "explanation": "Bij hoge snelheid is de remafstand veel langer dan de reactieafstand.",
           "correct": 0,
           "theoryCardIndex": 3
         },
         {
           "id": "D2_Q45",
-          "question": "U hebt alcohol gedronken. Is uw reactieafstand aangetast?",
+          "question": "Je hebt alcohol gedronken. Is je reactieafstand langer?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Alcohol verlengt de reactietijd naar 2-3 s, waardoor de reactieafstand verdubbelt of verdrievoudigt voor het remmen.",
+          "explanation": "Ja: je reageert later, dus je legt meer meter af voor je remt.",
           "correct": 0,
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "D2_Q47",
-          "question": "Wat betekent ABS?",
+          "question": "Wat doet het ABS?",
           "choices": [
-            "Automatic Braking System",
-            "Anti-Blocking System",
-            "Advanced Brake Safety",
-            "Anti-Break System"
+            "Het voorkomt dat de wielen blokkeren bij het remmen",
+            "Het remt zelf",
+            "Het pompt de banden op"
           ],
-          "explanation": "ABS staat voor Anti-Blocking System: het voorkomt dat de wielen blokkeren bij een noodstop.",
-          "correct": 1,
+          "explanation": "Het antiblokkeersysteem voorkomt dat de wielen blokkeren bij hard remmen.",
+          "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D2_Q48",
-          "question": "Wat doet het ABS?",
+          "question": "Hoe rem je in nood met ABS?",
           "choices": [
-            "Het stopt de auto onmiddellijk",
-            "Het voorkomt dat de banden gaan glijden",
-            "Het verlaagt automatisch de snelheid",
-            "Het pompt de banden op"
+            "Je trapt het pedaal volledig in en houdt het ingedrukt",
+            "Je pompt op het pedaal",
+            "Je remt zachtjes"
           ],
-          "explanation": "Het ABS voorkomt dat de wielen blokkeren bij hard remmen, zelfs op natte rijbaan.",
-          "correct": 1,
+          "explanation": "Met ABS trap je hard en hou je vast: het systeem voorkomt dat de wielen blokkeren.",
+          "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D2_Q49",
-          "question": "Welk voordeel biedt ABS u tijdens een noodstop?",
+          "question": "Wat is het grootste voordeel van ABS?",
           "choices": [
-            "De controle over het stuur houden",
-            "Het brandstofverbruik verlagen",
-            "De waarschuwingslichten aanzetten"
+            "Je kunt nog sturen terwijl je remt",
+            "Je verbruikt minder",
+            "Je remt altijd korter"
           ],
-          "explanation": "Dankzij het ABS behoudt de bestuurder de controle over de stuurrichting van het voertuig, zelfs bij een noodstop.",
+          "explanation": "De wielen blokkeren niet: je kunt het obstakel nog ontwijken.",
           "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D2_Q50",
-          "question": "Is uw remafstand met ABS altijd korter?",
+          "question": "Is de stopafstand met ABS altijd korter?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Het ABS garandeert geen kortere remafstand. Het voornaamste voordeel is het behoud van de stuurrichting.",
+          "explanation": "Nee, ABS dient vooral om te kunnen blijven sturen, niet noodzakelijk om korter te remmen.",
           "correct": 1,
           "theoryCardIndex": 4
         },
         {
           "id": "D2_Q51",
-          "question": "Is de remafstand met ABS op nat wegdek korter dan op droog wegdek?",
+          "question": "Is de stopafstand met ABS op een natte weg dezelfde als op een droge?",
           "choices": [
-            "Ja, het ABS compenseert het gebrek aan grip",
-            "Nee, ze blijft langer op nat wegdek",
-            "Ja, dat is precies het doel van het ABS",
-            "Ze is identiek in beide gevallen"
+            "Nee, ze blijft langer",
+            "Ja, ABS compenseert"
           ],
-          "explanation": "Zelfs met ABS is de remafstand op nat wegdek langer dan op droog wegdek.",
-          "correct": 1,
+          "explanation": "Ook met ABS rem je langer op een natte weg.",
+          "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D2_Q52",
-          "question": "Mag u met ABS uw aandacht laten verslappen?",
+          "question": "Mag je met ABS minder opletten?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Het ABS is een hulpmiddel, geen vervanging van de waakzaamheid. De bestuurder moet altijd zijn rijgedrag aanpassen.",
+          "explanation": "ABS helpt, het vervangt je oplettendheid niet.",
           "correct": 1,
           "theoryCardIndex": 4
         },
         {
-          "id": "D2_Q53",
-          "question": "Wat is het enige contact tussen het voertuig en het wegdek?",
-          "choices": [
-            "De schokdempers",
-            "De banden",
-            "De remmen",
-            "Het chassis"
-          ],
-          "explanation": "De banden zijn het enige contactpunt tussen het voertuig en de rijbaan.",
-          "correct": 1,
-          "theoryCardIndex": 5
-        },
-        {
           "id": "D2_Q55",
-          "question": "Wat is de wettelijke minimale profieldiepte van banden?",
+          "question": "Wettelijke minimumdiepte van het bandenprofiel?",
           "choices": [
             "1 mm",
             "1,6 mm",
-            "2 mm",
             "3 mm"
           ],
-          "explanation": "De wettelijke minimale profieldiepte is 1,6 mm.",
+          "explanation": "Minimaal 1,6 mm.",
           "correct": 1,
           "theoryCardIndex": 5
         },
         {
           "id": "D2_Q56",
-          "question": "Uw banden hebben precies 1,6 mm groefdiepte. Wat moet u doen?",
+          "question": "Je banden hebben nog 1,6 mm profiel. Wat doe je?",
           "choices": [
-            "Ze zo snel mogelijk vervangen",
-            "Niets, dat is de ideale diepte",
-            "In de winter opnieuw nakijken"
+            "Je vervangt ze zo snel mogelijk",
+            "Niets, dat is perfect",
+            "Je wacht tot de winter"
           ],
-          "explanation": "1,6 mm is het wettelijk minimum. In de praktijk moet je de banden vervangen voor je dit niveau bereikt.",
+          "explanation": "Dat is het wettelijke minimum: tijd om ze te vervangen.",
           "correct": 0,
           "theoryCardIndex": 5
         },
         {
           "id": "D2_Q57",
-          "question": "Wat zijn de kleine balkjes in de hoofdgroeven van de band?",
+          "question": "Wat zijn de kleine balkjes onderaan de groeven van de band?",
           "choices": [
             "Slijtage-indicatoren",
             "Druksensoren",
-            "Fabricagemerktekens"
+            "Merktekens van de fabrikant"
           ],
-          "explanation": "TWI's (Tread Wear Indicators) zijn slijtage-indicatoren in de groeven. Wanneer het loopvlak op hun hoogte komt, zijn de banden versleten.",
+          "explanation": "Het zijn slijtage-indicatoren.",
           "correct": 0,
           "theoryCardIndex": 5
         },
         {
           "id": "D2_Q58",
-          "question": "Het loopvlak staat gelijk met de slijtage-indicatoren. Wat betekent dat?",
+          "question": "Het loopvlak bereikt de slijtage-indicatoren. Wat betekent dat?",
           "choices": [
-            "De banden zijn te versleten",
-            "De banden zijn nog nieuw",
-            "Ze moeten wat bijgepompt worden"
+            "De banden zijn versleten",
+            "De banden zijn nieuw",
+            "Ze moeten opgepompt worden"
           ],
-          "explanation": "Als het loopvlak de hoogte van de TWI's bereikt, zijn de banden te versleten en moeten ze vervangen worden.",
+          "explanation": "De banden moeten vervangen worden.",
           "correct": 0,
           "theoryCardIndex": 5
         },
         {
           "id": "D2_Q59",
-          "question": "Waar vindt u de aanbevolen bandenspanning?",
+          "question": "Waar vind je de aanbevolen bandenspanning?",
           "choices": [
-            "Op het etiket in het portier",
-            "Op de flank van de band zelf",
-            "Door de band te betasten"
+            "Op het etiket in de deur of het tankklepje",
+            "Op de flank van de band",
+            "Door aan de band te voelen"
           ],
-          "explanation": "De door de fabrikant voorgeschreven spanning staat op een etiket in het bestuurdersportier, passagiersportier of de tankklep.",
+          "explanation": "De constructeur vermeldt ze op een etiket, vaak in de deur.",
           "correct": 0,
           "theoryCardIndex": 5
         },
         {
           "id": "D2_Q60",
-          "question": "U vertrekt zwaar geladen op een lange rit. Wat doet u met de bandenspanning?",
+          "question": "Lange rit, met bagage en passagiers. Wat doe je met de bandenspanning?",
           "choices": [
-            "Ze lichtjes verhogen",
-            "Ze lichtjes verlagen",
-            "Ze onveranderd laten"
+            "Je verhoogt ze een beetje",
+            "Je verlaagt ze een beetje",
+            "Niets"
           ],
-          "explanation": "Voor een lange rit of een zware lading wordt aanbevolen om de bandenspanning lichtjes te verhogen.",
+          "explanation": "Beladen: iets hogere spanning, zoals de constructeur aangeeft.",
           "correct": 0,
           "theoryCardIndex": 5
         },
         {
           "id": "D2_Q61",
-          "question": "Uw banden staan te zacht. Verlengt dat uw remafstand?",
+          "question": "Maken onderopgepompte banden de remafstand langer?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Te zachte banden verminderen de grip en verhogen de remafstand.",
+          "explanation": "Ja, ze hebben minder grip.",
           "correct": 0,
           "theoryCardIndex": 5
         },
         {
           "id": "D2_Q63",
-          "question": "Is een automatisch remsysteem 100 % betrouwbaar?",
+          "question": "Je auto heeft een automatisch noodremsysteem. Wat doe je?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Je blijft opletten en anticiperen",
+            "Je vertrouwt er 100 % op",
+            "Je mag minder geconcentreerd zijn"
           ],
-          "explanation": "Automatische remsystemen zijn niet 100% betrouwbaar: ze kunnen fouten of valse positieven vertonen.",
-          "correct": 1,
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "D2_Q64",
-          "question": "Vervangen de rijhulpsystemen uw waakzaamheid?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "explanation": "Automatische systemen zijn hulpmiddelen, geen vervanging van de waakzaamheid. De bestuurder moet altijd aandachtig blijven.",
-          "correct": 1,
+          "explanation": "Die systemen kunnen zich vergissen: jij blijft de bestuurder.",
+          "correct": 0,
           "theoryCardIndex": 6
         },
         {
           "id": "D2_Q66",
-          "question": "Op een lange rit, om de hoeveel tijd moet u pauzeren?",
+          "question": "Lange rit: wanneer neem je een pauze?",
           "choices": [
             "Ongeveer om de 2 uur",
-            "Ongeveer om de 4 uur",
-            "Ongeveer om het uur"
+            "Om het uur",
+            "Om de 4 uur"
           ],
-          "explanation": "Tijdens een lange rit neem je ongeveer om de 2 uur een pauze om vermoeidheid te voorkomen.",
+          "explanation": "Ongeveer om de 2 uur.",
           "correct": 0,
           "theoryCardIndex": 6
         },
         {
           "id": "D2_Q67",
-          "question": "Wat is de aanbevolen minimumduur van een pauze?",
+          "question": "Hoe lang moet die pauze minstens duren?",
           "choices": [
-            "5 minuten",
             "15 minuten",
-            "30 minuten",
-            "10 minuten"
+            "5 minuten",
+            "1 uur"
           ],
-          "explanation": "De pauze moet minstens 15 minuten duren om effectief te zijn.",
-          "correct": 1,
+          "explanation": "Minstens 15 minuten om te recupereren.",
+          "correct": 0,
           "theoryCardIndex": 6
         },
         {
           "id": "D2_Q68",
-          "question": "U pauzeert tijdens een lange rit. Wat doet u om te herstellen?",
+          "question": "Wat doe je tijdens de pauze?",
           "choices": [
-            "Uitstappen, rekken en drinken",
-            "In de wagen blijven en slapen",
-            "De bandenspanning nakijken"
+            "Je stapt uit, wandelt en drinkt water",
+            "Je blijft achter het stuur zitten",
+            "Je drinkt een glas alcohol"
           ],
-          "explanation": "Tijdens de pauze stap je uit het voertuig, strek je je uit, adem je frisse lucht in en drink je water.",
+          "explanation": "Bewegen, frisse lucht en water drinken helpen om alert te blijven.",
           "correct": 0,
           "theoryCardIndex": 6
         },
         {
-          "id": "D2_Q69",
-          "question": "Waarom zijn regelmatige pauzes belangrijk?",
+          "id": "D2_Q70",
+          "question": "120 km/u op een droge autosnelweg. Stopafstand, ongeveer?",
           "choices": [
-            "Vermoeidheid tast uw reflexen aan",
-            "Om brandstof te besparen",
-            "Om de wagen na te kijken"
+            "110 m",
+            "60 m",
+            "80 m"
           ],
-          "explanation": "Vermoeidheid vertraagt de reflexen en verhoogt de reactietijd. Regelmatige pauzes helpen je alert te blijven.",
           "correct": 0,
+          "explanation": "Ongeveer 35 m reactie + 75 m remmen: iets meer dan 100 m.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q71",
+          "question": "Wanneer is vermoeidheid achter het stuur het grootst?",
+          "choices": [
+            "Tussen 2 en 5 uur 's nachts",
+            "Tussen 23 en 2 uur",
+            "Tussen 5 en 8 uur"
+          ],
+          "correct": 0,
+          "explanation": "'s Nachts tussen 2 en 5 uur is het lichaam in rust: tragere reflexen.",
           "theoryCardIndex": 6
         }
       ]

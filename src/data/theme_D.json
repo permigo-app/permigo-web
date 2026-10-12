@@ -1295,111 +1295,105 @@
       "questions": [
         {
           "id": "D2_Q1",
-          "question": "Vous roulez sur autoroute et souhaitez calculer votre distance de sécurité minimale. Quelle formule utilisez-vous ?",
+          "question": "Quelle distance minimale gardez-vous avec la voiture de devant ?",
           "choices": [
-            "Vitesse × 2",
-            "Vitesse ÷ 2",
-            "Vitesse ÷ 3",
-            "Vitesse × 3"
+            "La moitié de votre vitesse, en mètres",
+            "50 m, toujours",
+            "1 seconde"
           ],
-          "correct": 1,
-          "explanation": "La distance de sécurité minimale (en mètres) se calcule par : vitesse ÷ 2. À 120 km/h = 60 m, à 100 km/h = 50 m.",
+          "correct": 0,
+          "explanation": "Vitesse ÷ 2 : à 120 km/h, 60 m ; à 90 km/h, 45 m. Cela fait environ 2 secondes.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D2_Q1.webp"
         },
         {
           "id": "D2_Q2",
-          "question": "Vous roulez à 120 km/h sur autoroute par temps sec. Quelle distance de sécurité minimale devez-vous maintenir ?",
+          "question": "120 km/h, route sèche. Distance de sécurité minimale ?",
           "choices": [
-            "30 mètres",
-            "60 mètres",
-            "90 mètres",
-            "120 mètres"
+            "30 m",
+            "60 m",
+            "120 m"
           ],
           "correct": 1,
-          "explanation": "À 120 km/h, la distance de sécurité minimale est de 120 ÷ 2 = 60 mètres (2 secondes).",
+          "explanation": "120 ÷ 2 = 60 m.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D2_Q2.webp"
         },
         {
           "id": "D2_Q4",
-          "question": "Vous appliquez la règle des crocodiles sur route sèche. Combien de secondes minimum devez-vous compter ?",
+          "question": "Route sèche : combien de secondes gardez-vous derrière la voiture de devant ?",
           "choices": [
-            "1 seconde",
             "2 secondes",
-            "3 secondes",
+            "1 seconde",
             "5 secondes"
           ],
-          "correct": 1,
-          "explanation": "La règle des deux secondes impose de maintenir au minimum 2 secondes de distance sur sol sec.",
+          "correct": 0,
+          "explanation": "Au moins 2 secondes sur route sèche.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D2_Q4.webp"
         },
         {
           "id": "D2_Q5",
-          "question": "Comment appliquez-vous la règle des deux secondes ?",
+          "question": "Comment vérifiez-vous la règle des 2 secondes ?",
           "choices": [
-            "Compter deux secondes à un point fixe",
-            "Regarder l'horloge pendant deux secondes",
-            "Attendre deux secondes au démarrage"
+            "Vous comptez 2 secondes à partir d'un repère fixe",
+            "Vous regardez l'horloge",
+            "Vous attendez 2 secondes au démarrage"
           ],
           "correct": 0,
-          "explanation": "On choisit un point fixe, on dit 'un crocodile, deux crocodiles' quand le véhicule devant y passe. Si on passe le point après avoir dit les deux crocodiles, la distance est correcte.",
+          "explanation": "Quand la voiture de devant passe un repère, comptez « un crocodile, deux crocodiles » : vous ne devez pas l'atteindre avant.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D2_Q5.webp"
         },
         {
           "id": "D2_Q7",
-          "question": "Vous roulez sous la pluie. De combien devez-vous augmenter votre distance de sécurité par rapport au sol sec ?",
+          "question": "Sous la pluie, de combien augmentez-vous la distance de sécurité ?",
           "choices": [
-            "De 25%",
-            "De 50%",
-            "De 75%",
-            "De 100%"
+            "De moitié (3 secondes)",
+            "D'un quart",
+            "Elle ne change pas"
           ],
-          "correct": 1,
-          "explanation": "Sur sol mouillé, la distance de sécurité augmente de 50% (2 secondes → 3 secondes).",
+          "correct": 0,
+          "explanation": "Sur route mouillée : +50 %, soit 3 secondes.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D2_Q7.webp"
         },
         {
           "id": "D2_Q8",
-          "question": "Vous roulez à 120 km/h sur autoroute sous la pluie. Quelle distance de sécurité devez-vous maintenir ?",
+          "question": "120 km/h sur autoroute, il commence à pleuvoir fort. Que faites-vous ?",
           "choices": [
-            "60 mètres",
-            "75 mètres",
-            "90 mètres",
-            "120 mètres"
+            "Vous ralentissez et allongez la distance (90 m)",
+            "Vous gardez 60 m",
+            "Vous restez à 120 km/h"
           ],
-          "correct": 2,
-          "explanation": "À 120 km/h, sol sec : 60 m. Sol mouillé (+50%) : 60 + 30 = 90 mètres (3 secondes).",
+          "correct": 0,
+          "explanation": "Sous la pluie : 60 m + 50 % = 90 m, et une vitesse adaptée.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D2_Q8.webp"
         },
         {
           "id": "D2_Q11",
-          "question": "Sur route enneigée ou verglacée, quelle distance de sécurité en secondes ?",
+          "question": "Route enneigée ou verglacée : distance de sécurité ?",
           "choices": [
             "Au moins 4 secondes",
-            "Au moins 2 secondes",
-            "Au moins 3 secondes"
+            "2 secondes",
+            "3 secondes"
           ],
           "correct": 0,
-          "explanation": "Sur sol enneigé ou verglacé, la distance de sécurité est d'au moins 4 secondes (4 crocodiles).",
+          "explanation": "Neige ou verglas : au moins 4 secondes.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D2_Q11.webp"
         },
         {
           "id": "D2_Q13",
-          "question": "Vous comparez les distances de sécurité sur sol sec, mouillé et enneigé. Quel est le bon classement du plus court au plus long ?",
+          "question": "Distance de sécurité, de la plus courte à la plus longue ?",
           "choices": [
-            "Mouillé < sec < enneigé",
-            "Sec < mouillé < enneigé",
-            "Enneigé < mouillé < sec",
-            "Sec < enneigé < mouillé"
+            "Sec < mouillé < neige",
+            "Mouillé < sec < neige",
+            "Neige < mouillé < sec"
           ],
-          "correct": 1,
-          "explanation": "Sol sec (2 s) < sol mouillé (3 s) < sol enneigé/verglacé (4 s+).",
+          "correct": 0,
+          "explanation": "Sec 2 s, mouillé 3 s, neige ou verglas 4 s et plus.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D2_Q13.webp"
         },
@@ -1407,296 +1401,273 @@
           "id": "D2_Q15",
           "question": "Qu'est-ce que la distance de réaction ?",
           "choices": [
-            "Du danger perçu au coup de frein",
-            "Du coup de frein à l'arrêt total",
-            "L'écart entre deux véhicules"
+            "Du moment où vous voyez le danger au coup de frein",
+            "Du coup de frein à l'arrêt",
+            "L'écart avec la voiture de devant"
           ],
           "correct": 0,
-          "explanation": "La distance de réaction est la distance parcourue pendant le temps que met le conducteur à reconnaître un danger et à appuyer sur le frein.",
+          "explanation": "La distance parcourue pendant que vous réagissez, avant de freiner.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q15.webp"
         },
         {
           "id": "D2_Q16",
-          "question": "Vous êtes un conducteur attentif et reposé. Quel est votre temps de réaction moyen ?",
+          "question": "Temps de réaction d'un conducteur reposé et attentif ?",
           "choices": [
-            "0,5 seconde",
-            "1 seconde",
-            "2 secondes",
-            "3 secondes"
+            "Environ 1 seconde",
+            "Environ 0,2 seconde",
+            "Environ 3 secondes"
           ],
-          "correct": 1,
-          "explanation": "Le temps de réaction normal d'un conducteur est d'environ 1 seconde.",
+          "correct": 0,
+          "explanation": "Environ 1 seconde.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q16.webp"
         },
         {
           "id": "D2_Q17",
-          "question": "Vous passez de 60 à 120 km/h. Votre temps de réaction change-t-il ?",
+          "question": "Plus vous roulez vite, plus votre distance de réaction est longue. Vrai ou faux ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Vrai",
+            "Faux"
           ],
-          "correct": 1,
-          "explanation": "Le temps de réaction (environ 1 s) ne dépend pas de la vitesse. Mais la distance parcourue en 1 s augmente avec la vitesse.",
+          "correct": 0,
+          "explanation": "Le temps de réaction reste environ 1 s, mais plus vite vous roulez, plus vous parcourez de mètres pendant cette seconde.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q17.webp"
         },
         {
           "id": "D2_Q18",
-          "question": "Vous souhaitez calculer la distance parcourue en 1 seconde de réaction. Quelle formule utilisez-vous ?",
+          "question": "Comment calculer la distance de réaction (1 seconde) ?",
           "choices": [
-            "Vitesse × 3",
             "Vitesse ÷ 10 × 3",
             "Vitesse ÷ 2",
-            "Vitesse ÷ 3"
+            "Vitesse × 3"
           ],
-          "correct": 1,
-          "explanation": "La formule approximative est : vitesse ÷ 10 × 3 (donne la distance en mètres parcourue en 1 seconde).",
+          "correct": 0,
+          "explanation": "Vitesse ÷ 10 × 3 : à 50 km/h, 15 m.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q18.webp"
         },
         {
           "id": "D2_Q19",
-          "question": "À 50 km/h, quelle distance parcourez-vous pendant votre temps de réaction ?",
+          "question": "À 50 km/h, distance de réaction ?",
           "choices": [
-            "Environ 15 mètres",
-            "Environ 5 mètres",
-            "Environ 25 mètres"
+            "Environ 15 m",
+            "Environ 30 m",
+            "Environ 45 m"
           ],
           "correct": 0,
-          "explanation": "À 50 km/h : 50 ÷ 10 × 3 = 15 m (réel : environ 14 m).",
+          "explanation": "50 ÷ 10 × 3 = 15 m.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q19.webp"
         },
         {
           "id": "D2_Q20",
-          "question": "À 90 km/h, quelle distance parcourez-vous pendant votre temps de réaction ?",
+          "question": "À 90 km/h, distance de réaction ?",
           "choices": [
-            "Environ 27 mètres",
-            "Environ 15 mètres",
-            "Environ 45 mètres"
+            "17 m",
+            "22 m",
+            "27 m"
           ],
-          "correct": 0,
-          "explanation": "À 90 km/h : 90 ÷ 10 × 3 = 27 m (réel : environ 25 m).",
+          "correct": 2,
+          "explanation": "90 ÷ 10 × 3 = 27 m.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q20.webp"
         },
         {
           "id": "D2_Q21",
-          "question": "À 120 km/h, quelle distance parcourez-vous pendant votre temps de réaction ?",
+          "question": "À 120 km/h, distance de réaction ?",
           "choices": [
-            "Environ 36 mètres",
-            "Environ 25 mètres",
-            "Environ 60 mètres"
+            "Environ 36 m",
+            "Environ 25 m",
+            "Environ 60 m"
           ],
           "correct": 0,
-          "explanation": "À 120 km/h : 120 ÷ 10 × 3 = 36 m (réel : environ 33 m).",
+          "explanation": "120 ÷ 10 × 3 = 36 m.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q21.webp"
         },
         {
           "id": "D2_Q22",
-          "question": "Vous roulez à 30 km/h dans une zone 30. Quelle distance parcourez-vous en 1 seconde de réaction ?",
+          "question": "À 30 km/h, distance de réaction ?",
           "choices": [
-            "5 mètres",
-            "9 mètres",
-            "15 mètres",
-            "20 mètres"
+            "5 m",
+            "9 m",
+            "15 m"
           ],
           "correct": 1,
-          "explanation": "À 30 km/h : 30 ÷ 10 × 3 = 9 mètres.",
+          "explanation": "30 ÷ 10 × 3 = 9 m.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q22.webp"
         },
         {
           "id": "D2_Q23",
-          "question": "Vous roulez à 70 km/h sur une chaussée à voie centrale. Quelle distance parcourez-vous en 1 seconde ?",
+          "question": "À 70 km/h, distance de réaction ?",
           "choices": [
-            "14 mètres",
-            "21 mètres",
-            "28 mètres",
-            "35 mètres"
+            "14 m",
+            "21 m",
+            "28 m"
           ],
           "correct": 1,
-          "explanation": "À 70 km/h : 70 ÷ 10 × 3 = 21 mètres.",
+          "explanation": "70 ÷ 10 × 3 = 21 m.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q23.webp"
         },
         {
           "id": "D2_Q24",
-          "question": "Vous avez consommé de l'alcool et prenez le volant. Quel est votre temps de réaction ?",
+          "question": "Après avoir bu de l'alcool, votre temps de réaction :",
           "choices": [
-            "1 seconde",
-            "2-3 secondes",
-            "5-8 secondes",
-            "0,5 seconde"
+            "S'allonge, jusqu'à 2 ou 3 secondes",
+            "Reste d'environ 1 seconde",
+            "Devient plus court"
           ],
-          "correct": 1,
-          "explanation": "Sous influence d'alcool, le temps de réaction passe à 2-3 secondes.",
+          "correct": 0,
+          "explanation": "L'alcool ralentit vos réflexes : le temps de réaction peut doubler ou tripler.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D2_Q24.webp"
         },
         {
-          "id": "D2_Q25",
-          "question": "Vous avez consommé des stupéfiants et prenez le volant. Quel est votre temps de réaction ?",
-          "choices": [
-            "1-2 secondes",
-            "2-3 secondes",
-            "5-8 secondes",
-            "10 secondes"
-          ],
-          "correct": 2,
-          "explanation": "Sous influence de stupéfiants, le temps de réaction peut atteindre 5-8 secondes.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/D2_Q25.webp"
-        },
-        {
           "id": "D2_Q26",
-          "question": "Vous roulez à 120 km/h sous l'effet de l'alcool. Votre temps de réaction est de 3 secondes. Quelle distance parcourez-vous avant de freiner ?",
+          "question": "120 km/h, temps de réaction de 3 secondes (alcool). Distance parcourue avant de freiner ?",
           "choices": [
-            "33 mètres",
-            "66 mètres",
-            "99 mètres",
-            "120 mètres"
+            "Environ 33 m",
+            "Environ 66 m",
+            "Environ 100 m"
           ],
           "correct": 2,
-          "explanation": "À 120 km/h ≈ 33 m/s. En 3 secondes : 33 × 3 = 99 mètres parcourus avant de freiner.",
+          "explanation": "À 120 km/h, on parcourt environ 33 m par seconde : 3 × 33 ≈ 100 m.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D2_Q26.webp"
         },
         {
           "id": "D2_Q27",
-          "question": "Quels facteurs allongent votre temps de réaction ?",
+          "question": "Qu'est-ce qui allonge votre temps de réaction ?",
           "choices": [
-            "Âge, fatigue, médicaments, alcool",
-            "L'alcool et les drogues, sans plus",
-            "La vitesse à laquelle vous roulez"
+            "Fatigue, alcool, drogues, médicaments",
+            "Seulement l'alcool",
+            "Seulement la vitesse"
           ],
           "correct": 0,
-          "explanation": "Le temps de réaction est augmenté par : l'âge, la concentration, la température, les médicaments, les drogues et l'alcool.",
+          "explanation": "Fatigue, alcool, drogues, certains médicaments, manque de concentration.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D2_Q27.webp"
         },
         {
           "id": "D2_Q29",
-          "question": "Vous conduisez depuis des heures et vous êtes fatigué. Votre temps de réaction est-il affecté ?",
+          "question": "Vous êtes fatigué. Votre temps de réaction :",
           "choices": [
-            "Oui",
-            "Non"
+            "Augmente",
+            "Reste le même"
           ],
           "correct": 0,
-          "explanation": "La fatigue ralentit les réflexes et augmente significativement le temps de réaction.",
+          "explanation": "La fatigue ralentit vos réflexes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/D2_Q29.webp"
         },
         {
           "id": "D2_Q31",
-          "question": "Qu'est-ce que la distance de freinage ?",
+          "question": "La distance de freinage, c'est :",
           "choices": [
-            "Du coup de frein à l'arrêt total",
-            "Du danger perçu au coup de frein",
-            "L'écart gardé avec l'avant"
+            "Du coup de frein à l'arrêt complet",
+            "Du danger aperçu au coup de frein",
+            "L'écart avec la voiture de devant"
           ],
           "correct": 0,
-          "explanation": "La distance de freinage est la distance parcourue depuis le moment où le conducteur appuie sur le frein jusqu'à l'arrêt complet du véhicule.",
+          "explanation": "La distance parcourue entre le coup de frein et l'arrêt.",
           "theoryCardIndex": 2,
           "image": "/images/questions/D2_Q31.webp"
         },
         {
           "id": "D2_Q33",
-          "question": "Quels facteurs influencent votre distance de freinage ?",
+          "question": "De quoi dépend la distance de freinage ?",
           "choices": [
-            "Météo, pneus, voirie, poids, freins",
-            "La vitesse du véhicule, sans plus",
-            "L'état des pneus et rien d'autre"
+            "Vitesse, météo, pneus, route, poids, freins",
+            "Seulement de la vitesse",
+            "Seulement des pneus"
           ],
           "correct": 0,
-          "explanation": "La distance de freinage dépend de nombreux facteurs : conditions climatiques, pneus, voirie, poids, pente et état des freins.",
+          "explanation": "De la vitesse surtout, mais aussi de la météo, des pneus, du revêtement, du poids et des freins.",
           "theoryCardIndex": 2,
           "image": "/images/questions/D2_Q33.webp"
         },
         {
           "id": "D2_Q36",
-          "question": "Vous freinez d'urgence. Sur quel type de chaussée votre distance de freinage sera-t-elle la plus longue ?",
+          "question": "Sur sol mouillé, la distance de freinage est :",
           "choices": [
-            "Sur chaussée sèche",
-            "Sur chaussée mouillée",
-            "C'est la même",
-            "Sur chaussée en béton"
+            "Plus longue",
+            "La même",
+            "Plus courte"
           ],
-          "correct": 1,
-          "explanation": "La distance de freinage est nettement plus longue sur chaussée mouillée que sur chaussée sèche.",
+          "correct": 0,
+          "explanation": "Moins d'adhérence : vous freinez sur une plus longue distance.",
           "theoryCardIndex": 2,
           "image": "/images/questions/D2_Q36.webp"
         },
         {
           "id": "D2_Q38",
-          "question": "Vous roulez de plus en plus vite sur autoroute. Que se passe-t-il avec votre distance de freinage ?",
+          "question": "Plus vous roulez vite, plus la distance de freinage :",
           "choices": [
-            "Elle diminue",
-            "Elle augmente",
-            "Elle reste la même",
-            "Elle diminue puis augmente"
+            "Augmente, et même beaucoup",
+            "Reste la même",
+            "Diminue"
           ],
-          "correct": 1,
-          "explanation": "La distance de freinage augmente avec la vitesse (et même de façon plus que proportionnelle).",
+          "correct": 0,
+          "explanation": "Elle augmente plus vite que la vitesse : à vitesse doublée, environ quatre fois plus longue.",
           "theoryCardIndex": 2,
           "image": "/images/questions/D2_Q38.webp"
         },
         {
           "id": "D2_Q39",
-          "question": "Qu'est-ce que la distance d'arrêt ?",
+          "question": "La distance d'arrêt, c'est :",
           "choices": [
-            "Réaction plus freinage",
-            "Le freinage tout seul",
-            "L'écart de sécurité"
+            "Distance de réaction + distance de freinage",
+            "La distance de freinage seule",
+            "La distance de sécurité"
           ],
           "correct": 0,
-          "explanation": "La distance d'arrêt = distance de réaction + distance de freinage.",
+          "explanation": "Réaction + freinage = distance d'arrêt. Ce n'est pas un synonyme de distance de freinage.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D2_Q39.webp"
         },
         {
           "id": "D2_Q40",
-          "question": "Vous roulez et votre distance de réaction est de 15 m et votre distance de freinage est de 25 m. Quelle est votre distance d'arrêt totale ?",
+          "question": "Réaction : 15 m. Freinage : 25 m. Distance d'arrêt ?",
           "choices": [
-            "15 mètres",
-            "25 mètres",
-            "40 mètres",
-            "50 mètres"
+            "25 m",
+            "40 m",
+            "50 m"
           ],
-          "correct": 2,
-          "explanation": "Distance d'arrêt = 15 m (réaction) + 25 m (freinage) = 40 mètres.",
+          "correct": 1,
+          "explanation": "15 + 25 = 40 m.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D2_Q40.webp"
         },
         {
           "id": "D2_Q42",
-          "question": "Votre vitesse augmente. Comment évolue votre distance d'arrêt ?",
+          "question": "Votre vitesse augmente. Votre distance d'arrêt :",
           "choices": [
-            "Elle augmente",
-            "Elle diminue",
-            "Elle ne change pas"
+            "Augmente",
+            "Diminue",
+            "Ne change pas"
           ],
           "correct": 0,
-          "explanation": "La distance d'arrêt augmente avec la vitesse : les deux composantes (réaction et freinage) sont plus longues.",
+          "explanation": "Réaction et freinage s'allongent tous les deux.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D2_Q42.webp"
         },
         {
           "id": "D2_Q43",
-          "question": "Sur sol sec ou sur sol mouillé, quelle distance d'arrêt est la plus longue ?",
+          "question": "Distance d'arrêt sur neige, par rapport au sol sec ?",
           "choices": [
-            "Sur sol mouillé",
-            "Sur sol sec",
-            "Les deux sont égales"
+            "Plus longue",
+            "Plus courte",
+            "Identique"
           ],
           "correct": 0,
-          "explanation": "Sur sol mouillé, la distance de freinage est plus longue, donc la distance d'arrêt totale est aussi plus longue.",
+          "explanation": "Sur neige, le freinage est beaucoup plus long.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D2_Q43.webp"
         },
@@ -1706,286 +1677,266 @@
           "choices": [
             "La distance de freinage",
             "La distance de réaction",
-            "Elles restent égales entre elles"
+            "Elles sont égales"
           ],
           "correct": 0,
-          "explanation": "À haute vitesse, la distance de freinage augmente plus vite que la distance de réaction et devient prépondérante.",
+          "explanation": "À haute vitesse, la distance de freinage dépasse largement celle de réaction.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D2_Q44.webp"
         },
         {
           "id": "D2_Q45",
-          "question": "Vous avez bu de l'alcool. Votre distance de réaction est-elle affectée ?",
+          "question": "Vous avez bu de l'alcool. Votre distance de réaction est-elle plus longue ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'alcool allonge le temps de réaction à 2-3 s, doublant ou triplant la distance de réaction avant le freinage.",
+          "explanation": "Oui : vous réagissez plus tard, donc vous parcourez plus de mètres avant de freiner.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/D2_Q45.webp"
         },
         {
           "id": "D2_Q47",
-          "question": "Vous voyez le témoin « ABS » s'allumer sur votre tableau de bord. Que signifie ABS ?",
+          "question": "Que fait l'ABS ?",
           "choices": [
-            "Automatic Braking System",
-            "Anti-Blocking System",
-            "Advanced Brake Safety",
-            "Anti-Break System"
+            "Il empêche les roues de se bloquer au freinage",
+            "Il freine tout seul",
+            "Il gonfle les pneus"
           ],
-          "correct": 1,
-          "explanation": "ABS signifie Anti-Blocking System : il empêche les roues de se bloquer lors d'un freinage d'urgence.",
+          "correct": 0,
+          "explanation": "Le système antiblocage empêche les roues de se bloquer lors d'un freinage brusque.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D2_Q47.webp"
         },
         {
           "id": "D2_Q48",
-          "question": "Vous freinez brusquement et l'ABS s'active. Que fait exactement ce système ?",
+          "question": "Comment freinez-vous en urgence avec l'ABS ?",
           "choices": [
-            "Il arrête la voiture instantanément",
-            "Il empêche les pneus de glisser",
-            "Il réduit la vitesse automatiquement",
-            "Il gonfle les pneus"
+            "Vous enfoncez la pédale à fond et la gardez enfoncée",
+            "Vous pompez sur la pédale",
+            "Vous freinez doucement"
           ],
-          "correct": 1,
-          "explanation": "L'ABS empêche les roues de se bloquer lors d'un freinage brusque, même sur chaussée mouillée.",
+          "correct": 0,
+          "explanation": "Avec l'ABS, on appuie fort et on maintient : le système évite le blocage des roues.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D2_Q48.webp"
         },
         {
           "id": "D2_Q49",
-          "question": "Quel avantage l'ABS vous apporte-t-il pendant un freinage d'urgence ?",
+          "question": "Quel est l'avantage principal de l'ABS ?",
           "choices": [
-            "Garder le contrôle de la direction",
-            "Réduire la consommation de carburant",
-            "Allumer les feux de détresse seuls"
+            "Vous pouvez encore diriger la voiture en freinant",
+            "Vous consommez moins",
+            "Vous freinez toujours plus court"
           ],
           "correct": 0,
-          "explanation": "Grâce à l'ABS, le conducteur conserve le contrôle de la direction du véhicule même lors d'un freinage d'urgence.",
+          "explanation": "Les roues ne se bloquent pas : vous pouvez encore éviter l'obstacle.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D2_Q49.webp"
         },
         {
           "id": "D2_Q50",
-          "question": "Avec l'ABS, votre distance de freinage est-elle toujours plus courte ?",
+          "question": "Avec l'ABS, la distance d'arrêt est-elle toujours plus courte ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "L'ABS ne garantit pas une distance de freinage plus courte. Son principal avantage est le maintien de la direction.",
+          "explanation": "Non, l'ABS sert surtout à garder la direction, pas forcément à freiner plus court.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D2_Q50.webp"
         },
         {
           "id": "D2_Q51",
-          "question": "Vous freinez avec l'ABS sur sol mouillé. Votre distance de freinage est-elle plus courte que sur sol sec ?",
+          "question": "Avec l'ABS, la distance d'arrêt sur sol mouillé est-elle la même que sur sol sec ?",
           "choices": [
-            "Oui, l'ABS compense le manque d'adhérence",
-            "Non, elle reste plus longue sur sol mouillé",
-            "Oui, c'est précisément le but de l'ABS",
-            "Elle est identique dans les deux cas"
+            "Non, elle reste plus longue",
+            "Oui, l'ABS compense"
           ],
-          "correct": 1,
-          "explanation": "Même avec l'ABS, le sol mouillé allonge la distance de freinage par rapport au sol sec.",
+          "correct": 0,
+          "explanation": "Même avec l'ABS, on freine plus long sur sol mouillé.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D2_Q51.webp"
         },
         {
           "id": "D2_Q52",
-          "question": "Avec l'ABS, pouvez-vous relâcher votre attention ?",
+          "question": "Avec l'ABS, pouvez-vous être moins attentif ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "L'ABS est une aide, pas un remplacement de la vigilance. Le conducteur doit toujours adapter sa conduite.",
+          "explanation": "L'ABS aide, il ne remplace pas votre vigilance.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D2_Q52.webp"
         },
         {
-          "id": "D2_Q53",
-          "question": "Vous vérifiez l'état de votre véhicule. Quel est le seul élément en contact direct avec le sol ?",
-          "choices": [
-            "Les amortisseurs",
-            "Les pneus",
-            "Les freins",
-            "Le châssis"
-          ],
-          "correct": 1,
-          "explanation": "Les pneus sont le seul point de contact entre le véhicule et la chaussée.",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/D2_Q53.webp"
-        },
-        {
           "id": "D2_Q55",
-          "question": "Vous vérifiez la profondeur des rainures de vos pneus. Quel est le minimum légal ?",
+          "question": "Profondeur minimale légale des rainures d'un pneu ?",
           "choices": [
             "1 mm",
             "1,6 mm",
-            "2 mm",
             "3 mm"
           ],
           "correct": 1,
-          "explanation": "La profondeur minimale légale des rainures est de 1,6 mm.",
+          "explanation": "1,6 mm minimum.",
           "theoryCardIndex": 5,
           "image": "/images/questions/D2_Q55.webp"
         },
         {
           "id": "D2_Q56",
-          "question": "Vos pneus ont exactement 1,6 mm de rainures. Que devez-vous faire ?",
+          "question": "Vos pneus ont 1,6 mm de rainures. Que faites-vous ?",
           "choices": [
-            "Les changer dès que possible",
-            "Rien, c'est la profondeur idéale",
-            "Vérifier à nouveau en hiver"
+            "Vous les changez au plus vite",
+            "Rien, c'est parfait",
+            "Vous attendez l'hiver"
           ],
           "correct": 0,
-          "explanation": "1,6 mm est le minimum légal. En pratique, il faut changer les pneus avant d'atteindre ce seuil.",
+          "explanation": "C'est le minimum légal : il est temps de les remplacer.",
           "theoryCardIndex": 5,
           "image": "/images/questions/D2_Q56.webp"
         },
         {
           "id": "D2_Q57",
-          "question": "Que sont les petites barres dans les rainures principales du pneu ?",
+          "question": "Que sont les petites barres au fond des rainures du pneu ?",
           "choices": [
             "Des témoins d'usure",
             "Des capteurs de pression",
-            "Des marques de fabrication"
+            "Des marques du fabricant"
           ],
           "correct": 0,
-          "explanation": "Les TWI (Tread Wear Indicators) sont des témoins d'usure dans les rainures. Quand la bande de roulement les atteint, les pneus sont usés.",
+          "explanation": "Ce sont les témoins d'usure.",
           "theoryCardIndex": 5,
           "image": "/images/questions/D2_Q57.webp"
         },
         {
           "id": "D2_Q58",
-          "question": "La bande de roulement arrive au niveau des témoins d'usure. Que signifie cela ?",
+          "question": "La bande de roulement atteint les témoins d'usure. Que signifie cela ?",
           "choices": [
-            "Les pneus sont trop usés",
-            "Les pneus sont encore neufs",
-            "Il faut les regonfler un peu"
+            "Les pneus sont usés",
+            "Les pneus sont neufs",
+            "Il faut les regonfler"
           ],
           "correct": 0,
-          "explanation": "Si la bande de roulement atteint la hauteur des TWI, les pneus sont trop usés et doivent être remplacés.",
+          "explanation": "Les pneus doivent être remplacés.",
           "theoryCardIndex": 5,
           "image": "/images/questions/D2_Q58.webp"
         },
         {
           "id": "D2_Q59",
-          "question": "Où trouvez-vous la pression recommandée pour vos pneus ?",
+          "question": "Où trouvez-vous la pression conseillée de vos pneus ?",
           "choices": [
-            "Sur l'étiquette dans la portière",
-            "Sur le flanc du pneu lui-même",
-            "En tâtant la fermeté du pneu"
+            "Sur l'étiquette dans la portière ou la trappe à carburant",
+            "Sur le flanc du pneu",
+            "En tâtant le pneu"
           ],
           "correct": 0,
-          "explanation": "La pression prescrite par le constructeur est indiquée sur une étiquette dans la porte du conducteur, du passager ou la trappe à carburant.",
+          "explanation": "Le constructeur l'indique sur une étiquette, souvent dans la portière.",
           "theoryCardIndex": 5,
           "image": "/images/questions/D2_Q59.webp"
         },
         {
           "id": "D2_Q60",
-          "question": "Vous partez chargé pour un long trajet. Que faites-vous de la pression des pneus ?",
+          "question": "Long trajet, avec bagages et passagers. Que faites-vous de la pression des pneus ?",
           "choices": [
-            "L'augmenter légèrement",
-            "La diminuer légèrement",
-            "La laisser telle quelle"
+            "Vous l'augmentez un peu",
+            "Vous la baissez un peu",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Pour un long trajet ou une charge lourde, augmenter légèrement la pression des pneus est recommandé.",
+          "explanation": "Chargé : une pression un peu plus élevée, comme indiqué par le constructeur.",
           "theoryCardIndex": 5,
           "image": "/images/questions/D2_Q60.webp"
         },
         {
           "id": "D2_Q61",
-          "question": "Vos pneus sont sous-gonflés. Cela allonge-t-il votre distance de freinage ?",
+          "question": "Des pneus sous-gonflés allongent-ils la distance de freinage ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Des pneus sous-gonflés réduisent l'adhérence et augmentent la distance de freinage.",
+          "explanation": "Oui, ils tiennent moins bien la route.",
           "theoryCardIndex": 5,
           "image": "/images/questions/D2_Q61.webp"
         },
         {
           "id": "D2_Q63",
-          "question": "Un système de freinage automatique est-il fiable à 100 % ?",
+          "question": "Votre voiture a un freinage automatique d'urgence. Que faites-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Vous restez attentif et anticipez",
+            "Vous lui faites confiance à 100 %",
+            "Vous pouvez être moins concentré"
           ],
-          "correct": 1,
-          "explanation": "Les systèmes de freinage automatique ne sont pas fiables à 100% : ils peuvent avoir des ratés ou des faux positifs.",
+          "correct": 0,
+          "explanation": "Ces systèmes peuvent se tromper : vous restez le conducteur.",
           "theoryCardIndex": 6,
           "image": "/images/questions/D2_Q63.webp"
         },
         {
-          "id": "D2_Q64",
-          "question": "Les aides à la conduite remplacent-elles votre vigilance ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Les systèmes automatiques sont des aides, non des substituts à la vigilance. Le conducteur doit toujours rester attentif.",
-          "theoryCardIndex": 6,
-          "image": "/images/questions/D2_Q64.webp"
-        },
-        {
           "id": "D2_Q66",
-          "question": "Sur un long trajet, tous les combien devez-vous faire une pause ?",
+          "question": "Long trajet : quand faites-vous une pause ?",
           "choices": [
             "Environ toutes les 2 heures",
-            "Environ toutes les 4 heures",
-            "Environ toutes les heures"
+            "Toutes les heures",
+            "Toutes les 4 heures"
           ],
           "correct": 0,
-          "explanation": "Lors d'un long trajet, faites une pause toutes les 2 heures environ pour éviter la fatigue.",
+          "explanation": "Environ toutes les 2 heures.",
           "theoryCardIndex": 6,
           "image": "/images/questions/D2_Q66.webp"
         },
         {
           "id": "D2_Q67",
-          "question": "Vous faites une pause sur une aire d'autoroute. Quelle est la durée minimale recommandée de cette pause ?",
+          "question": "Combien de temps doit durer cette pause, au moins ?",
           "choices": [
-            "5 minutes",
             "15 minutes",
-            "30 minutes",
-            "10 minutes"
+            "5 minutes",
+            "1 heure"
           ],
-          "correct": 1,
-          "explanation": "La pause doit durer au minimum 15 minutes pour être efficace.",
+          "correct": 0,
+          "explanation": "Au moins 15 minutes pour récupérer.",
           "theoryCardIndex": 6,
           "image": "/images/questions/D2_Q67.webp"
         },
         {
           "id": "D2_Q68",
-          "question": "Vous faites une pause pendant un long trajet. Que faites-vous pour récupérer ?",
+          "question": "Que faites-vous pendant la pause ?",
           "choices": [
-            "Sortir, vous étirer et vous hydrater",
-            "Rester dans la voiture et dormir",
-            "Vérifier la pression des pneus"
+            "Vous sortez, marchez et buvez de l'eau",
+            "Vous restez assis au volant",
+            "Vous buvez un verre d'alcool"
           ],
           "correct": 0,
-          "explanation": "Pendant la pause, descendez du véhicule, étirez-vous, respirez de l'air frais et hydratez-vous.",
+          "explanation": "Bouger, prendre l'air et boire de l'eau aident à rester alerte.",
           "theoryCardIndex": 6,
           "image": "/images/questions/D2_Q68.webp"
         },
         {
-          "id": "D2_Q69",
-          "question": "Pourquoi les pauses régulières sont-elles importantes ?",
+          "id": "D2_Q70",
+          "question": "120 km/h sur autoroute sèche. Distance d'arrêt, environ ?",
           "choices": [
-            "La fatigue dégrade vos réflexes",
-            "Pour économiser du carburant",
-            "Pour vérifier l'état du véhicule"
+            "110 m",
+            "60 m",
+            "80 m"
           ],
           "correct": 0,
-          "explanation": "La fatigue ralentit les réflexes et augmente le temps de réaction. Les pauses régulières permettent de rester alerte.",
-          "theoryCardIndex": 6,
-          "image": "/images/questions/D2_Q69.webp"
+          "explanation": "Environ 35 m de réaction + 75 m de freinage : un peu plus de 100 m.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "D2_Q71",
+          "question": "À quelle heure la fatigue est-elle la plus forte au volant ?",
+          "choices": [
+            "Entre 2h et 5h du matin",
+            "Entre 23h et 2h",
+            "Entre 5h et 8h"
+          ],
+          "correct": 0,
+          "explanation": "La nuit, entre 2h et 5h, le corps est en phase de repos : réflexes plus lents.",
+          "theoryCardIndex": 6
         }
       ]
     }
