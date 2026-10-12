@@ -1917,572 +1917,483 @@
       ],
       "questions": [
         {
-          "id": "I3_Q1",
-          "question": "Pourquoi vous demander si la voiture est vraiment nécessaire pour un court trajet ?",
-          "choices": [
-            "C'est coûteux et polluant",
-            "Pour gagner un peu de temps",
-            "Pour éviter les embouteillages"
-          ],
-          "correct": 0,
-          "explanation": "Chaque trajet en voiture engendre un coût financier et un impact environnemental. Se poser la question permet de choisir une alternative quand c'est possible.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "I3_Q2",
-          "question": "Quel moyen de transport est le plus adapté pour 800 mètres ?",
+          "question": "Pour 800 m, quel moyen est le plus adapté ?",
           "choices": [
-            "La marche à pied",
-            "La voiture personnelle",
-            "Le taxi de la station"
+            "À pied",
+            "En voiture",
+            "En taxi"
           ],
           "correct": 0,
-          "explanation": "La marche est raisonnable pour des distances allant jusque 1 km.",
+          "explanation": "Jusqu'à environ 1 km, la marche est idéale.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q3",
-          "question": "Quel moyen de transport est recommandé pour une distance de 5 km ?",
+          "question": "Pour 5 km, quel moyen est conseillé ?",
           "choices": [
             "Le vélo",
             "La voiture",
             "Le taxi"
           ],
           "correct": 0,
-          "explanation": "Le vélo est le moyen de transport recommandé pour les distances de 1 à 10 km.",
+          "explanation": "De 1 à 10 km, le vélo est idéal.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q4",
-          "question": "Pourquoi rouler sur de courtes distances avec un moteur froid est-il néfaste ?",
+          "question": "Pourquoi les petits trajets moteur froid sont-ils mauvais ?",
           "choices": [
-            "Mauvais moteur et plus de carburant",
-            "Le moteur chauffe beaucoup trop vite",
-            "Cela use surtout les pneus avant"
+            "Le moteur s'use et consomme plus",
+            "Le moteur chauffe trop",
+            "Les pneus s'usent"
           ],
           "correct": 0,
-          "explanation": "Un moteur froid sollicité intensément s'use plus vite et consomme davantage.",
+          "explanation": "Moteur froid : plus d'usure, plus de carburant, plus de pollution.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q5",
-          "question": "Votre moteur est encore froid. Comment devez-vous conduire ?",
+          "question": "Le moteur est froid. Comment roulez-vous ?",
           "choices": [
-            "En douceur jusqu'à température",
-            "De façon sportive pour chauffer",
-            "En accélérant franchement"
+            "En douceur",
+            "En accélérant fort pour le chauffer",
+            "En faisant tourner le moteur à l'arrêt"
           ],
           "correct": 0,
-          "explanation": "Avec un moteur froid, conduire en douceur et attendre la température de fonctionnement.",
+          "explanation": "Roulez calmement jusqu'à ce qu'il soit chaud.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q6",
-          "question": "Votre moteur est à température. Pouvez-vous conduire plus dynamiquement ?",
+          "question": "Le moteur est chaud. Pouvez-vous rouler plus dynamiquement ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, en respectant le code",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "Une fois à température, une conduite plus dynamique est possible, mais toujours dans le respect du code.",
+          "explanation": "À température, le moteur supporte plus d'efforts.",
           "theoryCardIndex": 0
         },
         {
           "id": "I3_Q7",
-          "question": "En essence, à quel régime passer la vitesse supérieure ?",
+          "question": "Essence : à quel régime passez-vous la vitesse supérieure ?",
           "choices": [
-            "Entre 2000 et 2500 tours",
-            "Entre 1000 et 1500 tours",
-            "Entre 3000 et 4000 tours"
+            "2000 à 2500 tr/min",
+            "1000 à 1500 tr/min",
+            "3000 à 4000 tr/min"
           ],
           "correct": 0,
-          "explanation": "Pour l'essence, passer la vitesse supérieure entre 2000 et 2500 tours/min pour économiser.",
+          "explanation": "Essence : entre 2000 et 2500 tours.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q8",
-          "question": "En diesel, à quel régime passer la vitesse supérieure ?",
+          "question": "Diesel : à quel régime passez-vous la vitesse supérieure ?",
           "choices": [
-            "Entre 1500 et 2000 tours",
-            "Entre 2000 et 2500 tours",
-            "Entre 3000 et 3500 tours"
+            "1500 à 2000 tr/min",
+            "2000 à 2500 tr/min",
+            "3000 à 3500 tr/min"
           ],
           "correct": 0,
-          "explanation": "Pour le diesel, passer la vitesse supérieure entre 1500 et 2000 tours/min.",
+          "explanation": "Diesel : entre 1500 et 2000 tours.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q9",
-          "question": "Quel est l'impact d'une conduite sportive sur votre consommation ?",
+          "question": "Une conduite sportive fait :",
           "choices": [
-            "Elle augmente nettement",
-            "Elle diminue nettement",
-            "Elle ne change pas du tout"
+            "Monter la consommation",
+            "Baisser la consommation",
+            "Rien changer"
           ],
           "correct": 0,
-          "explanation": "Maintenir un régime élevé et faire des changements de vitesse constants augmente fortement la consommation.",
+          "explanation": "Régimes élevés et accélérations brusques = plus de carburant.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q10",
-          "question": "Pour rejoindre une voie rapide ou dépasser, pouvez-vous dépasser le régime conseillé ?",
+          "question": "Pour vous insérer sur l'autoroute ou dépasser, pouvez-vous monter plus haut dans les tours ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Dépasser le régime conseillé est acceptable pour s'insérer sur une voie rapide ou effectuer un dépassement.",
+          "explanation": "Oui, quand il faut de la puissance.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q11",
-          "question": "Vous êtes immobilisé dans une file depuis plusieurs minutes. Devez-vous couper le moteur ?",
+          "question": "Vous attendez devant un pont levant. Coupez-vous le moteur ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le code prévoit de couper le moteur lors d'une immobilisation prolongée.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "I3_Q12",
-          "question": "La règle des 30 secondes avant de couper le moteur figure-t-elle dans la loi ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Aucune durée précise n'est fixée par la loi ; la règle des 30 secondes n'est qu'une recommandation.",
+          "explanation": "Arrêt prolongé : coupez le moteur.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q13",
-          "question": "Quels facteurs liés au moteur augmentent la consommation ?",
+          "question": "Un filtre à air sale…",
           "choices": [
-            "Moteur mal réglé, filtre sale",
-            "Un moteur bien entretenu",
-            "Un catalyseur tout neuf"
+            "Augmente la consommation",
+            "Ne change rien",
+            "Diminue la consommation"
           ],
           "correct": 0,
-          "explanation": "Un moteur mal réglé et un filtre à air encrassé augmentent la consommation.",
+          "explanation": "Moteur mal entretenu = plus de carburant.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q14",
-          "question": "Quel est le rôle du catalyseur de votre véhicule ?",
+          "question": "À quoi sert le catalyseur ?",
           "choices": [
-            "Diminuer la pollution",
-            "Augmenter la puissance",
-            "Réduire le bruit du moteur"
+            "À réduire la pollution",
+            "À augmenter la puissance",
+            "À réduire le bruit"
           ],
           "correct": 0,
-          "explanation": "Le catalyseur réduit ou détruit les gaz polluants, diminuant ainsi la pollution.",
+          "explanation": "Il détruit une partie des gaz polluants.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q15",
-          "question": "Vous révisez les aspects environnementaux. En quoi les gaz d'échappement polluants se transforment-ils au contact de l'air ?",
+          "question": "Au soleil, les gaz d'échappement se transforment en :",
           "choices": [
-            "En dioxyde de carbone",
-            "En ozone",
-            "En vapeur d'eau",
-            "En oxygène"
+            "Ozone",
+            "Oxygène",
+            "Vapeur d'eau"
           ],
-          "correct": 1,
-          "explanation": "Les gaz d'échappement polluants se transforment en ozone au contact de l'air.",
+          "correct": 0,
+          "explanation": "Avec le soleil, ils forment de l'ozone, nocif pour la santé.",
           "theoryCardIndex": 1
         },
         {
           "id": "I3_Q17",
-          "question": "Pourquoi retirer les objets inutiles de votre coffre ?",
+          "question": "Pourquoi vider le coffre des objets inutiles ?",
           "choices": [
             "Le poids fait consommer plus",
-            "Pour faire de la place",
-            "Pour mieux voir à l'arrière"
+            "Pour la place",
+            "Pour mieux voir"
           ],
           "correct": 0,
-          "explanation": "Chaque kilo supplémentaire augmente la consommation de carburant.",
+          "explanation": "Chaque kilo en trop coûte du carburant.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q18",
-          "question": "Vous n'utilisez plus votre remorque. Devez-vous la laisser attachée ?",
+          "question": "Vous n'utilisez plus la remorque. La laissez-vous attachée ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Une remorque attachée inutilement augmente le poids et la résistance, donc la consommation.",
+          "correct": 0,
+          "explanation": "Poids et résistance inutiles.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q19",
-          "question": "Pourquoi un coffre de toit augmente-t-il la consommation ?",
+          "question": "Retour de vacances : que retirez-vous du toit ?",
           "choices": [
-            "Il augmente la résistance à l'air",
-            "Surtout à cause de son poids",
-            "À cause de sa couleur foncée"
+            "Le coffre de toit et les barres",
+            "Rien",
+            "Seulement les bagages"
           ],
           "correct": 0,
-          "explanation": "Un coffre de toit crée une résistance aérodynamique supplémentaire, augmentant la consommation.",
+          "explanation": "Même vides, ils freinent la voiture dans l'air.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q20",
-          "question": "Votre coffre de toit est vide mais toujours en place. Pouvez-vous rouler ainsi ?",
+          "question": "Un coffre de toit vide consomme-t-il quand même ?",
           "choices": [
             "Oui",
             "Non"
           ],
-          "correct": 1,
-          "explanation": "Même vide, un coffre de toit crée de la résistance à l'air. Il faut le retirer quand inutilisé.",
+          "correct": 0,
+          "explanation": "Il crée de la résistance à l'air, même vide.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q21",
-          "question": "Où fixer un porte-vélos pour consommer le moins possible ?",
+          "question": "Où fixer les vélos pour consommer le moins ?",
           "choices": [
-            "À l'arrière de la voiture",
-            "Sur le toit du véhicule",
-            "Sur le capot avant"
+            "À l'arrière",
+            "Sur le toit",
+            "Sur le capot"
           ],
           "correct": 0,
-          "explanation": "Un porte-vélo à l'arrière génère moins de résistance à l'air qu'un porte-vélo sur le toit.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "I3_Q22",
-          "question": "Vous roulez avec les vitres à moitié ouvertes. De combien cela augmente-t-il votre consommation en moyenne ?",
-          "choices": [
-            "1 %",
-            "5 %",
-            "15 %",
-            "0 %"
-          ],
-          "correct": 1,
-          "explanation": "Les vitres à moitié ouvertes augmentent la consommation d'environ 5 % en moyenne.",
+          "explanation": "À l'arrière, moins de résistance à l'air.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q23",
-          "question": "Vous avez chaud sans vouloir consommer plus. Quelle est la meilleure solution ?",
+          "question": "Rouler vitres ouvertes consomme moins que vitres fermées. Vrai ou faux ?",
           "choices": [
-            "Vitres fermées et ventilation",
-            "Toutes les vitres grandes ouvertes",
-            "Rouler plus vite pour le vent"
+            "Faux",
+            "Vrai"
           ],
           "correct": 0,
-          "explanation": "Utiliser la ventilation intérieure avec les vitres fermées évite la résistance aérodynamique.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "I3_Q24",
-          "question": "Un courant d'air désagréable apparaît quand vous ouvrez votre vitre. Que faites-vous ?",
-          "choices": [
-            "Ouvrir un peu la vitre arrière",
-            "Fermer toutes les autres vitres",
-            "Rouler nettement plus lentement"
-          ],
-          "correct": 0,
-          "explanation": "Ouvrir légèrement la vitre arrière droite compense et réduit l'effet de parachute côté conducteur.",
+          "explanation": "Vitres ouvertes, la voiture fend moins bien l'air : elle consomme plus.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q25",
-          "question": "Pourquoi la climatisation augmente-t-elle la consommation ?",
+          "question": "La climatisation est allumée. Conséquence ?",
           "choices": [
-            "Le moteur fournit plus d'énergie",
-            "Elle refroidit aussi le moteur",
-            "Elle use davantage les pneus"
+            "Vous consommez plus",
+            "Vous consommez moins",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "La climatisation exige davantage d'électricité, ce qui fait travailler plus le moteur.",
+          "explanation": "Le moteur doit fournir l'énergie de la clim.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q26",
-          "question": "Quels équipements électriques éteindre s'ils ne sont pas nécessaires ?",
+          "question": "Quels équipements éteindre s'ils ne servent pas ?",
           "choices": [
-            "Clim, lunette et sièges chauffants",
-            "Les phares et feux de position",
-            "Les clignotants et feux stop"
+            "Clim, dégivrage arrière, sièges chauffants",
+            "Les phares",
+            "Les clignotants"
           ],
           "correct": 0,
-          "explanation": "Tous ces équipements consomment de l'électricité et augmentent la consommation de carburant.",
+          "explanation": "Ils consomment de l'énergie, donc du carburant.",
           "theoryCardIndex": 2
         },
         {
           "id": "I3_Q29",
-          "question": "Quelle pression devez-vous respecter pour vos pneus ?",
+          "question": "Quelle pression mettez-vous dans les pneus ?",
           "choices": [
             "Celle du constructeur",
-            "Deux bars sur chaque roue",
-            "La pression la plus basse"
+            "2 bars partout",
+            "La plus basse possible"
           ],
           "correct": 0,
-          "explanation": "La pression correcte selon le constructeur assure sécurité et consommation optimale.",
+          "explanation": "La bonne pression : sécurité et consommation.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q30",
-          "question": "Vous partez en voyage avec une voiture bien chargée. Adaptez-vous la pression des pneus ?",
+          "question": "Voiture très chargée pour les vacances. Adaptez-vous la pression ?",
           "choices": [
-            "Oui",
+            "Oui, selon le constructeur",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une charge lourde ou un long trajet nécessite une légère augmentation de la pression.",
+          "explanation": "Avec une forte charge, on augmente la pression.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q31",
-          "question": "Vos pneus sont usés. Pouvez-vous continuer à rouler avec ?",
+          "question": "Vos pneus sont usés. Pouvez-vous continuer à rouler ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Rouler avec des pneus usés est interdit car cela compromet la sécurité.",
+          "correct": 0,
+          "explanation": "Pneus usés : interdit et dangereux.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q32",
-          "question": "Vos pneus sont usés. Pouvez-vous recreuser les rainures ?",
+          "question": "Pouvez-vous regraver des pneus usés ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, une fois"
           ],
-          "correct": 1,
-          "explanation": "Retailler ou recreuser les rainures est interdit.",
+          "correct": 0,
+          "explanation": "Regraver les rainures est interdit.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q33",
-          "question": "Vous vous informez sur les carburants. Parmi les suivants, lequel est le plus écologique ?",
+          "question": "Quel carburant pollue le moins ?",
           "choices": [
-            "Le diesel",
             "Le GPL",
             "L'essence",
-            "Le gazole rouge"
+            "Le diesel"
           ],
-          "correct": 1,
-          "explanation": "Du plus au moins écologique : GPL > essence > diesel.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "I3_Q34",
-          "question": "Vous comparez l'impact environnemental des carburants. Dans l'ordre du plus au moins écologique, comment les classez-vous ?",
-          "choices": [
-            "Diesel > essence > GPL",
-            "GPL > essence > diesel",
-            "Essence > GPL > diesel",
-            "Ils sont tous identiques"
-          ],
-          "correct": 1,
-          "explanation": "GPL est le plus écologique, suivi de l'essence, puis du diesel.",
+          "correct": 0,
+          "explanation": "Du moins au plus polluant : GPL, essence, diesel.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q35",
-          "question": "Le diesel sans soufre est-il plus ou moins écologique que le diesel ordinaire ?",
+          "question": "Quel diesel est le plus écologique ?",
           "choices": [
-            "Plus écologique",
-            "Moins écologique",
-            "Exactement identique"
+            "Le diesel à faible teneur en soufre",
+            "Le diesel blanc ordinaire",
+            "Le diesel rouge"
           ],
           "correct": 0,
-          "explanation": "Le diesel sans soufre est plus écologique que le gazole blanc ou rouge ordinaire.",
+          "explanation": "Moins de soufre, moins de pollution.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q36",
-          "question": "Le diesel blanc et le mazout de chauffage rouge sont-ils le même produit ?",
+          "question": "Diesel blanc et mazout de chauffage rouge : même produit ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, mais moins taxé et coloré en rouge",
+            "Non, totalement différent"
           ],
           "correct": 0,
-          "explanation": "C'est chimiquement le même produit, mais le mazout de chauffage est coloré en rouge et moins taxé.",
+          "explanation": "Même produit, taxes différentes.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q37",
-          "question": "Pouvez-vous utiliser du mazout de chauffage rouge dans votre voiture diesel ?",
+          "question": "Pouvez-vous rouler au mazout de chauffage rouge ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Rouler au mazout rouge est interdit car les taxes du carburant routier n'ont pas été payées.",
+          "correct": 0,
+          "explanation": "Interdit : les taxes routières n'ont pas été payées.",
           "theoryCardIndex": 3
         },
         {
           "id": "I3_Q39",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Zone interdite aux plus polluants",
-            "Zone entièrement piétonne",
-            "Zone de stationnement payant"
+            "Zone de basses émissions (LEZ)",
+            "Zone piétonne",
+            "Parking payant"
           ],
           "correct": 0,
-          "explanation": "Une LEZ est une zone où certains véhicules polluants sont interdits.",
+          "explanation": "Les véhicules trop polluants n'y entrent pas.",
           "theoryCardIndex": 4,
           "sign": "F117"
         },
         {
           "id": "I3_Q40",
-          "question": "Qui décide de l'implantation d'une zone de basses émissions ?",
+          "question": "Qui décide de créer une zone de basses émissions ?",
           "choices": [
-            "Chaque ville ou commune",
-            "L'État fédéral belge",
-            "L'Union européenne"
+            "La ville ou la région",
+            "L'Union européenne",
+            "La police"
           ],
           "correct": 0,
-          "explanation": "La décision d'instaurer une LEZ est locale : chaque ville ou village peut la décider.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "I3_Q41",
-          "question": "Combien de zones de basses émissions existent en Belgique ?",
-          "choices": [
-            "Trois",
-            "Une",
-            "Dix"
-          ],
-          "correct": 0,
-          "explanation": "En Belgique, trois villes ont une LEZ : Anvers, Bruxelles et Gand.",
+          "explanation": "C'est une décision locale ou régionale.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q42",
-          "question": "Les conditions d'accès sont-elles identiques dans les trois zones de basses émissions ?",
+          "question": "Les règles d'accès sont-elles les mêmes dans toutes les zones de basses émissions ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les conditions d'accès diffèrent entre Anvers, Bruxelles et Gand.",
+          "correct": 0,
+          "explanation": "Chaque zone a ses propres conditions.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q43",
-          "question": "Que devez-vous faire avant de vous rendre dans une zone de basses émissions ?",
+          "question": "Avant d'aller dans une zone de basses émissions, que faites-vous ?",
           "choices": [
-            "Vérifier les conditions d'accès",
-            "Acheter un autocollant spécial",
-            "Appeler la commune concernée"
+            "Je vérifie si ma voiture peut y entrer",
+            "J'achète un autocollant",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Les règles variant d'une ville à l'autre, il faut les vérifier sur Internet avant d'y entrer.",
+          "explanation": "Les règles varient : vérifiez avant de partir.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q44",
-          "question": "Où trouvez-vous la norme EURO de votre véhicule ?",
+          "question": "Où trouvez-vous la norme Euro de votre voiture ?",
           "choices": [
             "Sur le certificat d'immatriculation",
-            "Sur le tableau de bord du véhicule",
-            "Sur le capot du compartiment moteur"
+            "Sur le tableau de bord",
+            "Sur le capot"
           ],
           "correct": 0,
-          "explanation": "La norme EURO est indiquée sur le certificat d'immatriculation du véhicule.",
+          "explanation": "Elle figure sur le certificat d'immatriculation.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q45",
-          "question": "Vous rencontrez le terme \"éco-score\" en vous informant sur les voitures. De quoi s'agit-il ?",
+          "question": "Une voiture est plus écologique avec un éco-score :",
           "choices": [
-            "De la puissance du moteur",
-            "D'une valeur entre 0 et 100",
-            "De la consommation en litres",
-            "De la vitesse maximale"
+            "Élevé",
+            "Faible"
           ],
-          "correct": 1,
-          "explanation": "L'éco-score est une valeur de 0 à 100 permettant de comparer l'impact environnemental des véhicules.",
+          "correct": 0,
+          "explanation": "L'éco-score va de 0 à 100 : plus il est haut, mieux c'est.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q47",
-          "question": "Qu'est-ce que le certificat d'immatriculation ?",
+          "question": "Le certificat d'immatriculation, c'est :",
           "choices": [
             "La carte d'identité de la voiture",
-            "Votre contrat d'assurance auto",
-            "Le rapport du contrôle technique"
+            "Le contrat d'assurance",
+            "Le contrôle technique"
           ],
           "correct": 0,
-          "explanation": "Le certificat d'immatriculation est le document officiel contenant toutes les caractéristiques du véhicule.",
+          "explanation": "Il identifie le véhicule et son titulaire.",
           "theoryCardIndex": 4
         },
         {
           "id": "I3_Q49",
-          "question": "En quoi consiste la conduite défensive ?",
+          "question": "Conduire de façon défensive, c'est :",
           "choices": [
             "Regarder loin et anticiper",
             "Rouler bien sous la limite",
-            "Freiner tôt et brusquement"
+            "Freiner fort et tard"
           ],
           "correct": 0,
-          "explanation": "La conduite défensive consiste à anticiper les situations dangereuses avant qu'elles ne surviennent.",
+          "explanation": "Voir le danger avant qu'il arrive.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q50",
-          "question": "Quel est le principal avantage de la conduite défensive pour votre sécurité ?",
+          "question": "Quel est le grand avantage de la conduite défensive ?",
           "choices": [
-            "Détecter le danger à l'avance",
-            "Rouler plus vite en sécurité",
-            "Éviter les radars et amendes"
+            "Voir le danger à temps",
+            "Rouler plus vite",
+            "Éviter les radars"
           ],
           "correct": 0,
-          "explanation": "Anticiper les dangers avant qu'ils ne se produisent est l'essence même de la conduite défensive.",
+          "explanation": "Vous avez plus de temps pour réagir.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q51",
-          "question": "Comment la conduite défensive permet-elle d'économiser du carburant ?",
+          "question": "Comment la conduite défensive économise-t-elle du carburant ?",
           "choices": [
-            "Relâcher tôt et freiner moteur",
-            "Monter les rapports au plus tard",
-            "Rouler au point mort en descente"
+            "Je lève le pied tôt et laisse rouler",
+            "Je monte haut dans les tours",
+            "Je roule au point mort"
           ],
           "correct": 0,
-          "explanation": "Anticiper permet de lever le pied tôt et d'utiliser le frein moteur, économisant ainsi le carburant.",
+          "explanation": "Moins de freinages, moins d'accélérations.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q52",
-          "question": "En plus du carburant, qu'économise la conduite défensive ?",
+          "question": "En plus du carburant, la conduite défensive économise :",
           "choices": [
-            "Les plaquettes de frein",
-            "Les pneus, et rien d'autre",
-            "Le liquide de refroidissement"
+            "Les freins",
+            "Le liquide de refroidissement",
+            "Rien d'autre"
           ],
           "correct": 0,
-          "explanation": "En freinant moins brusquement, on use moins les plaquettes de frein.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "I3_Q53",
-          "question": "La conduite défensive diminue-t-elle votre distance de freinage ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "Anticiper permet de freiner plus tôt et en douceur, réduisant la distance nécessaire pour s'arrêter.",
+          "explanation": "Freinages doux = moins d'usure.",
           "theoryCardIndex": 5
         },
         {
           "id": "I3_Q55",
-          "question": "Un véhicule freine brusquement trois voitures devant vous. Que faites-vous ?",
+          "question": "Trois voitures devant, quelqu'un freine fort. Que faites-vous ?",
           "choices": [
-            "Relâcher et freiner en douceur",
-            "Freiner fort au dernier moment",
-            "Changer de bande aussitôt"
+            "Je lève le pied et freine en douceur",
+            "Je freine fort au dernier moment",
+            "Je change de bande"
           ],
           "correct": 0,
-          "explanation": "La conduite défensive permet d'anticiper ce type de situation et de réagir en douceur.",
+          "explanation": "Vous avez vu venir : freinez tôt et doucement.",
           "theoryCardIndex": 5
         }
       ]
