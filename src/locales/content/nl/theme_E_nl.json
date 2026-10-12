@@ -1636,162 +1636,140 @@
       "questions": [
         {
           "id": "E3_Q1",
-          "question": "Een onderbroken witte lijn scheidt de twee richtingen. Mag u ze overschrijden om in te halen?",
+          "question": "Een onderbroken witte streep scheidt de twee richtingen. Mag je ze overschrijden om in te halen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een onderbroken lijn (wit of geel) mag overschreden worden om langs links in te halen.",
+          "explanation": "Een onderbroken streep mag je overschrijden om in te halen, als de weg vrij is.",
           "theoryCardIndex": 0
         },
         {
           "id": "E3_Q2",
-          "question": "Na het inhalen, mag u links van die onderbroken lijn blijven?",
+          "question": "Inhaalmanoeuvre klaar. Mag je links van de onderbroken streep blijven?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De onderbroken lijn mag enkel overschreden worden om in te halen — niet om zonder reden links te blijven rijden.",
+          "explanation": "Je gaat zo snel mogelijk terug naar rechts.",
           "theoryCardIndex": 0
         },
         {
           "id": "E3_Q3",
-          "question": "Een doorlopende witte lijn scheidt de twee richtingen. Mag u ze overschrijden om in te halen?",
+          "question": "Een doorlopende witte streep scheidt de twee richtingen. Mag je ze overschrijden om in te halen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De doorgetrokken lijn mag nooit overschreden worden om in te halen.",
+          "explanation": "Een doorlopende streep overschrijd je niet.",
           "theoryCardIndex": 0
         },
         {
           "id": "E3_Q4",
-          "question": "Uw eigendom ligt links, achter een doorlopende lijn. Mag u ze overschrijden om er te komen?",
+          "question": "Je huis ligt links, achter een doorlopende streep. Mag je ze overschrijden om binnen te rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De doorgetrokken lijn mag om geen enkele reden overschreden worden, ook niet om een eigendom op te rijden.",
+          "explanation": "Een doorlopende streep overschrijd je niet, ook niet om naar huis te rijden: rijd om.",
           "theoryCardIndex": 0
         },
         {
           "id": "E3_Q6",
-          "question": "Dubbele gemengde lijn, de onderbroken ligt aan uw kant. Mag u inhalen?",
+          "question": "Dubbele streep: de onderbroken streep ligt aan jouw kant. Mag je inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Als de onderbroken lijn aan jouw kant ligt, mag je die overschrijden om in te halen.",
+          "explanation": "De streep aan jouw kant is onderbroken: je mag ze overschrijden.",
           "theoryCardIndex": 0
         },
         {
           "id": "E3_Q7",
-          "question": "Mag u na dat inhalen de doorlopende lijn overschrijden om rechts terug te keren?",
+          "question": "Mag je na deze inhaalmanoeuvre de doorlopende streep opnieuw overschrijden om terug naar rechts te gaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Na het inhalen overschrijd je de doorgetrokken lijn om terug naar rechts te gaan.",
+          "explanation": "Ja, om na het inhalen je plaats rechts terug in te nemen.",
           "theoryCardIndex": 0
         },
         {
           "id": "E3_Q8",
-          "question": "Dubbele gemengde lijn, de doorlopende ligt aan uw kant. Mag u inhalen?",
+          "question": "Dubbele streep: de doorlopende streep ligt aan jouw kant. Mag je inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Als de doorgetrokken lijn aan jouw kant ligt, mag je die niet overschrijden om in te halen.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "E3_Q9",
-          "question": "Een onderbroken gele lijn ligt op het wegdek. Mag u ze overschrijden om in te halen?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 0,
-          "explanation": "De kleur geel verandert niets aan de regel: een onderbroken lijn (geel of wit) mag overschreden worden om in te halen.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "E3_Q10",
-          "question": "Een doorlopende gele lijn ligt op het wegdek. Mag u ze overschrijden?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Gele doorgetrokken lijn = niet te overschrijden, net als de witte doorgetrokken lijn.",
+          "explanation": "De streep aan jouw kant is doorlopend: verboden.",
           "theoryCardIndex": 0
         },
         {
           "id": "E3_Q11",
-          "question": "Wanneer is de snelheid beperkt tot 30 km/u bij een verhoogde inrichting?",
+          "question": "Waar moet je een verhoogde inrichting aan maximaal 30 km/u nemen?",
           "choices": [
-            "Aangekondigd door A14 en F87, of zone 30",
-            "Zodra er een inrichting op de weg ligt",
-            "Aan de aangeduide schoolomgevingen"
+            "Als ze met een bord aangekondigd is, of in een zone 30",
+            "Overal waar een drempel is",
+            "Alleen bij scholen"
           ],
           "correct": 0,
-          "explanation": "Drie precieze gevallen leggen 30 km/u op bij een verhoogde inrichting.",
+          "explanation": "Inrichting aangekondigd met de borden (driehoek « verhoogde inrichting »), of in een zone 30: maximaal 30 km/u.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "E3_Q12",
-          "question": "Hoe moet u een aangekondigde verhoogde inrichting benaderen?",
+          "question": "Hoe nader je een aangekondigde verhoogde inrichting?",
           "choices": [
-            "Gematigd, maximum 30 km/u",
-            "Aan normale snelheid, ongewijzigd",
-            "Door vlak ervoor te remmen"
+            "Voorzichtig, om ze aan maximaal 30 km/u te nemen",
+            "Met normale snelheid",
+            "Hard remmend vlak ervoor"
           ],
           "correct": 0,
-          "explanation": "Het naderen van een verhoogde inrichting vereist voorzichtigheid en een matige snelheid.",
+          "explanation": "Met matige snelheid, om ze aan maximaal 30 km/u te nemen.",
           "theoryCardIndex": 1
         },
         {
           "id": "E3_Q13",
-          "question": "Langs welke kant moet u een fietser inhalen?",
+          "question": "Langs welke kant haal je een fietser in?",
           "choices": [
-            "Langs links",
-            "Langs rechts",
-            "Naar keuze, waar plaats is"
+            "Links",
+            "Rechts",
+            "Naar keuze"
           ],
           "correct": 0,
-          "explanation": "Een fietser mag enkel langs links ingehaald worden (tenzij die links afslaat).",
+          "explanation": "Links, behalve als hij links is gaan staan om af te slaan.",
           "theoryCardIndex": 1
         },
         {
           "id": "E3_Q15",
-          "question": "De fietser voor u steekt zijn linkerarm uit. Langs welke kant haalt u hem in?",
+          "question": "De fietser voor je steekt zijn linkerarm uit en gaat links staan om af te slaan. Langs waar haal je hem in?",
           "choices": [
-            "Langs rechts",
-            "Langs links",
-            "U mag hem niet inhalen"
+            "Rechts",
+            "Links",
+            "Je mag niet"
           ],
           "correct": 0,
-          "explanation": "Uitzondering: als de fietser aanstalten maakt om links af te slaan, mag je hem langs rechts inhalen.",
+          "explanation": "Wie links is gaan staan om af te slaan, haal je rechts in.",
           "theoryCardIndex": 1
         },
         {
           "id": "E3_Q17",
-          "question": "Onder dit bord, welke voertuigen mag u niet langs links inhalen?",
+          "question": "Wie mag je onder dit bord inhaalverbod niet inhalen?",
           "choices": [
-            "Een gespan of meer dan twee wielen",
-            "Alle voertuigen, zonder uitzondering",
-            "Enkel vrachtwagens en autobussen"
+            "Voertuigen met meer dan 2 wielen en bespannen voertuigen",
+            "Iedereen",
+            "Alleen vrachtwagens"
           ],
           "correct": 0,
-          "explanation": "Het verbod geldt voor aangespannen voertuigen en voertuigen met meer dan twee wielen.",
+          "explanation": "Het bord verbiedt voertuigen met meer dan twee wielen en bespannen voertuigen in te halen.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "C35"
@@ -1800,405 +1778,324 @@
           "id": "E3_Q18",
           "question": "Tot waar geldt het inhaalverbod?",
           "choices": [
-            "Tot het kruispunt of het eindbord",
-            "Over een afstand van 500 meter",
+            "Tot het volgende kruispunt of het eindbord",
+            "Over 500 m",
             "Tot het volgende verkeerslicht"
           ],
           "correct": 0,
-          "explanation": "Het verbod geldt tot het volgende kruispunt of tot het verkeersbord einde verbod.",
+          "explanation": "Tot het volgende kruispunt, of tot het bord einde inhaalverbod.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "E3_Q19",
-          "question": "Mag u onder het inhaalverbodsbord een motorfiets inhalen?",
+          "question": "Mag een auto onder dit bord een motorfiets inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een motorfiets heeft twee wielen — die valt niet onder het verbod dat gericht is op voertuigen met meer dan twee wielen.",
+          "explanation": "De motorfiets heeft maar twee wielen: het bord geldt niet voor haar.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "E3_Q20",
-          "question": "U rijdt met de motor onder datzelfde bord. Mag u een auto inhalen?",
+          "question": "Mag een motorfiets onder dit bord een auto inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De auto heeft meer dan twee wielen: een motorrijder mag die niet inhalen onder dit verkeersbord.",
+          "explanation": "De auto heeft meer dan twee wielen: niemand mag ze hier inhalen, ook geen motorfiets.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "E3_Q21",
-          "question": "Het inhaalverbod voor vrachtwagens: tot wie richt het zich?",
+          "question": "Dit bord inhaalverbod toont een vrachtwagen. Voor wie geldt het?",
           "choices": [
-            "Tot goederenvervoer boven 3,5 t",
-            "Tot alle bestuurders, zonder uitzondering",
-            "Tot enkel de bestelwagens voor levering"
+            "Voor vrachtwagens van meer dan 3,5 ton",
+            "Voor alle bestuurders",
+            "Voor bestelwagens"
           ],
           "correct": 0,
-          "explanation": "Dit verkeersbord geldt enkel voor zware voertuigen voor goederenvervoer > 3,5 t MTM.",
+          "explanation": "Het geldt voor voertuigen voor goederenvervoer van meer dan 3,5 ton.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "C39"
         },
         {
           "id": "E3_Q22",
-          "question": "U rijdt met de auto onder dit bord voor vrachtwagens. Mag u een vrachtwagen inhalen?",
+          "question": "Mag je onder dit bord « vrachtwagens » met de auto een vrachtwagen inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Het verkeersbord voor vrachtwagens geldt enkel voor goederenvervoerders > 3,5 t, niet voor auto's.",
+          "explanation": "Het bord geldt alleen voor vrachtwagens die inhalen, niet voor auto's.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "E3_Q23",
-          "question": "U rijdt met een autobus onder dit bord voor vrachtwagens. Mag u inhalen?",
+          "question": "Mag een autobus onder dit bord « vrachtwagens » inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De autobus vervoert personen (geen goederen) — die valt niet onder dit verkeersbord.",
+          "explanation": "De autobus vervoert personen: het bord geldt niet voor hem.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "E3_Q24",
-          "question": "U rijdt met een vrachtwagen boven 3,5 t onder dit bord. Mag u een autobus inhalen?",
+          "question": "Mag een vrachtwagen van meer dan 3,5 ton onder dit bord een autobus inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Een autobus heeft meer dan twee wielen — een vrachtwagen mag die niet inhalen onder dit verkeersbord.",
+          "explanation": "De vrachtwagen mag geen enkel voertuig met meer dan twee wielen inhalen.",
           "theoryCardIndex": 2
         },
         {
-          "id": "E3_Q25",
-          "question": "Op hoeveel manieren kan een inhaalverbod eindigen?",
-          "choices": [
-            "Drie",
-            "Eén",
-            "Twee"
-          ],
-          "correct": 0,
-          "explanation": "Het verbod eindigt op drie manieren: kruispunt, specifiek verkeersbord einde verbod, of algemeen verkeersbord einde verboden.",
-          "theoryCardIndex": 2,
-          "severe": true
-        },
-        {
           "id": "E3_Q26",
-          "question": "Dit verbodsbord draagt de vermelding « 200 m ». Wanneer begint het verbod?",
+          "question": "Dit bord inhaalverbod toont « 200 m ». Wanneer begint het verbod?",
           "choices": [
-            "200 meter verderop",
-            "Meteen aan het bord",
+            "200 m verder",
+            "Meteen",
             "Aan het volgende kruispunt"
           ],
           "correct": 0,
-          "explanation": "Met het onderbord « 200 m » begint het verbod pas 200 meter verder.",
+          "explanation": "Het onderbord « 200 m » kondigt het verbod 200 m vooraf aan.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "C35"
         },
         {
           "id": "E3_Q28",
-          "question": "Met de auto onder een inhaalverbod, wie mag u nog inhalen?",
+          "question": "Wie mag je met de auto onder dit bord nog inhalen?",
           "choices": [
-            "Motoren, fietsers en steps",
-            "De fietsers en niemand anders",
-            "Iedereen, als u traag genoeg rijdt"
+            "Motorfietsen, fietsers en steps",
+            "Niemand",
+            "Iedereen, traag"
           ],
           "correct": 0,
-          "explanation": "Motorfietsen (2 wielen), fietsers en voortbewegingstoestellen mogen nog ingehaald worden, ook onder dit verkeersbord.",
+          "explanation": "Tweewielers en steps vallen niet onder het bord.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "E3_Q30",
-          "question": "U komt aan een kruispunt onder een inhaalverbod. Eindigt het verbod daar?",
+          "question": "Je komt aan een kruispunt tijdens een inhaalverbod. Stopt het verbod?",
           "choices": [
-            "Ja",
+            "Ja, tenzij een nieuw bord",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Het verbod eindigt op het volgende kruispunt, tenzij een nieuw verkeersbord het verlengt.",
+          "explanation": "Het eindigt aan het kruispunt, tenzij een bord het herhaalt.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "E3_Q31",
-          "question": "Aan een overweg zonder slagbomen, welke voertuigen mag u niet inhalen?",
+          "question": "Overweg zonder slagbomen of lichten. Wie mag je niet inhalen?",
           "choices": [
-            "Gespannen, meer dan 2 wielen, motoren",
-            "Alle voertuigen, ook de fietsen",
-            "De vrachtwagens boven 3,5 ton"
+            "Bespannen voertuigen, motorfietsen, bromfietsen en voertuigen met meer dan 2 wielen",
+            "Niemand",
+            "Alleen vrachtwagens"
           ],
           "correct": 0,
-          "explanation": "De 3 verboden categorieën op de overweg: aangespannen, meer dan 2 wielen, motorvoertuig op 2 wielen.",
+          "explanation": "Verboden voor bespannen voertuigen, gemotoriseerde tweewielers en voertuigen met meer dan twee wielen. Fietsers mag je inhalen.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "E3_Q32",
-          "question": "Aan een overweg met slagbomen, mag u een traag voertuig inhalen?",
+          "question": "Overweg met slagbomen. Mag je een trage auto inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De aanwezigheid van slagbomen is een uitzondering: inhalen is dan wel toegelaten.",
+          "explanation": "Met slagbomen geldt het verbod niet (als de weg vrij is).",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "E3_Q33",
-          "question": "Het maanwitte licht knippert aan de overweg. Mag u inhalen?",
+          "question": "Het witte licht knippert aan de overweg met lichten. Mag je inhalen?",
           "choices": [
-            "Ja",
+            "Ja, alle voertuigen",
+            "Alleen fietsers",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Het knipperende witte maanlicht is de tweede uitzondering die inhalen op een overweg toelaat.",
+          "explanation": "De overweg is met lichten geregeld: het verbod geldt niet, als de weg vrij is.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "E3_Q34",
-          "question": "Aan een overweg zonder slagbomen, mag u een fietser inhalen?",
+          "question": "Overweg zonder slagbomen. Mag je een fietser inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De fietser valt niet onder de 3 verboden categorieën — die mag ingehaald worden, ook zonder slagbomen.",
+          "explanation": "Fietsers vallen niet onder dit verbod.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "E3_Q36",
-          "question": "Aan een kruispunt met voorrangsbord, mag u een motorfiets langs links inhalen?",
+          "question": "Kruispunt waar je voorrang moet verlenen. Mag je er een motorfiets links inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Op plaatsen met inhaalverbod vallen motorfietsen (motorvoertuig op 2 wielen) onder het verbod.",
+          "explanation": "Waar je voorrang moet verlenen, haal je geen gemotoriseerde tweewielers of voertuigen met meer dan twee wielen in.",
           "theoryCardIndex": 3
         },
         {
           "id": "E3_Q38",
-          "question": "Aan datzelfde kruispunt, mag u een elektrische step inhalen?",
+          "question": "Mag je op hetzelfde kruispunt een elektrische step inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Voortbewegingstoestellen mogen ingehaald worden op plaatsen met inhaalverbod.",
+          "explanation": "De step volgt de regels voor fietsers: het verbod geldt niet.",
           "theoryCardIndex": 3
         },
         {
           "id": "E3_Q39",
-          "question": "Op de top van een helling zonder voldoende zicht, mag u een auto inhalen?",
+          "question": "Top van een helling, je ziet niet wat er van voren komt. Mag je een auto inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Inhalen is verboden bij het naderen van de top van een helling zonder voldoende zicht.",
+          "explanation": "Verboden zonder voldoende zicht.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "E3_Q40",
-          "question": "Zelfde top, maar de rijbaan heeft stroken zonder doorlopende lijn. Mag u inhalen?",
+          "question": "Dezelfde top, maar twee rijstroken in jouw richting, zonder doorlopende streep te overschrijden. Mag je inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Uitzondering op de top: als de rijbaan in rijstroken verdeeld is en je geen doorgetrokken lijn overschrijdt.",
+          "explanation": "Je blijft in je richting, zonder een doorlopende streep te overschrijden: het mag.",
           "theoryCardIndex": 3
         },
         {
           "id": "E3_Q41",
-          "question": "Op de top van een helling zonder voldoende zicht, mag u een fietser inhalen?",
+          "question": "Top van een helling: je ziet ver genoeg om deze fietser zonder risico in te halen. Mag je hem inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Op de top van een helling mag een fietser altijd ingehaald worden (valt niet onder de 3 verboden categorieën).",
+          "explanation": "Het verbod op een top geldt voor motorvoertuigen. Een fietser haal je in als je ver genoeg ziet om het zonder risico te doen.",
           "theoryCardIndex": 3
         },
         {
           "id": "E3_Q42",
-          "question": "In een bocht zonder voldoende zicht, mag u een auto inhalen?",
+          "question": "Bocht zonder zicht. Mag je een auto inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Inhalen in een gevaarlijke bocht zonder voldoende zicht is verboden.",
+          "explanation": "Verboden zonder voldoende zicht.",
           "theoryCardIndex": 3
         },
         {
           "id": "E3_Q43",
-          "question": "In een bocht met beperkt maar behoorlijk zicht, mag u een fietser inhalen?",
+          "question": "Bocht waar je helemaal niet ziet wat er van voren komt. Mag je een fietser inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, het is een fiets"
           ],
           "correct": 0,
-          "explanation": "In een bocht mag een fietser ingehaald worden, behalve als het zicht zeer slecht is.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "E3_Q45",
-          "question": "Welk verschil om een fietser in te halen op een heuveltop en in een bocht?",
-          "choices": [
-            "Op de top wel, in de bocht niet",
-            "In de bocht wel, op de top niet",
-            "Geen, de regel is dezelfde"
-          ],
-          "correct": 0,
-          "explanation": "Top: fietser altijd inhaalbaar. Bocht met zeer slecht zicht: zelfs de fietser is verboden.",
+          "explanation": "Zonder te zien wat er van voren komt, haal je niemand in, ook geen fietser.",
           "theoryCardIndex": 3
         },
         {
           "id": "E3_Q47",
-          "question": "Het voertuig voor u vertraagt voor een oversteekplaats. Mag u het inhalen?",
+          "question": "De auto voor je vertraagt voor het zebrapad. Mag je hem inhalen?",
           "choices": [
-            "Ja",
+            "Ja, als er geen voetganger is",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden elk voertuig in te halen dat een oversteekplaats voor voetgangers nadert, vertraagt of stopt.",
+          "explanation": "Verboden een voertuig in te halen dat een zebrapad nadert of ervoor stopt.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
-          "id": "E3_Q49",
-          "question": "Mag u parkeren op een oversteekplaats voor voetgangers?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Parkeren is verboden op oversteekplaatsen voor voetgangers (rijbaan en berm).",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "E3_Q50",
-          "question": "Mag u parkeren op 3 meter vóór een oversteekplaats?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Het parkeerverbod geldt tot 5 meter vóór de oversteekplaats. Op 3 m is het dus nog verboden.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "E3_Q51",
-          "question": "Mag u parkeren net voorbij een oversteekplaats?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 0,
-          "explanation": "Het verbod geldt alleen voor de 5 m vóór de oversteekplaats. Erna is het wel toegelaten.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "E3_Q52",
-          "question": "U haalt een bestuurder in die zelf aan het inhalen is. Hoe heet dat?",
-          "choices": [
-            "Drievoudig inhalen",
-            "Gewoon inhalen",
-            "Voorbijrijden"
-          ],
-          "correct": 0,
-          "explanation": "Driedubbel inhalen = een bestuurder inhalen die zelf een andere bestuurder aan het inhalen is.",
-          "theoryCardIndex": 4
-        },
-        {
           "id": "E3_Q53",
-          "question": "Op een tweerichtingsweg haalt een auto een bromfiets in. Mag u die auto inhalen?",
+          "question": "Weg met tweerichtingsverkeer: een auto haalt een bromfiets in. Mag je die auto inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De bromfiets heeft 2 wielen — driedubbel inhalen is toegelaten op een weg met twee richtingen als het tussenvoertuig 2 wielen heeft.",
+          "explanation": "Hij haalt een tweewieler in: jij mag hem op jouw beurt inhalen, als de weg vrij is.",
           "theoryCardIndex": 4
         },
         {
           "id": "E3_Q55",
-          "question": "Op een tweerichtingsweg haalt een auto een andere auto in. Mag u drievoudig inhalen?",
+          "question": "Weg met tweerichtingsverkeer: een auto haalt een andere in. Mag je hem tegelijk inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Op een weg met twee richtingen is driedubbel inhalen verboden als het tussenvoertuig meer dan 2 wielen heeft.",
+          "explanation": "Verboden een voertuig in te halen dat zelf een auto inhaalt.",
           "theoryCardIndex": 4
         },
         {
           "id": "E3_Q57",
-          "question": "Op een autosnelweg met drie stroken haalt een auto een andere in. Mag u langs links inhalen?",
+          "question": "Autosnelweg met 3 rijstroken: een auto haalt een andere in. Mag je hem links inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Op een rijbaan met 3 of meer rijstroken in de gevolgde richting is driedubbel inhalen toegelaten.",
+          "explanation": "Met minstens 3 rijstroken in je richting mag het.",
           "theoryCardIndex": 4
         },
         {
           "id": "E3_Q60",
-          "question": "Mag u in de zones met inhaalverbod altijd een fietser inhalen?",
+          "question": "Kruispunt met voorrang van rechts: je mag deze auto hier niet inhalen. Wie mag je wel inhalen?",
           "choices": [
-            "Ja, behalve in bocht zonder zicht",
-            "Ja, in alle mogelijke gevallen",
-            "Nee, in geen van die zones"
+            "Alleen een fietser",
+            "Een fietser en een bromfiets",
+            "Een fietser, een bromfiets en een motorfiets"
           ],
           "correct": 0,
-          "explanation": "Je mag een fietser inhalen bij alle inhaalverboden, behalve in een bocht als het zicht zeer slecht is.",
+          "explanation": "Gemotoriseerde tweewielers vallen er ook onder. Alleen de fiets mag je inhalen.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "E3_Q61",
-          "question": "In een zone met inhaalverbod, mag u een elektrische step inhalen?",
+          "question": "Mag je op een verhoogde inrichting een bromfiets links inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, met 1 m afstand"
           ],
           "correct": 0,
-          "explanation": "Voortbewegingstoestellen genieten dezelfde uitzondering als fietsers.",
+          "explanation": "Op een verhoogde inrichting haal je geen gemotoriseerde tweewielers of voertuigen met meer dan twee wielen in. Een fiets wel.",
           "theoryCardIndex": 5,
           "severe": true
-        },
-        {
-          "id": "E3_Q62",
-          "question": "Waarom mag u in een bocht met zeer slecht zicht geen fietser inhalen?",
-          "choices": [
-            "Men ziet niet ver genoeg vooruit",
-            "Fietsers hebben er voorrang",
-            "Fietsers rijden er zeer snel"
-          ],
-          "correct": 0,
-          "explanation": "Zeer slecht zicht = onmogelijk om tegenliggers te zien = elk inhaalmanoeuvre is gevaarlijk.",
-          "theoryCardIndex": 5
         },
         {
           "id": "E3_Q64",
@@ -2268,12 +2165,12 @@
           "id": "E3_Q70",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Steile helling omhoog",
-            "Gevaarlijke afdaling",
-            "Weg in slechte staat"
+            "Gevaarlijke helling omhoog",
+            "Gevaarlijke daling",
+            "Slecht wegdek"
           ],
           "correct": 0,
-          "explanation": "Dit gevarenverkeersbord waarschuwt voor een helling met sterke stijging.",
+          "explanation": "Gevaarsbord: steile helling omhoog.",
           "theoryCardIndex": 3,
           "sign": "A5"
         },
@@ -2281,13 +2178,12 @@
           "id": "E3_Q71",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Verplicht rechts afslaan",
             "Gevaarlijke bocht naar rechts",
-            "Tijdelijke omleiding naar rechts",
-            "Naderende rotonde"
+            "Verplicht rechtsaf",
+            "Omleiding naar rechts"
           ],
-          "correct": 1,
-          "explanation": "Dit gevarenverkeersbord waarschuwt voor een gevaarlijke bocht naar rechts.",
+          "correct": 0,
+          "explanation": "Driehoek met rode rand en een bocht: gevaarlijke bocht.",
           "theoryCardIndex": 3,
           "sign": "A1b"
         }

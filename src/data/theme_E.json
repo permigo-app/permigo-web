@@ -1785,19 +1785,19 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une ligne discontinue (blanche ou jaune) peut être franchie pour dépasser par la gauche.",
+          "explanation": "Une ligne discontinue peut être franchie pour dépasser, si la voie est libre.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q1.webp"
         },
         {
           "id": "E3_Q2",
-          "question": "Le dépassement terminé, pouvez-vous rester à gauche de cette ligne discontinue ?",
+          "question": "Dépassement fini. Pouvez-vous rester à gauche de la ligne discontinue ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La ligne discontinue ne peut être franchie que pour dépasser — pas pour rester à gauche sans raison.",
+          "explanation": "Vous revenez à droite dès que possible.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q2.webp"
         },
@@ -1809,584 +1809,472 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "La ligne continue ne peut jamais être franchie pour dépasser.",
+          "explanation": "Une ligne continue ne se franchit pas.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q3.webp"
         },
         {
           "id": "E3_Q4",
-          "question": "Votre propriété est à gauche, derrière une ligne continue. Pouvez-vous la franchir pour y accéder ?",
+          "question": "Votre maison est à gauche, derrière une ligne continue. Pouvez-vous la franchir pour y entrer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La ligne continue est infranchissable pour toute raison, y compris entrer dans une propriété.",
+          "explanation": "La ligne continue ne se franchit pas, même pour entrer chez vous : faites le tour.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q4.webp"
         },
         {
           "id": "E3_Q6",
-          "question": "Double ligne mixte, la discontinue est de votre côté. Pouvez-vous dépasser ?",
+          "question": "Double ligne : la discontinue est de votre côté. Pouvez-vous dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Si la ligne discontinue est de votre côté, vous pouvez la franchir pour dépasser.",
+          "explanation": "La ligne de votre côté est discontinue : vous pouvez la franchir.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q6.webp"
         },
         {
           "id": "E3_Q7",
-          "question": "Après ce dépassement, pouvez-vous franchir la ligne continue pour revenir à droite ?",
+          "question": "Après ce dépassement, pouvez-vous refranchir la ligne continue pour revenir à droite ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une fois le dépassement terminé, on franchit la ligne continue pour se remettre à droite.",
+          "explanation": "Oui, pour reprendre votre place à droite après le dépassement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q7.webp"
         },
         {
           "id": "E3_Q8",
-          "question": "Double ligne mixte, la continue est de votre côté. Pouvez-vous dépasser ?",
+          "question": "Double ligne : la continue est de votre côté. Pouvez-vous dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Si la ligne continue est de votre côté, vous ne pouvez pas la franchir pour dépasser.",
+          "explanation": "La ligne de votre côté est continue : interdit.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E3_Q8.webp"
         },
         {
-          "id": "E3_Q9",
-          "question": "Une ligne discontinue jaune est tracée au sol. Pouvez-vous la franchir pour dépasser ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "La couleur jaune ne change pas la règle : une ligne discontinue (jaune ou blanche) peut être franchie pour dépasser.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/E3_Q9.webp"
-        },
-        {
-          "id": "E3_Q10",
-          "question": "Une ligne continue jaune est tracée au sol. Pouvez-vous la franchir ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Ligne continue jaune = infranchissable, comme la ligne continue blanche.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/E3_Q10.webp"
-        },
-        {
           "id": "E3_Q11",
-          "question": "Dans quels cas la vitesse est-elle limitée à 30 km/h devant un dispositif surélevé ?",
+          "question": "Où devez-vous franchir un dispositif surélevé à 30 km/h maximum ?",
           "choices": [
-            "Annoncé par A14 et F87, ou en zone 30",
-            "Dès qu'un dispositif est sur la route",
-            "Aux abords des écoles signalées"
+            "Quand il est annoncé par un signal, ou en zone 30",
+            "Partout où il y a une bosse",
+            "Seulement près des écoles"
           ],
           "correct": 0,
-          "explanation": "Trois cas précis imposent 30 km/h sur un dispositif surélevé.",
+          "explanation": "Dispositif annoncé par les signaux (triangle « dispositif surélevé »), ou situé dans une zone 30 : 30 km/h maximum.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/E3_Q11.webp"
         },
         {
           "id": "E3_Q12",
-          "question": "Comment devez-vous aborder une zone à dispositif surélevé annoncé ?",
+          "question": "Comment abordez-vous un dispositif surélevé annoncé ?",
           "choices": [
-            "À allure modérée, max 30 km/h",
-            "À vitesse normale, sans changer",
-            "En freinant juste avant le dos"
+            "Prudemment, pour le passer à 30 km/h maximum",
+            "À vitesse normale",
+            "En freinant fort juste devant"
           ],
           "correct": 0,
-          "explanation": "L'approche d'un dispositif surélevé exige prudence et allure modérée.",
+          "explanation": "Allure modérée, pour le franchir à 30 km/h maximum.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E3_Q12.webp"
         },
         {
           "id": "E3_Q13",
-          "question": "Par quel côté devez-vous dépasser un cycliste ?",
+          "question": "Par quel côté dépassez-vous un cycliste ?",
           "choices": [
             "Par la gauche",
             "Par la droite",
-            "Au choix, selon la place"
+            "Au choix"
           ],
           "correct": 0,
-          "explanation": "Un cycliste ne peut être dépassé que par la gauche (sauf s'il tourne à gauche).",
+          "explanation": "Par la gauche, sauf s'il s'est placé à gauche pour tourner.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E3_Q13.webp"
         },
         {
           "id": "E3_Q15",
-          "question": "Le cycliste devant vous tend le bras à gauche. Par quel côté le dépassez-vous ?",
+          "question": "Le cycliste devant tend le bras à gauche et se place à gauche pour tourner. Par où le dépassez-vous ?",
           "choices": [
             "Par la droite",
             "Par la gauche",
-            "Vous ne pouvez pas dépasser"
+            "Vous ne pouvez pas"
           ],
           "correct": 0,
-          "explanation": "Exception : si le cycliste s'apprête à tourner à gauche, vous pouvez le dépasser par la droite.",
+          "explanation": "Celui qui s'est placé à gauche pour tourner se dépasse par la droite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E3_Q15.webp"
         },
         {
           "id": "E3_Q17",
-          "question": "Sous ce panneau, quels véhicules ne pouvez-vous pas dépasser par la gauche ?",
+          "question": "Sous ce panneau d'interdiction de dépasser, qui ne pouvez-vous pas dépasser ?",
           "choices": [
-            "Un attelage ou plus de deux roues",
-            "Tous les véhicules, sans exception",
-            "Les camions et les autobus seuls"
+            "Les véhicules à plus de 2 roues et les attelages",
+            "Tout le monde",
+            "Seulement les camions"
           ],
           "correct": 0,
-          "explanation": "L'interdiction vise les véhicules attelés et ceux à plus de deux roues.",
+          "explanation": "Le panneau interdit de dépasser les véhicules à plus de deux roues et les véhicules attelés.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "C35"
         },
         {
           "id": "E3_Q18",
-          "question": "Jusqu'où l'interdiction de dépasser est-elle applicable ?",
+          "question": "Jusqu'où vaut l'interdiction de dépasser ?",
           "choices": [
-            "Jusqu'au carrefour ou au signal de fin",
-            "Sur une distance de 500 mètres",
-            "Jusqu'au prochain feu rencontré"
+            "Jusqu'au prochain carrefour ou au signal de fin",
+            "Sur 500 m",
+            "Jusqu'au prochain feu"
           ],
           "correct": 0,
-          "explanation": "L'interdiction dure jusqu'au carrefour suivant ou jusqu'au signal de fin.",
+          "explanation": "Jusqu'au carrefour suivant, ou jusqu'au signal de fin d'interdiction.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E3_Q18.webp"
         },
         {
           "id": "E3_Q19",
-          "question": "Sous le panneau d'interdiction de dépasser, pouvez-vous dépasser une motocyclette ?",
+          "question": "Sous ce panneau, une voiture peut-elle dépasser une moto ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une moto a deux roues — elle n'est pas visée par l'interdiction qui cible les véhicules à plus de deux roues.",
+          "explanation": "La moto n'a que deux roues : elle n'est pas visée par le panneau.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E3_Q19.webp"
         },
         {
           "id": "E3_Q20",
-          "question": "Vous êtes motocycliste sous ce même panneau. Pouvez-vous dépasser une voiture ?",
+          "question": "Sous ce panneau, une moto peut-elle dépasser une voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La voiture a plus de deux roues : un motocycliste ne peut pas la dépasser sous ce signal.",
+          "explanation": "La voiture a plus de deux roues : personne ne peut la dépasser ici, même une moto.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E3_Q20.webp"
         },
         {
           "id": "E3_Q21",
-          "question": "Le panneau d'interdiction de dépasser réservé aux camions : à qui s'adresse-t-il ?",
+          "question": "Ce panneau d'interdiction de dépasser montre un camion. À qui s'adresse-t-il ?",
           "choices": [
-            "Aux marchandises de plus de 3,5 t",
-            "À tous les conducteurs, sans exception",
-            "Aux camionnettes de livraison seules"
+            "Aux camions de plus de 3,5 t",
+            "À tous les conducteurs",
+            "Aux camionnettes"
           ],
           "correct": 0,
-          "explanation": "Ce signal ne vise que les poids lourds de transport de marchandises > 3,5 t MMA.",
+          "explanation": "Il vise les véhicules de transport de marchandises de plus de 3,5 t.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "C39"
         },
         {
           "id": "E3_Q22",
-          "question": "Vous conduisez une voiture sous ce panneau réservé aux camions. Pouvez-vous dépasser un camion ?",
+          "question": "Sous ce panneau « camions », pouvez-vous dépasser un camion en voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le signal pour camions ne concerne que les transporteurs de marchandises > 3,5 t, pas les voitures.",
+          "explanation": "Le panneau vise seulement les camions qui dépassent, pas les voitures.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E3_Q22.webp"
         },
         {
           "id": "E3_Q23",
-          "question": "Vous conduisez un autobus sous ce panneau réservé aux camions. Pouvez-vous dépasser ?",
+          "question": "Sous ce panneau « camions », un autobus peut-il dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'autobus transporte des personnes (pas des marchandises) — il n'est pas visé par ce signal.",
+          "explanation": "L'autobus transporte des personnes : il n'est pas visé.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E3_Q23.webp"
         },
         {
           "id": "E3_Q24",
-          "question": "Vous conduisez un camion de plus de 3,5 t sous ce panneau. Pouvez-vous dépasser un autobus ?",
+          "question": "Sous ce panneau, un camion de plus de 3,5 t peut-il dépasser un autobus ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Un autobus a plus de deux roues — un camion ne peut pas le dépasser sous ce signal.",
+          "explanation": "Le camion ne peut dépasser aucun véhicule à plus de deux roues.",
           "theoryCardIndex": 2,
           "image": "/images/questions/E3_Q24.webp"
         },
         {
-          "id": "E3_Q25",
-          "question": "De combien de manières l'interdiction de dépasser peut-elle prendre fin ?",
-          "choices": [
-            "Trois",
-            "Une",
-            "Deux"
-          ],
-          "correct": 0,
-          "explanation": "L'interdiction prend fin de trois façons : carrefour, signal de fin spécifique, ou signal général de fin.",
-          "theoryCardIndex": 2,
-          "severe": true,
-          "image": "/images/questions/E3_Q25.webp"
-        },
-        {
           "id": "E3_Q26",
-          "question": "Ce panneau d'interdiction porte la mention « 200 m ». Quand l'interdiction commence-t-elle ?",
+          "question": "Ce panneau d'interdiction de dépasser porte « 200 m ». Quand commence l'interdiction ?",
           "choices": [
-            "200 mètres plus loin",
-            "Tout de suite au panneau",
+            "200 m plus loin",
+            "Tout de suite",
             "Au prochain carrefour"
           ],
           "correct": 0,
-          "explanation": "Avec le panneau « 200 m », l'interdiction ne commence que 200 mètres plus loin.",
+          "explanation": "Le panonceau « 200 m » annonce l'interdiction 200 m à l'avance.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "C35"
         },
         {
           "id": "E3_Q28",
-          "question": "En voiture sous une interdiction de dépasser, quels usagers pouvez-vous encore dépasser ?",
+          "question": "En voiture sous ce panneau, qui pouvez-vous encore dépasser ?",
           "choices": [
             "Motos, cyclistes et trottinettes",
-            "Les cyclistes et personne d'autre",
-            "Tous, en roulant assez lentement"
+            "Personne",
+            "Tout le monde, lentement"
           ],
           "correct": 0,
-          "explanation": "Motos (2 roues), cyclistes et engins de déplacement restent dépassables même sous ce signal.",
+          "explanation": "Les deux-roues et les trottinettes ne sont pas visés par le panneau.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E3_Q28.webp"
         },
         {
           "id": "E3_Q30",
-          "question": "Vous arrivez à un carrefour sous une interdiction de dépasser. L'interdiction prend-elle fin ?",
+          "question": "Vous arrivez à un carrefour pendant une interdiction de dépasser. L'interdiction s'arrête-t-elle ?",
           "choices": [
-            "Oui",
+            "Oui, sauf nouveau panneau",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'interdiction prend fin au carrefour suivant, sauf si un nouveau signal la prolonge.",
+          "explanation": "Elle prend fin au carrefour, sauf si un panneau la répète.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E3_Q30.webp"
         },
         {
           "id": "E3_Q31",
-          "question": "À un passage à niveau sans barrières, quels véhicules ne pouvez-vous pas dépasser ?",
+          "question": "Passage à niveau sans barrières ni feux. Qui ne pouvez-vous pas dépasser ?",
           "choices": [
-            "Attelages, plus de 2 roues, motos",
-            "Tous les véhicules, vélos compris",
-            "Les camions de plus de 3,5 tonnes"
+            "Attelages, motos, cyclomoteurs et véhicules à plus de 2 roues",
+            "Personne",
+            "Seulement les camions"
           ],
           "correct": 0,
-          "explanation": "Les 3 catégories interdites au passage à niveau : attelé, plus de 2 roues, moteur à 2 roues.",
+          "explanation": "Interdit pour les véhicules attelés, les deux-roues à moteur et les plus de deux roues. Les vélos restent dépassables.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/E3_Q31.webp"
         },
         {
           "id": "E3_Q32",
-          "question": "À un passage à niveau équipé de barrières, pouvez-vous dépasser un véhicule lent ?",
+          "question": "Passage à niveau avec barrières. Pouvez-vous dépasser une voiture lente ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La présence de barrières est une exception : le dépassement est alors autorisé.",
+          "explanation": "Avec des barrières, l'interdiction ne s'applique pas (si la voie est libre).",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/E3_Q32.webp"
         },
         {
           "id": "E3_Q33",
-          "question": "Le feu blanc lunaire clignote au passage à niveau. Pouvez-vous dépasser ?",
+          "question": "Le feu blanc clignote au passage à niveau à feux. Pouvez-vous dépasser ?",
           "choices": [
-            "Oui",
+            "Oui, tous les véhicules",
+            "Seulement les vélos",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le feu blanc lunaire clignotant est la seconde exception autorisant le dépassement à un passage à niveau.",
+          "explanation": "Le passage est réglé par des feux : l'interdiction ne s'applique pas, si la voie est libre.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/E3_Q33.webp"
         },
         {
           "id": "E3_Q34",
-          "question": "À un passage à niveau sans barrières, pouvez-vous dépasser un cycliste ?",
+          "question": "Passage à niveau sans barrières. Pouvez-vous dépasser un cycliste ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le cycliste n'est pas dans les 3 catégories interdites — il peut être dépassé même sans barrières.",
+          "explanation": "Le vélo n'est pas visé par cette interdiction.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/E3_Q34.webp"
         },
         {
           "id": "E3_Q36",
-          "question": "À un carrefour avec cédez-le-passage, pouvez-vous dépasser une motocyclette par la gauche ?",
+          "question": "Carrefour où vous devez céder le passage. Pouvez-vous y dépasser une moto par la gauche ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Dans les endroits d'interdiction, les motos (véhicule à moteur à 2 roues) sont incluses dans l'interdiction.",
+          "explanation": "Là où vous devez céder le passage, pas de dépassement des deux-roues à moteur ni des plus de deux roues.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q36.webp"
         },
         {
           "id": "E3_Q38",
-          "question": "À ce même carrefour, pouvez-vous dépasser une trottinette électrique ?",
+          "question": "Au même carrefour, pouvez-vous dépasser une trottinette électrique ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les engins de déplacement peuvent être dépassés dans les endroits d'interdiction.",
+          "explanation": "La trottinette suit les règles des cyclistes : elle n'est pas visée.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q38.webp"
         },
         {
           "id": "E3_Q39",
-          "question": "Au sommet d'une côte sans visibilité suffisante, pouvez-vous dépasser une voiture ?",
+          "question": "Sommet d'une côte, vous ne voyez pas ce qui vient en face. Pouvez-vous dépasser une voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le dépassement est interdit à l'approche du sommet d'une côte sans visibilité suffisante.",
+          "explanation": "Interdit sans visibilité suffisante.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/E3_Q39.webp"
         },
         {
           "id": "E3_Q40",
-          "question": "Même sommet, mais la chaussée est en bandes sans ligne continue. Pouvez-vous dépasser ?",
+          "question": "Même sommet, mais deux bandes dans votre sens, sans ligne continue à franchir. Pouvez-vous dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Exception au sommet : si la chaussée est en bandes et qu'on ne franchit pas de ligne continue.",
+          "explanation": "Vous restez dans votre sens, sans franchir de ligne continue : c'est permis.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q40.webp"
         },
         {
           "id": "E3_Q41",
-          "question": "Au sommet d'une côte sans visibilité suffisante, pouvez-vous dépasser un cycliste ?",
+          "question": "Sommet d'une côte : vous voyez assez loin pour dépasser ce cycliste sans risque. Pouvez-vous le dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Au sommet d'une côte, le cycliste peut toujours être dépassé (pas dans les 3 catégories interdites).",
+          "explanation": "L'interdiction au sommet vise les véhicules à moteur. Un cycliste se dépasse si vous voyez assez loin pour le faire sans risque.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q41.webp"
         },
         {
           "id": "E3_Q42",
-          "question": "Dans un virage sans visibilité suffisante, pouvez-vous dépasser une voiture ?",
+          "question": "Virage sans visibilité. Pouvez-vous dépasser une voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Dépasser dans un virage dangereux sans visibilité suffisante est interdit.",
+          "explanation": "Interdit sans visibilité suffisante.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q42.webp"
         },
         {
           "id": "E3_Q43",
-          "question": "Dans un virage à visibilité réduite mais correcte, pouvez-vous dépasser un cycliste ?",
+          "question": "Virage où vous ne voyez pas du tout ce qui arrive en face. Pouvez-vous dépasser un cycliste ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, c'est un vélo"
           ],
           "correct": 0,
-          "explanation": "Dans un virage, le cycliste peut être dépassé sauf si la visibilité est très mauvaise.",
+          "explanation": "Sans voir ce qui arrive en face, on ne dépasse personne, même un cycliste.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E3_Q43.webp"
         },
         {
-          "id": "E3_Q45",
-          "question": "Quelle différence pour dépasser un cycliste au sommet d'une côte et dans un virage ?",
-          "choices": [
-            "Au sommet oui, dans un virage non",
-            "Dans un virage oui, au sommet non",
-            "Aucune, la règle est identique"
-          ],
-          "correct": 0,
-          "explanation": "Sommet : cycliste toujours dépassable. Virage avec visibilité très mauvaise : même le cycliste est interdit.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/E3_Q45.webp"
-        },
-        {
           "id": "E3_Q47",
-          "question": "Le véhicule devant vous ralentit à l'approche d'un passage pour piétons. Pouvez-vous le dépasser ?",
+          "question": "La voiture devant ralentit avant le passage pour piétons. Pouvez-vous la dépasser ?",
           "choices": [
-            "Oui",
+            "Oui, s'il n'y a pas de piéton",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Interdiction de dépasser tout véhicule qui approche, ralentit ou s'arrête devant un passage pour piétons.",
+          "explanation": "Interdit de dépasser un véhicule qui approche ou s'arrête devant un passage pour piétons.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/E3_Q47.webp"
         },
         {
-          "id": "E3_Q49",
-          "question": "Pouvez-vous stationner sur un passage pour piétons ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Stationnement interdit sur les passages pour piétons (chaussée et accotement).",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/E3_Q49.webp"
-        },
-        {
-          "id": "E3_Q50",
-          "question": "Pouvez-vous vous garer à 3 mètres avant un passage pour piétons ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "L'interdiction de stationner couvre 5 mètres avant le passage. À 3 m, c'est donc encore interdit.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/E3_Q50.webp"
-        },
-        {
-          "id": "E3_Q51",
-          "question": "Pouvez-vous vous garer juste après un passage pour piétons ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "L'interdiction ne couvre que les 5 m avant le passage. Après, c'est autorisé.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/E3_Q51.webp"
-        },
-        {
-          "id": "E3_Q52",
-          "question": "Vous dépassez un conducteur qui est lui-même en train d'en dépasser un autre. Comment appelle-t-on cela ?",
-          "choices": [
-            "Tripler",
-            "Doubler",
-            "Contourner"
-          ],
-          "correct": 0,
-          "explanation": "Tripler = dépasser un conducteur qui est lui-même en train d'en dépasser un autre.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/E3_Q52.webp"
-        },
-        {
           "id": "E3_Q53",
-          "question": "Sur une chaussée à deux sens, une voiture dépasse un cyclomoteur. Pouvez-vous dépasser cette voiture ?",
+          "question": "Route à double sens : une voiture dépasse un cyclomoteur. Pouvez-vous dépasser cette voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le cyclomoteur a 2 roues — tripler est autorisé sur double sens quand le véhicule intermédiaire est à 2 roues.",
+          "explanation": "Elle dépasse un deux-roues : vous pouvez la dépasser à votre tour, si la voie est libre.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E3_Q53.webp"
         },
         {
           "id": "E3_Q55",
-          "question": "Sur une chaussée à deux sens, une voiture en dépasse une autre. Pouvez-vous tripler ?",
+          "question": "Route à double sens : une voiture en dépasse une autre. Pouvez-vous la dépasser en même temps ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Sur double sens, tripler une voiture qui dépasse une autre voiture est interdit (plus de 2 roues).",
+          "explanation": "Interdit de dépasser un véhicule qui dépasse lui-même une voiture.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E3_Q55.webp"
         },
         {
           "id": "E3_Q57",
-          "question": "Sur une autoroute à trois bandes, une voiture en dépasse une autre. Pouvez-vous tripler par la gauche ?",
+          "question": "Autoroute à 3 bandes : une voiture en dépasse une autre. Pouvez-vous la dépasser par la gauche ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Sur une chaussée à 3 bandes ou plus dans le sens suivi, le tripler est autorisé.",
+          "explanation": "Avec au moins 3 bandes dans votre sens, c'est permis.",
           "theoryCardIndex": 4,
           "image": "/images/questions/E3_Q57.webp"
         },
         {
           "id": "E3_Q60",
-          "question": "Dans les zones d'interdiction de dépasser, peut-on toujours dépasser un cycliste ?",
+          "question": "Carrefour à priorité de droite : vous ne pouvez pas y dépasser cette voiture. Qui pouvez-vous dépasser ?",
           "choices": [
-            "Oui, sauf en virage sans visibilité",
-            "Oui, dans tous les cas possibles",
-            "Non, dans aucune de ces zones"
+            "Un cycliste seulement",
+            "Un cycliste et un cyclomoteur",
+            "Un cycliste, un cyclomoteur et une moto"
           ],
           "correct": 0,
-          "explanation": "On peut dépasser un cycliste dans toutes les interdictions, sauf en virage si la visibilité est très mauvaise.",
+          "explanation": "Les deux-roues à moteur sont visés aussi. Seul le vélo peut être dépassé.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/E3_Q60.webp"
         },
         {
           "id": "E3_Q61",
-          "question": "Dans une zone d'interdiction de dépasser, pouvez-vous dépasser une trottinette électrique ?",
+          "question": "Sur un dispositif surélevé, pouvez-vous dépasser un cyclomoteur par la gauche ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, avec 1 m d'écart"
           ],
           "correct": 0,
-          "explanation": "Les engins de déplacement bénéficient de la même exception que les cyclistes.",
+          "explanation": "Sur un dispositif surélevé, on ne dépasse pas les deux-roues à moteur ni les plus de deux roues. Un vélo, oui.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/E3_Q61.webp"
-        },
-        {
-          "id": "E3_Q62",
-          "question": "Dans un virage à très mauvaise visibilité, pourquoi ne pouvez-vous pas dépasser un cycliste ?",
-          "choices": [
-            "On ne voit pas assez loin en face",
-            "Les cyclistes y sont prioritaires",
-            "Les cyclistes y roulent très vite"
-          ],
-          "correct": 0,
-          "explanation": "Visibilité très mauvaise = impossible de voir en sens inverse = tout dépassement est dangereux.",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/E3_Q62.webp"
         },
         {
           "id": "E3_Q64",
@@ -2461,26 +2349,25 @@
           "id": "E3_Q70",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Montée à forte pente",
+            "Montée à forte inclinaison",
             "Descente dangereuse",
             "Route en mauvais état"
           ],
           "correct": 0,
-          "explanation": "Ce signal de danger avertit d'une montée à forte inclinaison.",
+          "explanation": "Signal de danger : montée à forte inclinaison.",
           "theoryCardIndex": 3,
           "sign": "A5"
         },
         {
           "id": "E3_Q71",
-          "question": "Vous apercevez un signal triangulaire de danger avec une courbe vers la droite. Que signifie ce panneau ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Obligation de tourner à droite",
             "Virage dangereux à droite",
-            "Déviation temporaire à droite",
-            "Rond-point à l'approche"
+            "Obligation de tourner à droite",
+            "Déviation à droite"
           ],
-          "correct": 1,
-          "explanation": "Ce signal de danger avertit d'un virage dangereux à droite.",
+          "correct": 0,
+          "explanation": "Triangle à bord rouge avec une courbe : virage dangereux.",
           "theoryCardIndex": 3,
           "sign": "A1b"
         }
