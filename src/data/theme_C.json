@@ -1487,13 +1487,13 @@
         },
         {
           "id": "C2_Q45",
-          "question": "Un siège enfant dos à la route est placé à l'avant, airbag actif. Est-ce permis ?",
+          "question": "Siège bébé dos à la route à l'avant, avec l'airbag désactivé comme ici. Est-ce permis ?",
           "choices": [
             "Oui",
             "Non"
           ],
-          "correct": 1,
-          "explanation": "Interdit tant que l'airbag frontal de cette place est actif.",
+          "correct": 0,
+          "explanation": "Permis à l'avant seulement si l'airbag frontal de cette place est désactivé.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q45.webp"
         },
@@ -1736,7 +1736,7 @@
         },
         {
           "id": "C2_Q71",
-          "question": "Camionnette : 2 700 kg de MMA. Quelle MMA maximale pour la remorque, avec le permis B ?",
+          "question": "Votre voiture a une MMA de 2 700 kg. Quelle MMA maximale pour la remorque, avec le permis B ?",
           "choices": [
             "800 kg",
             "750 kg",
@@ -2297,14 +2297,14 @@
         },
         {
           "id": "C3_Q29",
-          "question": "Le brouillard se lève : vous voyez maintenant à 110 m. Le feu de brouillard arrière :",
+          "question": "Brouillard épais : vous voyez à 50 m. Le feu de brouillard arrière :",
           "choices": [
-            "Ne peut plus être allumé",
-            "Doit rester allumé",
-            "Peut rester allumé"
+            "Doit être allumé",
+            "Est interdit",
+            "Est facultatif"
           ],
           "correct": 0,
-          "explanation": "Par brouillard, il s'allume seulement sous 100 m. Au-delà, il est interdit.",
+          "explanation": "Par brouillard, sous 100 m de visibilité, il est obligatoire. Au-delà de 100 m, il est interdit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q29.webp"
         },
@@ -2692,10 +2692,11 @@
         },
         {
           "id": "C3_Q73",
-          "question": "La nuit, hors agglomération, ce conducteur klaxonne avant de dépasser. En a-t-il le droit ?",
+          "question": "La nuit, hors agglomération, comment ce conducteur annonce-t-il qu'il va dépasser ?",
           "choices": [
-            "Non, la nuit c'est un appel de phares",
-            "Oui, hors agglomération"
+            "Par un appel de phares",
+            "Par un coup de klaxon",
+            "Avec les feux de brouillard"
           ],
           "correct": 0,
           "explanation": "La nuit, le klaxon est remplacé par l'appel de phares, sauf danger imminent.",
