@@ -191,479 +191,417 @@
       "questions": [
         {
           "id": "C1_Q1",
-          "question": "Vous venez d'obtenir le permis B. Quels véhicules pouvez-vous conduire ?",
+          "question": "Avec le permis B, pouvez-vous conduire une camionnette ?",
           "choices": [
-            "Voiture, minibus et camionnette",
-            "Les voitures particulières seules",
-            "Voiture et moto jusqu'à 125 cm³"
+            "Oui, jusqu'à 3,5 tonnes de MMA",
+            "Non, il faut le permis C",
+            "Oui, quelle que soit sa masse"
           ],
           "correct": 0,
-          "explanation": "Le permis B autorise : voiture, voiture mixte, minibus et camionnette, à condition que la MMA ne dépasse pas 3,5 tonnes.",
+          "explanation": "Le permis B couvre voiture, minibus et camionnette, jusqu'à 3,5 tonnes de MMA.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q1.webp"
         },
         {
           "id": "C1_Q3",
-          "question": "Vous preparez votre examen theorique. Quelle est la masse maximale autorisee pour conduire avec un permis B ?",
+          "question": "La MMA d'un véhicule conduit avec le permis B ne peut pas dépasser :",
           "choices": [
             "2 500 kg",
             "3 500 kg",
-            "5 000 kg",
-            "7 500 kg"
+            "5 000 kg"
           ],
           "correct": 1,
-          "explanation": "Le permis B est limité aux véhicules dont la MMA ne dépasse pas 3 500 kg.",
+          "explanation": "Permis B : 3 500 kg de MMA maximum.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q3.webp"
         },
         {
           "id": "C1_Q5",
-          "question": "Le permis B provisoire autorise-t-il les mêmes véhicules que le définitif ?",
+          "question": "Le permis provisoire B permet-il les mêmes véhicules que le permis B ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le permis B provisoire autorise les mêmes véhicules que le permis B définitif.",
+          "explanation": "Oui, les mêmes véhicules.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q5.webp"
         },
         {
           "id": "C1_Q6",
-          "question": "Que désigne la MMA sur le certificat d'immatriculation ?",
+          "question": "Que désigne la MMA ?",
           "choices": [
-            "Le poids maximal autorisé en charge",
-            "Le poids du véhicule à vide",
-            "Le poids du chargement seul"
+            "La masse maximale autorisée en charge",
+            "La masse du véhicule à vide",
+            "La masse du chargement seul"
           ],
           "correct": 0,
-          "explanation": "La MMA (Masse Maximale Autorisée) inclut tout : le véhicule, le carburant, le conducteur, les passagers et le chargement.",
+          "explanation": "La MMA est le maximum permis : véhicule, carburant, occupants et chargement compris.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q6.webp"
         },
         {
           "id": "C1_Q8",
-          "question": "Qui détermine la MMA de votre véhicule ?",
+          "question": "Qui fixe la MMA d'une voiture ?",
           "choices": [
-            "Le fabricant du véhicule",
-            "Le contrôle technique",
-            "Le propriétaire du véhicule"
+            "Le constructeur",
+            "Le gouvernement",
+            "Le garagiste"
           ],
           "correct": 0,
-          "explanation": "La MMA est fixée par le fabricant et inscrite sur le certificat d'immatriculation.",
+          "explanation": "C'est le constructeur. Elle figure sur le certificat d'immatriculation.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q8.webp"
         },
         {
           "id": "C1_Q9",
-          "question": "Que se passe-t-il si vous dépassez la MMA de votre véhicule ?",
+          "question": "Que se passe-t-il si vous dépassez la MMA ?",
           "choices": [
-            "Le véhicule n'est plus aux normes",
-            "Le moteur cale au démarrage",
-            "Les pneus éclatent aussitôt"
+            "Vous êtes en surcharge, c'est une infraction",
+            "Le moteur cale",
+            "Rien, c'est une indication"
           ],
           "correct": 0,
-          "explanation": "Dépasser la MMA signifie que le véhicule ne respecte plus les normes de sécurité pour lesquelles il a été conçu.",
+          "explanation": "Au-delà de la MMA, la voiture est en surcharge : c'est interdit et dangereux.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q9.webp"
         },
         {
-          "id": "C1_Q10",
-          "question": "Une petite voiture a-t-elle une MMA plus élevée qu'un grand SUV ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "La MMA est proportionnelle à la taille du véhicule : petite voiture = MMA basse, grande voiture = MMA élevée.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/C1_Q10.webp"
-        },
-        {
           "id": "C1_Q11",
-          "question": "Vous roulez sur une route pour automobiles. Un signal indique 60 km/h pour les vehicules de MMA > 3,5 tonnes et un autre 90 km/h pour les autres. Vous conduisez une voiture. Quelle vitesse maximale ?",
+          "question": "Un panneau indique 60 km/h pour les plus de 3,5 t et 90 km/h pour les autres. Vous êtes en voiture. Vitesse maximale ?",
           "choices": [
             "60 km/h",
             "90 km/h",
-            "120 km/h",
-            "70 km/h"
+            "120 km/h"
           ],
           "correct": 1,
-          "explanation": "Votre voiture a une MMA ≤ 3,5 tonnes : le signal de 90 km/h s'applique à vous.",
+          "explanation": "Votre voiture a une MMA de 3,5 t ou moins : 90 km/h.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/C1_Q11.webp"
         },
         {
           "id": "C1_Q12",
-          "question": "Un signal interdit le dépassement aux véhicules de plus de 3,5 tonnes. Votre voiture pèse 1 800 kg. Êtes-vous concerné ?",
+          "question": "Ce panneau interdit le dépassement aux plus de 3,5 t. Votre voiture pèse 1 800 kg. Êtes-vous concerné ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le signal ne vise que les véhicules de MMA > 3,5 tonnes. Votre voiture (1 800 kg) n'est pas concernée.",
+          "explanation": "Le panneau vise les véhicules de plus de 3,5 t de MMA.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q12.webp"
         },
         {
           "id": "C1_Q15",
-          "question": "Où est mentionnée la MMA de votre voiture ?",
+          "question": "Où trouvez-vous la MMA de votre voiture ?",
           "choices": [
             "Sur le certificat d'immatriculation",
-            "Sur le flanc des pneus du véhicule",
-            "Sur le tableau de bord de la voiture"
+            "Sur les pneus",
+            "Sur le tableau de bord"
           ],
           "correct": 0,
-          "explanation": "La MMA est mentionnée sur le certificat d'immatriculation.",
+          "explanation": "Sur le certificat d'immatriculation.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q15.webp"
         },
         {
           "id": "C1_Q16",
-          "question": "Que désigne la MEC d'un véhicule ?",
+          "question": "Le poids réel d'une voiture, avec chargement et occupants, s'appelle :",
           "choices": [
-            "Le poids réel à un moment donné",
-            "Le poids maximal autorisé",
-            "Le poids du véhicule à vide"
+            "La masse en charge (MEC)",
+            "La masse maximale autorisée (MMA)"
           ],
           "correct": 0,
-          "explanation": "La MEC (Masse En Charge) est le poids réel du véhicule tel qu'il est au moment considéré.",
+          "explanation": "MEC : le poids réel à ce moment-là, sur la balance.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q16.webp"
         },
         {
           "id": "C1_Q17",
-          "question": "Quelle est la différence entre la MMA et la MEC ?",
+          "question": "MMA et MEC : quelle différence ?",
           "choices": [
-            "La MMA est le maximum théorique",
-            "La MEC est fixée par le fabricant",
-            "Il n'y a aucune différence"
+            "MMA : maximum permis. MEC : poids réel",
+            "MMA : poids réel. MEC : maximum permis",
+            "C'est la même chose"
           ],
           "correct": 0,
-          "explanation": "MMA = poids max théorique (fixe). MEC = poids réel actuel (variable).",
+          "explanation": "La MMA ne change pas. La MEC change selon le chargement.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q17.webp"
         },
         {
           "id": "C1_Q19",
-          "question": "La MEC peut-elle être supérieure à la MMA ?",
+          "question": "La MEC peut-elle dépasser la MMA ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Si la MEC dépasse la MMA, le véhicule est en surcharge illégale.",
+          "explanation": "Non : ce serait une surcharge interdite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q19.webp"
         },
         {
           "id": "C1_Q20",
-          "question": "Vous faites un calcul. Votre voiture pese 1 400 kg vide avec carburant. Vous pesez 80 kg, votre passager 60 kg et vous avez 100 kg de bagages. Quelle est la MEC ?",
+          "question": "Voiture vide : 1 400 kg. Vous : 80 kg, passager : 60 kg, bagages : 100 kg. MEC ?",
           "choices": [
             "1 400 kg",
-            "1 640 kg",
-            "1 500 kg",
-            "1 540 kg"
+            "1 540 kg",
+            "1 640 kg"
           ],
-          "correct": 1,
-          "explanation": "MEC = 1 400 + 80 + 60 + 100 = 1 640 kg.",
+          "correct": 2,
+          "explanation": "1 400 + 80 + 60 + 100 = 1 640 kg.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q20.webp"
         },
         {
           "id": "C1_Q21",
-          "question": "La MEC de votre voiture est de 1 665 kg et sa MMA de 2 000 kg. Êtes-vous en surcharge ?",
+          "question": "MEC : 1 665 kg. MMA : 2 000 kg. Êtes-vous en surcharge ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "1 665 kg < 2 000 kg : pas de surcharge.",
+          "explanation": "1 665 kg, c'est moins que 2 000 kg.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q21.webp"
         },
         {
           "id": "C1_Q22",
-          "question": "Un pont limite la masse en charge à 3,5 tonnes. Votre voiture chargée pèse 1 800 kg. Pouvez-vous passer ?",
+          "question": "Ce pont est limité à 3,5 t en charge. Votre voiture chargée pèse 1 800 kg. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "1 800 kg < 3,5 tonnes : votre MEC est inférieure à la limite du pont.",
+          "explanation": "1 800 kg, c'est moins que 3,5 t.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q22.webp"
         },
         {
           "id": "C1_Q23",
-          "question": "Sur ce même pont limité à 3,5 tonnes, un camion chargé de 5 tonnes se présente. Peut-il passer ?",
+          "question": "Un camion chargé de 5 t arrive à ce pont limité à 3,5 t. Peut-il passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "5 tonnes > 3,5 tonnes : le camion ne peut pas passer.",
+          "explanation": "5 t, c'est plus que 3,5 t.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C1_Q23.webp"
         },
         {
           "id": "C1_Q25",
-          "question": "Vous conduisez un camion vide de 4 tonnes et voyez ce panneau portant « 5t ». Pouvez-vous passer ?",
+          "question": "Ce panneau « 5t » vise la masse en charge. Votre camion vide pèse 4 t. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Si c'est un signal de MEC, votre poids réel (4 t) est inférieur à la limite (5 t) : vous pouvez passer.",
+          "explanation": "Votre poids réel (4 t) est sous la limite (5 t).",
           "theoryCardIndex": 1,
           "sign": "C21"
         },
         {
           "id": "C1_Q26",
-          "question": "Un triangle de danger est-il obligatoire dans votre voiture ?",
+          "question": "Le triangle de danger est-il obligatoire dans votre voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le triangle de danger est obligatoire dans tout véhicule de maximum 3,5 tonnes MMA.",
+          "explanation": "Oui, il est obligatoire.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q26.webp"
         },
         {
           "id": "C1_Q27",
-          "question": "Une trousse de secours est-elle obligatoire dans votre voiture ?",
+          "question": "La trousse de secours est-elle obligatoire dans votre voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La trousse de secours est obligatoire dans la voiture.",
+          "explanation": "Oui, elle est obligatoire.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q27.webp"
         },
         {
           "id": "C1_Q28",
-          "question": "Un extincteur est-il obligatoire dans votre voiture ?",
+          "question": "L'extincteur est-il obligatoire dans votre voiture ?",
           "choices": [
             "Oui, d'au moins 1 kg de poudre",
-            "Non, il est simplement conseillé",
-            "Oui, mais sur autoroute"
+            "Non, il est seulement conseillé",
+            "Oui, seulement sur autoroute"
           ],
           "correct": 0,
-          "explanation": "L'extincteur est obligatoire et doit contenir au minimum 1 kg de poudre.",
+          "explanation": "Obligatoire, avec au moins 1 kg de poudre.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q28.webp"
         },
         {
-          "id": "C1_Q29",
-          "question": "Vous verifiez votre extincteur. En combien de secondes devez-vous pouvoir y acceder ?",
-          "choices": [
-            "5 secondes",
-            "10 secondes",
-            "30 secondes",
-            "Pas de limite"
-          ],
-          "correct": 1,
-          "explanation": "L'extincteur doit être accessible dans les 10 secondes.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/C1_Q29.webp"
-        },
-        {
           "id": "C1_Q30",
-          "question": "Vous avez utilisé un peu de votre extincteur. Que devez-vous faire ?",
+          "question": "Vous avez un peu utilisé votre extincteur. Que faites-vous ?",
           "choices": [
-            "Le remplacer par un neuf",
-            "Le recharger au garage",
+            "Vous le faites recharger ou le remplacez",
             "Rien, il reste de la poudre"
           ],
           "correct": 0,
-          "explanation": "Toute utilisation, même minime, signifie que l'extincteur ne contient plus exactement 1 kg : il doit être remplacé.",
+          "explanation": "Utilisé, même un peu, il n'est plus complet : il doit être rechargé ou remplacé.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q30.webp"
         },
         {
           "id": "C1_Q32",
-          "question": "Un gilet de sécurité rétroréfléchissant est-il obligatoire dans votre voiture ?",
+          "question": "Le gilet fluo est-il obligatoire dans votre voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le gilet de sécurité réfléchissant est obligatoire dans la voiture.",
+          "explanation": "Oui, au moins un, pour le conducteur.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q32.webp"
         },
         {
           "id": "C1_Q33",
-          "question": "Où devez-vous placer votre gilet de sécurité ?",
+          "question": "Où rangez-vous le gilet fluo ?",
           "choices": [
             "Dans l'habitacle",
-            "Dans le coffre",
-            "Sous le siège arrière"
+            "Dans le coffre"
           ],
           "correct": 0,
-          "explanation": "Le gilet doit être dans l'habitacle (pas dans le coffre) pour être accessible avant de sortir.",
+          "explanation": "Dans l'habitacle, pour l'enfiler avant de sortir.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q33.webp"
         },
         {
           "id": "C1_Q35",
-          "question": "Quels sont les quatre équipements obligatoires dans une voiture ?",
+          "question": "Qu'est-ce qui doit obligatoirement être dans votre voiture ?",
           "choices": [
             "Triangle, trousse, extincteur, gilet",
             "Triangle, trousse, roue de secours, gilet",
             "Triangle, extincteur, cric, gilet"
           ],
           "correct": 0,
-          "explanation": "Les 4 équipements obligatoires : triangle de danger, trousse de secours, extincteur (1 kg de poudre), gilet réfléchissant.",
+          "explanation": "Les 4 obligatoires : triangle, trousse de secours, extincteur et gilet fluo. La roue de secours et le cric ne le sont pas.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q35.webp"
         },
         {
           "id": "C1_Q36",
-          "question": "Vous constatez que votre extincteur a ete utilise une fois et que votre gilet est dans le coffre. Combien de problemes avez-vous ?",
+          "question": "Votre extincteur a déjà servi et votre gilet est dans le coffre. Combien de problèmes ?",
           "choices": [
-            "Un seul",
             "Deux",
-            "Aucun",
-            "Trois"
+            "Un",
+            "Aucun"
           ],
-          "correct": 1,
-          "explanation": "Deux problèmes : l'extincteur utilisé doit être remplacé, et le gilet doit être dans l'habitacle, pas dans le coffre.",
+          "correct": 0,
+          "explanation": "L'extincteur doit être rechargé, et le gilet doit être dans l'habitacle.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q36.webp"
         },
         {
           "id": "C1_Q37",
-          "question": "Quand devez-vous porter le gilet de sécurité ?",
+          "question": "Quand le conducteur doit-il porter le gilet fluo ?",
           "choices": [
-            "En cas de panne sur autoroute",
-            "Chaque fois que vous conduisez",
-            "La nuit et par temps de pluie"
+            "Quand il quitte sa voiture en panne sur autoroute",
+            "Chaque fois qu'il conduit",
+            "La nuit, quand il pleut"
           ],
           "correct": 0,
-          "explanation": "Le gilet est obligatoire avant de sortir du véhicule en cas de panne ou d'accident sur autoroute ou route pour automobiles.",
+          "explanation": "Il l'enfile avant de quitter sa voiture immobilisée sur autoroute, route pour automobiles ou là où l'arrêt est interdit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C1_Q37.webp"
         },
         {
           "id": "C1_Q38",
-          "question": "Quels documents personnels devez-vous avoir sur vous en conduisant ?",
+          "question": "Quels documents personnels avez-vous sur vous en conduisant ?",
           "choices": [
-            "La carte d'identité et le permis",
-            "Le permis de conduire, sans plus",
-            "Le passeport et le permis"
+            "Carte d'identité et permis de conduire",
+            "Le permis seulement",
+            "Passeport et permis"
           ],
           "correct": 0,
-          "explanation": "Le conducteur doit avoir avec lui sa carte d'identité ET son permis de conduire.",
+          "explanation": "Carte d'identité et permis de conduire, en original.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q38.webp"
         },
         {
           "id": "C1_Q39",
-          "question": "Que signifie être « titulaire et porteur » d'un permis ?",
+          "question": "La police demande votre permis. Il est resté à la maison. Que dit le code ?",
           "choices": [
-            "En être propriétaire et l'avoir sur soi",
-            "L'avoir rangé dans la boîte à gants",
-            "En posséder une copie certifiée conforme"
+            "Vous devez toujours l'avoir sur vous",
+            "Vous avez 24 heures pour le montrer"
           ],
           "correct": 0,
-          "explanation": "Titulaire = en être propriétaire. Porteur = l'avoir sur soi. Les deux conditions sont requises.",
+          "explanation": "Vous devez être titulaire du permis ET l'avoir sur vous.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q39.webp"
         },
         {
           "id": "C1_Q40",
-          "question": "Vous avez perdu votre permis et disposez d'une attestation de perte. Pouvez-vous conduire ?",
+          "question": "Vous avez perdu votre permis et avez une attestation de perte. Pouvez-vous conduire ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "L'attestation de perte ne remplace pas le permis. Il est interdit de conduire sans le document original.",
+          "explanation": "L'attestation de perte ne remplace pas le permis.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q40.webp"
         },
         {
           "id": "C1_Q42",
-          "question": "Quels documents doivent se trouver dans votre voiture ?",
+          "question": "Quels documents doivent être dans votre voiture ?",
           "choices": [
-            "Conformité, immatriculation, assurance",
+            "Immatriculation, conformité, assurance, contrôle technique",
             "Le certificat d'immatriculation seul",
-            "La carte grise et la vignette fiscale"
+            "La carte grise et la facture d'achat"
           ],
           "correct": 0,
-          "explanation": "4 documents dans la voiture : certificat de conformité, d'immatriculation, d'assurance et de contrôle technique.",
+          "explanation": "Certificat d'immatriculation, de conformité, d'assurance et de contrôle technique.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q42.webp"
         },
         {
           "id": "C1_Q44",
-          "question": "Ces documents doivent-ils être des originaux ?",
+          "question": "Tous vos documents doivent être des originaux, sauf un. Lequel ?",
           "choices": [
-            "Oui, sauf le certificat d'assurance",
-            "Non, des copies simples suffisent",
-            "Non, une photo au téléphone suffit"
+            "L'attestation d'assurance",
+            "Le certificat d'immatriculation",
+            "Le certificat de conformité"
           ],
           "correct": 0,
-          "explanation": "Tous les documents doivent être des originaux, sauf le certificat d'assurance qui peut être en copie.",
+          "explanation": "Seule l'attestation d'assurance peut être une copie.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q44.webp"
         },
         {
           "id": "C1_Q45",
-          "question": "Votre certificat d'assurance est en PDF sur votre téléphone. Est-ce conforme ?",
+          "question": "Votre attestation d'assurance est en PDF sur votre téléphone. Est-ce valable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le certificat d'assurance est le seul document qui peut être en copie, y compris numérique (PDF, JPEG).",
+          "explanation": "L'attestation d'assurance peut être une copie, même sur téléphone.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_Q45.webp"
         },
         {
-          "id": "C1_Q49",
-          "question": "Vous revisez votre theorie. Combien de documents au total devez-vous avoir (personnels + vehicule) ?",
-          "choices": [
-            "4",
-            "6",
-            "3",
-            "8"
-          ],
-          "correct": 1,
-          "explanation": "6 documents au total : 2 personnels (carte d'identité, permis) + 4 dans la voiture.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/C1_Q49.webp"
-        },
-        {
           "id": "C1_Q50",
-          "question": "Vous avez un permis provisoire et souhaitez partir a l'etranger. Le permis provisoire est-il valable hors de Belgique ?",
+          "question": "Votre permis provisoire est-il valable à l'étranger ?",
           "choices": [
+            "Non, seulement en Belgique",
             "Oui, dans toute l'Europe",
-            "Non, il n'est valable qu'en Belgique",
-            "Oui, dans les pays voisins",
-            "Oui, avec une assurance internationale"
-          ],
-          "correct": 1,
-          "explanation": "Le permis provisoire n'est valable qu'en Belgique.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/C1_Q50.webp"
-        },
-        {
-          "id": "C1_Q52",
-          "question": "Pourquoi vous renseigner sur les gilets avant de partir à l'étranger ?",
-          "choices": [
-            "Certains pays en exigent plusieurs",
-            "Les gilets belges n'y valent rien",
-            "La couleur change selon les pays"
+            "Oui, dans les pays voisins"
           ],
           "correct": 0,
-          "explanation": "Certains pays exigent plus d'un gilet de sécurité par véhicule.",
+          "explanation": "Le permis provisoire ne vaut qu'en Belgique.",
           "theoryCardIndex": 3,
-          "image": "/images/questions/C1_Q52.webp"
+          "image": "/images/questions/C1_Q50.webp"
         },
         {
           "id": "C1_Q53",
@@ -694,28 +632,27 @@
         },
         {
           "id": "C1_Q56",
-          "question": "Jusqu'où ce panneau de vitesse est-il valable ?",
+          "question": "Jusqu'où ce panneau de limitation de vitesse est-il valable ?",
           "choices": [
             "Jusqu'au prochain carrefour",
-            "Sur les 500 mètres suivants",
-            "Jusqu'au prochain feu rouge"
+            "Sur 500 m",
+            "Jusqu'au prochain feu"
           ],
           "correct": 0,
-          "explanation": "Le signal C43 de limitation de vitesse est valable jusqu'au prochain carrefour.",
+          "explanation": "Une limitation de vitesse vaut jusqu'au prochain carrefour, sauf si elle est répétée.",
           "theoryCardIndex": 1,
           "severe": true,
           "sign": "C43"
         },
         {
           "id": "C1_Q59",
-          "question": "Que signifie ce panneau ?",
+          "question": "Ce panneau concerne :",
           "choices": [
-            "Interdit au-dessus de cette masse",
-            "Charge maximale du pont indiquée",
-            "Distance restante en tonnes"
+            "La masse en charge",
+            "La masse maximale autorisée"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux véhicules dont la masse en charge (MEC) dépasse la valeur indiquée.",
+          "explanation": "Rond à bord rouge avec « t » : accès interdit au-dessus de cette masse en charge.",
           "theoryCardIndex": 1,
           "sign": "C21"
         },
@@ -734,13 +671,13 @@
         },
         {
           "id": "C1_Q63",
-          "question": "Votre voiture pèse 1 500 kg. Un panneau interdit de tourner à droite aux véhicules de plus de 3,5 t. Pouvez-vous tourner ?",
+          "question": "Votre voiture pèse 1 500 kg. Ce panneau interdit de tourner à droite aux plus de 3,5 t. Pouvez-vous tourner ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "1 500 kg < 3,5 tonnes : l'interdiction ne vous concerne pas.",
+          "explanation": "1 500 kg, c'est moins de 3,5 t : vous n'êtes pas concerné.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q63.webp"
         },
@@ -748,25 +685,24 @@
           "id": "C1_Q64",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Interdit au transport de marchandises",
-            "Zone de livraison pour les camions",
-            "Itinéraire conseillé aux camions"
+            "Accès interdit aux véhicules de transport de choses",
+            "Zone de livraison",
+            "Itinéraire pour camions"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux véhicules de transport de marchandises.",
+          "explanation": "Interdit aux véhicules qui transportent des marchandises.",
           "theoryCardIndex": 0,
           "sign": "C23"
         },
         {
           "id": "C1_Q65",
-          "question": "Ce panneau porte un panneau additionnel de MMA. Que signifie-t-il ?",
+          "question": "Ce panneau porte un panonceau de masse. Il concerne :",
           "choices": [
-            "Interdit au-dessus de cette MMA",
-            "Interdit à tous les camions",
-            "Interdit aussi aux voitures"
+            "La MMA",
+            "La MEC"
           ],
           "correct": 0,
-          "explanation": "Le panneau additionnel MMA restreint l'interdiction aux véhicules de transport de marchandises dépassant cette masse.",
+          "explanation": "Le panonceau limite l'interdiction aux véhicules de transport de choses dont la MMA dépasse la masse indiquée.",
           "theoryCardIndex": 0,
           "sign": "C23"
         },
@@ -796,50 +732,51 @@
         },
         {
           "id": "C1_Q71",
-          "question": "Votre camionnette chargée pèse 3 200 kg. Un signal interdit les véhicules de plus de 3 tonnes en charge. Pouvez-vous passer ?",
+          "question": "Votre camionnette chargée pèse 3 200 kg. Ce panneau interdit les plus de 3 t en charge. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le signal porte sur la MEC. Votre MEC (3 200 kg) > 3 000 kg : vous ne pouvez pas passer.",
+          "explanation": "Le panneau vise la masse en charge : 3 200 kg, c'est plus que 3 t.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C1_Q71.webp"
         },
         {
           "id": "C1_PROV_1",
-          "question": "Avec un permis provisoire B, quand ne pouvez-vous pas conduire ?",
+          "question": "Permis provisoire : à partir de quelle heure ne pouvez-vous plus conduire le vendredi soir ?",
           "choices": [
-            "Les nuits de week-end, 22h à 6h",
-            "Toutes les nuits de la semaine",
-            "Le dimanche toute la journée"
+            "22h",
+            "20h",
+            "18h"
           ],
           "correct": 0,
-          "explanation": "Le permis provisoire interdit de conduire du vendredi, samedi et dimanche soir 22h jusqu'au lendemain 6h, ainsi que les veilles et soirs de jours fériés.",
+          "explanation": "Vendredi, samedi et dimanche soir : pas de conduite de 22h à 6h. Idem les nuits de jours fériés et leurs veilles.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_PROV_1.webp"
         },
         {
           "id": "C1_PROV_2",
-          "question": "Samedi 23h, permis provisoire, votre guide est à côté de vous. Pouvez-vous conduire ?",
+          "question": "Samedi 23h, permis provisoire, votre guide à côté de vous. Pouvez-vous conduire ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Les nuits de week-end (22h-6h), la conduite est interdite avec un permis provisoire — la présence du guide ne change rien.",
+          "explanation": "De 22h à 6h le week-end, c'est interdit, même avec le guide.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_PROV_2.webp"
         },
         {
           "id": "C1_PROV_3",
-          "question": "Avec un permis provisoire, pouvez-vous conduire la veille d'un jour férié à 23h ?",
+          "question": "Permis provisoire. C'est Noël. Pouvez-vous conduire en journée ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, entre 6h et 22h",
+            "Non, pas du tout",
+            "Oui, entre 8h et 18h"
           ],
-          "correct": 1,
-          "explanation": "L'interdiction 22h-6h couvre les nuits de week-end, mais aussi les veilles et les soirs de jours fériés.",
+          "correct": 0,
+          "explanation": "Les jours fériés, seule la nuit (22h-6h) est interdite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C1_PROV_3.webp"
         }
