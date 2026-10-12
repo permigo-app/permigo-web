@@ -5467,242 +5467,223 @@
       "questions": [
         {
           "id": "A6_Q1",
-          "question": "Comment une agglomération est-elle délimitée ?",
+          "question": "Qu'est-ce qui marque le début d'une agglomération ?",
           "choices": [
-            "Par un signal de début et de fin",
-            "Par la continuité des habitations",
-            "Par la présence de commerces"
+            "Le signal de début d'agglomération",
+            "Les premières maisons",
+            "Les premiers commerces"
           ],
           "correct": 0,
-          "explanation": "Une agglomération est délimitée par des signaux spéciaux de début et de fin, pas par la présence de maisons ou commerces.",
+          "explanation": "Seuls les signaux de début et de fin délimitent l'agglomération, pas les maisons.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q1.webp"
         },
         {
           "id": "A6_Q2",
-          "question": "Le panneau jaune à bord rouge indiquant le nom d'une commune a-t-il une signification pour le code de la route ?",
+          "question": "Ce panneau ne porte que le nom de la commune. Indique-t-il le début de l'agglomération ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le panneau jaune à bord rouge est une indication administrative, pas un signal de code de la route. Il ne modifie pas la vitesse.",
+          "explanation": "Un simple panneau de nom de commune n'est pas le signal d'agglomération : il ne change pas la vitesse.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q2.webp"
         },
         {
           "id": "A6_Q4",
-          "question": "Quelle est la vitesse maximale en agglomération ?",
+          "question": "Vitesse maximale en agglomération, en Wallonie et en Flandre ?",
           "choices": [
             "30 km/h",
             "50 km/h",
-            "70 km/h",
-            "90 km/h"
+            "70 km/h"
           ],
           "correct": 1,
-          "explanation": "La vitesse maximale en agglomération est de 50 km/h (Wallonie et Flandre). À Bruxelles, elle est de 30 km/h.",
+          "explanation": "50 km/h en agglomération en Wallonie et en Flandre (30 km/h à Bruxelles).",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/A6_Q4.webp"
         },
         {
           "id": "A6_Q5",
-          "question": "Quelle est la vitesse maximale en agglomération à Bruxelles-Capitale ?",
+          "question": "Vitesse maximale en agglomération à Bruxelles ?",
           "choices": [
-            "50 km/h",
-            "40 km/h",
             "30 km/h",
+            "50 km/h",
             "20 km/h"
           ],
-          "correct": 2,
-          "explanation": "À Bruxelles-Capitale, la vitesse maximale en agglomération est de 30 km/h.",
+          "correct": 0,
+          "explanation": "À Bruxelles, 30 km/h en agglomération, sauf signal contraire.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/A6_Q5.webp"
         },
         {
           "id": "A6_Q7",
-          "question": "Que risquez-vous si vous dépassez de plus de 20 km/h la vitesse maximale en agglomération ?",
+          "question": "Vous roulez à plus de 20 km/h au-dessus de la limite en agglomération. Que risquez-vous ?",
           "choices": [
-            "Un retrait de permis de 8 jours à 6 mois",
-            "Une amende, sans aucune autre conséquence",
-            "Un simple avertissement écrit"
+            "Un retrait immédiat de votre permis",
+            "Seulement une amende",
+            "Un simple avertissement"
           ],
           "correct": 0,
-          "explanation": "Dépasser de plus de 20 km/h en agglomération entraîne un retrait immédiat du permis de 8 jours à 6 mois par le Procureur du Roi.",
+          "explanation": "Au-delà de +20 km/h en agglomération (ou en zone 30), la police peut retirer immédiatement votre permis, en principe pour 15 jours.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/A6_Q7.webp"
         },
         {
-          "id": "A6_Q8",
-          "question": "Vous avez le permis B depuis 1 an et vous dépassez de plus de 20 km/h en agglomération. Que risquez-vous en plus ?",
-          "choices": [
-            "Une déchéance du droit de conduire",
-            "Rien de plus qu'un autre conducteur",
-            "Une amende simplement doublée"
-          ],
-          "correct": 0,
-          "explanation": "Pour les titulaires du permis B depuis moins de 2 ans, le juge devra prononcer la déchéance du droit de conduire.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/A6_Q8.webp"
-        },
-        {
           "id": "A6_Q9",
-          "question": "Un signal de limitation à 70 km/h se trouve après le panneau d'accès à l'agglomération. Jusqu'où est-il valable ?",
+          "question": "Un panneau 70 km/h est placé juste après le signal d'agglomération. Jusqu'où vaut-il ?",
           "choices": [
             "Jusqu'au prochain carrefour",
             "Dans toute l'agglomération",
-            "Sur les 500 mètres suivants"
+            "Sur 500 m"
           ],
           "correct": 0,
-          "explanation": "Un signal de limitation placé au-dessus ou après le panneau d'agglomération n'est valable que jusqu'au prochain carrefour.",
+          "explanation": "Une limite placée à l'entrée d'agglomération vaut jusqu'au prochain carrefour.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q9.webp"
         },
         {
           "id": "A6_Q10",
-          "question": "Un signal 30 km/h est placé au-dessus de ce panneau. Que signifie-t-il ?",
+          "question": "Un panneau 30 km/h est placé au-dessus du signal d'agglomération. Où vaut-il ?",
           "choices": [
-            "30 dans toute l'agglomération",
-            "30 jusqu'au prochain carrefour",
-            "30 sur les 200 mètres suivants"
+            "Dans toute l'agglomération",
+            "Jusqu'au prochain carrefour",
+            "Sur 200 m"
           ],
           "correct": 0,
-          "explanation": "Exception : si la limitation est de 30 km/h au-dessus du signal de début d'agglomération, le 30 km/h s'applique dans toute l'agglomération.",
+          "explanation": "Un 30 km/h combiné au signal d'agglomération vaut dans toute l'agglomération.",
           "theoryCardIndex": 0,
           "sign": "F1"
         },
         {
           "id": "A6_Q12",
-          "question": "Vous quittez l'agglomération en Wallonie. Quelle est la vitesse maximale ?",
+          "question": "Vous quittez l'agglomération en Wallonie. Vitesse maximale ?",
           "choices": [
             "70 km/h",
-            "80 km/h",
             "90 km/h",
             "120 km/h"
           ],
-          "correct": 2,
-          "explanation": "En sortant d'une agglomération en Wallonie, la vitesse maximale est de 90 km/h, sauf indication contraire.",
+          "correct": 1,
+          "explanation": "En Wallonie, 90 km/h hors agglomération, sauf signal contraire.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/A6_Q12.webp"
         },
         {
           "id": "A6_Q13",
-          "question": "Vous quittez l'agglomération en Flandre. Quelle est la vitesse maximale ?",
+          "question": "Vous quittez l'agglomération en Flandre. Vitesse maximale ?",
           "choices": [
-            "90 km/h",
-            "70 km/h",
             "50 km/h",
-            "120 km/h"
+            "70 km/h",
+            "90 km/h"
           ],
           "correct": 1,
-          "explanation": "En sortant d'une agglomération en Flandre, la vitesse maximale est de 70 km/h, sauf indication contraire.",
+          "explanation": "En Flandre, 70 km/h hors agglomération, sauf signal contraire.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/A6_Q13.webp"
         },
         {
           "id": "A6_Q14",
-          "question": "Vous quittez l'agglomération à Bruxelles. Quelle est la vitesse maximale ?",
+          "question": "Vous quittez l'agglomération à Bruxelles. Vitesse maximale ?",
           "choices": [
-            "90 km/h",
-            "70 km/h",
             "50 km/h",
-            "30 km/h"
+            "70 km/h",
+            "90 km/h"
           ],
           "correct": 1,
-          "explanation": "En sortant d'une agglomération à Bruxelles, la vitesse maximale est de 70 km/h, sauf indication contraire.",
+          "explanation": "À Bruxelles, 70 km/h hors agglomération, sauf signal contraire.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/A6_Q14.webp"
         },
         {
           "id": "A6_Q15",
-          "question": "Vous quittez l'agglomération et voyez un panneau 50 km/h juste après le signal de fin. Que faites-vous ?",
+          "question": "Juste après le signal de fin d'agglomération, un panneau 50 km/h. Que faites-vous ?",
           "choices": [
-            "Vous respectez le 50 km/h",
+            "Vous respectez 50 km/h jusqu'au prochain carrefour",
             "Vous passez à 90 km/h",
             "Vous ignorez ce panneau"
           ],
           "correct": 0,
-          "explanation": "Un signal de limitation placé après le signal de fin d'agglomération est valable jusqu'au prochain carrefour.",
+          "explanation": "La limite placée à la sortie d'agglomération vaut jusqu'au prochain carrefour.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q15.webp"
         },
         {
           "id": "A6_Q16",
-          "question": "Des signaux routiers peuvent-ils imposer une autre vitesse que la vitesse standard hors agglomération ?",
+          "question": "Hors agglomération, un panneau peut-il imposer une autre vitesse que la limite habituelle ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Des signaux routiers peuvent toujours imposer une vitesse différente de la vitesse standard.",
+          "explanation": "Un panneau l'emporte toujours sur la limite générale.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A6_Q16.webp"
         },
         {
           "id": "A6_Q17",
-          "question": "Comment reconnaît-on une zone résidentielle ?",
+          "question": "À quoi reconnaît-on une zone résidentielle ?",
           "choices": [
-            "À un signal de début et de fin",
-            "À la présence de ralentisseurs",
-            "À un feu orange clignotant"
+            "À ses signaux de début et de fin",
+            "À ses ralentisseurs",
+            "À ses maisons"
           ],
           "correct": 0,
-          "explanation": "Une zone résidentielle est délimitée par un signal de début et un signal de fin spécifiques.",
+          "explanation": "Une zone résidentielle va du signal de début au signal de fin.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q17.webp"
         },
         {
           "id": "A6_Q18",
-          "question": "Dans une zone résidentielle, les piétons peuvent-ils utiliser toute la largeur de la voirie ?",
+          "question": "Zone résidentielle : les piétons peuvent-ils utiliser toute la largeur de la rue ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les piétons peuvent utiliser toute la largeur de la voirie, mais sans gêner le trafic sans raison valable.",
+          "explanation": "Oui, sans gêner la circulation sans raison.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q18.webp"
         },
         {
           "id": "A6_Q19",
-          "question": "Les cyclistes peuvent-ils utiliser toute la largeur de la voirie dans une zone résidentielle ?",
+          "question": "Zone résidentielle : les cyclistes peuvent-ils utiliser toute la largeur de la rue ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Dans une zone résidentielle, c'est uniquement les piétons (pas les cyclistes) qui peuvent utiliser toute la largeur de la voirie.",
+          "explanation": "Seuls les piétons peuvent utiliser toute la largeur, pas les cyclistes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q19.webp"
         },
         {
           "id": "A6_Q20",
-          "question": "Les enfants peuvent-ils jouer sur la chaussée dans une zone résidentielle ?",
+          "question": "Zone résidentielle : les enfants peuvent-ils jouer sur la chaussée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Dans une zone résidentielle, les enfants et les adultes peuvent jouer sur la chaussée.",
+          "explanation": "Oui, les jeux sont permis sur toute la voie publique.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q20.webp"
         },
         {
           "id": "A6_Q21",
-          "question": "Quelle est la vitesse maximale dans une zone résidentielle ?",
+          "question": "Vitesse maximale dans une zone résidentielle ?",
           "choices": [
-            "30 km/h",
             "20 km/h",
-            "50 km/h",
-            "L'allure du pas"
+            "25 km/h",
+            "30 km/h"
           ],
-          "correct": 1,
-          "explanation": "La vitesse maximale dans une zone résidentielle est de 20 km/h.",
+          "correct": 0,
+          "explanation": "20 km/h maximum dans une zone résidentielle.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A6_Q21.webp"
@@ -5711,64 +5692,50 @@
           "id": "A6_Q23",
           "question": "Où pouvez-vous stationner dans une zone résidentielle ?",
           "choices": [
-            "Sur un emplacement prévu",
-            "N'importe où dans la zone",
-            "Sur le trottoir élargi"
+            "Seulement sur les emplacements prévus",
+            "Partout dans la zone",
+            "Sur le trottoir"
           ],
           "correct": 0,
-          "explanation": "Dans une zone résidentielle, vous ne pouvez stationner que sur un emplacement prévu à cet effet.",
+          "explanation": "Uniquement sur les emplacements marqués.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q23.webp"
         },
         {
           "id": "A6_Q24",
-          "question": "Pouvez-vous stationner à gauche dans une zone résidentielle si un emplacement est prévu ?",
+          "question": "Zone résidentielle : pouvez-vous stationner à gauche, sur un emplacement prévu ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Dans une zone résidentielle avec emplacement prévu, vous pouvez stationner à droite ou à gauche du sens de la marche.",
+          "explanation": "Sur les emplacements prévus, vous pouvez stationner à droite comme à gauche.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A6_Q24.webp"
         },
         {
-          "id": "A6_Q26",
-          "question": "Le dépassement de vitesse dans une zone résidentielle est sanctionné comme :",
-          "choices": [
-            "Sur autoroute",
-            "En agglomération",
-            "Hors agglomération",
-            "Il n'y a pas de sanction"
-          ],
-          "correct": 1,
-          "explanation": "Le dépassement de vitesse en zone résidentielle est sanctionné comme en agglomération.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/A6_Q26.webp"
-        },
-        {
           "id": "A6_Q27",
-          "question": "Dans une rue réservée au jeu, que couvre la zone de jeu ?",
+          "question": "Dans une rue réservée au jeu, où peut-on jouer ?",
           "choices": [
-            "Toute la largeur de la voie",
-            "La chaussée sans le trottoir",
-            "Un espace clôturé à part"
+            "Sur toute la largeur de la voie",
+            "Seulement sur le trottoir",
+            "Dans un espace clôturé"
           ],
           "correct": 0,
-          "explanation": "Dans une rue réservée au jeu, toute la largeur de la voie publique est réservée pour les jeux.",
+          "explanation": "Toute la largeur de la voie publique est réservée aux jeux.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q27.webp"
         },
         {
           "id": "A6_Q28",
-          "question": "Qui peut accéder à une rue réservée au jeu avec un véhicule à moteur ?",
+          "question": "Qui peut entrer en voiture dans une rue réservée au jeu ?",
           "choices": [
-            "Habitants et véhicules autorisés",
-            "Tout conducteur roulant au pas",
-            "Personne, la rue est fermée"
+            "Les habitants et les véhicules autorisés",
+            "Tout le monde, au pas",
+            "Personne"
           ],
           "correct": 0,
-          "explanation": "Seuls les habitants, les véhicules prioritaires, les véhicules autorisés par le gestionnaire, et les cyclistes peuvent y accéder.",
+          "explanation": "Seuls les habitants, les véhicules prioritaires et ceux qui ont une autorisation.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q28.webp"
         },
@@ -5780,289 +5747,285 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "Vous pouvez toujours quitter une rue réservée au jeu.",
+          "explanation": "Vous pouvez toujours en sortir, au pas.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q29.webp"
         },
         {
           "id": "A6_Q31",
-          "question": "À quelle vitesse devez-vous circuler dans une rue réservée au jeu ?",
+          "question": "Vitesse maximale dans une rue réservée au jeu ?",
           "choices": [
-            "À l'allure du pas",
-            "À 20 km/h maximum",
-            "À 30 km/h maximum"
+            "Au pas",
+            "20 km/h",
+            "30 km/h"
           ],
           "correct": 0,
-          "explanation": "Les conducteurs autorisés doivent circuler à l'allure du pas dans une rue réservée au jeu.",
+          "explanation": "Les conducteurs autorisés roulent au pas.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q31.webp"
         },
         {
           "id": "A6_Q32",
-          "question": "Vous habitez dans une rue réservée au jeu et rentrez chez vous en voiture. À quelle vitesse circulez-vous ?",
+          "question": "Vous avez le droit de rouler dans cette rue réservée au jeu. Un enfant traverse devant vous. Qui passe ?",
           "choices": [
-            "À l'allure du pas",
-            "À 30 km/h maximum",
-            "À 50 km/h maximum"
+            "L'enfant",
+            "Vous"
           ],
           "correct": 0,
-          "explanation": "Même les habitants doivent circuler à l'allure du pas dans une rue réservée au jeu.",
+          "explanation": "Dans une rue réservée au jeu, vous roulez au pas et laissez passer piétons et enfants.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q32.webp"
         },
         {
           "id": "A6_Q34",
-          "question": "Quel est le statut des véhicules motorisés dans une zone cyclable ?",
+          "question": "En voiture dans une zone cyclable, quelle règle est vraie ?",
           "choices": [
-            "Ils ont priorité",
-            "Ils sont des \"hôtes\"",
-            "Ils sont interdits",
-            "Ils circulent normalement"
+            "Vous ne pouvez pas dépasser les cyclistes",
+            "Vous ne pouvez pas y entrer",
+            "Vous pouvez rouler à 50 km/h"
           ],
-          "correct": 1,
-          "explanation": "Dans une zone cyclable, les cyclistes sont les usagers principaux. Les véhicules motorisés sont des \"hôtes\".",
+          "correct": 0,
+          "explanation": "Les voitures peuvent entrer, mais à 30 km/h maximum et sans dépasser les cyclistes.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A6_Q34.webp"
         },
         {
           "id": "A6_Q35",
-          "question": "Pouvez-vous dépasser un cycliste dans une zone cyclable ?",
+          "question": "Dans une zone cyclable, les voitures peuvent-elles dépasser les cyclistes ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de dépasser un cycliste dans une zone cyclable.",
+          "explanation": "Non : interdit de dépasser un cycliste dans une zone cyclable.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A6_Q35.webp"
         },
         {
           "id": "A6_Q37",
-          "question": "Pouvez-vous dépasser un cyclomotoriste dans une zone cyclable ?",
+          "question": "Dans une zone cyclable, pouvez-vous dépasser un cyclomoteur ?",
           "choices": [
             "Oui, par la gauche",
             "Oui, par la droite",
-            "Non, c'est interdit"
+            "Non"
           ],
           "correct": 0,
-          "explanation": "On peut dépasser un cyclomotoriste par la gauche dans une zone cyclable.",
+          "explanation": "L'interdiction vise les cyclistes, pas les cyclomoteurs : dépassement par la gauche permis.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A6_Q37.webp"
         },
         {
           "id": "A6_Q39",
-          "question": "Les engins de déplacement motorisés circulant plus vite que l'allure du pas suivent les règles de :",
+          "question": "Une trottinette électrique roule plus vite qu'au pas. Quelles règles suit-elle ?",
           "choices": [
-            "Piétons",
-            "Cyclistes",
-            "Voitures",
-            "Cyclomoteurs"
+            "Celles des cyclistes",
+            "Celles des piétons",
+            "Celles des voitures"
           ],
-          "correct": 1,
-          "explanation": "Les engins de déplacement motorisés (et non motorisés) circulant plus vite que l'allure du pas sont soumis aux règles des cyclistes.",
+          "correct": 0,
+          "explanation": "Au-delà de l'allure du pas, les engins de déplacement suivent les règles des cyclistes.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A6_Q39.webp"
         },
         {
           "id": "A6_Q40",
-          "question": "Pouvez-vous dépasser une trottinette électrique dans une zone cyclable ?",
+          "question": "Pouvez-vous dépasser cette trottinette électrique dans une zone cyclable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Une trottinette électrique circulant plus vite que l'allure du pas est soumise aux règles des cyclistes : vous ne pouvez pas la dépasser.",
+          "explanation": "Elle suit les règles des cyclistes : pas de dépassement.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A6_Q40.webp"
         },
         {
           "id": "A6_Q42",
-          "question": "Les obligations imposées à l'accès d'une zone restent-elles valables de nuit ?",
+          "question": "Ce signal de zone 30 s'applique :",
           "choices": [
-            "Oui",
-            "Non"
+            "De jour comme de nuit",
+            "Seulement le jour",
+            "Jusqu'au prochain carrefour"
           ],
           "correct": 0,
-          "explanation": "Les obligations d'une zone sont valables de jour et de nuit.",
+          "explanation": "Une zone vaut jour et nuit, jusqu'au signal de fin.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q42.webp"
         },
         {
           "id": "A6_Q43",
-          "question": "Comment est délimitée une zone ?",
+          "question": "Où se termine une zone 30 ?",
           "choices": [
-            "Par un signal de début et de fin",
-            "Par des lignes peintes au sol",
-            "Par des barrières amovibles"
+            "Au signal de fin de zone",
+            "Au prochain carrefour",
+            "Après 1 km"
           ],
           "correct": 0,
-          "explanation": "Une zone est délimitée par un signal de début et un signal de fin.",
+          "explanation": "Une zone va du signal de début au signal de fin.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q43.webp"
         },
         {
           "id": "A6_Q44",
-          "question": "Un panneau électronique de zone n'est pas illuminé. L'obligation est-elle valable ?",
+          "question": "Ce panneau électronique de zone 30 est éteint. Devez-vous rouler à 30 km/h ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Pour les panneaux électroniques, l'obligation n'est valable que lorsque le panneau est illuminé.",
+          "explanation": "Un panneau électronique n'impose sa règle que lorsqu'il est allumé.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q44.webp"
         },
         {
           "id": "A6_Q45",
-          "question": "Le dépassement de vitesse en zone 30 est sanctionné comme :",
+          "question": "Un excès de vitesse en zone 30 est puni comme :",
           "choices": [
-            "Sur autoroute",
             "En agglomération",
             "Hors agglomération",
-            "Il n'y a pas de sanction"
+            "Sur autoroute"
           ],
-          "correct": 1,
-          "explanation": "Le dépassement de vitesse en zone 30 est sanctionné comme en agglomération.",
+          "correct": 0,
+          "explanation": "Comme en agglomération : retrait immédiat possible dès +20 km/h.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q45.webp"
         },
         {
           "id": "A6_Q46",
-          "question": "Vous voyez un panneau électronique de zone 30 illuminé. Que devez-vous faire ?",
+          "question": "Ce panneau électronique de zone 30 est allumé. Que faites-vous ?",
           "choices": [
-            "Respecter le 30 dans la zone",
-            "Ralentir au niveau du panneau",
-            "Rien, il n'est qu'indicatif"
+            "Vous roulez à 30 km/h dans toute la zone",
+            "Vous ralentissez juste au panneau",
+            "Rien, il est indicatif"
           ],
           "correct": 0,
-          "explanation": "Un panneau de zone illuminé impose la limite dans toute la zone jusqu'au signal de fin.",
+          "explanation": "Allumé, il impose 30 km/h jusqu'au signal de fin de zone.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q46.webp"
         },
         {
           "id": "A6_Q47",
-          "question": "Quels sont les deux signaux nécessaires pour délimiter les abords d'école ?",
+          "question": "Qu'indique cette combinaison de signaux ?",
           "choices": [
-            "Présence d'enfants ET zone 30",
-            "Présence d'enfants seule",
-            "Zone résidentielle et zone 30"
+            "Les abords d'une école",
+            "Une zone de jeu",
+            "Une priorité de droite partout"
           ],
           "correct": 0,
-          "explanation": "Les abords d'école nécessitent obligatoirement les deux signaux ensemble : \"présence possible d'enfants\" et \"zone 30\".",
+          "explanation": "Signal « enfants » + zone 30 ensemble : les abords d'école.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q47.webp"
         },
         {
           "id": "A6_Q48",
-          "question": "Vous voyez un signal \"présence possible d'enfants\" mais pas de signal zone 30. Êtes-vous dans les abords d'école ?",
+          "question": "Signal « enfants » mais pas de zone 30. Êtes-vous aux abords d'une école ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il faut impérativement les deux signaux ensemble pour délimiter les abords d'école.",
+          "explanation": "Il faut les deux signaux ensemble.",
           "theoryCardIndex": 4,
           "sign": "A23"
         },
         {
           "id": "A6_Q49",
-          "question": "Quelle est la vitesse maximale dans les abords d'école ?",
+          "question": "Vitesse maximale aux abords d'une école ?",
           "choices": [
             "20 km/h",
             "30 km/h",
-            "50 km/h",
-            "L'allure du pas"
+            "50 km/h"
           ],
           "correct": 1,
-          "explanation": "La vitesse maximale dans les abords d'école est de 30 km/h (zone 30).",
+          "explanation": "30 km/h aux abords d'école.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/A6_Q49.webp"
         },
         {
           "id": "A6_Q50",
-          "question": "Vous roulez à 40 km/h dans les abords d'école. Commettez-vous une infraction ?",
+          "question": "Vous roulez à 40 km/h aux abords d'une école. Est-ce une infraction ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Dans les abords d'école, la limite est 30 km/h. Rouler à 40 km/h est une infraction.",
+          "explanation": "La limite est 30 km/h.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q50.webp"
         },
         {
           "id": "A6_Q51",
-          "question": "Qu'est-ce qui caractérise une rue scolaire ?",
+          "question": "Qu'est-ce qu'une rue scolaire ?",
           "choices": [
-            "Elle est fermée aux heures d'école",
-            "Elle est en zone 30 permanente",
-            "Elle longe simplement une école"
+            "Une rue fermée aux voitures aux heures d'école",
+            "Une rue en zone 30 permanente",
+            "Une rue qui longe une école"
           ],
           "correct": 0,
-          "explanation": "Une rue scolaire est une voie temporairement fermée avec des barrières C3 portant la mention \"rue scolaire\".",
+          "explanation": "Aux heures d'école, une barrière ou un signal C3 « rue scolaire » la ferme aux véhicules.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q51.webp"
         },
         {
           "id": "A6_Q52",
-          "question": "Qu'est-ce qui peut remplacer la barrière dans une rue scolaire ?",
+          "question": "Qu'est-ce qui peut remplacer la barrière d'une rue scolaire ?",
           "choices": [
-            "Un signal C3 avec mention",
+            "Un signal C3 avec la mention « rue scolaire »",
             "Un feu orange clignotant",
-            "Des cônes de signalisation"
+            "Des cônes"
           ],
           "correct": 0,
-          "explanation": "Un signal C3 fixe avec la mention \"rue scolaire\" et l'horaire peut remplacer la barrière déplaçable.",
+          "explanation": "Un signal C3 fixe avec la mention et les heures peut remplacer la barrière.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q52.webp"
         },
         {
           "id": "A6_Q53",
-          "question": "À qui la rue scolaire est-elle réservée pendant les heures scolaires ?",
+          "question": "Aux heures d'école, à qui la rue scolaire est-elle réservée ?",
           "choices": [
-            "Piétons, cyclistes, speed pedelecs",
-            "Aux piétons et aux enfants",
-            "À tous les usagers de la route"
+            "Piétons, cyclistes et speed pedelecs",
+            "Aux seuls enfants",
+            "À tous les usagers"
           ],
           "correct": 0,
-          "explanation": "Pendant les heures scolaires, la rue scolaire est réservée aux piétons, cyclistes et speed pedelecs.",
+          "explanation": "Piétons, cyclistes et speed pedelecs.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q53.webp"
         },
         {
           "id": "A6_Q54",
-          "question": "Un habitant de la rue scolaire peut-il y entrer en voiture pendant les heures scolaires ?",
+          "question": "Vous habitez une rue scolaire. Pouvez-vous y entrer en voiture aux heures d'école ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Les habitants peuvent quitter la rue scolaire mais ne peuvent pas y entrer aux heures scolaires.",
+          "explanation": "Les habitants ne peuvent pas entrer pendant les heures d'école, mais peuvent sortir.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q54.webp"
         },
         {
           "id": "A6_Q55",
-          "question": "Un habitant de la rue scolaire peut-il quitter la rue en voiture pendant les heures scolaires ?",
+          "question": "Votre voiture est garée dans la rue, qui devient rue scolaire. Pouvez-vous partir ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, au pas",
+            "Non, vous attendez la fin"
           ],
           "correct": 0,
-          "explanation": "Les habitants peuvent quitter la rue scolaire même pendant les heures scolaires.",
+          "explanation": "Vous pouvez quitter la rue scolaire, au pas, en cédant le passage aux piétons et cyclistes.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q55.webp"
         },
         {
           "id": "A6_Q56",
-          "question": "Un véhicule prioritaire peut-il entrer dans une rue scolaire ?",
+          "question": "Une ambulance en mission peut-elle entrer dans une rue scolaire ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les véhicules prioritaires peuvent entrer dans une rue scolaire lorsque leur mission le justifie.",
+          "explanation": "Les véhicules prioritaires peuvent y entrer quand leur mission le justifie.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q56.webp"
         },
@@ -6070,186 +6033,187 @@
           "id": "A6_Q58",
           "question": "Un piéton traverse devant vous dans la rue scolaire. Que faites-vous ?",
           "choices": [
-            "Vous cédez le passage",
+            "Vous le laissez passer",
             "Vous continuez lentement",
             "Vous faites un appel de phares"
           ],
           "correct": 0,
-          "explanation": "Dans une rue scolaire, vous devez céder le passage aux piétons et vous arrêter si nécessaire.",
+          "explanation": "Vous cédez le passage aux piétons et cyclistes, en vous arrêtant si nécessaire.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/A6_Q58.webp"
         },
         {
           "id": "A6_Q59",
-          "question": "Quelles sont vos obligations envers les piétons et cyclistes dans une rue scolaire ?",
+          "question": "Vous pouvez circuler dans une rue scolaire. À quelle vitesse ?",
           "choices": [
-            "Céder le passage et s'arrêter",
-            "Limiter la vitesse à 30 km/h",
-            "Les avertir en klaxonnant"
+            "Au pas",
+            "20 km/h",
+            "30 km/h"
           ],
           "correct": 0,
-          "explanation": "Vous devez ne pas mettre en danger ni gêner les piétons et cyclistes, et leur céder le passage en vous arrêtant si nécessaire.",
+          "explanation": "Les véhicules qui peuvent y circuler roulent au pas.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/A6_Q59.webp"
         },
         {
           "id": "A6_Q60",
-          "question": "Comment savez-vous quels usagers peuvent emprunter un chemin réservé ?",
+          "question": "Qui peut emprunter ce chemin réservé ?",
           "choices": [
-            "Par les emblèmes du panneau",
-            "Par la largeur du chemin",
-            "Par la couleur du revêtement"
+            "Les usagers dessinés sur le panneau",
+            "Tout le monde, au pas",
+            "Seulement les piétons"
           ],
           "correct": 0,
-          "explanation": "Les emblèmes sur le panneau du chemin réservé indiquent quels usagers peuvent l'emprunter.",
+          "explanation": "Les symboles du panneau disent qui peut y passer.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A6_Q60.webp"
         },
         {
           "id": "A6_Q63",
-          "question": "Votre propriété est accessible uniquement par un chemin réservé. Pouvez-vous l'emprunter même si vous n'êtes pas repris sur le signal ?",
+          "question": "Votre maison n'est accessible que par ce chemin réservé. Pouvez-vous l'emprunter en voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Exception : vous pouvez emprunter un chemin réservé pour rejoindre une propriété accessible uniquement par ce chemin.",
+          "explanation": "Oui, pour rejoindre une propriété accessible uniquement par ce chemin.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A6_Q63.webp"
         },
         {
           "id": "A6_Q64",
-          "question": "Vous n'êtes pas repris sur le signal d'un chemin réservé et votre propriété n'est pas dans ce chemin. Pouvez-vous y circuler ?",
+          "question": "Vous n'êtes pas sur le panneau et n'habitez pas ce chemin réservé. Pouvez-vous y rouler ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Sans être repris sur le signal et sans propriété accessible par ce chemin, vous n'avez pas accès au chemin réservé.",
+          "explanation": "Sans être repris sur le panneau ni y avoir une propriété, vous n'y avez pas accès.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A6_Q64.webp"
         },
         {
           "id": "A6_Q65",
-          "question": "Pouvez-vous entraver la circulation sans nécessité sur un chemin réservé ?",
+          "question": "Sur un chemin réservé, pouvez-vous gêner les autres usagers sans nécessité ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Même si vous êtes autorisé à emprunter le chemin, vous ne devez pas entraver la circulation sans nécessité.",
+          "explanation": "Même autorisé, vous ne gênez pas les autres sans nécessité.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A6_Q65.webp"
         },
         {
           "id": "A6_Q66",
-          "question": "À qui un site spécial franchissable est-il réservé ?",
+          "question": "À qui est réservé un site spécial franchissable ?",
           "choices": [
             "Aux trams et à certains bus",
-            "Aux piétons et aux poussettes",
-            "Aux cyclistes des deux sens"
+            "Aux piétons",
+            "Aux cyclistes"
           ],
           "correct": 0,
-          "explanation": "Le SSF est une partie de la voie publique réservée à la circulation des trams et de certains bus de transport en commun.",
+          "explanation": "Le site spécial franchissable est réservé aux transports en commun.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q66.webp"
         },
         {
           "id": "A6_Q67",
-          "question": "Le SSF fait-il partie de la chaussée ?",
+          "question": "Le site spécial franchissable fait-il partie de la chaussée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le SSF ne fait PAS partie de la chaussée.",
+          "explanation": "Non, il ne fait pas partie de la chaussée.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q67.webp"
         },
         {
           "id": "A6_Q68",
-          "question": "Pouvez-vous circuler en voiture sur un SSF ?",
+          "question": "Pouvez-vous rouler en voiture sur un site spécial franchissable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Vous ne pouvez pas circuler sur un SSF, sauf si un panneau additionnel l'autorise pour votre catégorie de conducteurs.",
+          "explanation": "Non, sauf si un panneau l'autorise pour votre catégorie.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q68.webp"
         },
         {
           "id": "A6_Q69",
-          "question": "Avec le covoiturage (minimum 2 ou 3 personnes), pouvez-vous emprunter le SSF ?",
+          "question": "Vous êtes trois dans la voiture. Pouvez-vous emprunter le site spécial franchissable ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Seulement si un panneau l'autorise",
+            "Oui, toujours",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "Le covoiturage peut être autorisé sur le SSF uniquement si un panneau additionnel le précise.",
+          "explanation": "Le covoiturage n'y est admis que si un panneau le prévoit.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q69.webp"
         },
         {
           "id": "A6_Q70",
-          "question": "Pouvez-vous traverser le SSF pour rejoindre un emplacement de stationnement ?",
+          "question": "Pouvez-vous traverser le site spécial franchissable pour aller vous garer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Vous pouvez traverser le SSF pour rejoindre un emplacement de stationnement le long du SSF.",
+          "explanation": "Oui, pour rejoindre un emplacement de stationnement.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q70.webp"
         },
         {
           "id": "A6_Q71",
-          "question": "Pouvez-vous traverser le SSF pour rejoindre votre propriété ?",
+          "question": "Pouvez-vous traverser le site spécial franchissable pour rentrer chez vous ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Vous pouvez traverser le SSF pour rejoindre ou quitter une propriété.",
+          "explanation": "Oui, pour entrer dans une propriété ou en sortir.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q71.webp"
         },
         {
           "id": "A6_Q72",
-          "question": "Pouvez-vous traverser le SSF dans un carrefour ?",
+          "question": "Pouvez-vous traverser le site spécial franchissable à un carrefour ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La traversée du SSF est autorisée dans les carrefours.",
+          "explanation": "Oui, la traversée est permise aux carrefours.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q72.webp"
         },
         {
           "id": "A6_Q73",
-          "question": "Un obstacle bloque la chaussée. Pouvez-vous utiliser le SSF pour le contourner ?",
+          "question": "Un obstacle bloque la chaussée. Pouvez-vous le contourner par le site spécial franchissable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En cas d'obstacle sur la chaussée, vous pouvez utiliser le SSF pour le contourner.",
+          "explanation": "Oui, pour contourner un obstacle.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q73.webp"
         },
         {
           "id": "A6_Q74",
-          "question": "Si vous circulez dans un SSF, que devez-vous respecter ?",
+          "question": "Vous roulez exceptionnellement sur le site spécial franchissable. Que respectez-vous ?",
           "choices": [
-            "Les feux spéciaux des trams",
-            "Les panneaux routiers seuls",
-            "La vitesse maximale, sans plus"
+            "Les feux spéciaux des trams et bus",
+            "Seulement les panneaux",
+            "Rien de plus"
           ],
           "correct": 0,
-          "explanation": "Lorsque vous circulez dans un SSF, vous devez respecter les feux lumineux spéciaux des véhicules de transport en commun.",
+          "explanation": "Sur ce site, vous respectez aussi les feux réservés aux transports en commun.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A6_Q74.webp"
         },
@@ -6294,14 +6258,14 @@
         },
         {
           "id": "A6_Q81",
-          "question": "Que signifie ce panneau barré ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Fin de zone résidentielle",
-            "Début de zone résidentielle",
-            "Zone résidentielle interdite"
+            "Fin de la zone résidentielle",
+            "Fin d'une zone de jeu",
+            "Début d'une zone résidentielle"
           ],
           "correct": 0,
-          "explanation": "Le signal de zone résidentielle barré indique la fin d'une zone résidentielle.",
+          "explanation": "Barré : fin de la zone résidentielle.",
           "theoryCardIndex": 1,
           "sign": "F12b"
         },
@@ -6309,24 +6273,24 @@
           "id": "A6_Q83",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Une zone limitée à 30 km/h",
-            "Une vitesse conseillée de 30",
-            "Un danger annoncé à 30 mètres"
+            "Début d'une zone 30",
+            "Vitesse conseillée de 30 km/h",
+            "Danger à 30 m"
           ],
           "correct": 0,
-          "explanation": "Le signal zone 30 indique le commencement d'une zone où la vitesse est limitée à 30 km/h.",
+          "explanation": "Zone 30 : 30 km/h maximum jusqu'au signal de fin.",
           "theoryCardIndex": 4,
           "sign": "F4a"
         },
         {
           "id": "A6_Q84",
-          "question": "Vous êtes dans une zone 30. Un panneau 50 km/h apparaît-il automatiquement dans cette zone ?",
+          "question": "Vous êtes dans une zone 30. Après un carrefour, pouvez-vous reprendre 50 km/h ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, pas avant le signal de fin",
+            "Oui, après chaque carrefour"
           ],
-          "correct": 1,
-          "explanation": "Le 30 km/h est valable dans toute la zone jusqu'au signal de fin, sans exception automatique.",
+          "correct": 0,
+          "explanation": "La zone 30 continue après les carrefours, jusqu'au signal de fin.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A6_Q84.webp"
         },
@@ -6344,40 +6308,28 @@
           "destination": "panneaux"
         },
         {
-          "id": "A6_Q86",
-          "question": "Le signal de chemin réservé peut-il être adapté en fonction des catégories d'usagers ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "Le signal de chemin réservé peut être adapté pour indiquer différentes catégories d'usagers autorisés.",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/A6_Q86.webp"
-        },
-        {
           "id": "A6_Q87",
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Un site spécial franchissable",
-            "Un arrêt de tram ou de bus",
-            "Un parking réservé aux bus"
+            "Un arrêt de tram",
+            "Un parking pour bus"
           ],
           "correct": 0,
-          "explanation": "Ce signal indique un site spécial franchissable (SSF) réservé aux transports en commun.",
+          "explanation": "Ce signal annonce un site spécial franchissable, réservé aux transports en commun.",
           "theoryCardIndex": 6,
           "sign": "F18"
         },
         {
           "id": "A6_Q88",
-          "question": "Ce panneau porte un pictogramme de cyclomoteur. Que signifie-t-il ?",
+          "question": "Ce panneau porte un cyclomoteur. Que signifie-t-il ?",
           "choices": [
             "Les cyclomoteurs y sont admis",
             "Les cyclomoteurs y sont interdits",
             "Un parking pour cyclomoteurs"
           ],
           "correct": 0,
-          "explanation": "Le panneau SSF avec pictogramme cyclomoteur signifie que les cyclomotoristes sont autorisés sur ce SSF.",
+          "explanation": "Le symbole cyclomoteur autorise les cyclomoteurs sur ce site.",
           "theoryCardIndex": 6,
           "sign": "F18"
         },
@@ -6396,14 +6348,14 @@
         },
         {
           "id": "A6_Q90",
-          "question": "Ce panneau porte un pictogramme de vélo. Que signifie-t-il ?",
+          "question": "Ce panneau porte un vélo. Que signifie-t-il ?",
           "choices": [
             "Les cyclistes y sont admis",
             "Les cyclistes y sont interdits",
-            "Un parking pour les vélos"
+            "Un parking pour vélos"
           ],
           "correct": 0,
-          "explanation": "Le panneau SSF avec pictogramme vélo signifie que les cyclistes sont autorisés sur ce SSF.",
+          "explanation": "Le symbole vélo autorise les cyclistes sur ce site.",
           "theoryCardIndex": 6,
           "sign": "F18"
         },
@@ -6432,31 +6384,6 @@
           "explanation": "Une zone cyclable s'applique à plusieurs rues, tandis qu'une rue cyclable concerne une seule rue.",
           "sign": "F111",
           "destination": "panneaux"
-        },
-        {
-          "id": "A6_Q95",
-          "question": "Ce panneau est suivi d'un signal zone 30. Quelle vitesse respectez-vous ?",
-          "choices": [
-            "20 km/h, la plus restrictive",
-            "30 km/h, le dernier signal",
-            "50 km/h, la règle par défaut"
-          ],
-          "correct": 0,
-          "explanation": "La zone résidentielle impose 20 km/h, ce qui est plus restrictif que la zone 30. C'est cette limite qui s'applique.",
-          "theoryCardIndex": 1,
-          "sign": "F12a"
-        },
-        {
-          "id": "A6_Q97",
-          "question": "Vous voyez un panneau électronique de zone 30 éteint. Devez-vous rouler à 30 km/h ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Un panneau électronique éteint n'impose aucune obligation. L'obligation n'est valable que lorsque le panneau est illuminé.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/A6_Q97.webp"
         }
       ]
     }
