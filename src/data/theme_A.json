@@ -290,13 +290,13 @@
         },
         {
           "id": "A1Q21",
-          "question": "Les bandes d'herbe le long de la route font-elles partie de la voie publique ?",
+          "question": "La piste cyclable et le trottoir font-ils partie de la voie publique ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La voie publique comprend la chaussée, mais aussi les accotements, les trottoirs et les pistes cyclables.",
+          "explanation": "La voie publique, c'est tout : chaussée, pistes cyclables, trottoirs, accotements.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q21.webp"
         },
@@ -315,14 +315,14 @@
         },
         {
           "id": "A1Q24",
-          "question": "Comment s'appelle la partie de la route entourée en jaune ?",
+          "question": "Comment s'appelle la partie de la route où vous roulez ?",
           "choices": [
             "La chaussée",
-            "La bande de circulation",
+            "Le trottoir",
             "L'accotement"
           ],
           "correct": 0,
-          "explanation": "La chaussée est toute la partie faite pour les véhicules. Elle peut être divisée en plusieurs bandes de circulation.",
+          "explanation": "La chaussée est la partie aménagée pour les véhicules.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q24.webp"
         },
@@ -403,13 +403,14 @@
         },
         {
           "id": "A1Q33",
-          "question": "Ce conducteur roule au milieu de la chaussée, il s'y sent plus en sécurité. En a-t-il le droit ?",
+          "question": "Deux bandes dans votre sens, trafic fluide. Sur quelle bande roulez-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Celle de droite",
+            "Celle de gauche",
+            "Au milieu, sur la ligne"
           ],
-          "correct": 1,
-          "explanation": "Règle de base : rouler le plus près possible du bord droit.",
+          "correct": 0,
+          "explanation": "On roule à droite ; la bande de gauche sert à dépasser.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A1Q33.webp"
         },
@@ -1852,13 +1853,13 @@
         },
         {
           "id": "A2_Q33",
-          "question": "Pouvez-vous vous arrêter sur la bande bus pour déposer un passager ?",
+          "question": "Cette voiture s'est arrêtée sur la bande bus pour déposer quelqu'un. Est-ce permis ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, brièvement"
           ],
-          "correct": 1,
-          "explanation": "En voiture, vous ne pouvez ni circuler, ni vous arrêter, ni stationner sur la bande bus.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement sont interdits sur la bande bus.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q33.webp"
         },
@@ -2483,7 +2484,7 @@
         },
         {
           "id": "A3_Q9",
-          "question": "Ce cycliste de 14 ans n'a pas de piste cyclable. Peut-il rouler sur le trottoir ?",
+          "question": "Pas de piste cyclable. Ce cycliste adulte peut-il rouler sur le trottoir ?",
           "choices": [
             "Oui, hors agglomération seulement",
             "Oui, partout",
@@ -3796,13 +3797,13 @@
         },
         {
           "id": "A4_Q21",
-          "question": "Pouvez-vous vous arrêter un instant sur la bande d'arrêt d'urgence pour envoyer un SMS ?",
+          "question": "Ce conducteur s'arrête sur la bande d'arrêt d'urgence pour regarder sa carte. Est-ce permis ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La bande d'arrêt d'urgence est réservée aux vraies urgences : ni SMS, ni carte, ni pause.",
+          "explanation": "La bande d'arrêt d'urgence est réservée aux vraies urgences : ni carte, ni SMS, ni pause.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A4_Q21.webp"
         },
@@ -4038,7 +4039,7 @@
         },
         {
           "id": "A4_Q46",
-          "question": "Pas de flèche verte au-dessus de la bande des heures de pointe. Quand pouvez-vous y rouler ?",
+          "question": "Croix rouge au-dessus de la bande des heures de pointe. Quand pouvez-vous y rouler ?",
           "choices": [
             "Seulement pour entrer sur l'autoroute ou en sortir",
             "Jamais, même pour sortir",
@@ -4247,13 +4248,13 @@
         },
         {
           "id": "A4_Q68",
-          "question": "Pouvez-vous vous arrêter sur la bretelle d'accès pour prendre un passager ?",
+          "question": "Pouvez-vous vous arrêter sur une bretelle d'autoroute pour prendre un passager ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La bretelle fait partie de l'autoroute : l'arrêt y est interdit.",
+          "explanation": "Les bretelles font partie de l'autoroute : l'arrêt y est interdit.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q68.webp"
         },
@@ -4310,14 +4311,14 @@
         },
         {
           "id": "A4_Q75",
-          "question": "Ce panneau annonce quoi, 1600 m plus loin ?",
+          "question": "Deux autoroutes se croisent ici. Comment s'appelle cet ouvrage ?",
           "choices": [
             "Un échangeur",
             "Une sortie ordinaire",
-            "La fin de l'autoroute"
+            "Un rond-point"
           ],
           "correct": 0,
-          "explanation": "Panneau blanc sur fond bleu avec un échangeur : croisement avec une autre autoroute.",
+          "explanation": "Un échangeur relie deux autoroutes sans carrefour ni feu.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q75.webp"
         },
@@ -4891,14 +4892,14 @@
         },
         {
           "id": "A5_Q32",
-          "question": "Panne sur la bande d'arrêt d'urgence. Quand le conducteur porte-t-il le gilet fluo ?",
+          "question": "Panne au bord d'une route pour automobiles. Quand le conducteur met-il le gilet fluo ?",
           "choices": [
-            "Toujours, quand il quitte la voiture",
-            "Uniquement la nuit",
-            "Uniquement le jour"
+            "Avant de sortir de la voiture",
+            "Seulement la nuit",
+            "Seulement par brouillard"
           ],
           "correct": 0,
-          "explanation": "Le conducteur met le gilet dès qu'il quitte la voiture, de jour comme de nuit.",
+          "explanation": "Il le porte dès qu'il sort, de jour comme de nuit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q32.webp"
         },
@@ -4943,13 +4944,14 @@
         },
         {
           "id": "A5_Q37",
-          "question": "Le conducteur de la voiture brune reste sur la bande de gauche alors que la droite est libre. Est-ce permis ?",
+          "question": "Vous venez de dépasser ce camion par la gauche. Ensuite, où roulez-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Je reviens à droite dès que possible",
+            "Je reste à gauche",
+            "Je roule à cheval sur la ligne"
           ],
-          "correct": 1,
-          "explanation": "Après un dépassement, on revient à droite. Rester à gauche sans raison est une infraction.",
+          "correct": 0,
+          "explanation": "Dépassement fini : retour sur la bande de droite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q37.webp"
         },
@@ -5041,13 +5043,14 @@
         },
         {
           "id": "A5_Q49",
-          "question": "Pouvez-vous vous arrêter sur la bande d'arrêt d'urgence pour téléphoner ?",
+          "question": "Panne sur la bande d'arrêt d'urgence. Où vous mettez-vous pour appeler les secours ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Derrière la glissière",
+            "Dans la voiture",
+            "Sur la bande d'arrêt d'urgence"
           ],
-          "correct": 1,
-          "explanation": "La bande d'arrêt d'urgence ne sert qu'en cas de vraie urgence.",
+          "correct": 0,
+          "explanation": "Derrière la glissière, avec le gilet : à l'abri du trafic.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q49.webp"
         },
@@ -5766,13 +5769,13 @@
         },
         {
           "id": "A6_Q32",
-          "question": "Vous avez le droit de rouler dans cette rue réservée au jeu. Un enfant traverse devant vous. Qui passe ?",
+          "question": "Vous habitez cette rue réservée au jeu. Des enfants jouent sur la chaussée. Qui a la priorité ?",
           "choices": [
-            "L'enfant",
-            "Vous"
+            "Les enfants",
+            "Vous, vous habitez là"
           ],
           "correct": 0,
-          "explanation": "Dans une rue réservée au jeu, vous roulez au pas et laissez passer piétons et enfants.",
+          "explanation": "Dans une rue réservée au jeu, vous roulez au pas et laissez passer les enfants.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A6_Q32.webp"
         },

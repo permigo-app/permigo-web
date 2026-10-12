@@ -263,13 +263,13 @@
         },
         {
           "id": "A1Q21",
-          "question": "Maken de grasstroken langs de weg deel uit van de openbare weg?",
+          "question": "Horen het fietspad en het trottoir bij de openbare weg?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De openbare weg omvat de rijbaan, maar ook de bermen, de voetpaden en de fietspaden.",
+          "explanation": "De openbare weg is alles: rijbaan, fietspaden, trottoirs, bermen.",
           "theoryCardIndex": 1
         },
         {
@@ -286,14 +286,14 @@
         },
         {
           "id": "A1Q24",
-          "question": "Hoe heet het geel omlijnde deel van de weg?",
+          "question": "Hoe heet het deel van de weg waarop je rijdt?",
           "choices": [
             "De rijbaan",
-            "De rijstrook",
+            "Het trottoir",
             "De berm"
           ],
           "correct": 0,
-          "explanation": "De rijbaan is het hele deel dat voor voertuigen bestemd is. Ze kan in meerdere rijstroken verdeeld zijn.",
+          "explanation": "De rijbaan is het deel dat voor voertuigen aangelegd is.",
           "theoryCardIndex": 1
         },
         {
@@ -367,13 +367,14 @@
         },
         {
           "id": "A1Q33",
-          "question": "Deze bestuurder rijdt in het midden van de rijbaan, hij voelt zich daar veiliger. Mag dat?",
+          "question": "Twee rijstroken in jouw richting, vlot verkeer. Op welke rijstrook rijd je?",
           "choices": [
-            "Ja",
-            "Nee"
+            "De rechtse",
+            "De linkse",
+            "In het midden, op de lijn"
           ],
-          "correct": 1,
-          "explanation": "Basisregel: zo dicht mogelijk bij de rechterrand rijden.",
+          "correct": 0,
+          "explanation": "Je rijdt rechts; de linkse rijstrook dient om in te halen.",
           "theoryCardIndex": 2
         },
         {
@@ -1742,13 +1743,13 @@
         },
         {
           "id": "A2_Q33",
-          "question": "Mag je op de busstrook stilstaan om een passagier af te zetten?",
+          "question": "Deze auto is op de busstrook gestopt om iemand af te zetten. Mag dat?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, kort"
           ],
-          "correct": 1,
-          "explanation": "Met de auto mag je op de busstrook niet rijden, niet stilstaan en niet parkeren.",
+          "correct": 0,
+          "explanation": "Stilstaan en parkeren zijn verboden op de busstrook.",
           "theoryCardIndex": 3
         },
         {
@@ -2327,7 +2328,7 @@
         },
         {
           "id": "A3_Q9",
-          "question": "Deze fietser van 14 heeft geen fietspad. Mag hij op het voetpad fietsen?",
+          "question": "Geen fietspad. Mag deze volwassen fietser op het voetpad fietsen?",
           "choices": [
             "Ja, alleen buiten de bebouwde kom",
             "Ja, overal",
@@ -3539,13 +3540,13 @@
         },
         {
           "id": "A4_Q21",
-          "question": "Mag je even op de pechstrook stilstaan om een sms te sturen?",
+          "question": "Deze bestuurder stopt op de pechstrook om zijn kaart te bekijken. Mag dat?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De pechstrook is voor echte noodgevallen: geen sms, geen kaart, geen pauze.",
+          "explanation": "De pechstrook is voor echte noodgevallen: geen kaart, geen sms, geen pauze.",
           "theoryCardIndex": 2
         },
         {
@@ -3762,7 +3763,7 @@
         },
         {
           "id": "A4_Q46",
-          "question": "Geen groene pijl boven de spitsstrook. Wanneer mag je erop rijden?",
+          "question": "Rood kruis boven de spitsstrook. Wanneer mag je erop rijden?",
           "choices": [
             "Alleen om de autosnelweg op of af te rijden",
             "Nooit, ook niet om af te rijden",
@@ -3955,13 +3956,13 @@
         },
         {
           "id": "A4_Q68",
-          "question": "Mag je op de oprit stilstaan om een passagier op te pikken?",
+          "question": "Mag je op een op- of afrit van de autosnelweg stoppen om een passagier op te pikken?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De oprit hoort bij de autosnelweg: stilstaan is er verboden.",
+          "explanation": "Op- en afritten horen bij de autosnelweg: stilstaan is er verboden.",
           "theoryCardIndex": 8
         },
         {
@@ -4013,14 +4014,14 @@
         },
         {
           "id": "A4_Q75",
-          "question": "Wat kondigt dit bord aan, 1600 m verder?",
+          "question": "Hier kruisen twee autosnelwegen. Hoe heet dit bouwwerk?",
           "choices": [
             "Een verkeerswisselaar",
             "Een gewone afrit",
-            "Het einde van de autosnelweg"
+            "Een rotonde"
           ],
           "correct": 0,
-          "explanation": "Een verkeerswisselaar: het kruispunt met een andere autosnelweg.",
+          "explanation": "Een verkeerswisselaar verbindt twee autosnelwegen zonder kruispunt of licht.",
           "theoryCardIndex": 8
         },
         {
@@ -4554,14 +4555,14 @@
         },
         {
           "id": "A5_Q32",
-          "question": "Panne op de pechstrook. Wanneer draagt de bestuurder het fluohesje?",
+          "question": "Panne langs een autoweg. Wanneer trekt de bestuurder de fluovest aan?",
           "choices": [
-            "Altijd, als hij de auto verlaat",
+            "Voor hij uitstapt",
             "Alleen 's nachts",
-            "Alleen overdag"
+            "Alleen bij mist"
           ],
           "correct": 0,
-          "explanation": "De bestuurder trekt het hesje aan zodra hij de auto verlaat, dag en nacht.",
+          "explanation": "Hij draagt hem zodra hij uitstapt, overdag en 's nachts.",
           "theoryCardIndex": 2
         },
         {
@@ -4602,13 +4603,14 @@
         },
         {
           "id": "A5_Q37",
-          "question": "De bestuurder van de bruine auto blijft links rijden terwijl rechts vrij is. Mag dat?",
+          "question": "Je hebt deze vrachtwagen links ingehaald. Waar rijd je daarna?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Ik ga zo snel mogelijk terug naar rechts",
+            "Ik blijf links",
+            "Ik rij op de lijn"
           ],
-          "correct": 1,
-          "explanation": "Na het inhalen ga je terug naar rechts. Zonder reden links blijven is een overtreding.",
+          "correct": 0,
+          "explanation": "Inhalen voorbij: terug naar de rechtse rijstrook.",
           "theoryCardIndex": 3
         },
         {
@@ -4692,13 +4694,14 @@
         },
         {
           "id": "A5_Q49",
-          "question": "Mag je op de pechstrook stilstaan om te telefoneren?",
+          "question": "Panne op de pechstrook. Waar ga je staan om de hulpdiensten te bellen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Achter de vangrail",
+            "In de auto",
+            "Op de pechstrook"
           ],
-          "correct": 1,
-          "explanation": "De pechstrook dient alleen voor echte noodgevallen.",
+          "correct": 0,
+          "explanation": "Achter de vangrail, met de fluovest: weg van het verkeer.",
           "theoryCardIndex": 3
         },
         {
@@ -5356,13 +5359,13 @@
         },
         {
           "id": "A6_Q32",
-          "question": "Je mag in deze speelstraat rijden. Een kind steekt voor je over. Wie mag eerst?",
+          "question": "Je woont in deze speelstraat. Er spelen kinderen op de rijbaan. Wie heeft voorrang?",
           "choices": [
-            "Het kind",
-            "Jij"
+            "De kinderen",
+            "Jij, je woont er"
           ],
           "correct": 0,
-          "explanation": "In een speelstraat rijd je stapvoets en laat je voetgangers en kinderen voorgaan.",
+          "explanation": "In een speelstraat rij je stapvoets en laat je de kinderen voorgaan.",
           "theoryCardIndex": 2
         },
         {
