@@ -3551,43 +3551,28 @@
       "questions": [
         {
           "id": "F5_Q1",
-          "question": "Vous tournez à gauche, le véhicule d'en face continue tout droit. Qui a la priorité ?",
+          "question": "Vous tournez à gauche, la voiture d'en face va tout droit. Qui passe ?",
           "choices": [
-            "Le véhicule allant tout droit",
-            "Celui qui tourne à gauche",
-            "Le premier arrivé au carrefour"
+            "Celle qui va tout droit",
+            "Vous",
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "Celui qui tourne à gauche cède toujours le passage au sens inverse.",
+          "explanation": "Celui qui tourne à gauche cède à ceux qui viennent en face.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F5_Q1.webp"
         },
         {
-          "id": "F5_Q3",
-          "question": "Vous tournez à gauche sans céder le passage au véhicule venant en sens inverse. Quelle est la gravité de cette infraction ?",
-          "choices": [
-            "C'est une infraction mineure",
-            "C'est une infraction grave",
-            "C'est toléré si le carrefour est dégagé",
-            "C'est simplement un conseil de prudence"
-          ],
-          "correct": 1,
-          "explanation": "Ne pas céder au sens inverse en tournant à gauche = infraction grave.",
-          "theoryCardIndex": 0,
-          "severe": true,
-          "image": "/images/questions/F5_Q3.webp"
-        },
-        {
           "id": "F5_Q4",
-          "question": "Vous tournez à droite, le véhicule d'en face tourne à gauche. Qui a la priorité ?",
+          "question": "Vous tournez à droite, la voiture d'en face tourne à gauche. Qui passe ?",
           "choices": [
-            "Celui qui tourne à droite",
-            "Celui qui tourne à gauche",
-            "Le premier arrivé au carrefour"
+            "Vous",
+            "Celle qui tourne à gauche",
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "Celui qui tourne à droite a la priorité sur celui qui tourne à gauche.",
+          "explanation": "Celui qui tourne à gauche cède à celui qui vient en face.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F5_Q4.webp"
@@ -3601,535 +3586,447 @@
             "Le premier arrivé passe"
           ],
           "correct": 0,
-          "explanation": "Sans flèches au sol, les deux tournant à gauche se croisent par la droite.",
+          "explanation": "Sans flèches au sol : par la droite, chacun tourne devant l'autre.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F5_Q6.webp"
         },
         {
           "id": "F5_Q7",
-          "question": "Des flèches au sol indiquent un croisement par la gauche. Que suivez-vous ?",
+          "question": "Des flèches au sol vous font croiser par la gauche. Que suivez-vous ?",
           "choices": [
-            "Les flèches tracées au sol",
-            "La règle par défaut, à droite",
-            "Vous laissez l'autre passer"
+            "Les flèches",
+            "La règle par la droite",
+            "Rien, vous attendez"
           ],
           "correct": 0,
-          "explanation": "Les flèches au sol priment sur la règle par défaut.",
+          "explanation": "Les flèches au sol l'emportent sur la règle habituelle.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F5_Q7.webp"
         },
         {
           "id": "F5_Q8",
-          "question": "Vous tournez à droite et un piéton traverse cette rue, sans passage aménagé. Devez-vous lui céder ?",
+          "question": "Vous tournez à droite ; un piéton traverse cette rue, sans passage pour piétons. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En changeant de direction, vous cédez aux piétons même sans passage prévu.",
+          "explanation": "En tournant, vous cédez aux piétons qui traversent la rue où vous allez, même sans passage.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F5_Q8.webp"
         },
         {
           "id": "F5_Q9",
-          "question": "Vous tournez à gauche et un cycliste traverse la chaussée où vous allez. Devez-vous lui céder ?",
+          "question": "Vous tournez à gauche ; un cycliste traverse la rue où vous allez. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Cyclistes traversant la chaussée d'engagement = vous cédez.",
+          "explanation": "En changeant de direction, vous cédez à ceux qui circulent sur la voie où vous entrez.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F5_Q9.webp"
         },
         {
-          "id": "F5_Q10",
-          "question": "Cette obligation de céder aux piétons ne vaut-elle que lorsque vous tournez à gauche ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "L'obligation de céder aux piétons/cyclistes s'applique à gauche ET à droite.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/F5_Q10.webp"
-        },
-        {
           "id": "F5_Q11",
-          "question": "Vous allez tout droit, le véhicule d'en face tourne à gauche et un piéton traverse devant lui. Quel ordre ?",
+          "question": "Vous allez tout droit ; en face, une voiture tourne à gauche devant un piéton qui traverse. Ordre de passage ?",
           "choices": [
-            "Le piéton, vous, celui qui tourne",
-            "Vous, le piéton, celui qui tourne",
-            "Celui qui tourne, le piéton, vous"
+            "Vous et le piéton, puis la voiture qui tourne",
+            "La voiture, puis vous",
+            "La voiture, le piéton, vous"
           ],
           "correct": 0,
-          "explanation": "Le piéton traverse devant lui (il doit d'abord le laisser passer), et vous continuez tout droit car vous avez la priorité.",
+          "explanation": "Celui qui tourne à gauche passe en dernier : il cède à vous et au piéton.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F5_Q11.webp"
         },
         {
           "id": "F5_Q12",
-          "question": "Un véhicule tourne à droite, l'autre à gauche, un cycliste traverse. Quel est l'ordre de passage ?",
+          "question": "Une voiture tourne à droite, une autre (en face) à gauche, et un cycliste traverse la rue où elles vont. Ordre ?",
           "choices": [
-            "Le cycliste, la droite, la gauche",
-            "La droite, le cycliste, la gauche",
-            "La gauche, la droite, le cycliste"
+            "Le cycliste, celle qui tourne à droite, celle qui tourne à gauche",
+            "Celle de droite, le cycliste, celle de gauche",
+            "Celle de gauche, celle de droite, le cycliste"
           ],
           "correct": 0,
-          "explanation": "D'abord le cycliste (priorité dans sa voie), puis celui qui tourne à droite (priorité sur gauche), puis celui qui tourne à gauche.",
+          "explanation": "D'abord le cycliste, puis celle qui tourne à droite, enfin celle qui tourne à gauche.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F5_Q12.webp"
         },
         {
           "id": "F5_Q15",
-          "question": "Sur un sens unique, où placez-vous votre véhicule pour tourner à gauche ?",
+          "question": "Rue à sens unique : où vous placez-vous pour tourner à gauche ?",
           "choices": [
-            "Près du bord gauche",
-            "Près du bord droit",
-            "Au milieu de la chaussée"
+            "Contre le bord gauche",
+            "Contre le bord droit",
+            "Au milieu"
           ],
           "correct": 0,
-          "explanation": "Sur un sens unique, pour tourner à gauche : bord gauche.",
+          "explanation": "Sur un sens unique, on serre à gauche pour tourner à gauche.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F5_Q15.webp"
         },
         {
           "id": "F5_Q16",
-          "question": "Sur une chaussée à double sens, où placez-vous votre véhicule pour tourner à gauche ?",
+          "question": "Route à double sens : où vous placez-vous pour tourner à gauche ?",
           "choices": [
-            "Près de l'axe médian",
-            "Près du bord droit",
+            "Près de l'axe de la chaussée",
+            "Contre le bord droit",
             "Sur la bande d'en face"
           ],
           "correct": 0,
-          "explanation": "Double sens : se placer près de l'axe médian pour tourner à gauche.",
+          "explanation": "À double sens : près du milieu, sans gêner ceux d'en face.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F5_Q16.webp"
         },
         {
           "id": "F5_Q18",
-          "question": "Sur une chaussée à double sens, où placez-vous votre véhicule pour tourner à droite ?",
+          "question": "Où vous placez-vous pour tourner à droite ?",
           "choices": [
             "Le plus à droite possible",
-            "Près de l'axe médian",
-            "Au milieu de la chaussée"
+            "Près de l'axe",
+            "Au milieu"
           ],
           "correct": 0,
-          "explanation": "Pour tourner à droite : se positionner le plus à droite possible.",
+          "explanation": "Pour tourner à droite : serrer à droite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F5_Q18.webp"
         },
         {
           "id": "F5_Q19",
-          "question": "Vous vous placez à droite pour tourner. De quoi devez-vous vous méfier ?",
+          "question": "Vous serrez à droite pour tourner. Que vérifiez-vous ?",
           "choices": [
-            "D'un usager sur votre droite",
-            "Des feux du carrefour",
-            "Du marquage dans le virage"
+            "Qu'aucun cycliste n'est à votre droite",
+            "Les feux",
+            "Le marquage"
           ],
           "correct": 0,
-          "explanation": "Vérifiez qu'aucun cycliste ou autre usager ne se trouve à votre droite.",
+          "explanation": "Un cycliste peut se trouver à votre droite, dans l'angle mort.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F5_Q19.webp"
         },
         {
           "id": "F5_Q20",
-          "question": "Vous souhaitez tourner à gauche. Pouvez-vous vous positionner à l'extrême droite de la chaussée pour préparer votre virage ?",
+          "question": "Ce conducteur veut tourner à gauche, mais il s'est placé tout à droite. Est-ce correct ?",
           "choices": [
-            "Oui, pour avoir une meilleure visibilité",
-            "Non, c'est strictement interdit",
-            "Oui, sur un sens unique",
-            "Oui, hors agglomération"
+            "Non",
+            "Oui, il voit mieux"
           ],
-          "correct": 1,
-          "explanation": "Se présélectionner à l'extrême droite pour tourner à gauche est interdit.",
+          "correct": 0,
+          "explanation": "Pour tourner à gauche, on se place à gauche : vers l'axe, ou contre le bord gauche sur un sens unique.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F5_Q20.webp"
         },
         {
           "id": "F5_Q21",
-          "question": "Pour préparer votre virage à gauche, pouvez-vous vous placer sur la bande d'en face ?",
+          "question": "Pour tourner à gauche, pouvez-vous vous placer sur la bande d'en face ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "La bande du sens inverse est réservée aux véhicules qui viennent — y circuler est dangereux et interdit.",
+          "correct": 0,
+          "explanation": "La bande d'en face est pour ceux qui viennent : vous restez de votre côté.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F5_Q21.webp"
         },
         {
-          "id": "F5_Q23",
-          "question": "Vous souhaitez tourner à gauche. Quelle est la toute première étape de la procédure ?",
-          "choices": [
-            "Activer le clignotant gauche",
-            "Vérifier dans les rétroviseurs",
-            "Appuyer sur la pédale de frein",
-            "Tourner le volant vers la gauche"
-          ],
-          "correct": 1,
-          "explanation": "Étape 1 : rétroviseurs.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/F5_Q23.webp"
-        },
-        {
-          "id": "F5_Q24",
-          "question": "Après avoir vérifié les rétroviseurs, quelle est la deuxième étape avant de tourner à gauche ?",
-          "choices": [
-            "Freiner immédiatement",
-            "Contrôler l'angle mort",
-            "Tourner le volant",
-            "Activer le clignotant"
-          ],
-          "correct": 1,
-          "explanation": "Étape 2 : angle mort.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/F5_Q24.webp"
-        },
-        {
-          "id": "F5_Q25",
-          "question": "Après les rétroviseurs et l'angle mort, quelle est la troisième étape pour tourner ?",
-          "choices": [
-            "Mettre le clignotant",
-            "Freiner doucement",
-            "Tourner le volant"
-          ],
-          "correct": 0,
-          "explanation": "Étape 3 : clignotant (indicateur de direction).",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/F5_Q25.webp"
-        },
-        {
-          "id": "F5_Q26",
-          "question": "Quel est l'ordre correct des étapes pour tourner à gauche ?",
-          "choices": [
-            "Miroirs, angle mort, clignotant, frein",
-            "Clignotant, miroirs, frein, tourner",
-            "Frein, clignotant, tourner, céder"
-          ],
-          "correct": 0,
-          "explanation": "Ordre : rétroviseurs → angle mort → clignotant → freiner → tourner → céder aux piétons.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/F5_Q26.webp"
-        },
-        {
           "id": "F5_Q28",
-          "question": "Vous avez vérifié le rétroviseur mais oublié l'angle mort. Est-ce correct ?",
+          "question": "Avant de tourner, vous avez regardé le rétroviseur mais pas l'angle mort. Est-ce suffisant ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le rétroviseur ne remplace pas la vérification de l'angle mort.",
+          "correct": 0,
+          "explanation": "Le rétroviseur ne montre pas l'angle mort : un coup d'œil est nécessaire.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F5_Q28.webp"
         },
         {
           "id": "F5_Q29",
-          "question": "Vous changez de direction et un piéton traverse la chaussée où vous allez. Devez-vous lui céder ?",
+          "question": "Vous tournez ; un piéton traverse la rue où vous allez. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En changeant de direction, vous cédez toujours aux piétons traversant la chaussée d'engagement.",
+          "explanation": "En changeant de direction, vous laissez passer les piétons qui traversent.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F5_Q29.webp"
         },
         {
           "id": "F5_Q30",
-          "question": "Un cycliste circule sur la piste cyclable de la chaussée où vous vous engagez. Devez-vous lui céder ?",
+          "question": "Vous tournez ; un cycliste roule sur la piste cyclable de la rue où vous allez. Devez-vous le laisser passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Tous les usagers de la voie publique (chaussée + ses parties) doivent être respectés.",
+          "explanation": "Vous cédez à ceux qui circulent sur la voie où vous entrez, piste cyclable comprise.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F5_Q30.webp"
         },
         {
           "id": "F5_Q33",
-          "question": "Qu'est-ce qu'une manœuvre au sens du code de la route ?",
+          "question": "Lequel de ces gestes est une manœuvre ?",
           "choices": [
-            "Une action non réglée par le code",
-            "Un changement de direction simple",
-            "Un dépassement par la gauche"
+            "Quitter une place de stationnement",
+            "Aller tout droit au carrefour",
+            "Ralentir avant un feu"
           ],
           "correct": 0,
-          "explanation": "Une manœuvre = action non spécifiquement réglée par le code.",
+          "explanation": "Manœuvres : changer de bande, quitter un stationnement, sortir d'une propriété, faire demi-tour, reculer, traverser la chaussée.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F5_Q33.webp"
         },
         {
           "id": "F5_Q34",
-          "question": "Vous vous apprêtez à effectuer une manœuvre (par exemple reculer). Que devez-vous faire en premier ?",
+          "question": "Vous allez reculer. Que faites-vous d'abord ?",
           "choices": [
-            "Céder le passage immédiatement",
-            "Observer attentivement votre environnement",
-            "Klaxonner pour prévenir les autres",
-            "Accélérer pour terminer la manœuvre rapidement"
+            "Vous regardez bien tout autour",
+            "Vous klaxonnez",
+            "Vous reculez vite"
           ],
-          "correct": 1,
-          "explanation": "Avant toute manœuvre : observer attentivement.",
+          "correct": 0,
+          "explanation": "Avant toute manœuvre : regarder partout, puis céder à tous.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F5_Q34.webp"
         },
         {
           "id": "F5_Q35",
-          "question": "Pendant une manœuvre, à qui devez-vous céder le passage ?",
+          "question": "Pendant une manœuvre, à qui cédez-vous le passage ?",
           "choices": [
-            "À tous, conducteurs et piétons",
-            "Aux véhicules motorisés seuls",
-            "Aux piétons et à personne d'autre"
+            "À tout le monde, piétons compris",
+            "Aux voitures seulement",
+            "Aux piétons seulement"
           ],
           "correct": 0,
-          "explanation": "Manœuvre = céder à TOUS : conducteurs ET piétons.",
+          "explanation": "Celui qui manœuvre cède à tous les autres usagers.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F5_Q35.webp"
         },
         {
           "id": "F5_Q36",
-          "question": "Vous manœuvrez avec le clignotant. Vous donne-t-il une priorité ?",
+          "question": "Vous manœuvrez en mettant le clignotant. Vous donne-t-il la priorité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Une manœuvre ne donne jamais la priorité.",
+          "correct": 0,
+          "explanation": "Le clignotant annonce, il ne donne jamais la priorité.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F5_Q36.webp"
         },
         {
-          "id": "F5_Q38",
-          "question": "Quelle est la règle fondamentale de toute manœuvre ?",
+          "id": "F5_Q39",
+          "question": "Passer de la bande de droite à celle de gauche, est-ce une manœuvre ?",
           "choices": [
-            "Céder le passage à tous",
-            "Appliquer la priorité de droite",
-            "Klaxonner pour prévenir"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Observer + céder à tous = règle fondamentale de toute manœuvre.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/F5_Q38.webp"
-        },
-        {
-          "id": "F5_Q39",
-          "question": "Vous souhaitez passer de la bande de droite à la bande de gauche sur une chaussée à plusieurs bandes. Est-ce considéré comme une manœuvre ?",
-          "choices": [
-            "Non, c'est un déplacement normal",
-            "Oui, changer de bande est une manœuvre",
-            "Non, si vous utilisez le clignotant",
-            "Cela dépend de la largeur de la route"
-          ],
-          "correct": 1,
-          "explanation": "Changer de bande = manœuvre, vous cédez le passage.",
+          "explanation": "Changer de bande est une manœuvre.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F5_Q39.webp"
         },
         {
           "id": "F5_Q40",
-          "question": "Vous passez de la bande de droite à celle de gauche, déjà occupée. Qui a la priorité ?",
+          "question": "Vous passez sur la bande de gauche, où roule déjà une voiture. Qui passe ?",
           "choices": [
-            "Le véhicule déjà sur la bande",
-            "Vous, qui changez de bande",
-            "Celui qui roule le plus vite"
+            "La voiture déjà sur la bande",
+            "Vous",
+            "La plus rapide"
           ],
           "correct": 0,
-          "explanation": "Changement de bande = manœuvre, vous cédez au véhicule sur la bande cible.",
+          "explanation": "Vous changez de bande : vous cédez à celle qui y roule.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F5_Q40.webp"
         },
         {
           "id": "F5_Q41",
-          "question": "Faire demi-tour au milieu de la chaussée est-il une manœuvre ?",
+          "question": "Faire demi-tour sur la chaussée, est-ce une manœuvre ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Demi-tour = manœuvre.",
+          "explanation": "Oui : vous cédez à tous.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F5_Q41.webp"
         },
         {
           "id": "F5_Q42",
-          "question": "Jusqu'où l'interdiction de ce panneau s'applique-t-elle ?",
+          "question": "Jusqu'où vaut l'interdiction de ce panneau ?",
           "choices": [
             "Jusqu'au prochain carrefour",
-            "Sur les 500 mètres suivants",
-            "Jusqu'au prochain feu rouge"
+            "Sur 500 m",
+            "Jusqu'au prochain feu"
           ],
           "correct": 0,
-          "explanation": "L'interdiction s'applique jusqu'au prochain carrefour inclus.",
+          "explanation": "Jusqu'au prochain carrefour.",
           "theoryCardIndex": 3,
           "sign": "C33"
         },
         {
           "id": "F5_Q43",
-          "question": "Ce panneau vous interdit-il aussi de tourner à gauche ?",
+          "question": "Ce panneau « demi-tour interdit » vous interdit-il de tourner à gauche ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "L'interdiction de demi-tour ne concerne PAS les virages à gauche.",
+          "correct": 0,
+          "explanation": "Il interdit le demi-tour, pas le virage à gauche.",
           "theoryCardIndex": 3,
           "sign": "C33"
         },
         {
           "id": "F5_Q46",
-          "question": "Vous devez reculer pour manœuvrer. Reculer est-il considéré comme une manœuvre ?",
-          "choices": [
-            "Non, reculer n'est pas une manœuvre",
-            "Oui, reculer est une manœuvre",
-            "Non, si c'est pour stationner",
-            "Cela dépend de la distance parcourue"
-          ],
-          "correct": 1,
-          "explanation": "Reculer = manœuvre.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/F5_Q46.webp"
-        },
-        {
-          "id": "F5_Q47",
-          "question": "Vous reculez dans une rue résidentielle. Une prudence particulière s'impose-t-elle ?",
+          "question": "Reculer, est-ce une manœuvre ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Reculer impose une prudence accrue — visibilité réduite.",
+          "explanation": "Oui : vous cédez à tous.",
+          "theoryCardIndex": 3,
+          "image": "/images/questions/F5_Q46.webp"
+        },
+        {
+          "id": "F5_Q47",
+          "question": "Vous reculez dans une rue résidentielle. Faut-il être particulièrement prudent ?",
+          "choices": [
+            "Oui",
+            "Non"
+          ],
+          "correct": 0,
+          "explanation": "En reculant, vous voyez mal ce qui est bas et derrière vous.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F5_Q47.webp"
         },
         {
           "id": "F5_Q48",
-          "question": "Vous traversez la chaussée perpendiculairement, en dehors d'un carrefour, pour entrer dans une propriété. Comment cette action est-elle qualifiée ?",
+          "question": "Vous traversez la chaussée, hors carrefour, pour entrer chez vous. Qu'est-ce que c'est ?",
           "choices": [
-            "C'est un dépassement",
-            "C'est une manœuvre",
-            "C'est un croisement",
-            "C'est interdit"
+            "Une manœuvre",
+            "Un dépassement",
+            "Un croisement"
           ],
-          "correct": 1,
-          "explanation": "Traverser la chaussée hors carrefour = manœuvre.",
+          "correct": 0,
+          "explanation": "Traverser la chaussée est une manœuvre.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F5_Q48.webp"
         },
         {
           "id": "F5_Q49",
-          "question": "Vous traversez la chaussée hors carrefour pour rentrer chez vous. À qui cédez-vous le passage ?",
+          "question": "Vous traversez la chaussée pour rentrer chez vous. À qui cédez-vous ?",
           "choices": [
-            "À tous les usagers de la route",
-            "Aux voitures et rien d'autre",
-            "Aux piétons et rien d'autre"
+            "À tous les usagers",
+            "Aux voitures seulement",
+            "Aux piétons seulement"
           ],
           "correct": 0,
-          "explanation": "Manœuvre = céder à tous les usagers.",
+          "explanation": "Manœuvre : vous cédez à tous.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F5_Q49.webp"
         },
         {
           "id": "F5_Q50",
-          "question": "Votre bande prend fin et vous devez vous insérer à gauche. Est-ce une manœuvre ?",
+          "question": "Trafic fluide, votre bande se termine et vous passez à gauche. Est-ce une manœuvre ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "S'insérer sur une autre bande = manœuvre.",
+          "explanation": "Oui : vous cédez à ceux de la bande de gauche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F5_Q50.webp"
         },
         {
           "id": "F5_Q52",
-          "question": "En file dense, quel principe s'applique quand une bande prend fin ?",
+          "question": "Trafic dense et lent, une bande se termine. Quelle règle s'applique ?",
           "choices": [
-            "Le principe de la tirette",
+            "La tirette",
             "La priorité de droite",
-            "Le premier arrivé passe"
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "En file dense, le principe du zip (alternance) s'applique.",
+          "explanation": "Trafic fortement ralenti : tirette, juste devant le rétrécissement.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F5_Q52.webp"
         },
         {
           "id": "F5_Q53",
-          "question": "La chaussée se rétrécit par la droite, sans bandes tracées. Qui a la priorité ?",
+          "question": "La chaussée se rétrécit, sans bandes tracées. Deux voitures arrivent côte à côte. Qui passe ?",
           "choices": [
-            "Le véhicule qui reste à droite",
-            "Le véhicule venant de gauche",
-            "Le premier arrivé sur place"
+            "Celle de droite",
+            "Celle de gauche",
+            "La plus rapide"
           ],
           "correct": 0,
-          "explanation": "Simple rétrécissement sans bandes : le véhicule restant à droite a la priorité.",
+          "explanation": "Sans bandes tracées, la priorité de droite s'applique.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F5_Q53.webp"
         },
         {
           "id": "F5_Q54",
-          "question": "Quelle différence entre une fin de bandes tracées et un simple rétrécissement ?",
+          "question": "Fin d'une bande tracée ou simple rétrécissement : quelle règle ?",
           "choices": [
-            "Fin de bandes : manœuvre ; sinon : droite",
-            "Les deux comptent comme des manœuvres",
-            "Les deux suivent la priorité de droite"
+            "Bande tracée : manœuvre. Sans bande : priorité de droite",
+            "Manœuvre dans les deux cas",
+            "Priorité de droite dans les deux cas"
           ],
           "correct": 0,
-          "explanation": "Bandes qui prennent fin = manœuvre. Rétrécissement sans bandes = priorité au véhicule de droite.",
+          "explanation": "Quitter une bande qui finit est une manœuvre. Sans bandes, la droite passe.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F5_Q54.webp"
         },
         {
           "id": "F5_Q55",
-          "question": "La bande de droite se termine et son conducteur veut passer à gauche. A-t-il la priorité ?",
+          "question": "La bande de droite se termine ; ce conducteur passe à gauche, trafic fluide. A-t-il la priorité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, il est à droite"
           ],
-          "correct": 1,
-          "explanation": "Bande qui prend fin = manœuvre = céder, même si on est à droite.",
+          "correct": 0,
+          "explanation": "Il change de bande : c'est une manœuvre, il cède.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F5_Q55.webp"
         },
         {
           "id": "F5_Q57",
-          "question": "Vous entrez dans une place de stationnement en créneau. Comment cette action est-elle qualifiée ?",
+          "question": "Vous vous garez en créneau. Qu'est-ce que c'est ?",
           "choices": [
-            "C'est un dépassement",
-            "C'est une manœuvre",
-            "C'est un changement de direction",
-            "C'est un arrêt"
+            "Une manœuvre",
+            "Un dépassement",
+            "Un arrêt"
           ],
-          "correct": 1,
-          "explanation": "Entrer dans un stationnement = manœuvre.",
+          "correct": 0,
+          "explanation": "Entrer dans une place de stationnement est une manœuvre.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F5_Q57.webp"
         },
         {
           "id": "F5_Q58",
-          "question": "Vous quittez un parking privé pour rejoindre la chaussée. Comment cette action est-elle qualifiée ?",
+          "question": "Vous quittez un parking privé pour rejoindre la chaussée. À qui cédez-vous ?",
           "choices": [
-            "Une manœuvre : céder à tous",
-            "Un changement de direction",
-            "Un simple croisement"
+            "À tous",
+            "Seulement à ceux de droite",
+            "À personne"
           ],
           "correct": 0,
-          "explanation": "Quitter un terrain adjacent = manœuvre, céder à tous.",
+          "explanation": "Sortir d'un terrain privé est une manœuvre : vous cédez à tous.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F5_Q58.webp"
         },
