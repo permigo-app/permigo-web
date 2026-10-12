@@ -4293,27 +4293,27 @@
       "questions": [
         {
           "id": "F6_Q1",
-          "question": "Pourquoi devez-vous être particulièrement prudent à un passage à niveau ?",
+          "question": "Pourquoi un train est-il si dangereux à un passage à niveau ?",
           "choices": [
-            "Le train freine long et ne dévie pas",
-            "Les trains sont rares et imprévus",
-            "Les trains s'arrêtent facilement"
+            "Il freine sur une très longue distance",
+            "Il roule toujours lentement",
+            "Il peut s'arrêter vite"
           ],
           "correct": 0,
-          "explanation": "La distance de freinage très longue et l'impossibilité de dévier rendent les trains très dangereux.",
+          "explanation": "Un train met des centaines de mètres à s'arrêter et ne peut pas dévier.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F6_Q1.webp"
         },
         {
           "id": "F6_Q2",
-          "question": "Un train peut-il dévier sa trajectoire pour éviter un obstacle ?",
+          "question": "Un train peut-il dévier pour éviter une voiture ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Un train ne peut pas dévier — il suit impérativement ses rails.",
+          "correct": 0,
+          "explanation": "Il suit ses rails : c'est à vous de ne jamais rester sur la voie.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F6_Q2.webp"
@@ -4322,12 +4322,12 @@
           "id": "F6_Q3",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Passage à niveau à une voie",
-            "Passage à niveau à deux voies",
-            "Passage à niveau interdit"
+            "Passage à niveau à une seule voie",
+            "Passage à niveau à deux voies ou plus",
+            "Passage à niveau fermé"
           ],
           "correct": 0,
-          "explanation": "Une barre en croix = passage à niveau à voie unique.",
+          "explanation": "Une seule croix : une seule voie ferrée.",
           "theoryCardIndex": 0,
           "sign": "A45",
           "severe": true
@@ -4338,299 +4338,281 @@
           "choices": [
             "Passage à niveau à deux voies ou plus",
             "Passage à niveau à une seule voie",
-            "Passage à niveau fermé au trafic"
+            "Passage à niveau fermé"
           ],
           "correct": 0,
-          "explanation": "Deux barres en croix = passage à niveau à deux voies ou plus.",
+          "explanation": "Double croix : au moins deux voies ferrées.",
           "theoryCardIndex": 0,
           "sign": "A47",
           "severe": true
         },
         {
           "id": "F6_Q5",
-          "question": "Vous voyez le signal avec une ou deux barres en croix. Où se trouvent ces signaux exactement ?",
+          "question": "Où est placée la croix du passage à niveau ?",
           "choices": [
-            "À 150 mètres avant le passage à niveau",
-            "Au passage à niveau lui-même",
-            "À 500 mètres avant le passage",
-            "Après le passage à niveau"
+            "Au passage à niveau même",
+            "150 m avant",
+            "500 m avant"
           ],
-          "correct": 1,
-          "explanation": "Ces signaux sont placés au passage à niveau même.",
+          "correct": 0,
+          "explanation": "La croix (une ou deux barres) se trouve juste au passage à niveau.",
           "theoryCardIndex": 0,
           "severe": true,
           "sign": "A45"
         },
         {
           "id": "F6_Q6",
-          "question": "Ce panneau est placé à 150 mètres. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
             "Passage à niveau avec barrières",
             "Passage à niveau sans barrières",
-            "Des travaux routiers en cours"
+            "Travaux"
           ],
           "correct": 0,
-          "explanation": "Signal avec barrières à 150 m = passage avec barrières dans 150 m.",
+          "explanation": "Le panneau avec une barrière annonce un passage à niveau avec barrières, environ 150 m plus loin.",
           "theoryCardIndex": 0,
           "sign": "A41"
         },
         {
           "id": "F6_Q7",
-          "question": "Ce panneau est placé à 150 mètres. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
             "Passage à niveau sans barrières",
             "Passage à niveau avec barrières",
-            "Passage à niveau à une voie"
+            "Gare à proximité"
           ],
           "correct": 0,
-          "explanation": "Signal sans barrières à 150 m = passage sans barrières dans 150 m.",
+          "explanation": "La locomotive annonce un passage à niveau sans barrières : rien ne vous arrêtera, regardez bien.",
           "theoryCardIndex": 0,
           "sign": "A43"
         },
         {
-          "id": "F6_Q8",
-          "question": "Pourquoi est-il important de savoir qu'un passage à niveau n'a pas de barrières ?",
-          "choices": [
-            "Rien ne vous arrête physiquement",
-            "Pour adapter votre vitesse seule",
-            "Pour savoir où vous stationner"
-          ],
-          "correct": 0,
-          "explanation": "Sans barrières, rien ne bloque physiquement l'accès — prudence maximale requise.",
-          "theoryCardIndex": 0,
-          "severe": true,
-          "image": "/images/questions/F6_Q8.webp"
-        },
-        {
           "id": "F6_Q9",
-          "question": "Un feu blanc lunaire clignote au passage à niveau. Que signifie-t-il ?",
+          "question": "Le feu blanc clignote au passage à niveau. Que signifie-t-il ?",
           "choices": [
-            "Aucun train, vous pouvez passer",
-            "Un train approche, arrêtez-vous",
-            "Le franchissement est interdit"
+            "Vous pouvez passer",
+            "Un train arrive",
+            "Passage interdit"
           ],
           "correct": 0,
-          "explanation": "Feu blanc lunaire clignotant = autorisé à traverser.",
+          "explanation": "Feu blanc clignotant : pas de train annoncé, vous pouvez passer.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F6_Q9.webp"
         },
         {
           "id": "F6_Q10",
-          "question": "Les feux rouges clignotent et un signal sonore retentit. Que faites-vous ?",
+          "question": "Les feux rouges clignotent et la sonnerie retentit. Que faites-vous ?",
           "choices": [
-            "Vous vous arrêtez et attendez",
-            "Vous traversez en regardant",
-            "Vous accélérez pour passer"
+            "Vous vous arrêtez",
+            "Vous passez vite",
+            "Vous passez prudemment"
           ],
           "correct": 0,
-          "explanation": "Feux rouges clignotants et/ou signal sonore = interdiction absolue de s'engager.",
+          "explanation": "Feux rouges ou sonnerie : interdit de s'engager, même si les barrières sont encore ouvertes.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F6_Q10.webp"
         },
         {
           "id": "F6_Q11",
-          "question": "Vous êtes piéton devant ces feux rouges clignotants. L'interdiction vous concerne-t-elle ?",
+          "question": "Vous êtes à pied devant ces feux rouges clignotants. Pouvez-vous traverser ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "L'interdiction des feux rouges au passage à niveau s'applique à tous, piétons inclus.",
+          "explanation": "L'interdiction vaut pour tout le monde, piétons compris.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F6_Q11.webp"
         },
         {
           "id": "F6_Q12",
-          "question": "Vous traversez pendant que les barrières se ferment. Quelle est la gravité de cette infraction ?",
+          "question": "Les barrières commencent à descendre. Pouvez-vous encore passer ?",
           "choices": [
-            "Grave, retrait du permis possible",
-            "Mineure, du premier degré",
-            "Tolérée si vous êtes rapide"
+            "Non",
+            "Oui, si vous êtes rapide"
           ],
           "correct": 0,
-          "explanation": "Traverser pendant le mouvement des barrières = infraction grave, retrait immédiat possible.",
+          "explanation": "Interdit de s'engager quand les barrières bougent : c'est une infraction grave.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F6_Q12.webp"
         },
         {
           "id": "F6_Q13",
-          "question": "Vous franchissez les feux rouges clignotants d'un passage à niveau. Quelle conséquence ?",
+          "question": "Vous passez au feu rouge clignotant d'un passage à niveau. Votre permis peut-il être retiré sur place ?",
           "choices": [
-            "Grave, retrait du permis possible",
-            "Mineure, avec simple amende",
-            "Tolérée si le train est loin"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Franchir les feux rouges d'un passage à niveau = infraction grave, retrait immédiat.",
+          "explanation": "C'est une infraction grave : retrait immédiat possible.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F6_Q13.webp"
         },
         {
           "id": "F6_Q14",
-          "question": "Le feu blanc lunaire clignote et un véhicule lent vous précède. Pouvez-vous le dépasser par la gauche ?",
+          "question": "Le feu blanc clignote, les barrières sont levées. Pouvez-vous dépasser ce tracteur ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, si la voie est libre",
+            "Non, jamais sur un passage à niveau"
           ],
           "correct": 0,
-          "explanation": "Feu blanc lunaire = autorise à traverser ET à dépasser par la gauche.",
+          "explanation": "Avec barrières ou feux, le dépassement est permis. Sans eux, interdit de dépasser un véhicule à moteur (sauf un vélo).",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F6_Q14.webp"
         },
         {
           "id": "F6_Q15",
-          "question": "Qu'est-ce qu'un site spécial franchissable ?",
+          "question": "Le site spécial franchissable fait-il partie de la chaussée ?",
           "choices": [
-            "Un espace réservé aux transports",
-            "Une bande ordinaire de la chaussée",
-            "Un trottoir élargi pour les arrêts"
+            "Non, il est réservé aux bus et trams",
+            "Oui, c'est une bande normale",
+            "Oui, pour stationner"
           ],
           "correct": 0,
-          "explanation": "Le SSF est réservé aux TC (tram/bus) et ne fait pas partie de la chaussée.",
+          "explanation": "Il ne fait pas partie de la chaussée : il est réservé aux transports en commun.",
           "theoryCardIndex": 1,
           "sign": "F18"
         },
         {
           "id": "F6_Q17",
-          "question": "Vous observez la délimitation du SSF. Par quel type de ligne est-il délimité ?",
+          "question": "Quelle ligne délimite le site spécial franchissable ?",
           "choices": [
+            "Une large ligne blanche continue",
             "Une ligne blanche discontinue",
-            "Une ligne blanche continue",
-            "Des feux lumineux",
-            "Des poteaux en bordure"
+            "Une ligne jaune"
           ],
-          "correct": 1,
-          "explanation": "Le SSF est délimité par une ligne continue blanche.",
+          "correct": 0,
+          "explanation": "Site franchissable : large ligne continue. Bande bus : large ligne discontinue.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q17.webp"
         },
         {
           "id": "F6_Q18",
-          "question": "La chaussée est encombrée. Pouvez-vous emprunter le site franchissable en voiture ?",
+          "question": "Il y a un bouchon. Pouvez-vous rouler sur le site franchissable pour avancer ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Circuler sur le SSF est interdit, sauf exceptions.",
+          "correct": 0,
+          "explanation": "Un bouchon n'est pas un obstacle : vous restez sur la chaussée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q18.webp"
         },
         {
           "id": "F6_Q19",
-          "question": "Pouvez-vous vous arrêter ou stationner sur un site franchissable ?",
+          "question": "Pouvez-vous vous arrêter sur un site franchissable ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, brièvement"
           ],
-          "correct": 1,
-          "explanation": "Stationner et s'arrêter sur le SSF sont interdits.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement y sont interdits.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q19.webp"
         },
         {
           "id": "F6_Q20",
-          "question": "Pouvez-vous emprunter le site franchissable pour vous positionner avant un carrefour ?",
+          "question": "Pouvez-vous rouler sur le site franchissable pour vous placer avant le carrefour ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Utiliser le SSF pour se positionner avant un carrefour est interdit.",
+          "correct": 0,
+          "explanation": "C'est permis sur une bande bus, pas sur un site franchissable.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q20.webp"
         },
         {
           "id": "F6_Q21",
-          "question": "Un obstacle bloque votre bande. Pouvez-vous emprunter le site franchissable pour le contourner ?",
+          "question": "Un obstacle bloque votre bande. Pouvez-vous le contourner par le site franchissable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Circuler sur le SSF pour contourner un obstacle est l'une des exceptions autorisées.",
+          "explanation": "Contourner un obstacle est permis.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q21.webp"
         },
         {
           "id": "F6_Q22",
-          "question": "Le site franchissable traverse le carrefour. Pouvez-vous le traverser pour continuer ?",
+          "question": "Au carrefour, pouvez-vous traverser le site franchissable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Traverser le SSF dans les carrefours est autorisé.",
+          "explanation": "Le traverser dans un carrefour est permis.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q22.webp"
         },
         {
           "id": "F6_Q23",
-          "question": "Votre propriété est de l'autre côté du site franchissable. Pouvez-vous le traverser ?",
+          "question": "Votre garage est de l'autre côté du site franchissable. Pouvez-vous le traverser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Traverser le SSF pour accéder à une propriété ou un parking est autorisé.",
+          "explanation": "Traverser pour rejoindre une propriété ou une place de parking est permis.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q23.webp"
         },
         {
           "id": "F6_Q24",
-          "question": "Que délimitent les marques en damier tracées sur la chaussée ?",
+          "question": "Comment s'appellent ces carrés blancs au sol ?",
           "choices": [
-            "Un SSF ou un passage à niveau",
-            "Un parking payant en zone bleue",
-            "Un passage pour piétons surélevé"
+            "Des marques en damier",
+            "Une zone d'évitement",
+            "Un passage pour piétons"
           ],
           "correct": 0,
-          "explanation": "Les marques en damier délimitent le SSF, les espaces reliant des SSF entre eux, ou un passage à niveau.",
+          "explanation": "Les marques en damier délimitent un site franchissable ou une bande bus.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F6_Q24.webp"
         },
         {
           "id": "F6_Q25",
-          "question": "Pouvez-vous traverser des marques en damier pour rejoindre l'autre côté ?",
+          "question": "Pouvez-vous vous arrêter sur des marques en damier ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "On peut traverser les marques en damier, mais il est interdit de s'y arrêter ou d'y stationner.",
+          "explanation": "On peut les traverser, mais pas s'y arrêter ni y stationner.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q25.webp"
         },
         {
           "id": "F6_Q26",
-          "question": "Un panneau additionnel avec un vélo accompagne ce signal. Que signifie-t-il ?",
+          "question": "Sous ce panneau, un vélo. Que signifie-t-il ?",
           "choices": [
-            "Les cyclistes peuvent y circuler",
+            "Les cyclistes peuvent y rouler",
             "Les cyclistes y sont interdits",
-            "Un parking vélo à proximité"
+            "Parking vélos"
           ],
           "correct": 0,
-          "explanation": "Un panneau additionnel avec un vélo autorise les cyclistes à emprunter le SSF.",
+          "explanation": "Le symbole vélo autorise les cyclistes sur le site franchissable.",
           "theoryCardIndex": 1,
           "sign": "F18"
         },
         {
           "id": "F6_Q27",
-          "question": "Sans panneau additionnel, qui peut circuler sur un site franchissable ?",
+          "question": "Sans panneau additionnel, qui peut rouler sur le site franchissable ?",
           "choices": [
-            "Les trams et les autobus",
-            "Tous les véhicules du trafic",
-            "Les cyclistes et les piétons"
+            "Les bus et trams de ligne",
+            "Tout le monde",
+            "Les cyclistes"
           ],
           "correct": 0,
-          "explanation": "Sans panneau additionnel, seuls les véhicules de transport en commun (tram, bus) peuvent circuler sur le SSF.",
+          "explanation": "Seuls les transports en commun, sauf panneau qui en autorise d'autres.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q27.webp"
         },
@@ -4642,378 +4624,314 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "Si vous circulez sur le SSF via une exception autorisée, vous devez respecter les feux de transport en commun présents.",
+          "explanation": "Sur le site, vous suivez ses feux.",
           "theoryCardIndex": 1,
           "sign": "FEU_TRAM"
         },
         {
-          "id": "F6_Q29",
-          "question": "La ligne continue du site franchissable est-elle identique à celle qui sépare les bandes ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Non, la ligne du SSF n'est pas la même : le SSF ne fait pas partie de la chaussée, contrairement aux lignes séparant les bandes ordinaires.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/F6_Q29.webp"
-        },
-        {
           "id": "F6_Q30",
-          "question": "Sur certaines autoroutes, en quoi l'ancienne bande d'arrêt d'urgence a-t-elle été transformée ?",
+          "question": "Sur certaines autoroutes, à quoi sert l'ancienne bande d'arrêt d'urgence ?",
           "choices": [
-            "En site franchissable pour bus",
-            "En voie de dépassement en plus",
-            "En piste cyclable protégée"
+            "Aux bus, en site franchissable",
+            "Au dépassement",
+            "Aux vélos"
           ],
           "correct": 0,
-          "explanation": "Sur certaines autoroutes belges, l'ancienne bande d'arrêt d'urgence a été transformée en site spécial franchissable (SSF) réservé aux bus.",
+          "explanation": "Elle est devenue un site franchissable réservé aux bus.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F6_Q30.webp"
         },
         {
           "id": "F6_Q31",
-          "question": "Ligne continue, mot BUS au sol et panneaux F18 sur autoroute. De quoi s'agit-il ?",
+          "question": "Ligne continue, « BUS » au sol, ce panneau, sur autoroute. Qu'est-ce que c'est ?",
           "choices": [
-            "D'un site franchissable sur autoroute",
-            "D'un chantier signalé par des cônes",
-            "De panneaux directionnels bleus"
+            "Un site franchissable pour bus",
+            "Une bande d'arrêt d'urgence",
+            "Une sortie"
           ],
           "correct": 0,
-          "explanation": "Une ligne continue, le mot BUS écrit au sol et un panneau F18 permettent de reconnaître un SSF sur autoroute.",
+          "explanation": "Réservé aux bus : vous n'y roulez pas.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F6_Q31.webp"
         },
         {
           "id": "F6_Q32",
-          "question": "Le site franchissable est limité à 50 km/h. Les autres bandes gardent-elles 120 km/h ?",
+          "question": "Le site bus est limité à 50 km/h. Vous roulez en voiture sur les autres bandes. Votre maximum ?",
           "choices": [
-            "Oui",
-            "Non"
+            "120 km/h",
+            "50 km/h"
           ],
           "correct": 0,
-          "explanation": "La limitation de vitesse du SSF ne s'applique qu'à cette bande ; les autres bandes conservent la vitesse normale (ex. 120 km/h).",
+          "explanation": "Le 50 km/h vaut seulement pour le site des bus.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F6_Q32.webp"
         },
         {
           "id": "F6_Q33",
-          "question": "Sans bouchon sur l'autoroute, les bus circulent-ils quand même sur le site franchissable ?",
+          "question": "Bouchon sur l'autoroute. Pouvez-vous rouler en voiture sur le site des bus ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, à 50 km/h"
           ],
-          "correct": 1,
-          "explanation": "Sans bouchon, les bus roulent sur la bande de droite normale plutôt que sur le SSF limité à 50 km/h.",
+          "correct": 0,
+          "explanation": "Il est réservé aux bus, même en cas de bouchon.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F6_Q33.webp"
         },
         {
           "id": "F6_Q35",
-          "question": "Les rails du tram peuvent-ils être intégrés directement dans la chaussée ?",
+          "question": "Les rails du tram peuvent-ils être dans la chaussée, là où roulent les voitures ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Oui, les rails du tram peuvent être intégrés directement dans la chaussée ; un signal de danger spécifique en avertit.",
+          "explanation": "Oui : vous partagez alors la chaussée avec le tram.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F6_Q35.webp"
         },
         {
           "id": "F6_Q36",
-          "question": "Un tram vient de votre droite à un carrefour sans signalisation. Respecte-t-il la priorité de droite ?",
+          "question": "Carrefour sans signalisation, le tram vient de votre droite. Doit-il vous céder le passage ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, il a la priorité",
+            "Oui, vous êtes prioritaire"
           ],
-          "correct": 1,
-          "explanation": "Le tram est toujours prioritaire et n'est pas soumis aux règles de priorité ordinaires, quel que soit le côté d'où il arrive.",
+          "correct": 0,
+          "explanation": "Le tram a toujours la priorité sur les autres usagers, d'où qu'il vienne.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F6_Q36.webp"
         },
         {
           "id": "F6_Q37",
-          "question": "Dans quels cas le tram doit-il quand même s'arrêter ?",
+          "question": "Le conducteur de tram doit respecter :",
           "choices": [
-            "Aux agents et à ses propres feux",
-            "Quand la priorité de droite joue",
-            "Aux passages pour piétons seuls"
+            "Les agents et les feux",
+            "Les agents, les feux et la priorité de droite",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Le tram doit s'arrêter aux injonctions des agents qualifiés et à ses propres signaux lumineux (feux de TC).",
+          "explanation": "Il obéit aux agents et aux feux, pas aux règles de priorité.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F6_Q37.webp"
         },
         {
           "id": "F6_Q39",
-          "question": "Un agent lève le bras verticalement et un tram approche. Le tram doit-il s'arrêter ?",
+          "question": "L'agent lève le bras, un tram arrive. Le tram doit-il s'arrêter ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le tram doit respecter les injonctions des agents qualifiés.",
+          "explanation": "Le tram obéit aux agents.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F6_Q39.webp"
         },
         {
           "id": "F6_Q40",
-          "question": "Le tram respecte-t-il les feux de signalisation ?",
+          "question": "Le tram doit-il s'arrêter à son feu rouge ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le tram respecte les signaux lumineux, notamment ses propres feux de transport en commun.",
+          "explanation": "Le tram respecte les feux.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F6_Q40.webp"
         },
         {
-          "id": "F6_Q41",
-          "question": "Que respecte le tram et que ne respecte-t-il pas ?",
+          "id": "F6_Q42",
+          "question": "Que signale ce panneau ?",
           "choices": [
-            "Agents et feux oui, droite non",
-            "Il respecte tout comme les autres",
-            "Les agents oui, les feux non"
+            "Une bande réservée aux bus",
+            "Un arrêt de bus",
+            "Un site franchissable"
           ],
           "correct": 0,
-          "explanation": "Le tram respecte les agents qualifiés et les signaux lumineux, mais pas les règles de priorité ordinaires comme la priorité de droite.",
-          "theoryCardIndex": 3,
-          "severe": true,
-          "image": "/images/questions/F6_Q41.webp"
-        },
-        {
-          "id": "F6_Q42",
-          "question": "Vous cherchez le panneau qui signale une bande bus. Quel panneau est-ce ?",
-          "choices": [
-            "Le panneau F18",
-            "Le panneau F17",
-            "Le panneau F87",
-            "Le panneau C43"
-          ],
-          "correct": 1,
-          "explanation": "Le panneau F17 signale une bande bus.",
+          "explanation": "Le bus sur une des bandes : cette bande est réservée aux bus.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F6_Q42.webp"
         },
         {
           "id": "F6_Q43",
-          "question": "De quel type est la ligne qui délimite une bande bus ?",
+          "question": "Quelle ligne délimite une bande bus ?",
           "choices": [
-            "Une ligne blanche discontinue",
+            "Une large ligne blanche discontinue",
             "Une ligne blanche continue",
-            "Une ligne de couleur jaune"
+            "Une ligne jaune"
           ],
           "correct": 0,
-          "explanation": "La bande bus est délimitée par une ligne blanche discontinue.",
+          "explanation": "Bande bus : large ligne discontinue.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F6_Q43.webp"
         },
         {
           "id": "F6_Q44",
-          "question": "La bande bus est vide. Pouvez-vous l'emprunter en voiture ?",
+          "question": "La bande bus est vide. Pouvez-vous y rouler en voiture ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Circuler sur la bande bus en voiture est interdit, sauf indication contraire par panneau additionnel.",
+          "correct": 0,
+          "explanation": "Interdit, sauf panneau qui l'autorise.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F6_Q44.webp"
         },
         {
           "id": "F6_Q45",
-          "question": "Pouvez-vous vous arrêter ou stationner sur une bande bus ?",
+          "question": "Sur une bande bus, vous pouvez :",
           "choices": [
-            "Oui",
-            "Non"
+            "Ni vous arrêter ni stationner",
+            "Vous arrêter",
+            "Vous arrêter et stationner"
           ],
-          "correct": 1,
-          "explanation": "L'arrêt et le stationnement sur la bande bus sont interdits, sauf indication contraire.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement y sont interdits.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F6_Q45.webp"
         },
         {
           "id": "F6_Q46",
-          "question": "Vous voulez tourner à droite et la bande bus est à votre droite. Pouvez-vous l'emprunter ?",
+          "question": "Juste avant le carrefour, pouvez-vous rouler sur la bande bus pour tourner à droite ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "À proximité immédiate d'un carrefour, vous pouvez emprunter la bande bus pour changer de direction.",
+          "explanation": "Permis à l'approche immédiate du carrefour, pour changer de direction.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F6_Q46.webp"
         },
         {
           "id": "F6_Q47",
-          "question": "Un obstacle bloque votre bande. Pouvez-vous emprunter la bande bus pour le contourner ?",
+          "question": "Un obstacle bloque votre bande. Pouvez-vous le contourner par la bande bus ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Contourner un obstacle via la bande bus est autorisé.",
+          "explanation": "Contourner un obstacle est permis.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F6_Q47.webp"
         },
         {
           "id": "F6_Q48",
-          "question": "Un panneau additionnel avec un vélo accompagne ce signal. Que signifie-t-il ?",
+          "question": "Sous ce panneau, un vélo. Que signifie-t-il ?",
           "choices": [
-            "Les cyclistes peuvent y circuler",
+            "Les cyclistes peuvent rouler sur la bande bus",
             "Les cyclistes y sont interdits",
-            "Une piste cyclable est à côté"
+            "Piste cyclable à côté"
           ],
           "correct": 0,
-          "explanation": "Un panneau additionnel avec un vélo autorise les cyclistes à emprunter la bande bus.",
+          "explanation": "Le symbole vélo autorise les cyclistes sur la bande bus.",
           "theoryCardIndex": 4,
           "sign": "F17"
         },
         {
           "id": "F6_Q49",
-          "question": "Comment distinguer une bande bus d'un site franchissable ?",
+          "question": "Bande bus ou site franchissable : comment les reconnaître ?",
           "choices": [
-            "Bande bus : ligne discontinue",
-            "Bande bus : ligne continue",
-            "Par la couleur du revêtement"
+            "Bande bus : ligne discontinue. Site : ligne continue",
+            "Bande bus : ligne continue. Site : discontinue",
+            "À la couleur du sol"
           ],
           "correct": 0,
-          "explanation": "La bande bus est délimitée par une ligne discontinue ; le SSF par une ligne continue.",
+          "explanation": "Bande bus = discontinue, site franchissable = continue.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F6_Q49.webp"
         },
         {
           "id": "F6_Q52",
-          "question": "Un arrêt de bus se trouve sur votre bande de droite. Pouvez-vous y circuler ?",
+          "question": "Un arrêt de bus est sur votre bande. Pouvez-vous rouler dessus ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Circuler sur un arrêt de bus est autorisé et souvent nécessaire.",
+          "explanation": "Un arrêt de bus n'est pas une bande bus : vous pouvez y rouler.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F6_Q52.webp"
         },
         {
           "id": "F6_Q53",
-          "question": "Pouvez-vous vous arrêter à un arrêt de bus pour faire descendre un passager ?",
+          "question": "Pouvez-vous vous arrêter à un arrêt de bus pour déposer quelqu'un ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "S'arrêter pour embarquer ou débarquer des passagers à un arrêt de bus est autorisé.",
+          "explanation": "S'arrêter pour faire monter ou descendre quelqu'un est permis.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F6_Q53.webp"
         },
         {
           "id": "F6_Q54",
-          "question": "Pouvez-vous stationner votre voiture à un arrêt de bus en attendant quelqu'un ?",
+          "question": "Vous attendez votre amie dans la voiture, à l'arrêt de bus. Est-ce permis ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, quelques minutes"
           ],
-          "correct": 1,
-          "explanation": "Attendre le bus dans votre voiture à un arrêt est assimilé à du stationnement, ce qui est interdit.",
+          "correct": 0,
+          "explanation": "Attendre, c'est stationner : interdit à un arrêt de bus.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F6_Q54.webp"
         },
         {
           "id": "F6_Q56",
-          "question": "Sans marques au sol, à quelle distance du poteau d'arrêt le stationnement est-il interdit ?",
+          "question": "Le stationnement est interdit à moins de combien de mètres du panneau d'arrêt de bus ?",
           "choices": [
-            "À moins de 15 mètres",
-            "À moins de 5 mètres",
-            "À moins de 20 mètres"
+            "15 m, de chaque côté",
+            "5 m, avant seulement",
+            "20 m, après seulement"
           ],
           "correct": 0,
-          "explanation": "Sans marquage au sol, il est interdit de stationner à moins de 15 mètres de part et d'autre du poteau d'arrêt de bus.",
+          "explanation": "15 m avant et 15 m après le panneau.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F6_Q56.webp"
         },
         {
-          "id": "F6_Q58",
-          "question": "Cette distance de 15 mètres vaut-elle des deux côtés du poteau d'arrêt ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "La distance de 15 mètres s'applique de part et d'autre du poteau, avant ET après.",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/F6_Q58.webp"
-        },
-        {
           "id": "F6_Q59",
-          "question": "En agglomération, un autobus de ligne quitte son arrêt en pinçant à gauche. Devez-vous lui céder ?",
+          "question": "En agglomération, ce bus de ligne met son clignotant pour quitter l'arrêt. Que faites-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Vous le laissez partir",
+            "Vous passez, vous êtes sur la chaussée",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "En agglomération, vous devez céder le passage à un autobus de ligne qui active son clignotant gauche en quittant son arrêt.",
+          "explanation": "En agglomération, vous ralentissez et, au besoin, vous vous arrêtez.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/F6_Q59.webp"
         },
         {
           "id": "F6_Q61",
-          "question": "En agglomération, un autocar touristique quitte son arrêt en pinçant à gauche. Devez-vous lui céder ?",
+          "question": "En agglomération, un autocar de tourisme quitte l'arrêt avec son clignotant. Devez-vous le laisser partir ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les autocars ne bénéficient PAS de cette priorité, contrairement aux autobus de ligne réguliers.",
+          "correct": 0,
+          "explanation": "Cette règle vaut pour les autobus de ligne, pas pour les autocars.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/F6_Q61.webp"
         },
         {
-          "id": "F6_Q63",
-          "question": "Quels bus bénéficient de la priorité en quittant leur arrêt en agglomération ?",
+          "id": "F6_Q64",
+          "question": "Hors agglomération, un bus de ligne quitte l'arrêt avec son clignotant. Devez-vous le laisser partir ?",
           "choices": [
-            "Les autobus des services réguliers",
-            "Tous les bus, sans distinction",
-            "Les bus scolaires signalés"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "Seuls les autobus de service régulier de transport en commun bénéficient de cette priorité (pas les autocars, bus scolaires ou ouvriers).",
-          "theoryCardIndex": 5,
-          "severe": true,
-          "image": "/images/questions/F6_Q63.webp"
-        },
-        {
-          "id": "F6_Q64",
-          "question": "Hors agglomération, un autobus de ligne quitte son arrêt. Devez-vous lui céder le passage ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Hors agglomération, vous n'êtes pas tenu de céder le passage à un autobus qui quitte son arrêt.",
+          "explanation": "La règle ne vaut qu'en agglomération.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/F6_Q64.webp"
-        },
-        {
-          "id": "F6_Q65",
-          "question": "Quelles sont les trois conditions pour devoir céder au bus qui quitte son arrêt ?",
-          "choices": [
-            "Agglomération, service régulier, clignotant",
-            "En tout lieu et pour n'importe quel bus",
-            "Hors agglomération, pour tous les bus"
-          ],
-          "correct": 0,
-          "explanation": "Les trois conditions simultanées sont : en agglomération, pour un autobus de TC régulier, et dès l'activation du clignotant gauche.",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/F6_Q65.webp"
         },
         {
           "id": "F6_Q73",
@@ -5033,12 +4951,12 @@
           "id": "F6_Q74",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Une voie ferrée croise la chaussée",
-            "Une gare se trouve à proximité",
-            "Un passage à niveau avec barrières"
+            "Voies ferrées dans la chaussée",
+            "Gare à proximité",
+            "Passage à niveau avec barrières"
           ],
           "correct": 0,
-          "explanation": "Ce signal indique que des voies ferrées traversent la chaussée.",
+          "explanation": "Des rails traversent ou longent la chaussée.",
           "theoryCardIndex": 3,
           "sign": "A49"
         }

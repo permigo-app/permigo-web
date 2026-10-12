@@ -3954,26 +3954,26 @@
       "questions": [
         {
           "id": "F6_Q1",
-          "question": "Waarom moet u bijzonder voorzichtig zijn aan een overweg?",
+          "question": "Waarom is een trein zo gevaarlijk aan een overweg?",
           "choices": [
-            "De trein remt lang en wijkt niet uit",
-            "Treinen zijn zeldzaam en onvoorspelbaar",
-            "Treinen stoppen heel gemakkelijk"
+            "Hij heeft een heel lange remafstand",
+            "Hij rijdt altijd traag",
+            "Hij kan snel stoppen"
           ],
           "correct": 0,
-          "explanation": "De heel lange remafstand en de onmogelijkheid om af te wijken maken treinen heel gevaarlijk.",
+          "explanation": "Een trein heeft honderden meters nodig om te stoppen en kan niet uitwijken.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F6_Q2",
-          "question": "Kan een trein van koers wijken om een hindernis te ontwijken?",
+          "question": "Kan een trein uitwijken voor een auto?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Een trein kan niet afwijken — hij volgt noodzakelijkerwijs zijn sporen.",
+          "correct": 0,
+          "explanation": "Hij volgt zijn sporen: jij mag nooit op het spoor blijven staan.",
           "theoryCardIndex": 0,
           "severe": true
         },
@@ -3982,11 +3982,11 @@
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
             "Overweg met één spoor",
-            "Overweg met twee sporen",
-            "Overweg verboden toegang"
+            "Overweg met twee of meer sporen",
+            "Gesloten overweg"
           ],
           "correct": 0,
-          "explanation": "Eén kruisbalk = overweg met één enkel spoor.",
+          "explanation": "Eén kruis: één spoor.",
           "theoryCardIndex": 0,
           "sign": "A45",
           "severe": true
@@ -3995,639 +3995,563 @@
           "id": "F6_Q4",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Overweg met twee sporen of meer",
-            "Overweg met één enkel spoor",
-            "Overweg gesloten voor verkeer"
+            "Overweg met twee of meer sporen",
+            "Overweg met één spoor",
+            "Gesloten overweg"
           ],
           "correct": 0,
-          "explanation": "Twee kruisbalken = overweg met twee of meer sporen.",
+          "explanation": "Dubbel kruis: minstens twee sporen.",
           "theoryCardIndex": 0,
           "sign": "A47",
           "severe": true
         },
         {
           "id": "F6_Q5",
-          "question": "Waar staan deze seinen (één balk / twee balken)?",
+          "question": "Waar staat het andreaskruis van de overweg?",
           "choices": [
-            "Op 150 meter ervoor",
             "Aan de overweg zelf",
-            "Op 500 meter ervoor",
-            "Na de overweg"
+            "150 m ervoor",
+            "500 m ervoor"
           ],
-          "correct": 1,
-          "explanation": "Deze seinen staan aan de overweg zelf.",
+          "correct": 0,
+          "explanation": "Het kruis (enkel of dubbel) staat vlak aan de overweg.",
           "theoryCardIndex": 0,
           "severe": true,
           "sign": "A45"
         },
         {
           "id": "F6_Q6",
-          "question": "Dit bord staat op 150 meter. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
             "Overweg met slagbomen",
             "Overweg zonder slagbomen",
-            "Wegenwerken in uitvoering"
+            "Werken"
           ],
           "correct": 0,
-          "explanation": "Bord met slagbomen op 150 m = overweg met slagbomen over 150 m.",
+          "explanation": "Het bord met een slagboom kondigt een overweg met slagbomen aan, ongeveer 150 m verder.",
           "theoryCardIndex": 0,
           "sign": "A41"
         },
         {
           "id": "F6_Q7",
-          "question": "Dit bord staat op 150 meter. Wat betekent het?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
             "Overweg zonder slagbomen",
             "Overweg met slagbomen",
-            "Overweg met één enkel spoor"
+            "Station in de buurt"
           ],
           "correct": 0,
-          "explanation": "Bord zonder slagbomen op 150 m = overweg zonder slagbomen over 150 m.",
+          "explanation": "De locomotief kondigt een overweg zonder slagbomen aan: niets houdt je tegen, kijk goed.",
           "theoryCardIndex": 0,
           "sign": "A43"
         },
         {
-          "id": "F6_Q8",
-          "question": "Waarom is het belangrijk te weten dat een overweg geen slagbomen heeft?",
-          "choices": [
-            "Niets houdt u fysiek tegen",
-            "Enkel om uw snelheid aan te passen",
-            "Om te weten waar u kan parkeren"
-          ],
-          "correct": 0,
-          "explanation": "Zonder slagbomen is er geen fysieke blokkering — maximale voorzichtigheid vereist.",
-          "theoryCardIndex": 0,
-          "severe": true
-        },
-        {
           "id": "F6_Q9",
-          "question": "Een maanwit licht knippert aan de overweg. Wat betekent dat?",
+          "question": "Het witte licht knippert aan de overweg. Wat betekent het?",
           "choices": [
-            "Geen trein, u mag oversteken",
-            "Een trein nadert, stop",
-            "Oversteken is hier verboden"
+            "Je mag doorrijden",
+            "Er komt een trein",
+            "Doorrijden verboden"
           ],
           "correct": 0,
-          "explanation": "Knipperend wit maanlicht = je mag oversteken.",
+          "explanation": "Wit knipperlicht: geen trein aangekondigd, je mag doorrijden.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F6_Q10",
-          "question": "De rode lichten knipperen en er weerklinkt een geluidssignaal. Wat doet u?",
+          "question": "De rode lichten knipperen en de bel gaat. Wat doe je?",
           "choices": [
-            "U stopt en wacht af",
-            "U steekt over en kijkt rond",
-            "U versnelt om erdoor te zijn"
+            "Je stopt",
+            "Je rijdt snel door",
+            "Je rijdt voorzichtig door"
           ],
           "correct": 0,
-          "explanation": "Knipperende rode lichten en/of geluidssignaal = absoluut verbod om op te rijden.",
+          "explanation": "Rode lichten of bel: verboden op te rijden, ook als de slagbomen nog open zijn.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F6_Q11",
-          "question": "U bent voetganger bij die knipperende rode lichten. Geldt het verbod voor u?",
+          "question": "Je staat te voet voor deze knipperende rode lichten. Mag je oversteken?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
           "correct": 0,
-          "explanation": "Het verbod bij rode lichten aan de overweg geldt voor iedereen, voetgangers inbegrepen.",
+          "explanation": "Het verbod geldt voor iedereen, ook voor voetgangers.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F6_Q12",
-          "question": "U steekt over terwijl de slagbomen sluiten. Hoe zwaar is die overtreding?",
+          "question": "De slagbomen beginnen te zakken. Mag je nog doorrijden?",
           "choices": [
-            "Zwaar, intrekking rijbewijs mogelijk",
-            "Klein, van de eerste graad",
-            "Getolereerd als u snel bent"
+            "Nee",
+            "Ja, als je snel bent"
           ],
           "correct": 0,
-          "explanation": "Oversteken tijdens de beweging van de slagbomen = zware overtreding, mogelijke onmiddellijke intrekking.",
+          "explanation": "Verboden op te rijden zolang de slagbomen bewegen: dat is een zware overtreding.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F6_Q13",
-          "question": "U rijdt door de knipperende rode lichten van een overweg. Welk gevolg?",
+          "question": "Je rijdt door het rode knipperlicht van een overweg. Kan je rijbewijs ter plaatse ingetrokken worden?",
           "choices": [
-            "Zwaar, intrekking rijbewijs mogelijk",
-            "Klein, met een gewone boete",
-            "Getolereerd als de trein ver is"
+            "Ja",
+            "Nee"
           ],
           "correct": 0,
-          "explanation": "De rode lichten van een overweg negeren = zware overtreding, onmiddellijke intrekking.",
+          "explanation": "Het is een zware overtreding: onmiddellijke intrekking mogelijk.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F6_Q14",
-          "question": "Het maanwitte licht knippert en een traag voertuig rijdt voor u. Mag u langs links inhalen?",
+          "question": "Het witte licht knippert, de slagbomen zijn open. Mag je deze tractor inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Ja, als de weg vrij is",
+            "Nee, nooit op een overweg"
           ],
           "correct": 0,
-          "explanation": "Wit maanlicht = toestemming om over te steken EN links in te halen.",
+          "explanation": "Met slagbomen of lichten mag inhalen. Zonder mag je er geen motorvoertuig inhalen (wel een fiets).",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F6_Q15",
-          "question": "Wat is een bijzondere overrijdbare bedding?",
+          "question": "Maakt de bijzondere overrijdbare bedding deel uit van de rijbaan?",
           "choices": [
-            "Een ruimte voor het openbaar vervoer",
-            "Een gewone strook van de rijbaan",
-            "Een breder trottoir voor de haltes"
+            "Nee, ze is voor bussen en trams",
+            "Ja, het is een gewone rijstrook",
+            "Ja, om te parkeren"
           ],
           "correct": 0,
-          "explanation": "De BOB is voorbehouden voor het OV (tram/bus) en maakt geen deel uit van de rijbaan.",
+          "explanation": "Ze maakt geen deel uit van de rijbaan: ze is voor het openbaar vervoer.",
           "theoryCardIndex": 1,
           "sign": "F18"
         },
         {
           "id": "F6_Q17",
-          "question": "Waardoor is de BOB afgebakend?",
+          "question": "Welke lijn begrenst de bijzondere overrijdbare bedding?",
           "choices": [
-            "Een onderbroken lijn",
-            "Een doorlopende witte lijn",
-            "Lichten",
-            "Palen"
+            "Een brede witte doorlopende lijn",
+            "Een witte onderbroken lijn",
+            "Een gele lijn"
           ],
-          "correct": 1,
-          "explanation": "De BOB is afgebakend door een doorlopende witte lijn.",
+          "correct": 0,
+          "explanation": "Overrijdbare bedding: brede doorlopende lijn. Busstrook: brede onderbroken lijn.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q18",
-          "question": "De rijbaan staat vol. Mag u met de auto op de bijzondere bedding rijden?",
+          "question": "Er is file. Mag je op de overrijdbare bedding rijden om vooruit te komen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Op de BOB rijden is verboden, behalve uitzonderingen.",
+          "correct": 0,
+          "explanation": "File is geen hindernis: je blijft op de rijbaan.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q19",
-          "question": "Mag u stoppen of parkeren op een bijzondere overrijdbare bedding?",
+          "question": "Mag je stilstaan op een overrijdbare bedding?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, kort"
           ],
-          "correct": 1,
-          "explanation": "Parkeren en stoppen op de BOB zijn verboden.",
+          "correct": 0,
+          "explanation": "Stilstaan en parkeren zijn er verboden.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q20",
-          "question": "Mag u de bijzondere bedding gebruiken om u voor een kruispunt op te stellen?",
+          "question": "Mag je op de overrijdbare bedding rijden om je voor te sorteren voor het kruispunt?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "De BOB gebruiken om je te positioneren vóór een kruispunt is verboden.",
+          "correct": 0,
+          "explanation": "Dat mag op een busstrook, niet op een overrijdbare bedding.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q21",
-          "question": "Een hindernis blokkeert uw strook. Mag u de bijzondere bedding gebruiken om erlangs te gaan?",
+          "question": "Een hindernis blokkeert je rijstrook. Mag je eromheen via de overrijdbare bedding?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Drie uitzonderingen: hindernis, kruispunt, toegang eigendom/parking.",
+          "explanation": "Een hindernis omzeilen mag.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q22",
-          "question": "De bijzondere bedding kruist het kruispunt. Mag u ze oversteken om door te rijden?",
+          "question": "Mag je de overrijdbare bedding oversteken op het kruispunt?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een hindernis omzeilen via de BOB is toegestaan.",
+          "explanation": "Oversteken op een kruispunt mag.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q23",
-          "question": "Uw eigendom ligt aan de overkant van de bijzondere bedding. Mag u ze oversteken?",
+          "question": "Je garage ligt aan de andere kant van de overrijdbare bedding. Mag je ze oversteken?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De BOB oversteken op kruispunten is toegestaan.",
+          "explanation": "Oversteken naar een eigendom of parkeerplaats mag.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q24",
-          "question": "Wat bakenen de dambordmarkeringen op het wegdek af?",
+          "question": "Hoe heten deze witte vierkanten op de grond?",
           "choices": [
-            "Een bedding of een overweg",
-            "Een betalende blauwe zone",
-            "Een verhoogde oversteekplaats"
+            "Dambordmarkering",
+            "Verdrijvingsvlak",
+            "Oversteekplaats voor voetgangers"
           ],
           "correct": 0,
-          "explanation": "Een eigendom bereiken via de BOB is toegestaan.",
+          "explanation": "Dambordmarkering begrenst een overrijdbare bedding of een busstrook.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "F6_Q25",
-          "question": "Mag u dambordmarkeringen oversteken om aan de overkant te komen?",
+          "question": "Mag je stilstaan op dambordmarkering?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
           "correct": 0,
-          "explanation": "Dambordmarkeringen bakenen de BOB af, de verbindingsruimten of een overweg.",
+          "explanation": "Je mag ze oversteken, maar er niet stilstaan of parkeren.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q26",
-          "question": "Een onderbord met een fiets hangt bij dit bord. Wat betekent het?",
+          "question": "Onder dit bord staat een fiets. Wat betekent dat?",
           "choices": [
-            "Fietsers mogen er ook rijden",
+            "Fietsers mogen erop rijden",
             "Fietsers zijn er verboden",
-            "Een fietsenstalling in de buurt"
+            "Fietsenstalling"
           ],
           "correct": 0,
-          "explanation": "Je mag de dambordmarkeringen kruisen, maar er niet stoppen of parkeren.",
+          "explanation": "Het fietssymbool laat fietsers toe op de overrijdbare bedding.",
           "theoryCardIndex": 1,
           "sign": "F18"
         },
         {
           "id": "F6_Q27",
-          "question": "Zonder onderbord, wie mag op een bijzondere bedding rijden?",
+          "question": "Wie mag er zonder onderbord op de overrijdbare bedding rijden?",
           "choices": [
-            "De trams en de autobussen",
-            "Alle voertuigen van het verkeer",
-            "De fietsers en de voetgangers"
+            "Lijnbussen en trams",
+            "Iedereen",
+            "Fietsers"
           ],
           "correct": 0,
-          "explanation": "Het onderbord met fiets staat fietsers toe om de BOB te gebruiken.",
+          "explanation": "Alleen het openbaar vervoer, tenzij een bord anderen toelaat.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q28",
-          "question": "U rijdt om een hindernis via de bijzondere bedding. Moet u dit licht respecteren?",
+          "question": "Je omzeilt een hindernis via de overrijdbare bedding. Moet je dit licht volgen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zonder onderbord mogen enkel OV-voertuigen (tram, bus) de BOB gebruiken.",
+          "explanation": "Op de bedding volg je de lichten ervan.",
           "theoryCardIndex": 1,
           "sign": "FEU_TRAM"
         },
         {
-          "id": "F6_Q29",
-          "question": "Is de doorlopende lijn van de bedding dezelfde als die tussen de rijstroken?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Op een BOB gelden de OV-lichten voor alle aanwezige weggebruikers.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "F6_Q30",
-          "question": "Waarin werd de oude pechstrook op sommige autosnelwegen omgevormd?",
+          "question": "Waarvoor dient de vroegere pechstrook op sommige autosnelwegen?",
           "choices": [
-            "In een busbedding",
-            "In een extra inhaalstrook",
-            "In een beschermd fietspad"
+            "Voor bussen, als overrijdbare bedding",
+            "Om in te halen",
+            "Voor fietsers"
           ],
           "correct": 0,
-          "explanation": "De lijn van de BOB is niet dezelfde als die tussen rijstroken — de BOB is niet de rijbaan.",
+          "explanation": "Ze is een overrijdbare bedding voor bussen geworden.",
           "theoryCardIndex": 1
         },
         {
           "id": "F6_Q31",
-          "question": "Doorlopende lijn, het woord BUS op het wegdek en F18-borden. Wat is dat?",
+          "question": "Doorlopende lijn, « BUS » op de grond, dit bord, op de autosnelweg. Wat is het?",
           "choices": [
-            "Een busbedding op de autosnelweg",
-            "Een werf aangeduid met kegels",
-            "Blauwe richtingsborden"
+            "Een overrijdbare bedding voor bussen",
+            "Een pechstrook",
+            "Een afrit"
           ],
           "correct": 0,
-          "explanation": "De vroegere pechstrook wordt op sommige autosnelwegen een BOB.",
+          "explanation": "Voorbehouden aan bussen: jij rijdt er niet op.",
           "theoryCardIndex": 2
         },
         {
           "id": "F6_Q32",
-          "question": "De busbedding is beperkt tot 50 km/u. Blijven de andere stroken op 120 km/u?",
+          "question": "De busbedding is beperkt tot 50 km/u. Je rijdt met de auto op de andere rijstroken. Je maximum?",
           "choices": [
-            "Ja",
-            "Nee"
+            "120 km/u",
+            "50 km/u"
           ],
           "correct": 0,
-          "explanation": "Doorlopende lijn + BUS + verkeersbord F18 = BOB op de autosnelweg.",
+          "explanation": "De 50 km/u geldt alleen voor de busbedding.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F6_Q33",
-          "question": "Zonder file op de autosnelweg, rijden de bussen dan toch op de bedding?",
+          "question": "File op de autosnelweg. Mag je met de auto op de busbedding rijden?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, aan 50 km/u"
           ],
-          "correct": 1,
-          "explanation": "De BOB op de autosnelweg is in dit voorbeeld beperkt tot 50 km/u.",
+          "correct": 0,
+          "explanation": "Ze is voor bussen, ook bij file.",
           "theoryCardIndex": 2
         },
         {
           "id": "F6_Q35",
-          "question": "Mogen tramsporen rechtstreeks in de rijbaan liggen?",
+          "question": "Kunnen tramsporen in de rijbaan liggen, waar auto's rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zonder file verkiezen bussen de gewone rijstrook om sneller te rijden.",
+          "explanation": "Ja: je deelt dan de rijbaan met de tram.",
           "theoryCardIndex": 2
         },
         {
           "id": "F6_Q36",
-          "question": "Een tram komt van rechts op een kruispunt zonder borden. Respecteert hij de voorrang van rechts?",
+          "question": "Kruispunt zonder borden, de tram komt van rechts. Moet hij jou voorrang geven?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, hij heeft voorrang",
+            "Ja, jij hebt voorrang"
           ],
-          "correct": 1,
-          "explanation": "Een gevaarbord wijst op sporen die de rijbaan kruisen.",
+          "correct": 0,
+          "explanation": "De tram heeft altijd voorrang op de andere weggebruikers, van waar hij ook komt.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F6_Q37",
-          "question": "In welke gevallen moet de tram toch stoppen?",
+          "question": "De trambestuurder moet zich houden aan:",
           "choices": [
-            "Voor agenten en zijn eigen lichten",
-            "Wanneer voorrang van rechts geldt",
-            "Enkel aan de oversteekplaatsen"
+            "Agenten en verkeerslichten",
+            "Agenten, lichten en voorrang van rechts",
+            "Niets"
           ],
           "correct": 0,
-          "explanation": "De tramrails kunnen in de rijbaan geïntegreerd zijn.",
+          "explanation": "Hij volgt agenten en lichten, niet de voorrangsregels.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F6_Q39",
-          "question": "Een agent steekt zijn arm omhoog en een tram nadert. Moet de tram stoppen?",
+          "question": "De agent steekt de arm op, er komt een tram. Moet de tram stoppen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De tram stopt enkel bij bevelen van bevoegde personen en bij verkeerslichten.",
+          "explanation": "De tram volgt de agenten.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F6_Q40",
-          "question": "Respecteert de tram de verkeerslichten?",
+          "question": "Moet de tram stoppen voor zijn rood licht?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De tram heeft altijd voorrang, ongeacht van welke kant hij komt.",
+          "explanation": "De tram volgt de verkeerslichten.",
           "theoryCardIndex": 3
         },
         {
-          "id": "F6_Q41",
-          "question": "Wat respecteert de tram wel en wat niet?",
+          "id": "F6_Q42",
+          "question": "Wat geeft dit bord aan?",
           "choices": [
-            "Agenten en lichten wel, rechts niet",
-            "Hij respecteert alles zoals anderen",
-            "De agenten wel, de lichten niet"
+            "Een busstrook",
+            "Een bushalte",
+            "Een overrijdbare bedding"
           ],
           "correct": 0,
-          "explanation": "Bevoegde personen hebben voorrang op alles, ook op de voorrang van de tram.",
-          "theoryCardIndex": 3,
-          "severe": true
-        },
-        {
-          "id": "F6_Q42",
-          "question": "Respecteert de tram de verkeerslichten?",
-          "choices": [
-            "Nee, hij heeft altijd voorrang",
-            "Ja, de tram respecteert de verkeerslichten (zijn eigen OV-lichten)",
-            "Nee, nooit",
-            "Enkel het rode licht"
-          ],
-          "correct": 1,
-          "explanation": "De tram respecteert de verkeerslichten (zijn eigen OV-lichten).",
+          "explanation": "De bus op een van de stroken: die strook is voor bussen.",
           "theoryCardIndex": 3
         },
         {
           "id": "F6_Q43",
-          "question": "Welk soort lijn bakent een busstrook af?",
+          "question": "Welke lijn begrenst een busstrook?",
           "choices": [
-            "Een onderbroken witte lijn",
-            "Een doorlopende witte lijn",
-            "Een lijn in gele kleur"
+            "Een brede witte onderbroken lijn",
+            "Een witte doorlopende lijn",
+            "Een gele lijn"
           ],
           "correct": 0,
-          "explanation": "Tram: respecteert agenten en lichten. Respecteert niet de gewone voorrangsregels.",
+          "explanation": "Busstrook: brede onderbroken lijn.",
           "theoryCardIndex": 3
         },
         {
           "id": "F6_Q44",
-          "question": "De busstrook is leeg. Mag u er met de auto op rijden?",
+          "question": "De busstrook is leeg. Mag je er met de auto op rijden?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "De busstrook wordt aangeduid met verkeersbord F17.",
+          "correct": 0,
+          "explanation": "Verboden, tenzij een bord het toelaat.",
           "theoryCardIndex": 4
         },
         {
           "id": "F6_Q45",
-          "question": "Mag u stoppen of parkeren op een busstrook?",
+          "question": "Op een busstrook mag je:",
           "choices": [
-            "Ja",
-            "Nee"
+            "Niet stilstaan en niet parkeren",
+            "Stilstaan",
+            "Stilstaan en parkeren"
           ],
-          "correct": 1,
-          "explanation": "De busstrook is afgebakend door een witte onderbroken lijn.",
+          "correct": 0,
+          "explanation": "Stilstaan en parkeren zijn er verboden.",
           "theoryCardIndex": 4
         },
         {
           "id": "F6_Q46",
-          "question": "U wil rechts afslaan en de busstrook ligt rechts van u. Mag u ze gebruiken?",
+          "question": "Vlak voor het kruispunt: mag je op de busstrook rijden om rechts af te slaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Op de busstrook rijden is verboden, behalve bij andersluidende aanduiding.",
+          "explanation": "Mag vlak voor het kruispunt, om van richting te veranderen.",
           "theoryCardIndex": 4
         },
         {
           "id": "F6_Q47",
-          "question": "Een hindernis blokkeert uw strook. Mag u de busstrook gebruiken om erlangs te gaan?",
+          "question": "Een hindernis blokkeert je rijstrook. Mag je eromheen via de busstrook?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Stoppen en parkeren op de busstrook zijn verboden, behalve bij andersluidende aanduiding.",
+          "explanation": "Een hindernis omzeilen mag.",
           "theoryCardIndex": 4
         },
         {
           "id": "F6_Q48",
-          "question": "Een onderbord met een fiets hangt bij dit bord. Wat betekent het?",
+          "question": "Onder dit bord staat een fiets. Wat betekent dat?",
           "choices": [
-            "Fietsers mogen er ook rijden",
+            "Fietsers mogen op de busstrook",
             "Fietsers zijn er verboden",
-            "Een fietspad ligt ernaast"
+            "Fietspad ernaast"
           ],
           "correct": 0,
-          "explanation": "In de onmiddellijke nabijheid van een kruispunt mag je de busstrook gebruiken om van richting te veranderen.",
+          "explanation": "Het fietssymbool laat fietsers toe op de busstrook.",
           "theoryCardIndex": 4,
           "sign": "F17"
         },
         {
           "id": "F6_Q49",
-          "question": "Hoe onderscheidt u een busstrook van een bijzondere bedding?",
+          "question": "Busstrook of overrijdbare bedding: hoe herken je ze?",
           "choices": [
-            "Busstrook: onderbroken lijn",
-            "Busstrook: doorlopende lijn",
-            "Aan de kleur van het wegdek"
+            "Busstrook: onderbroken lijn. Bedding: doorlopende lijn",
+            "Busstrook: doorlopend. Bedding: onderbroken",
+            "Aan de kleur van de grond"
           ],
           "correct": 0,
-          "explanation": "Een hindernis omzeilen via de busstrook is toegestaan.",
+          "explanation": "Busstrook = onderbroken, overrijdbare bedding = doorlopend.",
           "theoryCardIndex": 4
         },
         {
           "id": "F6_Q52",
-          "question": "Een bushalte ligt op uw rechterstrook. Mag u erover rijden?",
+          "question": "Er ligt een bushalte op je rijstrook. Mag je erover rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Doorlopende lijn = BOB.",
+          "explanation": "Een bushalte is geen busstrook: je mag erover rijden.",
           "theoryCardIndex": 4
         },
         {
           "id": "F6_Q53",
-          "question": "Mag u aan een bushalte stoppen om een passagier te laten uitstappen?",
+          "question": "Mag je aan een bushalte stoppen om iemand af te zetten?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Onderbroken lijn = busstrook.",
+          "explanation": "Stoppen om iemand te laten in- of uitstappen mag.",
           "theoryCardIndex": 4
         },
         {
           "id": "F6_Q54",
-          "question": "Mag u uw auto aan een bushalte parkeren terwijl u op iemand wacht?",
+          "question": "Je wacht in de auto op je vriendin, aan de bushalte. Mag dat?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, een paar minuten"
           ],
-          "correct": 1,
-          "explanation": "Over een bushalte rijden is toegestaan en vaak noodzakelijk.",
+          "correct": 0,
+          "explanation": "Wachten is parkeren: verboden aan een bushalte.",
           "theoryCardIndex": 5
         },
         {
           "id": "F6_Q56",
-          "question": "Zonder markering op het wegdek, tot op welke afstand van de haltepaal is parkeren verboden?",
+          "question": "Op hoeveel meter van het bushaltebord is parkeren verboden?",
           "choices": [
-            "Op minder dan 15 meter",
-            "Op minder dan 5 meter",
-            "Op minder dan 20 meter"
+            "15 m, aan beide kanten",
+            "5 m, alleen ervoor",
+            "20 m, alleen erna"
           ],
           "correct": 0,
-          "explanation": "Wachten in je auto = parkeren = verboden aan een bushalte.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "F6_Q58",
-          "question": "Geldt die afstand van 15 meter aan beide kanten van de haltepaal?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 0,
-          "explanation": "Zonder markeringen: parkeren verboden op minder dan 15 m aan weerszijden van de paal.",
+          "explanation": "15 m voor en 15 m na het bord.",
           "theoryCardIndex": 5
         },
         {
           "id": "F6_Q59",
-          "question": "In de bebouwde kom verlaat een lijnbus zijn halte met de linkerpinker aan. Moet u hem voorrang geven?",
+          "question": "Binnen de bebouwde kom zet deze lijnbus zijn richtingaanwijzer aan om te vertrekken. Wat doe je?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Je laat hem vertrekken",
+            "Je rijdt door, jij zit op de rijbaan",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "10 m < 15 m minimum vereist → overtreding.",
+          "explanation": "Binnen de bebouwde kom vertraag je en stop je zo nodig.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "F6_Q61",
-          "question": "In de bebouwde kom verlaat een toeristische autocar zijn halte met de pinker aan. Moet u hem voorrang geven?",
+          "question": "Binnen de bebouwde kom vertrekt een touringcar aan de halte met richtingaanwijzer. Moet je hem laten vertrekken?",
           "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Binnen de bebouwde kom: voorrang verlenen aan de bus zodra hij zijn linkerrichtingaanwijzer aanzet.",
-          "theoryCardIndex": 5,
-          "severe": true
-        },
-        {
-          "id": "F6_Q63",
-          "question": "Welke bussen genieten voorrang bij het verlaten van hun halte in de bebouwde kom?",
-          "choices": [
-            "De bussen van de geregelde diensten",
-            "Alle bussen, zonder onderscheid",
-            "De aangeduide schoolbussen"
+            "Nee",
+            "Ja"
           ],
           "correct": 0,
-          "explanation": "Autocars hebben niet de voorrang bij het verlaten van hun halte.",
+          "explanation": "Die regel geldt voor lijnbussen, niet voor touringcars.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "F6_Q64",
-          "question": "Buiten de bebouwde kom verlaat een lijnbus zijn halte. Moet u hem voorrang geven?",
+          "question": "Buiten de bebouwde kom vertrekt een lijnbus aan de halte met richtingaanwijzer. Moet je hem laten vertrekken?",
           "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Schoolbussen en bedrijfsbussen: geen voorrang bij het verlaten van de halte.",
-          "theoryCardIndex": 5,
-          "severe": true
-        },
-        {
-          "id": "F6_Q65",
-          "question": "Wat zijn de drie voorwaarden om voorrang te moeten geven aan een vertrekkende bus?",
-          "choices": [
-            "Bebouwde kom, lijnbus, pinker aan",
-            "Op elke plaats en voor elke bus",
-            "Buiten de kom, voor alle bussen"
+            "Nee",
+            "Ja"
           ],
           "correct": 0,
-          "explanation": "Enkel de autobussen van de reguliere OV-dienst hebben voorrang.",
-          "theoryCardIndex": 5
+          "explanation": "De regel geldt alleen binnen de bebouwde kom.",
+          "theoryCardIndex": 5,
+          "severe": true
         },
         {
           "id": "F6_Q73",
@@ -4646,12 +4570,12 @@
           "id": "F6_Q74",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Een spoorlijn kruist de rijbaan",
-            "Een station in de buurt",
-            "Een overweg met slagbomen"
+            "Sporen in de rijbaan",
+            "Station in de buurt",
+            "Overweg met slagbomen"
           ],
           "correct": 0,
-          "explanation": "Dit bord geeft aan dat sporen de rijbaan kruisen.",
+          "explanation": "Er liggen sporen in of over de rijbaan.",
           "theoryCardIndex": 3,
           "sign": "A49"
         }
