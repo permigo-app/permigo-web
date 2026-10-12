@@ -818,18 +818,6 @@
           "sign": "A15"
         },
         {
-          "id": "A1Q79",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Chaussée glissante",
-            "Virages successifs",
-            "Zone de freinage"
-          ],
-          "correct": 0,
-          "explanation": "Le revêtement peut être glissant, surtout par temps humide : ralentissez et évitez les freinages brusques.",
-          "sign": "A15"
-        },
-        {
           "id": "A1Q80",
           "question": "Que signifie ce panneau ?",
           "choices": [
@@ -904,18 +892,6 @@
           "correct": 0,
           "explanation": "Cerfs et sangliers peuvent traverser : ralentissez, surtout à l'aube et au crépuscule.",
           "sign": "A27"
-        },
-        {
-          "id": "A1Q87",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Croisement de voie ferrée",
-            "Gare située à proximité",
-            "Arrêt de tram plus loin"
-          ],
-          "correct": 0,
-          "explanation": "Un train ou un tram peut croiser la route à cet endroit.",
-          "sign": "A49"
         },
         {
           "id": "A1Q88",
@@ -1121,19 +1097,6 @@
           "sign": "F45b"
         },
         {
-          "id": "A1_SIGN_A16_1",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Une montée à forte pente",
-            "Une descente dangereuse",
-            "Un ralentisseur au sol"
-          ],
-          "correct": 0,
-          "explanation": "La côte est raide : rétrogradez à temps pour garder de la puissance.",
-          "destination": "panneaux",
-          "sign": "A5"
-        },
-        {
           "id": "A1_SIGN_A23_1",
           "question": "Vous voyez un panneau triangulaire avec des silhouettes d'animaux domestiques. Que devez-vous anticiper ?",
           "choices": [
@@ -1160,20 +1123,6 @@
           "explanation": "Ce panneau annonce la présence prochaine de feux tricolores, pour que vous puissiez adapter votre vitesse à l'avance.",
           "destination": "panneaux",
           "sign": "A33"
-        },
-        {
-          "id": "A1_SIGN_A31_1",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Passage à niveau sans barrières",
-            "Passage à niveau avec barrières",
-            "Traversée de voie de tramway"
-          ],
-          "correct": 0,
-          "explanation": "Aucune barrière ne protège la voie : regardez des deux côtés et ne vous engagez qu'à coup sûr.",
-          "destination": "panneaux",
-          "sign": "A43",
-          "severe": true
         },
         {
           "id": "A1_SIGN_A33_1",
@@ -1295,19 +1244,6 @@
           "sign": "D11"
         },
         {
-          "id": "A1_SIGN_D10_1",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Chemin partagé piétons et cyclistes",
-            "Piste cyclable interdite aux piétons",
-            "Trottoir interdit aux cyclistes"
-          ],
-          "correct": 0,
-          "explanation": "Piétons et cyclistes empruntent la même surface : chacun tient compte de l'autre.",
-          "destination": "panneaux",
-          "sign": "D10"
-        },
-        {
           "id": "A1_SIGN_D11_1",
           "question": "Que signifie ce panneau ?",
           "choices": [
@@ -1371,20 +1307,6 @@
           "explanation": "Cette voie impose de continuer tout droit : il faut changer de bande avant pour tourner.",
           "destination": "panneaux",
           "sign": "FLECHE_SOL_TOUT_DROIT"
-        },
-        {
-          "id": "A1_SIGN_A21_1",
-          "question": "Que devez-vous anticiper en voyant ce panneau ?",
-          "choices": [
-            "Des cyclistes qui traversent",
-            "Une piste cyclable qui débute",
-            "Une course cycliste en cours"
-          ],
-          "correct": 0,
-          "explanation": "Des cyclistes et cyclomotoristes peuvent traverser la chaussée : ralentissez et soyez prêt à céder le passage.",
-          "destination": "panneaux",
-          "sign": "A25",
-          "severe": true
         },
         {
           "id": "A1Q61",
@@ -1672,18 +1594,6 @@
           "image": "/images/questions/A2_Q12.webp"
         },
         {
-          "id": "A2_Q14",
-          "question": "Double ligne : la ligne discontinue est de votre côté. Pouvez-vous dépasser ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "C'est la ligne de votre côté qui compte : discontinue, vous pouvez la franchir.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/A2_Q14.webp"
-        },
-        {
           "id": "A2_Q15",
           "question": "Dépassement terminé. Que faites-vous ?",
           "choices": [
@@ -1695,18 +1605,6 @@
           "explanation": "Après un dépassement, vous reprenez la bande de droite dès que possible.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q15.webp"
-        },
-        {
-          "id": "A2_Q16",
-          "question": "Double ligne : la ligne continue est de votre côté. Pouvez-vous dépasser ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "La ligne de votre côté est continue : vous ne pouvez pas la franchir.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/A2_Q16.webp"
         },
         {
           "id": "A2_Q17",
@@ -1889,18 +1787,6 @@
           "image": "/images/questions/A2_Q35.webp"
         },
         {
-          "id": "A2_Q36",
-          "question": "Un obstacle bloque votre chaussée. Pouvez-vous le contourner par la bande bus ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "Pour contourner un obstacle, vous pouvez emprunter la bande bus.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/A2_Q36.webp"
-        },
-        {
           "id": "A2_Q37",
           "question": "Des cyclistes roulent sur la bande bus. Est-ce permis ?",
           "choices": [
@@ -2015,32 +1901,6 @@
           "destination": "panneaux"
         },
         {
-          "id": "A2_Q49",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "La bande de gauche disparaît",
-            "La bande de droite disparaît",
-            "Un virage serré à gauche"
-          ],
-          "correct": 0,
-          "explanation": "La bande de gauche prend fin : ses conducteurs devront s'intercaler à droite.",
-          "theoryCardIndex": 1,
-          "sign": "F79"
-        },
-        {
-          "id": "A2_Q50",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "La bande de droite disparaît",
-            "La bande de gauche disparaît",
-            "Un virage serré à droite"
-          ],
-          "correct": 0,
-          "explanation": "La bande de droite prend fin : ses conducteurs devront s'intercaler à gauche.",
-          "theoryCardIndex": 1,
-          "sign": "F79"
-        },
-        {
           "id": "A2_Q51",
           "question": "Vous êtes sur la bande de droite, qui va disparaître. Que faites-vous ?",
           "choices": [
@@ -2065,33 +1925,6 @@
           "explanation": "Le symbole moto sur le signal autorise les motocyclettes sur la bande bus.",
           "theoryCardIndex": 3,
           "sign": "F17"
-        },
-        {
-          "id": "A2_Q56",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Garage à proximité",
-            "Zone industrielle",
-            "Travaux",
-            "Dépôt de matériaux"
-          ],
-          "correct": 2,
-          "explanation": "Le panneau de danger triangulaire avec des outils signale la présence de travaux sur la route.",
-          "sign": "A31",
-          "destination": "panneaux"
-        },
-        {
-          "id": "A2_Q58",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Circulation dans les deux sens",
-            "Début d'une voie à sens unique",
-            "Dépassement interdit plus loin"
-          ],
-          "correct": 0,
-          "explanation": "Ce panneau de danger annonce la fin d'un sens unique et le retour à la circulation en double sens.",
-          "sign": "A39",
-          "destination": "panneaux"
         },
         {
           "id": "A2_Q61",
@@ -3093,19 +2926,6 @@
           "destination": "panneaux"
         },
         {
-          "id": "A3_Q69",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Chemin séparé piétons et cyclistes",
-            "Chemin partagé sans séparation",
-            "Zone piétonne interdite aux vélos"
-          ],
-          "correct": 0,
-          "explanation": "Symboles l'un au-dessus de l'autre : réservé aux piétons et cyclistes seulement. Cyclomoteurs A et B interdits.",
-          "sign": "D9a",
-          "destination": "panneaux"
-        },
-        {
           "id": "A3_Q70",
           "question": "Que signifie ce panneau additionnel ?",
           "choices": [
@@ -3169,19 +2989,6 @@
           "correct": 1,
           "explanation": "Ce signal d'indication indique une voie sans issue.",
           "sign": "F45",
-          "destination": "panneaux"
-        },
-        {
-          "id": "A3_Q75",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Voie sans issue sauf vélos et piétons",
-            "Accès interdit aux vélos et aux piétons",
-            "Début d'une zone piétonne"
-          ],
-          "correct": 0,
-          "explanation": "Voie sans issue pour les voitures, mais les cyclistes et les piétons peuvent continuer.",
-          "sign": "F45b",
           "destination": "panneaux"
         },
         {
@@ -3634,20 +3441,6 @@
           "image": "/images/questions/A4_Q4.webp"
         },
         {
-          "id": "A4_Q6",
-          "question": "Vitesse maximale sur autoroute ?",
-          "choices": [
-            "90 km/h",
-            "120 km/h",
-            "130 km/h"
-          ],
-          "correct": 1,
-          "explanation": "120 km/h maximum, sauf signal ou conditions qui imposent moins.",
-          "theoryCardIndex": 1,
-          "severe": true,
-          "image": "/images/questions/A4_Q6.webp"
-        },
-        {
           "id": "A4_Q7",
           "question": "Sur autoroute, quelle affirmation est correcte ?",
           "choices": [
@@ -3688,20 +3481,6 @@
           "image": "/images/questions/A4_Q9.webp"
         },
         {
-          "id": "A4_Q10",
-          "question": "Vitesse minimale sur autoroute, quand les conditions le permettent ?",
-          "choices": [
-            "50 km/h",
-            "70 km/h",
-            "90 km/h"
-          ],
-          "correct": 1,
-          "explanation": "70 km/h minimum, si les conditions le permettent.",
-          "theoryCardIndex": 1,
-          "severe": true,
-          "image": "/images/questions/A4_Q10.webp"
-        },
-        {
           "id": "A4_Q12",
           "question": "Ce panneau est placé dans la sortie. Que signifie-t-il ?",
           "choices": [
@@ -3727,60 +3506,6 @@
           "explanation": "En cas de smog, la vitesse peut être limitée à 90 km/h.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q13.webp"
-        },
-        {
-          "id": "A4_Q15",
-          "question": "Quand pouvez-vous rouler avec des pneus cloutés ?",
-          "choices": [
-            "Du 1er novembre au 31 mars",
-            "Du 1er octobre au 30 avril",
-            "Toute l'année"
-          ],
-          "correct": 0,
-          "explanation": "Pneus cloutés : du 1er novembre au 31 mars.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/A4_Q15.webp"
-        },
-        {
-          "id": "A4_Q16",
-          "question": "Pneus cloutés sur autoroute. Vitesse maximale ?",
-          "choices": [
-            "70 km/h",
-            "90 km/h",
-            "120 km/h"
-          ],
-          "correct": 1,
-          "explanation": "Avec des pneus cloutés : 90 km/h sur autoroute, 60 km/h ailleurs.",
-          "theoryCardIndex": 1,
-          "severe": true,
-          "image": "/images/questions/A4_Q16.webp"
-        },
-        {
-          "id": "A4_Q17",
-          "question": "Pneus cloutés sur une route ordinaire en Wallonie. Vitesse maximale ?",
-          "choices": [
-            "60 km/h",
-            "70 km/h",
-            "90 km/h"
-          ],
-          "correct": 0,
-          "explanation": "Avec des pneus cloutés : 60 km/h sur les routes ordinaires, même là où la limite normale est 90.",
-          "theoryCardIndex": 1,
-          "severe": true,
-          "image": "/images/questions/A4_Q17.webp"
-        },
-        {
-          "id": "A4_Q18",
-          "question": "Sur quels véhicules les pneus cloutés sont-ils permis ?",
-          "choices": [
-            "MMA de 3,5 tonnes maximum",
-            "Tous les véhicules",
-            "Seulement les 4x4"
-          ],
-          "correct": 0,
-          "explanation": "Pneus cloutés : seulement sur les véhicules de 3,5 tonnes de MMA maximum.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/A4_Q18.webp"
         },
         {
           "id": "A4_Q20",
@@ -3860,19 +3585,6 @@
           "image": "/images/questions/A4_Q25.webp"
         },
         {
-          "id": "A4_Q26",
-          "question": "À quelle distance le triangle doit-il être visible ?",
-          "choices": [
-            "30 m",
-            "50 m",
-            "100 m"
-          ],
-          "correct": 1,
-          "explanation": "Le triangle doit être visible à 50 m au moins.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/A4_Q26.webp"
-        },
-        {
           "id": "A4_Q28",
           "question": "Panne sur autoroute. Quand mettez-vous le gilet fluo ?",
           "choices": [
@@ -3886,18 +3598,6 @@
           "image": "/images/questions/A4_Q28.webp"
         },
         {
-          "id": "A4_Q29",
-          "question": "Où rangez-vous le gilet fluo ?",
-          "choices": [
-            "Dans l'habitacle",
-            "Dans le coffre"
-          ],
-          "correct": 0,
-          "explanation": "Dans l'habitacle, pour l'enfiler avant de sortir.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/A4_Q29.webp"
-        },
-        {
           "id": "A4_Q30",
           "question": "Le gilet fluo est-il obligatoire pour les passagers ?",
           "choices": [
@@ -3908,19 +3608,6 @@
           "explanation": "Obligatoire pour le conducteur seulement, conseillé pour les passagers.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q30.webp"
-        },
-        {
-          "id": "A4_Q32",
-          "question": "Quel est le numéro d'urgence européen ?",
-          "choices": [
-            "101",
-            "112",
-            "911"
-          ],
-          "correct": 1,
-          "explanation": "Le 112 fonctionne dans toute l'Union européenne.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/A4_Q32.webp"
         },
         {
           "id": "A4_Q33",
@@ -4371,20 +4058,6 @@
           "correct": 0,
           "explanation": "Le signal vert avec une autoroute stylisée (F5) indique le début d'une autoroute ou un accès à l'autoroute.",
           "sign": "F5",
-          "destination": "panneaux"
-        },
-        {
-          "id": "A4_Q80",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Début d'autoroute",
-            "Fin d'autoroute",
-            "Sortie d'autoroute",
-            "Échangeur"
-          ],
-          "correct": 1,
-          "explanation": "Le signal vert barré (F7) indique la fin de l'autoroute.",
-          "sign": "F7",
           "destination": "panneaux"
         },
         {
@@ -4956,18 +4629,6 @@
           "image": "/images/questions/A5_Q37.webp"
         },
         {
-          "id": "A5_Q40",
-          "question": "Embouteillage : la file de droite avance plus vite. Est-ce un dépassement interdit ?",
-          "choices": [
-            "Non",
-            "Oui"
-          ],
-          "correct": 0,
-          "explanation": "Des files qui avancent à des vitesses différentes, ce n'est pas un dépassement par la droite.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/A5_Q40.webp"
-        },
-        {
           "id": "A5_Q42",
           "question": "Pouvez-vous stationner sur la chaussée d'une route pour automobiles ?",
           "choices": [
@@ -5068,20 +4729,6 @@
           "destination": "panneaux"
         },
         {
-          "id": "A5_Q51",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Début de route pour automobiles",
-            "Fin de route pour automobiles",
-            "Fin d'autoroute",
-            "Parking interdit"
-          ],
-          "correct": 1,
-          "explanation": "Le signal bleu barré avec une voiture indique la fin d'une route pour automobiles.",
-          "sign": "F11",
-          "destination": "panneaux"
-        },
-        {
           "id": "A5_Q52",
           "question": "Que signifie ce panneau ?",
           "choices": [
@@ -5095,19 +4742,6 @@
           "sign": "F11"
         },
         {
-          "id": "A5_Q53",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Début d'autoroute",
-            "Route pour automobiles",
-            "Sortie d'autoroute"
-          ],
-          "correct": 0,
-          "explanation": "Le signal vert avec une autoroute stylisée indique le début d'une autoroute.",
-          "sign": "F5",
-          "destination": "panneaux"
-        },
-        {
           "id": "A5_Q54",
           "question": "Qu'est-ce qui distingue le panneau d'autoroute de celui de route pour automobiles ?",
           "choices": [
@@ -5119,32 +4753,6 @@
           "explanation": "Les deux sont bleus. L'autoroute montre une route avec un pont, la route pour automobiles une voiture.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q54.webp"
-        },
-        {
-          "id": "A5_Q55",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Début d'agglomération",
-            "Fin d'agglomération",
-            "Direction de la localité"
-          ],
-          "correct": 0,
-          "explanation": "Le panneau avec le nom d'une localité sur fond blanc indique le début d'une agglomération.",
-          "sign": "F1",
-          "destination": "panneaux"
-        },
-        {
-          "id": "A5_Q56",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Fin d'agglomération",
-            "Début d'agglomération",
-            "Localité interdite d'accès"
-          ],
-          "correct": 0,
-          "explanation": "Le panneau barré avec le nom de la localité signale la fin de l'agglomération.",
-          "sign": "F3",
-          "destination": "panneaux"
         },
         {
           "id": "A5_Q59",
@@ -5494,34 +5102,6 @@
           "image": "/images/questions/A6_Q2.webp"
         },
         {
-          "id": "A6_Q4",
-          "question": "Vitesse maximale en agglomération, en Wallonie et en Flandre ?",
-          "choices": [
-            "30 km/h",
-            "50 km/h",
-            "70 km/h"
-          ],
-          "correct": 1,
-          "explanation": "50 km/h en agglomération en Wallonie et en Flandre (30 km/h à Bruxelles).",
-          "theoryCardIndex": 0,
-          "severe": true,
-          "image": "/images/questions/A6_Q4.webp"
-        },
-        {
-          "id": "A6_Q5",
-          "question": "Vitesse maximale en agglomération à Bruxelles ?",
-          "choices": [
-            "30 km/h",
-            "50 km/h",
-            "20 km/h"
-          ],
-          "correct": 0,
-          "explanation": "À Bruxelles, 30 km/h en agglomération, sauf signal contraire.",
-          "theoryCardIndex": 0,
-          "severe": true,
-          "image": "/images/questions/A6_Q5.webp"
-        },
-        {
           "id": "A6_Q7",
           "question": "Vous roulez à plus de 20 km/h au-dessus de la limite en agglomération. Que risquez-vous ?",
           "choices": [
@@ -5803,19 +5383,6 @@
           "explanation": "Non : interdit de dépasser un cycliste dans une zone cyclable.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A6_Q35.webp"
-        },
-        {
-          "id": "A6_Q37",
-          "question": "Dans une zone cyclable, pouvez-vous dépasser un cyclomoteur ?",
-          "choices": [
-            "Oui, par la gauche",
-            "Oui, par la droite",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "L'interdiction vise les cyclistes, pas les cyclomoteurs : dépassement par la gauche permis.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/A6_Q37.webp"
         },
         {
           "id": "A6_Q39",
@@ -6184,18 +5751,6 @@
           "image": "/images/questions/A6_Q71.webp"
         },
         {
-          "id": "A6_Q72",
-          "question": "Pouvez-vous traverser le site spécial franchissable à un carrefour ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "Oui, la traversée est permise aux carrefours.",
-          "theoryCardIndex": 6,
-          "image": "/images/questions/A6_Q72.webp"
-        },
-        {
           "id": "A6_Q73",
           "question": "Un obstacle bloque la chaussée. Pouvez-vous le contourner par le site spécial franchissable ?",
           "choices": [
@@ -6298,19 +5853,6 @@
           "image": "/images/questions/A6_Q84.webp"
         },
         {
-          "id": "A6_Q85",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Chemin réservé aux usagers indiqués",
-            "Début d'une zone piétonne fermée",
-            "Passage pour piétons surélevé au sol"
-          ],
-          "correct": 0,
-          "explanation": "Ce signal indique un chemin réservé aux catégories d'usagers représentées sur le panneau.",
-          "sign": "D10",
-          "destination": "panneaux"
-        },
-        {
           "id": "A6_Q87",
           "question": "Que signifie ce panneau ?",
           "choices": [
@@ -6361,19 +5903,6 @@
           "explanation": "Le symbole vélo autorise les cyclistes sur ce site.",
           "theoryCardIndex": 6,
           "sign": "F18"
-        },
-        {
-          "id": "A6_Q91",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Une rue cyclable, max 30 km/h",
-            "Une piste cyclable obligatoire",
-            "Une rue interdite aux voitures"
-          ],
-          "correct": 0,
-          "explanation": "Dans une rue cyclable, les cyclistes sont prioritaires, les voitures sont des \"invités\" et la vitesse max est 30 km/h.",
-          "sign": "F111",
-          "destination": "panneaux"
         },
         {
           "id": "A6_Q93",

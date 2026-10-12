@@ -874,30 +874,6 @@
           "explanation": "F43 marque la fin de la zone 30 (F41). La vitesse normale pour ce type de voie (souvent 50 km/h en agglomération) s'applique à nouveau.",
           "destination": "panneaux",
           "sign": "F4b"
-        },
-        {
-          "id": "F1_SIGN_F50_1",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Sans issue sauf vélos et piétons",
-            "Sans issue pour tout le monde",
-            "Parking pour vélos et piétons"
-          ],
-          "correct": 0,
-          "explanation": "F50 indique que la voie est sans issue pour les véhicules à moteur, mais qu'un passage est prévu pour les piétons et les cyclistes. Ils peuvent continuer.",
-          "destination": "panneaux",
-          "sign": "F45b"
-        },
-        {
-          "id": "F1_Q70",
-          "question": "L'agent lève le bras. Le tram doit-il aussi s'arrêter ?",
-          "choices": [
-            "Oui",
-            "Non, le tram a toujours priorité"
-          ],
-          "correct": 0,
-          "explanation": "Le tram obéit aux agents et aux feux.",
-          "theoryCardIndex": 0
         }
       ]
     },
@@ -1637,20 +1613,6 @@
           "image": "/images/questions/F2_Q54.webp"
         },
         {
-          "id": "F2_Q55",
-          "question": "Le feu blanc clignote au passage à niveau. Que signifie-t-il ?",
-          "choices": [
-            "Vous pouvez passer",
-            "Un train arrive",
-            "Le passage est fermé"
-          ],
-          "correct": 0,
-          "explanation": "Feu blanc clignotant : le passage est libre, vous pouvez franchir.",
-          "theoryCardIndex": 6,
-          "severe": true,
-          "image": "/images/questions/F2_Q55.webp"
-        },
-        {
           "id": "F2_Q56",
           "question": "Le feu blanc clignote au passage à niveau. Pouvez-vous dépasser par la gauche ?",
           "choices": [
@@ -1676,19 +1638,6 @@
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q57.webp"
-        },
-        {
-          "id": "F2_Q58",
-          "question": "Vous êtes piéton devant ces feux rouges clignotants. Pouvez-vous traverser ?",
-          "choices": [
-            "Non",
-            "Oui"
-          ],
-          "correct": 0,
-          "explanation": "L'interdiction vaut pour tous, piétons compris.",
-          "theoryCardIndex": 6,
-          "severe": true,
-          "image": "/images/questions/F2_Q58.webp"
         },
         {
           "id": "F2_Q59",
@@ -1849,19 +1798,6 @@
           "destination": "panneaux",
           "sign": "F7",
           "severe": true
-        },
-        {
-          "id": "F2_SIGN_F14_1",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Fin de route pour automobiles",
-            "Début de route pour automobiles",
-            "Entrée d'une voie rapide"
-          ],
-          "correct": 0,
-          "explanation": "F11 marque la fin d'une route pour automobiles (F9). Les règles associées à ce type de route (vitesse, usagers autorisés…) ne s'appliquent plus.",
-          "sign": "F11",
-          "destination": "panneaux"
         },
         {
           "id": "F2_Q72",
@@ -3334,19 +3270,6 @@
           "explanation": "Aux feux, chacun suit son feu : le tram a ses propres signaux.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F4_Q59.webp"
-        },
-        {
-          "id": "F4_Q62",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Céder le passage",
-            "Arrêt obligatoire",
-            "Voie prioritaire"
-          ],
-          "correct": 0,
-          "explanation": "Triangle blanc bordé de rouge sur pointe = cédez le passage.",
-          "destination": "panneaux",
-          "sign": "B1"
         },
         {
           "id": "F4_Q63",

@@ -801,29 +801,6 @@
           "correct": 0,
           "explanation": "F43 markeert het einde van de zone 30 (F41). De normale snelheid voor dit type weg (vaak 50 km/u binnen de bebouwde kom) geldt weer.",
           "sign": "F4b"
-        },
-        {
-          "id": "F1_SIGN_F50_1",
-          "question": "Wat betekent dit verkeersbord?",
-          "choices": [
-            "Doodlopend behalve fiets en voetganger",
-            "Doodlopend voor iedereen",
-            "Parking voor fietsen en voetgangers"
-          ],
-          "correct": 0,
-          "explanation": "F50 geeft aan dat de weg doodlopend is voor motorvoertuigen, maar dat er een doorgang is voor voetgangers en fietsers. Zij mogen doorlopen.",
-          "sign": "F45b"
-        },
-        {
-          "id": "F1_Q70",
-          "question": "De agent steekt zijn arm op. Moet de tram ook stoppen?",
-          "choices": [
-            "Ja",
-            "Nee, de tram heeft altijd voorrang"
-          ],
-          "correct": 0,
-          "explanation": "De tram gehoorzaamt aan de agenten en de lichten.",
-          "theoryCardIndex": 0
         }
       ]
     },
@@ -1503,19 +1480,6 @@
           "theoryCardIndex": 5
         },
         {
-          "id": "F2_Q55",
-          "question": "Het witte licht knippert aan de overweg. Wat betekent het?",
-          "choices": [
-            "Je mag erover",
-            "Er komt een trein",
-            "De overweg is dicht"
-          ],
-          "correct": 0,
-          "explanation": "Knipperend wit licht: de overweg is vrij, je mag erover.",
-          "theoryCardIndex": 6,
-          "severe": true
-        },
-        {
           "id": "F2_Q56",
           "question": "Het witte licht knippert aan de overweg. Mag je links inhalen?",
           "choices": [
@@ -1537,18 +1501,6 @@
           ],
           "correct": 0,
           "explanation": "Rode lichten: absoluut stoppen, ook als de slagbomen open zijn.",
-          "theoryCardIndex": 6,
-          "severe": true
-        },
-        {
-          "id": "F2_Q58",
-          "question": "Je bent voetganger voor deze knipperende rode lichten. Mag je oversteken?",
-          "choices": [
-            "Nee",
-            "Ja"
-          ],
-          "correct": 0,
-          "explanation": "Het verbod geldt voor iedereen, ook voor voetgangers.",
           "theoryCardIndex": 6,
           "severe": true
         },
@@ -1701,18 +1653,6 @@
           "explanation": "F11 duidt het einde van de autosnelweg aan. De specifieke regels (verbod voor voetgangers, fietsers, minimumsnelheid...) gelden niet meer na dit bord.",
           "sign": "F7",
           "severe": true
-        },
-        {
-          "id": "F2_SIGN_F14_1",
-          "question": "Wat betekent dit verkeersbord?",
-          "choices": [
-            "Einde van de autoweg",
-            "Begin van de autoweg",
-            "Oprit naar een snelweg"
-          ],
-          "correct": 0,
-          "explanation": "F14 duidt het einde van een autoweg (F13) aan. De regels die bij dit type weg horen (snelheid, toegelaten weggebruikers...) gelden niet meer.",
-          "sign": "F11"
         },
         {
           "id": "F2_Q72",
@@ -3079,18 +3019,6 @@
           "correct": 0,
           "explanation": "Aan lichten volgt iedereen zijn licht: de tram heeft zijn eigen signalen.",
           "theoryCardIndex": 3
-        },
-        {
-          "id": "F4_Q62",
-          "question": "Wat betekent dit verkeersbord?",
-          "choices": [
-            "Voorrang verlenen",
-            "Verplicht stoppen",
-            "Voorrangsweg"
-          ],
-          "correct": 0,
-          "explanation": "Witte driehoek met rode rand op punt = voorrang verlenen.",
-          "sign": "B1"
         },
         {
           "id": "F4_Q63",

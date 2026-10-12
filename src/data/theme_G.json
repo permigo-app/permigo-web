@@ -1202,19 +1202,6 @@
           "sign": "C15"
         },
         {
-          "id": "G2_SIGN_C15_1",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Accès interdit aux attelages",
-            "Accès interdit aux tracteurs",
-            "Accès interdit aux caravanes"
-          ],
-          "correct": 0,
-          "explanation": "C15 interdit l'accès aux véhicules attelés (charrette tirée par un animal). Il concerne les véhicules à traction animale.",
-          "destination": "panneaux",
-          "sign": "C13"
-        },
-        {
           "id": "G2_SIGN_C27_1",
           "question": "Ce panneau porte la mention « 10 m ». Que signifie-t-il ?",
           "choices": [
@@ -1244,28 +1231,15 @@
           "id": "G2_SIGN_C45_50_1",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Fin de la limitation à 50",
-            "Nouvelle limitation à 50",
-            "Limitation valable la nuit"
+            "Fin de la limitation de vitesse",
+            "Début d'une limitation de vitesse",
+            "Vitesse minimale obligatoire"
           ],
           "correct": 0,
-          "explanation": "C45-50 marque la fin de la limitation à 50 km/h. La vitesse autorisée revient à la limite normale applicable sur ce type de voie.",
+          "explanation": "Ce panneau barré marque la fin de la limitation de vitesse indiquée : la limite normale s'applique de nouveau.",
           "destination": "panneaux",
           "sign": "C45",
           "severe": true
-        },
-        {
-          "id": "G2_SIGN_C45_120_1",
-          "question": "Que signifie ce panneau ?",
-          "choices": [
-            "Fin de la limitation à 120",
-            "Vitesse minimale de 120",
-            "Nouvelle limitation à 100"
-          ],
-          "correct": 0,
-          "explanation": "C45-120 marque la fin de la limitation de 120 km/h imposée dans la zone de chantier. La vitesse normale d'autoroute (selon le pays) s'applique à nouveau.",
-          "destination": "panneaux",
-          "sign": "C45"
         },
         {
           "id": "G2_SIGN_C49_1",
