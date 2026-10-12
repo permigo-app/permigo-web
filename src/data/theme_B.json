@@ -1068,28 +1068,16 @@
       "questions": [
         {
           "id": "B2_Q1",
-          "question": "Qui est un conducteur au sens du code ?",
+          "question": "Qui est un conducteur, selon le code ?",
           "choices": [
             "Qui conduit un véhicule ou des animaux",
-            "Qui conduit une voiture, et rien d'autre",
+            "Qui conduit une voiture, rien d'autre",
             "Toute personne sur la voie publique"
           ],
           "correct": 0,
-          "explanation": "Un conducteur est toute personne qui conduit un véhicule (motorisé ou non) ou qui surveille des animaux sur la voie publique.",
+          "explanation": "Conducteur : qui conduit un véhicule (avec ou sans moteur) ou guide des animaux.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B2_Q1.webp"
-        },
-        {
-          "id": "B2_Q2",
-          "question": "Un conducteur doit-il obligatoirement conduire un véhicule à moteur ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Un conducteur peut conduire un véhicule avec ou sans moteur : vélo, charrette, voiture, moto, etc.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/B2_Q2.webp"
         },
         {
           "id": "B2_Q3",
@@ -1099,56 +1087,55 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "Un cycliste conduit un véhicule sans moteur (le vélo) : c'est un conducteur.",
+          "explanation": "Le vélo est un véhicule : le cycliste est un conducteur.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B2_Q3.webp"
         },
         {
           "id": "B2_Q5",
-          "question": "Un cavalier est-il considéré comme un conducteur ?",
+          "question": "Un cavalier est-il un conducteur ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Un cavalier mène un animal : c'est un conducteur au sens du Code de la route.",
+          "explanation": "Le cavalier mène un animal : c'est un conducteur.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B2_Q5.webp"
         },
         {
           "id": "B2_Q6",
-          "question": "Un fermier accompagne ses vaches sur la chaussée. Est-il conducteur ?",
+          "question": "Ce berger marche dans la rue avec ses moutons. Il est :",
           "choices": [
-            "Oui",
-            "Non"
+            "Un conducteur",
+            "Un piéton"
           ],
           "correct": 0,
-          "explanation": "Surveiller du bétail sur la voie publique fait du fermier un conducteur d'animaux.",
+          "explanation": "Qui guide des animaux est un conducteur, même à pied.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B2_Q6.webp"
         },
         {
           "id": "B2_Q7",
-          "question": "Un adulte marche à côté d'un jeune cavalier. Cet adulte est-il conducteur ?",
+          "question": "Papa marche à côté de son fils assis sur un poney. Papa est :",
           "choices": [
-            "Oui",
-            "Non"
+            "Un conducteur",
+            "Un piéton"
           ],
           "correct": 0,
-          "explanation": "Accompagner et surveiller un jeune cavalier sur la voie publique en fait un conducteur.",
+          "explanation": "Celui qui accompagne et guide l'animal est un conducteur.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B2_Q7.webp"
         },
         {
           "id": "B2_Q9",
-          "question": "Une personne pousse son cyclomoteur en panne. Est-elle piéton ou conducteur ?",
+          "question": "Cette personne pousse son cyclomoteur en panne. Elle est :",
           "choices": [
-            "Piéton",
-            "Conducteur",
-            "Cycliste"
+            "Piétonne",
+            "Conductrice"
           ],
           "correct": 0,
-          "explanation": "En poussant un cyclomoteur, on est piéton — pas besoin de permis ni de casque.",
+          "explanation": "Pousser à la main un cyclomoteur à deux roues fait de vous un piéton.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q9.webp"
         },
@@ -1160,48 +1147,32 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "En tant que piéton (poussant un cyclomoteur), pas de casque obligatoire.",
+          "explanation": "Elle est piétonne : pas de casque obligatoire.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q10.webp"
         },
         {
-          "id": "B2_Q11",
-          "question": "Vous observez cette personne poussant son cyclomoteur. A-t-elle besoin d'un permis de conduire ?",
-          "choices": [
-            "Oui, elle conduit un vehicule",
-            "Non, elle est pieton",
-            "Oui, le cyclomoteur est immatricule",
-            "Cela depend de la cylindree"
-          ],
-          "correct": 1,
-          "explanation": "En tant que piéton (poussant), aucun permis n'est requis.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/B2_Q11.webp"
-        },
-        {
           "id": "B2_Q12",
-          "question": "Vous voyez cette personne poussant son cyclomoteur. Ou doit-elle circuler ?",
+          "question": "Où marche cette personne qui pousse son cyclomoteur ?",
           "choices": [
-            "Sur la chaussee",
             "Sur le trottoir",
-            "Sur la piste cyclable",
-            "N'importe ou"
+            "Sur la chaussée",
+            "Sur la piste cyclable"
           ],
-          "correct": 1,
-          "explanation": "En tant que piéton, elle doit marcher sur le trottoir.",
+          "correct": 0,
+          "explanation": "Piétonne, elle prend le trottoir. Si elle gêne fortement les piétons, elle passe sur la chaussée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q12.webp"
         },
         {
           "id": "B2_Q14",
-          "question": "Une personne pousse sa motocyclette. Est-elle piéton ou conducteur ?",
+          "question": "Cette personne pousse sa moto. Elle est :",
           "choices": [
-            "Conducteur",
-            "Piéton",
-            "Motocycliste"
+            "Conductrice",
+            "Piétonne"
           ],
           "correct": 0,
-          "explanation": "En poussant une moto, on reste conducteur — casque et permis obligatoires.",
+          "explanation": "Pousser une moto ne fait pas de vous un piéton : vous restez conducteur.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q14.webp"
         },
@@ -1213,174 +1184,145 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "En tant que conducteur (poussant une moto), le casque est obligatoire.",
+          "explanation": "Elle reste conductrice : casque obligatoire.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q15.webp"
         },
         {
           "id": "B2_Q16",
-          "question": "Vous voyez cette personne poussant sa moto. Ou doit-elle circuler ?",
+          "question": "Où marche cette personne qui pousse sa moto ?",
           "choices": [
+            "Sur la chaussée",
             "Sur le trottoir",
-            "Sur la chaussee",
-            "Sur la piste cyclable",
-            "N'importe ou"
+            "Sur la piste cyclable"
           ],
-          "correct": 1,
-          "explanation": "En tant que conducteur, elle marche sur la chaussée (pas sur le trottoir).",
+          "correct": 0,
+          "explanation": "Conductrice, elle reste sur la chaussée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q16.webp"
         },
         {
           "id": "B2_Q17",
-          "question": "Cette personne qui pousse sa moto a-t-elle besoin d'un permis de conduire ?",
+          "question": "Cet homme pousse sa moto en panne. Quelle affirmation est la plus complète ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Casque, chaussée et permis de conduire",
+            "Casque seulement",
+            "Casque et chaussée seulement"
           ],
           "correct": 0,
-          "explanation": "Pousser une moto = conducteur = permis obligatoire.",
+          "explanation": "Il reste conducteur : casque, chaussée et permis valable.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q17.webp"
         },
         {
           "id": "B2_Q18",
-          "question": "Une personne pousse sa voiture en panne. Est-elle piéton ou conducteur ?",
+          "question": "Le conducteur descend de sa voiture et la pousse. Il est :",
           "choices": [
-            "Conducteur",
-            "Piéton",
-            "Passager"
+            "Toujours conducteur",
+            "Devenu piéton"
           ],
           "correct": 0,
-          "explanation": "Pousser une voiture = conducteur, même si on est à pied.",
+          "explanation": "Pousser une voiture ne fait pas de vous un piéton.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q18.webp"
         },
         {
           "id": "B2_Q19",
-          "question": "Quelle différence entre pousser un vélo et pousser une voiture ?",
+          "question": "Pousser un vélo ou pousser une voiture : quelle différence ?",
           "choices": [
-            "Vélo : piéton ; voiture : conducteur",
-            "Les deux comptent comme piétons",
-            "Les deux comptent comme conducteurs"
+            "Vélo : piéton. Voiture : conducteur",
+            "Piéton dans les deux cas",
+            "Conducteur dans les deux cas"
           ],
           "correct": 0,
-          "explanation": "Pousser un vélo ou cyclomoteur = piéton. Pousser une voiture ou moto = conducteur.",
+          "explanation": "Vélo ou cyclomoteur poussé : piéton. Voiture ou moto poussée : conducteur.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q19.webp"
         },
         {
-          "id": "B2_Q20",
-          "question": "Quelle différence entre pousser un cyclomoteur et pousser une moto ?",
-          "choices": [
-            "Cyclomoteur : piéton ; moto : conducteur",
-            "Les deux sont considérés comme piétons",
-            "Les deux sont considérés conducteurs"
-          ],
-          "correct": 0,
-          "explanation": "Cyclomoteur poussé = piéton (trottoir, pas de casque). Moto poussée = conducteur (chaussée + casque + permis).",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/B2_Q20.webp"
-        },
-        {
           "id": "B2_Q21",
-          "question": "Une règle vise les « usagers de la route ». Les piétons sont-ils inclus ?",
+          "question": "Les piétons sont-ils des usagers de la route ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "\"Usager de la route\" est un terme large qui inclut tous les utilisateurs de la voie publique : piétons et conducteurs.",
+          "explanation": "Usager : toute personne sur la voie publique, piétons compris.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B2_Q21.webp"
         },
         {
           "id": "B2_Q23",
-          "question": "Une règle vise les « conducteurs ». Les piétons sont-ils visés ?",
+          "question": "Une règle vise les « conducteurs ». Les piétons sont-ils concernés ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "\"Conducteur\" est un terme plus restreint qu'\"usager\" : il exclut les piétons.",
+          "explanation": "« Conducteur » exclut les piétons. « Usager » les inclut.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B2_Q23.webp"
         },
         {
-          "id": "B2_Q25",
-          "question": "Une règle vise les « usagers ». Vous êtes cycliste. Êtes-vous concerné ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "\"Usager\" inclut les conducteurs (dont les cyclistes) et les piétons.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/B2_Q25.webp"
-        },
-        {
           "id": "B2_Q27",
-          "question": "Vous preparez votre examen. Le permis B autorise la conduite de vehicules de quelle masse maximale ?",
+          "question": "Le permis B permet de conduire des véhicules jusqu'à quelle masse maximale autorisée ?",
           "choices": [
             "2,5 tonnes",
             "3,5 tonnes",
-            "5 tonnes",
-            "7,5 tonnes"
+            "5 tonnes"
           ],
           "correct": 1,
-          "explanation": "Le permis B autorise les véhicules d'une MMA maximale de 3,5 tonnes.",
+          "explanation": "Permis B : MMA de 3,5 tonnes maximum.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B2_Q27.webp"
         },
         {
           "id": "B2_Q29",
-          "question": "Vous venez d'obtenir le permis B. Quels véhicules pouvez-vous conduire ?",
-          "choices": [
-            "Voiture, minibus et camionnette",
-            "Les voitures particulières seules",
-            "Voiture et moto jusqu'à 125 cm³"
-          ],
-          "correct": 0,
-          "explanation": "Le permis B autorise : voiture, voiture mixte, minibus et camionnette (MMA ≤ 3,5 t).",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/B2_Q29.webp"
-        },
-        {
-          "id": "B2_Q32",
-          "question": "Le permis B provisoire permet-il de conduire les mêmes véhicules que le définitif ?",
+          "question": "Avec le permis B, pouvez-vous conduire un minibus ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le permis B provisoire autorise les mêmes véhicules (MMA ≤ 3,5 t) que le permis B définitif.",
+          "explanation": "Le permis B couvre voiture, voiture mixte, minibus et camionnette, jusqu'à 3,5 tonnes de MMA.",
+          "theoryCardIndex": 2,
+          "image": "/images/questions/B2_Q29.webp"
+        },
+        {
+          "id": "B2_Q32",
+          "question": "Le permis provisoire B permet-il les mêmes véhicules que le permis B définitif ?",
+          "choices": [
+            "Oui",
+            "Non"
+          ],
+          "correct": 0,
+          "explanation": "Oui, les mêmes véhicules (MMA de 3,5 tonnes maximum).",
           "theoryCardIndex": 2,
           "image": "/images/questions/B2_Q32.webp"
         },
         {
           "id": "B2_Q33",
-          "question": "Vous voyez un signal de danger representant une vache. Que signifie ce panneau ?",
+          "question": "Que signifie ce signal de danger ?",
           "choices": [
-            "Ferme a proximite",
-            "Traversee de betail",
-            "Zone agricole",
-            "Vente de produits laitiers"
+            "Traversée de bétail",
+            "Céder le passage au bétail",
+            "Zone agricole"
           ],
-          "correct": 1,
-          "explanation": "Ce signal de danger avertit d'une traversée de bétail possible sur la route.",
+          "correct": 0,
+          "explanation": "Du bétail peut traverser la route.",
           "theoryCardIndex": 0,
           "sign": "A29"
         },
         {
           "id": "B2_Q34",
-          "question": "Vous voyez un panneau de traversée de bétail. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau de traversée de bétail. Que faites-vous ?",
           "choices": [
-            "Ralentir et surveiller la route",
-            "Klaxonner pour les éloigner",
-            "Accélérer pour traverser vite"
+            "Vous ralentissez et surveillez la route",
+            "Vous klaxonnez",
+            "Vous accélérez"
           ],
           "correct": 0,
-          "explanation": "Ce signal vous avertit de ralentir et de rester vigilant face à d'éventuels animaux.",
+          "explanation": "Ralentissez : des animaux peuvent être sur la route.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B2_Q34.webp"
         },
@@ -1390,10 +1332,10 @@
           "choices": [
             "Accès interdit aux cyclistes",
             "Piste cyclable obligatoire",
-            "Parking à vélos aménagé"
+            "Parking à vélos"
           ],
           "correct": 0,
-          "explanation": "Ce signal d'interdiction interdit l'accès aux conducteurs de cycles.",
+          "explanation": "Rond à bord rouge avec un vélo : accès interdit aux cyclistes.",
           "theoryCardIndex": 1,
           "sign": "C11"
         },
@@ -1402,11 +1344,11 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Accès interdit aux cyclomoteurs",
-            "Piste réservée aux cyclomoteurs",
-            "Parking pour les cyclomoteurs"
+            "Piste pour cyclomoteurs",
+            "Parking pour cyclomoteurs"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux conducteurs de cyclomoteurs.",
+          "explanation": "Accès interdit aux conducteurs de cyclomoteurs.",
           "theoryCardIndex": 1,
           "sign": "C9"
         },
@@ -1415,11 +1357,11 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Accès interdit aux motos",
-            "Parking réservé aux motos",
+            "Parking pour motos",
             "Itinéraire conseillé aux motos"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux conducteurs de motocyclettes.",
+          "explanation": "Accès interdit aux conducteurs de motocyclettes.",
           "theoryCardIndex": 1,
           "sign": "C7"
         },
@@ -1427,12 +1369,12 @@
           "id": "B2_Q39",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Accès interdit aux camions",
-            "Un parking pour les camions",
-            "Une zone de livraison réglée"
+            "Accès interdit aux véhicules de transport de choses",
+            "Accès interdit au transport de personnes et de choses",
+            "Zone de livraison"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux véhicules de transport de marchandises (camions, camionnettes de livraison, etc.).",
+          "explanation": "Interdit aux véhicules qui transportent des marchandises (camions, camionnettes).",
           "theoryCardIndex": 1,
           "sign": "C23"
         },
@@ -1441,11 +1383,11 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Accès interdit aux autocars",
-            "Un arrêt d'autocar proche",
-            "Une gare routière proche"
+            "Arrêt d'autocar",
+            "Gare routière"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux conducteurs d'autocars.",
+          "explanation": "Accès interdit aux conducteurs d'autocars.",
           "theoryCardIndex": 1,
           "sign": "C22"
         },
@@ -1453,48 +1395,48 @@
           "id": "B2_Q41",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Accès interdit aux attelages",
-            "Une zone agricole proche",
-            "Un chemin pour tracteurs"
+            "Accès interdit aux véhicules attelés",
+            "Zone agricole",
+            "Chemin pour tracteurs"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux véhicules attelés (charrettes, chariots, etc.).",
+          "explanation": "Accès interdit aux charrettes et chariots tirés par des animaux.",
           "theoryCardIndex": 1,
           "sign": "C13"
         },
         {
           "id": "B2_Q42",
-          "question": "Vous conduisez une camionnette et voyez le panneau interdit au transport de choses. Pouvez-vous passer ?",
+          "question": "Vous conduisez une camionnette. Ce panneau interdit le transport de choses. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Une camionnette est un véhicule de transport de choses : le signal vous interdit l'accès.",
+          "explanation": "Une camionnette transporte des choses : le panneau vous interdit l'accès.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B2_Q42.webp"
         },
         {
           "id": "B2_Q43",
-          "question": "Vous conduisez une voiture et voyez le panneau interdit aux motocyclettes. Pouvez-vous passer ?",
+          "question": "Vous êtes en voiture devant ce panneau interdit aux motos. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Chaque signal d'interdiction vise une catégorie spécifique. Une voiture n'est pas une motocyclette.",
+          "explanation": "Le panneau ne vise que les motos.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B2_Q43.webp"
         },
         {
           "id": "B2_Q45",
-          "question": "Devant un panneau interdit aux cycles, vous descendez et poussez votre vélo. Pouvez-vous passer ?",
+          "question": "Devant ce panneau interdit aux cyclistes, vous descendez et poussez votre vélo. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En poussant votre vélo, vous êtes piéton. Le signal n'interdit que les cyclistes, pas les piétons.",
+          "explanation": "En poussant votre vélo, vous êtes piéton : le panneau ne vous vise plus.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B2_Q45.webp"
         },
@@ -1506,31 +1448,31 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "En poussant une moto, vous êtes conducteur. Le signal vous interdit donc l'accès.",
+          "explanation": "En poussant une moto, vous restez conducteur : le panneau vous vise.",
           "theoryCardIndex": 2,
           "sign": "C7"
         },
         {
           "id": "B2_Q48",
-          "question": "Un cavalier se présente devant ce panneau. Peut-il passer ?",
+          "question": "Un cavalier arrive devant ce panneau interdit aux piétons. Peut-il passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Un cavalier est un conducteur, pas un piéton. Le signal d'interdiction aux piétons ne le concerne pas.",
+          "explanation": "Le cavalier est un conducteur : le panneau ne vise que les piétons.",
           "theoryCardIndex": 2,
           "sign": "C19"
         },
         {
           "id": "B2_Q50",
-          "question": "Vous poussez votre vélo et arrivez par la droite à un carrefour. Avez-vous la priorité de droite ?",
+          "question": "Vous poussez votre vélo et arrivez par la droite au carrefour. Avez-vous la priorité de droite ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "En tant que piéton (poussant un vélo), vous ne bénéficiez pas de la priorité de droite réservée aux conducteurs.",
+          "explanation": "En poussant votre vélo, vous êtes piéton : pas de priorité de droite.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/B2_Q50.webp"

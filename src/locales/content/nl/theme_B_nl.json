@@ -989,25 +989,14 @@
       "questions": [
         {
           "id": "B2_Q1",
-          "question": "Wie is een bestuurder volgens de wegcode?",
+          "question": "Wie is volgens de wegcode een bestuurder?",
           "choices": [
-            "Wie een voertuig of dieren leidt",
-            "Wie een auto bestuurt, en niets anders",
-            "Elke persoon op de openbare weg"
+            "Wie een voertuig bestuurt of dieren leidt",
+            "Wie een auto bestuurt, niets anders",
+            "Iedereen op de openbare weg"
           ],
           "correct": 0,
-          "explanation": "Een bestuurder is elke persoon die een voertuig bestuurt (met of zonder motor) of die dieren bewaakt op de openbare weg.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "B2_Q2",
-          "question": "Moet een bestuurder verplicht een motorvoertuig besturen?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Een bestuurder kan een voertuig met of zonder motor besturen: fiets, kar, auto, motor, enz.",
+          "explanation": "Bestuurder: wie een voertuig bestuurt (met of zonder motor) of dieren leidt.",
           "theoryCardIndex": 0
         },
         {
@@ -1018,267 +1007,224 @@
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een fietser bestuurt een voertuig zonder motor (de fiets): dat is een bestuurder.",
+          "explanation": "De fiets is een voertuig: de fietser is een bestuurder.",
           "theoryCardIndex": 0
         },
         {
           "id": "B2_Q5",
-          "question": "Wordt een ruiter als bestuurder beschouwd?",
+          "question": "Is een ruiter een bestuurder?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een ruiter leidt een dier: dat is een bestuurder in de zin van de wegcode.",
+          "explanation": "De ruiter leidt een dier: hij is een bestuurder.",
           "theoryCardIndex": 0
         },
         {
           "id": "B2_Q6",
-          "question": "Een boer begeleidt zijn koeien op de rijbaan. Is hij bestuurder?",
+          "question": "Deze herder loopt met zijn schapen over straat. Hij is:",
           "choices": [
-            "Ja",
-            "Nee"
+            "Een bestuurder",
+            "Een voetganger"
           ],
           "correct": 0,
-          "explanation": "Vee bewaken op de openbare weg maakt van de boer een geleider van dieren, dus een bestuurder.",
+          "explanation": "Wie dieren leidt, is een bestuurder, ook te voet.",
           "theoryCardIndex": 0
         },
         {
           "id": "B2_Q7",
-          "question": "Een volwassene loopt naast een jonge ruiter. Is die volwassene bestuurder?",
+          "question": "Papa loopt naast zijn zoon die op een pony zit. Papa is:",
           "choices": [
-            "Ja",
-            "Nee"
+            "Een bestuurder",
+            "Een voetganger"
           ],
           "correct": 0,
-          "explanation": "Een jonge ruiter begeleiden en bewaken op de openbare weg maakt van die persoon een bestuurder.",
+          "explanation": "Wie het dier begeleidt en leidt, is een bestuurder.",
           "theoryCardIndex": 0
         },
         {
           "id": "B2_Q9",
-          "question": "Iemand duwt zijn bromfiets met panne. Is die persoon voetganger of bestuurder?",
+          "question": "Deze persoon duwt haar bromfiets met panne. Ze is:",
           "choices": [
             "Voetganger",
-            "Bestuurder",
-            "Fietser"
+            "Bestuurder"
           ],
           "correct": 0,
-          "explanation": "Wie een bromfiets duwt, is voetganger — geen rijbewijs of helm nodig.",
+          "explanation": "Een tweewielige bromfiets met de hand duwen maakt je voetganger.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q10",
-          "question": "Moet die persoon die zijn bromfiets duwt een helm dragen?",
+          "question": "Moet deze persoon die haar bromfiets duwt een helm dragen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Als voetganger (een bromfiets duwend) is een helm niet verplicht.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "B2_Q11",
-          "question": "Heeft die persoon een rijbewijs nodig om zijn bromfiets te duwen?",
-          "choices": [
-            "Ja, hij bestuurt een voertuig",
-            "Nee, hij is voetganger",
-            "Ja, de bromfiets is ingeschreven",
-            "Dat hangt af van de cilindermaat"
-          ],
-          "correct": 1,
-          "explanation": "Als voetganger (duwend) is geen rijbewijs vereist.",
+          "explanation": "Ze is voetganger: geen helm verplicht.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q12",
-          "question": "Waar moet hij zijn bromfiets duwen?",
+          "question": "Waar loopt deze persoon die haar bromfiets duwt?",
           "choices": [
-            "Op de rijbaan",
             "Op het voetpad",
-            "Op het fietspad",
-            "Om het even waar"
+            "Op de rijbaan",
+            "Op het fietspad"
           ],
-          "correct": 1,
-          "explanation": "Als voetganger moet hij op het voetpad lopen.",
+          "correct": 0,
+          "explanation": "Als voetganger neemt ze het voetpad. Hindert ze de voetgangers sterk, dan gaat ze op de rijbaan.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q14",
-          "question": "Iemand duwt zijn motorfiets. Is die persoon voetganger of bestuurder?",
+          "question": "Deze persoon duwt haar motorfiets. Ze is:",
           "choices": [
             "Bestuurder",
-            "Voetganger",
-            "Motorrijder"
+            "Voetganger"
           ],
           "correct": 0,
-          "explanation": "Wie een motor duwt, blijft bestuurder — helm en rijbewijs verplicht.",
+          "explanation": "Een motorfiets duwen maakt je geen voetganger: je blijft bestuurder.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q15",
-          "question": "Moet die persoon die zijn motor duwt een helm dragen?",
+          "question": "Moet deze persoon die haar motorfiets duwt een helm dragen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Als bestuurder (een motor duwend) is de helm verplicht.",
+          "explanation": "Ze blijft bestuurder: helm verplicht.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q16",
-          "question": "Waar moet hij lopen terwijl hij zijn motor duwt?",
+          "question": "Waar loopt deze persoon die haar motorfiets duwt?",
           "choices": [
-            "Op het voetpad",
             "Op de rijbaan",
-            "Op het fietspad",
-            "Om het even waar"
+            "Op het voetpad",
+            "Op het fietspad"
           ],
-          "correct": 1,
-          "explanation": "Als bestuurder loopt hij op de rijbaan (niet op het voetpad).",
+          "correct": 0,
+          "explanation": "Als bestuurder blijft ze op de rijbaan.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q17",
-          "question": "Heeft die persoon die zijn motor duwt een rijbewijs nodig?",
+          "question": "Deze man duwt zijn motorfiets met panne. Welke uitspraak is het volledigst?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Helm, rijbaan en rijbewijs",
+            "Alleen een helm",
+            "Alleen een helm en de rijbaan"
           ],
           "correct": 0,
-          "explanation": "Een motor duwen = bestuurder = rijbewijs verplicht.",
+          "explanation": "Hij blijft bestuurder: helm, rijbaan en een geldig rijbewijs.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q18",
-          "question": "Iemand duwt zijn auto met panne. Is die persoon voetganger of bestuurder?",
+          "question": "De bestuurder stapt uit zijn auto en duwt hem. Hij is:",
           "choices": [
-            "Bestuurder",
-            "Voetganger",
-            "Passagier"
+            "Nog altijd bestuurder",
+            "Voetganger geworden"
           ],
           "correct": 0,
-          "explanation": "Een auto duwen = bestuurder, zelfs als je te voet bent.",
+          "explanation": "Een auto duwen maakt je geen voetganger.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q19",
-          "question": "Wat is het verschil tussen een fiets duwen en een auto duwen?",
+          "question": "Een fiets duwen of een auto duwen: wat is het verschil?",
           "choices": [
-            "Fiets: voetganger; auto: bestuurder",
-            "Beide gelden als voetganger",
-            "Beide gelden als bestuurder"
+            "Fiets: voetganger. Auto: bestuurder",
+            "In beide gevallen voetganger",
+            "In beide gevallen bestuurder"
           ],
           "correct": 0,
-          "explanation": "Een fiets of bromfiets duwen = voetganger. Een auto of motor duwen = bestuurder.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "B2_Q20",
-          "question": "Wat is het verschil tussen een bromfiets duwen en een motor duwen?",
-          "choices": [
-            "Bromfiets: voetganger; motor: bestuurder",
-            "Beide worden als voetganger beschouwd",
-            "Beide worden als bestuurder beschouwd"
-          ],
-          "correct": 0,
-          "explanation": "Bromfiets geduwd = voetganger (voetpad, geen helm). Motor geduwd = bestuurder (rijbaan + helm + rijbewijs).",
+          "explanation": "Fiets of bromfiets duwen: voetganger. Auto of motorfiets duwen: bestuurder.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q21",
-          "question": "Een regel spreekt over « weggebruikers ». Zijn de voetgangers inbegrepen?",
+          "question": "Zijn voetgangers weggebruikers?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "\"Weggebruiker\" is een ruime term die alle gebruikers van de openbare weg omvat: voetgangers en bestuurders.",
+          "explanation": "Weggebruiker: iedereen op de openbare weg, ook voetgangers.",
           "theoryCardIndex": 2
         },
         {
           "id": "B2_Q23",
-          "question": "Een regel spreekt over « bestuurders ». Zijn de voetgangers bedoeld?",
+          "question": "Een regel geldt voor « bestuurders ». Gaat ze ook over voetgangers?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "\"Bestuurder\" is een beperktere term dan \"weggebruiker\": voetgangers vallen er niet onder.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "B2_Q25",
-          "question": "Een regel spreekt over « weggebruikers ». U bent fietser. Bent u betrokken?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 0,
-          "explanation": "\"Weggebruiker\" omvat de bestuurders (waaronder fietsers) en de voetgangers.",
+          "explanation": "« Bestuurder » sluit voetgangers uit. « Weggebruiker » sluit ze in.",
           "theoryCardIndex": 2
         },
         {
           "id": "B2_Q27",
-          "question": "Het rijbewijs B geeft recht op het besturen van voertuigen tot welke maximale massa?",
+          "question": "Met rijbewijs B mag je voertuigen besturen tot welke maximaal toegelaten massa?",
           "choices": [
             "2,5 ton",
             "3,5 ton",
-            "5 ton",
-            "7,5 ton"
+            "5 ton"
           ],
           "correct": 1,
-          "explanation": "Het rijbewijs B geeft recht op voertuigen met een MTM van maximaal 3,5 ton.",
+          "explanation": "Rijbewijs B: MTM van maximaal 3,5 ton.",
           "theoryCardIndex": 2
         },
         {
           "id": "B2_Q29",
-          "question": "U hebt net uw rijbewijs B. Welke voertuigen mag u besturen?",
-          "choices": [
-            "Auto, minibus en bestelwagen",
-            "Enkel de gewone personenwagens",
-            "Auto en motor tot 125 cm³"
-          ],
-          "correct": 0,
-          "explanation": "Het rijbewijs B geeft recht op: personenauto, gemengd voertuig, minibus en bestelwagen (MTM ≤ 3,5 t).",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "B2_Q32",
-          "question": "Laat het voorlopig rijbewijs B dezelfde voertuigen toe als het definitieve?",
+          "question": "Mag je met rijbewijs B een minibus besturen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Het voorlopig rijbewijs B geeft recht op dezelfde voertuigen (MTM ≤ 3,5 t) als het definitieve rijbewijs B.",
+          "explanation": "Rijbewijs B geldt voor auto, gemengde auto, minibus en bestelwagen, tot 3,5 ton MTM.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "B2_Q32",
+          "question": "Geldt het voorlopig rijbewijs B voor dezelfde voertuigen als het definitieve rijbewijs B?",
+          "choices": [
+            "Ja",
+            "Nee"
+          ],
+          "correct": 0,
+          "explanation": "Ja, dezelfde voertuigen (MTM van maximaal 3,5 ton).",
           "theoryCardIndex": 2
         },
         {
           "id": "B2_Q33",
-          "question": "Wat betekent dit verkeersbord?",
+          "question": "Wat betekent dit gevaarsbord?",
           "choices": [
-            "Boerderij in de buurt",
-            "Oversteekplaats voor vee",
-            "Landbouwzone",
-            "Verkoop van zuivelproducten"
+            "Overstekend vee",
+            "Voorrang verlenen aan vee",
+            "Landbouwzone"
           ],
-          "correct": 1,
-          "explanation": "Dit gevaarbord waarschuwt voor mogelijke oversteek van vee op de weg.",
+          "correct": 0,
+          "explanation": "Er kan vee de weg oversteken.",
           "theoryCardIndex": 0,
           "sign": "A29"
         },
         {
           "id": "B2_Q34",
-          "question": "U ziet een bord voor overstekend vee. Wat moet u doen?",
+          "question": "Je ziet dit bord overstekend vee. Wat doe je?",
           "choices": [
-            "Vertragen en de weg in het oog houden",
-            "Toeteren om ze weg te jagen",
-            "Versnellen om er snel voorbij te zijn"
+            "Je vertraagt en let op de weg",
+            "Je toetert",
+            "Je versnelt"
           ],
           "correct": 0,
-          "explanation": "Dit bord waarschuwt je om te vertragen en waakzaam te blijven voor eventuele dieren.",
+          "explanation": "Vertraag: er kunnen dieren op de weg zijn.",
           "theoryCardIndex": 0
         },
         {
@@ -1287,10 +1233,10 @@
           "choices": [
             "Verboden toegang voor fietsers",
             "Verplicht fietspad",
-            "Aangelegde fietsenstalling"
+            "Fietsenstalling"
           ],
           "correct": 0,
-          "explanation": "Dit verbodsbord verbiedt de toegang voor fietsers.",
+          "explanation": "Rond met rode rand en een fiets: verboden toegang voor fietsers.",
           "theoryCardIndex": 1,
           "sign": "C11"
         },
@@ -1298,12 +1244,12 @@
           "id": "B2_Q37",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Verboden toegang voor bromfietsers",
-            "Pad voorbehouden aan bromfietsers",
-            "Parking voor de bromfietsen"
+            "Verboden toegang voor bromfietsen",
+            "Pad voor bromfietsen",
+            "Parking voor bromfietsen"
           ],
           "correct": 0,
-          "explanation": "Dit bord verbiedt de toegang voor bromfietsers.",
+          "explanation": "Verboden toegang voor bestuurders van bromfietsen.",
           "theoryCardIndex": 1,
           "sign": "C9"
         },
@@ -1311,12 +1257,12 @@
           "id": "B2_Q38",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Verboden toegang voor motoren",
-            "Parking voorbehouden aan motoren",
-            "Aanbevolen reisweg voor motoren"
+            "Verboden toegang voor motorfietsen",
+            "Parking voor motorfietsen",
+            "Aanbevolen route voor motorfietsen"
           ],
           "correct": 0,
-          "explanation": "Dit bord verbiedt de toegang voor motorrijders.",
+          "explanation": "Verboden toegang voor bestuurders van motorfietsen.",
           "theoryCardIndex": 1,
           "sign": "C7"
         },
@@ -1324,12 +1270,12 @@
           "id": "B2_Q39",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Verboden toegang voor vrachtwagens",
-            "Een parking voor de vrachtwagens",
-            "Een geregelde leveringszone"
+            "Verboden toegang voor voertuigen voor goederenvervoer",
+            "Verboden toegang voor personen- en goederenvervoer",
+            "Laad- en loszone"
           ],
           "correct": 0,
-          "explanation": "Dit bord verbiedt de toegang voor voertuigen voor goederenvervoer (vrachtwagens, bestelwagens, enz.).",
+          "explanation": "Verboden voor voertuigen die goederen vervoeren (vrachtwagens, bestelwagens).",
           "theoryCardIndex": 1,
           "sign": "C23"
         },
@@ -1338,11 +1284,11 @@
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
             "Verboden toegang voor autocars",
-            "Een autocarhalte in de buurt",
-            "Een busstation in de buurt"
+            "Halte voor autocars",
+            "Busstation"
           ],
           "correct": 0,
-          "explanation": "Dit bord verbiedt de toegang voor autocarbestuurders.",
+          "explanation": "Verboden toegang voor bestuurders van autocars.",
           "theoryCardIndex": 1,
           "sign": "C22"
         },
@@ -1350,81 +1296,81 @@
           "id": "B2_Q41",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Verboden toegang voor gespannen",
-            "Een landbouwzone in de buurt",
-            "Een weg voor tractoren"
+            "Verboden toegang voor bespannen voertuigen",
+            "Landbouwzone",
+            "Weg voor tractoren"
           ],
           "correct": 0,
-          "explanation": "Dit bord verbiedt de toegang voor bespannen voertuigen (karren, wagens, enz.).",
+          "explanation": "Verboden toegang voor karren en wagens getrokken door dieren.",
           "theoryCardIndex": 1,
           "sign": "C13"
         },
         {
           "id": "B2_Q42",
-          "question": "U rijdt met een bestelwagen en ziet het bord verboden voor goederenvervoer. Mag u door?",
+          "question": "Je rijdt met een bestelwagen. Dit bord verbiedt goederenvervoer. Mag je erdoor?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Een bestelwagen is een voertuig voor goederenvervoer: het bord verbiedt jou de toegang.",
+          "explanation": "Een bestelwagen vervoert goederen: het bord verbiedt je de toegang.",
           "theoryCardIndex": 2
         },
         {
           "id": "B2_Q43",
-          "question": "U rijdt met een auto en ziet het bord verboden voor motorfietsen. Mag u door?",
+          "question": "Je staat met de auto voor dit bord verboden voor motorfietsen. Mag je erdoor?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Elk verbodsbord is gericht op een specifieke categorie. Een auto is geen motorfiets.",
+          "explanation": "Het bord geldt alleen voor motorfietsen.",
           "theoryCardIndex": 2
         },
         {
           "id": "B2_Q45",
-          "question": "Voor een bord verboden voor fietsers stapt u af en duwt u uw fiets. Mag u door?",
+          "question": "Voor dit bord verboden voor fietsers stap je af en duw je je fiets. Mag je erdoor?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Als je je fiets duwt, ben je voetganger. Het bord verbiedt alleen fietsers, geen voetgangers.",
+          "explanation": "Wie de fiets duwt, is voetganger: het bord geldt niet meer voor jou.",
           "theoryCardIndex": 1
         },
         {
           "id": "B2_Q47",
-          "question": "Voor dit bord duwt u uw motor. Mag u door?",
+          "question": "Voor dit bord duw je je motorfiets. Mag je erdoor?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Wie een motor duwt, is bestuurder. Het bord verbiedt je dus de toegang.",
+          "explanation": "Wie een motorfiets duwt, blijft bestuurder: het bord geldt voor jou.",
           "theoryCardIndex": 2,
           "sign": "C7"
         },
         {
           "id": "B2_Q48",
-          "question": "Een ruiter komt aan dit bord. Mag hij door?",
+          "question": "Een ruiter komt aan dit bord verboden voor voetgangers. Mag hij erdoor?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een ruiter is een bestuurder, geen voetganger. Het verbodsbord voor voetgangers geldt niet voor hem.",
+          "explanation": "De ruiter is een bestuurder: het bord geldt alleen voor voetgangers.",
           "theoryCardIndex": 2,
           "sign": "C19"
         },
         {
           "id": "B2_Q50",
-          "question": "U duwt uw fiets en komt van rechts op een kruispunt. Hebt u voorrang van rechts?",
+          "question": "Je duwt je fiets en komt van rechts op het kruispunt. Heb je voorrang van rechts?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Als voetganger (fiets duwend) heb je geen voorrang van rechts, die is voorbehouden voor bestuurders.",
+          "explanation": "Wie zijn fiets duwt, is voetganger: geen voorrang van rechts.",
           "theoryCardIndex": 1,
           "severe": true
         }
