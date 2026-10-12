@@ -168,181 +168,132 @@
       ],
       "questions": [
         {
-          "id": "A1_Q1",
-          "question": "Wat is een openbare weg?",
-          "choices": [
-            "Een plaats waar je alleen met de auto mag rijden",
-            "Een openbare plaats waar je vrij naartoe kan te voet of met een voertuig zonder verantwoording",
-            "Een plaats die alleen toegankelijk is met een vergunning",
-            "Een plaats voorbehouden voor het openbaar vervoer"
-          ],
-          "correct": 1,
-          "explanation": "De openbare weg is elke plaats die vrij toegankelijk is voor iedereen, te voet of met een voertuig, zonder zich te moeten verantwoorden.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "A1_Q2",
-          "question": "Welk van deze voorbeelden is een openbare weg?",
+          "question": "Welke van deze plaatsen is een openbare weg?",
           "choices": [
-            "De parking van een restaurant",
-            "Het oefenterrein van een rijschool",
-            "Een brug",
-            "De parking van een industrieterrein"
+            "Een brug over een rivier",
+            "De parking van een supermarkt",
+            "Het terrein van een rijschool",
+            "Een private oprit afgesloten met een slagboom"
           ],
-          "correct": 2,
-          "explanation": "Een brug is een openbare weg: je kan er vrij naartoe. Een restaurantparking is een openbaar terrein en een oefenterrein is niet-openbaar.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "A1Q5",
-          "question": "Wat heb je nodig om met je voertuig een openbaar terrein te betreden?",
-          "choices": [
-            "Geen voorwaarden",
-            "Een geldige reden",
-            "Een geldige reden en toestemming",
-            "Een speciaal rijbewijs"
-          ],
-          "correct": 1,
-          "explanation": "Een openbaar terrein is toegankelijk met een voertuig op voorwaarde dat je een geldige reden hebt.",
+          "correct": 0,
+          "explanation": "Een brug is voor iedereen toegankelijk: het is een openbare weg. Een winkelparking of een rijschoolterrein is dat niet.",
           "theoryCardIndex": 0
         },
         {
           "id": "A1Q7",
-          "question": "Je gaat naar de parking van een tankstation om te tanken. Is dat toegestaan?",
+          "question": "De parking van een tankstation is:",
           "choices": [
-            "Nee, het is een privéterrein",
-            "Ja, want je hebt een geldige reden om er te zijn",
-            "Ja, want het is een openbare weg",
-            "Nee, behalve met toestemming"
+            "Een openbaar terrein",
+            "Een openbare weg",
+            "Een privéterrein"
           ],
-          "correct": 1,
-          "explanation": "Tanken is een geldige reden om de parking van een tankstation (openbaar terrein) te betreden.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "A1Q9",
-          "question": "Wat heb je nodig om een niet-openbaar terrein te betreden?",
-          "choices": [
-            "Geen voorwaarden",
-            "Een geldige reden",
-            "Een geldige reden en toestemming",
-            "Alleen toestemming"
-          ],
-          "correct": 2,
-          "explanation": "Een niet-openbaar terrein vereist een geldige reden EN de toestemming van de eigenaar.",
+          "correct": 0,
+          "explanation": "Een openbaar terrein is toegankelijk voor wie er een reden heeft om te komen, zoals tanken. Het is geen openbare weg.",
           "theoryCardIndex": 0
         },
         {
           "id": "A1Q11",
-          "question": "De Wegcode is van toepassing:",
+          "question": "Waar geldt de wegcode?",
           "choices": [
-            "Overal in België",
-            "Alleen op de openbare weg",
-            "Op de openbare weg en openbare terreinen",
-            "Alleen op autosnelwegen"
+            "Op de openbare weg",
+            "Overal, zelfs op privéterrein",
+            "Op de openbare weg en op privéparkings"
           ],
-          "correct": 1,
-          "explanation": "De Wegcode is uitsluitend van toepassing op de openbare weg.",
+          "correct": 0,
+          "explanation": "De wegcode geldt op de openbare weg.",
           "theoryCardIndex": 0
         },
         {
           "id": "A1Q12",
-          "question": "Kan je bestraft worden voor een zware overtreding op een openbaar terrein?",
+          "question": "Zware overtreding op de parking van een supermarkt: kun je gestraft worden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zelfs buiten de openbare weg kan een zware overtreding voor de rechtbank vervolgd worden.",
+          "explanation": "Ook buiten de openbare weg kan een zware overtreding vervolgd en bestraft worden.",
           "theoryCardIndex": 0
         },
         {
           "id": "A1Q14",
-          "question": "Bij een ongeval op een openbaar terrein, welke regels bepalen de aansprakelijkheid?",
+          "question": "Aanrijding op de parking van een restaurant. Welke regels bepalen wie in fout is?",
           "choices": [
-            "Geen regels",
-            "De regels van de Wegcode",
-            "Alleen de verzekeringsregels",
-            "De regels van de eigenaar"
+            "Die van de wegcode",
+            "Die van de eigenaar",
+            "Geen enkele regel"
           ],
-          "correct": 1,
-          "explanation": "De Wegcode dient als referentie om de aansprakelijkheid te bepalen.",
+          "correct": 0,
+          "explanation": "Bij een ongeval op een parking worden de verantwoordelijkheden beoordeeld volgens de wegcode.",
           "theoryCardIndex": 0
         },
         {
           "id": "A1Q15",
-          "question": "Je komt bij een weg met de vermelding « privé ». Maakt ze deel uit van de openbare weg?",
-          "choices": [
-            "Ja, elke weg maakt deel uit van de openbare weg",
-            "Nee, tenzij ze vrij toegankelijk is voor iedereen",
-            "Nee, en geen enkel voertuig mag er rijden",
-            "Nee, ze is uitsluitend voorbehouden aan voetgangers"
-          ],
-          "correct": 1,
-          "explanation": "Een private weg is geen openbare weg, tenzij ze vrij toegankelijk is voor iedereen.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "A1Q17",
-          "question": "Je rijdt op een private weg die door een slagboom is afgesloten. Is de Wegcode van toepassing?",
-          "choices": [
-            "Ja, de Wegcode is van toepassing op elke berijdbare weg",
-            "Nee, deze afgesloten private weg is geen openbare weg",
-            "Ja, op voorwaarde dat je toestemming hebt om er te rijden",
-            "Enkel de voorrangsregels zijn van toepassing"
-          ],
-          "correct": 1,
-          "explanation": "Een afgesloten private weg is niet vrij toegankelijk voor iedereen: het is geen openbare weg.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "A1Q19",
-          "question": "Je ziet een tram een straat inrijden die verboden is voor voertuigen. Is dat normaal?",
+          "question": "Deze privéweg is voor iedereen toegankelijk. Is het een openbare weg?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De tram gehoorzaamt enkel aan bevoegde personen en verkeerslichten, niet aan verkeersborden.",
+          "explanation": "Een privéweg die vrij toegankelijk is voor iedereen, maakt deel uit van de openbare weg.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "A1Q17",
+          "question": "Geldt de wegcode op deze privéweg, afgesloten met een slagboom?",
+          "choices": [
+            "Ja",
+            "Nee"
+          ],
+          "correct": 1,
+          "explanation": "Een afgesloten privéweg is niet voor iedereen toegankelijk: het is geen openbare weg.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "A1Q19",
+          "question": "Deze tram rijdt een straat in die verboden richting is. Mag dat?",
+          "choices": [
+            "Ja",
+            "Nee"
+          ],
+          "correct": 0,
+          "explanation": "De tram volgt de verkeersborden niet: hij gehoorzaamt enkel aan de verkeerslichten en aan de bevoegde personen.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A1Q21",
-          "question": "Je denkt dat de openbare weg zich beperkt tot de rijbaan. Heb je gelijk?",
+          "question": "Maken de grasstroken langs de weg deel uit van de openbare weg?",
           "choices": [
-            "Ja, de openbare weg omvat enkel de rijbaan",
-            "Nee, ze omvat ook fietspaden, bermen, parkeerstroken en voetpaden",
-            "Nee, ze omvat enkel de rijbaan en de voetpaden",
-            "Ja, maar ze omvat ook openbare parkings"
+            "Ja",
+            "Nee"
           ],
-          "correct": 1,
-          "explanation": "De openbare weg omvat de rijbaan, fietspaden, bermen, parkeerstroken en voetpaden.",
+          "correct": 0,
+          "explanation": "De openbare weg omvat de rijbaan, maar ook de bermen, de voetpaden en de fietspaden.",
           "theoryCardIndex": 1
         },
         {
           "id": "A1Q22",
-          "question": "Je vraagt je af tot waar de openbare weg zich uitstrekt. Wat is haar grens?",
+          "question": "Tot waar loopt de openbare weg?",
           "choices": [
-            "Ze stopt aan de rand van de verharde rijbaan",
-            "Ze stopt aan de rand van het voetpad",
-            "Ze strekt zich uit tot de gracht, de talud of de grens van een privéeigendom",
-            "Ze stopt aan het fietspad"
+            "Tot aan de gracht of de talud",
+            "Tot aan de rand van de rijbaan",
+            "Tot aan de rand van het voetpad"
           ],
-          "correct": 2,
-          "explanation": "De openbare weg strekt zich uit tot de gracht, de talud of de grens van een privéeigendom.",
+          "correct": 0,
+          "explanation": "De openbare weg loopt tot aan de gracht, de talud of de grens van een privé-eigendom.",
           "theoryCardIndex": 1
         },
         {
           "id": "A1Q24",
-          "question": "Je rijdt met de auto. Op welk deel van de openbare weg rijd je?",
+          "question": "Hoe heet het geel omlijnde deel van de weg?",
           "choices": [
-            "Op de rijbaan",
-            "Op de berm",
-            "Op het trottoir"
+            "De rijbaan",
+            "De rijstrook",
+            "De berm"
           ],
           "correct": 0,
-          "explanation": "De rijbaan is het deel van de openbare weg dat is aangelegd voor het verkeer van voertuigen.",
+          "explanation": "De rijbaan is het hele deel dat voor voertuigen bestemd is. Ze kan in meerdere rijstroken verdeeld zijn.",
           "theoryCardIndex": 1
         },
         {
@@ -358,308 +309,253 @@
         },
         {
           "id": "A1Q26",
-          "question": "Je bent fietser en er is geen fietspad. Mag je op de rijbaan rijden?",
+          "question": "Er is geen fietspad. Mag deze fietser op de rijbaan rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Als er geen fietspad is, rijdt de fietser op de rijbaan.",
+          "explanation": "Zonder fietspad rijdt de fietser op de rijbaan.",
           "theoryCardIndex": 1
         },
         {
           "id": "A1Q27",
-          "question": "Je bent voetganger en er is geen voetpad of berm. Mag je op de rijbaan stappen?",
+          "question": "Geen voetpad en geen berm. Mag deze voetganger op de rijbaan lopen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zonder trottoir of begaanbare berm mag de voetganger op de rijbaan lopen, voorzichtig en zo dicht mogelijk bij de rand.",
+          "explanation": "Zonder begaanbaar voetpad of berm loopt de voetganger op de rijbaan, zo dicht mogelijk bij de rand.",
           "theoryCardIndex": 1
         },
         {
           "id": "A1Q29",
-          "question": "Je rijdt op een openbare weg met twee duidelijk gescheiden rijbanen. Mag je de linkse rijbaan gebruiken?",
+          "question": "Deze weg heeft twee gescheiden rijbanen. Mag je op de linkse rijden?",
           "choices": [
-            "Ja, je mag vrij je rijbaan kiezen",
-            "Nee, tenzij een plaatselijke reglementering het toelaat",
-            "Ja, om een inhaalmanoeuvre uit te voeren",
-            "Ja, als de rechtse rijbaan verzadigd is"
+            "Nee, behalve bij plaatselijke signalisatie",
+            "Ja, om in te halen",
+            "Ja, als de rechtse vol staat"
           ],
-          "correct": 1,
-          "explanation": "De linkse rijbaan is verboden behalve bij specifieke plaatselijke reglementering.",
+          "correct": 0,
+          "explanation": "De linkse rijbaan is verboden, behalve als een plaatselijke signalisatie het toelaat.",
           "theoryCardIndex": 2
         },
         {
           "id": "A1Q30",
-          "question": "Je merkt twee gescheiden rijbanen op. Waardoor kunnen ze gescheiden zijn?",
+          "question": "Hoeveel rijbanen telt deze weg?",
           "choices": [
-            "Enkel door een betonnen middenberm",
-            "Door vangrails, een berm, een grasstrook of wegmarkering",
-            "Enkel door een witte wegmarkering",
-            "Enkel door metalen afsluitingen"
+            "1",
+            "2",
+            "4"
           ],
           "correct": 1,
-          "explanation": "Vangrails, een berm, grasstrook of markering kunnen twee rijbanen scheiden.",
+          "explanation": "De middenberm scheidt twee rijbanen. Elke rijbaan heeft twee rijstroken.",
           "theoryCardIndex": 2
         },
         {
           "id": "A1Q31",
-          "question": "Je merkt een witte lijn op de rand van de rijbaan op. Wat betekent ze?",
+          "question": "Wat mag je rechts van deze brede doorlopende witte streep doen?",
           "choices": [
-            "Het parkeerverbod langs deze lijn",
-            "Ze geeft enkel de fictieve rand van de rijbaan aan, zonder verdere betekenis",
-            "Een wijziging van de snelheidsbeperking op die plaats",
-            "De aanwezigheid van een fietspad in de buurt"
+            "Stilstaan en parkeren",
+            "Rijden om in te halen",
+            "Niets, het is verboden"
           ],
-          "correct": 1,
-          "explanation": "De witte lijn op de rand geeft enkel de fictieve rand van de rijbaan aan.",
+          "correct": 0,
+          "explanation": "Deze streep markeert de rand van de rijbaan. Daarnaast dient de strook om stil te staan en te parkeren (behalve op autosnelwegen en autowegen).",
           "theoryCardIndex": 2
         },
         {
           "id": "A1Q33",
-          "question": "Je rijdt op een rijbaan met twee rijstroken. Waar moet je je positioneren?",
+          "question": "Deze bestuurder rijdt in het midden van de rijbaan, hij voelt zich daar veiliger. Mag dat?",
           "choices": [
-            "In het midden van de rijbaan voor het beste zicht",
-            "Zo veel mogelijk rechts",
-            "Op de linkse rijstrook om inhalen te vergemakkelijken",
-            "Waar je het comfortabelst vindt"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "De basisregel: zo veel mogelijk rechts rijden.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "A1Q35",
-          "question": "Je rijdt links op de rijbaan zonder geldige reden. Wat riskeer je?",
-          "choices": [
-            "Een overtreding van de wegcode",
-            "Een gewone mondelinge waarschuwing",
-            "Niets, de rijstrook is vrij te kiezen"
-          ],
-          "correct": 0,
-          "explanation": "U moet zo dicht mogelijk bij de rechterrand van de rijbaan rijden. Links rijden zonder reden is een overtreding.",
+          "explanation": "Basisregel: zo dicht mogelijk bij de rechterrand rijden.",
           "theoryCardIndex": 2
         },
         {
           "id": "A1Q36",
-          "question": "Je rijdt op een gewone weg in het Waals Gewest, buiten de bebouwde kom. Wat is de maximumsnelheid?",
+          "question": "Gewone weg buiten de bebouwde kom, in Wallonië. Maximumsnelheid?",
           "choices": [
             "70 km/u",
-            "80 km/u",
             "90 km/u",
             "120 km/u"
           ],
-          "correct": 2,
-          "explanation": "In Wallonië is de maximumsnelheid op een gewone weg 90 km/u.",
+          "correct": 1,
+          "explanation": "In Wallonië: 90 km/u op een gewone weg buiten de bebouwde kom.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "A1Q37",
-          "question": "Je rijdt op een gewone weg in het Vlaams Gewest, buiten de bebouwde kom. Wat is de maximumsnelheid?",
+          "question": "Gewone weg buiten de bebouwde kom, in Vlaanderen. Maximumsnelheid?",
           "choices": [
             "50 km/u",
             "70 km/u",
-            "90 km/u",
-            "120 km/u"
+            "90 km/u"
           ],
           "correct": 1,
-          "explanation": "In Vlaanderen is de maximumsnelheid op een gewone weg 70 km/u.",
+          "explanation": "In Vlaanderen: 70 km/u op een gewone weg buiten de bebouwde kom.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "A1Q38",
-          "question": "Je rijdt op een gewone weg in het Brussels Hoofdstedelijk Gewest, buiten de bebouwde kom. Wat is de maximumsnelheid?",
+          "question": "Gewone weg buiten de bebouwde kom, in Brussel. Maximumsnelheid?",
           "choices": [
             "50 km/u",
             "70 km/u",
-            "90 km/u",
-            "120 km/u"
+            "90 km/u"
           ],
           "correct": 1,
-          "explanation": "In Brussel is de maximumsnelheid op een gewone weg 70 km/u.",
+          "explanation": "In Brussel: 70 km/u op een gewone weg buiten de bebouwde kom.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "A1Q41",
-          "question": "Je komt op een weg met twee onderbroken witte lijnen langs weerszijden. Om welk type rijbaan gaat het?",
+          "question": "Hoe heet dit soort weg?",
           "choices": [
-            "Een rijbaan afgebakend door gele volle lijnen",
-            "Een rijbaan met middenrijstrook, herkenbaar aan de onderbroken witte lijnen",
-            "Een rijbaan gescheiden door een middenberm",
-            "Een kruispunt met knipperlichten"
+            "een middenrijbaan",
+            "Een weg met twee fietspaden",
+            "Een autoweg"
           ],
-          "correct": 1,
-          "explanation": "Twee onderbroken witte lijnen langs weerszijden kenmerken de middenrijstrook.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "A1Q42",
-          "question": "Je rijdt op een middenrijstrook. Voor welk type verkeer is ze bestemd?",
-          "choices": [
-            "Uitsluitend voor fietsers",
-            "Voor het motorverkeer",
-            "Voor het parkeren van voertuigen",
-            "Voor voetgangers en trage weggebruikers"
-          ],
-          "correct": 1,
-          "explanation": "De middenrijstrook is ingericht voor het motorverkeer.",
+          "correct": 0,
+          "explanation": "Twee onderbroken strepen begrenzen de middenrijbaan; aan elke kant ligt een zijdelingse strook.",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q43",
-          "question": "Je gaat een rijbaan met middenrijstrook oprijden. Wat is de maximumsnelheid?",
+          "question": "Maximumsnelheid op deze middenrijbaan?",
           "choices": [
-            "50 km/u in de drie Gewesten",
-            "90 km/u enkel in het Waals Gewest",
-            "70 km/u in de drie Gewesten",
-            "30 km/u enkel in de bebouwde kom"
+            "50 km/u",
+            "70 km/u",
+            "90 km/u"
           ],
-          "correct": 2,
-          "explanation": "Op een rijbaan met middenrijstrook is de limiet 70 km/u overal in België.",
+          "correct": 1,
+          "explanation": "70 km/u op een middenrijbaan, in de drie Gewesten.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "A1Q44",
-          "question": "Je rijdt 80 km/u op een middenrijstrook in Wallonië. Is dat toegelaten?",
+          "question": "Je bent in Wallonië, op deze middenrijbaan. Maximumsnelheid?",
           "choices": [
-            "Ja, want de limiet op een gewone weg in Wallonië is 90 km/u",
-            "Nee, want de limiet op een middenrijstrook is 70 km/u, zelfs in Wallonië",
-            "Ja, als je buiten de bebouwde kom rijdt",
-            "Nee, want de limiet is 50 km/u op elke middenrijstrook"
+            "70 km/u",
+            "90 km/u",
+            "120 km/u"
           ],
-          "correct": 1,
-          "explanation": "Op een middenrijstrook is 70 km/u de limiet overal, zelfs in Wallonië.",
+          "correct": 0,
+          "explanation": "Ook in Wallonië is de middenrijbaan beperkt tot 70 km/u.",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q45",
-          "question": "Je bekijkt de zijstrook van een rijbaan met middenrijstrook. Maakt ze deel uit van de rijbaan?",
+          "question": "Maakt de zijdelingse strook deel uit van de rijbaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Op een rijbaan met centrale rijstrook staan de zijstroken los van de rijbaan.",
+          "explanation": "De zijdelingse strook ligt langs de middenrijbaan, maar maakt er geen deel van uit.",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q46",
-          "question": "Je rijdt op een middenrijstrook. In welke omstandigheden mag je de zijstrook gebruiken?",
+          "question": "Wanneer mag een auto op de zijdelingse strook rijden?",
           "choices": [
             "Om te kruisen of in te halen",
-            "Om te stoppen en te parkeren",
-            "Om sneller te rijden dan in het midden"
+            "Om sneller te rijden",
+            "Nooit, zelfs niet om te kruisen"
           ],
           "correct": 0,
-          "explanation": "De zijstrook mag enkel worden gebruikt om te kruisen of in te halen, nooit om te parkeren.",
+          "explanation": "Een auto mag op de zijdelingse strook rijden om te kruisen of in te halen, zonder de gebruikers ervan in gevaar te brengen.",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q48",
-          "question": "Je haalt een fietser in de bebouwde kom in op een rijbaan met middenrijstrook. Welke minimale zijdelingse afstand moet je respecteren?",
+          "question": "Je haalt deze fietser in binnen de bebouwde kom. Minimale afstand?",
           "choices": [
-            "0,5 meter",
-            "1 meter",
-            "1,5 meter",
-            "2 meter"
+            "0,5 m",
+            "1 m",
+            "1,5 m"
           ],
           "correct": 1,
-          "explanation": "In de bebouwde kom is minstens 1 meter vereist ten opzichte van een fietser.",
+          "explanation": "Binnen de bebouwde kom: minstens 1 meter tussen jou en de fietser.",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q49",
-          "question": "Je haalt een fietser buiten de bebouwde kom in op een rijbaan met middenrijstrook. Welke minimale zijdelingse afstand moet je respecteren?",
+          "question": "Je haalt deze fietser in buiten de bebouwde kom. Minimale afstand?",
           "choices": [
-            "0,5 meter",
-            "1 meter",
-            "1,5 meter",
-            "2 meter"
+            "1 m",
+            "1,5 m",
+            "2 m"
           ],
-          "correct": 2,
-          "explanation": "Buiten de bebouwde kom is minstens 1,5 meter vereist ten opzichte van een fietser.",
+          "correct": 1,
+          "explanation": "Buiten de bebouwde kom: minstens 1,5 meter tussen jou en de fietser.",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q52",
-          "question": "Je merkt weggebruikers op de zijstrook op. Wie mag er rijden?",
+          "question": "Wie mag op de zijdelingse strook rijden?",
           "choices": [
-            "Fietsers, bromfietsers A en voetgangers",
+            "Fietsers, bromfietsen A en voetgangers",
             "Auto's die traag rijden",
-            "Landbouwvoertuigen en motoren"
+            "Tractoren en motorfietsen"
           ],
           "correct": 0,
-          "explanation": "De zijstrook is voorbehouden aan fietsers, speed pedelecs, bromfietsen klasse A, bestuurders van trekdieren en voetgangers (zonder voetpad).",
+          "explanation": "De zijdelingse strook is voor fietsers, speed pedelecs, bromfietsen klasse A, ruiters en voetgangers (als er geen voetpad is).",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q54",
-          "question": "Je ziet een bromfiets klasse B op de zijstrook rijden. Is dat toegelaten?",
+          "question": "Mag deze bromfiets klasse B op de zijdelingse strook rijden?",
           "choices": [
-            "Ja, alle bromfietsen zijn er zonder onderscheid toegelaten",
-            "Nee, enkel bromfietsen klasse A mogen er rijden",
-            "Ja, op voorwaarde dat de middenrijstrook bezet is",
-            "Ja, als hij niet sneller dan 25 km/u rijdt"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "Enkel bromfietsen klasse A zijn toegelaten op de zijstrook.",
+          "explanation": "Alleen bromfietsen klasse A mogen op de zijdelingse strook.",
           "theoryCardIndex": 3
         },
         {
           "id": "A1Q56",
-          "question": "Je nadert trekdieren op de openbare weg. Wat moet je doen?",
+          "question": "Er rijdt een paard met kar voor je op de weg. Wat doe je?",
           "choices": [
-            "Toeteren om ze uit de weg te jagen",
-            "Versnellen om ze snel in te halen",
-            "Onmiddellijk en zonder uitstel vertragen",
-            "Lichtsignalen geven om de ruiter te verwittigen"
+            "Je vertraagt",
+            "Je toetert zodat ze opzij gaan",
+            "Je geeft lichtsignalen"
           ],
-          "correct": 2,
-          "explanation": "Bij het naderen van dieren (trek-, last-, rijdieren, vee) is onmiddellijk vertragen verplicht.",
+          "correct": 0,
+          "explanation": "Als je dieren nadert, vertraag je en stop je indien nodig.",
           "theoryCardIndex": 4
         },
         {
           "id": "A1Q58",
-          "question": "Je moet vertragen bij het naderen van dieren op de openbare weg. Om welke soorten dieren gaat het?",
+          "question": "Voor welk van deze dieren moet je vertragen?",
           "choices": [
-            "Trek- en rijdieren en het vee",
-            "Honden aan de leiband van hun baasje",
-            "Wilde dieren die in het bos leven"
+            "Een bereden paard",
+            "Een hond aan de leiband",
+            "Een kat op het voetpad"
           ],
           "correct": 0,
-          "explanation": "Trek-, last- en rijdieren en vee verplichten u te vertragen en zelfs te stoppen.",
+          "explanation": "Trekdieren, lastdieren, rijdieren en vee: je moet vertragen en indien nodig stoppen.",
           "theoryCardIndex": 4
         },
         {
           "id": "A1Q59",
-          "question": "Je rijdt en een paard steigert voor je voertuig. Wat moet je doen?",
+          "question": "Dit paard steigert voor je. Wat doe je?",
           "choices": [
-            "Krachtig toeteren om de ruiter te verwittigen",
-            "Je voertuig stoppen en elke plotse beweging vermijden",
-            "Het paard snel links omzeilen",
-            "Onmiddellijk achteruitrijden"
+            "Je stopt, zonder bruuske bewegingen",
+            "Je vertraagt en rijdt verder",
+            "Je toetert om de ruiter te waarschuwen"
           ],
-          "correct": 1,
-          "explanation": "Steigerend paard = volledige stop + geen plotse beweging, zodat de ruiter de controle kan herwinnen.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "A1Q60",
-          "question": "Je bent gestopt voor een angstig paard. Waarom moet je elke plotse beweging vermijden?",
-          "choices": [
-            "Om je voertuig niet te beschadigen",
-            "Om de ruiter toe te laten het dier te kalmeren en de controle te herwinnen",
-            "Omdat het een wettelijke verplichting is zonder praktische reden",
-            "Om de andere bestuurders rondom je niet te verschrikken"
-          ],
-          "correct": 1,
-          "explanation": "Rust laat de ruiter toe de controle over het paard te herwinnen.",
+          "correct": 0,
+          "explanation": "Je stopt en blijft kalm, zodat de ruiter zijn paard weer onder controle krijgt.",
           "theoryCardIndex": 4
         },
         {
@@ -1416,6 +1312,30 @@
           "explanation": "Fietsers en bromfietsers kunnen de rijbaan oversteken: vertraag en wees klaar om voorrang te verlenen.",
           "sign": "A25",
           "severe": true
+        },
+        {
+          "id": "A1Q61",
+          "question": "Een kudde koeien steekt de weg over. Wat doe je?",
+          "choices": [
+            "Je stopt en wacht",
+            "Je rijdt traag tussen de dieren door",
+            "Je toetert om ze te laten doorlopen"
+          ],
+          "correct": 0,
+          "explanation": "Als er vee op de weg is, stop je en wacht je tot de weg vrij is.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "A1Q62",
+          "question": "Er is geen berm langs deze middenrijbaan. Je wilt even stoppen om je gps in te stellen. Waar?",
+          "choices": [
+            "Op de zijdelingse strook",
+            "Op de middenstrook",
+            "Nergens, stilstaan is verboden"
+          ],
+          "correct": 0,
+          "explanation": "Zonder begaanbare berm gaat een stilstaand voertuig op de zijdelingse strook staan.",
+          "theoryCardIndex": 3
         }
       ]
     },

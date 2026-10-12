@@ -187,137 +187,88 @@
       ],
       "questions": [
         {
-          "id": "A1_Q1",
-          "question": "Vous circulez sur une route ouverte. Qu'est-ce que la voie publique ?",
-          "choices": [
-            "Un lieu réservé aux véhicules motorisés",
-            "Un lieu accessible à tous, à pied ou en voiture",
-            "Un lieu accessible sur autorisation spéciale",
-            "Un lieu réservé aux transports en commun"
-          ],
-          "correct": 1,
-          "explanation": "La voie publique est tout endroit accessible librement à tout le monde, à pied ou en véhicule, sans avoir à se justifier.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/A1_Q1.webp"
-        },
-        {
           "id": "A1_Q2",
-          "question": "Vous passez devant ces différents endroits. Lequel constitue une voie publique ?",
+          "question": "Lequel de ces endroits est une voie publique ?",
           "choices": [
-            "Le parking d'un restaurant",
-            "Le terrain de manoeuvres d'une auto-école",
-            "Un pont enjambant une rivière",
-            "Le parking d'un terrain industriel"
+            "Un pont sur une rivière",
+            "Le parking d'un supermarché",
+            "Le terrain d'une auto-école",
+            "Une allée privée fermée par une barrière"
           ],
-          "correct": 2,
-          "explanation": "Un pont est une voie publique : on peut s'y rendre librement. Un parking de restaurant est un terrain public, et un terrain de manœuvres est non-public.",
+          "correct": 0,
+          "explanation": "Un pont est ouvert à tous : c'est une voie publique. Un parking de magasin ou un terrain d'auto-école n'en est pas une.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1_Q2.webp"
         },
         {
-          "id": "A1Q5",
-          "question": "Vous souhaitez accéder au parking d'un restaurant avec votre véhicule. De quoi avez-vous besoin ?",
-          "choices": [
-            "D'aucune condition particulière",
-            "D'un motif légitime pour y accéder",
-            "D'un motif et de l'accord du propriétaire",
-            "D'un permis délivré par la commune"
-          ],
-          "correct": 1,
-          "explanation": "Un terrain public est accessible en véhicule à condition d'avoir une bonne raison.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/A1Q5.webp"
-        },
-        {
           "id": "A1Q7",
-          "question": "Vous vous rendez en voiture sur le parking d'une station-service pour faire le plein. Est-ce autorisé ?",
+          "question": "Le parking d'une station-service, c'est :",
           "choices": [
-            "Non, il s'agit d'un terrain privé",
-            "Oui, vous avez un motif d'y accéder",
-            "Oui, c'est une voie publique ordinaire",
-            "Non, il faut l'accord du gérant"
+            "Un terrain public",
+            "Une voie publique",
+            "Un terrain privé"
           ],
-          "correct": 1,
-          "explanation": "Faire le plein est un motif légitime : le parking d'une station-service est un terrain public accessible dans ces conditions.",
+          "correct": 0,
+          "explanation": "Un terrain public est accessible à ceux qui ont une raison d'y aller, comme faire le plein. Ce n'est pas une voie publique.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1Q7.webp"
         },
         {
-          "id": "A1Q9",
-          "question": "Vous souhaitez entrer sur un terrain non-public. Quelles conditions devez-vous remplir ?",
-          "choices": [
-            "Aucune condition n'est requise",
-            "Avoir un motif légitime d'y entrer",
-            "Un motif et l'accord du propriétaire",
-            "Avoir l'accord du propriétaire seul"
-          ],
-          "correct": 2,
-          "explanation": "Un terrain non-public requiert une bonne raison ET la permission du propriétaire.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/A1Q9.webp"
-        },
-        {
           "id": "A1Q11",
-          "question": "Vous commettez une infraction au Code de la route. Où ce Code s'applique-t-il ?",
+          "question": "Où s'applique le code de la route ?",
           "choices": [
-            "Partout, y compris les terrains privés",
-            "Exclusivement sur la voie publique",
-            "Sur la voie publique et les terrains publics",
-            "Sur les autoroutes et routes nationales"
+            "Sur la voie publique",
+            "Partout, même sur un terrain privé",
+            "Sur la voie publique et les parkings privés"
           ],
-          "correct": 1,
-          "explanation": "Le Code de la route s'applique exclusivement sur la voie publique.",
+          "correct": 0,
+          "explanation": "Le code de la route s'applique sur la voie publique.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1Q11.webp"
         },
         {
           "id": "A1Q12",
-          "question": "Vous commettez une infraction grave sur le parking d'un supermarché. Pouvez-vous être sanctionné ?",
+          "question": "Infraction grave sur le parking d'un supermarché : pouvez-vous être puni ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Même hors voie publique, une infraction grave peut être poursuivie en justice et sanctionnée par une amende.",
+          "explanation": "Même hors de la voie publique, une infraction grave peut être poursuivie et punie.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1Q12.webp"
         },
         {
           "id": "A1Q14",
-          "question": "Vous êtes impliqué dans un accident sur le parking d'un restaurant. Quelles règles servent à déterminer votre responsabilité ?",
+          "question": "Accrochage sur le parking d'un restaurant. Quelles règles servent à décider qui est en tort ?",
           "choices": [
-            "Aucune règle ne s'applique sur ce terrain",
-            "Les règles du Code de la route font référence",
-            "Les conditions générales de votre assurance",
-            "Les règles fixées par le propriétaire"
+            "Celles du code de la route",
+            "Celles fixées par le propriétaire",
+            "Aucune règle"
           ],
-          "correct": 1,
-          "explanation": "Le Code de la route sert de référence pour déterminer les responsabilités.",
+          "correct": 0,
+          "explanation": "En cas d'accident sur un parking, on juge les responsabilités d'après le code de la route.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1Q14.webp"
         },
         {
           "id": "A1Q15",
-          "question": "Vous arrivez devant une route portant la mention « privée ». Fait-elle partie de la voie publique ?",
+          "question": "Cette route privée est ouverte à tous. Est-ce une voie publique ?",
           "choices": [
-            "Oui, toute route est voie publique",
-            "Non, sauf si elle est accessible à tous",
-            "Non, et aucun véhicule ne peut y rouler",
-            "Non, elle est réservée aux piétons"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
-          "explanation": "Une voie privée n'est pas voie publique, sauf si elle est librement accessible à tous.",
+          "correct": 0,
+          "explanation": "Une route privée librement accessible à tous fait partie de la voie publique.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A1Q15.webp"
         },
         {
           "id": "A1Q17",
-          "question": "Vous roulez sur un chemin privé fermé par une barrière. Le Code de la route s'applique-t-il ?",
+          "question": "Le code de la route s'applique-t-il sur ce chemin privé fermé par une barrière ?",
           "choices": [
-            "Oui, sur tout chemin carrossable",
-            "Non, ce chemin fermé n'est pas public",
-            "Oui, si vous avez la permission d'y rouler",
-            "Seules les règles de priorité s'appliquent"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
           "explanation": "Un chemin privé fermé n'est pas accessible à tous : ce n'est pas une voie publique.",
@@ -326,55 +277,52 @@
         },
         {
           "id": "A1Q19",
-          "question": "Vous voyez un tram s'engager dans une rue en sens interdit pour les véhicules. Est-ce normal ?",
+          "question": "Ce tram entre dans une rue en sens interdit. Est-ce permis ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le tram n'obéit qu'aux agents qualifiés et aux feux de circulation, pas aux panneaux de signalisation.",
+          "explanation": "Le tram ne suit pas les panneaux : il obéit seulement aux feux et aux agents.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A1Q19.webp"
         },
         {
           "id": "A1Q21",
-          "question": "La voie publique se limite-t-elle à la chaussée ?",
+          "question": "Les bandes d'herbe le long de la route font-elles partie de la voie publique ?",
           "choices": [
-            "Oui, seule la chaussée en fait partie",
-            "Non, trottoirs et accotements en font partie",
-            "Non, la chaussée et les trottoirs seuls",
-            "Oui, en y ajoutant les parkings publics"
+            "Oui",
+            "Non"
           ],
-          "correct": 1,
-          "explanation": "La voie publique inclut la chaussée, mais aussi les pistes cyclables, les accotements, les bandes de stationnement et les trottoirs.",
+          "correct": 0,
+          "explanation": "La voie publique comprend la chaussée, mais aussi les accotements, les trottoirs et les pistes cyclables.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q21.webp"
         },
         {
           "id": "A1Q22",
-          "question": "Vous vous demandez jusqu'où s'étend la voie publique. Quelle est sa limite ?",
+          "question": "Jusqu'où s'étend la voie publique ?",
           "choices": [
-            "Elle s'arrête au bord de la chaussée",
-            "Elle s'arrête au bord du trottoir",
-            "Elle va jusqu'au fossé ou au talus",
-            "Elle s'arrête à la piste cyclable"
+            "Jusqu'au fossé ou au talus",
+            "Jusqu'au bord de la chaussée",
+            "Jusqu'au bord du trottoir"
           ],
-          "correct": 2,
-          "explanation": "La voie publique s'étend jusqu'au fossé, au talus ou à la limite d'une propriété privée.",
+          "correct": 0,
+          "explanation": "La voie publique va jusqu'au fossé, au talus ou à la limite d'une propriété privée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q22.webp"
         },
         {
           "id": "A1Q24",
-          "question": "Vous circulez en voiture. Sur quelle partie de la voie publique roulez-vous ?",
+          "question": "Comment s'appelle la partie de la route entourée en jaune ?",
           "choices": [
-            "Sur la chaussée",
-            "Sur l'accotement",
-            "Sur le trottoir"
+            "La chaussée",
+            "La bande de circulation",
+            "L'accotement"
           ],
           "correct": 0,
-          "explanation": "La chaussée est la partie de la voie publique aménagée pour la circulation des véhicules.",
+          "explanation": "La chaussée est toute la partie faite pour les véhicules. Elle peut être divisée en plusieurs bandes de circulation.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q24.webp"
         },
@@ -392,333 +340,275 @@
         },
         {
           "id": "A1Q26",
-          "question": "Vous êtes cycliste et il n'y a pas de piste cyclable. Pouvez-vous rouler sur la chaussée ?",
+          "question": "Il n'y a pas de piste cyclable. Ce cycliste peut-il rouler sur la chaussée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En l'absence de piste cyclable, le cycliste circule sur la chaussée.",
+          "explanation": "Sans piste cyclable, le cycliste roule sur la chaussée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q26.webp"
         },
         {
           "id": "A1Q27",
-          "question": "Vous êtes piéton et il n'y a ni trottoir ni accotement. Pouvez-vous marcher sur la chaussée ?",
+          "question": "Ni trottoir ni accotement. Ce piéton peut-il marcher sur la chaussée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Sans trottoir ni accotement praticable, le piéton peut marcher sur la chaussée, en restant prudent et le plus près possible du bord.",
+          "explanation": "Sans trottoir ni accotement praticable, le piéton marche sur la chaussée, le plus près possible du bord.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A1Q27.webp"
         },
         {
           "id": "A1Q29",
-          "question": "Vous circulez sur une voie publique composée de deux chaussées nettement séparées. Pouvez-vous emprunter celle de gauche ?",
+          "question": "Cette route a deux chaussées séparées. Pouvez-vous rouler sur celle de gauche ?",
           "choices": [
-            "Oui, vous choisissez librement",
-            "Non, sauf autorisation locale",
-            "Oui, pour effectuer un dépassement",
-            "Oui, si la droite est encombrée"
+            "Non, sauf signalisation locale",
+            "Oui, pour dépasser",
+            "Oui, si celle de droite est encombrée"
           ],
-          "correct": 1,
-          "explanation": "La chaussée de gauche est interdite sauf réglementation locale spécifique.",
+          "correct": 0,
+          "explanation": "La chaussée de gauche est interdite, sauf si une signalisation locale l'autorise.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A1Q29.webp"
         },
         {
           "id": "A1Q30",
-          "question": "Vous observez deux chaussées séparées. Par quoi peuvent-elles être séparées ?",
+          "question": "Combien de chaussées compte cette route ?",
           "choices": [
-            "Par un terre-plein en béton seul",
-            "Par des rails, une berme ou un marquage",
-            "Par un marquage au sol blanc seul",
-            "Par des barrières métalliques seules"
+            "1",
+            "2",
+            "4"
           ],
           "correct": 1,
-          "explanation": "Deux chaussées peuvent être séparées par des rails de protection, une berme, un accotement ou un marquage routier.",
+          "explanation": "Le terre-plein central sépare deux chaussées. Chacune compte deux bandes de circulation.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A1Q30.webp"
         },
         {
           "id": "A1Q31",
-          "question": "Vous remarquez une ligne blanche tracée sur le bord de la chaussée. Que signifie-t-elle ?",
+          "question": "Que pouvez-vous faire à droite de cette large ligne blanche continue ?",
           "choices": [
-            "L'interdiction de stationner le long",
-            "Le bord fictif de la chaussée",
-            "Un changement de limitation de vitesse",
-            "La présence d'une piste cyclable"
+            "Vous arrêter et stationner",
+            "Rouler pour dépasser",
+            "Rien, c'est interdit"
           ],
-          "correct": 1,
-          "explanation": "La ligne blanche tracée sur le bord indique uniquement le bord fictif de la chaussée, sans autre signification.",
+          "correct": 0,
+          "explanation": "Cette ligne marque le bord de la chaussée. Au-delà, la bande sert à l'arrêt et au stationnement (sauf sur autoroute et route pour automobiles).",
           "theoryCardIndex": 2,
           "image": "/images/questions/A1Q31.webp"
         },
         {
           "id": "A1Q33",
-          "question": "Vous circulez sur une chaussée à deux bandes. Où devez-vous vous positionner ?",
+          "question": "Ce conducteur roule au milieu de la chaussée, il s'y sent plus en sécurité. En a-t-il le droit ?",
           "choices": [
-            "Au milieu, pour mieux voir la route",
-            "Le plus à droite possible",
-            "À gauche, pour faciliter les dépassements",
-            "Là où c'est le plus confortable"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "La règle fondamentale : rouler le plus à droite possible.",
+          "explanation": "Règle de base : rouler le plus près possible du bord droit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A1Q33.webp"
         },
         {
-          "id": "A1Q35",
-          "question": "Vous roulez à gauche de la chaussée sans raison valable. Que risquez-vous ?",
-          "choices": [
-            "Une infraction au Code de la route",
-            "Un simple avertissement verbal",
-            "Rien, la bande se choisit librement"
-          ],
-          "correct": 0,
-          "explanation": "Vous devez circuler le plus près possible du bord droit de la chaussée. Rouler à gauche sans raison est une infraction.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/A1Q35.webp"
-        },
-        {
           "id": "A1Q36",
-          "question": "Vous circulez sur une route ordinaire en Région wallonne, hors agglomération. Quelle est la vitesse maximale autorisée ?",
+          "question": "Route ordinaire hors agglomération, en Wallonie. Vitesse maximale ?",
           "choices": [
             "70 km/h",
-            "80 km/h",
             "90 km/h",
             "120 km/h"
           ],
-          "correct": 2,
-          "explanation": "En Wallonie, la vitesse maximale sur route ordinaire est 90 km/h.",
+          "correct": 1,
+          "explanation": "En Wallonie : 90 km/h sur route ordinaire hors agglomération.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/A1Q36.webp"
         },
         {
           "id": "A1Q37",
-          "question": "Vous circulez sur une route ordinaire en Région flamande, hors agglomération. Quelle est la vitesse maximale autorisée ?",
+          "question": "Route ordinaire hors agglomération, en Flandre. Vitesse maximale ?",
           "choices": [
             "50 km/h",
             "70 km/h",
-            "90 km/h",
-            "120 km/h"
+            "90 km/h"
           ],
           "correct": 1,
-          "explanation": "En Flandre, la vitesse maximale sur route ordinaire est 70 km/h.",
+          "explanation": "En Flandre : 70 km/h sur route ordinaire hors agglomération.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/A1Q37.webp"
         },
         {
           "id": "A1Q38",
-          "question": "Vous circulez sur une route ordinaire à Bruxelles-Capitale, hors agglomération. Quelle est la vitesse maximale autorisée ?",
+          "question": "Route ordinaire hors agglomération, à Bruxelles. Vitesse maximale ?",
           "choices": [
             "50 km/h",
             "70 km/h",
-            "90 km/h",
-            "120 km/h"
+            "90 km/h"
           ],
           "correct": 1,
-          "explanation": "À Bruxelles, la vitesse maximale sur route ordinaire est 70 km/h.",
+          "explanation": "À Bruxelles : 70 km/h sur route ordinaire hors agglomération.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/A1Q38.webp"
         },
         {
           "id": "A1Q41",
-          "question": "Vous arrivez sur une route avec deux bandes blanches discontinues parallèles de chaque côté. De quel type de chaussée s'agit-il ?",
+          "question": "Comment s'appelle ce type de route ?",
           "choices": [
-            "Une chaussée à lignes jaunes continues",
             "Une chaussée à voie centrale",
-            "Une chaussée à terre-plein central",
-            "Un carrefour à feux clignotants"
+            "Une route avec deux pistes cyclables",
+            "Une route pour automobiles"
           ],
-          "correct": 1,
-          "explanation": "Deux bandes blanches discontinues de chaque côté caractérisent la chaussée à voie centrale.",
+          "correct": 0,
+          "explanation": "Deux lignes discontinues délimitent la voie centrale ; de chaque côté, une bande latérale.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q41.webp"
         },
         {
-          "id": "A1Q42",
-          "question": "Vous circulez sur une voie centrale. À quel type de circulation est-elle destinée ?",
+          "id": "A1Q43",
+          "question": "Vitesse maximale sur cette chaussée à voie centrale ?",
           "choices": [
-            "À la circulation des cyclistes",
-            "À la circulation motorisée",
-            "Au stationnement des véhicules",
-            "Aux piétons et aux usagers lents"
+            "50 km/h",
+            "70 km/h",
+            "90 km/h"
           ],
           "correct": 1,
-          "explanation": "La voie centrale est aménagée pour la circulation motorisée.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/A1Q42.webp"
-        },
-        {
-          "id": "A1Q43",
-          "question": "Vous vous apprêtez à emprunter une chaussée à voie centrale. Quelle est la vitesse maximale autorisée ?",
-          "choices": [
-            "50 km/h dans les trois Régions",
-            "90 km/h en Région wallonne",
-            "70 km/h dans les trois Régions",
-            "30 km/h en agglomération"
-          ],
-          "correct": 2,
-          "explanation": "Sur chaussée à voie centrale, la limite est 70 km/h partout en Belgique.",
+          "explanation": "70 km/h sur une chaussée à voie centrale, dans les trois Régions.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/A1Q43.webp"
         },
         {
           "id": "A1Q44",
-          "question": "Vous roulez à 80 km/h sur une voie centrale en Wallonie. Est-ce autorisé ?",
+          "question": "Vous êtes en Wallonie, sur cette chaussée à voie centrale. Vitesse maximale ?",
           "choices": [
-            "Oui, la limite wallonne est de 90 km/h",
-            "Non, la limite est de 70 km/h partout",
-            "Oui, si vous êtes hors agglomération",
-            "Non, la limite y est de 50 km/h"
+            "70 km/h",
+            "90 km/h",
+            "120 km/h"
           ],
-          "correct": 1,
-          "explanation": "Sur une chaussée à voie centrale, la limite est de 70 km/h partout en Belgique, y compris en Wallonie.",
+          "correct": 0,
+          "explanation": "Même en Wallonie, la chaussée à voie centrale est limitée à 70 km/h.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q44.webp"
         },
         {
           "id": "A1Q45",
-          "question": "Vous observez la bande latérale d'une chaussée à voie centrale. Fait-elle partie de la chaussée ?",
+          "question": "La bande latérale fait-elle partie de la chaussée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Sur une chaussée à voie centrale, les bandes latérales sont distinctes de la chaussée.",
+          "explanation": "La bande latérale longe la chaussée à voie centrale, mais n'en fait pas partie.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q45.webp"
         },
         {
           "id": "A1Q46",
-          "question": "Vous circulez sur une voie centrale. Dans quelles circonstances pouvez-vous utiliser la bande latérale ?",
+          "question": "Quand une voiture peut-elle rouler sur la bande latérale ?",
           "choices": [
-            "Pour croiser ou dépasser un véhicule",
-            "Pour vous arrêter et stationner",
-            "Pour rouler plus vite qu'au centre"
+            "Pour croiser ou dépasser",
+            "Pour rouler plus vite",
+            "Jamais, même pour croiser"
           ],
           "correct": 0,
-          "explanation": "La bande latérale ne s'emprunte que pour croiser ou dépasser, jamais pour stationner.",
+          "explanation": "La voiture peut rouler sur la bande latérale pour croiser ou dépasser, sans mettre en danger ceux qui y circulent.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q46.webp"
         },
         {
           "id": "A1Q48",
-          "question": "Vous dépassez un cycliste en agglomération sur une chaussée à voie centrale. Quelle distance latérale minimale devez-vous respecter ?",
+          "question": "Vous dépassez ce cycliste en agglomération. Écart minimal ?",
           "choices": [
-            "0,5 mètre",
-            "1 mètre",
-            "1,5 mètre",
-            "2 mètres"
+            "0,5 m",
+            "1 m",
+            "1,5 m"
           ],
           "correct": 1,
-          "explanation": "En agglomération, 1 mètre minimum est requis avec un cycliste.",
+          "explanation": "En agglomération : au moins 1 mètre entre vous et le cycliste.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q48.webp"
         },
         {
           "id": "A1Q49",
-          "question": "Vous dépassez un cycliste hors agglomération sur une chaussée à voie centrale. Quelle distance latérale minimale devez-vous respecter ?",
+          "question": "Vous dépassez ce cycliste hors agglomération. Écart minimal ?",
           "choices": [
-            "0,5 mètre",
-            "1 mètre",
-            "1,5 mètre",
-            "2 mètres"
+            "1 m",
+            "1,5 m",
+            "2 m"
           ],
-          "correct": 2,
-          "explanation": "Hors agglomération, 1,5 mètre minimum est requis avec un cycliste.",
+          "correct": 1,
+          "explanation": "Hors agglomération : au moins 1,5 mètre entre vous et le cycliste.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q49.webp"
         },
         {
           "id": "A1Q52",
-          "question": "Vous observez des usagers circuler sur la bande latérale. Lesquels y sont autorisés ?",
+          "question": "Qui peut circuler sur la bande latérale ?",
           "choices": [
-            "Les cyclistes, cyclomoteurs A et piétons",
+            "Cyclistes, cyclomoteurs A et piétons",
             "Les voitures qui roulent lentement",
-            "Les véhicules agricoles et les motos"
+            "Les tracteurs et les motos"
           ],
           "correct": 0,
-          "explanation": "La bande latérale est réservée aux cyclistes, speed pedelecs, cyclomoteurs de classe A, conducteurs d'animaux et piétons en l'absence de trottoir.",
+          "explanation": "La bande latérale est pour les cyclistes, les speed pedelecs, les cyclomoteurs classe A, les cavaliers et les piétons (s'il n'y a pas de trottoir).",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q52.webp"
         },
         {
           "id": "A1Q54",
-          "question": "Vous voyez un cyclomoteur classe B circuler sur la bande latérale. Est-ce autorisé ?",
+          "question": "Ce cyclomoteur classe B peut-il rouler sur la bande latérale ?",
           "choices": [
-            "Oui, tous les cyclomoteurs y roulent",
-            "Non, la classe A seule y est admise",
-            "Oui, si la voie centrale est occupée",
-            "Oui, s'il ne dépasse pas 25 km/h"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Seuls les cyclomoteurs classe A sont autorisés sur la bande latérale.",
+          "explanation": "Seuls les cyclomoteurs classe A sont admis sur la bande latérale.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A1Q54.webp"
         },
         {
           "id": "A1Q56",
-          "question": "Vous approchez d'animaux de trait sur la voie publique. Que devez-vous faire ?",
+          "question": "Des chevaux attelés sont sur la route devant vous. Que faites-vous ?",
           "choices": [
-            "Klaxonner pour les écarter",
-            "Accélérer pour les dépasser vite",
-            "Ralentir immédiatement",
-            "Faire un appel de phares"
+            "Vous ralentissez",
+            "Vous klaxonnez pour qu'ils s'écartent",
+            "Vous faites un appel de phares"
           ],
-          "correct": 2,
-          "explanation": "À l'approche d'animaux (trait, charge, selle, bétail), ralentir immédiatement est obligatoire.",
+          "correct": 0,
+          "explanation": "À l'approche d'animaux, vous ralentissez et vous vous arrêtez si nécessaire.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A1Q56.webp"
         },
         {
           "id": "A1Q58",
-          "question": "Vous devez ralentir à l'approche d'animaux sur la voie publique. Quels types d'animaux sont concernés ?",
+          "question": "Pour lequel de ces animaux devez-vous ralentir ?",
           "choices": [
-            "Les animaux de trait, de selle et le bétail",
-            "Les chiens tenus en laisse par leur maître",
-            "Les animaux sauvages vivant en forêt"
+            "Un cheval monté",
+            "Un chien tenu en laisse",
+            "Un chat sur le trottoir"
           ],
           "correct": 0,
-          "explanation": "Les animaux de trait, de charge, de selle et le bétail imposent de ralentir, voire de s'arrêter.",
+          "explanation": "Animaux de trait, de charge, de selle et bétail : vous devez ralentir, et vous arrêter si nécessaire.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A1Q58.webp"
         },
         {
           "id": "A1Q59",
-          "question": "Vous circulez et un cheval se cabre devant votre véhicule. Que devez-vous faire ?",
+          "question": "Ce cheval se cabre devant vous. Que faites-vous ?",
           "choices": [
-            "Klaxonner pour avertir le cavalier",
-            "Vous arrêter, sans geste brusque",
-            "Contourner le cheval par la gauche",
-            "Reculer pour vous éloigner"
+            "Vous vous arrêtez, sans geste brusque",
+            "Vous ralentissez et continuez",
+            "Vous klaxonnez pour prévenir le cavalier"
           ],
-          "correct": 1,
-          "explanation": "Cheval cabré = arrêt complet + aucun mouvement brusque pour laisser le cavalier reprendre le contrôle.",
+          "correct": 0,
+          "explanation": "Vous vous arrêtez et restez calme pour que le cavalier reprenne le contrôle.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A1Q59.webp"
-        },
-        {
-          "id": "A1Q60",
-          "question": "Vous vous êtes arrêté face à un cheval effrayé. Pourquoi devez-vous éviter tout mouvement brusque ?",
-          "choices": [
-            "Pour ne pas abîmer votre véhicule",
-            "Pour que le cavalier reprenne le contrôle",
-            "Parce que la loi l'impose, sans plus",
-            "Pour ne pas effrayer les autres conducteurs"
-          ],
-          "correct": 1,
-          "explanation": "Le calme permet au cavalier de reprendre le contrôle du cheval.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/A1Q60.webp"
         },
         {
           "id": "A1Q63",
@@ -1494,6 +1384,30 @@
           "destination": "panneaux",
           "sign": "A25",
           "severe": true
+        },
+        {
+          "id": "A1Q61",
+          "question": "Un troupeau de vaches traverse la route. Que faites-vous ?",
+          "choices": [
+            "Vous vous arrêtez et attendez",
+            "Vous passez lentement entre les bêtes",
+            "Vous klaxonnez pour les faire avancer"
+          ],
+          "correct": 0,
+          "explanation": "Face à du bétail sur la route, vous vous arrêtez et attendez que la voie soit libre.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "A1Q62",
+          "question": "Pas d'accotement le long de cette chaussée à voie centrale. Vous voulez vous arrêter un instant pour régler votre GPS. Où ?",
+          "choices": [
+            "Sur la bande latérale",
+            "Sur la voie centrale",
+            "Nulle part, l'arrêt est interdit"
+          ],
+          "correct": 0,
+          "explanation": "Sans accotement praticable, un véhicule à l'arrêt se range sur la bande latérale.",
+          "theoryCardIndex": 3
         }
       ]
     },
