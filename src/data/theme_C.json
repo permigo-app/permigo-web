@@ -1035,416 +1035,391 @@
       "questions": [
         {
           "id": "C2_Q1",
-          "question": "Vous chargez votre vehicule. Quelle est la hauteur maximale autorisee, chargement inclus ?",
+          "question": "Hauteur maximale d'un véhicule, chargement compris ?",
           "choices": [
-            "3 metres",
-            "4 metres",
-            "5 metres",
-            "3,5 metres"
+            "3,5 m",
+            "4 m",
+            "5 m"
           ],
           "correct": 1,
-          "explanation": "La hauteur maximale d'un véhicule, chargement compris, est de 4 mètres. Au-delà, c'est un 'gabarit exceptionnel'. Les ponts et tunnels peuvent imposer une autre hauteur via un signal d'interdiction.",
+          "explanation": "4 m maximum, chargement compris. Au-delà, c'est un transport exceptionnel.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q1.webp"
         },
         {
           "id": "C2_Q2",
-          "question": "Votre véhicule chargé dépasse 4 mètres de hauteur. Que se passe-t-il ?",
+          "question": "Votre véhicule chargé dépasse 4 m de haut. Qu'est-ce que c'est ?",
           "choices": [
-            "C'est un transport exceptionnel",
-            "C'est autorisé jusqu'à 5 mètres",
+            "Un transport exceptionnel",
+            "C'est permis jusqu'à 5 m",
             "C'est réservé aux camions"
           ],
           "correct": 0,
-          "explanation": "Un véhicule qui dépasse 4 mètres de hauteur (chargement compris) entre dans la catégorie des transports exceptionnels.",
+          "explanation": "Au-delà de 4 m, c'est un transport exceptionnel.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q2.webp"
         },
         {
           "id": "C2_Q3",
-          "question": "Un tunnel est limité à 3,2 m et votre véhicule chargé mesure 3,5 m. Pouvez-vous passer ?",
+          "question": "Ce tunnel est limité à 3,2 m. Votre véhicule chargé fait 3,5 m. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le signal d'interdiction de hauteur s'applique à tous les véhicules. Si votre hauteur (chargement compris) dépasse la limite indiquée, vous ne pouvez pas passer.",
+          "explanation": "Votre hauteur, chargement compris, dépasse la limite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q3.webp"
         },
         {
           "id": "C2_Q4",
-          "question": "Pourquoi retirer le coffre de toit quand vous n'en avez plus besoin ?",
+          "question": "Pourquoi retirer le coffre de toit dès que vous n'en avez plus besoin ?",
           "choices": [
-            "Il augmente la consommation",
+            "Il fait consommer plus",
             "Il est interdit hors vacances",
-            "Il risque d'être volé la nuit"
+            "Il risque d'être volé"
           ],
           "correct": 0,
-          "explanation": "Le coffre de toit augmente la résistance à l'air et donc la consommation de carburant. Il faut le retirer dès qu'on n'en a plus besoin.",
+          "explanation": "Le coffre de toit freine la voiture dans l'air : vous consommez plus.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q4.webp"
         },
         {
           "id": "C2_Q5",
-          "question": "Où devez-vous placer les objets lourds dans votre voiture ?",
+          "question": "Où placez-vous les objets lourds ?",
           "choices": [
-            "Dans le coffre, le plus bas",
-            "Sur les barres de toit",
-            "Sur le siège passager avant"
+            "Dans le coffre, le plus bas possible",
+            "Sur le toit",
+            "Sur le siège passager"
           ],
           "correct": 0,
-          "explanation": "Les objets lourds doivent être placés dans le coffre, pas sur le toit, pour ne pas déstabiliser le véhicule dans les virages.",
+          "explanation": "Bas et dans le coffre, pour garder la voiture stable.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q5.webp"
         },
         {
           "id": "C2_Q6",
-          "question": "Vous devez transporter des velos. Ou est-il preferable de les fixer ?",
+          "question": "Où vaut-il mieux placer les vélos à transporter ?",
           "choices": [
-            "Sur le toit",
-            "A l'arriere de la voiture",
-            "Sur le cote",
-            "A l'interieur de la voiture"
+            "À l'arrière de la voiture",
+            "Sur le toit"
           ],
-          "correct": 1,
-          "explanation": "Il est préférable de fixer les vélos à l'arrière plutôt que sur le toit.",
+          "correct": 0,
+          "explanation": "À l'arrière : la voiture reste plus stable et consomme moins.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q6.webp"
         },
         {
           "id": "C2_Q7",
-          "question": "Votre chargement couvre les feux arrière. Est-ce autorisé ?",
+          "question": "Votre chargement cache vos feux arrière. Est-ce permis ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La charge à l'arrière ne peut jamais couvrir les feux arrière ni la plaque d'immatriculation.",
+          "explanation": "Un chargement ne peut jamais cacher les feux ni la plaque.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C2_Q7.webp"
         },
         {
           "id": "C2_Q8",
-          "question": "Un porte-vélos masque votre plaque d'immatriculation. Que devez-vous faire ?",
+          "question": "Votre porte-vélos cache votre plaque d'immatriculation. Que faites-vous ?",
           "choices": [
-            "Rendre la plaque visible",
-            "Rouler de jour, sans plus",
-            "Mettre vos feux de détresse"
+            "Vous rendez la plaque visible",
+            "Rien, si vous roulez de jour",
+            "Vous allumez vos feux de détresse"
           ],
           "correct": 0,
-          "explanation": "La plaque d'immatriculation doit toujours rester visible. Si votre chargement la couvre, vous devez la rendre visible ou la déplacer.",
+          "explanation": "La plaque doit toujours être lisible : déplacez-la ou ajoutez une plaque sur le porte-vélos.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C2_Q8.webp"
         },
         {
           "id": "C2_Q9",
-          "question": "Vous chargez votre vehicule. Quelle est la largeur maximale autorisee, saillies comprises ?",
+          "question": "Largeur maximale d'un véhicule avec son chargement ?",
           "choices": [
-            "2 metres",
-            "2,55 metres",
-            "3 metres",
-            "2,20 metres"
+            "2,45 m",
+            "2,50 m",
+            "2,55 m"
           ],
-          "correct": 1,
-          "explanation": "La largeur d'un véhicule chargé, toutes saillies comprises, ne peut excéder 2,55 mètres.",
+          "correct": 2,
+          "explanation": "2,55 m maximum, chargement compris.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C2_Q9.webp"
         },
         {
           "id": "C2_Q10",
-          "question": "Votre véhicule chargé fait 2,70 mètres de large. Que se passe-t-il ?",
+          "question": "Votre véhicule chargé fait 2,70 m de large. Qu'est-ce que c'est ?",
           "choices": [
-            "C'est un transport exceptionnel",
-            "C'est autorisé jusqu'à 3 mètres",
+            "Un transport exceptionnel",
+            "C'est permis jusqu'à 3 m",
             "C'est interdit sur autoroute"
           ],
           "correct": 0,
-          "explanation": "Un véhicule chargé de plus de 2,55 mètres de large est un transport exceptionnel.",
+          "explanation": "Au-delà de 2,55 m, c'est un transport exceptionnel.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C2_Q10.webp"
         },
         {
           "id": "C2_Q11",
-          "question": "Un signal limite la largeur à 2 mètres et votre voiture fait 1,80 m. Pouvez-vous passer ?",
+          "question": "Ce panneau limite la largeur à 2 m. Votre voiture fait 1,80 m. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Votre voiture fait 1,80 m, ce qui est inférieur à la limite de 2 m. Vous pouvez passer.",
+          "explanation": "1,80 m, c'est moins que 2 m.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C2_Q11.webp"
         },
         {
           "id": "C2_Q12",
-          "question": "Un signal de largeur maximale concerne-t-il uniquement les camions ?",
+          "question": "Ce panneau de largeur maximale s'applique :",
           "choices": [
-            "Oui",
-            "Non"
+            "À tous les véhicules",
+            "Seulement aux camions"
           ],
-          "correct": 1,
-          "explanation": "Le signal de largeur maximale concerne tous les véhicules dont la largeur (chargement compris) dépasse la limite indiquée.",
+          "correct": 0,
+          "explanation": "Il vise tout véhicule plus large que la limite, chargement compris.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C2_Q12.webp"
         },
         {
           "id": "C2_Q13",
-          "question": "Vous chargez une echelle sur les barres de toit. Le chargement peut-il depasser l'avant de la carrosserie ?",
+          "question": "De combien le chargement peut-il dépasser à l'avant de votre voiture ?",
           "choices": [
-            "Oui, de 50 cm maximum",
-            "Non, en aucun cas",
-            "Oui, de 1 metre maximum",
-            "Oui, avec un panneau"
+            "Pas du tout",
+            "1 m maximum",
+            "3 m pour une charge indivisible"
           ],
-          "correct": 1,
-          "explanation": "En aucun cas le chargement ne peut dépasser, à l'avant, l'extrémité de la carrosserie.",
+          "correct": 0,
+          "explanation": "À l'avant, le chargement ne peut jamais dépasser la carrosserie.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q13.webp"
         },
         {
           "id": "C2_Q15",
-          "question": "Vous chargez votre vehicule. De combien le chargement peut-il depasser l'arriere ?",
+          "question": "De combien le chargement peut-il dépasser à l'arrière ?",
           "choices": [
-            "50 cm",
-            "Maximum 1 metre",
-            "2 metres",
-            "Il ne peut pas depasser"
+            "1 m maximum",
+            "50 cm maximum",
+            "Pas du tout"
           ],
-          "correct": 1,
-          "explanation": "Le chargement ne peut pas dépasser l'extrémité arrière du véhicule de plus d'1 mètre.",
+          "correct": 0,
+          "explanation": "À l'arrière : 1 m maximum (3 m pour une charge indivisible signalée).",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q15.webp"
         },
         {
           "id": "C2_Q16",
-          "question": "Un objet dépasse de 1,5 m l'arrière de votre véhicule. Est-ce autorisé sans signalisation ?",
+          "question": "Un objet dépasse de 1,5 m à l'arrière. Est-ce permis sans rien de plus ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Au-delà d'1 mètre de dépassement, la charge doit être indivisible et un panneau d'avertissement doit être fixé à l'arrière.",
+          "explanation": "Au-delà d'1 m, la charge doit être indivisible et signalée par un panneau.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q16.webp"
         },
         {
           "id": "C2_Q17",
-          "question": "Une charge indivisible dépasse de 2,5 m l'arrière. Est-ce autorisé ?",
+          "question": "Une charge indivisible dépasse de 2,5 m à l'arrière, avec le panneau. Est-ce permis ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une charge indivisible peut dépasser de maximum 3 mètres l'arrière, à condition d'y accrocher un panneau d'avertissement. 2,5 mètres est autorisé.",
+          "explanation": "Une charge indivisible signalée peut dépasser jusqu'à 3 m à l'arrière.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q17.webp"
         },
         {
           "id": "C2_Q19",
-          "question": "Que signifie « charge indivisible » ?",
+          "question": "Qu'est-ce qu'une charge indivisible ?",
           "choices": [
-            "Une charge ni pliable ni rétractable",
-            "Une charge de plus de 100 kilos",
-            "Une charge de nature inflammable"
+            "Une charge qu'on ne peut ni plier ni raccourcir",
+            "Une charge de plus de 100 kg",
+            "Une charge inflammable"
           ],
           "correct": 0,
-          "explanation": "Une charge indivisible est une charge qui ne peut être ni pliée ni rétractée.",
+          "explanation": "On ne peut ni la plier ni la raccourcir, comme une longue poutre.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q19.webp"
         },
         {
           "id": "C2_Q21",
-          "question": "De quoi le panneau d'avertissement doit-il être muni la nuit ?",
+          "question": "La nuit, que faut-il en plus sur le panneau d'une charge qui dépasse ?",
           "choices": [
             "Un feu rouge et des catadioptres",
-            "Un feu jaune clignotant sur le toit",
-            "Des bandes fluorescentes blanches"
+            "Un feu jaune clignotant",
+            "Des bandes blanches"
           ],
           "correct": 0,
-          "explanation": "Lorsque l'éclairage est requis, le panneau d'avertissement doit être muni d'un feu rouge orienté vers l'arrière et d'un catadioptre orange de chaque côté.",
+          "explanation": "La nuit, le panneau doit être éclairé par un feu rouge et muni de catadioptres.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/C2_Q21.webp"
         },
         {
           "id": "C2_Q22",
-          "question": "Un signal de longueur maximale concerne-t-il uniquement les camions ?",
+          "question": "Ce panneau de longueur maximale s'applique :",
           "choices": [
-            "Oui",
-            "Non"
+            "À tous les véhicules",
+            "Seulement aux camions"
           ],
-          "correct": 1,
-          "explanation": "Le signal de longueur maximale concerne tous les véhicules et trains de véhicules, y compris voiture + caravane.",
+          "correct": 0,
+          "explanation": "Il vise tous les véhicules et ensembles, voiture + caravane comprise.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q22.webp"
         },
         {
           "id": "C2_Q23",
-          "question": "Un signal interdit les véhicules de plus de 10 m et votre ensemble fait 11 m. Pouvez-vous passer ?",
+          "question": "Ce panneau interdit plus de 10 m. Votre voiture + caravane fait 11 m. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le signal de longueur s'applique à l'ensemble voiture + caravane. Votre train de 11 mètres dépasse la limite de 10 mètres.",
+          "explanation": "La longueur se mesure pour l'ensemble : 11 m, c'est trop.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q23.webp"
         },
         {
           "id": "C2_Q24",
-          "question": "Vous tractez une remorque avec votre voiture. Comment appelle-t-on cet ensemble ?",
+          "question": "Une voiture qui tire une remorque forme :",
           "choices": [
-            "Un vehicule double",
-            "Un train de vehicules",
-            "Un convoi",
-            "Un transport exceptionnel"
+            "Un train de véhicules",
+            "Un convoi exceptionnel",
+            "Un véhicule double"
           ],
-          "correct": 1,
-          "explanation": "Un véhicule tractant une remorque forme un 'train de véhicules'.",
+          "correct": 0,
+          "explanation": "Voiture + remorque = un train de véhicules.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q24.webp"
         },
         {
           "id": "C2_Q25",
-          "question": "Vous verifiez l'espace dans votre voiture. De quelle largeur laterale minimale le conducteur doit-il disposer ?",
+          "question": "Quelle largeur minimale pour la place du conducteur ?",
           "choices": [
             "40 cm",
             "55 cm",
-            "60 cm",
-            "50 cm"
+            "60 cm"
           ],
           "correct": 1,
-          "explanation": "Le conducteur doit disposer d'une largeur latérale d'au moins 55 cm.",
+          "explanation": "Le conducteur doit avoir au moins 55 cm de largeur.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C2_Q25.webp"
         },
         {
           "id": "C2_Q26",
-          "question": "Vous verifiez l'espace pour votre passager avant. De quelle largeur minimale doit-il disposer ?",
+          "question": "Quelle largeur minimale pour un passager à l'avant ?",
           "choices": [
             "30 cm",
             "40 cm",
-            "55 cm",
-            "50 cm"
+            "55 cm"
           ],
           "correct": 1,
-          "explanation": "Chaque passager avant doit disposer de minimum 40 cm de largeur.",
+          "explanation": "Chaque passager avant : au moins 40 cm.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C2_Q26.webp"
         },
         {
           "id": "C2_Q27",
-          "question": "Vous avez une voiture avec banquette avant pour trois occupants. Quelle est sa largeur minimale ?",
+          "question": "Banquette avant pour le conducteur et deux passagers. Largeur minimale ?",
           "choices": [
-            "120 cm",
-            "135 cm",
-            "150 cm",
-            "140 cm"
+            "125 cm",
+            "130 cm",
+            "135 cm"
           ],
-          "correct": 1,
-          "explanation": "La banquette avant pour trois personnes doit mesurer au moins 135 cm (55 cm conducteur + 2 × 40 cm passagers).",
+          "correct": 2,
+          "explanation": "55 cm + 40 cm + 40 cm = 135 cm.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C2_Q27.webp"
         },
         {
           "id": "C2_Q29",
-          "question": "Comment régler correctement l'appui-tête ?",
+          "question": "Comment réglez-vous l'appui-tête ?",
           "choices": [
-            "Le haut au niveau du sommet du crâne",
-            "Le plus bas possible pour le confort",
-            "Au niveau des épaules du conducteur"
+            "Son haut au niveau du sommet de la tête",
+            "Le plus bas possible",
+            "Au niveau des épaules"
           ],
           "correct": 0,
-          "explanation": "L'appui-tête doit être réglé de manière à ce que sa partie supérieure se situe à la même hauteur que le sommet de la tête.",
+          "explanation": "Le haut de l'appui-tête arrive au sommet de la tête : il protège la nuque en cas de choc.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C2_Q29.webp"
         },
         {
-          "id": "C2_Q30",
-          "question": "Pourquoi est-il important de bien régler l'appui-tête ?",
-          "choices": [
-            "Pour la protection en cas de choc",
-            "Pour mieux voir dans le rétroviseur",
-            "Pour le confort du dos, sans plus"
-          ],
-          "correct": 0,
-          "explanation": "Un appui-tête correctement réglé offre une protection optimale et contribue à une bonne position de conduite.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/C2_Q30.webp"
-        },
-        {
           "id": "C2_Q31",
-          "question": "Quand devez-vous porter la ceinture de sécurité ?",
+          "question": "Les passagers à l'arrière doivent-ils porter la ceinture ?",
           "choices": [
-            "Chaque fois qu'elle est présente",
-            "Sur autoroute et route rapide",
-            "Aux places avant du véhicule"
+            "Oui",
+            "Non, c'est seulement conseillé"
           ],
           "correct": 0,
-          "explanation": "La ceinture de sécurité doit être portée toujours quand elle est présente dans le véhicule, par le conducteur comme par les passagers.",
+          "explanation": "La ceinture est obligatoire à toutes les places qui en sont équipées.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q31.webp"
         },
         {
           "id": "C2_Q32",
-          "question": "Comment la ceinture doit-elle être portée ?",
+          "question": "Ce conducteur porte la ceinture sous le bras. Qu'en dit le code ?",
           "choices": [
-            "Au-dessus de l'épaule",
-            "Sous le bras, contre le flanc",
-            "Derrière le dos"
+            "C'est comme ne pas la porter",
+            "Elle protège juste un peu moins"
           ],
           "correct": 0,
-          "explanation": "La ceinture doit être portée au-dessus de l'épaule.",
+          "explanation": "Mal portée (sous le bras), la ceinture compte comme non portée. Elle passe sur l'épaule.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q32.webp"
         },
         {
           "id": "C2_Q34",
-          "question": "Devez-vous porter la ceinture pendant une marche arrière ?",
+          "question": "Quand le conducteur peut-il ne pas porter la ceinture ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Pendant une marche arrière",
+            "Quand il est seul dans la voiture",
+            "En zone 30"
           ],
-          "correct": 1,
-          "explanation": "Le conducteur effectuant une marche arrière est dispensé du port de la ceinture.",
+          "correct": 0,
+          "explanation": "La marche arrière est une des rares dispenses.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q34.webp"
         },
         {
           "id": "C2_Q35",
-          "question": "Vous êtes chauffeur de taxi avec des clients. Devez-vous porter la ceinture ?",
+          "question": "Vous êtes chauffeur de taxi avec un client. Devez-vous porter la ceinture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Un chauffeur de taxi transportant des clients est dispensé du port de la ceinture.",
+          "explanation": "Le chauffeur de taxi qui transporte un client en est dispensé.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q35.webp"
         },
         {
           "id": "C2_Q36",
-          "question": "Vous êtes facteur et distribuez le courrier de porte en porte. Devez-vous porter la ceinture ?",
+          "question": "Le facteur distribue le courrier de porte en porte. Doit-il porter la ceinture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Un facteur de La Poste distribuant le courrier de porte en porte est dispensé du port de la ceinture.",
+          "explanation": "Les agents de la Poste en tournée, avec des arrêts rapprochés, en sont dispensés.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q36.webp"
         },
         {
           "id": "C2_Q37",
-          "question": "Les agents qualifiés et les services de secours doivent-ils porter la ceinture ?",
+          "question": "Ce chauffeur d'une société privée livre des colis de porte en porte. Doit-il porter la ceinture ?",
           "choices": [
-            "Dispensés si la mission l'exige",
-            "Dispensés en toute circonstance",
-            "Tenus de la porter comme tous"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Les agents qualifiés et services de secours sont dispensés du port de la ceinture si leur mission l'exige.",
+          "explanation": "La dispense vaut pour les agents de la Poste, pas pour les autres livreurs.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q37.webp"
         },
@@ -1456,107 +1431,106 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "Les femmes enceintes SONT tenues de porter la ceinture de sécurité. Elles ne bénéficient d'aucune exemption.",
+          "explanation": "Non : les femmes enceintes portent la ceinture, sauf dispense médicale officielle.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q38.webp"
         },
         {
           "id": "C2_Q39",
-          "question": "Vous passez votre examen. Parmi ces personnes, laquelle DOIT porter la ceinture ?",
+          "question": "Laquelle de ces personnes DOIT porter la ceinture ?",
           "choices": [
-            "Un chauffeur de taxi avec client",
-            "Un facteur en tournee",
             "Une femme enceinte",
-            "Un conducteur en marche arriere"
+            "Un taxi avec un client",
+            "Un conducteur en marche arrière"
           ],
-          "correct": 2,
-          "explanation": "La femme enceinte DOIT porter la ceinture. Les trois autres bénéficient d'une exemption dans leur situation respective.",
+          "correct": 0,
+          "explanation": "La grossesse n'est pas une dispense.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C2_Q39.webp"
         },
         {
           "id": "C2_Q41",
-          "question": "À quelles conditions un enfant doit-il voyager dans un siège adapté ?",
+          "question": "Qu'est-ce qui décide si un enfant doit être dans un siège enfant ?",
           "choices": [
-            "Moins de 18 ans et moins d'1,35 m",
-            "Moins de 12 ans, quelle que soit la taille",
-            "Moins de 10 ans et moins d'un mètre"
+            "Son âge et sa taille",
+            "Son âge seulement",
+            "Sa taille seulement"
           ],
           "correct": 0,
-          "explanation": "Un enfant doit voyager dans un DRA s'il a moins de 18 ans ET mesure moins de 1,35 m. Les deux conditions doivent être réunies.",
+          "explanation": "Moins de 18 ans ET moins de 1,35 m : siège enfant obligatoire.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q41.webp"
         },
         {
           "id": "C2_Q42",
-          "question": "Un enfant de 15 ans mesure 1,30 m. Doit-il utiliser un siège adapté ?",
+          "question": "Cet enfant de 15 ans mesure 1,30 m. Doit-il être dans un siège enfant ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Cet enfant a moins de 18 ans ET mesure moins de 1,35 m : les deux conditions sont réunies, il doit utiliser un DRA.",
+          "explanation": "Moins de 18 ans et moins de 1,35 m : siège enfant.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q42.webp"
         },
         {
           "id": "C2_Q43",
-          "question": "Un enfant de 10 ans mesure 1,40 m. Doit-il utiliser un siège adapté ?",
+          "question": "Ce garçon de 12 ans mesure 1,45 m. Il porte la ceinture à l'arrière, sans siège. Est-ce correct ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, il mesure plus de 1,35 m",
+            "Non, il n'a que 12 ans"
           ],
-          "correct": 1,
-          "explanation": "Cet enfant mesure plus de 1,35 m : même s'il a moins de 18 ans, il peut utiliser uniquement la ceinture.",
+          "correct": 0,
+          "explanation": "Au-delà de 1,35 m, la ceinture seule suffit.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q43.webp"
         },
         {
           "id": "C2_Q45",
-          "question": "Un siège dos à la route est placé à l'avant, airbag actif. Est-ce autorisé ?",
+          "question": "Un siège enfant dos à la route est placé à l'avant, airbag actif. Est-ce permis ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit d'installer un DRA dos à la route sur un siège avec airbag frontal actif, sauf si l'airbag a été désactivé ou se désactive automatiquement de manière fiable.",
+          "explanation": "Interdit tant que l'airbag frontal de cette place est actif.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q45.webp"
         },
         {
           "id": "C2_Q47",
-          "question": "Où doit passer la partie inférieure de la ceinture sur un enfant ?",
+          "question": "Où passe la partie basse de la ceinture sur un enfant ?",
           "choices": [
-            "Par-dessus les jambes",
-            "Par-dessus le ventre",
-            "Sous les bras de l'enfant"
+            "Sur les cuisses",
+            "Sur le ventre",
+            "Sous les bras"
           ],
           "correct": 0,
-          "explanation": "La partie inférieure de la ceinture doit passer par-dessus les jambes de l'enfant dans le DRA.",
+          "explanation": "Sur les cuisses, jamais sur le ventre.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q47.webp"
         },
         {
           "id": "C2_Q48",
-          "question": "Un siège pour enfant acheté sur internet doit-il être homologué ?",
+          "question": "Un siège enfant acheté sur internet doit-il être homologué ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Un DRA doit être homologué, c'est-à-dire conforme aux normes CEE.",
+          "explanation": "Il doit être homologué selon les normes européennes.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q48.webp"
         },
         {
           "id": "C2_Q49",
-          "question": "Vous êtes voisin et transportez un enfant de 4 ans sur une courte distance. La ceinture seule suffit-elle ?",
+          "question": "Vous emmenez exceptionnellement l'enfant de 4 ans des voisins, sur une courte distance. La ceinture seule suffit-elle ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, à l'arrière",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "L'exception s'applique : plus de 3 ans, courte distance, conducteur non-parent, de manière exceptionnelle. La ceinture suffit mais l'enfant doit être à l'arrière.",
+          "explanation": "Exception : plus de 3 ans, courte distance, occasionnel, pas les parents. L'enfant reste à l'arrière.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q49.webp"
         },
@@ -1568,123 +1542,94 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "Dans cette exception, l'enfant ne peut PAS être à l'avant du véhicule.",
+          "explanation": "Non, il doit rester à l'arrière.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q50.webp"
         },
         {
           "id": "C2_Q51",
-          "question": "Un enfant de 2 ans peut-il bénéficier de cette exception ?",
+          "question": "Un enfant de 2 ans peut-il profiter de cette exception ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "L'exception ne s'applique qu'aux enfants de PLUS de 3 ans. Un enfant de 2 ans doit toujours être dans un DRA.",
+          "explanation": "Non : l'exception vaut seulement pour les plus de 3 ans.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q51.webp"
         },
         {
           "id": "C2_Q52",
-          "question": "Deux sièges occupent l'arrière. Le troisième enfant a 5 ans et mesure 1,40 m. Que faites-vous ?",
+          "question": "Deux sièges enfants occupent l'arrière. Le troisième enfant a 5 ans et mesure 1,40 m. Que faites-vous ?",
           "choices": [
-            "La ceinture suffit, à l'arrière",
-            "Il s'assoit à l'avant sans siège",
-            "Il ne peut pas voyager ainsi"
+            "Ceinture seule, à l'arrière",
+            "À l'avant, sans siège",
+            "Il ne peut pas venir"
           ],
           "correct": 0,
-          "explanation": "Cet enfant mesure plus de 1,35 m : il peut utiliser uniquement la ceinture. Mais il doit rester à l'arrière.",
+          "explanation": "Il mesure plus de 1,35 m : la ceinture seule suffit, à l'arrière.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C2_Q52.webp"
-        },
-        {
-          "id": "C2_Q53",
-          "question": "Vous passez votre examen. Les mauvaises reponses sur la ceinture des enfants font perdre combien de points ?",
-          "choices": [
-            "1 point",
-            "3 points",
-            "5 points",
-            "2 points"
-          ],
-          "correct": 2,
-          "explanation": "Une mauvaise réponse sur la ceinture des enfants fait perdre 5 points à l'examen.",
-          "theoryCardIndex": 6,
-          "image": "/images/questions/C2_Q53.webp"
-        },
-        {
-          "id": "C2_Q54",
-          "question": "Vous passez votre examen. Si vous ne repondez pas a une question sur la ceinture des enfants, vous perdez :",
-          "choices": [
-            "5 points",
-            "3 points",
-            "1 point",
-            "0 point"
-          ],
-          "correct": 2,
-          "explanation": "Ne pas répondre à une question sur la ceinture des enfants fait perdre 1 point à l'examen.",
-          "theoryCardIndex": 6,
-          "image": "/images/questions/C2_Q54.webp"
         },
         {
           "id": "C2_Q55",
           "question": "Qu'est-ce qu'un angle mort ?",
           "choices": [
-            "Une zone invisible dans les miroirs",
-            "Un virage sans aucune visibilité",
-            "Une zone d'ombre sur la chaussée"
+            "Une zone que vous ne voyez pas dans vos rétroviseurs",
+            "Un virage sans visibilité",
+            "Une zone d'ombre sur la route"
           ],
           "correct": 0,
-          "explanation": "Les angles morts sont les zones à côté ou derrière le véhicule que le conducteur ne peut pas voir, même avec des rétroviseurs correctement réglés.",
+          "explanation": "Une zone à côté ou derrière la voiture, invisible même avec des rétroviseurs bien réglés.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q55.webp"
         },
         {
           "id": "C2_Q56",
-          "question": "Vos rétroviseurs sont bien réglés. Les angles morts existent-ils quand même ?",
+          "question": "Vos rétroviseurs sont bien réglés. Avez-vous encore des angles morts ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Même avec des rétroviseurs correctement réglés, il existe toujours des angles morts.",
+          "explanation": "Oui : un coup d'œil par-dessus l'épaule reste nécessaire.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q56.webp"
         },
         {
           "id": "C2_Q57",
-          "question": "Comment fonctionne un système de détection d'angle mort ?",
+          "question": "Un détecteur d'angle mort allume un voyant dans le rétroviseur extérieur. Vrai ou faux ?",
           "choices": [
-            "Un voyant s'allume dans le miroir",
-            "Le volant se met à vibrer un peu",
-            "Un signal sonore dans l'habitacle"
+            "Vrai",
+            "Faux"
           ],
           "correct": 0,
-          "explanation": "Le Blind Spot Warning allume un voyant LED dans le rétroviseur extérieur quand un usager se trouve dans l'angle mort.",
+          "explanation": "Un voyant s'allume dans le rétroviseur quand quelqu'un est dans l'angle mort.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q57.webp"
         },
         {
           "id": "C2_Q58",
-          "question": "Le voyant d'angle mort s'allume dans votre rétroviseur. Que devez-vous faire ?",
+          "question": "Le voyant d'angle mort s'allume. Que faites-vous ?",
           "choices": [
-            "Ne pas dépasser et attendre",
-            "Dépasser quand même vite",
-            "Changer de voie aussitôt"
+            "Vous ne changez pas de bande",
+            "Vous changez vite de bande",
+            "Vous freinez fort"
           ],
           "correct": 0,
-          "explanation": "Quand le voyant est allumé, ne dépassez pas : attendez qu'il s'éteigne avant de changer de voie.",
+          "explanation": "Quelqu'un est là : attendez que le voyant s'éteigne.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q58.webp"
         },
         {
           "id": "C2_Q59",
-          "question": "La détection d'angle mort remplace-t-elle le regard par-dessus l'épaule ?",
+          "question": "Le détecteur d'angle mort remplace-t-il le coup d'œil par-dessus l'épaule ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le système de détection d'angle mort ne remplace pas la vérification manuelle : vous devez toujours regarder par-dessus votre épaule.",
+          "explanation": "Non, vous regardez toujours par-dessus l'épaule.",
           "theoryCardIndex": 7,
           "image": "/images/questions/C2_Q59.webp"
         },
@@ -1692,12 +1637,12 @@
           "id": "C2_Q60",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Interdit aux marchandises dangereuses",
-            "Une route particulièrement dangereuse",
-            "L'entrée d'une zone industrielle"
+            "Interdit aux véhicules avec marchandises dangereuses",
+            "Route dangereuse",
+            "Zone industrielle"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit le passage aux véhicules transportant certaines marchandises dangereuses.",
+          "explanation": "Interdit aux véhicules qui transportent certaines marchandises dangereuses.",
           "theoryCardIndex": 8,
           "sign": "C24a"
         },
@@ -1705,12 +1650,12 @@
           "id": "C2_Q61",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Interdit aux matières inflammables",
-            "Une station-service à proximité",
-            "Une caserne de pompiers proche"
+            "Interdit aux marchandises inflammables ou explosives",
+            "Station-service proche",
+            "Caserne de pompiers"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit le passage aux véhicules transportant des marchandises inflammables ou explosives.",
+          "explanation": "Interdit aux véhicules qui transportent des matières inflammables ou explosives.",
           "theoryCardIndex": 8,
           "sign": "C24b"
         },
@@ -1718,101 +1663,87 @@
           "id": "C2_Q62",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Interdit aux matières polluantes",
-            "Une zone naturelle protégée",
-            "Un cours d'eau à proximité"
+            "Interdit aux marchandises dangereuses pour l'eau",
+            "Zone naturelle protégée",
+            "Rivière proche"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit le passage aux véhicules transportant des marchandises polluantes.",
+          "explanation": "Interdit aux véhicules qui transportent des matières qui peuvent polluer l'eau.",
           "theoryCardIndex": 8,
           "sign": "C24c"
         },
         {
-          "id": "C2_Q63",
-          "question": "Vous passez votre examen. Une mauvaise reponse sur ces trois signaux de marchandises dangereuses fait perdre combien de points ?",
-          "choices": [
-            "1 point",
-            "3 points",
-            "5 points",
-            "2 points"
-          ],
-          "correct": 2,
-          "explanation": "Une mauvaise réponse sur les signaux de marchandises dangereuses fait perdre 5 points à l'examen.",
-          "theoryCardIndex": 8,
-          "image": "/images/questions/C2_Q63.webp"
-        },
-        {
           "id": "C2_Q65",
-          "question": "Vous roulez au GPL et voyez ce panneau interdit aux marchandises dangereuses. Pouvez-vous passer ?",
+          "question": "Votre voiture roule au GPL. Pouvez-vous passer ce panneau ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Tous les signaux de marchandises dangereuses concernent le chargement, pas le carburant. Une voiture au GPL peut les franchir.",
+          "explanation": "Ces panneaux visent le chargement, pas le carburant de la voiture.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q65.webp"
         },
         {
           "id": "C2_Q66",
-          "question": "Vous avez un permis de conduire provisoire et souhaitez tracter une remorque. Est-ce autorise ?",
+          "question": "Avec un permis provisoire, pouvez-vous tracter une remorque ?",
           "choices": [
+            "Non",
             "Oui, une petite remorque",
-            "Non, c'est interdit",
-            "Oui, de moins de 500 kg",
-            "Oui, avec un accompagnateur"
+            "Oui, avec votre guide"
           ],
-          "correct": 1,
-          "explanation": "Avec un permis provisoire, il est interdit de tracter une remorque.",
+          "correct": 0,
+          "explanation": "Avec un permis provisoire, pas de remorque.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q66.webp"
         },
         {
           "id": "C2_Q67",
-          "question": "Avec un permis B, quelle MMA de remorque pouvez-vous tracter sans condition ?",
+          "question": "Avec le permis B, quelle MMA de remorque pouvez-vous tracter sans condition ?",
           "choices": [
             "750 kg",
-            "500 kg",
-            "1 000 kg"
+            "1 200 kg",
+            "3 500 kg"
           ],
           "correct": 0,
-          "explanation": "Avec un permis B définitif, vous pouvez tracter une remorque de MMA ≤ 750 kg sans condition supplémentaire.",
+          "explanation": "Jusqu'à 750 kg de MMA, sans condition. Au-delà, l'ensemble ne peut dépasser 3 500 kg.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q67.webp"
         },
         {
           "id": "C2_Q68",
-          "question": "Votre voiture fait 2 000 kg de MMA. Pouvez-vous tracter une remorque de 850 kg ?",
+          "question": "Voiture : 2 000 kg de MMA. Pouvez-vous tracter une remorque de 850 kg ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La remorque dépasse 750 kg mais le total (2 000 + 850 = 2 850 kg) ne dépasse pas 3 500 kg. C'est autorisé avec un permis B définitif.",
+          "explanation": "2 000 + 850 = 2 850 kg, donc pas plus de 3 500 kg : c'est permis.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q68.webp"
         },
         {
           "id": "C2_Q69",
-          "question": "Votre voiture fait 3 000 kg de MMA. Pouvez-vous tracter une remorque de 800 kg ?",
+          "question": "Voiture : 3 000 kg de MMA. Pouvez-vous tracter une remorque de 800 kg ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La remorque dépasse 750 kg ET le total (3 000 + 800 = 3 800 kg) dépasse 3 500 kg. C'est interdit avec un permis B.",
+          "explanation": "Plus de 750 kg et 3 000 + 800 = 3 800 kg, plus que 3 500 kg : interdit avec le permis B.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q69.webp"
         },
         {
           "id": "C2_Q71",
-          "question": "Votre voiture fait 2 500 kg de MMA et la remorque 700 kg. Pouvez-vous tracter ?",
+          "question": "Camionnette : 2 700 kg de MMA. Quelle MMA maximale pour la remorque, avec le permis B ?",
           "choices": [
-            "Oui",
-            "Non"
+            "800 kg",
+            "750 kg",
+            "700 kg"
           ],
           "correct": 0,
-          "explanation": "La remorque est ≤ 750 kg, donc aucune condition supplémentaire n'est requise. Vous pouvez tracter.",
+          "explanation": "3 500 − 2 700 = 800 kg. L'ensemble ne dépasse pas 3 500 kg.",
           "theoryCardIndex": 8,
           "image": "/images/questions/C2_Q71.webp"
         },
@@ -1821,11 +1752,11 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Hauteur maximale autorisée",
-            "Poids maximal en charge",
-            "Distance minimale à tenir"
+            "Masse maximale en charge",
+            "Distance minimale"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux véhicules dont la hauteur (chargement compris) dépasse la limite indiquée.",
+          "explanation": "Interdit aux véhicules plus hauts que la hauteur indiquée, chargement compris.",
           "theoryCardIndex": 1,
           "sign": "C29"
         },
@@ -1834,11 +1765,11 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Largeur maximale autorisée",
-            "Poids maximal en charge",
-            "Longueur maximale autorisée"
+            "Longueur maximale autorisée",
+            "Masse maximale en charge"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux véhicules dont la largeur (chargement compris) dépasse la limite indiquée.",
+          "explanation": "Interdit aux véhicules plus larges que la largeur indiquée, chargement compris.",
           "theoryCardIndex": 2,
           "sign": "C27"
         },
@@ -1851,82 +1782,56 @@
             "Hauteur maximale autorisée"
           ],
           "correct": 0,
-          "explanation": "Ce signal interdit l'accès aux véhicules dont la longueur totale (chargement + remorque compris) dépasse la limite indiquée.",
+          "explanation": "Interdit aux véhicules ou ensembles plus longs que la longueur indiquée.",
           "theoryCardIndex": 3,
           "sign": "C25"
         },
         {
           "id": "C2_Q79",
-          "question": "Un tunnel est limité à 3,5 m et votre voiture fait 1,60 m avec le coffre de toit. Pouvez-vous passer ?",
+          "question": "Ce tunnel est limité à 3,5 m. Votre voiture fait 1,60 m avec le coffre de toit. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Votre hauteur totale (1,60 m avec coffre) est bien inférieure à la limite de 3,5 m. Vous pouvez passer.",
+          "explanation": "1,60 m, c'est bien moins que 3,5 m.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C2_Q79.webp"
         },
         {
           "id": "C2_Q83",
-          "question": "Un objet dépasse de 80 cm à l'arrière. Devez-vous accrocher le panneau d'avertissement ?",
+          "question": "Un objet dépasse de 80 cm à l'arrière. Faut-il le panneau d'avertissement ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le panneau d'avertissement n'est requis qu'au-delà d'1 mètre de dépassement. 80 cm ne nécessite pas de panneau.",
+          "explanation": "Le panneau n'est obligatoire qu'au-delà d'1 m.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C2_Q83.webp"
         },
         {
-          "id": "C2_CHG_1",
-          "question": "Quelles sont les trois règles de base pour un chargement ?",
-          "choices": [
-            "Ne pas gêner, masquer, déstabiliser",
-            "Ne pas dépasser le poids autorisé",
-            "Bien fermer le coffre et les portes"
-          ],
-          "correct": 0,
-          "explanation": "Une charge ne peut pas gêner les autres usagers, masquer les feux, la signalisation ou les plaques, ni compromettre la stabilité du véhicule.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/C2_CHG_1.webp"
-        },
-        {
           "id": "C2_CHG_2",
-          "question": "Que devez-vous vérifier avant de partir avec un chargement ?",
+          "question": "Que vérifiez-vous avant de partir avec un chargement ?",
           "choices": [
-            "Qu'il est stable et bien arrimé",
-            "La pression des pneus du véhicule",
-            "Le niveau de carburant du réservoir"
+            "Qu'il est stable et bien attaché",
+            "Le niveau de carburant",
+            "La pression des pneus seulement"
           ],
           "correct": 0,
-          "explanation": "Avant de partir, vérifiez que le chargement est stable, bien arrimé et ne dépasse pas de manière dangereuse.",
+          "explanation": "Le chargement doit être stable et bien arrimé pour ne pas bouger ni tomber.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C2_CHG_2.webp"
         },
         {
-          "id": "C2_CHG_3",
-          "question": "Votre chargement mal arrimé tombe sur la chaussée. Quel est le principal danger ?",
-          "choices": [
-            "Provoquer un accident derrière",
-            "User les pneus plus vite",
-            "Consommer plus de carburant"
-          ],
-          "correct": 0,
-          "explanation": "Une charge mal arrimée qui tombe peut provoquer un accident grave pour les véhicules qui suivent.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/C2_CHG_3.webp"
-        },
-        {
           "id": "C2_CHG_4",
-          "question": "Des planches masquent partiellement vos clignotants. Pouvez-vous rouler ainsi ?",
+          "question": "Des planches cachent en partie vos clignotants. Pouvez-vous rouler ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La charge ne peut jamais masquer les feux ni les dispositifs de signalisation : les autres usagers doivent voir vos intentions.",
+          "explanation": "Les autres doivent voir vos clignotants : le chargement ne peut pas les cacher.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C2_CHG_4.webp"
         }
