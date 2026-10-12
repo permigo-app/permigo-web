@@ -3596,441 +3596,418 @@
           "id": "A4_Q1",
           "question": "Qu'est-ce qui caractérise une autoroute ?",
           "choices": [
-            "Ni feux ni carrefours à niveau",
-            "Un accès réservé aux camions",
-            "Au moins trois bandes par sens"
+            "Ni feux ni carrefours",
+            "Au moins trois bandes par sens",
+            "Un accès réservé aux camions"
           ],
           "correct": 0,
-          "explanation": "Une autoroute est une route express réservée aux automobiles, sans feux ni carrefours avec priorité, accessible uniquement par des voies d'accès.",
+          "explanation": "Une autoroute n'a ni feux ni carrefours : on y entre et on en sort par des bretelles.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/A4_Q1.webp"
         },
         {
           "id": "A4_Q3",
-          "question": "Quels véhicules sont interdits sur l'autoroute ?",
+          "question": "Lesquels de ces véhicules sont interdits sur l'autoroute ?",
           "choices": [
-            "Les cyclomoteurs et engins agricoles",
+            "Les cyclomoteurs et les tracteurs agricoles",
             "Les motos de moins de 400 cm³",
-            "Les camionnettes et les remorques"
+            "Les camionnettes avec remorque"
           ],
           "correct": 0,
-          "explanation": "Plusieurs catégories de véhicules sont interdits sur l'autoroute : cyclomoteurs, véhicules agricoles, quadricycles sans habitacle et trains forains.",
+          "explanation": "Cyclomoteurs, véhicules agricoles et quadricycles sans habitacle n'ont pas accès à l'autoroute.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A4_Q3.webp"
         },
         {
           "id": "A4_Q4",
-          "question": "Un cyclomoteur peut-il emprunter l'autoroute ?",
+          "question": "Un cyclomoteur peut-il rouler sur l'autoroute ?",
           "choices": [
+            "Non",
             "Oui, sur la bande de droite",
-            "Non, c'est interdit",
-            "Oui, s'il roule à 70 km/h",
-            "Oui, avec un véhicule d'escorte"
+            "Oui, s'il roule à 70 km/h"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Les cyclomoteurs sont interdits sur l'autoroute.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A4_Q4.webp"
         },
         {
           "id": "A4_Q6",
-          "question": "Quelle est la vitesse maximale sur autoroute ?",
+          "question": "Vitesse maximale sur autoroute ?",
           "choices": [
             "90 km/h",
-            "100 km/h",
             "120 km/h",
             "130 km/h"
           ],
-          "correct": 2,
-          "explanation": "La vitesse maximale sur autoroute est de 120 km/h, sous réserve des conditions et des signaux.",
+          "correct": 1,
+          "explanation": "120 km/h maximum, sauf signal ou conditions qui imposent moins.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A4_Q6.webp"
         },
         {
           "id": "A4_Q7",
-          "question": "Pouvez-vous toujours rouler à 120 km/h sur autoroute ?",
+          "question": "Sur autoroute, quelle affirmation est correcte ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Vous adaptez votre vitesse aux circonstances",
+            "Vous roulez toujours à 120 km/h",
+            "Vous roulez toujours à au moins 70 km/h"
           ],
-          "correct": 1,
-          "explanation": "La limite de 120 km/h n'est possible que si les conditions de circulation le permettent et qu'aucun signal ou agent ne l'interdit.",
+          "correct": 0,
+          "explanation": "120 km/h est un maximum : pluie, brouillard ou trafic imposent de rouler moins vite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q7.webp"
         },
         {
           "id": "A4_Q8",
-          "question": "Un signal indique 90 km/h sur les deux bandes de gauche et 70 km/h sur la bande de droite. Vous êtes sur la bande de droite. Quelle est votre vitesse maximale ?",
+          "question": "Ce signal indique 90 km/h sur les deux bandes de gauche et 70 km/h sur celle de droite. Vous êtes à droite. Vitesse maximale ?",
           "choices": [
-            "90 km/h",
-            "120 km/h",
             "70 km/h",
-            "80 km/h"
+            "90 km/h",
+            "120 km/h"
           ],
-          "correct": 2,
-          "explanation": "La limitation indiquée par bande s'applique à votre bande. Sur la bande de droite, la limite est 70 km/h.",
+          "correct": 0,
+          "explanation": "La limite par bande vaut pour votre bande : 70 km/h à droite.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A4_Q8.webp"
         },
         {
           "id": "A4_Q9",
-          "question": "Un signal de préavis indique une limitation à 1,5 km. Devez-vous déjà ralentir ?",
+          "question": "Ce panneau annonce une limite à 1500 m. Quand s'applique-t-elle ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Dans 1500 m",
+            "Dès maintenant, sur 1500 m",
+            "Dès la prochaine sortie"
           ],
-          "correct": 1,
-          "explanation": "Le signal de préavis vous informe de la limitation à venir, mais celle-ci ne s'applique qu'au point indiqué.",
+          "correct": 0,
+          "explanation": "C'est un préavis : la limite commence 1500 m plus loin.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q9.webp"
         },
         {
           "id": "A4_Q10",
-          "question": "Quelle est la vitesse minimale sur autoroute ?",
+          "question": "Vitesse minimale sur autoroute, quand les conditions le permettent ?",
           "choices": [
             "50 km/h",
-            "60 km/h",
             "70 km/h",
-            "80 km/h"
+            "90 km/h"
           ],
-          "correct": 2,
-          "explanation": "La vitesse minimale sur autoroute est de 70 km/h quand les conditions le permettent.",
+          "correct": 1,
+          "explanation": "70 km/h minimum, si les conditions le permettent.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A4_Q10.webp"
         },
         {
           "id": "A4_Q12",
-          "question": "Ce panneau est placé à la sortie. Que signifie-t-il ?",
+          "question": "Ce panneau est placé dans la sortie. Que signifie-t-il ?",
           "choices": [
-            "Vitesse maximale de 90 km/h",
-            "Vitesse minimale de 90 km/h",
-            "Vitesse conseillée de 90 km/h"
+            "90 km/h maximum dans la sortie",
+            "90 km/h minimum",
+            "90 km/h conseillés"
           ],
           "correct": 0,
-          "explanation": "Un signal de limitation dans la sortie indique la vitesse maximale autorisée sur cette bretelle.",
+          "explanation": "La limite indiquée vaut pour la sortie.",
           "theoryCardIndex": 1,
           "sign": "C43",
           "severe": true
         },
         {
           "id": "A4_Q13",
-          "question": "En cas de smog, quelle limitation de vitesse temporaire peut être imposée ?",
+          "question": "Alerte smog : quelle vitesse maximale peut être imposée sur l'autoroute ?",
           "choices": [
             "70 km/h",
-            "80 km/h",
             "90 km/h",
             "100 km/h"
           ],
-          "correct": 2,
-          "explanation": "En cas de smog, une limitation temporaire à 90 km/h peut être imposée par panneaux électroniques ou signal C43.",
+          "correct": 1,
+          "explanation": "En cas de smog, la vitesse peut être limitée à 90 km/h.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q13.webp"
         },
         {
-          "id": "A4_Q14",
-          "question": "Comment la limitation smog est-elle indiquée ?",
-          "choices": [
-            "Par panneau électronique ou C43",
-            "Par des cônes orange au sol",
-            "Par un message diffusé à la radio"
-          ],
-          "correct": 0,
-          "explanation": "La limitation smog est signalée par des panneaux électroniques variables ou par le signal C43 accompagné d'un panneau additionnel SMOG.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/A4_Q14.webp"
-        },
-        {
           "id": "A4_Q15",
-          "question": "Quand pouvez-vous monter des pneus cloutés ?",
+          "question": "Quand pouvez-vous rouler avec des pneus cloutés ?",
           "choices": [
             "Du 1er novembre au 31 mars",
             "Du 1er octobre au 30 avril",
-            "Toute l'année sans limite"
+            "Toute l'année"
           ],
           "correct": 0,
-          "explanation": "Les pneus cloutés sont autorisés du 1er novembre au 31 mars.",
+          "explanation": "Pneus cloutés : du 1er novembre au 31 mars.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q15.webp"
         },
         {
           "id": "A4_Q16",
-          "question": "Quelle est la vitesse maximale avec des pneus cloutés sur autoroute ?",
+          "question": "Pneus cloutés sur autoroute. Vitesse maximale ?",
           "choices": [
-            "60 km/h",
             "70 km/h",
             "90 km/h",
             "120 km/h"
           ],
-          "correct": 2,
-          "explanation": "Avec des pneus cloutés sur autoroute, la vitesse maximale est de 90 km/h.",
+          "correct": 1,
+          "explanation": "Avec des pneus cloutés : 90 km/h sur autoroute, 60 km/h ailleurs.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A4_Q16.webp"
         },
         {
           "id": "A4_Q17",
-          "question": "Quelle est la vitesse maximale avec des pneus cloutés sur route ordinaire ?",
+          "question": "Pneus cloutés sur une route ordinaire en Wallonie. Vitesse maximale ?",
           "choices": [
-            "50 km/h",
             "60 km/h",
             "70 km/h",
             "90 km/h"
           ],
-          "correct": 1,
-          "explanation": "Sur route ordinaire, la vitesse maximale avec des pneus cloutés est de 60 km/h.",
+          "correct": 0,
+          "explanation": "Avec des pneus cloutés : 60 km/h sur les routes ordinaires, même là où la limite normale est 90.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A4_Q17.webp"
         },
         {
           "id": "A4_Q18",
-          "question": "Sur quel type de véhicule pouvez-vous monter des pneus cloutés ?",
+          "question": "Sur quels véhicules les pneus cloutés sont-ils permis ?",
           "choices": [
-            "Une MMA de 3,5 tonnes maximum",
-            "Tous les véhicules sans exception",
-            "Les 4x4 et les SUV"
+            "MMA de 3,5 tonnes maximum",
+            "Tous les véhicules",
+            "Seulement les 4x4"
           ],
           "correct": 0,
-          "explanation": "Les pneus cloutés ne sont autorisés que sur les véhicules dont la masse maximale autorisée ne dépasse pas 3,5 tonnes.",
+          "explanation": "Pneus cloutés : seulement sur les véhicules de 3,5 tonnes de MMA maximum.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A4_Q18.webp"
         },
         {
           "id": "A4_Q20",
-          "question": "Qu'est-ce qui délimite la bande d'arrêt d'urgence ?",
+          "question": "Qu'est-ce qui sépare la bande d'arrêt d'urgence de la chaussée ?",
           "choices": [
-            "Des poteaux réfléchissants",
             "Une large ligne blanche continue",
             "Une ligne orange discontinue",
-            "Des barrières de sécurité"
+            "Des poteaux réfléchissants"
           ],
-          "correct": 1,
-          "explanation": "La bande d'arrêt d'urgence est délimitée par une large ligne blanche continue sur le bord extérieur de la bande de droite.",
+          "correct": 0,
+          "explanation": "Une large ligne blanche continue délimite la bande d'arrêt d'urgence.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A4_Q20.webp"
         },
         {
           "id": "A4_Q21",
-          "question": "Pouvez-vous vous arrêter sur la bande d'arrêt d'urgence pour consulter une carte ?",
+          "question": "Pouvez-vous vous arrêter un instant sur la bande d'arrêt d'urgence pour envoyer un SMS ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de s'arrêter sur la BAU pour quelque raison que ce soit, y compris consulter une carte ou téléphoner.",
+          "explanation": "La bande d'arrêt d'urgence est réservée aux vraies urgences : ni SMS, ni carte, ni pause.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A4_Q21.webp"
         },
         {
           "id": "A4_Q22",
-          "question": "Pouvez-vous circuler sur la bande d'arrêt d'urgence ?",
+          "question": "Quand pouvez-vous rouler sur la bande d'arrêt d'urgence ?",
           "choices": [
-            "Non, sauf panne ou marques orange",
-            "Oui, si la circulation est dense",
-            "Oui, pour dépasser par la droite"
+            "En cas de panne, ou si des lignes orange vous y dirigent",
+            "Si la circulation est dense",
+            "Pour dépasser par la droite"
           ],
           "correct": 0,
-          "explanation": "La circulation sur la BAU n'est autorisée qu'en cas de panne, d'accident ou si des marques orange le permettent.",
+          "explanation": "Seulement en cas de nécessité (panne, accident) ou si un marquage de chantier vous y dirige.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A4_Q22.webp"
         },
         {
           "id": "A4_Q23",
-          "question": "Vous êtes en panne sur la bande d'arrêt d'urgence. Où devez-vous attendre les secours ?",
+          "question": "Panne sur la bande d'arrêt d'urgence. Où attendent les passagers ?",
           "choices": [
-            "Derrière les barrières",
-            "Dans votre véhicule",
-            "Sur la berme centrale"
+            "Derrière les rails de sécurité",
+            "Dans la voiture",
+            "Sur la bande d'arrêt d'urgence"
           ],
           "correct": 0,
-          "explanation": "En attendant les secours sur la BAU, restez derrière les barrières de protection, pas dans votre véhicule.",
+          "explanation": "Tout le monde sort et attend derrière les rails de sécurité, du côté du talus.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q23.webp"
         },
         {
           "id": "A4_Q24",
-          "question": "À quelle distance devez-vous placer le triangle de danger sur autoroute ?",
+          "question": "À quelle distance placez-vous le triangle de danger sur autoroute ?",
           "choices": [
-            "30 mètres",
-            "50 mètres",
-            "100 mètres",
-            "150 mètres"
+            "30 m",
+            "100 m",
+            "150 m"
           ],
-          "correct": 2,
-          "explanation": "Sur autoroute, le triangle de danger doit être placé à 100 mètres en deçà du véhicule.",
+          "correct": 1,
+          "explanation": "Sur autoroute : 100 m derrière le véhicule.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q24.webp"
         },
         {
           "id": "A4_Q25",
-          "question": "À quelle distance devez-vous placer le triangle de danger sur route ordinaire ?",
+          "question": "À quelle distance placez-vous le triangle de danger sur une route ordinaire ?",
           "choices": [
-            "10 mètres",
-            "30 mètres",
-            "50 mètres",
-            "100 mètres"
+            "10 m",
+            "30 m",
+            "100 m"
           ],
           "correct": 1,
-          "explanation": "Sur route ordinaire, le triangle de danger se place à 30 mètres en deçà du véhicule.",
+          "explanation": "Sur route ordinaire : 30 m derrière le véhicule.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q25.webp"
         },
         {
           "id": "A4_Q26",
-          "question": "Le triangle de danger doit être visible à quelle distance ?",
+          "question": "À quelle distance le triangle doit-il être visible ?",
           "choices": [
-            "30 mètres",
-            "50 mètres",
-            "100 mètres",
-            "150 mètres"
+            "30 m",
+            "50 m",
+            "100 m"
           ],
           "correct": 1,
-          "explanation": "Le triangle de danger doit être visible à 50 mètres pour les conducteurs qui s'approchent.",
+          "explanation": "Le triangle doit être visible à 50 m au moins.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q26.webp"
         },
         {
           "id": "A4_Q28",
-          "question": "Quand devez-vous porter le gilet de sécurité réfléchissant ?",
+          "question": "Panne sur autoroute. Quand mettez-vous le gilet fluo ?",
           "choices": [
-            "En quittant le véhicule sur la BAU",
-            "Chaque fois que vous conduisez",
-            "La nuit et par temps de brouillard"
+            "Toujours, avant de sortir de la voiture",
+            "Seulement la nuit",
+            "Seulement par brouillard"
           ],
           "correct": 0,
-          "explanation": "Le gilet réfléchissant est obligatoire pour le conducteur qui quitte son véhicule (immobilisé en urgence).",
+          "explanation": "Le conducteur met le gilet avant de quitter le véhicule, de jour comme de nuit.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q28.webp"
         },
         {
           "id": "A4_Q29",
-          "question": "Où devez-vous ranger le gilet de sécurité dans votre voiture ?",
+          "question": "Où rangez-vous le gilet fluo ?",
           "choices": [
-            "Dans l'habitacle, à portée",
-            "Dans le coffre du véhicule",
-            "Sous la roue de secours"
+            "Dans l'habitacle",
+            "Dans le coffre"
           ],
           "correct": 0,
-          "explanation": "Le gilet doit être rangé dans l'habitacle (pas dans le coffre) pour pouvoir le mettre avant de sortir du véhicule.",
+          "explanation": "Dans l'habitacle, pour l'enfiler avant de sortir.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q29.webp"
         },
         {
           "id": "A4_Q30",
-          "question": "Le gilet est-il obligatoire pour les passagers ?",
+          "question": "Le gilet fluo est-il obligatoire pour les passagers ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le gilet réfléchissant est obligatoire uniquement pour le conducteur. Il est conseillé pour les passagers mais pas obligatoire.",
+          "explanation": "Obligatoire pour le conducteur seulement, conseillé pour les passagers.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q30.webp"
         },
         {
           "id": "A4_Q32",
-          "question": "Quel est le numéro d'appel d'urgence international ?",
+          "question": "Quel est le numéro d'urgence européen ?",
           "choices": [
-            "100",
             "101",
             "112",
             "911"
           ],
-          "correct": 2,
-          "explanation": "Le 112 est le numéro d'urgence européen, disponible dans tous les pays de l'UE.",
+          "correct": 1,
+          "explanation": "Le 112 fonctionne dans toute l'Union européenne.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q32.webp"
         },
         {
           "id": "A4_Q33",
-          "question": "Que devez-vous mentionner lorsque vous appelez le 112 sur autoroute ?",
+          "question": "Vous appelez le 112 depuis l'autoroute. Que dites-vous d'abord ?",
           "choices": [
-            "Le lieu exact et le sens de circulation",
-            "La marque et la couleur de votre voiture",
-            "Le nombre de passagers à bord"
+            "L'endroit exact et le sens de circulation",
+            "La marque de votre voiture",
+            "Le nombre de passagers"
           ],
           "correct": 0,
-          "explanation": "Lors d'un appel au 112, indiquez l'endroit précis (numéro de voirie, km) et le sens de circulation pour permettre aux secours de vous localiser.",
+          "explanation": "Les secours doivent d'abord savoir où vous êtes : autoroute, borne kilométrique, sens.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q33.webp"
         },
         {
           "id": "A4_Q34",
-          "question": "Le couloir de secours s'applique-t-il uniquement sur autoroute ?",
+          "question": "Embouteillage. Quand formez-vous un couloir de secours ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Toujours, dès 2 bandes dans votre sens",
+            "Seulement sur autoroute",
+            "Seulement quand vous entendez une sirène"
           ],
-          "correct": 1,
-          "explanation": "Le couloir de secours s'applique sur toutes les routes divisées en bandes de circulation, pas uniquement sur les autoroutes.",
+          "correct": 0,
+          "explanation": "Sur toute route à au moins 2 bandes dans le même sens, dès que le trafic se bloque.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q34.webp"
         },
         {
           "id": "A4_Q35",
-          "question": "Sur une chaussée à 2 bandes, comment se forme le couloir de secours ?",
+          "question": "Couloir de secours sur 2 bandes. Que faites-vous ?",
           "choices": [
-            "Gauche à gauche, droite à droite",
+            "Bande de gauche à gauche, bande de droite à droite",
             "Tout le monde serre à droite",
             "Tout le monde s'arrête sur place"
           ],
           "correct": 0,
-          "explanation": "Sur 2 bandes : gauche serre à gauche, droite serre à droite. Un couloir se forme entre les deux files.",
+          "explanation": "Gauche serre à gauche, droite serre à droite : le couloir s'ouvre au milieu.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q35.webp"
         },
         {
           "id": "A4_Q36",
-          "question": "Sur une chaussée à 3 bandes, où se forme le couloir de secours ?",
+          "question": "Couloir de secours sur 3 bandes. Où se forme-t-il ?",
           "choices": [
-            "À côté de la bande de gauche",
+            "Entre la bande de gauche et celle du milieu",
             "Sur la bande d'arrêt d'urgence",
-            "Au milieu de la chaussée"
+            "Entre la bande du milieu et celle de droite"
           ],
           "correct": 0,
-          "explanation": "Sur 3 bandes : la bande de gauche serre à gauche, toutes les autres serrent à droite. Le couloir se forme à côté de la bande de gauche.",
+          "explanation": "La bande de gauche serre à gauche, toutes les autres serrent à droite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A4_Q36.webp"
         },
         {
           "id": "A4_Q38",
-          "question": "Un conducteur fantôme est un conducteur qui :",
+          "question": "Qu'est-ce qu'un conducteur fantôme ?",
           "choices": [
-            "Roule en sens inverse",
-            "Roule sans ses phares",
-            "Roule beaucoup trop lentement"
+            "Un conducteur qui roule à contresens",
+            "Un conducteur qui roule sans phares",
+            "Un conducteur qui roule trop lentement"
           ],
           "correct": 0,
-          "explanation": "Un conducteur fantôme est un conducteur qui circule en sens inverse sur une autoroute, créant un danger mortel.",
+          "explanation": "Le conducteur fantôme roule dans le mauvais sens sur l'autoroute.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A4_Q38.webp"
         },
         {
           "id": "A4_Q39",
-          "question": "Que devez-vous faire face à un conducteur fantôme ?",
+          "question": "Une voiture arrive à contresens sur l'autoroute. Que faites-vous ?",
           "choices": [
-            "Ralentir, serrer à droite, appeler",
-            "Accélérer pour le dépasser vite",
-            "Faire demi-tour sur l'autoroute"
+            "Vous ralentissez, serrez à droite et appelez le 112",
+            "Vous accélérez pour la dépasser",
+            "Vous faites demi-tour"
           ],
           "correct": 0,
-          "explanation": "Face à un conducteur fantôme : ralentir + serrer à droite + appel de phares en le croisant + appeler le 112.",
+          "explanation": "Ralentir, serrer à droite, ne pas dépasser, appeler le 112.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A4_Q39.webp"
         },
         {
           "id": "A4_Q41",
-          "question": "Pouvez-vous vous réfugier sur la bande d'arrêt d'urgence face à un conducteur fantôme ?",
+          "question": "Pour éviter un conducteur fantôme, pouvez-vous aller sur la bande d'arrêt d'urgence ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Face à un conducteur fantôme, vous pouvez vous réfugier sur la BAU si nécessaire pour éviter la collision.",
+          "explanation": "Oui, si c'est nécessaire pour éviter la collision.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A4_Q41.webp"
         },
@@ -4038,369 +4015,347 @@
           "id": "A4_Q43",
           "question": "À quoi sert une bande réservée aux heures de pointe ?",
           "choices": [
-            "À fluidifier la circulation",
-            "À réserver une voie aux bus",
-            "À stationner temporairement"
+            "À ajouter une bande quand il y a beaucoup de trafic",
+            "À réserver une bande aux bus",
+            "À stationner"
           ],
           "correct": 0,
-          "explanation": "La bande réservée aux heures de pointe est une bande supplémentaire disponible à certains moments pour fluidifier le trafic.",
+          "explanation": "Elle ouvre une bande en plus aux heures chargées.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q43.webp"
         },
         {
-          "id": "A4_Q44",
-          "question": "Comment est séparée la bande réservée aux heures de pointe des autres bandes ?",
-          "choices": [
-            "Par une ligne blanche striée",
-            "Par une ligne blanche continue",
-            "Par une ligne orange discontinue"
-          ],
-          "correct": 0,
-          "explanation": "La bande réservée aux heures de pointe est séparée par une ligne blanche striée (10 m de trait, 2,5 m d'espace).",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/A4_Q44.webp"
-        },
-        {
           "id": "A4_Q45",
-          "question": "Une flèche verte est affichée au-dessus de la bande réservée. Que signifie-t-elle ?",
+          "question": "Flèche verte au-dessus de la bande réservée aux heures de pointe. Pouvez-vous y rouler ?",
           "choices": [
-            "Vous pouvez utiliser la bande",
-            "La bande vous est interdite",
-            "La bande est réservée aux bus"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Une flèche verte au-dessus d'une bande signifie que vous êtes autorisé à l'emprunter.",
+          "explanation": "Flèche verte : la bande est ouverte.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q45.webp"
         },
         {
           "id": "A4_Q46",
-          "question": "Une croix rouge est affichée au-dessus de la bande réservée. Que signifie-t-elle ?",
+          "question": "Pas de flèche verte au-dessus de la bande des heures de pointe. Quand pouvez-vous y rouler ?",
           "choices": [
-            "La bande est interdite",
-            "La bande est réservée aux lents",
-            "La bande est fermée pour travaux"
+            "Seulement pour entrer sur l'autoroute ou en sortir",
+            "Jamais, même pour sortir",
+            "Quand elle est libre"
           ],
           "correct": 0,
-          "explanation": "Une croix rouge signifie que la bande est interdite, sauf pour les véhicules entrant ou sortant de l'autoroute.",
+          "explanation": "Fermée, elle ne sert qu'à entrer, sortir ou en cas d'urgence.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q46.webp"
         },
         {
           "id": "A4_Q47",
-          "question": "Vous tombez en panne sur la bande réservée aux heures de pointe. Que faites-vous ?",
+          "question": "Panne sur la bande des heures de pointe. Que faites-vous ?",
           "choices": [
-            "Rejoindre un port de refuge",
-            "Rester dans votre voiture",
-            "Reculer jusqu'à la sortie"
+            "Vous rejoignez si possible un refuge",
+            "Vous restez dans la voiture",
+            "Vous reculez jusqu'à la sortie"
           ],
           "correct": 0,
-          "explanation": "En panne sur la bande de pointe : rejoignez un port de refuge si possible. Sinon, restez et signalez avec le triangle.",
+          "explanation": "Rejoignez un refuge si possible. Sinon, gilet, triangle, et tout le monde derrière les rails.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A4_Q47.webp"
         },
         {
           "id": "A4_Q49",
-          "question": "Par quel côté devez-vous dépasser sur autoroute ?",
+          "question": "Par où dépassez-vous sur autoroute ?",
           "choices": [
-            "Par la droite",
             "Par la gauche",
-            "Des deux côtés",
+            "Par la droite",
             "Par le côté le plus libre"
           ],
-          "correct": 1,
-          "explanation": "Sur autoroute, le dépassement se fait uniquement par la gauche.",
+          "correct": 0,
+          "explanation": "Sur autoroute aussi, on dépasse par la gauche.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A4_Q49.webp"
         },
         {
           "id": "A4_Q50",
-          "question": "Vous restez inutilement sur la voie du milieu sur autoroute. Est-ce une infraction ?",
+          "question": "Autoroute à 3 bandes, peu de trafic. Pouvez-vous rester sur la bande du milieu ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, vous revenez à droite",
+            "Oui, vous choisissez librement",
+            "Oui, si vous roulez à 120 km/h"
           ],
           "correct": 0,
-          "explanation": "Rester inutilement sur la voie du milieu ou de gauche sans raison est une infraction.",
+          "explanation": "Même avec 3 bandes, vous roulez à droite. Rester au milieu sans raison est une infraction.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A4_Q50.webp"
         },
         {
           "id": "A4_Q52",
-          "question": "Dans un bouchon, la file de droite avance plus vite que celle de gauche. Est-ce un dépassement ?",
+          "question": "Embouteillage : la file de droite avance plus vite que la vôtre. Est-ce un dépassement interdit ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "En embouteillage, si la file de droite avance plus vite, ce n'est pas juridiquement un dépassement.",
+          "correct": 0,
+          "explanation": "Quand les files avancent à des vitesses différentes, ce n'est pas un dépassement par la droite.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A4_Q52.webp"
         },
         {
           "id": "A4_Q54",
-          "question": "En cas d'embouteillage, entre quelles bandes les motos peuvent-elles remonter les files ?",
+          "question": "Embouteillage sur 3 bandes. Entre quelles bandes une moto peut-elle remonter les files ?",
           "choices": [
-            "Les deux bandes de gauche",
-            "Les deux bandes de droite",
-            "La droite et la bande d'urgence"
+            "Entre les deux bandes de gauche",
+            "Entre les deux bandes de droite",
+            "Où elle veut"
           ],
           "correct": 0,
-          "explanation": "Les motos peuvent circuler uniquement entre les deux bandes de gauche pour remonter les files.",
+          "explanation": "Les motos remontent les files entre les deux bandes les plus à gauche.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A4_Q54.webp"
         },
         {
           "id": "A4_Q55",
-          "question": "Quelle est la vitesse maximale d'une moto remontant les files ?",
+          "question": "Vitesse maximale d'une moto qui remonte les files ?",
           "choices": [
             "30 km/h",
             "50 km/h",
-            "70 km/h",
-            "90 km/h"
+            "70 km/h"
           ],
           "correct": 1,
-          "explanation": "La vitesse maximale d'une moto qui remonte les files en embouteillage est de 50 km/h.",
+          "explanation": "50 km/h maximum.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/A4_Q55.webp"
         },
         {
           "id": "A4_Q56",
-          "question": "Quelle différence de vitesse maximale une moto peut-elle avoir avec les autres véhicules dans un embouteillage ?",
+          "question": "De combien une moto qui remonte les files peut-elle rouler plus vite que les autres ?",
           "choices": [
             "10 km/h",
             "20 km/h",
-            "30 km/h",
-            "40 km/h"
+            "30 km/h"
           ],
           "correct": 1,
-          "explanation": "La moto peut rouler au maximum 20 km/h plus vite que les autres véhicules dans l'embouteillage.",
+          "explanation": "Au maximum 20 km/h de plus que les véhicules dans les files.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/A4_Q56.webp"
         },
         {
           "id": "A4_Q57",
-          "question": "Lorsque vous entrez sur l'autoroute via la bande d'accès, devez-vous céder le passage ?",
+          "question": "Vous entrez sur l'autoroute par la bande d'accès. Qui a la priorité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Les véhicules déjà sur l'autoroute",
+            "Vous",
+            "Le plus rapide"
           ],
           "correct": 0,
-          "explanation": "En entrant par la bande d'accès, vous devez céder le passage aux véhicules déjà sur l'autoroute.",
+          "explanation": "En vous insérant, vous cédez le passage à ceux qui sont déjà sur l'autoroute.",
           "theoryCardIndex": 7,
           "severe": true,
           "image": "/images/questions/A4_Q57.webp"
         },
         {
           "id": "A4_Q58",
-          "question": "Devez-vous obligatoirement rouler jusqu'à la fin de la bande d'accès ?",
+          "question": "Devez-vous rouler jusqu'au bout de la bande d'accès avant de vous insérer ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, dès que c'est possible en sécurité",
+            "Oui, toujours"
           ],
-          "correct": 1,
-          "explanation": "Il n'est pas obligatoire de rouler jusqu'à la fin de la bande d'accès. Vous pouvez vous insérer plus tôt si votre vitesse est suffisante.",
+          "correct": 0,
+          "explanation": "Vous vous insérez dès que vous pouvez le faire en sécurité.",
           "theoryCardIndex": 7,
           "image": "/images/questions/A4_Q58.webp"
         },
         {
           "id": "A4_Q59",
-          "question": "Vous roulez sur la bande de droite de l'autoroute et un véhicule veut s'insérer. Que pouvez-vous faire ?",
+          "question": "Vous êtes sur la bande de droite et une voiture veut s'insérer. Que pouvez-vous faire ?",
           "choices": [
-            "Vous écarter à gauche si possible",
-            "Accélérer pour passer avant lui",
-            "Rien, il doit vous céder le passage"
+            "Vous décaler à gauche, si c'est possible",
+            "Accélérer pour passer avant elle",
+            "Rien, c'est à elle de céder"
           ],
           "correct": 0,
-          "explanation": "Vous pouvez vous écarter vers la gauche par courtoisie pour faciliter l'insertion, à condition de ne pas gêner d'autres véhicules.",
+          "explanation": "Vous pouvez faciliter l'insertion en passant à gauche, sans gêner personne.",
           "theoryCardIndex": 7,
           "image": "/images/questions/A4_Q59.webp"
         },
         {
           "id": "A4_Q61",
-          "question": "Le principe de la tirette s'applique-t-il sur la bande d'accès à l'autoroute ?",
+          "question": "Trafic très ralenti sur la bretelle d'accès. Appliquez-vous la tirette pour vous insérer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La tirette ne s'applique jamais sur la bande d'accès. On cède toujours le passage aux véhicules déjà sur l'autoroute.",
+          "explanation": "Pas de tirette sur une bande d'accès : vous cédez toujours le passage.",
           "theoryCardIndex": 7,
           "image": "/images/questions/A4_Q61.webp"
         },
         {
           "id": "A4_Q63",
-          "question": "Quelle est la différence entre la bande d'accès et une bande qui se réduit sur autoroute ?",
+          "question": "Bande d'accès ou bande qui se termine sur l'autoroute : quelle règle ?",
           "choices": [
-            "Accès : céder ; réduction : tirette",
-            "La tirette dans les deux cas",
-            "On cède le passage dans les deux cas"
+            "Accès : céder le passage. Bande qui se termine : tirette",
+            "Tirette dans les deux cas",
+            "Céder le passage dans les deux cas"
           ],
           "correct": 0,
-          "explanation": "Bande d'accès = toujours céder le passage. Réduction de bande sur l'autoroute elle-même = tirette obligatoire (si circulation fortement ralentie).",
+          "explanation": "Sur la bande d'accès, vous cédez. Une bande de l'autoroute qui se termine dans un trafic très ralenti : tirette.",
           "theoryCardIndex": 7,
           "severe": true,
           "image": "/images/questions/A4_Q63.webp"
         },
         {
           "id": "A4_Q64",
-          "question": "Quand devez-vous commencer à freiner pour quitter l'autoroute ?",
+          "question": "Vous voulez sortir de l'autoroute. Où freinez-vous ?",
           "choices": [
-            "Sur la bande de sortie",
-            "500 mètres avant la sortie",
+            "Une fois sur la bande de sortie",
+            "150 m avant la sortie",
             "Dès le panneau de sortie"
           ],
           "correct": 0,
-          "explanation": "Vous ne freinez que lorsque vous êtes sur la bande de sortie, pas avant.",
+          "explanation": "Vous gardez votre vitesse sur l'autoroute et ne freinez que sur la bande de sortie.",
           "theoryCardIndex": 7,
           "image": "/images/questions/A4_Q64.webp"
         },
         {
           "id": "A4_Q66",
-          "question": "Vous avez raté votre sortie sur l'autoroute. Pouvez-vous faire marche arrière ?",
+          "question": "Vous avez raté votre sortie. Que faites-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Vous prenez la sortie suivante",
+            "Vous faites marche arrière sur la bande d'arrêt d'urgence",
+            "Vous vous arrêtez et attendez"
           ],
-          "correct": 1,
-          "explanation": "La marche arrière sur autoroute est strictement interdite. En cas de sortie ratée, prenez la sortie suivante.",
+          "correct": 0,
+          "explanation": "Marche arrière interdite sur l'autoroute : prenez la sortie suivante.",
           "theoryCardIndex": 7,
           "severe": true,
           "image": "/images/questions/A4_Q66.webp"
         },
         {
           "id": "A4_Q67",
-          "question": "Pouvez-vous vous garer sur la chaussée de l'autoroute ?",
+          "question": "Pouvez-vous stationner sur la chaussée de l'autoroute ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de stationner sur la chaussée de l'autoroute.",
+          "explanation": "Ni arrêt ni stationnement sur la chaussée de l'autoroute.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q67.webp"
         },
         {
           "id": "A4_Q68",
-          "question": "L'interdiction de s'arrêter s'applique-t-elle aussi aux accès et sorties de l'autoroute ?",
+          "question": "Pouvez-vous vous arrêter sur la bretelle d'accès pour prendre un passager ?",
           "choices": [
             "Oui",
             "Non"
           ],
-          "correct": 0,
-          "explanation": "L'interdiction de s'arrêter s'étend à la chaussée principale, aux accès et aux sorties.",
+          "correct": 1,
+          "explanation": "La bretelle fait partie de l'autoroute : l'arrêt y est interdit.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q68.webp"
         },
         {
           "id": "A4_Q69",
-          "question": "Pouvez-vous circuler sur la berme centrale de l'autoroute ?",
+          "question": "Pouvez-vous rouler sur la berme centrale de l'autoroute ?",
           "choices": [
+            "Non",
             "Oui, en cas d'urgence",
-            "Non, c'est interdit",
-            "Oui, pour faire demi-tour",
-            "Oui, si un agent l'autorise"
+            "Oui, pour faire demi-tour"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit de circuler sur la berme centrale d'une autoroute.",
+          "correct": 0,
+          "explanation": "La berme centrale est interdite à la circulation.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q69.webp"
         },
         {
           "id": "A4_Q70",
-          "question": "Pouvez-vous faire marche arrière sur l'autoroute ?",
+          "question": "Ce conducteur s'est trompé de chemin sur l'autoroute. Peut-il faire marche arrière ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La marche arrière est strictement interdite sur l'autoroute, quelle que soit la raison.",
+          "explanation": "La marche arrière est interdite sur l'autoroute. C'est une infraction grave.",
           "theoryCardIndex": 8,
           "severe": true,
           "image": "/images/questions/A4_Q70.webp"
         },
         {
           "id": "A4_Q71",
-          "question": "Pouvez-vous utiliser une attache de fortune pour tracter un véhicule sur l'autoroute ?",
+          "question": "Pouvez-vous remorquer une voiture avec une attache de fortune sur l'autoroute ?",
           "choices": [
-            "Oui, en cas de panne",
-            "Non, c'est interdit",
-            "Oui, jusqu'à la prochaine sortie",
-            "Oui, à moins de 50 km/h"
+            "Oui, jusqu'à la sortie suivante",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit d'utiliser une attache de fortune pour tracter un véhicule sur l'autoroute.",
+          "explanation": "Remorquer avec une attache de fortune est interdit sur l'autoroute.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q71.webp"
         },
         {
           "id": "A4_Q74",
-          "question": "Pouvez-vous emprunter les raccordements transversaux entre les deux chaussées de l'autoroute ?",
+          "question": "Pouvez-vous emprunter un passage entre les deux chaussées de l'autoroute pour faire demi-tour ?",
           "choices": [
-            "Oui, pour changer de sens",
-            "Non, c'est interdit",
-            "Oui, en cas d'embouteillage",
-            "Oui, si un panneau l'indique"
+            "Non",
+            "Oui, s'il est ouvert",
+            "Oui, en cas d'embouteillage"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit d'emprunter les raccordements transversaux entre les deux chaussées d'une autoroute.",
+          "correct": 0,
+          "explanation": "Les raccordements entre les deux chaussées sont interdits aux usagers.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q74.webp"
         },
         {
           "id": "A4_Q75",
-          "question": "Qu'est-ce qu'un échangeur ?",
+          "question": "Ce panneau annonce quoi, 1600 m plus loin ?",
           "choices": [
-            "Un parking le long de l'autoroute",
-            "Le croisement de deux autoroutes",
-            "Une sortie d'autoroute classique",
-            "Un poste de péage automatique"
+            "Un échangeur",
+            "Une sortie ordinaire",
+            "La fin de l'autoroute"
           ],
-          "correct": 1,
-          "explanation": "Un échangeur est le point de croisement de deux autoroutes permettant de passer de l'une à l'autre.",
+          "correct": 0,
+          "explanation": "Panneau blanc sur fond bleu avec un échangeur : croisement avec une autre autoroute.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q75.webp"
         },
         {
           "id": "A4_Q76",
-          "question": "Comment les échangeurs sont-ils signalés ?",
+          "question": "De quelle couleur sont signalés les échangeurs ?",
           "choices": [
-            "En vert",
             "En blanc",
-            "En bleu",
+            "En vert",
             "En rouge"
           ],
-          "correct": 1,
-          "explanation": "Les échangeurs sont signalés en blanc pour les distinguer des sorties ordinaires.",
+          "correct": 0,
+          "explanation": "Échangeurs en blanc, sorties en vert.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q76.webp"
         },
         {
           "id": "A4_Q77",
-          "question": "Comment les sorties d'autoroute sont-elles signalées ?",
+          "question": "De quelle couleur sont signalées les sorties d'autoroute ?",
           "choices": [
-            "En blanc",
             "En vert",
-            "En bleu",
+            "En blanc",
             "En rouge"
           ],
-          "correct": 1,
-          "explanation": "Les sorties d'autoroute ordinaires sont signalées en vert.",
+          "correct": 0,
+          "explanation": "Sorties en vert, échangeurs en blanc.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q77.webp"
         },
         {
           "id": "A4_Q78",
-          "question": "Avec un permis provisoire, pouvez-vous rouler sur l'autoroute ?",
+          "question": "Avec un permis provisoire B, pouvez-vous rouler sur l'autoroute ?",
           "choices": [
-            "Oui, en voiture ou à moto",
-            "Non, c'est interdit",
-            "Oui, mais accompagné"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Le permis provisoire autorise la conduite sur l'autoroute, en voiture ou à motocyclette.",
+          "explanation": "Le permis provisoire permet de rouler sur l'autoroute.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q78.webp"
         },
@@ -4433,14 +4388,14 @@
         },
         {
           "id": "A4_Q81",
-          "question": "Vous voyez ce panneau. Que devez-vous savoir ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Les règles d'autoroute cessent",
-            "Vous devez marquer l'arrêt ici",
-            "Vous entrez d'office sur un ring"
+            "Fin de l'autoroute",
+            "Fin de la route pour automobiles",
+            "Fin de la limite de 120 km/h"
           ],
           "correct": 0,
-          "explanation": "Après le signal de fin d'autoroute, les règles de l'autoroute ne s'appliquent plus. La vitesse maximale redevient celle de la route ordinaire.",
+          "explanation": "Après ce signal, les règles de l'autoroute ne s'appliquent plus.",
           "theoryCardIndex": 0,
           "severe": true,
           "sign": "F7"
@@ -4449,25 +4404,12 @@
           "id": "A4_Q82",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Une règle limitée à certaines bandes",
-            "Un changement de direction imposé",
+            "Une règle qui vaut pour certaines bandes",
+            "Une direction obligatoire",
             "Des travaux sur toutes les bandes"
           ],
           "correct": 0,
-          "explanation": "Ce signal indique que les réglementations (vitesse, interdictions) varient selon les bandes de circulation.",
-          "theoryCardIndex": 5,
-          "sign": "F13"
-        },
-        {
-          "id": "A4_Q83",
-          "question": "Où est placé ce panneau de préavis ?",
-          "choices": [
-            "Au bord de la chaussée",
-            "Au-dessus de la chaussée",
-            "À l'intérieur des tunnels"
-          ],
-          "correct": 0,
-          "explanation": "Le signal de préavis de réglementation par bande est placé sur le côté de la chaussée, pas au-dessus.",
+          "explanation": "Ce signal donne une règle (vitesse, interdiction) bande par bande.",
           "theoryCardIndex": 5,
           "sign": "F13"
         },
@@ -4486,14 +4428,14 @@
         },
         {
           "id": "A4_Q85",
-          "question": "Que signifie un panneau portant la mention « Ring » ?",
+          "question": "Que signifie ce panneau « Ring » ?",
           "choices": [
-            "Une rocade autour d'une ville",
+            "Une route qui fait le tour d'une ville",
             "Une route internationale",
-            "Une sortie vers le centre-ville"
+            "Une sortie vers le centre"
           ],
           "correct": 0,
-          "explanation": "Le signal \"Ring\" indique une rocade (route circulaire autour d'une ville).",
+          "explanation": "Un ring fait le tour d'une ville.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q85.webp"
         },
@@ -4513,54 +4455,89 @@
         },
         {
           "id": "A4_Q87",
-          "question": "Vous voyez ce panneau. Quelles règles s'appliquent maintenant ?",
+          "question": "Après ce panneau, quelles vitesses s'appliquent ?",
           "choices": [
-            "120 km/h max, 70 km/h min",
-            "120 km/h max, sans minimum",
-            "Les règles ordinaires de la route"
+            "120 km/h maximum, 70 km/h minimum",
+            "120 km/h maximum, sans minimum",
+            "Celles d'une route ordinaire"
           ],
           "correct": 0,
-          "explanation": "En entrant sur l'autoroute : vitesse max 120 km/h, min 70 km/h, dépassement par la gauche, pas de feux ni carrefours.",
+          "explanation": "Sur autoroute : 120 km/h maximum et, si les conditions le permettent, 70 km/h minimum.",
           "theoryCardIndex": 0,
           "sign": "F5"
         },
         {
           "id": "A4_Q88",
-          "question": "Vous roulez sur une route ordinaire et voyez un signal de numéro de route internationale. Êtes-vous sur autoroute ?",
+          "question": "Ce panneau porte un numéro de route européenne (E). Êtes-vous forcément sur une autoroute ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Un numéro de route internationale (E + chiffre) ne signifie pas que vous êtes sur une autoroute.",
+          "explanation": "Une route « E » peut être une route ordinaire. Seul le signal d'autoroute compte.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A4_Q88.webp"
         },
         {
           "id": "A4_Q89",
-          "question": "Une limitation par bande indique 70 km/h à droite et 90 km/h ailleurs. Vous voulez dépasser. Que faites-vous ?",
+          "question": "90 km/h sur les bandes de gauche, 70 km/h à droite. Vous voulez dépasser. Que faites-vous ?",
           "choices": [
-            "Passer à gauche, à 90 km/h",
-            "Rester à droite, à 70 km/h",
-            "Dépasser par la droite à 70"
+            "Vous passez à gauche, à 90 km/h maximum",
+            "Vous dépassez par la droite à 70 km/h",
+            "Vous restez derrière"
           ],
           "correct": 0,
-          "explanation": "Pour dépasser avec une limitation par bande de 90 km/h sur les bandes de gauche, vous changez de bande vers la gauche.",
+          "explanation": "Pour dépasser, vous passez à gauche : la limite de 90 km/h s'y applique.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A4_Q89.webp"
         },
         {
           "id": "A4_Q90",
-          "question": "Vous êtes sur un ring autour d'une ville. Les règles de l'autoroute s'appliquent-elles ?",
+          "question": "Vous roulez sur un ring. Les règles de l'autoroute s'appliquent-elles ?",
           "choices": [
-            "Oui, si le panneau de début est là",
-            "Oui, sur tous les rings sans exception",
-            "Non, un ring n'est pas une autoroute"
+            "Oui, si le signal d'autoroute est placé",
+            "Oui, sur tous les rings",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "Un ring peut être une autoroute ou non. Les règles de l'autoroute ne s'appliquent que si le signal correspondant est affiché.",
+          "explanation": "Un ring n'est une autoroute que si le signal d'autoroute l'indique.",
           "theoryCardIndex": 8,
           "image": "/images/questions/A4_Q90.webp"
+        },
+        {
+          "id": "A4_Q91",
+          "question": "Trafic à l'arrêt. Pouvez-vous rouler sur la bande d'arrêt d'urgence les derniers mètres avant la sortie ?",
+          "choices": [
+            "Non",
+            "Oui, les 150 derniers mètres",
+            "Oui, les 50 derniers mètres"
+          ],
+          "correct": 0,
+          "explanation": "Même juste avant une sortie, rouler sur la bande d'arrêt d'urgence est interdit.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "A4_Q92",
+          "question": "La radio signale un conducteur fantôme sur votre autoroute. Que faites-vous ?",
+          "choices": [
+            "Vous roulez à droite et ne dépassez plus",
+            "Vous passez sur la bande de gauche",
+            "Vous vous arrêtez sur la bande d'arrêt d'urgence"
+          ],
+          "correct": 0,
+          "explanation": "Restez sur la bande de droite, ne dépassez pas et gardez de la distance jusqu'à ce que l'alerte soit levée.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "A4_Q93",
+          "question": "Mettez-vous le clignotant pour vous insérer sur l'autoroute ?",
+          "choices": [
+            "Oui",
+            "Non, il n'y a qu'une direction possible"
+          ],
+          "correct": 0,
+          "explanation": "Vous changez de bande : le clignotant est obligatoire.",
+          "theoryCardIndex": 7
         }
       ]
     },

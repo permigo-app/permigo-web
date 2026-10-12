@@ -3353,752 +3353,709 @@
           "id": "A4_Q1",
           "question": "Wat kenmerkt een autosnelweg?",
           "choices": [
-            "Geen lichten of gelijkvloerse kruispunten",
-            "Een toegang enkel voor vrachtwagens",
-            "Minstens drie rijstroken per richting"
+            "Geen verkeerslichten en geen kruispunten",
+            "Minstens drie rijstroken per richting",
+            "Alleen toegankelijk voor vrachtwagens"
           ],
           "correct": 0,
-          "explanation": "Een autosnelweg is een expresweg die enkel bestemd is voor auto's, zonder verkeerslichten of kruispunten met voorrang, alleen bereikbaar via toegangswegen.",
+          "explanation": "Een autosnelweg heeft geen verkeerslichten en geen kruispunten: je rijdt erop en eraf via op- en afritten.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "A4_Q3",
-          "question": "Welke voertuigen zijn verboden op de autosnelweg?",
+          "question": "Welke van deze voertuigen zijn verboden op de autosnelweg?",
           "choices": [
-            "Bromfietsen en landbouwvoertuigen",
-            "Motoren van minder dan 400 cm³",
-            "Bestelwagens en aanhangwagens"
+            "Bromfietsen en landbouwtractoren",
+            "Motorfietsen onder 400 cm³",
+            "Bestelwagens met aanhangwagen"
           ],
           "correct": 0,
-          "explanation": "Meerdere categorieën voertuigen zijn verboden op de autosnelweg: bromfietsen, landbouwvoertuigen, vierwielers zonder koetswerk en kermisvoertuigtreinen.",
+          "explanation": "Bromfietsen, landbouwvoertuigen en vierwielers zonder koetswerk mogen de autosnelweg niet op.",
           "theoryCardIndex": 0
         },
         {
           "id": "A4_Q4",
-          "question": "Mag een bromfiets de autosnelweg op?",
+          "question": "Mag een bromfiets op de autosnelweg rijden?",
           "choices": [
-            "Ja, op de rechterrijstrook",
-            "Nee, dat is verboden",
-            "Ja, als hij 70 km/u rijdt",
-            "Ja, met een begeleidend voertuig"
+            "Nee",
+            "Ja, op de rechtse rijstrook",
+            "Ja, als hij 70 km/u rijdt"
           ],
-          "correct": 1,
+          "correct": 0,
           "explanation": "Bromfietsen zijn verboden op de autosnelweg.",
           "theoryCardIndex": 0
         },
         {
           "id": "A4_Q6",
-          "question": "Wat is de maximumsnelheid op de autosnelweg?",
+          "question": "Maximumsnelheid op de autosnelweg?",
           "choices": [
             "90 km/u",
-            "100 km/u",
             "120 km/u",
             "130 km/u"
           ],
-          "correct": 2,
-          "explanation": "De maximumsnelheid op de autosnelweg is 120 km/u, onder voorbehoud van de omstandigheden en de verkeersborden.",
+          "correct": 1,
+          "explanation": "Maximaal 120 km/u, tenzij een bord of de omstandigheden minder opleggen.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A4_Q7",
-          "question": "Mag je altijd 120 km/u rijden op de autosnelweg?",
+          "question": "Welke uitspraak is juist op de autosnelweg?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Je past je snelheid aan de omstandigheden aan",
+            "Je rijdt altijd 120 km/u",
+            "Je rijdt altijd minstens 70 km/u"
           ],
-          "correct": 1,
-          "explanation": "De limiet van 120 km/u geldt enkel als de verkeersomstandigheden het toelaten en geen verkeersbord of agent het verbiedt.",
+          "correct": 0,
+          "explanation": "120 km/u is een maximum: regen, mist of druk verkeer vragen om trager te rijden.",
           "theoryCardIndex": 1
         },
         {
           "id": "A4_Q8",
-          "question": "Een verkeersbord geeft 90 km/u aan op de twee linkerrijstroken en 70 km/u op de rechterrijstrook. Je rijdt op de rechterrijstrook. Wat is je maximumsnelheid?",
+          "question": "Dit bord toont 90 km/u op de twee linkse rijstroken en 70 km/u op de rechtse. Je rijdt rechts. Maximumsnelheid?",
           "choices": [
-            "90 km/u",
-            "120 km/u",
             "70 km/u",
-            "80 km/u"
+            "90 km/u",
+            "120 km/u"
           ],
-          "correct": 2,
-          "explanation": "De snelheidsbeperking per rijstrook geldt voor jouw rijstrook. Op de rechterrijstrook is de limiet 70 km/u.",
+          "correct": 0,
+          "explanation": "De grens per rijstrook geldt voor jouw rijstrook: 70 km/u rechts.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A4_Q9",
-          "question": "Een vooraankondigingsbord geeft een beperking aan op 1,5 km. Moet je nu al vertragen?",
+          "question": "Dit bord kondigt een beperking aan op 1500 m. Wanneer geldt ze?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Over 1500 m",
+            "Vanaf nu, over 1500 m",
+            "Vanaf de volgende afrit"
           ],
-          "correct": 1,
-          "explanation": "Het vooraankondigingsbord informeert je over de komende beperking, maar die geldt pas op het aangegeven punt.",
+          "correct": 0,
+          "explanation": "Het is een vooraankondiging: de beperking begint 1500 m verder.",
           "theoryCardIndex": 1
         },
         {
           "id": "A4_Q10",
-          "question": "Wat is de minimumsnelheid op de autosnelweg?",
+          "question": "Minimumsnelheid op de autosnelweg, als de omstandigheden het toelaten?",
           "choices": [
             "50 km/u",
-            "60 km/u",
             "70 km/u",
-            "80 km/u"
+            "90 km/u"
           ],
-          "correct": 2,
-          "explanation": "De minimumsnelheid op de autosnelweg is 70 km/u als de omstandigheden het toelaten.",
+          "correct": 1,
+          "explanation": "Minimaal 70 km/u, als de omstandigheden het toelaten.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A4_Q12",
-          "question": "Dit bord staat aan de afrit. Wat betekent het?",
+          "question": "Dit bord staat in de afrit. Wat betekent het?",
           "choices": [
-            "Maximumsnelheid van 90 km/u",
-            "Minimumsnelheid van 90 km/u",
-            "Aanbevolen snelheid van 90 km/u"
+            "Maximaal 90 km/u in de afrit",
+            "Minimaal 90 km/u",
+            "90 km/u aanbevolen"
           ],
           "correct": 0,
-          "explanation": "Een beperkingssignaal op de afrit duidt de maximaal toegelaten snelheid op die bretel aan.",
+          "explanation": "De aangeduide grens geldt voor de afrit.",
           "theoryCardIndex": 1,
           "sign": "C43",
           "severe": true
         },
         {
           "id": "A4_Q13",
-          "question": "Bij smog, welke tijdelijke snelheidsbeperking kan opgelegd worden?",
+          "question": "Smogalarm: welke maximumsnelheid kan worden opgelegd op de autosnelweg?",
           "choices": [
             "70 km/u",
-            "80 km/u",
             "90 km/u",
             "100 km/u"
           ],
-          "correct": 2,
-          "explanation": "Bij smog kan een tijdelijke beperking tot 90 km/u opgelegd worden via elektronische borden of het signaal C43.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "A4_Q14",
-          "question": "Hoe wordt de smogbeperking aangeduid?",
-          "choices": [
-            "Met een elektronisch bord of C43",
-            "Met oranje kegels op het wegdek",
-            "Met een bericht op de radio"
-          ],
-          "correct": 0,
-          "explanation": "De smogbeperking wordt gesignaleerd met variabele elektronische borden of met het signaal C43 vergezeld van een onderbord SMOG.",
+          "correct": 1,
+          "explanation": "Bij smog kan de snelheid beperkt worden tot 90 km/u.",
           "theoryCardIndex": 1
         },
         {
           "id": "A4_Q15",
-          "question": "Wanneer mag je spijkerbanden monteren?",
+          "question": "Wanneer mag je met spijkerbanden rijden?",
           "choices": [
             "Van 1 november tot 31 maart",
             "Van 1 oktober tot 30 april",
-            "Het hele jaar zonder beperking"
+            "Het hele jaar"
           ],
           "correct": 0,
-          "explanation": "Spijkerbanden zijn toegelaten van 1 november tot 31 maart.",
+          "explanation": "Spijkerbanden: van 1 november tot 31 maart.",
           "theoryCardIndex": 1
         },
         {
           "id": "A4_Q16",
-          "question": "Wat is de maximumsnelheid met spijkerbanden op de autosnelweg?",
+          "question": "Spijkerbanden op de autosnelweg. Maximumsnelheid?",
           "choices": [
-            "60 km/u",
             "70 km/u",
             "90 km/u",
             "120 km/u"
           ],
-          "correct": 2,
-          "explanation": "Met spijkerbanden op de autosnelweg is de maximumsnelheid 90 km/u.",
+          "correct": 1,
+          "explanation": "Met spijkerbanden: 90 km/u op de autosnelweg, 60 km/u elders.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A4_Q17",
-          "question": "Wat is de maximumsnelheid met spijkerbanden op een gewone weg?",
+          "question": "Spijkerbanden op een gewone weg in Wallonië. Maximumsnelheid?",
           "choices": [
-            "50 km/u",
             "60 km/u",
             "70 km/u",
             "90 km/u"
           ],
-          "correct": 1,
-          "explanation": "Op een gewone weg is de maximumsnelheid met spijkerbanden 60 km/u.",
+          "correct": 0,
+          "explanation": "Met spijkerbanden: 60 km/u op gewone wegen, ook waar normaal 90 geldt.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A4_Q18",
-          "question": "Op welk type voertuig mag je spijkerbanden monteren?",
+          "question": "Op welke voertuigen zijn spijkerbanden toegelaten?",
           "choices": [
-            "Een MTM van hoogstens 3,5 ton",
-            "Alle voertuigen zonder uitzondering",
-            "De 4x4's en de SUV's"
+            "Maximaal toegelaten massa van 3,5 ton",
+            "Alle voertuigen",
+            "Alleen 4x4's"
           ],
           "correct": 0,
-          "explanation": "Spijkerbanden zijn enkel toegelaten op voertuigen waarvan de maximaal toegelaten massa niet meer dan 3,5 ton bedraagt.",
+          "explanation": "Spijkerbanden: alleen op voertuigen met een MTM van maximaal 3,5 ton.",
           "theoryCardIndex": 1
         },
         {
           "id": "A4_Q20",
-          "question": "Wat bakent de pechstrook af?",
+          "question": "Wat scheidt de pechstrook van de rijbaan?",
           "choices": [
-            "Reflecterende paaltjes",
-            "Een brede witte doorlopende streep",
+            "Een brede doorlopende witte streep",
             "Een onderbroken oranje streep",
-            "Veiligheidsvangrails"
+            "Reflecterende paaltjes"
           ],
-          "correct": 1,
-          "explanation": "De pechstrook wordt afgebakend door een brede witte doorlopende lijn op de buitenrand van de rechtse rijstrook.",
+          "correct": 0,
+          "explanation": "Een brede doorlopende witte streep begrenst de pechstrook.",
           "theoryCardIndex": 2
         },
         {
           "id": "A4_Q21",
-          "question": "Mag je stilstaan op de pechstrook om een kaart te raadplegen?",
+          "question": "Mag je even op de pechstrook stilstaan om een sms te sturen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden stil te staan op de pechstrook om welke reden dan ook, inclusief een kaart raadplegen of telefoneren.",
+          "explanation": "De pechstrook is voor echte noodgevallen: geen sms, geen kaart, geen pauze.",
           "theoryCardIndex": 2
         },
         {
           "id": "A4_Q22",
-          "question": "Mag je op de pechstrook rijden?",
+          "question": "Wanneer mag je op de pechstrook rijden?",
           "choices": [
-            "Nee, behalve bij panne of oranje lijnen",
-            "Ja, als het verkeer druk is",
-            "Ja, om langs rechts in te halen"
+            "Bij panne, of als oranje strepen je erheen leiden",
+            "Bij druk verkeer",
+            "Om rechts in te halen"
           ],
           "correct": 0,
-          "explanation": "Rijden op de pechstrook is enkel toegelaten bij pech, een ongeval, of als oranje markeringen het toestaan.",
+          "explanation": "Alleen in noodgevallen (panne, ongeval) of als een werfmarkering je erheen leidt.",
           "theoryCardIndex": 2
         },
         {
           "id": "A4_Q23",
-          "question": "Je hebt pech op de pechstrook. Waar moet je op hulp wachten?",
+          "question": "Panne op de pechstrook. Waar wachten de passagiers?",
           "choices": [
             "Achter de vangrails",
-            "In uw voertuig",
-            "Op de middenberm"
+            "In de auto",
+            "Op de pechstrook"
           ],
           "correct": 0,
-          "explanation": "Terwijl je op hulp wacht op de pechstrook, blijf je achter de beschermende vangrails, niet in je voertuig.",
+          "explanation": "Iedereen stapt uit en wacht achter de vangrails, aan de kant van de berm.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q24",
-          "question": "Op welke afstand moet je de gevarendriehoek plaatsen op de autosnelweg?",
+          "question": "Op welke afstand plaats je de gevarendriehoek op de autosnelweg?",
           "choices": [
-            "30 meter",
-            "50 meter",
-            "100 meter",
-            "150 meter"
+            "30 m",
+            "100 m",
+            "150 m"
           ],
-          "correct": 2,
-          "explanation": "Op de autosnelweg moet de gevarendriehoek 100 meter vóór het voertuig geplaatst worden.",
+          "correct": 1,
+          "explanation": "Op de autosnelweg: 100 m achter het voertuig.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q25",
-          "question": "Op welke afstand moet je de gevarendriehoek plaatsen op een gewone weg?",
+          "question": "Op welke afstand plaats je de gevarendriehoek op een gewone weg?",
           "choices": [
-            "10 meter",
-            "30 meter",
-            "50 meter",
-            "100 meter"
+            "10 m",
+            "30 m",
+            "100 m"
           ],
           "correct": 1,
-          "explanation": "Op een gewone weg wordt de gevarendriehoek 30 meter vóór het voertuig geplaatst.",
+          "explanation": "Op een gewone weg: 30 m achter het voertuig.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q26",
-          "question": "Op welke afstand moet de gevarendriehoek zichtbaar zijn?",
+          "question": "Van op welke afstand moet de driehoek zichtbaar zijn?",
           "choices": [
-            "30 meter",
-            "50 meter",
-            "100 meter",
-            "150 meter"
+            "30 m",
+            "50 m",
+            "100 m"
           ],
           "correct": 1,
-          "explanation": "De gevarendriehoek moet zichtbaar zijn op 50 meter voor naderende bestuurders.",
+          "explanation": "De driehoek moet zichtbaar zijn van op minstens 50 m.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q28",
-          "question": "Wanneer moet je het reflecterende veiligheidshesje dragen?",
+          "question": "Panne op de autosnelweg. Wanneer trek je het fluohesje aan?",
           "choices": [
-            "Bij het verlaten van de wagen op de pechstrook",
-            "Telkens wanneer u rijdt",
-            "'s Nachts en bij mist"
+            "Altijd, voor je uitstapt",
+            "Alleen 's nachts",
+            "Alleen bij mist"
           ],
           "correct": 0,
-          "explanation": "Het reflecterende hesje is verplicht voor de bestuurder die zijn voertuig verlaat (in noodsituatie gestrand).",
+          "explanation": "De bestuurder trekt het hesje aan voor hij uitstapt, dag en nacht.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q29",
-          "question": "Waar moet je het veiligheidshesje in je auto bewaren?",
+          "question": "Waar bewaar je het fluohesje?",
           "choices": [
-            "In het interieur, binnen handbereik",
-            "In de koffer van het voertuig",
-            "Onder het reservewiel"
+            "In het interieur",
+            "In de koffer"
           ],
           "correct": 0,
-          "explanation": "Het hesje moet binnenin de passagiersruimte bewaard worden (niet in de koffer) zodat je het kan aandoen vóór je uitstapt.",
+          "explanation": "In het interieur, zodat je het aantrekt voor je uitstapt.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q30",
-          "question": "Is het hesje verplicht voor de passagiers?",
+          "question": "Is het fluohesje verplicht voor de passagiers?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het reflecterende hesje is enkel verplicht voor de bestuurder. Het wordt aangeraden voor passagiers, maar is niet verplicht.",
+          "explanation": "Alleen verplicht voor de bestuurder, aangeraden voor de passagiers.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q32",
-          "question": "Wat is het internationale noodnummer?",
+          "question": "Wat is het Europese noodnummer?",
           "choices": [
-            "100",
             "101",
             "112",
             "911"
           ],
-          "correct": 2,
-          "explanation": "112 is het Europese noodnummer, beschikbaar in alle EU-landen.",
+          "correct": 1,
+          "explanation": "112 werkt in de hele Europese Unie.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q33",
-          "question": "Wat moet je vermelden wanneer je 112 belt op de autosnelweg?",
+          "question": "Je belt 112 vanaf de autosnelweg. Wat zeg je eerst?",
           "choices": [
-            "De juiste plaats en de rijrichting",
-            "Het merk en de kleur van uw wagen",
-            "Het aantal inzittenden"
+            "De exacte plaats en de rijrichting",
+            "Het merk van je auto",
+            "Het aantal passagiers"
           ],
           "correct": 0,
-          "explanation": "Bij een oproep naar 112, geef de precieze locatie (wegnummer, km) en de rijrichting op zodat de hulpdiensten je kunnen lokaliseren.",
+          "explanation": "De hulpdiensten moeten eerst weten waar je bent: autosnelweg, kilometerpaal, richting.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q34",
-          "question": "Geldt de vrije doorgang voor hulpdiensten enkel op de autosnelweg?",
+          "question": "File. Wanneer vorm je een reddingsstrook?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Altijd, vanaf 2 rijstroken in jouw richting",
+            "Alleen op de autosnelweg",
+            "Alleen als je een sirene hoort"
           ],
-          "correct": 1,
-          "explanation": "De vrije doorgang voor hulpdiensten geldt op alle wegen verdeeld in rijstroken, niet enkel op autosnelwegen.",
+          "correct": 0,
+          "explanation": "Op elke weg met minstens 2 rijstroken in dezelfde richting, zodra het verkeer vaststaat.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q35",
-          "question": "Op een rijbaan met 2 rijstroken, hoe vormt zich de vrije doorgang voor hulpdiensten?",
+          "question": "Reddingsstrook op 2 rijstroken. Wat doe je?",
           "choices": [
-            "Links naar links, rechts naar rechts",
-            "Iedereen schuift naar rechts op",
+            "Linkse rijstrook naar links, rechtse naar rechts",
+            "Iedereen gaat naar rechts",
             "Iedereen stopt ter plaatse"
           ],
           "correct": 0,
-          "explanation": "Bij 2 rijstroken: links houdt links, rechts houdt rechts. Een doorgang ontstaat tussen de twee files.",
+          "explanation": "Links naar links, rechts naar rechts: de strook ontstaat in het midden.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q36",
-          "question": "Op een rijbaan met 3 rijstroken, waar vormt zich de vrije doorgang voor hulpdiensten?",
+          "question": "Reddingsstrook op 3 rijstroken. Waar ontstaat ze?",
           "choices": [
-            "Naast de linkerrijstrook",
+            "Tussen de linkse en de middelste rijstrook",
             "Op de pechstrook",
-            "In het midden van de rijbaan"
+            "Tussen de middelste en de rechtse rijstrook"
           ],
           "correct": 0,
-          "explanation": "Bij 3 rijstroken: de linkse rijstrook houdt links, alle andere houden rechts. De doorgang vormt zich naast de linkse rijstrook.",
+          "explanation": "De linkse rijstrook gaat naar links, alle andere gaan naar rechts.",
           "theoryCardIndex": 3
         },
         {
           "id": "A4_Q38",
-          "question": "Een spookrijder is een bestuurder die:",
+          "question": "Wat is een spookrijder?",
           "choices": [
-            "In de verkeerde richting rijdt",
-            "Zonder lichten rijdt",
-            "Veel te traag rijdt"
+            "Een bestuurder die in de verkeerde richting rijdt",
+            "Een bestuurder zonder lichten",
+            "Een bestuurder die te traag rijdt"
           ],
           "correct": 0,
-          "explanation": "Een spookrijder is een bestuurder die in tegengestelde richting op een autosnelweg rijdt, wat een dodelijk gevaar veroorzaakt.",
+          "explanation": "De spookrijder rijdt in de verkeerde richting op de autosnelweg.",
           "theoryCardIndex": 4
         },
         {
           "id": "A4_Q39",
-          "question": "Wat moet je doen bij een spookrijder?",
+          "question": "Er komt een auto in de verkeerde richting op de autosnelweg. Wat doe je?",
           "choices": [
-            "Vertragen, rechts houden, bellen",
-            "Versnellen om hem snel voorbij te steken",
-            "Keren op de autosnelweg"
+            "Je vertraagt, houdt rechts en belt 112",
+            "Je versnelt om hem voorbij te gaan",
+            "Je keert"
           ],
           "correct": 0,
-          "explanation": "Bij een spookrijder: vertragen + rechts houden + lichtsignaal geven bij het kruisen + 112 bellen.",
+          "explanation": "Vertragen, rechts houden, niet inhalen, 112 bellen.",
           "theoryCardIndex": 4
         },
         {
           "id": "A4_Q41",
-          "question": "Mag je je toevlucht zoeken op de pechstrook bij een spookrijder?",
+          "question": "Mag je naar de pechstrook uitwijken om een spookrijder te ontwijken?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Bij een spookrijder mag je je toevlucht zoeken op de pechstrook indien nodig om de botsing te vermijden.",
+          "explanation": "Ja, als het nodig is om een botsing te vermijden.",
           "theoryCardIndex": 4
         },
         {
           "id": "A4_Q43",
           "question": "Waarvoor dient een spitsstrook?",
           "choices": [
-            "Om het verkeer vlotter te maken",
-            "Om een strook aan bussen voor te behouden",
-            "Om tijdelijk te parkeren"
+            "Een extra rijstrook bij druk verkeer",
+            "Een rijstrook voor bussen",
+            "Om te parkeren"
           ],
           "correct": 0,
-          "explanation": "De spitsstrook is een extra rijstrook die op bepaalde momenten beschikbaar is om het verkeer vlotter te maken.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "A4_Q44",
-          "question": "Hoe is de spitsstrook gescheiden van de andere rijstroken?",
-          "choices": [
-            "Door een gearceerde witte lijn",
-            "Door een doorlopende witte lijn",
-            "Door een onderbroken oranje lijn"
-          ],
-          "correct": 0,
-          "explanation": "De spitsstrook wordt gescheiden door een witte streeplijn (10 m streep, 2,5 m opening).",
+          "explanation": "Ze opent een extra rijstrook tijdens de drukke uren.",
           "theoryCardIndex": 5
         },
         {
           "id": "A4_Q45",
-          "question": "Een groene pijl wordt weergegeven boven de spitsstrook. Wat betekent ze?",
+          "question": "Groene pijl boven de spitsstrook. Mag je erop rijden?",
           "choices": [
-            "U mag de strook gebruiken",
-            "De strook is voor u verboden",
-            "De strook is voor bussen"
+            "Ja",
+            "Nee"
           ],
           "correct": 0,
-          "explanation": "Een groene pijl boven een strook betekent dat je ze mag gebruiken.",
+          "explanation": "Groene pijl: de rijstrook is open.",
           "theoryCardIndex": 5
         },
         {
           "id": "A4_Q46",
-          "question": "Een rood kruis wordt weergegeven boven de spitsstrook. Wat betekent het?",
+          "question": "Geen groene pijl boven de spitsstrook. Wanneer mag je erop rijden?",
           "choices": [
-            "De strook is verboden",
-            "De strook is voor trage voertuigen",
-            "De strook is dicht wegens werken"
+            "Alleen om de autosnelweg op of af te rijden",
+            "Nooit, ook niet om af te rijden",
+            "Als ze vrij is"
           ],
           "correct": 0,
-          "explanation": "Een rood kruis betekent dat de strook verboden is, behalve voor voertuigen die de autosnelweg op- of afrijden.",
+          "explanation": "Gesloten dient ze alleen om op of af te rijden of in noodgevallen.",
           "theoryCardIndex": 5
         },
         {
           "id": "A4_Q47",
-          "question": "Je hebt pech op de spitsstrook. Wat doe je?",
+          "question": "Panne op de spitsstrook. Wat doe je?",
           "choices": [
-            "Een vluchthaven bereiken",
-            "In uw wagen blijven zitten",
-            "Achteruit tot aan de afrit"
+            "Je rijdt zo mogelijk naar een vluchthaven",
+            "Je blijft in de auto",
+            "Je rijdt achteruit tot de afrit"
           ],
           "correct": 0,
-          "explanation": "Bij pech op de spitsstrook: bereik indien mogelijk een vluchthaven. Zo niet, blijf staan en signaleer met de driehoek.",
+          "explanation": "Rijd zo mogelijk naar een vluchthaven. Anders: hesje, driehoek en iedereen achter de vangrails.",
           "theoryCardIndex": 5
         },
         {
           "id": "A4_Q49",
-          "question": "Langs welke kant moet je inhalen op de autosnelweg?",
+          "question": "Langs welke kant haal je in op de autosnelweg?",
           "choices": [
-            "Langs rechts",
-            "Langs links",
-            "Langs beide kanten",
-            "Langs de meest vrije kant"
+            "Links",
+            "Rechts",
+            "Langs de vrijste kant"
           ],
-          "correct": 1,
-          "explanation": "Op de autosnelweg gebeurt inhalen uitsluitend langs links.",
+          "correct": 0,
+          "explanation": "Ook op de autosnelweg haal je links in.",
           "theoryCardIndex": 6
         },
         {
           "id": "A4_Q50",
-          "question": "Je blijft onnodig op de middelste rijstrook van de autosnelweg. Is dat een overtreding?",
+          "question": "Autosnelweg met 3 rijstroken, weinig verkeer. Mag je op de middelste rijstrook blijven?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, je gaat terug naar rechts",
+            "Ja, je kiest vrij",
+            "Ja, als je 120 km/u rijdt"
           ],
           "correct": 0,
-          "explanation": "Onnodig op de middelste of linkse rijstrook blijven zonder reden is een overtreding.",
+          "explanation": "Ook met 3 rijstroken rijd je rechts. Zonder reden in het midden blijven is een overtreding.",
           "theoryCardIndex": 6
         },
         {
           "id": "A4_Q52",
-          "question": "In een file rijdt de rechtse file sneller dan de linkse. Is dat een inhaalmanoeuvre?",
+          "question": "File: de rechtse rij gaat sneller vooruit dan de jouwe. Is dat verboden inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "In een file, als de rechtse file sneller opschiet, is dit juridisch geen inhaalmanoeuvre.",
+          "correct": 0,
+          "explanation": "Als de rijen aan verschillende snelheden rijden, is dat geen rechts inhalen.",
           "theoryCardIndex": 6
         },
         {
           "id": "A4_Q54",
-          "question": "Bij een file, tussen welke rijstroken mogen motorfietsen de file voorbijsteken?",
+          "question": "File op 3 rijstroken. Tussen welke rijstroken mag een motor tussen de files rijden?",
           "choices": [
-            "De twee linkerrijstroken",
-            "De twee rechterrijstroken",
-            "Rechts en de pechstrook"
+            "Tussen de twee linkse rijstroken",
+            "Tussen de twee rechtse rijstroken",
+            "Waar hij wil"
           ],
           "correct": 0,
-          "explanation": "Motorfietsen mogen enkel tussen de twee linkse rijstroken rijden om de file voorbij te steken.",
+          "explanation": "Motoren rijden tussen de files tussen de twee meest linkse rijstroken.",
           "theoryCardIndex": 6
         },
         {
           "id": "A4_Q55",
-          "question": "Wat is de maximumsnelheid van een motorfiets die de file voorbijsteekt?",
+          "question": "Maximumsnelheid van een motor die tussen de files rijdt?",
           "choices": [
             "30 km/u",
             "50 km/u",
-            "70 km/u",
-            "90 km/u"
+            "70 km/u"
           ],
           "correct": 1,
-          "explanation": "De maximumsnelheid van een motorfiets die de file voorbijsteekt bij een opstopping is 50 km/u.",
+          "explanation": "Maximaal 50 km/u.",
           "theoryCardIndex": 6,
           "severe": true
         },
         {
           "id": "A4_Q56",
-          "question": "Welk maximaal snelheidsverschil mag een motorfiets hebben met de andere voertuigen in een file?",
+          "question": "Hoeveel sneller dan de anderen mag een motor tussen de files rijden?",
           "choices": [
             "10 km/u",
             "20 km/u",
-            "30 km/u",
-            "40 km/u"
+            "30 km/u"
           ],
           "correct": 1,
-          "explanation": "De motorfiets mag maximaal 20 km/u sneller rijden dan de andere voertuigen in de file.",
+          "explanation": "Maximaal 20 km/u sneller dan de voertuigen in de files.",
           "theoryCardIndex": 6,
           "severe": true
         },
         {
           "id": "A4_Q57",
-          "question": "Wanneer je de autosnelweg oprijdt via de toegangsstrook, moet je dan voorrang verlenen?",
+          "question": "Je rijdt de autosnelweg op via de invoegstrook. Wie heeft voorrang?",
           "choices": [
-            "Ja",
-            "Nee"
+            "De voertuigen die al op de autosnelweg rijden",
+            "Jij",
+            "De snelste"
           ],
           "correct": 0,
-          "explanation": "Bij het inrijden via de toegangsstrook moet je voorrang verlenen aan de voertuigen die al op de autosnelweg rijden.",
+          "explanation": "Bij het invoegen verleen je voorrang aan wie al op de autosnelweg rijdt.",
           "theoryCardIndex": 7,
           "severe": true
         },
         {
           "id": "A4_Q58",
-          "question": "Moet je verplicht tot het einde van de toegangsstrook rijden?",
+          "question": "Moet je tot het einde van de invoegstrook rijden voor je invoegt?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, zodra het veilig kan",
+            "Ja, altijd"
           ],
-          "correct": 1,
-          "explanation": "Het is niet verplicht om tot het einde van de toegangsstrook te rijden. Je mag eerder invoegen als je snelheid voldoende is.",
+          "correct": 0,
+          "explanation": "Je voegt in zodra het veilig kan.",
           "theoryCardIndex": 7
         },
         {
           "id": "A4_Q59",
-          "question": "Je rijdt op de rechtse rijstrook van de autosnelweg en een voertuig wil invoegen. Wat mag je doen?",
+          "question": "Je rijdt op de rechtse rijstrook en een auto wil invoegen. Wat mag je doen?",
           "choices": [
-            "Naar links uitwijken indien mogelijk",
-            "Versnellen om voor hem te blijven",
-            "Niets, hij moet u voorrang verlenen"
+            "Naar links gaan, als het kan",
+            "Versnellen om er voor te blijven",
+            "Niets, hij moet voorrang verlenen"
           ],
           "correct": 0,
-          "explanation": "Je mag uit hoffelijkheid naar links uitwijken om het invoegen te vergemakkelijken, op voorwaarde dat je geen andere voertuigen hindert.",
+          "explanation": "Je mag het invoegen vergemakkelijken door naar links te gaan, zonder iemand te hinderen.",
           "theoryCardIndex": 7
         },
         {
           "id": "A4_Q61",
-          "question": "Geldt het ritssluitingsprincipe op de toegangsstrook van de autosnelweg?",
+          "question": "Erg traag verkeer op de oprit. Pas je ritsen toe om in te voegen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het ritssluitingsprincipe geldt nooit op de toegangsstrook. Men verleent altijd voorrang aan de voertuigen die al op de autosnelweg rijden.",
+          "explanation": "Geen ritsen op een invoegstrook: je verleent altijd voorrang.",
           "theoryCardIndex": 7
         },
         {
           "id": "A4_Q63",
-          "question": "Wat is het verschil tussen de toegangsstrook en een rijstrook die vermindert op de autosnelweg zelf?",
+          "question": "Invoegstrook of een rijstrook die ophoudt op de autosnelweg: welke regel?",
           "choices": [
-            "Oprit: voorrang geven; versmalling: ritsen",
+            "Invoegen: voorrang verlenen. Rijstrook die ophoudt: ritsen",
             "Ritsen in beide gevallen",
-            "Voorrang geven in beide gevallen"
+            "Voorrang verlenen in beide gevallen"
           ],
           "correct": 0,
-          "explanation": "Toegangsstrook = altijd voorrang verlenen. Vermindering van rijstroken op de autosnelweg zelf = verplichte ritssluiting (bij sterk vertraagd verkeer).",
+          "explanation": "Op de invoegstrook verleen je voorrang. Een rijstrook van de autosnelweg die ophoudt in erg traag verkeer: ritsen.",
           "theoryCardIndex": 7,
           "severe": true
         },
         {
           "id": "A4_Q64",
-          "question": "Wanneer moet je beginnen remmen om de autosnelweg te verlaten?",
+          "question": "Je wilt de autosnelweg verlaten. Waar rem je?",
           "choices": [
-            "Op de afritstrook",
-            "500 meter voor de afrit",
-            "Zodra u het afritbord ziet"
+            "Eens je op de uitrijstrook bent",
+            "150 m voor de afrit",
+            "Vanaf het bord van de afrit"
           ],
           "correct": 0,
-          "explanation": "Je remt enkel wanneer je je op de afritstrook bevindt, niet ervoor.",
+          "explanation": "Je behoudt je snelheid op de autosnelweg en remt pas op de uitrijstrook.",
           "theoryCardIndex": 7
         },
         {
           "id": "A4_Q66",
-          "question": "Je hebt je afrit gemist op de autosnelweg. Mag je achteruitrijden?",
+          "question": "Je hebt je afrit gemist. Wat doe je?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Je neemt de volgende afrit",
+            "Je rijdt achteruit op de pechstrook",
+            "Je stopt en wacht"
           ],
-          "correct": 1,
-          "explanation": "Achteruitrijden op de autosnelweg is strikt verboden. Bij een gemiste afrit, neem de volgende afrit.",
+          "correct": 0,
+          "explanation": "Achteruitrijden is verboden op de autosnelweg: neem de volgende afrit.",
           "theoryCardIndex": 7,
           "severe": true
         },
         {
           "id": "A4_Q67",
-          "question": "Mag je je voertuig parkeren op de rijbaan van de autosnelweg?",
+          "question": "Mag je parkeren op de rijbaan van de autosnelweg?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden te parkeren op de rijbaan van de autosnelweg.",
+          "explanation": "Stilstaan en parkeren zijn verboden op de rijbaan van de autosnelweg.",
           "theoryCardIndex": 8
         },
         {
           "id": "A4_Q68",
-          "question": "Geldt het stilstandverbod ook voor de toegangen en afritten van de autosnelweg?",
+          "question": "Mag je op de oprit stilstaan om een passagier op te pikken?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "correct": 0,
-          "explanation": "Het stilstandverbod strekt zich uit tot de hoofdrijbaan, de toegangen en de afritten.",
+          "correct": 1,
+          "explanation": "De oprit hoort bij de autosnelweg: stilstaan is er verboden.",
           "theoryCardIndex": 8
         },
         {
           "id": "A4_Q69",
-          "question": "Mag je rijden op de middenberm van de autosnelweg?",
+          "question": "Mag je over de middenberm van de autosnelweg rijden?",
           "choices": [
-            "Ja, in noodgeval",
-            "Nee, dat is verboden",
-            "Ja, om rechtsomkeer te maken",
-            "Ja, als een agent het toelaat"
+            "Nee",
+            "Ja, in noodgevallen",
+            "Ja, om te keren"
           ],
-          "correct": 1,
-          "explanation": "Het is verboden te rijden op de middenberm van een autosnelweg.",
+          "correct": 0,
+          "explanation": "Over de middenberm rijden is verboden.",
           "theoryCardIndex": 8
         },
         {
           "id": "A4_Q70",
-          "question": "Mag je achteruitrijden op de autosnelweg?",
+          "question": "Deze bestuurder is verkeerd gereden op de autosnelweg. Mag hij achteruitrijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Achteruitrijden is strikt verboden op de autosnelweg, om welke reden dan ook.",
+          "explanation": "Achteruitrijden is verboden op de autosnelweg. Het is een zware overtreding.",
           "theoryCardIndex": 8,
           "severe": true
         },
         {
           "id": "A4_Q71",
-          "question": "Mag je een geïmproviseerde sleepverbinding gebruiken om een voertuig te slepen op de autosnelweg?",
+          "question": "Mag je op de autosnelweg een auto slepen met een noodkoppeling?",
           "choices": [
-            "Ja, bij pech",
-            "Nee, dat is verboden",
             "Ja, tot de volgende afrit",
-            "Ja, aan minder dan 50 km/u"
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden een geïmproviseerde sleepverbinding te gebruiken om een voertuig te slepen op de autosnelweg.",
+          "explanation": "Slepen met een noodkoppeling is verboden op de autosnelweg.",
           "theoryCardIndex": 8
         },
         {
           "id": "A4_Q74",
-          "question": "Mag je de dwarsverbindingen tussen de twee rijbanen van de autosnelweg gebruiken?",
+          "question": "Mag je een doorsteek tussen de twee rijbanen van de autosnelweg nemen om te keren?",
           "choices": [
-            "Ja, om van richting te veranderen",
-            "Nee, dat is verboden",
-            "Ja, bij een file",
-            "Ja, als een bord het aanduidt"
+            "Nee",
+            "Ja, als ze open is",
+            "Ja, bij file"
           ],
-          "correct": 1,
-          "explanation": "Het is verboden de dwarsverbindingen tussen de twee rijbanen van een autosnelweg te gebruiken.",
+          "correct": 0,
+          "explanation": "De doorsteken tussen de twee rijbanen zijn verboden voor weggebruikers.",
           "theoryCardIndex": 8
         },
         {
           "id": "A4_Q75",
-          "question": "Wat is een knooppunt?",
+          "question": "Wat kondigt dit bord aan, 1600 m verder?",
           "choices": [
-            "Een parking langs de autosnelweg",
-            "De kruising van twee autosnelwegen",
-            "Een klassieke afrit",
-            "Een automatische tolpost"
+            "Een verkeerswisselaar",
+            "Een gewone afrit",
+            "Het einde van de autosnelweg"
           ],
-          "correct": 1,
-          "explanation": "Een knooppunt is het kruispunt van twee autosnelwegen waar je van de ene naar de andere kan overgaan.",
+          "correct": 0,
+          "explanation": "Een verkeerswisselaar: het kruispunt met een andere autosnelweg.",
           "theoryCardIndex": 8
         },
         {
           "id": "A4_Q76",
-          "question": "Hoe worden knooppunten gesignaleerd?",
+          "question": "In welke kleur worden verkeerswisselaars aangeduid?",
           "choices": [
-            "In het groen",
-            "In het wit",
-            "In het blauw",
-            "In het rood"
+            "Wit",
+            "Groen",
+            "Rood"
           ],
-          "correct": 1,
-          "explanation": "Knooppunten worden in het wit gesignaleerd om ze te onderscheiden van gewone afritten.",
+          "correct": 0,
+          "explanation": "Verkeerswisselaars in het wit, afritten in het groen.",
           "theoryCardIndex": 8
         },
         {
           "id": "A4_Q77",
-          "question": "Hoe worden afritten van de autosnelweg gesignaleerd?",
+          "question": "In welke kleur worden afritten van de autosnelweg aangeduid?",
           "choices": [
-            "In het wit",
-            "In het groen",
-            "In het blauw",
-            "In het rood"
+            "Groen",
+            "Wit",
+            "Rood"
           ],
-          "correct": 1,
-          "explanation": "Gewone afritten van de autosnelweg worden in het groen gesignaleerd.",
+          "correct": 0,
+          "explanation": "Afritten in het groen, verkeerswisselaars in het wit.",
           "theoryCardIndex": 8
         },
         {
           "id": "A4_Q78",
-          "question": "Mag je met een voorlopig rijbewijs op de autosnelweg rijden?",
+          "question": "Mag je met een voorlopig rijbewijs B op de autosnelweg rijden?",
           "choices": [
-            "Ja, met de auto of de motor",
-            "Nee, dat is verboden",
-            "Ja, maar begeleid"
+            "Ja",
+            "Nee"
           ],
           "correct": 0,
-          "explanation": "Het voorlopig rijbewijs staat rijden op de autosnelweg toe, met de auto of de motorfiets.",
+          "explanation": "Met een voorlopig rijbewijs mag je op de autosnelweg rijden.",
           "theoryCardIndex": 8
         },
         {
@@ -4128,14 +4085,14 @@
         },
         {
           "id": "A4_Q81",
-          "question": "U ziet dit verkeersbord. Wat moet u weten?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "De autosnelwegregels stoppen",
-            "U moet hier volledig stoppen",
-            "U rijdt meteen een ring op"
+            "Einde van de autosnelweg",
+            "Einde van de autoweg",
+            "Einde van de grens van 120 km/u"
           ],
           "correct": 0,
-          "explanation": "Na het signaal einde autosnelweg zijn de regels van de autosnelweg niet meer van toepassing. De maximumsnelheid wordt opnieuw die van de gewone weg.",
+          "explanation": "Na dit bord gelden de regels van de autosnelweg niet meer.",
           "theoryCardIndex": 0,
           "severe": true,
           "sign": "F7"
@@ -4144,25 +4101,12 @@
           "id": "A4_Q82",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Een regel beperkt tot bepaalde stroken",
-            "Een opgelegde richtingsverandering",
+            "Een regel die voor bepaalde rijstroken geldt",
+            "Een verplichte richting",
             "Werken op alle rijstroken"
           ],
           "correct": 0,
-          "explanation": "Dit signaal duidt aan dat de reglementeringen (snelheid, verboden) verschillen per rijstrook.",
-          "theoryCardIndex": 5,
-          "sign": "F13"
-        },
-        {
-          "id": "A4_Q83",
-          "question": "Waar staat dit voorwaarschuwingsbord?",
-          "choices": [
-            "Aan de rand van de rijbaan",
-            "Boven de rijbaan",
-            "Binnen in de tunnels"
-          ],
-          "correct": 0,
-          "explanation": "Het voorsignaal van reglementering per rijstrook staat aan de zijkant van de rijbaan, niet erboven.",
+          "explanation": "Dit bord geeft een regel (snelheid, verbod) per rijstrook.",
           "theoryCardIndex": 5,
           "sign": "F13"
         },
@@ -4180,14 +4124,14 @@
         },
         {
           "id": "A4_Q85",
-          "question": "Wat betekent een bord met de vermelding « Ring »?",
+          "question": "Wat betekent dit bord « Ring »?",
           "choices": [
-            "Een ringweg rond een stad",
+            "Een weg rond een stad",
             "Een internationale weg",
-            "Een afrit naar het stadscentrum"
+            "Een afrit naar het centrum"
           ],
           "correct": 0,
-          "explanation": "Het signaal \"Ring\" duidt een rondweg (circulaire weg rond een stad) aan.",
+          "explanation": "Een ring loopt rond een stad.",
           "theoryCardIndex": 8,
           "sign": "F23d"
         },
@@ -4206,52 +4150,87 @@
         },
         {
           "id": "A4_Q87",
-          "question": "U ziet dit verkeersbord. Welke regels gelden nu?",
+          "question": "Welke snelheden gelden na dit bord?",
           "choices": [
-            "Max 120 km/u, min 70 km/u",
-            "Max 120 km/u, zonder minimum",
-            "De gewone regels van de weg"
+            "Maximaal 120 km/u, minimaal 70 km/u",
+            "Maximaal 120 km/u, geen minimum",
+            "Die van een gewone weg"
           ],
           "correct": 0,
-          "explanation": "Bij het oprijden van de autosnelweg: max 120 km/u, min 70 km/u, inhalen langs links, geen verkeerslichten of kruispunten.",
+          "explanation": "Op de autosnelweg: maximaal 120 km/u en, als de omstandigheden het toelaten, minimaal 70 km/u.",
           "theoryCardIndex": 0,
           "sign": "F5"
         },
         {
           "id": "A4_Q88",
-          "question": "Je rijdt op een gewone weg en ziet een signaal voor een internationale wegnummer. Bevind je je op een autosnelweg?",
+          "question": "Dit bord toont een Europees wegnummer (E). Ben je zeker op een autosnelweg?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Een internationaal wegnummer (E + cijfer) betekent niet dat je op een autosnelweg bent.",
+          "explanation": "Een E-weg kan een gewone weg zijn. Alleen het bord autosnelweg telt.",
           "theoryCardIndex": 0
         },
         {
           "id": "A4_Q89",
-          "question": "Een strookbeperking geeft 70 km/u rechts en 90 km/u elders aan. U wil inhalen. Wat doet u?",
+          "question": "90 km/u op de linkse rijstroken, 70 km/u rechts. Je wilt inhalen. Wat doe je?",
           "choices": [
-            "Naar links gaan, aan 90 km/u",
-            "Rechts blijven, aan 70 km/u",
-            "Rechts inhalen aan 70 km/u"
+            "Je gaat naar links, maximaal 90 km/u",
+            "Je haalt rechts in aan 70 km/u",
+            "Je blijft erachter"
           ],
           "correct": 0,
-          "explanation": "Om in te halen bij een beperking per rijstrook van 90 km/u op de linkse rijstroken, verander je van rijstrook naar links.",
+          "explanation": "Om in te halen ga je naar links: daar geldt 90 km/u.",
           "theoryCardIndex": 6,
           "sign": "F91"
         },
         {
           "id": "A4_Q90",
-          "question": "Je bevindt je op een ring rond een stad. Gelden de regels van de autosnelweg?",
+          "question": "Je rijdt op een ring. Gelden de regels van de autosnelweg?",
           "choices": [
-            "Ja, als het beginbord er staat",
-            "Ja, op alle ringen zonder uitzondering",
-            "Nee, een ring is geen autosnelweg"
+            "Ja, als het bord autosnelweg er staat",
+            "Ja, op alle ringen",
+            "Nee, nooit"
           ],
           "correct": 0,
-          "explanation": "Een ring kan al dan niet een autosnelweg zijn. De regels van de autosnelweg gelden enkel als het bijhorende signaal is aangebracht.",
+          "explanation": "Een ring is pas een autosnelweg als het bord autosnelweg dat aanduidt.",
           "theoryCardIndex": 8
+        },
+        {
+          "id": "A4_Q91",
+          "question": "Verkeer staat stil. Mag je de laatste meters voor de afrit over de pechstrook rijden?",
+          "choices": [
+            "Nee",
+            "Ja, de laatste 150 meter",
+            "Ja, de laatste 50 meter"
+          ],
+          "correct": 0,
+          "explanation": "Ook vlak voor een afrit is rijden op de pechstrook verboden.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "A4_Q92",
+          "question": "De radio meldt een spookrijder op jouw autosnelweg. Wat doe je?",
+          "choices": [
+            "Je rijdt rechts en haalt niet meer in",
+            "Je gaat naar de linkse rijstrook",
+            "Je stopt op de pechstrook"
+          ],
+          "correct": 0,
+          "explanation": "Blijf op de rechtse rijstrook, haal niet in en houd afstand tot het alarm voorbij is.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "A4_Q93",
+          "question": "Zet je je richtingaanwijzer aan om in te voegen op de autosnelweg?",
+          "choices": [
+            "Ja",
+            "Nee, er is maar één richting mogelijk"
+          ],
+          "correct": 0,
+          "explanation": "Je verandert van rijstrook: de richtingaanwijzer is verplicht.",
+          "theoryCardIndex": 7
         }
       ]
     },
