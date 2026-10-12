@@ -1015,14 +1015,14 @@
       "questions": [
         {
           "id": "I2_Q1",
-          "question": "Vous êtes en panne sur la route. Que devez-vous faire en priorité ?",
+          "question": "Vous êtes en panne. Que faites-vous d'abord ?",
           "choices": [
-            "Ranger le véhicule au bon endroit",
-            "Placer le triangle tout de suite",
-            "Appeler votre assurance d'abord"
+            "Je range la voiture hors de la circulation",
+            "Je place le triangle",
+            "J'appelle mon assurance"
           ],
           "correct": 0,
-          "explanation": "En cas de panne, essayer avant tout de stationner le véhicule à un endroit autorisé.",
+          "explanation": "D'abord dégager la voiture, si c'est possible.",
           "theoryCardIndex": 0,
           "severe": true
         },
@@ -1030,775 +1030,644 @@
           "id": "I2_Q2",
           "question": "Une partie de votre chargement tombe sur la chaussée. Que faites-vous ?",
           "choices": [
-            "L'enlever de la chaussée vite",
-            "Continuer sans vous arrêter",
-            "Attendre la police sur place"
+            "Je l'enlève au plus vite",
+            "Je continue",
+            "J'attends la police"
           ],
           "correct": 0,
-          "explanation": "Si du chargement tombe sur la chaussée, vous devez l'enlever le plus rapidement possible.",
+          "explanation": "Un objet sur la route est un danger : enlevez-le vite, en sécurité.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q3",
-          "question": "Après un accident, votre véhicule ne peut pas être déplacé. Que faites-vous en priorité ?",
+          "question": "Après un accident, la voiture ne peut pas être déplacée. Que faites-vous ?",
           "choices": [
-            "Triangle et feux de détresse",
-            "Appeler l'assurance d'abord",
-            "Photographier pour le constat"
+            "Feux de détresse et triangle",
+            "J'appelle l'assurance",
+            "Je prends des photos"
           ],
           "correct": 0,
-          "explanation": "Si le véhicule ne peut pas être déplacé, placer le triangle et allumer les feux de détresse pour éviter un autre accident.",
+          "explanation": "D'abord prévenir les autres pour éviter un second accident.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I2_Q4",
-          "question": "Vous arrivez sur le lieu d'un accident où un moteur tourne encore. Pourquoi faut-il le couper ?",
+          "question": "Le moteur d'une voiture accidentée tourne encore. Pourquoi le couper ?",
           "choices": [
-            "Pour économiser du carburant",
             "Pour éviter un incendie",
-            "Par politesse envers les riverains",
-            "Pour réduire le bruit"
+            "Pour économiser l'essence",
+            "Pour le bruit"
           ],
-          "correct": 1,
-          "explanation": "Couper les moteurs réduit le risque d'incendie sur le lieu de l'accident.",
+          "correct": 0,
+          "explanation": "Moteur coupé : moins de risque de feu.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q5",
-          "question": "Des curieux fument près du lieu de l'accident. Peuvent-ils le faire ?",
+          "question": "Des curieux fument près de l'accident. Est-ce acceptable ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Fumer sur le lieu d'un accident est interdit à cause du risque d'incendie. Les spectateurs doivent également ne pas fumer.",
+          "correct": 0,
+          "explanation": "Risque d'incendie : pas de cigarette.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q6",
-          "question": "Sur une route ordinaire, à quelle distance minimum placez-vous le triangle de danger ?",
+          "question": "Route ordinaire : à quelle distance placez-vous le triangle ?",
           "choices": [
-            "Au moins 30 mètres",
-            "Au moins 10 mètres",
-            "Au moins 100 mètres"
+            "30 m au moins",
+            "10 m",
+            "100 m"
           ],
           "correct": 0,
-          "explanation": "Sur route ordinaire, le triangle doit être placé à au moins 30 mètres de l'obstacle.",
+          "explanation": "Au moins 30 m derrière le véhicule.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q7",
-          "question": "Sur l'autoroute, à quelle distance minimum placez-vous le triangle de danger ?",
+          "question": "Autoroute : à quelle distance placez-vous le triangle ?",
           "choices": [
-            "Au moins 100 mètres",
-            "Au moins 30 mètres",
-            "Au moins 50 mètres"
+            "100 m au moins",
+            "30 m",
+            "50 m"
           ],
           "correct": 0,
-          "explanation": "Sur autoroute, le triangle doit être placé à au moins 100 mètres de l'obstacle.",
+          "explanation": "Au moins 100 m derrière le véhicule.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q8",
-          "question": "Vous placez votre triangle de danger. À quelle distance doit-il être visible pour les conducteurs qui approchent ?",
+          "question": "De quelle distance le triangle doit-il être visible ?",
           "choices": [
-            "30 mètres",
-            "50 mètres",
-            "100 mètres",
-            "20 mètres"
+            "Environ 50 m",
+            "20 m",
+            "200 m"
           ],
-          "correct": 1,
-          "explanation": "Le triangle doit être visible à 50 mètres pour les conducteurs qui approchent.",
+          "correct": 0,
+          "explanation": "Les conducteurs doivent le voir à environ 50 m.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q9",
-          "question": "Vous êtes en panne à 20 mètres d'un carrefour. Où placez-vous le triangle ?",
+          "question": "En agglomération, impossible de reculer de 30 m. Où mettez-vous le triangle ?",
           "choices": [
-            "À l'endroit le plus visible",
-            "À 30 mètres derrière, sans plus",
-            "Au milieu du carrefour même"
+            "Plus près, ou même sur la voiture",
+            "Au milieu du carrefour",
+            "Vous n'en mettez pas"
           ],
           "correct": 0,
-          "explanation": "Si la règle des 30 m n'est pas logique (ex : 20 m d'un carrefour), placez le triangle là où c'est sensé, voire sur le toit.",
+          "explanation": "En agglomération, il peut être plus près, voire sur le véhicule.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q10",
-          "question": "Que devez-vous obligatoirement avoir dans votre voiture ?",
+          "question": "Qu'est-ce qui doit obligatoirement être dans votre voiture ?",
           "choices": [
-            "Triangle, extincteur, gilet, trousse",
-            "Un triangle et un gilet fluorescent",
-            "Un extincteur à poudre, sans plus"
+            "Triangle, extincteur, trousse de secours, gilet",
+            "Triangle et gilet seulement",
+            "Un extincteur seulement"
           ],
           "correct": 0,
-          "explanation": "Ces 4 éléments sont obligatoires dans tout véhicule : triangle, extincteur, gilet fluorescent et trousse de premiers secours.",
+          "explanation": "Les quatre sont obligatoires.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q11",
-          "question": "Vous rangez votre gilet fluorescent dans le coffre. Est-ce le bon endroit ?",
+          "question": "Où rangez-vous le gilet fluo ?",
           "choices": [
-            "Oui",
-            "Non"
+            "À portée de main, dans l'habitacle",
+            "Au fond du coffre",
+            "À la maison"
           ],
-          "correct": 1,
-          "explanation": "Le gilet doit être dans l'habitacle pour pouvoir l'enfiler AVANT de sortir du véhicule sur autoroute/voie rapide.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "I2_Q12",
-          "question": "Vous avez un extincteur dans votre voiture. En combien de temps devez-vous pouvoir y accéder ?",
-          "choices": [
-            "30 secondes",
-            "10 secondes",
-            "1 minute",
-            "5 secondes"
-          ],
-          "correct": 1,
-          "explanation": "L'extincteur (1 kg de poudre) doit être accessible en 10 secondes.",
+          "correct": 0,
+          "explanation": "Vous devez pouvoir l'enfiler avant de sortir de la voiture.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q13",
-          "question": "Accident sans blessés, constat rempli et signé. Devez-vous appeler la police ?",
+          "question": "Accident sans blessés, constat rempli et signé. Faut-il appeler la police ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, toujours"
           ],
-          "correct": 1,
-          "explanation": "Sans blessés, la police n'est pas nécessaire si les deux parties signent le constat européen.",
+          "correct": 0,
+          "explanation": "Pas nécessaire si vous êtes d'accord et que le constat est signé.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q14",
-          "question": "Que doit contenir le croquis du constat européen ?",
+          "question": "Que dessinez-vous dans la grande case du constat ?",
           "choices": [
-            "Positions, signaux et repères A/B",
-            "Le nom des deux conducteurs",
-            "La date et l'heure de l'accident"
+            "Un croquis de l'accident",
+            "Votre signature",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Le croquis doit inclure : situation routière, nom de rue, sens de marche, position des véhicules, feux/signaux/marquages et l'identification A/B.",
+          "explanation": "Un croquis clair : rues, sens, positions des véhicules A et B.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q15",
-          "question": "Qui doit signer la face avant du constat européen ?",
+          "question": "Qui signe le recto du constat ?",
           "choices": [
-            "Les deux parties impliquées",
-            "Un seul des deux conducteurs",
-            "La police et un témoin"
+            "Les deux conducteurs",
+            "Un seul",
+            "La police"
           ],
           "correct": 0,
-          "explanation": "La face avant doit être remplie ET signée par les deux parties.",
+          "explanation": "Les deux parties signent.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q16",
           "question": "Le constat est signé et vous voyez une erreur au recto. Pouvez-vous la corriger ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Une fois le constat signé, PLUS DE MODIFICATION possible au recto.",
+          "correct": 0,
+          "explanation": "Après signature, le recto ne se modifie plus.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q17",
-          "question": "L'autre partie refuse de signer le constat. Que faites-vous ?",
+          "question": "Dégâts matériels, mais vous n'êtes pas d'accord. Que faites-vous ?",
           "choices": [
-            "Vous avertissez la police",
-            "Vous partez de votre côté",
-            "Vous appelez votre assurance"
+            "Vous appelez la police",
+            "Vous partez",
+            "Vous signez quand même"
           ],
           "correct": 0,
-          "explanation": "En cas de refus de signer ou de désaccord, avertir la police. Si indisponible, se rendre au commissariat.",
+          "explanation": "En cas de désaccord, prévenez la police.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q18",
-          "question": "Vous abîmez une voiture garée sans trouver le propriétaire. Que faites-vous ?",
+          "question": "Vous abîmez une voiture garée, sans trouver le propriétaire. Que faites-vous ?",
           "choices": [
-            "Laisser vos coordonnées sur place",
-            "Partir discrètement sans rien",
-            "Attendre le propriétaire sur place"
+            "Je laisse mes coordonnées et préviens la police",
+            "Je pars",
+            "J'attends toute la journée"
           ],
           "correct": 0,
-          "explanation": "En cas de dégâts sans propriétaire présent : laisser vos données d'identité ou informer la police.",
+          "explanation": "Laissez vos coordonnées et prévenez la police.",
           "theoryCardIndex": 0
         },
         {
           "id": "I2_Q19",
-          "question": "Accident avec blessés légers. Que faites-vous de votre véhicule ?",
+          "question": "Accident avec blessés. Pouvez-vous déplacer votre voiture ?",
           "choices": [
-            "Le garer à un endroit autorisé",
-            "Le laisser au milieu de la route",
-            "Bloquer la route volontairement"
+            "Non, sauf pour éviter un danger",
+            "Oui, toujours",
+            "Oui, pour dégager la route"
           ],
           "correct": 0,
-          "explanation": "En cas de blessés légers, stationnez le véhicule à un endroit autorisé.",
+          "explanation": "Laissez la voiture sur place pour les constatations, sauf danger.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q20",
-          "question": "Vous arrivez sur un accident avec blessés graves. Que faites-vous en priorité ?",
+          "question": "Vous arrivez sur un accident. Que faites-vous d'abord ?",
           "choices": [
-            "Éviter un second accident",
-            "Partir chercher de l'aide",
-            "Déplacer les blessés hors route"
+            "Je me mets en sécurité et je protège les lieux",
+            "Je soigne les blessés",
+            "Je pars chercher de l'aide"
           ],
           "correct": 0,
-          "explanation": "En cas de blessés graves ou déplacement impossible, tout mettre en œuvre pour éviter d'autres accidents.",
+          "explanation": "D'abord sécuriser, ensuite alerter, puis secourir.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I2_Q21",
-          "question": "Il y a des blessés dans l'accident. La police doit-elle intervenir ?",
+          "question": "Il y a des blessés. Faut-il prévenir la police ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Accident avec blessés = police TOUJOURS obligatoire pour les constatations.",
+          "explanation": "Avec des blessés, la police doit toujours venir.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q23",
-          "question": "Vous sortez de votre voiture après un accident sur autoroute. Le gilet est-il obligatoire ?",
+          "question": "En panne sur l'autoroute, vous sortez de la voiture. Le gilet est-il obligatoire ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le gilet est obligatoire pour le conducteur sur l'autoroute et la route pour automobiles.",
+          "explanation": "Le conducteur le porte dès qu'il sort.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q24",
           "question": "Vos passagers sortent aussi. Le gilet est-il obligatoire pour eux ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, mais conseillé",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le gilet n'est pas obligatoire pour les passagers mais est vivement conseillé.",
+          "correct": 0,
+          "explanation": "Obligatoire pour le conducteur, conseillé pour les passagers.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q26",
-          "question": "Vous êtes arrêté sur la bande d'arrêt d'urgence. Où attendez-vous les secours ?",
+          "question": "Arrêté sur la bande d'arrêt d'urgence, où attendez-vous ?",
           "choices": [
-            "Derrière les glissières",
-            "Dans votre voiture",
-            "Sur la bande d'arrêt"
+            "Derrière la glissière",
+            "Dans la voiture",
+            "Sur la bande d'arrêt d'urgence"
           ],
           "correct": 0,
-          "explanation": "Sur la BAU, attendre derrière les glissières de sécurité pour éviter les accidents.",
+          "explanation": "Derrière la glissière, à l'abri du trafic.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q27",
           "question": "Pouvez-vous marcher sur la bande d'arrêt d'urgence ?",
           "choices": [
-            "Uniquement si nécessaire",
-            "Oui, sans restriction",
-            "Non, en aucun cas"
+            "Seulement si nécessaire",
+            "Oui, librement",
+            "Jamais"
           ],
           "correct": 0,
-          "explanation": "Ne pas rester dans la voiture ni circuler sur la BAU si ce n'est pas nécessaire.",
+          "explanation": "Le moins possible : c'est très dangereux.",
           "theoryCardIndex": 1
         },
         {
           "id": "I2_Q28",
-          "question": "Vous êtes impliqué dans un accident. Pouvez-vous quitter les lieux ?",
+          "question": "Vous êtes impliqué dans un accident. Pouvez-vous partir ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Toute personne impliquée dans un accident doit rester sur place.",
+          "correct": 0,
+          "explanation": "Vous restez sur place.",
           "theoryCardIndex": 1
         },
         {
-          "id": "I2_Q29",
-          "question": "Que devez-vous évaluer avant d'appeler les secours ?",
-          "choices": [
-            "Lieu, blessés, gravité, risques",
-            "Le coût des dégâts matériels",
-            "La marque et la couleur du véhicule"
-          ],
-          "correct": 0,
-          "explanation": "Avant d'appeler les secours : évaluer le lieu, le nombre de blessés, si des personnes sont bloquées et s'il y a risque d'incendie.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "I2_Q30",
-          "question": "Vous devez appeler les secours après un accident. Quel numéro composez-vous ?",
+          "question": "Quel est le numéro d'urgence européen ?",
           "choices": [
-            "100",
             "112",
-            "101",
+            "100",
             "911"
           ],
-          "correct": 1,
-          "explanation": "Le 112 est le numéro d'urgence européen à appeler en cas d'accident.",
+          "correct": 0,
+          "explanation": "112, partout en Europe.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q31",
-          "question": "Le couloir de secours se forme-t-il uniquement sur autoroute ?",
+          "question": "Le couloir de secours, seulement sur autoroute ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, dès qu'il y a 2 bandes ou plus",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le couloir de secours est requis sur toute chaussée à 2 bandes ou plus dans le même sens, pas seulement les autoroutes.",
+          "correct": 0,
+          "explanation": "Sur toute chaussée à au moins deux bandes, quand une file se forme.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q32",
-          "question": "Quand devez-vous commencer à former le couloir de secours ?",
+          "question": "Quand formez-vous le couloir de secours ?",
           "choices": [
-            "Avant l'arrêt complet du trafic",
-            "Après l'arrêt complet du trafic",
-            "Quand la police le demande"
+            "Dès qu'une file se forme",
+            "Quand tout est arrêté",
+            "Quand vous entendez une sirène"
           ],
           "correct": 0,
-          "explanation": "Le couloir de secours se forme de manière PRÉVENTIVE, avant que la circulation ne s'arrête.",
+          "explanation": "Dès la formation de la file, sans attendre.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q33",
-          "question": "Sur une chaussée à deux bandes, où se forme le couloir de secours ?",
+          "question": "Chaussée à deux bandes : où se forme le couloir de secours ?",
           "choices": [
-            "Entre la gauche et la droite",
+            "Entre les deux bandes",
             "Sur la bande d'arrêt d'urgence",
-            "Au milieu de la bande droite"
+            "À droite"
           ],
           "correct": 0,
-          "explanation": "Sur 2 bandes : couloir entre les voies gauche et droite.",
+          "explanation": "Gauche serre à gauche, droite serre à droite.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q34",
-          "question": "Sur une chaussée à trois bandes, où se forme le couloir de secours ?",
+          "question": "Chaussée à trois bandes : où se forme le couloir de secours ?",
           "choices": [
-            "Entre la gauche et la centrale",
-            "Entre la droite et la centrale",
-            "Sur la bande de droite même"
+            "Entre la bande de gauche et celle du milieu",
+            "Entre celle du milieu et celle de droite",
+            "Sur la bande d'arrêt d'urgence"
           ],
           "correct": 0,
-          "explanation": "Sur 3 bandes : couloir entre les voies gauche et centrale.",
+          "explanation": "La gauche serre à gauche, toutes les autres à droite.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q35",
-          "question": "Vous êtes sur la bande de gauche. De quel côté vous décalez-vous ?",
+          "question": "File, vous êtes sur la bande de gauche. Où vous décalez-vous ?",
           "choices": [
-            "Encore plus à gauche",
-            "Vers la droite comme les autres",
-            "Vous restez bien au centre"
+            "À gauche",
+            "À droite",
+            "Nulle part"
           ],
           "correct": 0,
-          "explanation": "Sur la bande de gauche d'une autoroute à 2 bandes : se décaler à gauche pour créer le couloir.",
+          "explanation": "La bande de gauche serre à gauche.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q36",
-          "question": "Vous êtes sur la bande de droite. De quel côté vous décalez-vous ?",
+          "question": "File sur deux bandes, vous êtes à droite. Où vous décalez-vous ?",
           "choices": [
-            "Vers la droite",
-            "Vers la gauche",
-            "Vous restez au centre"
+            "À droite",
+            "À gauche",
+            "Nulle part"
           ],
           "correct": 0,
-          "explanation": "Sur la bande de droite d'une autoroute à 2 bandes : se décaler à droite pour créer le couloir.",
+          "explanation": "La bande de droite serre à droite.",
           "theoryCardIndex": 2
         },
         {
           "id": "I2_Q37",
-          "question": "Un blessé est au sol après l'accident. Devez-vous le déplacer ?",
+          "question": "Un blessé est au sol. Le déplacez-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, sauf danger immédiat",
+            "Oui, toujours"
           ],
-          "correct": 1,
-          "explanation": "Il ne faut pas déplacer la victime et attendre les secours, sauf en cas d'incendie.",
+          "correct": 0,
+          "explanation": "On ne déplace pas un blessé, sauf feu ou danger immédiat.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q38",
-          "question": "Le véhicule prend feu avec un blessé à l'intérieur. Devez-vous le sortir ?",
+          "question": "La voiture prend feu, un blessé est à l'intérieur. Le sortez-vous ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La victime ne doit être déplacée qu'en cas d'incendie ou de danger d'incendie immédiat.",
+          "explanation": "Le feu est un danger immédiat : là, on déplace.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q39",
-          "question": "Un motard blessé porte son casque. Devez-vous le retirer ?",
+          "question": "Un motard blessé porte son casque. Le retirez-vous ?",
           "choices": [
             "Non, sauf s'il respire mal",
-            "Oui, tout de suite pour aider",
-            "Oui, pour voir ses blessures"
+            "Oui, tout de suite"
           ],
           "correct": 0,
-          "explanation": "Ne pas retirer le casque, sauf en cas de difficultés respiratoires ou de vomissements.",
+          "explanation": "On laisse le casque, sauf problème de respiration.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q40",
-          "question": "Un blessé vous demande de l'eau. Devez-vous lui en donner ?",
+          "question": "Un blessé demande à boire. Lui donnez-vous de l'eau ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Il ne faut rien donner à boire, à manger ni comme médicament au blessé.",
+          "correct": 0,
+          "explanation": "Rien à boire ni à manger.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q41",
-          "question": "Un blessé souffre. Pouvez-vous lui donner un antidouleur ?",
+          "question": "Un blessé a mal. Lui donnez-vous un antidouleur ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Il est déconseillé de donner tout médicament à un blessé en attente des secours.",
+          "correct": 0,
+          "explanation": "Aucun médicament.",
           "theoryCardIndex": 3
         },
         {
           "id": "I2_Q42",
-          "question": "Un blessé a une forte hémorragie au bras. Que faites-vous ?",
+          "question": "Un blessé saigne beaucoup au bras. Que faites-vous ?",
           "choices": [
-            "Couvrir la plaie proprement",
-            "Nouer un garrot au-dessus",
-            "Verser de l'eau sur la plaie"
+            "Je couvre la plaie et j'appuie",
+            "Je fais un garrot",
+            "Je verse de l'eau"
           ],
           "correct": 0,
-          "explanation": "En cas d'hémorragie, couvrir la plaie. Ne pas nouer au-dessus (pas de garrot).",
+          "explanation": "Couvrir proprement, sans garrot.",
           "theoryCardIndex": 3
-        },
-        {
-          "id": "I2_Q43",
-          "question": "Vous vous demandez s'il est recommandé de nouer un garrot au-dessus d'une plaie hémorragique. Est-ce une bonne idée ?",
-          "choices": [
-            "Oui, c'est la bonne méthode",
-            "Non, nouer un garrot n'est PAS recommandé",
-            "Oui, si le saignement est abondant",
-            "Cela dépend de la localisation de la plaie"
-          ],
-          "correct": 1,
-          "explanation": "Le garrot (nouer au-dessus de la plaie) n'est PAS recommandé.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "I2_Q44",
-          "question": "Un motard inconscient respire normalement, casque en place. Que faites-vous ?",
-          "choices": [
-            "Laisser le casque en place",
-            "Retirer le casque doucement",
-            "Le déplacer sur le trottoir"
-          ],
-          "correct": 0,
-          "explanation": "Si le blessé respire normalement, laissez le casque en place et attendez les secours.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "I2_Q46",
-          "question": "Un blessé saigne abondamment et demande à boire. Que faites-vous en priorité ?",
-          "choices": [
-            "Couvrir la plaie, sans donner",
-            "Lui donner de l'eau à boire",
-            "Lui donner un antidouleur"
-          ],
-          "correct": 0,
-          "explanation": "Priorité : couvrir l'hémorragie avec un bandage. Ne rien donner à boire ni à manger.",
-          "theoryCardIndex": 3,
-          "severe": true
         },
         {
           "id": "I2_Q47",
-          "question": "Votre médecin vous déclare inapte à conduire. Dans quel délai devez-vous informer votre commune ?",
+          "question": "Le médecin vous déclare inapte à conduire. Dans quel délai prévenez-vous la commune ?",
           "choices": [
-            "7 jours ouvrables",
             "4 jours ouvrables",
-            "10 jours ouvrables",
-            "30 jours calendrier"
+            "7 jours",
+            "30 jours"
           ],
-          "correct": 1,
-          "explanation": "Vous devez informer la commune dans les 4 jours ouvrables.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "I2_Q48",
-          "question": "Vous êtes déclaré inapte à conduire. Les week-ends comptent-ils dans le délai de 4 jours ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Samedis, dimanches et jours fériés ne sont PAS inclus dans le délai de 4 jours ouvrables.",
+          "correct": 0,
+          "explanation": "4 jours ouvrables (week-ends et jours fériés non compris).",
           "theoryCardIndex": 4
         },
         {
           "id": "I2_Q49",
-          "question": "Vous avez informé la commune de votre inaptitude. Que devez-vous faire en plus ?",
+          "question": "Inapte à conduire : que faites-vous de votre permis ?",
           "choices": [
-            "Rendre votre permis",
-            "Repasser un examen médical",
-            "Payer une amende forfaitaire"
+            "Je le rends à la commune",
+            "Je le garde",
+            "Je le détruis"
           ],
           "correct": 0,
-          "explanation": "En plus d'informer la commune, vous devez rendre votre permis de conduire.",
+          "explanation": "Vous rendez votre permis.",
           "theoryCardIndex": 4
         },
         {
           "id": "I2_Q50",
-          "question": "Vous conduisez avec votre enfant de 12 ans à bord. Pouvez-vous fumer ?",
+          "question": "Votre enfant de 12 ans est dans la voiture. Pouvez-vous fumer ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, fenêtre ouverte"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit de fumer en voiture en présence de passagers mineurs.",
+          "correct": 0,
+          "explanation": "Interdit de fumer en voiture en présence d'enfants.",
           "theoryCardIndex": 4
         },
         {
           "id": "I2_Q51",
-          "question": "Vous conduisez avec uniquement des passagers adultes. Pouvez-vous fumer ?",
+          "question": "Seulement des adultes à bord. Pouvez-vous fumer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'interdiction de fumer en voiture ne s'applique que lorsqu'il y a des passagers mineurs.",
+          "explanation": "L'interdiction vise la présence d'enfants.",
           "theoryCardIndex": 4
         },
         {
           "id": "I2_Q52",
-          "question": "Vous approchez d'un tunnel. À partir de quelle longueur un tunnel est-il signalé par un signal spécifique ?",
+          "question": "Ce panneau « tunnel » est placé devant les tunnels de plus de :",
           "choices": [
-            "100 mètres",
-            "Plus de 500 mètres",
-            "1 kilomètre",
-            "200 mètres"
+            "500 m",
+            "100 m",
+            "2 km"
           ],
-          "correct": 1,
-          "explanation": "Un tunnel de plus de 500 m est signalé par un signal spécifique.",
+          "correct": 0,
+          "explanation": "Il signale les tunnels de plus de 500 m.",
           "theoryCardIndex": 5
         },
         {
-          "id": "I2_Q53",
-          "question": "Ce panneau de tunnel porte la mention « 2 km ». Que signifie-t-il ?",
+          "id": "I2_Q54",
+          "question": "Avant un long tunnel, que vérifiez-vous ?",
           "choices": [
-            "Un tunnel à 2 km d'ici",
-            "Un tunnel long de 2 km",
-            "Ralentir pendant 2 km"
+            "Votre carburant",
+            "La pression des pneus",
+            "L'huile"
           ],
           "correct": 0,
-          "explanation": "Le panneau \"2 km\" indique la distance jusqu'au tunnel, pas sa longueur.",
-          "theoryCardIndex": 5,
-          "sign": "F8"
-        },
-        {
-          "id": "I2_Q54",
-          "question": "Vous allez entrer dans un long tunnel. Que devez-vous vérifier avant d'y pénétrer ?",
-          "choices": [
-            "La pression des pneus",
-            "Votre niveau de carburant",
-            "Le niveau d'huile moteur",
-            "La température extérieure"
-          ],
-          "correct": 1,
-          "explanation": "Vérifier le niveau de carburant avant d'entrer dans un long tunnel.",
+          "explanation": "Tomber en panne sèche dans un tunnel est très dangereux.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q55",
-          "question": "Quand devez-vous allumer vos feux de croisement avant un tunnel ?",
+          "question": "Quand allumez-vous les feux de croisement pour un tunnel ?",
           "choices": [
-            "Bien avant d'y entrer",
-            "Juste à l'entrée même",
-            "Au milieu du tunnel"
+            "Avant d'y entrer",
+            "Au milieu",
+            "Jamais"
           ],
           "correct": 0,
-          "explanation": "Allumer les feux de croisement bien avant de s'engager dans le tunnel.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "I2_Q56",
-          "question": "Pourquoi vous conseille-t-on de fermer un œil avant d'entrer dans un tunnel ?",
-          "choices": [
-            "Pour éviter l'effet de trou noir",
-            "Pour reposer vos yeux avant",
-            "Pour mieux juger les distances"
-          ],
-          "correct": 0,
-          "explanation": "Fermer un œil permet d'éviter l'effet de \"trou noir\" à l'entrée du tunnel.",
+          "explanation": "Avant l'entrée, pour voir et être vu.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q57",
-          "question": "Vous roulez dans un tunnel sombre. Les feux de croisement sont obligatoires si la visibilité est inférieure à combien de mètres ?",
+          "question": "Les feux de croisement sont obligatoires quand on voit à moins de :",
           "choices": [
-            "100 mètres",
-            "200 mètres",
-            "300 mètres",
-            "50 mètres"
+            "200 m",
+            "100 m",
+            "50 m"
           ],
-          "correct": 1,
-          "explanation": "Les feux de croisement sont obligatoires si la visibilité est inférieure à 200 m.",
+          "correct": 0,
+          "explanation": "Visibilité inférieure à 200 m : feux de croisement.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q58",
-          "question": "Vous rouliez avec les antibrouillards. Que faites-vous en entrant dans le tunnel ?",
+          "question": "Vous rouliez avec les antibrouillards. Dans le tunnel, vous :",
           "choices": [
-            "Vous les éteignez",
-            "Vous les gardez allumés",
-            "Vous ajoutez les feux de route"
+            "Les éteignez",
+            "Les gardez",
+            "Ajoutez les feux de route"
           ],
           "correct": 0,
-          "explanation": "Éteindre les feux antibrouillard dans un tunnel (pas de conditions météo justifiant leur usage).",
+          "explanation": "Pas de brouillard dans le tunnel : on les éteint.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q59",
           "question": "Pouvez-vous vous arrêter sur la chaussée dans un tunnel ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit de stationner ou de s'arrêter sur la chaussée dans un tunnel.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement interdits.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q60",
           "question": "Pouvez-vous faire demi-tour dans un tunnel ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le demi-tour est interdit dans un tunnel.",
+          "correct": 0,
+          "explanation": "Interdit.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q61",
-          "question": "Pouvez-vous faire marche arrière dans un tunnel ?",
+          "question": "Pouvez-vous reculer dans un tunnel ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "La marche arrière est interdite dans un tunnel.",
+          "correct": 0,
+          "explanation": "Interdit.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q62",
-          "question": "Vous êtes témoin d'un accident dans un tunnel. Comment prévenez-vous les secours ?",
+          "question": "Accident dans un tunnel, sans fumée. Comment prévenez-vous les secours ?",
           "choices": [
-            "Par le téléphone d'urgence",
-            "Par GSM en roulant, sans plus",
-            "En klaxonnant pour alerter"
+            "Par le téléphone d'urgence du tunnel",
+            "En klaxonnant",
+            "En roulant avec le GSM"
           ],
           "correct": 0,
-          "explanation": "Utiliser le téléphone d'urgence du tunnel de préférence, sinon le 112.",
+          "explanation": "Le téléphone d'urgence indique tout de suite où vous êtes.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q63",
-          "question": "Un incendie se déclare dans le tunnel où vous vous trouvez. Où garez-vous votre voiture ?",
+          "question": "Incendie dans le tunnel. Où mettez-vous la voiture ?",
           "choices": [
-            "À gauche de la chaussée",
-            "À droite de la chaussée",
-            "Au milieu du tunnel",
-            "Vous continuez à rouler"
+            "Le plus à droite possible",
+            "À gauche",
+            "Au milieu"
           ],
-          "correct": 1,
-          "explanation": "En cas de feu dans un tunnel, stationner à droite.",
+          "correct": 0,
+          "explanation": "À droite, pour laisser passer les secours.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q64",
-          "question": "Vous évacuez votre voiture dans un tunnel en feu. Devez-vous emporter votre clé ?",
+          "question": "Vous quittez la voiture dans un tunnel en feu. Et la clé ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Je la laisse dans la voiture",
+            "Je l'emporte",
+            "Je ferme à clé"
           ],
-          "correct": 1,
-          "explanation": "Laisser la clé sur le contact (ou le transpondeur sur le siège) pour permettre aux secours de déplacer le véhicule.",
+          "correct": 0,
+          "explanation": "Les secours doivent pouvoir déplacer la voiture.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q65",
-          "question": "Vous évacuez un tunnel en feu à pied. Dans quelle direction allez-vous ?",
+          "question": "Vous évacuez un tunnel en feu à pied. Où allez-vous ?",
           "choices": [
-            "Vers l'endroit d'où vous venez",
-            "Dans le sens de la circulation",
-            "Vers le milieu du tunnel"
+            "Vers la sortie de secours la plus proche, loin de la fumée",
+            "Vers le feu",
+            "Vous restez dans la voiture"
           ],
           "correct": 0,
-          "explanation": "Évacuer de préférence en sens inverse de la circulation, vers l'entrée du tunnel.",
-          "theoryCardIndex": 5
-        },
-        {
-          "id": "I2_Q66",
-          "question": "Comment les instructions d'évacuation d'un tunnel vous parviennent-elles ?",
-          "choices": [
-            "Par des haut-parleurs du tunnel",
-            "Par la radio locale, sans plus",
-            "Par un SMS envoyé au conducteur"
-          ],
-          "correct": 0,
-          "explanation": "Les instructions d'urgence sont souvent diffusées via les hauts-parleurs du tunnel.",
+          "explanation": "Suivez les sorties de secours, loin de la fumée.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q67",
-          "question": "Vers quoi mène une sortie de secours dans un tunnel ?",
+          "question": "Où mène une sortie de secours dans un tunnel ?",
           "choices": [
-            "Vers des abris d'évacuation",
-            "Vers la chaussée opposée",
+            "Vers un abri sûr",
+            "Vers la chaussée d'en face",
             "Vers la bande d'arrêt d'urgence"
           ],
           "correct": 0,
-          "explanation": "La sortie de secours mène vers des abris équipés de voies d'évacuation.",
+          "explanation": "Vers un abri protégé de la fumée.",
           "theoryCardIndex": 5
         },
         {
           "id": "I2_Q68",
-          "question": "Vous êtes impliqué dans un accident et vous quittez les lieux en sachant que vous l'avez probablement causé. Comment appelle-t-on cela ?",
+          "question": "Vous causez un accident et partez sans rien dire. C'est :",
           "choices": [
-            "Une fuite devant la police",
             "Un délit de fuite",
             "Un refus d'obtempérer",
-            "Un défaut de constat"
-          ],
-          "correct": 1,
-          "explanation": "Le délit de fuite = quitter intentionnellement les lieux d'un accident que vous avez causé pour échapper aux constatations.",
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "I2_Q69",
-          "question": "Quels éléments constituent le délit de fuite ?",
-          "choices": [
-            "Partir en se sachant impliqué",
-            "La vitesse, l'accident, la fuite",
-            "Le refus et le constat non signé"
+            "Rien si personne n'a vu"
           ],
           "correct": 0,
-          "explanation": "Les 3 éléments : abandon intentionnel + connaissance d'être la cause + intention d'échapper aux constatations.",
+          "explanation": "Partir en sachant qu'on est impliqué : délit de fuite.",
           "theoryCardIndex": 6
         },
         {
@@ -1809,31 +1678,29 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le délit de fuite est sévèrement puni : emprisonnement, amende et déchéance du droit de conduire.",
+          "explanation": "Prison, amende et déchéance du droit de conduire possibles.",
           "theoryCardIndex": 6
         },
         {
           "id": "I2_Q71",
-          "question": "Vous causez un accident et vous quittez les lieux en pensant que personne ne vous a vu. Est-ce un délit de fuite ?",
-          "choices": [
-            "Non, si personne ne vous a vu",
-            "Oui, c'est un délit de fuite",
-            "Non, si les dégâts sont mineurs",
-            "Cela dépend des témoins"
-          ],
-          "correct": 1,
-          "explanation": "Même si personne ne vous a vu, dès lors que vous doutez avoir causé l'accident et quittez les lieux, c'est un délit de fuite.",
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "I2_Q72",
-          "question": "Pouvez-vous quitter les lieux d'un accident en laissant vos coordonnées ?",
+          "question": "Personne ne vous a vu causer l'accident. Partir est-il un délit de fuite ?",
           "choices": [
             "Oui",
             "Non"
           ],
-          "correct": 1,
-          "explanation": "Toute personne impliquée doit rester sur place. Seule exception : dégâts sur propriété privée sans propriétaire trouvé (laisser ses coordonnées).",
+          "correct": 0,
+          "explanation": "Témoins ou pas, c'est un délit de fuite.",
+          "theoryCardIndex": 6
+        },
+        {
+          "id": "I2_Q72",
+          "question": "Accident avec un autre conducteur présent : pouvez-vous partir en laissant vos coordonnées ?",
+          "choices": [
+            "Non",
+            "Oui"
+          ],
+          "correct": 0,
+          "explanation": "Vous restez sur place pour les constatations.",
           "theoryCardIndex": 6
         }
       ]
