@@ -2071,54 +2071,27 @@
       ],
       "questions": [
         {
-          "id": "C3_Q1",
-          "question": "Quelle est la double fonction des feux d'une voiture ?",
-          "choices": [
-            "Mieux voir et être vu sans éblouir",
-            "Éclairer la route et la décorer",
-            "Signaler et réchauffer le moteur"
-          ],
-          "correct": 0,
-          "explanation": "Les feux ont une double fonction : mieux voir et mieux être vu par les autres usagers, sans éblouir.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/C3_Q1.webp"
-        },
-        {
-          "id": "C3_Q2",
-          "question": "Quels sont les quatre types de feux d'une voiture ?",
-          "choices": [
-            "Croisement, route, brouillard, position",
-            "Clignotants, warnings, phares, veilleuses",
-            "Avant, arrière, latéraux, de toit"
-          ],
-          "correct": 0,
-          "explanation": "Les quatre types de feux sont : feux de croisement, feux de route, feux antibrouillard avant et feux de position.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/C3_Q2.webp"
-        },
-        {
           "id": "C3_Q3",
-          "question": "Les feux antibrouillard avant sont-ils présents sur toutes les voitures ?",
+          "question": "Les feux de brouillard avant sont-ils obligatoires sur une voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Les feux antibrouillard avant ne sont pas présents sur toutes les voitures. Leur présence n'étant pas obligatoire, il n'est jamais obligatoire de les allumer.",
+          "explanation": "Ils ne sont pas obligatoires, et on n'est jamais obligé de les allumer.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C3_Q3.webp"
         },
         {
           "id": "C3_Q4",
-          "question": "Vous revisez les types de feux. Quels feux eclairent le moins ?",
+          "question": "Quels feux éclairent le moins ?",
           "choices": [
-            "Les feux de croisement",
-            "Les feux de route",
             "Les feux de position",
-            "Les feux antibrouillard"
+            "Les feux de croisement",
+            "Les feux de route"
           ],
-          "correct": 2,
-          "explanation": "Les feux de position éclairent le moins. Ils ne sont pas utilisés pour circuler.",
+          "correct": 0,
+          "explanation": "Les feux de position signalent la voiture mais n'éclairent pas la route : on ne roule pas avec eux.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C3_Q4.webp"
         },
@@ -2130,682 +2103,602 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "Toutes les voitures ont des feux de position, mais toutes n'ont pas des feux de stationnement.",
+          "explanation": "Toutes ont des feux de position, mais pas toutes un feu de stationnement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C3_Q6.webp"
         },
         {
-          "id": "C3_Q7",
-          "question": "Devez-vous savoir reconnaître les logos des feux sur le tableau de bord ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "Vous devez être capable de reconnaître les logos de chaque type de feux sur le tableau de bord.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/C3_Q7.webp"
-        },
-        {
           "id": "C3_Q8",
-          "question": "À quoi ressemble le logo des feux de route sur le tableau de bord ?",
+          "question": "À quoi ressemble le témoin des feux de route ?",
           "choices": [
             "Des traits horizontaux droits",
             "Des traits inclinés vers le bas",
-            "Un symbole rond et plein"
+            "Un rond plein"
           ],
           "correct": 0,
-          "explanation": "Le logo des feux de route se distingue par des traits horizontaux droits (lumière projetée droit devant).",
+          "explanation": "Feux de route : traits droits. Feux de croisement : traits inclinés vers le bas.",
           "theoryCardIndex": 0,
           "image": "/images/questions/C3_Q8.webp"
         },
         {
           "id": "C3_Q9",
-          "question": "Vous allumez vos feux de croisement. Quels autres feux s'allument en même temps ?",
+          "question": "Quels feux s'allument toujours avec les feux de croisement ?",
           "choices": [
-            "Les feux de position avant et arrière",
-            "Les feux antibrouillard avant seuls",
-            "Les feux rouges arrière, sans plus"
+            "Les feux de position et les feux rouges arrière",
+            "Les feux de brouillard avant",
+            "Les feux rouges arrière seuls"
           ],
           "correct": 0,
-          "explanation": "Quand vous allumez les feux de croisement ou de route, les deux feux de position à l'avant et deux feux rouges à l'arrière s'allument également.",
+          "explanation": "Avec les feux de croisement s'allument les feux de position avant et les feux rouges arrière.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q9.webp"
         },
         {
           "id": "C3_Q11",
-          "question": "Quand devez-vous allumer les feux de croisement ou de route ?",
+          "question": "Quand roulez-vous avec les feux de croisement ou de route ?",
           "choices": [
             "De la tombée au lever du jour",
-            "À partir de minuit, pas avant",
-            "Sur autoroute et route rapide"
+            "À partir de minuit",
+            "Sur autoroute seulement"
           ],
           "correct": 0,
-          "explanation": "Dans l'obscurité, les feux de croisement ou de route doivent être allumés dès la tombée du jour jusqu'au lever du jour.",
+          "explanation": "De la tombée au lever du jour, et chaque fois qu'on ne voit plus à 200 m environ.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q11.webp"
         },
         {
           "id": "C3_Q12",
-          "question": "En journée sous forte pluie, quand allumer les feux de croisement ?",
+          "question": "En journée, il pleut fort. Quand allumez-vous les feux de croisement ?",
           "choices": [
-            "Si la visibilité est sous 200 m",
-            "Par beau temps comme par pluie",
-            "En cas de brouillard épais seul"
+            "Si vous ne voyez plus à 200 m",
+            "Jamais en journée",
+            "Seulement dans le brouillard"
           ],
           "correct": 0,
-          "explanation": "Pendant la journée, les feux de croisement doivent être allumés quand la visibilité est inférieure à 200 mètres.",
+          "explanation": "De jour, dès que la visibilité tombe sous 200 m environ.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q12.webp"
         },
         {
-          "id": "C3_Q14",
-          "question": "Vous oubliez d'allumer vos feux de croisement alors que c'est obligatoire. Quelle infraction commettez-vous ?",
-          "choices": [
-            "Un simple oubli sans consequence",
-            "Une infraction grave",
-            "Une infraction legere",
-            "Pas une infraction"
-          ],
-          "correct": 1,
-          "explanation": "Ne pas allumer les feux de croisement quand c'est obligatoire est une infraction grave.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/C3_Q14.webp"
-        },
-        {
           "id": "C3_Q16",
-          "question": "De nuit sur une route éclairée où vous voyez à 100 m, pouvez-vous allumer les feux de route ?",
+          "question": "Rue bien éclairée en agglomération : vous voyez à 100 m. Pouvez-vous rouler en feux de route ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Les feux de route sont interdits quand la route est éclairée de manière continue et suffisante pour voir à 100 mètres.",
+          "explanation": "Interdit quand l'éclairage permet de voir à 100 m environ.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q16.webp"
         },
         {
           "id": "C3_Q17",
-          "question": "Vous suivez un véhicule à 40 mètres sans vouloir le dépasser. Pouvez-vous garder les feux de route ?",
+          "question": "Vous suivez une voiture à 40 m, sans vouloir la dépasser. Gardez-vous les feux de route ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Les feux de route sont interdits quand vous suivez un véhicule à moins de 50 mètres sans intention immédiate de le dépasser.",
+          "explanation": "À moins de 50 m derrière un véhicule, feux de croisement (sauf pendant un dépassement).",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q17.webp"
         },
         {
           "id": "C3_Q18",
-          "question": "Un véhicule arrive en face alors que vous roulez en feux de route. Devez-vous passer en croisement ?",
+          "question": "Une voiture arrive en face et vous êtes en feux de route. Que faites-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Vous passez en feux de croisement",
+            "Vous gardez les feux de route",
+            "Vous éteignez tout"
           ],
           "correct": 0,
-          "explanation": "Vous devez passer aux feux de croisement pour ne pas éblouir les usagers venant en sens inverse.",
+          "explanation": "Vous passez en croisement pour ne pas éblouir celui qui arrive.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q18.webp"
         },
         {
           "id": "C3_Q19",
-          "question": "Vous roulez la nuit le long d'un canal et un bateau approche. Pouvez-vous garder les feux de route ?",
+          "question": "La nuit, le long d'un canal, un bateau approche. Gardez-vous les feux de route ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Les feux de route sont interdits à l'approche d'un bateau, comme à l'approche d'un véhicule sur rails.",
+          "explanation": "Feux de croisement à l'approche d'un bateau ou d'un tram dont le conducteur risque d'être ébloui.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q19.webp"
         },
         {
           "id": "C3_Q21",
-          "question": "Vous vous apprêtez à dépasser un véhicule de nuit. Pouvez-vous allumer les feux de route ?",
+          "question": "La nuit, vous dépassez une voiture. Les feux de route peuvent-ils rester allumés ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Quand vous vous apprêtez à dépasser ou êtes en train de dépasser, les feux de route peuvent être allumés.",
+          "explanation": "Pendant un dépassement, les feux de route sont permis, sauf si quelqu'un arrive en face.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q21.webp"
         },
         {
           "id": "C3_Q22",
-          "question": "Vous suivez un véhicule à 40 mètres avec l'intention de le dépasser. Pouvez-vous garder les feux de route ?",
+          "question": "Vous suivez une voiture à 40 m et allez la dépasser tout de suite. Gardez-vous les feux de route ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Si vous avez l'intention immédiate de dépasser, vous pouvez garder les feux de route même à moins de 50 mètres.",
+          "explanation": "Si vous dépassez, les feux de route sont permis même à moins de 50 m.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q22.webp"
         },
         {
           "id": "C3_Q24",
-          "question": "Un véhicule arrive en face pendant votre dépassement de nuit. Que faites-vous ?",
+          "question": "Pendant votre dépassement de nuit, une voiture arrive en face. Que faites-vous ?",
           "choices": [
             "Vous passez en feux de croisement",
             "Vous gardez les feux de route",
-            "Vous éteignez tous vos feux"
+            "Vous éteignez vos feux"
           ],
           "correct": 0,
-          "explanation": "Même pendant un dépassement, si un véhicule arrive en sens inverse, vous devez passer aux feux de croisement.",
+          "explanation": "Même en dépassant, vous passez en croisement face à quelqu'un qui arrive.",
           "theoryCardIndex": 1,
           "image": "/images/questions/C3_Q24.webp"
         },
         {
           "id": "C3_Q25",
-          "question": "Les feux antibrouillard avant sont-ils obligatoires ?",
+          "question": "Brouillard épais, visibilité 50 m. Devez-vous allumer les feux de brouillard avant ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, ils ne sont jamais obligatoires",
+            "Oui, sous 100 m",
+            "Oui, sous 200 m"
           ],
-          "correct": 1,
-          "explanation": "Les feux brouillard avant ne sont pas obligatoires sur une voiture et il n'est jamais obligatoire de les allumer.",
+          "correct": 0,
+          "explanation": "Les feux de brouillard avant sont permis, jamais obligatoires.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q25.webp"
         },
         {
           "id": "C3_Q26",
-          "question": "Dans quels cas pouvez-vous utiliser les feux antibrouillard avant ?",
+          "question": "Quand pouvez-vous utiliser les feux de brouillard avant ?",
           "choices": [
             "Brouillard, neige ou forte pluie",
-            "Chaque fois qu'il fait sombre",
-            "Dès que la visibilité baisse"
+            "Dès qu'il fait sombre",
+            "Pour mieux voir les bords la nuit"
           ],
           "correct": 0,
-          "explanation": "Les feux brouillard avant ne peuvent être utilisés qu'en cas de brouillard, chute de neige ou forte pluie.",
+          "explanation": "Seulement par brouillard, chute de neige ou forte pluie.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q26.webp"
         },
         {
           "id": "C3_Q27",
-          "question": "Dans le brouillard, les feux antibrouillard avant peuvent-ils remplacer les feux de croisement ?",
+          "question": "Dans le brouillard, les feux de brouillard avant peuvent-ils remplacer les feux de croisement ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les feux brouillard avant peuvent remplacer les feux de croisement/route ou être allumés simultanément.",
+          "explanation": "Oui, ou être allumés en même temps.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q27.webp"
         },
         {
           "id": "C3_Q28",
-          "question": "Les feux antibrouillard arrière sont-ils obligatoires sur une voiture ?",
+          "question": "Les feux de brouillard arrière sont-ils obligatoires sur une voiture ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Contrairement aux feux brouillard avant, les feux brouillard arrière (un ou deux feux rouges) sont obligatoires sur une voiture.",
+          "explanation": "Oui, au moins un feu de brouillard arrière rouge.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q28.webp"
         },
         {
           "id": "C3_Q29",
-          "question": "Dans le brouillard, quand les feux antibrouillard arrière doivent-ils être allumés ?",
+          "question": "Le brouillard se lève : vous voyez maintenant à 110 m. Le feu de brouillard arrière :",
           "choices": [
-            "Sous environ 100 mètres de visibilité",
-            "Sous environ 200 mètres de visibilité",
-            "Dès qu'un peu de brouillard apparaît"
+            "Ne peut plus être allumé",
+            "Doit rester allumé",
+            "Peut rester allumé"
           ],
           "correct": 0,
-          "explanation": "En cas de brouillard, les feux brouillard arrière doivent être allumés quand la visibilité est inférieure à 100 mètres.",
+          "explanation": "Par brouillard, il s'allume seulement sous 100 m. Au-delà, il est interdit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q29.webp"
         },
         {
           "id": "C3_Q30",
-          "question": "Sous une forte pluie, quand les feux antibrouillard arrière doivent-ils être allumés ?",
+          "question": "Forte pluie, visibilité 130 m. Allumez-vous le feu de brouillard arrière ?",
           "choices": [
-            "Toujours en cas de forte pluie",
-            "Sous 100 mètres de visibilité",
-            "Sous 200 mètres de visibilité"
+            "Oui, toujours en cas de forte pluie",
+            "Non, la visibilité dépasse 100 m"
           ],
           "correct": 0,
-          "explanation": "En cas de forte pluie, les feux brouillard arrière doivent toujours être allumés (pas de seuil de visibilité).",
+          "explanation": "Par forte pluie, le feu de brouillard arrière s'allume toujours, sans seuil.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q30.webp"
         },
         {
           "id": "C3_Q32",
-          "question": "Quelle différence de condition entre brouillard, neige et forte pluie ?",
+          "question": "Il neige fort, visibilité 80 m. Quels feux devez-vous allumer ?",
           "choices": [
-            "Brouillard : sous 100 m ; pluie : toujours",
-            "Brouillard : toujours ; pluie : sous 100 m",
-            "Les trois cas sont exactement pareils"
+            "Croisement et brouillard arrière",
+            "Croisement seulement",
+            "Croisement et brouillard avant et arrière"
           ],
           "correct": 0,
-          "explanation": "Brouillard et neige : feux brouillard arrière obligatoires si visibilité < 100 m. Forte pluie : toujours obligatoires.",
+          "explanation": "Sous 200 m : croisement. Neige et moins de 100 m : brouillard arrière. Le brouillard avant reste facultatif.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q32.webp"
         },
         {
           "id": "C3_Q33",
-          "question": "Vous entrez soudainement dans un banc de brouillard. Que devez-vous faire ?",
+          "question": "Vous entrez soudain dans un banc de brouillard. Que faites-vous ?",
           "choices": [
-            "Réduire progressivement l'allure",
-            "Vous arrêter immédiatement",
-            "Allumer les feux de route"
+            "Vous ralentissez progressivement",
+            "Vous freinez brusquement",
+            "Vous allumez les feux de route"
           ],
           "correct": 0,
-          "explanation": "En entrant dans un banc de brouillard, vous devez réduire progressivement votre vitesse.",
+          "explanation": "Ralentir progressivement : un freinage brusque surprend ceux qui suivent.",
           "theoryCardIndex": 2,
           "image": "/images/questions/C3_Q33.webp"
         },
         {
           "id": "C3_Q35",
-          "question": "Quand devez-vous allumer des feux sur un véhicule en stationnement ?",
+          "question": "Votre voiture est garée sur une route non éclairée, la nuit. Faut-il des feux ?",
           "choices": [
-            "De la tombée au lever du jour",
-            "De jour comme de nuit, en continu",
-            "En stationnement, aucun feu"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "En stationnement, les feux doivent être allumés entre la tombée et le lever du jour, et quand la visibilité est réduite à moins de 200 mètres.",
+          "explanation": "La nuit, une voiture garée se signale par ses feux, si l'éclairage public ne la rend pas visible à 100 m.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q35.webp"
         },
         {
           "id": "C3_Q36",
-          "question": "Vous stationnez de nuit. Quels feux allumez-vous à l'avant ?",
+          "question": "Garé la nuit sur une route non éclairée : quels feux à l'avant ?",
           "choices": [
             "Un ou deux feux de position",
             "Les feux de croisement",
-            "Les feux antibrouillard"
+            "Les feux de brouillard"
           ],
           "correct": 0,
-          "explanation": "À l'avant, en stationnement de nuit : un ou deux feux de position blancs ou ambrés.",
+          "explanation": "À l'avant : un ou deux feux de position.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q36.webp"
         },
         {
           "id": "C3_Q37",
-          "question": "Vous stationnez de nuit. Quels feux allumez-vous à l'arrière ?",
+          "question": "Garé la nuit sur une route non éclairée : quels feux à l'arrière ?",
           "choices": [
             "Un ou deux feux rouges",
             "Les feux de brouillard",
             "Les quatre clignotants"
           ],
           "correct": 0,
-          "explanation": "À l'arrière, en stationnement de nuit : un ou deux feux rouges.",
+          "explanation": "À l'arrière : un ou deux feux rouges.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q37.webp"
         },
         {
           "id": "C3_Q38",
-          "question": "Vous êtes stationné par temps de brouillard. Pouvez-vous allumer les feux de croisement ?",
+          "question": "Brouillard épais, vous êtes garé sur la chaussée. Quelle affirmation est fausse ?",
           "choices": [
-            "Oui, mais ce n'est pas obligatoire",
-            "Oui, et c'est même obligatoire",
-            "Non, c'est exclu en stationnement"
+            "Le feu de brouillard arrière doit être allumé",
+            "Les feux de position doivent être allumés",
+            "Les feux de brouillard avant peuvent être allumés"
           ],
           "correct": 0,
-          "explanation": "Par brouillard, neige ou forte pluie, en stationnement, vous POUVEZ utiliser les feux de croisement ou antibrouillard, mais ce n'est pas obligatoire.",
+          "explanation": "À l'arrêt par brouillard, le feu de brouillard arrière est permis, pas obligatoire.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q38.webp"
         },
         {
           "id": "C3_Q39",
-          "question": "En agglomération, pouvez-vous remplacer les feux de position par un feu de stationnement ?",
+          "question": "En agglomération, pouvez-vous remplacer vos feux de position par un feu de stationnement ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, si la voiture est parallèle et sans remorque",
+            "Non, jamais",
+            "Oui, toujours"
           ],
           "correct": 0,
-          "explanation": "En agglomération, le feu de stationnement peut remplacer les feux de position si le véhicule est parallèle à la chaussée et sans remorque.",
+          "explanation": "En agglomération, voiture rangée parallèlement et sans remorque : le feu de stationnement suffit.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q39.webp"
         },
         {
           "id": "C3_Q40",
-          "question": "De quel côté devez-vous allumer le feu de stationnement ?",
+          "question": "De quel côté allumez-vous le feu de stationnement ?",
           "choices": [
-            "Du côté de l'axe de la chaussée",
-            "Du côté du trottoir et du bord",
-            "Des deux côtés à la fois"
+            "Du côté du milieu de la chaussée",
+            "Du côté du trottoir",
+            "Des deux côtés"
           ],
           "correct": 0,
-          "explanation": "Seul le feu du côté de l'axe de la chaussée peut être utilisé comme feu de stationnement.",
+          "explanation": "Seul le feu du côté de l'axe de la chaussée compte.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q40.webp"
         },
         {
           "id": "C3_Q41",
-          "question": "Vous êtes garé en agglomération mais pas parallèlement à la chaussée. Le feu de stationnement suffit-il ?",
+          "question": "Garé en agglomération, en épi (pas parallèle). Le feu de stationnement suffit-il ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le feu de stationnement n'est permis qu'à la condition d'être garé parallèlement à la chaussée.",
+          "explanation": "Il faut être rangé parallèlement à la chaussée.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q41.webp"
         },
         {
           "id": "C3_Q42",
-          "question": "Vous êtes garé en agglomération, parallèle, mais avec une remorque. Le feu de stationnement suffit-il ?",
+          "question": "Garé en agglomération, parallèle, avec une remorque attelée. Le feu de stationnement suffit-il ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le feu de stationnement est interdit si une remorque est attelée : il faut utiliser les feux de position.",
+          "explanation": "Avec une remorque attelée, il faut les feux de position.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q42.webp"
         },
         {
           "id": "C3_Q43",
-          "question": "Vous stationnez de nuit hors agglomération. Le feu de stationnement seul suffit-il ?",
+          "question": "Garé la nuit hors agglomération. Le feu de stationnement suffit-il ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Hors agglomération, le feu de stationnement ne suffit pas : il faut les feux de position.",
+          "explanation": "Hors agglomération, il faut les feux de position.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q43.webp"
         },
         {
-          "id": "C3_Q44",
-          "question": "Quelle différence pour le feu de stationnement entre agglomération et hors agglomération ?",
-          "choices": [
-            "Il suffit en agglomération, pas dehors",
-            "Il suffit partout, sans distinction",
-            "Hors agglomération, aucun feu la nuit"
-          ],
-          "correct": 0,
-          "explanation": "En agglomération (conditions : parallèle, sans remorque), le feu de stationnement peut suffire. Hors agglomération, les feux de position sont toujours requis.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/C3_Q44.webp"
-        },
-        {
           "id": "C3_Q45",
-          "question": "Vous êtes garé hors agglomération, parallèle, sans remorque. Quels feux utilisez-vous ?",
+          "question": "Garé hors agglomération, parallèle, sans remorque, la nuit. Quels feux ?",
           "choices": [
             "Les feux de position",
             "Le feu de stationnement",
             "Les feux de croisement"
           ],
           "correct": 0,
-          "explanation": "Hors agglomération, même si toutes les conditions sont remplies, il faut les feux de position.",
+          "explanation": "Hors agglomération, toujours les feux de position.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q45.webp"
         },
         {
           "id": "C3_Q46",
-          "question": "Quelles conditions permettent d'utiliser le feu de stationnement seul ?",
+          "question": "Quand le feu de stationnement peut-il suffire ?",
           "choices": [
-            "En agglomération, parallèle, sans remorque",
-            "Partout sauf sur autoroute et voie rapide",
-            "Hors agglomération, de nuit surtout"
+            "En agglomération, garé parallèlement, sans remorque",
+            "Partout, sauf sur autoroute",
+            "Hors agglomération"
           ],
           "correct": 0,
-          "explanation": "Feu de stationnement seul autorisé en agglomération, véhicule parallèle à la chaussée, sans remorque, feu allumé du côté de l'axe.",
+          "explanation": "Les trois conditions ensemble, et le feu du côté de l'axe.",
           "theoryCardIndex": 3,
           "image": "/images/questions/C3_Q46.webp"
         },
         {
           "id": "C3_Q47",
-          "question": "Dans quels cas pouvez-vous allumer les quatre clignotants ?",
+          "question": "Quand pouvez-vous allumer vos quatre clignotants ?",
           "choices": [
-            "Panne, danger, bus scolaire à l'arrêt",
-            "Pour un stationnement en double file",
-            "Pour remercier un autre conducteur"
+            "Panne, danger d'accident ou transport scolaire",
+            "Pour stationner en double file",
+            "Pour remercier quelqu'un"
           ],
           "correct": 0,
-          "explanation": "Les warnings ne sont autorisés que dans 3 cas : panne, risque d'accident imminent, ou bus scolaire embarquant/débarquant des enfants.",
+          "explanation": "Panne, risque d'accident imminent, ou transport scolaire qui fait monter ou descendre des enfants.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q47.webp"
         },
         {
           "id": "C3_Q50",
-          "question": "Vous êtes mal garé et vous allumez vos warnings. Est-ce autorisé ?",
+          "question": "Vous stationnez là où c'est interdit. Devez-vous allumer vos quatre clignotants ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Allumer les warnings pour signaler un mauvais stationnement est une infraction supplémentaire.",
+          "explanation": "Non : les quatre clignotants ne rendent pas permis un stationnement interdit, et ne servent pas à ça.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q50.webp"
         },
         {
           "id": "C3_Q52",
-          "question": "Un autobus scolaire est arrêté, warnings allumés. Que signifie ce signal ?",
+          "question": "Un bus scolaire est arrêté, quatre clignotants allumés. Que signifie ce signal ?",
           "choices": [
             "Des enfants montent ou descendent",
-            "Le bus est en panne sur place",
-            "Le bus va repartir bientôt"
+            "Le bus est en panne",
+            "Le bus va repartir"
           ],
           "correct": 0,
-          "explanation": "Un bus scolaire avec warnings = des enfants embarquent ou débarquent.",
+          "explanation": "Des enfants montent ou descendent.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q52.webp"
         },
         {
           "id": "C3_Q53",
-          "question": "Vous approchez d'un autobus scolaire warnings allumés. Que devez-vous faire ?",
+          "question": "Un bus scolaire est arrêté, quatre clignotants allumés. Que faites-vous ?",
           "choices": [
-            "Ralentir fortement et s'arrêter",
-            "Continuer votre route normalement",
-            "Klaxonner pour prévenir les enfants"
+            "Vous ralentissez et vous arrêtez si nécessaire",
+            "Vous vous arrêtez toujours",
+            "Vous continuez normalement"
           ],
           "correct": 0,
-          "explanation": "Quand un bus scolaire a ses warnings allumés, vous devez réduire fortement votre vitesse et vous arrêter si nécessaire.",
+          "explanation": "Vous ralentissez fortement et vous vous arrêtez si un enfant risque de traverser.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q53.webp"
         },
         {
           "id": "C3_Q54",
-          "question": "Un bus scolaire a ses warnings allumés. Pouvez-vous le dépasser ?",
+          "question": "Pouvez-vous dépasser un bus scolaire arrêté, quatre clignotants allumés ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, très prudemment",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "Vous pouvez dépasser un bus scolaire avec ses warnings allumés, mais avec précaution.",
+          "explanation": "C'est permis, mais lentement et prêt à vous arrêter.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q54.webp"
         },
         {
           "id": "C3_Q55",
-          "question": "Un bus scolaire allume ses clignotants de direction, pas ses warnings. Que signifie ce signal ?",
+          "question": "Le bus scolaire allume un seul clignotant, pas les quatre. Que signifie ce signal ?",
           "choices": [
-            "Le bus va repartir ou tourner",
+            "Il va repartir ou tourner",
             "Des enfants montent ou descendent",
-            "Le bus est en panne sur place"
+            "Il est en panne"
           ],
           "correct": 0,
-          "explanation": "Les clignotants de direction (pas les warnings) signalent que le bus va repartir ou changer de direction.",
+          "explanation": "Un seul clignotant : changement de direction ou départ.",
           "theoryCardIndex": 4,
           "image": "/images/questions/C3_Q55.webp"
         },
         {
-          "id": "C3_Q57",
-          "question": "Vous voyez un signal routier de tunnel. Quelle longueur minimale indique-t-il ?",
-          "choices": [
-            "200 metres",
-            "500 metres",
-            "1 000 metres",
-            "300 metres"
-          ],
-          "correct": 1,
-          "explanation": "Le signal de tunnel indique un tunnel d'au moins 500 mètres.",
-          "theoryCardIndex": 5,
-          "sign": "F8"
-        },
-        {
           "id": "C3_Q58",
-          "question": "Que devez-vous vérifier avant d'entrer dans un long tunnel ?",
+          "question": "Que vérifiez-vous avant d'entrer dans un long tunnel ?",
           "choices": [
-            "Le niveau de carburant",
+            "Que vous avez assez de carburant",
             "La pression des pneus",
-            "Le bon état de la radio"
+            "La radio"
           ],
           "correct": 0,
-          "explanation": "Avant d'entrer dans un long tunnel, vérifiez qu'il y a suffisamment de carburant.",
+          "explanation": "Une panne sèche dans un tunnel est dangereuse.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q58.webp"
         },
         {
           "id": "C3_Q59",
-          "question": "Vous circulez dans un tunnel ou la visibilite est inferieure a 200 metres. Quels feux devez-vous utiliser ?",
+          "question": "Dans un tunnel où vous ne voyez pas à 200 m, quels feux utilisez-vous ?",
           "choices": [
-            "Les feux de position",
             "Les feux de croisement",
-            "Les feux de route",
-            "Les feux antibrouillard"
+            "Les feux de position",
+            "Les feux de route"
           ],
-          "correct": 1,
-          "explanation": "Dans un tunnel avec visibilité < 200 m, les feux de croisement sont obligatoires.",
+          "correct": 0,
+          "explanation": "Visibilité sous 200 m : feux de croisement.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q59.webp"
         },
         {
           "id": "C3_Q60",
-          "question": "Pourquoi est-il conseillé de retirer ses lunettes de soleil avant un tunnel ?",
+          "question": "Pourquoi retirer vos lunettes de soleil avant un tunnel ?",
           "choices": [
-            "Pour éviter l'effet de trou noir",
-            "Pour mieux entendre la circulation",
-            "Pour ne pas abîmer les lunettes"
+            "Pour éviter d'être aveuglé par l'obscurité",
+            "Pour mieux entendre",
+            "Pour ne pas les abîmer"
           ],
           "correct": 0,
-          "explanation": "Les lunettes de soleil ralentissent l'adaptation des yeux à l'obscurité, créant un 'trou noir' à l'entrée du tunnel.",
+          "explanation": "Avec des lunettes de soleil, vos yeux s'habituent plus lentement à l'obscurité du tunnel.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q60.webp"
         },
         {
-          "id": "C3_Q61",
-          "question": "Comment éviter l'effet de trou noir à l'entrée d'un tunnel ?",
-          "choices": [
-            "Fermer un œil avant d'entrer",
-            "Accélérer juste avant d'entrer",
-            "Allumer les feux de route"
-          ],
-          "correct": 0,
-          "explanation": "Fermez un œil 100-200 m avant le tunnel et ouvrez-le à l'intérieur : un œil déjà adapté à l'obscurité évite le 'trou noir'.",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/C3_Q61.webp"
-        },
-        {
           "id": "C3_Q62",
-          "question": "Un incendie éclate dans un tunnel. Où devez-vous vous immobiliser ?",
+          "question": "Un incendie éclate dans le tunnel et la file s'arrête. Où vous immobilisez-vous ?",
           "choices": [
-            "Sur la bande de droite",
+            "Le plus à droite possible",
             "Sur la bande de gauche",
-            "Au milieu du tunnel"
+            "Au milieu"
           ],
           "correct": 0,
-          "explanation": "En cas d'incendie dans un tunnel, immobilisez-vous sur la bande de droite.",
+          "explanation": "Rangez-vous à droite pour laisser passer les secours, puis coupez le moteur.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q62.webp"
         },
         {
           "id": "C3_Q63",
-          "question": "Vous évacuez votre voiture dans un tunnel en feu. Que faites-vous de la clé ?",
+          "question": "Fumée épaisse dans le tunnel, vous quittez votre voiture. Quelle est l'erreur ?",
           "choices": [
-            "Vous la laissez sur le contact",
-            "Vous la prenez avec vous",
-            "Vous la cachez dans la voiture"
+            "Verrouiller la voiture",
+            "Laisser la clé sur le contact",
+            "Partir par la sortie de secours"
           ],
           "correct": 0,
-          "explanation": "Laissez la clé sur le contact (ou le transpondeur sur le siège conducteur) pour que les secours puissent déplacer le véhicule.",
+          "explanation": "Laissez la clé et ne verrouillez pas : les secours doivent pouvoir déplacer la voiture.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q63.webp"
         },
         {
           "id": "C3_Q64",
-          "question": "Vous fuyez un tunnel en feu. Dans quelle direction allez-vous ?",
+          "question": "Incendie dans le tunnel : par où quittez-vous les lieux ?",
           "choices": [
-            "À contresens de la circulation",
-            "Dans le sens de la circulation",
-            "Vers le milieu du tunnel"
+            "Par la sortie de secours la plus proche",
+            "En restant dans votre voiture",
+            "Vers le feu, pour voir ce qui se passe"
           ],
           "correct": 0,
-          "explanation": "Fuyez à contresens : les ventilateurs poussent les fumées dans le sens de la circulation, donc l'air frais vient de l'autre sens.",
+          "explanation": "À pied, vers la sortie de secours la plus proche, en vous éloignant de la fumée.",
           "theoryCardIndex": 5,
           "image": "/images/questions/C3_Q64.webp"
         },
         {
-          "id": "C3_Q66",
-          "question": "Pourquoi faut-il quitter très vite un tunnel en feu ?",
-          "choices": [
-            "Les fumées sont souvent mortelles",
-            "Pour ne pas gêner les autres",
-            "Pour protéger votre véhicule"
-          ],
-          "correct": 0,
-          "explanation": "Dans un tunnel en feu, les fumées sont souvent mortelles et le risque de flash fire (explosion soudaine) augmente avec le temps.",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/C3_Q66.webp"
-        },
-        {
           "id": "C3_Q67",
-          "question": "Comment doivent être les avertissements sonores ?",
+          "question": "Comment doit être un coup de klaxon ?",
           "choices": [
-            "Aussi brefs que possible",
-            "Longs et bien appuyés",
-            "Continus jusqu'à réaction"
+            "Le plus bref possible",
+            "Long et appuyé",
+            "Répété jusqu'à réaction"
           ],
           "correct": 0,
-          "explanation": "Les avertissements sonores doivent être aussi brefs que possible, sans excès.",
+          "explanation": "Aussi bref que possible.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q67.webp"
         },
         {
           "id": "C3_Q68",
-          "question": "Pouvez-vous installer un klaxon musical sur votre voiture ?",
+          "question": "Pouvez-vous installer un klaxon musical ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit d'utiliser d'autres avertisseurs que ceux prévus par le règlement. Pas de klaxon musical.",
+          "explanation": "Seuls les avertisseurs prévus par le règlement sont permis.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q68.webp"
         },
         {
           "id": "C3_Q69",
-          "question": "Vous circulez en agglomeration pendant la journee. Quand pouvez-vous klaxonner ?",
+          "question": "En agglomération, de jour, quand pouvez-vous klaxonner ?",
           "choices": [
-            "Quand vous voulez, sans restriction",
-            "Uniquement pour eviter un accident",
-            "Pour saluer une connaissance",
-            "Jamais en agglomeration"
+            "Seulement pour éviter un accident",
+            "Pour annoncer un dépassement",
+            "Pour saluer quelqu'un"
           ],
-          "correct": 1,
-          "explanation": "En agglomération de jour, le klaxon n'est autorisé que pour éviter un accident.",
+          "correct": 0,
+          "explanation": "En agglomération, seulement pour éviter un accident.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q69.webp"
         },
         {
           "id": "C3_Q70",
-          "question": "Hors agglomération et de jour, quand pouvez-vous klaxonner ?",
+          "question": "Vous voulez dépasser. Quand pouvez-vous l'annoncer avec un coup de klaxon ?",
           "choices": [
-            "Pour éviter un accident",
-            "Pour saluer un conducteur",
-            "Quand vous le souhaitez"
+            "De jour, hors agglomération",
+            "De jour, en agglomération",
+            "Jour et nuit, hors agglomération"
           ],
           "correct": 0,
-          "explanation": "Hors agglomération de jour, le klaxon est autorisé pour éviter un accident ET pour avertir d'un dépassement imminent.",
+          "explanation": "Le klaxon pour annoncer un dépassement : seulement de jour, hors agglomération.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q70.webp"
         },
         {
           "id": "C3_Q73",
-          "question": "De nuit, pouvez-vous klaxonner pour annoncer un dépassement ?",
+          "question": "La nuit, hors agglomération, ce conducteur klaxonne avant de dépasser. En a-t-il le droit ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, la nuit c'est un appel de phares",
+            "Oui, hors agglomération"
           ],
-          "correct": 1,
-          "explanation": "La nuit, le klaxon est remplacé par les appels de phares, sauf en cas de danger imminent.",
+          "correct": 0,
+          "explanation": "La nuit, le klaxon est remplacé par l'appel de phares, sauf danger imminent.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q73.webp"
         },
@@ -2813,24 +2706,24 @@
           "id": "C3_Q74",
           "question": "Qu'est-ce qu'un appel de phares ?",
           "choices": [
-            "Un usage bref et alterné des feux",
-            "Les feux de route allumés en continu",
-            "Les feux antibrouillard allumés"
+            "Allumer brièvement les feux de route, en alternance",
+            "Rouler en feux de route",
+            "Allumer les feux de brouillard"
           ],
           "correct": 0,
-          "explanation": "Un appel de phares = usage bref et alterné des feux de route et des feux de croisement.",
+          "explanation": "Un bref passage feux de croisement / feux de route, en alternance.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q74.webp"
         },
         {
           "id": "C3_Q75",
-          "question": "De nuit, face à un danger imminent, pouvez-vous klaxonner ?",
+          "question": "La nuit, face à un danger imminent, pouvez-vous klaxonner ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En cas de danger imminent, le klaxon reste autorisé même la nuit.",
+          "explanation": "Oui, pour éviter un accident, même la nuit.",
           "theoryCardIndex": 6,
           "image": "/images/questions/C3_Q75.webp"
         }
