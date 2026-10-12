@@ -7,7 +7,10 @@
   "D1_Q5": "Route hors agglomération à deux bandes par sens (quatre bandes au total) séparées uniquement par un marquage peint au sol, sans aucune berme centrale physique, paysage plat flamand bordé de peupliers.",
   "D1_Q6": "Vue conducteur sur une route à 2×2 voies en WALLONIE, hors agglomération, les deux sens séparés uniquement par un MARQUAGE au sol (aucune berme) : paysage nettement wallon — relief vallonné, bois de feuillus, prairies en pente, maisons en pierre bleue et toits d'ardoise au loin, clocher pointu. Aucun repère de plaine flamande.",
   "D1_Q7": "Vue conducteur sur une chaussée de la Région de Bruxelles-Capitale, HORS agglomération : deux bandes par sens séparées uniquement par un marquage routier (aucune berme centrale), bordées d'arbres et de talus enherbés, sans aucune façade ni commerce en bord de route. Au loin, dans l'axe, la silhouette des tours de bureaux du quartier Nord bruxellois. Aucun panneau de vitesse.",
-  "D1_Q8": "Route à trois bandes avec une voie centrale partagée réservée aux dépassements dans les deux sens, campagne belge.",
+  "D1_Q8": {
+    "model": 3,
+    "scene": "Vue conducteur sur une chaussée à voie centrale belge, en campagne (champs, haies, quelques fermes au loin) : une voie centrale d'asphalte sombre au milieu, et de chaque côté une bande latérale plus claire. IMPORTANT : AUCUN marquage au milieu de la route — une chaussée à voie centrale n'a pas de ligne centrale. Uniquement les DEUX lignes blanches discontinues latérales, une de chaque côté, avec les bandes latérales au revêtement plus clair le long des bords. Aucun panneau de vitesse. Ajoute un unique badge « ? » discret dans un coin."
+  },
   "D1_Q9": "Route à trois bandes avec voie centrale partagée, vue large, paysage rural belge générique.",
   "D1_Q10": "Vue conducteur à l'entrée d'une agglomération FLAMANDE : le le signal de DÉBUT D'AGGLOMÉRATION — rectangle vertical à fond BLANC portant en NOIR la silhouette de bâtiments serrés, jamais bleu — est net au premier plan, et derrière lui s'ouvre un village typiquement flamand — maisons mitoyennes en briques claires à pignons droits, rue plate bordée de peupliers, terrain sans relief. Aucun immeuble de rapport bruxellois, aucune tour de bureaux.",
   "D1_Q11": "Vue conducteur à l'entrée d'une agglomération WALLONNE : le panneau F1 est net au premier plan, et derrière lui s'ouvre un village wallon — maisons en pierre bleue et brique, toits d'ardoise, rue en pente, collines boisées et clocher en arrière-plan. Le décor doit se distinguer sans ambiguïté de celui de la Flandre et de Bruxelles.",
@@ -59,7 +62,10 @@
     "model": 3,
     "scene": "Route de campagne flamande à une bande par sens, compteur de vitesse flouté au premier plan. Ajoute un unique badge « ? » discret, sans autre mot."
   },
-  "D1_Q53": "Vue conducteur sur une ROUTE POUR AUTOMOBILES belge : le panneau F9 (silhouette de voiture blanche sur fond bleu carré) est planté au bord droit, net et au premier plan, et la route est une 2×2 voies à berme centrale. Plus loin, un panneau directionnel bleu porte un nom de localité belge plausible — il ne doit pas rester vide. Aucun panneau F5 d'autoroute : c'est bien une route pour automobiles.",
+  "D1_Q53": {
+    "model": 3,
+    "scene": "Vue conducteur sur une route ORDINAIRE en Flandre, hors agglomération : UNE SEULE bande par sens, séparée par une ligne blanche discontinue au milieu, paysage tout plat, champs à perte de vue, rangée de peupliers, aucune berme, aucune glissière, aucun panneau de vitesse. Le compteur est visible au premier plan, aiguille haute mais chiffres illisibles. Ajoute un unique badge « ? » discret dans un coin."
+  },
   "D1_Q54": "Vue conducteur sur une autoroute belge : un portique de RADAR TRONÇON enjambe la chaussée, avec ses caméras et son panneau de contrôle de vitesse, net et bien visible au premier plan. Trafic normal, filé modéré. Le dispositif de contrôle est le sujet — il change du simple pare-brise sur autoroute vide.",
   "D1_Q55": "Vue conducteur sur une autoroute belge : filé de vitesse TRÈS marqué sur la chaussée, les glissières et les arbres, rendant une allure nettement excessive, et un radar fixe orange en bord de chaussée qui vient d'être franchi. Le compteur est visible, aiguille poussée très haut, chiffres non lisibles.",
   "D1_Q56": {
@@ -313,5 +319,21 @@
     "model": 3,
     "scene": "Une voiture moderne roulant en ville avec des icônes d'assistance à la conduite discrètes sur le tableau de bord. Ajoute un unique badge « ? » discret, sans autre mot."
   },
-  "CARD_D2_p6_c1": "Un conducteur descendu de sa voiture sur une aire de repos d'autoroute, s'étirant, bouteille d'eau à la main."
+  "CARD_D2_p6_c1": "Un conducteur descendu de sa voiture sur une aire de repos d'autoroute, s'étirant, bouteille d'eau à la main.",
+  "D1_Q90": {
+    "model": 3,
+    "scene": "Vue conducteur sur une autoroute belge, de jour : devant nous, une ambulance gyrophares bleus allumés s'éloigne rapidement sur la bande de gauche. Notre voiture la suit. Compteur visible au premier plan, chiffres illisibles. Ajoute un unique badge « ? » discret dans un coin."
+  },
+  "D1_Q91": {
+    "model": 3,
+    "scene": "Vue conducteur sur une route nationale belge ordinaire, hors agglomération : une bande par sens, ligne centrale discontinue, un carrefour avec des feux tricolores au loin, quelques maisons et commerces le long de la route. Aucune autoroute visible. Ajoute un unique badge « ? » discret dans un coin."
+  },
+  "D2_Q70": {
+    "model": 3,
+    "scene": "Vue conducteur sur une autoroute belge par temps sec et ensoleillé, chaussée dégagée : loin devant, une file de voitures arrêtées, feux stop allumés. Compteur visible au premier plan, chiffres illisibles. Aucun chiffre ni distance écrits dans l'image. Ajoute un unique badge « ? » discret dans un coin."
+  },
+  "D2_Q71": {
+    "model": 3,
+    "scene": "Intérieur d'une voiture en pleine nuit noire, sur une autoroute belge déserte : le conducteur bâille, les yeux lourds. L'horloge de bord est floue et illisible. Seuls les phares éclairent la route. Ajoute un unique badge « ? » discret dans un coin."
+  }
 }
