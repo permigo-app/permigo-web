@@ -2408,39 +2408,39 @@
       "questions": [
         {
           "id": "A3_Q1",
-          "question": "Sur une piste cyclable, qui doit circuler ?",
+          "question": "Qui doit rouler sur la piste cyclable ?",
           "choices": [
-            "Les vélos et cyclomoteurs classe A",
-            "Les voitures et les camionnettes",
-            "Les piétons et les poussettes"
+            "Les vélos et les cyclomoteurs classe A",
+            "Les cyclomoteurs classe B",
+            "Les piétons"
           ],
           "correct": 0,
-          "explanation": "La piste cyclable est une partie de la voie publique (pas de la chaussée) destinée aux vélos et cyclomoteurs classe A.",
+          "explanation": "La piste cyclable est pour les vélos et les cyclomoteurs classe A. Les classe B roulent sur la chaussée.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q1.webp"
         },
         {
           "id": "A3_Q2",
-          "question": "Comment reconnaît-on une piste cyclable sur la chaussée ?",
+          "question": "À quoi reconnaît-on une piste cyclable ?",
           "choices": [
-            "À deux lignes blanches discontinues",
-            "À un revêtement rouge ou vert",
-            "À des poteaux de délimitation"
+            "À deux lignes blanches discontinues ou à un signal",
+            "À sa couleur rouge",
+            "À des poteaux le long du bord"
           ],
           "correct": 0,
-          "explanation": "La piste cyclable est délimitée par deux lignes blanches discontinues parallèles. La couleur (ocre, jaune, rouge) ne joue aucun rôle.",
+          "explanation": "Deux lignes blanches discontinues ou un signal font la piste cyclable. Sa couleur ne compte pas.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q2.webp"
         },
         {
           "id": "A3_Q4",
-          "question": "Les tricycles de moins d'un mètre de large sont-ils assimilés aux bicyclettes ?",
+          "question": "Un tricycle de moins d'un mètre de large doit-il prendre la piste cyclable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les tricycles, quadricycles et triporteurs de moins d'un mètre de large sont assimilés aux bicyclettes et doivent emprunter la piste cyclable.",
+          "explanation": "Tricycles et triporteurs de moins d'un mètre de large suivent les règles des vélos.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q4.webp"
         },
@@ -2453,45 +2453,44 @@
             "Chemin réservé aux cyclomoteurs"
           ],
           "correct": 0,
-          "explanation": "Symboles côte à côte = vélos + cyclomoteurs classe A + piétons. Les cyclomoteurs classe B ne peuvent pas y circuler.",
+          "explanation": "Ce chemin est réservé aux piétons et aux cyclistes. Les cyclomoteurs n'y sont pas admis.",
           "theoryCardIndex": 0,
           "sign": "D10"
         },
         {
           "id": "A3_Q6",
-          "question": "Sur un chemin réservé aux piétons et cyclistes, les cyclomoteurs sont-ils admis ?",
+          "question": "Sur ce chemin pour piétons et cyclistes, les cyclomoteurs sont-ils admis ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Ce chemin n'est pas accessible aux cyclomoteurs, ni de classe A ni de classe B.",
+          "explanation": "Ni les cyclomoteurs classe A, ni les classe B.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q6.webp"
         },
         {
           "id": "A3_Q8",
-          "question": "Un cycliste peut-il rouler sur le trottoir en agglomération ?",
+          "question": "Cette fille de 8 ans roule à vélo en agglomération. Peut-elle rouler sur le trottoir ?",
           "choices": [
-            "Non, sauf les enfants de moins de 10 ans",
-            "Oui, à condition de rouler au pas",
-            "Oui, si la piste cyclable est occupée"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Rouler à vélo sur le trottoir en agglomération est interdit, sauf pour les enfants de moins de 10 ans.",
+          "explanation": "Les cyclistes de moins de 10 ans peuvent toujours rouler sur le trottoir.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q8.webp"
         },
         {
           "id": "A3_Q9",
-          "question": "Hors agglomération, un cycliste peut-il circuler sur le trottoir s'il n'y a pas de piste cyclable ?",
+          "question": "Ce cycliste de 14 ans n'a pas de piste cyclable. Peut-il rouler sur le trottoir ?",
           "choices": [
-            "Oui, à droite dans le sens de la marche",
-            "Oui, dans le sens qu'il préfère",
-            "Non, le trottoir reste réservé aux piétons"
+            "Oui, hors agglomération seulement",
+            "Oui, partout",
+            "Jamais"
           ],
           "correct": 0,
-          "explanation": "Hors agglomération, sans piste cyclable, tous les cyclistes peuvent circuler sur le trottoir ou l'accotement en saillie, à droite dans le sens de la circulation.",
+          "explanation": "Hors agglomération, sans piste cyclable, un cycliste peut rouler sur le trottoir, à droite.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q9.webp"
         },
@@ -2503,109 +2502,108 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "La piste cyclable est une partie de la voie publique mais n'est PAS une partie de la chaussée.",
+          "explanation": "La piste cyclable fait partie de la voie publique, pas de la chaussée.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q11.webp"
         },
         {
           "id": "A3_Q12",
-          "question": "Pouvez-vous circuler en voiture sur une piste cyclable ?",
+          "question": "Pouvez-vous rouler en voiture sur une piste cyclable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La piste cyclable n'est pas une partie de la chaussée. Les voitures n'ont pas le droit d'y circuler.",
+          "explanation": "Les voitures ne roulent pas sur la piste cyclable.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q12.webp"
         },
         {
           "id": "A3_Q13",
-          "question": "Pouvez-vous stationner votre voiture sur une piste cyclable ?",
+          "question": "L'accotement est trop étroit. Pouvez-vous stationner un peu sur la piste cyclable ?",
           "choices": [
-            "Oui, pour un court arrêt",
-            "Non, c'est interdit",
-            "Oui, si vous mettez vos warnings",
-            "Oui, hors agglomération"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de stationner sur une piste cyclable.",
+          "explanation": "Le stationnement est interdit sur la piste cyclable, même en partie.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q13.webp"
         },
         {
           "id": "A3_Q14",
-          "question": "Pouvez-vous vous arrêter sur une piste cyclable pour faire descendre un passager ?",
+          "question": "Pouvez-vous vous arrêter sur la piste cyclable pour déposer un passager ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de s'arrêter sur une piste cyclable pour embarquer ou faire descendre un passager.",
+          "explanation": "S'arrêter sur une piste cyclable est interdit, même un instant.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q14.webp"
         },
         {
           "id": "A3_Q15",
-          "question": "Pouvez-vous traverser une piste cyclable avec votre voiture ?",
+          "question": "Pouvez-vous traverser une piste cyclable en voiture ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, pour tourner ou entrer dans une propriété",
+            "Non, jamais",
+            "Oui, pour dépasser"
           ],
           "correct": 0,
-          "explanation": "Vous pouvez traverser une piste cyclable uniquement pour changer de direction ou effectuer une manœuvre.",
+          "explanation": "Vous pouvez la traverser pour tourner ou entrer dans une propriété, en cédant le passage aux cyclistes.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A3_Q15.webp"
         },
         {
           "id": "A3_Q16",
-          "question": "À quelle distance se trouve le signal de danger rouge avant un passage pour cyclistes ?",
+          "question": "À quelle distance du passage pour cyclistes se trouve ce signal de danger ?",
           "choices": [
-            "Environ 150 mètres",
-            "Environ 50 mètres",
-            "Environ 300 mètres"
+            "Environ 150 m",
+            "Environ 50 m",
+            "Environ 300 m"
           ],
           "correct": 0,
-          "explanation": "Le signal de danger (panneau triangulaire rouge) est placé à environ 150 mètres avant le passage pour cyclistes.",
+          "explanation": "Les signaux de danger sont placés à environ 150 m du danger.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q16.webp"
         },
         {
           "id": "A3_Q17",
-          "question": "Où se trouve le signal d'indication bleu par rapport au passage pour cyclistes ?",
+          "question": "Où se trouve ce signal bleu de passage pour cyclistes ?",
           "choices": [
-            "150 mètres avant",
-            "À proximité du passage",
-            "100 mètres après",
-            "Au carrefour suivant"
+            "Juste au passage",
+            "150 m avant",
+            "100 m après"
           ],
-          "correct": 1,
-          "explanation": "Le signal d'indication bleu indiquant le passage pour cyclistes se trouve à proximité immédiate du passage.",
+          "correct": 0,
+          "explanation": "Le signal bleu est placé au passage lui-même.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q17.webp"
         },
         {
           "id": "A3_Q19",
-          "question": "Un cycliste est déjà engagé sur le passage pour cyclistes. A-t-il priorité ?",
+          "question": "Ce cycliste est déjà engagé sur le passage pour cyclistes. Qui passe ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Le cycliste",
+            "Vous",
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "Une fois que le cycliste est engagé sur le passage, il a la priorité et les conducteurs doivent lui céder le passage.",
+          "explanation": "Un cycliste engagé sur le passage a la priorité : vous le laissez passer.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A3_Q19.webp"
         },
         {
           "id": "A3_Q20",
-          "question": "Un cycliste attend au bord du passage pour cyclistes. Devez-vous vous arrêter ?",
+          "question": "Ce cycliste attend au bord du passage pour cyclistes. Devez-vous vous arrêter ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Contrairement au passage piéton, le cycliste n'a pas priorité s'il n'est pas encore engagé. Il doit céder le passage aux véhicules sur la chaussée.",
+          "explanation": "Le cycliste qui n'est pas encore engagé doit laisser passer les véhicules. Restez quand même attentif.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A3_Q20.webp"
@@ -2614,62 +2612,60 @@
           "id": "A3_Q21",
           "question": "Pouvez-vous stationner sur un passage pour cyclistes ?",
           "choices": [
-            "Oui, si c'est rapide",
-            "Non, c'est interdit",
-            "Oui, hors agglomération",
-            "Oui, la nuit"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de s'arrêter ou stationner sur un passage pour cyclistes (y compris sur l'accotement).",
+          "explanation": "Ni arrêt ni stationnement sur un passage pour cyclistes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q21.webp"
         },
         {
           "id": "A3_Q22",
-          "question": "Pouvez-vous stationner sur la chaussée à 3 mètres en deçà d'un passage pour cyclistes ?",
+          "question": "Pouvez-vous stationner sur la chaussée 3 m avant un passage pour cyclistes ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de s'arrêter ou stationner à moins de 5 mètres en deçà (avant) d'un passage pour cyclistes.",
+          "explanation": "Interdit à moins de 5 m avant un passage pour cyclistes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q22.webp"
         },
         {
           "id": "A3_Q23",
-          "question": "Pouvez-vous stationner juste AU-DELÀ d'un passage pour cyclistes ?",
+          "question": "Pouvez-vous stationner juste après un passage pour cyclistes ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Au-delà du passage (après), vous pouvez stationner, sauf si des signaux l'interdisent.",
+          "explanation": "Après le passage, c'est permis, sauf signal contraire. L'interdiction des 5 m vaut avant le passage.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q23.webp"
         },
         {
           "id": "A3_Q24",
-          "question": "Un conducteur ralentit devant un passage pour cyclistes. Pouvez-vous le dépasser ?",
+          "question": "Une voiture ralentit devant un passage pour cyclistes. Pouvez-vous la dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de dépasser un conducteur qui ralentit ou s'arrête devant un passage pour cyclistes.",
+          "explanation": "Interdit de dépasser un véhicule qui ralentit ou s'arrête devant un passage pour cyclistes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q24.webp"
         },
         {
           "id": "A3_Q25",
-          "question": "Comment devez-vous approcher un passage pour cyclistes ?",
+          "question": "Comment approchez-vous d'un passage pour cyclistes ?",
           "choices": [
             "À allure modérée",
             "À vitesse normale",
-            "En accélérant"
+            "En klaxonnant"
           ],
           "correct": 0,
-          "explanation": "On ne peut s'approcher d'un passage pour cyclistes qu'à allure modérée pour ne pas mettre en danger les cyclistes engagés.",
+          "explanation": "On approche d'un passage pour cyclistes à allure modérée.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A3_Q25.webp"
         },
@@ -2681,20 +2677,19 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "Elle est peinte sur la chaussée mais n'est ni délimitée par des lignes discontinues ni signalée : elle fait partie de la chaussée.",
+          "explanation": "Elle est peinte sur la chaussée, sans lignes discontinues ni signal : elle fait partie de la chaussée.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A3_Q28.webp"
         },
         {
           "id": "A3_Q29",
-          "question": "Pourquoi une bande cyclable suggérée n'est-elle pas une piste cyclable ?",
+          "question": "Pouvez-vous rouler en voiture sur cette bande cyclable suggérée ?",
           "choices": [
-            "Elle n'a ni lignes discontinues ni signal",
-            "Elle est trop étroite pour les vélos",
-            "Elle est réservée aux cyclomoteurs"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "La bande cyclable suggérée n'a ni lignes discontinues parallèles ni signaux routiers : deux éléments indispensables pour qualifier une piste cyclable.",
+          "explanation": "La bande cyclable suggérée fait partie de la chaussée : les voitures peuvent y rouler, en restant attentives aux cyclistes.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A3_Q29.webp"
         },
@@ -2706,47 +2701,46 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "La bande cyclable suggérée fait partie de la chaussée, contrairement à la piste cyclable.",
+          "explanation": "Oui, contrairement à la piste cyclable.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A3_Q30.webp"
         },
         {
           "id": "A3_Q32",
-          "question": "Pouvez-vous stationner sur une bande cyclable suggérée ?",
+          "question": "Pouvez-vous stationner sur cette bande cyclable suggérée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Sur une bande cyclable suggérée (partie de la chaussée), vous pouvez vous arrêter et stationner.",
+          "explanation": "Elle fait partie de la chaussée : l'arrêt et le stationnement y suivent les règles normales.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A3_Q32.webp"
         },
         {
           "id": "A3_Q33",
-          "question": "Quelle est la vitesse maximale sur une chaussée à voie centrale ?",
+          "question": "Vitesse maximale sur une chaussée à voie centrale ?",
           "choices": [
             "50 km/h",
-            "90 km/h",
             "70 km/h",
-            "30 km/h"
+            "90 km/h"
           ],
-          "correct": 2,
-          "explanation": "Sur une chaussée à voie centrale, la vitesse maximale est de 70 km/h.",
+          "correct": 1,
+          "explanation": "70 km/h sur une chaussée à voie centrale.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/A3_Q33.webp"
         },
         {
           "id": "A3_Q34",
-          "question": "Les piétons peuvent-ils emprunter la bande latérale ?",
+          "question": "Pas de trottoir. Sur quelle bande latérale marche ce piéton ?",
           "choices": [
-            "Oui, celle de gauche, à défaut de trottoir",
-            "Oui, celle de droite, à défaut de trottoir",
-            "Non, elle est réservée aux véhicules"
+            "Celle de gauche",
+            "Celle de droite",
+            "Aucune, il marche sur la voie centrale"
           ],
           "correct": 0,
-          "explanation": "Les piétons peuvent emprunter la bande latérale de gauche s'il n'y a pas de trottoir.",
+          "explanation": "Sans trottoir, le piéton peut prendre la bande latérale, à gauche par rapport à sa marche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A3_Q34.webp"
         },
@@ -2758,214 +2752,212 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "La bande latérale est destinée entre autres aux cavaliers et aux animaux de trait.",
+          "explanation": "La bande latérale accueille aussi les cavaliers.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A3_Q35.webp"
         },
         {
           "id": "A3_Q36",
-          "question": "Deux voitures doivent se croiser sur une chaussée à voie centrale. Peuvent-elles empiéter sur la bande latérale ?",
+          "question": "Deux voitures se croisent sur une chaussée à voie centrale. Peuvent-elles mordre sur la bande latérale ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les voitures peuvent empiéter sur la bande latérale pour se croiser ou dépasser, à condition de ne pas gêner les cyclistes et de respecter les distances.",
+          "explanation": "Oui, pour se croiser, sans mettre en danger ceux qui y circulent.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A3_Q36.webp"
         },
         {
           "id": "A3_Q38",
-          "question": "En agglomération, quelle distance latérale devez-vous maintenir avec un cycliste sur la bande latérale ?",
+          "question": "En agglomération, vous dépassez un cycliste sur la bande latérale. Écart minimal ?",
           "choices": [
-            "0,5 mètre",
-            "1 mètre",
-            "1,5 mètre",
-            "2 mètres"
+            "0,5 m",
+            "1 m",
+            "1,5 m"
           ],
           "correct": 1,
-          "explanation": "En agglomération, la distance latérale minimale à maintenir avec un cycliste est de 1 mètre (1,5 m hors agglomération).",
+          "explanation": "1 m en agglomération, 1,5 m hors agglomération.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A3_Q38.webp"
         },
         {
           "id": "A3_Q39",
-          "question": "Le signal de danger avec une bicyclette a combien de significations ?",
+          "question": "Ce signal de danger avec un vélo annonce :",
           "choices": [
-            "Deux",
-            "Une",
-            "Trois"
+            "Un passage pour cyclistes ou des cyclistes qui quittent la piste",
+            "Une piste cyclable obligatoire",
+            "Le début d'une zone cyclable"
           ],
           "correct": 0,
-          "explanation": "Ce signal de danger a deux significations : il indique un passage pour cyclistes OU que des cyclistes vont quitter la piste cyclable.",
+          "explanation": "Ce signal a deux sens : un passage pour cyclistes, ou des cyclistes qui quittent la piste pour la chaussée.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A3_Q39.webp"
         },
         {
           "id": "A3_Q41",
-          "question": "Un cycliste reprend sa place sur la chaussée à la fin d'une piste cyclable. A-t-il la priorité ?",
+          "question": "La piste cyclable se termine. Ce cycliste continue tout droit sur la chaussée. Qui passe ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Le cycliste",
+            "Les voitures sur la chaussée",
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "En fin de piste cyclable, le cycliste qui rejoint la chaussée a la priorité. Les voitures et motos doivent lui céder.",
+          "explanation": "En fin de piste cyclable, le cycliste qui continue tout droit sur la chaussée garde la priorité.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/A3_Q41.webp"
         },
         {
           "id": "A3_Q42",
-          "question": "Un cycliste quitte la piste cyclable à cause d'un obstacle. A-t-il la priorité ?",
+          "question": "Ce cycliste quitte la piste cyclable pour éviter un obstacle. A-t-il la priorité ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La priorité du cycliste qui rejoint la chaussée s'applique uniquement en fin de piste cyclable, pas s'il quitte la piste à cause d'un obstacle.",
+          "explanation": "Quitter la piste au milieu, pour un obstacle, est une manœuvre : le cycliste doit céder le passage.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/A3_Q42.webp"
         },
         {
           "id": "A3_Q45",
-          "question": "Pouvez-vous stationner à 3 mètres de l'endroit où les cyclistes quittent la piste pour la chaussée ?",
+          "question": "Pouvez-vous stationner à 3 m de l'endroit où les cyclistes quittent la piste pour la chaussée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de s'arrêter ou stationner à moins de 5 mètres des points de jonction entre la piste cyclable et la chaussée.",
+          "explanation": "Interdit à moins de 5 m de cet endroit.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A3_Q45.webp"
         },
         {
           "id": "A3_Q46",
-          "question": "Pouvez-vous vous arrêter à 6 mètres de l'endroit où les cyclistes rejoignent la piste cyclable depuis la chaussée ?",
+          "question": "Pouvez-vous vous arrêter à 6 m de l'endroit où les cyclistes rejoignent la piste ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'interdiction s'étend à moins de 5 mètres. À 6 mètres, c'est autorisé (sauf signal contraire).",
+          "explanation": "L'interdiction vaut à moins de 5 m. À 6 m, c'est permis, sauf signal contraire.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A3_Q46.webp"
         },
         {
           "id": "A3_Q47",
-          "question": "Un groupe de 20 cyclistes doit-il emprunter la piste cyclable ?",
+          "question": "À partir de combien de cyclistes un groupe peut-il ne pas prendre la piste cyclable ?",
           "choices": [
-            "Oui",
-            "Non"
+            "15",
+            "10",
+            "20"
           ],
-          "correct": 1,
-          "explanation": "Un groupe de 15 à 50 cyclistes n'est pas tenu d'emprunter les pistes cyclables.",
+          "correct": 0,
+          "explanation": "Un groupe de 15 à 50 cyclistes n'est pas obligé de prendre la piste cyclable.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q47.webp"
         },
         {
           "id": "A3_Q48",
-          "question": "Un groupe de 15 à 50 cyclistes peut rouler à combien de front ?",
+          "question": "Un groupe de 30 cyclistes peut rouler sur la chaussée :",
           "choices": [
-            "Deux de front",
+            "À deux de front",
             "Un seul de front",
-            "Trois de front"
+            "À trois de front"
           ],
           "correct": 0,
-          "explanation": "Un groupe de 15 à 50 cyclistes peut rouler à deux de front sur la chaussée.",
+          "explanation": "Un groupe de 15 à 50 cyclistes peut rouler à deux de front.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q48.webp"
         },
         {
           "id": "A3_Q49",
-          "question": "Quelle bande de circulation un groupe de 15 à 50 cyclistes peut-il utiliser ?",
+          "question": "Quelle bande un groupe de cyclistes peut-il utiliser ?",
           "choices": [
-            "La bande de droite",
-            "La bande de gauche",
-            "N'importe quelle bande"
+            "Celle de droite",
+            "Celle de gauche",
+            "N'importe laquelle"
           ],
           "correct": 0,
-          "explanation": "Un groupe de cyclistes doit utiliser uniquement la bande de droite.",
+          "explanation": "Le groupe roule sur la bande de droite.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q49.webp"
         },
         {
           "id": "A3_Q50",
-          "question": "Si un seul véhicule d'escorte accompagne un groupe de 15 à 50, où doit-il se placer ?",
+          "question": "Un seul véhicule accompagne ce groupe de cyclistes. Où se place-t-il ?",
           "choices": [
-            "Devant le groupe",
             "Derrière le groupe",
-            "Au milieu du groupe",
-            "Sur la bande de gauche"
+            "Devant le groupe",
+            "Au milieu du groupe"
           ],
-          "correct": 1,
-          "explanation": "Si un seul véhicule d'escorte est présent, il doit suivre le groupe (se placer derrière).",
+          "correct": 0,
+          "explanation": "Avec un seul véhicule d'escorte, celui-ci suit le groupe.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q50.webp"
         },
         {
           "id": "A3_Q51",
-          "question": "À quelle distance le véhicule d'escorte doit-il se trouver du groupe ?",
+          "question": "À quelle distance du groupe roule le véhicule d'escorte ?",
           "choices": [
-            "10 mètres",
-            "Environ 30 mètres",
-            "50 mètres",
-            "100 mètres"
+            "Environ 30 m",
+            "Environ 10 m",
+            "Environ 100 m"
           ],
-          "correct": 1,
-          "explanation": "Le véhicule d'escorte doit se trouver à environ 30 mètres du groupe.",
+          "correct": 0,
+          "explanation": "Le véhicule d'escorte se tient à environ 30 m du groupe.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q51.webp"
         },
         {
           "id": "A3_Q52",
-          "question": "Un groupe de 80 cyclistes doit-il avoir des véhicules d'escorte ?",
+          "question": "Un groupe de 80 cyclistes doit-il être escorté ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Un groupe de 51 à 150 cyclistes doit obligatoirement être précédé ET suivi d'un véhicule d'escorte à environ 30 mètres.",
+          "explanation": "De 51 à 150 cyclistes : un véhicule devant et un derrière, à environ 30 m.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q52.webp"
         },
         {
           "id": "A3_Q53",
-          "question": "Combien de capitaines de route un groupe de 51 à 150 doit-il avoir ?",
+          "question": "À partir de combien de cyclistes un groupe doit-il avoir deux capitaines de route ?",
           "choices": [
-            "Un",
-            "Deux",
-            "Trois",
-            "Aucun"
+            "51",
+            "15",
+            "25"
           ],
-          "correct": 1,
-          "explanation": "Un groupe de 51 à 150 cyclistes doit être accompagné de deux capitaines de route.",
+          "correct": 0,
+          "explanation": "Plus de 50 cyclistes : au moins deux capitaines de route.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q53.webp"
         },
         {
           "id": "A3_Q54",
-          "question": "Aux carrefours sans feux, que peuvent faire les capitaines de route ?",
+          "question": "À un carrefour sans feux, que peuvent faire les capitaines de route ?",
           "choices": [
-            "Immobiliser la circulation transversale",
-            "Signaler la présence du groupe, sans plus",
-            "Régler la circulation à un feu rouge"
+            "Arrêter la circulation transversale",
+            "Rien, ils signalent juste le groupe",
+            "Brûler un feu rouge"
           ],
           "correct": 0,
-          "explanation": "Les capitaines de route peuvent immobiliser la circulation transversale aux carrefours sans feux, pour permettre au groupe de traverser.",
+          "explanation": "Aux carrefours sans feux, ils peuvent arrêter la circulation pour laisser passer le groupe.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q54.webp"
         },
         {
           "id": "A3_Q55",
-          "question": "Que portent les capitaines de route ?",
+          "question": "À quoi reconnaît-on un capitaine de route ?",
           "choices": [
-            "Un brassard avec le drapeau belge",
-            "Un gilet jaune et un casque blanc",
-            "Un drapeau rouge et un sifflet"
+            "Un brassard aux couleurs belges",
+            "Un gilet rouge",
+            "Un casque blanc"
           ],
           "correct": 0,
-          "explanation": "Les capitaines de route portent un brassard avec le drapeau belge au bras gauche et utilisent le signal C3 pour arrêter le trafic.",
+          "explanation": "Il porte un brassard aux couleurs du drapeau belge et utilise un disque C3 pour arrêter la circulation.",
           "theoryCardIndex": 5,
           "image": "/images/questions/A3_Q55.webp"
         },
@@ -2973,118 +2965,116 @@
           "id": "A3_Q56",
           "question": "Un capitaine de route vous présente un disque C3. Que faites-vous ?",
           "choices": [
-            "Vous vous arrêtez pour laisser passer",
-            "Vous continuez lentement votre route",
-            "Vous contournez le groupe par la gauche"
+            "Vous vous arrêtez",
+            "Vous ralentissez et passez",
+            "Vous contournez le groupe"
           ],
           "correct": 0,
-          "explanation": "Le signal C3 est un signal d'arrêt obligatoire. Vous devez vous arrêter pour laisser passer le groupe et ses véhicules d'escorte.",
+          "explanation": "Le disque C3 vous oblige à vous arrêter pour laisser passer le groupe.",
           "theoryCardIndex": 5,
           "sign": "C3"
         },
         {
           "id": "A3_Q57",
-          "question": "Dans une zone cyclable, quel est le statut des cyclistes ?",
+          "question": "En voiture dans une zone cyclable, qu'est-ce qui vous est interdit ?",
           "choices": [
-            "Ils sont prioritaires sur les voitures",
-            "Ils doivent rester le long du bord droit",
-            "Ils sont interdits sur la chaussée"
+            "Dépasser un cycliste",
+            "Entrer dans la zone",
+            "Rouler derrière un cycliste"
           ],
           "correct": 0,
-          "explanation": "La zone cyclable est une zone signalisée où les cyclistes ont la priorité et les véhicules motorisés sont considérés comme des invités.",
+          "explanation": "Les voitures peuvent entrer dans une zone cyclable, mais ne peuvent pas y dépasser les cyclistes.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/A3_Q57.webp"
         },
         {
           "id": "A3_Q58",
-          "question": "Comment reconnaît-on une zone cyclable ?",
+          "question": "Où s'arrête une zone cyclable ?",
           "choices": [
-            "À un panneau de début et de fin",
-            "À des lignes peintes au sol",
-            "À un revêtement de couleur rouge"
+            "Au signal de fin de zone cyclable",
+            "Au prochain carrefour",
+            "Après 500 m"
           ],
           "correct": 0,
-          "explanation": "La zone cyclable est délimitée par un panneau de début et un panneau de fin.",
+          "explanation": "La zone cyclable va du signal de début au signal de fin.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q58.webp"
         },
         {
           "id": "A3_Q59",
-          "question": "Les cyclistes dans une zone cyclable peuvent utiliser :",
+          "question": "Zone cyclable à sens unique : quelle largeur ce cycliste peut-il utiliser ?",
           "choices": [
             "Toute la largeur de la chaussée",
-            "Le bord droit de la chaussée",
-            "La piste cyclable et rien d'autre"
+            "Le bord droit",
+            "La moitié droite"
           ],
           "correct": 0,
-          "explanation": "Dans une zone cyclable, les cyclistes et speed pedelecs peuvent utiliser toute la largeur de la chaussée.",
+          "explanation": "Sur une chaussée à sens unique, le cycliste peut utiliser toute la largeur.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q59.webp"
         },
         {
           "id": "A3_Q60",
-          "question": "Si la chaussée en zone cyclable est ouverte dans les deux sens, les cyclistes peuvent utiliser :",
+          "question": "Zone cyclable à double sens : quelle largeur ce cycliste peut-il utiliser ?",
           "choices": [
-            "Toute la chaussée",
-            "Uniquement la moitié droite",
-            "Uniquement la bande de gauche",
-            "N'importe quel côté"
+            "La moitié droite",
+            "Toute la largeur",
+            "Le bord droit"
           ],
-          "correct": 1,
-          "explanation": "En double sens dans une zone cyclable, les cyclistes ne peuvent utiliser que la moitié droite de la chaussée.",
+          "correct": 0,
+          "explanation": "Dans les deux sens, le cycliste utilise la moitié droite de la chaussée.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q60.webp"
         },
         {
           "id": "A3_Q61",
-          "question": "Quelle est la vitesse maximale dans une zone cyclable ?",
+          "question": "Vitesse maximale dans une zone cyclable ?",
           "choices": [
-            "50 km/h",
             "20 km/h",
             "30 km/h",
-            "40 km/h"
+            "50 km/h"
           ],
-          "correct": 2,
-          "explanation": "La vitesse maximale dans une zone cyclable est de 30 km/h.",
+          "correct": 1,
+          "explanation": "Jamais plus de 30 km/h dans une zone cyclable.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/A3_Q61.webp"
         },
         {
           "id": "A3_Q63",
-          "question": "Pouvez-vous dépasser un cycliste dans une zone cyclable avec votre voiture ?",
+          "question": "Pouvez-vous dépasser ce cycliste dans une zone cyclable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de dépasser un cycliste (ou engin assimilé) dans une zone cyclable.",
+          "explanation": "Dans une zone cyclable, les véhicules à moteur ne dépassent pas les cyclistes.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q63.webp"
         },
         {
           "id": "A3_Q64",
-          "question": "Pouvez-vous dépasser une trottinette dans une zone cyclable ?",
+          "question": "Ce garçon roule en trottinette dans une zone cyclable. Pouvez-vous le dépasser ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, ce n'est pas un cycliste"
           ],
-          "correct": 1,
-          "explanation": "Les trottinettes sont des engins assimilés aux cyclistes dans une zone cyclable : on ne peut pas les dépasser.",
+          "correct": 0,
+          "explanation": "La trottinette suit ici les règles des cyclistes : pas de dépassement.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q64.webp"
         },
         {
           "id": "A3_Q65",
-          "question": "Pouvez-vous dépasser un cyclomoteur dans une zone cyclable ?",
+          "question": "Pouvez-vous dépasser ce cyclomoteur dans une zone cyclable ?",
           "choices": [
-            "Oui, à 30 km/h maximum",
-            "Oui, par la droite",
-            "Non, c'est interdit"
+            "Oui, par la gauche, sans dépasser 30 km/h",
+            "Non, jamais",
+            "Oui, par la droite"
           ],
           "correct": 0,
-          "explanation": "Un cyclomoteur peut être dépassé dans une zone cyclable, par la gauche, sans dépasser 30 km/h.",
+          "explanation": "L'interdiction vise les cyclistes et speed pedelecs, pas les cyclomoteurs. La limite de 30 km/h reste.",
           "theoryCardIndex": 6,
           "image": "/images/questions/A3_Q65.webp"
         },
@@ -3197,52 +3187,26 @@
           "id": "A3_Q76",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Le début d'une rue cyclable",
+            "Le début d'une zone cyclable",
             "Le début d'une piste cyclable",
             "Le début d'une zone 30"
           ],
           "correct": 0,
-          "explanation": "La rue cyclable est une rue où les cyclistes ont la priorité. Les véhicules motorisés y sont des invités.",
+          "explanation": "Zone cyclable : 30 km/h maximum, et les voitures ne peuvent pas y dépasser les cyclistes.",
           "theoryCardIndex": 6,
           "sign": "F111",
           "severe": true
         },
         {
-          "id": "A3_Q77",
+          "id": "A3_Q79",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Les règles de rue cyclable cessent",
-            "Le début d'une piste cyclable",
-            "Un sens interdit aux vélos"
+            "La fin de la zone cyclable",
+            "Le début d'une zone 30",
+            "La fin d'une piste cyclable"
           ],
           "correct": 0,
-          "explanation": "Ce signal indique la fin de la rue cyclable. Les règles normales du code de la route reprennent.",
-          "theoryCardIndex": 6,
-          "sign": "F113"
-        },
-        {
-          "id": "A3_Q78",
-          "question": "Quelle différence entre une zone cyclable et une rue cyclable ?",
-          "choices": [
-            "La zone couvre plusieurs rues",
-            "La zone est interdite aux voitures",
-            "Il n'y a aucune différence"
-          ],
-          "correct": 0,
-          "explanation": "La zone cyclable englobe plusieurs rues, tandis que la rue cyclable ne concerne qu'une seule rue.",
-          "theoryCardIndex": 6,
-          "sign": "F111"
-        },
-        {
-          "id": "A3_Q79",
-          "question": "Que devez-vous savoir en voyant ce panneau ?",
-          "choices": [
-            "Les règles normales reprennent",
-            "Vous entrez dans une zone 30",
-            "Les cyclistes quittent la chaussée"
-          ],
-          "correct": 0,
-          "explanation": "Ce signal marque la fin de la zone cyclable. Les règles normales du code de la route s'appliquent à nouveau.",
+          "explanation": "Fin de la zone cyclable : les règles normales reprennent.",
           "theoryCardIndex": 6,
           "sign": "F113"
         },
@@ -3255,7 +3219,7 @@
             "Fin de la piste cyclable"
           ],
           "correct": 0,
-          "explanation": "Le signal rond rouge avec une bicyclette est un signal d'interdiction : les cyclistes n'ont pas accès.",
+          "explanation": "Rond à bord rouge avec un vélo : accès interdit aux cyclistes.",
           "theoryCardIndex": 6,
           "sign": "C11"
         },
@@ -3300,42 +3264,40 @@
         },
         {
           "id": "A3_Q85",
-          "question": "Vous voyez un signal d'accès interdit aux cycles suivi d'une piste cyclable obligatoire un peu plus loin. Que comprenez-vous ?",
+          "question": "Accès interdit aux vélos ici, piste cyclable obligatoire un peu plus loin. Que font les cyclistes ?",
           "choices": [
-            "Les cyclistes prennent la piste indiquée",
-            "Les cyclistes sont interdits partout",
-            "Les cyclistes choisissent librement"
+            "Ils prennent la piste cyclable indiquée",
+            "Ils font demi-tour",
+            "Ils roulent où ils veulent"
           ],
           "correct": 0,
-          "explanation": "L'accès interdit aux cycles ferme une voie aux cyclistes, qui sont redirigés vers la piste cyclable signalée plus loin.",
+          "explanation": "Les cyclistes sont dirigés vers la piste cyclable signalée plus loin.",
           "theoryCardIndex": 1,
           "sign": "C11"
         },
         {
           "id": "A3_Q86",
-          "question": "Vous voyez ce panneau et vous êtes en voiture. Que faites-vous ?",
+          "question": "Vous êtes en voiture devant ce panneau. Que faites-vous ?",
           "choices": [
-            "Vous entrez, puis faites demi-tour",
-            "Vous traversez la rue normalement",
-            "Vous ne pouvez pas y entrer"
+            "Vous pouvez entrer, mais devrez faire demi-tour",
+            "Vous ne pouvez pas entrer",
+            "Vous traversez, la rue continue pour vous"
           ],
           "correct": 0,
-          "explanation": "Voie sans issue pour les voitures = vous ne pouvez pas entrer. Seuls les cyclistes et piétons peuvent continuer.",
+          "explanation": "Voie sans issue, sauf pour piétons et cyclistes : vous pouvez entrer en voiture, mais il n'y a pas de sortie pour vous.",
           "theoryCardIndex": 1,
           "sign": "F45b"
         },
         {
-          "id": "A3_Q87",
-          "question": "Ce panneau est suivi d'un panneau 30 km/h. Lequel prime ?",
+          "id": "A3_Q88",
+          "question": "La voiture devant vous tourne à gauche. Pouvez-vous la dépasser par la droite en roulant un peu sur la piste cyclable ?",
           "choices": [
-            "Les deux, la zone impose déjà 30",
-            "Le panneau 30 km/h, lui seul",
-            "Le panneau de zone cyclable"
+            "Oui, si aucun cycliste n'arrive",
+            "Non"
           ],
-          "correct": 0,
-          "explanation": "La zone cyclable impose déjà une vitesse de 30 km/h. Le panneau 30 km/h confirme cette limite. Les deux s'appliquent simultanément.",
-          "theoryCardIndex": 6,
-          "sign": "F111"
+          "correct": 1,
+          "explanation": "Les voitures ne roulent jamais sur la piste cyclable, même un peu et même sans cycliste.",
+          "theoryCardIndex": 0
         }
       ]
     },

@@ -2257,85 +2257,84 @@
       "questions": [
         {
           "id": "A3_Q1",
-          "question": "Wie moet op een fietspad rijden?",
+          "question": "Wie moet op het fietspad rijden?",
           "choices": [
-            "Fietsers en bromfietsers klasse A",
-            "Auto's en bestelwagens",
-            "Voetgangers en kinderwagens"
+            "Fietsen en bromfietsen klasse A",
+            "Bromfietsen klasse B",
+            "Voetgangers"
           ],
           "correct": 0,
-          "explanation": "Het fietspad is een deel van de openbare weg (niet van de rijbaan) bestemd voor fietsen en bromfietsen klasse A.",
+          "explanation": "Het fietspad is voor fietsen en bromfietsen klasse A. Klasse B rijdt op de rijbaan.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q2",
-          "question": "Hoe herken je een fietspad op de rijbaan?",
+          "question": "Waaraan herken je een fietspad?",
           "choices": [
-            "Aan twee onderbroken witte lijnen",
-            "Aan een rood of groen wegdek",
-            "Aan afbakeningspaaltjes"
+            "Aan twee onderbroken witte strepen of een verkeersbord",
+            "Aan zijn rode kleur",
+            "Aan paaltjes langs de rand"
           ],
           "correct": 0,
-          "explanation": "Het fietspad wordt afgebakend door twee evenwijdige witte onderbroken lijnen. De kleur (oker, geel, rood) speelt geen rol.",
+          "explanation": "Twee onderbroken witte strepen of een verkeersbord maken het fietspad. De kleur telt niet.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q4",
-          "question": "Worden driewielers van minder dan een meter breed gelijkgesteld met fietsen?",
+          "question": "Moet een driewieler van minder dan een meter breed het fietspad nemen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Driewielers, vierwielers en bakfietsen van minder dan een meter breed worden gelijkgesteld met fietsen en moeten het fietspad gebruiken.",
+          "explanation": "Driewielers en bakfietsen van minder dan een meter breed volgen de regels voor fietsen.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q5",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Pad voor voetgangers en fietsers",
-            "Pad enkel voor voetgangers",
-            "Pad enkel voor bromfietsers"
+            "Weg voor voetgangers en fietsers",
+            "Weg alleen voor voetgangers",
+            "Weg alleen voor bromfietsen"
           ],
           "correct": 0,
-          "explanation": "Symbolen naast elkaar = fietsen + bromfietsen klasse A + voetgangers. Bromfietsen klasse B mogen er niet rijden.",
+          "explanation": "Deze weg is voorbehouden aan voetgangers en fietsers. Bromfietsen zijn er niet toegelaten.",
           "theoryCardIndex": 0,
           "sign": "D10"
         },
         {
           "id": "A3_Q6",
-          "question": "Zijn bromfietsers toegelaten op een pad voor voetgangers en fietsers?",
+          "question": "Zijn bromfietsen toegelaten op deze weg voor voetgangers en fietsers?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Dit pad is niet toegankelijk voor bromfietsers, noch klasse A noch klasse B.",
+          "explanation": "Noch bromfietsen klasse A, noch klasse B.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q8",
-          "question": "Mag een fietser in de bebouwde kom op het voetpad rijden?",
+          "question": "Dit meisje van 8 fietst binnen de bebouwde kom. Mag ze op het voetpad fietsen?",
           "choices": [
-            "Nee, behalve kinderen jonger dan 10",
-            "Ja, op voorwaarde stapvoets te rijden",
-            "Ja, als het fietspad bezet is"
+            "Ja",
+            "Nee"
           ],
           "correct": 0,
-          "explanation": "Met de fiets op het voetpad rijden in de bebouwde kom is verboden, behalve voor kinderen jonger dan 10 jaar.",
+          "explanation": "Fietsers jonger dan 10 jaar mogen altijd op het voetpad fietsen.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q9",
-          "question": "Mag een fietser buiten de bebouwde kom op het voetpad rijden als er geen fietspad is?",
+          "question": "Deze fietser van 14 heeft geen fietspad. Mag hij op het voetpad fietsen?",
           "choices": [
-            "Ja, rechts in de looprichting",
-            "Ja, in de richting die hij verkiest",
-            "Nee, het trottoir blijft voor voetgangers"
+            "Ja, alleen buiten de bebouwde kom",
+            "Ja, overal",
+            "Nooit"
           ],
           "correct": 0,
-          "explanation": "Buiten de bebouwde kom mogen, zonder fietspad, alle fietsers op het voetpad of de verhoogde berm rijden, rechts in de rijrichting.",
+          "explanation": "Buiten de bebouwde kom mag een fietser zonder fietspad op het voetpad fietsen, rechts.",
           "theoryCardIndex": 0
         },
         {
@@ -2346,7 +2345,7 @@
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het fietspad is een deel van de openbare weg maar maakt GEEN deel uit van de rijbaan.",
+          "explanation": "Het fietspad maakt deel uit van de openbare weg, niet van de rijbaan.",
           "theoryCardIndex": 0
         },
         {
@@ -2357,533 +2356,524 @@
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het fietspad is geen deel van de rijbaan. Auto's mogen er niet rijden.",
+          "explanation": "Auto's rijden niet op het fietspad.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q13",
-          "question": "Mag je met je auto parkeren op een fietspad?",
+          "question": "De berm is te smal. Mag je een beetje op het fietspad parkeren?",
           "choices": [
-            "Ja, voor een korte stop",
-            "Nee, dat is verboden",
-            "Ja, als je je alarmlichten aanzet",
-            "Ja, buiten de bebouwde kom"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden te parkeren op een fietspad.",
+          "explanation": "Parkeren op het fietspad is verboden, ook gedeeltelijk.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q14",
-          "question": "Mag je stilstaan op een fietspad om een passagier te laten uitstappen?",
+          "question": "Mag je op het fietspad stilstaan om een passagier af te zetten?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden stil te staan op een fietspad om een passagier te laten in- of uitstappen.",
+          "explanation": "Stilstaan op een fietspad is verboden, ook heel even.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q15",
-          "question": "Mag je een fietspad oversteken met je auto?",
+          "question": "Mag je met de auto een fietspad oversteken?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Ja, om af te slaan of een eigendom op te rijden",
+            "Nee, nooit",
+            "Ja, om in te halen"
           ],
           "correct": 0,
-          "explanation": "Je mag een fietspad enkel oversteken om van richting te veranderen of een manoeuvre uit te voeren.",
+          "explanation": "Je mag het oversteken om af te slaan of een eigendom op te rijden, en je verleent voorrang aan de fietsers.",
           "theoryCardIndex": 0
         },
         {
           "id": "A3_Q16",
-          "question": "Op welke afstand bevindt zich het rode gevaarsbord vóór een fietsoversteekplaats?",
+          "question": "Op welke afstand van de fietsoversteekplaats staat dit gevaarsbord?",
           "choices": [
-            "Ongeveer 150 meter",
-            "Ongeveer 50 meter",
-            "Ongeveer 300 meter"
+            "Ongeveer 150 m",
+            "Ongeveer 50 m",
+            "Ongeveer 300 m"
           ],
           "correct": 0,
-          "explanation": "Het gevaarsbord (rood driehoekig bord) staat ongeveer 150 meter vóór de fietsoversteekplaats.",
+          "explanation": "Gevaarsborden staan op ongeveer 150 m van het gevaar.",
           "theoryCardIndex": 1
         },
         {
           "id": "A3_Q17",
-          "question": "Waar bevindt zich het blauwe aanwijzingsbord ten opzichte van de fietsoversteekplaats?",
+          "question": "Waar staat dit blauwe bord van een fietsoversteekplaats?",
           "choices": [
-            "150 meter ervoor",
             "Vlak bij de oversteekplaats",
-            "100 meter erna",
-            "Aan het volgende kruispunt"
+            "150 m ervoor",
+            "100 m erna"
           ],
-          "correct": 1,
-          "explanation": "Het blauwe aanwijzingsbord dat de fietsoversteekplaats aanduidt, bevindt zich vlak bij de oversteekplaats zelf.",
+          "correct": 0,
+          "explanation": "Het blauwe bord staat aan de oversteekplaats zelf.",
           "theoryCardIndex": 1
         },
         {
           "id": "A3_Q19",
-          "question": "Een fietser bevindt zich al op de fietsoversteekplaats. Heeft hij voorrang?",
+          "question": "Deze fietser rijdt al op de fietsoversteekplaats. Wie mag eerst?",
           "choices": [
-            "Ja",
-            "Nee"
+            "De fietser",
+            "Jij",
+            "Wie het eerst aankomt"
           ],
           "correct": 0,
-          "explanation": "Eenmaal de fietser zich op de oversteekplaats bevindt, heeft hij voorrang en moeten bestuurders hem voorrang verlenen.",
+          "explanation": "Een fietser die al op de oversteekplaats rijdt, heeft voorrang: je laat hem door.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A3_Q20",
-          "question": "Een fietser wacht aan de rand van de fietsoversteekplaats. Moet je stoppen?",
+          "question": "Deze fietser wacht aan de rand van de fietsoversteekplaats. Moet je stoppen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "In tegenstelling tot een voetgangersoversteekplaats heeft de fietser geen voorrang zolang hij zich niet heeft aangeboden. Hij moet voorrang verlenen aan de voertuigen op de rijbaan.",
+          "explanation": "Een fietser die nog niet op de oversteekplaats rijdt, moet de voertuigen laten passeren. Blijf wel opletten.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A3_Q21",
-          "question": "Mag je parkeren op een fietsoversteekplaats?",
+          "question": "Mag je op een fietsoversteekplaats parkeren?",
           "choices": [
-            "Ja, als het snel gaat",
-            "Nee, dat is verboden",
-            "Ja, buiten de bebouwde kom",
-            "Ja, 's nachts"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden stil te staan of te parkeren op een fietsoversteekplaats (inclusief op de berm).",
+          "explanation": "Stilstaan en parkeren zijn verboden op een fietsoversteekplaats.",
           "theoryCardIndex": 1
         },
         {
           "id": "A3_Q22",
-          "question": "Mag je op de rijbaan parkeren op 3 meter vóór een fietsoversteekplaats?",
+          "question": "Mag je op de rijbaan parkeren 3 m vóór een fietsoversteekplaats?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden stil te staan of te parkeren binnen 5 meter vóór een fietsoversteekplaats.",
+          "explanation": "Verboden op minder dan 5 m vóór een fietsoversteekplaats.",
           "theoryCardIndex": 1
         },
         {
           "id": "A3_Q23",
-          "question": "Mag je net NA een fietsoversteekplaats parkeren?",
+          "question": "Mag je net na een fietsoversteekplaats parkeren?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Na de oversteekplaats mag je parkeren, tenzij signalen het verbieden.",
+          "explanation": "Na de oversteekplaats mag het, tenzij een bord het verbiedt. Het verbod van 5 m geldt vóór de oversteekplaats.",
           "theoryCardIndex": 1
         },
         {
           "id": "A3_Q24",
-          "question": "Een bestuurder vertraagt voor een fietsoversteekplaats. Mag je hem inhalen?",
+          "question": "Een auto vertraagt vóór een fietsoversteekplaats. Mag je hem inhalen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden een bestuurder in te halen die vertraagt of stopt voor een fietsoversteekplaats.",
+          "explanation": "Verboden een voertuig in te halen dat vertraagt of stopt vóór een fietsoversteekplaats.",
           "theoryCardIndex": 1
         },
         {
           "id": "A3_Q25",
-          "question": "Hoe moet je een fietsoversteekplaats naderen?",
+          "question": "Hoe nader je een fietsoversteekplaats?",
           "choices": [
-            "Met gematigde snelheid",
+            "Met matige snelheid",
             "Met normale snelheid",
-            "Door te versnellen"
+            "Al toeterend"
           ],
           "correct": 0,
-          "explanation": "Men mag een fietsoversteekplaats enkel naderen aan matige snelheid om de aanwezige fietsers niet in gevaar te brengen.",
+          "explanation": "Je nadert een fietsoversteekplaats met matige snelheid.",
           "theoryCardIndex": 1
         },
         {
           "id": "A3_Q28",
-          "question": "Is een aanbevolen fietsstrook een fietspad?",
+          "question": "Is een fietssuggestiestrook een fietspad?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Ze is op de rijbaan geschilderd maar niet afgebakend met onderbroken lijnen en niet gesignaleerd: ze maakt deel uit van de rijbaan.",
+          "explanation": "Ze is op de rijbaan geschilderd, zonder onderbroken strepen of bord: ze maakt deel uit van de rijbaan.",
           "theoryCardIndex": 2
         },
         {
           "id": "A3_Q29",
-          "question": "Waarom is een gesuggereerde fietsstrook geen fietspad?",
+          "question": "Mag je met de auto op deze fietssuggestiestrook rijden?",
           "choices": [
-            "Ze heeft geen onderbroken lijnen of bord",
-            "Ze is te smal voor de fietsers",
-            "Ze is voorbehouden aan bromfietsers"
+            "Ja",
+            "Nee"
           ],
           "correct": 0,
-          "explanation": "De gesuggereerde fietsstrook heeft noch evenwijdige onderbroken lijnen noch verkeersborden: twee onmisbare elementen om als fietspad te gelden.",
+          "explanation": "De fietssuggestiestrook maakt deel uit van de rijbaan: auto's mogen erop rijden, met aandacht voor de fietsers.",
           "theoryCardIndex": 2
         },
         {
           "id": "A3_Q30",
-          "question": "Maakt de gesuggereerde fietsstrook deel uit van de rijbaan?",
+          "question": "Maakt de fietssuggestiestrook deel uit van de rijbaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De gesuggereerde fietsstrook maakt deel uit van de rijbaan, in tegenstelling tot het fietspad.",
+          "explanation": "Ja, in tegenstelling tot het fietspad.",
           "theoryCardIndex": 2
         },
         {
           "id": "A3_Q32",
-          "question": "Mag je parkeren op een gesuggereerde fietsstrook?",
+          "question": "Mag je op deze fietssuggestiestrook parkeren?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Op een gesuggereerde fietsstrook (deel van de rijbaan) mag je stilstaan en parkeren.",
+          "explanation": "Ze maakt deel uit van de rijbaan: stilstaan en parkeren volgen er de gewone regels.",
           "theoryCardIndex": 2
         },
         {
           "id": "A3_Q33",
-          "question": "Wat is de maximumsnelheid op een rijbaan met middenrijstrook?",
+          "question": "Maximumsnelheid op een middenrijbaan?",
           "choices": [
             "50 km/u",
-            "90 km/u",
             "70 km/u",
-            "30 km/u"
+            "90 km/u"
           ],
-          "correct": 2,
-          "explanation": "Op een rijbaan met middenrijstrook is de maximumsnelheid 70 km/u.",
+          "correct": 1,
+          "explanation": "70 km/u op een middenrijbaan.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "A3_Q34",
-          "question": "Mogen voetgangers de zijstrook gebruiken?",
+          "question": "Geen voetpad. Op welke zijdelingse strook loopt deze voetganger?",
           "choices": [
-            "Ja, de linkse, bij gebrek aan trottoir",
-            "Ja, de rechtse, bij gebrek aan trottoir",
-            "Nee, ze is voorbehouden aan voertuigen"
+            "De linkse",
+            "De rechtse",
+            "Geen, hij loopt op de middenrijbaan"
           ],
           "correct": 0,
-          "explanation": "Voetgangers mogen de linkse zijstrook gebruiken als er geen voetpad is.",
+          "explanation": "Zonder voetpad mag de voetganger de zijdelingse strook nemen, links ten opzichte van zijn looprichting.",
           "theoryCardIndex": 3
         },
         {
           "id": "A3_Q35",
-          "question": "Mag een ruiter op de zijstrook rijden?",
+          "question": "Mag een ruiter op de zijdelingse strook rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De zijstrook is onder andere bestemd voor ruiters en trekdieren.",
+          "explanation": "Ook ruiters mogen op de zijdelingse strook.",
           "theoryCardIndex": 3
         },
         {
           "id": "A3_Q36",
-          "question": "Twee auto's moeten elkaar kruisen op een rijbaan met middenrijstrook. Mogen ze de zijstrook betreden?",
+          "question": "Twee auto's kruisen elkaar op een middenrijbaan. Mogen ze op de zijdelingse strook komen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Auto's mogen de zijstrook betreden om te kruisen of in te halen, op voorwaarde dat ze fietsers niet hinderen en de afstanden respecteren.",
+          "explanation": "Ja, om te kruisen, zonder de gebruikers ervan in gevaar te brengen.",
           "theoryCardIndex": 3
         },
         {
           "id": "A3_Q38",
-          "question": "In de bebouwde kom, welke zijdelingse afstand moet je houden ten opzichte van een fietser op de zijstrook?",
+          "question": "Binnen de bebouwde kom haal je een fietser in op de zijdelingse strook. Minimale afstand?",
           "choices": [
-            "0,5 meter",
-            "1 meter",
-            "1,5 meter",
-            "2 meter"
+            "0,5 m",
+            "1 m",
+            "1,5 m"
           ],
           "correct": 1,
-          "explanation": "In de bebouwde kom is de minimale zijdelingse afstand ten opzichte van een fietser 1 meter (1,5 m buiten de bebouwde kom).",
+          "explanation": "1 m binnen de bebouwde kom, 1,5 m erbuiten.",
           "theoryCardIndex": 3
         },
         {
           "id": "A3_Q39",
-          "question": "Hoeveel betekenissen heeft het gevaarsbord met een fiets?",
+          "question": "Dit gevaarsbord met een fiets kondigt aan:",
           "choices": [
-            "Twee",
-            "Een",
-            "Drie"
+            "Een fietsoversteekplaats of fietsers die het fietspad verlaten",
+            "Een verplicht fietspad",
+            "Het begin van een fietszone"
           ],
           "correct": 0,
-          "explanation": "Dit gevaarsbord heeft twee betekenissen: het duidt een fietsoversteekplaats aan OF dat fietsers het fietspad zullen verlaten.",
+          "explanation": "Dit bord heeft twee betekenissen: een fietsoversteekplaats, of fietsers die het fietspad verlaten naar de rijbaan.",
           "theoryCardIndex": 4
         },
         {
           "id": "A3_Q41",
-          "question": "Een fietser vervoegt de rijbaan aan het einde van een fietspad. Heeft hij voorrang?",
+          "question": "Het fietspad houdt op. Deze fietser rijdt rechtdoor de rijbaan op. Wie mag eerst?",
           "choices": [
-            "Ja",
-            "Nee"
+            "De fietser",
+            "De auto's op de rijbaan",
+            "Wie het eerst aankomt"
           ],
           "correct": 0,
-          "explanation": "Aan het einde van een fietspad heeft de fietser die de rijbaan vervoegt voorrang. Auto's en motoren moeten hem voorrang verlenen.",
+          "explanation": "Aan het einde van het fietspad behoudt de fietser die rechtdoor de rijbaan oprijdt de voorrang.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "A3_Q42",
-          "question": "Een fietser verlaat het fietspad wegens een obstakel. Heeft hij voorrang?",
+          "question": "Deze fietser verlaat het fietspad om een hindernis te ontwijken. Heeft hij voorrang?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De voorrang van de fietser die de rijbaan vervoegt, geldt enkel bij het einde van een fietspad, niet als hij het pad verlaat wegens een obstakel.",
+          "explanation": "Het fietspad halverwege verlaten voor een hindernis is een manoeuvre: de fietser moet voorrang verlenen.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "A3_Q45",
-          "question": "Mag je parkeren op 3 meter van de plaats waar fietsers het fietspad verlaten voor de rijbaan?",
+          "question": "Mag je parkeren op 3 m van de plaats waar fietsers het fietspad verlaten naar de rijbaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden stil te staan of te parkeren binnen 5 meter van de verbindingspunten tussen fietspad en rijbaan.",
+          "explanation": "Verboden op minder dan 5 m van die plaats.",
           "theoryCardIndex": 4
         },
         {
           "id": "A3_Q46",
-          "question": "Mag je stilstaan op 6 meter van de plaats waar fietsers vanaf de rijbaan het fietspad vervoegen?",
+          "question": "Mag je stilstaan op 6 m van de plaats waar fietsers het fietspad opgaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Het verbod geldt tot op 5 meter. Op 6 meter is het toegelaten (tenzij een tegengesteld signaal).",
+          "explanation": "Het verbod geldt op minder dan 5 m. Op 6 m mag het, tenzij een bord het verbiedt.",
           "theoryCardIndex": 4
         },
         {
           "id": "A3_Q47",
-          "question": "Moet een groep van 20 fietsers het fietspad gebruiken?",
+          "question": "Vanaf hoeveel fietsers moet een groep het fietspad niet nemen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "15",
+            "10",
+            "20"
           ],
-          "correct": 1,
-          "explanation": "Een groep van 15 tot 50 fietsers is niet verplicht de fietspaden te gebruiken.",
+          "correct": 0,
+          "explanation": "Een groep van 15 tot 50 fietsers is niet verplicht het fietspad te nemen.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q48",
-          "question": "Met hoeveel naast elkaar mag een groep van 15 tot 50 fietsers rijden?",
+          "question": "Een groep van 30 fietsers mag op de rijbaan rijden:",
           "choices": [
-            "Twee naast elkaar",
-            "Een enkele rij",
-            "Drie naast elkaar"
+            "Met twee naast elkaar",
+            "Achter elkaar",
+            "Met drie naast elkaar"
           ],
           "correct": 0,
-          "explanation": "Een groep van 15 tot 50 fietsers mag met twee naast elkaar op de rijbaan rijden.",
+          "explanation": "Een groep van 15 tot 50 fietsers mag met twee naast elkaar rijden.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q49",
-          "question": "Welke rijstrook mag een groep van 15 tot 50 fietsers gebruiken?",
+          "question": "Welke rijstrook mag een groep fietsers gebruiken?",
           "choices": [
-            "De rechterrijstrook",
-            "De linkerrijstrook",
-            "Om het even welke strook"
+            "De rechtse",
+            "De linkse",
+            "Om het even welke"
           ],
           "correct": 0,
-          "explanation": "Een groep fietsers mag uitsluitend de rechtse rijstrook gebruiken.",
+          "explanation": "De groep rijdt op de rechtse rijstrook.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q50",
-          "question": "Als een enkel begeleidingsvoertuig een groep van 15 tot 50 begeleidt, waar moet het zich bevinden?",
+          "question": "Eén voertuig begeleidt deze groep fietsers. Waar rijdt het?",
           "choices": [
-            "Vóór de groep",
             "Achter de groep",
-            "Midden in de groep",
-            "Op de linkse rijstrook"
+            "Voor de groep",
+            "In het midden van de groep"
           ],
-          "correct": 1,
-          "explanation": "Als er slechts één begeleidingsvoertuig aanwezig is, moet het de groep volgen (zich achteraan bevinden).",
+          "correct": 0,
+          "explanation": "Met één begeleidend voertuig rijdt dat achter de groep.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q51",
-          "question": "Op welke afstand moet het begeleidingsvoertuig zich van de groep bevinden?",
+          "question": "Op welke afstand van de groep rijdt het begeleidende voertuig?",
           "choices": [
-            "10 meter",
-            "Ongeveer 30 meter",
-            "50 meter",
-            "100 meter"
+            "Ongeveer 30 m",
+            "Ongeveer 10 m",
+            "Ongeveer 100 m"
           ],
-          "correct": 1,
-          "explanation": "Het begeleidingsvoertuig moet zich op ongeveer 30 meter van de groep bevinden.",
+          "correct": 0,
+          "explanation": "Het begeleidende voertuig blijft op ongeveer 30 m van de groep.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q52",
-          "question": "Moet een groep van 80 fietsers begeleidingsvoertuigen hebben?",
+          "question": "Moet een groep van 80 fietsers begeleid worden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Een groep van 51 tot 150 fietsers moet verplicht voorafgegaan EN gevolgd worden door een begeleidingsvoertuig op ongeveer 30 meter.",
+          "explanation": "Van 51 tot 150 fietsers: een voertuig vooraan en een achteraan, op ongeveer 30 m.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q53",
-          "question": "Hoeveel wegkapiteins moet een groep van 51 tot 150 hebben?",
+          "question": "Vanaf hoeveel fietsers moet een groep twee wegkapiteins hebben?",
           "choices": [
-            "Eén",
-            "Twee",
-            "Drie",
-            "Geen"
+            "51",
+            "15",
+            "25"
           ],
-          "correct": 1,
-          "explanation": "Een groep van 51 tot 150 fietsers moet begeleid worden door twee wegkapiteins.",
+          "correct": 0,
+          "explanation": "Meer dan 50 fietsers: minstens twee wegkapiteins.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q54",
-          "question": "Wat mogen wegkapiteins doen aan kruispunten zonder verkeerslichten?",
+          "question": "Wat mogen wegkapiteins doen aan een kruispunt zonder lichten?",
           "choices": [
             "Het dwarsverkeer stilleggen",
-            "De groep aankondigen, meer niet",
-            "Het verkeer aan een rood licht regelen"
+            "Niets, ze melden alleen de groep",
+            "Door het rood rijden"
           ],
           "correct": 0,
-          "explanation": "Wegkapiteins mogen het dwarsverkeer stilleggen aan kruispunten zonder verkeerslichten, om de groep te laten oversteken.",
+          "explanation": "Aan kruispunten zonder lichten mogen ze het verkeer stilleggen om de groep door te laten.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q55",
-          "question": "Wat dragen wegkapiteins?",
+          "question": "Waaraan herken je een wegkapitein?",
           "choices": [
-            "Een armband met de Belgische vlag",
-            "Een geel hesje en een witte helm",
-            "Een rode vlag en een fluitje"
+            "Een armband in de Belgische kleuren",
+            "Een rood hesje",
+            "Een witte helm"
           ],
           "correct": 0,
-          "explanation": "Wegkapiteins dragen een armband met de Belgische vlag aan de linkerarm en gebruiken het signaal C3 om het verkeer te stoppen.",
+          "explanation": "Hij draagt een armband in de kleuren van de Belgische vlag en gebruikt een schijf C3 om het verkeer stil te leggen.",
           "theoryCardIndex": 5
         },
         {
           "id": "A3_Q56",
-          "question": "Een wegkapitein toont u een C3-schijf. Wat doet u?",
+          "question": "Een wegkapitein toont je een schijf C3. Wat doe je?",
           "choices": [
-            "U stopt om de groep door te laten",
-            "U rijdt traag verder uw weg",
-            "U rijdt links om de groep heen"
+            "Je stopt",
+            "Je vertraagt en rijdt door",
+            "Je rijdt rond de groep"
           ],
           "correct": 0,
-          "explanation": "Het signaal C3 is een verplicht stopsignaal. Je moet stoppen om de groep en zijn begeleidingsvoertuigen te laten passeren.",
+          "explanation": "De schijf C3 verplicht je te stoppen om de groep door te laten.",
           "theoryCardIndex": 5,
           "sign": "B5"
         },
         {
           "id": "A3_Q57",
-          "question": "Wat is het statuut van de fietsers in een fietszone?",
+          "question": "Wat is met de auto verboden in een fietszone?",
           "choices": [
-            "Zij hebben voorrang op de auto's",
-            "Zij moeten langs de rechterrand blijven",
-            "Zij mogen niet op de rijbaan"
+            "Een fietser inhalen",
+            "De zone inrijden",
+            "Achter een fietser rijden"
           ],
           "correct": 0,
-          "explanation": "De fietszone is een gesignaleerde zone waar fietsers voorrang hebben en motorvoertuigen als gasten worden beschouwd.",
+          "explanation": "Auto's mogen een fietszone inrijden, maar mogen er geen fietsers inhalen.",
           "theoryCardIndex": 6,
           "severe": true
         },
         {
           "id": "A3_Q58",
-          "question": "Hoe herkent men een fietszone?",
+          "question": "Waar eindigt een fietszone?",
           "choices": [
-            "Aan een begin- en een eindbord",
-            "Aan lijnen op het wegdek",
-            "Aan een rood gekleurd wegdek"
+            "Aan het bord einde fietszone",
+            "Aan het volgende kruispunt",
+            "Na 500 m"
           ],
           "correct": 0,
-          "explanation": "De fietszone wordt afgebakend door een beginbord en een eindbord.",
+          "explanation": "De fietszone loopt van het beginbord tot het eindbord.",
           "theoryCardIndex": 6
         },
         {
           "id": "A3_Q59",
-          "question": "Fietsers in een fietszone mogen gebruikmaken van:",
+          "question": "Fietszone in één richting: welke breedte mag deze fietser gebruiken?",
           "choices": [
-            "De volle breedte van de rijbaan",
-            "De rechterrand van de rijbaan",
-            "Het fietspad en niets anders"
+            "De volledige breedte van de rijbaan",
+            "De rechterrand",
+            "De rechterhelft"
           ],
           "correct": 0,
-          "explanation": "In een fietszone mogen fietsers en speed pedelecs de volledige breedte van de rijbaan gebruiken.",
+          "explanation": "Op een rijbaan in één richting mag de fietser de volledige breedte gebruiken.",
           "theoryCardIndex": 6
         },
         {
           "id": "A3_Q60",
-          "question": "Als de rijbaan in een fietszone in beide richtingen open is, mogen fietsers gebruikmaken van:",
+          "question": "Fietszone in beide richtingen: welke breedte mag deze fietser gebruiken?",
           "choices": [
-            "De volledige rijbaan",
-            "Uitsluitend de rechterhelft",
-            "Uitsluitend de linkse rijstrook",
-            "Eender welke kant"
+            "De rechterhelft",
+            "De volledige breedte",
+            "De rechterrand"
           ],
-          "correct": 1,
-          "explanation": "Bij tweerichtingsverkeer in een fietszone mogen fietsers enkel de rechterhelft van de rijbaan gebruiken.",
+          "correct": 0,
+          "explanation": "In beide richtingen gebruikt de fietser de rechterhelft van de rijbaan.",
           "theoryCardIndex": 6
         },
         {
           "id": "A3_Q61",
-          "question": "Wat is de maximumsnelheid in een fietszone?",
+          "question": "Maximumsnelheid in een fietszone?",
           "choices": [
-            "50 km/u",
             "20 km/u",
             "30 km/u",
-            "40 km/u"
+            "50 km/u"
           ],
-          "correct": 2,
-          "explanation": "De maximumsnelheid in een fietszone is 30 km/u.",
+          "correct": 1,
+          "explanation": "Nooit meer dan 30 km/u in een fietszone.",
           "theoryCardIndex": 6,
           "severe": true
         },
         {
           "id": "A3_Q63",
-          "question": "Mag je een fietser inhalen in een fietszone met je auto?",
+          "question": "Mag je deze fietser inhalen in een fietszone?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden een fietser (of gelijkgesteld voertuig) in te halen in een fietszone.",
+          "explanation": "In een fietszone halen motorvoertuigen geen fietsers in.",
           "theoryCardIndex": 6
         },
         {
           "id": "A3_Q64",
-          "question": "Mag je een step inhalen in een fietszone?",
+          "question": "Deze jongen rijdt met een step in een fietszone. Mag je hem inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, het is geen fietser"
           ],
-          "correct": 1,
-          "explanation": "Steps zijn gelijkgestelde voertuigen met fietsen in een fietszone: je mag ze niet inhalen.",
+          "correct": 0,
+          "explanation": "De step volgt hier de regels voor fietsers: niet inhalen.",
           "theoryCardIndex": 6
         },
         {
           "id": "A3_Q65",
-          "question": "Mag je een bromfiets inhalen in een fietszone?",
+          "question": "Mag je deze bromfiets inhalen in een fietszone?",
           "choices": [
-            "Ja, aan maximum 30 km/u",
-            "Ja, langs rechts",
-            "Nee, dat is verboden"
+            "Ja, links, zonder 30 km/u te overschrijden",
+            "Nee, nooit",
+            "Ja, rechts"
           ],
           "correct": 0,
-          "explanation": "Een bromfiets mag ingehaald worden in een fietszone, langs links, zonder de 30 km/u te overschrijden.",
+          "explanation": "Het verbod geldt voor fietsers en speed pedelecs, niet voor bromfietsen. De grens van 30 km/u blijft.",
           "theoryCardIndex": 6
         },
         {
@@ -2987,65 +2977,39 @@
           "id": "A3_Q76",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Het begin van een fietsstraat",
+            "Het begin van een fietszone",
             "Het begin van een fietspad",
             "Het begin van een zone 30"
           ],
           "correct": 0,
-          "explanation": "De fietsstraat is een straat waar fietsers voorrang hebben. Motorvoertuigen zijn er te gast.",
+          "explanation": "Fietszone: maximaal 30 km/u, en auto's mogen er geen fietsers inhalen.",
           "theoryCardIndex": 6,
           "sign": "F111",
           "severe": true
         },
         {
-          "id": "A3_Q77",
+          "id": "A3_Q79",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "De regels van de fietsstraat stoppen",
-            "Het begin van een fietspad",
-            "Verboden richting voor fietsers"
+            "Het einde van de fietszone",
+            "Het begin van een zone 30",
+            "Het einde van een fietspad"
           ],
           "correct": 0,
-          "explanation": "Dit signaal duidt het einde van de fietsstraat aan. De normale verkeersregels herbeginnen.",
-          "theoryCardIndex": 6,
-          "sign": "F113"
-        },
-        {
-          "id": "A3_Q78",
-          "question": "Wat is het verschil tussen een fietszone en een fietsstraat?",
-          "choices": [
-            "De zone omvat meerdere straten",
-            "De zone is verboden voor auto's",
-            "Er is geen enkel verschil"
-          ],
-          "correct": 0,
-          "explanation": "De fietszone omvat meerdere straten, terwijl de fietsstraat slechts één enkele straat betreft.",
-          "theoryCardIndex": 6,
-          "sign": "F111"
-        },
-        {
-          "id": "A3_Q79",
-          "question": "Wat moet u weten bij dit verkeersbord?",
-          "choices": [
-            "De gewone regels gelden opnieuw",
-            "U rijdt een zone 30 binnen",
-            "De fietsers verlaten de rijbaan"
-          ],
-          "correct": 0,
-          "explanation": "Dit signaal duidt het einde van de fietszone aan. De normale verkeersregels zijn opnieuw van toepassing.",
+          "explanation": "Einde van de fietszone: de gewone regels gelden weer.",
           "theoryCardIndex": 6,
           "sign": "F113"
         },
         {
           "id": "A3_Q80",
-          "question": "Wat betekent dit bord?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
             "Verboden toegang voor fietsers",
             "Verplicht fietspad",
             "Einde van het fietspad"
           ],
           "correct": 0,
-          "explanation": "Het ronde rode signaal met een fiets is een verbodssignaal: fietsers hebben er geen toegang.",
+          "explanation": "Rond met rode rand en een fiets: verboden toegang voor fietsers.",
           "theoryCardIndex": 6,
           "sign": "C11"
         },
@@ -3087,42 +3051,40 @@
         },
         {
           "id": "A3_Q85",
-          "question": "Je ziet een signaal verboden toegang voor fietsen gevolgd door een verplicht fietspad iets verderop. Wat begrijp je?",
+          "question": "Hier verboden toegang voor fietsers, verderop een verplicht fietspad. Wat doen de fietsers?",
           "choices": [
-            "De fietsers nemen het aangeduide pad",
-            "De fietsers zijn overal verboden",
-            "De fietsers kiezen vrij hun route"
+            "Ze nemen het aangeduide fietspad",
+            "Ze keren om",
+            "Ze rijden waar ze willen"
           ],
           "correct": 0,
-          "explanation": "Het verbod voor fietsen sluit een weg af voor fietsers, die omgeleid worden naar het verderop gesignaleerde fietspad.",
+          "explanation": "De fietsers worden naar het verderop aangeduide fietspad gestuurd.",
           "theoryCardIndex": 1,
           "sign": "C11"
         },
         {
           "id": "A3_Q86",
-          "question": "U ziet dit bord en u rijdt met de auto. Wat doet u?",
+          "question": "Je staat met de auto voor dit bord. Wat doe je?",
           "choices": [
-            "U rijdt binnen en keert daarna om",
-            "U rijdt gewoon door de straat",
-            "U mag er niet binnenrijden"
+            "Je mag erin, maar je zult moeten keren",
+            "Je mag er niet in",
+            "Je rijdt door, de straat loopt voor jou verder"
           ],
           "correct": 0,
-          "explanation": "Doodlopende weg voor auto's = je mag niet oversteken. Enkel fietsers en voetgangers kunnen verder.",
+          "explanation": "Doodlopende weg, behalve voor voetgangers en fietsers: met de auto mag je erin, maar er is voor jou geen uitweg.",
           "theoryCardIndex": 1,
           "sign": "F45b"
         },
         {
-          "id": "A3_Q87",
-          "question": "Dit bord wordt gevolgd door een bord 30 km/u. Welk bord telt?",
+          "id": "A3_Q88",
+          "question": "De auto voor je slaat linksaf. Mag je hem rechts inhalen door een beetje over het fietspad te rijden?",
           "choices": [
-            "Beide, de zone legt al 30 op",
-            "Enkel het bord 30 km/u",
-            "Enkel het bord van de fietszone"
+            "Ja, als er geen fietser komt",
+            "Nee"
           ],
-          "correct": 0,
-          "explanation": "De fietszone legt al een snelheid van 30 km/u op. Het bord 30 km/u bevestigt deze limiet. Beide zijn tegelijk van toepassing.",
-          "theoryCardIndex": 6,
-          "sign": "F111"
+          "correct": 1,
+          "explanation": "Auto's rijden nooit op het fietspad, ook niet een beetje en ook niet zonder fietser.",
+          "theoryCardIndex": 0
         }
       ]
     },
