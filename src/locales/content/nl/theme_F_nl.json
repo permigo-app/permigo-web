@@ -214,170 +214,154 @@
       "questions": [
         {
           "id": "F1_Q1",
-          "question": "Een bevoegd agent steekt één arm verticaal omhoog. Wat moet u doen?",
+          "question": "De agent steekt zijn arm verticaal omhoog. Wat doe je?",
           "choices": [
-            "Stoppen",
-            "Wat vertragen",
-            "Rechts afslaan"
+            "Je stopt",
+            "Je vertraagt",
+            "Je slaat rechtsaf"
           ],
           "correct": 0,
-          "explanation": "De verticaal geheven arm = alle weggebruikers stoppen.",
+          "explanation": "Arm omhoog: iedereen stopt.",
           "theoryCardIndex": 0
         },
         {
           "id": "F1_Q2",
-          "question": "Je bevindt je al op het kruispunt wanneer de agent zijn arm opheft. Wat doe je?",
+          "question": "Je staat al op het kruispunt als de agent zijn arm opsteekt. Wat doe je?",
           "choices": [
+            "Je verlaat het kruispunt",
             "Je stopt ter plaatse",
-            "Je verlaat het kruispunt zo snel mogelijk",
-            "Je rijdt achteruit",
-            "Je wacht op het kruispunt"
+            "Je rijdt achteruit"
           ],
-          "correct": 1,
-          "explanation": "Weggebruikers die zich al op het kruispunt bevinden, moeten het zo snel mogelijk verlaten.",
+          "correct": 0,
+          "explanation": "Als je al op het kruispunt bent, maak je het vrij.",
           "theoryCardIndex": 0
         },
         {
           "id": "F1_Q3",
-          "question": "Een agent steekt zijn arm verticaal omhoog. U bent voetganger: bent u betrokken?",
+          "question": "De agent steekt zijn arm op. Je bent voetganger. Geldt het voor jou?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De geheven arm geldt voor ALLE weggebruikers, inclusief voetgangers.",
+          "explanation": "De opgestoken arm geldt voor alle weggebruikers, ook voetgangers.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F1_Q4",
-          "question": "Een agent strekt één arm horizontaal en u rijdt naar zijn buik toe. Wat doet u?",
+          "question": "De agent strekt een arm horizontaal en je komt naar zijn buik toe. Wat doe je?",
           "choices": [
-            "U stopt",
-            "U rijdt gewoon door",
-            "U slaat rechts af"
+            "Je stopt",
+            "Je rijdt door",
+            "Je slaat rechtsaf"
           ],
           "correct": 0,
-          "explanation": "Richting de buik van de agent rijden = verplichting om te stoppen.",
+          "explanation": "Naar de buik of de rug van de agent toe: stoppen.",
           "theoryCardIndex": 0
         },
         {
           "id": "F1_Q6",
-          "question": "Een agent strekt één arm horizontaal en u komt aan de kant van zijn hand. Wat mag u doen?",
+          "question": "De agent strekt een arm horizontaal en je komt aan de kant van zijn hand. Wat mag je doen?",
           "choices": [
-            "Rechtdoor, naar links of naar rechts",
-            "Rechtdoor rijden, meer niet",
-            "Stoppen voor het kruispunt"
+            "Rechtdoor, links of rechts",
+            "Alleen rechtdoor",
+            "Stoppen"
           ],
           "correct": 0,
-          "explanation": "Naderen van de zijkant van de agent = je mag in alle richtingen passeren.",
+          "explanation": "Aan de kant van de gestrekte arm: je mag door, in alle richtingen.",
           "theoryCardIndex": 0
         },
         {
           "id": "F1_Q7",
-          "question": "Een agent strekt beide armen horizontaal. Verschilt dat van één gestrekte arm?",
+          "question": "Betekenen twee horizontaal gestrekte armen hetzelfde als één?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "correct": 1,
-          "explanation": "Twee horizontale armen = hetzelfde bevel als één horizontale arm.",
+          "correct": 0,
+          "explanation": "Ja, hetzelfde bevel.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F1_Q8",
-          "question": "Een agent heeft de armen horizontaal gestrekt. Wie stopt en wie rijdt door?",
+          "question": "De agent strekt zijn armen horizontaal. Wie stopt?",
           "choices": [
-            "Buik of rug: stoppen; zijkant: door",
-            "Zijkant: stoppen; buik of rug: door",
-            "Iedereen stopt, zonder uitzondering"
+            "Wie naar zijn buik of rug toe rijdt",
+            "Wie aan zijn zijkant komt",
+            "Iedereen"
           ],
           "correct": 0,
-          "explanation": "Buik/rug van de agent = stop. Zijkant van de agent = mag in alle richtingen door.",
+          "explanation": "Buik of rug: stoppen. Zijkanten: doorrijden.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "F1_Q9",
-          "question": "Een agent zwaait een rode fakkel in jouw richting. Wat moet je doen?",
+          "question": "'s Nachts zwaait de agent met een rood licht naar je toe. Wat doe je?",
           "choices": [
-            "Vertragen",
-            "Stoppen",
-            "Versnellen",
-            "Je lichten aandoen"
+            "Je stopt",
+            "Je vertraagt en rijdt door",
+            "Je zet je knipperlichten aan"
           ],
-          "correct": 1,
-          "explanation": "De rode fakkel in jouw richting gezwaaid = verplichting om te stoppen.",
+          "correct": 0,
+          "explanation": "Rood licht dat naar je toe zwaait: stoppen.",
           "theoryCardIndex": 0
         },
         {
           "id": "F1_Q10",
-          "question": "Een agent maakt een verticale beweging (van boven naar beneden) met zijn arm. Wat betekent dat?",
+          "question": "De agent beweegt zijn arm op en neer. Wat betekent dat?",
           "choices": [
-            "Stop",
-            "Verminder je snelheid",
-            "Verhoog je snelheid",
-            "Afslaan"
+            "Vertragen",
+            "Stoppen",
+            "Versnellen"
           ],
-          "correct": 1,
-          "explanation": "Verticale beweging van boven naar beneden = snelheid verminderen.",
+          "correct": 0,
+          "explanation": "Verticale beweging op en neer: verminder je snelheid.",
           "theoryCardIndex": 0
         },
         {
           "id": "F1_Q11",
-          "question": "Een agent maakt een draaiende beweging met de arm. Wat betekent dat?",
+          "question": "De agent maakt een draaiende beweging met zijn arm. Wat betekent dat?",
           "choices": [
-            "Uw snelheid verhogen",
-            "Uw snelheid verlagen",
-            "Hier omkeren"
+            "Versnellen",
+            "Vertragen",
+            "Keren"
           ],
           "correct": 0,
-          "explanation": "Draaiende beweging = snelheid verhogen.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "F1_Q12",
-          "question": "Wat is het verschil tussen de verticale en de draaiende armbeweging?",
-          "choices": [
-            "Verticaal: trager; draaiend: sneller",
-            "Verticaal: sneller; draaiend: trager",
-            "Beide betekenen dat u moet stoppen"
-          ],
-          "correct": 0,
-          "explanation": "Verticaal (van boven naar beneden) = verminderen. Draaiend = verhogen.",
+          "explanation": "Draaiende beweging: verhoog je snelheid.",
           "theoryCardIndex": 1
         },
         {
           "id": "F1_Q13",
-          "question": "Is het fluitje van een agent een bevel?",
+          "question": "De agent fluit. Moet je stoppen?",
           "choices": [
-            "Ja, u moet onmiddellijk stoppen",
-            "Nee, het dient enkel om de aandacht te trekken",
-            "Ja, u moet sterk vertragen",
-            "Ja, u moet antwoorden met een lichtsignaal"
+            "Nee, hij trekt je aandacht",
+            "Ja, meteen",
+            "Ja, en lichtsignalen geven"
           ],
-          "correct": 1,
-          "explanation": "Het fluitje is GEEN bevel — het trekt enkel de aandacht.",
+          "correct": 0,
+          "explanation": "Het fluitsignaal trekt de aandacht: kijk naar de agent, het bevel volgt.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "F1_Q14",
-          "question": "Een agent fluit in uw richting. Wat is de juiste reactie?",
+          "question": "De agent fluit in jouw richting. Wat doe je?",
           "choices": [
-            "Naar hem kijken voor zijn teken",
-            "Meteen ter plaatse stoppen",
-            "Versnellen om de zone te verlaten"
+            "Je kijkt naar hem om zijn gebaar te zien",
+            "Je remt bruusk",
+            "Je versnelt"
           ],
           "correct": 0,
-          "explanation": "Het fluitje betekent 'kijk naar mij, er volgt een bevel'.",
+          "explanation": "Het fluitsignaal kondigt een bevel aan: kijk naar hem.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "F1_Q15",
-          "question": "Een agent beveelt u mondeling opzij te gaan. Is dat bevel geldig?",
+          "question": "De agent zegt je aan de kant te gaan. Is een mondeling bevel geldig?",
           "choices": [
             "Ja",
             "Nee"
@@ -389,414 +373,396 @@
         },
         {
           "id": "F1_Q16",
-          "question": "Een agent fluit en steekt dan zijn arm verticaal omhoog. Wat doet u?",
+          "question": "De agent fluit en steekt dan zijn arm op. Wat doe je?",
           "choices": [
-            "U stopt",
-            "U toetert terug",
-            "U rijdt verder uw weg"
+            "Je stopt",
+            "Je toetert",
+            "Je rijdt door"
           ],
           "correct": 0,
-          "explanation": "Fluitje = aandacht. Geheven arm = bevel om te stoppen.",
+          "explanation": "Fluitsignaal: opgelet. Opgestoken arm: stoppen.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "F1_Q18",
-          "question": "Een agent strekt een arm horizontaal uit. Jij nadert van zijn zijkant. Een voetganger nadert van zijn buikkant. Wat gebeurt er?",
+          "question": "Horizontaal gestrekte arm. Jij komt aan de kant van zijn hand; een voetganger komt naar zijn buik toe. Wie mag door?",
           "choices": [
-            "Iedereen mag door",
-            "Jij mag door, de voetganger moet stoppen",
-            "De voetganger mag door, jij moet stoppen",
-            "Iedereen stopt"
+            "Alleen jij",
+            "Alleen de voetganger",
+            "Jullie allebei"
           ],
-          "correct": 1,
-          "explanation": "Zijkant = mag door. Buik = moet stoppen. Jij rijdt door, de voetganger stopt.",
+          "correct": 0,
+          "explanation": "Kant van de arm: jij mag door. Naar de buik toe: de voetganger wacht.",
           "theoryCardIndex": 0
         },
         {
           "id": "F1_Q19",
-          "question": "Een agent gebaart u te stoppen. Mag u eerst uw inhaalmanoeuvre afmaken?",
+          "question": "Je haalt een bestelwagen in als de agent zijn arm opsteekt. Mag je je inhaalmanoeuvre afmaken?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, je gehoorzaamt meteen",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Je moet onmiddellijk gehoorzamen, zonder uitstel.",
+          "correct": 0,
+          "explanation": "Je gehoorzaamt meteen aan de agent.",
           "theoryCardIndex": 2
         },
         {
           "id": "F1_Q20",
-          "question": "U bent voetganger en een agent beveelt u te stoppen. Moet u gehoorzamen?",
+          "question": "Je bent voetganger. De agent geeft je een teken om te stoppen. Moet je gehoorzamen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zowel voetgangers als bestuurders moeten de bevelen van bevoegde agenten opvolgen.",
+          "explanation": "Voetgangers en bestuurders moeten de agenten gehoorzamen.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F1_Q21",
-          "question": "Uw wagen staat correct geparkeerd en een agent vraagt hem te verplaatsen. Moet u gehoorzamen?",
+          "question": "Je auto staat correct geparkeerd. De agent vraagt hem te verplaatsen. Moet je gehoorzamen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Je moet je voertuig verplaatsen zodra de agent het vraagt, onmiddellijk en zonder discussie.",
+          "explanation": "Ja, ook als je correct geparkeerd stond.",
           "theoryCardIndex": 2
         },
         {
           "id": "F1_Q22",
-          "question": "U vraagt die agent waarom. Moet hij u antwoorden?",
+          "question": "Je vraagt de agent waarom. Moet hij antwoorden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De agent hoeft zijn verzoek niet te rechtvaardigen.",
+          "explanation": "De agent hoeft zijn bevel niet te verantwoorden.",
           "theoryCardIndex": 2
         },
         {
           "id": "F1_Q23",
-          "question": "Mag je het bevel van een agent betwisten?",
+          "question": "De agent legt je een richting op die je onterecht vindt. Mag je ter plaatse discussiëren?",
           "choices": [
-            "Ja, je hebt het recht om te protesteren",
-            "Nee, je moet het uitvoeren zonder discussie",
-            "Ja, als je denkt dat je gelijk hebt",
-            "Ja, als er een andere agent aanwezig is"
+            "Nee, je gehoorzaamt",
+            "Ja, als je gelijk hebt"
           ],
-          "correct": 1,
-          "explanation": "Geen discussie mogelijk: je voert het uit zonder te discussiëren.",
+          "correct": 0,
+          "explanation": "Je gehoorzaamt eerst. Betwisten doe je later, niet ter plaatse.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "F1_Q25",
-          "question": "Wie mag verkeersaanwijzingen geven zonder bevoegd agent te zijn?",
+          "question": "Wie mag ook het verkeer regelen zonder agent te zijn?",
           "choices": [
-            "Gemachtigde opzichters en seingevers",
-            "Elke persoon met een armband",
-            "De politie in burger in dienst"
+            "Gemachtigde opzichters, seingevers, wegkapiteins",
+            "Iedereen met een fluohesje",
+            "Om het even welke bestuurder"
           ],
           "correct": 0,
-          "explanation": "Deze gemachtigde personen mogen aanwijzingen geven, geen bevelen.",
+          "explanation": "Deze gemachtigde personen geven aanwijzingen, in welbepaalde gevallen.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F1_Q26",
-          "question": "Een gemachtigd persoon geeft u teken te vertragen. Moet u dat opvolgen?",
+          "question": "Een gemachtigde persoon geeft je een teken om te vertragen. Moet je die aanwijzing volgen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De aanwijzingen van gemachtigde personen zijn verplicht.",
+          "explanation": "Ja, haar aanwijzingen zijn verplicht.",
           "theoryCardIndex": 3
         },
         {
           "id": "F1_Q27",
-          "question": "Mag een seingever van een wielerwedstrijd echte bevelen geven?",
+          "question": "Heeft een wegkapitein op een kruispunt met lichten dezelfde bevoegdheid als een agent?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Gemachtigde personen geven enkel aanwijzingen, geen bevelen.",
+          "correct": 0,
+          "explanation": "Nee: hij geeft aanwijzingen, geen bevelen zoals een agent.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "F1_Q29",
-          "question": "Mag een gemachtigd opzichter een proces-verbaal opstellen?",
+          "question": "Mag een gemachtigde opzichter een proces-verbaal opstellen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Een PV opstellen is voorbehouden aan bevoegde agenten.",
+          "explanation": "Alleen bevoegde agenten stellen een pv op.",
           "theoryCardIndex": 3
         },
         {
-          "id": "F1_Q30",
-          "question": "Wat is het verschil tussen een bevoegd agent en een gemachtigd persoon?",
-          "choices": [
-            "De agent beveelt en verbaliseert",
-            "De gemachtigde verbaliseert",
-            "Geen, hun bevoegdheden zijn gelijk"
-          ],
-          "correct": 0,
-          "explanation": "Bevoegd agent = bevelen + verkeer regelen + PV. Gemachtigde persoon = enkel aanwijzingen.",
-          "theoryCardIndex": 3,
-          "severe": true
-        },
-        {
           "id": "F1_Q31",
-          "question": "Iemand met een Belgische armband houdt een C3-schijf omhoog aan een kruispunt. Wat gebeurt er?",
+          "question": "Iemand met een armband in de Belgische kleuren houdt een schijf C3 omhoog op het kruispunt. Wat doe je?",
           "choices": [
-            "Hij mag het verkeer stilleggen",
-            "Hij heeft hier geen enkele macht",
-            "U steekt uw hand op als antwoord"
+            "Je stopt",
+            "Je rijdt door, het is geen agent",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "Armband met Belgische vlag op de linkerarm + verkeersbord C3 op armlengte.",
+          "explanation": "Belgische armband + schijf C3: een gemachtigde persoon die het verkeer stillegt.",
           "theoryCardIndex": 3
         },
         {
           "id": "F1_Q32",
-          "question": "Op welke arm moet de armband met de Belgische vlag gedragen worden?",
+          "question": "Aan welke arm draagt de gemachtigde persoon de Belgische armband?",
           "choices": [
-            "De rechterarm",
             "De linkerarm",
-            "Om het even welke arm",
-            "Beide armen"
+            "De rechterarm",
+            "Om het even welke"
           ],
-          "correct": 1,
-          "explanation": "De armband wordt verplicht op de linkerarm gedragen.",
+          "correct": 0,
+          "explanation": "Aan de linkerarm.",
           "theoryCardIndex": 3
         },
         {
           "id": "F1_Q33",
-          "question": "Welk teken moet een gemachtigd persoon tonen om het verkeer stil te leggen?",
+          "question": "Wat houdt de gemachtigde persoon omhoog om het verkeer stil te leggen?",
           "choices": [
-            "Een C3-schijf op armlengte",
-            "Een achthoekig STOP-bord",
-            "Een rood gekleurde vlag"
+            "Een schijf C3, met gestrekte arm",
+            "Een STOP-bord",
+            "Een rode vlag"
           ],
           "correct": 0,
-          "explanation": "Het verkeersbord C3 moet vastgemaakt zijn en op armlengte gehouden worden.",
+          "explanation": "Een schijf C3 met gestrekte arm.",
           "theoryCardIndex": 3
         },
         {
           "id": "F1_Q34",
-          "question": "Een bestuurder betrokken bij een ongeval regelt het verkeer. Mag hij dat?",
+          "question": "Na een ongeval begint een van de bestuurders het verkeer te regelen. Mag dat?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Noch de bestuurder, noch enige andere persoon mag het verkeer regelen na een ongeval.",
+          "explanation": "Nee, alleen agenten en gemachtigde personen regelen het verkeer.",
           "theoryCardIndex": 3
         },
         {
           "id": "F1_Q37",
-          "question": "Waaraan herkent u een prioritair voertuig?",
+          "question": "Waaraan herken je een prioritair voertuig met een dringende opdracht?",
           "choices": [
             "Aan het blauwe licht en de sirene",
-            "Aan zijn officiële kleur",
-            "Aan het logo op de portieren"
+            "Aan zijn kleur",
+            "Aan zijn logo"
           ],
           "correct": 0,
-          "explanation": "Blauw knipperlicht + speciaal geluidssignaal = prioritair voertuig.",
+          "explanation": "Blauw zwaailicht + sirene.",
           "theoryCardIndex": 4
         },
         {
           "id": "F1_Q38",
-          "question": "Welke voertuigen gelden als prioritair?",
+          "question": "Welke van deze voertuigen kunnen prioritair zijn?",
           "choices": [
             "Politie, ziekenwagens, brandweer",
-            "Taxi's en lijnbussen",
-            "Vrachtwagens en landbouwtuigen"
+            "Taxi's en autobussen",
+            "Vrachtwagens en tractoren"
           ],
           "correct": 0,
-          "explanation": "Politie, ziekenwagen, brandweer = prioritaire voertuigen.",
+          "explanation": "Politie, ziekenwagens, brandweer (en enkele andere hulpdiensten).",
           "theoryCardIndex": 4
         },
         {
           "id": "F1_Q39",
-          "question": "Een politiewagen nadert met enkel het blauwe licht, zonder sirene. Wat doet u?",
+          "question": "Er komt een politiewagen met alleen het blauwe licht, zonder sirene. Wat doe je?",
           "choices": [
-            "U rijdt gewoon verder",
-            "U stopt meteen",
-            "U maakt de rijbaan vrij"
+            "Je rijdt voorzichtig door",
+            "Je stopt",
+            "Je maakt de rijbaan vrij"
           ],
           "correct": 0,
-          "explanation": "Enkel blauw licht (zonder sirene) = gewoon doorrijden.",
+          "explanation": "Zonder sirene hoef je geen voorrang te verlenen: blijf opletten.",
           "theoryCardIndex": 4
         },
         {
           "id": "F1_Q41",
-          "question": "Een ziekenwagen komt achter u met blauw licht en sirene. Wat moet u doen?",
+          "question": "Er komt een ziekenwagen achter je, met blauw licht en sirene. Wat doe je?",
           "choices": [
-            "Vrij maken en voorrang verlenen",
-            "Uw koers gewoon aanhouden",
-            "Versnellen om hem door te laten"
+            "Je laat hem door",
+            "Je houdt je koers",
+            "Je versnelt"
           ],
           "correct": 0,
-          "explanation": "Blauw licht + sirene = onmiddellijk de rijbaan vrijmaken.",
+          "explanation": "Blauw licht + sirene: je maakt de doorgang vrij.",
           "theoryCardIndex": 4
         },
         {
           "id": "F1_Q42",
-          "question": "De weg is te smal om opzij te gaan voor die ziekenwagen. Wat doet u?",
+          "question": "De weg is te smal om opzij te gaan voor de ziekenwagen. Wat doe je?",
           "choices": [
-            "Vertragen of stoppen",
-            "Versnellen naar een betere plaats",
-            "De voorliggers toeteren"
+            "Je vertraagt of stopt zodra het kan",
+            "Je versnelt",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "Als je niet opzij kunt, vertraag of stop je zodra het mogelijk is.",
+          "explanation": "Als je niet opzij kunt, vertraag of stop je zodra het kan.",
           "theoryCardIndex": 4
         },
         {
           "id": "F1_Q44",
-          "question": "U staat aan een groen licht en een ziekenwagen komt van rechts. Wat doet u?",
+          "question": "Je licht is groen. Er komt een ziekenwagen van rechts, met blauw licht en sirene. Wat doe je?",
           "choices": [
-            "Voorrang verlenen aan de ziekenwagen",
-            "Doorrijden, u hebt groen licht",
-            "Toeteren om hem te waarschuwen"
+            "Je laat hem voorgaan",
+            "Je rijdt door, het is groen",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "De ziekenwagen met blauw licht + sirene heeft voorrang op het groene licht.",
+          "explanation": "Het prioritaire voertuig gaat voor, ook als jij groen hebt.",
           "theoryCardIndex": 4
         },
         {
           "id": "F1_Q45",
-          "question": "Wat is de volgorde van de hiërarchie, van sterk naar zwak?",
+          "question": "Wat gaat voor, van sterk naar zwak?",
           "choices": [
-            "Agenten, lichten, borden, regels",
-            "Lichten, agenten, borden, regels",
-            "Borden, lichten, agenten, regels"
+            "Agent, lichten, borden, regels",
+            "Lichten, agent, borden, regels",
+            "Borden, lichten, agent, regels"
           ],
           "correct": 0,
-          "explanation": "Agenten > Verkeerslichten > Verkeersborden > Algemene regels.",
+          "explanation": "Agent > lichten > borden > algemene regels.",
           "theoryCardIndex": 5
         },
         {
           "id": "F1_Q46",
-          "question": "Wat heeft voorrang: een verkeerslicht of een verkeersbord?",
+          "question": "Het kruispunt heeft werkende lichten en een voorrangsbord. Wat volg je?",
           "choices": [
-            "Het verkeersbord",
-            "Het verkeerslicht",
-            "Het is hetzelfde",
-            "Dat hangt af van de weg"
+            "De lichten",
+            "Het bord",
+            "Beide evenveel"
           ],
-          "correct": 1,
-          "explanation": "Verkeerslichten hebben voorrang op verkeersborden in de hiërarchie.",
+          "correct": 0,
+          "explanation": "Werkende lichten gaan voor op de voorrangsborden.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "F1_Q47",
-          "question": "Een agent laat u doorrijden terwijl het licht rood is. Wat gaat voor?",
+          "question": "Je licht is rood, maar de agent geeft je een teken om door te rijden. Wat doe je?",
           "choices": [
-            "Het bevel van de agent",
-            "Het rode licht van het kruispunt",
-            "Beide gelden hier evenveel"
+            "Je rijdt door, de agent gaat voor",
+            "Je wacht op groen",
+            "Je toetert"
           ],
           "correct": 0,
-          "explanation": "Het bevel van de agent heeft voorrang op alles, inclusief de verkeerslichten.",
+          "explanation": "De agent gaat voor op de lichten.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "F1_Q48",
-          "question": "Een bord geeft 70 km/u aan waar de algemene regel 90 is. Wat gaat voor?",
+          "question": "Dit bord toont 70 km/u op een weg waar de algemene regel 90 is. Wat respecteer je?",
           "choices": [
-            "Het bord van 70 km/u",
-            "De algemene regel van 90",
-            "Beide gelden hier evenveel"
+            "70 km/u",
+            "90 km/u",
+            "Het gemiddelde"
           ],
           "correct": 0,
-          "explanation": "Verkeersborden hebben voorrang op de algemene regels.",
+          "explanation": "Het bord gaat voor op de algemene regel.",
           "theoryCardIndex": 5
         },
         {
           "id": "F1_Q49",
-          "question": "Een agent beveelt een ziekenwagen in dienst te stoppen. Wat gebeurt er?",
+          "question": "De agent beveelt een ziekenwagen met opdracht te stoppen. Wat doet de ziekenwagen?",
           "choices": [
-            "De ziekenwagen moet stoppen",
-            "De ziekenwagen rijdt sowieso door",
-            "De agent moet voor hem wijken"
+            "Hij stopt",
+            "Hij rijdt toch door",
+            "Hij toetert"
           ],
           "correct": 0,
-          "explanation": "Het bevel van de agent heeft voorrang op ALLES, zelfs prioritaire voertuigen.",
+          "explanation": "De agent gaat voor op alles, ook op prioritaire voertuigen.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "F1_Q52",
-          "question": "Valt het oranje knipperlicht onder de hiërarchie lichten vóór borden?",
+          "question": "Het oranje licht knippert. Wat regelt de voorrang?",
           "choices": [
-            "Ja",
-            "Nee"
+            "De borden, anders voorrang van rechts",
+            "Het oranje licht",
+            "Niemand heeft voorrang"
           ],
-          "correct": 1,
-          "explanation": "Het oranje knipperlicht is een uitzondering op de hiërarchie verkeerslichten > verkeersborden.",
+          "correct": 0,
+          "explanation": "Knipperend oranje licht: de borden en markeringen gelden, anders voorrang van rechts.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "F1_Q53",
-          "question": "Vallen de lichten boven de rijstroken onder de hiërarchie lichten vóór borden?",
+          "question": "Gaan de lichten boven de rijstroken (kruis, pijlen) voor op de borden?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, ze gelden samen",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Deze signalen zijn een uitzondering op de hiërarchie verkeerslichten > verkeersborden.",
+          "correct": 0,
+          "explanation": "Deze signalen gaan niet voor op de voorrangsborden: ze gelden samen.",
           "theoryCardIndex": 5
         },
         {
           "id": "F1_Q54",
-          "question": "Heft een groen licht het bord B22 voor fietsers op?",
+          "question": "Het licht is rood, maar eronder hangt een bordje met een fiets en een pijl naar rechts. Mag de fietser rechtsaf?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Ja, met voorrang verlenen",
+            "Nee, het rode licht gaat voor"
           ],
-          "correct": 1,
-          "explanation": "B22 en B23 zijn uitzonderingen: ze vallen niet onder de hiërarchie verkeerslichten > verkeersborden.",
+          "correct": 0,
+          "explanation": "Dat onderbord laat de fietser door het rood in de aangeduide richting, als hij voorrang verleent.",
           "theoryCardIndex": 5
         },
         {
           "id": "F1_Q56",
-          "question": "In een zone 50 gebaart een agent u te versnellen. Wat doet u?",
+          "question": "In een zone 50 geeft de agent je een teken om te versnellen. Wat doe je?",
           "choices": [
-            "U versnelt, de agent gaat voor",
-            "U blijft op 50 km/u",
-            "U stopt om uitleg te vragen"
+            "Je versnelt, de agent gaat voor",
+            "Je blijft 50 rijden",
+            "Je stopt"
           ],
           "correct": 0,
-          "explanation": "De agent heeft voorrang op de verkeersborden: zijn bevel prevaleert.",
+          "explanation": "Het bevel van de agent gaat voor op het bord.",
           "theoryCardIndex": 5,
           "severe": true
         },
         {
           "id": "F1_Q59",
-          "question": "Wat is het internationale noodnummer?",
+          "question": "Wat is het Europese noodnummer?",
           "choices": [
-            "100",
             "112",
-            "911",
-            "101"
+            "100",
+            "911"
           ],
-          "correct": 1,
-          "explanation": "Het 112 is het internationale noodnummer.",
+          "correct": 0,
+          "explanation": "112, in heel Europa.",
           "theoryCardIndex": 6
         },
         {
           "id": "F1_Q60",
-          "question": "Een praatpaal staat op 50 meter van een ongeval op de autosnelweg. Wat doet u?",
+          "question": "Ongeval op de autosnelweg, een praatpaal staat op 50 m. Wat doe je?",
           "choices": [
-            "De praatpaal gebruiken",
-            "Het 112 bellen met de telefoon",
-            "Het 101 bellen met de telefoon"
+            "Je gebruikt de praatpaal",
+            "Je belt 101",
+            "Je doet niets"
           ],
           "correct": 0,
-          "explanation": "De noodoproeppaal heeft de voorkeur als die beschikbaar is.",
+          "explanation": "De praatpaal geeft meteen je plaats door. Blijf achter de vangrail.",
           "theoryCardIndex": 6
         },
         {
           "id": "F1_Q61",
-          "question": "Mag een brandweerman het verkeer regelen op de plaats van zijn interventie?",
+          "question": "Mag een brandweerman het verkeer regelen waar hij tussenkomt?",
           "choices": [
             "Ja",
-            "Nee"
+            "Nee, alleen de politie"
           ],
           "correct": 0,
-          "explanation": "Een brandweerman mag het verkeer regelen op de plaats van zijn interventie.",
+          "explanation": "Ja, op de plaats van de interventie mag hij bevelen geven.",
           "theoryCardIndex": 6
         },
         {
@@ -807,19 +773,7 @@
             "Nee"
           ],
           "correct": 1,
-          "explanation": "De brandweerman mag geen PV opstellen — dat mogen enkel bevoegde agenten.",
-          "theoryCardIndex": 6
-        },
-        {
-          "id": "F1_Q63",
-          "question": "Wat is het verschil tussen een brandweerman en een bevoegd agent in het verkeer?",
-          "choices": [
-            "De brandweerman verbaliseert niet",
-            "De brandweerman heeft meer macht",
-            "De agent regelt het verkeer niet"
-          ],
-          "correct": 0,
-          "explanation": "Brandweerman: verkeer regelen enkel op de interventieplaats, geen PV. Bevoegd agent: beide.",
+          "explanation": "Nee, hij regelt het verkeer maar stelt geen pv op.",
           "theoryCardIndex": 6
         },
         {
@@ -858,6 +812,17 @@
           "correct": 0,
           "explanation": "F50 geeft aan dat de weg doodlopend is voor motorvoertuigen, maar dat er een doorgang is voor voetgangers en fietsers. Zij mogen doorlopen.",
           "sign": "F45b"
+        },
+        {
+          "id": "F1_Q70",
+          "question": "De agent steekt zijn arm op. Moet de tram ook stoppen?",
+          "choices": [
+            "Ja",
+            "Nee, de tram heeft altijd voorrang"
+          ],
+          "correct": 0,
+          "explanation": "De tram gehoorzaamt aan de agenten en de lichten.",
+          "theoryCardIndex": 0
         }
       ]
     },

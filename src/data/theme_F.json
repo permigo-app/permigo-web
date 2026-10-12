@@ -238,663 +238,614 @@
       "questions": [
         {
           "id": "F1_Q1",
-          "question": "Un agent qualifié lève un bras à la verticale. Que devez-vous faire ?",
+          "question": "L'agent lève le bras à la verticale. Que faites-vous ?",
           "choices": [
-            "Vous arrêter",
-            "Ralentir un peu",
-            "Tourner à droite"
+            "Vous vous arrêtez",
+            "Vous ralentissez",
+            "Vous tournez à droite"
           ],
           "correct": 0,
-          "explanation": "Le bras levé verticalement = tous les usagers s'arrêtent.",
+          "explanation": "Bras levé : tout le monde s'arrête.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F1_Q1.webp"
         },
         {
           "id": "F1_Q2",
-          "question": "Vous êtes déjà engagé dans un carrefour lorsqu'un agent lève le bras verticalement. Que faites-vous ?",
+          "question": "Vous êtes déjà dans le carrefour quand l'agent lève le bras. Que faites-vous ?",
           "choices": [
-            "Vous vous immobilisez sur place dans le carrefour",
-            "Vous évacuez le carrefour le plus rapidement possible",
-            "Vous faites marche arrière pour sortir du carrefour",
-            "Vous restez dans le carrefour en attendant un nouveau signal"
+            "Vous quittez le carrefour",
+            "Vous vous arrêtez sur place",
+            "Vous reculez"
           ],
-          "correct": 1,
-          "explanation": "Les usagers déjà engagés doivent évacuer le carrefour le plus rapidement possible.",
+          "correct": 0,
+          "explanation": "Déjà engagé, vous dégagez le carrefour.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F1_Q2.webp"
         },
         {
           "id": "F1_Q3",
-          "question": "Un agent lève le bras verticalement. Vous êtes piéton : êtes-vous concerné ?",
+          "question": "L'agent lève le bras. Vous êtes piéton. Êtes-vous concerné ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le bras levé concerne TOUS les usagers, piétons inclus.",
+          "explanation": "Le bras levé vaut pour tous les usagers, piétons compris.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F1_Q3.webp"
         },
         {
           "id": "F1_Q4",
-          "question": "Un agent tend un bras horizontalement et vous vous dirigez vers son ventre. Que faites-vous ?",
+          "question": "L'agent tend un bras à l'horizontale et vous arrivez face à son ventre. Que faites-vous ?",
           "choices": [
             "Vous vous arrêtez",
-            "Vous avancez normalement",
+            "Vous passez",
             "Vous tournez à droite"
           ],
           "correct": 0,
-          "explanation": "Se diriger vers le ventre de l'agent = obligation de s'arrêter.",
+          "explanation": "Face au ventre ou au dos de l'agent : arrêt.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F1_Q4.webp"
         },
         {
           "id": "F1_Q6",
-          "question": "Un agent tend un bras horizontalement et vous arrivez du côté de sa main. Que pouvez-vous faire ?",
+          "question": "L'agent tend un bras à l'horizontale et vous arrivez du côté de sa main. Que pouvez-vous faire ?",
           "choices": [
-            "Tout droit, à gauche ou à droite",
-            "Continuer tout droit, sans plus",
-            "Vous arrêter avant le carrefour"
+            "Aller tout droit, à gauche ou à droite",
+            "Seulement aller tout droit",
+            "Vous arrêter"
           ],
           "correct": 0,
-          "explanation": "Approcher du côté de l'agent = vous pouvez passer dans toutes les directions.",
+          "explanation": "Du côté du bras tendu : vous pouvez passer, dans toutes les directions.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F1_Q6.webp"
         },
         {
           "id": "F1_Q7",
-          "question": "Un agent tend les deux bras horizontalement. L'injonction diffère-t-elle d'un seul bras tendu ?",
+          "question": "Deux bras tendus à l'horizontale signifient-ils la même chose qu'un seul ?",
           "choices": [
             "Oui",
             "Non"
           ],
-          "correct": 1,
-          "explanation": "Deux bras horizontaux = même injonction qu'un seul bras horizontal.",
+          "correct": 0,
+          "explanation": "Oui, même injonction.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F1_Q7.webp"
         },
         {
           "id": "F1_Q8",
-          "question": "Un agent a les bras tendus horizontalement. Qui s'arrête et qui passe ?",
+          "question": "L'agent a les bras tendus à l'horizontale. Qui s'arrête ?",
           "choices": [
-            "Ventre ou dos : arrêt ; côté : passage",
-            "Côté : arrêt ; ventre ou dos : passage",
-            "Tout le monde s'arrête, sans exception"
+            "Ceux face à son ventre ou à son dos",
+            "Ceux de son côté",
+            "Tout le monde"
           ],
           "correct": 0,
-          "explanation": "Ventre/dos de l'agent = stop. Côté de l'agent = peut passer dans toutes les directions.",
+          "explanation": "Ventre ou dos : arrêt. Côtés : passage.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F1_Q8.webp"
         },
         {
           "id": "F1_Q9",
-          "question": "Il fait nuit. Un agent balance une torche rouge dans votre direction. Que devez-vous faire ?",
+          "question": "La nuit, l'agent balance une lampe rouge vers vous. Que faites-vous ?",
           "choices": [
-            "Vous ralentissez et poursuivez votre route",
-            "Vous vous arrêtez immédiatement",
-            "Vous accélérez pour quitter la zone",
+            "Vous vous arrêtez",
+            "Vous ralentissez et passez",
             "Vous allumez vos feux de détresse"
           ],
-          "correct": 1,
-          "explanation": "La torche rouge balancée vers vous = obligation de s'arrêter.",
+          "correct": 0,
+          "explanation": "Lumière rouge balancée vers vous : arrêt.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F1_Q9.webp"
         },
         {
           "id": "F1_Q10",
-          "question": "Vous roulez sur une route et un agent effectue un mouvement vertical du bras, de haut en bas. Que signifie ce geste ?",
+          "question": "L'agent abaisse et relève le bras, de haut en bas. Que signifie ce geste ?",
           "choices": [
-            "Vous devez vous arrêter complètement",
-            "Vous devez réduire votre vitesse",
-            "Vous devez augmenter votre vitesse",
-            "Vous devez changer de direction"
+            "Ralentir",
+            "S'arrêter",
+            "Accélérer"
           ],
-          "correct": 1,
-          "explanation": "Mouvement vertical de haut en bas = réduire la vitesse.",
+          "correct": 0,
+          "explanation": "Mouvement vertical de haut en bas : réduisez votre vitesse.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F1_Q10.webp"
         },
         {
           "id": "F1_Q11",
-          "question": "Un agent fait un mouvement rotatif du bras. Que signifie ce geste ?",
+          "question": "L'agent fait un mouvement circulaire du bras. Que signifie ce geste ?",
           "choices": [
-            "Augmenter votre vitesse",
-            "Réduire votre vitesse",
-            "Faire demi-tour ici"
+            "Accélérer",
+            "Ralentir",
+            "Faire demi-tour"
           ],
           "correct": 0,
-          "explanation": "Mouvement rotatif = augmenter la vitesse.",
+          "explanation": "Mouvement circulaire : augmentez votre vitesse.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F1_Q11.webp"
         },
         {
-          "id": "F1_Q12",
-          "question": "Quelle différence entre le mouvement vertical et le mouvement rotatif du bras ?",
+          "id": "F1_Q13",
+          "question": "L'agent donne un coup de sifflet. Devez-vous vous arrêter ?",
           "choices": [
-            "Vertical : ralentir ; rotatif : accélérer",
-            "Vertical : accélérer ; rotatif : ralentir",
-            "Les deux imposent de vous arrêter"
+            "Non, il attire votre attention",
+            "Oui, tout de suite",
+            "Oui, et faire un appel de phares"
           ],
           "correct": 0,
-          "explanation": "Vertical (haut en bas) = réduire. Rotatif = augmenter.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/F1_Q12.webp"
-        },
-        {
-          "id": "F1_Q13",
-          "question": "Vous entendez un agent donner un coup de sifflet. Le sifflet constitue-t-il une injonction en soi ?",
-          "choices": [
-            "Oui, vous devez vous arrêter immédiatement",
-            "Non, il sert uniquement à attirer l'attention",
-            "Oui, vous devez ralentir fortement",
-            "Oui, vous devez répondre par un appel de phares"
-          ],
-          "correct": 1,
-          "explanation": "Le sifflet n'est PAS une injonction — il attire uniquement l'attention.",
+          "explanation": "Le sifflet attire l'attention : regardez l'agent, l'injonction va suivre.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F1_Q13.webp"
         },
         {
           "id": "F1_Q14",
-          "question": "Un agent siffle dans votre direction. Quelle est la réaction correcte ?",
+          "question": "L'agent siffle dans votre direction. Que faites-vous ?",
           "choices": [
-            "Le regarder pour voir son geste",
-            "Vous arrêter net sur-le-champ",
-            "Accélérer pour dégager la zone"
+            "Vous le regardez pour voir son geste",
+            "Vous freinez net",
+            "Vous accélérez"
           ],
           "correct": 0,
-          "explanation": "Le sifflet signifie « regardez-moi, une injonction va suivre ».",
+          "explanation": "Le sifflet annonce une injonction : regardez-le.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F1_Q14.webp"
         },
         {
           "id": "F1_Q15",
-          "question": "Un agent vous ordonne verbalement de vous ranger. Cette injonction est-elle valable ?",
+          "question": "L'agent vous dit de vous ranger. Un ordre verbal est-il valable ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les injonctions peuvent être données par gestes ou verbalement.",
+          "explanation": "Les injonctions peuvent être données par gestes ou de vive voix.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F1_Q15.webp"
         },
         {
           "id": "F1_Q16",
-          "question": "Un agent siffle, puis lève le bras verticalement. Que faites-vous ?",
+          "question": "L'agent siffle, puis lève le bras. Que faites-vous ?",
           "choices": [
             "Vous vous arrêtez",
-            "Vous klaxonnez en retour",
-            "Vous continuez votre route"
+            "Vous klaxonnez",
+            "Vous continuez"
           ],
           "correct": 0,
-          "explanation": "Sifflet = attention. Bras levé = injonction de s'arrêter.",
+          "explanation": "Sifflet : attention. Bras levé : arrêt.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F1_Q16.webp"
         },
         {
           "id": "F1_Q18",
-          "question": "Un agent tend un bras horizontal. Vous approchez par son côté droit. Un piéton approche face à son ventre. Que se passe-t-il ?",
+          "question": "Bras tendu à l'horizontale. Vous arrivez du côté de sa main ; un piéton arrive face à son ventre. Qui passe ?",
           "choices": [
-            "Vous et le piéton pouvez tous les deux passer",
-            "Vous pouvez passer, mais le piéton doit s'arrêter",
-            "Le piéton peut passer, mais vous devez vous arrêter",
-            "Vous et le piéton devez tous les deux vous arrêter"
+            "Vous seulement",
+            "Le piéton seulement",
+            "Vous deux"
           ],
-          "correct": 1,
-          "explanation": "Côté = peut passer. Ventre = doit s'arrêter. Vous passez, le piéton s'arrête.",
+          "correct": 0,
+          "explanation": "Côté du bras : vous passez. Face au ventre : le piéton attend.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F1_Q18.webp"
         },
         {
           "id": "F1_Q19",
-          "question": "Un agent vous fait signe de vous arrêter. Pouvez-vous d'abord finir votre dépassement ?",
+          "question": "Vous dépassez une camionnette quand l'agent lève le bras. Pouvez-vous finir votre dépassement ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, vous obéissez tout de suite",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "L'obtempération doit être immédiate, sans délai.",
+          "correct": 0,
+          "explanation": "On obéit immédiatement à l'agent.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F1_Q19.webp"
         },
         {
           "id": "F1_Q20",
-          "question": "Vous êtes piéton et un agent vous ordonne de vous arrêter. Devez-vous obéir ?",
+          "question": "Vous êtes piéton. L'agent vous fait signe de vous arrêter. Devez-vous obéir ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Piétons et conducteurs doivent tous obtempérer aux injonctions des agents qualifiés.",
+          "explanation": "Piétons et conducteurs doivent obéir aux agents.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F1_Q20.webp"
         },
         {
           "id": "F1_Q21",
-          "question": "Votre véhicule est bien garé et un agent vous demande de le déplacer. Devez-vous obéir ?",
+          "question": "Votre voiture est bien garée. L'agent vous demande de la déplacer. Devez-vous obéir ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Vous devez déplacer votre véhicule dès que l'agent le demande, immédiatement et sans discuter.",
+          "explanation": "Oui, même si vous étiez bien garé.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F1_Q21.webp"
         },
         {
           "id": "F1_Q22",
-          "question": "Vous demandez à cet agent pourquoi. Est-il tenu de vous répondre ?",
+          "question": "Vous demandez à l'agent pourquoi. Doit-il vous répondre ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "L'agent n'a pas à justifier sa demande.",
+          "explanation": "L'agent n'a pas à justifier son injonction.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F1_Q22.webp"
         },
         {
           "id": "F1_Q23",
-          "question": "Un agent vous ordonne de changer de direction à un carrefour. Vous pensez que son injonction est injustifiée. Pouvez-vous la contester sur place ?",
+          "question": "L'agent vous impose une direction que vous trouvez injuste. Pouvez-vous discuter sur place ?",
           "choices": [
-            "Oui, vous avez le droit de contester l'injonction",
-            "Non, vous devez vous exécuter sans discuter",
-            "Oui, si vous pensez avoir raison",
-            "Oui, si un autre agent est présent pour arbitrer"
+            "Non, vous obéissez",
+            "Oui, si vous avez raison"
           ],
-          "correct": 1,
-          "explanation": "Aucune discussion possible : on s'exécute sans discuter.",
+          "correct": 0,
+          "explanation": "Vous obéissez d'abord. Une contestation se fait plus tard, pas sur place.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F1_Q23.webp"
         },
         {
           "id": "F1_Q25",
-          "question": "Qui peut donner des indications de circulation sans être agent qualifié ?",
+          "question": "Qui peut aussi régler la circulation sans être agent ?",
           "choices": [
-            "Surveillants, signaleurs, capitaines",
-            "Toute personne avec un brassard",
-            "Les policiers en civil de service"
+            "Surveillants, signaleurs, capitaines de route",
+            "Toute personne avec un gilet fluo",
+            "N'importe quel conducteur"
           ],
           "correct": 0,
-          "explanation": "Ces personnes autorisées peuvent donner des indications, pas des injonctions.",
+          "explanation": "Ces personnes autorisées donnent des indications, dans des cas précis.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F1_Q25.webp"
         },
         {
           "id": "F1_Q26",
-          "question": "Une personne autorisée vous indique de ralentir. Devez-vous la respecter ?",
+          "question": "Une personne autorisée vous fait signe de ralentir. Devez-vous suivre son indication ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les indications des personnes autorisées sont obligatoires.",
+          "explanation": "Oui, ses indications sont obligatoires.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F1_Q26.webp"
         },
         {
           "id": "F1_Q27",
-          "question": "Un signaleur de course cycliste peut-il donner de véritables injonctions ?",
+          "question": "Dans un carrefour à feux, un capitaine de route a-t-il les mêmes pouvoirs qu'un agent ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les personnes autorisées ne donnent que des indications, pas des injonctions.",
+          "correct": 0,
+          "explanation": "Non : il donne des indications, pas des injonctions d'agent.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F1_Q27.webp"
         },
         {
           "id": "F1_Q29",
-          "question": "Un surveillant habilité peut-il rédiger un procès-verbal ?",
+          "question": "Un surveillant habilité peut-il dresser un procès-verbal ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Rédiger un PV est réservé aux agents qualifiés.",
+          "explanation": "Seuls les agents qualifiés dressent des PV.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F1_Q29.webp"
         },
         {
-          "id": "F1_Q30",
-          "question": "Quelle différence entre un agent qualifié et une personne autorisée ?",
-          "choices": [
-            "L'agent injonctionne et verbalise",
-            "La personne autorisée verbalise",
-            "Aucune, leurs pouvoirs sont égaux"
-          ],
-          "correct": 0,
-          "explanation": "Agent qualifié = injonctions + circulation + PV. Personne autorisée = indications uniquement.",
-          "theoryCardIndex": 3,
-          "severe": true,
-          "image": "/images/questions/F1_Q30.webp"
-        },
-        {
           "id": "F1_Q31",
-          "question": "Une personne au brassard belge brandit un signal C3 à un carrefour. Que se passe-t-il ?",
+          "question": "Une personne avec un brassard aux couleurs belges lève un disque C3 au carrefour. Que faites-vous ?",
           "choices": [
-            "Elle peut arrêter la circulation",
-            "Elle n'a aucun pouvoir réel ici",
-            "Vous levez la main en réponse"
+            "Vous vous arrêtez",
+            "Vous continuez, ce n'est pas un agent",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "Brassard drapeau belge au bras gauche + signal C3 à bout de bras.",
+          "explanation": "Brassard belge + disque C3 : une personne autorisée qui arrête la circulation.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F1_Q31.webp"
         },
         {
           "id": "F1_Q32",
-          "question": "Une personne autorisée arrête la circulation à un carrefour sans feux. Sur quel bras doit-elle porter le brassard avec le drapeau belge ?",
+          "question": "Sur quel bras la personne autorisée porte-t-elle le brassard belge ?",
           "choices": [
-            "Le bras droit",
             "Le bras gauche",
-            "N'importe quel bras",
-            "Les deux bras"
+            "Le bras droit",
+            "N'importe lequel"
           ],
-          "correct": 1,
-          "explanation": "Le brassard se porte obligatoirement sur le bras gauche.",
+          "correct": 0,
+          "explanation": "Sur le bras gauche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F1_Q32.webp"
         },
         {
           "id": "F1_Q33",
-          "question": "Quel signal une personne autorisée doit-elle brandir pour arrêter la circulation ?",
+          "question": "Que brandit la personne autorisée pour arrêter la circulation ?",
           "choices": [
-            "Un signal C3 à bout de bras",
-            "Un panneau STOP octogonal",
-            "Un drapeau de couleur rouge"
+            "Un disque C3, à bout de bras",
+            "Un panneau STOP",
+            "Un drapeau rouge"
           ],
           "correct": 0,
-          "explanation": "Le signal C3 doit être fixé et tenu à bout de bras.",
+          "explanation": "Un disque C3 tenu à bout de bras.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F1_Q33.webp"
         },
         {
           "id": "F1_Q34",
-          "question": "Un conducteur impliqué dans un accident dirige la circulation. En a-t-il le droit ?",
+          "question": "Après un accident, un des conducteurs se met à diriger la circulation. En a-t-il le droit ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Ni le conducteur ni aucune autre personne ne peut régler la circulation après un accident.",
+          "explanation": "Non, seuls les agents et les personnes autorisées règlent la circulation.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F1_Q34.webp"
         },
         {
           "id": "F1_Q37",
-          "question": "À quoi reconnaît-on un véhicule prioritaire ?",
+          "question": "À quoi reconnaît-on un véhicule prioritaire en mission urgente ?",
           "choices": [
             "Au feu bleu et à la sirène",
-            "À sa couleur officielle",
-            "À son logo sur les portières"
+            "À sa couleur",
+            "À son logo"
           ],
           "correct": 0,
-          "explanation": "Feu bleu clignotant + avertisseur sonore spécial = véhicule prioritaire.",
+          "explanation": "Feu bleu clignotant + sirène.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F1_Q37.webp"
         },
         {
           "id": "F1_Q38",
-          "question": "Quels véhicules sont considérés comme prioritaires ?",
+          "question": "Lesquels de ces véhicules peuvent être prioritaires ?",
           "choices": [
             "Police, ambulances, pompiers",
-            "Taxis et autobus de ligne",
-            "Camions et engins agricoles"
+            "Taxis et autobus",
+            "Camions et tracteurs"
           ],
           "correct": 0,
-          "explanation": "Police, ambulance, pompiers = véhicules prioritaires.",
+          "explanation": "Police, ambulances, pompiers (et quelques autres services de secours).",
           "theoryCardIndex": 4,
           "image": "/images/questions/F1_Q38.webp"
         },
         {
           "id": "F1_Q39",
-          "question": "Une voiture de police approche avec son feu bleu seul, sans sirène. Que faites-vous ?",
+          "question": "Une voiture de police arrive avec le feu bleu seul, sans sirène. Que faites-vous ?",
           "choices": [
-            "Vous continuez normalement",
-            "Vous vous arrêtez aussitôt",
+            "Vous continuez, prudemment",
+            "Vous vous arrêtez",
             "Vous dégagez la chaussée"
           ],
           "correct": 0,
-          "explanation": "Feu bleu seul (sans sirène) = continuez normalement.",
+          "explanation": "Sans sirène, pas d'obligation de céder : restez attentif.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F1_Q39.webp"
         },
         {
           "id": "F1_Q41",
-          "question": "Une ambulance arrive derrière vous, feu bleu et sirène. Que devez-vous faire ?",
+          "question": "Une ambulance arrive derrière vous, feu bleu et sirène. Que faites-vous ?",
           "choices": [
-            "Dégager et céder le passage",
-            "Garder votre trajectoire",
-            "Accélérer pour la laisser"
+            "Vous lui laissez le passage",
+            "Vous gardez votre trajectoire",
+            "Vous accélérez"
           ],
           "correct": 0,
-          "explanation": "Feu bleu + sirène = dégager immédiatement la chaussée.",
+          "explanation": "Feu bleu + sirène : vous dégagez le passage.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F1_Q41.webp"
         },
         {
           "id": "F1_Q42",
-          "question": "La route est trop étroite pour vous écarter devant cette ambulance. Que faites-vous ?",
+          "question": "La route est trop étroite pour vous écarter devant l'ambulance. Que faites-vous ?",
           "choices": [
-            "Ralentir ou vous arrêter",
-            "Accélérer pour trouver mieux",
-            "Klaxonner ceux de devant"
+            "Vous ralentissez ou vous arrêtez dès que possible",
+            "Vous accélérez",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "Si impossible de s'écarter, on ralentit ou s'arrête dès que possible.",
+          "explanation": "Si vous ne pouvez pas vous écarter, vous ralentissez ou vous arrêtez dès que possible.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F1_Q42.webp"
         },
         {
           "id": "F1_Q44",
-          "question": "Vous êtes à un feu vert et une ambulance arrive par la droite. Que faites-vous ?",
+          "question": "Votre feu est vert. Une ambulance arrive par la droite, feu bleu et sirène. Que faites-vous ?",
           "choices": [
-            "Céder le passage à l'ambulance",
-            "Passer, vous avez le feu vert",
-            "Klaxonner pour la prévenir"
+            "Vous la laissez passer",
+            "Vous passez, c'est vert",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "L'ambulance avec feu bleu + sirène prime sur le feu vert.",
+          "explanation": "Le véhicule prioritaire passe avant, même si vous avez le vert.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F1_Q44.webp"
         },
         {
           "id": "F1_Q45",
-          "question": "Quel est l'ordre de la hiérarchie, du plus fort au plus faible ?",
+          "question": "Qu'est-ce qui l'emporte, du plus fort au plus faible ?",
           "choices": [
-            "Agents, feux, panneaux, règles",
-            "Feux, agents, panneaux, règles",
-            "Panneaux, feux, agents, règles"
+            "Agent, feux, panneaux, règles",
+            "Feux, agent, panneaux, règles",
+            "Panneaux, feux, agent, règles"
           ],
           "correct": 0,
-          "explanation": "Agents > Feux > Panneaux > Règles générales.",
+          "explanation": "Agent > feux > panneaux > règles générales.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F1_Q45.webp"
         },
         {
           "id": "F1_Q46",
-          "question": "Vous arrivez à un carrefour équipé de feux ET d'un panneau de priorité. Les feux fonctionnent. Lequel prime ?",
+          "question": "Le carrefour a des feux qui fonctionnent et un panneau de priorité. Que suivez-vous ?",
           "choices": [
-            "Le panneau (signal routier)",
-            "Le feu de signalisation",
-            "Les deux ont la même valeur",
-            "Cela dépend du type de route"
+            "Les feux",
+            "Le panneau",
+            "Les deux à égalité"
           ],
-          "correct": 1,
-          "explanation": "Les feux priment sur les panneaux dans la hiérarchie.",
+          "correct": 0,
+          "explanation": "Les feux qui fonctionnent l'emportent sur les panneaux de priorité.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/F1_Q46.webp"
         },
         {
           "id": "F1_Q47",
-          "question": "Un agent vous fait signe de passer alors que le feu est rouge. Que prime ?",
+          "question": "Votre feu est rouge, mais l'agent vous fait signe de passer. Que faites-vous ?",
           "choices": [
-            "L'injonction de l'agent",
-            "Le feu rouge du carrefour",
-            "Les deux se valent ici"
+            "Vous passez, l'agent l'emporte",
+            "Vous attendez le vert",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "L'injonction de l'agent prime sur tout, y compris les feux.",
+          "explanation": "L'agent l'emporte sur les feux.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/F1_Q47.webp"
         },
         {
           "id": "F1_Q48",
-          "question": "Un panneau indique 70 km/h là où la règle générale est de 90. Lequel prime ?",
+          "question": "Ce panneau indique 70 km/h sur une route où la règle générale est 90. Que respectez-vous ?",
           "choices": [
-            "Le panneau de 70 km/h",
-            "La règle générale de 90",
-            "Les deux se valent ici"
+            "70 km/h",
+            "90 km/h",
+            "La moyenne"
           ],
           "correct": 0,
-          "explanation": "Les panneaux priment sur les règles générales.",
+          "explanation": "Le panneau l'emporte sur la règle générale.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F1_Q48.webp"
         },
         {
           "id": "F1_Q49",
-          "question": "Un agent ordonne à une ambulance en intervention de s'arrêter. Que se passe-t-il ?",
+          "question": "L'agent ordonne à une ambulance en mission de s'arrêter. Que fait l'ambulance ?",
           "choices": [
-            "L'ambulance doit s'arrêter",
-            "L'ambulance passe d'office",
-            "L'agent doit s'écarter d'elle"
+            "Elle s'arrête",
+            "Elle passe quand même",
+            "Elle klaxonne"
           ],
           "correct": 0,
-          "explanation": "L'injonction de l'agent prime sur TOUT, même les véhicules prioritaires.",
+          "explanation": "L'agent l'emporte sur tout, même sur les véhicules prioritaires.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/F1_Q49.webp"
         },
         {
           "id": "F1_Q52",
-          "question": "Le feu jaune-orange clignotant est-il soumis à la hiérarchie feux avant panneaux ?",
+          "question": "Le feu orange clignote. Qu'est-ce qui règle la priorité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Les panneaux, sinon la priorité de droite",
+            "Le feu orange",
+            "Personne n'a priorité"
           ],
-          "correct": 1,
-          "explanation": "Le feu jaune-orange clignotant est une exception à la hiérarchie feux > panneaux.",
+          "correct": 0,
+          "explanation": "Feu orange clignotant : les panneaux et marquages s'appliquent, ou à défaut la priorité de droite.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/F1_Q52.webp"
         },
         {
           "id": "F1_Q53",
-          "question": "Les feux au-dessus des bandes sont-ils soumis à la hiérarchie feux avant panneaux ?",
+          "question": "Les feux au-dessus des bandes (croix, flèches) l'emportent-ils sur les panneaux ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, ils s'ajoutent",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Ces signaux sont une exception à la hiérarchie feux > panneaux.",
+          "correct": 0,
+          "explanation": "Ces signaux ne passent pas avant les panneaux de priorité : ils s'appliquent ensemble.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F1_Q53.webp"
         },
         {
           "id": "F1_Q54",
-          "question": "Un feu vert annule-t-il le panneau B22 destiné aux cyclistes ?",
+          "question": "Le feu est rouge, mais un petit panneau vélo avec flèche à droite est fixé dessous. Le cycliste peut-il tourner à droite ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, en cédant le passage",
+            "Non, le feu rouge l'emporte"
           ],
-          "correct": 1,
-          "explanation": "B22 et B23 sont des exceptions : ils ne sont pas soumis à la hiérarchie feux > panneaux.",
+          "correct": 0,
+          "explanation": "Ce panonceau permet au cycliste de passer au rouge dans la direction indiquée, en cédant le passage.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F1_Q54.webp"
         },
         {
           "id": "F1_Q56",
-          "question": "En zone 50, un agent vous fait signe d'accélérer. Que faites-vous ?",
+          "question": "En zone 50, l'agent vous fait signe d'accélérer. Que faites-vous ?",
           "choices": [
-            "Vous accélérez, l'agent prime",
-            "Vous restez à 50 km/h",
-            "Vous vous arrêtez pour demander"
+            "Vous accélérez, l'agent l'emporte",
+            "Vous restez à 50",
+            "Vous vous arrêtez"
           ],
           "correct": 0,
-          "explanation": "L'agent prime sur les panneaux : son injonction l'emporte.",
+          "explanation": "L'injonction de l'agent l'emporte sur le panneau.",
           "theoryCardIndex": 5,
           "severe": true,
           "image": "/images/questions/F1_Q56.webp"
         },
         {
           "id": "F1_Q59",
-          "question": "Vous êtes témoin d'un accident. Quel numéro d'urgence international devez-vous composer ?",
+          "question": "Quel est le numéro d'urgence européen ?",
           "choices": [
-            "Le 100",
-            "Le 112",
-            "Le 911",
-            "Le 101"
+            "112",
+            "100",
+            "911"
           ],
-          "correct": 1,
-          "explanation": "Le 112 est le numéro d'urgence international.",
+          "correct": 0,
+          "explanation": "Le 112, dans toute l'Europe.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F1_Q59.webp"
         },
         {
           "id": "F1_Q60",
-          "question": "Une borne d'appel se trouve à 50 mètres d'un accident sur autoroute. Que faites-vous ?",
+          "question": "Accident sur autoroute, une borne d'appel est à 50 m. Que faites-vous ?",
           "choices": [
-            "Utiliser la borne d'appel",
-            "Appeler le 112 au téléphone",
-            "Appeler le 101 au téléphone"
+            "Vous utilisez la borne",
+            "Vous appelez le 101",
+            "Vous ne faites rien"
           ],
           "correct": 0,
-          "explanation": "La borne d'appel d'urgence est à privilégier si elle est disponible.",
+          "explanation": "La borne localise immédiatement l'appel. Restez derrière la glissière.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F1_Q60.webp"
         },
         {
           "id": "F1_Q61",
-          "question": "Un pompier peut-il régler la circulation sur le lieu de son intervention ?",
+          "question": "Un pompier peut-il régler la circulation là où il intervient ?",
           "choices": [
             "Oui",
-            "Non"
+            "Non, seule la police"
           ],
           "correct": 0,
-          "explanation": "Un pompier peut régler la circulation sur son lieu d'intervention.",
+          "explanation": "Oui, sur le lieu de l'intervention, il peut donner des injonctions.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F1_Q61.webp"
         },
         {
           "id": "F1_Q62",
-          "question": "Un pompier peut-il rédiger un procès-verbal ?",
+          "question": "Un pompier peut-il dresser un procès-verbal ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le pompier ne peut pas rédiger de PV — uniquement les agents qualifiés le peuvent.",
+          "explanation": "Non, il règle la circulation mais ne dresse pas de PV.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F1_Q62.webp"
-        },
-        {
-          "id": "F1_Q63",
-          "question": "Quelle différence entre un pompier et un agent qualifié en matière de circulation ?",
-          "choices": [
-            "Le pompier ne dresse pas de PV",
-            "Le pompier a plus de pouvoirs",
-            "L'agent ne règle pas le trafic"
-          ],
-          "correct": 0,
-          "explanation": "Pompier : circulation sur lieu d'intervention seulement, pas de PV. Agent qualifié : les deux.",
-          "theoryCardIndex": 6,
-          "image": "/images/questions/F1_Q63.webp"
         },
         {
           "id": "F1_SIGN_F23_1",
@@ -935,6 +886,17 @@
           "explanation": "F50 indique que la voie est sans issue pour les véhicules à moteur, mais qu'un passage est prévu pour les piétons et les cyclistes. Ils peuvent continuer.",
           "destination": "panneaux",
           "sign": "F45b"
+        },
+        {
+          "id": "F1_Q70",
+          "question": "L'agent lève le bras. Le tram doit-il aussi s'arrêter ?",
+          "choices": [
+            "Oui",
+            "Non, le tram a toujours priorité"
+          ],
+          "correct": 0,
+          "explanation": "Le tram obéit aux agents et aux feux.",
+          "theoryCardIndex": 0
         }
       ]
     },
