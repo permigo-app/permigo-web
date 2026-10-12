@@ -190,341 +190,272 @@
       ],
       "questions": [
         {
-          "id": "E1_Q1",
-          "question": "Deux véhicules se rencontrent en sens opposé. Comment appelle-t-on cette situation ?",
-          "choices": [
-            "Un croisement",
-            "Un dépassement",
-            "Un contournement"
-          ],
-          "correct": 0,
-          "explanation": "Le croisement désigne la rencontre de deux véhicules circulant en sens opposé.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/E1_Q1.webp"
-        },
-        {
           "id": "E1_Q2",
-          "question": "Un véhicule arrive en face sur une chaussée à deux bandes par sens. Comment vous positionnez-vous ?",
+          "question": "Une voiture arrive en face. Comment vous placez-vous ?",
           "choices": [
-            "Serrer à droite sur votre bande",
-            "Rester au milieu de la chaussée",
-            "Vous déporter sur la gauche"
+            "Vous serrez à droite",
+            "Vous restez au milieu",
+            "Vous vous déportez à gauche"
           ],
           "correct": 0,
-          "explanation": "Pour croiser en sécurité, on serre à droite et on utilise la bande de droite si plusieurs bandes existent.",
+          "explanation": "On croise par la droite, en serrant à droite si nécessaire.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q2.webp"
         },
         {
           "id": "E1_Q4",
-          "question": "Une large ligne blanche est peinte au bord de la chaussée. De quoi s'agit-il ?",
+          "question": "Que marque cette large ligne blanche continue au bord de la chaussée ?",
           "choices": [
-            "Du bord fictif de la chaussée",
-            "De la limite du trottoir",
-            "D'une ligne de guidage"
+            "Le bord de la chaussée",
+            "La limite du trottoir",
+            "Une ligne de guidage"
           ],
           "correct": 0,
-          "explanation": "Le bord fictif est une large ligne blanche ; la zone au-delà est réservée à l'arrêt/stationnement.",
+          "explanation": "Elle marque le bord fictif de la chaussée. Au-delà : arrêt et stationnement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q4.webp"
         },
         {
           "id": "E1_Q5",
-          "question": "Pour croiser sur une chaussée étroite, pouvez-vous rouler au-delà du bord fictif ?",
+          "question": "Pour croiser plus facilement, pouvez-vous rouler sur la bande de stationnement ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La zone au-delà du bord fictif est réservée à l'arrêt et au stationnement, on ne peut pas l'utiliser pour croiser.",
+          "explanation": "La bande au-delà de la ligne est réservée à l'arrêt et au stationnement.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q5.webp"
         },
         {
           "id": "E1_Q6",
-          "question": "Pour croiser un camion sur une route étroite, pouvez-vous empiéter sur la piste cyclable ?",
+          "question": "La chaussée est étroite. Pouvez-vous rouler un peu sur la piste cyclable pour croiser ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, sans mettre personne en danger"
           ],
-          "correct": 1,
-          "explanation": "La piste cyclable ne fait pas partie de la chaussée, il est interdit de l'emprunter pour croiser.",
+          "correct": 0,
+          "explanation": "La piste cyclable ne fait pas partie de la chaussée : on n'y roule pas, même un peu.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q6.webp"
         },
         {
           "id": "E1_Q7",
-          "question": "Pour croiser sur une route étroite, pouvez-vous rouler sur une bande cyclable suggérée ?",
+          "question": "Pour croiser, pouvez-vous rouler sur une bande cyclable suggérée ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, vous pouvez",
+            "Non",
+            "Oui, vous devez"
           ],
           "correct": 0,
-          "explanation": "La bande cyclable suggérée fait partie de la chaussée, donc on peut l'emprunter pour croiser.",
+          "explanation": "Elle fait partie de la chaussée : vous pouvez y rouler, sans y être obligé.",
           "theoryCardIndex": 0,
           "image": "/images/questions/E1_Q7.webp"
         },
         {
-          "id": "E1_Q8",
-          "question": "Piste cyclable et bande cyclable suggérée : quelle différence pour croiser ?",
-          "choices": [
-            "La bande suggérée, oui ; la piste, non",
-            "Les deux peuvent être empruntées",
-            "Aucune des deux ne peut servir"
-          ],
-          "correct": 0,
-          "explanation": "La piste cyclable ≠ chaussée (interdite). La bande cyclable suggérée = chaussée (autorisée pour croiser).",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/E1_Q8.webp"
-        },
-        {
           "id": "E1_Q11",
-          "question": "Le code fixe-t-il une distance latérale précise pour croiser ?",
+          "question": "Deux voitures se croisent. Quelle distance latérale le code impose-t-il ?",
           "choices": [
-            "Non, une distance suffisante",
-            "Oui, au moins un mètre",
-            "Oui, au moins 1,5 mètre"
+            "Une distance suffisante",
+            "1 m",
+            "1,5 m"
           ],
           "correct": 0,
-          "explanation": "Le code n'impose pas de distance précise mais exige une distance latérale suffisante.",
+          "explanation": "Entre deux voitures, le code demande une distance latérale suffisante, sans chiffre précis.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q11.webp"
         },
         {
           "id": "E1_Q12",
-          "question": "Vous roulez en agglomération et croisez un cycliste venant en sens inverse. Quelle distance latérale minimale devez-vous respecter ?",
+          "question": "En agglomération, vous croisez un cycliste. Écart minimal ?",
           "choices": [
-            "0,5 mètre",
-            "1 mètre",
-            "1,5 mètre",
-            "2 mètres"
+            "0,5 m",
+            "1 m",
+            "1,5 m"
           ],
           "correct": 1,
-          "explanation": "En agglomération, la distance minimale en croisant un cycliste est de 1 mètre.",
+          "explanation": "Avec un cycliste : 1 m en agglomération.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q12.webp"
         },
         {
           "id": "E1_Q13",
-          "question": "Vous circulez hors agglomération et croisez un cycliste. Quelle distance latérale minimale devez-vous laisser ?",
+          "question": "Hors agglomération, vous croisez un cycliste. Écart minimal ?",
           "choices": [
-            "1 mètre",
-            "1,5 mètre",
-            "2 mètres",
-            "0,5 mètre"
+            "1 m",
+            "1,5 m",
+            "Une distance suffisante"
           ],
           "correct": 1,
-          "explanation": "Hors agglomération, la distance minimale en croisant un cycliste est de 1,5 mètre.",
+          "explanation": "Avec un cycliste : 1,5 m hors agglomération.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q13.webp"
         },
         {
           "id": "E1_Q15",
-          "question": "Pour croiser sur une route trop étroite, pouvez-vous emprunter l'accotement de plain-pied ?",
+          "question": "La route est trop étroite. Pouvez-vous rouler sur l'accotement de plain-pied pour croiser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'accotement de plain-pied peut être emprunté pour croiser, à condition de ne pas mettre en danger ses usagers.",
+          "explanation": "Oui, sans mettre en danger ceux qui s'y trouvent.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q15.webp"
         },
         {
           "id": "E1_Q16",
-          "question": "Un piéton marche sur cet accotement de plain-pied. Pouvez-vous quand même y rouler ?",
+          "question": "Un piéton marche sur cet accotement. Pouvez-vous quand même y rouler pour croiser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de mettre en danger les usagers de l'accotement.",
+          "explanation": "Vous ne pouvez pas mettre en danger celui qui s'y trouve.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q16.webp"
         },
         {
           "id": "E1_Q17",
-          "question": "Par quel côté devez-vous normalement croiser un tram ?",
+          "question": "Par quel côté croisez-vous un tram, normalement ?",
           "choices": [
             "Par la droite",
             "Par la gauche",
-            "Au choix, selon la place"
+            "Au choix"
           ],
           "correct": 0,
-          "explanation": "La règle générale est de croiser un tram par la droite.",
+          "explanation": "Comme tout croisement : par la droite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q17.webp"
         },
         {
           "id": "E1_Q18",
-          "question": "Dans quelles situations pouvez-vous croiser un tram par la gauche ?",
+          "question": "Un obstacle bloque votre droite. Pouvez-vous croiser le tram par la gauche ?",
           "choices": [
-            "Passage bloqué ou trop étroit à droite",
-            "Dans toutes les situations possibles",
-            "En agglomération, à l'allure du pas"
+            "Oui",
+            "Non"
           ],
           "correct": 0,
-          "explanation": "Trois exceptions autorisent le croisement d'un tram par la gauche : passage trop étroit, véhicule stationné à droite, obstacle sur la chaussée.",
+          "explanation": "Oui, si la droite est bloquée ou trop étroite, sans gêner ceux qui viennent en face.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q18.webp"
         },
         {
           "id": "E1_Q20",
-          "question": "Vous allez croiser un tram par la gauche. Que devez-vous vérifier ?",
+          "question": "Vous allez croiser un tram par la gauche. Que vérifiez-vous ?",
           "choices": [
-            "Qu'aucun véhicule ne vient en face",
-            "Que le tram va s'arrêter pour vous",
-            "Que la chaussée est bien sèche"
+            "Que personne ne vient en face",
+            "Que le tram s'arrête",
+            "Que la route est sèche"
           ],
           "correct": 0,
-          "explanation": "Avant de croiser un tram par la gauche, vérifiez qu'aucun véhicule n'arrive en sens contraire et que vous ne gênez personne.",
+          "explanation": "Vous ne pouvez gêner personne qui vient en sens inverse.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q20.webp"
         },
         {
-          "id": "E1_Q22",
-          "question": "En croisant un tram par la gauche, pouvez-vous gêner d'autres usagers ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Même en cas d'exception, vous ne pouvez pas gêner d'autres usagers en croisant un tram par la gauche.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/E1_Q22.webp"
-        },
-        {
           "id": "E1_Q23",
-          "question": "À un carrefour sans flèches au sol, comment s'effectue le croisement ?",
+          "question": "Deux voitures tournent à gauche dans ce carrefour, sans flèches au sol. Comment se croisent-elles ?",
           "choices": [
             "Par la droite",
-            "Par la gauche",
-            "Selon les feux du carrefour"
+            "Par la gauche"
           ],
           "correct": 0,
-          "explanation": "Sans flèches au sol, la règle par défaut est le croisement par la droite.",
+          "explanation": "Sans flèches au sol, on se croise par la droite.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q23.webp"
         },
         {
           "id": "E1_Q25",
-          "question": "À un carrefour avec des flèches peintes au sol, comment s'effectue le croisement ?",
+          "question": "Des flèches peintes au sol guident les deux voitures. Que suivent-elles ?",
           "choices": [
-            "Selon les flèches tracées au sol",
-            "Par la droite malgré les flèches",
-            "Par la gauche, c'est un carrefour"
+            "Les flèches",
+            "La règle par la droite"
           ],
           "correct": 0,
-          "explanation": "Quand des flèches sont tracées au sol, le croisement suit leur indication.",
+          "explanation": "Les flèches au sol l'emportent sur la règle habituelle.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q25.webp"
         },
         {
           "id": "E1_Q28",
-          "question": "Par quel type de signal un rétrécissement de chaussée est-il annoncé ?",
+          "question": "Ce panneau annonce un rétrécissement. C'est un signal :",
           "choices": [
-            "Un signal de danger triangulaire",
-            "Un panneau bleu rectangulaire",
-            "Des lignes peintes sur le sol"
+            "De danger",
+            "D'indication",
+            "De priorité"
           ],
           "correct": 0,
-          "explanation": "Les rétrécissements sont signalés par des signaux de danger triangulaires.",
+          "explanation": "Un triangle à bord rouge : signal de danger.",
           "theoryCardIndex": 2,
           "sign": "A7a"
         },
         {
-          "id": "E1_Q29",
-          "question": "Quelles variantes de rétrécissement ces signaux peuvent-ils indiquer ?",
-          "choices": [
-            "Des deux côtés, à gauche ou à droite",
-            "Un rétrécissement à droite seul",
-            "Un rétrécissement à gauche seul"
-          ],
-          "correct": 0,
-          "explanation": "Il existe trois variantes : rétrécissement des deux côtés, à gauche seulement, ou à droite seulement.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/E1_Q29.webp"
-        },
-        {
           "id": "E1_Q30",
-          "question": "À un rétrécissement sans signaux, l'obstacle est de votre côté. Que faites-vous ?",
+          "question": "Rétrécissement sans panneau : l'obstacle est de votre côté. Que faites-vous ?",
           "choices": [
-            "Céder le passage",
-            "Passer en premier",
-            "Klaxonner et avancer"
+            "Vous cédez le passage",
+            "Vous passez en premier",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "Sans signaux de priorité, celui qui a l'obstacle de son côté doit céder le passage.",
+          "explanation": "Celui qui a l'obstacle de son côté laisse passer ceux d'en face.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E1_Q30.webp"
         },
         {
           "id": "E1_Q31",
-          "question": "À un rétrécissement sans signaux, l'obstacle est du côté opposé. Que faites-vous ?",
+          "question": "Rétrécissement sans panneau : l'obstacle est de l'autre côté. Qui passe ?",
           "choices": [
-            "Vous avez la priorité",
-            "Céder quand même le passage",
-            "Attendre un geste d'en face"
+            "Vous",
+            "Le conducteur d'en face",
+            "Le premier arrivé"
           ],
           "correct": 0,
-          "explanation": "L'obstacle est du côté opposé, donc c'est l'autre conducteur qui doit céder.",
+          "explanation": "C'est à celui qui a l'obstacle de son côté de céder.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/E1_Q31.webp"
         },
         {
           "id": "E1_Q34",
-          "question": "Vous voyez ce panneau à un passage étroit. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau à un passage étroit. Que faites-vous ?",
           "choices": [
-            "Céder le passage à ceux d'en face",
-            "Passer avant les véhicules d'en face",
-            "Faire un appel de phares"
+            "Vous cédez le passage à ceux d'en face",
+            "Vous passez avant eux",
+            "Vous faites un appel de phares"
           ],
           "correct": 0,
-          "explanation": "Le signal rond rouge/blanc = obligation de céder le passage.",
+          "explanation": "Rond rouge et blanc : vous laissez passer ceux qui viennent en face.",
           "theoryCardIndex": 2,
           "sign": "B19",
           "severe": true
         },
         {
           "id": "E1_Q35",
-          "question": "Vous voyez ce panneau à un passage étroit. Que signifie-t-il ?",
+          "question": "Vous voyez ce panneau bleu à un passage étroit. Que signifie-t-il ?",
           "choices": [
-            "Vous avez la priorité de passage",
+            "Vous avez la priorité",
             "Vous devez céder le passage",
-            "Le passage est interdit ici"
+            "Le passage est interdit"
           ],
           "correct": 0,
-          "explanation": "Le signal rectangulaire bleu = priorité de passage dans le passage étroit.",
+          "explanation": "Rectangle bleu : priorité sur ceux qui viennent en face.",
           "theoryCardIndex": 2,
           "sign": "B21",
           "severe": true
         },
         {
-          "id": "E1_Q36",
-          "question": "Pourquoi les signaux de passage étroit ont-ils des formes différentes ?",
+          "id": "E1_Q37",
+          "question": "Vous voyez le panneau rond rouge et blanc. Que voient ceux d'en face ?",
           "choices": [
-            "Pour les reconnaître même abîmés",
-            "Pour distinguer les pays voisins",
-            "Pour une raison purement esthétique"
+            "Le panneau bleu de priorité",
+            "Le même panneau rond",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Des formes différentes permettent de les identifier même dans de mauvaises conditions.",
-          "theoryCardIndex": 2,
-          "sign": "B19"
-        },
-        {
-          "id": "E1_Q37",
-          "question": "Vous voyez le signal rond rouge et blanc de passage étroit. Quel signal voient les conducteurs en face ?",
-          "choices": [
-            "Le même signal rond rouge et blanc",
-            "Le signal rectangulaire bleu de priorité",
-            "Aucun signal n'est placé en face",
-            "Un feu de signalisation classique"
-          ],
-          "correct": 1,
-          "explanation": "Les deux signaux vont toujours par paire : rond (céder) d'un côté, rectangulaire (priorité) de l'autre.",
+          "explanation": "Les deux panneaux vont par paire : céder d'un côté, priorité de l'autre.",
           "theoryCardIndex": 2,
           "sign": "B19",
           "severe": true
@@ -535,111 +466,99 @@
           "choices": [
             "Circulation dans les deux sens",
             "Passage étroit, cédez le passage",
-            "Vous êtes sur un sens unique"
+            "Voie à sens unique"
           ],
           "correct": 0,
-          "explanation": "Ce signal triangulaire avertit que la circulation reprend dans les deux sens après un tronçon à sens unique.",
+          "explanation": "Après une section à sens unique, la circulation reprend dans les deux sens.",
           "theoryCardIndex": 2,
           "sign": "A39"
-        },
-        {
-          "id": "E1_Q40",
-          "question": "Le signal rond rouge et blanc et le triangulaire à deux flèches ont-ils la même signification ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Ces deux signaux sont souvent confondus à l'examen, mais leur signification est totalement différente.",
-          "theoryCardIndex": 2,
-          "sign": "B19"
         },
         {
           "id": "E1_Q42",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Voie publique à sens unique",
+            "Voie à sens unique",
             "Obligation d'aller tout droit",
-            "Fin du sens unique ici"
+            "Fin du sens unique"
           ],
           "correct": 0,
-          "explanation": "Le signal rectangulaire bleu avec flèche blanche indique une voie à sens unique.",
+          "explanation": "Rectangle bleu à flèche blanche : sens unique.",
           "theoryCardIndex": 3,
           "sign": "F19"
         },
         {
           "id": "E1_Q43",
-          "question": "Sur une voie à sens unique, risquez-vous de croiser d'autres conducteurs ?",
+          "question": "Sur une voie à sens unique, pouvez-vous croiser quelqu'un ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, des cyclistes si un panonceau l'autorise",
+            "Non, jamais"
           ],
-          "correct": 1,
-          "explanation": "En principe, sur un sens unique, pas de trafic en sens opposé (sauf exception signalée).",
+          "correct": 0,
+          "explanation": "Normalement non, sauf les cyclistes quand un panonceau les autorise à contresens.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q43.webp"
         },
         {
           "id": "E1_Q44",
-          "question": "Que signifie ce panneau additionnel sur un sens unique ?",
+          "question": "Que signifie ce panonceau sous le panneau de sens unique ?",
           "choices": [
-            "Les cyclistes viennent en face",
-            "Les vélos sont interdits ici",
-            "Un parking à vélos plus loin"
+            "Des cyclistes peuvent venir en face",
+            "Les vélos sont interdits",
+            "Parking à vélos"
           ],
           "correct": 0,
-          "explanation": "Le panneau additionnel avec un vélo autorise les cyclistes à circuler en sens inverse.",
+          "explanation": "Les cyclistes sont autorisés à rouler en sens inverse.",
           "theoryCardIndex": 3,
           "sign": "M4"
         },
         {
           "id": "E1_Q45",
-          "question": "Sur un sens unique où les cyclistes viennent en face, que devez-vous faire ?",
+          "question": "Sens unique, des cyclistes viennent en face. Que faites-vous ?",
           "choices": [
-            "Surveiller les cyclistes en face",
-            "Rouler au milieu de la chaussée",
-            "Klaxonner en voyant un cycliste"
+            "Vous leur laissez assez de place",
+            "Vous roulez au milieu",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "Vous devez être attentif et laisser suffisamment d'espace aux cyclistes autorisés en sens inverse.",
+          "explanation": "Restez attentif et laissez-leur assez d'espace.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q45.webp"
         },
         {
           "id": "E1_Q46",
-          "question": "Sur une voie à sens unique, devez-vous tout de même rouler à droite ?",
+          "question": "Sur une voie à sens unique, roulez-vous à droite ?",
           "choices": [
             "Oui",
-            "Non"
+            "Non, où vous voulez"
           ],
           "correct": 0,
-          "explanation": "Sur un sens unique, la règle de tenir la droite s'applique sauf exceptions.",
+          "explanation": "Oui, on tient la droite, sauf pour tourner à gauche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q46.webp"
         },
         {
           "id": "E1_Q47",
-          "question": "De quel côté pouvez-vous stationner sur une chaussée à sens unique ?",
+          "question": "Sur une voie à sens unique, de quel côté pouvez-vous stationner ?",
           "choices": [
             "À droite comme à gauche",
-            "Du côté droit, pas ailleurs",
-            "Du côté gauche, pas ailleurs"
+            "Seulement à droite",
+            "Seulement à gauche"
           ],
           "correct": 0,
-          "explanation": "Sur une chaussée à sens unique, le stationnement est autorisé des deux côtés.",
+          "explanation": "Sur une chaussée à sens unique : des deux côtés.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q47.webp"
         },
         {
           "id": "E1_Q48",
-          "question": "En stationnant sur un sens unique, quelle largeur libre devez-vous laisser ?",
+          "question": "Vous stationnez sur un sens unique. Quelle largeur libre laissez-vous ?",
           "choices": [
-            "Au moins 3 mètres",
-            "Au moins 2 mètres",
-            "Au moins 4 mètres"
+            "Au moins 3 m",
+            "Au moins 2 m",
+            "Au moins 4 m"
           ],
           "correct": 0,
-          "explanation": "Il faut laisser au minimum 3 mètres d'espace libre entre les véhicules.",
+          "explanation": "Il faut laisser au moins 3 m libres pour la circulation.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q48.webp"
         },
@@ -652,34 +571,33 @@
             "Un signal de danger"
           ],
           "correct": 0,
-          "explanation": "Le signal rond bleu est un signal d'obligation (direction imposée), contrairement au rectangulaire bleu (indication).",
+          "explanation": "Rond et bleu : signal d'obligation.",
           "theoryCardIndex": 3,
           "sign": "D1a"
         },
         {
           "id": "E1_Q52",
-          "question": "Sur un sens unique, où vous positionner pour tourner à gauche ?",
+          "question": "Sens unique : où vous placez-vous pour tourner à gauche ?",
           "choices": [
             "Le plus à gauche possible",
             "Le plus à droite possible",
-            "Au milieu de la chaussée"
+            "Au milieu"
           ],
           "correct": 0,
-          "explanation": "Pour tourner à gauche depuis un sens unique, se positionner le plus à gauche possible.",
+          "explanation": "Sur un sens unique, on serre à gauche pour tourner à gauche.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q52.webp"
         },
         {
           "id": "E1_Q54",
-          "question": "Vous tournez à gauche depuis un sens unique. Des cyclistes autorisés circulent en sens inverse. Que faites-vous ?",
+          "question": "Vous tournez à gauche sur un sens unique ; des cyclistes viennent en face. Que faites-vous ?",
           "choices": [
-            "Vous tournez sans vérifier, c'est un sens unique",
-            "Vous leur laissez suffisamment d'espace",
-            "Vous klaxonnez pour les avertir",
-            "Vous accélérez pour passer avant eux"
+            "Vous leur laissez assez de place",
+            "Vous tournez sans regarder",
+            "Vous accélérez"
           ],
-          "correct": 1,
-          "explanation": "Même en tournant à gauche, vous devez laisser suffisamment d'espace aux cyclistes autorisés en sens inverse.",
+          "correct": 0,
+          "explanation": "Les cyclistes autorisés à contresens doivent pouvoir passer sans danger.",
           "theoryCardIndex": 3,
           "image": "/images/questions/E1_Q54.webp"
         },
@@ -727,11 +645,11 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Obligation d'aller tout droit",
-            "Voie à sens unique tout droit",
-            "Début d'une route prioritaire"
+            "Voie à sens unique",
+            "Route prioritaire"
           ],
           "correct": 0,
-          "explanation": "Le signal rond bleu est un signal d'obligation : vous devez aller tout droit.",
+          "explanation": "Rond bleu à flèche vers le haut : vous devez aller tout droit.",
           "theoryCardIndex": 3,
           "sign": "D1a"
         },
@@ -740,38 +658,38 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Obligation de tourner à droite",
-            "Voie à sens unique vers la droite",
-            "Stationnement autorisé à droite"
+            "Sens unique vers la droite",
+            "Stationnement à droite"
           ],
           "correct": 0,
-          "explanation": "Le signal rond bleu avec flèche à droite oblige à tourner à droite.",
+          "explanation": "Rond bleu à flèche vers la droite : vous devez tourner à droite.",
           "theoryCardIndex": 3,
           "sign": "D1d"
         },
         {
           "id": "E1_Q66",
-          "question": "Vous avez ce panneau et le véhicule en face a le panneau bleu. Qui passe ?",
+          "question": "Vous avez le panneau rond rouge et blanc, l'autre voiture le panneau bleu. Qui passe ?",
           "choices": [
-            "Le véhicule en face",
+            "La voiture d'en face",
             "Vous, arrivé le premier",
-            "Le plus large des deux"
+            "La plus large"
           ],
           "correct": 0,
-          "explanation": "Rond rouge/blanc = céder. Rectangulaire bleu = priorité. Le véhicule en face passe.",
+          "explanation": "Rond rouge et blanc : vous cédez. Bleu : priorité pour l'autre.",
           "theoryCardIndex": 2,
           "sign": "B19",
           "severe": true
         },
         {
           "id": "E1_Q68",
-          "question": "Vous croisez un cycliste à 1,2 m en agglomération, puis à 1,2 m hors agglomération. Où êtes-vous en infraction ?",
+          "question": "Vous croisez un cycliste à 1,2 m, en agglomération puis hors agglomération. Où êtes-vous en tort ?",
           "choices": [
-            "Hors agglomération, il faut 1,5 m",
-            "En agglomération, il faut 1,5 m",
-            "Dans les deux cas, c'est trop peu"
+            "Hors agglomération",
+            "En agglomération",
+            "Nulle part"
           ],
           "correct": 0,
-          "explanation": "En agglomération, 1 m suffit (1,2 m ok). Hors agglomération, 1,5 m requis (1,2 m insuffisant).",
+          "explanation": "1 m suffit en agglomération, mais il faut 1,5 m hors agglomération.",
           "theoryCardIndex": 1,
           "image": "/images/questions/E1_Q68.webp"
         }
