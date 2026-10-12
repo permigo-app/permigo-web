@@ -4367,339 +4367,292 @@
       "questions": [
         {
           "id": "A5_Q1",
-          "question": "Hoe herkent u een autoweg?",
+          "question": "Waaraan herken je een autoweg?",
           "choices": [
-            "Aan zijn begin- en eindborden",
-            "Aan het volledig ontbreken van kruispunten",
-            "Aan zijn drie rijstroken per richting"
+            "Aan het beginbord",
+            "Aan het ontbreken van kruispunten",
+            "Aan drie rijstroken per richting"
           ],
           "correct": 0,
-          "explanation": "De autoweg wordt bepaald door zijn signalen: een beginsignaal (blauw) en een eindsignaal.",
+          "explanation": "Het beginbord (een witte auto op een blauwe achtergrond) maakt van de weg een autoweg.",
           "theoryCardIndex": 0
         },
         {
           "id": "A5_Q2",
-          "question": "Wat is het belangrijkste verschil tussen een autoweg en een autosnelweg?",
+          "question": "Wat kan een autoweg hebben, in tegenstelling tot een autosnelweg?",
           "choices": [
-            "Mogelijke kruispunten en lichten",
-            "Het verbod voor vrachtwagens",
-            "De toegelaten maximumsnelheid"
+            "Kruispunten en verkeerslichten",
+            "Een verbod voor vrachtwagens",
+            "Een snelheid van 130 km/u"
           ],
           "correct": 0,
-          "explanation": "In tegenstelling tot de autosnelweg kan een autoweg kruispunten met voorrang en verkeerslichten hebben.",
+          "explanation": "Een autoweg kan kruispunten en verkeerslichten hebben, een autosnelweg niet.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "A5_Q4",
-          "question": "Welke voertuigen zijn verboden op een autoweg?",
-          "choices": [
-            "Bromfietsen en landbouwvoertuigen",
-            "Motoren van minder dan 400 cm³",
-            "Bestelwagens en aanhangwagens"
-          ],
-          "correct": 0,
-          "explanation": "Dezelfde voertuigen als op de autosnelweg zijn verboden op autowegen.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "A5_Q8",
-          "question": "Hoe kunnen de rijbanen van een weg voor autoverkeer gescheiden zijn?",
-          "choices": [
-            "Door markeringen of een berm",
-            "Door metalen vangrails",
-            "Door knipperende lichten"
-          ],
-          "correct": 0,
-          "explanation": "De rijbanen kunnen gescheiden zijn door wegmarkeringen of door een middenberm.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "A5_Q9",
-          "question": "Kan een rijbaan op een weg voor autoverkeer meerdere rijstroken hebben?",
+          "question": "Mag je met een bromfiets klasse B op een autoweg rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "correct": 0,
-          "explanation": "Een rijbaan kan twee of meer rijstroken hebben op een weg voor autoverkeer.",
+          "correct": 1,
+          "explanation": "Bromfietsen en landbouwvoertuigen zijn verboden op de autoweg.",
           "theoryCardIndex": 0
         },
         {
           "id": "A5_Q10",
-          "question": "Mag je de linkse rijbaan gebruiken op een weg met drie gescheiden rijbanen?",
+          "question": "Weg met drie gescheiden rijbanen. Mag je de linkse nemen?",
           "choices": [
-            "Nee, behalve plaatselijke regeling",
-            "Ja, om een voertuig in te halen",
+            "Nee, behalve bij plaatselijke signalisatie",
+            "Ja, om in te halen",
             "Ja, als ze vrij is"
           ],
           "correct": 0,
-          "explanation": "Het is verboden de linkse rijbaan te gebruiken op een weg met meerdere gescheiden rijbanen, behalve plaatselijke reglementering.",
+          "explanation": "De linkse rijbaan is verboden, behalve bij plaatselijke signalisatie.",
           "theoryCardIndex": 0
         },
         {
           "id": "A5_Q12",
-          "question": "Wat is de maximumsnelheid buiten de bebouwde kom op een weg voor autoverkeer met middenberm en 2 rijstroken per richting?",
+          "question": "Autoweg buiten de bebouwde kom, met middenberm en 2 rijstroken per richting. Maximumsnelheid?",
           "choices": [
             "90 km/u",
-            "100 km/u",
             "120 km/u",
             "70 km/u"
           ],
-          "correct": 2,
-          "explanation": "Middenberm + minstens 2 rijstroken per richting + buiten de bebouwde kom = 120 km/u.",
+          "correct": 1,
+          "explanation": "Middenberm + minstens 2 rijstroken per richting, buiten de bebouwde kom: 120 km/u.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q13",
-          "question": "Wat zijn de twee voorwaarden om aan 120 km/u te rijden op een weg voor autoverkeer?",
+          "question": "Om 120 km/u te mogen rijden op een autoweg, is nodig:",
           "choices": [
-            "Twee stroken per richting en een berm",
-            "Drie stroken en een doorlopende lijn",
-            "Vier stroken en verlichting"
+            "Een middenberm en 2 rijstroken per richting",
+            "Drie rijstroken per richting",
+            "Verlichting 's nachts"
           ],
           "correct": 0,
-          "explanation": "Om aan 120 km/u te rijden: middenberm ÉN minstens 2 rijstroken per richting.",
+          "explanation": "De twee voorwaarden: een middenberm EN minstens 2 rijstroken per richting.",
           "theoryCardIndex": 1
         },
         {
           "id": "A5_Q15",
-          "question": "Wat is de maximumsnelheid in de bebouwde kom in Vlaanderen op een weg voor autoverkeer met middenberm?",
+          "question": "Autoweg binnen de bebouwde kom, in Vlaanderen. Maximumsnelheid?",
           "choices": [
             "30 km/u",
             "50 km/u",
-            "70 km/u",
-            "90 km/u"
+            "70 km/u"
           ],
           "correct": 1,
-          "explanation": "In de bebouwde kom in Vlaanderen is de maximumsnelheid 50 km/u op een weg voor autoverkeer.",
+          "explanation": "Binnen de bebouwde kom in Vlaanderen: 50 km/u.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q16",
-          "question": "Wat is de maximumsnelheid in de bebouwde kom in Brussel op een weg voor autoverkeer?",
+          "question": "Autoweg binnen de bebouwde kom, in Brussel. Maximumsnelheid?",
           "choices": [
-            "50 km/u",
             "30 km/u",
-            "70 km/u",
-            "40 km/u"
+            "50 km/u",
+            "70 km/u"
           ],
-          "correct": 1,
-          "explanation": "In de bebouwde kom in Brussel is de maximumsnelheid 30 km/u.",
+          "correct": 0,
+          "explanation": "Binnen de bebouwde kom in Brussel: 30 km/u, tenzij een bord anders aangeeft.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q17",
-          "question": "Je bevindt je op een weg voor autoverkeer in de bebouwde kom in Wallonië met middenberm. Wat is de maximumsnelheid?",
+          "question": "Autoweg binnen de bebouwde kom, in Wallonië, met middenberm. Maximumsnelheid?",
           "choices": [
-            "120 km/u",
+            "50 km/u",
             "90 km/u",
-            "70 km/u",
-            "50 km/u"
+            "120 km/u"
           ],
-          "correct": 3,
-          "explanation": "In de bebouwde kom in Wallonië is de maximumsnelheid 50 km/u, zelfs op een weg voor autoverkeer met middenberm.",
+          "correct": 0,
+          "explanation": "Binnen de bebouwde kom: 50 km/u, ook met een middenberm.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q18",
-          "question": "Wat is de maximumsnelheid buiten de bebouwde kom in Wallonië op een weg voor autoverkeer zonder middenberm (wegmarkeringen)?",
+          "question": "Autoweg buiten de bebouwde kom in Wallonië, zonder middenberm (markeringen). Maximumsnelheid?",
           "choices": [
-            "120 km/u",
-            "90 km/u",
             "70 km/u",
-            "50 km/u"
+            "90 km/u",
+            "120 km/u"
           ],
           "correct": 1,
-          "explanation": "Wallonië + buiten bebouwde kom + wegmarkeringen (zonder berm) = 90 km/u.",
+          "explanation": "Wallonië, zonder middenberm, buiten de bebouwde kom: 90 km/u.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q19",
-          "question": "Wat is de maximumsnelheid buiten de bebouwde kom in Vlaanderen op een weg voor autoverkeer zonder middenberm?",
+          "question": "Autoweg buiten de bebouwde kom in Vlaanderen, zonder middenberm. Maximumsnelheid?",
           "choices": [
-            "90 km/u",
-            "80 km/u",
             "70 km/u",
-            "50 km/u"
+            "90 km/u",
+            "120 km/u"
           ],
-          "correct": 2,
-          "explanation": "Vlaanderen + buiten bebouwde kom + wegmarkeringen (zonder berm) = 70 km/u.",
+          "correct": 0,
+          "explanation": "Vlaanderen, zonder middenberm, buiten de bebouwde kom: 70 km/u.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q20",
-          "question": "Wat is de maximumsnelheid buiten de bebouwde kom in Brussel op een weg voor autoverkeer zonder middenberm?",
+          "question": "Autoweg buiten de bebouwde kom in Brussel, zonder middenberm. Maximumsnelheid?",
           "choices": [
-            "90 km/u",
-            "80 km/u",
+            "50 km/u",
             "70 km/u",
-            "50 km/u"
+            "90 km/u"
           ],
-          "correct": 2,
-          "explanation": "Brussel + buiten bebouwde kom + wegmarkeringen (zonder berm) = 70 km/u.",
+          "correct": 1,
+          "explanation": "Brussel, zonder middenberm, buiten de bebouwde kom: 70 km/u.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q24",
-          "question": "Is er een minimumsnelheid op een weg voor autoverkeer?",
+          "question": "Moet je op een autoweg minstens 70 km/u rijden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "In tegenstelling tot de autosnelweg heeft de weg voor autoverkeer geen minimumsnelheid.",
+          "explanation": "Geen minimumsnelheid op een autoweg, in tegenstelling tot de autosnelweg.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q25",
-          "question": "Je rijdt zeer traag zonder reden op een weg voor autoverkeer en hindert de anderen. Is dat een overtreding?",
+          "question": "Je rijdt zonder reden erg traag en hindert de anderen. Is dat een overtreding?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zelfs zonder minimumsnelheid, is te traag rijden zonder geldige reden en andere bestuurders hinderen een overtreding.",
+          "explanation": "Ook zonder minimumsnelheid is het verboden anderen te hinderen door te traag te rijden.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "A5_Q28",
-          "question": "Op welke afstand moet je de gevarendriehoek plaatsen op een weg voor autoverkeer?",
+          "question": "Panne op een autoweg. Op welke afstand plaats je de driehoek?",
           "choices": [
-            "Minstens 30 meter",
-            "Minstens 100 meter",
-            "Minstens 10 meter"
+            "30 m",
+            "100 m",
+            "10 m"
           ],
           "correct": 0,
-          "explanation": "Op een weg voor autoverkeer wordt de driehoek op minstens 30 meter vóór het voertuig geplaatst.",
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "A5_Q29",
-          "question": "Op welke afstand moet de driehoek geplaatst worden op de autosnelweg?",
-          "choices": [
-            "Minstens 100 meter",
-            "Minstens 30 meter",
-            "Minstens 50 meter"
-          ],
-          "correct": 0,
-          "explanation": "Op de autosnelweg moet de driehoek op minstens 100 meter vooraf geplaatst worden.",
+          "explanation": "Op een autoweg: minstens 30 m achter het voertuig.",
           "theoryCardIndex": 2
         },
         {
           "id": "A5_Q32",
-          "question": "Wanneer moet je het veiligheidshesje dragen op een weg voor autoverkeer?",
+          "question": "Panne op de pechstrook. Wanneer draagt de bestuurder het fluohesje?",
           "choices": [
-            "Bij het verlaten van de stilstaande wagen",
-            "Telkens wanneer u rijdt",
-            "'s Nachts en bij slecht weer"
+            "Altijd, als hij de auto verlaat",
+            "Alleen 's nachts",
+            "Alleen overdag"
           ],
           "correct": 0,
-          "explanation": "Het hesje is verplicht voor de bestuurder die zijn voertuig verlaat, gestrand op een plaats waar parkeren verboden is.",
+          "explanation": "De bestuurder trekt het hesje aan zodra hij de auto verlaat, dag en nacht.",
           "theoryCardIndex": 2
         },
         {
           "id": "A5_Q33",
-          "question": "Waar moet je het veiligheidshesje bewaren?",
+          "question": "Waar moet het fluohesje liggen?",
           "choices": [
-            "In het interieur, binnen handbereik",
-            "In de koffer van het voertuig",
-            "Op de achterbank"
+            "In het interieur",
+            "In de koffer",
+            "In het interieur of de koffer"
           ],
           "correct": 0,
-          "explanation": "Het hesje moet bereikbaar zijn binnenin de passagiersruimte vóór je uitstapt.",
+          "explanation": "In het interieur, zodat je het aantrekt voor je uitstapt.",
           "theoryCardIndex": 2
         },
         {
           "id": "A5_Q34",
-          "question": "Moeten de passagiers het veiligheidshesje dragen?",
+          "question": "Wie moet het fluohesje dragen bij het uitstappen bij panne?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Alleen de bestuurder",
+            "De bestuurder en de passagiers",
+            "Niemand op een autoweg"
           ],
-          "correct": 1,
-          "explanation": "Het hesje is enkel verplicht voor de bestuurder. Passagiers zijn niet verplicht, maar het wordt aangeraden.",
+          "correct": 0,
+          "explanation": "Verplicht voor de bestuurder, aangeraden voor de passagiers.",
           "theoryCardIndex": 2
         },
         {
           "id": "A5_Q36",
-          "question": "Op welke rijstrook moet je rijden in normale omstandigheden op een weg voor autoverkeer?",
+          "question": "Normaal verkeer op een autoweg met 2 rijstroken. Waar rijd je?",
           "choices": [
-            "De linkse rijstrook",
-            "De middelste rijstrook",
-            "Zo veel mogelijk rechts",
-            "Eender welke rijstrook"
+            "Op de rechtse rijstrook",
+            "Op de linkse rijstrook",
+            "Op om het even welke"
           ],
-          "correct": 2,
-          "explanation": "Op een weg voor autoverkeer, zoals overal, moet je zo veel mogelijk rechts rijden.",
+          "correct": 0,
+          "explanation": "Zoals overal: zo veel mogelijk rechts. Links dient om in te halen.",
           "theoryCardIndex": 3
         },
         {
           "id": "A5_Q37",
-          "question": "Langs welke kant moet je inhalen op een weg voor autoverkeer?",
+          "question": "De bestuurder van de bruine auto blijft links rijden terwijl rechts vrij is. Mag dat?",
           "choices": [
-            "Langs rechts",
-            "Langs links",
-            "Langs beide kanten",
-            "Langs de meest vrije kant"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "Inhalen gebeurt uitsluitend langs links op een weg voor autoverkeer.",
+          "explanation": "Na het inhalen ga je terug naar rechts. Zonder reden links blijven is een overtreding.",
           "theoryCardIndex": 3
         },
         {
           "id": "A5_Q40",
-          "question": "In een file rijdt de rechtse file sneller dan de linkse. Is dat een inhaalmanoeuvre?",
+          "question": "File: de rechtse rij gaat sneller vooruit. Is dat verboden inhalen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Bij een drukke file, als de rechtse file sneller opschiet, is dit juridisch geen inhaalmanoeuvre.",
+          "correct": 0,
+          "explanation": "Rijen die aan verschillende snelheden rijden, is geen rechts inhalen.",
           "theoryCardIndex": 3
         },
         {
           "id": "A5_Q42",
-          "question": "Mag je je voertuig parkeren op de rijbaan van een weg voor autoverkeer?",
+          "question": "Mag je parkeren op de rijbaan van een autoweg?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden te parkeren op de rijbaan van een weg voor autoverkeer.",
+          "explanation": "Stilstaan en parkeren zijn verboden op de autoweg.",
           "theoryCardIndex": 3
         },
         {
           "id": "A5_Q43",
-          "question": "Geldt het stilstandverbod voor de toegangen en afritten?",
+          "question": "Mag je stilstaan op de oprit van een autoweg?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "correct": 0,
-          "explanation": "Het stilstandverbod strekt zich uit tot de hoofdrijbaan, de toegangen en de afritten.",
+          "correct": 1,
+          "explanation": "Het stilstaanverbod geldt ook op op- en afritten.",
           "theoryCardIndex": 3
         },
         {
           "id": "A5_Q44",
-          "question": "Mag je rijden op de middenberm van een weg voor autoverkeer?",
+          "question": "Mag je over de middenberm rijden om te keren?",
           "choices": [
-            "Ja, in noodgeval",
-            "Nee, dat is verboden",
-            "Ja, om rechtsomkeer te maken",
-            "Ja, als een agent het toelaat"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden te rijden op de middenberm van een weg voor autoverkeer.",
+          "explanation": "Keren en over de middenberm rijden zijn verboden.",
           "theoryCardIndex": 3
         },
         {
@@ -4710,59 +4663,42 @@
             "Nee"
           ],
           "correct": 1,
-          "explanation": "Achteruitrijden is strikt verboden. Bij een gemiste afrit, neem de volgende afrit.",
+          "explanation": "Achteruitrijden is verboden: neem de volgende afrit.",
           "theoryCardIndex": 3
         },
         {
           "id": "A5_Q46",
-          "question": "Mag je een geïmproviseerde sleepverbinding gebruiken om een voertuig te slepen op een weg voor autoverkeer?",
+          "question": "Je auto is in panne. Mag een vriend hem met een touw slepen op een autoweg?",
           "choices": [
-            "Ja, tot de volgende afrit",
-            "Nee, dat is verboden",
-            "Ja, aan minder dan 50 km/u",
-            "Ja, bij pech"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "De geïmproviseerde sleepverbinding is verboden op wegen voor autoverkeer.",
+          "explanation": "Slepen met een noodkoppeling is verboden, net als op de autosnelweg.",
           "theoryCardIndex": 3
         },
         {
           "id": "A5_Q47",
-          "question": "Zijn de verboden op een weg voor autoverkeer dezelfde als op de autosnelweg?",
+          "question": "Welke regel van de autosnelweg geldt NIET op een autoweg?",
           "choices": [
-            "Ja, behalve de minimumsnelheid",
-            "Nee, er zijn er veel minder",
-            "Nee, er zijn er duidelijk meer"
+            "De minimumsnelheid van 70 km/u",
+            "Het verbod om achteruit te rijden",
+            "Het verbod om stil te staan"
           ],
           "correct": 0,
-          "explanation": "Dezelfde verboden als op de autosnelweg gelden, behalve de minimumsnelheid die niet bestaat op een weg voor autoverkeer.",
+          "explanation": "De verboden zijn dezelfde, behalve de minimumsnelheid.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
-          "id": "A5_Q48",
-          "question": "Mag je in tegengestelde richting rijden op een weg voor autoverkeer?",
-          "choices": [
-            "Ja, als de weg leeg is",
-            "Nee, dat is verboden",
-            "Ja, op de pechstrook",
-            "Ja, in noodgeval"
-          ],
-          "correct": 1,
-          "explanation": "Het is verboden in tegengestelde richting te rijden op een weg voor autoverkeer.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "A5_Q49",
-          "question": "Mag je stilstaan op de pechstrook van een weg voor autoverkeer om te telefoneren?",
+          "question": "Mag je op de pechstrook stilstaan om te telefoneren?",
           "choices": [
-            "Ja, voor een kort gesprek",
-            "Nee, dat is verboden",
-            "Ja, met de alarmlichten",
-            "Ja, als het dringend is"
+            "Ja",
+            "Nee"
           ],
           "correct": 1,
-          "explanation": "Het is verboden stil te staan op de pechstrook om te telefoneren.",
+          "explanation": "De pechstrook dient alleen voor echte noodgevallen.",
           "theoryCardIndex": 3
         },
         {
@@ -4792,14 +4728,14 @@
         },
         {
           "id": "A5_Q52",
-          "question": "U ziet dit verkeersbord. Wat verandert er?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "De regels van deze weg stoppen",
-            "U rijdt een autosnelweg op",
-            "Enkel de maximumsnelheid stijgt"
+            "Einde van de autoweg",
+            "Verboden toegang voor auto's",
+            "Einde van de autosnelweg"
           ],
           "correct": 0,
-          "explanation": "Het einde van de weg voor autoverkeer betekent dat de specifieke regels niet meer van toepassing zijn.",
+          "explanation": "Einde van de autoweg: de regels ervan gelden niet meer.",
           "theoryCardIndex": 0,
           "sign": "F11"
         },
@@ -4817,14 +4753,14 @@
         },
         {
           "id": "A5_Q54",
-          "question": "Wat is het visuele verschil tussen het autosnelwegsignaal en dat van de weg voor autoverkeer?",
+          "question": "Wat onderscheidt het bord autosnelweg van het bord autoweg?",
           "choices": [
-            "Een gestileerde snelweg of een auto",
-            "De kleur, de ene groen de andere blauw",
-            "Geen enkel, ze zijn identiek"
+            "De tekening: een autosnelweg of een auto",
+            "De kleur: het ene groen, het andere blauw",
+            "Niets, ze zijn gelijk"
           ],
           "correct": 0,
-          "explanation": "Autosnelweg = groene achtergrond. Weg voor autoverkeer = blauwe achtergrond. Twee duidelijk verschillende signalen.",
+          "explanation": "Beide zijn blauw. De autosnelweg toont een weg met een brug, de autoweg een auto.",
           "theoryCardIndex": 0
         },
         {
@@ -4853,39 +4789,38 @@
         },
         {
           "id": "A5_Q59",
-          "question": "Je rijdt op een weg voor autoverkeer buiten de bebouwde kom in Wallonië. De richtingen zijn gescheiden door wegmarkeringen. Je ziet het signaal begin bebouwde kom. Je snelheid gaat van:",
+          "question": "Wallonië, autoweg zonder middenberm, buiten de bebouwde kom. Je rijdt de bebouwde kom in. Je snelheid gaat van:",
           "choices": [
-            "90 km/u naar 70 km/u",
-            "90 km/u naar 50 km/u",
-            "70 km/u naar 50 km/u",
-            "120 km/u naar 70 km/u"
+            "90 naar 50 km/u",
+            "90 naar 70 km/u",
+            "70 naar 50 km/u"
           ],
-          "correct": 1,
-          "explanation": "Wallonië zonder berm = 90 km/u. Bij het binnenrijden van de bebouwde kom in Wallonië = 50 km/u.",
+          "correct": 0,
+          "explanation": "Zonder middenberm in Wallonië: 90 km/u. Binnen de bebouwde kom: 50 km/u.",
           "theoryCardIndex": 1
         },
         {
           "id": "A5_Q60",
-          "question": "Je rijdt op een weg voor autoverkeer en ziet het signaal einde weg voor autoverkeer gevolgd door een signaal begin bebouwde kom. Welke regels gelden?",
+          "question": "Einde autoweg, dan begin bebouwde kom. Welke regels gelden?",
           "choices": [
             "Die van de bebouwde kom",
             "Die van de autosnelweg",
             "Die van de autoweg"
           ],
           "correct": 0,
-          "explanation": "Einde weg voor autoverkeer + begin bebouwde kom = de normale regels van de bebouwde kom zijn van toepassing.",
+          "explanation": "Je bent in de bebouwde kom: die regels gelden.",
           "theoryCardIndex": 0
         },
         {
           "id": "A5_Q61",
-          "question": "Dit bord wordt gevolgd door een bord 90 km/u. Welke snelheid respecteert u?",
+          "question": "Na dit bord volgt een bord 90 km/u. Welke snelheid respecteer je?",
           "choices": [
-            "90 km/u, de laagste",
-            "120 km/u, die van de weg",
+            "90 km/u",
+            "120 km/u",
             "Het gemiddelde van beide"
           ],
           "correct": 0,
-          "explanation": "Een specifiek beperkingssignaal primeert op de algemene snelheid van de weg voor autoverkeer.",
+          "explanation": "Een snelheidsbord gaat voor op de algemene snelheid van de weg.",
           "theoryCardIndex": 1,
           "sign": "F9"
         }

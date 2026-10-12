@@ -4689,365 +4689,315 @@
       "questions": [
         {
           "id": "A5_Q1",
-          "question": "Comment reconnaît-on une route pour automobiles ?",
+          "question": "À quoi reconnaît-on une route pour automobiles ?",
           "choices": [
-            "À ses panneaux de début et de fin",
-            "À son absence totale de carrefours",
+            "À son panneau de début",
+            "À l'absence de carrefours",
             "À ses trois bandes par sens"
           ],
           "correct": 0,
-          "explanation": "La route pour automobiles est définie par ses signaux : un signal de début (bleu) et un signal de fin.",
+          "explanation": "C'est le signal de début (une voiture blanche sur fond bleu) qui fait la route pour automobiles.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q1.webp"
         },
         {
           "id": "A5_Q2",
-          "question": "Quelle est la principale différence entre une route pour automobiles et une autoroute ?",
+          "question": "Qu'est-ce qu'une route pour automobiles peut avoir, contrairement à l'autoroute ?",
           "choices": [
-            "Des carrefours et des feux possibles",
-            "L'interdiction faite aux camions",
-            "La vitesse maximale autorisée"
+            "Des carrefours et des feux",
+            "Des camions interdits",
+            "Une vitesse de 130 km/h"
           ],
           "correct": 0,
-          "explanation": "Contrairement à l'autoroute, une route pour automobiles peut avoir des carrefours avec priorité et des feux de signalisation.",
+          "explanation": "Une route pour automobiles peut avoir des carrefours et des feux, pas une autoroute.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/A5_Q2.webp"
         },
         {
           "id": "A5_Q4",
-          "question": "Quels véhicules sont interdits sur une route pour automobiles ?",
-          "choices": [
-            "Les cyclomoteurs et engins agricoles",
-            "Les motos de moins de 400 cm³",
-            "Les camionnettes et les remorques"
-          ],
-          "correct": 0,
-          "explanation": "Les mêmes véhicules qu'en autoroute sont interdits sur les routes pour automobiles.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/A5_Q4.webp"
-        },
-        {
-          "id": "A5_Q8",
-          "question": "Comment les chaussées d'une route pour automobiles peuvent-elles être séparées ?",
-          "choices": [
-            "Par des marques ou une berme",
-            "Par des barrières métalliques",
-            "Par des feux clignotants"
-          ],
-          "correct": 0,
-          "explanation": "Les chaussées peuvent être séparées par des marques routières ou par une berme centrale.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/A5_Q8.webp"
-        },
-        {
-          "id": "A5_Q9",
-          "question": "Une chaussée sur une route pour automobiles peut-elle comporter plusieurs bandes de circulation ?",
+          "question": "Pouvez-vous rouler sur une route pour automobiles avec un cyclomoteur classe B ?",
           "choices": [
             "Oui",
             "Non"
           ],
-          "correct": 0,
-          "explanation": "Une chaussée peut comporter deux bandes ou plus sur une route pour automobiles.",
+          "correct": 1,
+          "explanation": "Cyclomoteurs et véhicules agricoles sont interdits sur la route pour automobiles.",
           "theoryCardIndex": 0,
-          "image": "/images/questions/A5_Q9.webp"
+          "image": "/images/questions/A5_Q4.webp"
         },
         {
           "id": "A5_Q10",
-          "question": "Pouvez-vous emprunter la chaussée de gauche sur une route à trois chaussées séparées ?",
+          "question": "Route à trois chaussées séparées. Pouvez-vous prendre celle de gauche ?",
           "choices": [
-            "Non, sauf réglementation locale",
-            "Oui, pour dépasser un véhicule",
-            "Oui, si elle est dégagée"
+            "Non, sauf signalisation locale",
+            "Oui, pour dépasser",
+            "Oui, si elle est libre"
           ],
           "correct": 0,
-          "explanation": "Il est interdit d'emprunter la chaussée de gauche sur une route à plusieurs chaussées séparées, sauf réglementation locale.",
+          "explanation": "La chaussée de gauche est interdite, sauf signalisation locale.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q10.webp"
         },
         {
           "id": "A5_Q12",
-          "question": "Quelle est la vitesse maximale hors agglomération sur une route pour automobiles avec berme centrale et 2 bandes par sens ?",
+          "question": "Route pour automobiles hors agglomération, berme centrale et 2 bandes par sens. Vitesse maximale ?",
           "choices": [
             "90 km/h",
-            "100 km/h",
             "120 km/h",
             "70 km/h"
           ],
-          "correct": 2,
-          "explanation": "Berme centrale + au moins 2 bandes par sens + hors agglomération = 120 km/h.",
+          "correct": 1,
+          "explanation": "Berme centrale + au moins 2 bandes par sens, hors agglomération : 120 km/h.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q12.webp"
         },
         {
           "id": "A5_Q13",
-          "question": "Quelles sont les deux conditions pour rouler à 120 km/h sur une route pour automobiles ?",
+          "question": "Pour rouler à 120 km/h sur une route pour automobiles, il faut :",
           "choices": [
-            "Deux bandes par sens et berme",
-            "Trois bandes et ligne continue",
-            "Quatre bandes et éclairage"
+            "Une berme centrale et 2 bandes par sens",
+            "Trois bandes par sens",
+            "Un éclairage de nuit"
           ],
           "correct": 0,
-          "explanation": "Pour rouler à 120 km/h : berme centrale ET au moins 2 bandes par sens.",
+          "explanation": "Les deux conditions : berme centrale ET au moins 2 bandes par sens.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A5_Q13.webp"
         },
         {
           "id": "A5_Q15",
-          "question": "Quelle est la vitesse maximale en agglomération en Flandre sur une route pour automobiles avec berme centrale ?",
+          "question": "Route pour automobiles en agglomération, en Flandre. Vitesse maximale ?",
           "choices": [
             "30 km/h",
             "50 km/h",
-            "70 km/h",
-            "90 km/h"
+            "70 km/h"
           ],
           "correct": 1,
-          "explanation": "En agglomération en Flandre, la vitesse maximale est de 50 km/h sur une route pour automobiles.",
+          "explanation": "En agglomération en Flandre : 50 km/h.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q15.webp"
         },
         {
           "id": "A5_Q16",
-          "question": "Quelle est la vitesse maximale en agglomération à Bruxelles sur une route pour automobiles ?",
+          "question": "Route pour automobiles en agglomération, à Bruxelles. Vitesse maximale ?",
           "choices": [
-            "50 km/h",
             "30 km/h",
-            "70 km/h",
-            "40 km/h"
+            "50 km/h",
+            "70 km/h"
           ],
-          "correct": 1,
-          "explanation": "En agglomération à Bruxelles, la vitesse maximale est de 30 km/h.",
+          "correct": 0,
+          "explanation": "En agglomération à Bruxelles : 30 km/h, sauf signal contraire.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q16.webp"
         },
         {
           "id": "A5_Q17",
-          "question": "Vous êtes sur une route pour automobiles en agglomération en Wallonie avec berme centrale. Quelle est la vitesse maximale ?",
+          "question": "Route pour automobiles en agglomération, en Wallonie, avec berme centrale. Vitesse maximale ?",
           "choices": [
-            "120 km/h",
+            "50 km/h",
             "90 km/h",
-            "70 km/h",
-            "50 km/h"
+            "120 km/h"
           ],
-          "correct": 3,
-          "explanation": "En agglomération en Wallonie, la vitesse maximale est de 50 km/h, même sur une route pour automobiles avec berme centrale.",
+          "correct": 0,
+          "explanation": "En agglomération : 50 km/h, même avec une berme centrale.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q17.webp"
         },
         {
           "id": "A5_Q18",
-          "question": "Quelle est la vitesse maximale hors agglomération en Wallonie sur une route pour automobiles sans berme centrale (marques routières) ?",
+          "question": "Route pour automobiles hors agglomération en Wallonie, sans berme (marquage au sol). Vitesse maximale ?",
           "choices": [
-            "120 km/h",
-            "90 km/h",
             "70 km/h",
-            "50 km/h"
+            "90 km/h",
+            "120 km/h"
           ],
           "correct": 1,
-          "explanation": "Wallonie + hors agglo + marques routières (sans berme) = 90 km/h.",
+          "explanation": "Wallonie, sans berme, hors agglomération : 90 km/h.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q18.webp"
         },
         {
           "id": "A5_Q19",
-          "question": "Quelle est la vitesse maximale hors agglomération en Flandre sur une route pour automobiles sans berme centrale ?",
+          "question": "Route pour automobiles hors agglomération en Flandre, sans berme. Vitesse maximale ?",
           "choices": [
-            "90 km/h",
-            "80 km/h",
             "70 km/h",
-            "50 km/h"
+            "90 km/h",
+            "120 km/h"
           ],
-          "correct": 2,
-          "explanation": "Flandre + hors agglo + marques routières (sans berme) = 70 km/h.",
+          "correct": 0,
+          "explanation": "Flandre, sans berme, hors agglomération : 70 km/h.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q19.webp"
         },
         {
           "id": "A5_Q20",
-          "question": "Quelle est la vitesse maximale hors agglomération à Bruxelles sur une route pour automobiles sans berme centrale ?",
+          "question": "Route pour automobiles hors agglomération à Bruxelles, sans berme. Vitesse maximale ?",
           "choices": [
-            "90 km/h",
-            "80 km/h",
+            "50 km/h",
             "70 km/h",
-            "50 km/h"
+            "90 km/h"
           ],
-          "correct": 2,
-          "explanation": "Bruxelles + hors agglo + marques routières (sans berme) = 70 km/h.",
+          "correct": 1,
+          "explanation": "Bruxelles, sans berme, hors agglomération : 70 km/h.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q20.webp"
         },
         {
           "id": "A5_Q24",
-          "question": "Y a-t-il une vitesse minimale sur une route pour automobiles ?",
+          "question": "Sur une route pour automobiles, devez-vous rouler à au moins 70 km/h ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Contrairement à l'autoroute, la route pour automobiles n'a pas de vitesse minimale.",
+          "explanation": "Pas de vitesse minimale sur une route pour automobiles, contrairement à l'autoroute.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q24.webp"
         },
         {
           "id": "A5_Q25",
-          "question": "Vous roulez très lentement sans raison sur une route pour automobiles et gênez les autres. Est-ce une infraction ?",
+          "question": "Vous roulez très lentement sans raison et gênez les autres. Est-ce une infraction ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Même sans vitesse minimale, rouler trop lentement sans raison valable et gêner les autres conducteurs constitue une infraction.",
+          "explanation": "Même sans vitesse minimale, gêner les autres en roulant trop lentement est interdit.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/A5_Q25.webp"
         },
         {
           "id": "A5_Q28",
-          "question": "À quelle distance devez-vous placer le triangle de danger sur une route pour automobiles ?",
+          "question": "Panne sur une route pour automobiles. À quelle distance placez-vous le triangle ?",
           "choices": [
-            "Au moins 30 mètres",
-            "Au moins 100 mètres",
-            "Au moins 10 mètres"
+            "30 m",
+            "100 m",
+            "10 m"
           ],
           "correct": 0,
-          "explanation": "Sur une route pour automobiles, le triangle se place à au moins 30 mètres en amont du véhicule.",
+          "explanation": "Sur une route pour automobiles : à 30 m au moins derrière le véhicule.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q28.webp"
         },
         {
-          "id": "A5_Q29",
-          "question": "À quelle distance le triangle doit-il être placé sur autoroute ?",
-          "choices": [
-            "Au moins 100 mètres",
-            "Au moins 30 mètres",
-            "Au moins 50 mètres"
-          ],
-          "correct": 0,
-          "explanation": "Sur autoroute, le triangle doit être placé à au moins 100 mètres en amont.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/A5_Q29.webp"
-        },
-        {
           "id": "A5_Q32",
-          "question": "Quand devez-vous porter le gilet de sécurité sur une route pour automobiles ?",
+          "question": "Panne sur la bande d'arrêt d'urgence. Quand le conducteur porte-t-il le gilet fluo ?",
           "choices": [
-            "En quittant le véhicule à l'arrêt",
-            "Chaque fois que vous conduisez",
-            "La nuit et par mauvais temps"
+            "Toujours, quand il quitte la voiture",
+            "Uniquement la nuit",
+            "Uniquement le jour"
           ],
           "correct": 0,
-          "explanation": "Le gilet est obligatoire pour le conducteur qui quitte son véhicule immobilisé à un endroit où le stationnement est interdit.",
+          "explanation": "Le conducteur met le gilet dès qu'il quitte la voiture, de jour comme de nuit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q32.webp"
         },
         {
           "id": "A5_Q33",
-          "question": "Où devez-vous ranger le gilet de sécurité ?",
+          "question": "Où doit se trouver le gilet fluo ?",
           "choices": [
-            "Dans l'habitacle, à portée",
-            "Dans le coffre du véhicule",
-            "Sur le siège arrière"
+            "Dans l'habitacle",
+            "Dans le coffre",
+            "Dans l'habitacle ou le coffre"
           ],
           "correct": 0,
-          "explanation": "Le gilet doit être accessible dans l'habitacle avant de sortir du véhicule.",
+          "explanation": "Dans l'habitacle, pour l'enfiler avant de sortir.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q33.webp"
         },
         {
           "id": "A5_Q34",
-          "question": "Les passagers doivent-ils porter le gilet de sécurité ?",
+          "question": "Qui doit porter le gilet fluo en sortant de la voiture en panne ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Le conducteur seulement",
+            "Le conducteur et les passagers",
+            "Personne sur une route pour automobiles"
           ],
-          "correct": 1,
-          "explanation": "Le gilet est obligatoire uniquement pour le conducteur. Les passagers ne sont pas obligés, mais c'est recommandé.",
+          "correct": 0,
+          "explanation": "Obligatoire pour le conducteur, conseillé pour les passagers.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A5_Q34.webp"
         },
         {
           "id": "A5_Q36",
-          "question": "Sur quelle bande devez-vous rouler en conditions normales sur une route pour automobiles ?",
+          "question": "Circulation normale sur une route pour automobiles à 2 bandes. Où roulez-vous ?",
           "choices": [
-            "La bande de gauche",
-            "La bande du milieu",
-            "Le plus à droite possible",
-            "N'importe quelle bande"
+            "Sur la bande de droite",
+            "Sur la bande de gauche",
+            "Sur n'importe laquelle"
           ],
-          "correct": 2,
-          "explanation": "Sur une route pour automobiles, comme partout, vous devez rouler le plus à droite possible.",
+          "correct": 0,
+          "explanation": "Comme partout : le plus à droite possible. La gauche sert à dépasser.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q36.webp"
         },
         {
           "id": "A5_Q37",
-          "question": "Par quel côté devez-vous dépasser sur une route pour automobiles ?",
+          "question": "Le conducteur de la voiture brune reste sur la bande de gauche alors que la droite est libre. Est-ce permis ?",
           "choices": [
-            "Par la droite",
-            "Par la gauche",
-            "Des deux côtés",
-            "Par le côté le plus libre"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Le dépassement se fait uniquement par la gauche sur une route pour automobiles.",
+          "explanation": "Après un dépassement, on revient à droite. Rester à gauche sans raison est une infraction.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q37.webp"
         },
         {
           "id": "A5_Q40",
-          "question": "Dans un embouteillage, la file de droite avance plus vite que celle de gauche. Est-ce un dépassement ?",
+          "question": "Embouteillage : la file de droite avance plus vite. Est-ce un dépassement interdit ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "En embouteillage dense, si la file de droite avance plus vite, ce n'est juridiquement pas un dépassement.",
+          "correct": 0,
+          "explanation": "Des files qui avancent à des vitesses différentes, ce n'est pas un dépassement par la droite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q40.webp"
         },
         {
           "id": "A5_Q42",
-          "question": "Pouvez-vous vous garer sur la chaussée d'une route pour automobiles ?",
+          "question": "Pouvez-vous stationner sur la chaussée d'une route pour automobiles ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de stationner sur la chaussée d'une route pour automobiles.",
+          "explanation": "Ni arrêt ni stationnement sur la route pour automobiles.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q42.webp"
         },
         {
           "id": "A5_Q43",
-          "question": "L'interdiction de s'arrêter s'applique-t-elle aux accès et sorties ?",
+          "question": "Pouvez-vous vous arrêter dans la bretelle d'accès d'une route pour automobiles ?",
           "choices": [
             "Oui",
             "Non"
           ],
-          "correct": 0,
-          "explanation": "L'interdiction d'arrêt s'étend à la chaussée principale, aux accès et aux sorties.",
+          "correct": 1,
+          "explanation": "L'interdiction d'arrêt vaut aussi pour les accès et les sorties.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q43.webp"
         },
         {
           "id": "A5_Q44",
-          "question": "Pouvez-vous circuler sur la berme centrale d'une route pour automobiles ?",
+          "question": "Pouvez-vous rouler sur la berme centrale pour faire demi-tour ?",
           "choices": [
-            "Oui, en cas d'urgence",
-            "Non, c'est interdit",
-            "Oui, pour faire demi-tour",
-            "Oui, si un agent l'autorise"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de circuler sur la berme centrale d'une route pour automobiles.",
+          "explanation": "Demi-tour et passage sur la berme centrale sont interdits.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q44.webp"
         },
@@ -5059,63 +5009,45 @@
             "Non"
           ],
           "correct": 1,
-          "explanation": "La marche arrière est strictement interdite. En cas de sortie ratée, prenez la sortie suivante.",
+          "explanation": "Marche arrière interdite : prenez la sortie suivante.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q45.webp"
         },
         {
           "id": "A5_Q46",
-          "question": "Pouvez-vous utiliser une attache de fortune pour tracter un véhicule sur une route pour automobiles ?",
+          "question": "Votre voiture est en panne. Un ami peut-il la remorquer avec une corde sur une route pour automobiles ?",
           "choices": [
-            "Oui, jusqu'à la prochaine sortie",
-            "Non, c'est interdit",
-            "Oui, à moins de 50 km/h",
-            "Oui, en cas de panne"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "L'attache de fortune est interdite sur les routes pour automobiles.",
+          "explanation": "Remorquer avec une attache de fortune est interdit, comme sur l'autoroute.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q46.webp"
         },
         {
           "id": "A5_Q47",
-          "question": "Les interdictions sur une route pour automobiles sont-elles les mêmes que sur autoroute ?",
+          "question": "Quelle règle de l'autoroute ne vaut PAS sur une route pour automobiles ?",
           "choices": [
-            "Oui, sauf la vitesse minimale",
-            "Non, il y en a beaucoup moins",
-            "Non, il y en a nettement plus"
+            "La vitesse minimale de 70 km/h",
+            "L'interdiction de faire marche arrière",
+            "L'interdiction de s'arrêter"
           ],
           "correct": 0,
-          "explanation": "Les mêmes interdictions qu'en autoroute s'appliquent, à l'exception de la vitesse minimale qui n'existe pas sur route pour automobiles.",
+          "explanation": "Les interdictions sont les mêmes, sauf la vitesse minimale.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/A5_Q47.webp"
         },
         {
-          "id": "A5_Q48",
-          "question": "Pouvez-vous rouler en sens contraire sur une route pour automobiles ?",
-          "choices": [
-            "Oui, si la route est vide",
-            "Non, c'est interdit",
-            "Oui, sur la bande d'arrêt d'urgence",
-            "Oui, en cas d'urgence"
-          ],
-          "correct": 1,
-          "explanation": "Il est interdit de rouler en sens contraire sur une route pour automobiles.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/A5_Q48.webp"
-        },
-        {
           "id": "A5_Q49",
-          "question": "Pouvez-vous vous arrêter sur la bande d'arrêt d'urgence d'une route pour automobiles pour téléphoner ?",
+          "question": "Pouvez-vous vous arrêter sur la bande d'arrêt d'urgence pour téléphoner ?",
           "choices": [
-            "Oui, pour un court appel",
-            "Non, c'est interdit",
-            "Oui, avec les warnings",
-            "Oui, si c'est urgent"
+            "Oui",
+            "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de s'arrêter sur la bande d'arrêt d'urgence pour téléphoner.",
+          "explanation": "La bande d'arrêt d'urgence ne sert qu'en cas de vraie urgence.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A5_Q49.webp"
         },
@@ -5148,14 +5080,14 @@
         },
         {
           "id": "A5_Q52",
-          "question": "Vous voyez ce panneau. Que change-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Les règles de cette route cessent",
-            "Vous entrez sur une autoroute",
-            "Seule la vitesse maximale monte"
+            "Fin de la route pour automobiles",
+            "Accès interdit aux voitures",
+            "Fin de l'autoroute"
           ],
           "correct": 0,
-          "explanation": "La fin de route pour automobiles signifie que les règles spécifiques ne s'appliquent plus.",
+          "explanation": "Fin de la route pour automobiles : ses règles ne s'appliquent plus.",
           "theoryCardIndex": 0,
           "sign": "F11"
         },
@@ -5174,14 +5106,14 @@
         },
         {
           "id": "A5_Q54",
-          "question": "Quelle est la différence visuelle entre le signal d'autoroute et celui de route pour automobiles ?",
+          "question": "Qu'est-ce qui distingue le panneau d'autoroute de celui de route pour automobiles ?",
           "choices": [
-            "Une autoroute stylisée ou une voiture",
-            "La couleur, l'un est vert l'autre bleu",
-            "Aucune, ils sont identiques"
+            "Le dessin : une autoroute ou une voiture",
+            "La couleur : l'un vert, l'autre bleu",
+            "Rien, ils sont identiques"
           ],
           "correct": 0,
-          "explanation": "Autoroute = fond vert. Route pour automobiles = fond bleu. Deux signaux bien distincts.",
+          "explanation": "Les deux sont bleus. L'autoroute montre une route avec un pont, la route pour automobiles une voiture.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q54.webp"
         },
@@ -5213,28 +5145,27 @@
         },
         {
           "id": "A5_Q59",
-          "question": "Vous roulez sur une route pour automobiles hors agglomération en Wallonie. Les sens sont séparés par des marques routières. Vous voyez le signal de début d'agglomération. Votre vitesse passe de :",
+          "question": "Wallonie, route pour automobiles sans berme, hors agglomération. Vous entrez en agglomération. Votre vitesse passe de :",
           "choices": [
-            "90 km/h à 70 km/h",
-            "90 km/h à 50 km/h",
-            "70 km/h à 50 km/h",
-            "120 km/h à 70 km/h"
+            "90 à 50 km/h",
+            "90 à 70 km/h",
+            "70 à 50 km/h"
           ],
-          "correct": 1,
-          "explanation": "Wallonie sans berme = 90 km/h. En entrant en agglomération en Wallonie = 50 km/h.",
+          "correct": 0,
+          "explanation": "Sans berme en Wallonie : 90 km/h. En agglomération : 50 km/h.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A5_Q59.webp"
         },
         {
           "id": "A5_Q60",
-          "question": "Vous roulez sur une route pour automobiles et voyez le signal de fin de route pour automobiles suivi d'un signal de début d'agglomération. Quelles règles s'appliquent ?",
+          "question": "Fin de route pour automobiles, puis début d'agglomération. Quelles règles s'appliquent ?",
           "choices": [
             "Celles de l'agglomération",
             "Celles de l'autoroute",
             "Celles de la route pour automobiles"
           ],
           "correct": 0,
-          "explanation": "Fin de route pour automobiles + début d'agglomération = les règles normales de l'agglomération s'appliquent.",
+          "explanation": "Vous êtes en agglomération : ses règles s'appliquent.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A5_Q60.webp"
         },
@@ -5242,12 +5173,12 @@
           "id": "A5_Q61",
           "question": "Ce panneau est suivi d'un panneau 90 km/h. Quelle vitesse respectez-vous ?",
           "choices": [
-            "90 km/h, la plus basse",
-            "120 km/h, celle de la route",
-            "La moyenne des deux vitesses"
+            "90 km/h",
+            "120 km/h",
+            "La moyenne des deux"
           ],
           "correct": 0,
-          "explanation": "Un signal spécifique de limitation prime sur la vitesse générale de la route pour automobiles.",
+          "explanation": "Un panneau de limitation l'emporte sur la vitesse générale de la route.",
           "theoryCardIndex": 1,
           "sign": "F9"
         }
