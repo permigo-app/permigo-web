@@ -1596,139 +1596,114 @@
       "questions": [
         {
           "id": "A2_Q1",
-          "question": "Vous circulez sur une chaussée divisée en bandes. Comment ces bandes sont-elles délimitées ?",
+          "question": "Les bandes de circulation sont délimitées par :",
           "choices": [
-            "Par des lignes blanches",
-            "Par des poteaux au sol",
-            "Par des lignes jaunes"
+            "Des lignes blanches",
+            "Des lignes jaunes",
+            "Des poteaux"
           ],
           "correct": 0,
-          "explanation": "Les bandes de circulation sont délimitées par des lignes blanches continues ou discontinues peintes sur la chaussée.",
+          "explanation": "Les bandes de circulation sont séparées par des lignes blanches, continues ou discontinues.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A2_Q1.webp"
         },
         {
           "id": "A2_Q3",
-          "question": "Vous circulez sur une chaussée à plusieurs bandes en conditions normales. Sur quelle bande devez-vous rouler ?",
+          "question": "Chaussée à plusieurs bandes, circulation normale. Sur quelle bande roulez-vous ?",
           "choices": [
-            "Sur la bande de droite",
-            "Sur la bande de gauche",
-            "Sur la bande du milieu"
+            "Celle de droite",
+            "Celle de gauche",
+            "Celle du milieu"
           ],
           "correct": 0,
-          "explanation": "La règle fondamentale est de circuler sur la bande de droite. La bande de gauche est réservée au dépassement.",
+          "explanation": "Vous roulez sur la bande de droite. Les autres servent à dépasser.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A2_Q3.webp"
         },
         {
           "id": "A2_Q5",
-          "question": "Vous approchez d'un carrefour et voyez des flèches peintes au sol. À quoi servent-elles ?",
+          "question": "Ces flèches au sol, avant le carrefour, vous imposent :",
           "choices": [
-            "À imposer la direction à suivre",
-            "À indiquer la vitesse maximale",
-            "À signaler un danger proche"
+            "La direction à suivre",
+            "Une vitesse maximale",
+            "Un arrêt obligatoire"
           ],
           "correct": 0,
-          "explanation": "Les flèches au sol près des carrefours indiquent la direction à suivre obligatoirement pour chaque bande.",
+          "explanation": "Les flèches de sélection imposent la direction à suivre depuis chaque bande.",
           "theoryCardIndex": 0,
           "image": "/images/questions/A2_Q5.webp"
         },
         {
-          "id": "A2_Q8",
-          "question": "Vous voyez un panneau de limitation de vitesse sur une route ordinaire. Peut-il imposer une vitesse différente de la limite standard ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "Les signaux routiers peuvent toujours imposer une vitesse différente de la limite générale.",
-          "theoryCardIndex": 0,
-          "sign": "C43"
-        },
-        {
           "id": "A2_Q9",
-          "question": "Le véhicule devant vous roule lentement et une ligne blanche discontinue sépare les bandes. Pouvez-vous le dépasser en franchissant cette ligne ?",
+          "question": "La ligne est discontinue. Pouvez-vous la franchir pour dépasser ce véhicule lent ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une ligne discontinue peut être franchie pour dépasser un véhicule plus lent, à condition que la visibilité soit bonne et qu'aucun signal ne l'interdise.",
+          "explanation": "Une ligne discontinue peut être franchie pour dépasser, si la visibilité est bonne et qu'aucun signal ne l'interdit.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q9.webp"
         },
         {
           "id": "A2_Q10",
-          "question": "Vous souhaitez dépasser en franchissant une ligne discontinue. Dans quel cas est-ce interdit ?",
+          "question": "Ligne discontinue : quand le dépassement reste-t-il interdit ?",
           "choices": [
             "Si la visibilité est insuffisante",
-            "Si la route est assez large",
-            "Si vous êtes en agglomération"
+            "Si la route est large",
+            "En agglomération"
           ],
           "correct": 0,
-          "explanation": "Même si la ligne est discontinue, vous ne pouvez pas dépasser si la visibilité est insuffisante ou si un signal l'interdit.",
+          "explanation": "Même avec une ligne discontinue, pas de dépassement sans visibilité suffisante.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q10.webp"
         },
         {
           "id": "A2_Q12",
-          "question": "Vous circulez derrière un véhicule lent mais la ligne de séparation est blanche et continue. Pouvez-vous la franchir pour dépasser ?",
+          "question": "Ligne blanche continue. Pouvez-vous la franchir pour dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est totalement interdit de franchir une ligne blanche continue pour dépasser, quelle que soit la situation.",
+          "explanation": "Une ligne blanche continue ne se franchit pas, ni pour dépasser ni pour rouler à sa gauche.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q12.webp"
         },
         {
-          "id": "A2_Q13",
-          "question": "Une ligne blanche continue sépare les deux sens de circulation. Pouvez-vous circuler à gauche de cette ligne ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Il est interdit de circuler à gauche d'une ligne continue séparant les deux sens, même si la route est libre.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/A2_Q13.webp"
-        },
-        {
           "id": "A2_Q14",
-          "question": "Vous voyez une ligne continue et une ligne discontinue côte à côte. La ligne discontinue est de votre côté. Pouvez-vous dépasser ?",
+          "question": "Double ligne : la ligne discontinue est de votre côté. Pouvez-vous dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Avec une double ligne mixte, c'est la ligne de votre côté qui compte. Si elle est discontinue, vous pouvez la franchir pour dépasser.",
+          "explanation": "C'est la ligne de votre côté qui compte : discontinue, vous pouvez la franchir.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q14.webp"
         },
         {
           "id": "A2_Q15",
-          "question": "Vous avez dépassé un véhicule en franchissant la ligne discontinue. Que devez-vous faire ensuite ?",
+          "question": "Dépassement terminé. Que faites-vous ?",
           "choices": [
-            "Rester sur la bande de gauche si vous roulez vite",
-            "Revenir sur la bande de droite dès que possible",
-            "Vous arrêter pour vérifier que tout est en ordre",
-            "Accélérer encore pour vous éloigner du véhicule dépassé"
+            "Vous revenez à droite dès que possible",
+            "Vous restez à gauche si vous roulez vite",
+            "Vous accélérez pour vous éloigner"
           ],
-          "correct": 1,
-          "explanation": "Une fois le dépassement effectué, vous devez obligatoirement revenir sur la bande de droite.",
+          "correct": 0,
+          "explanation": "Après un dépassement, vous reprenez la bande de droite dès que possible.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q15.webp"
         },
         {
           "id": "A2_Q16",
-          "question": "Vous voyez une double ligne mixte : la ligne continue est de votre côté. Pouvez-vous dépasser le véhicule devant vous ?",
+          "question": "Double ligne : la ligne continue est de votre côté. Pouvez-vous dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Avec une double ligne mixte, si la ligne continue est de votre côté, vous ne pouvez pas dépasser.",
+          "explanation": "La ligne de votre côté est continue : vous ne pouvez pas la franchir.",
           "theoryCardIndex": 1,
           "image": "/images/questions/A2_Q16.webp"
         },
@@ -1737,306 +1712,278 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Le nombre de bandes diminue",
-            "Un changement de vitesse",
-            "Des travaux sur la route"
+            "Un évitement plus loin",
+            "Une traversée de la berme centrale"
           ],
           "correct": 0,
-          "explanation": "Une bande de circulation va prendre fin : anticipez et placez-vous correctement.",
+          "explanation": "Ce signal annonce une réduction du nombre de bandes de circulation.",
           "theoryCardIndex": 1,
           "sign": "F79"
         },
         {
-          "id": "A2_Q18",
-          "question": "Il existe deux signaux différents pour annoncer la réduction de bandes. Que distinguent-ils ?",
-          "choices": [
-            "Un rétrécissement à gauche ou à droite",
-            "Un sens unique ou une route à double sens",
-            "Un carrefour dangereux ou un giratoire"
-          ],
-          "correct": 0,
-          "explanation": "Il y a deux signaux distincts : l'un pour un rétrécissement par la gauche, l'autre pour un rétrécissement par la droite.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/A2_Q18.webp"
-        },
-        {
           "id": "A2_Q19",
-          "question": "Vous circulez sur une route à plusieurs bandes et la circulation est fortement ralentie à cause d'un rétrécissement. Que devez-vous appliquer ?",
+          "question": "Trafic très ralenti, une bande se termine. Quelle règle s'applique ?",
           "choices": [
-            "Le principe de la tirette",
+            "La tirette",
             "La priorité de droite",
-            "Le dépassement par la gauche"
+            "Le premier arrivé passe"
           ],
           "correct": 0,
-          "explanation": "La tirette s'applique uniquement quand la circulation est fortement ralentie ET qu'une bande prend fin.",
+          "explanation": "Circulation fortement ralentie + bande qui se termine = tirette.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A2_Q19.webp"
         },
         {
           "id": "A2_Q20",
-          "question": "Vous circulez et une bande prend fin, mais la circulation est fluide. Devez-vous appliquer la tirette ?",
+          "question": "Une bande se termine, mais la circulation est fluide. Appliquez-vous la tirette ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La tirette ne s'applique que si la circulation est fortement ralentie. Si la circulation est fluide, les règles normales de priorité s'appliquent.",
+          "explanation": "La tirette ne vaut que si la circulation est fortement ralentie. Sinon, celui qui change de bande cède le passage.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/A2_Q20.webp"
         },
         {
           "id": "A2_Q21",
-          "question": "Vous êtes dans un embouteillage devant un rétrécissement. Un conducteur refuse de vous laisser vous intercaler. Le principe de la tirette est-il obligatoire ?",
+          "question": "La tirette est-elle obligatoire ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, c'est une règle du code de la route",
+            "Non, c'est seulement conseillé et courtois"
           ],
           "correct": 0,
-          "explanation": "Le principe de la tirette est une règle obligatoire du Code de la route.",
+          "explanation": "La tirette est une obligation du code de la route, pas une simple politesse.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A2_Q21.webp"
         },
         {
-          "id": "A2_Q22",
-          "question": "Vous appliquez le principe de la tirette. Est-ce considéré comme une manoeuvre ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Le principe de la tirette n'est pas une manœuvre : il ne nécessite pas de vérification spéciale ni de signal.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/A2_Q22.webp"
-        },
-        {
           "id": "A2_Q23",
-          "question": "Vous êtes sur une bande qui prend fin et la circulation est fortement ralentie. Où devez-vous vous intercaler ?",
+          "question": "Tirette : où vous intercalez-vous ?",
           "choices": [
             "Juste devant le rétrécissement",
-            "Le plus tôt possible avant",
-            "Après le rétrécissement"
+            "Le plus tôt possible",
+            "Dès que vous pouvez le faire en sécurité"
           ],
           "correct": 0,
-          "explanation": "Les conducteurs doivent s'intercaler uniquement juste devant le rétrécissement, pas avant.",
+          "explanation": "Avec la tirette, on s'intercale seulement juste devant le rétrécissement.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A2_Q23.webp"
         },
         {
           "id": "A2_Q26",
-          "question": "Vous circulez sur la bande libre et un conducteur veut s'intercaler juste devant le rétrécissement. Que devez-vous faire ?",
+          "question": "Vous êtes sur la bande libre. Juste devant le rétrécissement, un conducteur veut s'intercaler. Que faites-vous ?",
           "choices": [
-            "Lui céder le passage à tour de rôle",
-            "Accélérer pour ne pas le laisser",
-            "Klaxonner pour signaler votre présence"
+            "Vous le laissez passer, à tour de rôle",
+            "Vous le laissez passer seulement s'il clignote",
+            "Rien : vous êtes sur la bande libre"
           ],
           "correct": 0,
-          "explanation": "Sur la bande libre, vous devez céder le passage à tour de rôle au conducteur qui s'intercale.",
+          "explanation": "Sur la bande libre, vous laissez passer à tour de rôle un conducteur qui s'intercale.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/A2_Q26.webp"
         },
         {
           "id": "A2_Q28",
-          "question": "La circulation est interrompue à la fois sur la bande de gauche et sur celle de droite. Qui passe en premier ?",
+          "question": "Les bandes de gauche et de droite se ferment. Qui passe en premier ?",
           "choices": [
-            "Le conducteur venant de droite",
-            "Le conducteur venant de gauche",
-            "Le véhicule le plus rapide"
+            "Le conducteur de la bande de droite",
+            "Le conducteur de la bande de gauche",
+            "Le conducteur de la bande libre"
           ],
           "correct": 0,
-          "explanation": "Quand deux bandes sont interrompues, la priorité va d'abord au conducteur de droite.",
+          "explanation": "Quand deux bandes se ferment, la priorité va d'abord au conducteur de droite.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/A2_Q28.webp"
         },
         {
           "id": "A2_Q29",
-          "question": "Deux bandes sont interrompues simultanément. Après le conducteur de droite, qui passe en deuxième ?",
+          "question": "Deux bandes se ferment. Le conducteur de droite est passé. Qui passe ensuite ?",
           "choices": [
-            "Le conducteur de la bande libre",
             "Le conducteur de la bande de gauche",
-            "De nouveau un conducteur de la bande de droite",
-            "Personne, on attend un signal"
+            "Le conducteur de la bande libre",
+            "De nouveau celui de droite"
           ],
-          "correct": 1,
-          "explanation": "Après le conducteur de droite, c'est le conducteur de gauche qui passe en deuxième.",
+          "correct": 0,
+          "explanation": "Ordre : droite, puis gauche, puis la bande libre.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A2_Q29.webp"
         },
         {
           "id": "A2_Q30",
-          "question": "Deux bandes sont interrompues. Après le passage du conducteur de droite puis de gauche, qui passe en troisième ?",
+          "question": "Deux bandes se ferment. Droite puis gauche sont passés. Qui passe en troisième ?",
           "choices": [
-            "Le conducteur de la bande de droite",
-            "Le conducteur de la bande de gauche",
             "Le conducteur de la bande libre",
-            "Personne, le cycle recommence"
+            "Le conducteur de la bande de droite",
+            "Le conducteur de la bande de gauche"
           ],
-          "correct": 2,
-          "explanation": "L'ordre est : droite → gauche → bande libre. Le conducteur de la bande libre passe en dernier.",
+          "correct": 0,
+          "explanation": "Ordre : droite, puis gauche, puis la bande libre.",
           "theoryCardIndex": 2,
           "image": "/images/questions/A2_Q30.webp"
         },
         {
           "id": "A2_Q31",
-          "question": "Vous circulez le long d'une bande de bus. Fait-elle partie de la chaussée ?",
+          "question": "La bande bus fait-elle partie de la chaussée ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "La bande de bus est une voie séparée qui ne fait PAS partie de la chaussée.",
+          "explanation": "La bande bus ne fait pas partie de la chaussée.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q31.webp"
         },
         {
           "id": "A2_Q32",
-          "question": "Vous devez identifier une bande de bus. Comment la reconnaissez-vous ?",
+          "question": "À quoi reconnaissez-vous une bande bus ?",
           "choices": [
-            "À de larges lignes blanches discontinues",
-            "À un revêtement de couleur rouge",
-            "À des poteaux de signalisation particuliers"
+            "De larges lignes blanches discontinues",
+            "Un revêtement rouge",
+            "Des lignes jaunes"
           ],
           "correct": 0,
-          "explanation": "La bande de bus est signalée par une ou deux larges lignes blanches discontinues, parfois des marques en damier, et le signal F17.",
+          "explanation": "Une ou deux larges lignes blanches discontinues (ou un damier) et le signal F17.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q32.webp"
         },
         {
           "id": "A2_Q33",
-          "question": "Vous circulez en voiture à côté d'une bande de bus. Qu'est-il interdit d'y faire ?",
+          "question": "Pouvez-vous vous arrêter sur la bande bus pour déposer un passager ?",
           "choices": [
-            "Y circuler, y stationner, s'y arrêter",
-            "Y stationner votre véhicule",
-            "Rien du tout, elle est accessible à tous"
+            "Oui",
+            "Non"
           ],
-          "correct": 0,
-          "explanation": "Il est interdit de circuler, de stationner et de s'arrêter sur une bande de bus avec une voiture.",
+          "correct": 1,
+          "explanation": "En voiture, vous ne pouvez ni circuler, ni vous arrêter, ni stationner sur la bande bus.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q33.webp"
         },
         {
           "id": "A2_Q34",
-          "question": "Vous devez tourner à droite au prochain carrefour. Pouvez-vous emprunter la bande de bus pour vous positionner ?",
+          "question": "Vous tournez à droite au prochain carrefour. Pouvez-vous rouler sur la bande bus ?",
           "choices": [
-            "Oui, à proximité du carrefour",
+            "Oui, juste avant le carrefour",
             "Oui, dès qu'elle est libre",
-            "Non, c'est interdit partout"
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "Vous pouvez emprunter la bande de bus uniquement à proximité immédiate d'un carrefour pour changer de direction.",
+          "explanation": "Vous pouvez emprunter la bande bus juste avant le carrefour, pour tourner.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q34.webp"
         },
         {
           "id": "A2_Q35",
-          "question": "Vous devez entrer dans une propriété privée située de l'autre côté de la bande de bus. Pouvez-vous la traverser ?",
+          "question": "Pouvez-vous traverser la bande bus pour entrer dans une propriété ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Traverser une bande de bus pour entrer dans une propriété riveraine est autorisé.",
+          "explanation": "Traverser la bande bus pour entrer dans une propriété ou en sortir est permis.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q35.webp"
         },
         {
           "id": "A2_Q36",
-          "question": "Un obstacle bloque votre chaussée et la seule possibilité est de passer par la bande de bus. Pouvez-vous le faire ?",
+          "question": "Un obstacle bloque votre chaussée. Pouvez-vous le contourner par la bande bus ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Vous pouvez utiliser la bande de bus pour contourner un obstacle qui bloque la chaussée.",
+          "explanation": "Pour contourner un obstacle, vous pouvez emprunter la bande bus.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q36.webp"
         },
         {
           "id": "A2_Q37",
-          "question": "Vous voyez des cyclistes rouler sur la bande de bus. Est-ce autorisé ?",
+          "question": "Des cyclistes roulent sur la bande bus. Est-ce permis ?",
           "choices": [
-            "Oui, si des panneaux l'autorisent",
-            "Oui, pour tous les usagers",
-            "Non, seuls les bus y ont accès"
+            "Oui, si le panneau les autorise",
+            "Oui, toujours",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "Des panneaux additionnels peuvent autoriser d'autres usagers (cyclistes, cyclomoteurs, motos) à utiliser la bande de bus.",
+          "explanation": "Les cyclistes, cyclomoteurs, motos ou taxis y sont admis seulement si leur symbole figure sur le signal.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q37.webp"
         },
         {
           "id": "A2_Q39",
-          "question": "Vous voyez de larges lignes diagonales peintes au sol. De quoi s'agit-il ?",
+          "question": "Comment s'appellent ces marques au sol ?",
           "choices": [
-            "D'une zone d'évitement interdite",
-            "D'une bande réservée aux bus",
-            "D'un passage pour piétons élargi"
+            "Une zone d'évitement",
+            "Des marques en damier",
+            "Une bande bus"
           ],
           "correct": 0,
-          "explanation": "La zone d'évitement est identifiable par de larges lignes diagonales au sol. Il y est interdit de circuler, s'arrêter et stationner.",
+          "explanation": "Zone d'évitement : vous ne pouvez ni y circuler, ni vous y arrêter, ni y stationner.",
           "theoryCardIndex": 3,
           "image": "/images/questions/A2_Q39.webp"
         },
         {
           "id": "A2_Q42",
-          "question": "Vous traversez une zone de travaux et voyez des lignes au sol d'une couleur différente. De quelle couleur sont les lignes provisoires de chantier ?",
+          "question": "De quelle couleur sont les lignes provisoires de chantier ?",
           "choices": [
             "Orange",
             "Jaune",
             "Rouge"
           ],
           "correct": 0,
-          "explanation": "Les lignes provisoires lors de travaux sont de couleur orange.",
+          "explanation": "Sur un chantier, les lignes provisoires sont orange.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q42.webp"
         },
         {
           "id": "A2_Q43",
-          "question": "Vous voyez des lignes provisoires orange sur un chantier. Ont-elles la même valeur que les lignes blanches ?",
+          "question": "Les lignes orange ont-elles la même valeur que les lignes blanches ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les lignes orange ont exactement la même signification que les lignes blanches : continue = interdit de franchir, discontinue = franchissable.",
+          "explanation": "Même signification : continue, on ne franchit pas ; discontinue, on peut franchir.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q43.webp"
         },
         {
           "id": "A2_Q44",
-          "question": "Vous voyez à la fois des lignes blanches et des lignes orange sur la chaussée. Lesquelles devez-vous suivre ?",
+          "question": "Il y a des lignes blanches et des lignes orange. Lesquelles suivez-vous ?",
           "choices": [
             "Les lignes orange",
             "Les lignes blanches",
-            "Les deux en même temps"
+            "Les deux"
           ],
           "correct": 0,
-          "explanation": "En présence de lignes blanches et orange simultanément, seules les lignes orange font foi.",
+          "explanation": "Quand il y a les deux, seules les lignes orange comptent.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q44.webp"
         },
         {
           "id": "A2_Q45",
-          "question": "Les lignes orange de chantier vous dirigent sur une zone d'évitement. Pouvez-vous y circuler ?",
+          "question": "Les lignes orange vous font rouler sur une zone d'évitement. Est-ce permis ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Si les lignes orange de chantier vous autorisent à circuler sur une zone d'évitement, c'est légalement autorisé.",
+          "explanation": "Si les lignes orange vous y dirigent, vous pouvez y rouler.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q45.webp"
         },
         {
           "id": "A2_Q46",
-          "question": "Les lignes orange de chantier vous dirigent sur la bande d'arrêt d'urgence. Pouvez-vous y circuler ?",
+          "question": "Les lignes orange vous font rouler sur la bande d'arrêt d'urgence. Est-ce permis ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En présence de lignes orange de chantier, la circulation sur la BAU est autorisée si ces lignes vous y dirigent.",
+          "explanation": "Si les lignes orange vous y dirigent, vous pouvez y rouler.",
           "theoryCardIndex": 4,
           "image": "/images/questions/A2_Q46.webp"
         },
@@ -2046,10 +1993,10 @@
           "choices": [
             "Des flèches de sélection au sol",
             "Un parking organisé en bandes",
-            "Un sens interdit aux poids lourds"
+            "Un sens interdit aux camions"
           ],
           "correct": 0,
-          "explanation": "Ce signal prévient que des flèches directionnelles au sol obligent à choisir sa bande selon la direction souhaitée.",
+          "explanation": "Ce signal annonce des flèches de sélection : choisissez votre bande selon votre direction.",
           "theoryCardIndex": 2,
           "sign": "F13"
         },
@@ -2068,53 +2015,53 @@
         },
         {
           "id": "A2_Q49",
-          "question": "Ce panneau annonce un rétrécissement par la gauche. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
             "La bande de gauche disparaît",
-            "Un virage serré vers la gauche",
-            "Des travaux sur la gauche"
+            "La bande de droite disparaît",
+            "Un virage serré à gauche"
           ],
           "correct": 0,
-          "explanation": "Ce signal d'indication annonce que la bande de gauche va prendre fin et que les conducteurs de cette bande devront se déplacer vers la droite.",
+          "explanation": "La bande de gauche prend fin : ses conducteurs devront s'intercaler à droite.",
           "theoryCardIndex": 1,
           "sign": "F79"
         },
         {
           "id": "A2_Q50",
-          "question": "Ce panneau annonce un rétrécissement par la droite. Que signifie-t-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
             "La bande de droite disparaît",
-            "Un virage serré vers la droite",
-            "Un stationnement sur la droite"
+            "La bande de gauche disparaît",
+            "Un virage serré à droite"
           ],
           "correct": 0,
-          "explanation": "Ce signal d'indication annonce que la bande de droite va prendre fin et que les conducteurs de cette bande devront se déplacer vers la gauche.",
+          "explanation": "La bande de droite prend fin : ses conducteurs devront s'intercaler à gauche.",
           "theoryCardIndex": 1,
           "sign": "F79"
         },
         {
           "id": "A2_Q51",
-          "question": "Vous voyez un signal de rétrécissement par la droite. Vous êtes sur la bande de droite. Que faites-vous ?",
+          "question": "Vous êtes sur la bande de droite, qui va disparaître. Que faites-vous ?",
           "choices": [
-            "Vous vous intercalez à gauche",
-            "Vous accélérez pour passer",
-            "Vous vous arrêtez sur place"
+            "Vous vous préparez à vous intercaler à gauche",
+            "Vous accélérez pour passer en premier",
+            "Vous vous arrêtez au bout de la bande"
           ],
           "correct": 0,
-          "explanation": "Si vous êtes sur la bande qui disparaît, vous devez vous préparer à vous intercaler sur la bande adjacente.",
+          "explanation": "Sur la bande qui disparaît, vous vous préparez à rejoindre la bande voisine.",
           "theoryCardIndex": 1,
           "sign": "F79"
         },
         {
           "id": "A2_Q55",
-          "question": "Ce panneau de bande bus porte un pictogramme moto. Que signifie-t-il ?",
+          "question": "Ce signal de bande bus porte une moto. Que signifie-t-il ?",
           "choices": [
-            "Les motos peuvent y circuler",
+            "Les motos peuvent y rouler",
             "Les motos y sont interdites",
-            "Un parking réservé aux motos"
+            "Un parking pour motos"
           ],
           "correct": 0,
-          "explanation": "Un pictogramme moto sur le signal de bande bus signifie que les motocyclettes sont autorisées à y circuler.",
+          "explanation": "Le symbole moto sur le signal autorise les motocyclettes sur la bande bus.",
           "theoryCardIndex": 3,
           "sign": "F17"
         },
@@ -2146,29 +2093,15 @@
           "destination": "panneaux"
         },
         {
-          "id": "A2_Q60",
+          "id": "A2_Q61",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Un double sens temporaire",
-            "Une route fermée plus loin",
-            "Un passage pour piétons"
+            "Une traversée de la berme centrale",
+            "Une réduction du nombre de bandes",
+            "Un évitement plus loin"
           ],
           "correct": 0,
-          "explanation": "Sur un chantier, la circulation passe temporairement en double sens : restez à droite et surveillez les véhicules en face.",
-          "theoryCardIndex": 3,
-          "sign": "F85"
-        },
-        {
-          "id": "A2_Q61",
-          "question": "Ce signal de préavis annonce une traversée de la berme centrale. Que signifie-t-il ?",
-          "choices": [
-            "Interdiction de traverser la berme centrale",
-            "La circulation est déviée vers l'autre chaussée",
-            "L'arrêt est interdit sur la berme centrale",
-            "Des travaux sont en cours sur la berme centrale"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal annonce que la circulation va traverser la berme centrale pour passer sur l'autre chaussée, généralement à cause de travaux.",
+          "explanation": "Ce signal annonce que la circulation va traverser la berme centrale pour passer sur l'autre chaussée.",
           "theoryCardIndex": 2,
           "sign": "F83"
         },
@@ -2187,16 +2120,40 @@
         },
         {
           "id": "A2_Q65",
-          "question": "Vous voyez un signal indiquant que la circulation va passer en double sens. Vous étiez sur une route à sens unique. Comment adaptez-vous votre conduite ?",
+          "question": "Ce panneau vous annonce que la circulation passe dans les deux sens. Que faites-vous ?",
           "choices": [
-            "Rester à droite et surveiller",
-            "Accélérer pour quitter la zone",
-            "Continuer sans rien changer"
+            "Vous restez bien à droite",
+            "Vous roulez au milieu",
+            "Rien ne change"
           ],
           "correct": 0,
-          "explanation": "En passant d'un sens unique à un double sens, vous devez rester à droite et être attentif aux véhicules venant en sens inverse.",
+          "explanation": "Des véhicules vont arriver en face : vous restez à droite et vous êtes attentif.",
           "theoryCardIndex": 1,
           "sign": "A39"
+        },
+        {
+          "id": "A2_Q66",
+          "question": "Comment s'appelle la partie de la route marquée d'un « ? » ?",
+          "choices": [
+            "La bande de circulation",
+            "La chaussée",
+            "La voie publique"
+          ],
+          "correct": 0,
+          "explanation": "La chaussée est divisée par des lignes blanches en bandes de circulation. Le « ? » est sur une seule bande.",
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "A2_Q67",
+          "question": "Combien de bandes de circulation compte cette route pour automobiles ?",
+          "choices": [
+            "2",
+            "3",
+            "4"
+          ],
+          "correct": 1,
+          "explanation": "Trois bandes de circulation. La bande d'arrêt d'urgence, à droite, n'en est pas une.",
+          "theoryCardIndex": 0
         }
       ]
     },
