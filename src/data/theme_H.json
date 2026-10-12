@@ -1917,576 +1917,526 @@
       "questions": [
         {
           "id": "H3_Q1",
-          "question": "Que signifie ce panneau de zone ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Zone bleue, disque obligatoire",
-            "Zone de stationnement payant",
-            "Zone résidentielle à 20 km/h"
+            "Stationnement à durée limitée : disque obligatoire",
+            "Parking payant",
+            "Zone résidentielle"
           ],
           "correct": 0,
-          "explanation": "La zone bleue est une zone de stationnement à durée limitée où l'utilisation du disque est obligatoire.",
+          "explanation": "Le disque dessiné : durée limitée, disque obligatoire.",
           "theoryCardIndex": 0,
           "sign": "E9a_disque"
         },
         {
           "id": "H3_Q2",
-          "question": "La règle de la zone bleue s'applique-t-elle à chaque emplacement de la zone ?",
+          "question": "La zone bleue vaut-elle partout dans la zone ?",
           "choices": [
-            "Oui, sauf signalisation contraire",
-            "Non, rien qu'au bord du signal",
-            "Oui, partout sans aucune exception"
+            "Oui, sauf panneau contraire",
+            "Non, seulement près du panneau"
           ],
           "correct": 0,
-          "explanation": "La zone bleue s'applique dans toute la zone, sauf aux emplacements avec une signalisation de stationnement différente.",
+          "explanation": "Elle vaut dans toute la zone, sauf autre signalisation.",
           "theoryCardIndex": 0
         },
         {
           "id": "H3_Q3",
-          "question": "Vous vous garez en zone bleue un mardi à 11h. Le disque est-il obligatoire ?",
+          "question": "Zone bleue, mardi 11h. Disque obligatoire ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le disque est obligatoire les jours ouvrables entre 9h et 18h, sauf indication contraire.",
+          "explanation": "Jours ouvrables de 9h à 18h, sauf autre indication.",
           "theoryCardIndex": 0
         },
         {
           "id": "H3_Q4",
-          "question": "Vous vous garez en zone bleue un dimanche à 14h. Le disque est-il obligatoire ?",
+          "question": "Zone bleue, dimanche 14h. Disque obligatoire ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le dimanche n'est pas un jour ouvrable : le disque n'est pas obligatoire sauf indication contraire.",
+          "correct": 0,
+          "explanation": "Le dimanche n'est pas un jour ouvrable.",
           "theoryCardIndex": 0
         },
         {
           "id": "H3_Q5",
-          "question": "Un panneau additionnel indique « 8h–20h ». Prime-t-il sur les horaires par défaut ?",
+          "question": "Le panneau indique « 8h–20h ». Quels horaires suivez-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "8h–20h",
+            "9h–18h"
           ],
           "correct": 0,
-          "explanation": "Un panneau additionnel précisant les horaires prime sur les horaires standards : il faut respecter les horaires indiqués.",
+          "explanation": "Les horaires du panneau remplacent ceux par défaut.",
           "theoryCardIndex": 0
         },
         {
           "id": "H3_Q6",
-          "question": "Où devez-vous placer votre disque de stationnement ?",
+          "question": "Où placez-vous le disque ?",
           "choices": [
-            "Bien visible sur le pare-brise",
-            "Accroché au rétroviseur",
-            "Sous le siège du conducteur"
+            "Derrière le pare-brise, bien visible",
+            "Au rétroviseur",
+            "Sur le siège"
           ],
           "correct": 0,
-          "explanation": "Le disque doit être visible depuis l'extérieur à l'intérieur du pare-brise.",
+          "explanation": "Sur la face interne du pare-brise.",
           "theoryCardIndex": 0
         },
         {
           "id": "H3_Q7",
-          "question": "Vous arrivez en zone bleue à 10h12. Sur quel trait devez-vous placer la flèche de votre disque ?",
+          "question": "Vous arrivez à 10h12. Où mettez-vous la flèche du disque ?",
           "choices": [
-            "Sur 10h00",
             "Sur 10h30",
-            "Sur 10h12 exactement",
-            "Sur 11h00"
+            "Sur 10h00",
+            "Sur 10h12"
           ],
-          "correct": 1,
-          "explanation": "La flèche se place sur le trait qui SUIT l'heure d'arrivée : après 10h12, c'est le trait 10h30.",
+          "correct": 0,
+          "explanation": "Sur le trait qui suit votre heure d'arrivée.",
           "theoryCardIndex": 0
         },
         {
           "id": "H3_Q8",
-          "question": "Vous arrivez en zone bleue à 14h00 pile. Sur quel trait placez-vous la flèche ?",
+          "question": "Vous arrivez à 14h00 pile. Où mettez-vous la flèche ?",
           "choices": [
-            "Sur 13h30",
             "Sur 14h30",
             "Sur 14h00",
-            "Sur 15h00"
+            "Sur 13h30"
           ],
-          "correct": 1,
-          "explanation": "À 14h00 pile, la flèche se place sur le trait qui SUIT : 14h30.",
+          "correct": 0,
+          "explanation": "Toujours le trait qui suit : 14h30.",
           "theoryCardIndex": 0
         },
         {
           "id": "H3_Q10",
-          "question": "Combien de temps pouvez-vous rester garé en zone bleue ?",
+          "question": "Sauf indication, combien de temps pouvez-vous rester en zone bleue ?",
           "choices": [
-            "Deux heures",
-            "Une heure",
-            "Trois heures"
+            "2 heures",
+            "1 heure",
+            "3 heures"
           ],
           "correct": 0,
-          "explanation": "La durée maximale en zone bleue est de 2 heures à compter de l'heure indiquée sur le disque.",
+          "explanation": "2 heures maximum.",
           "theoryCardIndex": 1
         },
         {
           "id": "H3_Q11",
-          "question": "Un panneau additionnel indique « durée maximale 1h ». Combien de temps restez-vous ?",
+          "question": "Le panneau indique « 1 h max ». Combien de temps restez-vous ?",
           "choices": [
-            "Une heure, le panneau prime",
-            "Deux heures, comme partout",
-            "Trois heures avec le disque"
+            "1 heure",
+            "2 heures"
           ],
           "correct": 0,
-          "explanation": "Le panneau additionnel prime : la durée maximale est 1 heure dans ce cas.",
+          "explanation": "Le panneau l'emporte.",
           "theoryCardIndex": 1
         },
         {
           "id": "H3_Q12",
-          "question": "Vos deux heures sont écoulées. Pouvez-vous modifier l'heure affichée sur le disque ?",
+          "question": "Vos 2 heures sont finies. Pouvez-vous tourner le disque sans bouger la voiture ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit de modifier l'heure sur le disque. Vous devez déplacer le véhicule.",
+          "correct": 0,
+          "explanation": "Interdit : vous devez d'abord quitter la place.",
           "theoryCardIndex": 1
         },
         {
           "id": "H3_Q13",
-          "question": "Vous avez déplacé votre véhicule. Pouvez-vous revenir stationner au même endroit ?",
+          "question": "Vous avez quitté la place. Pouvez-vous y revenir avec une nouvelle heure ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Après avoir déplacé le véhicule, vous pouvez revenir au même endroit et régler un nouveau temps de 2 heures.",
+          "explanation": "Après avoir quitté l'emplacement, vous pouvez y revenir.",
           "theoryCardIndex": 1
         },
         {
           "id": "H3_Q14",
-          "question": "Hors zone bleue, un signal porte la mention « disque obligatoire ». Devez-vous l'utiliser ?",
+          "question": "Hors zone bleue, un panneau P avec un disque dessiné dessous. Devez-vous mettre le disque ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le disque peut être obligatoire hors zone bleue si un signal de stationnement porte la mention \"disque obligatoire\".",
+          "explanation": "Le disque dessiné rend le disque obligatoire à cet endroit.",
           "theoryCardIndex": 1,
           "sign": "E9a_disque"
         },
         {
           "id": "H3_Q16",
-          "question": "Vous êtes en zone bleue un samedi à 15h. Le disque est-il obligatoire ?",
+          "question": "Zone bleue, samedi 15h. Disque obligatoire ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le samedi est un jour ouvrable et 15h est dans la plage 9h–18h : le disque est obligatoire.",
+          "explanation": "Le samedi est un jour ouvrable.",
           "theoryCardIndex": 1
         },
         {
           "id": "H3_Q17",
-          "question": "Vous êtes en zone bleue un jour ouvrable à 20h. Le disque est-il obligatoire ?",
+          "question": "Zone bleue, jeudi 20h. Disque obligatoire ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "20h est après 18h, hors plage horaire obligatoire : le disque n'est pas requis (sauf autre panneau).",
+          "correct": 0,
+          "explanation": "Après 18h, il n'est plus obligatoire (sauf autre panneau).",
           "theoryCardIndex": 1
         },
         {
           "id": "H3_Q18",
-          "question": "Vous arrivez à 11h15 et placez la flèche sur 11h30. Jusqu'à quelle heure pouvez-vous rester ?",
+          "question": "Arrivée à 11h15, flèche sur 11h30. Jusqu'à quand pouvez-vous rester ?",
           "choices": [
             "13h30",
             "13h15",
             "12h30"
           ],
           "correct": 0,
-          "explanation": "Flèche sur 11h30 + 2 heures = vous pouvez rester jusqu'à 13h30.",
+          "explanation": "11h30 + 2 heures.",
           "theoryCardIndex": 1
         },
         {
           "id": "H3_Q19",
-          "question": "Sur quelle donnée la limite d'une zone « 3,5 t » se base-t-elle ?",
+          "question": "Zone de stationnement « 3,5 t » : de quelle masse parle-t-on ?",
           "choices": [
             "La masse maximale autorisée",
-            "La masse en charge du moment",
-            "Le poids du véhicule à vide"
+            "La masse en charge",
+            "Le poids à vide"
           ],
           "correct": 0,
-          "explanation": "La zone 3,5 t se base sur la MMA (Masse Maximale Autorisée), pas la MEC.",
+          "explanation": "Pour le stationnement, on regarde la masse maximale autorisée.",
           "theoryCardIndex": 2
         },
         {
           "id": "H3_Q20",
-          "question": "Votre voiture a une MMA de 1,8 tonne. Pouvez-vous stationner en zone 3,5 t ?",
+          "question": "Votre voiture a une MMA de 1,8 t. Pouvez-vous stationner dans cette zone « 3,5 t » ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une MMA de 1,8 t est inférieure à 3,5 t : vous pouvez stationner dans la zone.",
+          "explanation": "1,8 t, c'est moins que 3,5 t.",
           "theoryCardIndex": 2
         },
         {
           "id": "H3_Q21",
-          "question": "Vous vous garez devant un parcomètre. Devez-vous payer ?",
+          "question": "Vous vous garez à une place avec parcomètre. Devez-vous payer ?",
           "choices": [
-            "Oui",
+            "Oui, selon ce qu'il indique",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le paiement au parcomètre est obligatoire selon le tarif affiché.",
+          "explanation": "Vous suivez les conditions affichées sur l'appareil.",
           "theoryCardIndex": 2
         },
         {
           "id": "H3_Q22",
-          "question": "Le parcomètre est en panne. Que devez-vous faire ?",
+          "question": "Le parcomètre est en panne. Que faites-vous ?",
           "choices": [
-            "Utiliser votre disque",
-            "Stationner gratuitement",
-            "Chercher un autre endroit"
+            "J'utilise mon disque",
+            "Je me gare gratuitement",
+            "Je pars"
           ],
           "correct": 0,
-          "explanation": "En cas de panne du parcomètre, utilisez votre disque de stationnement.",
+          "explanation": "Parcomètre hors d'usage : disque obligatoire.",
           "theoryCardIndex": 2
         },
         {
           "id": "H3_Q23",
-          "question": "Vous souhaitez connaître les tarifs et horaires du parcomètre. Où trouvez-vous ces informations ?",
+          "question": "Où trouvez-vous les tarifs et horaires d'un parcomètre ?",
           "choices": [
-            "Sur le site internet de la commune",
-            "Sur le parcomètre lui-même",
-            "À l'administration communale",
-            "Sur le signal de stationnement"
+            "Sur le parcomètre",
+            "Sur le site de la commune",
+            "Sur le panneau P"
           ],
-          "correct": 1,
-          "explanation": "Toutes les modalités (prix, heures, périodes gratuites) sont indiquées sur l'appareil lui-même.",
+          "correct": 0,
+          "explanation": "Les conditions sont affichées sur l'appareil.",
           "theoryCardIndex": 2
         },
         {
           "id": "H3_Q24",
-          "question": "Le parcomètre indique « gratuit le dimanche ». Devez-vous payer le dimanche ?",
+          "question": "Le parcomètre indique « gratuit le dimanche ». Payez-vous le dimanche ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les modalités indiquées sur l'appareil s'appliquent : gratuit le dimanche = pas de paiement le dimanche.",
+          "correct": 0,
+          "explanation": "Vous suivez ce qui est indiqué sur l'appareil.",
           "theoryCardIndex": 2
         },
         {
           "id": "H3_Q25",
-          "question": "Quels véhicules peuvent stationner sous ce panneau ?",
+          "question": "En cyclomoteur, pouvez-vous vous garer sur la chaussée sous ce panneau ?",
           "choices": [
-            "Tous, sauf vélos et cyclomoteurs",
-            "Les voitures et rien d'autre",
-            "Les motocyclettes, elles seules"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "Le signal P général autorise tous les véhicules sauf les vélos et cyclomoteurs.",
+          "explanation": "Vélos et cyclomoteurs à deux roues se garent hors de la chaussée.",
           "theoryCardIndex": 3,
           "sign": "E9a"
         },
         {
           "id": "H3_Q27",
-          "question": "Ce panneau porte une silhouette de voiture. Quels véhicules peuvent y stationner ?",
+          "question": "Panneau P avec une voiture. Qui peut s'y garer ?",
           "choices": [
-            "Voitures, minibus et motos",
-            "Les voitures et rien d'autre",
-            "Les motos et les cyclomoteurs"
+            "Voitures, voitures mixtes, minibus et motos",
+            "Seulement les voitures",
+            "Tous les véhicules"
           ],
           "correct": 0,
-          "explanation": "Le signal P + voiture est réservé aux voitures, voitures mixtes (pick-up), minibus et motocyclettes.",
+          "explanation": "Réservé aux motos, voitures, voitures mixtes et minibus.",
           "theoryCardIndex": 3,
           "sign": "E9b"
         },
         {
           "id": "H3_Q28",
-          "question": "Vous conduisez une camionnette. Pouvez-vous stationner sous ce panneau ?",
+          "question": "En camionnette, pouvez-vous vous garer sous ce panneau ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Malgré le permis B, la camionnette est exclue du signal P + voiture.",
+          "correct": 0,
+          "explanation": "Les camionnettes ont leur propre panneau.",
           "theoryCardIndex": 3,
           "sign": "E9b"
         },
         {
           "id": "H3_Q29",
-          "question": "Vous conduisez une moto. Pouvez-vous stationner sous ce panneau ?",
+          "question": "En moto, pouvez-vous vous garer sous ce panneau ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les motocyclettes sont incluses dans le signal P + voiture.",
+          "explanation": "Les motos y sont admises.",
           "theoryCardIndex": 3,
           "sign": "E9b"
         },
         {
           "id": "H3_Q30",
-          "question": "Qu'est-ce qu'une « voiture mixte » ?",
+          "question": "Une « voiture mixte », c'est :",
           "choices": [
-            "Un pick-up passagers et cargo",
-            "Une voiture 100 % électrique",
-            "Un minibus de neuf places"
+            "Une voiture pour passagers et marchandises",
+            "Une voiture hybride",
+            "Un minibus"
           ],
           "correct": 0,
-          "explanation": "Une voiture mixte est un véhicule avec une partie passagers et une partie cargaison (type pick-up).",
+          "explanation": "Elle transporte à la fois des personnes et des marchandises.",
           "theoryCardIndex": 3
         },
         {
           "id": "H3_Q31",
-          "question": "Un signal montre un véhicule posé sur l'accotement. Où devez-vous stationner ?",
+          "question": "Panneau P avec une voiture sur l'accotement. Où vous garez-vous ?",
           "choices": [
             "Sur l'accotement ou le trottoir",
-            "Sur la chaussée, et nulle part ailleurs",
-            "Le stationnement y est interdit"
+            "Sur la chaussée",
+            "Nulle part"
           ],
           "correct": 0,
-          "explanation": "Ce signal impose le stationnement sur l'accotement ou le trottoir : interdit sur la chaussée.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H3_Q32",
-          "question": "Ce signal ne s'applique-t-il qu'aux accotements en saillie ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Le signal s'applique à tous les accotements, pas seulement ceux en saillie.",
+          "explanation": "Stationnement obligatoire sur l'accotement ou le trottoir.",
           "theoryCardIndex": 3
         },
         {
           "id": "H3_Q33",
-          "question": "Le signal impose la chaussée, mais elle est étroite et l'accotement large. Où stationnez-vous ?",
+          "question": "Le panneau impose la chaussée, l'accotement est large. Où vous garez-vous ?",
           "choices": [
-            "Sur la chaussée, le signal l'impose",
-            "Sur l'accotement, c'est plus large",
-            "Sur le trottoir, faute de place"
+            "Sur la chaussée",
+            "Sur l'accotement"
           ],
           "correct": 0,
-          "explanation": "Le signal impose le stationnement sur la chaussée, même si l'accotement est plus large.",
+          "explanation": "Le panneau l'impose : chaussée.",
           "theoryCardIndex": 3
         },
         {
           "id": "H3_Q34",
-          "question": "Qu'interdit un signal de stationnement obligatoire sur la chaussée ?",
+          "question": "Stationnement obligatoire sur la chaussée. Pouvez-vous vous garer sur l'accotement ?",
           "choices": [
-            "Le stationnement sur l'accotement",
-            "Le stationnement sur la chaussée",
-            "Le stationnement dans le parking"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "Le signal de stationnement sur la chaussée interdit de stationner sur l'accotement et le trottoir.",
+          "explanation": "Le panneau impose la chaussée.",
           "theoryCardIndex": 3
         },
         {
           "id": "H3_Q35",
-          "question": "Un signal montre un véhicule à cheval sur la chaussée et l'accotement. Comment stationnez-vous ?",
+          "question": "Panneau P avec une voiture à moitié sur l'accotement. Comment vous garez-vous ?",
           "choices": [
-            "Moitié chaussée, moitié accotement",
+            "En partie sur l'accotement",
             "Entièrement sur la chaussée",
             "Entièrement sur l'accotement"
           ],
           "correct": 0,
-          "explanation": "Le signal impose de stationner à cheval : en partie sur la chaussée et en partie sur l'accotement.",
+          "explanation": "Stationnement obligatoire en partie sur l'accotement ou le trottoir.",
           "theoryCardIndex": 3
         },
         {
           "id": "H3_Q36",
-          "question": "Sous ce signal à cheval, pouvez-vous stationner entièrement sur l'accotement ?",
+          "question": "Panneau « à moitié sur l'accotement » : pouvez-vous vous garer entièrement sur l'accotement ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Ce signal impose un stationnement à cheval : ni entièrement sur l'accotement, ni entièrement sur la chaussée.",
+          "correct": 0,
+          "explanation": "Il impose d'être à cheval.",
           "theoryCardIndex": 3
         },
         {
           "id": "H3_Q37",
-          "question": "Un signal réserve la place aux vélos de 7h30 à 18h. Il est 10h : pouvez-vous y garer votre voiture ?",
+          "question": "Place réservée aux vélos de 7h30 à 18h. Il est 10h : votre voiture peut-elle s'y garer ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "À 10h, l'emplacement est réservé aux vélos : votre voiture ne peut pas y stationner.",
+          "correct": 0,
+          "explanation": "À 10h, la place est aux vélos.",
           "theoryCardIndex": 3
         },
         {
           "id": "H3_Q38",
-          "question": "Même signal, il est maintenant 20h. Pouvez-vous y garer votre voiture ?",
+          "question": "Même place, il est 20h. Votre voiture peut-elle s'y garer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "À 20h, c'est la plage réservée aux voitures (18h–7h30) : vous pouvez stationner.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H3_Q40",
-          "question": "Le signal impose l'accotement mais il n'y en a pas. Que faites-vous ?",
-          "choices": [
-            "Vous ne stationnez pas ici",
-            "Vous stationnez sur la chaussée",
-            "Vous stationnez sur le trottoir"
-          ],
-          "correct": 0,
-          "explanation": "Si l'accotement n'est pas disponible et que le signal impose d'y stationner, vous ne pouvez pas stationner à cet endroit.",
+          "explanation": "De 18h à 7h30, elle est aux voitures.",
           "theoryCardIndex": 3
         },
         {
           "id": "H3_Q41",
-          "question": "Vous avez garé votre voiture et vous vous apprêtez à en descendre. Quelle est la première chose à faire ?",
+          "question": "Vous vous êtes garé. Que faites-vous en premier ?",
           "choices": [
-            "Éteindre le moteur",
-            "Serrer le frein à main",
-            "Retirer la clé du contact",
-            "Fermer les fenêtres"
-          ],
-          "correct": 1,
-          "explanation": "La première action est de tirer le frein à main avant de descendre.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "H3_Q42",
-          "question": "Quel est l'ordre correct des actions en descendant de votre véhicule ?",
-          "choices": [
-            "Frein, fenêtres, moteur, clé, portes",
-            "Moteur, fenêtres, frein, clé, portes",
-            "Clé, frein, moteur, fenêtres, portes"
+            "Je serre le frein à main",
+            "Je retire la clé",
+            "J'ouvre la porte"
           ],
           "correct": 0,
-          "explanation": "L'ordre est : frein à main → fenêtres/toit → moteur → clé → portes.",
+          "explanation": "D'abord immobiliser la voiture.",
           "theoryCardIndex": 4
         },
         {
           "id": "H3_Q43",
-          "question": "Vous passez votre examen pratique et vous oubliez de serrer le frein à main en quittant le véhicule. Que se passe-t-il ?",
+          "question": "À l'examen pratique, vous sortez sans serrer le frein à main. Conséquence ?",
           "choices": [
-            "Vous recevez un simple avertissement",
-            "Vous devez repasser l'examen",
-            "Quelques points sont déduits",
-            "Ce n'est pas grave"
+            "Échec",
+            "Rien",
+            "Un simple avertissement"
           ],
-          "correct": 1,
-          "explanation": "Oublier le frein à main à l'examen pratique entraîne l'obligation de repasser l'examen.",
+          "correct": 0,
+          "explanation": "C'est une faute éliminatoire.",
           "theoryCardIndex": 4
         },
         {
           "id": "H3_Q44",
-          "question": "Vous conduisez une voiture automatique. Que remplace le frein à main lorsque vous quittez le véhicule ?",
+          "question": "Voiture automatique : avant de sortir, vous mettez le levier sur :",
           "choices": [
-            "Le frein moteur",
-            "La position Parking",
-            "Le frein à pied maintenu",
-            "Rien ne le remplace"
+            "P (parking)",
+            "N (neutre)",
+            "D (drive)"
           ],
-          "correct": 1,
-          "explanation": "En voiture automatique, on met le levier en position Parking (P) à la place du frein à main.",
+          "correct": 0,
+          "explanation": "Position P, et frein à main.",
           "theoryCardIndex": 4
         },
         {
           "id": "H3_Q47",
-          "question": "Vous descendez de votre voiture garée au bord de la route. Dans quelle direction marchez-vous ?",
+          "question": "Vous sortez côté rue. Dans quel sens marchez-vous ?",
           "choices": [
-            "Vers l'arrière du véhicule",
-            "Vers l'avant du véhicule",
-            "Vers la gauche de la route"
+            "Vers l'arrière de la voiture",
+            "Vers l'avant",
+            "Au milieu de la rue"
           ],
           "correct": 0,
-          "explanation": "Marcher vers l'arrière permet de voir le trafic qui vient vers vous.",
+          "explanation": "Vers l'arrière, vous voyez venir le trafic.",
           "theoryCardIndex": 4
         },
         {
           "id": "H3_Q49",
-          "question": "Vous retournez à votre voiture garée. Par quel côté devez-vous l'approcher ?",
+          "question": "Vous revenez à votre voiture, côté rue. Par où l'approchez-vous ?",
           "choices": [
-            "Par l'arrière du véhicule",
-            "Par l'avant du véhicule",
-            "Par le côté gauche",
-            "N'importe quel côté"
+            "Par l'avant",
+            "Par l'arrière",
+            "Peu importe"
           ],
-          "correct": 1,
-          "explanation": "Approcher par l'avant du véhicule permet de voir la circulation qui arrive.",
+          "correct": 0,
+          "explanation": "Par l'avant, vous faites face au trafic.",
           "theoryCardIndex": 4
         },
         {
           "id": "H3_Q51",
-          "question": "Votre voiture est en panne sur la voie publique. Combien de temps peut-elle y rester au maximum ?",
+          "question": "Combien de temps une voiture en panne peut-elle rester sur la voie publique ?",
           "choices": [
+            "24 heures",
             "48 heures",
-            "24 heures maximum",
-            "1 semaine",
-            "Sans limite de temps"
+            "1 semaine"
           ],
-          "correct": 1,
-          "explanation": "Un véhicule en panne peut rester sur la voie publique au maximum 24 heures.",
+          "correct": 0,
+          "explanation": "24 heures consécutives maximum.",
           "theoryCardIndex": 5
         },
         {
           "id": "H3_Q53",
-          "question": "Vous avez un véhicule publicitaire garé sur la voie publique. Combien de temps peut-il y rester ?",
+          "question": "Combien de temps un véhicule publicitaire peut-il stationner sur la voie publique ?",
           "choices": [
+            "3 heures",
             "24 heures",
-            "3 heures maximum",
-            "1 heure",
-            "Sans limite de temps"
+            "1 heure"
           ],
-          "correct": 1,
-          "explanation": "Un véhicule publicitaire ne peut stationner sur la voie publique que 3 heures maximum.",
+          "correct": 0,
+          "explanation": "3 heures consécutives maximum.",
           "theoryCardIndex": 5
         },
         {
           "id": "H3_Q55",
-          "question": "Pouvez-vous garer votre voiture sur la voie publique avec un panneau « à vendre » ?",
+          "question": "Pouvez-vous garer votre voiture dans la rue avec un panneau « à vendre » ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Mettre en vente un véhicule sur la voie publique est interdit.",
+          "correct": 0,
+          "explanation": "Exposer un véhicule à vendre sur la voie publique est interdit.",
           "theoryCardIndex": 5
         },
         {
           "id": "H3_Q56",
-          "question": "Pouvez-vous proposer un véhicule en location en le garant sur la voie publique ?",
+          "question": "Pouvez-vous garer un véhicule dans la rue pour le proposer en location ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Mettre en location un véhicule sur la voie publique est interdit.",
+          "correct": 0,
+          "explanation": "Interdit aussi pour la location.",
           "theoryCardIndex": 5
         },
         {
           "id": "H3_Q61",
-          "question": "Vous voyez un signal P accompagné d'une silhouette de camionnette/camion. À qui est-il réservé ?",
+          "question": "Panneau P avec une camionnette. Qui peut s'y garer ?",
           "choices": [
-            "Aux voitures",
-            "Aux camionnettes et camions",
-            "Aux autocars",
-            "Le stationnement est interdit"
+            "Camionnettes et camions",
+            "Voitures",
+            "Autocars"
           ],
-          "correct": 1,
-          "explanation": "Le signal P + camionnette/camion est réservé aux camionnettes et camions.",
+          "correct": 0,
+          "explanation": "Réservé aux camionnettes et camions.",
           "theoryCardIndex": 3,
           "sign": "E9c"
         },
         {
           "id": "H3_Q65",
-          "question": "Ce panneau porte un symbole de prise électrique. Que signifie-t-il ?",
+          "question": "Panneau P avec une prise électrique. Qui peut s'y garer ?",
           "choices": [
-            "Réservé aux véhicules électriques",
-            "Une borne de recharge à côté",
-            "Un parking gratuit pour tous"
+            "Les véhicules électriques",
+            "Tout le monde",
+            "Les voitures au gaz"
           ],
           "correct": 0,
-          "explanation": "Le signal P + prise électrique indique un emplacement réservé aux véhicules électriques.",
+          "explanation": "Place réservée aux véhicules électriques.",
           "theoryCardIndex": 3,
           "sign": "E9a"
         }
