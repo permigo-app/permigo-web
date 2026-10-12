@@ -204,662 +204,520 @@
       "questions": [
         {
           "id": "D1_Q1",
-          "question": "Vous roulez sur l'autoroute belge. À quelle vitesse maximale pouvez-vous circuler ?",
+          "question": "Vitesse maximale sur autoroute ?",
           "choices": [
             "100 km/h",
             "120 km/h",
-            "130 km/h",
-            "90 km/h"
+            "130 km/h"
           ],
           "correct": 1,
-          "explanation": "La vitesse maximale sur autoroute est de 120 km/h.",
+          "explanation": "120 km/h sur autoroute.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/D1_Q1.webp"
         },
         {
           "id": "D1_Q2",
-          "question": "Vous circulez sur l'autoroute. En dessous de quelle vitesse risquez-vous une infraction pour lenteur excessive ?",
+          "question": "Vitesse minimale sur autoroute, si les conditions le permettent ?",
           "choices": [
             "50 km/h",
-            "60 km/h",
             "70 km/h",
-            "80 km/h"
+            "90 km/h"
           ],
-          "correct": 2,
-          "explanation": "La vitesse minimale sur autoroute est de 70 km/h.",
+          "correct": 1,
+          "explanation": "70 km/h minimum, si les conditions le permettent.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/D1_Q2.webp"
         },
         {
           "id": "D1_Q3",
-          "question": "Vous roulez hors agglomération sur une route à 2x2 voies séparées par une berme centrale. Quelle est votre vitesse maximale ?",
+          "question": "Hors agglomération, 2 bandes par sens séparées par une berme centrale. Vitesse maximale ?",
           "choices": [
             "90 km/h",
-            "100 km/h",
             "120 km/h",
             "70 km/h"
           ],
-          "correct": 2,
-          "explanation": "Sur une route à au moins 2 bandes par sens avec berme centrale, la vitesse maximale est de 120 km/h.",
+          "correct": 1,
+          "explanation": "Au moins 2 bandes par sens + berme centrale : 120 km/h.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/D1_Q3.webp"
         },
         {
           "id": "D1_Q4",
-          "question": "Quelles conditions la route doit-elle remplir pour rouler à 120 km/h hors agglomération ?",
+          "question": "Pour rouler à 120 km/h hors autoroute, il faut :",
           "choices": [
-            "Deux bandes par sens et une berme",
-            "Trois bandes et un marquage au sol",
-            "Deux bandes et des feux réglant"
+            "2 bandes par sens et une berme centrale",
+            "3 bandes et un marquage au sol",
+            "2 bandes et des feux"
           ],
           "correct": 0,
-          "explanation": "Pour rouler à 120 km/h hors agglomération : au moins 2 bandes par sens ET séparation par berme centrale.",
+          "explanation": "Deux conditions : au moins 2 bandes par sens ET une berme centrale.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D1_Q4.webp"
         },
         {
           "id": "D1_Q5",
-          "question": "Vous roulez hors agglomération en Flandre sur une route à 2x2 voies séparées par un simple marquage. Quelle vitesse maximale devez-vous respecter ?",
+          "question": "Flandre, hors agglomération, sens séparés par un simple marquage. Vitesse maximale ?",
           "choices": [
-            "90 km/h",
             "70 km/h",
-            "50 km/h",
+            "90 km/h",
             "120 km/h"
           ],
-          "correct": 1,
-          "explanation": "En Flandre, hors agglomération, la vitesse maximale sur une route séparée par marquage est de 70 km/h.",
+          "correct": 0,
+          "explanation": "En Flandre : 70 km/h.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/D1_Q5.webp"
         },
         {
           "id": "D1_Q6",
-          "question": "Vous circulez hors agglomération en Wallonie sur une route séparée par marquage. Quelle est votre vitesse maximale ?",
+          "question": "Wallonie, hors agglomération, sens séparés par un simple marquage. Vitesse maximale ?",
           "choices": [
             "70 km/h",
             "90 km/h",
-            "120 km/h",
-            "50 km/h"
+            "120 km/h"
           ],
           "correct": 1,
-          "explanation": "En Wallonie, hors agglomération, la vitesse maximale sur une route séparée par marquage est de 90 km/h.",
+          "explanation": "En Wallonie : 90 km/h.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/D1_Q6.webp"
         },
         {
           "id": "D1_Q7",
-          "question": "Vous roulez hors agglomération à Bruxelles sur une route séparée par marquage. À quelle vitesse maximale pouvez-vous circuler ?",
+          "question": "Bruxelles, hors agglomération, route ordinaire. Vitesse maximale ?",
           "choices": [
-            "90 km/h",
             "70 km/h",
-            "50 km/h",
-            "30 km/h"
+            "90 km/h",
+            "120 km/h"
           ],
-          "correct": 1,
-          "explanation": "À Bruxelles, hors agglomération, la vitesse maximale sur une route séparée par marquage est de 70 km/h.",
+          "correct": 0,
+          "explanation": "À Bruxelles : 70 km/h.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/D1_Q7.webp"
         },
         {
           "id": "D1_Q8",
-          "question": "Vous arrivez sur une chaussée à voie centrale. Quelle vitesse maximale devez-vous adopter ?",
+          "question": "Vitesse maximale sur une chaussée à voie centrale ?",
           "choices": [
             "50 km/h",
             "70 km/h",
-            "90 km/h",
-            "120 km/h"
+            "90 km/h"
           ],
           "correct": 1,
-          "explanation": "La vitesse maximale sur une chaussée à voie centrale est de 70 km/h, partout en Belgique.",
+          "explanation": "70 km/h, partout en Belgique.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/D1_Q8.webp"
         },
         {
-          "id": "D1_Q9",
-          "question": "Sur une chaussée à voie centrale, la limite est-elle la même dans tout le pays ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "70 km/h sur chaussée à voie centrale est la même dans toutes les régions de Belgique.",
-          "theoryCardIndex": 0,
-          "image": "/images/questions/D1_Q9.webp"
-        },
-        {
           "id": "D1_Q10",
-          "question": "Vous entrez en agglomération en Flandre. Quelle vitesse maximale devez-vous respecter ?",
+          "question": "Agglomération en Flandre. Vitesse maximale ?",
           "choices": [
             "30 km/h",
             "50 km/h",
-            "70 km/h",
-            "40 km/h"
+            "70 km/h"
           ],
           "correct": 1,
-          "explanation": "La vitesse maximale en agglomération en Flandre est de 50 km/h.",
+          "explanation": "50 km/h, sauf signal contraire.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q10.webp"
         },
         {
           "id": "D1_Q11",
-          "question": "Vous traversez une agglomération en Wallonie. Quelle est la vitesse maximale autorisée ?",
+          "question": "Agglomération en Wallonie. Vitesse maximale ?",
           "choices": [
             "30 km/h",
             "50 km/h",
-            "70 km/h",
-            "40 km/h"
+            "70 km/h"
           ],
           "correct": 1,
-          "explanation": "La vitesse maximale en agglomération en Wallonie est de 50 km/h.",
+          "explanation": "50 km/h, sauf signal contraire.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q11.webp"
         },
         {
           "id": "D1_Q12",
-          "question": "Vous circulez en agglomération à Bruxelles. Quelle vitesse maximale devez-vous respecter ?",
+          "question": "Agglomération à Bruxelles. Vitesse maximale ?",
           "choices": [
-            "50 km/h",
-            "40 km/h",
             "30 km/h",
+            "50 km/h",
             "20 km/h"
           ],
-          "correct": 2,
-          "explanation": "La vitesse maximale en agglomération à Bruxelles est de 30 km/h.",
+          "correct": 0,
+          "explanation": "30 km/h, sauf signal contraire.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q12.webp"
         },
         {
           "id": "D1_Q13",
-          "question": "Vous entrez dans une zone résidentielle (zone de rencontre). À quelle vitesse maximale devez-vous rouler ?",
+          "question": "Zone résidentielle. Vitesse maximale ?",
           "choices": [
-            "30 km/h",
             "20 km/h",
-            "L'allure du pas",
-            "50 km/h"
+            "30 km/h",
+            "Au pas"
           ],
-          "correct": 1,
-          "explanation": "Dans une zone résidentielle (zone de rencontre), la vitesse maximale est de 20 km/h.",
+          "correct": 0,
+          "explanation": "20 km/h dans une zone résidentielle.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q13.webp"
         },
         {
           "id": "D1_Q14",
-          "question": "Vous empruntez un chemin réservé. Quelle vitesse maximale devez-vous respecter ?",
+          "question": "Chemin réservé, vous êtes autorisé à y rouler. Vitesse maximale ?",
           "choices": [
-            "20 km/h",
             "30 km/h",
-            "50 km/h",
-            "L'allure du pas"
+            "20 km/h",
+            "Au pas"
           ],
-          "correct": 1,
-          "explanation": "Sur un chemin réservé, la vitesse maximale est de 30 km/h.",
+          "correct": 0,
+          "explanation": "30 km/h sur un chemin réservé.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q14.webp"
         },
         {
           "id": "D1_Q15",
-          "question": "Vous êtes autorisé à circuler dans une rue réservée au jeu. À quelle vitesse maximale devez-vous rouler ?",
+          "question": "Rue réservée au jeu, vous êtes autorisé à y rouler. Vitesse maximale ?",
           "choices": [
+            "Au pas",
             "20 km/h",
-            "30 km/h",
-            "L'allure du pas",
-            "10 km/h"
+            "30 km/h"
           ],
-          "correct": 2,
-          "explanation": "Dans une rue réservée au jeu, la vitesse maximale est l'allure du pas.",
+          "correct": 0,
+          "explanation": "Au pas.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q15.webp"
         },
         {
           "id": "D1_Q16",
-          "question": "Vous traversez une rue scolaire. Quelle vitesse maximale devez-vous adopter ?",
+          "question": "Rue scolaire, vous êtes autorisé à y rouler. Vitesse maximale ?",
           "choices": [
+            "Au pas",
             "20 km/h",
-            "30 km/h",
-            "L'allure du pas",
-            "10 km/h"
+            "30 km/h"
           ],
-          "correct": 2,
-          "explanation": "Dans une rue scolaire, la vitesse maximale est l'allure du pas.",
+          "correct": 0,
+          "explanation": "Au pas.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q16.webp"
         },
         {
           "id": "D1_Q17",
-          "question": "Vous approchez d'une école et voyez le panneau « abords d'école ». Quelle vitesse maximale devez-vous respecter ?",
+          "question": "Abords d'école. Vitesse maximale ?",
           "choices": [
             "20 km/h",
             "30 km/h",
-            "50 km/h",
-            "L'allure du pas"
+            "50 km/h"
           ],
           "correct": 1,
-          "explanation": "Aux abords d'école, la vitesse maximale est de 30 km/h.",
+          "explanation": "30 km/h aux abords d'école.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q17.webp"
         },
         {
           "id": "D1_Q18",
-          "question": "Vous êtes autorisé à pénétrer dans une zone piétonne. À quelle vitesse maximale devez-vous circuler ?",
+          "question": "Zone piétonne, vous êtes autorisé à y rouler. Vitesse maximale ?",
           "choices": [
+            "Au pas",
             "20 km/h",
-            "30 km/h",
-            "L'allure du pas",
-            "10 km/h"
+            "30 km/h"
           ],
-          "correct": 2,
-          "explanation": "Dans une zone piétonne, la vitesse maximale est l'allure du pas.",
+          "correct": 0,
+          "explanation": "Au pas.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q18.webp"
         },
         {
           "id": "D1_Q19",
-          "question": "Vous entrez dans une zone cyclable. Quelle vitesse maximale devez-vous respecter ?",
+          "question": "Zone cyclable. Vitesse maximale ?",
           "choices": [
             "20 km/h",
             "30 km/h",
-            "50 km/h",
-            "L'allure du pas"
+            "Au pas"
           ],
           "correct": 1,
-          "explanation": "Dans une zone cyclable, la vitesse maximale est de 30 km/h.",
+          "explanation": "30 km/h dans une zone cyclable.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q19.webp"
         },
         {
           "id": "D1_Q20",
-          "question": "Vous approchez d'un dispositif surélevé annoncé par un signal. Quelle vitesse maximale devez-vous adopter ?",
+          "question": "À quelle vitesse franchissez-vous un dispositif surélevé ?",
           "choices": [
-            "20 km/h",
-            "30 km/h",
-            "50 km/h",
-            "L'allure du pas"
+            "30 km/h maximum",
+            "20 km/h maximum",
+            "50 km/h maximum"
           ],
-          "correct": 1,
-          "explanation": "La vitesse maximale à l'approche et lors du passage d'un dispositif surélevé est de 30 km/h.",
+          "correct": 0,
+          "explanation": "30 km/h maximum, en l'abordant prudemment.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q20.webp"
         },
         {
           "id": "D1_Q21",
-          "question": "Vous circulez sur une trottinette électrique. Quelle est votre vitesse maximale autorisée ?",
+          "question": "Vitesse maximale d'une trottinette électrique ?",
           "choices": [
-            "20 km/h",
             "25 km/h",
-            "30 km/h",
+            "20 km/h",
             "45 km/h"
           ],
-          "correct": 1,
-          "explanation": "Les engins de déplacement motorisés (trottinettes électriques, etc.) ont une vitesse maximale de 25 km/h.",
+          "correct": 0,
+          "explanation": "Les engins de déplacement motorisés : 25 km/h maximum.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/D1_Q21.webp"
         },
         {
-          "id": "D1_Q26",
-          "question": "Vous pénétrez dans une zone résidentielle. Plus loin, un panneau indique une zone 30. Quelle vitesse devez-vous respecter ?",
-          "choices": [
-            "30 km/h",
-            "20 km/h",
-            "50 km/h",
-            "25 km/h"
-          ],
-          "correct": 1,
-          "explanation": "La zone résidentielle impose 20 km/h, ce qui est plus restrictif que la zone 30. On applique toujours la règle la plus stricte.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/D1_Q26.webp"
-        },
-        {
           "id": "D1_Q27",
-          "question": "Vous roulez sur l'autoroute et un panneau de sortie indique 90 km/h. Quelle vitesse adoptez-vous dans cette sortie ?",
+          "question": "Ce panneau 90 km/h est dans la sortie d'autoroute. Il s'applique :",
           "choices": [
-            "120 km/h",
-            "90 km/h",
-            "70 km/h",
-            "50 km/h"
+            "Seulement dans la sortie",
+            "Sur toute l'autoroute",
+            "Seulement aux camions"
           ],
-          "correct": 1,
-          "explanation": "Un signal de limitation de vitesse à 90 km/h sur la sortie s'applique à cette bretelle.",
+          "correct": 0,
+          "explanation": "La limite indiquée vaut pour la sortie.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D1_Q27.webp"
         },
         {
           "id": "D1_Q29",
-          "question": "Autoroute, agglomération en Wallonie, zone résidentielle, zone piétonne : quel classement du plus rapide au plus lent ?",
+          "question": "Du plus rapide au plus lent : autoroute, agglomération en Wallonie, zone résidentielle, zone piétonne ?",
           "choices": [
-            "120 > 50 > 20 > allure du pas",
-            "120 > 90 > 50 > 30 km/h partout",
-            "90 > 70 > 50 > 30 km/h partout"
+            "120 > 50 > 20 > au pas",
+            "120 > 90 > 50 > 30",
+            "90 > 70 > 50 > 30"
           ],
           "correct": 0,
-          "explanation": "Autoroute : 120 km/h. Agglomération Wallonie : 50 km/h. Zone résidentielle : 20 km/h. Zone piétonne : allure du pas.",
+          "explanation": "Autoroute 120, agglomération 50, zone résidentielle 20, zone piétonne au pas.",
           "theoryCardIndex": 0,
           "image": "/images/questions/D1_Q29.webp"
         },
         {
           "id": "D1_Q31",
-          "question": "Vous roulez à 40 km/h sur une route limitée à 90 km/h sans raison valable. Est-ce une infraction ?",
+          "question": "Vous roulez à 40 km/h sans raison sur une route à 90 km/h. Est-ce une infraction ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Conduire trop lentement sans raison est une infraction car cela oblige les autres à vous dépasser.",
+          "explanation": "Rouler anormalement lentement sans raison gêne les autres : c'est interdit.",
           "theoryCardIndex": 2,
           "image": "/images/questions/D1_Q31.webp"
         },
         {
           "id": "D1_Q33",
-          "question": "Vous freinez brusquement sans raison. Est-ce une infraction ?",
+          "question": "Freiner brusquement sans raison, est-ce une infraction ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Freiner soudainement sans raison est une infraction qui met en danger les conducteurs derrière vous.",
+          "explanation": "Oui : cela met en danger ceux qui vous suivent.",
           "theoryCardIndex": 2,
           "image": "/images/questions/D1_Q33.webp"
         },
         {
-          "id": "D1_Q35",
-          "question": "À l'examen pratique en agglomération, à quelle vitesse devez-vous rouler ?",
-          "choices": [
-            "Adaptée, proche de 50 km/h",
-            "À 30 km/h en toute occasion",
-            "Le plus lentement possible"
-          ],
-          "correct": 0,
-          "explanation": "À l'examen, roulez à une vitesse adaptée : ni trop vite, ni trop lentement. Rouler inutilement lentement est une faute.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/D1_Q35.webp"
-        },
-        {
           "id": "D1_Q36",
-          "question": "Pouvez-vous organiser une course de vitesse sur la voie publique ?",
+          "question": "Pouvez-vous faire une course de vitesse sur la voie publique ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Toutes les courses sur la voie publique sont interdites, sauf autorisation spéciale de l'autorité légalement compétente.",
+          "explanation": "Les courses sont interdites sur la voie publique, sauf autorisation spéciale.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/D1_Q36.webp"
         },
         {
-          "id": "D1_Q37",
-          "question": "L'interdiction des courses ne concerne-t-elle que la vitesse ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "L'interdiction couvre les courses de vitesse, de régularité ET d'adresse sur la voie publique.",
-          "theoryCardIndex": 2,
-          "image": "/images/questions/D1_Q37.webp"
-        },
-        {
           "id": "D1_Q38",
-          "question": "Participer à une course de vitesse sur la voie publique, quel degré d'infraction ?",
+          "question": "Une course de vitesse sur la voie publique est une infraction du :",
           "choices": [
-            "Quatrième degré",
-            "Deuxième degré",
-            "Premier degré"
+            "4e degré",
+            "2e degré",
+            "1er degré"
           ],
           "correct": 0,
-          "explanation": "Une course de vitesse sur la voie publique est une infraction du quatrième degré, la plus grave.",
+          "explanation": "4e degré : la catégorie la plus grave, jugée au tribunal.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/D1_Q38.webp"
         },
         {
           "id": "D1_Q40",
-          "question": "Vous roulez sur l'autoroute et dépassez la limite de vitesse. À partir de quel dépassement votre permis peut-il être retiré immédiatement ?",
+          "question": "Hors agglomération, à partir de quel excès la police peut-elle retirer votre permis sur-le-champ ?",
           "choices": [
-            "> 20 km/h",
-            "> 30 km/h",
-            "> 40 km/h",
-            "> 50 km/h"
+            "Plus de 20 km/h",
+            "Plus de 30 km/h",
+            "Plus de 40 km/h"
           ],
           "correct": 1,
-          "explanation": "Sur autoroute, route pour automobiles ou route ordinaire, le retrait immédiat s'applique au-delà de 30 km/h de dépassement.",
+          "explanation": "Hors agglomération : plus de 30 km/h au-dessus de la limite.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D1_Q40.webp"
         },
         {
           "id": "D1_Q41",
-          "question": "Vous roulez à 155 km/h sur autoroute limitée à 120. Risquez-vous un retrait immédiat ?",
+          "question": "155 km/h sur autoroute limitée à 120. Risquez-vous un retrait immédiat ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "35 km/h de dépassement est supérieur à 30 km/h : retrait immédiat possible.",
+          "explanation": "35 km/h de trop, c'est plus que 30 : retrait immédiat possible.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D1_Q41.webp"
         },
         {
           "id": "D1_Q43",
-          "question": "Vous roulez en agglomération. À partir de quel dépassement de la limite votre permis peut-il être retiré immédiatement ?",
+          "question": "En agglomération ou en zone 30, à partir de quel excès la police peut-elle retirer votre permis sur-le-champ ?",
           "choices": [
-            "> 10 km/h",
-            "> 20 km/h",
-            "> 30 km/h",
-            "> 40 km/h"
+            "Plus de 10 km/h",
+            "Plus de 20 km/h",
+            "Plus de 30 km/h"
           ],
           "correct": 1,
-          "explanation": "En agglomération, zone 30 et zone résidentielle, le retrait immédiat s'applique au-delà de 20 km/h de dépassement.",
+          "explanation": "En agglomération et dans les zones : plus de 20 km/h.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D1_Q43.webp"
         },
         {
           "id": "D1_Q44",
-          "question": "Vous roulez à 55 km/h dans une zone 30. Risquez-vous un retrait immédiat ?",
+          "question": "55 km/h dans une zone 30. Risquez-vous un retrait immédiat ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Dans une zone 30, le seuil est 20 km/h. Un dépassement de 25 km/h dépasse ce seuil : retrait immédiat possible.",
+          "explanation": "25 km/h de trop en zone 30, c'est plus que 20 : retrait immédiat possible.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D1_Q44.webp"
         },
         {
-          "id": "D1_Q46",
-          "question": "Qui décide du retrait immédiat de votre permis ?",
-          "choices": [
-            "Le Procureur du Roi",
-            "La police sur place",
-            "Le bourgmestre"
-          ],
-          "correct": 0,
-          "explanation": "Le retrait immédiat est décidé par le Procureur du Roi ou un Officier de Police Judiciaire.",
-          "theoryCardIndex": 3,
-          "severe": true,
-          "image": "/images/questions/D1_Q46.webp"
-        },
-        {
-          "id": "D1_Q47",
-          "question": "Votre permis doit être retiré immédiatement. Qui procède concrètement à ce retrait ?",
-          "choices": [
-            "Le Procureur du Roi",
-            "La Police",
-            "Un juge",
-            "Un huissier"
-          ],
-          "correct": 1,
-          "explanation": "L'exécution du retrait immédiat revient à la Police, sur place.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/D1_Q47.webp"
-        },
-        {
           "id": "D1_Q50",
-          "question": "Vous roulez à 145 km/h sur autoroute limitée à 120. Risquez-vous un retrait immédiat ?",
+          "question": "145 km/h sur autoroute limitée à 120. Risquez-vous un retrait immédiat ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Sur autoroute, le seuil est 30 km/h. Un dépassement de 25 km/h ne déclenche pas le retrait immédiat.",
+          "explanation": "25 km/h de trop, c'est moins que 30 : amende, pas de retrait immédiat.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D1_Q50.webp"
         },
         {
           "id": "D1_Q51",
-          "question": "Vous roulez à 100 km/h sur une route limitée à 70, soit 30 km/h pile de trop. Risquez-vous un retrait immédiat ?",
+          "question": "100 km/h sur une route limitée à 70 : 30 km/h pile de trop. Retrait immédiat ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le seuil est un dépassement de PLUS de 30 km/h. Un dépassement de 30 km/h pile ne suffit pas pour déclencher le retrait immédiat.",
+          "explanation": "Il faut PLUS de 30 km/h de trop. 30 pile ne suffit pas.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D1_Q51.webp"
         },
         {
           "id": "D1_Q53",
-          "question": "Le retrait immédiat s'applique-t-il aussi sur une route pour automobiles ?",
+          "question": "105 km/h sur une route ordinaire en Flandre. Que risquez-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Un retrait immédiat du permis",
+            "Seulement une amende",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Le seuil de retrait immédiat de 30 km/h s'applique sur autoroute, route pour automobiles ET route ordinaire.",
+          "explanation": "Limite 70 : 35 km/h de trop, plus que 30 : retrait immédiat possible.",
           "theoryCardIndex": 3,
           "image": "/images/questions/D1_Q53.webp"
         },
         {
           "id": "D1_Q54",
-          "question": "Vous roulez sur l'autoroute bien au-delà de la limite. À partir de quel dépassement risquez-vous une déchéance du droit de conduire ?",
+          "question": "Hors agglomération, à partir de quel excès êtes-vous envoyé au tribunal, avec une déchéance possible ?",
           "choices": [
-            "> 20 km/h",
-            "> 30 km/h",
-            "> 40 km/h",
-            "> 50 km/h"
+            "Plus de 40 km/h",
+            "Plus de 30 km/h",
+            "Plus de 20 km/h"
           ],
-          "correct": 2,
-          "explanation": "Sur autoroute et route ordinaire, la déchéance s'applique au-delà de 40 km/h de dépassement.",
+          "correct": 0,
+          "explanation": "Hors agglomération : plus de 40 km/h de trop.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q54.webp"
         },
         {
           "id": "D1_Q55",
-          "question": "Vous roulez à 165 km/h sur autoroute limitée à 120. Risquez-vous une déchéance ?",
+          "question": "165 km/h sur autoroute limitée à 120. Risquez-vous une déchéance ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "45 km/h de dépassement sur autoroute dépasse le seuil de 40 km/h : déchéance possible.",
+          "explanation": "45 km/h de trop, plus que 40 : tribunal et déchéance possible.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q55.webp"
         },
         {
           "id": "D1_Q56",
-          "question": "Vous roulez en agglomération bien au-delà de la limite. À partir de quel dépassement risquez-vous une déchéance ?",
+          "question": "En agglomération, à partir de quel excès êtes-vous envoyé au tribunal, avec une déchéance possible ?",
           "choices": [
-            "> 20 km/h",
-            "> 30 km/h",
-            "> 40 km/h",
-            "> 50 km/h"
+            "Plus de 30 km/h",
+            "Plus de 20 km/h",
+            "Plus de 40 km/h"
           ],
-          "correct": 1,
-          "explanation": "En agglomération, zone 30 et zone résidentielle, la déchéance s'applique au-delà de 30 km/h de dépassement.",
+          "correct": 0,
+          "explanation": "En agglomération et dans les zones : plus de 30 km/h de trop.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q56.webp"
         },
         {
           "id": "D1_Q57",
-          "question": "Vous roulez à 85 km/h en agglomération limitée à 50. Risquez-vous une déchéance ?",
+          "question": "85 km/h en agglomération limitée à 50. Risquez-vous une déchéance ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "35 km/h de dépassement en agglomération dépasse le seuil de 30 km/h : déchéance possible.",
+          "explanation": "35 km/h de trop en agglomération, plus que 30 : tribunal et déchéance possible.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q57.webp"
         },
         {
-          "id": "D1_Q59",
-          "question": "Vous êtes déchu de votre droit de conduire par un juge. Quelle est la durée minimale de cette déchéance ?",
-          "choices": [
-            "1 jour",
-            "8 jours",
-            "15 jours",
-            "30 jours"
-          ],
-          "correct": 1,
-          "explanation": "La déchéance du droit de conduire dure au minimum 8 jours.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/D1_Q59.webp"
-        },
-        {
-          "id": "D1_Q60",
-          "question": "Vous risquez une déchéance du droit de conduire. Quelle peut être la durée maximale prononcée par le juge ?",
-          "choices": [
-            "1 an",
-            "3 ans",
-            "5 ans",
-            "10 ans"
-          ],
-          "correct": 2,
-          "explanation": "La déchéance du droit de conduire peut durer jusqu'à 5 ans maximum.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/D1_Q60.webp"
-        },
-        {
-          "id": "D1_Q61",
-          "question": "Déchu du droit de conduire, pouvez-vous conduire un engin à moteur ne nécessitant pas de permis ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "La déchéance s'applique aussi aux véhicules à moteur qui n'exigent pas de permis de conduire.",
-          "theoryCardIndex": 4,
-          "image": "/images/questions/D1_Q61.webp"
-        },
-        {
           "id": "D1_Q62",
-          "question": "Qui prononce la déchéance du droit de conduire ?",
+          "question": "Qui prononce une déchéance du droit de conduire ?",
           "choices": [
-            "Un juge au tribunal",
-            "Le Procureur du Roi",
-            "La police sur place"
+            "Un juge",
+            "La police sur place",
+            "Le bourgmestre"
           ],
           "correct": 0,
-          "explanation": "La déchéance du droit de conduire est prononcée par un Juge au tribunal.",
+          "explanation": "La déchéance est prononcée par un juge au tribunal de police.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q62.webp"
         },
         {
           "id": "D1_Q63",
-          "question": "Quelle est la différence entre un retrait immédiat et une déchéance ?",
+          "question": "Retrait immédiat ou déchéance : quelle différence ?",
           "choices": [
-            "Retrait : Procureur ; déchéance : juge",
-            "Le retrait est plus grave des deux",
-            "Retrait au tribunal, déchéance sur place"
+            "Retrait : sur place. Déchéance : par un juge",
+            "Les deux sont décidés par le juge",
+            "Les deux se font sur place"
           ],
           "correct": 0,
-          "explanation": "Retrait immédiat : décision du Procureur/OPJ, exécution sur place. Déchéance : décision d'un Juge, prononcée plus tard.",
+          "explanation": "Le retrait se fait sur-le-champ, au bord de la route. La déchéance vient plus tard, au tribunal.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q63.webp"
         },
@@ -871,46 +729,46 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le retrait immédiat (sur place) et la déchéance (au tribunal) sont deux sanctions distinctes qui peuvent se cumuler.",
+          "explanation": "Oui, les deux peuvent s'ajouter.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q64.webp"
         },
         {
           "id": "D1_Q65",
-          "question": "Vous dépassez de 35 km/h sur autoroute. Quelles sanctions risquez-vous ?",
+          "question": "35 km/h de trop sur autoroute. Que risquez-vous ?",
           "choices": [
-            "Retrait immédiat, pas de déchéance",
-            "Retrait immédiat et déchéance",
-            "Aucune sanction à ce niveau"
+            "Retrait immédiat, pas de tribunal",
+            "Retrait immédiat et tribunal",
+            "Rien de plus qu'une amende"
           ],
           "correct": 0,
-          "explanation": "35 km/h > 30 km/h → retrait immédiat possible. 35 km/h < 40 km/h → pas de déchéance.",
+          "explanation": "Plus que 30 : retrait immédiat. Moins que 40 : pas de tribunal.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q65.webp"
         },
         {
           "id": "D1_Q66",
-          "question": "Vous dépassez de 45 km/h sur autoroute. Quelles sanctions risquez-vous ?",
+          "question": "45 km/h de trop sur autoroute. Que risquez-vous ?",
           "choices": [
-            "Retrait immédiat et déchéance",
-            "Retrait immédiat, sans plus",
-            "Déchéance seule, sans retrait"
+            "Retrait immédiat et tribunal",
+            "Retrait immédiat seulement",
+            "Tribunal seulement"
           ],
           "correct": 0,
-          "explanation": "45 km/h > 30 km/h → retrait immédiat. 45 km/h > 40 km/h → déchéance possible. Les deux peuvent se cumuler.",
+          "explanation": "Plus que 30 : retrait immédiat. Plus que 40 : tribunal et déchéance possible.",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q66.webp"
         },
         {
           "id": "D1_Q67",
-          "question": "Vous dépassez de 25 km/h en agglomération. Quelles sanctions risquez-vous ?",
+          "question": "67 km/h en agglomération à Bruxelles (limite 30). Que risquez-vous ?",
           "choices": [
-            "Retrait immédiat, pas de déchéance",
-            "Retrait immédiat et déchéance",
-            "Aucune sanction à ce niveau"
+            "Retrait immédiat et tribunal",
+            "Seulement une amende",
+            "Retrait immédiat seulement"
           ],
           "correct": 0,
-          "explanation": "25 km/h > 20 km/h → retrait immédiat possible. 25 km/h < 30 km/h → pas de déchéance.",
+          "explanation": "37 km/h de trop en agglomération : plus que 20 (retrait) et plus que 30 (tribunal).",
           "theoryCardIndex": 4,
           "image": "/images/questions/D1_Q67.webp"
         },
@@ -923,7 +781,7 @@
             "Sortie d'autoroute"
           ],
           "correct": 0,
-          "explanation": "Ce signal vert indique le commencement d'une autoroute (120 km/h max, 70 km/h min).",
+          "explanation": "Début d'autoroute : 120 km/h maximum, 70 km/h minimum.",
           "theoryCardIndex": 0,
           "sign": "F5"
         },
@@ -936,7 +794,7 @@
             "Parking pour voitures"
           ],
           "correct": 0,
-          "explanation": "Ce signal bleu avec voiture blanche indique une route pour automobiles (120 km/h si 2x2 voies avec berme centrale).",
+          "explanation": "Route pour automobiles : pas de vitesse minimale ; 120 km/h seulement avec 2 bandes par sens et une berme.",
           "theoryCardIndex": 0,
           "sign": "F9"
         },
@@ -945,11 +803,11 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Début d'agglomération",
-            "Direction de la localité",
-            "Zone industrielle proche"
+            "Direction d'une localité",
+            "Zone industrielle"
           ],
           "correct": 0,
-          "explanation": "Ce signal indique le commencement d'une agglomération (limite de vitesse selon la région).",
+          "explanation": "Début d'agglomération : la limite de l'agglomération s'applique (50 ou 30 km/h selon la région).",
           "theoryCardIndex": 1,
           "sign": "F1"
         },
@@ -962,7 +820,7 @@
             "Parking résidentiel"
           ],
           "correct": 0,
-          "explanation": "Ce signal indique une zone résidentielle (zone de rencontre) : vitesse maximale 20 km/h.",
+          "explanation": "Zone résidentielle : 20 km/h maximum.",
           "theoryCardIndex": 1,
           "sign": "F12a",
           "severe": true
@@ -971,40 +829,39 @@
           "id": "D1_Q72",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Une zone limitée à 30 km/h",
-            "Une zone longue de 30 mètres",
-            "Une pente de 30 % annoncée"
+            "Début d'une zone 30",
+            "Zone longue de 30 m",
+            "Pente de 30 %"
           ],
           "correct": 0,
-          "explanation": "Ce signal marque le commencement d'une zone à vitesse limitée à 30 km/h.",
+          "explanation": "Zone 30 : 30 km/h jusqu'au signal de fin.",
           "theoryCardIndex": 1,
           "sign": "F4a"
         },
         {
           "id": "D1_Q73",
-          "question": "Vous voyez un panneau triangulaire montrant un dos-d'âne. Que signifie-t-il ?",
+          "question": "Que signifie ce signal de danger ?",
           "choices": [
+            "Dispositif surélevé",
             "Cassis ou dos-d'âne naturel",
-            "Dispositif(s) surélevé(s)",
-            "Pont mobile",
-            "Descente dangereuse"
+            "Pont mobile"
           ],
-          "correct": 1,
-          "explanation": "Ce signal de danger annonce un ou plusieurs dispositifs surélevés. La vitesse maximale est de 30 km/h.",
+          "correct": 0,
+          "explanation": "Il annonce un ou plusieurs dispositifs surélevés : 30 km/h maximum dessus.",
           "theoryCardIndex": 1,
           "sign": "A14",
           "severe": true
         },
         {
           "id": "D1_Q74",
-          "question": "Ce panneau porte la mention « 200 m ». Que signifie-t-il ?",
+          "question": "Ce panneau porte « 200 m ». Que signifie-t-il ?",
           "choices": [
             "Un dispositif surélevé dans 200 m",
-            "200 mètres de ralentisseurs",
-            "Un pont situé à 200 mètres"
+            "200 m de ralentisseurs",
+            "Un pont à 200 m"
           ],
           "correct": 0,
-          "explanation": "Ce signal annonce qu'un dispositif surélevé se trouve dans 200 mètres.",
+          "explanation": "Le dispositif surélevé se trouve 200 m plus loin.",
           "theoryCardIndex": 1,
           "sign": "A14"
         },
@@ -1012,53 +869,38 @@
           "id": "D1_Q75",
           "question": "Ce panneau porte « 150 m » et « 500 m ». Que signifie-t-il ?",
           "choices": [
-            "Plusieurs dispositifs sur 500 m",
-            "Un seul dispositif à 150 mètres",
-            "Une pente de 500 m après 150 m"
+            "Plusieurs dispositifs, dans 150 m, sur 500 m",
+            "Un dispositif long de 500 m",
+            "Un seul dispositif à 150 m"
           ],
           "correct": 0,
-          "explanation": "Ce signal annonce plusieurs dispositifs surélevés : ils commencent dans 150 m et s'étendent sur 500 m.",
+          "explanation": "Dans 150 m commencent plusieurs dispositifs surélevés, répartis sur 500 m.",
           "theoryCardIndex": 1,
           "sign": "A14"
         },
         {
           "id": "D1_Q77",
-          "question": "Ce panneau porte « 200 m » et « 60 km/h ». Que signifie-t-il ?",
+          "question": "Ce panneau porte « 200 m » sous un 60 km/h. Que signifie-t-il ?",
           "choices": [
-            "60 km/h à partir de 200 m",
-            "60 km/h dès maintenant",
+            "60 km/h maximum, 200 m plus loin",
+            "60 km/h dès maintenant, sur 200 m",
             "Encore 60 km de trajet"
           ],
           "correct": 0,
-          "explanation": "Ce signal annonce qu'une limitation de vitesse à 60 km/h entrera en vigueur dans 200 mètres.",
+          "explanation": "C'est un préavis : la limite commence 200 m plus loin.",
           "theoryCardIndex": 1,
           "sign": "C43"
-        },
-        {
-          "id": "D1_Q82",
-          "question": "Vous voyez un panneau combinant une interdiction de dépasser et « 60 km/h dans 200 m ». Que devez-vous respecter immédiatement ?",
-          "choices": [
-            "Uniquement la limitation de vitesse",
-            "Uniquement l'interdiction de dépasser",
-            "Les deux règles immédiatement",
-            "Aucune des deux avant 200 mètres"
-          ],
-          "correct": 1,
-          "explanation": "L'interdiction de dépasser est immédiate. La limitation de vitesse à 60 km/h s'applique seulement dans 200 m.",
-          "theoryCardIndex": 1,
-          "severe": true,
-          "image": "/images/questions/D1_Q82.webp"
         },
         {
           "id": "D1_Q83",
           "question": "Que signifie ce panneau pour votre vitesse ?",
           "choices": [
-            "Route ordinaire, vitesses standards",
-            "Route pour automobiles, 120 km/h",
-            "Le début d'une zone limitée à 30"
+            "Route ordinaire : vitesses normales de la région",
+            "Route pour automobiles : 120 km/h",
+            "Zone 30"
           ],
           "correct": 0,
-          "explanation": "Ce signal indique une route ordinaire. Les vitesses standards de la région s'appliquent.",
+          "explanation": "C'est une route ordinaire : les limites habituelles de la région s'appliquent.",
           "theoryCardIndex": 0,
           "sign": "F23a"
         },
@@ -1131,62 +973,82 @@
         },
         {
           "id": "D1_DEG_1",
-          "question": "Faire demi-tour sur l'autoroute : de quel degré est cette infraction ?",
+          "question": "Faire demi-tour sur l'autoroute est une infraction du :",
           "choices": [
-            "1er degré",
-            "2e degré",
+            "4e degré",
             "3e degré",
-            "4e degré"
+            "2e degré"
           ],
-          "correct": 3,
-          "explanation": "Faire demi-tour ou marche arrière sur autoroute rend l'accident quasi inévitable : c'est une infraction du 4e degré, la plus grave.",
+          "correct": 0,
+          "explanation": "4e degré, le plus grave : le danger d'accident est énorme.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/D1_DEG_1.webp"
         },
         {
           "id": "D1_DEG_2",
-          "question": "Franchir un feu rouge est une infraction du…",
+          "question": "Passer au feu rouge est une infraction du :",
           "choices": [
-            "1er degré",
-            "2e degré",
             "3e degré",
+            "1er degré",
             "4e degré"
           ],
-          "correct": 2,
-          "explanation": "Franchir un feu rouge met directement en danger les autres usagers : infraction du 3e degré (174 € de perception immédiate).",
+          "correct": 0,
+          "explanation": "3e degré : elle met directement les autres en danger.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/D1_DEG_2.webp"
         },
         {
           "id": "D1_DEG_3",
-          "question": "Que risque l'auteur d'une infraction du 4e degré ?",
+          "question": "Infraction du 4e degré : que se passe-t-il ?",
           "choices": [
-            "Une convocation au tribunal",
-            "Une amende immédiate de 58 €",
-            "Un avertissement écrit simple"
+            "Vous êtes convoqué au tribunal",
+            "Une petite amende sur place",
+            "Un simple avertissement"
           ],
           "correct": 0,
-          "explanation": "Le 4e degré ne se règle pas par perception immédiate : l'auteur est cité au tribunal de police et risque une déchéance du droit de conduire.",
+          "explanation": "Le 4e degré passe toujours devant le tribunal de police.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/D1_DEG_3.webp"
         },
         {
           "id": "D1_DEG_4",
-          "question": "Stationner sur une place réservée aux personnes handicapées : quel degré ?",
+          "question": "Stationner sur une place pour personnes handicapées est une infraction du :",
           "choices": [
-            "1er degré",
             "2e degré",
-            "3e degré",
+            "1er degré",
             "4e degré"
           ],
-          "correct": 1,
-          "explanation": "Stationner sur une place réservée aux personnes handicapées est une infraction du 2e degré (116 € de perception immédiate).",
+          "correct": 0,
+          "explanation": "2e degré.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/D1_DEG_4.webp"
+        },
+        {
+          "id": "D1_Q90",
+          "question": "L'ambulance qui transporte votre père roule à 140 km/h. Pouvez-vous la suivre à cette vitesse ?",
+          "choices": [
+            "Non",
+            "Oui, c'est une urgence"
+          ],
+          "correct": 0,
+          "explanation": "Seule l'ambulance en mission peut dépasser la limite. Vous, vous respectez la vitesse maximale.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D1_Q91",
+          "question": "Les routes N, ce sont :",
+          "choices": [
+            "Des routes ordinaires",
+            "Des autoroutes",
+            "Des routes pour automobiles"
+          ],
+          "correct": 0,
+          "explanation": "Les routes N sont des routes ordinaires : les vitesses de la région s'y appliquent.",
+          "theoryCardIndex": 0
         }
       ]
     },

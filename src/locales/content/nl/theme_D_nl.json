@@ -183,614 +183,481 @@
       "questions": [
         {
           "id": "D1_Q1",
-          "question": "Wat is de maximumsnelheid op de autosnelweg?",
+          "question": "Maximumsnelheid op de autosnelweg?",
           "choices": [
             "100 km/u",
             "120 km/u",
-            "130 km/u",
-            "90 km/u"
+            "130 km/u"
           ],
-          "explanation": "De maximumsnelheid op de autosnelweg is 120 km/u.",
+          "explanation": "120 km/u op de autosnelweg.",
           "correct": 1,
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "D1_Q2",
-          "question": "Wat is de minimumsnelheid op de autosnelweg?",
+          "question": "Minimumsnelheid op de autosnelweg, als de omstandigheden het toelaten?",
           "choices": [
             "50 km/u",
-            "60 km/u",
             "70 km/u",
-            "80 km/u"
+            "90 km/u"
           ],
-          "explanation": "De minimumsnelheid op de autosnelweg is 70 km/u.",
-          "correct": 2,
-          "theoryCardIndex": 0,
-          "severe": true
-        },
-        {
-          "id": "D1_Q3",
-          "question": "Wat is de maximumsnelheid buiten de bebouwde kom op een weg met 2x2 rijstroken gescheiden door een middenberm?",
-          "choices": [
-            "90 km/u",
-            "100 km/u",
-            "120 km/u",
-            "70 km/u"
-          ],
-          "explanation": "Op een weg met minstens 2 rijstroken per richting en een middenberm is de maximumsnelheid 120 km/u.",
-          "correct": 2,
-          "theoryCardIndex": 0,
-          "severe": true
-        },
-        {
-          "id": "D1_Q4",
-          "question": "Aan welke voorwaarden moet de weg voldoen om 120 km/u te rijden buiten de bebouwde kom?",
-          "choices": [
-            "Twee stroken per richting en een berm",
-            "Drie stroken en een wegmarkering",
-            "Twee stroken en verkeerslichten"
-          ],
-          "explanation": "Om 120 km/u te mogen rijden buiten de bebouwde kom: minstens 2 rijstroken per richting EN scheiding door een middenberm.",
-          "correct": 0,
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "D1_Q5",
-          "question": "Buiten de bebouwde kom in Vlaanderen, wat is de maximumsnelheid op een weg gescheiden door wegmarkering?",
-          "choices": [
-            "90 km/u",
-            "70 km/u",
-            "50 km/u",
-            "120 km/u"
-          ],
-          "explanation": "In Vlaanderen, buiten de bebouwde kom, is de maximumsnelheid op een weg gescheiden door wegmarkering 70 km/u.",
+          "explanation": "Minimaal 70 km/u, als de omstandigheden het toelaten.",
           "correct": 1,
           "theoryCardIndex": 0,
           "severe": true
         },
         {
-          "id": "D1_Q6",
-          "question": "Buiten de bebouwde kom in Wallonie, wat is de maximumsnelheid op een weg gescheiden door wegmarkering?",
+          "id": "D1_Q3",
+          "question": "Buiten de bebouwde kom, 2 rijstroken per richting gescheiden door een middenberm. Maximumsnelheid?",
+          "choices": [
+            "90 km/u",
+            "120 km/u",
+            "70 km/u"
+          ],
+          "explanation": "Minstens 2 rijstroken per richting + middenberm: 120 km/u.",
+          "correct": 1,
+          "theoryCardIndex": 0,
+          "severe": true
+        },
+        {
+          "id": "D1_Q4",
+          "question": "Om buiten de autosnelweg 120 km/u te mogen rijden, is nodig:",
+          "choices": [
+            "2 rijstroken per richting en een middenberm",
+            "3 rijstroken en een markering",
+            "2 rijstroken en verkeerslichten"
+          ],
+          "explanation": "Twee voorwaarden: minstens 2 rijstroken per richting EN een middenberm.",
+          "correct": 0,
+          "theoryCardIndex": 0
+        },
+        {
+          "id": "D1_Q5",
+          "question": "Vlaanderen, buiten de bebouwde kom, richtingen gescheiden door een markering. Maximumsnelheid?",
           "choices": [
             "70 km/u",
             "90 km/u",
-            "120 km/u",
-            "50 km/u"
+            "120 km/u"
           ],
-          "explanation": "In Wallonie, buiten de bebouwde kom, is de maximumsnelheid op een weg gescheiden door wegmarkering 90 km/u.",
+          "explanation": "In Vlaanderen: 70 km/u.",
+          "correct": 0,
+          "theoryCardIndex": 0,
+          "severe": true
+        },
+        {
+          "id": "D1_Q6",
+          "question": "Wallonië, buiten de bebouwde kom, richtingen gescheiden door een markering. Maximumsnelheid?",
+          "choices": [
+            "70 km/u",
+            "90 km/u",
+            "120 km/u"
+          ],
+          "explanation": "In Wallonië: 90 km/u.",
           "correct": 1,
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "D1_Q7",
-          "question": "Buiten de bebouwde kom in Brussel, wat is de maximumsnelheid op een weg gescheiden door wegmarkering?",
+          "question": "Brussel, buiten de bebouwde kom, gewone weg. Maximumsnelheid?",
           "choices": [
-            "90 km/u",
             "70 km/u",
-            "50 km/u",
-            "30 km/u"
+            "90 km/u",
+            "120 km/u"
           ],
-          "explanation": "In Brussel, buiten de bebouwde kom, is de maximumsnelheid op een weg gescheiden door wegmarkering 70 km/u.",
-          "correct": 1,
+          "explanation": "In Brussel: 70 km/u.",
+          "correct": 0,
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "D1_Q8",
-          "question": "Wat is de maximumsnelheid op een rijbaan met middenrijstrook?",
+          "question": "Maximumsnelheid op een middenrijbaan?",
           "choices": [
             "50 km/u",
             "70 km/u",
-            "90 km/u",
-            "120 km/u"
+            "90 km/u"
           ],
-          "explanation": "De maximumsnelheid op een rijbaan met middenrijstrook is 70 km/u, overal in België.",
+          "explanation": "70 km/u, overal in België.",
           "correct": 1,
           "theoryCardIndex": 0,
           "severe": true
         },
         {
-          "id": "D1_Q9",
-          "question": "Geldt op een rijbaan met centrale strook overal in het land dezelfde limiet?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "explanation": "70 km/u op een rijbaan met middenrijstrook is hetzelfde in alle gewesten van België.",
-          "correct": 0,
-          "theoryCardIndex": 0
-        },
-        {
           "id": "D1_Q10",
-          "question": "Wat is de maximumsnelheid in de bebouwde kom in Vlaanderen?",
+          "question": "Bebouwde kom in Vlaanderen. Maximumsnelheid?",
           "choices": [
             "30 km/u",
             "50 km/u",
-            "70 km/u",
-            "40 km/u"
+            "70 km/u"
           ],
-          "explanation": "De maximumsnelheid in de bebouwde kom in Vlaanderen is 50 km/u.",
+          "explanation": "50 km/u, tenzij een bord anders aangeeft.",
           "correct": 1,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q11",
-          "question": "Wat is de maximumsnelheid in de bebouwde kom in Wallonie?",
+          "question": "Bebouwde kom in Wallonië. Maximumsnelheid?",
           "choices": [
             "30 km/u",
             "50 km/u",
-            "70 km/u",
-            "40 km/u"
+            "70 km/u"
           ],
-          "explanation": "De maximumsnelheid in de bebouwde kom in Wallonie is 50 km/u.",
+          "explanation": "50 km/u, tenzij een bord anders aangeeft.",
           "correct": 1,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q12",
-          "question": "Wat is de maximumsnelheid in de bebouwde kom in Brussel?",
+          "question": "Bebouwde kom in Brussel. Maximumsnelheid?",
           "choices": [
-            "50 km/u",
-            "40 km/u",
             "30 km/u",
+            "50 km/u",
             "20 km/u"
           ],
-          "explanation": "De maximumsnelheid in de bebouwde kom in Brussel is 30 km/u.",
-          "correct": 2,
+          "explanation": "30 km/u, tenzij een bord anders aangeeft.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q13",
-          "question": "Wat is de maximumsnelheid in een woonerf?",
+          "question": "Woonerf. Maximumsnelheid?",
           "choices": [
-            "30 km/u",
             "20 km/u",
-            "Stapvoets",
-            "50 km/u"
+            "30 km/u",
+            "Stapvoets"
           ],
-          "explanation": "In een woonerf (erftoegangsweg) is de maximumsnelheid 20 km/u.",
-          "correct": 1,
+          "explanation": "20 km/u in een woonerf.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q14",
-          "question": "Wat is de maximumsnelheid op een voorbehouden weg?",
+          "question": "Voorbehouden weg, je mag erop rijden. Maximumsnelheid?",
           "choices": [
-            "20 km/u",
             "30 km/u",
-            "50 km/u",
+            "20 km/u",
             "Stapvoets"
           ],
-          "explanation": "Op een voorbehouden weg is de maximumsnelheid 30 km/u.",
-          "correct": 1,
+          "explanation": "30 km/u op een voorbehouden weg.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q15",
-          "question": "Wat is de maximumsnelheid in een speelstraat?",
+          "question": "Speelstraat, je mag erin rijden. Maximumsnelheid?",
           "choices": [
-            "20 km/u",
-            "30 km/u",
             "Stapvoets",
-            "10 km/u"
+            "20 km/u",
+            "30 km/u"
           ],
-          "explanation": "In een speelstraat is de maximumsnelheid stapvoets.",
-          "correct": 2,
+          "explanation": "Stapvoets.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q16",
-          "question": "Wat is de maximumsnelheid in een schoolstraat?",
+          "question": "Schoolstraat, je mag erin rijden. Maximumsnelheid?",
           "choices": [
-            "20 km/u",
-            "30 km/u",
             "Stapvoets",
-            "10 km/u"
+            "20 km/u",
+            "30 km/u"
           ],
-          "explanation": "In een schoolstraat is de maximumsnelheid stapvoets.",
-          "correct": 2,
+          "explanation": "Stapvoets.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q17",
-          "question": "Wat is de maximumsnelheid in een schoolomgeving?",
+          "question": "Schoolomgeving. Maximumsnelheid?",
           "choices": [
             "20 km/u",
             "30 km/u",
-            "50 km/u",
-            "Stapvoets"
+            "50 km/u"
           ],
-          "explanation": "In een schoolomgeving is de maximumsnelheid 30 km/u.",
+          "explanation": "30 km/u in de schoolomgeving.",
           "correct": 1,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q18",
-          "question": "Wat is de maximumsnelheid in een voetgangerszone?",
+          "question": "Voetgangerszone, je mag erin rijden. Maximumsnelheid?",
           "choices": [
-            "20 km/u",
-            "30 km/u",
             "Stapvoets",
-            "10 km/u"
+            "20 km/u",
+            "30 km/u"
           ],
-          "explanation": "In een voetgangerszone is de maximumsnelheid stapvoets.",
-          "correct": 2,
+          "explanation": "Stapvoets.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q19",
-          "question": "Wat is de maximumsnelheid in een fietszone?",
+          "question": "Fietszone. Maximumsnelheid?",
           "choices": [
             "20 km/u",
             "30 km/u",
-            "50 km/u",
             "Stapvoets"
           ],
-          "explanation": "In een fietszone is de maximumsnelheid 30 km/u.",
+          "explanation": "30 km/u in een fietszone.",
           "correct": 1,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q20",
-          "question": "Wat is de maximumsnelheid bij het naderen van een verhoogde inrichting?",
+          "question": "Met welke snelheid rijd je over een verhoogde inrichting?",
           "choices": [
-            "20 km/u",
-            "30 km/u",
-            "50 km/u",
-            "Stapvoets"
+            "Maximaal 30 km/u",
+            "Maximaal 20 km/u",
+            "Maximaal 50 km/u"
           ],
-          "explanation": "De maximumsnelheid bij het naderen en het passeren van een verhoogde inrichting is 30 km/u.",
-          "correct": 1,
+          "explanation": "Maximaal 30 km/u, en je nadert ze voorzichtig.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "D1_Q21",
-          "question": "Wat is de maximumsnelheid van gemotoriseerde voortbewegingstoestellen op de toegestane wegen?",
+          "question": "Maximumsnelheid van een elektrische step?",
           "choices": [
-            "20 km/u",
             "25 km/u",
-            "30 km/u",
+            "20 km/u",
             "45 km/u"
           ],
-          "explanation": "Gemotoriseerde voortbewegingstoestellen (elektrische steps, enz.) hebben een maximumsnelheid van 25 km/u.",
-          "correct": 1,
+          "explanation": "Gemotoriseerde voortbewegingstoestellen: maximaal 25 km/u.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "severe": true
         },
         {
-          "id": "D1_Q26",
-          "question": "Je rijdt een woonerf binnen en ziet dan een verkeersbord zone 30. Welke snelheid?",
-          "choices": [
-            "30 km/u",
-            "20 km/u",
-            "50 km/u",
-            "25 km/u"
-          ],
-          "explanation": "Het woonerf legt 20 km/u op, wat strenger is dan zone 30. Je past altijd de strengste regel toe.",
-          "correct": 1,
-          "theoryCardIndex": 1
-        },
-        {
           "id": "D1_Q27",
-          "question": "Je bent op de autosnelweg. Een verkeersbord geeft 90 km/u aan voor de afrit. Welke snelheid op de afrit?",
+          "question": "Dit bord 90 km/u staat in de afrit van de autosnelweg. Het geldt:",
           "choices": [
-            "120 km/u",
-            "90 km/u",
-            "70 km/u",
-            "50 km/u"
+            "Alleen in de afrit",
+            "Op de hele autosnelweg",
+            "Alleen voor vrachtwagens"
           ],
-          "explanation": "Een snelheidsbeperkingsbord van 90 km/u op de afrit geldt voor die invoegstrook.",
-          "correct": 1,
+          "explanation": "De aangeduide grens geldt voor de afrit.",
+          "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D1_Q29",
-          "question": "Autosnelweg, bebouwde kom in Wallonië, woonerf, voetgangerszone: welke volgorde van snel naar traag?",
+          "question": "Van snelst naar traagst: autosnelweg, bebouwde kom in Wallonië, woonerf, voetgangerszone?",
           "choices": [
             "120 > 50 > 20 > stapvoets",
-            "120 > 90 > 50 > 30 km/u overal",
-            "90 > 70 > 50 > 30 km/u overal"
+            "120 > 90 > 50 > 30",
+            "90 > 70 > 50 > 30"
           ],
-          "explanation": "Autosnelweg: 120 km/u. Bebouwde kom Wallonie: 50 km/u. Woonerf: 20 km/u. Voetgangerszone: stapvoets.",
+          "explanation": "Autosnelweg 120, bebouwde kom 50, woonerf 20, voetgangerszone stapvoets.",
           "correct": 0,
           "theoryCardIndex": 0
         },
         {
           "id": "D1_Q31",
-          "question": "U rijdt 40 km/u op een weg met limiet 90 zonder geldige reden. Is dat een overtreding?",
+          "question": "Je rijdt zonder reden 40 km/u op een weg van 90 km/u. Is dat een overtreding?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Te traag rijden zonder reden is een overtreding want het verplicht anderen om je in te halen.",
+          "explanation": "Zonder reden abnormaal traag rijden hindert de anderen: dat is verboden.",
           "correct": 0,
           "theoryCardIndex": 2
         },
         {
           "id": "D1_Q33",
-          "question": "U remt bruusk zonder reden. Is dat een overtreding?",
+          "question": "Is bruusk remmen zonder reden een overtreding?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Plots remmen zonder reden is een overtreding die de bestuurders achter je in gevaar brengt.",
-          "correct": 0,
-          "theoryCardIndex": 2
-        },
-        {
-          "id": "D1_Q35",
-          "question": "Aan welke snelheid moet u rijden op het praktijkexamen in de bebouwde kom?",
-          "choices": [
-            "Aangepast, dicht bij 50 km/u",
-            "Aan 30 km/u bij elke gelegenheid",
-            "Zo traag mogelijk"
-          ],
-          "explanation": "Op het examen rijd je op een aangepaste snelheid: niet te snel, niet te traag. Onnodig traag rijden is een fout.",
+          "explanation": "Ja: het brengt wie je volgt in gevaar.",
           "correct": 0,
           "theoryCardIndex": 2
         },
         {
           "id": "D1_Q36",
-          "question": "Mag u een snelheidswedstrijd organiseren op de openbare weg?",
+          "question": "Mag je een snelheidswedstrijd houden op de openbare weg?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Alle wedstrijden op de openbare weg zijn verboden, behalve met een speciale toelating van de wettelijk bevoegde overheid.",
+          "explanation": "Wedstrijden zijn verboden op de openbare weg, behalve met een speciale toelating.",
           "correct": 1,
           "theoryCardIndex": 2,
           "severe": true
         },
         {
-          "id": "D1_Q37",
-          "question": "Geldt het verbod op wedstrijden enkel voor snelheid?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "explanation": "Het verbod omvat snelheidswedstrijden, regelmatigheidswedstrijden EN behendigheidswedstrijden op de openbare weg.",
-          "correct": 1,
-          "theoryCardIndex": 2
-        },
-        {
           "id": "D1_Q38",
-          "question": "Deelnemen aan een snelheidswedstrijd op de openbare weg: welke graad van overtreding?",
+          "question": "Een snelheidswedstrijd op de openbare weg is een overtreding van de:",
           "choices": [
-            "Vierde graad",
-            "Tweede graad",
-            "Eerste graad"
+            "4de graad",
+            "2de graad",
+            "1ste graad"
           ],
-          "explanation": "Een snelheidswedstrijd op de openbare weg is een overtreding van de vierde graad, de zwaarste.",
+          "explanation": "4de graad: de zwaarste categorie, voor de rechtbank.",
           "correct": 0,
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "D1_Q40",
-          "question": "Vanaf welke snelheidsoverschrijding kan je rijbewijs onmiddellijk ingetrokken worden op de autosnelweg?",
+          "question": "Buiten de bebouwde kom: vanaf welke overschrijding kan de politie je rijbewijs ter plaatse intrekken?",
           "choices": [
-            "> 20 km/u",
-            "> 30 km/u",
-            "> 40 km/u",
-            "> 50 km/u"
+            "Meer dan 20 km/u",
+            "Meer dan 30 km/u",
+            "Meer dan 40 km/u"
           ],
-          "explanation": "Op de autosnelweg, autoweg of gewone weg geldt de onmiddellijke intrekking bij meer dan 30 km/u overschrijding.",
+          "explanation": "Buiten de bebouwde kom: meer dan 30 km/u boven de grens.",
           "correct": 1,
           "theoryCardIndex": 3
         },
         {
           "id": "D1_Q41",
-          "question": "U rijdt 155 km/u op een autosnelweg met limiet 120. Riskeert u een onmiddellijke intrekking?",
+          "question": "155 km/u op een autosnelweg van 120. Riskeer je een onmiddellijke intrekking?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "35 km/u overschrijding is meer dan 30 km/u: onmiddellijke intrekking is mogelijk.",
+          "explanation": "35 km/u te snel is meer dan 30: onmiddellijke intrekking mogelijk.",
           "correct": 0,
           "theoryCardIndex": 3
         },
         {
           "id": "D1_Q43",
-          "question": "Vanaf welke snelheidsoverschrijding kan je rijbewijs onmiddellijk ingetrokken worden in de bebouwde kom?",
+          "question": "Binnen de bebouwde kom of in een zone 30: vanaf welke overschrijding kan de politie je rijbewijs ter plaatse intrekken?",
           "choices": [
-            "> 10 km/u",
-            "> 20 km/u",
-            "> 30 km/u",
-            "> 40 km/u"
+            "Meer dan 10 km/u",
+            "Meer dan 20 km/u",
+            "Meer dan 30 km/u"
           ],
-          "explanation": "In de bebouwde kom, zone 30 en woonerf geldt de onmiddellijke intrekking bij meer dan 20 km/u overschrijding.",
+          "explanation": "Binnen de bebouwde kom en in de zones: meer dan 20 km/u.",
           "correct": 1,
           "theoryCardIndex": 3
         },
         {
           "id": "D1_Q44",
-          "question": "U rijdt 55 km/u in een zone 30. Riskeert u een onmiddellijke intrekking?",
+          "question": "55 km/u in een zone 30. Riskeer je een onmiddellijke intrekking?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "In een zone 30 is de drempel 20 km/u. Een overschrijding van 25 km/u overschrijdt die drempel: onmiddellijke intrekking is mogelijk.",
+          "explanation": "25 km/u te snel in een zone 30 is meer dan 20: onmiddellijke intrekking mogelijk.",
           "correct": 0,
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "D1_Q46",
-          "question": "Wie beslist over de onmiddellijke intrekking van uw rijbewijs?",
-          "choices": [
-            "De procureur des Konings",
-            "De politie ter plaatse",
-            "De burgemeester"
-          ],
-          "explanation": "De onmiddellijke intrekking wordt beslist door de Procureur des Konings of een Officier van Gerechtelijke Politie.",
-          "correct": 0,
-          "theoryCardIndex": 3,
-          "severe": true
-        },
-        {
-          "id": "D1_Q47",
-          "question": "Wie voert de onmiddellijke intrekking van het rijbewijs uit?",
-          "choices": [
-            "De Procureur des Konings",
-            "De Politie",
-            "Een rechter",
-            "Een deurwaarder"
-          ],
-          "explanation": "De uitvoering van de onmiddellijke intrekking gebeurt door de Politie, ter plaatse.",
-          "correct": 1,
           "theoryCardIndex": 3
         },
         {
           "id": "D1_Q50",
-          "question": "U rijdt 145 km/u op een autosnelweg met limiet 120. Riskeert u een onmiddellijke intrekking?",
+          "question": "145 km/u op een autosnelweg van 120. Riskeer je een onmiddellijke intrekking?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Op de autosnelweg is de drempel 30 km/u. Een overschrijding van 25 km/u leidt niet tot onmiddellijke intrekking.",
+          "explanation": "25 km/u te snel is minder dan 30: boete, geen onmiddellijke intrekking.",
           "correct": 1,
           "theoryCardIndex": 3
         },
         {
           "id": "D1_Q51",
-          "question": "U rijdt 100 km/u waar 70 geldt, dus precies 30 km/u te veel. Riskeert u een onmiddellijke intrekking?",
+          "question": "100 km/u op een weg van 70: precies 30 km/u te snel. Onmiddellijke intrekking?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "De drempel is een overschrijding van MEER dan 30 km/u. Een overschrijding van precies 30 km/u volstaat niet om de onmiddellijke intrekking te activeren.",
+          "explanation": "Het moet MEER dan 30 km/u te snel zijn. Precies 30 volstaat niet.",
           "correct": 1,
           "theoryCardIndex": 3
         },
         {
           "id": "D1_Q53",
-          "question": "Geldt de onmiddellijke intrekking ook op een autoweg?",
+          "question": "105 km/u op een gewone weg in Vlaanderen. Wat riskeer je?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Een onmiddellijke intrekking van het rijbewijs",
+            "Alleen een boete",
+            "Niets"
           ],
-          "explanation": "De drempel voor onmiddellijke intrekking van 30 km/u geldt op de autosnelweg, de autoweg EN de gewone weg.",
+          "explanation": "Grens 70: 35 km/u te snel, meer dan 30: onmiddellijke intrekking mogelijk.",
           "correct": 0,
           "theoryCardIndex": 3
         },
         {
           "id": "D1_Q54",
-          "question": "Vanaf welke snelheidsoverschrijding riskeer je een verval op de autosnelweg?",
+          "question": "Buiten de bebouwde kom: vanaf welke overschrijding moet je naar de rechtbank, met mogelijk verval van het recht tot sturen?",
           "choices": [
-            "> 20 km/u",
-            "> 30 km/u",
-            "> 40 km/u",
-            "> 50 km/u"
+            "Meer dan 40 km/u",
+            "Meer dan 30 km/u",
+            "Meer dan 20 km/u"
           ],
-          "explanation": "Op de autosnelweg en gewone weg geldt het verval bij meer dan 40 km/u overschrijding.",
-          "correct": 2,
+          "explanation": "Buiten de bebouwde kom: meer dan 40 km/u te snel.",
+          "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D1_Q55",
-          "question": "U rijdt 165 km/u op een autosnelweg met limiet 120. Riskeert u een verval van het recht tot sturen?",
+          "question": "165 km/u op een autosnelweg van 120. Riskeer je een verval van het recht tot sturen?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "45 km/u overschrijding op de autosnelweg overschrijdt de drempel van 40 km/u: verval is mogelijk.",
+          "explanation": "45 km/u te snel, meer dan 40: rechtbank en verval mogelijk.",
           "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D1_Q56",
-          "question": "Vanaf welke snelheidsoverschrijding riskeer je een verval in de bebouwde kom?",
+          "question": "Binnen de bebouwde kom: vanaf welke overschrijding moet je naar de rechtbank, met mogelijk verval?",
           "choices": [
-            "> 20 km/u",
-            "> 30 km/u",
-            "> 40 km/u",
-            "> 50 km/u"
+            "Meer dan 30 km/u",
+            "Meer dan 20 km/u",
+            "Meer dan 40 km/u"
           ],
-          "explanation": "In de bebouwde kom, zone 30 en woonerf geldt het verval bij meer dan 30 km/u overschrijding.",
-          "correct": 1,
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "D1_Q57",
-          "question": "U rijdt 85 km/u in de bebouwde kom met limiet 50. Riskeert u een verval van het recht tot sturen?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "explanation": "35 km/u overschrijding in de bebouwde kom overschrijdt de drempel van 30 km/u: verval is mogelijk.",
+          "explanation": "Binnen de bebouwde kom en in de zones: meer dan 30 km/u te snel.",
           "correct": 0,
           "theoryCardIndex": 4
         },
         {
-          "id": "D1_Q59",
-          "question": "Wat is de minimumduur van het verval van het recht tot sturen?",
-          "choices": [
-            "1 dag",
-            "8 dagen",
-            "15 dagen",
-            "30 dagen"
-          ],
-          "explanation": "Het verval van het recht tot sturen duurt minimaal 8 dagen.",
-          "correct": 1,
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "D1_Q60",
-          "question": "Wat is de maximumduur van het verval?",
-          "choices": [
-            "1 jaar",
-            "3 jaar",
-            "5 jaar",
-            "10 jaar"
-          ],
-          "explanation": "Het verval van het recht tot sturen kan maximaal 5 jaar duren.",
-          "correct": 2,
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "D1_Q61",
-          "question": "Bij verval van het recht tot sturen, mag u een motortuig zonder rijbewijs besturen?",
+          "id": "D1_Q57",
+          "question": "85 km/u binnen de bebouwde kom van 50. Riskeer je een verval?",
           "choices": [
             "Ja",
             "Nee"
           ],
-          "explanation": "Het verval geldt ook voor motorvoertuigen waarvoor geen rijbewijs vereist is.",
-          "correct": 1,
+          "explanation": "35 km/u te snel binnen de bebouwde kom, meer dan 30: rechtbank en verval mogelijk.",
+          "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D1_Q62",
-          "question": "Wie spreekt het verval van het recht tot sturen uit?",
+          "question": "Wie spreekt een verval van het recht tot sturen uit?",
           "choices": [
-            "Een rechter in de rechtbank",
-            "De procureur des Konings",
-            "De politie ter plaatse"
+            "Een rechter",
+            "De politie ter plaatse",
+            "De burgemeester"
           ],
-          "explanation": "Het verval van het recht tot sturen wordt uitgesproken door een Rechter in de rechtbank.",
+          "explanation": "Het verval wordt uitgesproken door een rechter van de politierechtbank.",
           "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D1_Q63",
-          "question": "Wat is het verschil tussen een onmiddellijke intrekking en een verval?",
+          "question": "Onmiddellijke intrekking of verval: wat is het verschil?",
           "choices": [
-            "Intrekking: procureur; verval: rechter",
-            "De intrekking is de zwaarste van twee",
-            "Intrekking in de rechtbank, verval ter plaatse"
+            "Intrekking: ter plaatse. Verval: door een rechter",
+            "Beide beslist de rechter",
+            "Beide gebeuren ter plaatse"
           ],
-          "explanation": "Onmiddellijke intrekking: beslissing van de Procureur/OGP, uitvoering ter plaatse. Verval: beslissing van een Rechter, later uitgesproken.",
+          "explanation": "De intrekking gebeurt meteen, langs de weg. Het verval komt later, voor de rechtbank.",
           "correct": 0,
           "theoryCardIndex": 4
         },
@@ -801,43 +668,43 @@
             "Ja",
             "Nee"
           ],
-          "explanation": "De onmiddellijke intrekking (ter plaatse) en het verval (in de rechtbank) zijn twee afzonderlijke sancties die gecumuleerd kunnen worden.",
+          "explanation": "Ja, beide kunnen samen.",
           "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D1_Q65",
-          "question": "U rijdt 35 km/u te snel op de autosnelweg. Welke sancties riskeert u?",
+          "question": "35 km/u te snel op de autosnelweg. Wat riskeer je?",
           "choices": [
-            "Intrekking, geen verval",
-            "Intrekking en verval samen",
-            "Geen enkele sanctie hier"
+            "Onmiddellijke intrekking, geen rechtbank",
+            "Onmiddellijke intrekking en rechtbank",
+            "Niet meer dan een boete"
           ],
-          "explanation": "35 km/u > 30 km/u -> onmiddellijke intrekking mogelijk. 35 km/u < 40 km/u -> geen verval.",
+          "explanation": "Meer dan 30: onmiddellijke intrekking. Minder dan 40: geen rechtbank.",
           "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D1_Q66",
-          "question": "U rijdt 45 km/u te snel op de autosnelweg. Welke sancties riskeert u?",
+          "question": "45 km/u te snel op de autosnelweg. Wat riskeer je?",
           "choices": [
-            "Intrekking en verval samen",
-            "Enkel intrekking, meer niet",
-            "Enkel verval, zonder intrekking"
+            "Onmiddellijke intrekking en rechtbank",
+            "Alleen onmiddellijke intrekking",
+            "Alleen rechtbank"
           ],
-          "explanation": "45 km/u > 30 km/u -> onmiddellijke intrekking. 45 km/u > 40 km/u -> verval mogelijk. Beide kunnen gecumuleerd worden.",
+          "explanation": "Meer dan 30: onmiddellijke intrekking. Meer dan 40: rechtbank en mogelijk verval.",
           "correct": 0,
           "theoryCardIndex": 4
         },
         {
           "id": "D1_Q67",
-          "question": "U rijdt 25 km/u te snel in de bebouwde kom. Welke sancties riskeert u?",
+          "question": "67 km/u binnen de bebouwde kom in Brussel (grens 30). Wat riskeer je?",
           "choices": [
-            "Intrekking, geen verval",
-            "Intrekking en verval samen",
-            "Geen enkele sanctie hier"
+            "Onmiddellijke intrekking en rechtbank",
+            "Alleen een boete",
+            "Alleen onmiddellijke intrekking"
           ],
-          "explanation": "25 km/u > 20 km/u -> onmiddellijke intrekking mogelijk. 25 km/u < 30 km/u -> geen verval.",
+          "explanation": "37 km/u te snel binnen de bebouwde kom: meer dan 20 (intrekking) en meer dan 30 (rechtbank).",
           "correct": 0,
           "theoryCardIndex": 4
         },
@@ -849,7 +716,7 @@
             "Autoweg",
             "Afrit van de autosnelweg"
           ],
-          "explanation": "Dit groene bord geeft het begin van een autosnelweg aan (120 km/u max, 70 km/u min).",
+          "explanation": "Begin van de autosnelweg: maximaal 120 km/u, minimaal 70 km/u.",
           "correct": 0,
           "theoryCardIndex": 0,
           "sign": "F5"
@@ -862,7 +729,7 @@
             "Begin van de autosnelweg",
             "Parking voor auto's"
           ],
-          "explanation": "Dit blauwe bord met een witte auto geeft een autoweg aan (120 km/u als 2x2 rijstroken met middenberm).",
+          "explanation": "Autoweg: geen minimumsnelheid; 120 km/u alleen met 2 rijstroken per richting en een middenberm.",
           "correct": 0,
           "theoryCardIndex": 0,
           "sign": "F9"
@@ -872,10 +739,10 @@
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
             "Begin van de bebouwde kom",
-            "Richting van de gemeente",
-            "Industriezone in de buurt"
+            "Richting van een plaats",
+            "Industriezone"
           ],
-          "explanation": "Dit bord geeft het begin van een bebouwde kom aan (snelheidsbeperking volgens het gewest).",
+          "explanation": "Begin van de bebouwde kom: de grens van de bebouwde kom geldt (50 of 30 km/u volgens het gewest).",
           "correct": 0,
           "theoryCardIndex": 1,
           "sign": "F1"
@@ -888,7 +755,7 @@
             "Voetgangerszone",
             "Bewonersparking"
           ],
-          "explanation": "Dit bord geeft een woonerf (erftoegangsweg) aan: maximumsnelheid 20 km/u.",
+          "explanation": "Woonerf: maximaal 20 km/u.",
           "correct": 0,
           "theoryCardIndex": 1,
           "sign": "F12a",
@@ -898,92 +765,77 @@
           "id": "D1_Q72",
           "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Een zone beperkt tot 30 km/u",
-            "Een zone van 30 meter lang",
-            "Een helling van 30 procent"
+            "Begin van een zone 30",
+            "Zone van 30 m lang",
+            "Helling van 30 %"
           ],
-          "explanation": "Dit bord markeert het begin van een zone met snelheidsbeperking tot 30 km/u.",
+          "explanation": "Zone 30: 30 km/u tot het eindbord.",
           "correct": 0,
           "theoryCardIndex": 1,
           "sign": "F4a"
         },
         {
           "id": "D1_Q73",
-          "question": "Wat betekent dit verkeersbord?",
+          "question": "Wat betekent dit gevaarsbord?",
           "choices": [
-            "Uitholling of natuurlijke drempel",
-            "Verhoogde inrichting(en)",
-            "Beweegbare brug",
-            "Gevaarlijke afdaling"
+            "Verhoogde inrichting",
+            "Natuurlijke bult of drempel",
+            "Beweegbare brug"
           ],
-          "explanation": "Dit gevaarbord kondigt een of meer verhoogde inrichtingen aan. De maximumsnelheid is 30 km/u.",
-          "correct": 1,
+          "explanation": "Het kondigt een of meer verhoogde inrichtingen aan: maximaal 30 km/u erop.",
+          "correct": 0,
           "theoryCardIndex": 1,
           "sign": "A14",
           "severe": true
         },
         {
           "id": "D1_Q74",
-          "question": "Dit bord draagt de vermelding « 200 m ». Wat betekent het?",
+          "question": "Dit bord toont « 200 m ». Wat betekent het?",
           "choices": [
             "Een verhoogde inrichting over 200 m",
-            "200 meter verkeersdrempels",
-            "Een brug op 200 meter"
+            "200 m verkeersdrempels",
+            "Een brug op 200 m"
           ],
-          "explanation": "Dit bord kondigt aan dat een verhoogde inrichting zich op 200 meter bevindt.",
+          "explanation": "De verhoogde inrichting ligt 200 m verder.",
           "correct": 0,
           "theoryCardIndex": 1,
           "sign": "A14"
         },
         {
           "id": "D1_Q75",
-          "question": "Dit bord draagt « 150 m » en « 500 m ». Wat betekent het?",
+          "question": "Dit bord toont « 150 m » en « 500 m ». Wat betekent het?",
           "choices": [
-            "Meerdere inrichtingen over 500 m",
-            "Eén inrichting op 150 meter",
-            "Een helling van 500 m na 150 m"
+            "Meerdere inrichtingen, over 150 m, op 500 m",
+            "Eén inrichting van 500 m lang",
+            "Eén inrichting op 150 m"
           ],
-          "explanation": "Dit bord kondigt meerdere verhoogde inrichtingen aan: ze beginnen over 150 m en strekken zich uit over 500 m.",
+          "explanation": "Over 150 m beginnen meerdere verhoogde inrichtingen, gespreid over 500 m.",
           "correct": 0,
           "theoryCardIndex": 1,
           "sign": "A14"
         },
         {
           "id": "D1_Q77",
-          "question": "Dit bord draagt « 200 m » en « 60 km/u ». Wat betekent het?",
+          "question": "Dit bord toont « 200 m » onder een bord 60 km/u. Wat betekent het?",
           "choices": [
-            "60 km/u vanaf 200 m verder",
-            "60 km/u vanaf nu meteen",
+            "Maximaal 60 km/u, 200 m verder",
+            "60 km/u vanaf nu, over 200 m",
             "Nog 60 km te rijden"
           ],
-          "explanation": "Dit bord kondigt aan dat een snelheidsbeperking van 60 km/u van kracht wordt over 200 meter.",
+          "explanation": "Het is een vooraankondiging: de grens begint 200 m verder.",
           "correct": 0,
           "theoryCardIndex": 1,
           "sign": "C43"
         },
         {
-          "id": "D1_Q82",
-          "question": "Je ziet een bord dat een inhaalverbod en een beperking tot 60 km/u combineert over 200 m. Wat moet je onmiddellijk respecteren?",
-          "choices": [
-            "Enkel de snelheidsbeperking",
-            "Enkel het inhaalverbod",
-            "Beide regels onmiddellijk",
-            "Geen van beide vóór 200 meter"
-          ],
-          "explanation": "Het inhaalverbod geldt onmiddellijk. De snelheidsbeperking van 60 km/u geldt pas over 200 m.",
-          "correct": 1,
-          "theoryCardIndex": 1,
-          "severe": true
-        },
-        {
           "id": "D1_Q83",
-          "question": "Wat betekent dit bord voor uw snelheid?",
+          "question": "Wat betekent dit bord voor je snelheid?",
           "choices": [
-            "Gewone weg, standaardsnelheden",
-            "Autoweg, 120 km/u toegelaten",
-            "Het begin van een zone 30"
+            "Gewone weg: de normale snelheden van het gewest",
+            "Autoweg: 120 km/u",
+            "Zone 30"
           ],
-          "explanation": "Dit bord geeft een gewone weg aan. De standaardsnelheden van het gewest zijn van toepassing.",
+          "explanation": "Het is een gewone weg: de gewone snelheidsgrenzen van het gewest gelden.",
           "correct": 0,
           "theoryCardIndex": 0,
           "sign": "F23a"
@@ -1052,58 +904,78 @@
         },
         {
           "id": "D1_DEG_1",
-          "question": "Omkeren op de autosnelweg: van welke graad is deze overtreding?",
+          "question": "Keren op de autosnelweg is een overtreding van de:",
           "choices": [
-            "1e graad",
-            "2e graad",
-            "3e graad",
-            "4e graad"
+            "4de graad",
+            "3de graad",
+            "2de graad"
           ],
-          "correct": 3,
-          "explanation": "Omkeren of achteruitrijden op de autosnelweg maakt een ongeval bijna onvermijdelijk: een overtreding van de 4e graad, de zwaarste.",
+          "correct": 0,
+          "explanation": "4de graad, de zwaarste: het gevaar voor een ongeval is enorm.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "D1_DEG_2",
-          "question": "Door een rood licht rijden is een overtreding van de…",
+          "question": "Door het rode licht rijden is een overtreding van de:",
           "choices": [
-            "1e graad",
-            "2e graad",
-            "3e graad",
-            "4e graad"
+            "3de graad",
+            "1ste graad",
+            "4de graad"
           ],
-          "correct": 2,
-          "explanation": "Door een rood licht rijden brengt de andere weggebruikers rechtstreeks in gevaar: overtreding van de 3e graad (174 € onmiddellijke inning).",
+          "correct": 0,
+          "explanation": "3de graad: ze brengt de anderen rechtstreeks in gevaar.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "D1_DEG_3",
-          "question": "Wat riskeert de dader van een overtreding van de vierde graad?",
+          "question": "Overtreding van de 4de graad: wat gebeurt er?",
           "choices": [
-            "Een dagvaarding voor de rechtbank",
-            "Een onmiddellijke boete van 58 €",
-            "Een eenvoudige schriftelijke waarschuwing"
+            "Je wordt voor de rechtbank gedaagd",
+            "Een kleine boete ter plaatse",
+            "Een gewone verwittiging"
           ],
           "correct": 0,
-          "explanation": "De 4e graad wordt niet met onmiddellijke inning afgehandeld: de dader wordt gedagvaard voor de politierechtbank en riskeert een rijverbod.",
+          "explanation": "De 4de graad gaat altijd naar de politierechtbank.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "D1_DEG_4",
-          "question": "Parkeren op een plaats voorbehouden voor personen met een handicap: welke graad?",
+          "question": "Parkeren op een plaats voor personen met een handicap is een overtreding van de:",
           "choices": [
-            "1e graad",
-            "2e graad",
-            "3e graad",
-            "4e graad"
+            "2de graad",
+            "1ste graad",
+            "4de graad"
           ],
-          "correct": 1,
-          "explanation": "Parkeren op een voorbehouden plaats voor personen met een handicap is een overtreding van de 2e graad (116 € onmiddellijke inning).",
+          "correct": 0,
+          "explanation": "2de graad.",
           "theoryCardIndex": 4,
           "severe": true
+        },
+        {
+          "id": "D1_Q90",
+          "question": "De ziekenwagen met je vader rijdt 140 km/u. Mag je hem met die snelheid volgen?",
+          "choices": [
+            "Nee",
+            "Ja, het is dringend"
+          ],
+          "correct": 0,
+          "explanation": "Alleen de ziekenwagen met opdracht mag te snel rijden. Jij houdt je aan de maximumsnelheid.",
+          "theoryCardIndex": 2
+        },
+        {
+          "id": "D1_Q91",
+          "question": "N-wegen zijn:",
+          "choices": [
+            "Gewone wegen",
+            "Autosnelwegen",
+            "Autowegen"
+          ],
+          "correct": 0,
+          "explanation": "N-wegen zijn gewone wegen: de snelheden van het gewest gelden er.",
+          "theoryCardIndex": 0
         }
       ]
     },
