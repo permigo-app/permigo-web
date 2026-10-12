@@ -292,320 +292,282 @@
       "questions": [
         {
           "id": "H1_Q1",
-          "question": "Vous vous immobilisez au bord de la route pour faire descendre un passager. Comment cela s'appelle-t-il ?",
+          "question": "Vous vous rangez pour faire descendre un passager. C'est :",
           "choices": [
             "Un arrêt",
             "Un stationnement",
             "Une immobilisation"
           ],
           "correct": 0,
-          "explanation": "Un arrêt est le temps nécessaire pour embarquer/débarquer des personnes ou charger/décharger des marchandises.",
+          "explanation": "Le temps de faire monter ou descendre quelqu'un, c'est un arrêt.",
           "theoryCardIndex": 0
         },
         {
           "id": "H1_Q3",
-          "question": "Un camion décharge du mazout devant une maison depuis 30 minutes. Arrêt ou stationnement ?",
+          "question": "Un camion décharge du mazout depuis 30 minutes. C'est :",
           "choices": [
             "Un arrêt",
-            "Un stationnement",
-            "Une immobilisation"
+            "Un stationnement"
           ],
           "correct": 0,
-          "explanation": "Un arrêt pour décharger des marchandises peut durer longtemps : c'est toujours un arrêt.",
+          "explanation": "Le temps nécessaire pour décharger reste un arrêt, même s'il est long.",
           "theoryCardIndex": 0
         },
         {
           "id": "H1_Q4",
-          "question": "Vous faites descendre 50 enfants d'un autocar scolaire en 10 minutes. Est-ce un arrêt ?",
+          "question": "50 enfants descendent d'un car en 10 minutes. Est-ce un arrêt ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Peu importe la durée : si c'est le temps nécessaire pour débarquer des personnes, c'est un arrêt.",
+          "explanation": "Peu importe la durée : c'est le temps nécessaire pour les faire descendre.",
           "theoryCardIndex": 0
         },
         {
           "id": "H1_Q5",
-          "question": "Votre passager est descendu mais vous restez garé. Quand votre arrêt devient-il un stationnement ?",
+          "question": "Votre passager est descendu, vous restez là. Quand est-ce du stationnement ?",
           "choices": [
-            "Dès la fin de l'embarquement",
-            "Au bout de cinq minutes pile",
-            "Dès que vous coupez le moteur"
+            "Dès qu'il est descendu",
+            "Après 5 minutes",
+            "Quand vous coupez le moteur"
           ],
           "correct": 0,
-          "explanation": "Dès que vous restez au-delà du temps nécessaire pour embarquer/débarquer ou charger/décharger, c'est du stationnement.",
+          "explanation": "Au-delà du temps nécessaire, c'est du stationnement.",
           "theoryCardIndex": 0
         },
         {
           "id": "H1_Q7",
-          "question": "Vous attendez dans votre voiture garée en bord de route, sans passager à embarquer ni marchandise à charger. Êtes-vous à l'arrêt ?",
+          "question": "Vous attendez quelqu'un dans la voiture, moteur allumé. C'est :",
           "choices": [
-            "Oui, vous êtes dans la voiture",
-            "Non, c'est du stationnement",
-            "Oui, tant que le moteur tourne",
-            "Cela dépend du lieu"
-          ],
-          "correct": 1,
-          "explanation": "Sans embarquement ni chargement en cours, rester immobile = stationnement.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "H1_Q8",
-          "question": "Vous décidez de vous arrêter pour déposer un colis. Cette décision est-elle volontaire ou imposée ?",
-          "choices": [
-            "Volontaire, c'est votre choix",
-            "Imposée par le code de la route",
-            "Involontaire et subie par vous"
+            "Du stationnement",
+            "Un arrêt"
           ],
           "correct": 0,
-          "explanation": "L'arrêt et le stationnement sont des actes volontaires : vous choisissez de vous immobiliser.",
+          "explanation": "Attendre, c'est stationner, même au volant et moteur allumé.",
           "theoryCardIndex": 0
         },
         {
           "id": "H1_Q9",
-          "question": "Vous êtes immobilisé à un feu rouge. Êtes-vous \"à l'arrêt\" au sens du code de la route ?",
+          "question": "Vous attendez au feu rouge. Êtes-vous « à l'arrêt » au sens du code ?",
           "choices": [
-            "Oui, c'est un arrêt au sens du code",
-            "Non, vous êtes simplement « immobilisé »",
-            "Oui, c'est même du stationnement",
-            "Cela dépend de la durée du feu rouge"
+            "Non, la circulation vous immobilise",
+            "Oui",
+            "Oui, c'est du stationnement"
           ],
-          "correct": 1,
-          "explanation": "À un feu rouge, la décision est imposée : vous êtes immobilisé, pas à l'arrêt.",
+          "correct": 0,
+          "explanation": "Un feu, un embouteillage, un piéton : vous êtes immobilisé, ce n'est pas un arrêt.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
-          "id": "H1_Q11",
-          "question": "Quelle est la différence entre un arrêt et une immobilisation ?",
-          "choices": [
-            "L'arrêt est volontaire",
-            "L'arrêt est imposé",
-            "Aucune, c'est la même chose"
-          ],
-          "correct": 0,
-          "explanation": "L'arrêt = acte volontaire (embarquer/décharger). L'immobilisation = imposée par une contrainte extérieure.",
-          "theoryCardIndex": 0
-        },
-        {
           "id": "H1_Q12",
-          "question": "Votre voiture tombe en panne sur la chaussée. S'agit-il d'un arrêt ou d'un stationnement ?",
+          "question": "Votre voiture tombe en panne sur la chaussée. C'est :",
           "choices": [
-            "Ni l'un ni l'autre",
-            "Un arrêt involontaire",
-            "Un stationnement direct"
+            "Ni un arrêt ni un stationnement",
+            "Un arrêt",
+            "Un stationnement"
           ],
           "correct": 0,
-          "explanation": "Un véhicule en panne est une catégorie à part : ni arrêt, ni stationnement.",
+          "explanation": "La panne vous immobilise malgré vous.",
           "theoryCardIndex": 0
         },
         {
           "id": "H1_Q13",
-          "question": "Vous êtes en panne et ne pouvez pas ranger le véhicule en sécurité. Que devez-vous faire ?",
+          "question": "En panne, impossible de dégager la voiture. Que faites-vous ?",
           "choices": [
-            "Placer un triangle de danger",
-            "Allumer vos phares, sans plus",
-            "Appeler tout de suite la police"
+            "Je place le triangle de danger",
+            "J'allume les phares",
+            "J'attends dans la voiture"
           ],
           "correct": 0,
-          "explanation": "Un véhicule en panne qui ne peut être rangé en sécurité doit être signalé par un triangle de danger.",
-          "theoryCardIndex": 0
-        },
-        {
-          "id": "H1_Q14",
-          "question": "Votre voiture est en panne devant un panneau de stationnement interdit. Êtes-vous en infraction ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Les signaux d'arrêt et de stationnement ne s'appliquent pas aux véhicules en panne.",
+          "explanation": "Feux de détresse et triangle pour prévenir les autres.",
           "theoryCardIndex": 0
         },
         {
           "id": "H1_Q17",
-          "question": "En agglomération, un accotement de plain-pied est disponible. Où devez-vous stationner ?",
+          "question": "En agglomération, il y a un accotement de plain-pied. Où vous garez-vous ?",
           "choices": [
-            "Sur l'accotement de plain-pied",
-            "Sur la chaussée elle-même",
-            "Sur le trottoir si besoin"
+            "Sur l'accotement",
+            "Sur la chaussée",
+            "Sur le trottoir"
           ],
           "correct": 0,
-          "explanation": "L'accotement ou la bande de stationnement sont à privilégier pour stationner.",
+          "explanation": "Hors de la chaussée, sur l'accotement de plain-pied.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q18",
-          "question": "Hors agglomération, pouvez-vous stationner sur tous les types d'accotements ?",
+          "question": "Hors agglomération, sur quels accotements pouvez-vous stationner ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Sur tous",
+            "Seulement de plain-pied",
+            "Sur aucun"
           ],
           "correct": 0,
-          "explanation": "Hors agglomération, la bande de stationnement et tous les accotements sont autorisés.",
+          "explanation": "Hors agglomération : tout accotement, même en saillie.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q19",
-          "question": "Une large ligne blanche est tracée à droite de la chaussée. Qu'est-ce que l'espace au-delà ?",
+          "question": "Large ligne blanche continue à droite. À quoi sert l'espace au-delà ?",
           "choices": [
-            "Une bande de stationnement",
-            "Une bande réservée aux bus",
-            "Une piste cyclable marquée"
+            "À l'arrêt et au stationnement",
+            "Aux bus",
+            "Aux vélos"
           ],
           "correct": 0,
-          "explanation": "La bande de stationnement est délimitée par une large ligne blanche à gauche : au-delà = espace pour stationner.",
+          "explanation": "C'est une bande de stationnement.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q21",
-          "question": "L'accotement est trop étroit pour accueillir tout votre véhicule. Que faites-vous ?",
+          "question": "L'accotement est trop étroit pour toute la voiture. Que faites-vous ?",
           "choices": [
-            "Stationner en partie dessus",
-            "Stationner sur la chaussée",
-            "Monter sur le trottoir"
+            "Je me gare à moitié dessus",
+            "Je me gare sur la chaussée",
+            "Je monte sur le trottoir"
           ],
           "correct": 0,
-          "explanation": "Si l'accotement est trop étroit, vous pouvez stationner en partie dessus.",
+          "explanation": "En partie sur l'accotement, en partie sur la chaussée.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q22",
-          "question": "Vous stationnez en partie sur l'accotement, sans trottoir. Quel passage laissez-vous aux piétons ?",
+          "question": "Vous stationnez sur un accotement emprunté par les piétons. Quelle place leur laissez-vous ?",
           "choices": [
-            "Au moins 1,5 mètre",
-            "Au moins 1 mètre",
-            "Au moins 2 mètres"
+            "1,5 m",
+            "1 m",
+            "2 m"
           ],
           "correct": 0,
-          "explanation": "Sans trottoir, vous devez laisser au moins 1,5 m de passage pour les piétons.",
+          "explanation": "Au moins 1,5 m du côté extérieur.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q23",
-          "question": "Vous devez stationner sur la chaussée. De quel côté vous placez-vous ?",
+          "question": "Rue à double sens : de quel côté vous garez-vous ?",
           "choices": [
-            "À droite, dans le sens de marche",
-            "À gauche, dans le sens de marche",
-            "Au milieu de la chaussée"
+            "À droite",
+            "À gauche",
+            "Au choix"
           ],
           "correct": 0,
-          "explanation": "Sur la chaussée : toujours à droite dans le sens de la marche, le plus près du bord.",
+          "explanation": "À droite dans votre sens de marche.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q24",
-          "question": "Pouvez-vous stationner en double file pour quelques minutes ?",
+          "question": "Pouvez-vous vous garer en double file quelques minutes ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement en double file est interdit.",
+          "correct": 0,
+          "explanation": "Sur la chaussée, une seule file.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q25",
-          "question": "Vous vous garez entre deux voitures. Quel espace minimum devez-vous leur laisser ?",
+          "question": "Quelle distance laissez-vous devant et derrière une voiture garée ?",
           "choices": [
-            "Au moins 1 mètre",
-            "Au moins 2 mètres",
-            "Cinquante centimètres"
+            "1 m",
+            "50 cm",
+            "2 m"
           ],
           "correct": 0,
-          "explanation": "Il faut laisser au moins 1 mètre entre deux voitures stationnées.",
+          "explanation": "Au moins 1 m devant et derrière.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q26",
-          "question": "Sur une voie à sens unique, de quel côté pouvez-vous stationner ?",
+          "question": "Rue à sens unique : de quel côté pouvez-vous vous garer ?",
           "choices": [
-            "À droite et à gauche",
-            "À droite, pas ailleurs",
-            "À gauche, pas ailleurs"
+            "Des deux côtés",
+            "À droite seulement",
+            "À gauche seulement"
           ],
           "correct": 0,
-          "explanation": "Sur un sens unique, le stationnement est autorisé des deux côtés.",
+          "explanation": "Sur un sens unique, à droite ou à gauche.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q27",
-          "question": "Sur une chaussée à double sens, pouvez-vous stationner à gauche ?",
+          "question": "Rue à double sens : pouvez-vous vous garer à gauche ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Sur une chaussée à double sens, le stationnement à gauche est interdit.",
+          "correct": 0,
+          "explanation": "À double sens, on se gare à droite.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q28",
           "question": "En zone résidentielle, où pouvez-vous vous garer ?",
           "choices": [
-            "Sur les emplacements prévus",
-            "À droite de la chaussée",
-            "N'importe où dans la zone"
+            "Aux emplacements marqués",
+            "Partout à droite",
+            "N'importe où"
           ],
           "correct": 0,
-          "explanation": "En zone résidentielle/rencontre, le stationnement est limité aux emplacements désignés.",
+          "explanation": "Seulement aux emplacements indiqués.",
           "theoryCardIndex": 1
         },
         {
           "id": "H1_Q31",
-          "question": "Pouvez-vous vous arrêter là où votre véhicule représente un danger ?",
+          "question": "Pouvez-vous vous arrêter là où vous gênez ou mettez les autres en danger ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, brièvement"
           ],
-          "correct": 1,
-          "explanation": "L'arrêt et le stationnement sont interdits là où le véhicule représente un danger ou gêne sans raison valable.",
+          "correct": 0,
+          "explanation": "Interdit partout où vous êtes un danger ou une gêne inutile.",
           "theoryCardIndex": 2
         },
         {
           "id": "H1_Q32",
-          "question": "Pouvez-vous vous arrêter sur la bande d'arrêt d'urgence pour téléphoner ?",
+          "question": "Fatigué, vous vous arrêtez sur la bande d'arrêt d'urgence pour vous dégourdir les jambes. Permis ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Sur l'autoroute, l'arrêt et le stationnement sont interdits partout : bandes, accès, sorties et BAU.",
+          "correct": 0,
+          "explanation": "Fatigue n'est pas urgence : sortez à la prochaine aire.",
           "theoryCardIndex": 2
         },
         {
           "id": "H1_Q33",
           "question": "Pouvez-vous stationner sur le trottoir ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, à moitié"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement sur le trottoir est interdit.",
+          "correct": 0,
+          "explanation": "Interdit, sauf panneau qui l'autorise.",
           "theoryCardIndex": 2
         },
         {
           "id": "H1_Q34",
-          "question": "Pouvez-vous stationner sur un dispositif surélevé ?",
+          "question": "Sur un dispositif surélevé, vous pouvez :",
           "choices": [
-            "Non, sauf marquage l'autorisant",
-            "Oui, ce n'est qu'un ralentisseur",
-            "Oui, sans souci pendant la journée"
+            "Ni vous arrêter ni stationner",
+            "Vous arrêter",
+            "Vous arrêter et stationner"
           ],
           "correct": 0,
-          "explanation": "Interdit sur un dispositif surélevé, sauf si une signalisation l'autorise explicitement.",
+          "explanation": "Interdit, sauf signalisation qui l'autorise.",
           "theoryCardIndex": 2
         },
         {
           "id": "H1_Q35",
-          "question": "Pouvez-vous vous arrêter brièvement sur une piste cyclable ?",
+          "question": "Pouvez-vous vous arrêter un instant sur la piste cyclable pour déposer quelqu'un ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "L'arrêt et le stationnement sont interdits sur une piste cyclable.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement interdits sur la piste cyclable.",
           "theoryCardIndex": 3
         },
         {
@@ -616,250 +578,212 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "Contrairement à la piste cyclable, l'arrêt sur une bande cyclable suggérée est autorisé.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "H1_Q37",
-          "question": "Quelle différence entre piste cyclable et bande suggérée pour l'arrêt ?",
-          "choices": [
-            "Interdit sur la piste, permis sur la bande",
-            "Permis sur la piste, interdit sur la bande",
-            "L'arrêt est interdit sur les deux voies"
-          ],
-          "correct": 0,
-          "explanation": "Piste cyclable = interdit de s'arrêter. Bande cyclable suggérée = autorisé.",
+          "explanation": "Ce n'est pas une piste cyclable : elle fait partie de la chaussée.",
           "theoryCardIndex": 3
         },
         {
           "id": "H1_Q38",
           "question": "Pouvez-vous vous arrêter sur des marques en damier ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les marques en damier interdisent l'arrêt et le stationnement.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement y sont interdits.",
           "theoryCardIndex": 3
         },
         {
           "id": "H1_Q39",
-          "question": "Pouvez-vous stationner sur les voies ferrées du tram ?",
+          "question": "Pouvez-vous vous garer de façon à gêner le passage du tram ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, brièvement"
           ],
-          "correct": 1,
-          "explanation": "Stationner sur les voies ferrées du tram est interdit.",
+          "correct": 0,
+          "explanation": "Interdit de stationner là où vous bloquez le tram.",
           "theoryCardIndex": 3
         },
         {
           "id": "H1_Q40",
-          "question": "Vous êtes arrêté au feu rouge, les roues sur des rails de tram. Est-ce une infraction ?",
+          "question": "Feu rouge : vous attendez avec les roues sur des rails de tram. Est-ce une infraction ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "L'immobilisation imposée (feu rouge, passage piéton...) est permise même sur des rails intégrés.",
-          "theoryCardIndex": 3,
-          "severe": true
-        },
-        {
-          "id": "H1_Q41",
-          "question": "Vous stationnez sur un passage à niveau. De quel degré d'infraction s'agit-il ?",
-          "choices": [
-            "C'est une infraction du 1er degré",
-            "C'est une infraction du 4e degré",
-            "C'est une infraction du 2e degré",
-            "C'est une infraction du 3e degré"
-          ],
-          "correct": 1,
-          "explanation": "Stationner sur un passage à niveau est une infraction du 4e degré.",
+          "correct": 0,
+          "explanation": "Vous êtes immobilisé par la circulation : ce n'est ni un arrêt ni un stationnement.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "H1_Q42",
-          "question": "Pouvez-vous vous arrêter sur une zone d'évitement ?",
+          "question": "Sur une zone d'évitement, vous pouvez :",
           "choices": [
-            "Oui",
-            "Non"
+            "Ni vous arrêter ni stationner",
+            "Vous arrêter",
+            "Vous arrêter et stationner"
           ],
-          "correct": 1,
-          "explanation": "Impossible de s'arrêter sur une zone d'évitement : la circulation même y est interdite.",
+          "correct": 0,
+          "explanation": "Interdit d'y rouler, de s'y arrêter et d'y stationner.",
           "theoryCardIndex": 3
         },
         {
           "id": "H1_Q44",
-          "question": "Pouvez-vous stationner sur un accès d'autoroute ?",
+          "question": "Pouvez-vous stationner sur une bretelle d'autoroute ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, sur le côté"
           ],
-          "correct": 1,
-          "explanation": "Les accès et sorties d'autoroute font partie des zones où l'arrêt et le stationnement sont interdits.",
+          "correct": 0,
+          "explanation": "Interdit sur toute l'autoroute, accès et sorties compris.",
           "theoryCardIndex": 2
         },
         {
           "id": "H1_Q45",
-          "question": "Pouvez-vous stationner sur une route pour automobiles ?",
+          "question": "Sur une route pour automobiles, pouvez-vous vous arrêter ou stationner ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, contrairement à l'autoroute"
           ],
-          "correct": 1,
-          "explanation": "Sur une route pour automobiles, l'arrêt et le stationnement sont interdits.",
+          "correct": 0,
+          "explanation": "Mêmes règles que sur l'autoroute : interdit.",
           "theoryCardIndex": 2
         },
         {
           "id": "H1_Q46",
-          "question": "Où l'arrêt et le stationnement sont-ils toujours interdits ?",
+          "question": "Où l'arrêt est-il interdit ?",
           "choices": [
-            "Trottoir, piste, passage à niveau",
-            "Chaussée, accotement et parking",
-            "Les autoroutes et leurs bretelles"
+            "Sur un passage à niveau",
+            "Sur un accotement de plain-pied",
+            "Dans une bande de stationnement"
           ],
           "correct": 0,
-          "explanation": "Parmi les nombreux endroits : trottoir, piste cyclable, passage à niveau, autoroute, voies du tram.",
+          "explanation": "Passage à niveau, trottoir, piste cyclable : arrêt et stationnement interdits.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "H1_Q47",
-          "question": "Pouvez-vous vous arrêter directement sur un passage pour piétons ?",
+          "question": "Pouvez-vous vous arrêter sur un passage pour piétons ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, un instant"
           ],
-          "correct": 1,
-          "explanation": "L'arrêt et le stationnement sont interdits sur les passages pour piétons, sur chaussée et accotement.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement interdits sur le passage.",
           "theoryCardIndex": 4
         },
         {
           "id": "H1_Q48",
-          "question": "Vous cherchez à vous garer à proximité d'un carrefour sans feux. À quelle distance minimum du bord de la voie transversale devez-vous vous trouver ?",
+          "question": "Carrefour sans feux : à quelle distance minimum vous garez-vous ?",
           "choices": [
-            "Au moins 3 mètres",
-            "Au moins 5 mètres",
-            "Au moins 10 mètres",
-            "Au moins 20 mètres"
+            "5 m",
+            "3 m",
+            "10 m"
           ],
-          "correct": 1,
-          "explanation": "Dans un carrefour sans feux : au moins 5 mètres du bord adjacent de la voie transversale.",
+          "correct": 0,
+          "explanation": "5 m du bord de la rue transversale.",
           "theoryCardIndex": 4
         },
         {
           "id": "H1_Q50",
-          "question": "À quelle distance minimum des feux de signalisation pouvez-vous stationner ?",
+          "question": "À quelle distance avant des feux de signalisation pouvez-vous stationner ?",
           "choices": [
-            "Au moins 20 mètres",
-            "Au moins 5 mètres",
-            "Au moins 30 mètres"
+            "20 m",
+            "5 m",
+            "30 m"
           ],
           "correct": 0,
-          "explanation": "Dans un carrefour avec feux : au moins 20 mètres avant les feux.",
+          "explanation": "Au moins 20 m avant les feux.",
           "theoryCardIndex": 4
         },
         {
           "id": "H1_Q51",
-          "question": "À quelle distance minimum d'un signal placé hors carrefour pouvez-vous stationner ?",
+          "question": "À quelle distance avant un panneau routier pouvez-vous stationner ?",
           "choices": [
-            "Au moins 20 mètres",
-            "Au moins 10 mètres",
-            "Au moins 30 mètres"
+            "20 m",
+            "10 m",
+            "30 m"
           ],
           "correct": 0,
-          "explanation": "Pour un signal hors carrefour : au moins 20 mètres en deçà (avant) du signal.",
+          "explanation": "Au moins 20 m avant, pour ne pas le cacher.",
           "theoryCardIndex": 4
         },
         {
           "id": "H1_Q52",
-          "question": "Votre voiture fait 1,50 m et le signal est à 2,5 m. Pouvez-vous stationner à moins de 20 m ?",
+          "question": "Votre voiture fait 1,50 m de haut, le bas du panneau est à 2,5 m. Pouvez-vous vous garer à moins de 20 m ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'exception s'applique : signal à ≥ 2 m + véhicule ≤ 1,65 m = vous ne masquez pas le signal.",
-          "theoryCardIndex": 4
-        },
-        {
-          "id": "H1_Q53",
-          "question": "Quelles sont les deux conditions cumulatives de cette exception ?",
-          "choices": [
-            "Signal à 2 m et véhicule sous 1,65 m",
-            "Signal rouge et véhicule de petite taille",
-            "Signal à 1 m et véhicule sous 2 mètres"
-          ],
-          "correct": 0,
-          "explanation": "Deux conditions cumulatives : signal à ≥ 2 m de hauteur ET véhicule (chargement compris) ≤ 1,65 m.",
+          "explanation": "Voiture de 1,65 m maximum et panneau à 2 m minimum : vous ne le cachez pas.",
           "theoryCardIndex": 4
         },
         {
           "id": "H1_Q54",
-          "question": "Votre camionnette fait 1,80 m et le signal est à 2,20 m. L'exception s'applique-t-elle ?",
+          "question": "Votre camionnette fait 1,80 m, le bas du panneau est à 2,20 m. Pouvez-vous vous garer à moins de 20 m ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le véhicule dépasse 1,65 m : l'exception ne s'applique pas même si le signal est à ≥ 2 m.",
+          "correct": 0,
+          "explanation": "Plus de 1,65 m : l'exception ne vaut pas.",
           "theoryCardIndex": 4
         },
         {
           "id": "H1_Q56",
-          "question": "Les distances de 5 m et 20 m s'appliquent-elles aussi sur l'accotement ?",
+          "question": "Les 5 m du carrefour et les 20 m des feux valent-ils aussi sur l'accotement ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Ces distances s'appliquent sur la chaussée ET sur l'accotement.",
+          "explanation": "Sur la chaussée et sur l'accotement.",
           "theoryCardIndex": 4
         },
         {
           "id": "H1_Q57",
-          "question": "Pouvez-vous vous arrêter sur la chaussée à 3 mètres avant un passage pour piétons ?",
+          "question": "Pouvez-vous vous arrêter sur la chaussée 3 m avant un passage pour piétons ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit de s'arrêter ou stationner à moins de 5 m en deçà d'un passage piétons (chaussée uniquement).",
+          "correct": 0,
+          "explanation": "Interdit à moins de 5 m avant le passage.",
           "theoryCardIndex": 5
         },
         {
           "id": "H1_Q58",
-          "question": "Cette interdiction des 5 mètres s'applique-t-elle aussi sur l'accotement ?",
+          "question": "Ces 5 m avant le passage pour piétons valent-ils sur l'accotement ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "L'interdiction de 5 m avant un passage piétons concerne la chaussée uniquement.",
+          "correct": 0,
+          "explanation": "Seulement sur la chaussée.",
           "theoryCardIndex": 5
         },
         {
           "id": "H1_Q59",
-          "question": "Pouvez-vous stationner juste après un passage pour piétons, sur la chaussée ?",
+          "question": "Pouvez-vous vous garer sur la chaussée juste après un passage pour piétons ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'interdiction de 5 m ne vise que l'avant du passage piétons (en deçà), pas l'après.",
+          "explanation": "Les 5 m ne valent qu'avant le passage.",
           "theoryCardIndex": 5
         },
         {
           "id": "H1_Q60",
-          "question": "Pouvez-vous stationner sur la chaussée, sous un pont ?",
+          "question": "Pouvez-vous vous arrêter sur la chaussée sous un pont pour laisser monter quelqu'un ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Stationner sur la chaussée sous un pont est interdit.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement interdits sur la chaussée sous un pont.",
           "theoryCardIndex": 5
         },
         {
@@ -870,62 +794,62 @@
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'interdiction concerne le stationnement SOUS les ponts (sur la chaussée), pas sur les ponts.",
+          "explanation": "L'interdiction vise le dessous du pont, pas le pont lui-même.",
           "theoryCardIndex": 5
         },
         {
           "id": "H1_Q62",
-          "question": "Sous un pont, pouvez-vous vous garer sur l'accotement ou dans une bande de stationnement ?",
+          "question": "Sous un pont, pouvez-vous vous garer sur l'accotement ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'interdiction sous les ponts ne vise que la chaussée : l'accotement ou la bande de stationnement restent possibles.",
+          "explanation": "L'interdiction vise seulement la chaussée.",
           "theoryCardIndex": 5
         },
         {
           "id": "H1_Q63",
-          "question": "Pouvez-vous stationner sur la chaussée dans un tunnel ?",
+          "question": "Pouvez-vous vous arrêter sur la chaussée dans un tunnel ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "L'arrêt et le stationnement sont interdits sur la chaussée dans les tunnels.",
+          "correct": 0,
+          "explanation": "Arrêt et stationnement interdits sur la chaussée dans un tunnel.",
           "theoryCardIndex": 5
         },
         {
           "id": "H1_Q64",
-          "question": "Pouvez-vous stationner sur la chaussée près du sommet d'une côte ?",
+          "question": "Pouvez-vous stationner sur la chaussée au sommet d'une côte sans visibilité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Stationner sur la chaussée à proximité du sommet d'une côte est interdit (visibilité réduite).",
+          "correct": 0,
+          "explanation": "Les autres ne vous verraient pas à temps.",
           "theoryCardIndex": 5
         },
         {
           "id": "H1_Q65",
           "question": "Pouvez-vous stationner sur la chaussée dans un virage sans visibilité ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Stationner sur la chaussée dans un virage à visibilité insuffisante est interdit.",
+          "correct": 0,
+          "explanation": "Interdit sur la chaussée dans un virage sans visibilité.",
           "theoryCardIndex": 5
         },
         {
           "id": "H1_Q68",
-          "question": "Au sommet d'une côte, pouvez-vous stationner sur l'accotement ?",
+          "question": "Au sommet d'une côte, pouvez-vous vous garer sur l'accotement ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "L'interdiction au sommet d'une côte vise la chaussée uniquement. L'accotement est en principe possible si le véhicule ne constitue pas un danger.",
+          "explanation": "L'interdiction vise la chaussée ; l'accotement reste possible si vous ne gênez pas.",
           "theoryCardIndex": 5
         },
         {
@@ -953,18 +877,6 @@
           "explanation": "Ce signal indique un passage pour cyclistes et cyclomoteurs à deux roues.",
           "destination": "panneaux",
           "sign": "F50"
-        },
-        {
-          "id": "H1_Q73",
-          "question": "Quelles sont les règles d'arrêt et de stationnement sur une route pour automobiles ?",
-          "choices": [
-            "Arrêt et stationnement interdits",
-            "Stationnement limité à 30 minutes",
-            "Arrêt permis sur les accotements"
-          ],
-          "correct": 0,
-          "explanation": "Sur route pour automobiles : arrêt et stationnement interdits sur la route, les accès et les sorties.",
-          "theoryCardIndex": 2
         },
         {
           "id": "H1_Q75",
