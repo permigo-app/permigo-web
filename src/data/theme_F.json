@@ -1143,372 +1143,328 @@
       "questions": [
         {
           "id": "F2_Q1",
-          "question": "Où exactement devez-vous vous immobiliser à un feu rouge ?",
+          "question": "Feu rouge. Où vous arrêtez-vous ?",
           "choices": [
-            "Devant la ligne d'arrêt",
-            "Juste devant le feu lui-même",
-            "Cinq mètres avant le feu"
+            "Avant la ligne d'arrêt",
+            "Juste sous le feu",
+            "5 m avant le feu"
           ],
           "correct": 0,
-          "explanation": "La ligne d'arrêt blanche est la référence. Sans ligne, on s'arrête devant le signal.",
+          "explanation": "Avant la ligne d'arrêt. Sans ligne, avant le feu.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F2_Q1.webp"
         },
         {
           "id": "F2_Q3",
-          "question": "De quel côté de la chaussée le feu principal doit-il se trouver ?",
+          "question": "Où se trouve normalement le feu principal ?",
           "choices": [
             "À votre droite",
             "À votre gauche",
-            "Au-dessus, seul"
+            "Seulement au-dessus"
           ],
           "correct": 0,
-          "explanation": "Le signal lumineux principal doit être à droite.",
+          "explanation": "Le feu principal est à droite. Il peut être répété à gauche ou au-dessus.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F2_Q3.webp"
         },
         {
           "id": "F2_Q4",
-          "question": "Un feu est répété au-dessus de la chaussée et à gauche. Est-ce normal ?",
+          "question": "Le feu est répété au-dessus de la chaussée et à gauche. Est-ce normal ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le feu principal est à droite, mais il peut être répété au-dessus et/ou à gauche.",
+          "explanation": "Oui, ces feux répètent celui de droite.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F2_Q4.webp"
         },
         {
           "id": "F2_Q5",
-          "question": "Le feu se trouve exclusivement à votre gauche. Devez-vous en tenir compte ?",
+          "question": "Il n'y a qu'un feu, placé uniquement à votre gauche. Devez-vous en tenir compte ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Un feu uniquement à gauche ne doit pas être pris en compte.",
+          "correct": 0,
+          "explanation": "Le feu officiel est à droite. Un feu seul à gauche ne s'adresse pas à vous.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F2_Q5.webp"
         },
         {
           "id": "F2_Q6",
-          "question": "Ce feu de gauche est rouge et un cédez-le-passage est à votre droite. Que faites-vous ?",
+          "question": "Ce feu à gauche est rouge, et un panneau « cédez le passage » est à votre droite. Que suivez-vous ?",
           "choices": [
-            "Vous suivez le cédez-le-passage",
-            "Vous vous arrêtez au feu rouge",
-            "Vous passez sans rien regarder"
+            "Le cédez-le-passage",
+            "Le feu rouge de gauche",
+            "Rien"
           ],
           "correct": 0,
-          "explanation": "Le feu uniquement à gauche est ignoré — on applique les autres règles présentes.",
+          "explanation": "Le feu seul à gauche ne compte pas : vous suivez le panneau.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F2_Q6.webp"
         },
         {
           "id": "F2_Q7",
-          "question": "Une zone avancée pour cyclistes est aménagée au feu. Où arrêtez-vous votre voiture ?",
+          "question": "Zone avancée pour cyclistes au feu rouge. Où arrêtez-vous votre voiture ?",
           "choices": [
-            "Devant la première ligne",
-            "Devant la deuxième ligne",
-            "Dans le sas réservé aux vélos"
+            "Avant la première ligne",
+            "Avant la deuxième ligne",
+            "Dans la zone vélo"
           ],
           "correct": 0,
-          "explanation": "Les voitures s'arrêtent devant la première ligne (la plus éloignée du carrefour).",
+          "explanation": "Les voitures s'arrêtent avant la première ligne. La zone est pour les vélos.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F2_Q7.webp"
         },
         {
           "id": "F2_Q8",
-          "question": "Vous êtes cycliste devant cette zone avancée. Où vous placez-vous ?",
+          "question": "Vous êtes cycliste devant cette zone avancée. Où vous arrêtez-vous ?",
           "choices": [
-            "Devant la deuxième ligne",
-            "Devant la première ligne",
+            "Dans la zone, avant la deuxième ligne",
+            "Avant la première ligne",
             "Derrière les voitures"
           ],
           "correct": 0,
-          "explanation": "Les cyclistes s'arrêtent devant la deuxième ligne (la plus proche du carrefour).",
+          "explanation": "Le cycliste se place dans la zone, avant la deuxième ligne.",
           "theoryCardIndex": 0,
           "severe": true,
           "image": "/images/questions/F2_Q8.webp"
         },
         {
           "id": "F2_Q9",
-          "question": "Le feu est orange. Devez-vous respecter la première ligne d'arrêt de la zone avancée ?",
+          "question": "Le feu est orange. Respectez-vous la première ligne de la zone vélo ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La première ligne d'arrêt s'applique dès le feu orange ou rouge.",
+          "explanation": "Oui, au feu orange comme au rouge.",
           "theoryCardIndex": 0,
           "image": "/images/questions/F2_Q9.webp"
         },
         {
           "id": "F2_Q11",
-          "question": "Le feu passe au vert mais le carrefour est encombré. Pouvez-vous vous y engager ?",
+          "question": "Votre feu passe au vert mais le carrefour est encombré. Pouvez-vous y entrer ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le feu vert autorise à s'engager UNIQUEMENT si le carrefour est dégagé.",
+          "correct": 0,
+          "explanation": "Vous n'entrez que si vous pouvez traverser sans rester bloqué au milieu.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F2_Q11.webp"
         },
         {
           "id": "F2_Q13",
-          "question": "Un signal de priorité est placé sous un feu qui fonctionne. S'applique-t-il ?",
+          "question": "Un panneau de priorité est placé sous un feu qui fonctionne. Le suivez-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, vous suivez le feu",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les signaux de priorité sous le feu ne s'appliquent pas tant que les feux fonctionnent.",
+          "correct": 0,
+          "explanation": "Tant que les feux fonctionnent, ce sont eux qui comptent.",
           "theoryCardIndex": 1,
           "sign": "B1",
           "severe": true
         },
         {
           "id": "F2_Q14",
-          "question": "Les feux sont en panne et un signal de priorité est placé dessous. S'applique-t-il alors ?",
+          "question": "Les feux sont en panne, un panneau de priorité est placé dessous. Le suivez-vous ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les signaux de priorité reprennent leur rôle quand les feux ne fonctionnent plus.",
+          "explanation": "Feux en panne : le panneau reprend sa valeur.",
           "theoryCardIndex": 1,
           "sign": "B1",
           "severe": true
         },
         {
           "id": "F2_Q15",
-          "question": "Un feu jaune-orange clignotant remplace le vert, en dessous. Pouvez-vous vous engager ?",
+          "question": "Un feu orange clignote en bas, à la place du vert. Pouvez-vous avancer ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, prudemment, en respectant les priorités",
+            "Non, c'est comme un rouge"
           ],
           "correct": 0,
-          "explanation": "Feu jaune-orange clignotant en dessous = vous pouvez passer, mais avec prudence et en respectant les priorités.",
+          "explanation": "Vous pouvez passer, prudemment, en suivant les panneaux ou la priorité de droite.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F2_Q15.webp"
         },
         {
           "id": "F2_Q16",
-          "question": "Feu jaune-orange clignotant en dessous et panneau STOP à côté. Que faites-vous ?",
+          "question": "Orange clignotant en bas, et un panneau STOP à côté. Que faites-vous ?",
           "choices": [
             "Vous marquez l'arrêt au STOP",
-            "Vous passez, le feu prime",
-            "Vous ralentissez sans stopper"
+            "Vous passez",
+            "Vous ralentissez seulement"
           ],
           "correct": 0,
-          "explanation": "Le STOP doit être respecté même avec le feu jaune-orange clignotant.",
+          "explanation": "Avec l'orange clignotant, le STOP s'applique : arrêt complet.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/F2_Q16.webp"
         },
         {
           "id": "F2_Q17",
-          "question": "Vous attendez devant un feu jaune-orange clignotant placé en dessous. Passera-t-il au vert ?",
+          "question": "Ce feu orange clignote en bas. Va-t-il passer au vert ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Feu clignotant en dessous = jamais de vert à cet emplacement.",
+          "correct": 0,
+          "explanation": "Ce feu n'a jamais de vert : il clignote en permanence.",
           "theoryCardIndex": 1,
           "image": "/images/questions/F2_Q17.webp"
         },
         {
-          "id": "F2_Q18",
-          "question": "Quelle différence entre le jaune-orange clignotant en dessous et celui au milieu ?",
+          "id": "F2_Q19",
+          "question": "Vous roulez à 50 km/h et le feu passe à l'orange fixe. Que faites-vous ?",
           "choices": [
-            "En dessous : jamais de vert",
-            "En dessous : feux en panne",
-            "Aucune, c'est la même chose"
+            "Vous vous arrêtez",
+            "Vous accélérez",
+            "Vous continuez"
           ],
           "correct": 0,
-          "explanation": "Position du clignotant = sens différent : en dessous (remplace vert), au milieu (panne).",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/F2_Q18.webp"
-        },
-        {
-          "id": "F2_Q19",
-          "question": "Vous roulez à 50 km/h et le feu passe au jaune-orange fixe. Que devez-vous faire ?",
-          "choices": [
-            "Accélérer pour passer avant le rouge",
-            "Vous arrêter devant la ligne d'arrêt",
-            "Continuer normalement sans changer d'allure",
-            "Ralentir sans vous arrêter complètement"
-          ],
-          "correct": 1,
-          "explanation": "Feu jaune-orange fixe = s'arrêter, sauf si l'arrêt est impossible en toute sécurité.",
+          "explanation": "Orange fixe : arrêt, sauf si vous êtes trop près pour vous arrêter sans danger.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F2_Q19.webp"
         },
         {
           "id": "F2_Q20",
-          "question": "Le feu passe au jaune fixe et vous ne pouvez plus freiner en sécurité. Pouvez-vous franchir ?",
+          "question": "L'orange s'allume, vous êtes trop près pour freiner sans danger. Pouvez-vous passer ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La seule exception : ne plus pouvoir s'arrêter en toute sécurité.",
+          "explanation": "Oui, c'est la seule exception, sans mettre les autres en danger.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F2_Q20.webp"
         },
         {
           "id": "F2_Q21",
-          "question": "Quelle couleur apparaît après le feu jaune-orange fixe ?",
+          "question": "Quel feu suit l'orange fixe ?",
           "choices": [
             "Le rouge",
             "Le vert",
-            "Le clignotant"
+            "L'orange clignotant"
           ],
           "correct": 0,
-          "explanation": "Jaune-orange fixe → rouge.",
+          "explanation": "Vert, puis orange, puis rouge.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F2_Q21.webp"
         },
         {
           "id": "F2_Q22",
-          "question": "Vous arrivez à un carrefour et le feu jaune-orange clignote à l'emplacement central (à la place de l'orange fixe habituel). Que cela signifie-t-il ?",
+          "question": "L'orange du milieu clignote, rouge et vert sont éteints. Que signifie-t-il ?",
           "choices": [
-            "Le feu va bientôt passer au vert",
             "Les feux sont en panne",
-            "Le feu va passer au rouge",
-            "C'est un fonctionnement normal du feu"
+            "Le vert arrive",
+            "Le rouge arrive"
           ],
-          "correct": 1,
-          "explanation": "Feu jaune-orange clignotant au milieu = feux en panne.",
+          "correct": 0,
+          "explanation": "Orange clignotant au milieu : feux en panne ou éteints.",
           "theoryCardIndex": 2,
           "image": "/images/questions/F2_Q22.webp"
         },
         {
           "id": "F2_Q23",
-          "question": "Les feux d'un carrefour sont en panne (jaune-orange clignotant au milieu). Il n'y a aucun signal de priorité. Quelle règle appliquez-vous ?",
+          "question": "Feux en panne, aucun panneau ni marquage de priorité. Quelle règle s'applique ?",
           "choices": [
-            "Le premier arrivé passe en premier",
-            "La priorité de droite s'applique",
-            "Tout le monde doit s'arrêter et attendre",
-            "Les piétons ont la priorité absolue"
+            "La priorité de droite",
+            "Le premier arrivé",
+            "Tout le monde s'arrête"
           ],
-          "correct": 1,
-          "explanation": "Sans signal de priorité, feux en panne → priorité de droite.",
+          "correct": 0,
+          "explanation": "Sans panneau, la priorité de droite.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F2_Q23.webp"
         },
         {
           "id": "F2_Q24",
-          "question": "Les feux sont en panne et un cédez-le-passage est visible dessous. Que faites-vous ?",
+          "question": "Feux en panne, un « cédez le passage » est placé dessous. Que faites-vous ?",
           "choices": [
             "Vous suivez le cédez-le-passage",
             "Vous prenez la priorité de droite",
-            "Vous passez sans vous arrêter"
+            "Vous passez"
           ],
           "correct": 0,
-          "explanation": "En panne, les signaux de priorité présents s'appliquent.",
+          "explanation": "En panne, les panneaux présents s'appliquent.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/F2_Q24.webp"
         },
         {
-          "id": "F2_Q26",
-          "question": "Quelle différence de comportement entre le jaune fixe et le jaune clignotant au milieu ?",
-          "choices": [
-            "Fixe : s'arrêter ; clignotant : panne",
-            "Fixe : panne ; clignotant : s'arrêter",
-            "Aucune, le comportement est le même"
-          ],
-          "correct": 0,
-          "explanation": "Fixe → s'arrêter. Clignotant au milieu → panne, appliquer les règles de priorité.",
-          "theoryCardIndex": 2,
-          "severe": true,
-          "image": "/images/questions/F2_Q26.webp"
-        },
-        {
           "id": "F2_Q27",
-          "question": "Vous êtes cycliste, un panneau B22 est sous le feu rouge. Que pouvez-vous faire ?",
+          "question": "Cycliste au feu rouge, avec ce petit panneau sous le feu (vélo et flèche à droite). Que pouvez-vous faire ?",
           "choices": [
-            "Tourner à droite malgré le rouge",
-            "Aller tout droit malgré le rouge",
-            "Tourner à gauche malgré le rouge"
+            "Tourner à droite",
+            "Aller tout droit",
+            "Tourner à gauche"
           ],
           "correct": 0,
-          "explanation": "B22 = autorisation de tourner à droite au feu rouge ou orange.",
+          "explanation": "Ce panonceau permet au cycliste de tourner à droite au rouge, en cédant le passage.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F2_Q27.webp"
         },
         {
           "id": "F2_Q28",
-          "question": "Vous êtes cycliste au feu rouge. Un panneau B23 est placé sous le feu. Que pouvez-vous faire ?",
+          "question": "Cycliste au feu rouge, avec ce petit panneau sous le feu (vélo et flèche droite). Que pouvez-vous faire ?",
           "choices": [
-            "Tourner à droite malgré le feu",
-            "Aller tout droit malgré le feu",
-            "Tourner à gauche malgré le feu",
-            "Faire demi-tour au carrefour"
+            "Aller tout droit",
+            "Tourner à droite",
+            "Tourner à gauche"
           ],
-          "correct": 1,
-          "explanation": "B23 = autorisation d'aller tout droit au feu rouge ou orange.",
+          "correct": 0,
+          "explanation": "Ce panonceau permet au cycliste d'aller tout droit au rouge, en cédant le passage.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F2_Q28.webp"
         },
         {
-          "id": "F2_Q29",
-          "question": "Le panneau B22 prime-t-il sur le feu rouge ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 0,
-          "explanation": "B22 et B23 priment sur les feux : ils constituent une exception légale.",
-          "theoryCardIndex": 3,
-          "sign": "B22",
-          "severe": true
-        },
-        {
           "id": "F2_Q30",
-          "question": "Vous tournez à droite au rouge grâce au B22. Devez-vous céder le passage ?",
+          "question": "Vous tournez à droite au rouge grâce à ce panonceau vélo. Devez-vous céder le passage ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Même avec le B22, le cycliste cède à tous les usagers de la voie transversale.",
+          "explanation": "Oui, à tous ceux qui ont le vert et aux piétons.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F2_Q30.webp"
         },
         {
           "id": "F2_Q31",
-          "question": "Vous êtes en voiture et un B22 est sous le feu rouge. Pouvez-vous tourner à droite ?",
+          "question": "Vous êtes en voiture. Ce panonceau vélo est sous le feu rouge. Pouvez-vous tourner à droite ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "B22 et B23 s'adressent exclusivement aux cyclistes et speed pedelecs.",
+          "correct": 0,
+          "explanation": "Il ne vaut que pour les cyclistes et les speed pedelecs.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F2_Q31.webp"
         },
         {
           "id": "F2_Q33",
-          "question": "Une flèche rouge pointe vers la gauche à la place du feu circulaire. Que signifie-t-elle ?",
+          "question": "Une flèche rouge vers la gauche remplace le feu rond. Que signifie-t-elle ?",
           "choices": [
             "Seule la gauche est interdite",
-            "Toutes les directions interdites",
-            "Il est interdit d'aller à droite"
+            "Tout est interdit",
+            "La droite est interdite"
           ],
           "correct": 0,
-          "explanation": "La flèche rouge n'interdit que la direction indiquée, pas les autres directions.",
+          "explanation": "Une flèche n'interdit que la direction qu'elle montre.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F2_Q33.webp"
@@ -1517,380 +1473,364 @@
           "id": "F2_Q34",
           "question": "Une flèche verte vers la droite est allumée. Pouvez-vous aller tout droit ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "La flèche verte n'autorise que la direction indiquée.",
+          "correct": 0,
+          "explanation": "La flèche verte n'autorise que sa direction.",
           "theoryCardIndex": 3,
           "image": "/images/questions/F2_Q34.webp"
         },
         {
           "id": "F2_Q36",
-          "question": "Le feu rouge est allumé mais une flèche verte pointe à droite. Pouvez-vous tourner à droite ?",
+          "question": "Feu rouge, avec une flèche verte vers la droite allumée à côté. Pouvez-vous tourner à droite ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Feu rouge + flèche verte = vous pouvez suivre la direction de la flèche, avec prudence.",
+          "explanation": "Oui, dans la direction de la flèche, en cédant le passage.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F2_Q36.webp"
         },
         {
           "id": "F2_Q37",
-          "question": "Vous tournez à droite grâce à cette flèche verte. Devez-vous céder le passage ?",
+          "question": "Vous tournez à droite grâce à cette flèche verte, à côté du feu rouge. Devez-vous céder le passage ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Feu rouge + flèche verte = céder à tous les usagers de toutes les directions.",
+          "explanation": "Oui, aux conducteurs venant des autres directions et aux piétons.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F2_Q37.webp"
         },
         {
           "id": "F2_Q38",
-          "question": "Le feu est rouge avec une flèche verte vers la droite. Vous tournez à droite et un piéton traverse de droite. Que faites-vous ?",
+          "question": "Rouge + flèche verte à droite. Vous tournez et un piéton traverse. Que faites-vous ?",
           "choices": [
-            "Vous passez : la flèche verte vous y autorise",
-            "Vous cédez le passage au piéton",
-            "Vous klaxonnez pour avertir le piéton",
-            "Vous accélérez pour passer avant lui"
+            "Vous le laissez passer",
+            "Vous passez, la flèche vous y autorise",
+            "Vous klaxonnez"
           ],
-          "correct": 1,
-          "explanation": "La flèche verte ne donne aucune priorité — vous cédez à tous.",
+          "correct": 0,
+          "explanation": "La flèche verte ne donne pas la priorité : vous cédez aux piétons.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/F2_Q38.webp"
         },
         {
-          "id": "F2_Q39",
-          "question": "Quelle différence entre un feu vert circulaire et un feu rouge avec flèche verte ?",
-          "choices": [
-            "La flèche impose de céder le passage",
-            "Le vert impose de céder le passage",
-            "Aucune, les deux se valent ici"
-          ],
-          "correct": 0,
-          "explanation": "Feu vert = toutes directions, priorité normale. Feu rouge + flèche verte = une direction seulement, céder à tous.",
-          "theoryCardIndex": 3,
-          "severe": true,
-          "image": "/images/questions/F2_Q39.webp"
-        },
-        {
           "id": "F2_Q41",
-          "question": "Une flèche verte isolée est placée au-delà du carrefour, à gauche. De quoi s'agit-il ?",
+          "question": "Une flèche verte seule, vers la gauche, est placée à la sortie du carrefour. Qu'est-ce que c'est ?",
           "choices": [
-            "D'une flèche d'évacuation",
-            "D'un feu vert supplémentaire",
-            "D'un signal pour les piétons"
+            "Une flèche d'évacuation",
+            "Un feu vert en plus",
+            "Un feu pour piétons"
           ],
           "correct": 0,
-          "explanation": "La flèche d'évacuation aide les conducteurs déjà dans le carrefour à tourner à gauche.",
+          "explanation": "Elle signale que le trafic d'en face est arrêté : ceux qui attendent au milieu peuvent tourner à gauche.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F2_Q41.webp"
         },
         {
           "id": "F2_Q43",
-          "question": "La flèche d'évacuation est allumée mais votre feu est rouge. Pouvez-vous entrer dans le carrefour ?",
+          "question": "La flèche d'évacuation est allumée, mais votre feu est rouge. Pouvez-vous entrer dans le carrefour ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "La flèche d'évacuation ne permet PAS d'entrer au rouge — elle aide ceux déjà dans le carrefour.",
+          "correct": 0,
+          "explanation": "Elle sert à ceux qui sont déjà dans le carrefour. Vous, vous restez au rouge.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/F2_Q43.webp"
         },
         {
           "id": "F2_Q45",
-          "question": "Vous êtes dans le carrefour pour tourner à gauche et la voie est libre. Devez-vous attendre la flèche d'évacuation ?",
+          "question": "Vous êtes dans le carrefour pour tourner à gauche, et personne ne vient en face. Devez-vous attendre la flèche d'évacuation ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Si la voie est libre, vous pouvez évacuer sans attendre la flèche d'évacuation.",
+          "correct": 0,
+          "explanation": "Si la voie est libre, vous pouvez tourner sans attendre la flèche.",
           "theoryCardIndex": 4,
           "image": "/images/questions/F2_Q45.webp"
         },
         {
           "id": "F2_Q47",
-          "question": "Une flèche verte est affichée au-dessus d'une bande. Que signifie-t-elle ?",
+          "question": "Une flèche verte est allumée au-dessus d'une bande. Que signifie-t-elle ?",
           "choices": [
-            "La bande est autorisée",
-            "Une vitesse minimale y est due",
-            "Le changement de bande est interdit"
+            "La bande est ouverte",
+            "Vitesse minimale obligatoire",
+            "Changement de bande interdit"
           ],
           "correct": 0,
-          "explanation": "Flèche verte = bande empruntable.",
+          "explanation": "Flèche verte : vous pouvez rouler sur cette bande.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F2_Q47.webp"
         },
         {
           "id": "F2_Q48",
-          "question": "La flèche verte est au-dessus de la bande de gauche. Devez-vous obligatoirement y rouler ?",
+          "question": "La flèche verte est au-dessus de la bande de gauche. Devez-vous y rouler ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "La flèche verte autorise, elle n'oblige pas. La règle de base (bande de droite) reste.",
+          "correct": 0,
+          "explanation": "Elle autorise, elle n'oblige pas : vous restez à droite.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F2_Q48.webp"
         },
         {
           "id": "F2_Q49",
-          "question": "Une flèche jaune-orange apparaît au-dessus de votre bande. Que devez-vous faire ?",
+          "question": "Une flèche orange oblique s'allume au-dessus de votre bande. Que faites-vous ?",
           "choices": [
-            "Quitter la bande dès que possible",
-            "Rester sur cette bande sans souci",
-            "Accélérer pour dégager plus vite"
+            "Vous quittez la bande dès que possible",
+            "Vous restez sur la bande",
+            "Vous accélérez"
           ],
           "correct": 0,
-          "explanation": "Flèche jaune-orange = quittez cette bande dès que possible en toute sécurité.",
+          "explanation": "Flèche orange : quittez la bande, en sécurité, dans le sens de la flèche.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F2_Q49.webp"
         },
         {
           "id": "F2_Q50",
-          "question": "Vous ne pouvez pas encore quitter cette bande. Pouvez-vous y circuler quelques instants ?",
+          "question": "Flèche orange, mais vous ne pouvez pas encore changer de bande. Pouvez-vous rester un moment ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, le temps de pouvoir changer",
+            "Non, vous vous arrêtez"
           ],
           "correct": 0,
-          "explanation": "Si impossible de se rabattre, on peut encore circuler — mais la croix rouge va suivre.",
+          "explanation": "Vous changez dès que c'est possible sans danger. La croix rouge suivra.",
           "theoryCardIndex": 5,
           "image": "/images/questions/F2_Q50.webp"
         },
         {
           "id": "F2_Q52",
-          "question": "Une croix rouge est affichée au-dessus de votre bande. Que signifie ce signal ?",
+          "question": "Une croix rouge est allumée au-dessus de votre bande. Que signifie-t-elle ?",
           "choices": [
-            "La bande est interdite",
+            "La bande est fermée",
             "La bande est prioritaire",
             "La bande est pour les bus"
           ],
           "correct": 0,
-          "explanation": "Croix rouge = interdiction d'emprunter cette bande.",
+          "explanation": "Croix rouge : interdit de rouler sur cette bande.",
           "theoryCardIndex": 5,
           "sign": "CROIX_ROUGE_VOIE"
         },
         {
           "id": "F2_Q54",
-          "question": "Quel est l'ordre de progression des signaux au-dessus des bandes ?",
+          "question": "Dans quel ordre ces signaux se suivent-ils pour fermer une bande ?",
           "choices": [
-            "Verte, jaune-orange, croix rouge",
-            "Croix rouge, jaune-orange, verte",
-            "Jaune-orange, verte, croix rouge"
+            "Vert, orange, croix rouge",
+            "Croix rouge, orange, vert",
+            "Orange, vert, croix rouge"
           ],
           "correct": 0,
-          "explanation": "L'ordre est : vert (autorisé) → jaune-orange (quittez) → croix rouge (interdit).",
+          "explanation": "Ouverte (vert), à quitter (orange), fermée (croix rouge).",
           "theoryCardIndex": 5,
           "image": "/images/questions/F2_Q54.webp"
         },
         {
           "id": "F2_Q55",
-          "question": "Un feu blanc lunaire clignote à un passage à niveau. Que signifie-t-il ?",
+          "question": "Le feu blanc clignote au passage à niveau. Que signifie-t-il ?",
           "choices": [
-            "Aucun train, passage autorisé",
-            "Un train approche, arrêtez-vous",
-            "Le passage à niveau est fermé"
+            "Vous pouvez passer",
+            "Un train arrive",
+            "Le passage est fermé"
           ],
           "correct": 0,
-          "explanation": "Feu blanc lunaire clignotant = autorisé à franchir le passage à niveau.",
+          "explanation": "Feu blanc clignotant : le passage est libre, vous pouvez franchir.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q55.webp"
         },
         {
           "id": "F2_Q56",
-          "question": "Ce feu blanc lunaire clignote. Pouvez-vous dépasser par la gauche ?",
+          "question": "Le feu blanc clignote au passage à niveau. Pouvez-vous dépasser par la gauche ?",
           "choices": [
-            "Oui",
+            "Oui, si la voie est libre",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Feu blanc lunaire = autorise aussi le dépassement par la gauche à un passage à niveau.",
+          "explanation": "Un passage à niveau réglé par des feux n'interdit pas le dépassement, si la voie est libre.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q56.webp"
         },
         {
           "id": "F2_Q57",
-          "question": "Deux feux rouges clignotent alternativement au passage à niveau. Que faites-vous ?",
+          "question": "Les deux feux rouges clignotent au passage à niveau, les barrières sont encore hautes. Que faites-vous ?",
           "choices": [
-            "Vous ne franchissez pas la ligne",
-            "Vous traversez en regardant bien",
-            "Vous passez si les barrières sont hautes"
+            "Vous vous arrêtez",
+            "Vous passez vite",
+            "Vous passez si aucun train n'est visible"
           ],
           "correct": 0,
-          "explanation": "Deux feux rouges alternants = arrêt absolu, même sans ligne d'arrêt.",
+          "explanation": "Feux rouges : arrêt absolu, même si les barrières sont levées.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q57.webp"
         },
         {
           "id": "F2_Q58",
-          "question": "Vous êtes piéton devant ces feux rouges clignotants. L'interdiction vous concerne-t-elle ?",
+          "question": "Vous êtes piéton devant ces feux rouges clignotants. Pouvez-vous traverser ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "L'interdiction des feux rouges au passage à niveau s'applique à tous, piétons inclus.",
+          "explanation": "L'interdiction vaut pour tous, piétons compris.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q58.webp"
         },
         {
           "id": "F2_Q59",
-          "question": "Vous franchissez les feux rouges clignotants d'un passage à niveau. Quelle en est la gravité ?",
+          "question": "Cette voiture s'engage sur les rails malgré les feux rouges du passage à niveau. Qu'en dit le code ?",
           "choices": [
-            "Grave, retrait du permis possible",
-            "Mineure, sans grande portée",
-            "Une simple amende, sans plus"
+            "Infraction très grave",
+            "Petite infraction",
+            "Rien si aucun train"
           ],
           "correct": 0,
-          "explanation": "Franchir les feux rouges d'un passage à niveau = infraction grave, retrait immédiat du permis.",
+          "explanation": "Franchir les feux rouges d'un passage à niveau est une des infractions les plus graves.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q59.webp"
         },
         {
           "id": "F2_Q60",
-          "question": "Vous êtes en voiture et un feu affiche une silhouette verte de piéton. Ce feu vous concerne-t-il ?",
+          "question": "Vous êtes en voiture. Un feu montre un piéton vert. Vous concerne-t-il ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Silhouette piéton = uniquement pour les piétons.",
+          "correct": 0,
+          "explanation": "Il ne vaut que pour les piétons.",
           "theoryCardIndex": 6,
           "sign": "FEU_PIETON_VERT"
         },
         {
           "id": "F2_Q61",
-          "question": "Un feu affiche la silhouette verte d'un vélo. Quels usagers sont concernés ?",
+          "question": "Un feu montre un vélo vert. À qui s'adresse-t-il ?",
           "choices": [
-            "Cyclistes et cyclomoteurs",
-            "Les conducteurs de voiture",
-            "Les piétons qui traversent"
+            "Aux cyclistes et cyclomoteurs à deux roues",
+            "Aux voitures",
+            "Aux piétons"
           ],
           "correct": 0,
-          "explanation": "Silhouette vélo = uniquement cyclistes et cyclomoteurs à deux roues.",
+          "explanation": "Feu vélo : cyclistes et cyclomoteurs à deux roues.",
           "theoryCardIndex": 6,
           "sign": "FEU_VELO_VERT"
         },
         {
           "id": "F2_Q62",
-          "question": "Un feu affiche un cycliste et un piéton. À qui s'adresse-t-il ?",
+          "question": "Un feu montre un vélo et un piéton. À qui s'adresse-t-il ?",
           "choices": [
-            "Cyclistes, cyclomoteurs, piétons",
-            "Aux cyclistes et personne d'autre",
-            "À tous les usagers de la route"
+            "Cyclistes, cyclomoteurs et piétons",
+            "Seulement aux cyclistes",
+            "À tous"
           ],
           "correct": 0,
-          "explanation": "Silhouette cycliste + piéton = cyclistes, cyclomoteurs à 2 roues ET piétons.",
+          "explanation": "Aux cyclistes, aux cyclomoteurs admis sur la piste et aux piétons.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F2_Q62.webp"
         },
         {
           "id": "F2_Q64",
-          "question": "Vous êtes cycliste et un feu vert carré s'allume. Que pouvez-vous faire ?",
+          "question": "Cycliste, le vert s'allume pour tous les vélos en même temps. Que pouvez-vous faire ?",
           "choices": [
-            "Traverser en tous sens, même en biais",
-            "Aller tout droit et rien de plus",
-            "Tourner à droite, sans autre choix"
+            "Traverser dans tous les sens, même en biais",
+            "Aller seulement tout droit",
+            "Tourner seulement à droite"
           ],
           "correct": 0,
-          "explanation": "Feu vert carré = traversée en tous sens (y compris diagonale) pour les cyclistes.",
+          "explanation": "Vert pour tous les cyclistes : traversée dans tous les sens, même en diagonale.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F2_Q64.webp"
         },
         {
           "id": "F2_Q65",
-          "question": "Ce feu vert carré pour cyclistes est allumé. Quelle couleur voient les autres conducteurs ?",
+          "question": "Le vert est allumé pour tous les cyclistes. Que voient les autres conducteurs ?",
           "choices": [
-            "Le feu rouge",
-            "Le feu vert",
-            "Le feu orange"
+            "Le rouge",
+            "Le vert",
+            "L'orange"
           ],
           "correct": 0,
-          "explanation": "Quand le feu vert carré est pour les cyclistes, tous les autres voient le feu rouge.",
+          "explanation": "Tous les autres ont le rouge.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q65.webp"
         },
         {
           "id": "F2_Q66",
-          "question": "Deux cyclistes se croisent dans ce carrefour. Quelle règle de priorité s'applique entre eux ?",
+          "question": "Deux cyclistes se croisent dans ce carrefour, tous au vert. Qui passe en premier ?",
           "choices": [
-            "La priorité de droite",
-            "Le premier arrivé passe",
-            "Le plus rapide passe"
+            "Celui qui vient de droite",
+            "Le premier arrivé",
+            "Le plus rapide"
           ],
           "correct": 0,
-          "explanation": "Entre cyclistes au feu vert carré, la priorité de droite s'applique.",
+          "explanation": "Entre eux, la priorité de droite s'applique.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q66.webp"
         },
         {
           "id": "F2_Q67",
-          "question": "Des barres lumineuses sont installées à un carrefour. À qui sont-elles destinées ?",
+          "question": "Ces feux à barres blanches sont installés au carrefour. À qui s'adressent-ils ?",
           "choices": [
-            "Aux trams et aux autobus",
+            "Aux trams et aux bus",
             "À tous les conducteurs",
-            "Aux piétons qui traversent"
+            "Aux piétons"
           ],
           "correct": 0,
-          "explanation": "Les barres lumineuses sont réservées aux conducteurs de transport en commun.",
+          "explanation": "Ce sont les feux des transports en commun.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F2_Q67.webp"
         },
         {
           "id": "F2_Q68",
-          "question": "Vous observez un signal de transport en commun en forme de triangle pointe en bas. À quel feu classique correspond-il ?",
+          "question": "Ce feu de tram montre un triangle pointe en bas. À quel feu correspond-il ?",
           "choices": [
-            "Au feu rouge",
-            "Au feu vert",
-            "Au feu orange",
-            "Au feu clignotant"
+            "Au vert",
+            "Au rouge",
+            "À l'orange"
           ],
-          "correct": 1,
-          "explanation": "Triangle pointe en bas (TC) = équivalent du feu vert.",
+          "correct": 0,
+          "explanation": "Triangle pointe en bas : passage autorisé, comme un feu vert.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F2_Q68.webp"
         },
         {
           "id": "F2_Q69",
-          "question": "Un signal de transport en commun affiche une barre horizontale. À quel feu correspond-il ?",
+          "question": "Ce feu de tram montre une barre horizontale. À quel feu correspond-il ?",
           "choices": [
-            "Au feu rouge",
-            "Au feu vert",
-            "Au feu orange"
+            "Au rouge",
+            "Au vert",
+            "À l'orange"
           ],
           "correct": 0,
-          "explanation": "Barre horizontale (TC) = équivalent du feu rouge.",
+          "explanation": "Barre horizontale : arrêt, comme un feu rouge.",
           "theoryCardIndex": 6,
           "severe": true,
           "image": "/images/questions/F2_Q69.webp"
         },
         {
           "id": "F2_Q70",
-          "question": "Vous circulez exceptionnellement sur un site franchissable. Devez-vous respecter ces feux ?",
+          "question": "Vous roulez exceptionnellement sur le site du tram. Ce feu à barre horizontale s'allume. Que faites-vous ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Vous vous arrêtez",
+            "Vous l'ignorez, il est pour le tram"
           ],
           "correct": 0,
-          "explanation": "Sur un site spécial franchissable, les feux de TC s'appliquent à tous.",
+          "explanation": "Sur le site du tram, ses feux s'appliquent aussi à vous.",
           "theoryCardIndex": 6,
           "image": "/images/questions/F2_Q70.webp"
         },
@@ -1921,6 +1861,30 @@
           "explanation": "F11 marque la fin d'une route pour automobiles (F9). Les règles associées à ce type de route (vitesse, usagers autorisés…) ne s'appliquent plus.",
           "sign": "F11",
           "destination": "panneaux"
+        },
+        {
+          "id": "F2_Q72",
+          "question": "Votre feu est vert. Vous voulez tourner à gauche, mais des voitures arrivent en face. Que faites-vous ?",
+          "choices": [
+            "Vous avancez au milieu du carrefour et attendez",
+            "Vous attendez avant la ligne d'arrêt",
+            "Vous tournez avant elles"
+          ],
+          "correct": 0,
+          "explanation": "Au vert, vous pouvez avancer au milieu du carrefour et attendre que la voie soit libre pour tourner.",
+          "theoryCardIndex": 4
+        },
+        {
+          "id": "F2_Q73",
+          "question": "Vous attendez au milieu du carrefour pour tourner à gauche. La flèche d'évacuation s'allume. Que signifie-t-elle ?",
+          "choices": [
+            "Le trafic d'en face est arrêté : vous tournez",
+            "Vous devez reculer",
+            "Vous devez attendre le vert suivant"
+          ],
+          "correct": 0,
+          "explanation": "La flèche d'évacuation indique que ceux d'en face ont le rouge : vous pouvez dégager le carrefour.",
+          "theoryCardIndex": 4
         }
       ]
     },
