@@ -45,9 +45,9 @@
               "explanation_simple": "Parking uitrijden, keren, wegrijden van de kant: bij een manoeuvre verleen je voorrang aan iedereen, zonder uitzondering."
             },
             {
-              "title": "Het fietspad verlaten of oversteken",
-              "content": "📋 De regel\nWanneer je het fietspad verlaat om je op de rijbaan in te voegen, of een rijbaan oversteekt vanaf het fietspad, voer je een manoeuvre uit: de voertuigen op de rijbaan gaan eerst.\n\n💡 Waarom\nDe bestuurders op de rijbaan verwachten niet dat een bromfiets uit het fietspad opduikt: de overgang is JOUW kritieke moment.\n\n🛵 In de praktijk\nEinde van het fietspad: vertraag, schoudercheck links, geef een teken, en voeg in in een echte opening — niet in een hoop.\n\n📍 Voorbeeld\nHet fietspad stopt 50 m vóór het kruispunt: je voegt in achter de blauwe auto, niet ervoor.\n\n⚠️ Veelgemaakte fout\n« Rechtdoor » blijven rijden van het pad naar de rijbaan alsof er niets gebeurt: die overgang is een invoeging, geen recht.",
-              "explanation_simple": "Fietspad → rijbaan = invoegen = manoeuvre: wie op de rijbaan rijdt, gaat vóór jou."
+              "title": "Op het einde van het fietspad",
+              "content": "📋 De regel\nAls het fietspad ophoudt en je rechtdoor verder rijdt op de rijbaan, is dat geen manoeuvre. Het fietspad onderweg verlaten of de rijbaan oversteken is wel een manoeuvre: je verleent voorrang.\n\n💡 Waarom\nRechtdoor rijden is je weg volgen. Van kant wisselen of de rijbaan oversteken verrast de anderen.\n\n🛵 In de praktijk\nEinde fietspad: kijk in je spiegel en hou goed rechts. Om het fietspad ergens anders te verlaten of over te steken: wacht op een echte opening.\n\n⚠️ Veelgemaakte fout\nDenken dat je op het einde van het fietspad voorrang moet geven aan iedereen: niet als je rechtdoor rijdt.",
+              "explanation_simple": "Einde fietspad, rechtdoor: geen manoeuvre. Fietspad elders verlaten of oversteken: manoeuvre, je verleent voorrang."
             }
           ]
         }
@@ -55,124 +55,153 @@
       "questions": [
         {
           "id": "AM_D1_Q1",
-          "question": "Kruispunt zonder enige signalisatie: wie gaat eerst?",
+          "question": "Kruispunt zonder borden of lichten. Wie mag eerst?",
           "choices": [
-            "Het snelste voertuig",
             "Wie van rechts komt",
-            "Wie het eerst aankwam",
-            "Het grootste voertuig"
+            "Wie eerst aankomt",
+            "De grootste"
           ],
-          "explanation": "Zonder signalisatie geldt de voorrang van rechts: je verleent voorrang aan elke bestuurder die regelmatig van rechts komt."
+          "explanation": "Voorrang van rechts.",
+          "correct": 0
         },
         {
           "id": "AM_D1_Q2",
-          "question": "Jij hebt voorrang maar een auto links vertraagt niet. Wat doe je?",
+          "question": "Je hebt voorrang, maar de auto vertraagt niet. Je:",
           "choices": [
-            "Je rijdt door, jij hebt voorrang",
-            "Je ziet af van je voorrang en laat hem passeren",
-            "Je claxonneert en versnelt",
-            "Je stopt midden op het kruispunt"
+            "Laat hem voorgaan",
+            "Rijdt door, het is je recht",
+            "Toetert en versnelt"
           ],
-          "explanation": "Voorrang forceer je nooit: respecteert de ander ze niet, dan zie je ervan af — op twee wielen betaal jij de botsing."
+          "explanation": "Voorrang hebben beschermt je niet tegen een botsing.",
+          "correct": 0
         },
         {
           "id": "AM_D1_Q3",
-          "question": "Aan een kruispunt heeft de straat tegenover jou een STOP en jij niets. Wat leid je daaruit af?",
+          "question": "De straat tegenover heeft een STOP, jij hebt niets. Je besluit:",
           "choices": [
-            "Jij moet ook stoppen",
-            "Jij bent op de voorrangsweg aan dit kruispunt",
-            "De voorrang van rechts geldt",
-            "De lichten springen zo op rood"
+            "Je rijdt op de voorrangsweg",
+            "Je moet ook stoppen",
+            "Voorrang van rechts geldt"
           ],
-          "explanation": "De borden van de anderen lezen informeert je: hun STOP betekent dat zij jou voorrang verlenen — blijf niettemin aandachtig."
+          "explanation": "De straten met een STOP verlenen jou voorrang.",
+          "correct": 0
         },
         {
           "id": "AM_D1_Q4",
-          "question": "Je slaat linksaf aan een kruispunt. Aan wie verleen je voorrang?",
+          "question": "Je slaat links af. Aan wie verleen je voorrang?",
           "choices": [
-            "Aan niemand als je groen hebt",
-            "Aan de tegemoetkomende voertuigen en de voetgangers van de zijstraat",
-            "Enkel aan vrachtwagens en bussen",
-            "Enkel aan voertuigen van rechts"
+            "Aan tegenliggers en voetgangers in de straat waar je inrijdt",
+            "Aan niemand bij groen",
+            "Alleen aan bussen"
           ],
-          "explanation": "Links afslaan verplicht voorrang te verlenen aan het tegemoetkomend verkeer, en daarna aan de voetgangers en fietsers die de straat oversteken waar je inrijdt."
+          "explanation": "Links afslaan: voorrang aan tegenliggers en voetgangers.",
+          "correct": 0
         },
         {
           "id": "AM_D1_Q5",
-          "question": "Je rijdt de parking van een winkel uit naar de rijbaan. Wie heeft voorrang?",
+          "question": "Je rijdt de parking van een winkel uit. Wie heeft voorrang?",
           "choices": [
-            "Jij, want je komt van rechts",
-            "Alle andere weggebruikers: het is een manoeuvre",
-            "Enkel de auto's, niet de fietsen",
-            "Wie het eerst aan de uitrit is"
+            "Alle anderen",
+            "Jij, als je van rechts komt",
+            "Wie eerst aankomt"
           ],
-          "explanation": "Een eigendom verlaten is een manoeuvre: je verleent voorrang aan IEDEREEN — voetgangers, fietsers en voertuigen."
+          "explanation": "Een parking uitrijden is een manoeuvre: je verleent voorrang aan iedereen.",
+          "correct": 0
         },
         {
           "id": "AM_D1_Q6",
-          "question": "Het fietspad eindigt en je moet invoegen op de rijbaan. Je:",
+          "question": "Het fietspad houdt op, je rijdt rechtdoor verder op de rijbaan. Is dat een manoeuvre?",
           "choices": [
-            "Rijdt rechtdoor, jij was er eerst",
-            "Verleent voorrang aan de voertuigen op de rijbaan vóór je invoegt",
-            "Hebt voorrang want je komt van het fietspad",
-            "Stopt verplicht 3 seconden"
+            "Nee",
+            "Ja, je verleent voorrang aan iedereen",
+            "Ja, je moet stoppen"
           ],
-          "explanation": "Het fietspad verlaten voor de rijbaan is een invoeging, dus een manoeuvre: de voertuigen op de rijbaan gaan eerst."
+          "explanation": "Op het einde van het fietspad rechtdoor rijden is geen manoeuvre. Blijf toch opletten.",
+          "correct": 0
         },
         {
           "id": "AM_D1_B1",
-          "question": "Kruispunt zonder signalisatie: een FIETS komt van rechts. Wie gaat eerst?",
+          "question": "Kruispunt zonder borden: een fiets komt van rechts. Wie mag eerst?",
           "choices": [
-            "Jij, jouw voertuig is gemotoriseerd",
-            "De fiets: de voorrang van rechts geldt voor elke bestuurder",
-            "De snelste van de twee",
-            "Wie het eerst claxonneert"
+            "De fiets",
+            "Jij, je hebt een motor",
+            "De snelste"
           ],
-          "explanation": "De fietser is een bestuurder: komt hij van rechts, dan heeft hij voorrang — de motorisatie speelt geen enkele rol."
+          "explanation": "Voorrang van rechts geldt ook voor fietsers.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_D1_B2",
-          "question": "Je wilt keren op de rijbaan. Dat is:",
+          "question": "Keren op de rijbaan is:",
           "choices": [
             "Een manoeuvre: je verleent voorrang aan iedereen",
-            "Een prioritair recht",
-            "Verboden voor elke bromfiets",
-            "Enkel toegelaten aan kruispunten"
+            "Een recht",
+            "Verboden met een bromfiets"
           ],
-          "explanation": "Keren is een manoeuvre: je rijdt pas nadat je alle andere weggebruikers hebt laten passeren."
+          "explanation": "Keren = manoeuvre.",
+          "correct": 0,
+          "theoryCardIndex": 2
         },
         {
           "id": "AM_D1_B3",
-          "question": "Bij het uitrijden van een garage kruis je eerst het voetpad. Wie gaat eerst?",
+          "question": "Je rijdt een garage uit over het trottoir. Wie mag eerst?",
           "choices": [
-            "Jij, je bent gemotoriseerd",
-            "Niemand, ieder trekt zijn plan",
-            "De voetgangers op het voetpad",
-            "Enkel de voertuigen op de rijbaan"
+            "De voetgangers",
+            "Jij",
+            "Niemand"
           ],
-          "explanation": "Een eigendom verlaten = manoeuvre: eerst gaan de voetgangers van het voetpad, daarna de weggebruikers van de rijbaan."
+          "explanation": "Je komt uit een eigendom: voorrang aan iedereen, ook voetgangers.",
+          "correct": 0,
+          "theoryCardIndex": 2
         },
         {
           "id": "AM_D1_C1",
-          "question": "Kruispunt zonder signalisatie: een auto komt van links, een fiets van rechts. De volgorde?",
+          "question": "Zonder borden: een auto links van je, een fiets rechts. De volgorde?",
           "choices": [
-            "De auto eerst, hij is sneller",
-            "De fiets gaat, dan jij, dan de auto",
-            "Jij eerst, jij was er in het midden",
-            "Ieder rijdt wanneer het hem uitkomt"
+            "De fiets, jij, de auto",
+            "De auto, jij, de fiets",
+            "Jij, de fiets, de auto"
           ],
-          "explanation": "Ieder verleent voorrang aan zijn rechterkant: jij aan de fiets, de auto aan jou — de volgorde is fiets, jij, auto."
+          "explanation": "Iedereen verleent voorrang aan wie van rechts komt.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_D1_C2",
-          "question": "Je slaat rechtsaf; een voetganger steekt de straat over waar jij inrijdt. Jij:",
+          "question": "Je slaat rechts af, een voetganger steekt de straat over waar je inrijdt. Je:",
           "choices": [
-            "Passeert achter hem terwijl je versnelt",
-            "Claxonneert om hem op te jagen",
-            "Laat hem eerst volledig oversteken vóór je inrijdt",
-            "Passeert vóór hem, jij bent gemotoriseerd"
+            "Laat hem oversteken",
+            "Rijdt voor hem langs",
+            "Toetert"
           ],
-          "explanation": "Bij het afslaan verleen je voorrang aan de voetgangers die de straat oversteken waar je inrijdt — rechts zoals links."
+          "explanation": "Bij het afslaan verleen je voorrang aan overstekende voetgangers.",
+          "correct": 0,
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_D1_D1",
+          "question": "Groen licht. Je slaat links af, een tegenligger rijdt rechtdoor. Wie mag eerst?",
+          "choices": [
+            "De tegenligger",
+            "Jij, je licht is groen",
+            "Wie eerst aankomt"
+          ],
+          "correct": 0,
+          "explanation": "Links afslaan: je laat de tegenliggers voorgaan, ook bij groen.",
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_D1_D2",
+          "question": "Je verlaat het fietspad onderweg om naar de rijbaan te gaan. Je:",
+          "choices": [
+            "Verleent voorrang aan het verkeer op de rijbaan",
+            "Hebt voorrang",
+            "Rijdt zonder te kijken"
+          ],
+          "correct": 0,
+          "explanation": "Onderweg van wegdeel wisselen is een manoeuvre: je verleent voorrang.",
+          "theoryCardIndex": 2
         }
       ]
     },
@@ -229,190 +258,196 @@
       "questions": [
         {
           "id": "AM_D2_Q1",
-          "question": "Aan de ingang van een gesignaleerde rotonde verleen je voorrang:",
+          "question": "Aan de ingang van een rotonde verleen je voorrang:",
           "choices": [
-            "Aan de voertuigen die tegemoetkomen",
-            "Aan de bestuurders die al in de ring rijden",
-            "Aan niemand, wie oprijdt heeft voorrang",
-            "Enkel aan vrachtwagens en bussen"
+            "Aan wie al op de rotonde rijdt",
+            "Aan wie tegenover binnenrijdt",
+            "Aan niemand"
           ],
-          "explanation": "De B1-borden aan de ingangen geven voorrang aan wie al op de rotonde rijdt."
+          "explanation": "Wie al op de rotonde rijdt, mag eerst.",
+          "correct": 0
         },
         {
           "id": "AM_D2_Q2",
-          "question": "Wanneer gebruik je je richtingaanwijzer op een rotonde?",
+          "question": "Wanneer zet je op een rotonde je richtingaanwijzer aan?",
           "choices": [
-            "Enkel bij het oprijden",
-            "Bij het verlaten, na de afslag vóór de jouwe",
-            "Tijdens het hele traject in de ring",
-            "Nooit met een bromfiets"
+            "Om eraf te rijden",
+            "Om erop te rijden",
+            "De hele tijd"
           ],
-          "explanation": "Geen richtingaanwijzer bij het oprijden; bij het verlaten geef je rechts aan na het passeren van de afslag vóór de jouwe."
+          "explanation": "Rechts aanduiden om eraf te rijden, niet om erop te rijden.",
+          "correct": 0
         },
         {
           "id": "AM_D2_Q3",
-          "question": "Welke positie neem je met de bromfiets aan in de ring van een rotonde?",
+          "question": "Waar rijd je op de rotonde?",
           "choices": [
-            "Tegen de buitenrand geplakt",
-            "Midden op je rijstrook, goed zichtbaar",
-            "Op de markering tussen de stroken",
-            "Zo dicht mogelijk bij het middeneiland"
+            "In het midden van je rijstrook, goed zichtbaar",
+            "Tegen de rechterrand",
+            "Op de lijn tussen de rijstroken"
           ],
-          "explanation": "Midden op de strook: tegen de buitenrand rijden nodigt auto's uit je in te halen en je af te snijden bij het verlaten."
+          "explanation": "Op de rotonde moet je niet rechts houden: neem je plaats in.",
+          "correct": 0
         },
         {
           "id": "AM_D2_Q4",
-          "question": "Een tram nadert jouw positie in een gedeelde bedding. Wat doe je?",
+          "question": "Er komt een tram achter je op de sporen. Je:",
           "choices": [
-            "Je houdt je traject aan, hij ziet je wel",
-            "Je wijkt van de sporen en laat hem passeren",
-            "Je versnelt om vóór te blijven",
-            "Je claxonneert om je aanwezigheid te melden"
+            "Verlaat de sporen en laat hem voorbij",
+            "Blijft voor hem rijden",
+            "Toetert"
           ],
-          "explanation": "De tram heeft voorrang: je wijkt van de sporen zodra hij nadert — en pas op voor de gladde rails."
+          "explanation": "Iedereen verleent voorrang aan de tram en gaat van de sporen af.",
+          "correct": 0
         },
         {
           "id": "AM_D2_Q5",
-          "question": "Hoe steek je tramsporen over bij regen?",
+          "question": "Hoe steek je tramsporen over in de regen?",
           "choices": [
-            "Schuin, om in de verkeersstroom te blijven",
-            "Zo loodrecht mogelijk",
-            "Remmend erop voor meer controle",
-            "Sterk versnellend"
+            "Zo recht mogelijk",
+            "Schuin",
+            "Al remmend"
           ],
-          "explanation": "Natte sporen zijn valstrikken voor de wielen van een tweewieler: steek ze goed recht over, zonder erop te remmen."
+          "explanation": "Schuin kan je wiel wegglijden of in de rail vastraken.",
+          "correct": 0
         },
         {
           "id": "AM_D2_Q6",
-          "question": "Binnen de bebouwde kom knippert een bus links om zijn halte te verlaten. Je:",
+          "question": "Binnen de bebouwde kom geeft een bus aan dat hij vertrekt. Je:",
           "choices": [
-            "Versnelt om hem vóór te zijn",
-            "Vertraagt en laat hem invoegen",
-            "Claxonneert om hem te verwittigen",
+            "Vertraagt en laat hem vertrekken",
+            "Versnelt om er eerst voorbij te zijn",
             "Haalt hem rechts in"
           ],
-          "explanation": "Binnen de bebouwde kom moet je voorrang verlenen aan de bus die aangeeft zijn halte te willen verlaten."
+          "explanation": "Binnen de bebouwde kom laat je de bus vertrekken.",
+          "correct": 0
         },
         {
           "id": "AM_D2_Q7",
-          "question": "De auto vóór je stopt ter hoogte van een zebrapad. Je:",
+          "question": "De auto voor je stopt voor een zebrapad. Je:",
           "choices": [
-            "Haalt hem traag links in",
-            "Stopt erachter zonder in te halen",
-            "Rijdt er rechts omheen",
-            "Claxonneert om te begrijpen"
+            "Stopt achter hem",
+            "Haalt hem links in",
+            "Rijdt rechts rond hem"
           ],
-          "explanation": "Een voertuig inhalen dat gestopt is vóór een zebrapad is verboden: een verborgen voetganger is waarschijnlijk aan het oversteken."
+          "explanation": "Hij laat waarschijnlijk een voetganger door die jij niet ziet.",
+          "correct": 0
         },
         {
           "id": "AM_D2_Q8",
-          "question": "Een ziekenwagen komt achter je aan met sirene en blauwe lichten. Je:",
+          "question": "Ziekenwagen achter je, sirene en blauwe lichten. Je:",
           "choices": [
-            "Houdt je snelheid aan in het midden",
-            "Gaat rustig rechts aan de kant en laat hem door",
-            "Remt bruusk ter plaatse",
-            "Rijdt al rijdend het voetpad op"
+            "Gaat rustig rechts en laat hem voorbij",
+            "Houdt je snelheid",
+            "Remt plots"
           ],
-          "explanation": "Prioritair voertuig in actie: je maakt de doorgang rechts vrij, kalm en voorspelbaar."
+          "explanation": "Je maakt de weg vrij zonder bruuske beweging.",
+          "correct": 0
         },
         {
           "id": "AM_D2_B1",
-          "question": "Bij het OPRIJDEN van een rotonde is je richtingaanwijzer:",
+          "question": "Je rijdt een rotonde op. Je richtingaanwijzer?",
           "choices": [
-            "Links verplicht",
-            "Rechts verplicht",
-            "Niet in gebruik",
-            "Waarschuwingslichten aanbevolen"
+            "Niet nodig",
+            "Links",
+            "Rechts"
           ],
-          "explanation": "Geen richtingaanwijzer bij het oprijden van een rotonde; je geeft enkel aan bij het verlaten, naar rechts."
+          "explanation": "Geen richtingaanwijzer om erop te rijden.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_D2_B2",
-          "question": "BUITEN de bebouwde kom knippert een bus om zijn halte te verlaten. Moet je hem laten vertrekken?",
+          "question": "Buiten de bebouwde kom geeft een bus aan dat hij vertrekt. Moet je hem laten vertrekken?",
           "choices": [
-            "Ja, zoals binnen de bebouwde kom",
-            "Ja, maar enkel schoolbussen",
-            "Nee, en je mag claxonneren",
-            "De plicht geldt binnen de bebouwde kom; hier voorzichtigheid, zonder verplichting"
+            "Nee, maar je blijft voorzichtig",
+            "Ja, zoals in de stad",
+            "Ja, als het een schoolbus is"
           ],
-          "explanation": "Voorrang verlenen aan de vertrekkende bus is een verplichting BINNEN de bebouwde kom. Erbuiten: geen verplichting, maar voorzichtigheid blijft geboden."
+          "explanation": "De verplichting geldt binnen de bebouwde kom.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_D2_B3",
-          "question": "Een voetganger staat duidelijk te wachten aan de rand van een zebrapad zonder lichten. Je:",
+          "question": "Een voetganger wacht aan een zebrapad zonder lichten. Je:",
           "choices": [
-            "Vertraagt en laat hem oversteken",
-            "Passeert snel vóór hij vertrekt",
-            "Claxonneert om je doortocht te melden",
-            "Rijdt door, hij is nog niet vertrokken"
+            "Laat hem oversteken",
+            "Rijdt snel voor hem langs",
+            "Rijdt door, hij staat nog niet op het zebrapad"
           ],
-          "explanation": "Je moet voorrang verlenen aan de voetganger die oversteekt OF duidelijk aanstalten maakt om over te steken."
+          "explanation": "Je verleent ook voorrang aan een voetganger die op het punt staat over te steken.",
+          "correct": 0,
+          "theoryCardIndex": 2
         },
         {
           "id": "AM_D2_B4",
-          "question": "Waarom zijn tramsporen dubbel gevaarlijk voor een bromfiets?",
+          "question": "Waarom zijn tramsporen gevaarlijk met een bromfiets?",
           "choices": [
-            "Ze staan onder stroom aan het oppervlak",
-            "Glad ÉN een val voor het wiel (groef van het spoor)",
-            "Ze doen de lichten op rood springen",
-            "Ze demagnetiseren de remmen"
+            "Ze zijn glad en je wiel kan erin vastraken",
+            "Ze staan onder stroom",
+            "Ze beschadigen je banden"
           ],
-          "explanation": "Natte sporen = geen grip, en de groef van het spoor kan een smal wiel vangen: steek goed recht over."
+          "explanation": "Glad, en je wiel kan in de groef vallen.",
+          "correct": 0
         },
         {
           "id": "AM_D2_B5",
-          "question": "Je hoort een sirene zonder het prioritaire voertuig te zien. Je:",
+          "question": "Je hoort een sirene maar ziet het voertuig niet. Je:",
           "choices": [
-            "Remt bruusk ter plaatse",
-            "Stopt midden op het kruispunt",
-            "Lokaliseert het voertuig en gaat zonder bruusk gebaar aan de kant",
-            "Versnelt om de straat vrij te maken"
+            "Zoekt het en gaat rustig opzij",
+            "Remt ter plaatse",
+            "Versnelt"
           ],
-          "explanation": "Eerst lokaliseren, dan rustig vrijmaken: een paniekmanoeuvre creëert het gevaar dat het wil vermijden."
+          "explanation": "Zoek eerst waar het vandaan komt.",
+          "correct": 0,
+          "theoryCardIndex": 2
         },
         {
           "id": "AM_D2_C1",
-          "question": "In de ring vertraagt de auto links van je bij een afslag, zonder te knipperen. Jij:",
+          "question": "Op de rotonde vertraagt de auto links van je bij een afrit, zonder aan te duiden. Je:",
           "choices": [
-            "Houdt je remmen klaar: hij gaat waarschijnlijk vóór jou afslaan",
-            "Haalt hem snel rechts in",
-            "Versnelt om vóór zijn afslag te passeren",
-            "Claxonneert onophoudelijk om hem te verwittigen"
+            "Maakt je klaar om te remmen",
+            "Haalt hem rechts in",
+            "Versnelt"
           ],
-          "explanation": "Het vertragen ter hoogte van een afslag kondigt de afslag beter aan dan een afwezige richtingaanwijzer: anticipeer, remmen klaar."
+          "explanation": "Hij rijdt misschien voor je de rotonde af.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_D2_C2",
-          "question": "Aan een niet-gesignaleerd kruispunt komt een tram aan. Wie gaat eerst?",
+          "question": "Kruispunt zonder borden, er komt een tram. Wie mag eerst?",
           "choices": [
-            "Jij, als je van zijn rechterkant komt",
-            "Wie het eerst aan het kruispunt is",
-            "Het traagste van beide voertuigen",
-            "De tram: hij heeft voorrang behoudens andere signalisatie"
+            "De tram",
+            "Jij, als hij van links komt",
+            "Wie eerst aankomt"
           ],
-          "explanation": "De tram heeft voorrang op de andere bestuurders, zelfs komend van links — enkel lichten en agenten regelen het anders."
+          "explanation": "Je verleent altijd voorrang aan de tram.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_D2_C3",
-          "question": "Een ziekenwagen in opdracht komt je TEGEMOET op een smalle weg. Jij:",
+          "question": "Smalle weg, er komt een ziekenwagen van voren. Je:",
           "choices": [
-            "Rijdt gewoon door, hij komt uit de tegenrichting",
-            "Houdt rechts aan en vertraagt: je vergemakkelijkt ook de doorgang in tegenrichting",
-            "Maakt onmiddellijk rechtsomkeer",
-            "Stopt midden op de rijbaan"
+            "Gaat rechts en vertraagt",
+            "Rijdt gewoon verder",
+            "Keert"
           ],
-          "explanation": "De plicht om de doorgang te vergemakkelijken geldt in beide richtingen: op een smalle weg heeft de ziekenwagen JOUW helft nodig."
+          "explanation": "Je helpt hem door, ook in tegenovergestelde richting.",
+          "correct": 0
         },
         {
           "id": "AM_D2_C4",
-          "question": "Bij het verlaten van de rotonde kruist een zebrapad je afslag en een voetganger stapt erop. Jij:",
+          "question": "Bij het verlaten van de rotonde stapt een voetganger op het zebrapad. Je:",
           "choices": [
-            "Maakt snel je afslag af",
-            "Claxonneert vanuit de ring",
-            "Laat hem oversteken vóór je je afslag afmaakt",
-            "Blijft een extra ronde in de ring"
+            "Laat hem oversteken",
+            "Rijdt snel voor hem weg",
+            "Toetert"
           ],
-          "explanation": "De voetganger op het zebrapad heeft voorrang: je maakt je afslag af zodra zijn oversteek voorbij is."
+          "explanation": "De voetganger op het zebrapad mag eerst.",
+          "correct": 0
         }
       ]
     }
