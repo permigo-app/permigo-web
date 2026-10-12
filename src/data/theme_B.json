@@ -236,623 +236,589 @@
           "question": "Qui est un usager de la route ?",
           "choices": [
             "Toute personne qui utilise la voie publique",
-            "Tout véhicule qui roule sur la voie publique",
-            "Les conducteurs de voiture et les piétons"
+            "Tout véhicule sur la voie publique",
+            "Seulement les conducteurs"
           ],
           "correct": 0,
-          "explanation": "Un usager de la route est une personne. Un véhicule ou un animal seul n'est pas un usager.",
+          "explanation": "Un usager est une personne. Un véhicule ou un animal seul n'en est pas un.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B1_Q1.webp"
         },
         {
           "id": "B1_Q2",
-          "question": "Vous croisez un cheval seul sur la chaussée. Est-il un usager de la route ?",
+          "question": "Un cheval seul se promène sur la chaussée. Est-il un usager de la route ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le cheval seul n'est pas un usager. Son cavalier, lui, est un usager (conducteur d'animal).",
+          "explanation": "Un animal seul n'est pas un usager. Son cavalier ou son guide, lui, l'est.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B1_Q2.webp"
         },
         {
           "id": "B1_Q3",
-          "question": "Vous apercevez un vélo garé contre un poteau. Ce vélo est-il un usager de la route ?",
+          "question": "Ce vélo garé contre un poteau est-il un usager de la route ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Le vélo est un objet. Seule la personne qui le conduit est un usager de la route.",
+          "explanation": "Un vélo est un objet. Seule la personne qui le conduit est un usager.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B1_Q3.webp"
         },
         {
           "id": "B1_Q4",
-          "question": "En quelles catégories le code divise-t-il les usagers ?",
+          "question": "Un chien qui marche seul sur la voie publique est :",
           "choices": [
-            "Les piétons et les conducteurs",
-            "Les véhicules et les animaux",
-            "Les voitures et les camions"
+            "Ni piéton ni usager",
+            "Un piéton",
+            "Un usager de la route"
           ],
           "correct": 0,
-          "explanation": "Les deux catégories sont : les piétons et les conducteurs (de véhicules ou d'animaux).",
+          "explanation": "Un usager est toujours une personne : un chien seul n'est ni piéton ni usager.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B1_Q4.webp"
         },
         {
           "id": "B1_Q5",
-          "question": "Un fermier guide ses vaches sur la voie publique. Est-il un usager de la route ?",
+          "question": "Un fermier guide ses vaches sur la route. Est-il un usager de la route ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, c'est un conducteur",
+            "Non",
+            "Oui, c'est un piéton"
           ],
           "correct": 0,
-          "explanation": "Un conducteur d'animaux fait partie de la catégorie des conducteurs, et donc des usagers de la route.",
+          "explanation": "Celui qui guide des animaux est un conducteur, donc un usager.",
           "theoryCardIndex": 0,
           "image": "/images/questions/B1_Q5.webp"
         },
         {
           "id": "B1_Q6",
-          "question": "Qui est un piéton au sens du code ?",
+          "question": "Une jeune fille pousse son cyclomoteur sur la chaussée. Selon le code, elle est :",
           "choices": [
-            "Une personne qui se déplace à pied",
-            "Toute personne sur la voie publique",
-            "Un cycliste qui roule lentement"
+            "Piétonne",
+            "Conductrice"
           ],
           "correct": 0,
-          "explanation": "Un piéton est une personne qui se déplace à pied.",
+          "explanation": "Qui pousse à la main un vélo ou un cyclomoteur à deux roues est assimilé à un piéton.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q6.webp"
         },
         {
           "id": "B1_Q7",
-          "question": "Vous êtes piéton en ville. Où devez-vous marcher en priorité ?",
+          "question": "Vous êtes piéton. Où marchez-vous d'abord ?",
           "choices": [
             "Sur le trottoir ou l'accotement",
             "Sur la chaussée, près du bord",
-            "Sur la piste cyclable de droite"
+            "Sur la piste cyclable"
           ],
           "correct": 0,
-          "explanation": "Le piéton doit marcher sur le trottoir, sentier ou accotement en priorité.",
+          "explanation": "Le piéton prend d'abord le trottoir ou l'accotement.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/B1_Q7.webp"
         },
         {
           "id": "B1_Q8",
-          "question": "Vous marchez le long d'une route sans trottoir ni accotement. Où pouvez-vous circuler ?",
+          "question": "Ni trottoir ni accotement, mais une piste cyclable. Où marche ce piéton ?",
           "choices": [
-            "Sur la piste cyclable, sinon la chaussée",
-            "Sur le trottoir d'en face du côté",
-            "Nulle part, la route est interdite"
+            "Sur la piste cyclable",
+            "Sur la chaussée",
+            "Nulle part"
           ],
           "correct": 0,
-          "explanation": "Sans trottoir ni accotement, le piéton peut utiliser la piste cyclable (de préférence) ou la chaussée.",
+          "explanation": "Sans trottoir ni accotement, le piéton prend la piste cyclable, sinon la chaussée. Il y cède le passage aux cyclistes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q8.webp"
         },
         {
           "id": "B1_Q10",
-          "question": "Une personne pousse un caddie près d'un magasin. Est-elle piéton ?",
+          "question": "Cette personne pousse un caddie. Est-elle piétonne ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une personne poussant un caddie est assimilée à un piéton.",
+          "explanation": "Pousser un caddie, une poussette ou une brouette : on reste piéton.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q10.webp"
         },
         {
           "id": "B1_Q11",
-          "question": "Une personne en fauteuil roulant circule sur le trottoir. Est-elle piéton ?",
+          "question": "Cette personne en fauteuil roulant est-elle piétonne ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Une personne en fauteuil roulant est assimilée à un piéton.",
+          "explanation": "Une personne en chaise roulante est assimilée à un piéton.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q11.webp"
         },
         {
           "id": "B1_Q12",
-          "question": "Une personne avance à l'allure du pas sur un engin de déplacement. Est-elle piéton ?",
+          "question": "Cet enfant avance au pas sur une trottinette sans moteur. Est-il piéton ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Un engin de déplacement allant au pas ou moins est assimilé à un piéton.",
+          "explanation": "Un engin sans moteur, au pas : piéton. Plus vite, ou avec un moteur : règles des cyclistes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q12.webp"
         },
         {
           "id": "B1_Q13",
-          "question": "Vous voyez une personne poussant son velo a la main. Est-elle pieton ou conducteur ?",
+          "question": "Cette personne pousse son vélo à la main. Elle est :",
           "choices": [
-            "Un conducteur",
-            "Un pieton",
-            "Un cycliste",
-            "Cela depend de la route"
+            "Piétonne",
+            "Cycliste",
+            "Conductrice"
           ],
-          "correct": 1,
-          "explanation": "En poussant son vélo, une personne est un piéton.",
+          "correct": 0,
+          "explanation": "Qui pousse son vélo à la main est assimilé à un piéton.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q13.webp"
         },
         {
           "id": "B1_Q15",
-          "question": "Vous croisez un cavalier monte sur son cheval. Ce cavalier est-il un pieton ?",
+          "question": "Ce cavalier sur son cheval est-il un piéton ?",
           "choices": [
-            "Oui, il est a cheval mais reste pieton",
-            "Non, un cavalier est un conducteur",
-            "Oui, s'il est a pied a cote du cheval",
-            "Cela depend de la route"
+            "Non, c'est un conducteur",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Un cavalier est un conducteur, pas un piéton.",
+          "correct": 0,
+          "explanation": "Un cavalier est un conducteur.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q15.webp"
         },
         {
           "id": "B1_Q16",
-          "question": "Une personne marche à côté de son cheval en le tenant par la bride. Est-elle piéton ?",
+          "question": "L'homme qui marche à côté de son cheval en le tenant est :",
           "choices": [
-            "Oui",
-            "Non"
+            "Un conducteur",
+            "Un piéton"
           ],
-          "correct": 1,
-          "explanation": "Même à pied, une personne accompagnant un cheval est considérée comme un conducteur.",
+          "correct": 0,
+          "explanation": "Même à pied, celui qui guide un animal est un conducteur.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q16.webp"
         },
         {
           "id": "B1_Q17",
-          "question": "Vous voyez une personne poussant sa voiture en panne. Est-elle un pieton ?",
+          "question": "Cette personne pousse sa voiture en panne. Est-elle piétonne ?",
           "choices": [
-            "Oui, puisqu'elle est a pied",
-            "Non, c'est un conducteur",
-            "Oui, si la voiture est en panne",
-            "Cela depend de la distance"
+            "Non, c'est une conductrice",
+            "Oui, elle est à pied"
           ],
-          "correct": 1,
-          "explanation": "Pousser une voiture = conducteur, pas piéton.",
+          "correct": 0,
+          "explanation": "Pousser une voiture ne fait pas de vous un piéton : vous restez conducteur.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q17.webp"
         },
         {
           "id": "B1_Q18",
-          "question": "Une personne pousse sa moto en panne. Doit-elle porter un casque ?",
+          "question": "Cette personne pousse sa moto en panne. Doit-elle porter un casque ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En poussant une moto, on est conducteur et on doit porter le casque.",
+          "explanation": "Pousser une moto ne fait pas de vous un piéton (contrairement au vélo ou au cyclomoteur) : vous restez conducteur.",
           "theoryCardIndex": 1,
           "image": "/images/questions/B1_Q18.webp"
         },
         {
           "id": "B1_Q19",
-          "question": "Une personne poussant sa moto arrive par votre droite à un carrefour. A-t-elle la priorité de droite ?",
+          "question": "Une personne qui pousse sa moto arrive par votre droite au carrefour. A-t-elle la priorité de droite ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En poussant sa moto, elle est conducteur et bénéficie de la priorité de droite.",
+          "explanation": "En poussant sa moto, elle reste conductrice : elle a la priorité de droite.",
           "theoryCardIndex": 1,
           "severe": true,
           "image": "/images/questions/B1_Q19.webp"
         },
         {
           "id": "B1_Q20",
-          "question": "Vous êtes piéton et un passage se trouve à 15 mètres. Devez-vous l'emprunter ?",
+          "question": "Le passage pour piétons est à 15 m. Ce piéton doit-il l'emprunter ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "À moins de 20 mètres, le piéton est tenu d'emprunter le passage.",
+          "explanation": "À moins de 20 m, le piéton doit utiliser le passage.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B1_Q20.webp"
         },
         {
           "id": "B1_Q21",
-          "question": "Vous êtes piéton et le passage le plus proche est à 25 mètres. Devez-vous l'emprunter ?",
+          "question": "Le passage pour piétons le plus proche est à 25 m. Ce piéton doit-il l'emprunter ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "À 25 mètres, l'obligation n'existe plus. Elle ne s'applique qu'à moins de 20 mètres.",
+          "explanation": "L'obligation vaut seulement à moins de 20 m.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B1_Q21.webp"
         },
         {
           "id": "B1_Q22",
-          "question": "À quelle distance du passage ce panneau est-il placé ?",
+          "question": "À quelle distance du passage pour piétons se trouve ce signal de danger ?",
           "choices": [
-            "Environ 150 mètres",
-            "Environ 50 mètres",
-            "Environ 300 mètres"
+            "Environ 150 m",
+            "Environ 50 m",
+            "Environ 300 m"
           ],
           "correct": 0,
-          "explanation": "Le signal de danger rouge se trouve à environ 150 mètres en amont du passage pour piétons.",
+          "explanation": "Le signal de danger annonce le passage environ 150 m avant.",
           "theoryCardIndex": 2,
           "sign": "A21"
         },
         {
           "id": "B1_Q23",
-          "question": "Où se situe le passage par rapport à ce panneau bleu ?",
+          "question": "Où se trouve le passage pour piétons par rapport à ce panneau bleu ?",
           "choices": [
-            "À proximité immédiate",
-            "À 150 mètres devant",
+            "Juste à côté",
+            "150 m plus loin",
             "Au carrefour suivant"
           ],
           "correct": 0,
-          "explanation": "Le panneau d'indication bleu marque l'emplacement même du passage pour piétons, contrairement au panneau de danger qui l'annonce à distance.",
+          "explanation": "Le panneau bleu est placé au passage lui-même.",
           "theoryCardIndex": 2,
           "sign": "F49"
         },
         {
           "id": "B1_Q24",
-          "question": "Vous approchez d'un passage pour pietons et un pieton s'y trouve deja. A-t-il la priorite ?",
+          "question": "Un piéton est sur le passage pour piétons. Qui passe ?",
           "choices": [
-            "Non, il doit attendre",
-            "Oui, il a toujours la priorite",
-            "Uniquement s'il y a un feu vert",
-            "Uniquement en agglomeration"
+            "Le piéton",
+            "Vous",
+            "Celui qui arrive en premier"
           ],
-          "correct": 1,
-          "explanation": "Un piéton sur le passage a toujours la priorité.",
+          "correct": 0,
+          "explanation": "Un piéton engagé sur le passage a la priorité.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/B1_Q24.webp"
         },
         {
           "id": "B1_Q25",
-          "question": "Un piéton manifeste l'intention de traverser sans être encore engagé. A-t-il la priorité ?",
+          "question": "Ce piéton n'est pas encore sur le passage, mais va traverser. Devez-vous vous arrêter ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Un piéton qui a l'intention d'emprunter le passage a déjà la priorité, avant même d'y mettre le pied.",
+          "explanation": "Vous laissez passer le piéton engagé ou qui s'apprête à s'engager sur le passage.",
           "theoryCardIndex": 2,
           "severe": true,
           "image": "/images/questions/B1_Q25.webp"
         },
         {
           "id": "B1_Q26",
-          "question": "Un véhicule en stationnement masque votre vue sur un passage pour piétons. Que faites-vous ?",
+          "question": "Une camionnette garée vous cache le passage pour piétons. Que faites-vous ?",
           "choices": [
-            "Adapter votre vitesse par prudence",
-            "Klaxonner pour prévenir les piétons",
-            "Accélérer pour dégager le passage"
+            "Vous ralentissez",
+            "Vous klaxonnez",
+            "Vous passez vite"
           ],
           "correct": 0,
-          "explanation": "Si la visibilité est limitée, imaginez qu'un piéton se trouve sur le passage et adaptez votre vitesse.",
+          "explanation": "Un piéton peut surgir : vous ralentissez.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B1_Q26.webp"
         },
         {
           "id": "B1_Q27",
-          "question": "Le véhicule devant vous ralentit devant un passage pour piétons. Pouvez-vous le dépasser ?",
+          "question": "La voiture devant vous ralentit avant le passage pour piétons. Pouvez-vous la dépasser ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Tout dépassement (gauche ou droite) d'un véhicule qui ralentit ou s'arrête devant un passage est interdit.",
+          "explanation": "Interdit de dépasser un véhicule qui ralentit ou s'arrête devant un passage pour piétons.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B1_Q27.webp"
         },
         {
           "id": "B1_Q30",
-          "question": "Vous cherchez une place de stationnement. Pouvez-vous vous garer sur un passage pour pietons ?",
+          "question": "La file avance par à-coups. Pouvez-vous rester arrêté sur le passage pour piétons ?",
           "choices": [
-            "Oui, pour un court arret",
-            "Non, c'est interdit",
-            "Oui, la nuit",
-            "Oui, hors agglomeration"
+            "Non, vous vous arrêtez avant",
+            "Oui, si la file est bloquée"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit de s'arrêter ou stationner sur un passage pour piétons.",
+          "correct": 0,
+          "explanation": "Ni arrêt ni stationnement sur un passage pour piétons : vous attendez avant.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B1_Q30.webp"
         },
         {
           "id": "B1_Q31",
-          "question": "Pouvez-vous stationner à 3 mètres avant un passage pour piétons ?",
+          "question": "Pouvez-vous vous arrêter 3 m avant un passage pour piétons pour déposer quelqu'un ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Il est interdit de stationner à moins de 5 mètres EN DEÇÀ d'un passage pour piétons.",
+          "explanation": "Ni arrêt ni stationnement à moins de 5 m avant un passage pour piétons.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B1_Q31.webp"
         },
         {
           "id": "B1_Q32",
-          "question": "Pouvez-vous stationner juste au-delà d'un passage pour piétons ?",
+          "question": "Pouvez-vous stationner juste après un passage pour piétons ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Au-delà du passage, le stationnement est autorisé, sauf indication contraire.",
+          "explanation": "La règle des 5 m vaut avant le passage. Après, c'est permis, sauf signal contraire.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B1_Q32.webp"
         },
         {
           "id": "B1_Q33",
-          "question": "L'interdiction de stationner à moins de 5 mètres vaut-elle aussi pour un passage pour cyclistes ?",
+          "question": "La règle des 5 m avant le passage vaut-elle aussi pour un passage pour cyclistes ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La même règle des 5 mètres en deçà s'applique aux passages pour cyclistes.",
+          "explanation": "Oui, même règle pour les passages pour cyclistes.",
           "theoryCardIndex": 2,
           "image": "/images/questions/B1_Q33.webp"
         },
         {
           "id": "B1_Q34",
-          "question": "Sur une route sans passage pour piétons, un piéton veut traverser. A-t-il la priorité ?",
+          "question": "Pas de passage pour piétons. Ce piéton veut traverser. A-t-il la priorité ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Sans passage pour piétons, le piéton doit céder le passage aux véhicules.",
+          "explanation": "Hors passage, le piéton doit laisser passer les véhicules. Vous restez quand même prudent.",
           "theoryCardIndex": 3,
           "severe": true,
           "image": "/images/questions/B1_Q34.webp"
         },
         {
           "id": "B1_Q35",
-          "question": "Comment un piéton doit-il traverser hors passage ?",
+          "question": "Comment un piéton traverse-t-il hors passage ?",
           "choices": [
-            "Perpendiculairement à la chaussée",
-            "En diagonale pour aller plus vite",
-            "En zigzag entre les véhicules"
+            "Tout droit, sans traîner",
+            "En diagonale",
+            "Entre les voitures"
           ],
           "correct": 0,
-          "explanation": "Le piéton doit traverser perpendiculairement et sans s'attarder.",
+          "explanation": "Il traverse perpendiculairement à la chaussée, sans s'attarder.",
           "theoryCardIndex": 3,
           "image": "/images/questions/B1_Q35.webp"
         },
         {
           "id": "B1_Q37",
-          "question": "Un piéton traverse hors passage. Pouvez-vous le mettre en danger ?",
+          "question": "Un piéton traverse hors passage, devant vous. Pouvez-vous le mettre en danger ?",
           "choices": [
-            "Oui",
+            "Oui, il est en tort",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Même si le piéton est en tort, le conducteur ne peut jamais le mettre en danger.",
+          "explanation": "Même en tort, un piéton ne peut jamais être mis en danger.",
           "theoryCardIndex": 3,
           "image": "/images/questions/B1_Q37.webp"
         },
         {
           "id": "B1_Q39",
-          "question": "Face à quels piétons devez-vous redoubler de prudence ?",
+          "question": "Face à quels piétons redoublez-vous de prudence ?",
           "choices": [
-            "Enfants, personnes âgées, handicapées",
-            "Les enfants et personne d'autre",
-            "Tous les piétons de la même façon"
+            "Enfants, personnes âgées et handicapées",
+            "Seulement les enfants",
+            "Tous de la même façon"
           ],
           "correct": 0,
-          "explanation": "Il faut redoubler de prudence face aux enfants, personnes âgées et personnes handicapées.",
+          "explanation": "Enfants, personnes âgées et personnes handicapées : ralentir et au besoin s'arrêter.",
           "theoryCardIndex": 3,
           "image": "/images/questions/B1_Q39.webp"
         },
         {
           "id": "B1_Q40",
-          "question": "Un enfant s'approche de la chaussée devant vous. Que devez-vous faire ?",
+          "question": "Un accompagnateur veut traverser avec de jeunes enfants, sans passage pour piétons. Que faites-vous ?",
           "choices": [
-            "Ralentir et au besoin s'arrêter",
-            "Klaxonner pour avertir l'enfant",
-            "Continuer à vitesse normale"
+            "Vous ralentissez, prêt à vous arrêter",
+            "Vous continuez, il n'y a pas de passage",
+            "Vous klaxonnez pour les prévenir"
           ],
           "correct": 0,
-          "explanation": "En présence d'enfants, vous devez redoubler de prudence, ralentir et vous arrêter si nécessaire.",
+          "explanation": "En présence d'enfants, vous ralentissez et vous vous arrêtez si nécessaire.",
           "theoryCardIndex": 3,
           "image": "/images/questions/B1_Q40.webp"
         },
         {
           "id": "B1_Q42",
-          "question": "Vous êtes autorisé à circuler dans une zone piétonne. À quelle vitesse roulez-vous ?",
+          "question": "Vous pouvez rouler dans cette zone piétonne. À quelle vitesse ?",
           "choices": [
-            "À l'allure du pas",
-            "À 20 km/h maximum",
-            "À 30 km/h maximum"
+            "Au pas",
+            "20 km/h",
+            "30 km/h"
           ],
           "correct": 0,
-          "explanation": "Dans une zone piétonne, vous devez circuler à l'allure du pas.",
+          "explanation": "Dans une zone piétonne, les véhicules autorisés roulent au pas.",
           "theoryCardIndex": 4,
           "image": "/images/questions/B1_Q42.webp"
         },
         {
           "id": "B1_Q43",
-          "question": "Vous circulez dans une zone piétonne. Devez-vous céder le passage aux piétons ?",
+          "question": "Zone piétonne : devez-vous laisser passer les piétons ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Dans une zone piétonne, vous devez céder le passage aux piétons et vous arrêter si nécessaire.",
+          "explanation": "Oui, et vous vous arrêtez si nécessaire.",
           "theoryCardIndex": 4,
           "severe": true,
           "image": "/images/questions/B1_Q43.webp"
         },
         {
           "id": "B1_Q44",
-          "question": "Vous roulez dans une zone piétonne. Pouvez-vous gêner les piétons ?",
+          "question": "Zone piétonne : pouvez-vous gêner les piétons ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Dans une zone piétonne, il est interdit de gêner ou de mettre en danger les piétons.",
+          "explanation": "Vous ne pouvez ni gêner ni mettre en danger les piétons.",
           "theoryCardIndex": 4,
           "image": "/images/questions/B1_Q44.webp"
         },
         {
-          "id": "B1_Q47",
-          "question": "Vous entrez dans une zone piétonne. Quelles sont vos obligations ?",
-          "choices": [
-            "Allure du pas et céder le passage",
-            "30 km/h et klaxonner en passant",
-            "20 km/h et mettre vos warnings"
-          ],
-          "correct": 0,
-          "explanation": "Les 3 obligations : allure du pas, céder le passage, ne pas gêner ni mettre en danger.",
-          "theoryCardIndex": 4,
-          "severe": true,
-          "image": "/images/questions/B1_Q47.webp"
-        },
-        {
           "id": "B1_Q48",
-          "question": "Un tram s'arrête sur la chaussée sans refuge pour les voyageurs. Que devez-vous faire ?",
+          "question": "Un tram s'arrête sur la chaussée, sans refuge pour les voyageurs. Que faites-vous ?",
           "choices": [
-            "Vous arrêter et laisser traverser",
-            "Continuer lentement en surveillant",
-            "Contourner le tram par la gauche"
+            "Vous vous arrêtez et laissez traverser",
+            "Vous continuez lentement",
+            "Vous contournez le tram"
           ],
           "correct": 0,
-          "explanation": "Sans refuge, vous devez vous arrêter et laisser les voyageurs traverser.",
+          "explanation": "Sans refuge, vous vous arrêtez pour laisser les voyageurs gagner le trottoir.",
           "theoryCardIndex": 5,
           "image": "/images/questions/B1_Q48.webp"
         },
         {
           "id": "B1_Q50",
-          "question": "Un arrêt de bus est équipé d'un refuge. Êtes-vous obligé de vous arrêter ?",
+          "question": "L'arrêt de tram a un refuge pour les voyageurs. Devez-vous vous arrêter ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Si un refuge est présent, les voyageurs peuvent y attendre en sécurité : l'obligation de s'arrêter ne s'applique pas.",
+          "explanation": "Avec un refuge, pas d'obligation de s'arrêter. Vous passez à allure modérée.",
           "theoryCardIndex": 5,
           "image": "/images/questions/B1_Q50.webp"
         },
         {
           "id": "B1_Q51",
-          "question": "Les voyageurs du tram ont fini de traverser. À quelle vitesse repartez-vous ?",
+          "question": "Les voyageurs ont traversé. Comment repartez-vous ?",
           "choices": [
-            "À vitesse modérée",
+            "À allure modérée",
             "À vitesse normale",
-            "À l'allure du pas"
+            "En accélérant"
           ],
           "correct": 0,
-          "explanation": "Après la traversée des voyageurs, vous repartez à une vitesse modérée.",
+          "explanation": "Vous repartez à allure modérée.",
           "theoryCardIndex": 5,
           "image": "/images/questions/B1_Q51.webp"
         },
         {
           "id": "B1_Q53",
-          "question": "Vous circulez du côté opposé à l'embarquement d'un bus arrêté. Devez-vous vous arrêter ?",
+          "question": "Vous roulez du côté opposé aux portes de ce bus arrêté. Devez-vous vous arrêter ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 1,
-          "explanation": "Seul le conducteur du côté de l'embarquement ou du débarquement est obligé de s'arrêter.",
+          "explanation": "Seul le conducteur du côté où montent et descendent les voyageurs doit s'arrêter.",
           "theoryCardIndex": 5,
           "image": "/images/questions/B1_Q53.webp"
         },
         {
           "id": "B1_Q54",
-          "question": "Un véhicule porte un panneau jaune à l'avant et à l'arrière. De quel véhicule s'agit-il ?",
+          "question": "Ce véhicule porte un panneau jaune à l'avant et à l'arrière. Qu'est-ce que c'est ?",
           "choices": [
             "Un transport scolaire",
             "Un véhicule de secours",
             "Un convoi exceptionnel"
           ],
           "correct": 0,
-          "explanation": "Le transport scolaire se reconnaît à son panneau jaune (min. 0,40 m) visible à l'avant et à l'arrière.",
+          "explanation": "Le panneau jaune avec des enfants signale un transport scolaire.",
           "theoryCardIndex": 5,
           "image": "/images/questions/B1_Q54.webp"
         },
         {
-          "id": "B1_Q55",
-          "question": "Un minibus scolaire circule sans enfants à bord. Le panneau jaune doit-il rester en place ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Hors transport scolaire, le panneau doit être enlevé ou recouvert.",
-          "theoryCardIndex": 5,
-          "image": "/images/questions/B1_Q55.webp"
-        },
-        {
           "id": "B1_Q56",
-          "question": "Un véhicule de transport scolaire circule devant vous. Que devez-vous faire ?",
+          "question": "Un transport scolaire roule devant vous. Que faites-vous ?",
           "choices": [
-            "Ralentir et rester prudent",
-            "Le dépasser rapidement",
-            "Klaxonner pour prévenir"
+            "Vous restez prudent et ralentissez",
+            "Vous le dépassez vite",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "En présence d'un transport scolaire, soyez particulièrement prudent et réduisez votre vitesse.",
+          "explanation": "Des enfants peuvent descendre et traverser : prudence.",
           "theoryCardIndex": 5,
           "image": "/images/questions/B1_Q56.webp"
         },
         {
           "id": "B1_Q57",
-          "question": "Un véhicule de transport scolaire allume ses indicateurs de direction. Que signifie ce signal ?",
+          "question": "Ce transport scolaire arrêté allume ses quatre clignotants. Que signifie ce signal ?",
           "choices": [
             "Des enfants montent ou descendent",
-            "Il s'apprête à tourner à droite",
-            "Il va repartir de son arrêt"
+            "Il va tourner",
+            "Il est en panne"
           ],
           "correct": 0,
-          "explanation": "Les clignotants du transport scolaire signalent que des enfants vont monter ou descendre.",
+          "explanation": "Les clignotants du transport scolaire signalent que des enfants montent ou descendent.",
           "theoryCardIndex": 5,
           "image": "/images/questions/B1_Q57.webp"
         },
         {
           "id": "B1_Q59",
-          "question": "Un véhicule de transport scolaire est en train de s'arrêter, clignotants allumés. Devez-vous être prudent ?",
+          "question": "Ce transport scolaire ralentit pour s'arrêter, clignotants allumés. Devez-vous déjà être prudent ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "La prudence s'applique aussi aux véhicules scolaires en train de s'arrêter.",
+          "explanation": "Oui, dès qu'il signale son arrêt.",
           "theoryCardIndex": 5,
           "image": "/images/questions/B1_Q59.webp"
         },
         {
           "id": "B1_Q60",
-          "question": "Que signifie ce panneau ?",
+          "question": "Que signifie ce signal de danger ?",
           "choices": [
             "Endroit fréquenté par des enfants",
-            "Aire de jeux clôturée à proximité",
-            "Zone scolaire avec limitation"
+            "École",
+            "Les enfants peuvent marcher sur la chaussée"
           ],
           "correct": 0,
-          "explanation": "Ce signal de danger indique un endroit spécialement fréquenté par des enfants.",
+          "explanation": "Ce signal annonce un endroit où passent beaucoup d'enfants.",
           "theoryCardIndex": 2,
           "sign": "A23"
         },
         {
           "id": "B1_Q61",
-          "question": "Vous voyez ce panneau. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau. Que faites-vous ?",
           "choices": [
-            "Redoubler de prudence",
-            "Vous arrêter au panneau",
-            "Klaxonner en passant"
+            "Vous redoublez de prudence",
+            "Vous vous arrêtez au panneau",
+            "Vous klaxonnez"
           ],
           "correct": 0,
-          "explanation": "Ce signal exige de redoubler de prudence : des enfants peuvent surgir imprévisiblement.",
+          "explanation": "Des enfants peuvent surgir : soyez prêt à freiner.",
           "theoryCardIndex": 2,
           "sign": "A23"
         },
@@ -861,38 +827,24 @@
           "question": "Que signifie ce panneau ?",
           "choices": [
             "Accès interdit aux piétons",
-            "Passage pour piétons ici",
-            "Trottoir obligatoire ici"
+            "Passage pour piétons",
+            "Accès interdit sauf aux piétons"
           ],
           "correct": 0,
-          "explanation": "Ce signal d'interdiction interdit l'accès aux piétons.",
+          "explanation": "Rond à bord rouge avec un piéton : accès interdit aux piétons.",
           "theoryCardIndex": 1,
           "sign": "C19"
-        },
-        {
-          "id": "B1_Q66",
-          "question": "Vous voyez un signal bleu avec une voie qui se termine en cul-de-sac. Que signifie-t-il ?",
-          "choices": [
-            "Sens unique",
-            "Voie sans issue",
-            "Route barree",
-            "Parking"
-          ],
-          "correct": 1,
-          "explanation": "Ce signal d'indication bleu indique une voie sans issue.",
-          "theoryCardIndex": 3,
-          "sign": "F45"
         },
         {
           "id": "B1_Q67",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Sans issue sauf vélos et piétons",
-            "Accès interdit aux vélos et piétons",
+            "Sans issue, sauf pour piétons et cyclistes",
+            "Accès interdit aux piétons et cyclistes",
             "Début d'une zone piétonne"
           ],
           "correct": 0,
-          "explanation": "Voie sans issue pour les voitures, mais les cyclistes et piétons peuvent la traverser.",
+          "explanation": "Impasse pour les voitures, mais piétons et cyclistes peuvent passer.",
           "theoryCardIndex": 4,
           "sign": "F45b"
         },
@@ -900,12 +852,12 @@
           "id": "B1_Q68",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Zone piétonne : allure du pas",
-            "Piste cyclable obligatoire ici",
-            "Début d'une zone 30 classique"
+            "Début d'une zone piétonne",
+            "Piste cyclable obligatoire",
+            "Début d'une zone 30"
           ],
           "correct": 0,
-          "explanation": "Ce signal marque le début d'une zone piétonne : seuls les conducteurs autorisés peuvent y circuler, à l'allure du pas.",
+          "explanation": "Zone piétonne : seuls les véhicules autorisés y entrent, au pas.",
           "theoryCardIndex": 4,
           "sign": "F103"
         },
@@ -915,10 +867,10 @@
           "choices": [
             "Fin de la zone piétonne",
             "Début d'une zone 30",
-            "Sens interdit aux véhicules"
+            "Sens interdit"
           ],
           "correct": 0,
-          "explanation": "Le signal de fin de zone piétonne signifie que les règles spéciales de la zone ne s'appliquent plus.",
+          "explanation": "Fin de la zone piétonne : ses règles cessent.",
           "theoryCardIndex": 4,
           "sign": "F105"
         },
@@ -926,12 +878,12 @@
           "id": "B1_Q70",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Réservé aux piétons et cyclistes",
-            "Piste cyclable obligatoire seule",
+            "Chemin pour piétons et cyclistes",
+            "Piste cyclable obligatoire",
             "Trottoir réservé aux piétons"
           ],
           "correct": 0,
-          "explanation": "Piéton et vélo côte à côte = partie réservée aux piétons, cyclistes et cyclomoteurs classe A.",
+          "explanation": "Ce chemin est réservé aux piétons et aux cyclistes, qui le partagent.",
           "theoryCardIndex": 1,
           "sign": "D10"
         },
@@ -939,25 +891,25 @@
           "id": "B1_Q71",
           "question": "Que signifie ce panneau ?",
           "choices": [
-            "Piétons et cyclistes, chacun son côté",
-            "Piste cyclable pour tous les vélos",
-            "Début d'une zone piétonne fermée"
+            "Piétons et cyclistes, chacun sur sa partie",
+            "Piste cyclable pour tous",
+            "Début d'une zone piétonne"
           ],
           "correct": 0,
-          "explanation": "Piéton et vélo l'un au-dessus de l'autre = réservé piétons et cyclistes, cyclomoteurs interdits.",
+          "explanation": "Le trait sépare le chemin : les piétons d'un côté, les cyclistes de l'autre.",
           "theoryCardIndex": 1,
           "sign": "D9a"
         },
         {
           "id": "B1_Q74",
-          "question": "Un piéton s'engage malgré ce panneau. Que faites-vous en tant que conducteur ?",
+          "question": "Un piéton marche malgré ce panneau d'interdiction. Que faites-vous ?",
           "choices": [
             "Vous restez prudent",
             "Vous klaxonnez fort",
-            "Vous accélérez pour passer"
+            "Vous passez vite"
           ],
           "correct": 0,
-          "explanation": "Même si le piéton est en tort, vous ne pouvez jamais le mettre en danger.",
+          "explanation": "Même en tort, un piéton ne peut jamais être mis en danger.",
           "theoryCardIndex": 1,
           "sign": "C19"
         },
@@ -976,17 +928,40 @@
         },
         {
           "id": "B1_SIGN_ZEBRA_1",
-          "question": "Vous voyez des bandes blanches en travers de la chaussée. Que signifie ce marquage ?",
+          "question": "Que signifient ces bandes blanches en travers de la chaussée ?",
           "choices": [
             "Un passage pour piétons",
             "Une zone de livraison",
-            "Une zone limitée à 20 km/h"
+            "Une zone 20 km/h"
           ],
           "correct": 0,
-          "explanation": "Le passage clouté (zèbras) matérialise un passage pour piétons. Tout piéton engagé ou sur le point de s'engager a la priorité sur les véhicules.",
+          "explanation": "C'est un passage pour piétons : le piéton qui y est engagé ou va s'y engager a la priorité.",
           "theoryCardIndex": 2,
           "severe": true,
           "sign": "ZEBRAS"
+        },
+        {
+          "id": "B1_Q75",
+          "question": "Une personne aveugle avec une canne blanche traverse, sans passage pour piétons. Que faites-vous ?",
+          "choices": [
+            "Vous vous arrêtez et la laissez traverser",
+            "Vous passez : il n'y a pas de passage",
+            "Vous klaxonnez pour la prévenir"
+          ],
+          "correct": 0,
+          "explanation": "Face à un aveugle (canne blanche ou jaune), vous ralentissez et vous vous arrêtez au besoin.",
+          "theoryCardIndex": 3
+        },
+        {
+          "id": "B1_Q76",
+          "question": "Zone 30 en agglomération, pas de passage pour piétons. Des piétons traversent. Ont-ils la priorité ?",
+          "choices": [
+            "Non, mais vous restez prudent",
+            "Oui, parce que c'est une zone 30"
+          ],
+          "correct": 0,
+          "explanation": "Hors passage, le piéton n'a pas la priorité, même en zone 30. Vous ne pouvez jamais le mettre en danger.",
+          "theoryCardIndex": 3
         }
       ]
     },
