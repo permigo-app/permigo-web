@@ -787,389 +787,311 @@
       "questions": [
         {
           "id": "G2_Q1",
-          "question": "Een schuine pijl staat voor een hindernis. Waarvoor dient hij?",
+          "question": "Waarvoor dient deze schuine pijl op de hindernis?",
           "choices": [
-            "De kant aanduiden om langs te gaan",
-            "De maximumsnelheid aanduiden",
-            "Een parkeerplaats aanduiden"
+            "Om te tonen langs welke kant je moet",
+            "Om een snelheid aan te geven",
+            "Om een parking aan te duiden"
           ],
           "correct": 0,
-          "explanation": "Een schuine pijl op een bord geeft de richting aan waarin je het obstakel moet omrijden.",
+          "explanation": "Op een hindernis verplicht de pijl je langs de aangeduide kant te rijden.",
           "theoryCardIndex": 0
         },
         {
           "id": "G2_Q2",
-          "question": "De schuine pijl wijst naar links. Langs welke kant moet je het obstakel omrijden?",
+          "question": "De pijl op de hindernis wijst naar links. Langs waar rij je?",
           "choices": [
-            "Langs rechts",
-            "Langs links",
-            "Langs beide kanten",
-            "Dat hangt af van het verkeer"
+            "Links",
+            "Rechts",
+            "Naar keuze"
           ],
-          "correct": 1,
-          "explanation": "Je moet verplicht aan de kant passeren die door de pijl wordt aangeduid.",
+          "correct": 0,
+          "explanation": "Je rijdt langs de kant waar de pijl naar wijst.",
           "theoryCardIndex": 0
         },
         {
-          "id": "G2_Q3",
-          "question": "Op welke drager kan dit bord bevestigd zijn?",
-          "choices": [
-            "Een paal of een gele baken",
-            "Een gevelmuur, meer niet",
-            "Enkel een verkeerslicht"
-          ],
-          "correct": 0,
-          "explanation": "Dit bord kan bevestigd zijn op een paal of op een gele zuil.",
-          "theoryCardIndex": 0,
-          "sign": "D1f"
-        },
-        {
           "id": "G2_Q4",
-          "question": "Een schuine pijl op een hindernis: aanwijzing of verplichting?",
+          "question": "Is deze pijl op de hindernis verplicht?",
           "choices": [
-            "Een verplichting om langs te gaan",
-            "Een aanwijzing naar uw keuze",
-            "Een gewone raadgeving"
+            "Ja",
+            "Nee, het is een raad"
           ],
           "correct": 0,
-          "explanation": "Dit bord is verplicht: je moet aan de kant van de pijl passeren.",
+          "explanation": "Blauw rond bord: het is een verplichting.",
           "theoryCardIndex": 0
         },
         {
           "id": "G2_Q6",
-          "question": "Wat is het verschil tussen een pijl op een hindernis en een richtingsbord op een kruispunt?",
+          "question": "Linkse afbeelding: de pijl op de hindernis wijst naar rechts onder. Mag je links voorbij?",
           "choices": [
-            "Kant om langs te gaan of opgelegde richting",
-            "De pijl op de hindernis is aanwijzend",
-            "Het bord op het kruispunt is aanwijzend"
+            "Nee",
+            "Ja, als het vrij is"
           ],
           "correct": 0,
-          "explanation": "Op een obstakel legt de pijl de kant op om te omrijden. Op een kruispunt legt ze de te volgen richting op.",
+          "explanation": "Je moet langs de kant van de pijl: hier rechts.",
           "theoryCardIndex": 0
         },
         {
           "id": "G2_Q7",
-          "question": "Wat zijn de vorm en de kleur van een verplicht richtingsbord?",
+          "question": "Waaraan herken je een verplichte rijrichting?",
           "choices": [
-            "Rond en blauw met witte pijl",
-            "Driehoekig en van gele kleur",
-            "Rechthoekig en van groene kleur"
+            "Blauw rond bord, witte pijl",
+            "Blauw rechthoekig bord, witte pijl",
+            "Rode driehoek"
           ],
           "correct": 0,
-          "explanation": "Het bord verplichte richting is een rond blauw bord met een witte pijl.",
+          "explanation": "Blauw rond = verplichting.",
           "theoryCardIndex": 1
         },
         {
           "id": "G2_Q8",
-          "question": "Een rond blauw bord met een pijl naar rechts betekent:",
+          "question": "Blauw rond bord met pijl naar rechts, op het kruispunt. Wat doe je?",
           "choices": [
-            "Eenrichtingsverkeer rechts",
-            "Verplichting om rechts af te slaan",
-            "Aanduiding naar rechts",
-            "Parking rechts"
+            "Ik sla rechtsaf",
+            "Ik doe wat ik wil",
+            "Ik rij rechtdoor"
           ],
-          "correct": 1,
-          "explanation": "Het ronde blauwe bord legt de richting op: verplichting om rechts af te slaan.",
+          "correct": 0,
+          "explanation": "Je moet de pijl volgen.",
           "theoryCardIndex": 1,
           "sign": "D1d"
         },
         {
           "id": "G2_Q9",
-          "question": "U ziet dit bord aan een kruispunt. Wat moet u doen?",
+          "question": "Je ziet dit bord op het kruispunt. Wat moet je doen?",
           "choices": [
-            "Verplicht rechtdoor blijven rijden",
-            "U rijdt op een hoofdweg",
-            "U rijdt hier op een autoweg"
+            "Rechtdoor rijden",
+            "Afslaan naar keuze",
+            "Voorrang verlenen"
           ],
           "correct": 0,
-          "explanation": "Het ronde blauwe bord met pijl rechtdoor verplicht om rechtdoor te rijden.",
+          "explanation": "Pijl naar boven: verplicht rechtdoor.",
           "theoryCardIndex": 1,
           "sign": "D1a"
         },
         {
-          "id": "G2_Q10",
-          "question": "Waarom kan de pijl van een richtingsbord anders wijzen?",
+          "id": "G2_Q12",
+          "question": "Je ziet dit bord op het kruispunt. Mag je linksaf slaan?",
           "choices": [
-            "Hij volgt de echte wegconfiguratie",
-            "Hij wijst naar boven, meer niet",
-            "Hij verandert van kleur indien nodig"
+            "Nee",
+            "Ja"
           ],
           "correct": 0,
-          "explanation": "De pijl is gericht volgens de werkelijke configuratie: rechtdoor, links, rechts of combinaties.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "G2_Q12",
-          "question": "U ziet dit bord aan een kruispunt. Mag u links afslaan?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Je moet kiezen tussen de twee opgelegde richtingen: rechtdoor of rechts.",
+          "explanation": "Je kiest tussen rechtdoor en rechts, niet links.",
           "theoryCardIndex": 1,
           "sign": "D3b"
         },
         {
           "id": "G2_Q13",
-          "question": "Een richtingsbord draagt « uitgezonderd fietsers ». U bent fietser: moet u de richting volgen?",
+          "question": "Verplichte rijrichting « uitgezonderd fietsers ». Moet je ze met de fiets volgen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Het onderbord stelt fietsers en speed pedelecs vrij van de verplichte richting.",
+          "correct": 0,
+          "explanation": "Het onderbord stelt fietsers vrij.",
           "theoryCardIndex": 1
         },
         {
           "id": "G2_Q15",
-          "question": "Een richtingsbord draagt geen enkel onderbord. U bent fietser: moet u het volgen?",
+          "question": "Verplichte rijrichting zonder onderbord. Moet je ze met de fiets volgen?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zonder onderbord geldt de verplichte richting voor alle bestuurders.",
+          "explanation": "Zonder onderbord geldt ze voor iedereen.",
           "theoryCardIndex": 1
         },
         {
           "id": "G2_Q18",
-          "question": "U ziet dit bord aan een kruispunt. Mag u rechtdoor rijden?",
+          "question": "Je ziet dit bord op het kruispunt. Mag je rechtdoor?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Het ronde blauwe bord legt de richting op: rechtdoor rijden is verboden.",
+          "correct": 0,
+          "explanation": "Je moet de pijl(en) volgen: rechtdoor hoort er niet bij.",
           "theoryCardIndex": 1,
           "sign": "D1c"
         },
         {
           "id": "G2_Q19",
-          "question": "U ziet dit bord aan een kruispunt. Mag u rechts afslaan?",
+          "question": "Je ziet dit bord op het kruispunt. Mag je rechtsaf slaan?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Je moet een van de twee opgelegde richtingen volgen: links of rechtdoor.",
+          "correct": 0,
+          "explanation": "Je kiest tussen links en rechtdoor.",
           "theoryCardIndex": 1,
           "sign": "D3a"
         },
         {
           "id": "G2_Q20",
-          "question": "Dit bord legt rechtdoor op maar draagt « uitgezonderd fietsers ». U bent fietser: mag u rechts afslaan?",
+          "question": "Verplicht rechtdoor, « uitgezonderd fietsers ». Mag je met de fiets rechtsaf?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Het onderbord stelt je vrij van de verplichte richting.",
+          "explanation": "Het onderbord stelt je vrij van de verplichting.",
           "theoryCardIndex": 1,
           "sign": "D1a"
         },
         {
           "id": "G2_Q21",
-          "question": "Om welk bord gaat het hier?",
+          "question": "Wat betekent dit verkeersbord?",
           "choices": [
-            "Een eenrichtingsweg",
-            "Een verplichte richting",
-            "Een driehoekig gevaar"
+            "Eenrichtingsverkeer",
+            "Verplichte rijrichting",
+            "Einde van de weg"
           ],
           "correct": 0,
-          "explanation": "Het bord eenrichtingsverkeer is rechthoekig blauw met een witte pijl.",
+          "explanation": "Blauw rechthoekig bord met pijl: eenrichtingsverkeer. In principe geen tegenliggers.",
           "theoryCardIndex": 2,
           "sign": "F19"
         },
         {
-          "id": "G2_Q23",
-          "question": "Wat is de vorm van een verplicht richtingsbord?",
-          "choices": [
-            "Rond en blauw",
-            "Rechthoekig",
-            "Driehoekig"
-          ],
-          "correct": 0,
-          "explanation": "Het bord verplichte richting is rond blauw met een witte pijl.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "G2_Q25",
-          "question": "Hoe onderscheidt u de eenrichtingsweg van de verplichte richting?",
+          "question": "Blauw rond of blauw rechthoekig bord met pijl: welk verplicht je de pijl te volgen?",
           "choices": [
-            "Rechthoekig of rond",
-            "Lichtblauw of donkerblauw",
-            "Groot formaat of klein"
+            "Het ronde",
+            "Het rechthoekige",
+            "Allebei"
           ],
           "correct": 0,
-          "explanation": "De vorm is de sleutel: rechthoekig = aanduiding (eenrichtingsverkeer), rond = verplichting (opgelegde richting).",
+          "explanation": "Rond = verplichting. Rechthoekig = informatie (eenrichtingsverkeer).",
           "theoryCardIndex": 2
         },
         {
           "id": "G2_Q26",
-          "question": "U ziet dit bord bij het inrijden van een straat. Moet u verplicht rechts afslaan?",
+          "question": "Dit bord staat aan de ingang van de straat rechts. Moet je erin draaien?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Het rechthoekige bord is een aanduiding (eenrichtingsverkeer), geen verplichting om af te slaan.",
+          "correct": 0,
+          "explanation": "Het is eenrichtingsverkeer: het informeert, het verplicht je niet af te slaan.",
           "theoryCardIndex": 2,
           "sign": "F19"
         },
         {
           "id": "G2_Q27",
-          "question": "U ziet dit bord aan een kruispunt. Moet u verplicht rechts afslaan?",
+          "question": "Je ziet dit bord op het kruispunt. Moet je rechtsaf slaan?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Het ronde blauwe bord legt de richting op: je moet rechts afslaan.",
+          "explanation": "Blauw rond bord: de richting is verplicht.",
           "theoryCardIndex": 2,
           "sign": "D1d"
         },
         {
-          "id": "G2_Q30",
-          "question": "Welke gevolgen als u eenrichtingsweg en verplichte richting verwart?",
-          "choices": [
-            "Verkeerd of helemaal niet afslaan",
-            "Geen enkel gevolg in de praktijk",
-            "Een gewone schriftelijke waarschuwing"
-          ],
-          "correct": 0,
-          "explanation": "Deze twee borden verwarren kan leiden tot verkeerd en gevaarlijk gedrag.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "G2_Q31",
-          "question": "U ziet dit bord voor een hindernis. Wat mag u doen?",
+          "question": "Dit bord staat op een hindernis. Langs waar mag je?",
           "choices": [
-            "Links of rechts voorbijrijden",
-            "Enkel langs links voorbijrijden",
-            "U mag er niet voorbij"
+            "Links of rechts",
+            "Alleen links",
+            "Nergens"
           ],
           "correct": 0,
-          "explanation": "Dit aanduidingsbord laat je vrij om aan de ene of de andere kant te passeren.",
+          "explanation": "Je mag de kant kiezen.",
           "theoryCardIndex": 3,
           "sign": "F21"
         },
         {
           "id": "G2_Q33",
-          "question": "Zijn een keuzerichtingsbord en een rond blauw bord met twee pijlen hetzelfde?",
+          "question": "Is dit blauwe ronde bord met twee pijlen gewoon informatie?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, het is een verplichting",
+            "Ja, je doet wat je wilt"
           ],
-          "correct": 1,
-          "explanation": "Het keuzebord (aanduiding) en het ronde blauwe bord met twee pijlen (verplichting) zijn fundamenteel verschillend.",
+          "correct": 0,
+          "explanation": "Blauw rond bord: je moet een van de aangeduide richtingen nemen.",
           "theoryCardIndex": 3,
           "sign": "D3a"
         },
         {
-          "id": "G2_Q34",
-          "question": "Op welke drager kan een keuzerichtingsbord bevestigd zijn?",
-          "choices": [
-            "Een paal of een gele baken",
-            "Enkel het wegdek zelf",
-            "Een gevelmuur, meer niet"
-          ],
-          "correct": 0,
-          "explanation": "Dit bord kan bevestigd zijn op een paal of op een gele zuil.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "G2_Q35",
-          "question": "Een gearceerde markering ligt midden op de rijbaan. Wat is dat?",
+          "question": "Hoe heet deze gearceerde zone in het midden van de rijbaan?",
           "choices": [
             "Een verkeersgeleider",
-            "Een oversteekplaats",
-            "Een bord op het wegdek"
+            "Een oversteekplaats voor voetgangers",
+            "Een parkeerplaats"
           ],
           "correct": 0,
-          "explanation": "Het verkeerseiland is een gearceerde markering of een gebouwd element om het verkeer te geleiden.",
+          "explanation": "Witte schuine lijnen duiden een verkeersgeleider of een verdrijvingsvlak aan.",
           "theoryCardIndex": 3
         },
         {
           "id": "G2_Q37",
-          "question": "Langs welke kant moet u een verkeersgeleider voorbijrijden?",
+          "question": "Langs welke kant rij je rond een verkeersgeleider?",
           "choices": [
-            "Langs rechts",
-            "Langs links",
-            "Naar keuze, waar plaats is"
+            "Rechts",
+            "Links",
+            "Naar keuze"
           ],
           "correct": 0,
-          "explanation": "Verkeerseilanden worden altijd rechts omreden.",
+          "explanation": "Je laat de verkeersgeleider links van je, tenzij borden iets anders zeggen.",
           "theoryCardIndex": 3
         },
         {
           "id": "G2_Q39",
-          "question": "Mag u op een geschilderde verkeersgeleider rijden?",
+          "question": "Mag je over deze arcering rijden?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, als het vrij is"
           ],
-          "correct": 1,
-          "explanation": "Het is verboden over een verkeerseiland te rijden, of het nu geschilderd of gebouwd is.",
+          "correct": 0,
+          "explanation": "Verboden erop te rijden, stil te staan en te parkeren.",
           "theoryCardIndex": 3
         },
         {
           "id": "G2_Q40",
-          "question": "Mag u even stoppen op een verkeersgeleider?",
+          "question": "Mag je even stilstaan op deze arcering?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Stoppen is verboden op een verkeerseiland.",
+          "correct": 0,
+          "explanation": "Stilstaan is er verboden.",
           "theoryCardIndex": 3
         },
         {
           "id": "G2_Q41",
-          "question": "Mag u parkeren op een verkeersgeleider?",
+          "question": "Mag je parkeren op deze arcering?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, 's nachts"
           ],
-          "correct": 1,
-          "explanation": "Parkeren is verboden op een verkeerseiland.",
-          "theoryCardIndex": 3
-        },
-        {
-          "id": "G2_Q42",
-          "question": "Noem de drie verboden betreffende een verkeerseiland:",
-          "choices": [
-            "Afslaan, inhalen, achteruitrijden",
-            "Rijden, stoppen en parkeren",
-            "Claxonneren, versnellen, remmen",
-            "Afslaan, parkeren, achteruitrijden"
-          ],
-          "correct": 1,
-          "explanation": "Rijden, stoppen en parkeren zijn de drie verboden op een verkeerseiland.",
+          "correct": 0,
+          "explanation": "Parkeren is er verboden.",
           "theoryCardIndex": 3
         },
         {
           "id": "G2_Q44",
-          "question": "Een verkeersgeleider ligt midden op het kruispunt. Hoe slaat u links af?",
+          "question": "Een verkeersgeleider midden op het kruispunt. Je slaat linksaf: hoe?",
           "choices": [
-            "Rechts eromheen, dan afslaan",
-            "De geleider langs links omrijden",
-            "Over de geleider heen rijden"
+            "Je rijdt rechts rond de verkeersgeleider",
+            "Je snijdt links van de verkeersgeleider af",
+            "Je rijdt over de verkeersgeleider"
           ],
           "correct": 0,
-          "explanation": "Je rijdt het eiland rechts om voordat je links afslaat.",
+          "explanation": "Je laat de verkeersgeleider links van je en slaat dan af.",
           "theoryCardIndex": 3
         },
         {
           "id": "G2_Q50",
-          "question": "Een onderbord met een fiets hangt onder deze eenrichtingsweg. Wat betekent het?",
+          "question": "Onder dit bord eenrichtingsverkeer staat een onderbord met een fiets en een dubbele pijl. Wat betekent het?",
           "choices": [
-            "Fietsers rijden in beide richtingen",
-            "Fietsers zijn hier verboden",
-            "Een fietspad in twee richtingen"
+            "Fietsers mogen in de andere richting rijden",
+            "Fietsers zijn verboden",
+            "Fietspad ernaast"
           ],
           "correct": 0,
-          "explanation": "Dit onderbord staat fietsers en speed pedelecs toe om in beide richtingen te rijden.",
+          "explanation": "Verwacht fietsers die je tegemoetkomen in deze straat.",
           "theoryCardIndex": 1,
           "sign": "F19"
         },

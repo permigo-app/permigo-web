@@ -855,403 +855,323 @@
       "questions": [
         {
           "id": "G2_Q1",
-          "question": "Une flèche diagonale est fixée devant un obstacle. À quoi sert-elle ?",
+          "question": "À quoi sert cette flèche oblique sur l'obstacle ?",
           "choices": [
-            "À indiquer le côté à contourner",
-            "À indiquer la vitesse maximale",
-            "À signaler un stationnement"
+            "À montrer de quel côté passer",
+            "À indiquer une vitesse",
+            "À signaler un parking"
           ],
           "correct": 0,
-          "explanation": "Une flèche en diagonale sur un panneau indique la direction dans laquelle vous devez contourner l'obstacle.",
+          "explanation": "Sur un obstacle, la flèche oblige à passer du côté indiqué.",
           "theoryCardIndex": 0,
           "image": "/images/questions/G2_Q1.webp"
         },
         {
           "id": "G2_Q2",
-          "question": "Vous arrivez devant un obstacle et la flèche diagonale pointe vers la gauche. De quel côté devez-vous contourner l'obstacle ?",
+          "question": "La flèche sur l'obstacle pointe vers la gauche. Par où passez-vous ?",
           "choices": [
-            "Vous devez passer par la droite",
-            "Vous devez passer par la gauche",
-            "Vous pouvez choisir l'un ou l'autre côté",
-            "Cela dépend de la densité du trafic"
+            "Par la gauche",
+            "Par la droite",
+            "Au choix"
           ],
-          "correct": 1,
-          "explanation": "Vous devez obligatoirement passer du côté indiqué par la flèche.",
+          "correct": 0,
+          "explanation": "Vous passez du côté où pointe la flèche.",
           "theoryCardIndex": 0,
           "image": "/images/questions/G2_Q2.webp"
         },
         {
-          "id": "G2_Q3",
-          "question": "Sur quel support ce panneau peut-il être fixé ?",
-          "choices": [
-            "Un poteau ou une borne jaune",
-            "Un mur de bâtiment, sans plus",
-            "Un feu de signalisation seul"
-          ],
-          "correct": 0,
-          "explanation": "Ce panneau peut être fixé sur un poteau ou sur une borne jaune.",
-          "theoryCardIndex": 0,
-          "sign": "D1f"
-        },
-        {
           "id": "G2_Q4",
-          "question": "Une flèche diagonale sur un obstacle : indication ou obligation ?",
+          "question": "Cette flèche sur l'obstacle est-elle obligatoire ?",
           "choices": [
-            "Une obligation de contourner",
-            "Une indication à votre choix",
-            "Un simple conseil de prudence"
+            "Oui",
+            "Non, c'est un conseil"
           ],
           "correct": 0,
-          "explanation": "Ce signal est obligatoire : vous devez passer du côté indiqué par la flèche.",
+          "explanation": "Rond bleu : c'est une obligation.",
           "theoryCardIndex": 0,
           "image": "/images/questions/G2_Q4.webp"
         },
         {
           "id": "G2_Q6",
-          "question": "Quelle différence entre une flèche sur un obstacle et un panneau de direction à un carrefour ?",
+          "question": "Image de gauche : la flèche sur l'obstacle pointe en bas à droite. Pouvez-vous passer à gauche ?",
           "choices": [
-            "Côté à contourner ou direction imposée",
-            "La flèche sur obstacle est indicative",
-            "Le panneau au carrefour est indicatif"
+            "Non",
+            "Oui, si c'est libre"
           ],
           "correct": 0,
-          "explanation": "Sur un obstacle, la flèche impose le côté de contournement. À un carrefour, elle impose la direction à suivre.",
+          "explanation": "Vous devez passer du côté de la flèche : ici, à droite.",
           "theoryCardIndex": 0,
           "image": "/images/questions/G2_Q6.webp"
         },
         {
           "id": "G2_Q7",
-          "question": "Quelle est la forme et la couleur d'un signal de direction obligatoire ?",
+          "question": "À quoi reconnaît-on une direction obligatoire ?",
           "choices": [
-            "Rond et bleu à flèche blanche",
-            "Triangulaire et de couleur jaune",
-            "Rectangulaire et de couleur verte"
+            "Rond bleu, flèche blanche",
+            "Rectangle bleu, flèche blanche",
+            "Triangle rouge"
           ],
           "correct": 0,
-          "explanation": "Le signal de direction obligatoire est un panneau rond bleu avec une flèche blanche.",
+          "explanation": "Rond bleu = obligation.",
           "theoryCardIndex": 1
         },
         {
           "id": "G2_Q8",
-          "question": "Vous arrivez à un carrefour et vous voyez un signal rond bleu avec une flèche vers la droite. Que signifie-t-il ?",
+          "question": "Rond bleu avec flèche vers la droite, au carrefour. Que faites-vous ?",
           "choices": [
-            "Cette rue est à sens unique vers la droite",
-            "Vous êtes obligé de tourner à droite",
-            "Il est conseillé d'aller vers la droite",
-            "Un parking se trouve à droite"
+            "Je tourne à droite",
+            "Je fais ce que je veux",
+            "Je vais tout droit"
           ],
-          "correct": 1,
-          "explanation": "Le signal rond bleu impose la direction : obligation de tourner à droite.",
+          "correct": 0,
+          "explanation": "Vous devez suivre la flèche.",
           "theoryCardIndex": 1,
           "sign": "D1d"
         },
         {
           "id": "G2_Q9",
-          "question": "Vous voyez ce panneau à un carrefour. Que devez-vous faire ?",
+          "question": "Vous voyez ce panneau au carrefour. Que devez-vous faire ?",
           "choices": [
-            "Continuer obligatoirement tout droit",
-            "Vous êtes sur une route principale",
-            "Vous êtes sur une voie rapide ici"
+            "Aller tout droit",
+            "Tourner au choix",
+            "Céder le passage"
           ],
           "correct": 0,
-          "explanation": "Le signal rond bleu avec flèche tout droit oblige à continuer tout droit.",
+          "explanation": "Flèche vers le haut : tout droit obligatoire.",
           "theoryCardIndex": 1,
           "sign": "D1a"
         },
         {
-          "id": "G2_Q10",
-          "question": "Pourquoi la flèche d'un signal de direction peut-elle pointer différemment ?",
+          "id": "G2_Q12",
+          "question": "Vous voyez ce panneau au carrefour. Pouvez-vous tourner à gauche ?",
           "choices": [
-            "Elle suit la configuration réelle",
-            "Elle pointe vers le haut, sans plus",
-            "Elle change de couleur au besoin"
+            "Non",
+            "Oui"
           ],
           "correct": 0,
-          "explanation": "La flèche est orientée selon la configuration réelle : tout droit, gauche, droite ou combinaisons.",
-          "theoryCardIndex": 1,
-          "image": "/images/questions/G2_Q10.webp"
-        },
-        {
-          "id": "G2_Q12",
-          "question": "Vous voyez ce panneau à un carrefour. Pouvez-vous tourner à gauche ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Vous devez choisir entre les deux directions imposées : tout droit ou à droite.",
+          "explanation": "Vous avez le choix entre tout droit et à droite, pas à gauche.",
           "theoryCardIndex": 1,
           "sign": "D3a"
         },
         {
           "id": "G2_Q13",
-          "question": "Un panneau de direction porte « excepté cyclistes ». Vous êtes cycliste : devez-vous suivre la direction ?",
+          "question": "Direction obligatoire « excepté cyclistes ». À vélo, devez-vous la suivre ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le panneau additionnel dispense les cyclistes et speed pedelecs de suivre la direction obligatoire.",
+          "correct": 0,
+          "explanation": "Le panneau additionnel dispense les cyclistes.",
           "theoryCardIndex": 1,
           "image": "/images/questions/G2_Q13.webp"
         },
         {
           "id": "G2_Q15",
-          "question": "Un panneau de direction n'a aucun panneau additionnel. Vous êtes cycliste : devez-vous le suivre ?",
+          "question": "Direction obligatoire sans panneau additionnel. À vélo, devez-vous la suivre ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Sans panneau additionnel, la direction obligatoire s'applique à tous les conducteurs.",
+          "explanation": "Sans panneau additionnel, elle vaut pour tous.",
           "theoryCardIndex": 1,
           "image": "/images/questions/G2_Q15.webp"
         },
         {
           "id": "G2_Q18",
-          "question": "Vous voyez ce panneau à un carrefour. Pouvez-vous continuer tout droit ?",
+          "question": "Vous voyez ce panneau au carrefour. Pouvez-vous aller tout droit ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le signal rond bleu impose la direction : aller tout droit est interdit.",
+          "correct": 0,
+          "explanation": "Vous devez suivre la ou les flèches : tout droit n'en fait pas partie.",
           "theoryCardIndex": 1,
           "sign": "D1c"
         },
         {
           "id": "G2_Q19",
-          "question": "Vous voyez ce panneau à un carrefour. Pouvez-vous tourner à droite ?",
+          "question": "Vous voyez ce panneau au carrefour. Pouvez-vous tourner à droite ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Vous devez suivre l'une des deux directions imposées : gauche ou tout droit.",
+          "correct": 0,
+          "explanation": "Vous avez le choix entre gauche et tout droit.",
           "theoryCardIndex": 1,
           "sign": "D3b"
         },
         {
           "id": "G2_Q20",
-          "question": "Ce panneau impose tout droit mais porte « excepté cyclistes ». Vous êtes cycliste : pouvez-vous tourner à droite ?",
+          "question": "Tout droit obligatoire, « excepté cyclistes ». À vélo, pouvez-vous tourner à droite ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le panneau additionnel vous dispense de la direction obligatoire.",
+          "explanation": "Le panneau additionnel vous dispense de l'obligation.",
           "theoryCardIndex": 1,
           "sign": "D1a"
         },
         {
           "id": "G2_Q21",
-          "question": "De quel signal s'agit-il ?",
+          "question": "Que signifie ce panneau ?",
           "choices": [
-            "Un sens unique",
-            "Une direction obligatoire",
-            "Un danger triangulaire"
+            "Sens unique",
+            "Direction obligatoire",
+            "Fin de route"
           ],
           "correct": 0,
-          "explanation": "Le signal de sens unique est rectangulaire bleu avec une flèche blanche.",
+          "explanation": "Rectangle bleu avec flèche : sens unique. Pas de trafic en sens inverse, en principe.",
           "theoryCardIndex": 2,
           "sign": "F19"
         },
         {
-          "id": "G2_Q23",
-          "question": "Quelle est la forme d'un signal de direction obligatoire ?",
-          "choices": [
-            "Rond et bleu",
-            "Rectangulaire",
-            "Triangulaire"
-          ],
-          "correct": 0,
-          "explanation": "Le signal de direction obligatoire est rond bleu avec une flèche blanche.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "G2_Q25",
-          "question": "Comment distinguer le sens unique de la direction obligatoire ?",
+          "question": "Rond bleu ou rectangle bleu avec flèche : lequel vous oblige à suivre la flèche ?",
           "choices": [
-            "Rectangulaire ou rond",
-            "Bleu clair ou bleu foncé",
-            "Grand format ou petit"
+            "Le rond",
+            "Le rectangle",
+            "Les deux"
           ],
           "correct": 0,
-          "explanation": "La forme est la clé : rectangulaire = indication (sens unique), rond = obligation (direction imposée).",
+          "explanation": "Rond = obligation. Rectangle = information (sens unique).",
           "theoryCardIndex": 2
         },
         {
           "id": "G2_Q26",
-          "question": "Vous voyez ce panneau à l'entrée d'une rue. Êtes-vous obligé de tourner à droite ?",
+          "question": "Ce panneau est à l'entrée de la rue de droite. Êtes-vous obligé d'y tourner ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le signal rectangulaire est une indication (sens unique), pas une obligation de tourner.",
+          "correct": 0,
+          "explanation": "C'est un sens unique : il vous informe, il n'oblige pas à tourner.",
           "theoryCardIndex": 2,
           "sign": "F19"
         },
         {
           "id": "G2_Q27",
-          "question": "Vous voyez ce panneau à un carrefour. Êtes-vous obligé de tourner à droite ?",
+          "question": "Vous voyez ce panneau au carrefour. Êtes-vous obligé de tourner à droite ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le signal rond bleu impose la direction : vous devez tourner à droite.",
+          "explanation": "Rond bleu : la direction est obligatoire.",
           "theoryCardIndex": 2,
           "sign": "D1d"
         },
         {
-          "id": "G2_Q30",
-          "question": "Quelles conséquences si vous confondez sens unique et direction obligatoire ?",
-          "choices": [
-            "Tourner à tort ou pas du tout",
-            "Aucune conséquence en pratique",
-            "Un simple avertissement écrit"
-          ],
-          "correct": 0,
-          "explanation": "Confondre ces deux signaux peut induire un comportement incorrect et dangereux.",
-          "theoryCardIndex": 2
-        },
-        {
           "id": "G2_Q31",
-          "question": "Vous voyez ce panneau devant un obstacle. Que pouvez-vous faire ?",
+          "question": "Ce panneau est sur un obstacle. Par où pouvez-vous passer ?",
           "choices": [
-            "Passer à gauche ou à droite",
-            "Passer par la gauche seule",
-            "Vous ne pouvez pas passer"
+            "À gauche ou à droite",
+            "À gauche seulement",
+            "Nulle part"
           ],
           "correct": 0,
-          "explanation": "Ce signal d'indication vous laisse libre de passer d'un côté ou de l'autre.",
+          "explanation": "Il vous laisse le choix du côté.",
           "theoryCardIndex": 3,
           "sign": "F21"
         },
         {
           "id": "G2_Q33",
-          "question": "Un signal de choix de direction et un rond bleu à deux flèches sont-ils le même signal ?",
+          "question": "Ce rond bleu à deux flèches est-il une simple information ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, c'est une obligation",
+            "Oui, vous faites ce que vous voulez"
           ],
-          "correct": 1,
-          "explanation": "Le signal de choix (indication) et le signal à deux flèches rond bleu (obligation) sont fondamentalement différents.",
+          "correct": 0,
+          "explanation": "Rond bleu : vous devez prendre une des directions indiquées.",
           "theoryCardIndex": 3,
           "sign": "D3a"
         },
         {
-          "id": "G2_Q34",
-          "question": "Sur quel support un signal de choix de direction peut-il être fixé ?",
-          "choices": [
-            "Un poteau ou une borne jaune",
-            "Le sol de la chaussée seul",
-            "Un mur de bâtiment, sans plus"
-          ],
-          "correct": 0,
-          "explanation": "Ce signal peut être fixé sur un poteau ou sur une borne jaune.",
-          "theoryCardIndex": 3
-        },
-        {
           "id": "G2_Q35",
-          "question": "Un marquage hachuré occupe le milieu de la chaussée. De quoi s'agit-il ?",
+          "question": "Comment s'appelle cette zone hachurée au milieu de la chaussée ?",
           "choices": [
-            "D'un îlot directionnel",
-            "D'un passage pour piétons",
-            "D'un panneau peint au sol"
+            "Un îlot directionnel",
+            "Un passage pour piétons",
+            "Une place de parking"
           ],
           "correct": 0,
-          "explanation": "L'îlot directionnel est un marquage hachuré ou un dispositif construit pour diriger la circulation.",
+          "explanation": "Des lignes obliques blanches marquent un îlot directionnel ou une zone d'évitement.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q35.webp"
         },
         {
           "id": "G2_Q37",
-          "question": "De quel côté devez-vous contourner un îlot directionnel ?",
+          "question": "Par quel côté contournez-vous un îlot directionnel ?",
           "choices": [
             "Par la droite",
             "Par la gauche",
-            "Au choix, selon la place"
+            "Au choix"
           ],
           "correct": 0,
-          "explanation": "Les îlots directionnels se contournent toujours par la droite.",
+          "explanation": "Vous laissez l'îlot à votre gauche, sauf signalisation contraire.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q37.webp"
         },
         {
           "id": "G2_Q39",
-          "question": "Pouvez-vous rouler sur un îlot directionnel peint au sol ?",
+          "question": "Pouvez-vous rouler sur ces hachures ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, si c'est libre"
           ],
-          "correct": 1,
-          "explanation": "Il est interdit de circuler sur un îlot directionnel, qu'il soit peint ou construit.",
+          "correct": 0,
+          "explanation": "Interdit de rouler, de s'arrêter et de stationner sur ces marques.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q39.webp"
         },
         {
           "id": "G2_Q40",
-          "question": "Pouvez-vous vous arrêter brièvement sur un îlot directionnel ?",
+          "question": "Pouvez-vous vous arrêter un instant sur ces hachures ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "L'arrêt est interdit sur un îlot directionnel.",
+          "correct": 0,
+          "explanation": "L'arrêt y est interdit.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q40.webp"
         },
         {
           "id": "G2_Q41",
-          "question": "Pouvez-vous stationner sur un îlot directionnel ?",
+          "question": "Pouvez-vous stationner sur ces hachures ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, la nuit"
           ],
-          "correct": 1,
-          "explanation": "Le stationnement est interdit sur un îlot directionnel.",
+          "correct": 0,
+          "explanation": "Le stationnement y est interdit.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q41.webp"
         },
         {
-          "id": "G2_Q42",
-          "question": "Vous révisez la théorie. Quelles sont les trois interdictions concernant un îlot directionnel ?",
-          "choices": [
-            "Tourner, dépasser et reculer",
-            "Circuler, s'arrêter et stationner",
-            "Klaxonner, accélérer et freiner",
-            "Tourner, stationner et reculer"
-          ],
-          "correct": 1,
-          "explanation": "Circuler, s'arrêter et stationner sont les trois interdictions sur un îlot directionnel.",
-          "theoryCardIndex": 3,
-          "image": "/images/questions/G2_Q42.webp"
-        },
-        {
           "id": "G2_Q44",
-          "question": "Un îlot directionnel occupe le centre du carrefour. Comment tournez-vous à gauche ?",
+          "question": "Un îlot au milieu du carrefour. Vous tournez à gauche : comment ?",
           "choices": [
-            "Contourner par la droite, puis tourner",
-            "Contourner l'îlot par la gauche",
-            "Rouler sur l'îlot directionnel"
+            "Vous contournez l'îlot par la droite",
+            "Vous coupez à gauche de l'îlot",
+            "Vous roulez sur l'îlot"
           ],
           "correct": 0,
-          "explanation": "Vous contournez l'îlot par la droite avant de tourner à gauche.",
+          "explanation": "Vous laissez l'îlot à votre gauche, puis vous tournez.",
           "theoryCardIndex": 3,
           "image": "/images/questions/G2_Q44.webp"
         },
         {
           "id": "G2_Q50",
-          "question": "Un panneau additionnel avec un vélo est placé sous ce sens unique. Que signifie-t-il ?",
+          "question": "Sous ce sens unique, un panneau additionnel montre un vélo et une double flèche. Que signifie-t-il ?",
           "choices": [
-            "Les cyclistes vont dans les deux sens",
-            "Les cyclistes sont interdits ici",
-            "Une piste cyclable double sens"
+            "Les cyclistes peuvent venir en sens inverse",
+            "Les cyclistes sont interdits",
+            "Piste cyclable à côté"
           ],
           "correct": 0,
-          "explanation": "Ce panneau additionnel autorise les cyclistes et speed pedelecs à circuler dans les deux sens.",
+          "explanation": "Attendez-vous à croiser des cyclistes dans cette rue.",
           "theoryCardIndex": 1,
           "sign": "F19"
         },
