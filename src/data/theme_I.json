@@ -218,382 +218,324 @@
       "questions": [
         {
           "id": "I1_Q1",
-          "question": "Quels sont les effets de l'alcool sur votre conduite ?",
+          "question": "Que fait l'alcool sur votre conduite ?",
           "choices": [
-            "Jugement et réflexes altérés",
-            "Une meilleure concentration",
-            "Une simple sensation de fatigue"
+            "Il ralentit vos réflexes et trouble votre jugement",
+            "Il améliore la concentration",
+            "Rien sous 1 ‰"
           ],
           "correct": 0,
-          "explanation": "L'alcool altère la concentration, le jugement, le temps de réaction, provoque de la fatigue et un comportement téméraire.",
+          "explanation": "Réflexes plus lents, jugement altéré, prise de risques.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q2",
-          "question": "Vous prenez le volant en ayant trop bu. Qui mettez-vous en danger ?",
+          "question": "Le café fait-il baisser votre taux d'alcool ?",
           "choices": [
-            "Vous-même et les autres",
-            "Vous-même et personne d'autre",
-            "Vos passagers, sans plus"
+            "Non, seul le temps le fait baisser",
+            "Oui, quelques tasses suffisent",
+            "Oui, avec beaucoup d'eau"
           ],
           "correct": 0,
-          "explanation": "Un conducteur ivre met en danger sa propre vie ET celle des autres usagers de la route.",
+          "explanation": "Rien n'accélère l'élimination : il faut attendre.",
           "theoryCardIndex": 0
         },
         {
           "id": "I1_Q3",
-          "question": "Qui peut être soumis à un contrôle d'alcoolémie ?",
+          "question": "Qui peut devoir souffler dans un éthylotest ?",
           "choices": [
-            "Qui conduit un véhicule ou une monture",
-            "Les automobilistes et personne d'autre",
-            "Toute personne sur la voie publique"
+            "Toute personne qui conduit un véhicule ou un cheval",
+            "Seulement les automobilistes",
+            "Tout le monde dans la rue"
           ],
           "correct": 0,
-          "explanation": "Tout conducteur de véhicule ou monture peut être contrôlé : voitures, cyclistes, cavaliers, etc.",
+          "explanation": "Tout conducteur, cavaliers et cyclistes compris.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q4",
-          "question": "Vous rentrez d'une fête à vélo. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Vous rentrez d'une fête à vélo. Pouvez-vous être contrôlé ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Les cyclistes conduisent un véhicule et peuvent être soumis à un contrôle d'alcoolémie.",
+          "explanation": "Un cycliste conduit un véhicule.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q5",
-          "question": "Vous êtes moniteur et accompagnez un élève. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Vous accompagnez un élève en apprentissage. Pouvez-vous être contrôlé ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Le moniteur d'auto-école, qui est le guide du véhicule, peut être contrôlé.",
+          "explanation": "Le guide ou moniteur peut être contrôlé comme le conducteur.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q6",
-          "question": "Vous êtes piéton et avez provoqué un accident. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Un piéton ivre a peut-être causé un accident. Peut-il être contrôlé ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "Même un piéton peut être contrôlé s'il a contribué à provoquer un accident, même en tant que victime.",
+          "explanation": "Un piéton impliqué dans un accident peut être contrôlé.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q7",
-          "question": "Vous êtes passager d'une voiture contrôlée. Pouvez-vous être soumis à un contrôle d'alcoolémie ?",
+          "question": "Vous êtes passager (pas accompagnateur). Pouvez-vous être contrôlé ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Les passagers ne conduisent pas et ne peuvent pas être soumis à un contrôle d'alcoolémie.",
-          "theoryCardIndex": 0,
-          "severe": true
-        },
-        {
-          "id": "I1_Q8",
-          "question": "Vous dormez sur la banquette arrière de votre voiture. Pouvez-vous être contrôlé ?",
-          "choices": [
-            "Oui",
-            "Non"
-          ],
-          "correct": 1,
-          "explanation": "Dormir sur la banquette arrière ne vous expose pas au contrôle d'alcoolémie.",
+          "correct": 0,
+          "explanation": "Un simple passager ne conduit pas.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q9",
-          "question": "Vous marchez sur le trottoir sans accident. La police peut-elle vous contrôler l'alcoolémie ?",
+          "question": "Vous marchez sur le trottoir, sans accident. La police peut-elle vous faire souffler ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Seuls les piétons impliqués dans un accident peuvent être contrôlés.",
+          "correct": 0,
+          "explanation": "Un piéton n'est contrôlé qu'en cas d'accident.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q10",
-          "question": "Pouvez-vous refuser le test de l'haleine lors d'un contrôle ?",
+          "question": "Pouvez-vous refuser de souffler lors d'un contrôle ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui"
           ],
-          "correct": 1,
-          "explanation": "Le refus sans motif légitime est punissable et équivaut à un résultat Positif (P).",
+          "correct": 0,
+          "explanation": "Le refus est puni et vaut un résultat positif.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q11",
-          "question": "À l'hôpital après un accident, pouvez-vous refuser un prélèvement sanguin ?",
+          "question": "Après un accident, à l'hôpital, pouvez-vous refuser la prise de sang ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, sauf motif légitime",
+            "Oui, toujours"
           ],
-          "correct": 1,
-          "explanation": "Le refus de prélèvement sanguin sans motif légitime est punissable.",
+          "correct": 0,
+          "explanation": "Le refus sans motif légitime est puni.",
           "theoryCardIndex": 0
         },
         {
           "id": "I1_Q12",
-          "question": "Vous refusez de souffler dans l'éthylomètre. Que se passe-t-il ?",
+          "question": "Vous refusez de souffler. Combien de temps ne pouvez-vous plus conduire ?",
           "choices": [
-            "Vous êtes considéré positif",
-            "Vous passez à la prise de sang",
-            "Vous recevez un avertissement"
+            "12 heures",
+            "3 heures",
+            "6 heures"
           ],
           "correct": 0,
-          "explanation": "Le refus du test est considéré comme un résultat Positif : interdiction de conduire 6 heures.",
+          "explanation": "Le refus compte comme positif : 12 heures d'interdiction de conduire.",
           "theoryCardIndex": 0
         },
         {
-          "id": "I1_Q13",
-          "question": "Pendant combien de temps devez-vous souffler dans l'éthylomètre ?",
-          "choices": [
-            "Environ 7 secondes",
-            "Environ 3 secondes",
-            "Environ 15 secondes"
-          ],
-          "correct": 0,
-          "explanation": "Il faut souffler avec vigueur pendant environ 7 secondes dans l'éthylomètre.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "I1_Q14",
-          "question": "Comment savez-vous que vous soufflez correctement ?",
-          "choices": [
-            "Un sifflement continu",
-            "La couleur de l'écran",
-            "L'agent vous le dit"
-          ],
-          "correct": 0,
-          "explanation": "Un sifflement continu confirme que vous soufflez correctement dans l'éthylomètre.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "I1_Q15",
-          "question": "Vous soufflez dans l'éthylomètre et un témoin lumineux s'allume. Quelle couleur indique que vous avez suffisamment soufflé ?",
-          "choices": [
-            "Rouge",
-            "Vert",
-            "Orange",
-            "Bleu"
-          ],
-          "correct": 1,
-          "explanation": "Le témoin lumineux vert indique que vous avez fourni un souffle suffisant.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "I1_Q16",
-          "question": "Le résultat affiche « S » (Safe). Que signifie-t-il ?",
+          "question": "L'éthylotest affiche « S ». Que se passe-t-il ?",
           "choices": [
-            "Sous le seuil, vous pouvez rouler",
-            "Positif, vous ne pouvez pas rouler",
-            "Alarme, une analyse est requise"
+            "Vous pouvez repartir",
+            "Analyse de l'haleine",
+            "Interdiction de conduire"
           ],
           "correct": 0,
-          "explanation": "S = Safe : concentration en dessous du seuil autorisé, vous pouvez conduire.",
+          "explanation": "S (safe) : moins de 0,22 mg/l, vous repartez.",
           "theoryCardIndex": 1
         },
         {
           "id": "I1_Q17",
-          "question": "Le résultat affiche « A » (Alarme). À quelle concentration cela correspond-il ?",
+          "question": "L'éthylotest affiche « A ». À quel taux cela correspond-il ?",
           "choices": [
             "De 0,22 à 0,35 mg/l",
             "Moins de 0,22 mg/l",
-            "Au moins 0,35 mg/l"
+            "0,35 mg/l ou plus"
           ],
           "correct": 0,
-          "explanation": "A = Alarme : entre 0,22 mg/l (0,5 ‰) et 0,35 mg/l (0,8 ‰).",
+          "explanation": "A (alarme) : entre 0,22 et 0,35 mg/l.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q18",
-          "question": "Le résultat affiche « P » (Positif). À quelle concentration cela correspond-il ?",
+          "question": "L'éthylotest affiche « P ». À quel taux cela correspond-il ?",
           "choices": [
-            "Au moins 0,35 mg/l",
+            "0,35 mg/l ou plus",
             "Moins de 0,22 mg/l",
             "De 0,22 à 0,35 mg/l"
           ],
           "correct": 0,
-          "explanation": "P = Positif : concentration ≥ 0,35 mg/l (0,8 ‰).",
+          "explanation": "P (positif) : au moins 0,35 mg/l.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q19",
-          "question": "Vous avez obtenu un résultat \"A\" (Alarme) au test de l'haleine. Que se passe-t-il ensuite ?",
+          "question": "L'éthylotest n'affiche pas « S ». Que se passe-t-il ?",
           "choices": [
-            "Vous pouvez reprendre le volant directement",
-            "Vous devez subir une analyse de l'haleine",
-            "Votre permis est retiré immédiatement",
-            "Vous passez directement au prélèvement sanguin"
+            "Vous passez une analyse de l'haleine",
+            "Vous repartez",
+            "Rien"
           ],
-          "correct": 1,
-          "explanation": "Le résultat A déclenche une analyse de l'haleine pour mesurer la concentration exacte.",
+          "correct": 0,
+          "explanation": "L'analyse mesure ensuite votre taux exact.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q21",
-          "question": "Vous révisez pour l'examen. À combien de pour mille (pour mille) correspondent 0,22 mg/l d'air alvéolaire ?",
+          "question": "0,22 mg/l dans l'air expiré, cela fait combien dans le sang ?",
           "choices": [
-            "0,2 pour mille",
-            "0,5 pour mille",
-            "0,8 pour mille",
-            "1,0 pour mille"
+            "0,5 ‰",
+            "0,2 ‰",
+            "0,8 ‰"
           ],
-          "correct": 1,
-          "explanation": "0,22 mg/l = 0,5 ‰. C'est le seuil d'Alarme (résultat A).",
+          "correct": 0,
+          "explanation": "0,22 mg/l = 0,5 ‰ : la limite légale.",
           "theoryCardIndex": 1
         },
         {
           "id": "I1_Q22",
-          "question": "Vous révisez les seuils d'alcoolémie. À combien de pour mille correspondent 0,35 mg/l ?",
+          "question": "0,35 mg/l dans l'air expiré, cela fait combien dans le sang ?",
           "choices": [
-            "0,5 pour mille",
-            "0,8 pour mille",
-            "1,0 pour mille",
-            "1,5 pour mille"
+            "0,8 ‰",
+            "0,5 ‰",
+            "1,2 ‰"
           ],
-          "correct": 1,
-          "explanation": "0,35 mg/l = 0,8 ‰. C'est le seuil Positif (résultat P).",
+          "correct": 0,
+          "explanation": "0,35 mg/l = 0,8 ‰.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q23",
-          "question": "Quelle différence entre le test et l'analyse de l'haleine ?",
+          "question": "Quel test mesure votre taux d'alcool avec précision ?",
           "choices": [
-            "Le test indique, l'analyse mesure",
-            "L'analyse indique, le test mesure",
-            "Aucune, les deux se valent"
+            "L'analyse de l'haleine",
+            "Le test de l'haleine",
+            "Le test salivaire"
           ],
           "correct": 0,
-          "explanation": "Le test indique S/A/P. L'analyse donne la concentration précise et délivre un ticket imprimé.",
+          "explanation": "Le test donne S, A ou P ; l'analyse donne le chiffre exact.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q25",
-          "question": "L'analyse de l'haleine indique 0,18 mg/l. Que se passe-t-il ?",
+          "question": "L'analyse indique 0,18 mg/l. Que se passe-t-il ?",
           "choices": [
-            "Vous pouvez conduire",
-            "Votre permis est retiré",
-            "Vous recevez une amende"
+            "Vous pouvez repartir",
+            "Interdiction de conduire",
+            "Retrait du permis"
           ],
           "correct": 0,
-          "explanation": "En dessous de 0,22 mg/l, vous pouvez conduire normalement.",
+          "explanation": "Moins de 0,22 mg/l : vous repartez.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q26",
-          "question": "Vous avez subi une analyse de l'haleine et le résultat indique 0,28 mg/l. Que se passe-t-il ?",
+          "question": "L'analyse indique 0,28 mg/l. Combien de temps ne pouvez-vous plus conduire ?",
           "choices": [
-            "Rien, vous pouvez reprendre la route",
-            "Permis retiré 3 heures et une amende",
-            "Permis retiré 6 heures et le tribunal",
-            "Un simple avertissement sans suite"
+            "12 heures",
+            "3 heures",
+            "15 jours"
           ],
-          "correct": 1,
-          "explanation": "0,28 mg/l est entre 0,22 et 0,35 : permis retiré 3 heures + amende.",
+          "correct": 0,
+          "explanation": "De 0,22 à 0,35 mg/l : 12 heures d'interdiction de conduire (depuis juillet 2026), plus une amende.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q27",
-          "question": "Vous avez subi une analyse de l'haleine et le résultat indique 0,40 mg/l. Que se passe-t-il ?",
+          "question": "L'analyse indique 0,40 mg/l. Que risquez-vous sur place ?",
           "choices": [
-            "Votre permis est retiré 3 heures",
-            "Permis retiré 6 heures et une amende",
-            "Vous pouvez reprendre la route",
-            "Vous recevez un simple avertissement"
+            "Le retrait immédiat du permis pour 15 jours",
+            "3 heures d'interdiction",
+            "Rien"
           ],
-          "correct": 1,
-          "explanation": "0,40 mg/l ≥ 0,35 : permis retiré 6 heures + amende. En pratique souvent 15 jours.",
+          "correct": 0,
+          "explanation": "À partir de 0,35 mg/l, le permis peut être retiré immédiatement pour 15 jours.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q30",
-          "question": "Vous refusez l'analyse de l'haleine. Que se passe-t-il ?",
+          "question": "Vous refusez l'analyse de l'haleine. Combien de temps ne pouvez-vous plus conduire ?",
           "choices": [
-            "Considéré positif, 6 heures",
-            "Une amende, sans plus",
-            "Un avertissement écrit"
+            "12 heures",
+            "3 heures",
+            "Aucune interdiction"
           ],
           "correct": 0,
-          "explanation": "Le refus de l'analyse est considéré comme un résultat Positif : interdiction de conduire 6 heures.",
+          "explanation": "Le refus compte comme positif : 12 heures.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q32",
-          "question": "Vous soufflez exactement 0,22 mg/l lors de l'analyse. Que se passe-t-il ?",
+          "question": "L'analyse indique exactement 0,22 mg/l. Êtes-vous en infraction ?",
           "choices": [
-            "Vous pouvez reprendre la route",
-            "Permis retiré 3 heures et une amende",
-            "Rien, le seuil n'est pas dépassé",
-            "Cela dépend de l'appréciation de l'agent"
+            "Oui",
+            "Non, c'est la limite"
           ],
-          "correct": 1,
-          "explanation": "0,22 mg/l atteint le seuil minimal : permis retiré 3 heures + amende.",
+          "correct": 0,
+          "explanation": "L'infraction commence à 0,22 mg/l inclus.",
           "theoryCardIndex": 2
         },
         {
           "id": "I1_Q33",
-          "question": "Vous êtes hospitalisé après un accident et vous ne pouvez pas souffler. Comment la police peut-elle mesurer votre taux d'alcool ?",
+          "question": "Hospitalisé après un accident, vous ne pouvez pas souffler. Comment mesure-t-on votre alcool ?",
           "choices": [
-            "En attendant votre rétablissement",
-            "Par un prélèvement sanguin",
-            "Elle ne peut pas vous contrôler",
-            "Par une prise de sang à votre demande"
+            "Par une prise de sang",
+            "On attend votre guérison",
+            "On ne le mesure pas"
           ],
-          "correct": 1,
-          "explanation": "Le prélèvement sanguin est effectué quand le test/analyse est impossible (hôpital, asthme, incapacité à souffler).",
+          "correct": 0,
+          "explanation": "Si souffler est impossible : prise de sang.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "I1_Q34",
-          "question": "Vous êtes asthmatique et ne pouvez pas souffler. Que se passe-t-il ?",
+          "question": "Asthmatique, vous ne pouvez pas souffler. Que se passe-t-il ?",
           "choices": [
-            "Un prélèvement sanguin d'office",
-            "Vous êtes libéré sans contrôle",
+            "Prise de sang",
+            "Vous repartez",
             "Vous devez souffler quand même"
           ],
           "correct": 0,
-          "explanation": "L'impossibilité de souffler (asthme) justifie un prélèvement sanguin.",
+          "explanation": "Un problème médical réel mène à une prise de sang.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q35",
-          "question": "Vous devez subir un prélèvement sanguin. Qui effectue cette prise de sang ?",
+          "question": "Qui fait la prise de sang ?",
           "choices": [
-            "Un agent de police",
-            "Un médecin",
-            "Un infirmier",
-            "Vous-même avec un kit"
+            "Un médecin désigné par la police",
+            "Un policier",
+            "Le médecin de votre choix"
           ],
-          "correct": 1,
-          "explanation": "Seul un médecin est habilité à effectuer le prélèvement sanguin.",
+          "correct": 0,
+          "explanation": "Un médecin, requis par la police.",
           "theoryCardIndex": 3
         },
         {
@@ -605,219 +547,189 @@
             "L'assureur"
           ],
           "correct": 0,
-          "explanation": "L'éthylotest antidémarrage est imposé par décision du juge.",
+          "explanation": "C'est une décision du juge.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "I1_Q38",
-          "question": "Pour quelle durée l'éthylotest antidémarrage peut-il être imposé ?",
+          "question": "Pour combien de temps l'éthylotest antidémarrage peut-il être imposé ?",
           "choices": [
             "De 1 à 3 ans, voire à vie",
-            "Six mois au maximum",
-            "Un mois, pas davantage"
+            "6 mois maximum",
+            "1 mois"
           ],
           "correct": 0,
-          "explanation": "L'éthylotest antidémarrage peut être imposé de 1 à 3 ans, voire à vie.",
+          "explanation": "De 1 à 3 ans, voire définitivement.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q39",
-          "question": "Vous devez souffler dans l'éthylotest antidémarrage avant de démarrer. Quel est le seuil au-delà duquel le moteur refuse de démarrer ?",
+          "question": "À partir de quel taux l'éthylotest antidémarrage bloque-t-il le moteur ?",
           "choices": [
-            "0,5 pour mille",
-            "0,2 pour mille",
-            "0,8 pour mille",
-            "0,0 pour mille"
+            "0,2 ‰",
+            "0,5 ‰",
+            "0,8 ‰"
           ],
-          "correct": 1,
-          "explanation": "Le seuil est 0,2 ‰ : au-dessus ou égal à ce taux, le moteur ne démarre pas.",
+          "correct": 0,
+          "explanation": "Au-delà de 0,2 ‰, la voiture ne démarre pas.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q41",
-          "question": "À quels conducteurs l'éthylotest antidémarrage peut-il être imposé ?",
+          "question": "À qui le juge peut-il imposer un éthylotest antidémarrage ?",
           "choices": [
-            "Plus de 0,8 pour mille ou ivres",
-            "Ceux contrôlés à 0,5 pour mille",
-            "Tous les conducteurs, sans tri"
+            "Aux conducteurs à 0,8 ‰ ou plus, ou ivres",
+            "À tous les conducteurs",
+            "Aux conducteurs à 0,5 ‰"
           ],
           "correct": 0,
-          "explanation": "Il peut être imposé (mais pas obligatoirement) aux conducteurs > 0,8 ‰, en état d'ivresse ou récidivistes.",
+          "explanation": "À partir de 0,8 ‰ ou en cas d'ivresse.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "I1_Q42",
-          "question": "Vous révisez les seuils. À partir de quel taux l'éthylotest antidémarrage DOIT-il obligatoirement être imposé ?",
+          "question": "À partir de quel taux l'éthylotest antidémarrage est-il en principe obligatoire ?",
           "choices": [
-            "0,8 pour mille",
-            "1,8 pour mille",
-            "1,2 pour mille",
-            "0,5 pour mille"
+            "1,8 ‰",
+            "0,8 ‰",
+            "1,2 ‰"
           ],
-          "correct": 1,
-          "explanation": "À partir de 1,8 ‰, l'éthylotest antidémarrage est obligatoire, sauf décision contraire explicitement motivée du juge.",
+          "correct": 0,
+          "explanation": "À partir de 1,8 ‰, le juge doit l'imposer (sauf décision motivée).",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q43",
-          "question": "À quels récidivistes l'éthylotest antidémarrage doit-il être imposé ?",
+          "question": "Quel récidiviste doit recevoir un éthylotest antidémarrage ?",
           "choices": [
-            "Deux fois 1,2 pour mille en 3 ans",
-            "Une fois 0,8 pour mille au volant",
-            "Toute forme de récidive routière"
+            "Deux fois 1,2 ‰ ou plus en 3 ans",
+            "Une fois 0,8 ‰",
+            "Toute récidive"
           ],
           "correct": 0,
-          "explanation": "L'éthylotest est obligatoire pour les récidivistes contrôlés deux fois avec ≥ 1,2 ‰ en 3 ans.",
+          "explanation": "Récidive à 1,2 ‰ ou plus dans les 3 ans.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q44",
-          "question": "Un conducteur affiche 1,8 pour mille. Le juge peut-il renoncer à l'éthylotest antidémarrage ?",
+          "question": "1,8 ‰ : le juge peut-il ne pas imposer l'éthylotest antidémarrage ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, s'il motive sa décision",
+            "Non, jamais"
           ],
           "correct": 0,
-          "explanation": "Le juge peut exceptionnellement ne pas l'imposer, mais doit explicitement le décider et motiver sa décision.",
+          "explanation": "Exception possible, mais motivée.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q45",
-          "question": "Vous soufflez 0,15 pour mille dans l'éthylotest antidémarrage. Le moteur démarre-t-il ?",
+          "question": "Vous soufflez 0,15 ‰ dans l'éthylotest antidémarrage. La voiture démarre-t-elle ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "0,15 ‰ < 0,2 ‰ : le seuil n'est pas atteint, le moteur démarre.",
+          "explanation": "0,15 ‰, c'est moins que 0,2 ‰.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q47",
-          "question": "Comment se déroule un test salivaire de drogues ?",
+          "question": "Comment s'appelle le test qui détecte la drogue ?",
           "choices": [
-            "Un prélèvement au coton-tige",
-            "Une prise de sang au poste",
-            "Une analyse d'urine au labo"
+            "Le test salivaire",
+            "Le test de l'haleine",
+            "Le thermotest"
           ],
           "correct": 0,
-          "explanation": "Le test salivaire consiste à recueillir de la salive avec un coton-tige.",
+          "explanation": "On prélève un peu de salive.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q48",
-          "question": "Sans infraction ni accident, la police peut-elle vous imposer un test salivaire ?",
+          "question": "Sans accident, la police peut-elle vous imposer un test salivaire sans raison ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non, il faut un soupçon objectif",
+            "Oui, à tout conducteur"
           ],
-          "correct": 1,
-          "explanation": "Le test salivaire nécessite un soupçon objectif, sauf en cas d'accident où il peut toujours être imposé.",
+          "correct": 0,
+          "explanation": "Hors accident, il faut des signes objectifs de consommation.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q49",
-          "question": "Après un accident, la police peut-elle imposer un test salivaire sans soupçon ?",
+          "question": "Vous êtes impliqué dans un accident. La police peut-elle vous imposer un test salivaire ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Oui, toujours",
+            "Seulement en cas de soupçon"
           ],
           "correct": 0,
-          "explanation": "En cas d'accident, le test salivaire peut être imposé sans soupçon préalable.",
-          "theoryCardIndex": 4,
-          "severe": true
-        },
-        {
-          "id": "I1_Q50",
-          "question": "Quelles conditions distinguent le contrôle alcool du contrôle drogues ?",
-          "choices": [
-            "Alcool : tous ; drogues : soupçon",
-            "Drogues : tous ; alcool : soupçon",
-            "Les deux exigent un soupçon"
-          ],
-          "correct": 0,
-          "explanation": "Le contrôle alcool peut s'appliquer à tout conducteur. Le contrôle drogue nécessite un soupçon objectif (sauf accident).",
+          "explanation": "En cas d'accident, il peut toujours être imposé.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q51",
-          "question": "Vous avez été soumis à un test salivaire et le résultat est positif. Pendant combien de temps votre permis est-il retiré ?",
+          "question": "Test salivaire positif. Combien de temps ne pouvez-vous plus conduire ?",
           "choices": [
-            "6 heures",
             "12 heures",
             "3 heures",
-            "24 heures"
+            "6 heures"
           ],
-          "correct": 1,
-          "explanation": "Un test salivaire positif entraîne un retrait du permis de 12 heures.",
+          "correct": 0,
+          "explanation": "12 heures d'interdiction de conduire.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q52",
-          "question": "Vous êtes positif aux drogues. Un retrait immédiat prolongé est-il possible ?",
+          "question": "Test salivaire positif. Le permis peut-il aussi être retiré sur place ?",
           "choices": [
             "Oui",
             "Non"
           ],
           "correct": 0,
-          "explanation": "En plus des 12 heures, un retrait immédiat du permis est possible en cas de test positif.",
-          "theoryCardIndex": 4,
-          "severe": true
-        },
-        {
-          "id": "I1_Q53",
-          "question": "Quelle est la durée maximale d'interdiction de conduire pour conduite sous drogues ?",
-          "choices": [
-            "Cinq ans au maximum",
-            "Trois ans au maximum",
-            "Un an au maximum"
-          ],
-          "correct": 0,
-          "explanation": "L'interdiction de conduire pour drogue peut aller jusqu'à 5 ans maximum.",
+          "explanation": "En plus des 12 heures, un retrait immédiat est possible.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q55",
-          "question": "Vous avez consommé de l'alcool ET des drogues avant de prendre le volant. Est-ce plus ou moins grave que l'alcool seul ?",
+          "question": "Alcool et drogue ensemble : par rapport à l'alcool seul, c'est :",
           "choices": [
-            "C'est aussi grave que l'alcool seul",
-            "C'est plus grave que l'alcool seul",
-            "C'est moins grave",
-            "Cela n'a pas d'importance"
+            "Plus grave",
+            "Aussi grave",
+            "Moins grave"
           ],
-          "correct": 1,
-          "explanation": "La combinaison alcool + drogues est plus grave et plus dangereuse que l'alcool seul.",
+          "correct": 0,
+          "explanation": "Les effets s'additionnent et se renforcent.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q56",
-          "question": "Certains médicaments ont-ils des effets sur la conduite ?",
+          "question": "Votre médicament provoque de la somnolence (voir la notice). Pouvez-vous conduire ?",
           "choices": [
-            "Oui",
-            "Non"
+            "Non",
+            "Oui, si vous êtes prudent"
           ],
           "correct": 0,
-          "explanation": "Certains médicaments altèrent la concentration, les réflexes ou la vigilance.",
+          "explanation": "Conduire malgré l'avertissement est puni comme l'alcool au volant.",
           "theoryCardIndex": 4
         },
         {
           "id": "I1_Q57",
-          "question": "Vous mélangez médicaments et alcool avant de conduire. Quel est le risque ?",
+          "question": "Médicaments et alcool ensemble avant de conduire :",
           "choices": [
             "L'alcool renforce leurs effets",
-            "Il n'y a aucun risque de plus",
-            "Les effets restent identiques"
+            "Aucun risque en plus",
+            "Les effets s'annulent"
           ],
           "correct": 0,
-          "explanation": "L'alcool amplifie les effets néfastes des médicaments, rendant la combinaison encore plus dangereuse.",
+          "explanation": "Le mélange est encore plus dangereux.",
           "theoryCardIndex": 4,
           "severe": true
         },

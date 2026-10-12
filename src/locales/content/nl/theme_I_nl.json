@@ -140,606 +140,518 @@
       "questions": [
         {
           "id": "I1_Q1",
-          "question": "Welke effecten heeft alcohol op uw rijgedrag?",
+          "question": "Wat doet alcohol met je rijgedrag?",
           "choices": [
-            "Oordeel en reflexen aangetast",
-            "Een betere concentratie",
-            "Enkel een gevoel van vermoeidheid"
+            "Het vertraagt je reflexen en vertroebelt je oordeel",
+            "Het verbetert je concentratie",
+            "Niets onder 1 ‰"
           ],
           "correct": 0,
-          "explanation": "Alcohol tast de concentratie, het beoordelingsvermogen, de reactietijd aan, veroorzaakt vermoeidheid en overmoedig gedrag.",
+          "explanation": "Tragere reflexen, slechter oordeel, meer risico's.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q2",
-          "question": "U rijdt na te veel gedronken te hebben. Wie brengt u in gevaar?",
+          "question": "Doet koffie je alcoholgehalte dalen?",
           "choices": [
-            "Uzelf en de anderen",
-            "Uzelf en niemand anders",
-            "Uw passagiers, meer niet"
+            "Nee, alleen tijd doet het dalen",
+            "Ja, een paar koppen volstaan",
+            "Ja, met veel water"
           ],
           "correct": 0,
-          "explanation": "Een dronken bestuurder brengt zowel zijn eigen leven als dat van andere weggebruikers in gevaar.",
+          "explanation": "Niets versnelt de afbraak: je moet wachten.",
           "theoryCardIndex": 0
         },
         {
           "id": "I1_Q3",
-          "question": "Wie kan aan een alcoholcontrole worden onderworpen?",
+          "question": "Wie kan een ademtest moeten afleggen?",
           "choices": [
-            "Wie een voertuig of rijdier bestuurt",
-            "De autobestuurders en niemand anders",
-            "Elke persoon op de openbare weg"
+            "Iedereen die een voertuig of paard bestuurt",
+            "Alleen autobestuurders",
+            "Iedereen op straat"
           ],
           "correct": 0,
-          "explanation": "Elke bestuurder van een voertuig of rijdier kan gecontroleerd worden: auto's, fietsers, ruiters, enz.",
+          "explanation": "Elke bestuurder, ook ruiters en fietsers.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q4",
-          "question": "U keert met de fiets terug van een feest. Kan u aan een alcoholcontrole worden onderworpen?",
+          "question": "Je fietst terug van een feestje. Kan je gecontroleerd worden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Fietsers besturen een voertuig en kunnen aan een ademtest onderworpen worden.",
+          "explanation": "Een fietser bestuurt een voertuig.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q5",
-          "question": "U bent instructeur en begeleidt een leerling. Kan u aan een alcoholcontrole worden onderworpen?",
+          "question": "Je begeleidt een leerling-bestuurder. Kan je gecontroleerd worden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "De rijschoolinstructeur, die het voertuig begeleidt, kan gecontroleerd worden.",
+          "explanation": "De begeleider of instructeur kan gecontroleerd worden zoals de bestuurder.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q6",
-          "question": "U bent voetganger en veroorzaakte een ongeval. Kan u aan een alcoholcontrole worden onderworpen?",
+          "question": "Een dronken voetganger heeft misschien een ongeval veroorzaakt. Kan hij gecontroleerd worden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Zelfs een voetganger kan gecontroleerd worden als hij heeft bijgedragen tot het veroorzaken van een ongeval, zelfs als slachtoffer.",
+          "explanation": "Een voetganger die betrokken is bij een ongeval kan gecontroleerd worden.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q7",
-          "question": "U bent passagier in een gecontroleerde wagen. Kan u aan een alcoholcontrole worden onderworpen?",
+          "question": "Je bent passagier (geen begeleider). Kan je gecontroleerd worden?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Passagiers rijden niet en kunnen niet aan een ademtest onderworpen worden.",
-          "theoryCardIndex": 0,
-          "severe": true
-        },
-        {
-          "id": "I1_Q8",
-          "question": "U slaapt op de achterbank van uw wagen. Kan u gecontroleerd worden?",
-          "choices": [
-            "Ja",
-            "Nee"
-          ],
-          "correct": 1,
-          "explanation": "Slapen op de achterbank stelt u vrij van een ademtest.",
+          "correct": 0,
+          "explanation": "Een gewone passagier bestuurt niet.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q9",
-          "question": "U wandelt op het trottoir zonder ongeval. Mag de politie uw alcohol controleren?",
+          "question": "Je wandelt op het trottoir, zonder ongeval. Mag de politie je laten blazen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Enkel voetgangers die betrokken zijn bij een ongeval kunnen gecontroleerd worden.",
+          "correct": 0,
+          "explanation": "Een voetganger wordt alleen bij een ongeval gecontroleerd.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q10",
-          "question": "Mag u de ademtest bij een controle weigeren?",
+          "question": "Mag je weigeren te blazen bij een controle?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja"
           ],
-          "correct": 1,
-          "explanation": "Weigeren zonder wettige reden is strafbaar en staat gelijk aan een resultaat Positief (P).",
+          "correct": 0,
+          "explanation": "Weigeren is strafbaar en geldt als een positief resultaat.",
           "theoryCardIndex": 0,
           "severe": true
         },
         {
           "id": "I1_Q11",
-          "question": "In het ziekenhuis na een ongeval, mag u een bloedafname weigeren?",
+          "question": "Mag je na een ongeval in het ziekenhuis de bloedproef weigeren?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, tenzij met gegronde reden",
+            "Ja, altijd"
           ],
-          "correct": 1,
-          "explanation": "Het weigeren van een bloedafname zonder wettige reden is strafbaar.",
+          "correct": 0,
+          "explanation": "Weigeren zonder gegronde reden is strafbaar.",
           "theoryCardIndex": 0
         },
         {
           "id": "I1_Q12",
-          "question": "U weigert in het toestel te blazen. Wat gebeurt er?",
+          "question": "Je weigert te blazen. Hoelang mag je niet meer rijden?",
           "choices": [
-            "U wordt als positief beschouwd",
-            "U gaat naar de bloedafname",
-            "U krijgt een waarschuwing"
+            "12 uur",
+            "3 uur",
+            "6 uur"
           ],
           "correct": 0,
-          "explanation": "De weigering van de test wordt beschouwd als een resultaat Positief: rijverbod van 6 uur.",
+          "explanation": "Weigeren geldt als positief: 12 uur rijverbod.",
           "theoryCardIndex": 0
         },
         {
-          "id": "I1_Q13",
-          "question": "Hoe lang moet u in het ademtesttoestel blazen?",
-          "choices": [
-            "Ongeveer 7 seconden",
-            "Ongeveer 3 seconden",
-            "Ongeveer 15 seconden"
-          ],
-          "correct": 0,
-          "explanation": "U moet krachtig blazen gedurende ongeveer 7 seconden in het ademtoestel.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "I1_Q14",
-          "question": "Hoe weet u dat u correct blaast?",
-          "choices": [
-            "Een aanhoudend gefluit",
-            "De kleur van het scherm",
-            "De agent zegt het u"
-          ],
-          "correct": 0,
-          "explanation": "Een continu fluitgeluid bevestigt dat u correct blaast in het ademtoestel.",
-          "theoryCardIndex": 1
-        },
-        {
-          "id": "I1_Q15",
-          "question": "U blaast in het ademtoestel en een lampje gaat branden. Welke kleur geeft aan dat u voldoende geblazen heeft?",
-          "choices": [
-            "Rood",
-            "Groen",
-            "Oranje",
-            "Blauw"
-          ],
-          "correct": 1,
-          "explanation": "Het groene lampje geeft aan dat u voldoende geblazen heeft.",
-          "theoryCardIndex": 1
-        },
-        {
           "id": "I1_Q16",
-          "question": "Het resultaat toont « S » (Safe). Wat betekent dat?",
+          "question": "De ademtest toont « S ». Wat gebeurt er?",
           "choices": [
-            "Onder de grens, u mag rijden",
-            "Positief, u mag niet rijden",
-            "Alarm, een analyse is nodig"
+            "Je mag verder rijden",
+            "Ademanalyse",
+            "Rijverbod"
           ],
           "correct": 0,
-          "explanation": "S = Safe: gehalte onder de toegelaten drempel, u mag rijden.",
+          "explanation": "S (safe): minder dan 0,22 mg/l, je rijdt verder.",
           "theoryCardIndex": 1
         },
         {
           "id": "I1_Q17",
-          "question": "Het resultaat toont « A » (Alarm). Met welke concentratie komt dat overeen?",
+          "question": "De ademtest toont « A ». Met welk gehalte komt dat overeen?",
           "choices": [
             "Van 0,22 tot 0,35 mg/l",
             "Minder dan 0,22 mg/l",
-            "Minstens 0,35 mg/l"
+            "0,35 mg/l of meer"
           ],
           "correct": 0,
-          "explanation": "A = Alarm: tussen 0,22 mg/l (0,5 ‰) en 0,35 mg/l (0,8 ‰).",
+          "explanation": "A (alarm): tussen 0,22 en 0,35 mg/l.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q18",
-          "question": "Het resultaat toont « P » (Positief). Met welke concentratie komt dat overeen?",
+          "question": "De ademtest toont « P ». Met welk gehalte komt dat overeen?",
           "choices": [
-            "Minstens 0,35 mg/l",
+            "0,35 mg/l of meer",
             "Minder dan 0,22 mg/l",
             "Van 0,22 tot 0,35 mg/l"
           ],
           "correct": 0,
-          "explanation": "P = Positief: concentratie ≥ 0,35 mg/l (0,8 ‰).",
+          "explanation": "P (positief): minstens 0,35 mg/l.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q19",
-          "question": "U kreeg een resultaat \"A\" (Alarm) bij de ademtest. Wat gebeurt er nu?",
+          "question": "De ademtest toont geen « S ». Wat gebeurt er?",
           "choices": [
-            "U mag meteen weer achter het stuur",
-            "U moet een ademanalyse ondergaan",
-            "Uw rijbewijs wordt onmiddellijk ingetrokken",
-            "U gaat rechtstreeks naar de bloedafname"
+            "Je legt een ademanalyse af",
+            "Je rijdt verder",
+            "Niets"
           ],
-          "correct": 1,
-          "explanation": "Het resultaat A leidt tot een ademanalyse om de exacte concentratie te meten.",
+          "correct": 0,
+          "explanation": "De analyse meet daarna je exacte gehalte.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q21",
-          "question": "U bereidt zich voor op het examen. Met hoeveel promille stemt 0,22 mg/l alveolaire lucht overeen?",
+          "question": "0,22 mg/l in de uitgeademde lucht, hoeveel is dat in het bloed?",
           "choices": [
-            "0,2 promille",
-            "0,5 promille",
-            "0,8 promille",
-            "1,0 promille"
+            "0,5 ‰",
+            "0,2 ‰",
+            "0,8 ‰"
           ],
-          "correct": 1,
-          "explanation": "0,22 mg/l = 0,5 ‰. Dit is de Alarm-drempel (resultaat A).",
+          "correct": 0,
+          "explanation": "0,22 mg/l = 0,5 ‰: de wettelijke grens.",
           "theoryCardIndex": 1
         },
         {
           "id": "I1_Q22",
-          "question": "U herhaalt de alcoholdrempels. Met hoeveel promille stemt 0,35 mg/l overeen?",
+          "question": "0,35 mg/l in de uitgeademde lucht, hoeveel is dat in het bloed?",
           "choices": [
-            "0,5 promille",
-            "0,8 promille",
-            "1,0 promille",
-            "1,5 promille"
+            "0,8 ‰",
+            "0,5 ‰",
+            "1,2 ‰"
           ],
-          "correct": 1,
-          "explanation": "0,35 mg/l = 0,8 ‰. Dit is de Positief-drempel (resultaat P).",
+          "correct": 0,
+          "explanation": "0,35 mg/l = 0,8 ‰.",
           "theoryCardIndex": 1,
           "severe": true
         },
         {
           "id": "I1_Q23",
-          "question": "Wat is het verschil tussen de ademtest en de ademanalyse?",
+          "question": "Welke test meet je alcoholgehalte precies?",
           "choices": [
-            "De test wijst aan, de analyse meet",
-            "De analyse wijst aan, de test meet",
-            "Geen, ze zijn gelijkwaardig"
+            "De ademanalyse",
+            "De ademtest",
+            "De speekseltest"
           ],
           "correct": 0,
-          "explanation": "De test geeft S/A/P. De analyse geeft de precieze concentratie en levert een afgedrukt ticket.",
+          "explanation": "De test geeft S, A of P; de analyse geeft het exacte cijfer.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q25",
-          "question": "De ademanalyse geeft 0,18 mg/l aan. Wat gebeurt er?",
+          "question": "De analyse toont 0,18 mg/l. Wat gebeurt er?",
           "choices": [
-            "U mag rijden",
-            "Uw rijbewijs wordt ingetrokken",
-            "U krijgt een boete"
+            "Je mag verder rijden",
+            "Rijverbod",
+            "Intrekking van het rijbewijs"
           ],
           "correct": 0,
-          "explanation": "Onder 0,22 mg/l mag u gewoon rijden.",
+          "explanation": "Minder dan 0,22 mg/l: je rijdt verder.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q26",
-          "question": "U onderging een ademanalyse en het resultaat toont 0,28 mg/l. Wat gebeurt er?",
+          "question": "De analyse toont 0,28 mg/l. Hoelang mag je niet meer rijden?",
           "choices": [
-            "Niets, u mag verder rijden",
-            "Rijbewijs 3 uur ingetrokken en een boete",
-            "Rijbewijs 6 uur ingetrokken en de rechtbank",
-            "Een simpele waarschuwing zonder gevolg"
+            "12 uur",
+            "3 uur",
+            "15 dagen"
           ],
-          "correct": 1,
-          "explanation": "0,28 mg/l ligt tussen 0,22 en 0,35: rijbewijs 3 uur ingetrokken + boete.",
+          "correct": 0,
+          "explanation": "Van 0,22 tot 0,35 mg/l: 12 uur rijverbod (sinds juli 2026), plus een boete.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q27",
-          "question": "U onderging een ademanalyse en het resultaat toont 0,40 mg/l. Wat gebeurt er?",
+          "question": "De analyse toont 0,40 mg/l. Wat riskeer je ter plaatse?",
           "choices": [
-            "Uw rijbewijs wordt 3 uur ingetrokken",
-            "Rijbewijs 6 uur ingetrokken en een boete",
-            "U mag verder rijden",
-            "U krijgt een eenvoudige waarschuwing"
+            "Onmiddellijke intrekking van het rijbewijs voor 15 dagen",
+            "3 uur rijverbod",
+            "Niets"
           ],
-          "correct": 1,
-          "explanation": "0,40 mg/l ≥ 0,35: rijbewijs 6 uur ingetrokken + boete. In de praktijk vaak 15 dagen.",
+          "correct": 0,
+          "explanation": "Vanaf 0,35 mg/l kan het rijbewijs onmiddellijk ingetrokken worden voor 15 dagen.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q30",
-          "question": "U weigert de ademanalyse. Wat gebeurt er?",
+          "question": "Je weigert de ademanalyse. Hoelang mag je niet meer rijden?",
           "choices": [
-            "Positief geacht, 6 uur",
-            "Een boete, meer niet",
-            "Een schriftelijke waarschuwing"
+            "12 uur",
+            "3 uur",
+            "Geen verbod"
           ],
           "correct": 0,
-          "explanation": "Het weigeren van de analyse wordt beschouwd als een resultaat Positief: rijverbod van 6 uur.",
+          "explanation": "Weigeren geldt als positief: 12 uur.",
           "theoryCardIndex": 2,
           "severe": true
         },
         {
           "id": "I1_Q32",
-          "question": "U blaast exact 0,22 mg/l bij de analyse. Wat gebeurt er?",
+          "question": "De analyse toont precies 0,22 mg/l. Ben je in overtreding?",
           "choices": [
-            "U mag verder rijden",
-            "Rijbewijs 3 uur ingetrokken en een boete",
-            "Niets, de drempel is niet overschreden",
-            "Dat hangt af van de agent"
+            "Ja",
+            "Nee, het is de grens"
           ],
-          "correct": 1,
-          "explanation": "0,22 mg/l bereikt de minimumdrempel: rijbewijs 3 uur ingetrokken + boete.",
+          "correct": 0,
+          "explanation": "De overtreding begint vanaf 0,22 mg/l, inbegrepen.",
           "theoryCardIndex": 2
         },
         {
           "id": "I1_Q33",
-          "question": "U bent opgenomen in het ziekenhuis na een ongeval en kunt niet blazen. Hoe kan de politie uw alcoholgehalte meten?",
+          "question": "In het ziekenhuis na een ongeval kan je niet blazen. Hoe meet men je alcohol?",
           "choices": [
-            "Door te wachten tot u hersteld bent",
-            "Via een bloedafname",
-            "Ze kan u niet controleren",
-            "Via een bloedafname op uw verzoek"
+            "Met een bloedproef",
+            "Men wacht tot je hersteld bent",
+            "Men meet het niet"
           ],
-          "correct": 1,
-          "explanation": "De bloedafname gebeurt wanneer de test/analyse onmogelijk is (ziekenhuis, astma, onvermogen om te blazen).",
+          "correct": 0,
+          "explanation": "Als blazen onmogelijk is: bloedproef.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "I1_Q34",
-          "question": "U hebt astma en kan niet blazen. Wat gebeurt er?",
+          "question": "Je hebt astma en kan niet blazen. Wat gebeurt er?",
           "choices": [
-            "Een bloedafname van ambtswege",
-            "U wordt vrijgelaten zonder controle",
-            "U moet toch blazen"
+            "Bloedproef",
+            "Je rijdt verder",
+            "Je moet toch blazen"
           ],
           "correct": 0,
-          "explanation": "Het onvermogen om te blazen (astma) rechtvaardigt een bloedafname.",
+          "explanation": "Een echt medisch probleem leidt tot een bloedproef.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q35",
-          "question": "U moet een bloedafname ondergaan. Wie voert deze bloedafname uit?",
+          "question": "Wie neemt de bloedproef af?",
           "choices": [
+            "Een arts aangeduid door de politie",
             "Een politieagent",
-            "Een arts",
-            "Een verpleger",
-            "Uzelf met een kit"
+            "Een arts naar keuze"
           ],
-          "correct": 1,
-          "explanation": "Enkel een arts is bevoegd om de bloedafname uit te voeren.",
+          "correct": 0,
+          "explanation": "Een arts, gevorderd door de politie.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q37",
-          "question": "Wie kan u een alcoholslot opleggen?",
+          "question": "Wie kan je een alcoholslot opleggen?",
           "choices": [
             "De rechter",
             "De politie",
             "De verzekeraar"
           ],
           "correct": 0,
-          "explanation": "Het alcoholslot wordt opgelegd door een beslissing van de rechter.",
+          "explanation": "Het is een beslissing van de rechter.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "I1_Q38",
-          "question": "Voor welke duur kan het alcoholslot worden opgelegd?",
+          "question": "Voor hoelang kan een alcoholslot opgelegd worden?",
           "choices": [
-            "Van 1 tot 3 jaar, zelfs levenslang",
-            "Hoogstens zes maanden",
-            "Eén maand, niet langer"
+            "1 tot 3 jaar, zelfs levenslang",
+            "Maximum 6 maanden",
+            "1 maand"
           ],
           "correct": 0,
-          "explanation": "Het alcoholslot kan opgelegd worden voor 1 tot 3 jaar, of zelfs levenslang.",
+          "explanation": "1 tot 3 jaar, zelfs definitief.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q39",
-          "question": "U moet in het alcoholslot blazen voor u start. Wat is de drempel waarboven de motor weigert te starten?",
+          "question": "Vanaf welk gehalte blokkeert het alcoholslot de motor?",
           "choices": [
-            "0,5 promille",
-            "0,2 promille",
-            "0,8 promille",
-            "0,0 promille"
+            "0,2 ‰",
+            "0,5 ‰",
+            "0,8 ‰"
           ],
-          "correct": 1,
-          "explanation": "De drempel is 0,2 ‰: boven of gelijk aan dit gehalte start de motor niet.",
+          "correct": 0,
+          "explanation": "Boven 0,2 ‰ start de auto niet.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q41",
-          "question": "Aan welke bestuurders kan het alcoholslot worden opgelegd?",
+          "question": "Aan wie kan de rechter een alcoholslot opleggen?",
           "choices": [
-            "Meer dan 0,8 promille of dronken",
-            "Wie 0,5 promille blies",
-            "Alle bestuurders, zonder onderscheid"
+            "Aan bestuurders met 0,8 ‰ of meer, of dronken",
+            "Aan alle bestuurders",
+            "Aan bestuurders met 0,5 ‰"
           ],
           "correct": 0,
-          "explanation": "Het kan opgelegd worden (maar niet verplicht) aan bestuurders > 0,8 ‰, in staat van dronkenschap of recidivisten.",
+          "explanation": "Vanaf 0,8 ‰ of bij dronkenschap.",
           "theoryCardIndex": 3,
           "severe": true
         },
         {
           "id": "I1_Q42",
-          "question": "U herhaalt de drempels. Vanaf welk gehalte MOET het alcoholslot verplicht opgelegd worden?",
+          "question": "Vanaf welk gehalte is het alcoholslot in principe verplicht?",
           "choices": [
-            "0,8 promille",
-            "1,8 promille",
-            "1,2 promille",
-            "0,5 promille"
+            "1,8 ‰",
+            "0,8 ‰",
+            "1,2 ‰"
           ],
-          "correct": 1,
-          "explanation": "Vanaf 1,8 ‰ is het alcoholslot verplicht, tenzij de rechter uitdrukkelijk gemotiveerd anders beslist.",
+          "correct": 0,
+          "explanation": "Vanaf 1,8 ‰ moet de rechter het opleggen (behalve met gemotiveerde beslissing).",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q43",
-          "question": "Aan welke recidivisten moet het alcoholslot worden opgelegd?",
+          "question": "Welke recidivist moet een alcoholslot krijgen?",
           "choices": [
-            "Twee keer 1,2 promille in 3 jaar",
-            "Eén keer 0,8 promille aan het stuur",
-            "Elke vorm van herhaling in het verkeer"
+            "Twee keer 1,2 ‰ of meer binnen 3 jaar",
+            "Eén keer 0,8 ‰",
+            "Elke herhaling"
           ],
           "correct": 0,
-          "explanation": "Het alcoholslot is verplicht voor recidivisten die twee keer gecontroleerd zijn met ≥ 1,2 ‰ binnen 3 jaar.",
+          "explanation": "Herhaling met 1,2 ‰ of meer binnen 3 jaar.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q44",
-          "question": "Een bestuurder blaast 1,8 promille. Mag de rechter afzien van het alcoholslot?",
+          "question": "1,8 ‰: kan de rechter het alcoholslot niet opleggen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Ja, als hij zijn beslissing motiveert",
+            "Nee, nooit"
           ],
           "correct": 0,
-          "explanation": "De rechter kan uitzonderlijk beslissen het niet op te leggen, maar moet dit uitdrukkelijk beslissen en motiveren.",
+          "explanation": "Uitzondering mogelijk, maar gemotiveerd.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q45",
-          "question": "U blaast 0,15 promille in het alcoholslot. Start de motor?",
+          "question": "Je blaast 0,15 ‰ in het alcoholslot. Start de auto?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "0,15 ‰ < 0,2 ‰: de drempel is niet bereikt, de motor start.",
+          "explanation": "0,15 ‰ is minder dan 0,2 ‰.",
           "theoryCardIndex": 3
         },
         {
           "id": "I1_Q47",
-          "question": "Hoe verloopt een speekseltest op drugs?",
+          "question": "Hoe heet de test die drugs opspoort?",
           "choices": [
-            "Een afname met een wattenstaafje",
-            "Een bloedafname op het bureau",
-            "Een urineanalyse in het labo"
+            "De speekseltest",
+            "De ademtest",
+            "De thermotest"
           ],
           "correct": 0,
-          "explanation": "De speekseltest bestaat uit het afnemen van speeksel met een wattenstaafje.",
+          "explanation": "Men neemt wat speeksel af.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q48",
-          "question": "Zonder overtreding of ongeval, mag de politie u een speekseltest opleggen?",
+          "question": "Kan de politie je zonder ongeval en zonder reden een speekseltest opleggen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee, er moet een objectief vermoeden zijn",
+            "Ja, aan elke bestuurder"
           ],
-          "correct": 1,
-          "explanation": "De speekseltest vereist een objectief vermoeden, behalve bij een ongeval waar hij altijd opgelegd kan worden.",
+          "correct": 0,
+          "explanation": "Buiten een ongeval zijn er objectieve tekenen van gebruik nodig.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q49",
-          "question": "Na een ongeval, mag de politie een speekseltest opleggen zonder vermoeden?",
+          "question": "Je bent betrokken bij een ongeval. Mag de politie je een speekseltest opleggen?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Ja, altijd",
+            "Alleen bij een vermoeden"
           ],
           "correct": 0,
-          "explanation": "Bij een ongeval kan de speekseltest opgelegd worden zonder voorafgaand vermoeden.",
-          "theoryCardIndex": 4,
-          "severe": true
-        },
-        {
-          "id": "I1_Q50",
-          "question": "Welke voorwaarden onderscheiden de alcoholcontrole van de drugscontrole?",
-          "choices": [
-            "Alcohol: iedereen; drugs: vermoeden",
-            "Drugs: iedereen; alcohol: vermoeden",
-            "Beide vragen een vermoeden"
-          ],
-          "correct": 0,
-          "explanation": "De alcoholcontrole geldt voor elke bestuurder. De drugscontrole vereist een objectief vermoeden (behalve bij een ongeval).",
+          "explanation": "Bij een ongeval mag het altijd.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q51",
-          "question": "U onderging een speekseltest en het resultaat is positief. Voor hoelang wordt uw rijbewijs ingetrokken?",
+          "question": "Positieve speekseltest. Hoelang mag je niet meer rijden?",
           "choices": [
-            "6 uur",
             "12 uur",
             "3 uur",
-            "24 uur"
+            "6 uur"
           ],
-          "correct": 1,
-          "explanation": "Een positieve speekseltest leidt tot een intrekking van het rijbewijs van 12 uur.",
+          "correct": 0,
+          "explanation": "12 uur rijverbod.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q52",
-          "question": "U bent positief op drugs. Is een verlengde onmiddellijke intrekking mogelijk?",
+          "question": "Positieve speekseltest. Kan het rijbewijs ook ter plaatse ingetrokken worden?",
           "choices": [
             "Ja",
             "Nee"
           ],
           "correct": 0,
-          "explanation": "Naast de 12 uur is een onmiddellijke intrekking van het rijbewijs mogelijk bij een positieve test.",
-          "theoryCardIndex": 4,
-          "severe": true
-        },
-        {
-          "id": "I1_Q53",
-          "question": "Wat is de maximale duur van het rijverbod voor rijden onder invloed van drugs?",
-          "choices": [
-            "Hoogstens vijf jaar",
-            "Hoogstens drie jaar",
-            "Hoogstens één jaar"
-          ],
-          "correct": 0,
-          "explanation": "Het rijverbod voor drugs kan tot 5 jaar maximum bedragen.",
+          "explanation": "Naast de 12 uur is een onmiddellijke intrekking mogelijk.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q55",
-          "question": "U heeft alcohol EN drugs gebruikt voor u achter het stuur kruipt. Is dit ernstiger of minder ernstig dan alcohol alleen?",
+          "question": "Alcohol en drugs samen: vergeleken met alleen alcohol is dat:",
           "choices": [
-            "Even ernstig als alcohol alleen",
-            "Dit is ernstiger dan alcohol alleen",
-            "Dit is minder ernstig",
-            "Dit maakt geen verschil"
+            "Erger",
+            "Even erg",
+            "Minder erg"
           ],
-          "correct": 1,
-          "explanation": "De combinatie alcohol + drugs is ernstiger en gevaarlijker dan alcohol alleen.",
+          "correct": 0,
+          "explanation": "De effecten tellen op en versterken elkaar.",
           "theoryCardIndex": 4,
           "severe": true
         },
         {
           "id": "I1_Q56",
-          "question": "Hebben sommige geneesmiddelen effect op het rijden?",
+          "question": "Je geneesmiddel maakt slaperig (zie bijsluiter). Mag je rijden?",
           "choices": [
-            "Ja",
-            "Nee"
+            "Nee",
+            "Ja, als je voorzichtig bent"
           ],
           "correct": 0,
-          "explanation": "Sommige medicijnen tasten de concentratie, de reflexen of de waakzaamheid aan.",
+          "explanation": "Toch rijden wordt bestraft zoals rijden onder invloed van alcohol.",
           "theoryCardIndex": 4
         },
         {
           "id": "I1_Q57",
-          "question": "U mengt geneesmiddelen en alcohol voor u rijdt. Wat is het risico?",
+          "question": "Geneesmiddelen en alcohol samen voor je rijdt:",
           "choices": [
             "Alcohol versterkt hun effect",
-            "Er is geen extra risico",
-            "De effecten blijven dezelfde"
+            "Geen extra risico",
+            "De effecten heffen elkaar op"
           ],
           "correct": 0,
-          "explanation": "Alcohol versterkt de schadelijke effecten van medicijnen, wat de combinatie nog gevaarlijker maakt.",
+          "explanation": "De combinatie is nog gevaarlijker.",
           "theoryCardIndex": 4,
           "severe": true
         },
