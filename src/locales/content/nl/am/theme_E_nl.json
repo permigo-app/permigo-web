@@ -40,135 +40,139 @@
       "questions": [
         {
           "id": "AM_E1_Q1",
-          "question": "Je scooter klasse B (45 km/u) rijdt een zone 30 binnen. Jouw maximumsnelheid?",
+          "question": "Je scooter klasse B rijdt een zone 30 in. Je maximumsnelheid?",
           "choices": [
-            "45 km/u, je constructielimiet",
-            "30 km/u, de limiet van de zone",
-            "35 km/u bij wijze van tolerantie",
-            "40 km/u overdag"
+            "30 km/u",
+            "45 km/u",
+            "35 km/u"
           ],
-          "explanation": "De laagste limiet geldt altijd: in een zone 30 rijd je maximaal 30 km/u."
+          "explanation": "De laagste van de twee limieten geldt.",
+          "correct": 0
         },
         {
           "id": "AM_E1_Q2",
-          "question": "Buiten de bebouwde kom is de weg beperkt tot 90 km/u. Jouw klasse B mag rijden aan:",
+          "question": "Weg met limiet 90 km/u. Met klasse B rijd je maximaal:",
           "choices": [
-            "90 km/u zoals de auto's",
-            "Maximaal 70 km/u",
-            "45 km/u, haar constructielimiet",
-            "Maximaal 60 km/u"
+            "45 km/u",
+            "70 km/u",
+            "90 km/u"
           ],
-          "explanation": "Je constructiebegrenzing (45 km/u) blijft je absolute plafond, ook wanneer de weg meer toelaat."
+          "explanation": "Je bromfiets rijdt nooit sneller dan 45 km/u.",
+          "correct": 0
         },
         {
           "id": "AM_E1_Q3",
-          "question": "Slagregen, veel voetgangers, straat beperkt tot 50. Wat is de juiste snelheid?",
+          "question": "Zware regen, veel voetgangers, straat met limiet 50. Je snelheid?",
           "choices": [
-            "45 km/u, je limiet laat het toe",
-            "50 km/u, de limiet van de plaats",
-            "Een duidelijk verlaagd tempo, aangepast aan de omstandigheden",
-            "Dezelfde als de auto's rondom"
+            "Veel lager, aangepast",
+            "45 km/u",
+            "Zoals de auto's"
           ],
-          "explanation": "De limiet is een maximum: de wegcode verplicht je je snelheid aan te passen aan weer, zicht en aanwezige weggebruikers."
+          "explanation": "De limiet is een maximum: je past je aan de omstandigheden aan.",
+          "correct": 0
         },
         {
           "id": "AM_E1_Q4",
-          "question": "Waaruit bestaat de stopafstand?",
+          "question": "De stopafstand is:",
           "choices": [
-            "Enkel uit het remmen",
-            "Uit de reactieafstand + de remafstand",
-            "Uit de veiligheidsafstand",
-            "Enkel uit de reactietijd"
+            "Reactieafstand + remafstand",
+            "Alleen het remmen",
+            "De veiligheidsafstand"
           ],
-          "explanation": "Stopafstand = reactie (±1 seconde, de tijd om te beslissen) + remmen (de tijd die de remmen nodig hebben)."
+          "explanation": "Je reageert, en dan rem je.",
+          "correct": 0
         },
         {
           "id": "AM_E1_Q5",
-          "question": "Ongeveer welke afstand leg je af tijdens 1 seconde reactie aan 45 km/u?",
+          "question": "Hoeveel meter leg je af in 1 seconde aan 45 km/u?",
           "choices": [
-            "4 tot 5 meter",
-            "12 tot 13 meter",
-            "20 tot 25 meter",
-            "30 meter"
+            "Ongeveer 12 m",
+            "Ongeveer 5 m",
+            "Ongeveer 25 m"
           ],
-          "explanation": "45 km/u ≈ 12,5 m/s: één seconde reactie verbruikt al meer dan 12 meter vóór enig remmen."
+          "explanation": "45 km/u = 12,5 m per seconde.",
+          "correct": 0
         },
         {
           "id": "AM_E1_Q6",
-          "question": "Welke afstand houd je tot je voorligger op een nat wegdek?",
+          "question": "Natte weg. Hoeveel afstand tot het voertuig voor je?",
           "choices": [
-            "1 seconde volstaat",
-            "2 seconden zoals op droog wegdek",
-            "4 seconden, het dubbele van droog",
-            "10 vaste meters"
+            "4 seconden",
+            "2 seconden",
+            "1 seconde"
           ],
-          "explanation": "De 2-secondenregel verdubbelt op nat wegdek: 4 seconden, want je remweg wordt veel langer."
+          "explanation": "In de regen verdubbel je je afstand.",
+          "correct": 0
         },
         {
           "id": "AM_E1_B1",
-          "question": "Met klasse B rijd je 40 km/u in een zone 30. Dat is:",
+          "question": "Met klasse B, 40 km/u in een zone 30. Dat is:",
           "choices": [
-            "Legaal, je zit onder je 45 km/u",
-            "Gedoogd tot 10 km/u erboven",
-            "Een overtreding: de limiet van de plaats primeert",
-            "Legaal buiten de schooluren"
+            "Een overtreding",
+            "Toegelaten, je zit onder 45",
+            "Gedoogd"
           ],
-          "explanation": "De laagste limiet geldt: zone 30 = maximaal 30 km/u, je begrenzing van 45 geeft je niets extra."
+          "explanation": "De limiet van de plaats geldt.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_E1_B2",
-          "question": "Welke afstand leg je ongeveer per seconde af aan 25 km/u?",
+          "question": "Hoeveel meter per seconde aan 25 km/u?",
           "choices": [
-            "Ongeveer 7 meter",
-            "Ongeveer 15 meter",
-            "Ongeveer 2 meter",
-            "Ongeveer 25 meter"
+            "Ongeveer 7 m",
+            "Ongeveer 15 m",
+            "Ongeveer 2 m"
           ],
-          "explanation": "25 km/u ≈ 7 m/s: zelfs « traag » verbruikt één seconde onoplettendheid al 7 meter."
+          "explanation": "25 km/u ≈ 7 m per seconde.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_E1_B3",
-          "question": "Dichte mist op je traject. Jouw twee prioriteiten:",
+          "question": "Dichte mist. Je:",
           "choices": [
-            "45 km/u aanhouden en de achterlichten volgen",
-            "Het tempo sterk verlagen en gezien worden (lichten, hesje)",
-            "In het midden van de rijbaan rijden",
-            "Tegen je voorligger kleven als gids"
+            "Vertraagt sterk en maakt je zichtbaar",
+            "Blijft 45 km/u rijden",
+            "Kleeft aan het voertuig voor je"
           ],
-          "explanation": "Bij mist: snelheid aangepast aan het werkelijke zicht, en alles om gezien te worden — lichten in orde, lichte of reflecterende kledij."
+          "explanation": "Traag, lichten aan, goed zichtbaar.",
+          "correct": 0
         },
         {
           "id": "AM_E1_C1",
-          "question": "Welke afstand leg je aan 45 km/u af tijdens de 2 veiligheidsseconden?",
+          "question": "Hoeveel meter is 2 seconden afstand aan 45 km/u?",
           "choices": [
-            "Ongeveer 10 meter",
-            "Ongeveer 15 meter",
-            "Ongeveer 25 meter",
-            "Ongeveer 40 meter"
+            "Ongeveer 25 m",
+            "Ongeveer 10 m",
+            "Ongeveer 40 m"
           ],
-          "explanation": "45 km/u ≈ 12,5 m/s: twee seconden ≈ 25 meter — de afstand die je houdt tot je voorligger."
+          "explanation": "2 × 12,5 m = 25 m.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_E1_C2",
-          "question": "Woonerf: kinderen spelen op de rijbaan. Dat is:",
+          "question": "Woonerf: er spelen kinderen op straat. Je:",
           "choices": [
-            "Verboden: je mag ze doen uitwijken",
-            "Normaal — ze hebben het recht; jij rijdt 20 km/u, klaar om te stoppen",
-            "Enkel gedoogd in weekends en op feestdagen",
-            "Voorbehouden aan gesignaleerde speelzones"
+            "Rijdt stapvoets, klaar om te stoppen",
+            "Toetert zodat ze opzij gaan",
+            "Rijdt 30"
           ],
-          "explanation": "In een woonerf is spelen op de rijbaan een recht: maximaal 20 km/u en totale waakzaamheid voor jou."
+          "explanation": "Ze mogen op straat spelen. Jij rijdt max. 20.",
+          "correct": 0
         },
         {
           "id": "AM_E1_C3",
-          "question": "Slagregen in een zone 30. Jouw juiste snelheid kan zijn:",
+          "question": "Zware regen in zone 30. Je snelheid kan zijn:",
           "choices": [
-            "Onder de 30 als de omstandigheden het eisen",
-            "Precies 30 km/u, de aangegeven limiet",
-            "35 km/u, de regentolerantie",
-            "45 km/u, je constructielimiet"
+            "Onder 30 km/u",
+            "Precies 30 km/u",
+            "45 km/u"
           ],
-          "explanation": "De limiet is een plafond: bij hevige regen kan de aangepaste snelheid ver onder de aangegeven limiet liggen."
+          "explanation": "Als de omstandigheden het vragen, rij je trager dan de limiet.",
+          "correct": 0,
+          "theoryCardIndex": 0
         }
       ]
     },
@@ -225,146 +229,164 @@
       "questions": [
         {
           "id": "AM_E2_Q1",
-          "question": "Waar gebeurt het remmen voor een bocht op twee wielen?",
+          "question": "Waar rem je voor een bocht?",
           "choices": [
-            "In de bocht, geleidelijk",
-            "Vóór de bocht, in rechte lijn",
-            "Bij het uitkomen van de bocht",
-            "In het midden van de bocht"
+            "Ervoor, in rechte lijn",
+            "In de bocht",
+            "Bij het uitrijden"
           ],
-          "explanation": "Je remt ERVOOR, in rechte lijn: in een bocht kunnen de banden niet tegelijk sturen en remmen."
+          "explanation": "Schuin hangend kan remmen je doen wegglijden.",
+          "correct": 0
         },
         {
           "id": "AM_E2_Q2",
-          "question": "Waar richt je je blik in een bocht?",
+          "question": "In een bocht kijk je:",
           "choices": [
-            "Op je voorwiel",
-            "Op de buitenrand van de bocht",
-            "Ver, naar de uitgang van de bocht",
-            "Op de snelheidsmeter"
+            "Ver, naar de uitgang",
+            "Naar je voorwiel",
+            "Naar de rand van de weg"
           ],
-          "explanation": "De tweewieler gaat waar je ogen zich richten: kijk naar de uitgang, nooit naar de hindernis of de gracht."
+          "explanation": "De tweewieler gaat waar je kijkt.",
+          "correct": 0
         },
         {
           "id": "AM_E2_Q3",
-          "question": "Welk traject wordt aanbevolen in een bocht?",
+          "question": "Welke lijn neem je in een bocht?",
           "choices": [
-            "Binnen - buiten - binnen",
-            "Buiten - binnen - buiten",
-            "Altijd in het midden van de strook",
-            "Zo dicht mogelijk bij de rand"
+            "Buiten, binnen, buiten",
+            "Binnen, buiten, binnen",
+            "Altijd aan de rand"
           ],
-          "explanation": "Buiten-binnen-buiten « opent » de bocht: beter zicht bij het inrijden, zachtere curve, veiligere uitgang."
+          "explanation": "Je maakt de bocht ruimer en ziet verder, zonder je rijstrook te verlaten.",
+          "correct": 0
         },
         {
           "id": "AM_E2_Q4",
-          "question": "Hoe rijd je over een natte geschilderde markering met een tweewieler?",
+          "question": "Natte wegmarkering voor je. Je rijdt erover:",
           "choices": [
-            "Erop remmend uit voorzorg",
-            "Recht, aan constante snelheid, zonder erop te remmen",
-            "Versnellend om er snel over te zijn",
-            "Erop sturend om af te snijden"
+            "Recht, zonder erop te remmen",
+            "Al remmend",
+            "Al draaiend"
           ],
-          "explanation": "Natte verf glijdt: je passeert ze goed recht, zonder erop te remmen, te versnellen of te sturen."
+          "explanation": "Natte verf is glad.",
+          "correct": 0
         },
         {
           "id": "AM_E2_Q5",
-          "question": "Waarom is de eerste regen na een droge periode zo gevaarlijk?",
+          "question": "Waarom is de eerste regen na een droge periode gevaarlijk?",
           "choices": [
-            "Het water is kouder dan in de winter",
-            "De opgestapelde koolwaterstoffen komen boven en vormen een gladde film",
-            "De bestuurders rijden sneller",
-            "De banden zijn nog warm"
+            "Olie en stof maken de weg glad",
+            "Het water is koud",
+            "De banden zijn warm"
           ],
-          "explanation": "Water + opgestapelde olieresten = onzichtbare zeepfilm: de eerste bui na de droogte is de ergste."
+          "explanation": "Water met vuil vormt een gladde laag.",
+          "correct": 0
         },
         {
           "id": "AM_E2_Q6",
-          "question": "Wat betekent « defensief rijden » met een bromfiets?",
+          "question": "Defensief rijden is:",
           "choices": [
+            "De fouten van anderen voorzien",
             "Zo traag mogelijk rijden",
-            "De fouten van anderen anticiperen en een uitweg houden",
-            "Remmen zodra een voertuig nadert",
-            "Permanent op het fietspad blijven"
+            "Remmen zodra er een auto komt"
           ],
-          "explanation": "Ver kijken, de fout van de anderen veronderstellen, een uitweg openhouden: jouw veiligheid is het ongeval dat niet plaatsvindt."
+          "explanation": "Je anticipeert en houdt een uitweg open.",
+          "correct": 0
         },
         {
           "id": "AM_E2_Q7",
-          "question": "Je bromfiets valt in panne. Wat is je statuut wanneer je hem duwt?",
+          "question": "Je duwt je defecte bromfiets. Je bent:",
           "choices": [
-            "Bestuurder, zoals aan het stuur",
-            "Voetganger: je gebruikt het voetpad",
-            "Gelijkgestelde fietser",
-            "Prioritaire weggebruiker"
+            "Voetganger",
+            "Bestuurder",
+            "Fietser"
           ],
-          "explanation": "Je bromfiets duwen maakt je voetganger: voetpad of berm, motor af."
+          "explanation": "Wie een tweewielige bromfiets aan de hand meevoert, is gelijkgesteld met een voetganger.",
+          "correct": 0
         },
         {
           "id": "AM_E2_B1",
-          "question": "Steenslag bedekt de bocht die je nadert. Je:",
+          "question": "Grind in de bocht. Je:",
           "choices": [
-            "Remt hard in de bocht",
-            "Helt meer over om te compenseren",
-            "Sluit je ogen op het traject",
-            "Vertraagt ervoor en houdt hem zo recht mogelijk"
+            "Vertraagt ervoor en rijdt zo recht mogelijk",
+            "Remt er hard in",
+            "Helt meer over"
           ],
-          "explanation": "Op steenslag: alle snelheid gaat er VOORAF af, en je passeert zo recht mogelijk, zonder remmen of overhellen."
+          "explanation": "Op grind: hoe minder schuin, hoe minder je wegglijdt.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_E2_B2",
-          "question": "Een natte rioolplaat ligt op je traject in een bocht. Je:",
+          "question": "Natte putdeksel in je bocht. Je:",
           "choices": [
-            "Past je traject aan om ze rechtop te passeren of te vermijden",
-            "Remt erop voor meer controle",
-            "Versnelt om erover te zweven",
-            "Stopt er vlak voor"
+            "Ontwijkt hem of rijdt er rechtop over",
+            "Remt erop",
+            "Versnelt erop"
           ],
-          "explanation": "Nat metaal glijdt: je vermijdt het of passeert het met rechte machine, aan constante snelheid."
+          "explanation": "Nat metaal is erg glad.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_E2_B3",
-          "question": "Noodstop in rechte lijn: de juiste techniek?",
+          "question": "Noodstop in rechte lijn:",
           "choices": [
-            "Enkel de achterrem",
-            "Beide remmen, geleidelijk maar krachtig",
-            "Enkel de voorrem, in één keer vol",
-            "Eerst de motor afzetten"
+            "Beide remmen, stevig maar geleidelijk",
+            "Alleen de achterrem",
+            "Alleen de voorrem, in één keer"
           ],
-          "explanation": "Beide remmen samen, progressief aangespannen: de voorrem levert de kracht, de achterrem stabiliseert."
+          "explanation": "Beide remmen samen, zonder het wiel te blokkeren.",
+          "correct": 0,
+          "theoryCardIndex": 2
         },
         {
           "id": "AM_E2_C1",
-          "question": "Je staart naar de gracht bij het uitkomen van de bocht. Het risico?",
+          "question": "In de bocht kijk je naar de gracht. Het risico?",
           "choices": [
-            "Geen: kijken beïnvloedt het traject niet",
-            "Je verliest je voorrang in de bocht",
-            "Het achterwiel breekt automatisch uit",
-            "Je tweewieler stuurt erheen: de blik leidt de machine"
+            "Je rijdt naar de gracht",
+            "Geen",
+            "Je verliest je voorrang"
           ],
-          "explanation": "Staren brengt het voertuig naar wat je fixeert: kijk naar de uitgang van de bocht, nooit naar de hindernis."
+          "explanation": "Je blik stuurt je voertuig.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_E2_C2",
-          "question": "Noodremming in de regen:",
+          "question": "Noodstop in de regen:",
           "choices": [
-            "Identiek aan remmen op droog wegdek",
-            "Nog geleidelijker: de grip is verminderd",
-            "Enkel de achterrem, dat is veiliger",
-            "Onmogelijk: je moet altijd ontwijken"
+            "Nog geleidelijker",
+            "Zoals op droge weg",
+            "Alleen de achterrem"
           ],
-          "explanation": "Op nat wegdek span je de remmen nog geleidelijker aan — een wiel blokkeren gaat veel sneller."
+          "explanation": "De weg heeft minder grip: doseer je remmen.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_E2_C3",
-          "question": "Een grote plas ligt dwars over de weg vóór je. Jij:",
+          "question": "Grote plas voor je. Je:",
           "choices": [
-            "Remt erin om de controle te houden",
-            "Rijdt er op volle snelheid door",
-            "Vertraagt ervoor en rijdt er recht doorheen zonder erin te remmen",
-            "Sluit bruusk het gas in het midden"
+            "Vertraagt ervoor en rijdt er recht door",
+            "Remt erin",
+            "Rijdt er vol gas door"
           ],
-          "explanation": "Diep water kan je banden doen drijven (aquaplaning): snelheid ERVOOR verlagen, recht traject, niet remmen erin."
+          "explanation": "Niet remmen in het water: vertraag ervoor.",
+          "correct": 0,
+          "theoryCardIndex": 1
+        },
+        {
+          "id": "AM_E2_D1",
+          "question": "Je rijdt langs geparkeerde auto's, er zit iemand achter het stuur. Je:",
+          "choices": [
+            "Houdt afstand: er kan een portier opengaan",
+            "Rijdt er rakelings langs om tijd te winnen",
+            "Toetert"
+          ],
+          "correct": 0,
+          "explanation": "Defensief rijden: verwacht de fout van de ander.",
+          "theoryCardIndex": 2
         }
       ]
     },
@@ -411,146 +433,149 @@
       "questions": [
         {
           "id": "AM_E3_Q1",
-          "question": "Vanaf welke leeftijd mag een bestuurder een passagier vervoeren op een bromfiets?",
+          "question": "Vanaf welke leeftijd mag je een passagier meenemen op een bromfiets?",
           "choices": [
-            "Vanaf 16 jaar, met het rijbewijs AM",
-            "Vanaf 18 jaar",
-            "Vanaf 17 jaar met ouderlijke toestemming",
-            "Geen leeftijdsvoorwaarde"
+            "18 jaar",
+            "16 jaar",
+            "17 jaar"
           ],
-          "explanation": "De bestuurder moet minstens 18 jaar zijn om een passagier te vervoeren — het rijbewijs AM op 16 volstaat niet."
+          "explanation": "De bestuurder moet minstens 18 jaar zijn.",
+          "correct": 0
         },
         {
           "id": "AM_E3_Q2",
-          "question": "Welke uitrusting moet de bromfiets hebben om een passagier te vervoeren?",
+          "question": "Wat moet je bromfiets hebben om een passagier mee te nemen?",
           "choices": [
-            "Een gehomologeerde topkoffer",
-            "Dubbel zadel, voetsteunen en handgreep",
-            "Een verstevigd windscherm",
-            "Extra richtingaanwijzers"
+            "Een passagiersplaats en voetsteunen",
+            "Een topkoffer",
+            "Een windscherm"
           ],
-          "explanation": "Het voertuig moet voor twee voorzien zijn: dubbel zadel, voetsteunen voor de passagier en een handgreep."
+          "explanation": "Een plaats voor hem, en zijn voeten op de voetsteunen.",
+          "correct": 0
         },
         {
           "id": "AM_E3_Q3",
-          "question": "Mag je een kind van 2 jaar vervoeren op je bromfiets?",
+          "question": "Mag je een kind van 2 jaar meenemen op de bromfiets?",
           "choices": [
-            "Ja, in een aangepast zitje",
-            "Ja, vastgehouden door een volwassene",
-            "Nee, de passagier moet minstens 3 jaar zijn",
-            "Ja, op korte trajecten"
+            "Nee, minimum 3 jaar",
+            "Ja, in een zitje",
+            "Ja, vastgehouden door een volwassene"
           ],
-          "explanation": "Jonger dan 3 jaar: vervoer verboden. Van 3 tot 8 jaar is een aangepast kinderbeveiligingssysteem verplicht."
+          "explanation": "Geen passagier jonger dan 3 jaar.",
+          "correct": 0
         },
         {
           "id": "AM_E3_Q4",
-          "question": "De « amazonezit » (beide benen aan dezelfde kant) is:",
+          "question": "De passagier zit met beide benen aan dezelfde kant (« amazonezit »):",
           "choices": [
-            "Toegelaten binnen de bebouwde kom",
-            "Verboden voor de passagier",
-            "Voorbehouden aan volwassenen",
+            "Verboden",
+            "Toegelaten in de stad",
             "Toegelaten onder 25 km/u"
           ],
-          "explanation": "De passagier zit schrijlings: de amazonezit brengt de tweewieler uit evenwicht en is formeel verboden."
+          "explanation": "De passagier zit schrijlings.",
+          "correct": 0
         },
         {
           "id": "AM_E3_Q5",
-          "question": "Met een passagier worden je remafstanden:",
+          "question": "Met een passagier wordt je remafstand:",
           "choices": [
-            "Blijven identiek",
-            "Langer: je anticipeert meer",
-            "Korter dankzij het gewicht",
-            "Enkel anders bij regen"
+            "Langer",
+            "Niet anders",
+            "Korter"
           ],
-          "explanation": "Het extra gewicht verlengt het remmen en wijzigt het evenwicht: meer anticipatie en afstand."
+          "explanation": "Meer gewicht = langer remmen.",
+          "correct": 0
         },
         {
           "id": "AM_E3_Q6",
-          "question": "Hoeveel mag je lading ACHTERAAN uitsteken op een tweewielige bromfiets?",
+          "question": "Je lading mag achteraan uitsteken:",
           "choices": [
+            "Max. 50 cm",
             "Helemaal niet",
-            "Maximaal 0,5 meter",
-            "Maximaal 1 meter",
-            "1,5 meter met een rode doek"
+            "Max. 1 m"
           ],
-          "explanation": "Grenzen van de lading: niets vooraan, maximaal 0,5 m achteraan, 1 m breedte, 4 m hoogte."
+          "explanation": "0,50 m achteraan. Niets vooraan.",
+          "correct": 0
         },
         {
           "id": "AM_E3_Q7",
-          "question": "Je pak verbergt gedeeltelijk je achterlicht. Je:",
+          "question": "Je pakje verbergt je achterlicht. Je:",
           "choices": [
-            "Mag enkel overdag rijden",
-            "Moet hersjorren: lichten en plaat moeten zichtbaar blijven",
-            "Mag rijden mits regelmatig claxonneren",
-            "Plakt een reflector op het pak"
+            "Legt het anders: licht en plaat moeten zichtbaar zijn",
+            "Rijdt alleen overdag",
+            "Kleeft er een reflector op"
           ],
-          "explanation": "De lading mag nooit lichten, reflectoren of nummerplaat verbergen: sjor opnieuw vast vóór vertrek."
+          "explanation": "Lichten en nummerplaat moeten zichtbaar blijven.",
+          "correct": 0
         },
         {
           "id": "AM_E3_B1",
-          "question": "Jij bent 18. Je passagier van 10 jaar moet:",
+          "question": "Je bent 18. Je passagier van 10 jaar moet:",
           "choices": [
-            "Vastgehouden worden door een volwassene",
-            "Vóór jou zitten",
             "Een helm dragen en schrijlings zitten",
-            "Een verplicht kinderbeveiligingssysteem hebben"
+            "Voor je zitten",
+            "Een kinderzitje hebben"
           ],
-          "explanation": "Op 10 jaar (ouder dan 8) is geen zitje meer verplicht: gehomologeerde helm en schrijlingse zit volstaan — op een uitgeruste bromfiets."
+          "explanation": "Een kinderzitje is voor 3 tot 8 jaar.",
+          "correct": 0
         },
         {
           "id": "AM_E3_B2",
-          "question": "Wat zeg je tegen je passagier vóór vertrek?",
+          "question": "Wat zeg je tegen je passagier voor je vertrekt?",
           "choices": [
-            "Volg mijn bewegingen zonder bruuske gebaren, voeten op de steunen",
-            "Hel over naar de andere kant in de bochten om te compenseren",
-            "Stap af bij elk rood licht",
-            "Houd je voeten op de grond tijdens het rijden"
+            "Volg mijn bewegingen, voeten op de voetsteunen",
+            "Hang naar de andere kant in de bochten",
+            "Zet je voeten neer aan het rode licht"
           ],
-          "explanation": "Een stabiele passagier die het voertuig volgt, is de voorwaarde voor jouw evenwicht."
+          "explanation": "Een rustige passagier brengt je niet uit evenwicht.",
+          "correct": 0
         },
         {
           "id": "AM_E3_B3",
-          "question": "Een boodschappentas aan het stuur hangen is:",
+          "question": "Een boodschappentas aan je stuur:",
           "choices": [
-            "Praktisch en zonder gevolgen",
-            "Toegelaten tot 5 kg",
-            "Verplicht aan de rechterkant",
-            "Af te raden: ze slingert en trekt aan je stuur"
+            "Vermijden: hij hindert het sturen",
+            "Geen risico",
+            "Toegelaten tot 5 kg"
           ],
-          "explanation": "Gewicht aan het stuur destabiliseert de besturing bij elke bocht: topkoffer of bagagedrager, nooit het stuur."
+          "explanation": "Hij slingert en trekt aan je stuur.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_E3_B4",
-          "question": "Maximale hoogte van een beladen bromfiets:",
+          "question": "Maximale hoogte van een geladen voertuig:",
           "choices": [
-            "2,5 meter",
-            "4 meter",
-            "3 meter",
-            "Geen hoogtebeperking"
+            "4 m",
+            "2,5 m",
+            "3 m"
           ],
-          "explanation": "Lading inbegrepen mag het geheel nooit hoger zijn dan 4 meter (en 1 m breed op 2 wielen)."
+          "explanation": "4 meter.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_E3_C1",
-          "question": "Je bent 17,5 jaar; je broertje dringt aan om achterop te zitten. Jij:",
+          "question": "Je bent 17. Je broertje wil achterop. Je:",
           "choices": [
-            "Aanvaardt, het is naaste familie",
-            "Weigert: een passagier mag pas vanaf je 18 jaar",
-            "Aanvaardt voor een heel kort ritje",
-            "Aanvaardt als hij een gehomologeerde helm draagt"
+            "Weigert",
+            "Aanvaardt als hij een helm heeft",
+            "Aanvaardt voor een kort ritje"
           ],
-          "explanation": "De voorwaarde van 18 jaar voor de bestuurder kent familie noch afstand: vóór je 18e rijd je alleen."
+          "explanation": "Geen passagier voor je 18 jaar.",
+          "correct": 0
         },
         {
           "id": "AM_E3_C2",
-          "question": "Je lading steekt 40 cm uit achter de bagagedrager. Dat is:",
+          "question": "Je lading steekt 40 cm uit achteraan. Dat is:",
           "choices": [
-            "Toegelaten: de limiet achteraan is 0,5 m",
-            "Verboden: niets mag uitsteken",
-            "Toegelaten tot 1 m achteraan",
-            "Verboden zonder rode doek eraan"
+            "Toegelaten",
+            "Verboden",
+            "Toegelaten met een rode doek"
           ],
-          "explanation": "Achteraan mag de lading tot 0,5 meter uitsteken: 40 cm valt binnen de limiet."
+          "explanation": "De limiet is 50 cm achteraan.",
+          "correct": 0,
+          "theoryCardIndex": 1
         }
       ]
     }
