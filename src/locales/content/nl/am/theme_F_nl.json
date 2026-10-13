@@ -40,135 +40,139 @@
       "questions": [
         {
           "id": "AM_F1_Q1",
-          "question": "Wat is de alcohollimiet voor een bromfietser van 16 jaar?",
+          "question": "Alcohollimiet voor een bromfietser van 16 jaar?",
           "choices": [
-            "1,0 promille, hij rijdt geen auto",
-            "0,5 promille, zoals elke bestuurder",
-            "0,8 promille binnen de bebouwde kom",
-            "Geen limiet vóór 18 jaar"
+            "0,5 promille",
+            "0,8 promille",
+            "Geen voor 18 jaar"
           ],
-          "explanation": "De limieten zijn identiek voor alle bestuurders: 0,5 promille (0,22 mg/l uitgeademde lucht), vanaf de eerste dag met je rijbewijs."
+          "explanation": "Dezelfde als voor elke bestuurder.",
+          "correct": 0
         },
         {
           "id": "AM_F1_Q2",
-          "question": "Wat gebeurt er als je weigert te blazen in het ademtoestel?",
+          "question": "Je weigert te blazen. Wat gebeurt er?",
           "choices": [
-            "Niets, dat is je recht",
-            "Je wordt behandeld als een positieve bestuurder",
-            "Je krijgt een eenvoudige waarschuwing",
-            "De test wordt uitgesteld tot morgen"
+            "Je wordt behandeld als positief",
+            "Niets, het is je recht",
+            "Een gewone waarschuwing"
           ],
-          "explanation": "Weigeren te blazen staat gelijk met een positieve test: rijverbod en sancties volgen."
+          "explanation": "Weigeren = dezelfde straffen als een positieve test, waaronder 12 u rijverbod.",
+          "correct": 0
         },
         {
           "id": "AM_F1_Q3",
-          "question": "Controle tussen 0,5 en 0,8 promille: wat riskeer je onmiddellijk?",
+          "question": "Controle: 0,6 promille. Wat riskeer je meteen?",
           "choices": [
-            "Een boete en 12 uur rijverbod",
-            "Enkel een mondelinge waarschuwing",
-            "De definitieve intrekking van het rijbewijs AM",
-            "De inbeslagname van de bromfiets"
+            "Een boete en 12 u rijverbod",
+            "Een waarschuwing",
+            "Definitieve intrekking van je rijbewijs"
           ],
-          "explanation": "Tussen 0,5 en 0,8: boete en 12 uur rijverbod (sinds juli 2026). Vanaf 0,8 kan het rijbewijs 15 dagen ingetrokken worden."
+          "explanation": "Vanaf 0,5 promille: 12 uur rijverbod.",
+          "correct": 0
         },
         {
           "id": "AM_F1_Q4",
-          "question": "Waarom is alcohol bijzonder gevaarlijk op twee wielen?",
+          "question": "Waarom is alcohol zo gevaarlijk op twee wielen?",
           "choices": [
-            "De tank is kleiner",
-            "Hij tast het evenwicht aan, vitaal op een tweewieler",
-            "De controles zijn er zeldzamer",
-            "Hij koelt de motor af"
+            "Het tast je evenwicht aan",
+            "Er zijn minder controles",
+            "Het beschadigt de motor"
           ],
-          "explanation": "De tweewieler blijft enkel recht door jouw voortdurende correcties: alcohol valt het evenwicht, de reflexen en het afstandsgevoel aan."
+          "explanation": "Zonder evenwicht valt een tweewieler.",
+          "correct": 0
         },
         {
           "id": "AM_F1_Q5",
-          "question": "Wat is de regel voor drugs aan het stuur?",
+          "question": "Drugs achter het stuur:",
           "choices": [
-            "Nultolerantie, met speekseltest",
-            "Een kleine hoeveelheid wordt gedoogd",
-            "Enkel cannabis is verboden",
-            "Controles bestaan enkel voor auto's"
+            "Nultolerantie",
+            "Een beetje mag",
+            "Alleen cannabis is verboden"
           ],
-          "explanation": "Nultolerantie: de speekseltest spoort de stoffen op, en elk spoor is een zware overtreding — ook op een bromfiets."
+          "explanation": "Een positieve speekseltest volstaat voor een straf.",
+          "correct": 0
         },
         {
           "id": "AM_F1_Q6",
-          "question": "Een geneesmiddel draagt een pictogram dat het rijden afraadt. Jij:",
+          "question": "Je geneesmiddel heeft een pictogram « niet rijden ». Je:",
           "choices": [
-            "Mag rijden, het geldt voor automobilisten",
-            "Neemt het stuur niet, het geldt ook voor jou",
-            "Rijdt enkel overdag",
-            "Verlaagt gewoon je snelheid"
+            "Rijdt niet",
+            "Rijdt, het is voor auto's",
+            "Rijdt alleen overdag"
           ],
-          "explanation": "Slaapmiddelen, kalmeermiddelen en sommige antihistaminica beïnvloeden het rijden: de waarschuwing geldt voor elke bestuurder, bromfiets inbegrepen."
+          "explanation": "Het geldt ook voor jou.",
+          "correct": 0
         },
         {
           "id": "AM_F1_B1",
-          "question": "Waarmee komt 0,22 mg/l uitgeademde alveolaire lucht overeen?",
+          "question": "0,22 mg/l uitgeademde lucht komt overeen met:",
           "choices": [
-            "Met de limiet « jonge bestuurders » alleen",
-            "Met de wettelijke limiet van 0,5 promille in het bloed",
-            "Met de nultolerantiedrempel",
-            "Met een waarde zonder wettelijke betekenis"
+            "0,5 promille in het bloed",
+            "0,8 promille",
+            "Nultolerantie"
           ],
-          "explanation": "0,22 mg/l uitgeademde lucht komt overeen met 0,5 promille in het bloed: de wettelijke limiet bij de ademtest."
+          "explanation": "Dat is de wettelijke limiet, gemeten in de adem.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_F1_B2",
-          "question": "Onder een tijdelijk rijverbod (3 u) neem je toch je scooter. Dat is:",
+          "question": "Je hebt 12 u rijverbod en rijdt toch met je scooter. Dat is:",
           "choices": [
+            "Een nieuwe overtreding",
             "Toegelaten als je je goed voelt",
-            "Gedoogd om naar huis te rijden",
-            "Een nieuwe overtreding die je dossier verzwaart",
-            "Zonder gevolg na 1 uur"
+            "Gedoogd om naar huis te rijden"
           ],
-          "explanation": "Rijden tijdens het verbod is een bijkomende overtreding, die streng beoordeeld wordt."
+          "explanation": "Je maakt het alleen erger.",
+          "correct": 0,
+          "theoryCardIndex": 0
         },
         {
           "id": "AM_F1_B3",
           "question": "Door het rood rijden met een bromfiets is:",
           "choices": [
-            "Minder erg dan met de auto",
-            "Gedoogd als het kruispunt leeg is",
-            "Enkel strafbaar binnen de bebouwde kom",
-            "Een overtreding van dezelfde ernst als met de auto"
+            "Even zwaar als met een auto",
+            "Minder zwaar dan met een auto",
+            "Gedoogd als het vrij is"
           ],
-          "explanation": "De ernst van de overtreding hangt niet af van de grootte van het voertuig: rood licht = zware overtreding, ook per bromfiets."
+          "explanation": "Dezelfde overtreding, welk voertuig ook.",
+          "correct": 0
         },
         {
           "id": "AM_F1_C1",
-          "question": "« Twee glazen kan altijd »: wat is die berekening waard?",
+          "question": "« Twee glazen kan altijd. » Klopt dat?",
           "choices": [
-            "Ze klopt voor een gemiddelde volwassene",
-            "Niets: het promillage hangt af van het lichaam, enkel een test is betrouwbaar",
-            "Ze geldt enkel na een stevige maaltijd",
-            "Ze geldt enkel voor licht bier"
+            "Nee, dat hangt van iedereen af",
+            "Ja, voor een volwassene",
+            "Ja, na een maaltijd"
           ],
-          "explanation": "Gewicht, geslacht, vermoeidheid, lege maag: het promillage verschilt enorm van persoon tot persoon — geen enkele caféberekening is betrouwbaar."
+          "explanation": "Je promille hangt af van je lichaam: niet te raden.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_F1_C2",
-          "question": "Sterke koffie, koude douche: welk effect op je alcoholgehalte?",
+          "question": "Koffie of een koude douche op je promille:",
           "choices": [
-            "Ze halveren het promillage",
-            "Ze versnellen de eliminatie duidelijk",
-            "Geen — enkel de tijd elimineert alcohol",
-            "Ze heffen het effect van één glas op"
+            "Geen effect",
+            "Halveren het",
+            "Doen het sneller zakken"
           ],
-          "explanation": "Niets versnelt de eliminatie van alcohol: geen koffie, geen douche, geen frisse lucht. Enkel de tijd werkt."
+          "explanation": "Alleen tijd doet het promillage dalen.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_F1_C3",
-          "question": "Stevige avond, het is laat, je scooter wacht buiten. De juiste optie:",
+          "question": "Je hebt gedronken, je scooter staat klaar. Je:",
           "choices": [
-            "Traag rijden door de kleine straten",
-            "Een uur wachten en dan vertrekken",
-            "Rijden achter een nuchter gebleven vriend",
-            "Anders naar huis gaan en de scooter morgen ophalen"
+            "Gaat op een andere manier naar huis",
+            "Rijdt rustig",
+            "Wacht een uur"
           ],
-          "explanation": "Onder invloed is de enige juiste beslissing het stuur niet te nemen: de scooter wacht prima tot morgen."
+          "explanation": "Je haalt je scooter de volgende dag op.",
+          "correct": 0
         }
       ]
     },
@@ -215,168 +219,169 @@
       "questions": [
         {
           "id": "AM_F2_Q1",
-          "question": "Wat is de volgorde van handelingen bij een ongeval met gewonden?",
+          "question": "Ongeval met gewonde. In welke volgorde?",
           "choices": [
-            "Helpen, beschermen, verwittigen",
-            "Beschermen, verwittigen (112), helpen",
-            "Verwittigen, hulp gaan halen, terugkomen",
-            "De gewonde verplaatsen, dan bellen"
+            "Beschermen, alarmeren, helpen",
+            "Helpen, beschermen, alarmeren",
+            "Alarmeren, weggaan, terugkomen"
           ],
-          "explanation": "De plaats beschermen, 112 verwittigen, helpen zonder de gewonde te verplaatsen (behalve onmiddellijk gevaar zoals brand)."
+          "explanation": "Eerst beveiligen, dan 112, dan helpen.",
+          "correct": 0
         },
         {
           "id": "AM_F2_Q2",
-          "question": "Een gewonde motorrijder ligt op de grond, met helm, en ademt. Zijn helm:",
+          "question": "Een gewonde motorrijder ademt, hij heeft zijn helm op. Je:",
           "choices": [
-            "Moet voorzichtig verwijderd worden",
-            "Blijft op tot de hulpdiensten er zijn",
-            "Moet losgemaakt en verwijderd worden",
-            "Dient als steun om hem recht te helpen"
+            "Laat hem op",
+            "Zet hem voorzichtig af",
+            "Maakt hem losser"
           ],
-          "explanation": "Je haalt nooit de helm af van een gewonde die ademt: enkel een levensbedreigend gevaar (ademstilstand, brand) rechtvaardigt het."
+          "explanation": "Zet de helm niet af: zijn nek kan geraakt zijn.",
+          "correct": 0
         },
         {
           "id": "AM_F2_Q3",
-          "question": "Je schrampt een geparkeerde auto, eigenaar afwezig. Je:",
+          "question": "Je krast een geparkeerde auto, niemand te zien. Je:",
           "choices": [
-            "Vertrekt, het is maar een kras",
-            "Laat je gegevens achter of verwittigt de politie",
-            "Wacht een uur en vertrekt dan",
-            "Verplaatst je scooter en kijkt toe"
+            "Laat je gegevens achter of belt de politie",
+            "Rijdt weg",
+            "Wacht een uur"
           ],
-          "explanation": "Gegevens ter plaatse of de politie bellen: vertrekken zonder iets is vluchtmisdrijf, zelfs voor een kras."
+          "explanation": "Zomaar wegrijden is vluchtmisdrijf.",
+          "correct": 0
         },
         {
           "id": "AM_F2_Q4",
-          "question": "Vluchtmisdrijf is:",
+          "question": "Vluchtmisdrijf, ook zonder gewonden:",
           "choices": [
-            "Een zware strafrechtelijke inbreuk, zelfs zonder gewonde",
-            "Een eenvoudige administratieve boete",
-            "Gedoogd bij lichte schade",
-            "Onbewijsbaar voor een bromfiets"
+            "Zware overtreding, voor de rechtbank",
+            "Gewone boete",
+            "Gedoogd bij kleine schade"
           ],
-          "explanation": "De plaats verlaten om aan de vaststellingen te ontsnappen is een strafrechtelijke inbreuk voor de rechtbank — ongeacht de ernst van het ongeval."
+          "explanation": "Je blijft altijd ter plaatse.",
+          "correct": 0
         },
         {
           "id": "AM_F2_Q5",
-          "question": "Vanaf welke leeftijd ben je aansprakelijk als bestuurder?",
+          "question": "Op je 16de worden je verkeersovertredingen:",
           "choices": [
-            "18 jaar, bij de meerderjarigheid",
-            "Vanaf 16 jaar, met je rijbewijs AM",
-            "21 jaar voor zware boetes",
-            "Nooit zolang je student bent"
+            "Bestraft",
+            "Niet geteld",
+            "Betaald door je ouders"
           ],
-          "explanation": "Het rijbewijs AM maakt van jou een volwaardige bestuurder: boetes, verboden en verval gelden voor jou vanaf 16 jaar."
+          "explanation": "Vanaf 16 jaar ben je verantwoordelijk voor hoe je rijdt.",
+          "correct": 0
         },
         {
           "id": "AM_F2_Q6",
-          "question": "In welk geval kan je verzekering zich na vergoeding tegen jou keren?",
+          "question": "Wanneer kan je verzekeraar het geld voor de slachtoffers terugvragen?",
           "choices": [
-            "Na elk ongeval, systematisch",
-            "Bij zware fout: alcohol, opvoeren, illegaal uitlenen",
-            "Enkel als je van verzekeraar verandert",
-            "Nooit, de BA is definitief"
+            "Bij zware fout, zoals alcohol of opdrijven",
+            "Na elk ongeval",
+            "Nooit"
           ],
-          "explanation": "De BA vergoedt de slachtoffers, maar zware fouten (alcohol, opgevoerd voertuig, niet-gerechtigde bestuurder) openen een verhaal tegen jou."
+          "explanation": "Ze betaalt het slachtoffer en vraagt het dan aan jou terug.",
+          "correct": 0
         },
         {
           "id": "AM_F2_Q7",
-          "question": "Je leent je scooter aan een vriend zonder rijbewijs AM. Wie loopt risico?",
+          "question": "Je leent je scooter aan een vriend zonder rijbewijs AM. Wie riskeert veel?",
           "choices": [
-            "Enkel hij, hij rijdt",
-            "Jullie beiden: bestuurder en eigenaar",
-            "Niemand als de rit kort is",
-            "Enkel de verzekeraar"
+            "Jullie allebei",
+            "Alleen hij",
+            "Niemand als het kort is"
           ],
-          "explanation": "De bestuurder is in overtreding, en jij als eigenaar blijft verantwoordelijk voor wie jouw voertuig bestuurt — de verzekering kan jullie beiden aanspreken."
+          "explanation": "De bestuurder en wie het voertuig uitleende.",
+          "correct": 0
         },
         {
           "id": "AM_F2_B1",
-          "question": "Welke informatie geef je bij voorrang aan de 112?",
+          "question": "Aan 112 zeg je eerst:",
           "choices": [
-            "Exacte plaats, aantal en toestand van de gewonden, aanwezige gevaren",
-            "Je nummerplaat en je verzekering",
-            "Het merk van de betrokken voertuigen",
-            "Je reisweg van de dag"
+            "De exacte plaats en de toestand van de gewonden",
+            "Je nummerplaat",
+            "Het merk van de voertuigen"
           ],
-          "explanation": "De hulpdiensten hebben de precieze plaats, de menselijke balans en de gevaren (vuur, verkeer) nodig — de rest kan wachten."
+          "explanation": "Waar, hoeveel gewonden, welke gevaren.",
+          "correct": 0
         },
         {
           "id": "AM_F2_B2",
-          "question": "De gewonde is bij bewustzijn en wil rechtstaan om « naar huis te gaan ». Je:",
+          "question": "De gewonde wil rechtstaan en vertrekken. Je:",
           "choices": [
-            "Helpt hem terug op zijn fiets",
-            "Moedigt hem aan onbeweeglijk te blijven tot de hulpdiensten er zijn",
-            "Draagt hem naar het voetpad",
-            "Laat hem vertrekken, hij is bij bewustzijn"
+            "Zegt hem stil te blijven liggen",
+            "Helpt hem recht",
+            "Laat hem gaan"
           ],
-          "explanation": "Ook bij bewustzijn kan een gewonde onzichtbare letsels hebben: je houdt hem kalm en onbeweeglijk tot de hulpdiensten er zijn."
+          "explanation": "Hij kan erger gewond zijn dan hij denkt.",
+          "correct": 0
         },
         {
           "id": "AM_F2_B3",
-          "question": "Vóór je de voertuigen verplaatst na een aanrijding met blikschade:",
+          "question": "Aanrijding zonder gewonden. Voor je de weg vrijmaakt:",
           "choices": [
-            "Wacht je 2 uur op de politie",
-            "Wis je de remsporen uit",
-            "Vertrek je elk je eigen kant uit",
-            "Fotografeer je posities en schade"
+            "Neem je foto's",
+            "Wacht je 2 uur",
+            "Rijd je weg"
           ],
-          "explanation": "Eerst foto's van de posities en de schade: zij documenteren het formulier zodra de rijbaan is vrijgemaakt."
+          "explanation": "De foto's tonen de posities en de schade.",
+          "correct": 0
         },
         {
           "id": "AM_F2_B4",
-          "question": "De verongelukte bromfiets vat vuur, de bestuurder ligt bewusteloos ernaast. Uitzondering op « niet verplaatsen »?",
+          "question": "De bromfiets vat vuur, de bestuurder ligt bewusteloos ernaast. Verplaats je hem?",
           "choices": [
-            "Ja: onmiddellijk gevaar, je haalt het slachtoffer weg",
-            "Nee, je raakt nooit een gewonde aan",
-            "Ja, maar enkel de brandweer",
-            "Nee, je blust eerst het vuur"
+            "Ja, het is een direct gevaar",
+            "Nee, nooit",
+            "Nee, eerst het vuur blussen"
           ],
-          "explanation": "Onmiddellijk gevaar (brand, tweede ongeval) is DE enige reden om een slachtoffer te verplaatsen vóór de hulpdiensten."
+          "explanation": "Direct gevaar: de enige uitzondering op « niet verplaatsen ».",
+          "correct": 0
         },
         {
           "id": "AM_F2_B5",
-          "question": "Na een ongeval ontdekt de verzekeraar dat je bromfiets opgevoerd was. Hij kan:",
+          "question": "Na een ongeval ontdekt de verzekeraar dat je bromfiets opgedreven is. Hij kan:",
           "choices": [
-            "Gewoon je premie verhogen",
-            "De politieboete annuleren",
-            "Weigeren nog tussen te komen in de toekomst",
-            "De slachtoffers vergoeden en daarna alles van jou terugvorderen"
+            "De slachtoffers betalen en het geld van jou terugvragen",
+            "Alleen je premie verhogen",
+            "Je boete schrappen"
           ],
-          "explanation": "Het opgevoerde voertuig komt niet meer overeen met het contract: de verzekeraar vergoedt de derden en oefent daarna verhaal uit tegen jou."
+          "explanation": "Opgedreven = zware fout.",
+          "correct": 0,
+          "theoryCardIndex": 1
         },
         {
           "id": "AM_F2_C1",
-          "question": "Waar zet je je scooter vóór je hulp verleent?",
+          "question": "Waar zet je je scooter voor je helpt?",
           "choices": [
-            "Uit het verkeer, zonder nieuw gevaar te scheppen",
-            "Midden op de rijbaan om de weg te blokkeren",
-            "Op de exacte plaats van het ongeval",
-            "Maakt niet uit, elke seconde telt"
+            "Uit de weg van het verkeer",
+            "Midden op de weg",
+            "Maakt niet uit"
           ],
-          "explanation": "Veilig parkeren, uit het verkeer, vermijdt een tweede ongeval — het volgende slachtoffer is vaak de hulpverlener."
+          "explanation": "Geen nieuw ongeval veroorzaken.",
+          "correct": 0
         },
         {
           "id": "AM_F2_C2",
-          "question": "Op het aanrijdingsformulier mag je nooit:",
+          "question": "Aanrijdingsformulier: je tekent niet als:",
           "choices": [
-            "Een precieze schets van de situatie maken",
-            "Foto's van de schade nemen",
-            "Ter plaatse je aansprakelijkheid erkennen",
-            "De gegevens van een getuige noteren"
+            "Je niet akkoord bent met wat er staat",
+            "Er een schets is",
+            "Er een getuige is"
           ],
-          "explanation": "Beschrijf de feiten, nooit de schuld: de aansprakelijkheid bepalen de verzekeraars nadien, niet jij in de emotie."
+          "explanation": "Lees alles na voor je tekent: je handtekening telt.",
+          "correct": 0
         },
         {
           "id": "AM_F2_C3",
-          "question": "De 112 is:",
+          "question": "112 is:",
           "choices": [
-            "Enkel het nummer van de lokale politie",
-            "Het unieke noodnummer, geldig in heel Europa",
-            "Een betalend nummer buiten abonnement",
-            "Het nummer van de pechdiensten"
+            "Het Europese noodnummer",
+            "Alleen de lokale politie",
+            "Een takeldienst"
           ],
-          "explanation": "De 112 is het Europese noodnummer, gratis, bereikbaar zelfs zonder belwaarde of actieve simkaart."
+          "explanation": "Gratis, overal in Europa.",
+          "correct": 0
         }
       ]
     }
