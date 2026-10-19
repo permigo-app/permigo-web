@@ -1,10 +1,11 @@
 'use client';
 
-import { type ReactNode, useEffect, useRef, useCallback } from 'react';
+import { type ReactNode, useEffect, useRef, useCallback, useState } from 'react';
 import SignImage from '@/components/SignImage';
 import { useLang } from '@/contexts/LanguageContext';
 import ImageRequestButton from '@/components/ImageRequestButton';
 import { playSound } from '@/lib/sounds';
+import { isVoiceSupported, getVoiceEnabled, setVoiceEnabled, speak, stopSpeaking } from '@/lib/voice';
 
 const CHOICE_LABELS = ['A', 'B', 'C', 'D'];
 
@@ -93,8 +94,59 @@ export default function QuizLayout({
   questionId,
   questionKey,
 }: QuizLayoutProps) {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const isCorrect = selected === correctIndex;
+
+  // ── Lecture vocale (option, mémorisée sur l'appareil) ──
+  // Détecté après le montage : la synthèse vocale n'existe pas côté serveur.
+  const [voiceSupported, setVoiceSupported] = useState(false);
+  const [voiceOn, setVoiceOn] = useState(false);
+  useEffect(() => {
+    setVoiceSupported(isVoiceSupported());
+    setVoiceOn(getVoiceEnabled());
+    return () => stopSpeaking();
+  }, []);
+
+  // Toujours la question affichée, même si la page recrée le tableau de choix
+  // à chaque rendu (l'examen passe [...q.choices]).
+  const lectureRef = useRef<string[]>([]);
+  lectureRef.current = [question, ...choices.map((c, i) => `${t('voix_reponse')} ${CHOICE_LABELS[i]}. ${c}`)];
+  const lireQuestion = useCallback(() => speak(lectureRef.current, lang), [lang]);
+
+  // Nouvelle question → lecture automatique si la voix est activée.
+  // `dejaLue` évite de relancer la question que le clic d'activation vient de
+  // lancer (sinon elle repart du début une fraction de seconde plus tard).
+  const cleQuestion = questionKey ?? question;
+  const dejaLue = useRef<string | number | null>(null);
+  useEffect(() => {
+    if (!voiceOn || validated || dejaLue.current === cleQuestion) return;
+    dejaLue.current = cleQuestion;
+    lireQuestion();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cleQuestion, voiceOn, lireQuestion]);
+
+  // Réponse validée → on coupe la lecture et on lit l'explication (leçons, révision)
+  useEffect(() => {
+    if (!validated) return;
+    stopSpeaking();
+    if (voiceOn && explanation) speak([explanation], lang);
+  }, [validated, voiceOn, explanation, lang]);
+
+  const basculerVoix = () => {
+    const on = !voiceOn;
+    setVoiceOn(on);
+    setVoiceEnabled(on);
+    // Lancé directement dans le clic : sur iPhone, la première lecture doit
+    // venir d'un geste de l'utilisateur.
+    if (on && !validated) {
+      dejaLue.current = cleQuestion;
+      lireQuestion();
+    }
+    if (!on) {
+      dejaLue.current = null;
+      stopSpeaking();
+    }
+  };
   // 2 ou 3 réponses (81 % des questions) : on profite de la place pour
   // agrandir l'énoncé et les réponses. À 4, on garde la taille compacte.
   const ample = choices.length <= 3;
@@ -227,6 +279,35 @@ export default function QuizLayout({
                 l'écart : c'est la comparaison des 4 propositions qui demande le
                 plus d'attention, pas la relecture de la question. */}
             <p className={`${ample ? 'text-[21px]' : 'text-[19px]'} md:text-[22px] font-bold text-center mb-2 lg:mb-3 leading-snug max-w-2xl mx-auto fade-in-up`} style={{ color: 'var(--text-primary)' }}>{question}</p>
+
+            {/* Lecture vocale : on l'active une fois, elle lit ensuite chaque question */}
+            {voiceSupported && (
+              <div className="flex justify-center gap-2 mb-2 lg:mb-3">
+                <button
+                  type="button"
+                  onClick={basculerVoix}
+                  aria-pressed={voiceOn}
+                  className="rounded-full px-3 py-1 text-xs font-bold press-scale"
+                  style={{
+                    background: voiceOn ? 'rgba(78,205,196,0.15)' : 'var(--card-secondary)',
+                    border: `1px solid ${voiceOn ? 'var(--brand)' : 'var(--border-subtle)'}`,
+                    color: voiceOn ? 'var(--brand)' : 'var(--text-secondary)',
+                  }}
+                >
+                  {voiceOn ? `🔊 ${t('voix_active')}` : `🔈 ${t('voix_activer')}`}
+                </button>
+                {voiceOn && (
+                  <button
+                    type="button"
+                    onClick={() => (validated && explanation ? speak([explanation], lang) : lireQuestion())}
+                    className="rounded-full px-3 py-1 text-xs font-bold press-scale"
+                    style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)', color: 'var(--text-secondary)' }}
+                  >
+                    ↻ {t('voix_reecouter')}
+                  </button>
+                )}
+              </div>
+            )}
 
             {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
             {imageUrl && (

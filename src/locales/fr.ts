@@ -11,6 +11,10 @@
   // ── Quiz / QuizLayout ──
   valider: 'VALIDER',
   question_suivante: 'Question suivante →',
+  voix_activer: 'Lire les questions',
+  voix_active: 'Voix activée',
+  voix_reecouter: 'Réécouter',
+  voix_reponse: 'Réponse',
   voir_resultats: 'VOIR RÉSULTATS →',
   correct: 'Correct !',
   incorrect: 'Incorrect',

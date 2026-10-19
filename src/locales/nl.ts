@@ -11,6 +11,10 @@
   // ── Quiz / QuizLayout ──
   valider: 'BEVESTIGEN',
   question_suivante: 'Volgende vraag →',
+  voix_activer: 'Vragen voorlezen',
+  voix_active: 'Stem aan',
+  voix_reecouter: 'Opnieuw beluisteren',
+  voix_reponse: 'Antwoord',
   voir_resultats: 'RESULTATEN BEKIJKEN →',
   correct: 'Correct!',
   incorrect: 'Fout',
