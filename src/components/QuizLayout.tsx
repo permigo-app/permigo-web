@@ -65,6 +65,14 @@ interface QuizLayoutProps {
    * on retombe sur le texte de la question.
    */
   questionKey?: string | number;
+
+  /**
+   * Prévenu quand la lecture AUTOMATIQUE d'une question commence (true) et se
+   * termine (false). L'examen blanc s'en sert pour ne lancer son chrono qu'une
+   * fois la question lue. « Réécouter » ne le déclenche pas : on ne peut pas
+   * gagner du temps en relançant la lecture.
+   */
+  onReadingChange?: (reading: boolean) => void;
 }
 
 export default function QuizLayout({
@@ -93,18 +101,24 @@ export default function QuizLayout({
   shakeWrong,
   questionId,
   questionKey,
+  onReadingChange,
 }: QuizLayoutProps) {
   const { t, lang } = useLang();
   const isCorrect = selected === correctIndex;
 
-  // ── Lecture vocale (option, mémorisée sur l'appareil) ──
+  // ── Lecture vocale (activée par défaut, l'utilisateur peut la couper) ──
   // Détecté après le montage : la synthèse vocale n'existe pas côté serveur.
   const [voiceSupported, setVoiceSupported] = useState(false);
   const [voiceOn, setVoiceOn] = useState(false);
+  const readingCbRef = useRef(onReadingChange);
+  readingCbRef.current = onReadingChange;
   useEffect(() => {
     setVoiceSupported(isVoiceSupported());
     setVoiceOn(getVoiceEnabled());
-    return () => stopSpeaking();
+    return () => {
+      stopSpeaking();
+      readingCbRef.current?.(false);
+    };
   }, []);
 
   // Toujours la question affichée, même si la page recrée le tableau de choix
@@ -112,6 +126,11 @@ export default function QuizLayout({
   const lectureRef = useRef<string[]>([]);
   lectureRef.current = [question, ...choices.map((c, i) => `${t('voix_reponse')} ${CHOICE_LABELS[i]}. ${c}`)];
   const lireQuestion = useCallback(() => speak(lectureRef.current, lang), [lang]);
+  // Lecture automatique : la seule qui suspend le chrono de l'examen
+  const lireQuestionAuto = useCallback(() => {
+    readingCbRef.current?.(true);
+    speak(lectureRef.current, lang, () => readingCbRef.current?.(false));
+  }, [lang]);
 
   // Nouvelle question → lecture automatique si la voix est activée.
   // `dejaLue` évite de relancer la question que le clic d'activation vient de
@@ -119,16 +138,17 @@ export default function QuizLayout({
   const cleQuestion = questionKey ?? question;
   const dejaLue = useRef<string | number | null>(null);
   useEffect(() => {
-    if (!voiceOn || validated || dejaLue.current === cleQuestion) return;
+    if (!voiceSupported || !voiceOn || validated || dejaLue.current === cleQuestion) return;
     dejaLue.current = cleQuestion;
-    lireQuestion();
+    lireQuestionAuto();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cleQuestion, voiceOn, lireQuestion]);
+  }, [cleQuestion, voiceOn, voiceSupported, lireQuestionAuto]);
 
   // Réponse validée → on coupe la lecture et on lit l'explication (leçons, révision)
   useEffect(() => {
     if (!validated) return;
     stopSpeaking();
+    readingCbRef.current?.(false);
     if (voiceOn && explanation) speak([explanation], lang);
   }, [validated, voiceOn, explanation, lang]);
 
@@ -140,11 +160,12 @@ export default function QuizLayout({
     // venir d'un geste de l'utilisateur.
     if (on && !validated) {
       dejaLue.current = cleQuestion;
-      lireQuestion();
+      lireQuestionAuto();
     }
     if (!on) {
       dejaLue.current = null;
       stopSpeaking();
+      readingCbRef.current?.(false); // voix coupée en pleine lecture : le chrono repart
     }
   };
   // 2 ou 3 réponses (81 % des questions) : on profite de la place pour

@@ -68,9 +68,13 @@ function ExamContent() {
   // le passage à la suivante. La ref évite de rappeler handleValidate à chaque
   // tick (elle changerait à chaque rendu et relancerait l'intervalle).
   const validateRef = useRef<(forced?: boolean) => void>(() => {});
+  // Pendant la lecture vocale de la question, le chrono attend : les 15 s
+  // commencent une fois la question entendue.
+  const [lectureEnCours, setLectureEnCours] = useState(false);
   useEffect(() => {
     if (!started || questions.length === 0) return;
     setSecondsLeft(SECONDS_PER_QUESTION);
+    if (lectureEnCours) return;
     const id = setInterval(() => {
       setSecondsLeft(s => {
         if (s <= 1) {
@@ -82,7 +86,7 @@ function ExamContent() {
       });
     }, 1000);
     return () => clearInterval(id);
-  }, [started, currentQ, questions.length]);
+  }, [started, currentQ, questions.length, lectureEnCours]);
 
   useEffect(() => {
     if (hasRestoredRef.current) return;
@@ -446,7 +450,7 @@ function ExamContent() {
             minWidth: 54, textAlign: 'center',
           }}
         >
-          {secondsLeft}s
+          {lectureEnCours ? '🔊' : `${secondsLeft}s`}
         </div>
       }
       question={q.question}
@@ -463,6 +467,7 @@ function ExamContent() {
       shakeWrong={false}
       questionId={q.id || `exam_${themeCode}_q${currentQ}`}
       questionKey={currentQ}
+      onReadingChange={setLectureEnCours}
       leftPanel={
         // Grille façon examen officiel : une case par question. Vert = déjà
         // répondue (PAS forcément juste — aucune correction n'est donnée

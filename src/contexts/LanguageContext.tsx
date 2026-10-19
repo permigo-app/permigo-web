@@ -4,6 +4,7 @@ import { createContext, useContext, useState, useEffect, useCallback, type React
 import fr from '@/locales/fr';
 import nl from '@/locales/nl';
 import { supabase } from '@/lib/supabase';
+import { installVoiceUnlock } from '@/lib/voice';
 
 type Lang = 'fr' | 'nl';
 
@@ -65,6 +66,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>('fr');
 
   useEffect(() => {
+    // Débloque la lecture vocale des questions dès le premier toucher sur le site
+    installVoiceUnlock();
     const initial = detectInitialLang();
     setLangState(initial);
     try {
