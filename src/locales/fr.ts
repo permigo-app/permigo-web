@@ -15,6 +15,7 @@
   voix_active: 'Voix activée',
   voix_reecouter: 'Réécouter',
   voix_reponse: 'Réponse',
+  voix_indispo: 'Lecture vocale : pas de voix française sur cet appareil',
   voir_resultats: 'VOIR RÉSULTATS →',
   correct: 'Correct !',
   incorrect: 'Incorrect',

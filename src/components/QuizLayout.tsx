@@ -5,7 +5,7 @@ import SignImage from '@/components/SignImage';
 import { useLang } from '@/contexts/LanguageContext';
 import ImageRequestButton from '@/components/ImageRequestButton';
 import { playSound } from '@/lib/sounds';
-import { isVoiceSupported, getVoiceEnabled, setVoiceEnabled, speak, stopSpeaking } from '@/lib/voice';
+import { isVoiceSupported, getVoiceEnabled, setVoiceEnabled, speak, stopSpeaking, voicesFor, onVoicesReady } from '@/lib/voice';
 
 const CHOICE_LABELS = ['A', 'B', 'C', 'D'];
 
@@ -121,6 +121,16 @@ export default function QuizLayout({
     };
   }, []);
 
+  // L'appareil a-t-il une voix dans la langue du site ? (Windows n'a souvent
+  // que les voix de sa propre langue : pas de néerlandais sur un PC français.)
+  const [voixDispo, setVoixDispo] = useState(true);
+  useEffect(() => {
+    if (!voiceSupported) return;
+    return onVoicesReady(() => {
+      if (window.speechSynthesis.getVoices().length > 0) setVoixDispo(voicesFor(lang).length > 0);
+    });
+  }, [voiceSupported, lang]);
+
   // Toujours la question affichée, même si la page recrée le tableau de choix
   // à chaque rendu (l'examen passe [...q.choices]).
   const lectureRef = useRef<string[]>([]);
@@ -138,11 +148,11 @@ export default function QuizLayout({
   const cleQuestion = questionKey ?? question;
   const dejaLue = useRef<string | number | null>(null);
   useEffect(() => {
-    if (!voiceSupported || !voiceOn || validated || dejaLue.current === cleQuestion) return;
+    if (!voiceSupported || !voixDispo || !voiceOn || validated || dejaLue.current === cleQuestion) return;
     dejaLue.current = cleQuestion;
     lireQuestionAuto();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cleQuestion, voiceOn, voiceSupported, lireQuestionAuto]);
+  }, [cleQuestion, voiceOn, voiceSupported, voixDispo, lireQuestionAuto]);
 
   // Réponse validée → on coupe la lecture et on lit l'explication (leçons, révision)
   useEffect(() => {
@@ -302,7 +312,10 @@ export default function QuizLayout({
             <p className={`${ample ? 'text-[21px]' : 'text-[19px]'} md:text-[22px] font-bold text-center mb-2 lg:mb-3 leading-snug max-w-2xl mx-auto fade-in-up`} style={{ color: 'var(--text-primary)' }}>{question}</p>
 
             {/* Lecture vocale : on l'active une fois, elle lit ensuite chaque question */}
-            {voiceSupported && (
+            {voiceSupported && !voixDispo && (
+              <p className="text-center text-xs mb-2 lg:mb-3" style={{ color: 'var(--text-disabled)' }}>🔇 {t('voix_indispo')}</p>
+            )}
+            {voiceSupported && voixDispo && (
               <div className="flex justify-center gap-2 mb-2 lg:mb-3">
                 <button
                   type="button"

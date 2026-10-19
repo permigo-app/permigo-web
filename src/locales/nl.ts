@@ -15,6 +15,7 @@
   voix_active: 'Stem aan',
   voix_reecouter: 'Opnieuw beluisteren',
   voix_reponse: 'Antwoord',
+  voix_indispo: 'Voorlezen: geen Nederlandse stem op dit toestel',
   voir_resultats: 'RESULTATEN BEKIJKEN →',
   correct: 'Correct!',
   incorrect: 'Fout',

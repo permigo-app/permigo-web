@@ -24,18 +24,47 @@ export function getVoiceEnabled(): boolean {
  * la voix est alors débloquée pour toute la visite, et les questions peuvent
  * être lues automatiquement.
  */
+let debloquee = false;
+let installee = false;
+// Lecture refusée faute de geste (page ouverte directement, sans clic) :
+// on la rejoue au premier toucher.
+let enAttente: { parts: string[]; lang: Lang } | null = null;
+
 export function installVoiceUnlock() {
-  if (!isVoiceSupported()) return;
-  const unlock = () => {
-    try {
-      const u = new SpeechSynthesisUtterance(' ');
-      u.volume = 0;
-      window.speechSynthesis.speak(u);
-    } catch {
-      // sans conséquence : la lecture pourra quand même être relancée à la main
+  if (!isVoiceSupported() || installee) return;
+  installee = true;
+  window.addEventListener('pointerdown', () => {
+    if (!debloquee) {
+      debloquee = true;
+      try {
+        const u = new SpeechSynthesisUtterance(' ');
+        u.volume = 0;
+        window.speechSynthesis.speak(u);
+      } catch {
+        // sans conséquence : la lecture pourra quand même être relancée à la main
+      }
     }
-  };
-  window.addEventListener('pointerdown', unlock, { once: true, capture: true });
+    if (enAttente) {
+      const { parts, lang } = enAttente;
+      enAttente = null;
+      speak(parts, lang);
+    }
+  }, { capture: true });
+}
+
+/** Voix installées sur l'appareil pour cette langue (vide tant que la liste n'est pas chargée). */
+export function voicesFor(lang: Lang): SpeechSynthesisVoice[] {
+  if (!isVoiceSupported()) return [];
+  return window.speechSynthesis.getVoices().filter(v => v.lang.toLowerCase().replace('_', '-').startsWith(lang));
+}
+
+/** Appelle `cb` quand la liste des voix est connue (immédiatement si elle l'est déjà). */
+export function onVoicesReady(cb: () => void): () => void {
+  if (!isVoiceSupported()) return () => {};
+  const synth = window.speechSynthesis;
+  if (synth.getVoices().length > 0) cb();
+  synth.addEventListener('voiceschanged', cb);
+  return () => synth.removeEventListener('voiceschanged', cb);
 }
 
 export function setVoiceEnabled(on: boolean) {
@@ -83,6 +112,7 @@ let lectureCourante = 0;
 
 export function stopSpeaking() {
   lectureCourante++;
+  enAttente = null;
   if (isVoiceSupported()) window.speechSynthesis.cancel();
 }
 
@@ -112,16 +142,24 @@ export function speak(parts: string[], lang: Lang, onDone?: () => void) {
   // ~80 ms par caractère à vitesse normale, + 3 s de marge, plafonné à 30 s
   const dureeMax = Math.min(30000, textes.join(' ').length * 80 + 3000);
   setTimeout(terminer, dureeMax);
+  enAttente = null;
   const run = () => {
     if (id !== lectureCourante) return; // déjà remplacée par une autre lecture
     const voice = pickVoice(lang);
+    // Aucune voix pour cette langue (ex. pas de voix néerlandaise dans Windows) :
+    // on se tait plutôt que de lire du néerlandais avec une voix française.
+    if (!voice && synth.getVoices().length > 0) { terminer(); return; }
     textes.forEach((text, i) => {
       const u = new SpeechSynthesisUtterance(text);
       u.lang = voice?.lang ?? (lang === 'fr' ? 'fr-BE' : 'nl-BE');
       if (voice) u.voice = voice;
       u.rate = 1;
       if (i === textes.length - 1) u.onend = terminer;
-      u.onerror = terminer; // bloquée ou interrompue : on n'attend pas
+      u.onerror = (e: SpeechSynthesisErrorEvent) => {
+        // Refusée faute de clic sur la page : rejouée au premier toucher
+        if (e.error === 'not-allowed' && id === lectureCourante) enAttente = { parts, lang };
+        terminer(); // bloquée ou interrompue : on n'attend pas
+      };
       synth.speak(u);
     });
   };
