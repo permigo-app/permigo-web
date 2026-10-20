@@ -95,7 +95,6 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     pillars: [
       { title: 'Théorie complète', price: 'Toute la théorie offerte', cta: '', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
       { title: 'Examens blancs', price: 'Un examen offert', cta: '', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
-      { title: 'Premium, tout débloqué', price: 'Tout se débloque d\u2019un coup', cta: 'Voir Premium', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
     ],
     stats: [
       { v: '1 500+', l: "questions d'entraînement" },
@@ -136,9 +135,9 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { code: 'H', emoji: '🅿️', label: 'Arrêt et stationnement' },
       { code: 'I', emoji: '📋', label: 'Divers' },
     ],
-    planKicker: 'Gratuit & Premium',
+    planKicker: 'Gratuit',
     planTitle: 'Essaie d\'abord, décide ensuite',
-    planSubtitle: 'De quoi te faire une vraie idée sans sortir ta carte. Premium débloque le reste le jour où tu veux accélérer.',
+    planSubtitle: 'De quoi te faire une vraie idée, sans sortir ta carte.',
     freeTitle: 'Gratuit',
     freeBadge: 'Sans carte bancaire',
     freeItems: [
@@ -191,7 +190,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       },
     ],
     finalTitle: 'On commence maintenant ?',
-    finalDesc: 'Plus de 100 inscrits en quelques semaines. Trente secondes pour créer ton compte, et tu attaques la première leçon dans la foulée.',
+    finalDesc: 'Déjà près de 100 inscrits. Trente secondes pour créer ton compte, et tu attaques la première leçon dans la foulée.',
     finalCta: 'Créer mon compte gratuit',
     finalNote: 'Gratuit · Aucune carte bancaire pour commencer',
   },
@@ -215,7 +214,6 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
     pillars: [
       { title: 'Volledige theorie', price: 'Alle theorie gratis', cta: '', href: '/register', bg: '#6FD8CC', fg: '#0B2A2A', btnBg: '#0B2A2A', btnFg: '#6FD8CC' },
       { title: 'Proefexamens', price: 'Eén examen gratis', cta: '', href: '/register', bg: '#8FC7F5', fg: '#0B2138', btnBg: '#0B2138', btnFg: '#8FC7F5' },
-      { title: 'Premium, alles vrij', price: 'Alles in één keer vrij', cta: 'Premium bekijken', href: '/premium', bg: '#F7A93B', fg: '#3A2200', btnBg: '#3A2200', btnFg: '#F7A93B' },
     ],
     stats: [
       { v: '1 500+', l: 'oefenvragen' },
@@ -256,9 +254,9 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       { code: 'H', emoji: '🅿️', label: 'Stilstaan en parkeren' },
       { code: 'I', emoji: '📋', label: 'Diversen' },
     ],
-    planKicker: 'Gratis & Premium',
+    planKicker: 'Gratis',
     planTitle: 'Eerst proberen, dan beslissen',
-    planSubtitle: 'Genoeg om je een echt beeld te vormen zonder je bankkaart. Premium ontgrendelt de rest op de dag dat je wil versnellen.',
+    planSubtitle: 'Genoeg om je een echt beeld te vormen, zonder je bankkaart.',
     freeTitle: 'Gratis',
     freeBadge: 'Zonder bankkaart',
     freeItems: [
@@ -311,7 +309,7 @@ const COPY: Record<'fr' | 'nl', LandingCopy> = {
       },
     ],
     finalTitle: 'Zullen we beginnen?',
-    finalDesc: 'Meer dan 100 inschrijvingen in enkele weken. Dertig seconden om je account te maken, en je start meteen met de eerste les.',
+    finalDesc: 'Al bijna 100 inschrijvingen. Dertig seconden om je account te maken, en je start meteen met de eerste les.',
     finalCta: 'Maak mijn gratis account',
     finalNote: 'Gratis · Geen bankkaart om te starten',
   },
@@ -704,7 +702,7 @@ export default function LandingContent() {
             <p style={{ margin: '0 auto', maxWidth: 520, fontSize: 15, color: 'rgba(11,18,32,0.55)', lineHeight: 1.7 }}>{c.planSubtitle}</p>
           </div>
 
-          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 20, alignItems: 'start' }}>
+          <div className="grid" style={{ gridTemplateColumns: '1fr', maxWidth: 480, margin: '0 auto', alignItems: 'start' }}>
             {/* Gratuit */}
             <div style={{ background: '#F9FBFC', borderRadius: 22, padding: '28px 26px', border: '1px solid rgba(11,18,32,0.09)' }}>
               <div className="flex flex-wrap items-center" style={{ gap: 10, marginBottom: 6 }}>
@@ -722,35 +720,6 @@ export default function LandingContent() {
               </div>
             </div>
 
-            {/* Premium */}
-            <div style={{
-              background: '#FFFFFF', borderRadius: 22, padding: '28px 26px',
-              border: `2px solid ${BRAND}`, boxShadow: `0 16px 44px ${BRAND}2E`,
-            }}>
-              <div className="flex flex-wrap items-center" style={{ gap: 10, marginBottom: 6 }}>
-                <span style={{ fontSize: 20, fontWeight: 900 }}>{c.premiumTitle}</span>
-                <span style={{ fontSize: 11, fontWeight: 800, padding: '3px 10px', borderRadius: 99, background: BRAND, color: INK }}>{c.premiumBadge}</span>
-              </div>
-              {/* Le montant vit sur /premium. Ici on dit seulement que c'est
-                  payant et on y mène : le visiteur découvre le prix au moment
-                  où il a envie de continuer, pas à l'accueil. */}
-              <Link href="/premium" style={{
-                display: 'inline-block', margin: '0 0 20px',
-                fontSize: 17, fontWeight: 800, color: BRAND_DEEP, textDecoration: 'none',
-                borderBottom: `2px solid ${BRAND}`, paddingBottom: 2,
-              }}>
-                {c.premiumVoirTarif}
-              </Link>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 11, marginBottom: 22 }}>
-                {c.premiumItems.map(item => (
-                  <div key={item} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                    {check(BRAND_DEEP)}
-                    <span style={{ fontSize: 13.5, color: 'rgba(11,18,32,0.72)', lineHeight: 1.6 }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p style={{ margin: 0, fontSize: 11.5, color: 'rgba(11,18,32,0.42)', lineHeight: 1.6 }}>{c.premiumNote}</p>
-            </div>
           </div>
         </div>
       </section>
