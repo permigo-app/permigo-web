@@ -100,8 +100,10 @@ export default function LessonPage() {
   // le bandeau Premium et la bulle de feedback disparaissent sur téléphone.
   useEffect(() => {
     if (phase !== 'theory' && phase !== 'quiz') return;
-    document.body.classList.add('quiz-focus');
-    return () => document.body.classList.remove('quiz-focus');
+    // `quiz-questions` masque aussi la barre du haut (logo, thème, langue) :
+    // la théorie a déjà son retour et sa progression, tout remonte.
+    document.body.classList.add('quiz-focus', 'quiz-questions');
+    return () => document.body.classList.remove('quiz-focus', 'quiz-questions');
   }, [phase]);
 
   useEffect(() => {
@@ -314,9 +316,11 @@ export default function LessonPage() {
   // ── PARTIE SELECTOR ── (quand pas de ?partie= et plusieurs parties)
   if (!isPartieMode && theories.length > 1) {
     return (
-      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', paddingBottom: 120 }}>
+      // Marges resserrées : la page réserve déjà la place des barres du site,
+      // les 120 px du bas et 52 px du haut faisaient défiler la liste pour rien.
+      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', paddingBottom: 24 }}>
         {/* Header */}
-        <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', padding: '52px 20px 20px' }}>
+        <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', padding: '24px 20px 18px' }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <button
               onClick={quitter}

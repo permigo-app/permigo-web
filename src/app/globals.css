@@ -1026,8 +1026,45 @@ main, .page-content {
    l'en-tête, les pastilles et les deux boutons (~212 px) — tout tient sur une
    page, sans défiler. Sur ordinateur, taille d'origine. */
 .flash-carte { height: clamp(420px, calc(100dvh - 330px), 600px); }
+/* En-tête des pages de l'appli (accueil, leçons, profil, réflexe) : 52 px
+   au-dessus du titre sur ordinateur, réduit à 22 px sur téléphone (plus bas). */
+.entete-page { padding-top: 52px; }
 @media (max-width: 1023px) {
   .flash-carte { height: clamp(300px, calc(100dvh - 212px - env(safe-area-inset-bottom)), 560px); }
+}
+
+/* Sur téléphone, dans l'appli : une page « pleine hauteur » (min-height:100vh
+   ou .min-h-screen) ne doit pas compter les barres du site, déjà réservées par
+   <main> (44 px en haut, 80 px en bas) — sinon chaque écran court défile de
+   ~120 px pour rien. En mode plein écran (questions, théorie, flash), il n'y a
+   plus de barres : la page fait exactement la hauteur de l'écran. */
+@media (max-width: 1023px) {
+  body.page-appli main .min-h-screen {
+    min-height: calc(100dvh - 124px) !important;
+  }
+  body.page-appli.quiz-questions main .min-h-screen {
+    min-height: 100dvh !important;
+  }
+  /* Bouton principal fixé en bas : toujours visible au-dessus de la barre du
+     bas (58 px) — et du bandeau Premium (~50 px) quand il est affiché. La page
+     qui le contient (.page-avec-cta) garde une marge pour ne rien cacher. */
+  .cta-collant {
+    position: fixed !important;
+    left: 16px; right: 16px;
+    width: auto !important;
+    margin: 0 !important;
+    bottom: calc(58px + env(safe-area-inset-bottom) + 10px);
+    z-index: 30;
+    box-shadow: 0 6px 20px rgba(11, 38, 89, 0.25);
+  }
+  body:has(.bandeau-premium) .cta-collant {
+    bottom: calc(110px + env(safe-area-inset-bottom) + 10px);
+  }
+  .page-avec-cta { padding-bottom: 76px; }
+  /* En-têtes de page : 52 px de vide au-dessus du titre, hérités d'avant la
+     barre du haut. Sur téléphone, 22 px suffisent — tout remonte de 30 px. */
+  .entete-page { padding-top: 22px !important; }
+  body.page-appli main .ex-hero { padding-top: 24px !important; }
 }
 
 /* Pied de page légal : masqué sur téléphone dans l'appli (voir AppShell).

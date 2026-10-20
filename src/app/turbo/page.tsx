@@ -266,10 +266,10 @@ function TurboContent() {
     ];
 
     return (
-      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
+      <div className="page-avec-cta" style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
 
         {/* Header */}
-        <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
+        <div className="entete-page" style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>{t('turbo_entrainement')}</p>
             <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>{t('turbo_titre')}</h1>
@@ -353,11 +353,12 @@ function TurboContent() {
             })}
           </div>
 
-          {/* CTA */}
+          {/* CTA — collant en bas sur téléphone (voir .cta-collant) : toujours
+              visible sans défiler, au-dessus de la barre du bas et du bandeau */}
           <button
             onClick={() => { if (!blocked) startGame(mobileSelectedMode); }}
             disabled={blocked}
-            className="press-scale"
+            className="press-scale cta-collant"
             style={{
               width: '100%', padding: '16px', borderRadius: 14,
               background: blocked ? 'var(--bg-input)' : '#0b2659',

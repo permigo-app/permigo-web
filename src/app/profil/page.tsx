@@ -246,7 +246,7 @@ export default function ProfilePage() {
     <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
 
       {/* Page header */}
-      <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
+      <div className="entete-page" style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingBottom: 18, paddingLeft: 20, paddingRight: 20 }}>
         <p style={{ margin: 0, fontSize: 10, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'var(--text-hint)' }}>Compte</p>
         <h1 style={{ margin: '4px 0 0', fontSize: 22, fontWeight: 800, color: 'var(--text-title)', letterSpacing: -0.5 }}>{t('profil_titre')}</h1>
       </div>

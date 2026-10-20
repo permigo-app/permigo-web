@@ -228,10 +228,10 @@ export default function HomePage() {
     <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif' }}>
 
       {/* ── HEADER ── */}
-      <div style={{
+      <div className="entete-page" style={{
         background: 'var(--bg-header)',
         borderBottom: '1px solid var(--border-header)',
-        paddingTop: 52, paddingBottom: 18, paddingLeft: 20, paddingRight: 20,
+        paddingBottom: 18, paddingLeft: 20, paddingRight: 20,
       }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
           <div>

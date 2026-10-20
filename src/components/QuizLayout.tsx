@@ -378,9 +378,10 @@ export default function QuizLayout({
 
             {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
             {imageUrl && (
-              // Téléphone : l'image va toujours d'un bord à l'autre de l'écran
-              // (-mx-4 annule la marge latérale), sans rien rogner de la scène.
-              <div className="flex justify-center mb-3 lg:mb-5 -mx-4 lg:mx-0">
+              // Téléphone : l'image s'étire presque d'un bord à l'autre, avec une
+              // fine marge de 10 px et des coins arrondis pour la voir encadrée
+              // (-mx-1.5 ramène la marge de page de 16 à 10 px). Rien n'est rogné.
+              <div className="flex justify-center mb-3 lg:mb-5 -mx-1.5 lg:mx-0">
                 {/* Sa hauteur maximale = toute la place libre (imgMax, calculée
                     par ajusterEcran). Avant le premier calcul : 40 % de l'écran.
                     La photo garde sa forme : si la place manque, elle se réduit
@@ -393,7 +394,7 @@ export default function QuizLayout({
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  className="quiz-img max-h-[40vh] w-auto max-w-full rounded-none lg:rounded-xl lg:max-h-none lg:w-full lg:max-w-lg"
+                  className="quiz-img max-h-[40vh] w-auto max-w-full rounded-xl lg:max-h-none lg:w-full lg:max-w-lg"
                   onLoad={ajusterEcran}
                   style={{ height: 'auto', ...(imgMax ? { maxHeight: imgMax } : {}) }}
                 />

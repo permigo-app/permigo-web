@@ -79,7 +79,7 @@ export default function ThemeDetailPage() {
     <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', paddingBottom: 140 }}>
 
       {/* ── HEADER ───────────────────────────────────────────────── */}
-      <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingTop: 52, paddingBottom: 20, paddingLeft: 20, paddingRight: 20 }}>
+      <div className="entete-page" style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', paddingBottom: 20, paddingLeft: 20, paddingRight: 20 }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
           <Link href="/app" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 16 }}>
