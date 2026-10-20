@@ -2,12 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
-import { isSoundMuted, toggleMute } from '@/lib/sounds';
 import { useIsPremium } from '@/lib/premium';
 
 // `tour` = ancre du didacticiel (OnboardingTour surligne l'élément visible)
@@ -67,12 +65,11 @@ function isNavActive(href: string, pathname: string): boolean {
   return pathname.startsWith(href);
 }
 
-function MobileTopBar({ muted, onToggleMute }: {
-  muted: boolean; onToggleMute: () => void;
-}) {
-  const { t } = useLang();
+// Le réglage du son des effets reste disponible dans la page Profil.
+// `barre-haut-mobile` : masquée pendant les questions (mode focus, globals.css).
+function MobileTopBar() {
   return (
-    <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-3 gap-4"
+    <div className="barre-haut-mobile lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-3 gap-4"
       style={{ height: 44, background: 'var(--nav-bg)', borderBottom: '1px solid var(--nav-border)' }}>
       <Link href="/app" className="flex-shrink-0">
         <span style={{ fontSize: 15, fontWeight: 900, letterSpacing: -0.5 }}>
@@ -82,11 +79,6 @@ function MobileTopBar({ muted, onToggleMute }: {
         </span>
       </Link>
       <div className="flex-shrink-0 flex items-center gap-2">
-        <button onClick={onToggleMute}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', fontSize: 16, lineHeight: 1 }}
-          title={muted ? t('activer_son') : t('couper_son')}>
-          {muted ? '🔇' : '🔊'}
-        </button>
         <ThemeToggle />
         <LanguageSwitcher />
       </div>
@@ -133,13 +125,6 @@ export default function Navbar() {
   const { user } = useAuth();
   const { t } = useLang();
   const premium = useIsPremium();
-  const [muted, setMuted] = useState(false);
-
-  useEffect(() => {
-    setMuted(isSoundMuted());
-  }, []);
-
-  const handleToggleMute = () => setMuted(toggleMute());
   const initials = user?.username?.charAt(0).toUpperCase() || '?';
 
   return (
@@ -159,10 +144,6 @@ export default function Navbar() {
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <button onClick={handleToggleMute}
-            style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--bg-input)', border: '1px solid var(--border-card)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: 16, lineHeight: 1 }}>
-            {muted ? '🔇' : '🔊'}
-          </button>
           <ThemeToggle />
           <LanguageSwitcher />
           {user ? (
@@ -227,7 +208,7 @@ export default function Navbar() {
       </nav>
 
       {/* ── Mobile top bar ──────────────────────────────────────────── */}
-      <MobileTopBar muted={muted} onToggleMute={handleToggleMute} />
+      <MobileTopBar />
 
       {/* ── Mobile bottom nav ───────────────────────────────────────── */}
       <nav className="nav-bas-mobile lg:hidden fixed bottom-0 left-0 right-0 z-50"

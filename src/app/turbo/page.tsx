@@ -442,7 +442,7 @@ function TurboContent() {
       }
       headerCenter={
         mode !== 'survie' ? (
-          <span className={`text-sm font-black px-3 py-1 rounded-lg ${timeLeft <= 30 ? 'animate-pulse' : ''}`} style={{ color: timeLeft <= 30 ? '#FF4757' : 'white', background: timeLeft <= 30 ? '#FF475715' : 'transparent' }}>
+          <span className={`text-sm font-black px-3 py-1 rounded-lg ${timeLeft <= 30 ? 'animate-pulse' : ''}`} style={{ color: timeLeft <= 30 ? '#FF4757' : 'var(--text-primary)', background: timeLeft <= 30 ? '#FF475715' : 'transparent' }}>
             {'⏱️'} {formatTime(timeLeft)}
           </span>
         ) : (

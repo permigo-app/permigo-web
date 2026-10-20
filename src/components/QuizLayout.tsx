@@ -181,9 +181,15 @@ export default function QuizLayout({
   // 2 ou 3 réponses (81 % des questions) : on profite de la place pour
   // agrandir l'énoncé et les réponses. À 4, on garde la taille compacte.
   const ample = choices.length <= 3;
+  const voixActive = voiceSupported && voixDispo && voiceOn;
+  const [indispoVisible, setIndispoVisible] = useState(false);
+  // Après la réponse, l'image garde sa taille… sauf si l'explication ne tient
+  // pas à l'écran : alors seulement, elle se réduit (mesuré par verifierTient).
+  const [imageReduite, setImageReduite] = useState(false);
+  const reduite = validated && imageReduite;
   // Image bord à bord : seulement si l'énoncé tient en ~3 lignes (96 % des
   // questions illustrées). Au-delà, elle garde sa marge pour que tout tienne.
-  const grandeImage = ample && !validated && question.length <= 110;
+  const grandeImage = ample && !reduite && question.length <= 110;
 
   useEffect(() => {
     if (validated) {
@@ -201,10 +207,13 @@ export default function QuizLayout({
   // La barre de navigation, le bandeau Premium et la bulle de feedback
   // mangeaient ~230 px sur téléphone et poussaient « Question suivante »
   // derrière eux. On sort du quiz par la ✕ de l'en-tête.
+  // `quiz-questions` masque en plus la barre du haut du site (logo, thème,
+  // langue) : pendant une question, la ✕ et la progression suffisent, et la
+  // photo remonte d'autant. Les écrans de théorie gardent cette barre.
   useEffect(() => {
-    document.body.classList.add('quiz-focus');
+    document.body.classList.add('quiz-focus', 'quiz-questions');
     return () => {
-      document.body.classList.remove('quiz-focus');
+      document.body.classList.remove('quiz-focus', 'quiz-questions');
       document.documentElement.classList.remove('quiz-fige');
     };
   }, []);
@@ -215,20 +224,27 @@ export default function QuizLayout({
   // cachée sous le bouton et inaccessible serait bien pire qu'un défilement.
   const finContenuRef = useRef<HTMLDivElement>(null);
   const actionRef = useRef<HTMLDivElement>(null);
+  const validatedRef = useRef(validated);
+  validatedRef.current = validated;
   const verifierTient = useCallback(() => {
     const fin = finContenuRef.current, action = actionRef.current;
     if (!fin || !action) return;
     // +14 : on ignore la marge vide (mb-3) laissée sous le dernier bloc.
     const tient = fin.getBoundingClientRect().top <= action.getBoundingClientRect().top + 14;
+    // Réponse donnée et explication coupée par le bouton : on réduit l'image
+    // (une seule fois par question), puis on remesurera après l'animation.
+    if (!tient && validatedRef.current) setImageReduite(true);
     document.documentElement.classList.toggle('quiz-fige', tient);
   }, []);
+  // Nouvelle question : l'image repart en grand
+  useEffect(() => { setImageReduite(false); }, [questionKey ?? question]);
   useEffect(() => {
-    // le rétrécissement de l'image après validation dure 0,3 s
+    // le rétrécissement de l'image dure 0,3 s : on remesure après
     const t1 = requestAnimationFrame(verifierTient);
     const t2 = setTimeout(verifierTient, 350);
     window.addEventListener('resize', verifierTient);
     return () => { cancelAnimationFrame(t1); clearTimeout(t2); window.removeEventListener('resize', verifierTient); };
-  }, [verifierTient, questionKey, question, validated, choices.length]);
+  }, [verifierTient, questionKey, question, validated, imageReduite, choices.length]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
@@ -257,6 +273,25 @@ export default function QuizLayout({
                   <span className="text-xs font-bold flex-shrink-0" style={{ color: 'var(--brand)' }}>{progressLabel}</span>
                 )}
               </div>
+            )}
+            {/* Lecture vocale : une seule petite icône. 🔊 = activée, 🔇 = coupée
+                (ou pas de voix sur l'appareil : le toucher affiche pourquoi). */}
+            {voiceSupported && (
+              <button
+                type="button"
+                onClick={voixDispo ? basculerVoix : () => setIndispoVisible(v => !v)}
+                aria-pressed={voixActive}
+                aria-label={voixActive ? t('voix_active') : t('voix_activer')}
+                title={voixActive ? t('voix_active') : voixDispo ? t('voix_activer') : t('voix_indispo')}
+                className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 press-scale"
+                style={{
+                  background: voixActive ? 'rgba(78,205,196,0.15)' : 'var(--card-secondary)',
+                  border: `1px solid ${voixActive ? 'var(--brand)' : 'var(--border-subtle)'}`,
+                  fontSize: 16, lineHeight: 1, opacity: voixDispo ? 1 : 0.55,
+                }}
+              >
+                {voixActive ? '🔊' : '🔇'}
+              </button>
             )}
             {headerRight}
           </div>
@@ -290,8 +325,9 @@ export default function QuizLayout({
           {/* ── Left: Question + Answers (60%) ── */}
           <div className="flex-1 min-w-0 lg:flex-[3]">
             {/* Subtitle */}
+            {/* Sur téléphone, on le cache : chaque ligne gagnée revient à la photo */}
             {subtitle && (
-              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'var(--text-disabled)' }}>{subtitle}</p>
+              <p className="hidden lg:block text-xs font-bold uppercase tracking-widest mb-4" style={{ color: 'var(--text-disabled)' }}>{subtitle}</p>
             )}
 
             {/* Sign image */}
@@ -299,7 +335,7 @@ export default function QuizLayout({
               <div className="flex justify-center mb-3 lg:mb-5">
                 <div className="rounded-xl p-3 lg:p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
                   {/* Même logique que l'image : plus petit une fois la réponse donnée. */}
-                  <span className="lg:hidden"><SignImage code={signCode} size={validated ? 84 : 148} /></span>
+                  <span className="lg:hidden"><SignImage code={signCode} size={reduite ? 84 : 148} /></span>
                   <span className="hidden lg:inline"><SignImage code={signCode} size={148} /></span>
                 </div>
               </div>
@@ -309,38 +345,19 @@ export default function QuizLayout({
             {/* L'énoncé était en 24px face à des réponses en 14px. On resserre
                 l'écart : c'est la comparaison des 4 propositions qui demande le
                 plus d'attention, pas la relecture de la question. */}
-            <p className={`${ample ? 'text-[21px]' : 'text-[19px]'} md:text-[22px] font-bold text-center mb-2 lg:mb-3 leading-snug max-w-2xl mx-auto fade-in-up`} style={{ color: 'var(--text-primary)' }}>{question}</p>
+            {/* Voix activée : toucher l'énoncé le relit (ou l'explication, une fois répondu) */}
+            <p
+              className={`${ample ? 'text-[21px]' : 'text-[19px]'} md:text-[22px] font-bold text-center mb-2 lg:mb-3 leading-snug max-w-2xl mx-auto fade-in-up`}
+              style={{ color: 'var(--text-primary)', cursor: voixActive ? 'pointer' : undefined }}
+              onClick={voixActive ? () => (validated && explanation ? speak([explanation], lang) : lireQuestion()) : undefined}
+              title={voixActive ? t('voix_reecouter') : undefined}
+            >
+              {question}
+            </p>
 
-            {/* Lecture vocale : on l'active une fois, elle lit ensuite chaque question */}
-            {voiceSupported && !voixDispo && (
+            {/* Pas de voix pour cette langue : affiché seulement si on touche l'icône 🔇 */}
+            {voiceSupported && !voixDispo && indispoVisible && (
               <p className="text-center text-xs mb-2 lg:mb-3" style={{ color: 'var(--text-disabled)' }}>🔇 {t('voix_indispo')}</p>
-            )}
-            {voiceSupported && voixDispo && (
-              <div className="flex justify-center gap-2 mb-2 lg:mb-3">
-                <button
-                  type="button"
-                  onClick={basculerVoix}
-                  aria-pressed={voiceOn}
-                  className="rounded-full px-3 py-1 text-xs font-bold press-scale"
-                  style={{
-                    background: voiceOn ? 'rgba(78,205,196,0.15)' : 'var(--card-secondary)',
-                    border: `1px solid ${voiceOn ? 'var(--brand)' : 'var(--border-subtle)'}`,
-                    color: voiceOn ? 'var(--brand)' : 'var(--text-secondary)',
-                  }}
-                >
-                  {voiceOn ? `🔊 ${t('voix_active')}` : `🔈 ${t('voix_activer')}`}
-                </button>
-                {voiceOn && (
-                  <button
-                    type="button"
-                    onClick={() => (validated && explanation ? speak([explanation], lang) : lireQuestion())}
-                    className="rounded-full px-3 py-1 text-xs font-bold press-scale"
-                    style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)', color: 'var(--text-secondary)' }}
-                  >
-                    ↻ {t('voix_reecouter')}
-                  </button>
-                )}
-              </div>
             )}
 
             {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
@@ -361,10 +378,9 @@ export default function QuizLayout({
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  // Après validation, l'image a fait son travail : elle se réduit
-                  // en douceur pour laisser la place à l'explication, et tout
-                  // reste à l'écran sans scroller, même avec 3 réponses longues.
-                  className={`quiz-img ${validated ? 'quiz-img-valide max-h-[15vh] rounded-xl' : grandeImage ? 'max-h-[34vh] rounded-none lg:rounded-xl' : ample ? 'max-h-[28vh] rounded-xl' : 'quiz-img-quatre max-h-[22vh] rounded-xl'} w-auto max-w-full lg:max-h-none lg:w-full lg:max-w-lg`}
+                  // Après validation, l'image garde sa taille. Elle ne se réduit
+                  // (en douceur) que si l'explication ne tiendrait pas à l'écran.
+                  className={`quiz-img ${reduite ? 'quiz-img-valide max-h-[15vh] rounded-xl' : grandeImage ? 'max-h-[34vh] rounded-none lg:rounded-xl' : ample ? 'max-h-[28vh] rounded-xl' : 'quiz-img-quatre max-h-[22vh] rounded-xl'} w-auto max-w-full lg:max-h-none lg:w-full lg:max-w-lg`}
                   onLoad={verifierTient}
                   style={{ border: '1px solid var(--border-subtle)', height: 'auto', transition: 'max-height 0.3s ease' }}
                 />

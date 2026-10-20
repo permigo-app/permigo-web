@@ -1012,6 +1012,14 @@ main, .page-content {
   body.quiz-focus main {
     padding-bottom: 0 !important;
   }
+  /* Pendant une question : plus de barre du haut non plus (logo, thème,
+     langue). La ✕ et la progression du quiz restent, tout remonte. */
+  body.quiz-questions .barre-haut-mobile {
+    display: none !important;
+  }
+  body.quiz-questions main {
+    padding-top: 0 !important;
+  }
 }
 
 /* Écran de théorie : les boutons Précédent / Continuer se posent au-dessus
