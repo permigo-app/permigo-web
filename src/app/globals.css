@@ -1074,16 +1074,14 @@ main, .page-content {
 }
 
 /* Écran d'avant l'examen blanc, petits téléphones (iPhone SE…) : en-tête plus
-   fin et les 4 chiffres sur une seule ligne, pour que tout tienne sans défiler.
-   Les styles de base sont en ligne dans la page, d'où les !important. */
+   fin et marges resserrées pour que tout tienne sans défiler — les 4 chiffres
+   restent en gros blocs 2×2. Styles de base en ligne, d'où les !important. */
 @media (max-width: 1023px) and (max-height: 720px) {
   .ex-hero { padding: 18px 20px 14px !important; }
   .ex-hero h1 { font-size: 22px !important; }
   .ex-corps { padding: 12px 16px !important; }
-  .ex-stats { grid-template-columns: repeat(4, 1fr) !important; gap: 6px !important; margin-bottom: 12px !important; }
-  .ex-stat { padding: 10px 2px !important; border-radius: 12px !important; }
-  .ex-stat p:first-child { font-size: 15px !important; }
-  .ex-stat p:last-child { font-size: 10px !important; }
+  .ex-stats { gap: 8px !important; margin-bottom: 12px !important; }
+  .ex-stat { padding: 12px 10px !important; }
   .ex-conseil { padding: 10px 12px !important; margin-bottom: 12px !important; }
   .ex-conseil p { font-size: 12px !important; }
 }

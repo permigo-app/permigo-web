@@ -64,6 +64,26 @@ function ExamContent() {
     prefetchImage(questions[currentQ + 1]?.image);
   }, [currentQ, questions]);
 
+  // Écran d'avant l'examen : sans la barre du haut (logo, thème, langue), et
+  // figé quand tout tient — rien à faire défiler, juste « Commencer ».
+  useEffect(() => {
+    if (started) return;
+    document.body.classList.add('quiz-questions');
+    const figer = () => {
+      const tient = document.documentElement.scrollHeight <= window.innerHeight + 1;
+      document.documentElement.classList.toggle('quiz-fige', tient);
+    };
+    const t1 = requestAnimationFrame(figer);
+    const t2 = setTimeout(figer, 400);
+    window.addEventListener('resize', figer);
+    return () => {
+      cancelAnimationFrame(t1); clearTimeout(t2);
+      window.removeEventListener('resize', figer);
+      document.body.classList.remove('quiz-questions');
+      document.documentElement.classList.remove('quiz-fige');
+    };
+  }, [started]);
+
   // Décompte des 15 secondes. Redémarre à chaque question ; à zéro, on force
   // le passage à la suivante. La ref évite de rappeler handleValidate à chaque
   // tick (elle changerait à chaque rendu et relancerait l'intervalle).
