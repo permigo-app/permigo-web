@@ -74,6 +74,10 @@ export default function LessonPage() {
   const searchParams = useSearchParams();
   const { lang, t } = useLang();
   const lessonId = (params.id as string)?.toUpperCase();
+  // Sortie : toujours vers les leçons du thème. Un « retour » ne faisait rien
+  // quand on arrivait directement sur la page (lien, rechargement) — et en mode
+  // plein écran, sans barre de navigation, on restait alors bloqué.
+  const quitter = () => router.push(`/lecons/${themeCode || lessonId?.charAt(0) || 'A'}`);
   const partieParam = searchParams.get('partie');
   const isRevisionMode = searchParams.get('revision') === '1';
   const isPartieMode = partieParam !== null;
@@ -315,7 +319,7 @@ export default function LessonPage() {
         <div style={{ background: 'var(--bg-header)', borderBottom: '1px solid var(--border-header)', padding: '52px 20px 20px' }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <button
-              onClick={() => router.back()}
+              onClick={quitter}
               style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 16, background: 'transparent', border: 'none', cursor: 'pointer', padding: 0 }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-hint)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -510,7 +514,7 @@ export default function LessonPage() {
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <button
-                onClick={() => router.back()}
+                onClick={quitter}
                 style={{
                   width: 34, height: 34, borderRadius: 10, border: '1.5px solid var(--border-card)',
                   background: 'var(--bg-card)', display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -739,7 +743,7 @@ export default function LessonPage() {
               🔄 Réessayer
             </button>
             <button
-              onClick={() => router.back()}
+              onClick={quitter}
               className="w-full py-3 rounded-2xl font-bold text-sm press-scale"
               style={{ background: 'transparent', border: '1.5px solid var(--border-subtle)', color: 'var(--text-secondary)' }}
             >
@@ -764,7 +768,7 @@ export default function LessonPage() {
         progress={pctDone}
         progressLabel={`${currentQ + 1}/${questions.length}`}
         headerLeft={
-          <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
+          <button onClick={quitter} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
             {'✕'}
           </button>
         }

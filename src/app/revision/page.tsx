@@ -42,6 +42,8 @@ function RevisionContent() {
   const router = useRouter();
   const { t, lang } = useLang();
   const themeCode = params.get('theme') || 'A';
+  // Sortie : toujours vers l'accueil (un « retour » ne faisait rien sans historique)
+  const quitter = () => router.push('/app');
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🔄';
 
@@ -122,7 +124,7 @@ function RevisionContent() {
         <span className="text-[56px]">✅</span>
         <p style={{ fontWeight: 800, fontSize: 18, color: 'var(--text-title)' }}>{t('erreurs_aucune_titre')}</p>
         <p style={{ color: 'var(--text-sub)', maxWidth: 320 }}>{t('erreurs_aucune_sub')}</p>
-        <button onClick={() => router.back()} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: 'var(--bg-card)' }}>
+        <button onClick={quitter} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: 'var(--bg-card)' }}>
           {t('flash_retour')}
         </button>
       </div>
@@ -164,7 +166,7 @@ function RevisionContent() {
           </div>
         </div>
 
-        <button onClick={() => router.back()} className="w-full max-w-md h-[54px] rounded-2xl font-bold text-white press-scale" style={{ background: themeColor }}>
+        <button onClick={quitter} className="w-full max-w-md h-[54px] rounded-2xl font-bold text-white press-scale" style={{ background: themeColor }}>
           {t('revision_retour_carte')}
         </button>
         <button onClick={restart} className="w-full max-w-md h-[54px] rounded-2xl font-bold press-scale" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)', color: themeColor }}>
@@ -183,7 +185,7 @@ function RevisionContent() {
       progressLabel={`${index + 1}/${questions.length}`}
       questionKey={index}
       headerLeft={
-        <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--text-sub)' }}>
+        <button onClick={quitter} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--text-sub)' }}>
           {'←'}
         </button>
       }

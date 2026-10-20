@@ -57,6 +57,10 @@ function FlashContent() {
   const router = useRouter();
   const { t, lang } = useLang();
   const themeCode = params.get('theme') || 'A';
+  // Sortie : toujours vers les leçons du thème. Un « retour » ne faisait rien
+  // quand on arrivait directement sur la page (lien, rechargement) — et sans
+  // barre de navigation ici, on restait alors bloqué.
+  const quitter = () => router.push(`/lecons/${themeCode}`);
   const themeColor = THEME_COLORS[themeCode] || '#74B9FF';
   const themeEmoji = THEME_EMOJIS[themeCode] || '🃏';
 
@@ -215,7 +219,7 @@ function FlashContent() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4 px-4">
         <p style={{ color: 'var(--text-secondary)' }}>{t('flash_aucune_carte')}</p>
-        <button onClick={() => router.back()} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}>
+        <button onClick={quitter} className="px-6 py-3 rounded-xl font-bold press-scale" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}>
           {t('flash_retour')}
         </button>
       </div>
@@ -233,7 +237,7 @@ function FlashContent() {
       <div className="min-h-screen flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-5 pt-5 pb-3">
-          <button onClick={() => router.back()} className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold press-scale" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}>
+          <button onClick={quitter} className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold press-scale" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}>
             ←
           </button>
           <span className="text-lg font-extrabold" style={{ color: 'var(--text-primary)' }}>{themeEmoji} Flash</span>
@@ -257,7 +261,7 @@ function FlashContent() {
             <div className="h-full rounded-full transition-all" style={{ width: `${pct}%`, background: themeColor }} />
           </div>
 
-          <button onClick={() => router.back()} className="w-full h-[54px] rounded-2xl font-bold text-white press-scale mt-2" style={{ background: themeColor }}>
+          <button onClick={quitter} className="w-full h-[54px] rounded-2xl font-bold text-white press-scale mt-2" style={{ background: themeColor }}>
             {t('flash_retour_carte')}
           </button>
           <button onClick={restart} className="w-full h-[54px] rounded-2xl font-bold press-scale" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: themeColor }}>
@@ -287,7 +291,7 @@ function FlashContent() {
       >
         <div className="max-w-screen-xl mx-auto">
           <div className="flex items-center gap-4 mb-2">
-            <button onClick={() => router.back()} className="w-9 h-9 rounded-full flex items-center justify-center press-scale" style={{ background: 'var(--card-secondary)', color: 'var(--text-secondary)' }}>
+            <button onClick={quitter} aria-label="Quitter" className="w-9 h-9 rounded-full flex items-center justify-center press-scale flex-shrink-0 text-base font-bold" style={{ background: 'var(--card-primary)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}>
               ✕
             </button>
             <div className="flex-1 flex items-center justify-center gap-2 flex-wrap">
@@ -571,7 +575,7 @@ function FlashContent() {
 
               {/* End session button */}
               <button
-                onClick={() => router.back()}
+                onClick={quitter}
                 className="w-full py-3 rounded-xl font-bold text-sm press-scale"
                 style={{
                   background: 'transparent',
