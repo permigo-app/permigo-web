@@ -1060,14 +1060,9 @@ main, .page-content {
   body.quiz-focus .theorie-page { padding-bottom: 84px; }
 }
 
-/* Petits écrans (hauteur < 800 px) : l'image du quiz se resserre un peu plus,
-   pour que le pire cas du site (question longue, 4 réponses, explication de
-   200 caractères) tienne quand même sans scroller. */
-@media (max-width: 1023px) and (max-height: 800px) {
-  .quiz-img { max-height: 22vh !important; }
-  .quiz-img.quiz-img-valide { max-height: 12vh !important; }
-  .quiz-img.quiz-img-quatre { max-height: 18vh !important; }
-}
+/* (Ancienne règle « image du quiz à 22 % de l'écran sous 800 px de haut »
+   retirée : elle rétrécissait l'image sur la plupart des Android alors que la
+   place était libre. La taille est maintenant calculée par QuizLayout.) */
 
 /* Écran figé pendant une question (posé par QuizLayout). Uniquement sur
    téléphone en portrait d'au moins 640 px de haut : en dessous, ou en

@@ -183,13 +183,15 @@ export default function QuizLayout({
   const ample = choices.length <= 3;
   const voixActive = voiceSupported && voixDispo && voiceOn;
   const [indispoVisible, setIndispoVisible] = useState(false);
-  // Après la réponse, l'image garde sa taille… sauf si l'explication ne tient
-  // pas à l'écran : alors seulement, elle se réduit (mesuré par verifierTient).
-  const [imageReduite, setImageReduite] = useState(false);
-  const reduite = validated && imageReduite;
-  // Image bord à bord : seulement si l'énoncé tient en ~3 lignes (96 % des
-  // questions illustrées). Au-delà, elle garde sa marge pour que tout tienne.
-  const grandeImage = ample && !reduite && question.length <= 110;
+  // Taille de l'image sur téléphone : elle prend TOUTE la place libre entre
+  // l'énoncé et le bouton du bas (calculée par ajusterEcran), au lieu d'un
+  // pourcentage fixe d'écran qui la laissait petite avec du vide en dessous.
+  // Après la réponse, elle ne bouge plus : c'est le cadre de l'explication qui
+  // s'adapte à la place restante (et défile à l'intérieur si besoin).
+  const [imgMax, setImgMax] = useState<number | null>(null);
+  const [explMax, setExplMax] = useState<number | null>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const explRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     if (validated) {
@@ -226,25 +228,40 @@ export default function QuizLayout({
   const actionRef = useRef<HTMLDivElement>(null);
   const validatedRef = useRef(validated);
   validatedRef.current = validated;
-  const verifierTient = useCallback(() => {
+  const imgMaxRef = useRef(imgMax);
+  imgMaxRef.current = imgMax;
+  const ajusterEcran = useCallback(() => {
     const fin = finContenuRef.current, action = actionRef.current;
     if (!fin || !action) return;
-    // +14 : on ignore la marge vide (mb-3) laissée sous le dernier bloc.
-    const tient = fin.getBoundingClientRect().top <= action.getBoundingClientRect().top + 14;
-    // Réponse donnée et explication coupée par le bouton : on réduit l'image
-    // (une seule fois par question), puis on remesurera après l'animation.
-    if (!tient && validatedRef.current) setImageReduite(true);
-    document.documentElement.classList.toggle('quiz-fige', tient);
+    // Place libre entre la fin du contenu et le bouton fixe (négative = ça déborde).
+    // -14 : on ignore la marge vide (mb-3) laissée sous le dernier bloc.
+    const libre = action.getBoundingClientRect().top + 14 - fin.getBoundingClientRect().top;
+    if (window.innerWidth < 1024) {
+      if (!validatedRef.current) {
+        // Avant la réponse : l'image grandit ou rétrécit pour remplir l'espace
+        // exactement (jamais sous 150 px). Sa largeur reste limitée à l'écran,
+        // donc une image large s'arrête d'elle-même à sa taille pleine largeur.
+        const img = imgRef.current;
+        if (img && img.complete && img.naturalWidth > 0) {
+          const cible = Math.max(150, Math.floor(img.getBoundingClientRect().height + libre));
+          if (Math.abs(cible - (imgMaxRef.current ?? 0)) > 4) setImgMax(cible);
+        }
+      } else if (libre < 0) {
+        // Après la réponse : l'image ne bouge pas, l'explication se resserre
+        const ex = explRef.current;
+        if (ex) setExplMax(Math.max(64, Math.floor(ex.getBoundingClientRect().height + libre)));
+      }
+    }
+    document.documentElement.classList.toggle('quiz-fige', libre >= 0);
   }, []);
-  // Nouvelle question : l'image repart en grand
-  useEffect(() => { setImageReduite(false); }, [questionKey ?? question]);
+  // Nouvelle question : l'explication repart sans limite (l'image se réajuste seule)
+  useEffect(() => { setExplMax(null); }, [questionKey ?? question]);
   useEffect(() => {
-    // le rétrécissement de l'image dure 0,3 s : on remesure après
-    const t1 = requestAnimationFrame(verifierTient);
-    const t2 = setTimeout(verifierTient, 350);
-    window.addEventListener('resize', verifierTient);
-    return () => { cancelAnimationFrame(t1); clearTimeout(t2); window.removeEventListener('resize', verifierTient); };
-  }, [verifierTient, questionKey, question, validated, imageReduite, choices.length]);
+    const t1 = requestAnimationFrame(ajusterEcran);
+    const t2 = setTimeout(ajusterEcran, 350);
+    window.addEventListener('resize', ajusterEcran);
+    return () => { cancelAnimationFrame(t1); clearTimeout(t2); window.removeEventListener('resize', ajusterEcran); };
+  }, [ajusterEcran, questionKey, question, validated, imgMax, explMax, choices.length]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
@@ -334,8 +351,7 @@ export default function QuizLayout({
             {!imageUrl && signCode && (
               <div className="flex justify-center mb-3 lg:mb-5">
                 <div className="rounded-xl p-3 lg:p-4 flex items-center justify-center" style={{ background: 'var(--card-secondary)', border: '1px solid var(--border-subtle)' }}>
-                  {/* Même logique que l'image : plus petit une fois la réponse donnée. */}
-                  <span className="lg:hidden"><SignImage code={signCode} size={reduite ? 84 : 148} /></span>
+                  <span className="lg:hidden"><SignImage code={signCode} size={148} /></span>
                   <span className="hidden lg:inline"><SignImage code={signCode} size={148} /></span>
                 </div>
               </div>
@@ -362,27 +378,24 @@ export default function QuizLayout({
 
             {/* Illustration de situation — SOUS la question (on lit, puis on observe) */}
             {imageUrl && (
-              // Téléphone, 2-3 réponses : l'image va d'un bord à l'autre de
-              // l'écran (-mx-4 annule la marge latérale). Plus large, donc plus
-              // haute, sans rien rogner de la scène.
-              <div className={`flex justify-center mb-3 lg:mb-5 ${grandeImage ? '-mx-4 lg:mx-0' : ''}`}>
-                {/* Sur téléphone, l'image se limite à 28 % de la hauteur d'écran :
-                    grande sur un grand téléphone, plus compacte sur un petit —
-                    pour que les réponses et le bouton restent visibles sans
-                    scroller. La photo garde sa forme naturelle : plus de bandes
-                    grises vides au-dessus et en dessous. */}
+              // Téléphone : l'image va toujours d'un bord à l'autre de l'écran
+              // (-mx-4 annule la marge latérale), sans rien rogner de la scène.
+              <div className="flex justify-center mb-3 lg:mb-5 -mx-4 lg:mx-0">
+                {/* Sa hauteur maximale = toute la place libre (imgMax, calculée
+                    par ajusterEcran). Avant le premier calcul : 40 % de l'écran.
+                    La photo garde sa forme : si la place manque, elle se réduit
+                    proportionnellement, sans bandes ni déformation. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
+                  ref={imgRef}
                   src={imageUrl}
                   alt=""
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  // Après validation, l'image garde sa taille. Elle ne se réduit
-                  // (en douceur) que si l'explication ne tiendrait pas à l'écran.
-                  className={`quiz-img ${reduite ? 'quiz-img-valide max-h-[15vh] rounded-xl' : grandeImage ? 'max-h-[34vh] rounded-none lg:rounded-xl' : ample ? 'max-h-[28vh] rounded-xl' : 'quiz-img-quatre max-h-[22vh] rounded-xl'} w-auto max-w-full lg:max-h-none lg:w-full lg:max-w-lg`}
-                  onLoad={verifierTient}
-                  style={{ border: '1px solid var(--border-subtle)', height: 'auto', transition: 'max-height 0.3s ease' }}
+                  className="quiz-img max-h-[40vh] w-auto max-w-full rounded-none lg:rounded-xl lg:max-h-none lg:w-full lg:max-w-lg"
+                  onLoad={ajusterEcran}
+                  style={{ height: 'auto', ...(imgMax ? { maxHeight: imgMax } : {}) }}
                 />
               </div>
             )}
@@ -509,7 +522,11 @@ export default function QuizLayout({
                 </span>
                 {/* Filet de sécurité : si une explication était exceptionnellement
                     longue, c'est ce cadre qui défile — jamais l'écran. */}
-                <p className="text-sm leading-relaxed max-h-[24vh] overflow-y-auto lg:max-h-none" style={{ color: 'var(--text-secondary)' }}>
+                <p
+                  ref={explRef}
+                  className="text-sm leading-relaxed overflow-y-auto lg:max-h-none"
+                  style={{ color: 'var(--text-secondary)', ...(explMax ? { maxHeight: explMax } : {}) }}
+                >
                   {explanation || (isCorrect ? t('correct') : t('incorrect'))}
                 </p>
               </div>
