@@ -1030,6 +1030,27 @@ main, .page-content {
   .flash-carte { height: clamp(300px, calc(100dvh - 212px - env(safe-area-inset-bottom)), 560px); }
 }
 
+/* Pied de page légal : masqué sur téléphone dans l'appli (voir AppShell).
+   Il reste sur les pages publiques, et les liens sont aussi dans le Profil. */
+@media (max-width: 1023px) {
+  body.page-appli .pied-site { display: none; }
+}
+
+/* Écran d'avant l'examen blanc, petits téléphones (iPhone SE…) : en-tête plus
+   fin et les 4 chiffres sur une seule ligne, pour que tout tienne sans défiler.
+   Les styles de base sont en ligne dans la page, d'où les !important. */
+@media (max-width: 1023px) and (max-height: 720px) {
+  .ex-hero { padding: 18px 20px 14px !important; }
+  .ex-hero h1 { font-size: 22px !important; }
+  .ex-corps { padding: 12px 16px !important; }
+  .ex-stats { grid-template-columns: repeat(4, 1fr) !important; gap: 6px !important; margin-bottom: 12px !important; }
+  .ex-stat { padding: 10px 2px !important; border-radius: 12px !important; }
+  .ex-stat p:first-child { font-size: 15px !important; }
+  .ex-stat p:last-child { font-size: 10px !important; }
+  .ex-conseil { padding: 10px 12px !important; margin-bottom: 12px !important; }
+  .ex-conseil p { font-size: 12px !important; }
+}
+
 /* Écran de théorie : les boutons Précédent / Continuer se posent au-dessus
    de la barre du bas sur ordinateur, et tout en bas en mode focus. */
 .theorie-actions { bottom: 70px; }

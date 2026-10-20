@@ -68,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AppShell>
               {children}
             </AppShell>
-            <footer className="py-3 px-6 text-center" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}>
+            <footer className="pied-site py-3 px-6 text-center" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)' }}>
               <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
                 <span style={{ fontSize: '12px', color: 'var(--text-disabled)' }}>© 2025-2026 MyPermiGo</span>
 

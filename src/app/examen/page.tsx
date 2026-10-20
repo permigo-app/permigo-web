@@ -350,10 +350,13 @@ function ExamContent() {
       { label: t('examen_stat_format'), value: t('examen_stat_officiel') },
     ];
     return (
-      <div style={{ background: 'var(--bg-page)', minHeight: '100vh', fontFamily: 'Sora, sans-serif', padding: '0 0 calc(58px + env(safe-area-inset-bottom) + 24px)' }}>
+      // Pas de minHeight: 100vh ni de marge pour la barre du bas : la page
+      // (AppShell) réserve déjà la place des barres. Les deux ensemble
+      // ajoutaient ~120 px de vide et faisaient défiler un écran qui tient.
+      <div style={{ background: 'var(--bg-page)', fontFamily: 'Sora, sans-serif', paddingBottom: 24 }}>
 
         {/* Navy hero card */}
-        <div style={{ background: '#0b2659', padding: '52px 20px 28px' }}>
+        <div className="ex-hero" style={{ background: '#0b2659', padding: '52px 20px 28px' }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
             <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: '1.4px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
               {t('examen_blanc')}
@@ -367,12 +370,12 @@ function ExamContent() {
           </div>
         </div>
 
-        <div style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px' }}>
+        <div className="ex-corps" style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px' }}>
 
           {/* 2x2 stat grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
+          <div className="ex-stats" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
             {EXAM_STATS.map(s => (
-              <div key={s.label} style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px 14px', textAlign: 'center' }}>
+              <div key={s.label} className="ex-stat" style={{ background: 'var(--bg-card)', border: '1.5px solid var(--border-card)', borderRadius: 16, padding: '16px 14px', textAlign: 'center' }}>
                 <p style={{ margin: 0, fontSize: 22, fontWeight: 800, color: 'var(--text-navy)', lineHeight: 1 }}>{s.value}</p>
                 <p style={{ margin: '5px 0 0', fontSize: 11, fontWeight: 500, color: 'var(--text-hint)' }}>{s.label}</p>
               </div>
@@ -380,7 +383,7 @@ function ExamContent() {
           </div>
 
           {/* Advisory banner */}
-          <div style={{ background: 'var(--bg-why)', border: '1.5px solid #fde68a', borderRadius: 14, padding: '13px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+          <div className="ex-conseil" style={{ background: 'var(--bg-why)', border: '1.5px solid #fde68a', borderRadius: 14, padding: '13px 16px', marginBottom: 20, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
             <span style={{ fontSize: 18, flexShrink: 0 }}>⚡</span>
             <p style={{ margin: 0, fontSize: 13, color: '#92400e', lineHeight: 1.5, fontWeight: 500 }}>
               {t(isAM ? 'examen_regle_am' : 'examen_regle_b')

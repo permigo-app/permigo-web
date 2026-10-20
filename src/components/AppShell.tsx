@@ -16,6 +16,13 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const isPublicPage = pathname === '/' || pathname === '/login' || pathname === '/register' || pathname === '/auth' || pathname === '/choix-permis' || pathname === '/reset-password' || pathname === '/privacy' || pathname === '/terms';
   const isAdminPage = pathname.startsWith('/admin');
 
+  // Pages de l'appli : sur téléphone, le pied de page légal (déjà dans le
+  // Profil) est masqué — caché derrière la barre du bas, il ne faisait
+  // qu'allonger chaque page de ~77 px et la faire défiler pour rien.
+  useEffect(() => {
+    document.body.classList.toggle('page-appli', !isPublicPage);
+  }, [isPublicPage]);
+
   useEffect(() => {
     if (isPublicPage) return;
     const localDone = localStorage.getItem('@onboarding_done') === 'true';
