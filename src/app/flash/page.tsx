@@ -65,6 +65,17 @@ function FlashContent() {
   // puis tombe sur la porte Premium — il sait ainsi à quoi ressemble une fiche.
   const preview = !isThemeFree(themeCode) && !isPremium();
 
+  // Plein écran sur téléphone, comme les questions : sans barre du haut ni du
+  // bas, la carte et ses deux boutons tiennent sur un seul écran, sans défiler.
+  useEffect(() => {
+    document.body.classList.add('quiz-focus', 'quiz-questions');
+    document.documentElement.classList.add('quiz-fige');
+    return () => {
+      document.body.classList.remove('quiz-focus', 'quiz-questions');
+      document.documentElement.classList.remove('quiz-fige');
+    };
+  }, []);
+
   const [themeData, setThemeData] = useState<LocalTheme | null>(null);
   useEffect(() => {
     getThemeDataLocalized(themeCode, lang).then(setThemeData);
@@ -281,7 +292,8 @@ function FlashContent() {
             </button>
             <div className="flex-1 flex items-center justify-center gap-2 flex-wrap">
               <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>{t('flash_titre')} {themeCode}</span>
-              {preview && (
+              {/* Limite illimitée (Infinity) : rien à annoncer — sinon « Infinity par leçon » s'affichait */}
+              {preview && Number.isFinite(FREE_FLASHCARDS_PER_LESSON) && (
                 <span
                   className="px-2 py-0.5 rounded-full text-[10px] font-bold whitespace-nowrap"
                   style={{ background: 'rgba(34,214,199,0.14)', color: 'var(--brand)', border: '1px solid rgba(34,214,199,0.3)' }}
@@ -311,7 +323,7 @@ function FlashContent() {
       </div>
 
       {/* ── 3-column layout ── */}
-      <div className="flex-1 px-6 py-6">
+      <div className="flex-1 px-4 lg:px-6 py-3 lg:py-6">
         <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
 
           {/* ── Left sidebar (desktop only) ── */}
@@ -383,9 +395,12 @@ function FlashContent() {
 
             {/* 3D Flip Card */}
             <div
-              className="cursor-pointer"
               onClick={!flipped ? flipCard : undefined}
-              style={{ perspective: 1200, width: 480, height: 'clamp(420px, calc(100dvh - 330px), 600px)', maxWidth: 'calc(100vw - 32px)' }}
+              // Hauteur = l'écran moins l'en-tête, les pastilles et les boutons :
+              // tout tient sur une page. Le dos de la carte défile à l'intérieur
+              // si son texte est long ; la page, jamais.
+              className="cursor-pointer flash-carte"
+              style={{ perspective: 1200, width: 480, maxWidth: 'calc(100vw - 32px)' }}
             >
               <div
                 className="relative w-full h-full"

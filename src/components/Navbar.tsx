@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLang } from '@/contexts/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -67,10 +68,28 @@ function isNavActive(href: string, pathname: string): boolean {
 
 // Le réglage du son des effets reste disponible dans la page Profil.
 // `barre-haut-mobile` : masquée pendant les questions (mode focus, globals.css).
+// Comme dans les applis mobiles : elle se cache quand on descend dans la page
+// et revient dès qu'on remonte — toute la place pour lire, la langue à portée.
 function MobileTopBar() {
+  const [cachee, setCachee] = useState(false);
+  useEffect(() => {
+    let dernierY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y < 60) setCachee(false);              // tout en haut : toujours visible
+      else if (y > dernierY + 6) setCachee(true); // on descend
+      else if (y < dernierY - 6) setCachee(false); // on remonte
+      if (Math.abs(y - dernierY) > 6) dernierY = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   return (
     <div className="barre-haut-mobile lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-3 gap-4"
-      style={{ height: 44, background: 'var(--nav-bg)', borderBottom: '1px solid var(--nav-border)' }}>
+      style={{
+        height: 44, background: 'var(--nav-bg)', borderBottom: '1px solid var(--nav-border)',
+        transform: cachee ? 'translateY(-100%)' : 'translateY(0)', transition: 'transform 0.25s ease',
+      }}>
       <Link href="/app" className="flex-shrink-0">
         <span style={{ fontSize: 15, fontWeight: 900, letterSpacing: -0.5 }}>
           <span style={{ color: 'var(--text-primary)' }}>My</span>

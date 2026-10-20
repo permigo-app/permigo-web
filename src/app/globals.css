@@ -1022,6 +1022,14 @@ main, .page-content {
   }
 }
 
+/* Carte flash : sur téléphone, elle prend la hauteur de l'écran moins
+   l'en-tête, les pastilles et les deux boutons (~212 px) — tout tient sur une
+   page, sans défiler. Sur ordinateur, taille d'origine. */
+.flash-carte { height: clamp(420px, calc(100dvh - 330px), 600px); }
+@media (max-width: 1023px) {
+  .flash-carte { height: clamp(300px, calc(100dvh - 212px - env(safe-area-inset-bottom)), 560px); }
+}
+
 /* Écran de théorie : les boutons Précédent / Continuer se posent au-dessus
    de la barre du bas sur ordinateur, et tout en bas en mode focus. */
 .theorie-actions { bottom: 70px; }
