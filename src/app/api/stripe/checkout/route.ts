@@ -133,9 +133,14 @@ export async function POST(req: Request) {
 
     console.log('[Stripe] Creating session — userId:', userId, 'customer:', customerId);
 
-    const session = await stripe.checkout.sessions.create({
-      mode: 'subscription',
-      payment_method_types: ['card'],
+    // Moyens de paiement : carte (Apple Pay et Google Pay s'y greffent tout
+    // seuls sur la page Stripe) + Bancontact, la carte de débit de la plupart
+    // des jeunes en Belgique — en « carte » seule, leurs paiements échouaient
+    // ou finissaient « annulés ».
+    // Filet de sécurité : si Stripe refuse Bancontact (pas encore activé dans le
+    // tableau de bord), on retombe sur la carte seule au lieu de bloquer le paiement.
+    const baseParams = {
+      mode: 'subscription' as const,
       line_items: [{ price: STRIPE_PRICE_ID, quantity: 1 }],
       // Repli sur l'adresse www : l'apex redirige, ce qui ajoutait un saut
       // inutile juste après le paiement.
@@ -143,7 +148,14 @@ export async function POST(req: Request) {
       cancel_url: `${NEXT_PUBLIC_URL || SITE_URL}/premium`,
       customer: customerId,
       metadata: { userId },
-    });
+    };
+    let session;
+    try {
+      session = await stripe.checkout.sessions.create({ ...baseParams, payment_method_types: ['card', 'bancontact'] });
+    } catch (pmErr: unknown) {
+      console.warn('[Stripe] Bancontact refusé, repli sur la carte seule :', pmErr instanceof Error ? pmErr.message : pmErr);
+      session = await stripe.checkout.sessions.create({ ...baseParams, payment_method_types: ['card'] });
+    }
 
     console.log('[Stripe] Session created:', session.id, '— userId in metadata:', userId);
     return NextResponse.json({ url: session.url });
